@@ -1,0 +1,883 @@
+9
+9
+9
+1
+
+ 
+
+v
+o
+n
+4
+
+ 
+
+ 
+ 
+
+1
+v
+6
+2
+0
+1
+1
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+4 november 1999
+
+dias-stp-99-13
+
+noncommutative string theory, the r-matrix, and hopf
+
+algebras
+
+paul watts1
+
+dublin institute for advanced studies
+
+school of theoretical physics
+
+10 burlington road
+
+dublin 4
+ireland
+
+abstract
+
+motivated by the form of the noncommutative *-product in a system of open
+strings and dp-branes with constant nonzero neveu-schwarz 2-form, we dene
+a deformed multiplication operation on a quasitriangular hopf algebra in terms
+of its r-matrix, and comment on some of its properties. we show that the
+noncommutative string theory *-product is a particular example of this multi-
+plication, and comment on other possible hopf algebraic properties which may
+underlie the theory.
+
+pacs-95: 11.25.-w, 11.15.-q
+msc-91: 46l87, 57t05, 81t13
+
+keywords: hopf algebras, noncommutative geometry, r-matrix
+
+1e-mail: watts@stp.dias.ie
+
+1
+
+introduction
+
+although the subject of gauge theories in noncommutative geometry is not a
+new one [1], recently it has enjoyed something of a resurgence. it reappeared
+in the context of matrix models compactied on tori [2], where it was shown
+that such models may be reformulated as super yang-mills (sym) theories
+on noncommutative spacetimes when the neveu-schwarz (ns) 2-form bij is
+constant and nonzero. this is accomplished by replacing the usual commutative
+multiplication of functions on the space by a noncommutative one, denoted by
+*. subsequent studies dealt with various aspects of noncommutative spaces [3]-
+[13]. it has also been realised that one gets a noncommutative sym theory for
+the case of a system of open strings and dp-branes in a at spacetime (with the
+same condition on bij), provided that one not only changes all ordinary products
+to *-products, but also deforms the gauge elds and their transformations [14].
+this seems to suggest that noncommutative geometry may be an underlying
+aspect of a large class of theories.
+
+if this is so, then a mathematically consistent way of dealing with this non-
+commutativity is needed, and one possibility might be to use the language of
+hopf algebras (has). a ha extends the notion of an algebra by including
+information about its representations (through the coproduct), and when it is
+quasitriangular also gives the algebraic structure of the modules it is represented
+on through its associated r-matrix, i.e. commutation relations between module
+elements. perhaps the best-known cases where nontrivial quasitriangular has
+play key roles are quantum groups [15, 16], which may be thought of consisting
+of matrices whose entries are noncommuting.
+
+it is the intent of this paper to show (in section 3) that the *-product
+mentioned above is in fact a particular case of a more general multiplication
+which may be dened in terms of the r-matrix of a particular quasitriangular
+ha. this may be a clue that there is indeed a quasitriangular ha structure to
+these noncommutative theories, and might serve as a tentative rst step toward
+nding that structure. this could in turn lead toward a way of formulating
+gauge theories on a large class of spaces, not just commutative ones. some of
+the implications of such a structure are commented upon in section 4.
+
+parts of this work are somewhat pedagogical, but this is because it is in-
+tended for an audience for whom the language of has may not be too familiar;
+for those with some knowledge of the subject, section 2 can be skimmed just to
+determine the notation we use herein. others who may be curious about has
+may nd the short review useful.
+
+1
+
+2 hopf algebras
+
+this section is meant to be a review of both the formal aspects of what consti-
+tutes a hopf algebra and the explicit example where we consider the algebra of
+functions over a manifold and the partial derivatives acting on them.
+
+2.1 formal denitions
+a hopf algebra h is an associative algebra with unit 1 over a eld k which
+is also equipped with a counit  : h  k, a coproduct (or comultiplication)
+ : h  h  h and an antipode s : h  h; the rst two of these are dened
+to be homomorphisms, the third an antihomomorphism, and all three satisfy
+the relations
+
+(  id) (f ) = (id) (f ),
+(  id) (f ) = (id) (f ) = f,
+
+m ((s  id) (f )) = m ((ids) (f )) = (f )1,
+
+(2.1)
+
+where f  h, id is the identity map f 7 f and m is the multiplication operation
+on h (which will usually be suppressed). for future reference, the rst of (2.1)
+is often called coassociativity.
+for clarity, we adopt sweedlers notation [17], in which we write the coprod-
+uct as (f ) = f(1)  f(2), where there is an implied summation. for exam-
+
+ple, using this convention, the third of (2.1) may be written as s(cid:0)f(1)(cid:1) f(2) =
+f(1)s(cid:0)f(2)(cid:1) = (f )1.
+we can dene the dually paired ha to h, denoted h, in the following way:
+as a vector space over k, h is just the dual space to h, so there is an inner
+product taking hh to k, written as hx, fi for x  h and f  h. h may be
+given a hopf algebra structure by dening the multiplication, unit, coproduct,
+counit and antipode on h via
+
+hxy, fi
+h1, fi
+h(x), f  gi
+(x)
+hs(x), fi
+
+:= hx  y, (f )i ,
+:= (f ),
+:= hx, f gi ,
+:= hx, 1i ,
+:= hx, s(f )i .
+
+(2.2)
+
+it is straightforward to show that these operations satisfy all the ha conditions.
+h may be thought of as an algebra of operators on h when we dene the
+
+(left) action of x  h on f  h, denoted x  f , as
+
+x  f := f(1)(cid:10)x, f(2)(cid:11) .
+
+2
+
+(2.3)
+
+since it is easy to show that (xy)f = x(yf ), this is indeed an action of elements
+of h on those of h, and thus gives a representation of h with h as the module.
+furthermore, there is a sort of leibniz rule: x (f g) = (x(1)  f )(x(2)  g). to give
+h an interpretation, notice that p0(x) := x  (x)1 and p1(x) := (x)1 are
+projections on h, so h = ker  k1. note that for x  ker , x 1 = 0, so these
+may be thought of as derivatives on h; elements of k1 just multiply elements of
+h by elements of k. finally, if we have a concept of derivatives on h, we can
+x  ker .
+
+dene an integral on h as a linear mapr : h  k such thatr x  f = 0 for any
+
+a quasitriangular hopf algebra is an ha h for which there is a special
+
+invertible element r  h  h, called the r-matrix, which has the properties
+
+(  ) (f ) = r (f ) r1,
+(  id) (r) = r13r23,
+(id) (r) = r13r12,
+
+(2.4)
+
+where  : f  g 7 g  f and the subscripts on r in the latter two above
+tell in which pieces of h3 r lives, i.e.
+if r = r  r (sum implied), then
+r13 := r  1  r. one consequence of these properties on the r-matrix is the
+fact that it must satisfy the yang-baxter equation (ybe)
+
+r12r13r23 = r23r13r12.
+
+(2.5)
+
+(note that since r = 1 1 satises all the above, all has are in a sense trivially
+quasitriangular.)
+
+2.2 hopf algebra of functions and derivatives
+let f be the space of functions mapping rp+1 into c. f is made into a com-
+(f g)(x) := f (x)g(x) for
+mutative associative algebra in the usual way, e.g.
+f, g  f and x  rp+1. furthermore, f can be extended to an ha if we dene
+the following on the coordinate maps xi:
+
+(cid:0)xi(cid:1)
+(cid:0)xi(cid:1)
+s(cid:0)xi(cid:1)
+
+:= xi  1 + 1  xi,
+:= 0,
+:= xi.
+
+(2.6)
+
+once we have the above (as well as the relations (1) = 1  1, (1) = 1 and
+s(1) = 1, of course), we can use the fact that  and  are homomorphisms and
+s is an antihomomorphism to extend them to all monomials of the coordinate
+functions and (ignoring questions of completeness) thus to all of f .
+
+3
+
+we dene f , the dually paired ha to f , to be spanned by elements {i|i =
+
+1, . . . , d}, where the inner product between i  f  and a monomial in f is
+
+*i,
+
+nyp=1(cid:0)xjp(cid:1)np+ =
+
+nxp=1
+
+ijp np1yq6=p
+
+nq0,
+
+(2.7)
+
+as well as hi, 1i = 0. once we have this, the ha structure of f  is immediate:
+the form of the coproduct on f tells us that f  is commutative, the commu-
+tativity of f gives  (i) = i  1 + 1  i, and  (i) = 0 and s (i) = i.
+the action of i on a monomial in f can be computed as well; it will perhaps
+be no surprise to the reader that the result is
+
+i 
+
+nyp=1(cid:0)xjp(cid:1)np =
+
+nxp=1
+
+np(cid:0)xjp(cid:1)np1
+
+ijpyq6=p(cid:0)xjq(cid:1)nq .
+
+furthermore, for two arbitrary functions f (x) and g(x),
+
+(2.8)
+
+i  (f (x)g(x)) = (i  f (x)) g(x) + f (x) (i  g(x)) ,
+
+(2.9)
+so f  is indeed the space of partial derivatives on functions over rp+1. (note:
+for brevitys sake, from now on we will omit the  when speaking of the action
+of a partial derivative on a function of x.)
+
+3 the *-product
+
+motivated by the previously-mentioned literature on noncommuting strings, we
+now use the formalism just presented to introduce a new *-product on the hopf
+algebra h. we examine its properties, and then go on to show that the non-
+commutative product in string theory is a particular case of this multiplication.
+
+3.1 formal denition of the *-product
+suppose we have two dually paired has h and h, and further suppose that
+there is an r-matrix on h. we can thus dene a new operation  : hh  h
+in terms of r and the usual multiplication on h via
+
+f  g := f(1)g(1)(cid:10)r21, f(2)  g(2)(cid:11) .
+
+(3.1)
+(if h is trivially quasitriangular, then f  g = f g.) this operation is actually
+associative as a consequence of the ybe. to see this explicitly, we pick f, g, h 
+h, and rst compute (f  g)  h:
+
+(f  g)  h = (cid:0)f(1)g(1)(cid:10)r21, f(2)  g(2)(cid:11)(cid:1)  h
+
+= f(1)g(1)h(1)(cid:10)r21, f(2)g(2)  h(2)(cid:11)(cid:10)r21, f(3)  g(3)(cid:11)
+= f(1)g(1)h(1)(cid:10)r32r31r54, f(2)  g(2)  h(2)  f(3)  g(3)(cid:11)
+= f(1)g(1)h(1)(cid:10)r32r31r21, f(2)  g(2)  h(2)(cid:11) .
+
+(3.2)
+
+4
+
+  (f   g) =  (cid:0)f g(1)(cid:1)(cid:10), g(2)(cid:11)
+
+= f(1)g(1)(cid:10), f(2)g(2)(cid:11)(cid:10), g(3)(cid:11)
+= f(1)g(1)(cid:10) ()  , f(2)  (cid:0)g(2)(cid:1)(cid:11) ,
+
+(3.3)
+
+in going fron the rst line to the second, we used the coassociativity of ; next,
+the third of (2.2), the second of (2.4) and a relabelling of the indices so as to
+stick everything into one inner product; and the last step used the rst of (2.2).
+if we now calculate f  (g  h), an exactly analogous compution gives the result
+above with the left argument of the inner product replaced by r21r31r32, and
+by using the ybe (with the rst and third tensor spaces swapped), we nd the
+
+the algebra constructed from (the vector space) h and the *-multiplication is
+
+two quantities are exactly the same. hence, (f  g)  h = f  (g  h) and bh,
+associative. since it turns out that 1  f = f  1 = f , bh is unital as well.
+mutative, bh may not be if r21 6= r. to examine this a bit more, it can be shown
+ten in terms of , the *-product becomes f  g = f g + f(1)g(1)(cid:10)21, f(2)  g(2)(cid:11).
+
+this is in general a noncommutative multiplication: even if h itself is com-
+that the dening relations for r imply that (  id) (r) = (id) (r) = 11, so
+that we may dene a new quantity   ker  ker  as  := r11. when writ-
+suppose we now dene      and compute   (f   g):
+
+where in the last step we have split up f(2)g(2) to get the coproduct of . the
+third of (2.4) in terms of  is (id) () = 13 + 12 + 1312; if we use
+argument of the inner product, we nd
+
+this, and then get rid of (cid:0)g(2)(cid:1) by exchanging it for a multiplication in the h
+
+  (f   g) = f(1)g(1)(cid:10)21 + (1  )r21, f(2)  g(2)(cid:11) ,
+
+where  := . let us now suppose that there is a kind of tracelessness con-
+dition on , and  vanishes. we must stress that this is purely an assumption,
+but if it does in fact hold, then we conclude that
+
+(3.4)
+
+f  g = f g +   (f   g) ,
+
+(3.5)
+in other words, f  g and f g dier by a total derivative, since   ker . it
+
+follows that if there is an integralr dened over h,r f  g =r f g.
+
+a comment on the above: the above can be easily extended to the case where
+we have a n  n matrix-valued hopf algebra, i.e. h  mn (k), in which case
+the *-product includes matrix multiplication as well: (f  g)i
+j. note
+that this is not the same as a quantum group, since h is not being thought of
+as the set of functions over the group manifold. thus, when we take coproducts
+et al., the matrix part is unaected.
+
+k  gk
+
+j = f i
+
+also, the *-product is not unique: if r21 is replaced by r1, the new * is
+still associative, and the other results also follow with suitable modications.
+in the case where the ha is triangular, r21 = r1 by denition, and the two
+dierent *-products coincide.
+
+5
+
+3.2 noncommutative string theory
+
+recently [14], it has been shown that when one considers open strings and dp-
+branes in a space with metric gij and constant nonvanishing neveu-schwarz
+2-form bij (i, j = 0, . . . , p), the theory can be reformulated as a sym theory
+on a space where the coordinates no longer commute, but instead satisfy the
+deformed relation
+
+where
+
+xi  xj  xj  xi = iij,
+
+ij :=  (2)2(cid:18)
+
+1
+
+g + 2b
+
+b
+
+1
+
+g  2b(cid:19)ij
+
+.
+
+(3.6)
+
+(3.7)
+
+more generally, it is shown that if f (x) and g(x) are (matrix-valued) functions,
+the noncommutative product between two functions f (x) and g(x) is
+
+f (x)  g(x) := e
+
+i
+
+2 ij 
+i
+
+
+
+j f (x + )g(x + )(cid:12)(cid:12)(cid:12)==0
+
+.
+
+(3.8)
+
+the action then can be expressed in sym form provided that all ordinary multi-
+plications are replaced by this *-product, the closed string metric gij is replaced
+
+by the open string metric gij := gij  (2)2(cid:0)bg1b(cid:1)ij and the gauge eld
+ai is replaced by bai, which depends on both ai (and its derivatives) and ij .
+
+if we compare (3.8) to (3.1), it suggests that a candidate for the r-matrix is
+
+r = e i
+
+2 ij ij ,
+
+(3.9)
+
+but we must make sure it satises all the appropriate relations. since f  is
+commutative, and  (i) is symmetric, it is evident that the rst of (2.4) is
+satised. to check the second of (2.4), note that
+
+  ky=1
+
+i! =x xk
+
+1
+
+!(k  )!
+
+i(1) . . . i()  i(+1) . . . i(k) ,
+
+(3.10)
+
+where  is a permutation of (1, . . . , k). therefore,
+
+(  id) (r) =
+
+=
+
+(i)k
+
+2kk! ypk
+ipjp yk
+i yqk
+xk=0
+2kk!!(k  )!ypk
+ipjpx   ym=1
+xk=0xk
+i(n)! yqk
+jq
+kyn=+1
+
+(i)k
+
+
+
+jq
+
+i(m)
+
+6
+
+=
+
+(i)
+
+2! yp
+x=0
+in jn in! yqk
+  kyn=+1
+
+ipjp ip xk
+jq ,
+
+(i)k
+
+2k(k  )!
+
+(3.11)
+
+where in the last step we have switched the sums over k and , and also used
+the commutativity of the partial derivatives in the third tensor space to get rid
+of  (picking up a k! in the process). if we now split the product in the third
+space into two, one from 1 to  and the other from  + 1 to k, and let k   = r,
+then we get
+
+(  id) (r) =
+
+n j 
+
+i
+
+n i
+
+n
+
+(i)+r
+
+2+r!r!yp
+ipjp ip ynr
+x,r=0
+yq
+q
+jq yqr
+2! (cid:0)iji  1  j(cid:1)#" xr=0
+= " x=0
+(i)
+
+j 
+
+= r13r23.
+
+2rr! (cid:16)1  ij 
+(i)r
+
+i  j (cid:17)r#
+
+(3.12)
+
+a very similar calculation conrms that the last of (2.4) holds as well, so (3.9) is
+in fact an r-matrix, and f a quasitriangular ha (in fact, since r21 = r1, it is
+triangular). the ybe is therefore satised by this r, and thus * is associative,
+as proven above.
+
+to check that this r-matrix gives us the correct commutation relation (3.6),
+
+we simply compute xi  xj :
+
+xi  xj = (cid:0)xi(cid:1)(1)(cid:0)xj(cid:1)(1)dr21,(cid:0)xi(cid:1)(2) (cid:0)xj(cid:1)(2)e
+
+= xixj hr21, 1  1i + xi(cid:10)r21, 1  xj(cid:11) + xj(cid:10)r21, xi  1(cid:11)
++(cid:10)r21, xi  xj(cid:11)
+
+= xixj +
+
+ij .
+
+i
+2
+
+(3.13)
+
+therefore, by switching i and j and subtracting, we recover (3.6). (3.8) holds
+almost by denition, since, from (3.1), f  g is simply the product between the
+action of the rst tensor space of r21 on f and the action of the second on g.
+this r also satises the tracelessness condition: if we subtract 1  1 from
+r21 and multiply the two tensor product spaces together, we immediately get
+, which is evidently zero due to the asymmetry (and constancy) of ij and
+
+7
+
+commutativity of the partial derivatives, so f  g and f g dier by a total deriva-
+tive. and since the original multiplication was commutative to begin with,
+
+r tr (f  g) =r tr (g  f ).
+
+4 noncommutative gauge theories
+
+we now make some comments on noncommutative gauge theories and how they
+may or may not relate to has.
+
+4.1 algebraic structure
+
+in section 2.2, we showed that for the commutative case, there is a ha structure
+to both functions and derivatives on rp+1. however, even though the noncom-
+
+to zero. but this commutator is iij 1, so we have a contradiction. therefore,
+
+and associative, there is no deformed derivative. we can certainly dene an
+inner product between the two spaces, but due to the lack of a coproduct on
+
+this is no real surprise. in the rst place, the requirements necessary for
+a space to be a ha are very restrictive, and in general there is no reason to
+
+mutative bf is an associative unital algebra, it is not a ha, as can be seen from
+the following: as we proved, the unit in f is the unit in bf , so that if bf is a ha
+and has a counitb, then the fact that this counit is a homomorphism from bf
+to c meansb(1) = 1. now, consider xi  xj  xj  xi; the counit will map this
+bf cannot be a ha.
+expect an arbitrary algebra to also be a ha. furthermore, although bf  has a
+coalgebra structure (a counit and a coproduct) due to the fact that bf is unital
+bf , there is no action of bf  on it, and thus no concept of derivative. this is
+the noncommutative sym eld strength, via bfij = [ibaj]  iba[i  baj] [14]; if
+however, although there is no interpretation of elements of bf  as objects
+with a local action on bf , it might still be possible to interpret them as nonlocal
+
+operators. as an illustration of this, consider the case of the 2-dimensional
+quantum hyperplane: the coordinates x, y generate an algebra (the functions
+on the plane) modulo the commutation relation xy = qyx, and the derivatives
+x, y act on a function f (x, y) (ordered so that all xs appear to the left of all
+ys) as
+
+a deformed derivative were available, it would be the more natural choice, but
+this is not the case.
+
+borne out by the fact that we must use the ordinary partial derivative to dene
+
+xf (x, y) =
+
+yf (x, y) =
+
+f (q2x, y)  f (x, y)
+
+,
+
+(q2  1) x
+
+f (q2x, q2y)  f (q2x, y)
+
+(q2  1) y
+
+,
+
+(4.1)
+
+8
+
+gf =(cid:10)r, f(1)  g(1)(cid:11) f(2)g(2) (cid:10)r1, f(3)  g(3)(cid:11) .
+
+(4.2)
+
+where q  r [18]. note that as q  1, these become ordinary derivatives, but
+otherwise they are nonlocal dierence operators. the string case could be simi-
+lar, with ij playing the role of ln q. this granularisation of the spacetime might
+explain the absence of small instanton singularities [19, 14] in the noncommuting
+theory, by smearing out such objects over more than one point.
+
+4.2 gauge fields and hopf algebras
+
+the fact that the *-product can be dened in terms of an abstract ha and in-
+cludes the noncommutative string theory case hints at the possibility of describ-
+ing the entire theory using a quasitriangular ha, where the r-matrix depends
+on ij . however, this is certainly not sucient, since we have not considered
+
+the gauge eld bai. we have also not addressed the matter of the map ai 7 bai
+
+which allow us to cast the action in sym form. we now address both of these
+issues.
+
+ij is inherently a ha parameter; it appears in the r-matrix and therefore
+describes the ha structure of f and f . this can be seen either explicitly,
+as in the relation (  )(x) = r(x)r1 on any h, or via the commutation
+relations of elements of h, which may be expressed as
+
+so, motivated by these facts, it therefore seems reasonable to conjecture that
+all -dependence in the theory is in the ha structure of f and f .
+if this is true, then the -dependence in the noncommuting theory must arise
+from the underlying ha describing the commutative theory. this gives us a bit
+of information about the gauge elds: we know that the change of variables
+between the gauge elds of the two theories involves  [14], which means some
+sort of ha-derived operation is involved in going from one to the other. since, as
+
+there must be some element w  f with given ha properties (coproduct, etc.)
+the ha structure and not in f (as a vector space) itself leads to the conclusion
+that w is independent of , and thus must be related to ai, since this is the
+gauge eld for the ij = 0 case. if we also assume that the only dependence on
+the open string metric gij is from constructing lorentz-invariant quantities in
+
+we proved in the previous section, the noncommutative algebra bf is not a ha,
+which is related to both ai and bai. the assumption that all -dependence is in
+the integral, e.g. r dp+1xggij ij, then w should also be g-independent.
+
+at this writing, we do not know precisely what this element might be, but a
+natural candidate would be the wilson line (which explains why we call it w ):
+recall that the wilson line wc(x0,x) is given by
+
+wc(x0,x) := peir c(x0,x) a,
+
+(4.3)
+
+where c (x0, x) is a path going from x0 to x. it depends on the gauge eld of
+the commutative theory, and is independent of  and g, so it ts the criteria
+
+9
+
+our proposed w must relate both gauge elds in a ha-dependent way, but be
+independent of . the relation of wc to ai is through the multiplication on f ,
+for which the same wc can be written as a path-ordered exponential as well,
+
+we just outlined. we might also be able to obtain bai in the following way:
+via the path-ordered exponent. we could therefore dene bai to be that function
+but this time using the *-product instead (denotedbe). in other words,
+= 1 + izc(x0,x) ba zc(x0,x) ba zc(x0,x1) ba! + . . .
+
+wc(x0,x) = pbe ir c(x0,x) ba
+
+(4.4)
+
+then the condition
+
+(4.5)
+
+
+
+ij pbe ir c(x0,x) ba = 0
+
+would give a dierential equation involving bai, ij and wc , which we could
+presumably solve to nd bai as a function of ij and (derivatives of) ai. our
+
+rst calculations show enough similarities to the rst of equation (3.5) of [14]
+to be encouraging.
+
+as for the gauge transformation, the same idea applies: a nite transforma-
+tion on wc given by a unitary matrix u (x) = ei(x) gives u (x)wc(x0,x)u 1 (x0).
+
+this should be the same as if we started with wc in terms of * and bai, and
+then transformed by u expressed in terms of * and a new matrixb via u =be ib.
+
+then by solving
+
+(4.6)
+
+we would obtain the second of (3.5) in [14].
+
+
+
+ij hbe ib(x) be ir c(x0,x) ba be ib(x0)i = 0,
+
+so the sought-after w  f could be related to the wilson loop wc , even
+though we do not claim to have oered anything more than a vague justication
+for this feeling. we have not said anything about the ha properties of w
+
+(although the ha enters in going from e to be, via *), nor have we said how
+
+the curve c (x0, x) would be chosen, since we have taken it to be completely
+arbitrary. and perhaps most importantly, we have not considered what the
+action might be as a function of w (and r) such that we ultimately end up
+with a sym form when we go to the noncommuting spacetime. regardless,
+there is enough evidence to consider our wilson line guess as reasonable.
+
+everything we have done above has been for the specic case of a noncommu-
+tative string, where we started with a commutative space (rp+1); formulating
+it in the ha language as we propose would also be a way of coming up with
+gauge theories where the original space might be noncommutative. steps in this
+direction have been made when the gauge group (and possibly also the space-
+time) is deformed [20], and this may mean there is some hope of success for the
+present problem.
+
+10
+
+5 conclusions
+
+we have shown that the product appearing in noncommutative string theory is
+simply a specic case of one which may be dened in terms of a quasitriangular
+ha. this fact has lead us to speculate that it may be possible to relate an
+arbitrary noncommutative gauge theory to a quasitriangular ha in this way,
+and we have commented on some ways in which this may be done. we hope to
+address this possibility in future work.
+
+acknowledgements
+
+i would like to thank lochlainn o raifeartaigh, jan pawlowski and jorg teschner
+for their helpful comments, suggestions and advice.
+
+11
+
+references
+
+[1] a. connes, j. lott:
+
+particle models and noncommutative geometry,
+
+nucl. phys. proc. supp. 18b (1991) 29
+
+[2] a. connes, m. r. douglas, a. schwarz:
+
+noncommutative geometry
+and matrix theory: compactication on tori, jhep 9802 (1998) 003,
+hep-th/9711162
+
+[3] p.-m. ho, y.-s. wu: noncommutative geometry and d-branes, phys.
+
+lett. b398 (1997) 52, hep-th/9611233
+
+[4] m. r. douglas, c. hull:
+
+d-branes and the noncommutative torus,
+
+jhep 9802 (1998) 008, hep-th/9711165
+
+[5] p.-m. ho, y.-y. wu, y.s. wu:
+
+toward a noncommutative geometric
+approach to matrix compactication, phys. rev. d58 (1998) 026006,
+hep-th/9712201
+
+[6] p.-m. ho, y.-s. wu: noncommutative gauge theories in matrix theo-
+
+ries, phys. rev. d58 (1998) 066003, hep-th/9801147
+
+[7] r. casalbuoni: algebraic treatment of compactication on noncommu-
+
+tative tori, phys. lett. b431 (1998) 69, hep-th/9801170
+
+[8] t. kawano, k. okuyama:
+
+matrix theory on noncommutative torus,
+
+phys. lett. b433 (1998) 29, hep-th/9803044
+
+[9] y.-k. e. cheung, m. krough: noncommutative geometry from 0-branes
+
+in a background b field, nucl. phys. b528 (1998) 185
+
+[10] d. bigatti:
+
+noncommutative geometry and super-yang-mills theory,
+
+phys. lett. b451 (1999) 324, hep-th/9804120
+
+[11] b. morariu, b. zumino:
+
+super-yang-mills on the noncommutative
+torus, proc., a symposium on supersymmetry and gravitation, college
+station (world scientic, 1999), hep-th/9807198
+
+[12] f. ardalan, h. arfaei, m. m. sheikh-jabbari: noncommutative geome-
+try from strings and branes, jhep 9902 (1999) 016, hep-th/9810072
+
+[13] c.-s. chu, p.-m. ho: noncommutative open string and d-brane, nucl.
+
+phys. b550 (1999) 151, hep-th/9812219
+
+[14] n. seiberg, e. witten: string theory and noncommutative geometry,
+
+hep-th/9908142
+
+[15] v. g. drinfeld:
+(berkeley, 1986)
+
+quantum groups, proc., int. cong. math., berkeley
+
+12
+
+[16] s. l. woronowicz:
+
+compact matrix pseudogroups, commun. math.
+
+phys. 111 (1987) 613
+
+[17] m. e. sweedler: hopf algebras (benjamin 1969)
+
+[18] j. wess, b. zumino:
+
+covariant dierential calculus on the quantum
+
+hyperplane, nucl. phys. b18 (proc. supp.) (1990) 302
+
+[19] n. nekrasov, a. schwarz: instantons on noncommutative r4 and (2,0)
+superconformal field theory, commun. math. phys. 198 (1998) 689,
+hep-th/9802068
+
+[20] p. watts:
+
+toward a q-deformed standard model, j. geom. phys. 24
+
+(1997) 61, hep-th/9603143
+
+13
+
+

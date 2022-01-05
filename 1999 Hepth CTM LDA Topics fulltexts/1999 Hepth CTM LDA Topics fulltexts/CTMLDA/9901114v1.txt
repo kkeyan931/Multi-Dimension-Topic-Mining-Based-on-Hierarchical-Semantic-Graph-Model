@@ -1,0 +1,925 @@
+hubep99/01
+
+denition of magnetic monopole numbers for su (n )
+
+lattice gauge-higgs models
+
+s. hollands1and m. muller-preussker2,
+
+1 department of mathematics, university of york, uk
+
+2 institut fur physik, humboldt-universitat zu berlin, germany
+
+december 29, 1998
+
+abstract
+
+a geometric denition for a magnetic charge of abelian monopoles in su (n ) lat-
+tice gauge theories with higgs elds is presented. the corresponding local monopole
+number dened for almost all eld congurations does not require gauge xing and is
+stable against small perturbations. its topological content is that of a 3-cochain. a
+detailed prescription for calculating the local monopole number is worked out.
+
+our method generalizes a magnetic charge denition previously invented by phillips
+
+and stone for su (2).
+
+9
+9
+9
+1
+
+ 
+
+n
+a
+j
+ 
+
+3
+2
+
+ 
+ 
+
+1
+v
+4
+1
+1
+1
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+supported by graduiertenkolleg strukturuntersuchungen, prazisionstests und erweiterungen des stan-
+
+dardmodells der elementarteilchenphysik, dfg-grk 271/1-96
+
+1
+
+1 introduction
+
+the investigation of the complicated vacuum structure of quantized yang-mills theories re-
+quires the use of non-perturbative methods. the lattice regularization is the most convenient
+in this respect. among other applications it allows to identify those excitations (monopoles,
+instantons, etc.) which are expected to dominate the euclidean path integral at large scales
+and to explain important features like chiral symmetry breaking and quark connement in
+qcd.
+
+monopoles in which we take interest in this paper form the basis for the dual super-
+conductor scenario of connement [1, 2]. according to this scenario the condensation of
+(anti-) monopoles causes the color-electric ux to be squeezed into string-like ux tubes
+(dual meissner eect). the consequence is a linearly rising potential between static quarks.
+whether extended non-abelian t hooft-polyakov-like monopoles (see [3]) or singular
+abelian dirac-like monopoles play the major role in the connement phenomenon has not
+been settled yet. the majority of investigations concentrates on the latter kind of excitations.
+these can be identied by abelian projection after an appropriate gauge has been xed [4].
+up till now the maximally abelian gauge was considered to be the most favourable gauge
+[5, 6, 7] (for a recent review see e.g.
+[8]). for this gauge the resulting u(1) degrees of
+freedom as well as the corresponding abelian monopoles were shown to reproduce almost
+completely the string tension of the full theory (so-called abelian and monopole dominance,
+respectively) [9, 10].
+
+other gauges  dened for instance by diagonalizing gauge observables as parallel trans-
+porters along closed paths (e.g. the polyakov loop) which transform like higgs elds in the
+adjoint representation  have been studied, too [11]. based on appropriately dened order
+parameters according to a construction of frohlich and marchetti [12] the condensation of
+abelian monopoles in the connement phase was demonstrated to occur widely independent
+of the gauge chosen [13].
+
+but a general gauge independent proof for the validity of the dual superconductor picture
+
+is still missing.
+
+therefore, it would be worthwhile to have a gauge-independent and  at the same time 
+geometric lattice denition of the monopole charge. this, in general, requires the existence
+of a higgs eld in the adjoint representation. magnetic uxes and the magnetic charge, re-
+spectively, can easily be obtained by projecting the non-abelian plaquette variables onto the
+local colour direction of the higgs eld. however, the naive discretization does not provide
+any geometric meaning of the resulting charge. nevertheless, corresponding investigations
+of magnetic uxes have provided useful insight into the phase structure of the 4d su(2)
+georgi-glashow model [14].
+
+a rst geometrical denition for the monopole number has been given in [15, 16]. the
+lattice gauge eld together with the higgs eld determines local maps from the boundary
+of cubes into the coset space su(2)/u(1). the winding numbers of these maps provide
+the local integer-valued monopole charge, for each cube, or alternatively speaking, a closed
+magnetic current on the dual lattice. in our present work we are going to generalize the
+denition to a su(n) gauge-higgs theory. the higgs elds employed are considered to be
+cpn 1-valued elds. we shall present all the details necessary for developing a computer
+code for the calculation of the winding numbers from the local lattice eld data.
+
+2
+
+the resulting magnetic charge denition can be employed for explorations of the phase
+structure of su(n) gauge-higgs models. but, it might be worthwhile also for the application
+to pure su(n) gauge theories, when an auxiliary higgs eld is determined as proposed for
+the recently invented laplacian gauge xing [17].
+
+recently, in the context of investigations of the electro-weak phase transition for the
+su(2) theory another version of an integer-valued, gauge independent lattice magnetic
+charge denition was invented [18]. it remains an interesting task to work out the inter-
+relation between the dierent denitions, if there is any.
+
+section 2 will provide the general description and the necessary notations. in section 3
+we present the computation of the monopole number. some detailed proofs are shifted into
+the appendix. in section 4 we shall draw the conclusions.
+
+2 description of the model and notation
+
+in this work we want to consider a model consisting of an su(n) lattice gauge eld u =
+{uij} coupled to a higgs eld  = {i} transforming with respect to the fundamental
+representation.
+i, j, . . . denote the lattice sites and pairs hiji the corresponding links of a
+4-dimensional simplicial lattice. without loss of generality for our construction of the local
+monopole number we work with a higgs eld of xed length, kik = 1. in the following we
+denote by uijk... = uijujk . . . parallel transporters longer than one link.
+
+as the phase of the vector i  cn will be irrelevant for the monopole charge, it is
+sucient to identify the corresponding equivalence class [i]. the latter can be represented
+by the n  n projection matrix i = i  
+i projecting on the subspace spanned by the
+vector i. in this sense the higgs eld takes values in a cpn 1 manifold.
+
+the action of a complex invertible matrix v on elements of cpn 1 will be denoted by
+, e.g. v   means the projector v   (v )/kv k2 or the class [v ]. for the lattice
+we assume an ordering of the lattice sites and denote the dierent kinds of simplices (sites,
+links, triangles, tetrahedra, 4-tetrahedra) by ordered tuples of vertices such as hij . . . ki.
+if we consider a site i of a given simplex hij . . . ki as the coordinate origin, a cube chij...ki
+parametrized by coordinates 0  sj, . . . , sk  1 can be dened.
+
+3 denition of the local monopole number
+
+our aim in this section is to dene for a given tetrahedron  = hijkli a map x from the
+boundary of the 3-dimensional cube chijkli to cpn 1. this map is constructed from the link
+and higgs variables at the particular tetrahedron .
+
+since 2(cpn 1) = z, the homotopy class of such a map is represented by an integer
+n. this integer will be referred to as the local monopole number at the particular simplex.
+it will be shown to have the following properties:
+
+(a) gauge invariance: n is independent of a particular choice of gauge.
+
+(b) local conservation:
+
+3
+
+the assignment  7 n represents a cochain in the sense that
+
+(n)t = xt
+
+()n = 0,
+
+the sign depending on the relative orientation of  in the boundary of a 4-tetrahedron
+t . if  is the link dual to  we may equivalently say that m = n is a conserved
+(divergence free) magnetic current on the dual lattice.
+
+(c) geometric signicance:
+
+the collection of the xs dene a section of a su(n)/u(n  1)-bundle over the
+2-skeleton of the lattice. this section may be regarded as an interpolation of the higgs
+eld which is as horizontal as possible with respect to the lattice gauge eld.
+
+the maps x are worked out stepwise for higher simplices.
+
+in order to state their
+relevant properties, we need gl(n)-valued parallel transport functions vhij...kli(sj, . . . , sk)
+as introduced in [16]. these functions essentially measure to what extent the lattice gauge
+eld fails to be at. they are an important ingredient in the construction of su(n) bundles
+associated to lattice gauge elds. in our case, the relevant formulae read
+
+vhiji = uij,
+vhijki = sjuijk + (1  sj)uik,
+vhijkli = sjskuijkl + (1  sj)skuikl + sj(1  sk)uijl + (1  sj)(1  sk)uil,
+
+where 0  sj, sk  1. let us assume for simplicity that the simplex  in question is h01 . . . ki.
+then x is assumed to meet the following requirements:
+
+xh0...ki(. . . , sr = 1, . . .) = vh0...ri(s1, . . .)  xhr...ki(sr, . . .),
+xh0...ki(. . . , sr = 0, . . .) = xh0.../r...ki(s1, . . . , /sr, . . .),
+
+(1)
+(2)
+
+and likewise for all other simplices, with the obvious replacements. it follows from the results
+in [16] that such a collection of maps denes a section over the 2-skeleton in a bundle with
+principal ber cpn 1. it is also seen that the local winding number of this section at a
+tetrahedron  = hijkli is just the winding number of xhijkli : chijkli  cpn 1. let us now
+explicitly construct this map.
+
+requirements (1) and (2) suggest to dene the xs inductively for simplices of increasing
+
+dimension. this is done in four steps:
+
+step 0: as the xs essentially interpolate the higgs eld, we set xhii = i for the
+
+lattice sites.
+
+step 1: on the far end sj = 1 of the interval chiji, we must have, by requirement (1)
+
+xhiji(sj = 1) = vhiji  xhji.
+
+on the base sj = 0, xhiji must be xhii, by requirement (2). we thus interpolate geodesically
+in cpn 1 for intermediate values of sj.
+
+step 2: on the far sides sj = 1 or sk = 1 of the square chijki, we must have, by
+
+requirement (1)
+
+(a)
+(b)
+
+xhijki(sj = 1, sk) = vhiji  xhjki(sk),
+xhijki(sj, sk = 1) = vhijki(sj)  xhki.
+
+4
+
+again, on the base sj = sk = 0, xhijki must be xhii, by requirement (2). for intermediate
+values we interpolate geodesically from the the far sides to the base.
+
+step 3: in the last step we proceed as before. again, on the far faces sj = 1, sk = 1 or
+
+sl = 1 of the cube chijkli, we must have, by requirement (1)
+
+(i)
+(ii)
+(iii)
+
+xhijkli(sj = 1, sk, sl) = vhiji  xhjkli(sk, sl),
+xhijkli(sj, sk = 1, sl) = vhijki(sj)  xhkli(sl),
+xhijkli(sj, sk, sl = 1) = vhijkli(sj, sk)  xhli.
+
+as above, on the base sj = sk = sl = 0, xhijkli = xhii, by requirement (2). unlike in the
+previous cases, we cannot interpolate from the the far sides to the base since there might be
+an obstruction. nevertheless, we might do so on the boundary of our cube. this completes
+our construction. requirements (1) and (2) are more or less obviously satised.
+
+in the next chapter we shall see how the winding number of xhijkli may be calculated.
+
+4 calculation of the monopole number
+
+we have to determine the class of x. take a simplex  = h0123i. the boundary of the
+unit cube c with base h0i is the union of six faces c 1
+
+k (k = 1, 2, 3), where
+
+k , c 0
+
+c 0
+
+k = {(s1, s2, s3) :
+
+sk = 0}, c 1
+
+k = {(s1, s2, s3) :
+
+sk = 1}.
+
+the monopole number may be computed as an intersection number [19],
+
+n = x(c) : e,
+
+e denoting the (2n  4)-dimensional space of all projectors perpendicular to some rank
+one projector e. the intersection number does not depend on the particular projector e
+chosen. to facilitate the calculations, we take it to be 0. the strategy is to compute
+the intersection number separately for the six dierent faces of the surface of our cube. as
+geodesic interpolation is needed for the denition of x, let us collect some facts about
+the geometry of complex projective spaces (see also [20, 21, 22]). two points p, q in the
+complex projective space may be joined by a unique shortest geodesic if and only if p q 6= 0.
+furthermore, for such points it holds:
+
+lemma 4.1 the unique shortest geodesic between two points p, q intersects e if and only
+if re tr[p qe]  0 and im tr[p qe] = 0. moreover, such an arc can intersect e only once.
+
+we shall also need the following fact about triangles.
+
+lemma 4.2 let p, q, r be three points such that there is a unique shortest geodesic between
+any two of them. let  be the surface spanned by all geodesics between p and the geodesic
+
+arc dqr. this surface intersects e if and only if the equation im (t) = 0 has a solution
+
+0  t  1 satisfying re (t)  0. here
+
+(t) = t2 tr[qr]1/2tr[erp ] +
+
+(3)
+
+(1  t)2 tr[qr]1/2tr[eqp ] + t(1  t) tr[e(qr + rq)p ].
+
+5
+
+the sign of such an intersection is given by
+
+sign im" (t)
+t # .
+
+lemma 4.1 and 4.2 are proven in the appendix. let us rst turn our attention to the faces
+c 0
+
+k. with our particular choice of e the following lemma holds.
+
+lemma 4.3 except for a measure zero set of congurations (u, ), the surfaces xh0123i(c 0
+k )
+do not intersect with 
+0 .
+
+the proof of this lemma is given in the appendix. it follows that we only have to consider
+the faces c 1
+3 , schematicly shown in fig. 4 as quadrilaterals (i), (ii), (iii) respectively.
+on these faces, the map xh0123i has the form given in eqs. (i), (ii), (iii). the monopole
+number will be the sum of the intersection numbers obtained in each case.
+
+1 , c 1
+
+2 , c 1
+
+.
+
+p=u
+
+
+1
+
+01
+
+q=u
+
+012
+
+
+2
+
+.
+
+ii
+
+.
+
+x=u
+
+02
+
+
+2
+
+0123
+
+.
+ia ib
+  ur=
+.
+
+w=
+
+u023
+
+
+3
+
+.
+
+s=
+
+u
+
+013
+
+
+3
+
+
+3
+
+iii
+
+.
+
+
+3
+
+t=
+
+03u
+
+figure 1: the image of the surfaces c 1
+
+k as treated in cases (i), (ii), (iii).
+
+case (i): the image of c 1
+
+(i). as illustrated in fig. 2, it is
+naturally divided into two triangles a, b, according to the structure of eqs. (a) and (b).
+let us rst consider triangle a. the corners of this triangle are the points p = u01  1, q =
+u012  2, r = u0123  3. the surface enclosed by these three points is swept out by the set
+
+1 is described by eq.
+
+of all geodesics between p and the geodesic arc dqr, its orientation being xed by the order
+
+p, q, r of the vertices, see fig. 4. this is the situation described in lemma 4.2, except for
+degenerate cases and we use this result to calculate the intersection number of a with 
+0 .
+inserting the above expressions for p, q, r into eq. (3), we have to consider
+
+ia(t) = t2h0|u01233ihu1233|1ihu011|0i|h2|u233i|
+
+(4)
+
+6
+
++ (1  t)2h0|u0122ihu122|1ihu011|0i|h2|u233i|
++ t(1  t)(h0|u0122ih2|u233ihu1233|1ihu011|0i
++ h0|u01233ihu233|2ihu122|1ihu011|0i),
+
+where the standard notation for the scalar product in cn has been used.
+
+3
+
+u 
+.
+013
+
+3
+
+.
+u0123
+
+)
+u01*v<123>(s2
+
+a
+
+b
+
+u
+
+.
+u01
+
+
+1
+
+.
+
+2
+
+012
+
+figure 2: the image of c 1
+
+1 according to eq. (i).
+
+in order to nd the intersections, we must look for solutions 0  t  1 of im ia(t) = 0
+for which re ia(t)  0. according to lemma 4.2, such solutions will contribute with the
+sign
+
+sign im"ia(t)
+
+t
+
+#
+
+to the intersection number.
+
+triangle b is swept out by geodesics from the dotted line fig. 2 to the point p = u01 1.
+this arc is parametrized by vh01ivh123i(s2)  3. hence by lemma 4.1, we have to nd points
+0  s2  1 such that im ib(s2) = 0 and re ib(s2)  0, where ib is the function
+
+trhxh0i(vh01i  xh1i)(vh123i(s2)  xh3i)i .
+
+explicitly, in terms of the parallel transporters and higgs elds, this may be written as
+
+ib(s2) = s2
+
+2h0|u011ih1|u1233ihu01233|0i
+
+(5)
+
++ (1  s2)2h0|u011ih1|u133ihu0133|0i
++ s2(1  s2)h0|u011i(h1|u1233ihu0133|0i
++ h1|u133ihu01233|0i),
+
+which is explicitly seen to be gauge invariant (we have suppressed a positive overall factor
+which obviously does not aect our considerations). values of s2 with the above properties
+
+7
+
+may thus be found by elementary means. in the appendix, case ) we show that they make
+the following contribution to the intersection number, i.e. have the following sign for the
+relative orientation:
+
+sign im"ib(s2)
+
+s2
+
+# .
+
+case (ii): the image of c 1
+
+2 is a square. it is obtained by moving down the geodesic
+
+arc dp q to the arc dxw , see fig. 4. from the parametrization of this surface, eq. (ii) one
+
+concludes that it will intersect the manifold 
+
+0 if and only if
+
+(vh012i(s1)  xh23i(s3))xh0i = 0,
+ (vh210i(s1)  xh0i)xh23i(s3) = 0,
+
+(6)
+
+for some 0  s1, s3  1. from eq. (6) we see that this will happen precisely if the geodesic arc
+parametrised by xh23i(s3) intersects the manifold (vh210i(s1)0) for some value 0  s1  1.
+the arc has endpoints xh2i and vh23i  xh3i. we may apply lemma 4.1 to conclude that
+for such an intersection we must have im ii(s1) = 0 and re ii(s1)  0, where ii is the
+function
+
+trhxh2i(vh23i  xh3i)(vh210i(s1)  xh0i)i .
+
+expressing everything in terms of parallel transporters and higgs elds, we nd
+
+ii(s1) = s2
+
+1h2|u233ihu01233|0ih0|u0122i
+
+(7)
+
+1)2h2|u233ihu0233|0ih0|u022i
+
++ (1  s2
++ s1(1  s1)h2|u233i(hu01233|0ih0|u022i
++ hu0233|0ih0|u0122i),
+
+and this is directly seen to be gauge invariant. again as in case (i), we have omitted an
+irrelevant positive overall factor. it is shown in the appendix, case ) that such an intersection
+contributes with the sign
+
+sign im" ii(s1)
+
+s1
+
+# .
+
+3 is a square, parametrized
+case (iii): from eq.
+by vh0123i(s1, s2)  xh3i, where 0  s1, s2  1. this square will intersect the manifold 
+precisely for values s1, s2 such that
+
+(iii) we can see that the image of c 1
+
+0
+
+xh0i(vh0123i(s1, s2)  xh3i) = 0.
+
+we have to nd such values and determine their contribution to the intersection number.
+writing everything in terms of parallel transporters and higgs elds, the above condition
+reads iii(s1, s2) = 0, where
+
+iii(s1, s2) = h0|u01233is1s2 + h0|u0133is1(1  s2)
+
+(8)
+
++ h0|u0233i(1  s1)s2 + h0|u033i(1  s1)(1  s2),
+
+8
+
+and this expression is manifestly gauge invariant. condition (8) constitutes a system of two
+real equations in two real variables, which can easily be solved. in the appendix, case ) it
+is demonstrated that any point (s1, s2) satisfying eq. (8) contributes the value
+
+sign im" iii(s1, s2)
+
+s1
+
+iii (s1, s2)
+
+s2
+
+#
+
+to the intersection number.
+
+5 conclusions and outlook
+
+in this work we have given a geometric denition of local monopole numbers for an su(n)
+lattice gauge-higgs system. the denition yields a closed magnetic current which is stable
+under perturbations of the conguration in question.
+it is explicitly worked out how to
+calculate the monopole number for each tetrahedron of a simplicial 4-dimensional lattice.
+on the practical side, one has to solve four quadratic equations in one variable for each
+such tetrahedron. the coecients of these equations are given by traces of parallel trans-
+porters and higgs variables. the prescription is expicitly gauge invariant and can be directly
+implemented in a computer code.
+
+while the construction gives an integer local monopole number for almost all eld con-
+gurations, the question is on what kind of monopole the construction actually triggers. in
+the su(2) case for the georgi-glashow model it has been shown [15] that the construction
+is able to detect a discretized t hooft-polyakov monopole, provided the conguration is
+smooth enough. this question remains to be discussed for n > 2. on the other hand, for
+rough lattice elds as they are generated in a monte-carlo simulation, one has to expect
+nonvanishing monopole charges which do not correspond to physical excitations but are lat-
+tice artefacts (dislocations). it is then necessary to nd out whether these congurations
+become suciently suppressed in the continuum limit.
+
+appendix
+
+points in cpn 1 are identied with equivalence classes [a] = ca (lower case letters) or
+projectors a (capital letters) projecting on the subspace spanned by a. two points [p], [q]
+are joined by the unique shortest geodesic [(1  t)hp|qip + t|hp|qi|2q], provided hp|qi 6= 0 (see
+[20]).
+
+proof of lemma 4.1:
+
+from the form of the geodesics it is clear that the geodesic arc dp q will intersect e i
+
+(1  t)he|pihp|qi + t|hp|qi|2he|qi = 0 for some 0  t  1. this is easily seen to be equivalent
+to
+
+re[he|pihp|qihq|ei]  0,
+
+im[he|pihp|qihq|ei] = 0,
+
+proving the lemma.
+
+9
+
+proof of lemma 4.2:
+
+we parametrize the geodesic arc dqr by [p(t)] as above. now the triangle  intersects
+e i some arc dp (t)p does. according to lemma 4.1 this can happen if and only if
+
+im tr[p p (t)e] = 0 and re tr[p p (t)e]  0.
+inserting the expression for p (t), we see
+that these are just the conditions given in the lemma. the statement for the sign of the
+intersection is obtained in case .a) below.
+
+proof of lemma 4.3:
+the image under the map xh0123i of the faces c 0
+k is obtained by coning the boundary of fig.
+4 to the point e := 0. let a be any point in this boundary. in order that the geodesic arc
+
+dae intersects e, it is necessary that re tr ae  0, by lemma 4.1. but this is easily seen
+
+to imply ae = 0, i.e. a  e. so the image of the faces c 0
+k intersects e if and only if the
+boundary of the triangle in fig. 2 does. on dimensional grounds this can happen only for
+a measure zero set of congurations.
+
+we now prove the various claims about intersection numbers made above. let us briey recall
+how the relative orientation of two oriented, embedded transversally intersecting manifolds
+is dened. suppose x, y  z are oriented embedded manifolds, intersecting transversally
+at a point p. the union of two oriented frames in tpx and tpy then gives a frame in tpz
+whose orientation may be compared to the orientation of z. the sign x : y is dened
+to be 1 according to whether these orientations coincide resp. do not coincide. going
+over to the case at hand, we identify cn with the real vector space r2n and euclidean
+inner product (  ,  ) = reh  ,  i. the tangent space tacpn 1 is canonically identied
+with {x  cn = r2n | ax = 0}. each such tangent space may be equipped with the (real)
+(2n 2)-form (aia), dening thus a canonical orientation of the complex projective space.
+here,  denotes the operation of taking the hodge dual of an alternating form with help of
+the above euclidean inner product. in the same fashion, the tangent space tae, ea = 0 is
+identied with {x  cn = r2n | ax = ex = 0} and the (real) (2n 4)-form (eieaia)
+denes an orientation. suppose we are given a surface in projective space parametrized by
+[(s1, s2)]. with the above identications, the tangent space at a point [0] of this surface
+is given by the real linear span of x1, x2, where
+
+and the 2-form x1  x2 denes an orientation. now let [0] be also in e, i.e. an intersection
+point. then by denition, h0|xii = h0|ei = 0 and one calculates
+
+hence the sign of this intersection point is given by
+
+
+
+e+#  (0  i0).
+
+(9)
+
+xi =
+
+
+
+si+ 0,
+
+
+si
+
+*0(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+s2(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+x1  x2  (e  ie  0  i0) = im"*e(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+s1+* 
+s2(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+e+# .
+s1+* 
+
+sign im"*e(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+
+
+10
+
+we are now ready to prove the claims made above about the intersection numbers. the
+maps given in eqs. (i), (ii), (iii) dene a surface in cpn 1 which is schematically drawn
+
+in fig. 2. the arrows dene an orientation of this surface and the intersection numbers are
+dened with respect to this orientation and the canonical orientations given above.
+
+case .a): by denition the surface ia is parametrized by [(s, t)], where
+
+(t, s) = (1  s)h(t)|u011i(t) + s|h(t)|u011i|2u011,
+(t) = (1  t)h2|u233iu0122 + t|h2|u233i|2u01233.
+
+the orientation of this surface is given by the order of its vertices p, q, r, dened above. it
+is easily seen that this means that this orientation coincides with   , where
+
+ =
+
+
+t
+
+*0(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+
+
+t+ 0,
+
+ =
+
+
+s
+
+
+
+s+ 0.
+
+*0(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+now using eq. (9) and the denition of ia in eq. (4), we see that the sign of an intersection
+is given by
+
+sign im"ia(s2)
+
+s2
+
+# .
+
+case .b): the surface ib is a triangle, parametrized by [(s2, s3)], where
+
+(s2, s3) = (1  s3)hvh123i(s2)3|1i u01vh123i(s2)3 + s3|hvh123i(s2)3|1i|2 u011.
+
+with the above notations, x2  x3 is the orientation of this surface. setting e = 0, us-
+ing eq. (9) and the denition of ib in eq. (5), it is straightforward to calculate that an
+intersection has sign
+
+sign im"ib(s2)
+
+s2
+
+# .
+
+case ): surface ii is a square, parametrized by [(s1, s3)], the orientation of this piece
+
+of surface being given by x1  x3.
+
+(s1, s3) = (1  s3)h2|u233ivh012i(s1)2 + s3|h2|u233i|2 vh012i(s1)u233.
+
+now setting e = 0, using eq. (9) and the denition of ii in eq. (7), we get the result after
+a short computation.
+
+case ): surface iii is a square, parametrized by [(s1, s2)], where x1  x2 is its
+
+orientation and
+
+(s1, s2) = vh0123i(s1, s2)3.
+
+now setting e = 0, it follows immediately from the denition of iii in eq. (8) and from
+eq. (9) that the sign of the intersection is given by
+
+sign im" iii(s1, s2)
+
+s1
+
+iii (s1, s2)
+
+s2
+
+# .
+
+11
+
+references
+
+[1] mandelstam, s.: vortices and quark connement in nonabelian gauge theories. phys.
+
+reports 23c, 245 (1976)
+
+[2] t hooft, g.: topology of the gauge condition and new connement phases in non-
+
+abelian gauge theories. nucl. phys. b190, 455 (1981)
+
+[3] smit, j., van der sijs, a.: monopoles and connement. nucl. phys. b355, 603 (1991);
+smit, j., van der sijs, a.: a magnetic monopole in pure su(2) gauge theory. nucl.
+phys. b422, 349 (1994)
+
+[4] kronfeld, a.s., laursen, m.l., schierholz, g., wiese, u.-j.: monopole condensa-
+tion an colour connement. phys. lett. b198, 516 (1987); kronfeld, a.s., schier-
+holz, g., wiese, u.-j.: topology and dynamics of the connement mechanism. nucl.
+phys.b293, 461 (1987)
+
+[5] suzuki, t., yotsuyanagi, i.: a possible evidence for abelian dominance in quark
+
+connement. phys. rev. d42, 4257 (1990)
+
+[6] bornyakov, v. g., ilgenfritz, e.-m., laursen, m. l., mitrjushkin, v. k., muller-
+preussker, m., van der sijs, a.-j., zadorozhny, a. m.: the density of monopoles in
+su(2) lattice gauge theory. phys. lett. b261, 116 (1991)
+
+[7] bornyakov, v. g., mitrjushkin, v. k., muller-preussker, m.: deconnement transition
+and abelian monopoles in su(2) lattice gauge theory. phys. lett. b284, 99 (1992)
+
+[8] bali, g.: talk at 3rd int. conference on quark connement and hadron spectrum.
+
+hep-ph/9809351
+
+[9] shiba, h., suzuki, t.: monopoles and string tension in su(2) qcd. phys. lett. b333,
+
+461 (1994)
+
+[10] bali, g., bornyakov, v. g., muller-preussker, m., schilling, k.: dual superconductor
+scenario of connement: a systematic study of gribov copy eects. phys. rev. d54,
+2863 (1996)
+
+[11] reinhardt, h.: resolution of gauss law in yang-mills theory by gauge invariant pro-
+jection: topology and magnetic monopoles. nucl. phys. b503, 505 (1997); quandt,
+m., reinhardt, h., schafke, a.: magnetic monopoles and topology of yang-mills the-
+ory in polyakov gauge. hep-th/9810088; ford, c., mitreuter, u. g., tok, t., wipf,
+a., pawlowski, j. m.: monopoles, polyakov loops and gauge fixing on the torus.
+hep-th/9802191 (to appear in ann. phys.); ford, c., mitreuter, u. g., tok, t., wipf,
+a., pawlowski, j. m.: su(n) gauge theories in polyakov gauge on the torus. hep-
+th/98111248
+
+[12] frohlich, j., marchetti p. a.: soliton quantization in lattice gauge theories. commun.
+
+math. phys. 112, 343 (1987)
+
+12
+
+[13] di giacomo, a., pauti, g.: a disorder parameter for dual superconductivity in gauge
+theories. phys. rev. d56, 6816 (1997); di giacomo, a., lucini, b., montesi, l., pauti,
+g.: a disorder parameter for dual superconductivity in gauge theories. nucl. phys.
+b63 (proc. suppl.), 540 (1998); veselov, a. i., polikarpov, m. i., chernodub, m. n.:
+monopole order parameter in su(2) lattice gauge theory. jetp lett. 63, 411 (1996);
+veselov, a. i., polikarpov, m. i., chernodub, m. n.: eective constraint potential for
+abelian monopole in su(2) lattice gauge theory. phys. lett. b399, 267 (1997)
+
+[14] bornyakov, v. g., ilgenfritz e.-m., mitrjushkin, v. k., zadorozhny, a. m., muller-
+preussker, m.: investigation of the vacuum structure of the georgi-glashow model on
+the lattice. z. phys. c -particles and fields 42, 633 (1989)
+
+[15] phillips, a., stone, d.: an algorithm for detecting abelian monopoles in su(2) lattice
+
+gauge-higgs systems. commun. math. phys. 137, (1991)
+
+[16] phillips, a., stone, d.: the computation of characteristic classes for lattice gauge
+
+fields, commun. math. phys. 131, (1990)
+
+[17] van der sijs, a.: abelian projection without ambiguities. prog. theor. phys. suppl.
+131, 149 (1998); van der sijs, a.: laplacian abelian projection: abelian dominance
+and monopole dominance. talk at lattice 98, boulder 1998, hep-lat/9809126
+
+[18] chernodub, m. n., gubarev, f. v., ilgenfritz, e.-m.: embedded topological defects
+
+in hot electroweak theory: a lattice study. phys. lett. b434, 83 (1998)
+
+[19] chern, s. s.: complex manifolds without potential theory. berlin: springer, 1980
+
+[20] brehm u.: the shape invariant and trigonometry in two-point homogeneous spaces.
+
+geom. dedicata 33, 59 (1990)
+
+[21] hangan, t.: formules de trigonom`etrie sur la variete de grassmann. rend. sem. mat.
+
+torino 50, 367 (1990)
+
+[22] helgason, s: dierential geometry and symmetric spaces. new york: academic press,
+1962; gilmore, r.: lie groups, lie algebras and some of their representations. new
+york: wiley 1974
+
+13
+
+

@@ -1,0 +1,847 @@
+0
+0
+0
+2
+
+ 
+
+n
+a
+j
+ 
+
+0
+2
+
+ 
+ 
+
+3
+v
+3
+0
+1
+0
+1
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+modal expansions and non-perturbative quantum
+
+eld theory in minkowski space
+
+nathan salwen
+harvard university
+
+dean lee
+
+university of massachusetts
+
+cambridge, ma 02138
+
+amherst, ma 01003
+
+december 13, 2013
+
+abstract
+
+we introduce a spectral approach to non-perturbative eld theory
+within the periodic eld formalism. as an example we calculate the real
+and imaginary parts of the propagator in 1 + 1 dimensional 4 theory,
+identifying both one-particle and multi-particle contributions. we dis-
+cuss the computational limits of existing diagonalization algorithms and
+suggest new quasi-sparse eigenvector methods to handle very large fock
+spaces and higher dimensional eld theories.
+[pacs numbers: 11.10kk,
+12.38lg]
+
+1 introduction
+
+modal expansion methods have recently been used to study non-perturbative
+phenomena in quantum eld theory [1]-[3]. modal eld theory, the name for
+the general procedure, consists of two main parts. the rst is to approximate
+eld theory as a nite-dimensional quantum mechanical system. the second
+is to analyze the properties of the reduced system using one of several com-
+putational techniques. the quantum mechanical approximation is generated
+by decomposing eld congurations into free wave modes. this technique has
+been explored using both spherical partial waves (spherical eld theory [1][2])
+and periodic box modes (periodic eld theory [3]).
+
+having reduced eld theory to a more tractable quantum mechanical sys-
+tem, we have several dierent ways to proceed. boson interactions in euclidean
+space, for example, can be modeled using the method of diusion monte carlo.
+in many situations, however, monte carlo techniques are inadequate. these
+include unquenched fermion systems, processes in minkowski space, and the
+phenomenology of multi-particle states. diculties arise when the functional
+
+email: salwen@physics.harvard.edu
+email: dlee@physics.umass.edu
+
+1
+
+integral measure cannot be treated as a probability distribution or when in-
+formation must be extracted from excited states obscured by dominant lower
+lying states. fortunately there are several alternative methods in the modal
+eld formalism which avoid these problems. matrix runge-kutta techniques
+were introduced in [2] as a method for calculating unquenched fermion interac-
+tions. here we discuss a dierent approach, one which directly calculates the
+spectrum and eigenstates of the hamiltonian. for this approach it is essen-
+tial that the hamiltonian is time-independent, and so we will consider periodic
+rather than spherical eld theory. as we demonstrate, these methods naturally
+accommodate the study of multi-particle states and minkowskian dynamics.
+
+we apply the spectral approach to 1 + 1 dimensional 4 theory in a periodic
+box and calculate the real and imaginary parts of the  propagator. some in-
+teresting properties of 4
+2 theory such as the phase transition at large coupling
+were already discussed within the modal eld formalism using euclidean monte
+carlo techniques [3]. the purpose of this analysis is of a more general and
+exploratory nature. our aim is to test the viability of modal diagonalization
+techniques for quantum eld hamiltonians. we would like to know whether
+we can clearly see multi-particle phenomena, the size of the errors and com-
+putational limitations with current computer resources, and how such methods
+might be extended to more complicated higher dimensional eld theories.
+
+the spectral method presented in the rst part of our analysis is similar
+to the work of brooks and frautschi [4],1 who considered a 1 + 1 dimensional
+yukawa model in a periodic box and deserves credit for the rst application of
+diagonalization techniques using plane wave modes in a periodic box. our cal-
+culations are also similar in spirit to diagonalization-based hamiltonian lattice
+formulations [5] and tamm-danco light-cone and discrete light-cone quanti-
+zation [6]-[8]. there are, however, some dierences which we should mention.
+as in [4] we are using a momentum lattice rather than a spatial lattice. we
+nd this convenient to separate out invariant subspaces according to total mo-
+mentum quantum numbers. since we are using an equal time formulation our
+eigenvectors are not boost invariant as they would be on the light cone. also we
+are using a simple momentum cuto scheme rather than a regularization scheme
+which includes tamm-danco fock-space truncation. as a result our renor-
+malization procedure is relatively straightforward, but we will have to confront
+the problem of diagonalizing large fock spaces from the very beginning.
+in the
+latter part of the paper we mention current work on quasi-sparse eigenvector
+methods which can handle even exceptionally large fock spaces. despite the
+dierences among the various diagonalization approaches to eld theory, the
+issues and problems discussed in our analysis are of a general nature. we hope
+that the ideas presented here will be of use for the various dierent approaches.
+
+1we thank the referee of the original manuscript for providing information on this reference.
+
+2
+
+2 spectral method
+
+the eld conguration  in 1 + 1 dimensions is subject to periodic boundary
+conditions (t, x l) = (t, x + l). expanding in terms of periodic box modes,
+we have
+
+(t, x) = q 1
+
+2l xn=0,1,...
+
+n(t)einx/l.
+
+(1)
+
+the sum over momentum modes is regulated by choosing some large positive
+number nmax and throwing out all high-momentum modes n such that |n| >
+nmax. in this theory renormalization can be implemented by normal ordering
+the 4 interaction term. after a straightforward calculation (details are given
+in [3]), we nd that the counterterm hamiltonian has the form
+
+6b
+
+4!2l xn=nmax,nmax
+
+nn,
+
+where
+
+b = xn=nmax,nmax
+
+1
+
+2n
+
+,
+
+n = q n22
+
+l2 + 2.
+
+(2)
+
+(3)
+
+we represent the canonical conjugate pair n and dn
+operators qn and i 
+to that for a quantum mechanical system with hamiltonian
+
+dt using the schrodinger
+. then the functional integral for 4 theory is equivalent
+
+qn
+
+h = xn=nmax,nmaxh 1
+4!2l xni=nmax,nmax
+
++ 
+
+2
+
+qn1 qn2 qn3 qn4 .
+
+
+
+qn
+
+
+
+qn
+
++ 1
+
+2 (2
+
+n  b
+
+4l )qnqni
+
+(4)
+
+n1+n2+n3+n4=0
+
+we now consider the hilbert space of our quantum mechanical system.
+
+given d, an array of non-negative integers,
+
+d = {dnmax , dnmax} ,
+
+we denote pd(q) as the following monomial with total degree |d|,
+
+pd(q) =
+
+yn=nmax,nmax
+
+qdn
+
+n , xn
+
+dn = |d| .
+
+we dene g(q) to be a gaussian of the form2
+exp(cid:20)
+
+g (q) = yn=nmax,nmax
+
+qnqn 2+n22/l2
+
+2
+
+(cid:21) .
+
+2g(q) has been dened such that g(q) is the ground state of the free theory.
+
+3
+
+(5)
+
+(6)
+
+(7)
+
+ is an adjustable parameter which we will set later. any square-integrable
+function (q) can be written as a superposition
+
+(q) = xd
+
+cd pd(q)g (q).
+
+(8)
+
+in this analysis we consider only the zero-momentum subspace. we impose this
+constraint by restricting the sum in (8) to monomials satisfying
+
+ndn = 0.
+
+xn
+
+(9)
+
+we will restrict the space of functions (q) further by removing high energy
+
+states in the following manner. let
+
+k(d) = xn
+
+|n| dn.
+
+(10)
+
+k(d) was rst introduced in [2] and provides an estimate of the kinetic energy as-
+sociated with a given state. let us dene two auxiliary cuto parameters, kmax
+and dmax. we restrict the sum in (8) to monomials such that k(d) < kmax
+and |d|  dmax. we will refer to the corresponding subspace as vkmax,dmax .
+the cuto kmax removes states with high kinetic energy and the cuto dmax
+eliminates states with a large number of excited modes.3 we should stress that
+kmax and dmax are only auxiliary cutos. we increase these parameters until
+in
+the physical results appear close to the asymptotic limit kmax, dmax  .
+our scheme ultraviolet regularization is provided only by the momentum cuto
+parameter nmax.
+
+our plan is to analyze the spectrum and eigenstates of h restricted to this
+approximate low energy subspace, vkmax,dmax . for any xed l and nmax, h is
+the hamiltonian for a nite-dimensional quantum mechanical system and the
+results should converge in the limit kmax, dmax  . we obtain the desired
+eld theory result by then taking the limit l, nmax
+
+l  .
+
+3 results
+
+we have calculated the matrix elements of h restricted to vkmax,dmax using a
+symbolic dierentiation-integration algorithm4 and diagonalized h, obtaining
+both eigenvalues and eigenstates. let  be the full propagator,
+
+(p2) = iz d2x eip x
+
+h0| t [(x)(0)] |0i .
+
+(11)
+
+3in the case of spontaneous symmetry breaking, the broken symmetry of the vacuum may
+require retaining a large number of q0 modes. this however is remedied by shifting the
+variable, q
+
+0 = q0  h0| q0 |0i.
+
+4all codes can be obtained by request from the authors.
+
+4
+
+we have computed  by inserting our complete set of eigenstates (complete in
+vkmax,dmax). let mp be the multi-particle contribution to ,
+
+mp(p2) = (p2)  pole(p2),
+
+(12)
+
+where pole is the single-particle pole contribution. we are primarily interested
+in mp, a quantity that cannot be obtained for p2 > 0 using monte carlo
+methods. since the imaginary part of pole is a delta function, it is easy to
+distinguish the single-particle and multi-particle contributions in a plot of the
+imaginary part of . the real part of , however, is dominated by the one-
+particle pole. for this reason we have chosen to plot the real part of mp rather
+than that of .
+
+although we have referred to multi-particle states, it should be noted that
+in our nite periodic box there are no true continuum multi-particle states.
+instead we nd densely packed discrete spectra with level separation of size 
+l1 which become continuum states in the limit l  . we can approximate
+the contribution of these l   continuum states by a simple smoothing
+process. we included a small width   l1 to each of the would-be continuum
+states and averaged over a range of values for l. for the results we report here
+we have averaged over values l = 2.0, 2.1, 2.8. for convenience all units
+have been scaled such that  = 1.
+the parameter  was adjusted to reduce the errors due to the nite cuto
+values kmax and dmax.
+since the spectrum of h is bounded below, errors
+due to nite kmax and dmax generally drive the estimated eigenvalues higher.
+one strategy, therefore, is to optimize  by minimizing the trace of h restricted
+to the subspace vkmax,dmax . the approach used here is a slight variation
+of this  we have minimized the trace of h restricted to a smaller subspace
+max  vkmax,dmax . the aim is to accelerate the convergence of the
+vk 
+lowest energy states rather than the entire space vkmax,dmax . throughout our
+analysis we used k 
+
+max,d
+
+max, d
+
+max = 8, 3.
+
+for 
+
+4! = 0.50 we have plotted the imaginary part of  in figure 1 and the
+real part of mp in figure 2. the value 
+4! = 0.50 is above the threshold for
+reliable perturbative approximation5 ( 
+4! . 0.25) but below the critical value at
+which    symmetry breaks spontaneously ( 
+4!  2.5). the contribution of
+the one-particle state appears near p2 = (0.93)2 and the three-particle threshold
+is at approximately p2 = (2.9)2. we have chosen several dierent values for
+nmax, kmax, dmax to show the convergence as these parameters become large.
+the plot for nmax, kmax, dmax = 9, 19, 7 appears relatively close to the asymp-
+totic limit. the somewhat bumpy texture of the curves is due to the nite size
+of our periodic box and diminishes with increasing l. from dimensional power
+counting, we expect errors for nite nmax to scale as n 2
+max. assuming that
+kmax and dmax also function as uniform energy cutos, we expect a similar
+error dependence  and it appears plausible from the results in figures 1 and 2.
+a more systematic analysis of the errors and extrapolation methods for nite
+nmax, kmax, dmax, and l, will be discussed in future work.
+
+5for momenta (cid:12)(cid:12)p2(cid:12)(cid:12) & 1.
+
+5
+
+in figures 3 and 4 we have compared our spectral calculations with the
+two-loop perturbative result for 
+4! = 0.01. we have used nmax, kmax, dmax =
+9, 19, 7, and the agreement appears good. for small 
+4! the propagator has a
+very prominent logarithmic cusp at the three-particle threshold, which can be
+seen clearly in figures 3 and 4.
+
+in figures 5 and 6 we have compared results for 
+
+4! = 0.25, 0.50, 1.00. we
+have again used nmax, kmax, dmax = 9, 19, 7.
+in contrast with the quadratic
+scaling in the perturbative regime, the results here scale approximately linearly
+with 
+4! . an interesting and perhaps related observation is that the magnitude
+of the multi-particle contribution to  remains small (. 0.003) even for the
+rather large coupling value 
+
+4! = 1.00.
+
+4 limitations and new ideas
+
+we now address the computational limits of the diagonalization techniques pre-
+sented in this work. these techniques are rather straightforward and can in
+principle be generalized to any eld theory. in practise however the fock space
+vkmax,dmax becomes prohibitively large, especially for higher dimensional theo-
+ries. the data in figures 1 and 2 and crosschecks with euclidean monte carlo
+results6 suggest that for nmax = 9 and l = 2.0, 2.8 our spectral results
+with kmax, dmax = 19, 7 and 
+4! < 1 are within 20% of the kmax, dmax  
+in this case vkmax,dmax is a 2036 dimensional space and requires about
+limit.
+100 mb of ram using general (dense) matrix methods.
+
+sparse matrix techniques such as the lanczos or arnoldi schemes allow us
+to push the dimension of the fock space to about 105 states. this may be
+sucient to do accurate calculations near the critical point 
+4!  2.5 for larger
+values of l and nmax. it is, however, near the upper limit of what is possible
+using current computer technology and existing algorithms. unfortunately
+eld theories in 2 + 1 and 3 + 1 dimensions will require much larger fock spaces,
+probably at least 1012 and 1018 states respectively.
+in order to tackle these
+larger fock spaces it is necessary to venture beyond standard diagonalization
+approaches. the problem of large fock spaces (106 states) is beyond the
+intended scope of this analysis. but since it is of central importance to the
+diagonalization approach to eld theory we would like to briey comment on
+current work being done which may resolve many of the diculties. the new
+approach takes advantage of the sparsity of the fock-space hamiltonian and the
+approximate (quasi-)sparsity of the eigenvectors. a detailed description will be
+provided in a future publication [9].
+
+we start with some observations about the eigenvectors of the 4
+
+1+1 hamil-
+tonian for nmax = 9, l = 2.5 and kmax, dmax = 19, 7. to make certain that
+we are probing non-perturbative physics we will set 
+4! = 2.5, the approximate
+critical point value. we label the normalized eigenvectors as |v0i, |v1i, ,
+ascending in order with respect to energy. we also dene |b0i, |b1i, as the
+
+6see [3] for a discussion of these methods.
+
+6
+
+normalized eigenvectors of the free, non-interacting theory. for any vi we know
+
+xj
+
+|hbj|vii|2 = 1.
+
+let us dene k|viik(n) as the partial sum
+k|viik(n) = xk=1,n
+
+|hbjk|vii|2 ,
+
+where the inner products have been sorted from largest to smallest
+
+|hbj1|vii|  |hbj2|vii|   .
+
+table 1 shows k|viik(n) for several eigenvectors and dierent values of n.
+
+table 1
+
+(13)
+
+(14)
+
+(15)
+
+k|viik(n)
+|v0i
+|v1i
+|v5i
+|v10i
+
+n = 10 n = 20 n = 40 n = 80
+0.75
+0.89
+0.87
+0.77
+
+0.90
+0.95
+0.94
+0.90
+
+0.84
+0.92
+0.91
+0.86
+
+0.94
+0.97
+0.96
+0.94
+
+despite the non-perturbative coupling and complex phenomena associated with
+the phase transition, we see from the table that each of the eigenvectors can be
+approximated by just a small number of its largest fock-space components. we
+recall that the fock space for this system has 2036 dimensions. the eigenvec-
+tors are therefore quasi-sparse in this space, a consequence of the sparsity of
+the hamiltonian.
+if we write the hamiltonian as a matrix in the free fock-
+space basis, a typical row or column contains only about 200 non-zero entries,
+a number we refer to as ntransition.
+in [9] we show that a typical eigenvector
+will be dominated by the largest ntransition elements.7 the key point is that
+ntransition is quite manageable  on the order of 103 and 105 for 2 + 1 and
+3+1 dimensional eld theories respectively. although the size of the fock space
+for these systems are enormous, the extreme sparsity of the hamiltonian sug-
+gests that the eigenvectors can be approximated using current computational
+resources.
+
+with this simplication, the task is to nd the important basis states for
+a given eigenvector. since the important basis states for one eigenvector are
+generally dierent from that of another, each eigenvector is determined indepen-
+dently. this provides a starting point for parallelization, and many eigenvectors
+can be determined at the same time using massively parallel computers.
+in [9]
+we present a simple stochastic algorithm where the exact eigenvectors act as
+stable xed points of the update process.
+
+7there are some special exceptions to this rule and they are discussed in [9]. but these
+
+are typically not relevant for the lower energy eigenstates of a quantum eld hamiltonian.
+
+7
+
+5 summary
+
+we have introduced a spectral approach to periodic eld theory and used it
+to calculate the propagator in 1 + 1 dimensional 4 theory. we nd that the
+straightforward application of these methods with existing computer technology
+can be useful for describing the multi-particle properties of the theory, infor-
+mation dicult to obtain using euclidean monte carlo methods. however
+the extension to higher dimensional theories is made dicult by the large size
+of the corresponding fock space. as a possible solution to this problem, we
+note that each eigenvector of the 4
+1+1 hamiltonian can be well-approximated
+using relatively few components and discuss some current work on quasi-sparse
+eigenvector methods.
+
+acknowledgment
+
+we thank eugene golowich, mark windoloski, and daniel lee for useful discus-
+sions. d.l. also thanks the organizers and participants of the cssm workshop
+on light-cone qcd and non-perturbative hadron physics in adelaide. we
+acknowledge nancial support provided by the nsf under grant 5-22968 and
+phy-9802709.
+
+8
+
+references
+
+[1] d. lee, phys. lett. b439 (1998) 85; d. lee, phys. lett. b444 (1998) 474; b.
+borasoy, d. lee, phys. lett. b447 (1999) 98; d. lee, n. salwen, phys. lett.
+b460 (1999) 107.
+
+[2] n. salwen, d. lee, phys. lett. b468 (1999) 118.
+
+[3] p. marrero, e. roura, d. lee, phys. lett. 471(1999) 45.
+
+[4] e. brooks iii, s. frautschi, z. phys. c23 (1984) 263; e. brooks iii, s.
+
+frautschi, z. phys. c14 (1982) 27.
+
+[5] l. hollenberg, phys. rev. d47 (1993) 1640; l. hollenberg, phys. rev. d50
+
+(1994) 2293.
+
+[6] r. perry, a. harindranath, k. wilson, phys. rev. lett. 24 (1990) 2959.
+
+[7] s. pinsky, b. van de sande, j. hiller, phys. rev. d51 (1995) 726; c. bender,
+
+s. pinsky, b. van de sande, phys. rev. d48 (1993) 816.
+
+[8] s. brodsky, h. pauli, s. pinsky, phys. rep. 301 (1998) 299.
+
+[9] de. lee, n. salwen, da. lee, work in progress.
+
+figures
+
+figure 1: imaginary part of (p2) for 
+
+4! = 0.50 and several values for nmax, kmax, dmax.
+
+figure 2: real part of mp(p2) for 
+
+4! = 0.50 and several values for nmax, kmax, dmax.
+
+figure 3: imaginary part of (p2) for 
+
+4! = 0.01 and comparison with the two-loop
+
+result.
+
+figure 4: real part of mp(p2) for 
+
+4! = 0.01 and comparison with the two-loop
+
+result.
+
+figure 5: imaginary part of (p2) for 
+
+4! = 0.25, 0.50, 1.00.
+
+figure 6: real part of mp(p2) for 
+
+4! = 0.25, 0.50, 1.00.
+
+9
+
+figure 1
+
+l/4! = 0.50
+
+nmax,kmax,dmax = 
+
+5,13,5
+7,15,5
+7,15,7
+9,19,7
+
+im[d(p2)]
+
+0.002
+
+0.00175
+
+0.0015
+
+0.00125
+
+0.001
+
+0.00075
+
+0.0005
+
+0.00025
+
+10
+
+20
+
+30
+
+40
+
+50
+
+p2
+
+figure 2
+
+re[dmp(p2)]
+
+l/4! = 0.50
+
+nmax,kmax,dmax = 
+
+5,13,5
+7,15,5
+7,15,7
+9,19,7
+
+10
+
+20
+
+30
+
+40
+
+50
+
+p2
+
+0.001
+
+0.0005
+
+-0.0005
+
+10
+
+figure 3
+
+im[d(p2)]
+410-6
+
+l/4! = 0.01
+
+nmax,kmax,dmax = 9,19,7
+
+spectral calculation
+two-loop result 
+
+310-6
+
+210-6
+
+110-6
+
+10
+
+20
+
+30
+
+40
+
+50
+
+p2
+
+figure 4
+
+re[dmp(p2)]
+
+l/4! = 0.01
+
+nmax,kmax,dmax = 9,19,7
+
+spectral calculation
+two-loop result 
+
+10
+
+20
+
+30
+
+40
+
+50
+
+p2
+
+310-6
+
+210-6
+
+110-6
+
+-110-6
+
+-210-6
+
+11
+
+figure 5
+
+im[d(p2)]
+0.0035
+
+nmax,kmax,dmax = 9,19,7
+
+l/4! = 0.25
+l/4! = 0.50
+l/4! = 1.00
+
+0.003
+
+0.0025
+
+0.002
+
+0.0015
+
+0.001
+
+0.0005
+
+0.5
+
+1
+
+10
+
+20
+
+30
+
+40
+
+50
+
+p2
+
+figure 6
+
+re[dmp(p2)]
+
+nmax,kmax,dmax = 9,19,7
+
+0.003
+
+0.002
+
+0.001
+
+-0.001
+
+l/4! = 0.25
+l/4! = 0.50
+l/4! = 1.00
+
+10
+
+20
+
+30
+
+40
+
+50
+
+p2
+
+12
+
+

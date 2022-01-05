@@ -1,0 +1,4591 @@
+recursive graphical construction of feynman diagrams
+
+and their multiplicities in 4- and in 2a-theory
+
+hagen kleinert1, axel pelster1, boris kastening2, and m. bachmann1
+
+1institut fur theoretische physik, freie universitat berlin, arnimallee 14, 14195 berlin, germany
+
+2institut fur theoretische physik, universitat heidelberg, philosophenweg 16, 69120 heidelberg, germany
+
+the free energy of a eld theory can be considered as a functional of the free correlation function.
+as such it obeys a nonlinear functional dierential equation which can be turned into a recursion
+relation. this is solved order by order in the coupling constant to nd all connected vacuum diagrams
+with their proper multiplicities. the procedure is applied to a multicomponent scalar eld theory
+with a 4-self-interaction and then to a theory of two scalar elds  and a with an interaction 2a.
+all feynman diagrams with external lines are obtained from functional derivatives of the connected
+vacuum diagrams with respect to the free correlation function. finally, the recursive graphical
+construction is automatized by computer algebra with the help of a unique matrix notation for the
+feynman diagrams.
+
+i. introduction
+
+if one wants to draw all feynman diagrams of higher orders by hand, it becomes increasingly dicult to identify
+all topologically dierent connections between the vertices. to count the corresponding multiplicites is an even more
+tedious task. fortunately, there exist now various convenient computer programs, for instance feynarts [13] or
+qgraf [4,5], for constructing and counting feynman graphs in dierent eld theories. these programs are based on
+a combinatorial enumeration of all possible ways of connecting vertices by lines according to feynmans rules.
+
+the purpose of this paper is to develop an alternative systematic approach to construct all feynman diagrams of
+a eld theory. it relies on considering a feynman diagram as a functional of its graphical elements, i.e. its lines and
+vertices. functional derivatives with respect these elements are represented by graphical operations which remove
+lines or vertices of a feynman diagram in all possible ways. with these operations, our approach proceeds in two
+steps. first the connected vacuum diagrams are constructed, together with their proper multiplicities, as solutions of
+a graphical recursion relation derived from a nonlinear functional dierential equation. these relations have been set
+up a long time ago [6,7], but so far they have only been solved to all orders in the coupling strength in the trivial case
+of zero-dimensional quantum eld theories. the present paper extends the previous work by developing an ecient
+graphical algorithm for solving this equation for two simple scalar eld theories, a multicomponent scalar eld theory
+with 4-self-interaction and a theory with two scalar elds  and a with the interaction 2a. in a second step, all
+connected diagrams with external lines are obtained from functional derivatives of the connected vacuum diagrams
+with respect to the free correlation function. finally, we automatize our construction method by computer algebra
+with the help of a unique matrix notation for feynman diagrams.
+
+ii. scalar 4-theory
+
+consider a self-interacting scalar eld  with n components in d euclidean dimensions whose thermal uctuations
+
+are controlled by the energy functional
+
+e[] =
+
+1
+
+2z12
+
+g1
+
+12 12 +
+
+g
+
+4!z1234
+
+v12341234
+
+(2.1)
+
+with some coupling constant g. in this short-hand notation, the spatial and tensorial arguments of the eld , the
+bilocal kernel g1, and the quartic interaction v are indicated by simple number indices, i.e.,
+
+9
+9
+9
+1
+
+ 
+l
+u
+j
+ 
+
+1
+2
+
+ 
+ 
+
+1
+v
+8
+6
+1
+7
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+1  {x1, 1} , z1 x1 z ddx1 , 1  1 (x1) , g1
+
+12  g1
+
+1,2(x1, x2) , v1234  v1,2,3,4(x1, x2, x3, x4) .
+
+(2.2)
+
+the kernel is a functional matrix g1, while v is a functional tensor, both being symmetric in their indices. the
+energy functional (2.1) describes generically d-dimensional euclidean 4-theories. these are models for a family of
+universality classes of continuous phase transitions, such as the o(n )-symmetric 4-theory which serves to derive
+
+1
+
+the critical phenomena in dilute polymer solutions (n = 0), ising- and heisenberg-like magnets (n = 1, 3), and
+superuids (n = 2). in all these cases, the energy functional (2.1) is specied by
+
+g1
+
+1,2 (x1, x2) = 1,2 (cid:0)2
+
+x1 + m2(cid:1) (x1  x2) ,
+
+v1,2,3,4 (x1, x2, x3, x4) =
+
+1
+3 {1,23,4 + 1,32,4 + 1,4 2,3} (x1  x2)(x1  x3)(x1  x4) ,
+
+where the mass m2 is proportional to the temperature distance from the critical point. in the following we shall leave
+g1 and v completely general, except for the symmetry with respect to their indices, and insert the physical values
+(2.3) and (2.4) at the end. by using natural units in which the boltzmann constant kb times the temperature t
+equals unity, the partition function is determined as a functional integral over the boltzmann weight ee[]
+
+and may be evaluated perturbatively as a power series in the coupling constant g. from this we obtain the negative
+free energy w = ln z as an expansion
+
+the coecients w (p) may be displayed as connected vacuum diagrams constructed from lines and vertices. each line
+represents a free correlation function
+
+w =
+
+1
+
+4! (cid:19)p
+p!(cid:18)g
+
+
+
+xp=0
+
+w (p) .
+
+(2.6)
+
+which is the functional inverse of the kernel g1 in the energy functional (2.1), dened by
+
+(2.3)
+
+(2.4)
+
+(2.5)
+
+(2.7)
+
+(2.8)
+
+(2.9)
+
+z =z d ee[]
+
+2  g12 ,
+
+g12 g1
+
+23 = 13 .
+
+1
+
+z2
+
+z1234
+
+v1234 .
+
+the vertices represent an integral over the interaction
+
+to construct all connected vacuum diagrams contributing to w (p) to each order p in perturbation theory, one connects
+p vertices with 4p legs in all possible ways according to feynmans rules which follow from wicks expansion of
+correlation functions into a sum of all pair contractions. this yields an increasing number of feynman diagrams, each
+with a certain multiplicity which follows from combinatorics. in total there are 4!pp! ways of ordering the 4p legs of the p
+vertices. this number is reduced by permutations of the legs and the vertices which leave a vacuum diagram invariant.
+denoting the number of self-, double, triple and fourfold connections with s, d, t, f , there are 2!s, 2!d, 3!t , 4!f leg
+permutations. an additional reduction arises from the number n of identical vertex permutations where the vertices
+remain attached to the lines emerging from them in the same way as before. the resulting multiplicity of a connected
+vacuum diagram in the 4-theory is therefore given by the formula [8,9]
+
+m e=0
+
+4 =
+
+4!p p!
+
+2!s+d 3!t 4!f n
+
+.
+
+(2.10)
+
+the superscript e records that the number of external legs of the connected vacuum diagrams is zero. the diagram-
+matic representation of the coecients w (p) in the expansion (2.6) of the negative free energy w is displayed in table
+i up to ve loops [1012].
+
+for higher orders, the factorially increasing number of diagrams makes it more and more dicult to construct all
+topologically dierent diagrams and to count their multiplicities. in particular, it becomes quite hard to identify by
+inspection the number n of identical vertex permutations. this identication problem is solved by introducing a
+uniqued matrix notation for the graphs, to be explained in detail in section iv.
+
+in the following, we shall generate iteratively all connected vacuum diagrams. we start in subsection ii.a by iden-
+tifying graphical operations associated with functional derivatives with respect to the kernel g1, or the propagator
+g. in subsection ii.b we show that these operations can be applied to the one-loop contribution of the free partition
+function to generate all perturbative contributions to the partition function (2.5). in subsection ii.c we derive a
+nonlinear functional dierential equation for the negative free energy w , whose graphical solution in subsection ii.d.
+yields all connected vacuum diagrams order by order in the coupling strength.
+
+2
+
+a. basic graphical operations
+
+each feynman diagram is composed of integrals over products of free correlation functions g and may thus be
+considered as a functional of the kernel g1. the connected vacuum diagrams satisfy a certain functional dierential
+equation, from which they will be constructed recursively. this will be done by a graphical procedure, for which we
+set up the necessary graphical rules in this subsection. first we observe that functional derivatives with respect to the
+kernel g1 or to the free propagator g correspond to the graphical prescriptions of cutting or of removing a single
+line of a diagram in all possible ways, respectively.
+
+1. cutting lines
+
+since  is a real scalar eld, the kernel g1 is a symmetric functional matrix. this property has to be taken into
+
+account when performing functional derivatives with respect to the kernel g1, whose basic rule is
+
+g1
+12
+g1
+34
+
+=
+
+1
+2 {1342 + 1432} .
+
+(2.11)
+
+from the identity (2.8) and the functional chain rule, we nd the eect of this derivative on the free propagator
+
+ 2
+
+g12
+g1
+34
+
+= g13g42 + g14g32 .
+
+(2.12)
+
+this has the graphical representation
+
+ 2
+
+
+
+g1
+34
+
+1
+
+2 = 1
+
+3
+
+4
+
+2 + 1
+
+4
+
+3
+
+2
+
+.
+
+(2.13)
+
+thus dierentiating a propagator with respect to the kernel g1 amounts to cutting the associated line into two
+pieces. the dierentiation rule (2.11) ensures that the spatial indices of the kernel are symmetrically attached to the
+newly created line ends in the two possible ways. when dierentiating a general feynman integral with respect to
+g1, the product rule of functional dierentiation leads to a sum of diagrams in which each line is cut once.
+
+with this graphical operation, the product of two elds can be rewritten as a derivative of the energy functional
+
+with respect to the kernel
+
+as follows directly from (2.1) and (2.11). applying the substitution rule (2.14) to the functional integral for the fully
+interacting two-point function
+
+12 = 2
+
+e[]
+g1
+12
+
+,
+
+(2.14)
+
+we obtain the fundamental identity
+
+g12 =
+
+1
+
+z z d 12 ee[] ,
+
+g12 = 2
+
+w
+g1
+12
+
+.
+
+(2.15)
+
+(2.16)
+
+thus, by cutting a line of the connected vacuum diagrams in all possible ways, we obtain all diagrams of the fully
+interacting two-point function. analytically this has a taylor series expansion in powers of the coupling constant g
+similar to (2.6)
+
+with coecients
+
+g12 =
+
+1
+
+4! (cid:19)p
+p!(cid:18)g
+
+
+
+xp=0
+
+g
+
+(p)
+12
+
+3
+
+(2.17)
+
+g(p)
+
+12 = 2
+
+w (p)
+g1
+12
+
+.
+
+(2.18)
+
+the cutting prescription (2.16) converts the vacuum diagrams of pth order in the coecients w (p) in table i to
+the corresponding ones in the coecients g(p)
+12 of the two-point function. the results are shown in table ii up to
+four loops. the numbering of diagrams used in table ii reveals from which connected vacuum diagrams they are
+obtained by cutting a line. for instance, the diagrams #15.1-#15.5 and their multiplicities in table ii follow from
+the connected vacuum diagram #15 in table i. we observe that the multiplicity of a diagram of a two-point function
+obeys a formula similar to (2.10):
+
+m e=2
+
+4 =
+
+4!p p! 2!
+
+2!s+d 3!t n
+
+.
+
+(2.19)
+
+in the numerator, the 4!p p! permutations of the 4p legs of the p vertices are multiplied by a factor 2! for the permu-
+tations of the e = 2 end points of the two-point function. the number n in the denominator counts the identical
+permutations of both the p vertices and the two end points.
+
+performing a dierentiation of the two-point function (2.15) with respect to the kernel g1 yields
+
+where g1234 denotes the fully interacting four-point function
+
+ 2
+
+g12
+g1
+34
+
+= g1234  g12g34 ,
+
+g1234 =
+
+1
+
+z z d 1234 ee[] .
+
+(2.20)
+
+(2.21)
+
+the term g12g34 in (2.20) subtracts a certain set of disconnected diagrams from g1234. by subtracting all discon-
+nected diagrams from g1234, we obtain the connected four-point function
+
+in the form
+
+gc
+
+1234  g1234  g12g34  g13g24  g14g23
+
+gc
+
+1234 = 2
+
+g12
+g1
+
+34  g13g24  g14g23 .
+
+(2.22)
+
+(2.23)
+
+the rst term contains all diagrams obtained by cutting a line in the diagrams of the two-point-function g12. the
+second and third terms remove from these the disconnected diagrams. in this way we obtain the perturbative expansion
+
+gc
+
+1234 =
+
+1
+
+4! (cid:19)p
+p!(cid:18)g
+
+
+
+xp=1
+
+g
+
+c,(p)
+1234
+
+with coecients
+
+gc,(p)
+
+1234 = 2
+
+g(p)
+12
+g1
+
+34 
+
+p
+
+xq=0(cid:18) p
+
+q (cid:19)(cid:16)g(pq)
+
+13
+
+g(q)
+
+24 + g(pq)
+
+14
+
+(2.24)
+
+(2.25)
+
+g(q)
+
+23(cid:17) .
+
+they are listed diagrammatically in table iii up to three loops. as before in table ii, the multiple numbering in
+table iii indicates the origin of each diagram of the connected four-point function. for instance, the diagram #11.2.2,
+#11.4.3, #14.1.2, #14.3.3 in table iii stems together with its multiplicity from the diagrams #11.2, #11.4, #14.1,
+#14.3 in table ii.
+
+the multiplicity of each diagram of a connected four-point function obeys a formula similar to (2.19):
+
+this multiplicity decomposes into equal parts if the spatial indices 1, 2, 3, 4 are assigned to the e = 4 end points of
+the connected four-point function, for instance:
+
+m e=4
+
+4 =
+
+4!p p! 4!
+
+2!s+d 3!t n
+
+.
+
+(2.26)
+
+4
+
+62208
+
+ 20736
+
+1
+
+2
+
+3
+
+4
+
++ 20736
+
+1
+
+3
+
+2
+
+4
+
++ 20736
+
+1
+
+4
+
+2
+
+3
+
+.
+
+(2.27)
+
+generalizing the multiplicities (2.10), (2.19), and (2.26) for connected vacuum diagrams, two- and four-point functions
+to an arbitrary connected correlation function with an even number e of end points, we see that
+
+where n counts the number of permutations of vertices and external lines which leave the diagram unchanged.
+
+m e
+
+4 =
+
+4!p p! e!
+
+2!s+d 3!t 4!f n
+
+,
+
+(2.28)
+
+2. removing lines
+
+we now study the graphical eect of functional derivatives with respect to the free propagator g, where the basic
+
+dierentiation rule (2.11) becomes
+
+we represent this graphically by extending the elements of feynman diagrams by an open dot with two labeled line
+ends representing the delta function:
+
+g12
+g34
+
+=
+
+1
+2 {1342 + 1432} .
+
+(2.29)
+
+thus we can write the dierentiation (2.29) graphically as follows:
+
+1
+
+2 = 12 .
+
+
+
+ 3
+
+1
+
+4
+
+2 =
+
+1
+
+2(1
+
+3
+
+4
+
+2 + 1
+
+4
+
+3
+
+2) .
+
+(2.30)
+
+(2.31)
+
+dierentiating a line with respect to the free correlation function removes the line, leaving in a symmetrized way the
+spatial indices of the free correlation function on the vertices to which the line was connected.
+
+the eect of this derivative is illustrated by studying the diagrammatic eect of the operator
+
+l =z12
+
+g12
+
+
+
+g12
+
+.
+
+(2.32)
+
+applying l to a connected vacuum diagram in w (p), the functional derivative /g12 removes successively each of
+its 2p lines. subsequently, the removed lines are again reinserted, so that the connected vacuum diagrams w (p) are
+eigenfunctions of l, whose eigenvalues 2p count the lines of the diagrams:
+
+l w (p) = 2p w (p) .
+
+as an example, take the explicit rst-order expression for the vacuum diagrams, i.e.
+
+and apply the basic rule (2.29), leading to the desired eigenvalue 2.
+
+w (1) = 3z1234
+
+v1234 g12g34 ,
+
+(2.33)
+
+(2.34)
+
+b. perturbation theory
+
+field theoretic perturbation expressions are usually derived by introducing an external current j into the energy
+functional (2.1) which is linearly coupled to the eld  [1315]. thus the partition function (2.5) becomes in the
+presence of j the generating functional z[j] which allows us to nd all free n-point functions from functional derivatives
+with respect to this external current j. in the normal phase of a 4-theory, the expectation value of the eld  is
+zero and only correlation functions of an even number of elds are nonzero. to calculate all of these, it is possible
+to substitute two functional derivatives with respect to the current j by one functional derivative with respect to the
+kernel g1. this reduces the number of functional derivatives in each order of perturbation theory by one half and
+has the additional advantage that the introduction of the current j becomes superuous.
+
+5
+
+recall briey the standard perturbative treatment, in which the energy functional (2.1) is articially extended by
+
+a source term
+
+1. current approach
+
+the functional integral for the generating functional
+
+e[, j] = e[] z1
+
+j11 .
+
+z[j] =z d ee[,j]
+
+is rst explicitly calculated for a vanishing coupling constant g, yielding
+
+z (0)[j] = exp(cid:26)
+
+1
+2
+
+tr ln g1 +
+
+1
+
+2z12
+
+g12 j1j2(cid:27) ,
+
+where the trace of the logarithm of the kernel is dened by the series [16, p. 16]
+
+tr ln g1 =
+
+(1)n+1
+
+n
+
+
+
+xn=1
+
+z1...n(cid:8)g1
+
+12  12(cid:9)(cid:8)g1
+
+n1  n1(cid:9) .
+
+(2.35)
+
+(2.36)
+
+(2.37)
+
+(2.38)
+
+if the coupling constant g does not vanish, one expands the generating functional z[j] in powers of the quartic
+interaction v , and reexpresses the resulting powers of the eld within the functional integral (2.36) as functional
+derivatives with respect to the current j. the original partition function (2.5) can thus be obtained from the free
+generating functional (2.37) by the formula
+
+expanding the exponential in a power series, we arrive at the perturbation expansion
+
+z = exp(cid:26)
+
+g
+
+4! z1234
+
+v1234
+
+4
+
+j1j2j3j4(cid:27) z (0)[j](cid:12)(cid:12)(cid:12)(cid:12)j=0
+
+.
+
+(2.39)
+
+4
+
+j1j2j3j4
+
+v1234
+
+z =(cid:26)1 + g
+2(cid:18)g
+
+4! z1234
+4! (cid:19)2z12345678
+
++
+
+1
+
+v1234v5678
+
+8
+
+j1j2j3j4j5j6j7j8
+
++ . . .) z (0)[j](cid:12)(cid:12)(cid:12)(cid:12)(cid:12)j=0
+
+,
+
+(2.40)
+
+in which the pth order contribution for the partition function requires the evaluation of 4p functional derivatives with
+respect to the current j.
+
+2. kernel approach
+
+the derivation of the perturbation expansion simplies, if we use functional derivatives with respect to the kernel
+g1 in the energy functional (2.1) rather than with respect to the current j. this allows us to substitute the previous
+expression (2.39) for the partition function by
+
+z = exp(cid:26)
+
+g
+
+6 z1234
+
+v1234
+
+2
+g1
+12 g1
+
+34 (cid:27) ew (0)
+
+,
+
+where the zeroth order of the negative free energy has the diagrammatic representation
+
+tr ln g1 
+expanding again the exponential in a power series, we obtain
+
+w (0) = 
+
+1
+2
+
+1
+2
+
+.
+
+z =(1 + g
+
+6 z1234
+
+v1234
+
+2
+g1
+12 g1
+34
+
++
+
+1
+
+2(cid:18)g
+
+6 (cid:19)2z12345678
+
+v1234v5678
+
+6
+
+4
+12 g1
+34 g1
+
+g1
+
+56 g1
+78
+
+(2.41)
+
+(2.42)
+
++ . . .) ew (0)
+
+.
+
+(2.43)
+
+thus we need only half as many functional derivatives than in (2.40). taking into account (2.11), (2.12), and (2.38),
+we obtain
+
+w (0)
+g1
+12
+
+= 
+
+1
+2
+
+g12 ,
+
+2w (0)
+12 g1
+34
+
+g1
+
+=
+
+1
+4 {g13g24 + g14g23} ,
+
+such that the partition function z becomes
+
+z =(1 + g
+
+4!
+
+3z1234
+
+v1234 g12g34 +
+
+1
+
+2 (cid:18)g
+
+4! (cid:19)2z12345678
+
+v1234v5678
+
+ "9 g12g34g56g78 + 24 g15g26g37g48 + 72 g12g35g46g78# + . . .) ew (0)
+
+.
+
+this has the diagrammatic representation
+
+z =
+
+
+1 + g
+4!
+
+3
+
++
+
+1
+
+2 (cid:18)g
+
+4! (cid:19)2
+9
+
++ 24
+
++ 72
+
+(2.44)
+
+(2.45)
+
+ew (0)
+
+.
+
+(2.46)
+
+ + . . .
+
+
+
+
+
+
+all diagrams in this expansion follow directly by successively cutting lines of the basic one-loop vacuum diagram
+(2.42) according to (2.43). by going to the logarithm of the partition function z, we nd a diagrammatic expansion
+for the negative free energy w
+
+w =
+
+1
+2
+
++ g
+4!
+
+3
+
++
+
+24
+
++ 72
+
++ . . . ,
+
+(2.47)
+
+which turns out to contain precisely all connected diagrams in (2.46) with the same multiplicities. in the next section
+we show that this diagrammatic expansion for the negative free energy can be derived more eciently by solving a
+dierential equation.
+
+1
+
+2 (cid:18)g
+
+4! (cid:19)2
+
+
+c. functional dierential equation for w = ln z
+
+regarding the partition function z as a functional of the kernel g1, we derive a functional dierential equation
+
+for z. we start with the trivial identity
+
+z d
+
+
+
+1 n2 ee[]o = 0 ,
+
+(2.48)
+
+which follows via functional integration by parts from the vanishing of the exponential at innite elds. taking into
+account the explicit form of the energy functional (2.1), we perform the functional derivative with respect to the eld
+and obtain
+
+z d(cid:26)12 z3
+
+g1
+13 23 
+
+g
+
+6z345
+
+v1345 2345(cid:27) ee[] = 0 .
+
+(2.49)
+
+applying the substitution rule (2.14), this equation can be expressed in terms of the partition function (2.5) and its
+derivatives with respect to the kernel g1:
+
+12 z + 2z3
+
+g1
+13
+
+z
+g1
+23
+
+=
+
+2
+3
+
+g z345
+
+v1345
+
+2z
+23 g1
+45
+
+g1
+
+.
+
+(2.50)
+
+note that this linear functional dierential equation for the partition function z is, indeed, solved by (2.41) due to
+the commutation relation
+
+v1234
+
+g
+
+exp(cid:26)
+6z1234
+3z78
+= 
+
+g
+
+2
+g1
+12 g1
+
+
+34 (cid:27) g1
+exp(cid:26)
+
+56  g1
+g
+6z1234
+
+56 exp(cid:26)
+
+g
+
+6z1234
+34 (cid:27)
+
+2
+12 g1
+g1
+
+v1234
+
+v5678
+
+g1
+78
+
+v1234
+
+2
+g1
+12 g1
+
+34 (cid:27)
+
+(2.51)
+
+7
+
+which follows from the canonical one
+
+
+
+g1
+12
+
+34  g1
+g1
+
+34
+
+
+
+g1
+12
+
+=
+
+1
+2 {1324 + 1423} .
+
+going over from z to w = ln z, the linear functional dierential equation (2.50) turns into a nonlinear one:
+
+12 + 2z3
+
+g1
+13
+
+w
+g1
+23
+
+=
+
+2
+3
+
+g z345
+
+v1345(cid:26) 2w
+
+g1
+
+23 g1
+45
+
++
+
+w
+g1
+23
+
+w
+g1
+
+45 (cid:27) .
+
+(2.52)
+
+(2.53)
+
+if the coupling constant g vanishes, this is immediately solved by (2.42). for a non-vanishing coupling constant g,
+the right-hand side in (2.53) produces corrections to (2.42) which we shall denote with w (int). thus the negative free
+energy w decomposes according to
+
+w = w (0) + w (int) .
+
+(2.54)
+
+inserting this into (2.53) and taking into account (2.44), we obtain the following functional dierential equation for
+the interaction negative free energy w (int):
+
+g1
+12
+
+w (int)
+g1
+12
+
+=
+
+z12
+
+g
+
+4z1234
+3z1234
+
+g
+
++
+
+v1234 g12g34 
+v1234 (cid:26) 2w (int)
+
+g1
+
+12 g1
+34
+
+g
+
+3z1234
+
+v1234 g12
+
++
+
+w (int)
+g1
+12
+
+w (int)
+g1
+34
+w (int)
+g1
+
+34 (cid:27) .
+
+(2.55)
+
+with the help of the functional chain rule, the rst and second derivatives with respect to the kernel g1 are rewritten
+as
+
+and
+
+2
+g1
+12 g1
+34
+
+=z5678
+
+
+
+g1
+12
+
+= z34
+
+g13g24
+
+
+
+g34
+
+g15g26g37g48
+
+2
+
+g56g78
+
++
+
+1
+
+2z56 {g13g25g46 + g14g25g36 + g23g15g46 + g24g15g36}
+
+(2.56)
+
+(2.57)
+
+
+
+g56
+
+,
+
+respectively, so that the functional dierential equation (2.55) for w (int) takes the form (compare eq. (51) in ref. [7])
+
+g12
+
+w (int)
+g12
+
+= 
+
+z12
+
+
+
+g
+
+4z1234
+3z12345678
+
+g
+
+v1234 g12g34  g z123456
+
+v1234 g12g35g46
+
+v1234 g15g26g37g48(cid:26) 2w (int)
+
+g56g78
+
++
+
+w (int)
+g56
+w (int)
+g56
+
+w (int)
+
+g78 (cid:27) .
+
+(2.58)
+
+d. recursion relation and graphical solution
+
+we now convert the functional dierential equation (2.58) into a recursion relation by expanding w (int) into a
+
+power series in g:
+
+w (int) =
+
+1
+
+4! (cid:19)p
+p!(cid:18)g
+
+
+
+xp=1
+
+w (p) .
+
+(2.59)
+
+using the property (2.33) that the coecient w (p) satises the eigenvalue problem of the line numbering operator
+(2.32), we obtain the recursion relation
+
+8
+
+v1234 g12g35g46
+
+w (p)
+g56
+
++ 4z12345678
+
+v1234 g15g26g37g48
+
+2w (p)
+g56g78
+
+w (p+1) = 12z123456
+xq=1(cid:18) p
+
++4
+
+p1
+
+q (cid:19)z12345678
+
+v1234 g15g26g37g48
+
+w (pq)
+
+g56
+
+w (q)
+g78
+
+(2.60)
+
+and the initial condition (2.34). with the help of the graphical rules of subsection ii a, the recursion relation (2.60)
+can be written diagrammatically as follows
+
+w (p+1) = 4
+
+2w (p)
+2  3
+
+ 1
+
+4
+
+1
+2
+3
+4
+
++ 12
+
+w (p)
+ 1
+
+2
+
+1
+
+2
+
++ 4
+
+this is iterated starting from
+
+p1
+
+xq=1(cid:18) p
+
+q (cid:19) w (pq)
+
+ 1
+
+2
+
+1
+
+2
+
+3
+
+4
+
+w (q)
+ 3
+
+4
+
+,
+
+p  1 .
+
+w (1) = 3
+
+.
+
+(2.61)
+
+(2.62)
+
+the right-hand side of (2.61) contains three dierent graphical operations. the rst two are linear and involve one
+or two line amputations of the previous perturbative order. the third operation is nonlinear and mixes two dierent
+one-line amputations of lower orders.
+
+an alternative way of formulating the above recursion relation may be based on the graphical rules
+
+w (p) =
+
+p
+
+,
+
+w (p)
+g12
+
+=
+
+1
+
+2
+
+p
+
+,
+
+2w (p)
+g12g34
+
+=
+
+2
+
+3
+
+1
+
+4
+
+p
+
+.
+
+(2.63)
+
+with these, the recursion relation (2.61) reads
+
+p + 1 = 4
+
+p
+
++ 12
+
+p
+
++ 4
+
+p1
+
+xq=1 (cid:18) p
+
+q (cid:19) p  q
+
+q
+
+,
+
+p  1 .
+
+(2.64)
+
+to demonstrate the working of (2.61), we calculate the connected vacuum diagrams up to ve loops. applying the
+linear operations to (2.60), we obtain immediately
+
+w (1)
+ 1
+
+2
+
+= 6
+
+1
+
+2
+
+,
+
+ 1
+
+2w (1)
+2  3
+
+= 6
+
+4
+
+1
+
+2
+
+3
+
+4
+
+.
+
+inserted into (2.61), these lead to the three-loop vacuum diagrams
+
+w (2) = 24
+
++ 72
+
+.
+
+(2.65)
+
+(2.66)
+
+proceeding to the next order, we have to perform one- and two-line amputations on the vacuum graphs in (2.66),
+leading to
+
+w (2)
+ 1
+
+2
+
+= 96 1
+
+2 + 144
+
+1
+
+9
+
++ 144
+
+1
+
+2
+
+,
+
+2
+
+(2.67)
+
+and subsequently to
+
+2w (2)
+2  3
+
+ 1
+
+= 288
+
+4
+
+1
+
+3
+
+2
+
+4
+
++ 144
+
+1
+
+2
+
+3
+
+4
+
++ 288 2
+
++ 144 3
+
+1
+
+4
+
+2 + 144 1
+
+2
+
+3
+
+4 + 144
+
+1
+
+3
+
+1
+
+2
+
+4
+
+.
+
+3
+
+4
+
+(2.68)
+
+inserting (2.67) and (2.68) into (2.61) and taking into account (2.65), we nd the connected vacuum diagrams of
+order p = 3 with their multiplicities as shown in table i. we observe that the nonlinear operation in (2.61) does not
+lead to topologically new diagrams. it only corrects the multiplicities of the diagrams generated from the rst two
+operations. this is true also in higher orders. the connected vacuum diagrams of the subsequent order p = 4 and
+their multiplicities are listed in table i.
+
+as a cross-check we can also determine the total multiplicities m (p) of all connected vacuum diagrams contributing
+to w (p). to this end we recall that each of the m (p) diagrams in w (p) consists of 2p lines. the amputation of one or
+two lines therefore leads to 2pm (p) and 2p(2p 1)m (p) diagrams with 2p 1 and 2p 2 lines, respectively. considering
+only the total multiplicities, the graphical recursion relations (2.61) reduce to the form derived before in ref. [7]
+
+m (p+1) = 16p(p + 1)m (p) + 16
+
+p1
+
+xq=1
+
+p!
+
+(p  q  1)!(q  1)!
+
+m (q)m (pq) ;
+
+p  1 .
+
+these are solved starting with the initial value
+
+m (1) = 3 ,
+
+leading to the total multiplicities
+
+m (2) = 96 , m (3) = 9504 , m (4) = 1880064 ,
+
+which agree with the results listed in table i. in addition we note that the next orders would contain
+
+m (5) = 616108032 , m (6) = 301093355520 , m (7) = 205062331760640
+
+connected vacuum diagrams.
+
+(2.69)
+
+(2.70)
+
+(2.71)
+
+(2.72)
+
+for the sake of generality, let us also study the situation where the quartic interaction of the 4-theory is generated
+
+by a scalar eld a from a cubic 2a-interaction. the associated energy functional
+
+iii. scalar 2a-theory
+
+decomposes into the free part
+
+and the interaction
+
+e[, a] = e(0)[, a] + e(int)[, a]
+
+e(0)[, a] =
+
+1
+
+2z12
+
+g1
+
+12 12 +
+
+1
+
+2z12
+
+h 1
+
+12 a1a2
+
+e(int)[, a] =
+
+g
+2 z123
+
+v123 12a3 .
+
+indeed, as the eld a appears only quadratically in (3.1), the functional integral for the partition function
+
+z =z d da ee[,a]
+
+10
+
+(3.1)
+
+(3.2)
+
+(3.3)
+
+(3.4)
+
+can be exactly evaluated with respect to the eld a, yielding
+
+with the eective energy functional
+
+z =z d ee(eff)[]
+
+e(e)[] = 
+
+1
+2
+
+tr ln h 1 +
+
+1
+
+2z12
+
+g1
+12 12 
+
+g
+
+8z123456
+
+v125v346h56 1234 .
+
+(3.5)
+
+(3.6)
+
+apart from a trivial shift due to the negative free energy of the eld a, the eective energy functional (3.6) coincides
+with one (2.1) of a 4-theory with the quartic interaction
+
+if we supplement the previous feynman rules (2.7), (2.9) by the free correlation function of the eld a
+
+v1234 = 3 z56
+
+v125v346h56 .
+
+and the cubic interaction
+
+1
+
+2  h12
+
+ z123
+
+v123 ,
+
+the intimate relation (3.7) between the 4-theory and the 2a- theory can be graphically illustrated by
+
+= 
+
+
+
+
+
+.
+
+(3.7)
+
+(3.8)
+
+(3.9)
+
+(3.10)
+
+this corresponds to a photon exchange in the so-called s-, t- and u-channels of mandelstams theory of the scattering
+matrix. their innite repetitions yield the relevant forces in the hartree, fock and bogoliubov approximations of
+many-body physics. in the following we analyze the 2a-theory along similar lines as before the 4-theory.
+
+expanding the exponential in the partition function (3.4) in powers of the coupling constant g, the resulting
+
+perturbation series reads
+
+a. perturbation theory
+
+z =
+
+
+
+xp=0
+
+1
+
+(2p)!(cid:16) g
+
+4(cid:17)pz dda (cid:18)z123456
+
+v123v4561245a3a6(cid:19)p
+
+ee(0)[,a] .
+
+(3.11)
+
+substituting the product of two elds  or a by a functional derivative with respect to the kernels g1 or h 1, we
+conclude from (3.11)
+
+z =
+
+
+
+xp=0
+
+(2g)p
+(2p)! (cid:18)z123456
+
+v123v456
+
+where the zeroth order of the negative free energy reads
+
+3
+12 g1
+45 h 1
+
+36 (cid:19)p
+
+g1
+
+ew (0)
+
+,
+
+w (0) = 
+
+1
+2
+
+tr ln g1 
+
+1
+2
+
+tr ln h 1 
+
+1
+2
+
++
+
+1
+2
+
+.
+
+inserting (3.13) in (3.12), the rst-order contribution to the negative free energy yields
+
+w (1) = 2 z123456
+
+v123v456 h36g14g25 +z123456
+
+v123v456 h36g12g45 ,
+
+which corresponds to the feynman diagrams
+
+w (1) = 2
+
++
+
+.
+
+11
+
+(3.12)
+
+(3.13)
+
+(3.14)
+
+(3.15)
+
+b. functional dierential equation for w = ln z
+
+the derivation of a functional dierential equation for the negative free energy w requires the combination of two
+
+independent steps. consider rst the identity
+
+which immediately yields with the energy functional (3.1)
+
+z d da
+
+
+
+1 n2 ee[,a]o = 0 ,
+
++ 2g z34
+where hai denotes the expectation value of the eld a.
+consider the second identity
+
+12z + 2z3
+
+z
+g1
+23
+
+g1
+13
+
+v134
+
+ {ha4iz}
+
+g1
+23
+
+= 0 ,
+
+(3.16)
+
+(3.17)
+
+in order to close the functional dierential equation, we
+
+which leads to
+
+z d da
+
+
+
+a1
+
+ee[,a] = 0 ,
+
+ha1iz = g z234
+
+v234h14
+
+z
+g1
+23
+
+.
+
+(3.18)
+
+(3.19)
+
+inserting (3.19) in (3.17), we result in the desired functional dierential equation for the negative free energy w = ln z:
+
+12 + 2 z2
+
+g1
+13
+
+w
+g1
+23
+
+= 2g z34567
+
+v134v567h47(cid:26) 2w
+
+g1
+
+23 g1
+56
+
++
+
+w
+g1
+23
+
+w
+g1
+
+56 (cid:27) .
+
+(3.20)
+
+a subsequent separation (2.54) of the zeroth order (3.13) leads to a functional dierential equation for the interaction
+part of the free energy w (int):
+
+g1
+12
+
+w (int)
+g1
+12
+
+z12
+
+g
+
+4 z123456
+= 
+g z123456
+
+v123v456h36 {g12g45 + 2g14g25} + g z123456
+v123v456h36(cid:26) 2w (int)
+45 (cid:27) .
+
+w (int)
+g1
+12
+
+w (int)
+g1
+
+12 g1
+45
+
+g1
+
++
+
+v123v456g12h36
+
+w (int)
+g1
+45
+
+(3.21)
+
+taking into account the functional chain rules (2.56), (2.57), the functional derivatives with respect to g1 in (3.21)
+can be rewritten in terms of g:
+
+g12
+
+w (int)
+g12
+
+=
+
+z12
+
+g
+
+4 z123456
+
++2g14g27g58}
+
+w (int)
+g78
+
++ g z1234567891
+
+v123v456h36 {g12g45 + 2g14g25} + g z123456
+v123v456h36g17g28g39g41 (cid:26) 2w (int)
+
+g78g91
+
+v123v456h36 {g12g47g58
+
++
+
+w (int)
+g78
+
+w (int)
+
+g91 (cid:27) .
+
+(3.22)
+
+c. recursion relation and graphical solution
+
+the functional dierential equation (3.22) is now solved by the power series
+
+w (int) =
+
+
+
+xp=1
+
+1
+
+(2p)! (cid:16) g
+4(cid:17)p
+
+w (p) .
+
+(3.23)
+
+using the property (2.33) that the coecients w (p) satisfy the eigenvalue condition of the operator (2.32), we obtain
+both the recursion relation
+
+12
+
+w (p+1) = 4(2p + 1)(cid:26)z12345678
+
+v123v456 h36 (g12g47g58 + 2g14g27g58)
+
+w (p)
+g78
+
++z1234567891
+
+v123v456 h36g17g28g39g41   2w (p)
+
+g78g91
+
++
+
+p1
+
+xq=1(cid:18)2p
+
+2q (cid:19) w (pq)
+
+g78
+
+w (q)
+
+g91 !)
+
+(3.24)
+
+and the initial value (3.14). using the feynman rules (2.7), (3.8) and (3.9), the recursion relation (3.24) reads
+graphically
+
+w (p+1) = 4(2p + 1)( w (p)
+
+ 1
+
+2
+
++
+
+ 1
+
+2w (p)
+2  3
+
+4
+
+1
+
+2
+
+1
+2
+
+3
+4
+
++
+
++ 2
+
+w (p)
+ 1
+
+2
+
+1
+
+2
+
+p1
+
+xq=1 (cid:18) 2p
+
+2q (cid:19) w (pq)
+
+ 1
+
+2
+
+2
+
+1
+
+4
+
+3
+
+w (q)
+ 3
+
+4) ,
+
+p  1 ,
+
+(3.25)
+
+which is iterated starting from (3.15). in analogy to (2.64), this recursion relation can be cast in a closed diagrammatic
+way by using the alternative graphical rules (2.63):
+
+p + 1 = 4(2p + 1)(
+
+p
+
++ 2
+
+p
+
++
+
+p
+
++
+
+p1
+
+2q (cid:19)
+xq=1 (cid:18) 2p
+
+p  q
+
+q
+
+) ,
+
+p  1 ,
+
+(3.26)
+
+we illustrate the procedure of solving the recursion relation (3.25) by construction the three-loop vacuum diagrams.
+applying one or two functional derivatives to (3.15), we have
+
+w (1)
+ 1
+
+2
+
+= 2
+
+1
+
+2
+
++ 4
+
+1
+
+2
+
+,
+
+ 1
+
+2w (p)
+2  3
+
+= 2
+
+4
+
+2
+
+1
+
+4
+
+3
+
++ 4
+
+1
+
+3
+
+2
+
+4
+
+.
+
+(3.27)
+
+this is inserted into (3.25) to yield the three-loop diagrams shown in table iv with their multiplicities. the table
+also contains the subsequent 4-loop results which we shall not derive here in detail. observe that the multiplicity of
+a connected vacuum diagram d in the 2a-theory is given by a formula similar to (2.10) in the 4-theory:
+
+here s and d denote the number of self- and double connections, whereas n represents the number of identical vertex
+permutations.
+
+m d
+
+2a =
+
+(2p)!4p
+2!s+dn
+
+.
+
+(3.28)
+
+the connected vacuum diagrams of the 2a-theory in table iv can, of course, be converted to corresponding
+ones of the 4-theory in table i, by shrinking wiggly lines to a point and dividing the resulting multiplicity by 3 in
+accordance with (3.10). this relation between connected vacuum diagrams in 4- and 2a-theory is emphasized by
+the numbering used in table iv. for instance, the shrinking converts the ve diagrams #4.1-#4.5 in table iv to the
+diagram #4 in table i. taking into account the dierent combinatorial factors in the expansion (2.6) and (3.23) as
+well as the factor 3 in the shrinkage (3.10), the multiplicity m e=0
+of a 4-diagram results from the corresponding
+one m e=0
+
+2a of the 2a-partner diagrams via the rule
+
+4
+
+m e=0
+
+4 =
+
+1
+
+(2p  1)!!
+
+m e=0
+2a .
+
+13
+
+(3.29)
+
+iv. computer generation of diagrams
+
+continuing the solution of the graphical recursion relations (2.61) and (3.25) to higher loops becomes an arduous
+task. we therefore automatize the procedure by computer algebra. here we restrict ourselves to the 4-theory because
+of its relevance for critical phenomena.
+
+a. matrix representation of diagrams
+
+to implement the procedure on a computer we must represent feynman diagrams in the 4-theory by algebraic
+symbols. for this we use matrices as dened in refs. [8,9]. let p be the number of vertices of a given diagram and
+label them by indices from 1 to p. set up a matrix m whose elements mij (0  i, j  p) specify the number of lines
+joining the vertices i and j. the diagonal elements mii (i > 0) count the number of self-connections of the ith vertex.
+external lines of a diagram are labeled as if they were connected to a single additional dummy vertex with number
+0. as matrix element m00 is set to zero as a convention. the o-diagonal elements lie in the interval 0  mij  4,
+while the diagonal elements for i > 0 are restricted by 0  mii  2. we observe that the sum of the matrix elements
+mij in each row or column equals 4, where the diagonal elements count twice,
+
+mij + mii =
+
+p
+
+xj=0
+
+p
+
+xi=0
+
+mij + mjj = 4 .
+
+(4.1)
+
+the matrix m is symmetric and is thus specied by (p + 1)(p + 2)/2 1 elements. each matrix characterizes a unique
+diagram and determines its multiplicity via formula (2.28). from the matrix m we read odirectly the number of
+self-, double, triple, fourfold connections s, d, t, f and the number of external legs e = pp
+i=1 m0i. it also permits
+us to calculate the number n of identical vertex permutations. for this we observe that the matrix m is not unique,
+since so far the vertex numbering is arbitrary. in fact, n is the number of permutations of vertices and external lines
+which leave the matrix m unchanged [compare to the statement after (2.28)]. if nm denotes the number of dierent
+matrices representing the same diagram, the number n is given by
+
+n =
+
+p!
+nm
+
+m0i! .
+
+p
+
+yi=1
+
+(4.2)
+
+the matrix elements m0i count the number of external legs connected to the ith vertex. inserting eq. (4.2) into
+the formula (2.28) for e = 0, we obtain the multiplicity of the diagram represented by m . this may be used to
+cross-check the multiplicities obtained before when solving the recursion relation (2.61).
+
+as an example, consider the following diagram of the four-point function with p = 3 vertices:
+
+.
+
+(4.3)
+
+this diagram can be represented by altogether nm = 3 dierent matrices, depending on the labeling of the top vertex
+with two external legs by 1, 2, or 3:
+
+0 1 2 3
+0 0 2 1 1
+1 2 0 1 1
+2 1 1 0 2
+3 1 1 2 0
+
+0 1 2 3
+0 0 1 2 1
+1 1 0 1 2
+2 2 1 0 1
+3 1 2 1 0
+
+0 1 2 3
+0 0 1 1 2
+1 1 0 2 1
+2 1 2 0 1
+3 2 1 1 0
+
+.
+
+(4.4)
+
+from the zeroth row or column of these matrices or by inspecting the diagram (4.3), we read o that there exist two
+one-connections and one two-connection between external legs and vertices. thus eq. (4.2) states that the number
+of identical vertex permutations of the diagram (4.3) is 4 (compare the corresponding entry in table iii).
+
+the matrix m contains of course all information on the topological properties of a diagram [8,9]. for this we dene
+the submatrix m by removing the zeroth row and column from m . this allows us to recognize the connectedness of
+
+14
+
+a diagram: a diagram is disconnected if there is a vertex numbering for which m is a block matrix. furthermore a
+vertex is a cutvertex, e.g. a vertex which links two otherwise disconnected parts of a diagram, if the matrix m has an
+almost block-form for an appropriate numbering of vertices in which the blocks overlap only on some diagonal element
+mii, i.e. the matrix m takes block form if the ith row and column are removed. similarly, the matrix m allows us
+to recognize a one-particle-reducible diagram, which falls into two pieces by cutting a certain line. removing a line
+amounts to reducing the associated matrix elements in the submatrix m by one unit. if the resulting matrix m has
+block form, the diagram is one-particle-reducible.
+
+so far, the vertex numbering has been arbitrary, making the matrix representation of a diagram non-unique. to
+achieve uniqueness, we proceed as follows. we associate with each matrix a number whose digits are composed of the
+matrix elements mij (0  j  i  p), i.e. we form the number with the (p + 1)(p + 2)/2  1 elements
+
+m10m11m20m21m22m30m31m32m33 . . . mpp .
+
+(4.5)
+
+the smallest of these numbers is chosen to represent the diagram unique. for instance, the three matrices (4.4) carry
+the numbers
+
+201101120 ,
+
+102101210 ,
+
+101202110 ,
+
+(4.6)
+
+the smallest one being the last. thus we uniquely represent the diagram (4.3) by this number.
+
+b. practical generation
+
+we are now prepared for the computer generation of feynman diagrams. first the vacuum diagrams are generated
+from the recursion relation (2.61). from these the diagrams of the connected two- and four-point functions are
+obtained by cutting or removing lines. a mathematica program performs this task. the resulting unique matrix
+representations of the diagrams up to the order p = 4 are listed in table vvii. they are the same as those derived
+before by hand in table iiii. higher-order results up to p = 6, containing all diagrams which are relevant for the
+ve loop renormalization of the 4-theory in d = 4   dimensions [9,18], are made available on internet [17], where
+also the program can be found.
+
+1. connected vacuum diagrams
+
+the computer solution of the recursion relation (2.61) necessitates to keep an exact record of the labeling of external
+legs of intermediate diagrams which arise from dierentiating a vacuum diagram with respect to a line once or twice.
+to this end we have to extend our previous matrix representation of diagrams where the external legs are labeled
+as if they were connected to a simple additional vertex with number 0. for each matrix representing a diagram we
+dene an associated vector which contains the labels of the external legs connected to each vertex. this vector has
+the length of the dimension of the matrix and will be prepended to the matrix. by doing so, it is understood that
+the rows and columns of the matrix are labeled from 0 to the number of vertices as explained in subsection iv.a, so
+that we may omit these labels from now on. consider, as an example, the diagram (4.3) of the four-point function
+with p = 3 vertices, where the spatial indices 1, 2, 3, 4 are assigned in a particular order:
+
+1
+
+2
+
+3
+
+4
+
+.
+
+in our extended matrix notation, such a diagram can be represented in total by six matrices:
+
+0 1 2 1
+1 0 1 2
+2 1 0 1
+1 2 1 0
+
+
+
+
+
+
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+{}
+{1, 2}
+{3}
+{4}
+
+
+
+{}
+{1, 2}
+{4}
+{3}
+
+0 2 1 1
+2 0 1 1
+1 1 0 2
+1 1 2 0
+
+
+
+
+0 2 1 1
+2 0 1 1
+1 1 0 2
+1 1 2 0
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+{}
+, 
+{3}
+
+{1, 2}
+{4}
+, 
+
+
+
+
+
+{}
+{4}
+{1, 2}
+{3}
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+0 1 2 1
+1 0 1 2
+2 1 0 1
+1 2 1 0
+
+15
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+{}
+, 
+{3}
+
+{4}
+{1, 2}
+{}
+, 
+{4}
+
+{3}
+{1, 2}
+
+
+
+
+0 1 1 2
+1 0 2 1
+1 2 0 1
+2 1 1 0
+
+
+
+
+0 1 1 2
+1 0 2 1
+1 2 0 1
+2 1 1 0
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+,
+
+
+
+
+.
+
+(4.7)
+
+(4.8)
+
+in the calculation of the vacuum diagrams from the recursion relation (2.61), starting from the two-loop diagram
+(2.62), we have to represent three dierent elementary operations in our extended matrix notation:
+
+1. taking one or two derivatives of a vacuum diagram with respect to a line. for example, we apply this operation
+
+to the vacuum diagram #2 in table i
+
+2
+
+g12g34
+
+= 2
+
+1
+
+= 3
+ 3
+
+this has the matrix representation
+
+
+
+g12 
+ 3
+
+2
+
+4
+
++
+
+2
+
+3
+
+4 + 4
+
+1
+
+4
+
++
+
+1
+
+4
+
+2
+
+3
+
+3 
+
+
++
+
+2
+
+4
+
+1 
+ .
+
+3
+
+(4.9)
+
+{}
+{}
+{}
+
+2
+
+g12g34 
+
+= 3
+
+{}
+{1, 3}
+
+
+{2, 4}
+
+0 0 0
+0 0 4
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+0 4 0
+ = 2
+2 2 0
+ +
+
+
+0 2 2
+2 0 2
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+
+
+0 1 1
+1 0 3
+
+{}
+{3}
+{4}
+0 2 2
+2 0 2
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+1 3 0 
+g12 
+
+ +
+
+
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+2 2 0
+ +
+{}
+{}
+{2, 3}
+{1, 4}
+
+{1, 4}
+{2, 3}
+
+0 1 1
+1 0 3
+
+{}
+{4}
+{3}
+0 2 2
+2 0 2
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+1 3 0
+
+
+2 2 0
+ +
+{}
+{2, 4}
+
+{1, 3}
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+0 2 2
+2 0 2
+
+2 2 0
+
+
+
+ .
+
+(4.10)
+
+the rst and fourth matrix as well as the second and third matrix represent the same diagram in (4.9), as can
+be seen bu permutating rows and columns of either matrix.
+
+2. combining two or three diagrams to one. we perform this operation by creating a block matrix of internal lines
+from the submatrices representing the internal lines of the original diagrams. then the zeroth row or column is
+added to represent the respective original external spatial arguments. let us illustrate the combination of two
+diagrams by the example
+
+1
+
+2
+
+1
+
+2
+
+ 
+
+
+{}
+{1}
+{2}
+
+and the combination of three diagrams by
+
+0 1 1
+1 0 3
+
+1 3 0 
+
+{1, 2} (cid:12)(cid:12)(cid:12)(cid:12)
+ , (cid:18) {}
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+0 2
+
+2 1(cid:19)  
+
+
+{}
+{1, 2}
+{1}
+{2}
+
+0 2 1 1
+2 1 0 0
+1 0 0 3
+1 0 3 0
+
+
+
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+(4.11)
+
+1
+
+2
+
+1
+
+2
+
+3
+
+4
+
+3
+
+4
+
+
+
+{1, 2} (cid:12)(cid:12)(cid:12)(cid:12)
+(cid:18) {}
+
+0 2
+
+2 1 (cid:19) , (cid:18)
+
+{}
+
+{1, 2, 3, 4} (cid:12)(cid:12)(cid:12)(cid:12)
+
+0 4
+
+{3, 4} (cid:12)(cid:12)(cid:12)(cid:12)
+4 0 (cid:19) , (cid:18) {}
+
+0 2
+
+2 1(cid:19)  
+
+
+{}
+{1, 2}
+{3, 4}
+
+{1, 2, 3, 4}
+
+0 2 4 2
+2 1 0 0
+4 0 0 0
+2 0 0 1
+
+
+
+
+.
+
+(4.12)
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+we observe that the ordering of the submatrices in the block matrix is arbitrary at this point, we just have to
+make sure to distribute the spatial labels of the external legs correctly.
+
+3. connecting external legs with the same label and creating an internal line. this is achieved in our extended
+matrix notation by eliminating the spatial labels of external legs which appear twice, and by performing an
+appropriate entry in the matrix for the additional line. thus we obtain, for instance, from (4.11)
+
+ 
+
+
+{}
+{}
+{}
+{}
+
+0 0 0 0
+0 1 1 1
+0 1 0 3
+0 1 3 0
+
+
+
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+16
+
+(4.13)
+
+and similarily from (4.12)
+
+ 
+
+
+{}
+{}
+{}
+{}
+
+0 0 0 0
+0 1 2 0
+0 2 0 2
+0 0 2 1
+
+.
+
+
+
+
+(4.14)
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+as we reobtain at this stage connected vacuum diagrams where there are no more external legs to be labeled,
+we may omit the prepended vector.
+
+the selection of a unique matrix representation for the resulting vacuum diagrams obtained at each stage of the
+recursion relation proceeds as explained in detail in subsection iv.a. by comparing we nd out which of the vacuum
+diagrams are topologically identical and sum up their individual multiplicities. along these lines, the recursion rela-
+tion (2.61) is solved by a mathematica program up to the order p = 6. the results are shown in table v and in
+ref. [17]. to each order p, the numbers n(0)
+
+p of topologically dierent connected vacuum diagrams are
+
+p
+n(0)
+
+p
+
+1 2 3
+6
+1 2 4 10 28 97
+
+4
+
+5
+
+(4.15)
+
+2. two- and four-point functions g12 and gc
+
+1234 from cutting lines
+
+having found all connected vacuum diagrams, we derive from these the diagrams of the connected two- and four-
+point functions by using the relations (2.18) and (2.25). in the matrix representation, cutting a line is essentially
+identical to removing a line as explained above, except that we now interpret the labels which represent the external
+spatial labels as sitting on the end of lines. since we are not going to distinguish between trivially crossed graphs
+which are related by exchanging external labels in our computer implementation, we need no longer carry around
+external spatial labels. thus we omit the additional vector prepended to the matrix representing a diagram when
+generating vacuum diagrams. as an example, consider cutting a line in diagram #3 in table i
+
+
+
+g1
+
+
+
+which has the matrix representation
+
+= 2
+
++
+
++
+
+,
+
+(4.16)
+
+
+
+
+
+g1 
+
+
+0 0 0
+0 1 2
+
+0 2 1
+
+ = 2
+
+
+0 1 1
+1 1 1
+
+1 1 1
+ +
+
+
+0 2 0
+2 0 2
+
+0 2 1
+ +
+
+
+0 0 2
+0 1 2
+
+2 2 0 
+ .
+
+(4.17)
+
+here the plus signs and multiplication by 2 have a set-theoretical meaning and are not to be understood as matrix
+algebra operations. the last two matrices represent, incidentally, the same graph in (4.16) as can be seen by exchang-
+ing the last two rows and columns of either matrix.
+
+to create the connected four-point function, we also have to consider second derivatives of vacuum diagrams with
+respect to g1. if an external line is cut, an additional external line will be created which is not connected to any
+vertex. it can be interpreted as a self-connection of the zeroth vertex which collects the external lines. this may be
+accomodated in the matrix notation by letting the matrix element m00 count the number of lines not connected to
+any vertex. for example, taking the derivative of the rst diagram in eq. (4.16) gives
+
+
+
+g1
+
+
+
+with the matrix notation
+
+=
+
++
+
++
+
++ 2
+
+,
+
+(4.18)
+
+17
+
+
+
+
+
+g1 
+
+
+0 1 1
+1 1 1
+
+1 1 1 
+ =
+
+
+0 3 1
+3 0 1
+
+1 1 1 
+ +
+
+
+0 1 3
+1 1 1
+
+3 1 0 
+ +
+
+
+0 2 2
+2 1 0
+
+2 0 1
+
+ + 2
+
+
+1 1 1
+1 1 1
+
+1 1 1
+ .
+
+(4.19)
+
+the rst two matrices represent the same diagram as can be seen from eq. (4.18). the last two matrices in eq. (4.19)
+correspond to disconnected diagrams: the rst because of the absence of a connection between the two vertices, the
+second because of the disconnected line represented by the entry m00 = 1. in the full expression for the two loop
+contribution gc,(2)
+1234 to the four-point function in eq. (2.25) all disconnected diagrams arising from cutting a line in
+g(2)
+12 are canceled by diagrams resulting from the sum. therefore we may omit the sum, take only the rst term and
+discard all disconnected graphs it creates. this is particularly useful for treating low orders by hand. if we include
+the sum, we use the prescription of combining diagrams into one as described above in subsection iv.b.1, except that
+we now omit the extra vector with the labels of spatial arguments.
+
+3. two- and four-point function g12 and gc
+
+1234 from removing lines
+
+instead of cutting lines of connected vacuum graphs once or twice, the perturbative coecients of g12 and gc
+
+1234
+indeed, from (2.16), (2.44), (2.54) and (2.56) we get for the
+
+can also be obtained graphically by removing lines.
+two-point function
+
+so that we have for p > 0
+
+g12 = g12 + 2z34
+
+g13g24
+
+w (int)
+g34
+
+,
+
+g(p)
+
+12 = 2z34
+
+g13g24
+
+w (p)
+g34
+
+(4.20)
+
+(4.21)
+
+at our disposal to compute the coecients g(p)
+12 from removing one line in the connected vacuum diagrams w (p) in all
+possible ways. the corresponding matrix operations are identical to the ones for cutting a line so that in this respect
+there is no dierence between both procedures to obtain g12.
+
+combining (4.20) with (2.12), (2.23) and (2.56), we get for the connected four-point function
+
+gc
+
+1234 = 4z5678
+
+which is equivalent to
+
+g15g26g37g48
+
+2w (int)
+
+g56g78  4z5678
+
+g15g27(g36g48 + g46g38)
+
+w (int)
+g56
+
+w (int)
+g78
+
+(4.22)
+
+gc,(p)
+
+1234 = 4z5678
+
+g15g26g37g48
+
+2w (p)
+g56g78  4
+
+p1
+
+xq=1(cid:18) p
+
+q (cid:19)z5678
+
+g15g27(g36g48 + g46g38)
+
+w (q)
+g56
+
+w (pq)
+
+g78
+
+.
+
+(4.23)
+
+again, the sum serves only to subtract disconnected diagrams which are created by the rst term, so we may choose
+to discard both in the rst term.
+
+now the problem of generating diagrams is reduced to the generation of vacuum diagrams and subsequently taking
+functional derivatives with respect to g12. an advantage of this approach is that external lines do not appear at
+intermediate steps. so when one uses the cancellation of disconnected terms as a cross check, there are less operations
+to be performed than with cutting. at the end one just interprets external labels as sitting on external lines. since
+all necessary operations on matrices have already been introduced, we omit examples here and just note that we can
+again omit external labels if we are not distinguishing between trivially crossed graphs.
+
+the generation of diagrams of the connected two- and four-point functions has been implemented in both possible
+ways. cutting or removing one or two lines in the connected vacuum diagrams up to the order p = 6 lead to the
+following numbers n(2)
+
+p of topologically dierent diagrams of g(p)
+
+p and n(2)
+
+12 and gc,(p)
+1234:
+
+p
+n(2)
+n(4)
+
+p
+
+p
+
+5
+
+4
+
+6
+1 2 3
+1 3 8 30 118
+548
+1 2 8 37 181 1010
+
+18
+
+(4.24)
+
+v. outlook
+
+in this work we have shown f that all feynman diagrams can be eciently determined from a recursive graphical
+solution of a nonlinear functional dierential equation order by order in the coupling strength. in separate publications,
+this method will be applied to the ordered phase of 4-theory, where the energy functional contains a mixture of a
+cubic and a quartic interaction, and to quantum electrodynamics [19]. it is hoped that our method will eventually be
+combined with ecient numerical algorithms for actually evaluating these feynman diagrams.
+
+we are thankful to dr. bruno van den bossche and florian jasch for contributing various useful comments. one
+
+of us (m.b.) acknowledges support by the studienstiftung des deutschen volkes.
+
+acknowledgements
+
+[1] j. kulbeck, m. bohm, and a. denner, comp. phys. comm. 60, 165 (1991).
+[2] t. hahn, hep-ph/9905354.
+[3] http://www-itp.physik.uni-karlsruhe.de/feynarts.
+[4] p. nogueira, j. comput. phys. 105, 279 (1993).
+[5] ftp://gtae2.ist.utl.pt/pub/qgraf.
+[6] h. kleinert, fortschr. phys. 30, 187 (1982).
+[7] h. kleinert, fortschr. phys. 30, 351 (1982).
+[8] j. neu, ms thesis (in german), fu-berlin (1990).
+[9] h. kleinert, v. schulte-frohlinde, critical properties of 4-theories, world scientic, in press.
+[10] b. kastening, phys. rev. d 54, 3965 (1996).
+[11] b. kastening, phys. rev. d 57, 3567 (1998).
+[12] s.a. larin, m. monnigmann, m. strosser, v. dohm, phys. rev. b 58, 3394 (1998).
+[13] d.j. amit, field theory, the renormalization group and critical phenomena, mcgraw-hill (1978).
+[14] c. itzykson, j.-b. zuber, quantum field theory, mcgraw-hill (1985).
+[15] j. zinn-justin, quantum field theory and critical phenomena, third edition, oxford (1996).
+[16] h. kleinert, gauge fields in condensed matter, vol. i, superow and vortex lines, world scientic (1989).
+[17] http://www.physik.fu-berlin.de/kleinert/294/programs.
+[18] h. kleinert, j. neu, v. schulte-frohlinde, k.g. chetyrkin, s.a. larin, phys. lett. b 272, 39 (1991); 319, 545 (e) (1993).
+[19] m. bachmann, h. kleinert, a. pelster, hep-th/9907044.
+
+19
+
+p
+
+1
+
+2
+
+3
+
+4
+
+w (p)
+
+#1
+3
+
+(2,1,0,0;1)
+
+#2
+24
+
+#3
+72
+
+(0,0,0,1;2)
+
+(2,1,0,0;2)
+
+#4
+1728
+
+#5
+3456
+
+#6
+1728
+
+#7
+2592
+
+(0,3,0,0;6)
+
+(1,0,1,0;2)
+
+(3,0,0,0;6)
+
+(2,2,0,0;2)
+
+#8
+
+62208
+
+(0,4,0,0;8)
+
+#9
+
+248832
+(0,2,0,0;8)
+
+#10
+55296
+
+(0,0,2,0;4)
+
+#11
+
+497664
+(1,2,0,0;2)
+
+#12
+
+165888
+(2,0,1,0;2)
+
+#13
+
+248832
+(2,1,0,0;4)
+
+#14
+
+165888
+(1,1,1,0;2)
+
+#15
+
+248832
+(3,1,0,0;2)
+
+#16
+62208
+
+(4,0,0,0;8)
+
+#17
+
+124416
+(2,3,0,0;2)
+
+table i. connected vacuum diagrams and their multiplicities of the 4-theory up to ve loops. each diagram is char-
+acterized by the vector (s, d, t, f ; n ) whose components specify the number of self-, double, triple and fourfold connections,
+and of the identical vertex permutations, respectively.
+
+20
+
+p
+
+1
+
+2
+
+3
+
+4
+
+#8.1
+995328
+(0,3,0;2)
+
+#11.1
+995328
+(0,2,0;4)
+
+#12.2
+331776
+(2,0,1;2)
+
+#13.3
+1990656
+(2,1,0;1)
+
+#15.1
+995328
+(3,1,0;1)
+
+#16.1
+497664
+(3,0,0;4)
+
+#2.1
+192
+
+(0,0,1;2)
+
+#4.1
+20736
+(0,2,0;2)
+
+#6.1
+10368
+(2,0,0;4)
+
+#9.1
+
+1990656
+(0,1,0;4)
+
+#11.2
+1990656
+(1,2,0;1)
+
+#12.3
+663552
+(2,0,1;1)
+
+#14.1
+995328
+(1,2,0;2)
+
+#15.2
+497664
+(3,1,0;2)
+
+#16.2
+497664
+(4,0,0;2)
+
+g(p)
+12
+
+#1.1
+
+12
+
+(1,0,0;2)
+
+#3.1
+288
+
+(1,1,0;2)
+
+#3.2
+288
+
+(2,0,0;2)
+
+#5.1
+6912
+(0,0,1;4)
+
+#5.2
+20736
+(1,1,0;2)
+
+#5.3
+13824
+(1,0,1;1)
+
+#6.2
+10368
+(3,0,0;2)
+
+#9.2
+
+1990656
+(0,2,0;2)
+
+#11.3
+995328
+(1,2,0;2)
+
+#14.2
+663552
+(1,1,1;1)
+
+#15.3
+497664
+(2,1,0;4)
+
+#7.1
+10368
+(1,2,0;2)
+
+#7.2
+20736
+(2,1,0;1)
+
+#10.1
+221184
+(0,0,2;2)
+
+#11.4
+3981312
+(1,1,0;1)
+
+#12.4
+663552
+(1,0,1;2)
+
+#13.1
+995328
+(2,0,0;4)
+
+#14.3
+663552
+(1,0,1;2)
+
+#10.2
+663552
+(0,1,1;2)
+
+#12.1
+995328
+(2,1,0;2)
+
+#13.2
+995328
+(1,1,0;4)
+
+#14.4
+331776
+(0,1,1;4)
+
+#15.4
+995328
+(2,1,0;2)
+
+#15.5
+995328
+(3,0,0;2)
+
+#17.1
+497664
+(1,3,0;2)
+
+#17.2
+995328
+(2,2,0;1)
+
+#17.3
+497664
+(2,2,0;2)
+
+table ii. connected diagrams of the two-point function and their multiplicities of the 4-theory up to four loops. each
+diagram is characterized by the vector (s, d, t ; n ) whose components specify the number of self-, double, triple connections,
+and of the identical vertex permutations, respectively.
+
+21
+
+p
+
+1
+
+2
+
+3
+
+4
+
+gc,(p)
+1234
+
+#1.1.1
+
+24
+
+(0,0,0;24)
+
+#2.1.1,#3.1.1
+
+#3.1.2,#3.2.1
+
+1152,576
+
+1728
+
+(0,1,0;8)
+
+1152,1152
+
+2304
+
+(1,0,0;6)
+
+#4.1.1,#7.1.1
+
+41472,20736
+
+62208
+
+(0,2,0;8)
+
+#4.1.2,#5.1.1,#5.2.1
+
+165888,41472,41472
+
+248832
+
+(0,1,0;4)
+
+#5.1.2,#5.3.2
+
+27648,27648
+
+55296
+
+(0,0,1;6)
+
+#5.2.2,#6.1.1
+
+82944,41472
+
+124416
+
+(1,0,0;8)
+
+#5.2.3,#5.3.1,#7.1.2,#7.2.1
+
+82944,82944,41472,41472
+
+248832
+
+(1,1,0;2)
+
+#6.1.2,#6.2.2,#7.2.2
+
+20736,20736,82944
+
+124416
+
+(2,0,0;4)
+
+#6.1.3,#6.2.1
+
+41472,41472
+
+82944
+
+(2,0,0;6)
+
+#7.1.3,#7.2.3
+
+41472,41472
+
+82944
+
+(1,1,0;6)
+
+#8.1.1,#17.1.1
+
+1990656,995328
+
+2985984
+
+(0,3,0;8)
+
+#8.1.2,#9.2.1,#10.2.1
+
+#8.1.3,#11.1.2,#11.3.1
+
+3981312,3981312,3981312
+
+7962624,1990656,1990656
+
+11943936
+
+(0,2,0;4)
+
+11943936
+
+(0,2,0;4)
+
+#9.1.1,#13.2.1
+
+3981312,1990656
+
+5971968
+
+(0,1,0;16)
+
+#9.1.2
+
+7962624
+
+(0,0,0;24)
+
+#9.1.3,#9.2.3,#11.1.1,#11.4.1
+
+15925248,15925248,7962624,7962624
+
+47775744
+
+(0,1,0;2)
+
+#9.2.2,#14.1.1,#14.4.3
+
+#10.1.1,#10.2.3,#14.2.1,#14.4.2
+
+7962624,1990656,1990656
+
+2654208,2654208,1327104,1327104
+
+11943936
+
+(0,2,0;4)
+
+7962624
+
+(0,1,1;2)
+
+#10.2.2,#12.4.1
+
+2654208,1327104
+
+3981312
+
+(0,0,1;8)
+
+#11.1.3,#11.2.1
+
+3981312,3981312
+
+7962624
+
+(0,2,0;6)
+
+#11.2.2,#11.4.3,#14.1.2,#14.3.3
+
+#11.2.3,#11.4.2,#13.2.2,#13.3.1
+
+7962624,7962624,3981312,3981312
+
+7962624,7962624,3981312,3981312
+
+23887872
+
+(1,1,0;2)
+
+23887872
+
+(1,1,0;2)
+
+22
+
+#11.2.4,#11.3.2,#17.1.2,#17.2.1
+
+#11.3.3,#11.4.4,#12.1.1,#12.4.5
+
+#11.4.5,#15.3.1,#15.4.1
+
+3981312,3981312,1990656,1990656
+
+7962624,7962624,3981312,3981312
+
+7962624,1990656,1990656
+
+11943936
+
+(1,2,0;2)
+
+23887872
+
+(1,1,0;2)
+
+#11.4.6,#13.1.1,#13.2.3
+
+#12.1.2,#12.2.2,#13.3.3,#17.2.2
+
+15925248,3981312,3981312
+
+1990656,1990656,3981312,3981312
+
+11943936
+
+(1,1,0;4)
+
+#12.1.3,#16.1.2
+
+3981312,1990656
+
+5971968
+
+(2,0,0;8)
+
+#12.3.2,#12.4.3,#14.2.2,#14.3.2
+
+1327104,1327104,2654208,2654208
+
+7962624
+
+(1,0,1;2)
+
+11943936
+
+(2,1,0;2)
+
+#12.2.1,#12.4.2
+
+1327104,1327104
+
+2654208
+
+(1,0,1;6)
+
+23887872
+
+(1,0,0;4)
+
+#12.1.4,#12.3.3,#15.1.1,#15.3.2
+
+3981312,3981312,1990656,1990656
+
+11943936
+
+(2,1,0;2)
+
+#12.3.1,#12.4.4
+
+1327104,1327104
+
+2654208
+
+(1,0,1;6)
+
+#13.1.2,#13.3.4,#15.4.2,#15.5.1
+
+7962624,7962624,3981312,3981312
+
+23887872
+
+(2,0,0;2)
+
+#13.1.3,#16.1.1
+
+1990656,995328
+
+2985984
+
+(2,0,0;16)
+
+#13.2.4,#13.3.5
+
+3981312,3981312
+
+7962624
+
+(1,1,0;6)
+
+#13.3.2,#15.2.1,#15.3.3
+
+3981312,995328,995328
+
+5971968
+
+(2,1,0;4)
+
+#14.1.3,#14.2.3,#17.1.3,#17.3.1
+
+3981312,3981312,1990656,1990656
+
+11943936
+
+(1,2,0;2)
+
+#14.1.4,#15.4.4
+
+3981312,1990656
+
+5971968
+
+(1,1,0;8)
+
+#14.3.1,#14.4.1
+
+1327104,1327104
+
+2654208
+
+(0,0,1;12)
+
+#15.1.2,#15.5.3,#16.1.3,#16.2.2
+
+3981312,3981312,1990656,1990656
+
+11943936
+
+(3,0,0;2)
+
+#15.1.3,#15.4.3,#17.2.3,#17.3.2
+
+1990656,1990656,3981312,3981312
+
+11943936
+
+(2,1,0;2)
+
+#15.1.4,#15.4.5
+
+1990656,1990656
+
+3981312
+
+(2,1,0;6)
+
+#15.2.2,#15.5.2
+
+1990656,1990656
+
+3981312
+
+(3,0,0;6)
+
+#15.2.3,#15.4.6
+
+1990656,1990656
+
+3981312
+
+(2,1,0;6)
+
+#15.3.4,#15.5.4
+
+1990656,1990656
+
+3981312
+
+(2,0,0;12)
+
+#16.1.4,#16.2.1
+
+1990656,1990656
+
+3981312
+
+(3,0,0;6)
+
+#17.1.4,#17.2.4
+
+1990656,1990656
+
+3981312
+
+(1,2,0;6)
+
+table iii. connected diagrams of the four-point function and their multiplicities of the 4-theory up to three loops. each
+diagram is characterized by the vector (s, d, t ; n ) whose components specify the number of self-, double, triple connections,
+and of the identical vertex permutations, respectively.
+
+23
+
+p
+
+1
+
+2
+
+3
+
+w (p)
+
+#1.2
+
+1
+
+(2,0;2)
+
+#1.1
+
+2
+
+(0,1;2)
+
+#3.1
+
+96
+
+(0,0;4)
+
+#4.3
+3840
+(0,0;12)
+
+#5.3
+11520
+(1,0;2)
+
+#3.2
+
+96
+
+(1,0;2)
+
+#4.4
+960
+(0,3;6)
+
+#5.4
+5760
+(1,1;2)
+
+#6.4
+960
+(3,0;6)
+
+#7.5
+1440
+(2,2;2)
+
+#3.3
+
+24
+
+(2,1;2)
+
+#4.5
+5760
+(0,1;4)
+
+#6.1
+7680
+(0,0;6)
+
+#7.2
+5760
+(0,0;8)
+
+#7.1
+11520
+(0,0;4)
+
+#7.6
+2880
+(2,0;4)
+
+#2.1
+
+48
+
+(0,0;8)
+
+#4.1
+3840
+(0,0;12)
+
+#5.1
+11520
+(0,1;2)
+
+#6.2
+11520
+(1,0;2)
+
+#7.3
+11520
+(1,0;2)
+
+#2.2
+
+24
+
+(0,2;4)
+
+#4.2
+11520
+(0,0;4)
+
+#5.2
+23040
+(0,0;2)
+
+#6.3
+5760
+(2,0;2)
+
+#7.4
+5760
+(1,1;2)
+
+table iv. connected vacuum diagrams and their multiplicities of the 2a-theory up to four loops. each diagram is
+characterized by the vector (s, d; n ) whose components specify the number of self- and double connections as well as the
+identical vertex permutations, respectively.
+
+24
+
+w (1): 1 diagram
+1
+1
+
+i
+j
+# mij (s,d,t ,f ;n) m w 1
+1
+
+8
+
+2
+
+(2,1,0,0;1) 3
+
+w (2): 2 diagrams
+
+i 1 22
+j 1 12
+# mij
+2 0 40 (0,0,0,1;2) 24
+3 1 21 (2,1,0,0;2) 72
+
+(s,d,t ,f ;n) m w 1
+48
+16
+
+w (3): 4 diagrams
+
+i 1 22 333
+j 1 12 123
+# mij
+5 0 11 310 (1,0,1,0;2) 3456
+4 0 20 220 (0,3,0,0;6) 1728
+7 0 21 201 (2,2,0,0;2) 2592
+6 1 11 111 (3,0,0,0;6) 1728
+
+(s,d,t ,f ;n) m w 1
+24
+48
+32
+48
+
+w (4): 10 diagrams
+
+mij
+
+i 1 22 333 4444
+j 1 12 123 1234
+#
+10 0 00 130 3100 (0,0,2,0;4) 55296
+8 0 00 220 2200 (0,4,0,0;8) 62208
+12 0 01 111 3100 (2,0,1,0;2) 165888
+14 0 01 120 3010 (1,1,1,0;2) 165888
+17 0 01 201 2200 (2,3,0,0;2) 124416
+11 0 01 210 2110 (1,2,0,0;2) 497664
+9 0 10 120 2110 (0,2,0,0;8) 248832
+13 0 11 101 2110 (2,1,0,0;4) 248832
+15 0 11 111 2001 (3,1,0,0;2) 248832
+16 1 01 111 1101 (4,0,0,0;8) 62208
+
+(s,d,t ,f ;n) m w 1
+144
+128
+48
+48
+64
+16
+32
+32
+32
+128
+
+table v. unique matrix representation of all connected vacuum diagrams of 4-theory up to the order p = 4. the number
+in the rst column corresponds to their graphical representation in table i. the matrix elements mij represent the numbers of
+lines connecting two vertices i and j, with omitting mi0 = 0 for simplicity. the running numbers of the vertices are listed on
+top of each column in the rst two rows. the further columns contain the vector (s, d, t, f ; n ) characterizing the topology of
+the diagram, the multiplicity m and the weight w = m/[(4!)pp!].
+
+25
+
+g(1)
+11
+01
+
+12 : 1 diagram
+
+i
+j
+# mij (s,d,t ;n) m w 1
+1.1 21 (1,0,0;2) 12
+
+4
+
+12 : 3 diagrams
+
+g(2)
+11 222
+01 012
+
+i
+j
+# mij
+3.1 01 220 (1,1,0;2) 288
+2.1 10 130 (0,0,1;2) 192
+3.2 11 111 (2,0,0;2) 288
+
+(s,d,t ;n) m w 1
+
+8
+12
+8
+
+g(3)
+
+12 : 8 diagrams
+
+mij
+
+11 222 3333
+01 012 0123
+
+i
+j
+#
+7.1 00 021 2200 (1,2,0;2) 10368
+5.1 00 030 2110 (0,0,1;4) 6912
+5.3 00 111 1300 (1,0,1;1) 13824
+4.1 00 120 1210 (0,2,0;2) 20736
+6.1 01 011 2110 (2,0,0;4) 10368
+7.2 01 101 1210 (2,1,0;1) 20736
+5.2 01 110 1120 (1,1,0;2) 20736
+6.2 01 111 1101 (3,0,0;2) 10368
+
+(s,d,t ;n) m w 1
+16
+24
+12
+8
+16
+8
+8
+16
+
+g(4)
+
+12 : 30 diagrams
+
+mij
+
+11 222 3333 44444
+01 012 0123 01234
+
+i
+j
+#
+17.1 00 001 0220 22000 (1,3,0;2) 497664
+12.4 00 001 0310 21100 (1,0,1;2) 663552
+14.2 00 001 1120 13000 (1,1,1;1) 663552
+11.3 00 001 1210 12100 (1,2,0;2) 995328
+14.4 00 010 0130 22000 (0,1,1;4) 331776
+11.1 00 010 0220 21100 (0,2,0;4) 995328
+10.1 00 010 1030 13000 (0,0,2;2) 221184
+9.2 00 010 1120 12100 (0,2,0;2) 1990656
+15.3 00 011 0111 22000 (2,1,0;4) 497664
+15.4 00 011 0201 21100 (2,1,0;2) 995328
+13.2 00 011 0210 21010 (1,1,0;4) 995328
+12.3 00 011 1011 13000 (2,0,1;1) 663552
+13.3 00 011 1101 12100 (2,1,0;1) 1990656
+11.4 00 011 1110 12010 (1,1,0;1) 3981312
+11.2 00 020 1011 12100 (1,2,0;1) 1990656
+8.1 00 020 1020 12010 (0,3,0;2) 995328
+9.1 00 020 1110 11110 (0,1,0;4) 1990656
+17.2 00 021 1001 12010 (2,2,0;1) 995328
+14.1 00 021 1100 11020 (1,2,0;2) 995328
+15.2 00 021 1101 11001 (3,1,0;2) 497664
+14.3 00 030 1001 11110 (1,0,1;2) 663552
+10.2 00 030 1010 11020 (0,1,1;2) 663552
+12.2 00 030 1011 11001 (2,0,1;2) 331776
+16.1 01 001 0111 21100 (3,0,0;4) 497664
+15.1 01 001 1011 12100 (3,1,0;1) 995328
+17.3 01 001 1020 12010 (2,2,0;2) 497664
+13.1 01 001 1110 11110 (2,0,0;4) 995328
+15.5 01 011 1001 11110 (3,0,0;2) 995328
+12.1 01 011 1010 11020 (2,1,0;2) 995328
+16.2 01 011 1011 11001 (4,0,0;2) 497664
+
+(s,d,t ;n) m w 1
+32
+24
+24
+16
+48
+16
+72
+8
+32
+16
+16
+24
+8
+4
+8
+16
+8
+16
+16
+32
+24
+24
+48
+32
+16
+32
+16
+16
+16
+32
+
+table vi. unique matrix representation of all connected two-point function of 4-theory up to the order p = 4. the
+numbers in the rst column correspond to their graphical representation in table ii. the matrix elements mij represent the
+numbers of lines connecting two vertices i and j, with omitting mi0 = 0 for simplicity. the running numbers of the vertices
+are listed on top of each column in the rst two rows. the further columns contain the vector (s, d, t ; n ) characterizing the
+topology of the diagram, the multiplicity m and the weight w = m/[(4!)pp!].
+
+26
+
+gc,(1)
+1234 : 1 diagram
+11
+i
+j
+01
+# mij
+
+1.1.1 40 (0,0,0;24) 24
+
+(s,d,t ;n) m w 1
+24
+
+gc,(2)
+
+1234 : 2 diagrams
+11 222
+01 012
+
+i
+j
+#
+
+mij
+
+3.1.2, 3.2.1 11 310 (1,0,0;6) 2304
+2.1.1, 3.1.1 20 220 (0,1,0;8) 1728
+
+(s,d,t ;n) m w 1
+12
+16
+
+gc,(3)
+
+1234 : 8 diagrams
+
+i
+j
+#
+
+11 222 3333
+01 012 0123
+
+mij
+
+5.1.2, 5.3.2
+4.1.1, 7.1.1
+6.1.3, 6.2.1
+7.1.3, 7.2.3
+5.2.2, 6.1.1
+
+00 130 3100 (0,0,1;6) 55296
+00 220 2200 (0,2,0;8) 62208
+01 111 3100 (2,0,0;6) 82944
+01 120 3010 (1,1,0;6) 82944
+01 210 2110 (1,0,0;8) 124416
+5.2.3, 5.3.1, 7.1.2, 7.2.1 10 111 2200 (1,1,0;2) 248832
+10 120 2110 (0,1,0;4) 248832
+11 101 2110 (2,0,0;4) 124416
+
+(s,d,t ;n) m w 1
+36
+32
+24
+24
+16
+8
+8
+16
+
+4.1.2, 5.1.1, 5.2.1
+6.1.2, 6.2.2, 7.2.2
+
+i
+j
+#
+
+gc,(4)
+
+1234 : 37 diagrams
+11 222 3333 44444
+01 012 0123 01234
+
+mij
+
+(s,d,t ;n)
+
+m
+
+9.2.2, 14.1.1, 14.4.3
+
+11.4.5, 15.3.1, 15.4.1
+
+13.3.2, 15.2.1, 15.3.3
+
+9.1.3, 9.2.3, 11.1.1, 11.4.1
+
+13.2.4, 13.3.5
+12.3.1, 12.4.4
+
+11.1.3, 11.2.1
+8.1.1, 17.1.1
+9.1.1, 13.2.1
+15.2.3, 15.4.6
+17.1.4, 17.2.4
+14.1.4, 15.4.4
+12.2.1, 12.4.2
+14.3.1, 14.4.1
+10.2.2, 12.4.1
+
+00 011 1210 31000 (1,1,0;6) 7962624
+00 011 1300 30100 (1,0,1;6) 2654208
+00 011 2110 22000 (1,1,0;4) 11943936
+00 020 1120 31000 (0,2,0;6) 7962624
+00 020 2020 22000 (0,3,0;8) 2985984
+00 020 2110 21100 (0,1,0;16) 5971968
+00 021 1101 31000 (2,1,0;6) 3981312
+00 021 1200 30010 (1,2,0;6) 3981312
+00 021 2100 21010 (1,1,0;8) 5971968
+00 030 1011 31000 (1,0,1;6) 2654208
+00 030 1110 30010 (0,0,1;12) 2654208
+00 030 2010 21010 (0,0,1;8) 3981312
+11.2.4, 11.3.2, 17.1.2, 17.2.1 00 101 1210 22000 (1,2,0;2) 11943936
+12.3.2, 12.4.3, 14.2.2, 14.3.2 00 101 1300 21100 (1,0,1;2) 7962624
+00 110 1120 22000 (0,2,0;4) 11943936
+00 110 1210 21100 (0,1,0;2) 47775744
+10.1.1, 10.2.3, 14.2.1, 14.4.2 00 110 1300 20200 (0,1,1;2) 7962624
+00 111 1101 22000 (2,1,0;4) 5971968
+11.2.3, 11.4.2, 13.2.2, 13.3.1 00 111 1200 21010 (1,1,0;2) 23887872
+00 120 1200 20110 (0,2,0;4) 11943936
+01 001 1120 31000 (2,1,0;6) 3981312
+01 001 2110 21100 (2,0,0;16) 2985984
+01 011 1011 31000 (3,0,0;6) 3981312
+01 011 1110 30010 (2,0,0;12) 3981312
+01 011 2010 21010 (2,0,0;8) 5971968
+11.3.3, 11.4.4, 12.1.1, 12.4.5 01 100 1120 21100 (1,1,0;2) 23887872
+14.1.3, 14.2.3, 17.1.3, 17.3.1 01 100 1210 20200 (1,2,0;2) 11943936
+15.1.2, 15.5.3, 16.1.3, 16.2.2 01 101 1101 21100 (3,0,0;2) 11943936
+13.1.2, 13.3.4, 15.4.2, 15.5.1 01 101 1110 21010 (2,0,0;2) 23887872
+15.1.3, 15.4.3, 17.2.3, 17.3.2 01 101 1200 20110 (2,1,0;2) 11943936
+12.1.4, 12.3.3, 15.1.1, 15.3.2 01 110 1101 20200 (2,1,0;2) 11943936
+01 110 1110 20110 (1,0,0;4) 23887872
+10 100 1120 12100 (0,2,0;4) 11943936
+12.1.2, 12.2.2, 13.3.3, 17.2.2 10 101 1101 12100 (2,1,0;2) 11943936
+11.2.2, 11.4.3, 14.1.2, 14.3.3 10 101 1110 12010 (1,1,0;2) 23887872
+10 110 1110 11110 (0,0,0;24) 7962624
+10 111 1101 11001 (3,0,0;6) 3981312
+
+15.1.4, 15.4.5
+13.1.3, 16.1.1
+16.1.4, 16.2.1
+15.3.4, 15.5.4
+12.1.3, 16.1.2
+
+11.4.6, 13.1.1, 13.2.3
+
+9.1.2
+
+15.2.2, 15.5.2
+
+8.1.3, 11.1.2, 11.3.1
+
+8.1.2, 9.2.1, 10.2.1
+
+w 1
+24
+72
+16
+24
+64
+32
+48
+48
+32
+72
+72
+48
+16
+24
+16
+4
+24
+32
+8
+16
+48
+64
+48
+48
+32
+8
+16
+16
+8
+16
+16
+8
+16
+16
+8
+24
+48
+
+table vii. unique matrix representation of all connected two-point function of 4-theory up to the order p = 4. the
+numbers in the rst column correspond to their graphical representation in table iii. the matrix elements mij represent the
+numbers of lines connecting two vertices i and j, with omitting mi0 = 0 for simplicity. the running numbers of the vertices
+are listed on top of each column in the rst two rows. the further columns contain the vector (s, d, t ; n ) characterizing the
+topology of the diagram, the multiplicity m and the weight w = m/[(4!)pp!].
+
+27
+
+

@@ -1,0 +1,1373 @@
+9
+9
+9
+1
+
+ 
+
+y
+a
+m
+1
+1
+
+ 
+
+ 
+ 
+
+1
+v
+7
+7
+0
+5
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+renormalization in spherical eld theory1
+
+hutp-99/a003
+
+dean lee2
+
+university of massachusetts
+
+amherst, ma 01003
+
+nathan salwen3
+
+harvard university
+
+cambridge, ma 02138
+
+we derive several results concerning non-perturbative renormalization in the
+spherical eld formalism. using a small set of local counterterms, we are able
+to remove all ultraviolet divergences in a manner such that the renormalized
+theory is nite and translationally invariant. as an explicit example we
+consider massless 4 theory in four dimensions.
+[pacs numbers: 11.10.-z,
+11.10.gh, 11.15.tk]
+
+1
+
+introduction
+
+spherical eld theory is a non-perturbative method which uses the spheri-
+cal partial wave expansion to reduce a general d-dimensional euclidean eld
+theory into a set of coupled radial systems ([1], [2]). high spin partial waves
+correspond with large tangential momenta and can be neglected if the theory
+is properly renormalized. the remaining system can then be converted into
+dierential equations and solved using standard numerical methods. 4 the-
+ory in two dimensions was considered in [1]. in that case there was only one
+divergent diagram, and it could be completely removed by normal ordering.
+in general any super-renormalizable theory can be renormalized by removing
+the divergent parts of divergent diagrams. using a high-spin cuto jmax and
+discarding partial waves with spin greater than jmax, we simply compute the
+relevant counterterms using spherical feynman rules.
+
+1support provided by the nsf under grant 5-22968 and phy-9802709
+2email: dlee@het.phast.umass.edu
+3email: salwen@physics.harvard.edu
+
+1
+
+the jmax cuto scheme however is not translationally invariant. it pre-
+serves rotational invariance but regulates ultraviolet processes dierently de-
+pending on radial distance. in the two-dimensional 4 example it was found
+that the mass counterterm had the form
+
+lc.t.  2(~t)hk0(t)i0(t) + 2pn=1,jmax
+
+kn(t)in(t)i ,
+
+where in, kn are nth-order modied bessel functions of the rst and second
+kinds,  is the bare mass, and t is the magnitude of ~t. as jmax  , we nd
+
+(1)
+
+(2)
+
+lc.t.  2(~t)hlog( 2jmax
+
+t ) + o(j 1
+
+max)i .
+
+our regularization scheme varies with t, and we see that the counterterm also
+depends on t. the physically relevant issue, however, is whether or not the
+renormalized theory is independent of t. in this case the answer is yes. any
+t dependence in renormalized amplitudes is suppressed by powers of j 1
+max,
+and translational invariance becomes exact as jmax  .
+
+we now consider general renormalizable theories, in particular those which
+are not super-renormalizable. in this case the number of divergent diagrams
+is innite. since we are primarily interested in non-perturbative phenom-
+ena, a diagram by diagram subtraction method is not useful. in the same
+manner strictly perturbative methods such as dimensional regularization are
+not relevant either. our interest is in non-perturbative renormalization,
+where coecients of renormalization counterterms are determined by non-
+perturbative computations.4
+in this paper we analyze the general theory
+of non-perturbative renormalization in the spherical eld formalism. in the
+course of our analysis we answer the following three questions: (i) can ultra-
+violet divergences be cancelled by a nite number of local counterterms? (ii)
+can the renormalized theory be made translationally invariant? (iii) what
+is the general form of the counterterms?
+
+the organization of the paper is as follows. we begin with a discussion of
+dierential renormalization, a regularization-independent method which will
+allow us to construct local counterterms. next we describe a regularization
+procedure which is convenient for spherical eld theory. in the large radius
+limit t   our regularization procedure (which we call angle smearing) is
+
+4we should mention that pauli-villars regularization is compatible with non-
+perturbative renormalization. however this introduces additional unphysical degrees of
+freedom and tends to be computationally inecient.
+
+2
+
+anisotropic but locally invariant under translations. for general t we expand
+in powers of t1 to generate the general form of the counterterms. we con-
+clude with two examples of one-loop divergent diagrams. we show by direct
+calculation that the predicted counterterms render these processes nite and
+translationally invariant.
+
+2 dierential renormalization
+
+dierential renormalization is the coordinate space version of the bphz
+method.5
+it is framed entirely in coordinate space, and renormalized am-
+plitudes can be dened as distributions without reference to any specic
+regularization procedure. dierential renormalization was introduced in [3],
+and a systematic analysis of dierential renormalization to all orders in per-
+turbation theory using bogoliubovs recursion formula was rst described
+in [4]. the usual implementation of dierential renormalization is carried
+out using singular poisson equations and their explicit solutions.
+in our
+discussion, however, we nd it more convenient to operate directly on the
+distributions.6 we describe the details of our approach in the following. we
+should stress that the two approaches are equivalent, diering only at the
+level of formalism.
+
+we assume that we are working with a renormalizable theory. for indices
+
+i1,    ij let us dene
+
+ti1,ij = ti1ti2    tij ,
+i1,ij = i1i2    ij .
+
+(3)
+(4)
+
+let f (~t) be a smooth test function, and let i(~t ~t; 2) be a smooth function
+with support on a region of scale 1. we dene sj
+~t [f ] (~t) as i(~t  ~t; 2)
+multiplied by the jth order term in the taylor series of f (~t) about the point
+~t. inserting delta functions, we have
+
+sj
+
+~tf (~t) = i(~t  ~t; 2) pi1,ijh (tt)i1,ij
+
+(tt)i1,ij
+
+= i(~t  ~t; 2) pi1,ij
+
+j!
+
+j!
+
+i1,ij f (~t)i
+r d4~z ~t
+
+5paraphrase of private communication with jose latorre.
+6our approach is similar to the natural renormalization scheme described in [5]. in
+
+contrast with [5], however, we do not a priori specify the nite parts of amplitudes.
+
+3
+
+(5)
+
+i1,ij 4(~t  ~z) f (~z).
+
+for the purposes of this discussion we will require
+
+i(~t  ~t; 2) = 1 + on (~t  ~t)
+
+as ~t  ~t,
+
+(6)
+
+where n is some positive integer greater than the supercial degree of di-
+vergence of any subdiagram7 in the theory we are considering.
+for any
+renormalizable theory n > 2 will suce. in our formalism, i(~t  ~t; 2) de-
+termines how nite parts of renormalized amplitudes are assigned, and  is
+the renormalization mass scale.
+
+we now consider a particular diagram, g, with n vertices. we dene
+k(~t1,   ~tn) to be the kernel of the amputated diagram, i.e., the value of the
+diagram with vertices xed at points ~t1,   ~tn. the amplitude is obtained by
+integrating k(~t1,   ~tn) with respect to all internal vertices. we will regard
+k as a distribution acting on n smooth test functions f1,    fn. (for external
+vertices containing more than one external line and/or derivatives, fext(~text)
+should be regarded as a product of test functions, with possible derivatives,
+at ~text.)
+
+k : f1,    fn r d4~t1    d4~tn k(~t1,   ~tn)f1(~t1)    fn(~tn).
+
+let us assume that our diagram is primitively divergent with supercial de-
+gree of divergence j. we now dene another distribution tgk, which extracts
+the divergent part of k. we start with the case when g has more than one
+vertex. let us dene tgk : f1,    fn 
+
+(7)
+
+pj1++jnjr d4~t1    d4~tn k(~t1,   ~tn)sj1
+
+~tave
+
+f1(~t1)    sjn
+~tave
+
+fn(~tn),
+
+(8)
+
+where ~tave = 1
+tgk is nite and well-dened for all f1,    fn. let us dene
+
+n (~t1 +    + ~tn). we note that the subtracted distribution k 
+
+f i1,1,i2,1ijn ,n
+
+k
+
+(~t)
+
+i(~tk ~t;2)(tk t)
+
+i1,k ,ijk ,k
+
+jk!
+
+(9)
+
+# .
+
+=r d4~t1    d4~tn 4(~t1++~tn
+
+n
+
+ ~t)k(~t1,   ~tn)" qk=1,n
+
+7in our discussion a subdiagram is a subset of vertices together with all lines contained
+
+in those vertices.
+
+4
+
+we can then rewrite tgk : f1,    fn 
+
+pj1++jnj pi1,1,i2,1
+
+i1,nijn ,n
+
+"
+
+(cid:16)qk=1,n ~t
+
+k
+
+r d4~tf i1,1,i2,1ijn ,n
+
+i1,k,ijk ,k
+
+4(~t  ~zk)(cid:17) f1(~z1)    fn(~zn) # .
+(~t)r d4~z1    d4~zn
+
+(10)
+
+the delta functions make this kernel completely local. we can read o the
+corresponding counterterm interaction by functional dierentiation with re-
+spect to each of the component functions of fext(~text) for the external vertices
+and setting fint(~tint) = 1 for the internal vertices. we now turn to the case
+when g has only one vertex. for this case we set tgk = k, which is equiva-
+lent to normal ordering the interactions in our theory. in this case k is itself
+local and therefore tgk and our counterterm interaction are again local.
+
+we now extend the denition of tg in (10) to include the case of subdia-
+grams. let g be a general 1pi diagram, and let g be a renormalization part8
+of g with supercial degree of divergence j. for notational convenience we
+will label the vertices of g so that the rst n vertices lie in g. if g has
+only one vertex then again we normal order the interaction. otherwise we
+dene tgk : f1,    fn 
+
+n jr d4~t1    d4~tn k(~t1,   ~tn)" s
+
+pj
+
+1++j
+
+f1(~t1)    sj
+n
+~tave
+
+j
+1
+~tave
+fn+1(~tn+1)    fn(~tn)
+
+fn(~tn)
+
+# ,
+
+(11)
+
+where ~tave = 1
+dene products of tg
+subdiagrams g
+1  g
+the product so that larger diagrams are on the left.
+
+n (~t1 +    + ~tn).9 this denition can be used recursively to
+2 =  or nested
+2. for the case of nested subdiagrams we always order
+
+2 for disjoint subdiagrams g
+
+1  g
+
+tg
+
+1
+
+it is straightforward to show that the t operation acts as the identity on
+local interactions and thus treats overlapping divergences in the same manner
+as bphz. following the standard bphz procedure ([6][8]), we can write
+bogoliubovs r operation using zimmermans forest formula,
+
+(t),
+
+(12)
+
+8a renormalization part is a 1pi subdiagram with degree of divergence  0.
+9after applying tg, we regard g as being contracted to single vertex at ~tave.
+
+r =pf qf
+
+5
+
+where f ranges over all forests10 of g, and  ranges over all renormalization
+parts of f. in the product we have again ordered nested subdiagrams so that
+larger diagrams are on the left. let j be the supercial degree of divergence
+of g. the renormalized kernel, rk, is given by
+
+rk = rk
+
+rk = (1  tg) rk
+
+for j < 0
+for j  0.
+
+(13)
+
+our nal result is that all required counterterms are local, and the form of
+the counterterms is
+
+(14)
+
+lc.t. =pa(,i) fa(~t)a((~t), i(~t)),
+
+where the sum is over operators of renormalizable type. for the case of gauge
+theories, our renormalization procedure is supplemented by the additional re-
+quirement that the renormalized amplitudes satisfy ward identities.11 if our
+regularization procedure breaks gauge invariance these identities are not au-
+tomatic and the required local counterterms will in general be any operators
+of renormalizable type (not merely gauge-invariant operators). this is, how-
+ever, a separate discussion, and the details of implementing ward identity
+constraints will be discussed in future work.
+
+3 regularization by angle smearing
+
+in this section we determine the functional form of the coecients fa(~t) in
+(14). to make the discussion concrete, we will illustrate using the example
+of massless 4 theory in four dimensions
+
+l = 1
+
+2 2  
+
+4! 4 + lc.t..
+
+from (14) lc.t. is given by
+
+(15)
+
+(16)
+
+f2(~t)2(~t) + pi,jf ij
+
+(~t)i(~t)j(~t) + f4(~t)4(~t).
+
+let g(~t, ~t) be the free two-point correlator. we will use a regularization
+scheme which preserves rotational invariance and is convenient for spherical
+
+10a forest is any set of non-overlapping renormalization parts.
+11see [9], [10] for a discussion of gauge theories using the method of dierential renor-
+
+malization.
+
+6
+
+eld theory, but one which breaks translational invariance. we regulate
+the short distance behavior of g by smearing the endpoints over a radius
+t spherical shell within a conical region rm 2(~t), where rm 2(~t) is the set of
+vectors ~u such that the angle between ~t and ~u is between  1
+m t (see
+figure 1). the result is a regulated correlator
+
+m t and 1
+
+gm 2(~t, ~t) =
+
+1
+
+r ur
+
+m 2 (~t) d3 ur ur
+
+m 2 (~t) d3 u z urm 2 (~t)
+
+urm 2 (~t)
+
+d3ud3u g(tu, t u).
+
+(17)
+
+we recall that our renormalized theory is determined by the translationally
+invariant function i(~t  ~tave; 2) described in the previous section. even
+though our regularization scheme breaks translational invariance, the renor-
+malized theory nevertheless remains invariant.
+
+as the radius t increases the curvature of the angle-smearing region be-
+in the limit t   the region becomes a at three-
+comes negligible.
+dimensional ball with radius 1
+m lying in the plane perpendicular to the radial
+vector. in this limit our regularization is invariant under local transforma-
+tions and the counterterms converge to constants independent of ~t,
+
+lim
+t
+
+( 2
+m 2 )
+2 ( 2
+m 2 )
+
+(~t) = cij,(0)
+f ij
+f2(~t) = m 2c(0)
+4 ( 2
+
+f4(~t) = c(0)
+
+m 2 ).
+
+lim
+t
+
+lim
+t
+
+(18)
+
+(19)
+
+(20)
+
+we have chosen our coecients c(0)
+a to be dimensionless. although our reg-
+ularization scheme is invariant under rotations about the origin, the radial
+vector has a special orientation which is normal to our three-dimensional ball.
+our regularization scheme is therefore not isotropic. the result (as should
+be familiar from studies of anisotropic lattices) is that the coecient of the
+kinetic term has two independent components
+
+( 2
+cij,(0)
+
+m 2 ) = c
+
+tt,(0)
+( 2
+
+m 2 ) + ijc(0)
+
+( 2
+
+m 2 ).
+
+(21)
+
+starting with the t   result at lowest order, we now expand our
+
+coecient functions in powers of
+
+(~t) = cij,(0)
+f ij
+f2(~t) = m 2c(0)
+4 ( 2
+f4(~t) = c(0)
+
+( 2
+2 ( 2
+m 2 ) + 1
+
+m 2 ) + 1
+m 2 ) + m
+m t c(1)
+
+1
+m t ,
+( 2
+m t cij,(1)
+2 ( 2
+t c(1)
+m 2 ) + 1
+4 ( 2
+m 2 ) + 1
+
+m 2 ) + 1
+t2 c(2)
+m 2t2 c(2)
+
+m 2t2 cij,(2)
+2 ( 2
+4 ( 2
+
+( 2
+m 2 ) +   
+m 2 ) +    .
+
+m 2 ) +   
+
+(22)
+
+(23)
+
+(24)
+
+7
+
+for the moment let us assume t  1 for
+
+ = mz
+
+0m 1z,
+
+(25)
+
+for some xed mass m0 and constant z such that 0 < z < 1
+m t is bounded by mz
+our dimensionless expansion parameter
+diminishes uniformly as m  .
+
+1
+
+2. in this region
+m z and therefore
+
+0
+
+in general the 2
+
+m 2 dependence in the functions c(k)
+
+a will contain analytic
+terms as 2  0 as well as logarithmically divergent terms. there are,
+however, no inverse powers of 2
+m 2 . these would indicate severe infrared
+divergences not present in the processes we are considering, as can be deduced
+from the long distance behavior of the integral in (9).12 with this we can
+neglect terms which vanish as m  ,
+
+2 ( 2
+f2(~t) = m 2c(0)
+m 2 ) + 1
+( 2
+(~t) = cij,(0)
+f ij
+m 2 )
+4 ( 2
+f4(~t) = c(0)
+m 2 ).
+
+t2 c(2)
+
+2 ( 2
+m 2 )
+
+(26)
+
+(27)
+
+(28)
+
+since our regularization scheme is invariant under m  m, we have also
+omitted the term proportional to c(1)
+
+2 which is odd in m.
+
+we now consider what occurs in the small region near the origin, t  1.
+for the theory we are considering (and in fact for any renormalizable theory)
+the highest ultraviolet divergence possible is quadratic.13 in the limit m 
+ we deduce that each fa scales no greater than o(m 2). on the other hand
+the volume of the region t  1 diminishes as o(m 4z4). thus the total
+contribution from the region t  1 scales as o(m 4z2) and can be entirely
+neglected.
+
+to summarize our results, the counterterm lagrange density has the form
+
+c(0)
+(~(~t))2 + c
+
+tt,(0)
+(t  ~(~t))2 + (m 2c(0)
+
+2 + 1
+
+t2 c(2)
+
+2 )2(~t) + c(0)
+
+4 4(~t).
+
+(29)
+
+12if our theory contained bare masses mi, similar arguments would apply for the infrared
+
+13there may be additional logarithmic factors but this does not matter for our purposes
+
+limit 2, m2
+
+i  0, with m2
+
+i
+
+2 xed.
+
+here.
+
+8
+
+4 spherical elds
+
+we now examine the results of the previous section in the context of spherical
+eld theory. we start with the spherical partial wave expansion,
+
+where yl,m,n are four-dimensional spherical harmonics satisfying
+
+ =pl=0,1,pn=0,lpm=n,nl,n,m(t)yl,n,m(, , ),
+r d3 y 
+
+l,n,m(, , )yl,n,m(, , ) = l,ln,nm,m,
+
+l,n,m(, , ) = (1)myl,n,m(, , ).
+y 
+
+(30)
+
+(31)
+
+(32)
+
+the explicit form of yl,m,n can be found in [11].14 the integral of the free
+massless lagrange density in terms of spherical elds is
+
+r d4~t l =r 
+
+0 dt (xl,m,nh(1)ml,n,mh 
+
+t
+
+t3
+2
+
+
+t
+
+ t
+
+2 l(l + 2)i l,n,mi) .
+
+(33)
+
+it can be shown that the process of angle smearing the eld (~t) is equivalent
+to multiplying l,n,m(t) by an extra factor sm
+
+l (t) where
+
+sm
+l (t) =
+
+2m t[(l+2) sin( l
+
+l(l+1)(l+2)[2m t sin( 2
+
+m t )]
+m t )l sin( l+2
+m t )]
+
+.
+
+(34)
+
+for large l, sm
+l (t) diminishes as l2, and so the correlator receives an extra
+suppression of l4. we will later use this result to estimate the contribu-
+tion of high spin partial waves. the regularization of our correlator can be
+implemented in our lagrange density by dividing factors of sm
+
+l (t),
+
+ t
+
+t3
+2
+
+
+t
+
+t
+
+ t
+
+t3
+2
+
+
+t
+
+t
+
+we now include the interaction and counterterms. we rst dene
+
+2 l(l + 2)i l,n,m
+
+l (t))1l,n,m(cid:3)h 
+
+l,n,mh 
+(cid:2)(sm
+l3,n3,m3;l4,n4,m4i
+h l1,n1,m1;l2,n2,m2
+=r d3 yl1,n1,m1(, , )yl2,n2,m2(, , )yl3,n3,m3(, , )yl4,n4,m4(, , ).
+
+2 l(l + 2)i(cid:2)(sm
+
+l (t))1l,n,m(cid:3) .
+
+14[11] deserves credit as the rst discussion of radial (or covariant euclidean) quantiza-
+
+(35)
+
+(36)
+
+tion, an important part of the spherical eld formalism.
+
+9
+
+we can write the full functional integral as
+
+where
+
+z d exp(cid:2)r d4~t l(cid:3) z (cid:16)ql,n,md
+l,n,m(cid:3)h 
+l1 = xl,m,nh(1)m(cid:2)(sm
+
+l (t))1
+
+l,n,m(cid:17) exp(cid:2)r 
+
+t3
+2
+
+
+t
+
+t
+
+ t
+
+0 dt (l1 + l2 + l3)(cid:3) ,
+2 l(l + 2)i(cid:2)(sm
+
+l (t))1
+
+(37)
+
+l,n,m(cid:3)i ,
+
+(38)
+
+l2 = xl,m,n"(1)m
+
+l,n,m"
+
+tt,(0)
+
+  c
+
+i 
+hc(0)
+2 l(l + 2) + t3(m 2c(0)
+
+t
+
+t
+
+t3
+2
+
+
+t
+
++c(0)
+
+
+
+2 ) # 
+
+l,n,m# ,
+
+2 + 1
+
+t2 c(2)
+
+(39)
+
+
+
+l2,m2,n2
+
+
+
+l3,m3,n3
+
+
+
+l4,m4,n4
+
+.
+
+(40)
+
+(41)
+
+l3 = t3( 
+4!
+
+ c(0)
+
+l3,m3,n3;l4,m4,n4i 
+4 ) xli,mi,nih l1,m1,n1;l2,m2,n2
+
+l1,m1,n1
+
+we have used primes in preparation for redening the elds,
+
+(sm
+
+l (t))1
+
+l,n,m = l,n,m.
+
+the jacobian of this transformation is a constant (although innite) and
+can be absorbed into the normalization of the functional integral. now the
+lagrangian l1 has the usual free-eld form in terms of l,n,m while l2 and
+l3 are now functions of sm
+
+l (t)l,n,m.
+
+with m serving as our ultraviolet regulator, the contribution of high-spin
+partial waves decouples for suciently large spin l. we can estimate the order
+of magnitude of this contribution in the following manner. we rst identify
+t1l (where t is the characteristic radius we are considering) as an estimate
+of the magnitude of the tangential momentum, pt . for pt  m  t1 our
+correlator scales as m 4
+. by dimensional analysis, a diagram with nl loops
+p6
+t
+and ni internal lines will receive a contribution from partial waves with spin
+ l of order
+
+t (cid:17)ni
+(cid:16) m 4
+
+p6
+
+(pt )4nl =(cid:16) m 4
+
+(t1l)6(cid:17)ni
+
+(cid:0)t1l(cid:1)4nl .
+
+(42)
+
+10
+
+5 one-loop examples
+
+we will devote the remainder of our discussion to computing one-loop spher-
+ical feynman diagrams as a check of our results. our calculations are done
+both numerically and analytically. the diagrams we will consider are shown
+in figures 2 and 3. we start with the two-point function in figure 2. the
+amplitude can be written as t3b(t) where
+
+b(t) pl,n,m
+
+1
+
+t2(l+1) (sm
+
+l (t))2.
+
+(43)
+
+constants of proportionality are not important here and so we will dene
+b(t) to be equal to the right side of (43). our results tell us that if we
+choose our mass counterterms appropriately, the combination
+
+b(t) + m 2c(0)
+
+2 + 1
+
+t2 c(2)
+
+2
+
+should be independent of t, or more succinctly,
+
+b(t) + 1
+
+t2 c(2)
+
+2
+
+(44)
+
+(45)
+
+is independent of t. let us rst check this analytically. in the absence of a
+high-spin cuto, we can explicitly calculate the sum in (43):
+
+b(t) = 1
+
+t2 + b(t)
+
+b(t) = 4m 2 sin4( 1
+m t )
+m t ))2 .
+(2m t sin( 2
+
+where
+
+in the limit m  ,
+
+b(t)  1
+
+t2 + 9
+
+4 m 2.
+
+(46)
+
+(47)
+
+(48)
+
+we conclude that c(2)
+ant.
+
+2 = 1 and b(t) + 1
+
+t2 c(2)
+
+2 is in fact translationally invari-
+
+in figure 4 we have plotted b(t)  1
+
+t2 , computed numerically for various
+values of the high-spin cuto jmax. we have also plotted the limiting values
+b(t) and 9
+t2 is
+in units of m2, where m is an arbitrary mass scale such that m = 3m. as
+expected, the errors are of size m 4t2
+4 m 2
+for t . m 1 but the integral of the deviation is negligible as m  .
+
+4 m 2. in our plot t is measured in units of m1 and b(t)  1
+
+. there is clearly a deviation from 9
+
+max
+
+j 2
+
+11
+
+we now turn to the four-point function in figure 3. the amplitude can
+
+be written as t3
+
+1t3
+
+2c(t1, t2) where
+
+c(t1, t2) pl,n,m
+
+(sm
+
+l (t1))2(sm
+(l+1)2
+
+l (t2))2
+
+(t2  t1) + tl
+2
+tl+2
+1
+
+1
+tl+2
+2
+
+h tl
+
+(t1  t2)i2
+
+.
+
+(49)
+
+again constants of proportionally are not important and so we will dene
+c(t1, t2) to be equal to the right side of (49). we can write c(t1, t2) in terms
+of the regulated correlator gm 2(~t1, ~t2), 15
+
+c(t1, t2) z d3t1d3t2(cid:2)gm 2(~t1, ~t2)(cid:3)2
+
+since the coupling constant counterterm
+
+z d3t1(cid:2)gm 2(~t1, ~t2)(cid:3)2
+
+.
+
+c(0)
+4 4(~t1  ~t2)
+
+(50)
+
+(51)
+
+is translationally invariant, the amplitude by itself should be translationally
+invariant. let us dene
+
+so that
+
+z d4~t2ei~p(~t1~t2)(cid:2)gm 2(~t1, ~t2)(cid:3)2
+z d4~t2ei~p~t2(cid:2)gm 2(~t1, ~t2)(cid:3)2
+
+= f (~p2),
+
+= ei~p~t1f (~p2).
+
+integrating over t1, we nd
+
+z dt2 t2
+
+2j1(pt2)c(t1, t2)  1
+t1
+
+j1(pt1)f (~p2).
+
+let us dene
+
+we now check that in fact
+
+c(t) =r dt2 t2
+
+2j1(pt2)c(t, t2).
+
+c(t)  1
+t1
+
+j1(pt1).
+
+(52)
+
+(53)
+
+(54)
+
+(55)
+
+(56)
+
+15we recall that the regulated correlator goes with 
+
+l,n,m rather than l,n,m. but this
+
+is not important here since 
+
+0,0,0 = 0,0,0.
+
+12
+
+in the absence of a high-spin cuto, we nd that c(t) is given by16
+
+c(t) = 1
+t1
+
+j1(pt1)h 1
+
+2 log m 2
+
+p2 + ci +    ,
+
+where the ellipsis represents terms which vanish as m   and
+
+c = 324"z 1/2
+
+0
+
+dk(cid:16) (sin kk cos k)4
+
+4k13
+
+ 1
+
+324k(cid:17) +z 
+
+1/2
+
+dk (sin kk cos k)4
+
+4k13
+
+# .
+
+(57)
+
+(58)
+
+in figure 5 we plot c(t) for dierent values of the high-spin cuto jmax as
+well as the large-m limit value
+
+c1(t) = 1
+t1
+
+j1(pt1)h 1
+
+2 log m 2
+
+p2 + ci .
+
+(59)
+
+in our plot t is measured in units of p1 and m = 3p. from (42) the
+expected error is of size m 8t8
+. we see that the data is consistent with the
+results expected. again the deviation for t . m 1 integrates to a negligible
+contribution as m  .
+
+max
+
+j 8
+
+6 summary
+
+we have examined several important features of non-perturbative renormal-
+ization in the spherical eld formalism and answered the three questions
+posed in the introduction. ultraviolet divergences can be cancelled by a -
+nite number of local counterterms in a manner such that the renormalized
+theory is translationally invariant. using angle-smearing regularization we
+nd that the counterterms for 4 theory in four dimensions can be parame-
+terized by ve unknown constants as shown in (29). aside from our remarks
+about ward identity constraints in gauge theories, the extension to other
+eld theories is straightforward. we hope that these results will be useful for
+future studies of general renormalizable theories by spherical eld techniques.
+
+acknowledgments
+
+we gratefully acknowledge useful correspondence with daniel freedman, ro-
+man jackiw, and jose latorre.
+
+16this calculation is somewhat lengthy. details can be obtained upon request from the
+
+authors.
+
+13
+
+references
+
+[1] d. lee, phys. lett. b439 (1998) 85.
+
+[2] d. lee, phys. lett. b444 (1998) 474; b. borasoy, d. lee, phys. lett.
+
+b447 (1999) 98.
+
+[3] d. freedman, k. johnson, j. latorre, nucl. phys. b371 (1992) 353.
+
+[4] j. latorre, c. manuel, x. vilasis-cardona, ann. phys. 231 (1994) 149.
+
+[5] o. schnetz, j. math. phys. 38 (1997) 738.
+
+[6] n. bogoliubov, o. parasiuk, acta math. 97 (1957) 227.
+
+[7] k. hepp, comm. math. phys. 2 (1966) 301.
+
+[8] w. zimmerman, comm. math. phys. 11 (1969) 1; w. zimmerman,
+
+comm. math. phys. 15 (1969) 208.
+
+[9] m. perez-victoria, hep-th/9808071.
+
+[10] f. del aguila, a. culatti, r. munoz-tapia, m. perez-victoria, hep-
+
+ph/9806451.
+
+[11] s. fubini, a. hanson, r. jackiw, phys. rev. d7 (1973) 1732.
+
+figures
+
+figure 1. sketch of the angle-smearing region (three-dimensional rendering).
+figure 2. one-loop two-point correlator for 0,0,0.
+figure 3. one-loop four-point correlator for 0,0,0.
+figure 4. plot of b(t)  1
+t2 .
+figure 5. plot of c(t).
+
+14
+
+figure 1
+
+1
+mt
+
+figure 2
+
+fl,n,m
+
+f0,0,0
+
+f0,0,0
+
+t
+
+figure 3
+
+f l,n,m
+
+f l,n,-m
+
+f 0,0,0
+
+t 1
+
+f 0,0,0
+
+f0,0,0
+
+t 2
+
+f0,0,0
+
+15
+
+figure 4
+
+b(t)-1/t2
+
+9m 2/4 
+
+b(t)
+
+20
+
+15
+
+10
+
+5
+
+c(t)
+
+1.25
+
+1
+
+0.75
+
+0.5
+
+0.25
+
+jmax = 36
+
+jmax = 24
+
+jmax = 12
+
+1
+
+2
+
+t
+
+3
+
+4
+
+figure 5
+
+c1(t)
+
+jmax = 3
+
+jmax = 12
+
+jmax = 6
+
+jmax = 9
+
+1
+
+2
+
+3
+
+4
+
+t
+
+16
+
+

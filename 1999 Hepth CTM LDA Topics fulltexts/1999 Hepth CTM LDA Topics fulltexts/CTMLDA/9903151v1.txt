@@ -1,0 +1,1163 @@
+9
+9
+9
+1
+
+ 
+r
+a
+
+ 
+
+m
+7
+1
+
+ 
+ 
+
+1
+v
+1
+5
+1
+3
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+pade approximants and borel summation for qcd
+
+perturbation expansions
+
+institute of theoretical physics, warsaw university
+
+maciej pindor
+
+ul. ho za 69
+
+00-681 warszawa, poland
+
+abstract
+
+we study the applicability of pade approximants (pa) to estimate a sum of
+asymptotic series of the type appearing in qcd. we indicate that one should not
+expect pa to converge for positive values of the coupling constant and propose to
+use pa for the borel transform of the series. if the latter has poles on the positive
+semiaxis, the borel integral does not exist, but we point out that the cauchy
+pricipal value integral can exist and that it represents one of the possible sums
+of the original series, the one that is real on the positive semiaxis. we mention
+how this method works for bjorken sum rule, and study in detail its application
+to series appearing for the running coupling constant for the richardson static
+qcd potential. we also indicate that the same method should work if the borel
+transform has branchpoints on the positive semiaxis and support this claim by a
+simple numerical experiment.
+
+pacs numbers: 12.38 bx, 12.38 cy;
+keywords: asymptotic series, pade approximants, borel summation
+
+1 introduction
+
+perturbative expansions appearing in qcd and many of its models simmulating
+various interesting features of this theory have, usually, coecients growing so fast
+that it is dicult to obtain an increased precision by naive adding of subsequent
+terms [1],[2].
+
+pade approximants (pa) are an eective tool to sum an asymptotic series
+[3],[4], however they may not necesserily sum it to the function that has the required
+analytic properties. we must remember that there is an innite number of analytic
+functions having the same asymptotic expansion, and the additional requirements
+stemming from the physical meaning of the function can help us to diminish this
+abundance.
+
+we shall rst illustrate this problem on the very simple example and show that
+the use of the borel integral can be of help here. as we expect the perturbation
+series in qcd to have coecients growing like n!k nn [2] let us consider the simplest
+series of this type - the euler series:
+
+e(z) =
+
+n!zn
+
+
+
+xn=0
+
+it is well known [3],[4] that pa to this series converge to the function:
+
+e(z) = z 
+
+0
+
+eu
+
+1  zu
+
+du
+
+(1)
+
+(2)
+
+in the whole complex plane with the positive semiaxis excluded. the function has
+the branch point at z = 0 and pa reconstruct the branch of this function which
+is real on the negative semiaxis and has cut along the positive one. in qcd the
+expansion parameter is usually the coupling constant and we want to have our
+function for the positive values of coupling constant - moreover we want, for real
+expansion coecients, the function to be real, at least close to zero. our aim is
+therefore to nd a function which has not only the expansion (1) but is also real
+on the positive semiaxis. we want to stress that such function is again not unique,
+but we want to show how one of such functions can be constructed from (1).
+
+we rst consider a case when the borel transform of the series has only poles
+(section 2) and illustrate our point in section 3 by two examples of qcd related
+series. then, in section 4, we apply our considerations to the case when the borel
+transform has branchpoints and claim that the same approach (taking the principal
+value of the borel integral over pade approximants to the borel transform of the
+series) would work here - we support this claim by a simple numerical example.
+
+1
+
+2 poles in the borel transform
+
+we consider the series:
+
+
+
+f (z) =
+
+fnzn
+
+(3)
+
+xn=0
+
+where we expect that asymptotically (for n  ) fn behaves like n!k nn. the
+borel transform of this series is then:
+
+g(z) =
+
+gnzn =
+
+
+
+xn=0
+
+fn
+n!
+
+zn
+
+
+
+xn=0
+
+(4)
+
+if all fns are positive (which is often the case in qcd), then we can expect that
+g(z) has a singularity at z = k (where k is the radius of convergence of (4)). in
+this case the borel integral:
+
+(z) = z 
+
+0
+
+eug(uz)du
+
+(5)
+
+is complex for z > 0, if it exists.
+if g(z)(z  k) is nite for z  k, then this
+singularity does not spoil the convergence of (5), and similiar conditions can be
+imposed on the behaviour of g(z) near other singularities.
+
+let us rst assume that g(z) has a simple pole at z = k. in this case:
+
+lim
+zk
+
+g(z)(z  k) = res
+z=k
+
+g(z) < 
+
+and the integral (5) can be written , for x(0, ) as:
+
+(x) = p v z 
+
+0
+
+eug(ux)du 
+
+i
+x
+
+ek/xres
+x=k
+
+g(x)
+
+(6)
+
+(7)
+
+- choice of the sign depends on whether in (5) we integrate just below or just above
+the positive semiaxis. we see that the imaginary part of (z) has all coecients
+of the power expansion at z = 0+ vanishing and therefore:
+
+e(x) = re(x) = p v z 
+
+0
+
+eug(ux)du
+
+(8)
+
+is the function we need for x > 0.
+
+if we are frustrated by the fact that e(x) is dened only for x > 0, and is not
+
+an analytic function in the complex plane, we can dene it also there:
+
+e(z) = z +i
+
+0+i
+
+eug(uz)du +
+
+i
+z
+
+ek/zres
+x=k
+
+g(x)
+
+(9)
+
+obviously we can proceed in an analogous way if g(z) has more poles on the
+
+positive semiaxis. let us, for the moment, assume it has only poles there.
+
+2
+
+we now ask how can we construct a sequence of approximations to e(z) from
+(3). we have already pointed out that the direct application of pa to (3) will most
+probably fail, because we can expect that pa will diverge on the positive semiaxis.
+however, as we know that pa are particularily ecient in approximating functions
+in domains of their meromorphy [5], we can use pa to approximate g(z) from (4),
+i.e. we propose to construct [m/n]g(z) and approximate e(z) by:
+
+em,n (z) = p v z 
+
+0
+
+eu[m/n]g(uz)du
+
+(10)
+
+the convergence of pa in measure in the neighbourhood of the positive semiaxis
+(where we assumed g(z) to be meromorphic, and therefore we expect this type of
+convergence) guarantees us that (10) will converge to (8). we want to point out
+that the idea of combining pa with the borel method was proposed quite a time
+ago [6],[7], but in a context where the borel transform was regular on the positive
+semiaxis. essentially the same concept was used in [8], where the partial pade
+approximant [9] was used to predict a sum of the series for the gell-mann-low
+function of the eective charge.
+
+before we consider a more general situation when g(z) has also branch points
+on the positive semiaxis, let us see how the method works for two examples from
+qcd.
+
+3 two qcd series with only poles on the positive
+
+semiaxis
+
+first, we consider the bjorken sum rule.
+it is known [10] that in the large-0
+approximation it has only four simple poles in the borel plane and therefore our
+prescription would be exact for all [m/n] with m  3 and n  4. for realistic
+values of 0, the perturbation series has been calculated up to 3rd order and there
+exists an estimate for the next coecient [11]. it has been demonstrated in [11] that
+[2/1] pa to the borel transform of the truncated series for f (x) (we take nf = 3):
+
+f (x) = 1  x  3.58x2  20.22x3  130x4
+
+where f(x)is dened in:
+
+z 
+
+0
+
+[gp
+
+1(x, q2)  gn
+
+1 (x, q2)]dx =
+
+1
+6
+
+| ga | f (s/)
+
+(11)
+
+(12)
+
+exhibits a pole at y = 1.05 (y = 0
+4
+large-0 limit, as mentioned above. therefore we believe that
+
+s
+ ), while we expect poles at 1, 2 in the
+
+f (z) = 1  zp v z 
+
+0
+
+eu[2/1]s(u
+
+0
+4
+
+z)du
+
+(13)
+
+3
+
+is a reasonable approximation to f (z) (for the exact denition of s see [11]). we
+shall not discuss this example in more depth, but only remark that the value of
+s(q2 = 3gev 2) found this way is .371+.075
+.068.
+
+the next example, which we want to discuss in detail, is the asymptotic series
+for the running coupling constant obtained from the static qcd potential for which
+we take the richardson potential [12]. we follow notations and conventions of [13],
+and for more clarity we shall cite some formulae from this paper.
+
+the richardson potential in momentum space is:
+
+vr(q) = 
+
+162cf
+
+0q2ln(1 + q2/2
+
+r)
+
+(14)
+
+and we use nf = 3, therefore 0 = 11  2/3nf = 9, also r = .4 and cf = 4/3.
+this example is very instructive because one can nd the exact formula for the
+perturbative coupling in the position space:
+
+r(1/r) =
+
+2
+
+0 "1 z 
+
+1
+
+du
+u
+
+erru
+
+ln2(u2  1) + 2#
+
+at the same time the formula for the coupling in momentum space is:
+
+r(q) =
+
+4
+
+0 "
+
+1
+
+ln(1 + q2/2
+
+r)
+
+
+
+2
+r
+
+q2 #
+
+from this, one can calculate the  function:
+
+r(r) = q2 r(q)
+
+q2 = 
+
+0
+4
+
+2
+
+r +
+
+0
+
+4h 0
+
+4  ri2
+
+1 + q2/2
+r
+
+(15)
+
+(16)
+
+(17)
+
+on the other hand, one has (for any potential) the expansion:
+
+v (1/r) =
+
+fn v (v )
+
+
+
+v !n
+
+
+
+xn=0
+
+v (q = 1/r)
+
+(18)
+
+where r = ree , and e is eulers constant. fns are coecients of the expansion
+of:
+
+f (u) = s tan(u)
+
+u
+
+exp" 
+xn=1
+
+(2u)2n+1
+2n + 1
+
+(2n + 1)# =
+
+fnun
+
+
+
+xn=0
+
+(19)
+
+for details see [13].
+
+for later considerations it will be useful to observe that f (u) can also be written
+
+in a dierent form:
+
+f (u) =
+
+1
+
+1  2u
+
+1 + u
+k
+1  2u
+2k+1
+
+
+
+yk=1
+
+4
+
+(20)
+
+from this formula we can immediately see that f(u) has zeros at negative integer
+values of u and simple poles at half-integer positive values.
+
+it is important to observe from (17) that r(r) is not analytic at r(q) = 0.
+
+the reason is that r(q)  0 for q   and therefore:
+
+r(r) = 
+
+0
+4
+
+2
+
+r + terms like
+
+e 4
+
+0 r
+
+(21)
+
+summing up, we see that we can get for r(1/r) the perturbation expansion when
+we neglect higher twists:
+
+pert
+
+r (1/r) =
+
+4 !n
+r(q) 0r(q)
+
+n!fn
+
+
+
+xn=0
+
+(22)
+
+with q = 1/r. the direct calculation of pas to this series conrms our expectations:
+the majority of zeros and poles of diagonal pas [m/m] (the same is the case for
+paradiagonal sequences of the type [m  1/m]) lie on the positive semiaxis and
+interlace:
+
+5
+
+[2/2]
+
+[3/3]
+
+[4/4]
+
+[5/5]
+
+[6/6]
+
+[7/7]
+
+zeros
+
+poles
+
+0.22494i
+-0.22494i
+
+0.20414i
+-0.20414i
+
+-155.24210
+0.17087
+0.03832 +0.22543i
+0.03832
+0.22543i
+0.09784
+-0.14019
+-0.14019
+0.15711
+0.05773
+-0.26941
+-0.26941
+0.20733
+0.07728
+0.0403998
+-0.32614
+-0.32614
+0.23994
+0.09094
+0.05022
+0.03037432
+-0.32989
+-0.32989
+0.24307
+0.09256
+0.05154
+0.03165505
+0.01674128
+
+0.18282i
+-0.18282i
+
+0.18119i
+-0.18119i
+
+0.21387i
+-0.21387i
+
+0.18468i
+-0.18468i
+
+-1.91389
+0.15702
+0.03913 +0.23920i
+0.03913
+0.23920i
+.09658
+-0.14597
+-0.14597
+0.14879
+.05770
+-0.24492
+-0.24492
+0.18936
+0.07709
+0.0403993
+-0.27820
+-0.27820
+0.21487
+0.09047
+0.05021
+0.03037431
+-0.28017
+-0.28017
+0.21733
+0.09205
+0.05153
+0.03165504
+0.01674128
+
+0.17139i
+-0.17139i
+
+0.17065i
+-0.17065i
+
+we see that for large q (r small), there will be diculties in nding stable
+
+values for pas, because of condensation of their zeros and poles.
+
+when we now go to the borel plane we get the series which is just:
+
+r(q)f (
+
+0r(q)
+
+4
+
+)
+
+(23)
+
+however we know already (see (20)) that f(u) has only poles on the positive semi-
+axis, and therefore we can try to sum (22) using the formula:
+
+r(1/r)m,n =
+
+1
+z
+
+p v z 
+
+0
+
+eu/z[m/n]f (u)du(cid:12)(cid:12)(cid:12)(cid:12)z=
+
+0r(q)
+
+4
+
+(24)
+
+6
+
+[2/2]
+
+[3/3]
+
+[4/4]
+
+[5/5]
+
+[6/6]
+
+[7/7]
+
+[10/10]
+
+zeros
+
+poles
+
+0.42052
+0.42052
+0.95277
+0.95277
+-1.66887
+-0.94714
+1.00530
+1.00530
+2.33029
+-0.99840
+0.73068
+0.73068
+1.27993
+1.27993
+-1.00023
+0.81310
+0.81310
+1.08549
+1.33197
+1.33197
+-0.99994
+0.74517
+0.74517
+1.31201
+1.31201
+1.59142
+1.59142
+-1.95927
+-1.00000
+0.91881
+0.91881
+1.54963
+1.54963
+1.95905
+1.95905
+2.24957
+2.24957
+
+0.50473i
+-0.50473i
+-0.74029i
+0.74029i
+
+-1.10274i
+1.10274i
+
+1.56833i
+-1.56833i
+0.84019i
+-0.84019i
+
+1.67371i
+-1.67371i
+
+0.92750i
+-0.92750i
+
+1.93873i
+-1.93873i
+1.27438i
+-1.27438i
+0.56621i
+-0.56621i
+
+2.53060i
+-2.53060i
+1.87556i
+-1.87556i
+1.23582i
+-1.23582i
+0.55669i
+-0.55669i
+
+0.66625
+2.23334
+-0.78648
+-0.78648
+0.50170
+-1.20630
+-0.90978
+-0.90978
+0.49992
+-2.50005
+-2.50005
+-1.35858
+-1.35858
+0.499997
+-1.72341
+-1.72341
+-1.16083
+-1.16083
+0.50000
+1.07610
+-1.77158
+-1.77158
+-1.24094
+-1.24094
+0.50000
+1.60358
+76.62431
+-2.25821
+-2.14754
+-2.14754
+-1.77230
+-1.77230
+-1.16222
+-1.16222
+0.50000
+1.50020
+3.90255
+
+-0.77908i
+0.77908i
+
+-1.09780i
+1.09780i
+
+-0.89026i
+0.89026i
+1.40476i
+1.40476i
+
+0.82573i
+-0.82573i
+1.62300i
+-1.62300i
+
+0.96646i
+-0.96646i
+1.79463i
+-1.79463i
+
+1.01218i
+-1.01218i
+1.74984i
+-1.74984i
+2.47111i
+-2.47111i
+
+we see that pas to f (u) actually reconstruct zeros and poles on the real axis
+
+7
+
+and that there are many other complex zeros and poles drifting away from u = 0,
+most probably simulating the essential singularity of f (u) at u = .
+
+now we can see what values for (22) can one get from (24). we shall compare
+these values with the ones obtained in [13] as the best partial sums (denoted by
+r,n (1/r)), and those calculated from formula (15), though one must keep in mind,
+that (15) gives the exact value of r in position space, while we are here estimating
+the sum (22) which is (15) minus higher twists.
+
+we present below the case m = n, but include also [2/3], as it is the lowest
+pa which gives already values quite close to the limit and uses only ve coecients
+of the expansion.
+
+1/r[gev ]
+
+10
+
+20
+
+50
+
+100
+
+[2/2]
+[2/3]
+[3/3]
+[4/4]
+[5/5]
+[6/6]
+[7/7]
+[8/8]
+
+r(1/r)
+r,n (1/r)
+
+.2903148980 .2370475373 .1814661174 .1522256606
+.2710750452 .2232228306 .1757241919 .1497191873
+.2714196149 .2235681574 .1759161959 .1498234840
+.2714564564 .2234913019 .1758530906 .1497850862
+.2714137805 .2234817444 .1758530534 .1497859540
+.2714097805 .2234792391 .1758723578 .1497857339
+.2713988440 .2234777131 .1758524051 .1497857952
+.2714007078 .2234779029 .1758523985 .1497857906
+.2714046
+.2856
+
+.1491174
+.14868
+
+.2218345
+.22262
+
+.1746993
+.17647
+
+1/r[gev ]
+
+103
+
+104
+
+105
+
+106
+
+[2/2]
+[2/3]
+[3/3]
+[4/4]
+[5/5]
+[6/6]
+[7/7]
+[8/8]
+
+r(1/r)
+r,n (1/r)
+
+.09908701930 .07409640462 .05937036386 .04957967229
+.09908856884 .07413913414 .05938321829 .04958332635
+.09909570614 .07413847053 .05938281763 .04958320088
+.09909193228 .07413842675 .05938289532 .04958322765
+.09909214599 .07413844576 .05938289564 .04958322732
+.09909214737 .07413844662 .05938289573 .04958322732
+.09909214937 .07413844659 .05938289572 .04958322732
+.09909214928 .07413844654 .05938289571 .04958322732
+.09901686
+.098937
+
+.04958315
+.04958339
+
+.07413084
+.07413536
+
+.05938213
+.05938222
+
+we see that r(1/r)m,m converge when m grows, but not to the values of r
+- we attribute this to the dierence made by higher twists. in other words we
+
+8
+
+claim that the procedure we propose sums the series (22) well, which allows us
+to see clearly the dierence between the perturbative solution - represented by
+this series - and the full solution (15) including also nonperturbative eects. we
+demonstrate, therefore, once again the fact that the perturbation series contains
+only a part of the information about the full solution and that the requirement
+that the solution must be real for positive values of the coupling constant is not
+sucient to compensate for the information contained in higher twists terms.
+
+4 branch points in the borel transform
+
+if the borel transform has a branchpoint at z = k, instead of a pole, then the
+integral (5) for x(0, ) instead of (7) takes the form:
+
+(x) = z 
+
+0
+
+eureg(ux)du  iz 
+
+k/x
+
+euimg(ux)du
+
+(25)
+
+if g(z)(z  k) is nite for z  k (what is a condition for the existence of (5).
+
+again, we see that the second integral, which is equal to the imaginary part of (x),
+has all terms of the asymptotic expansion for x = 0+ vanishing, and therefore it is
+the rst integral which is of interest for us.
+
+in the same way, as in the case of the simple pole, we can nd an integral
+representation for the analytic function having the required asymptotic expansion
+(3) and being real on the positive semiaxis:
+
+e(z) = z +i
+
+0+i
+
+eug(uz)du 
+
+1
+
+2z z 
+
+k
+
+eu/z[g(u + i)  g(u  i)]du
+
+(26)
+
+these facts were also observed earlier [14], but we want to stress that re(x) has
+
+the same asymptotic expansion at zero as (x) and therefore it cannot be reliably
+estimated by calculation of partial sums.
+
+if we want now to use the same concept as before: to sum (4) using pas, we
+must remember that they will most probably not converge on semiaxis x(k, ).
+we conjecture, however, that if pas to g(z) converge in measure arbitrarily close
+to positive semiaxis (where we expect a cut, reconstructed by pas, should lie),
+then the integral:
+
+will converge to re(z) (see (25)) for z0.
+to check a plausibility of this hypothesis, we try to calculate this way:
+
+eu[m/n]g(uz)du
+
+e(z)m,n = p v z 
+
+0
+
+f (x) = rez 
+
+0
+
+eu/xlog(1  u)du
+
+9
+
+(27)
+
+(28)
+
+i.e. we approximate f (x) by:
+
+fm,n (x) = p v z 
+
+0
+
+eu/xu[m/n]log(1t)/t(u)du
+
+(29)
+
+as log(1  t)/t is the stieltjes function, all poles of pas to it lie on the semiaxis
+
+(1, ) and interlace with zeros [3],[4].
+
+on the other hand, f (x) can easily be converted to a simple principal value
+
+integral:
+
+f (x) = xp v z 
+
+0
+
+eu/x
+1  u
+
+du
+
+(30)
+
+we give below values of fm,n (x) for few values of x and compare them with
+
+values obtained from a numerical integration of the last formula.
+
+x
+
+.05
+
+.1
+
+.2
+
+.95
+
+5
+
+0.0527903605 0.1128659958 0.2754741870 0.4092156955
+0.049324951
+[1/1]
+0.0527972269 0.1131155255 0.2731042382 0.8349862840 1.544989018
+[1/2]
+0.0527977128 0.1131547428 0.2705616695 0.7678390728 1.080166535
+[2/2]
+0.0527977828 0.1131540942 0.2703267712 0.6479952192 0.590917162
+[2/3]
+0.0527977927 0.1131486878 0.2708042139 0.7437635764 1.199222773
+[3/3]
+0.0527977949 0.1131464797 0.2708502503 0.7091822199 0.256031716
+[3/4]
+0.0527977953 0.1131466717 0.2707469311 0.6971934572 0.961775112
+[4/4]
+0.0529797953 0.1131470772 0.2707743167 0.7066673691 0.711782921
+[5/5]
+0.0527977953 0.1131470109 0.2707637347 0.6701782542 0.586264408
+[6/6]
+0.0527977953 0.1131470222 0.2707667730 0.7125737482 0.577295644
+[7/7]
+0.0527977953 0.1131470201 0.2707662425 0.7110753552 0.621454057
+[8/8]
+[9/9]
+0.0527977953 0.1131470205 0.2707662164 0.7110508353 0.665707635
+[10/10] 0.0527977953 0.1131470205 0.2707662706 0.7113684213 0.688595754
+[11/11] 0.0527977953 0.1131470205 0.2707662537 0.7114624672 0.691851149
+
+it sholud be noticed that starting from [8/8] the quadruple precision was nec-
+
+essary to obtain the above numbers.
+
+5 conclusions
+
+we have proposed above to use pas to sum the borel transforms of the series
+appearing in qcd, and then to calculate cauchy principal value of the borel
+integral to obtain a function which has the given series as its asymptotic expansion
+at zero, and which is at the same time real on the positive semiaxis in the complex
+
+10
+
+coupling constant plane. the proposal is not entirely new [8], but we have pointed
+out that it produces values of the well dened analytic function, one of the variety of
+them having the same asymtotic expansion. we have also argued that the method
+should work not only in the case when the borel transform has poles on the positive
+semiaxis, but also when it has branchpoints there. this latter point is illustrated
+by the very simple numerical experiment.
+
+6 acknowledgements
+
+the author is indebted to prof. m. jezabek for drawing his attention to his paper
+[13], and for interesting discussion and also to dr. p. raczka for pointing him out
+paper [8].
+
+references
+
+[1] j. zinn-justin, phys.rep. 70 (1981) 109.
+
+[2] a.i.veinshtein, v.i.zakharov, phys.rev.lett 73 (1994) 1207.
+
+[3] g.a. baker jr., p. graves-morris, pade approximants, encyclopedia of
+mathematics and its applications vol. 13.14, addison-wesley publ. co. 1981
+
+[4] j. gilewicz, approximants de pade, lecture notes in mathematics, springer
+
+verlag 1978
+
+[5] j. nuttall, journal of math. anal. and appl. 31 (1970) 147
+
+[6] l. lovitch, m.f. marziani, il nuovo cimento 76a (1983) 615
+
+[7] m.f. marziani, il nuovo cimento 99b (1987) 145
+
+[8] p.a. raczka, phys. rev. d 43 (1991) r9
+
+[9] c. brezinski, journal of approx. theory 54 (1988) 210
+
+[10] c.n. lovett-turner, c.j. maxwell, nucl. phys. b432 (1994) 147
+
+[11] j. ellis, e. gardi, m. karliner, m.a. samuel, phys. lett. b366 (1996) 268
+
+[12] l.richardson, phys. lett. b82 (1979) 272
+
+[13] m. jezabek, m.peter, y. sumino, hep-ph /9803337. march 1998, phys.lett.
+
+b428 (1998) 352
+
+[14] g. grunberg, phys. lett. b325 (1994) 441
+
+11
+
+

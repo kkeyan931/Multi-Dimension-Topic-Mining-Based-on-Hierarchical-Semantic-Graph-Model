@@ -1,0 +1,572 @@
+ukc/ims/99/13
+
+to appear in phys. lett. b.
+
+monopoles from rational maps
+
+theodora ioannidou and paul m. sutclie
+
+institute of mathematics, university of kent at canterbury,
+
+canterbury, ct2 7nz, u.k.
+
+email : t.ioannidou@ukc.ac.uk
+
+email : p.m.sutclie@ukc.ac.uk
+
+march 1999
+
+abstract
+
+the moduli space of charge k su (2) bps monopoles is dieomorphic to the moduli
+space of degree k rational maps between riemann spheres. in this note we describe
+a numerical algorithm to compute the monopole elds and energy density from the
+rational map. the results for some symmetric examples are presented.
+
+9
+9
+9
+1
+
+ 
+
+y
+a
+m
+1
+1
+
+ 
+
+ 
+ 
+
+1
+v
+6
+6
+0
+5
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+1
+
+1 introduction
+
+the bps monopole elds, , ai, are su(2)-valued elds in ir3 satisfying the bogomolny
+
+equation
+
+1
+di = 
+2
+and the boundary condition that kk2 =  1
+2 tr2 = 1 at innity. the higgs eld, ,
+denes a map from the two-sphere at innity to the two-sphere of vacua and the winding
+number, k, of this map is a non-negative integer which equals the magnetic charge of the
+monopole (in suitable units).
+
+ijk fjk
+
+(1.1)
+
+the moduli space of charge k monopoles, mk, is a 4k-dimensional manifold and it has
+been known for some time [1] that mk is dieomorphic to the space of degree k based
+rational maps between riemann spheres. more recently, a new correspondence [8] between
+mk and the space of degree k unbased rational maps of the riemann sphere has been
+proved. in this new approach the rational map arises as the scattering data, along half-
+lines from the origin, of a linear operator constructed from the monopole elds. in this
+note we describe a numerical inverse scattering algorithm to compute the monopole elds
+and energy density from the rational map. the results of the algorithm are displayed for
+several symmetric examples.
+
+the algorithm involves solving a nonlinear elliptic partial dierential equation which is
+equivalent to the bogomolny equation, but for which the boundary conditions are given in
+terms of the rational map. it is the ability to specify a unique solution through the rational
+map boundary conditions which is the crucial feature here. it eliminates a problem which
+would arise in attempting a numerical solution of the original bogomolny equation, in that
+it is not at all clear how to specify the boundary conditions on the monopole elds so as
+to select a unique monopole from the 4k-dimensional family of solutions.
+
+an alternative numerical method for constructing monopoles, based on the nahm trans-
+form, already exists [4] and it is perhaps useful to make a brief comparison of the two
+approaches. the numerical nahm transform requires the solution of only ordinary dif-
+ferential equations and not a partial dierential equation, so from that point of view it
+requires less computational resources. however, the input required is nahm data, which
+involves the analytic solution of a matrix ordinary dierential equation. the general so-
+lution, for charge k, involves theta functions on a curve of genus (k  1)2 and this is too
+dicult to obtain explicitly in practice. for certain symmetric examples [2, 5] the curve
+has symmetries which allow the solution to be obtained on a quotient curve which is ellip-
+tic, and it is such examples which can then be used as input for the numerical code. some
+special non-elliptic examples have been studied numerically by using approximate nahm
+data [12], but even these cases rely on very symmetric congurations and there is currently
+no method available to deal with the general case for charge greater than two. in contrast
+the input for the numerical algorithm presented in this note is a rational map and so the
+data is free. any rational map can be chosen as the input data and hence the code can be
+used to obtain the monopole elds for all points in mk and not merely some special cases.
+let us briey review the main points of [8] to see how the rational map arises as scatter-
+
+2
+
+ing data. first introduce polar coordinates, r, , , and combine the angular coordinates
+into the riemann sphere parameter z = ei tan(/2). the rational map is obtained by
+considering hitchins equation
+
+(dr  i)s = 0
+
+(1.2)
+
+for the complex vector s, along each radial half-line from the origin out to innity, with
+the direction of the half-line determined by the value of z. the boundary condition on
+ implies that there is a one-parameter family of solutions s(r) = (w1(r), w2(r))t that
+are bounded as r  . dene r to be the ratio of these components at the origin ie.
+r = w1(0)/w2(0). it can then be shown [8] that r is a holomorphic function of z with
+degree equal to the monopole charge k. thus r : cip1 7 cip1 is the required degree k
+rational map between riemann spheres. note that the rational map is unbased, since
+a gauge transformation replaces r by an su(2) mobius transformation determined by
+the gauge transformation evaluated at the origin. thus the correspondence is between a
+monopole and an equivalence class of rational maps, where two maps are equivalent if they
+can be mapped into each other by a reorientation of the target riemann sphere. since the
+above construction does not break the so(3) rotational symmetry of ir3 then a monopole
+which is invariant under a subgroup g  so(3) will have an associated rational map r
+which is g-invariant (up to mobius transformations).
+
+2 the algorithm
+
+writing the bogomolny equation (1.1) in terms of the coordinates r, z, z and choosing
+
+the (complex) gauge
+
+ = iar = 
+
+i
+2
+
+h 
+
+1rh, az = h 
+
+1zh, az = 0
+
+(2.1)
+
+where h  sl(2, c) is a hermitian matrix, results in the single equation [8]
+
+r (cid:16)h 
+
+1 rh(cid:17) +
+
+(1 + |z|2)2
+
+r2
+
+z (cid:16)h 
+
+1 zh(cid:17) = 0.
+
+(2.2)
+
+in [8] it is proved that solutions of this equation are uniquely determined by boundary
+conditions at large r which are in one-to-one correspondence with rational maps between
+riemann spheres. this result is presented more explicitly in [7] where it is shown that
+the connection between the rational map r(z) and the matrix h(r, z, z) is the large r
+asymptotic relation
+
+h  exp(cid:26)
+
+2r
+
+1 + |r|2 (cid:18)|r|2  1
+2r
+
+2 r
+1  |r|2 (cid:19)(cid:27).
+
+(2.3)
+
+the input to the algorithm is the rational map r, and the main task is to compute the
+solution of equation (2.2) subject to the boundary condition that as r   the solution
+has the asymptotic form (2.3).
+
+3
+
+to compute solutions of the elliptic equation (2.2) we use a standard heat ow approach
+
+and study the parabolic equation
+
+h 
+
+1 th = r (cid:16)h 
+
+1 rh(cid:17) +
+
+(1 + |z|2)2
+
+r2
+
+z (cid:16)h 
+
+1 zh(cid:17) .
+
+(2.4)
+
+as t   the solutions of this equation are static, that is t-independent, and hence solve
+the original elliptic equation.
+although the choice of coordinates, r, z, z, has played a crucial role in the analysis so
+far, these are not good coordinates in which to implement a numerical solution. in ir3 the
+most ecient coordinates to use for a numerical code are cartesian coordinates, in which
+equation (2.4) becomes
+
+ht = hii 
+
+2
+r2 xihi  hih 
+
+1hi +
+
+i
+r
+
+ijkxihjh 
+
+1hk.
+
+(2.5)
+
+here an index i denotes partial dierentiation with respect to xi, and the summation
+convention is used over the spatial indices.
+
+although we are now using cartesian coordinates the method by which we have ob-
+tained equation (2.5) is reected in the broken translational symmetry. equation (2.5) can
+not be applied at r = 0, but this is not a problem since there is an additional constraint
+[8] that at the origin h = i, the 2  2 identity matrix.
+we solve equation (2.5) using a nite dierence approximation, with spatial derivatives
+approximated by second order symmetric dierences and the time derivative approximated
+by a rst order forward dierence. the discretization is performed on a regular grid,
+typically using 703 grid points. on the boundary of the grid the matrix h is xed to be
+the asymptotic expression (2.3). note that it is a subtle matter to enforce the boundary
+condition numerically since the elements of the matrix h are unbounded as r  . thus
+the size of the bounding box must be big enough to ensure that the monopole conguration
+sits comfortably inside the box, but the bounding box must not be too big otherwise the
+unbounded growth of the elements of h will lead to numerical diculties. in practice we
+nd that a bounding box with |x| < 5 is satisfactory for all the examples we present.
+
+the initial conditions are taken to be
+
+h = exp(cid:26) 2g(r)
+
+1 + |r|2 (cid:18)|r|2  1
+2r
+
+2 r
+1  |r|2(cid:19)(cid:27)
+
+(2.6)
+
+where g(r) is a monotonically increasing function with g(0) = 0 and g(r)  r for large r.
+note that from the relation (2.1) between h and  this initial condition gives a higgs eld
+whose length, kk2, is spherically symmetric. there are no spherically symmetric su(2)
+monopoles with k > 1, so it is clear that the initial condition is not a good approximation
+to the nal solution for charges greater than one.
+
+the elements of h are evolved directly in the time evolution and so the unit determinant
+
+constraint is preserved by performing the rescaling transformation
+
+h 7
+
+h
+
+deth
+
+4
+
+(2.7)
+
+after each iteration. a typical example requires around 5000 iterations to converge to a
+static solution.
+
+from the solution h the monopole elds are computed from the relations (2.1), where
+derivatives are again approximated by second order symmetric nite dierences. for ex-
+ample, the length of the higgs eld, which is a gauge invariant quantity, is given by
+
+kk2 = 
+
+1
+8
+
+tr(rhrh 
+
+1).
+
+the energy density, e, is then obtained from the higgs eld via the formula
+
+e = iikk2.
+
+(2.8)
+
+(2.9)
+
+in figure 1 we display the results of our algorithm, in the form of energy density isosur-
+face plots, for several examples. we have chosen some particularly symmetric examples,
+with charges from two to seven, and the explicit rational maps for each example are listed
+in table 1.
+
+charge rational map
+
+symmetry
+
+figure
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+z2
+
+axial
+
+3iz2
+z3
+
+1
+
+3iz
+
+
+
+z4+23iz2+1
+23iz2+1
+z4
+
+
+
+z5
+5z
+
+5z4
+1
+
+
+z4+ia
+iaz6+z2
+
+tetrahedral
+
+cubic
+
+octahedral
+
+dihedral
+
+z7
+7z5
+z7+7z5
+
+
+
+7z2
+1
+
+7z2+1
+
+
+
+
+dodecahedral
+
+1a
+
+1b
+
+1c
+
+1d
+
+1e
+
+1f
+
+table 1 : rational maps for the monopoles shown in figure 1.
+
+the details of these rational maps and a discussion of their symmetries can be found in
+ref.[3]. a reason for choosing the examples with platonic symmetry is that these cases fall
+into the special class which have been computed with the numerical nahm transform [4, 5]
+and hence we can verify that the results obtained from the two very dierent numerical
+approaches are in agreement. the charge six example has only a dihedral symmetry, d4d,
+and the associated nahm data is not known, since it is not an elliptic example. this case
+is therefore one in which the numerical nahm transform could not be used to construct the
+monopole and hence this is the rst computation of this particular monopole. the degree
+six rational map given in table 1 has d4d symmetry for all values of the real parameter
+
+5
+
+a, and the particular example shown here is for a = 0.16. the reason for this particular
+choice is that there is an ansatz to obtain approximate skyrmions from rational maps
+[3], and within this ansatz the rational map with a = 0.16 is the one which minimizes the
+energy of the approximate skyrmion. of course, for monopoles all congurations of a given
+charge have the same energy, but it is interesting to note that the monopole energy density
+isosurface in figure 1e is remarkably similar to the skyrmion baryon density isosurface
+shown in ref.[3]. it has already been observed that the known platonic monopoles resemble
+the corresponding skyrmions but a deep understanding of this fact is not yet available.
+within the rational map approximation for skyrmions there is an understanding of the
+relationship between the skyrmion baryon density and the rational map [3] and it would be
+interesting if a similar relationship could be found to connect the monopole energy density
+to the rational map.
+
+3 outlook
+
+we have presented an algorithm which computes monopoles from rational maps and
+in this section we comment on some possible
+
+displayed the results for some examples.
+applications of this code.
+
+one of the surprising results obtained from the numerical computation of monopoles is
+the discovery that a charge k monopole can have more than k zeros of the higgs eld [6, 13].
+the total number of zeros counted with multiplicity is k, but some of the zeros can have
+a negative multiplicity, which are known as anti-zeros. the current numerical evidence is
+obtained using the numerical nahm transform and it is satisfying to conrm the existence
+of anti-zeros with the algorithm presented in this note, since the two numerical approaches
+are very dierent. anti-zeros are indeed detected in the new algorithm, as demonstrated
+in figure 2 we plot the length of the higgs eld, kk2, along the x3-axis
+in figure 2.
+for the octahedral 5-monopole shown in figure 1d. the solid curve displays the initial
+condition, where the only higgs zeros is at the origin, whereas the dashed curve represents
+the solution at the end of the iteration. it can be seen that there are now three zeros along
+this line, and hence by the octahedral symmetry there are seven in total. the zero at the
+origin is an anti-zero giving a total multiplicity of ve as required. at present there is
+little understanding of the anti-zeros phenomenon and no signature for their appearance
+is known in terms of the associated rational map. however, now that an algorithm is
+available to construct a monopole from its rational map it will be possible to make a more
+extensive study and investigate any possible connections with the topology of the space of
+rational maps.
+
+in testing conjectures of electric-magnetic duality it has proved extremely useful to use
+the correspondence between monopoles and rational maps [11]. some preliminary attempts
+[3] have been made to use the rational map correspondence to determine which monopole
+congurations play a key role in this context and perhaps the construction of the monopole
+elds themselves may prove useful.
+
+in the geodesic approximation [10] the dynamics of k slowly moving monopoles can be
+
+6
+
+approximated by geodesic motion in the k-monopole moduli space. it is possible to nd
+geodesics as xed point sets of group actions on the space of rational maps. by constructing
+the monopole elds for such families of rational maps it would be possible to study various
+monopole scatterings in some detail.
+
+finally, the method introduced here could be extended to construct su(n) monopoles
+
+and this may be of use in understanding non-abelian clouds [9].
+
+acknowledgements
+
+pms acknowledges the epsrc for an advanced fellowship and the grant gr/l88320.
+
+7
+
+references
+
+[1] s.k. donaldson, commun. math. phys. 96, 387 (1984).
+
+[2] n.j. hitchin, n.s. manton and m.k. murray, nonlinearity, 8, 661 (1995).
+
+[3] c.j. houghton, n.s. manton and p.m. sutclie, nucl. phys. b 510, 507 (1998).
+
+[4] c.j. houghton and p.m. sutclie, commun. math. phys. 180, 343 (1996).
+
+[5] c.j. houghton and p.m. sutclie, nonlinearity 9, 385 (1996).
+
+[6] c.j. houghton and p.m. sutclie, nucl. phys. b 464, 59 (1996).
+
+[7] t. ioannidou and p.m. sutclie, monopoles and harmonic maps, hep-th/9903183.
+
+[8] s. jarvis, a rational map for euclidean monopoles via radial scattering, oxford
+
+preprint (1996).
+
+[9] k. lee, e.j. weinberg and p. yi, phys. rev. d 54, 6351 (1996).
+
+[10] n.s. manton, phys. lett. b 110, 54 (1982).
+
+[11] g. segal and a. selby, commun. math. phys. 177, 775 (1996).
+
+[12] p.m. sutclie, nucl. phys. b 505, 517 (1997).
+
+[13] p.m. sutclie, phys. lett. b 376, 103 (1996).
+
+figure captions
+
+figure 1: energy density isosurfaces for the monopoles listed in table 1.
+
+figure 2: plots of kk2 along the x3-axis for the octahedral 5-monopole. initial condi-
+
+tion (solid curve) and nal solution (dashed curve).
+
+8
+
+this figure "monratfig1.gif" is available in "gif"(cid:10) format from:
+
+http://arxiv.org/ps/hep-th/9905066v1
+
+0.1
+
+0.08
+
+0.06
+
+0.04
+
+0.02
+
+0
+
+-1
+
+-0.8
+
+-0.6
+
+-0.4
+
+-0.2
+
+0
+x3
+
+0.2
+
+0.4
+
+0.6
+
+0.8
+
+1
+
+

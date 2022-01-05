@@ -1,0 +1,3863 @@
+hep-th/9908046
+august 1999
+
+structure constants
+
+for the d-series virasoro minimal models
+
+ingo runkel1
+
+mathematics department,
+
+kings college london, strand, london wc2r 2ls, u.k.
+
+abstract
+
+in this paper expressions are given for the bulk and boundary structure constants of d-
+series virasoro minimal models on the upper half plane. it is the continuation of an earlier
+work on the a-series. the solution for the boundary theory is found rst and then extended
+to the bulk. the modular invariant bulk eld content is recovered as the maximal set of
+bulk elds consistent with the boundary theory. it is found that the structure constants are
+unique up to redenition of the elds and in the chosen normalisation exhibit a manifest
+z2symmetry associated to the d-diagram. the solution has been subjected to random
+numerical tests against the constraints it has to fulll.
+
+0
+0
+0
+2
+
+ 
+
+g
+u
+a
+4
+1
+
+ 
+
+ 
+ 
+
+2
+v
+6
+4
+0
+8
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+1e-mail: ingo@mth.kcl.ac.uk
+
+1
+
+introduction
+
+one of the aims of studying quantum eld theories is to compute correlation functions of the
+elds in the theory. in two-dimensional conformal eld theory one uses the presence of an
+innite amount of symmetries to achieve this goal.
+
+we will consider a special subclass of conformal eld theories, called minimal models. one
+of their properties is that the correlators fulll certain linear dierential equations (see [1] or
+e.g. [2] for details). one can nd a distinguished set of solutions to these dierential equations,
+called conformal blocks. a correlator can then be expressed as a bilinear combination of these
+blocks. to know the coecients in this bilinear combination a set of complex numbers, the
+structure constants, are needed. structure constants appear in the short distance expansion
+(or operator product expansion, ope) of certain elds in the conformal eld theory, called
+primary elds.
+
+in this paper we consider only virasoro minimal models. one approach to calculate all
+structure constants is to start in a situation without boundaries. in this case only bulk elds
+are present and one can solve the bulk theory alone by determining the conformal blocks and
+a consistent set of structure constants for the bulk elds (see [3] for the spinless case).
+it
+is possible to classify all modular invariant minimal models without boundaries [4] with the
+result that they fall into an ade pattern.
+
+starting from a well dened bulk theory one can proceed and introduce a boundary into
+the system. as it turns out the dierential equations that the correlators fulll stay the
+same, but now the correlator is a linear, not a bilinear, combination of the conformal blocks
+mentioned above (see [5]) and furthermore two new sets of structure constants appear: in
+addition to the bulk structure constants that determine the ope of two bulk primary elds,
+there are the bulk-boundary couplings that describe the expansion of a bulk eld in terms of
+boundary elds, and the boundary structure constants for the ope of two boundary elds.
+
+one can now classify all conformally invariant boundary conditions and the boundary
+elds that live on these boundaries or interpolate between two adjacent boundary conditions
+(see [69]). again one nds an ade pattern for all possible boundary theories [9], plus
+tadpole diagrams, which have been discarded as the resulting theory does not match with any
+of the modular invariant bulk theories.
+
+all three sets of structure constants can in principle be worked out from six consistency
+conditions that arise from taking dierent limits in certain correlators and equating the dier-
+ent opes in these limits. the constraints that arise in this way are called sewing constraints
+(see [10] and for an extension to non-orientable surfaces [7]). a more general discussion of
+the sewing constraints in presence of nontrivial multiplicities and their relation to [11] can be
+found in [12].
+
+above we have started from a bulk theory, which can be solved consistently, and then
+introduced a boundary. thus the bulk structure constants are known rst and then a solution
+for the other two sets of structure constants consistent with these has to be obtained. whereas
+the bulk structure constants for diagonal and nondiagonal minimal models can be found in the
+literature [3, 13, 14], these calculations have not been carried out for the boundary structure
+constants and only for a subset of the bulk-boundary couplings (see [69]).
+
+in this paper and a previous work [15] the missing structure constants for the a and d-
+series are calculated by taking the opposite path. the starting point now is a theory with only
+boundary elds. one chooses an ade type boundary eld content and tries to determine
+a consistent set of boundary structure constants. once this is achieved the boundary theory
+is extended to the bulk and it is only at this point that bulk elds are introduced.
+it is
+
+1
+
+interesting that one nds that the maximal bulk eld content consistent with the boundary
+theory coincides with the modular invariant one given in [4]. the bulk-boundary couplings
+and the bulk structure constants can now be obtained from the sewing constraints in a straight
+forward way. the results are explicit expressions for all three sets of structure constants in
+terms of so called fusion (f) matrices (see appendix a for details and references). the
+expressions are free of sign ambiguities (e.g. they do not contain any square roots) so that
+they are well suited for numerical computations.
+
+the deven minimal models have a larger symmetry algebra (a walgebra, see [16] and
+references therein) that contains the virasoro algebra as subalgebra. in principle one could
+understand these conformal eld theories in terms of the w-algebra, with w-algebra chiral
+blocks and fmatrices. but since these cfts are still nitely reducible with respect to the
+virasoro algebra alone (i.e. only a nite number of irreducible highest weight representations
+of the virasoro algebra occur), it is possible and indeed simple to use only the virasoro
+symmetry.
+
+the fact that one does not use the fully extended chiral algebra and the possible presence
+of multiple copies of primary elds means that the sewing constraints in ref. [10] must be
+rederived, which has been done. the results are presented in section 2 and an explicit example
+is provided in appendix a.
+
+both, in the a and the dseries, the sewing constraints are overdetermined and only a
+subset is used to nd the structure constants. it has to some extend been tested numerically
+(but not proven analytically) that the given structure constants solve the full set of constraints.
+it is shown that, given the boundary eld content, any solution can be brought to a standard
+form by redening the elds.
+in other words, under gauge transformations the space of
+solutions to the sewing constraints consists of only one orbit.
+
+the formulae for all bulk and boundary structure constants are given in eqns. (43)(47)
+and (53)(55). a short description of how to implement them can be found in the conclusion.
+the derivation of these expressions is organised as follows:
+
+in section 2 the notation for the various elds and structure constants is introduced and
+the rederived sewing constraints for genus zero surfaces are stated in a suitable form. section 3
+gives a short description of the procedure introduced in [9] for the construction of cylinder
+partition functions. this denes the boundary eld content which is used as input in the
+construction of the solution to the sewing constraints. the boundary structure constants are
+found in section 4. finally the extension to the bulk theory is carried out in section 5. here
+the maximal bulk eld content consistent with the boundary theory is determined and it is
+observed to be modular invariant. the remaining structure constants, i.e. the bulk-boundary
+couplings and the bulk structure constants are calculated and expressions for the vacuum
+expectation value of the unit disc are obtained. a choice of basis is presented which renders
+all structure constants real. finally it is observed that a subset of all structure constants is
+left invariant under a large number of distinct z2actions.
+
+2 genus zero sewing constraints
+
+unless otherwise mentioned, throughout this paper the boundary conformal eld theory will
+be considered on the upper half plane (uhp) with the boundary given by the real line.
+
+in a general virasoro minimal model there can be several primary bulk or boundary elds
+transforming in the same highest weight representation(s) of the virasoro algebra. therefore
+we cannot label the elds solely by their representations. virasoro highest weight represen-
+tations are labelled by small letters i, j, k and to take care of elds with multiplicities these
+
+2
+
+carry an additional greek index i, j, k. boundary conditions are labelled by small letters
+a, b, c or also x, y, z.
+
+it is always possible to make the (bulk and boundary) two-point functions diagonal by
+an appropriate choice of labels and normalisation of the elds: hi(x)j (y)i=i,j,f (x, y).
+a bulk eld i transforms in the tensor product of two virasoro highest weight represen-
+tations i. the two representations have conformal weights hi, h or, for better readability,
+hi, hi. a boundary eld (ab)
+lives between boundary conditions a and b and transforms in
+k
+one virasoro representation k of conformal weight hk.
+
+the vacuum expectation value of the uhp with boundary condition a imposed on the
+uhp. the vacuum expectation value of the full complex plane
+
+real line will be denoted with h1i(a)
+with no boundaries present will be denoted with h1i or h0|0i.
+product expansions of primary elds are, in this order:
+
+the leading terms in the bulkbulk, bulkboundary and boundaryboundary operator
+
+i(z)j (w) =xk,
+i(x + iy) =xk,
+i (x) (bc)
+(ab)
+(y) =xk,
+j
+
+cij
+
+(a)bi
+
+k (z  w)hkhihj (z  w)
+(cid:0)k (w) + (cid:1)
+k  (2y)hkhihi (cid:16) (aa)
+ (x  y)hkhihj (cid:16) (ac)
+
+k
+
+k
+
+c (abc)k
+ij
+
+hkhihj
+
+(x) + (cid:17)
+(y) + (cid:17)
+
+|z|>|w|
+y > 0
+
+x > y
+
+(1)
+
+(2)
+
+(3)
+
+the omissions stand for an innite sum of descendants of the primary eld in question.
+eqn. (1)(3) dene the three sets of structure constants which are necessary to compute the
+correlation functions of the minimal model under consideration: the bulk structure constants
+k with boundary
+cij
+condition a, bulk eld i and boundary eld k and the boundary structure constants c (abc)k
+ij
+with boundary conditions a, b, c and boundary elds i, j, k.
+
+k with three bulk elds i, j, k, the bulk-boundary couplings (a)bi
+
+by taking dierent limits in correlation functions one obtains a set of constraints, called
+sewing constraints. for orientable genus zero surfaces it is enough to consider the following
+four constraints [10]:
+
+for four boundary elds i, j, k,  and boundary conditions a, b, c, d:
+
+x
+
+c (bcd)q
+jk
+
+c (abd)
+
+iq c (ada)1
+
+ h1i(a)
+
+uhp
+
+=xp  x
+
+c (abc)p
+ij
+
+c (cda)p
+k 
+
+p p h1i(a)
+c (aca)1
+
+uhp! f
+
+pq(cid:20) j k
+(cid:21)
+
+i
+
+for two boundary elds p, q and one bulk eld i:
+
+(b)bi
+
+ c (abb)q
+p 
+
+qq h1i(a)
+c (aba)1
+
+uhp
+
+x
+
+=xk  x
+xm
+
+(a)bi
+
+k c (aba)k
+
+p q c (aaa)1
+
+ei(2hm2hihphq+ 1
+
+kk h1i(a)
+
+uhp!
+2 (hk+h))  f
+
+3
+
+km(cid:20)  q
+i p(cid:21)f
+
+m(cid:20) i 
+p q(cid:21)
+
+(4)
+
+(5)
+
+for two bulk elds i, j and one boundary eld k:
+
+cij
+
+m (a)bm
+
+k c (aaa)1
+
+k k h1i(a)
+
+uhp
+
+x
+
+(a)bi
+
+p (a)bj
+
+q c (aaa)k
+
+p q c (aaa)1
+
+kk h1i(a)
+2 (hk+hphq2hr+hmhmhi+hi+hj +hj)
+
+uhp!
+
+=xp,q  x,
+xr
+
+ei 
+
+qr(cid:20) k 
+p j(cid:21)f
+ f
+
+pm(cid:20)  r
+i j(cid:21)f
+
+r m(cid:20) 
+
+m k(cid:21)
+
+
+
+for four bulk elds i, j, k, :
+
+x
+
+cik
+
+q cj
+
+q cqq
+
+1 h1i
+
+=xp,p  x
+
+cij
+
+p ck
+
+p cp p
+
+ ei(hihi+hhhp+hphq+hq)f
+
+1 h1i!
+pq(cid:20) j 
+i k(cid:21)f
+
+pq(cid:20)  
+ k(cid:21)
+
+(6)
+
+(7)
+
+these constraints have been rederived using notation and techniques for calculating with
+conformal blocks presented in [11]. equations (4)(7) require a specic renormalisation of the
+fmatrices. this normalisation, together with the explicit derivation of the constraint (6) as
+an example are given in appendix a.
+
+the form of the constraints given here is slightly dierent from [10]. first of all only the
+virasoro symmetry was used in their derivation and not the maximally extended chiral algebra.
+secondly slightly dierent limits in the correlators were chosen so that that the expectation
+value of the identity eld cancels from all expressions. furthermore the present notation takes
+into account elds with multiplicities (see also [12]). leaving out the sums over multiplicities
+and the multiplicity indices, (4)(7) can be rearranged to match the corresponding equations
+in [10].
+
+3 cylinder partition function
+
+first a note about a convention used throughout this paper. to take care of the redundancy
+in the labelling of representations i with kac-labels (r, s) we will only consider pairs where
+r is odd. the set of entries in the kac-table with r odd is in one-to-one correspondence to
+virasoro highest weight representations of the given central charge.
+
+before we can begin to solve (4)(7) we need to know which elds are present in the theory.
+since our starting point is going to be the boundary theory the rst thing to determine is
+the boundary eld content on the upper half plane or, equivalently, the cylinder partition
+function.
+
+in ref. [9] a method for the construction of the cylinder partition functions associated to
+
+a pair of lie-algebras an, g is given. here we give a quick summary of this method.
+
+4
+
+3.1 general construction
+
+first choose an odd number p and a number q coprime to p. we will construct the cylinder
+partition function of a minimal model with the following central charge:
+
+c = 1  6
+
+(p  q)2
+
+pq
+
+(8)
+
+let a be the adjacency matrix of the dynkin diagram associated to the lie-algebra ap1
+
+and g be the adjacency matrix for a lie-algebra with coxeter number q.
+
+for x=a or x=g dene the matrix valued functions vn(x) recursively via
+
+vn(x) = v2(x)vn1(x)  vn2(x)
+
+; v1(x) = id and v2(x) = x
+
+(9)
+
+the vn are called fused adjacency matrices and form a representation of the verlinde fusion
+algebra.
+
+let  be an odd node of a and  be any node of g. then a=(, ) labels the possible
+boundary conditions. let a=(, ) and b=(, ). then the partition function of a cylinder
+of circumference t and length l with boundary conditions a and b is given by:
+
+vr(a)
+
+za|b = xr=1..p1
+
+s=1..q1
+
+vs(g)
+
+  r,s(q)
+
+; q = exp(t /l)
+
+(10)
+
+when we take the identity r,s = pr,qs for virasoro characters into account we can rewrite
+(10) in the following unique way:
+
+za|b = xi=(r odd,s)
+
+nia
+
+b  i(q)
+
+(11)
+
+in refs. [9] the genus one sewing constraint for a cylinder with no eld insertions was
+analysed with the result that g has to be the adjacency matrix of an ade type dynkin
+diagram or of a tadpole diagram.
+
+the numbers nia
+
+b can be interpreted as the number of times the representation i occurs
+in between the boundary conditions a and b and they thus describe the eld content on the
+boundary (in this case the real line).
+
+3.2 example: the a-series
+
+b, i.e. the eld content is just
+for the pair of lie algebras (ap1, aq1) one nds nia
+given by the verlinde fusion numbers [6]. distinct boundary conditions are given by pairings
+of an odd node in the rst a-diagram with any node in the second:
+
+b = nia
+
+1
+
+(cid:26) is
+
+2
+s
+
+is  is
+
+p1
+s
+
+1
+, is
+
+2
+is
+
+q1(cid:27)
+is  is is
+
+(12)
+
+there is a distinguished boundary condition, which we will call 1boundary, that corresponds
+to the rst node in each a-diagram, i.e. the (1, 1)-node.
+
+there are no elds with multiplicity and there is a unique eld i=a between the a and
+b can be understood as saying that
+1boundary:
+the representations i that can live between the a and bboundary are exactly those occurring
+in the fusion of the representations a and b:
+
+ i=a. the formula nia
+a
+
+b = nia
+
+a
+
+a
+
+b
+
+1
+
+b
+
+b
+
+.
+
+i
+
+1
+
+ a
+
+i
+
+5
+
+3.3 the d-series
+
+here q has to be an even number and the boundary conditions are given by pairings of an
+odd node in the a-diagram with any node in the d-diagram:
+
+
+
+
+1
+is
+
+2
+s
+
+is  is
+
+p1
+s
+
+1
+, is
+
+2
+is
+
+is    
+is
+@@
+
+is
+
+is
+
+q
+2
+
+q
+2 +1
+
+(13)
+
+
+
+
+in particular the total number of boundary conditions is 1
+4 (p 1)(q + 2). again the boundary
+condition associated with the rst node of each diagram, i.e. the (1, 1)-node, will get a special
+name. it will be called  so that it is not confused with the 1boundary in the a-series. the
+boundary will play a role similar to that of the 1boundary in [15].
+
+when looking at the d-series boundary eld content one observes the following: the
+boundary conditions can be organised in two categories.
+in the rst case, which we will
+denote as i-type boundaries, a boundary condition x=(, ) is associated with an odd node
+ of the a-diagram and any node  of the d-diagram except for the two at the split end. the
+second case we will call n-type. an n-type boundary a is associated with any odd a-node
+and one of the two end nodes in the d-diagram.
+
+i-type: is is is    
+is
+@@
+s
+
+s
+
+n-type:
+
+s
+
+s
+
+s    
+s
+@@
+
+is
+
+is
+
+(14)
+
+the names i-type and n-type stand for invariant and non-invariant and are related to the
+z2symmetry of the d-diagram.
+
+carrying through the procedure outlined in section 3.1 one nds that an n-type bound-
+ , denoted by au (unique). it has
+
+a
+
+ary a=(, ) has exactly one eld living on
+representation labels (, q
+
+2 ).
+
+an i-type boundary x=(, ) has two elds elds living on
+
+ with kac-labels
+(, ) and (, q  ) which we will denote by xe and xo (x even and x odd). the labelling
+is arbitrary, but we choose to always give the identity eld on the boundary an even label.
+ are given in
+terms of the node labels of the boundary condition x=(, ) some confusion might arise. but
+from the context it will be clear which one of the two interpretations makes sense.
+
+note that since the kac-labels of the representations that live on
+
+x
+
+x
+
+for deniteness we will x a specic even/odd labelling for boundary elds. it will turn
+out later that the structure constants involving only i-type boundaries have an explicit z2
+symmetry that sends even elds to themselves and odd elds to minus themselves. this
+symmetry is not assumed, but a consequence of the constraints and the gauge we choose. fol-
+lowing the arguments in [19] we would like the ground state, i.e. the state of lowest conformal
+weight, for each pair of boundary conditions to be invariant under that symmetry. this can
+ with x=(, ) an i-type boundary by assigning e/o-labels
+be achieved for all pairs
+to the two representations living between these boundary conditions in the following way:
+
+x
+
+xe =((, )
+
+(, q  )
+
+:  < p
+2
+:  > p
+2
+
+xo =((, q  )
+
+(, )
+
+:  < p
+2
+:  > p
+2
+
+(15)
+
+as discussed in [19] the physical motivation for this choice comes from relating the z2action
+to the eect of a disorder line stretching from boundary to boundary on a cylinder and trying
+to interpret the resulting amplitude as a partition function.
+it is also found there that in
+
+6
+
+boundary types
+ii
+ni
+nn
+
+x
+a
+a
+
+y
+y
+b
+
+
+
+
+
+labels
+
+e,o
+u
+u
+
+eld content
+y = nxe
+nx
+y = nau
+na
+a 6= b : na
+a = b : na
+
+ye + nxe
+ye = nau
+b = nau
+
+yo = nxo
+yo
+
+yo + nxo
+
+ye
+
+b = 0 otherwise
+
+bu if s  3 mod 4
+au if s  1 mod 4
+
+b = 0 otherwise
+
+and na
+
+a = nau
+
+and na
+
+table 1: field content and labels between the two types of boundary conditions.
+
+general it is not possible to x a labelling s.t. the ground state is invariant for all possible
+pairs of boundary conditions.
+
+the conformal weight of a highest weight representation with kac-labels (r, s) is given by
+
+hr,s = 1
+
+4pq ((qr  ps)2  (p  q)2). thus with denition (15) we nd:
+
+h(xo)  h(xe) =(cid:12)(cid:12)(  p
+
+2 )(  q
+2 )(cid:12)(cid:12)
+
+(16)
+
+in particular the boundary itself is of i-type and it has two elds living on it, the identity
+2 odd and
+
+21). we see that h(o) is integer for q
+
+e=1 and the eld o with h(o) = ( p
+half-integer for q
+
+21)( q
+
+2 even.
+
+we will now proceed to assign e/o/u-labels to all boundary elds, not just the ones adjacent
+to the boundary, in the following way: any eld adjacent to an n-type boundary will get
+where both x
+the label u. in this case no multiplicities do occur. in the case
+and y are of i-type, the possible representations  are those that occur in the fusion of xe, ye
+(which is the same set as in the fusion of xo, yo) or xe, yo (which is the same as xo, ye). if 
+occurs in the xe, yefusion it gets an e-label, i.e. =e and if it occurs in the xe, yofusion an
+o-label =o. if  occurs in both fusions, this representation has multiplicity two and the two
+corresponding elds have labels e and o.
+
+
+
+x
+
+y
+
+the eld content between dierent boundary conditions is summed up in table 1 listing
+b from (11) for the dierent cases (here the representation  has kac-labels
+
+the numbers nia
+ = (r, s) and the boundary conditions a, b have labels (a, a) and (b, b)).
+
+notice the double role of the e/o/uindices: when x is a boundary condition, then xe, xo
+or xu denote the even/odd/unique eld living between the x and boundary. in particular
+xe and xo denote dierent representations. if  is a representation, then e, o or u all denote
+the same representation and distinguish elds with multiplicities by labelling one as even and
+the other as odd.
+
+3.4 ordering of boundary conditions
+
+the constraint equations (4)(7) allow for a large amount of gauge freedom of the structure
+constants. here we nd a particular set of structure constants and show that any solution
+of the constraints can be transformed into this set by a regauging. for the construction
+of the structure constants presented here an ordering of the boundary conditions has to be
+introduced. let x=(, ) and y=(, ). then we dene:
+
+x < y  ( < ) or ( =  and  < )
+
+(17)
+
+7
+
+4 boundary structure constants
+
+in this section we will construct a set of boundary structure constants that solve the sewing
+constraint (4) under the condition that there exists a solution at all (for the given eld content).
+the line of argument in this section is as follows: we assume that there exists a solution to
+(4) for the d-series eld content. then we use the property of (4) that a change of basis in
+the set of primary boundary elds maps a solution of (4) to a new solution. by redening the
+boundary elds one by one this freedom is exploited to adjust a subset of boundary structure
+constants to the values we want. this subset together with (4) then xes the value of a general
+boundary structure constant. altogether the statement is that any solution can via change of
+basis be brought to the form presented in the end of this section.
+
+as input for the boundary solution we use
+
+a) the d-series eld content obtained in section 3.3
+
+b) the assumption that all two-point functions h (ab)
+
+for all a, b, i that are allowed by a).
+
+i (x) (ba)
+
+i (y)i are nonzero, i.e. c (aba)1
+
+ii 6=0
+
+an interpretation of assumption b) is that a zero two-point function implies that the eld
+in question does not occur in our model and hence we are looking at a eld content dierent
+from what we demanded in a). this can be seen as follows: suppose c (aba)1
+ii =0 for some
+choice of a, b, i. consider a correlator which contains the eld (ab)
+. any correlator can
+i
+be expressed as a sum of conformal blocks with coecients given as products of structure
+constants. it is always possible to take a limit of this correlator where all bulk elds are taken
+to the boundary and then all boundary elds except for (ab)
+i are taken together. in the end
+(x) (ba)
+we are left with the two-point function h (ab)
+(y)i. thus in this limit the coecient in
+i
+front of each conformal block contains the factor c (aba)1
+ii and hence the correlator is identically
+zero. therefore any correlator involving (ab)
+i vanishes and this eld can as well be removed
+from the model, so that we eectively have a eld content dierent from a).
+
+i
+
+the actual calculation of the boundary structure constants is a slightly lengthy case by
+case study and is presented only for completeness. the results are summerised in section 4.5.
+
+4.1 nonzero boundary structure constants
+
+first we investigate the consequence of b), i.e. that all two-point functions are nonzero.
+eqn. (4) can be rewritten so that the two-point structure constants cancel. to do so we
+set =1 and obtain the three-point identity:
+
+a
+
+i
+
+j
+
+b
+
+k
+
+c
+
+a
+
+ c (bca)i
+
+jk
+
+c (aba)1
+
+ii = c (abc)k
+ij
+
+c (aca)1
+kk
+
+applying this to the r.h.s. of (4) we get:
+
+a
+
+i
+
+j
+
+b
+
+k
+
+c
+
+d
+
+
+
+a
+
+ x
+
+c (bcd)q
+jk
+
+c (abd)
+
+iq =xp,
+
+c (abc)p
+ij
+
+c (acd)
+p k
+
+f
+
+pq(cid:20) j k
+(cid:21)
+
+i
+
+(18)
+
+(19)
+
+note that there is no freedom the rescale the identity eld 1 on any boundary. its nor-
+(xxy)j
+1i =i,j, and
+
+malisation is already xed by the condition that 1 (xy)
+
+i , i.e. that c
+
+i = (xy)
+
+similar for c
+
+(xyy)j
+i1
+
+.
+
+8
+
+dene an operation  on the labels e, o, u as follows: xe=xo, xo=xe and xu=xu, i.e.
+in terms of kac-labels: (r, s) = (r, q  s). take
+with q=1 and
+x any boundary condition. the sum on the r.h.s. of (19) reduces to p=xi because the
+representations xi and o can fuse only to xi. we get:
+
+o
+
+o
+
+xi
+
+xi
+
+
+
+
+
+
+
+
+
+x
+
+c (x)1
+
+xixi = c (x)xi
+
+oxi
+
+
+
+c (x)o
+xi
+
+xi
+
+f
+xi
+
+1(cid:20) o o
+
+xi xi (cid:21) 6= 0
+
+(20)
+
+the l.h.s. is nonzero due to assumption b) and hence all terms on the r.h.s. have to be nonzero
+for a solution with properties a) and b).
+
+in the same way, for an n-type boundary a and an arbitrary boundary x we can consider
+xi
+, again with q=1. the sum reduces to p=au and we are left with:
+
+ku
+
+ku
+
+xi
+
+
+
+x
+
+x
+
+a
+
+
+
+c (xax)1
+kuku
+
+= c (xa)au
+
+xiku
+
+c (ax)xi
+auku
+
+again all terms on the r.h.s. have to be nonzero.
+
+4.2 mixed boundaries
+
+f
+
+au1(cid:20) xi xi
+
+k (cid:21) 6= 0
+
+k
+
+(21)
+
+dene the boundary condition label  as =(1, q
+u
+the upper end node of the d-diagram in (13). consider (19) with
+and q=1. the sum on the r.h.s. reduces to p=u and we are left with:
+
+
+
+2 ), i.e. the rst node of the a-diagram and
+
+o
+
+
+
+
+
+o
+
+u
+
+
+
+
+
+(22)
+
+c ()1
+
+uo (cid:17)2
+oo =(cid:16) c ()u
+
+f
+
+u u(cid:21)
+u1(cid:20) o o
+
+using (18) in the form 
+ing ()
+o
+
+such that:
+
+u
+
+
+
+o
+
+u
+
+
+
+
+
+implies c ()u
+
+uo = c ()u
+
+ou
+
+. we start by rescal-
+
+from (22) it now follows that
+
+c ()u
+
+ou = 1
+
+c ()1
+
+oo = a
+
+where a = f
+
+o o(cid:21)
+u1(cid:20) u u
+
+(23)
+
+(24)
+
+dening the constant a. we use the freedom to rescale (x)
+xo
+boundary x.
+
+to x c (x)xe
+
+oxo =a for any i-type
+
+let a be an n-type boundary. taking
+
+
+
+o
+
+u
+
+
+
+
+
+u
+
+a
+
+au
+
+
+
+and q=au the sum
+
+reduces to p=u and we see, using (23):
+
+c (a)au
+
+uu
+
+c (a)au
+
+oau = c (a)au
+
+uu
+
+f
+
+uau(cid:20) o au
+u  (cid:21)
+
+(25)
+
+the representation u lives on
+and the fusion u, au  u exists by construction
+of the eld content. c (a)au
+is nonzero (see (21)) and the f-matrix element has to be
+independant of the specic choice of u we make. we denote this f-matrix element with ba:
+
+uu
+
+
+
+a
+
+ba = f
+
+uau(cid:20) o au
+u  (cid:21)
+
+9
+
+where
+
+
+
+u
+
+a
+
+(26)
+
+comparing to (25) we see c (a)au
+boundary x as follows:
+
+oau =ba.
+
+it is also useful to dene a constant cx for any
+
+x of i-type: cx = f
+
+xe1(cid:20) o o
+xo xo(cid:21)
+
+x of n-type: cx = f
+
+xu1(cid:20) o o
+xu xu(cid:21)
+
+(27)
+
+from (19) with 
+
+any n-type boundary a:
+
+o
+
+o
+
+
+
+au
+
+a
+
+au
+
+
+
+, q=au and p=1 we get the following identity for
+
+ca  ba =
+
+a
+ba
+
+(28)
+
+let x and y be two boundaries s.t. one is of n-type. then by rescaling (xy)
+u
+
+for x6= and
+=1 where ,  stand for the labels e or u, as applicable for the present
+6=1 we x c
+boundary conditions. let x be an i-type boundary. we can use (19) to calculate the structure
+constants involving xo instead of xe:
+
+(xy)y
+xu
+
+c (xa)au
+
+xou
+
+=
+
+a
+ba
+
+f
+
+xeau(cid:20) o au
+ (cid:21)
+
+xo
+
+c (ax)xo
+
+auu
+
+=
+
+ba
+a
+
+f
+
+auxo(cid:20) o xe
+au  (cid:21)
+
+(29)
+
+using (19) and the identities in appendix b one can verify that the denitions above give
+where at least one of x, y is of
+
+rise to symmetrical structure constants, i.e. c (xy)y
+xu
+n-type.
+
+= c (yx)y
+ux
+
+4.3
+
+i-type boundaries
+
+let x, y be i-type boundaries. consider the structure constant c (xy)y
+where the labels
+x
+, ,  are either e or o (as u cannot occur in this situation). we will now try to regauge the
+boundary elds such that the following rule holds:
+
+the structure constant c (xy)y
+x
+sets {e, e, e} or {e, o, o}.
+
+can be nonzero only if {, , } is one of the (unordered)
+
+suppose that the representation  on
+
+occurs with multiplicity one. recall
+from the analysis of the d-series boundary eld content in section 3.3 that then the above
+rule is automatically true, since e.g. if  gets label e then it occurs in the fusion of xe, ye or
+xo, yo but not in the fusion of xe, yo and xo, ye.
+
+x
+
+y
+
+if the representation  occurs with multiplicity two, we can use the freedom to form linear
+combinations of the two elds to make the above rule true. this is explained in more detail
+below.
+
+let  be a representation that occurs with multiplicity two. let (xy)
+e
+
+elds. recall that we normalised the two-point functions in such a way that only h (xy)
+and h (xy)
+
+be the two
+(yx)
+e i
+(yx)
+o i are nonzero. when taking linear combinations of the primary elds one has
+to preserve this condition, or the form of the sewing constraints would change. one gets the
+following constraints:
+
+and (xy)
+o
+
+o
+
+e
+
+h (xy)
+
+e
+
+(yx)
+o i = 0
+
+,
+
+h (xy)
+
+o
+
+(yx)
+e i = 0
+
+(30)
+
+10
+
+now consider the following change of basis:
+
+  (xy)
+o !new
+
+e
+(xy)
+
+= (cid:18)a b
+
+c d(cid:19)  (xy)
+o !old
+
+e
+(xy)
+
+,   (yx)
+
+e
+(yx)
+
+o !new
+
+= (cid:18)a b
+
+d(cid:19)  (yx)
+o !old
+
+e
+(yx)
+
+c
+
+where the two matrices are invertible. the constraints (30) amount to:
+
+ac  c (xyx)1
+
+ee,old + b d  c (xyx)1
+
+oo,old = 0
+
+ca  c (xyx)1
+
+ee,old + db  c (xyx)1
+
+oo,old = 0
+
+(31)
+
+(32)
+
+we see that we can choose the new basis of (xy) arbitrarily and the above condition xes the
+direction, but not the length of the new basis vectors for (yx).
+
+this change of basis can be used to bring the following 22matrix composed of structure
+
+constants to diagonal form:
+
+  c (xy)ye
+
+c (xy)ye
+
+xee
+
+xeo
+
+xee
+
+c (xy)yo
+c (xy)yo
+
+xeo !  (cid:18) 0
+0 (cid:19)
+
+(33)
+
+we now redened the structure constants c (xy)y
+x
+coupling relations {e, e, e} or {e, o, o}.
+
+the change of basis xes the new (yx)
+e
+
+and (yx)
+o
+
+in such a way that they obey our desired
+
+up to rescaling. however they do already
+
+obey the odd/even-coupling relation. to see this consider (19) in the form:
+
+
+
+xe
+
+x
+
+e
+
+y
+
+o
+
+xe
+
+x
+
+
+
+, q=1
+
+ c (xyx)1
+
+eo
+
+= c (xy)ye
+
+xee
+
+c (yx)xe
+
+yeo
+
+f
+
+
+
+ye1(cid:20) 
+
+xe xe(cid:21)
+
+(34)
+
+the l.h.s. of this equation is zero and on the r.h.s. both c (xy)ye
+nonzero (this can be seen from evaluating c (xyx)1
+ee
+c (yx)xe
+
+=0 as we said.
+
+6=0 instead of c (xyx)1
+
+xee
+
+eo
+
+and the f-matrix entry are
+
+=0 in (34)). hence
+
+oxo =a in the previous section we can determine c (x)xo
+
+oxe
+
+by using (19) and
+
+yeko
+from c (x)xe
+
+(82):
+
+
+
+o
+
+o
+
+
+
+
+
+xe
+
+x
+
+xe
+
+ c (x)xo
+
+oxe =
+
+, q=xo
+
+
+c ()1
+oo
+c (x)xe
+
+1xo(cid:20) o xe
+o xe(cid:21) =
+ f
+. for 6=1, x6= we rescale (xy)
+
+oxo
+
+e
+
+1
+cx
+
+and (xy)
+o
+
+s.t.:
+
+next we x the form of c (xy)y
+x
+
+(35)
+
+(36)
+
+c (xy)yo
+
+xoe
+
+= f
+
+xeyo(cid:20) o ye
+ (cid:21)
+
+xo
+
+c (xy)yo
+
+xeo
+
+1
+
+f
+
+ #
+xoyo" o ye
+
+xe
+
+if x  y
+if x > y
+
+=
+
+
+one can verify that for =1 indeed c (xx)xo
+expressions for c (x) given before.
+
+xo1 =1 and that for x= the above reduces to the
+
+as in the case of mixed boundaries one can now check that the denitions in (36) give rise
+to reection symmetric structure constants, but this time there is an exception for x=y: in
+
+11
+
+this case some of the structure constants are antisymmetric under reection. as opposed to
+the a-series, for the d-series it is in general impossible to nd a gauge in which all boundary
+structure constants have reection symmetry. to see this consider (19) in the form:
+
+
+
+xe
+
+x
+
+o
+
+x
+
+xe
+
+o
+
+
+
+
+
+ c (xx)xo
+
+oxe
+
+c (x)o
+
+xexo = c (xx)xo
+
+xeo
+
+c (x)o
+
+xoxe
+
+f
+
+xe(cid:21)
+xoxo(cid:20) xe o
+
+
+
+(37)
+
+eqn. (81) forces the f-matrix entry in (37) to square to one. but in general it does take the
+, in general
+is symmetric for some values of o, it will be antisymmetric
+
+values 1, depending on o. so no matter how we choose c (x)o
+we cannot avoid that if c (xx)xo
+for others.
+
+and c (x)o
+
+xoxe
+
+xexo
+
+xeo
+
+one can verify that (36) implies that for even elds alone we get a solution that resembles
+=1, whereas the various structure constants involving odd elds are:
+
+the a-series, i.e. c (xy)ye
+
+xee
+
+= 1 ; c (xy)yo
+
+xoe
+
+for x  y:
+
+for x > y:
+
+c (xy)yo
+
+xeo
+
+c (xy)ye
+
+xoo
+
+c (xy)yo
+
+xeo
+
+c (xy)ye
+
+xoo
+
+xo
+
+= f
+
+xeyo(cid:20) o ye
+ (cid:21) ;
+ (cid:21)  cy
+ (cid:21) ; c (xy)yo
+
+= f
+
+xoe
+
+xo
+
+xeye(cid:20) o yo
+= a  f
+xoyo(cid:20) o ye
+= a  cx
+
+= f
+
+xe
+
+xeyo(cid:20) o ye
+ (cid:21) ;
+
+xo
+
+4.4 general boundary structure constants
+
+consider (19) in the form
+
+
+
+x
+
+x
+
+ir
+
+y
+
+js
+
+z
+
+z
+
+
+
+ c (xyz)kt
+
+irjs =x
+
+, q=kt
+(xy)y
+xir c (yz)z
+yjs
+
+c
+
+c (xz)z
+xkt
+
+f
+
+yk(cid:20) x z
+j (cid:21)
+
+i
+
+(38)
+
+(39)
+
+where the set {, t, } has to be one of {e, e, e}, {e, o, o} or {u,,}. since all constants that
+can occur on the r.h.s. have been computed in the previous two sections, the general boundary
+structure constants can be obtained from (39).
+
+suppose all boundaries are of i-type. then choosing =e and =t reduces the sum in (39)
+to =r.in the numerator on the r.h.s. we now see the boundary structure constant c (yz)zt
+,
+which obeys the even/odd coupling rule as seen in section 4.3. this implies that the even/odd
+coupling rule extends to all boundary structure constants, i.e. c (xyz)kt
+can be nonzero only if
+{r, s, t} is one of the sets {e, e, e}, {e, o, o} or {u,,}.
+i.e. given c (xyz)kt
+is equivalent to =1 in the following equation:
+
+we can also investigate the behaviour of the boundary structure constants under reection,
+reection symmetry
+
+? using (18) we check that for c (xy)y
+x
+
+, what is c (zyx)kt
+
+yrjs
+
+irjs
+
+irjs
+
+jsir
+
+c (xy)y
+x
+
+=  
+
+c (x)1
+xx
+c (y)1
+y y
+
+c (yx)x
+
+y
+
+(40)
+
+12
+
+as remarked in the previous two sections, using the explicit form of the structure constants
+derived there, we see that =1 in all cases except for one, and that is =o and x=y, where
+we can have =  1. this can be made more precise in the light of (37), if we dene:
+
+(x, x, o) = f
+
+xoxo(cid:20) xe o
+xe(cid:21)
+
+
+
+and
+
+(x, y, ) = 1 in all other cases
+
+(41)
+
+then (40) holds with  = (x, y, i) for all x, y, i and we can use this relation to evaluate the
+reection property of the general boundary structure constants obtained in (39). we get:
+
+c (xyz)kt
+
+irjs =
+
+(x, y, ir)(y, z, js)
+
+(x, z, kt)
+
+ c (zyx)kt
+
+jsir
+
+(42)
+
+4.5 collection of results
+
+we found: any solution to the boundary four-point constraint (4) for a given d-series eld
+content can be brought to the same form by regauging the elds, i.e. if there is a solution, it
+is essentially unique.
+
+k
+
+i (yz)
+
+j  (xz)
+
+can exist. first the according verlinde fusion number nij
+
+in the gauge we chose, there are two conditions that have to be satised before a given
+fusion (xy)
+k has to
+be nonzero and second the e/u/o-labels {, , } have to be one of the sets {u,,}, {e, e, e}
+or {e, o, o} (where  stands for any label). the assignment of the e/o/u-labels is described in
+section 3.3. from this even/oddcoupling rule we see immediately that the boundary structure
+constants involving only i-type boundaries have a z2symmetry of the form (xy)
+and
+o   (xy)
+(xy)
+
+there are two boundary conditions which we have endowed with a special name.  stands
+for the boundary condition associated to the (1, 1) pair of nodes in the diagram (13) and 
+for (1, q
+
+2 ). the boundary structure constants take the following form:
+
+e  (xy)
+
+o
+
+e
+
+.
+
+ two-point functions with  (the constants a and cx are dened in (24) and (27)):
+
+c (x)1
+
+xuxu = 1
+
+c (x)1
+
+xexe = 1
+
+c (x)1
+
+xoxo = a  cx
+
+ for x any type and y of n-type (by is dened in (26)):
+c (xy)yu
+
+c (xy)yu
+
+c (xy)yu
+
+= 1
+
+= 1
+
+xou
+
+xuu
+
+xeu
+
+=
+
+a
+by
+
+f
+
+xeyu(cid:20) o yu
+ (cid:21)
+
+xo
+
+ for x, y of i-type and xy (the ordering is dened in section 3.4):
+
+c (xy)ye
+
+xee
+
+= 1
+
+c (xy)yo
+
+xeo
+
+= 1
+
+c (xy)yo
+
+xoe
+
+= f
+
+xeyo(cid:20) o ye
+ (cid:21)
+
+xo
+
+c (xy)ye
+
+xoo
+
+= a  cy  f
+
+xeye(cid:20) o yo
+ (cid:21)
+
+xo
+
+(43)
+
+(44)
+
+(45)
+
+all other cases can be obtained from this list by using (40) with =1 (since the case x=y is
+covered in the list), with results listed in (29), (38).
+
+for the general boundary structure constants we distinguish two cases. first, for x, z of
+
+n-type and y of i-type the sum over  in (39) has to be carried out and we get:
+
+c (xyz)ku
+
+iuju = f
+
+yek(cid:20) xu zu
+
+j (cid:21) +
+
+i
+
+bx
+bz  f
+
+xu(cid:21)f
+xuyo(cid:20) ye o
+
+yo(cid:21)f
+yezu(cid:20) zu o
+
+yok(cid:20) xu zu
+j (cid:21)
+
+j
+
+i
+
+i
+
+(46)
+
+13
+
+in all other cases the sum reduces to one term with the result:
+
+c (xyz)kt
+
+irjs
+
+=
+
+c
+
+(xy)y
+xir
+
+c (yz)z
+
+yjs
+
+c (xz)z
+xkt
+
+f
+
+yk(cid:20) x z
+j (cid:21)
+
+i
+
+(47)
+
+the r.h.s. does not depend on the specic choice of , ,  as long as the combinations {, r, },
+{, s, } and {, t, } are allowed by the even/odd coupling rule. the structure constant in
+the denominator is then automatically nonzero (see section 4.1). the boundary structure
+constants are either symmetric or antisymmetric under reection, the precise behaviour is
+given in eqn. (42).
+
+note in particular that if x, y, z are all of n-type or if the elds ir, js, kt are even, the
+
+solution takes the same form as in the a-series (see eqn. (31) in [15]):
+
+c (xyz)ke
+
+ieje
+
+= f
+
+yek(cid:20) xe ze
+j (cid:21)
+
+i
+
+and
+
+c (xyz)ku
+
+iuju
+
+= f
+
+yuk(cid:20) xu zu
+j (cid:21)
+
+i
+
+(48)
+
+in fact this form also holds for all mixed cases with only e/u eld labels, except when the
+boundaries x, z are of n-type and y is of i-type, when we obtained (46).
+
+5 extension to bulk theory
+
+the bulk-boundary couplings (a)bi
+(5) in a rewritten form using the assumption that all c (xyx)1
+the model (see section 4):
+
+k can be determined by analysing the sewing constraint
+ii are nonzero for elds present in
+
+(b)bi
+
+ c (abb)q
+p 
+
+x
+
+(a)bi
+
+=xk,
+
+k c (aab)q
+kp
+
+ei(2hm2hihphq+ 1
+
+2 (hk+h))
+
+xm
+km(cid:20)  q
+i p(cid:21)f
+ f
+
+m(cid:20) i 
+p q(cid:21)
+
+(49)
+
+suppose now there is a boundary condition a and a bulk eld i s.t. i does not couple to
+any boundary eld on the boundary a, i.e. (a)bi
+a 6= 0. then, roughly
+speaking (this is discussed in more detail below), since the r.h.s. of (49) is now zero, all bs
+involving the bulk eld i are zero. since any n-point function has a limit in which we take
+all bulk elds to the boundary, and hence in this limit the factors in front of the conformal
+blocks contain the product of the bs of all bulk elds, any n-point function involving the
+eld i is identically zero. this in turn just means that the bulk eld i is not part of the
+model and can be left out.
+
+k =0 for all k with nka
+
+using this idea we can now determine the maximal bulk eld content consistent with (49).
+this does not prove that the maximal eld content has to be modular invariant, but it turns
+out that it is indeed the d-series bulk eld content derived in [4].
+
+to make this more precise, the classication of boundary conditions and their eld content
+in [9] establishes a onetoone correspondence between boundary conditions and diagonal bulk
+elds. in this approach specifying the possible boundary conditions is equivalent to giving the
+diagonal part of the bulk partition function, and from [4] one knows which o-diagonal parts
+have to be added to make it modular invariant. the statement thus is that, at least of the
+a and dseries, the bulk eld content obtained by this procedure is the maximal consistent
+one.
+
+14
+
+5.1 bulk eld content
+
+for an arbitrary boundary x consider (49) with a=, b=x, p=x, q=x. the  sum reduces
+to one element and we get:
+
+(x)bi
+
+ c (xx)x
+
+x 
+
+= ()bi
+
+1 c (x)x
+
+1x
+
+(cid:0) fs (cid:1)(cid:12)(cid:12)(cid:12)k=1
+
+(cid:0) fs (cid:1)(cid:12)(cid:12)(cid:12)k=o
+
++ ()bi
+
+o c (x)x
+
+ox
+
+(50)
+
+first note that from an argument similar to (20) and (21) we see that all boundary
+structure constants that appear in (50) are nonzero if they are allowed by fusion and the
+even/odd coupling rule (see section 4.1).
+
+suppose a bulk eld i does not couple to the boundary, i.e. ()bi
+
+o =0.
+then the r.h.s. of (50) is identically zero and since the boundary structure constant on the
+k =0 for all a,k. as we argued before this implies that
+l.h.s. is nonzero it follows that (a)bi
+all correlators involving i vanish and the eld can be removed from the bulk theory. hence
+for any bulk eld i we need at least one of ()bi
+
+o to be nonzero.
+
+1 =0 and ()bi
+
+1 and ()bi
+
+the bulk eld i transforms in a tensor product of two representations i. suppose i is
+a eld with spin, i.e. i6=. then i and  cannot fuse to the identity and hence it follows that
+o 6=0. this is only possible if the fusion
+1 =0. so for the eld i to exist we need ()bi
+()bi
+i,   o exists, i.e. only pairs with kac-labels i=(r, s) and =(r, q  s) are possible. now
+consider (50) with x=, =x=o, x=1. we obtain (compare also to (16)):
+
+()bi
+
+o = ()bi
+
+o  e2i(hihi) = ()bi
+
+o  e2i( p
+
+2r)( q
+
+2s)
+
+(51)
+
+for the exponential to be +1 we need q
+odd and q always even).
+
+2  s to be even (recall that for the d-series p is always
+next suppose that the bulk eld i is diagonal, i.e. i=. let i have kac-labels (r, s). as
+before denote by i the representation with kac-labels (r, q  s). consider (50) with x=,
+=1, x=x=o. the f-sum in (49) reduces to m=i and we obtain:
+
+()bi
+
+1 = ()bi
+
+1  e2i(hi
+
+hiho ) =  ()bi
+
+1  eis
+
+(52)
+
+hence only diagonal bulk elds with representation i=(r, s) where s is odd are present. recall
+that by convention r is always odd.
+
+up to now we have determined which pairs of representations are possible in the bulk.
+now we have to determine their multiplicities. the maximal multiplicity a bulk eld can
+have is equal to the number of boundary elds it couples to on the boundary. this can
+be seen as follows: suppose two bulk elds i, i in the same representation i can due to
+the fusion rules only couple to one eld  on the boundary. then we can dene two new
+
+bulk elds as linear combination of i, i s.t., say, ()bi
+,new=0. now the
+new i eld does not couple to the boundary at all and can be removed from the theory. a
+similar argument forbids more than two bulk elds in the same representation that by fusion
+can couple to the two elds on the boundary. the only bulk-representations that allow
+coupling to both elds on the boundary is the pair ii where i has kac-labels (r, q
+2 ) and
+only in this case multiplicity two can occur.
+
+,new6=0 and ()bi
+
+
+
+table 2 summarizes the maximal bulk eld content consistent with a d-type cylinder
+partition function. each representation in the table occurs once for each possible fusion. the
+only situation in which multiplicity arises is for pairs of representations that can fuse to both
+1 and o, in which case we have multiplicity two. note that as mentioned before this can only
+
+15
+
+i,  fuse to
+
+1
+o
+
+representations
+(i, ) with i =  = (r, s) where r and s odd
+(i, ) with i = (r, s),  = (r, qs) where r odd and s q
+table 2: maximal bulk eld content for d-series
+
+2 even
+
+happen for a diagonal bulk eld with both representations of the form (r, q
+odd, i.e. in deven models.
+
+2 ) and when q
+
+2 is
+
+note that the same line of argument also works for the a-series. here the situation is
+much simpler, since there is only one eld, i.e. the identity, on the 1boundary. hence only
+diagonal bulk elds are allowed and only multiplicity one can occur. this is precisely the
+a-series modular invariant bulk eld content.
+
+5.2 bulk-boundary couplings
+
+as a rst step to determine the bulk-boundary couplings we will choose a basis of primary
+bulk elds s.t. each eld couples either to 1 or to o on the boundary, but not to both
+simultaneously.
+
+as we have seen in the previous section, this demand is automatically enforced by the
+fusion rules except for diagonal bulk elds in the representation ii where i has kac-labels
+(r, q
+2 ) and we are looking at a deven model. in this case the corresponding bulk elds have
+multiplicity two and similar to the argument for redening the boundary structure constants
+in section 4.3 we can take linear combinations of the two bulk elds to obtain the desired
+coupling rule. we will denote bulk elds that couple to 1 on the boundary as even and
+bulk elds that couple to the boundary eld o as odd. the new bulkboundary couplings
+then fulll ()bie
+
+o =0 for the even bulk elds ie and ()bio
+
+1 =0 for the odd elds io.
+
+we are still free to rescale all the bulk elds i. we use this freedom to set (the odd
+1 represent the pasquier algebra as
+
+diagonal elds are normalised dierently so that the (x)bi
+seen in section 5.6):
+
+()bio
+
+o =
+
+bi
+a 
+
+i
+
+s1
+1
+s1
+
+()bie
+
+1 = ()bio
+
+o =
+
+i
+
+s1
+1  ei 
+s1
+
+2 (hihi)
+
+for diagonal odd elds io (i.e. i=)
+
+for all other cases
+
+()bio
+
+1 = ()bie
+
+o = 0
+
+from the coupling rule
+
+(53)
+
+with this redenition of the elds the sum on the r.h.s. of (50) reduces to one term. using
+
+(50) with = and k= the general bulkboundary coupling takes the form:
+
+(x)bi
+
+ = ()bi
+
+ xm
+
+exp(cid:0)i(2hm  2hi  hx  hx + 1
+m(cid:20)  x
+i x(cid:21)f
+ f
+
+x x(cid:21) 
+
+m(cid:20) i
+
+
+
+2 (h + h))(cid:1)
+
+1
+cx1
+bx
+0
+
+: =e and =e or u
+: =o and =o
+: =o and =u
+: otherwise
+
+(54)
+
+where =e if x is an i-type boundary and =u if x is an n-type boundary.
+
+
+
+
+16
+
+note in particular that any bulk eld can couple to a ueld on an n-type boundary, but
+for an i-type boundary an even bulk eld can only couple to an even boundary eld and an
+odd bulk eld to an odd boundary eld. this indicates that the z2symmetry of the boundary
+structure constants for i-type boundaries carries over to the bulk.
+
+5.3 bulk structure constants
+
+the bulk structure constants can now be obtained from (6). take a=, the sum on the l.h.s.
+k 6=0, i.e. k=. on the r.h.s. the sum over p and q
+then reduces to the term where ()bm
+reduces to p=, q=. the rsum is also reduced to one element. we are left with:
+
+cij
+
+()bi
+
+m = exp(cid:0)i 
+
+ ()bj
+()bm
+
+
+
+
+
+2 (h +hh +2(hjhr)+hmhmhi+hihj+hj)(cid:1)
+u(cid:20) u u
+ (cid:21)f
+m (cid:21)
+ f
+
+ r(cid:20)  
+ j(cid:21)f
+
+m(cid:20)  r
+i j(cid:21)f
+
+r m(cid:20) 
+
+
+
+
+
+(55)
+
+where r=j if =e and r=j if =o. the rst f-matrix element in (55) implements an even/odd
+coupling rule for bulk elds, i.e. the only combinations for {, , } which can be nonzero are
+{e, e, e} and {e, o, o}.
+this implies that apart from other symmetries the bulk structure constants may have
+there is a manifest z2symmetry which sends even bulk elds to themselves and odd one to
+minus themselves. together with section 4.5 and eqn. (54) we can now conclude that any
+correlator with no or only i-type boundaries is manifestly invariant under the z2symmetry
+e  e and o  o applied to bulk and boundary simultaneously.
+from the explicit expression in (55) we get:
+
+it is useful to know the bulk two-point functions in the present normalisation of elds.
+
+cii
+
+cioio
+
+i
+
+1 =
+
+s1
+1
+s1
+1 = a  f
+
+i1(cid:20) o o
+ (cid:21) 
+
+
+
+i
+
+s1
+s1
+
+1  (1)s(io)
+
+for diagonal elds i (i.e. i=)
+
+for nondiagonal elds io
+
+(56)
+
+where s(i) = hihi  z is the spin of the bulk eld i.
+in [14] it was shown that the minimal model bulk structure constants in the a and d
+series are related by rational numbers, called relative structure constants. taking the explicit
+expression (55) together with the normalisation (56) we nd (numerical) agreement with these
+results. also, for unitary models the signs of the two-point structure constants in (56) are
+the same as in [14], where they were shown to lead to real bulk structure constants (in the
+unitary case).
+
+note that if all bulk elds are even the solution (55) takes the same form as in the a-series:
+
+cieje
+
+me =(cid:18)f
+
+m1(cid:20) i
+
+i
+
+j j(cid:21)(cid:19)1
+
+(57)
+
+together with equations (48) for the boundary structure constants and (54) for the bulk-
+boundary couplings this illustrates another interesting point. if one considers the even elds
+alone, that is all bulk and boundary elds that are invariant under the z2symmetry men-
+tioned above, they form a subalgebra (as the coupling e, e  o is not allowed) and the structure
+constants are identical to the a-series in the following way:
+
+17
+
+consider the a-series boundary theory associated to the pair of diagrams (ap1, aq1). in
+this theory consider only the boundary conditions (, ) with  < p
+2 and
+ > q
+2 (compare to (15)) and the bulk elds ii where i has kac-labels (r, s) with both r and
+s odd. then this is a closed subset of elds of the a-series theory and in the normalisation
+chosen its structure constants coincide with those of the invariant elds of the d-series theory
+2 +1). this correspondence seems natural form the point of view that the invariant
+(ap1, d q
+part of the d-diagram is an a-diagram.
+
+2 and  < q
+
+2 or  > p
+
+5.4 real structure constants
+
+in the normalisation chosen in this paper the f-matrices are all real. this implies rst of all
+that the boundary structure constants as given in section 4.5 are all real.
+
+for the bulk structure constants we have seen in (57) that they are real as long as only
+me . the phase
+even elds are involved. if odd elds are present consider (55) in the case ciojo
+factors cancel and we are left with a real expression. all other cases are real as well, as can for
+1 together with
+example be seen from the three-point function cij
+the fact that all two-point structure constants (56) are real. thus in the present normalisation
+all bulk structure constants are real, both for unitary and non-unitary models.
+
+1 = cjk
+
+k ckk
+
+i cii
+
+for the bulk-boundary couplings in (54) we can apply the identity (86) to obtain the
+
+result:
+
+(cid:16) (x)b(i)
+
+(cid:17) = (x)b(i)
+
+
+
+(58)
+
+this means that complex conjugation relates the bulk-boundary coupling for a bulk eld of
+spin s to that of the eld of spin s. in particular all bulk-boundary couplings for diagonal
+bulk elds are real.
+it is in general not possible to choose a basis of primary elds s.t. all structure constants
+are real. to see this we construct a gauge invariant expression from the sewing constraints
+which cannot be fullled by real structure constants. consider for example two diagonal bulk
+elds i and m and a eld j with spin one. take (6) with k=1 and a=. this forces
+p=q=o and r = . we get:
+
+cij
+
+m ()bm
+
+1 = ei
+
+x
+
+
+
+2  f
+
+om(cid:20) i 
+
+i j(cid:21)  ()bi
+
+o ()bj
+
+o c ()1
+oo
+
+(59)
+
+the f-matrix entry is real and will in general be nonzero, provided that all fusions are allowed.
+o 6=0) and we
+as discussed in section 5.1 the spin one eld j has to couple to o (i.e. ()bj
+can nd a diagonal eld i that couples to o. the boundary two-point function has to
+be nonzero by assumption b) in section 4. hence the r.h.s. is nonzero and thus some of
+the d-series structure constants will have nonzero imaginary part if they solve the sewing
+constraints.
+
+we can however consider the following non-primary basis of bulk elds to obtain real
+structure constants: diagonal (even or odd) bulk elds stay as they are and for a pair s, s
+of nondiagonal bulk elds with spins s we dene a new set of elds as follows:
+
+r = 1
+
+2 (s + s)
+
+i = 1
+
+2i (s  s)
+
+(60)
+
+the new elds r and i are no longer primary, but one nds that the coecients describing
+their behaviour under arbitrary conformal mappings are all real. since the ope is determined
+
+18
+
+from the transformation behaviour of the elds one expects the coecients appearing in the
+ope to be real as well.
+
+one can see explicitly from (58) that all bulk-boundary couplings (x)br
+
+ are
+real and one can verify numerically that all bulk structure constants are real in the new basis
+as well. this holds for both unitary and non-unitary models.
+
+ and (x)bi
+
+5.5 discrete symmetries of the structure constants
+
+denote the set of bulk and boundary structure constants given in (43)(47) and (53)(55)
+with a. we see that a depends explicitly on the assignment of e/olabels in section 3.3 and
+the ordering of the boundary conditions in section 3.4.
+
+denote the set of structure constants obtained by the same procedure, but with a dierent
+initial assignment of e/olabels in section 3.3 as b. it was shown in this paper that any solution
+to the sewing constraints with the d-series eld content can be brought to the form a. in
+particular there is a change of basis in the set of primary elds that maps b to a.
+
+for the primary elds in a we considered a z2action that takes even elds to themselves
+and odd elds to minus themselves. this action leaves the structure constants involving no
+or only i-type boundaries invariant.
+
+however a dierent initial e/olabelling leads to a dierent action of z2 on the boundary
+elds. the z2action of b does via the change of basis induce a z2action on a which
+is dierent from the original one. it follows that each distinct e/oassignment results in a
+distinct z2action on a.
+
+going back to section 3.3 we see that for each i-type boundary x6= we are free to choose
+x we call xe and which xo. the specic assignment
+
+which of the two elds living on 
+made in section 3.3 was motivated on physical grounds.
+
+there are altogether n =2(p1)(q2)/41 distinct assignments. thus among other symme-
+tries the structure constants may have, there are n z2s acting on the set of primary elds
+that leave the subset of the structure constants in a that involve no or only i-type boundary
+conditions invariant. one can convince oneself that the z2s all act in the same way on the
+bulk elds but can be distinguished from their action on the boundary elds. the collection
+of z2s just presented does not necessarily exhaust all discrete symmetries as can be seen for
+example in the three-states potts model which has an additional z3symmetry of whose z2
+subgroups only one is contained in the above list.
+
+5.6 disc partition function and pasquier algebra
+
+up two now all constraints on the structure constants were derived in such a way that the
+uhp cancelled. we will next derive some constraints for the
+(yx)
+i i
+
+vacuum expectation values h1i(x)
+vacuum expectation values of the unit disc h1i(x)
+
+d . consider the two-point function h (xy)
+
+on the unit disc. taking dierent limits leads to the constraint:
+
+i
+
+d = c (yxy)1
+
+ii h1i(x)
+c (xyx)1
+d , h1i(y)
+
+ii h1i(y)
+
+d
+
+(61)
+
+the vacuum expectation values h1i(x)
+
+d can be interpreted as the partition function of
+the unit disc with dierent boundary conditions. this expression thus relates the partition
+functions of dierent boundary conditions in the same geometry. the relation (61) remains
+true for dierent (genus zero) geometries, but the actual values of the partition functions do
+depend on the shape of the system (see e.g. [20]). for example the partition function for a
+
+disc of radius r is given by h1i(x)
+
+d  rc/6, where c is the central charge [20].
+
+19
+
+substituting the explicit boundary two-point functions into (61) we arrive at the following
+
+expressions (let x, y be i-type boundaries and a, b be n-type boundaries):
+
+d
+
+xe = h1i(y)
+h1i(x)
+s1
+
+s1
+
+d
+ye
+
+d
+
+xe = 2  h1i(a)
+h1i(x)
+s1
+
+d
+au
+
+s1
+
+d
+
+au = h1i(b)
+h1i(a)
+s1
+
+d
+bu
+
+s1
+
+(62)
+
+in [9] the matrices ni that descibe the boundary eld content are simultaneously diago-
+
+nalised in the following way:
+
+nix
+
+y = xj diag.
+
+j
+
+si
+s1
+
+j  x,j (y,j )
+
+(63)
+
+where the sum runs over all (even or odd) diagonal bulk elds and the vectors x form a
+complete orthonormal basis.
+
+replicating the line of argument in section 8 of [15] in the present notation we get the
+
+following expression for the matrices ni:
+
+nix
+
+y = xj diag.
+
+j
+
+si
+s1
+
+j 
+
+j
+
+s1
+1 h0|0i
+cjj
+
+(x)bj
+
+1 h1i(x)
+
+d
+
+(y)bj
+
+1 h1i(y)
+
+d
+
+using (56) and normalising the bulk vacuum:
+
+h0|0i = s1
+
+1
+
+we nd the following relation between the bulk-boundary couplings and the vectors x:
+
+by evaluating (66) for j=1 and recalling that (x)b1
+
+x,j = (x)bj
+
+d
+
+1 h1i(x)
+1 =1 we get:
+
+h1i(x)
+
+d = x,1
+
+(64)
+
+(65)
+
+(66)
+
+(67)
+
+furthermore we see that the the bulk-boundary couplings to the identity on the boundary are
+given by a ratio of s [9]:
+
+(x)bj
+
+1 =
+
+x,j
+x,1
+
+(68)
+
+in the present normalisation the bs form one dimensional representations of an algebra, a
+fact that was used to classify possible boundary conditions in [69]. the algebra was identied
+as the pasquier algebra [21] in [9]:
+
+mij
+
+k  (x)bk
+
+1
+
+(69)
+
+where mij
+
+(x)bi
+
+1 (x)bj
+
+1 =xk
+k =px x,ix,j (x,k )/x,1.
+
+from the relations (67), (68) and (62) together with the constraint that the vectors x
+
+form an orthonormal basis we get the following expression:
+
+x,i = (x)bi
+
+1 x,1
+
+x,1 =(2  s1
+12  s1
+
+xe
+
+xu
+
+if x is of i-type
+if x is of n-type
+
+(70)
+
+since the bulk-boundary couplings are known from (54) one can now check that the s so
+y on the l.h.s. taken
+dened are all real and verify numerically that they fulll (63), with nix
+from section 3.3.
+
+20
+
+6 conclusion
+
+the aim of this paper was to nd all structure constants of the d-series minimal model
+boundary conformal eld theory and to point out some of their properties.
+
+the structure constants can be calculated in several steps. the basic ingredient are the
+fusion matrices, as all structure constants are expressed in terms of these. a procedure to
+obtain the fusion matrices recursively is given in [15], together with references to the original
+literature. the matrices can also be extracted by rescaling explicit expressions found e.g.
+in [17] to match the normalisation xed in appendix a. as a rst step the d-series eld content
+of the boundary theory is computed, as described in section 3.3. next all boundary structure
+constants are obtained from the results collected in section 4.5. the boundary theory is now
+fully determined. the extension from the boundary to the bulk recovers the familiar d-series
+bulk eld content as the maximal set of bulk elds consistent with the boundary theory (see
+section 5.1). last, the remaining two sets of structure constants, the bulk-boundary couplings
+and the bulk structure constants are given in (53), (54) and (55).
+
+the boundary structure constants c (xyz)t
+rs
+
+k ob-
+tained by this procedure are all real, both for unitary and non-unitary minimal models.
+ are imaginary. there is in general no
+however some of the bulk-boundary couplings (x)bi
+basis of primary elds such that all structure constants real. in section 5.4 a non-primary
+basis of elds was presented in which all three sets of structure constants are real.
+
+and the bulk structure constants cij
+
+the solution described above was obtained by deriving a necessary form of the structure
+constants. it was shown that any solution to the sewing constraints (4)(7) for the d-series
+eld content can be brought to this form. so just as for the a-series it follows that the
+structure constants are unique up to redenition of the elds. it was however not analytically
+shown that the given structure constants do indeed solve the full set of genus zero sewing
+constraints, since they are overdetermined and only a subset was used for the actual solution.
+but numerical tests carried out for several minimal models where each of the equations (4)(7)
+was checked repeatedly with a dierent random selection of elds show no contradiction.
+
+it was also found that a subset of the d-series structure constants have a manifest z2
+symmetry: if no or only i-type boundaries are present in a correlator it is invariant under
+the change eveneven and odd odd. this symmetry can be associated to the z2
+symmetry of the d-diagram in the sense that the boundary conditions fall in two classes: the
+i-type boundaries are associated to nodes left invariant by that symmetry, and the n-type
+boundaries to nodes which are not. we have also seen that the even elds alone form a closed
+subalgebra with structure constants equal to the corresponding ones of an a-type theory.
+
+in deriving the structure constants we have used only the virasoro algebra, and not consid-
+ered the fact that it could be part of a larger symmetry algebra, as is the case for deven models.
+from the present point of view, curious properties of the solution such as the boundary eld
+content, the even/odd coupling rule or numerical coincidences in the structure constants, are
+obtained as results of the calculation, but lack an explanation in terms of the additional struc-
+ture present in the theory. one can use the maximally extended chiral algebra as a starting
+point for the analysis of a boundary conformal eld theory (see e.g. [22] and references therein)
+and it would be interesting to interpret the explicit results presented here in this more general
+framework.
+
+in section 5.5 it was pointed out that an initial freedom in the labelling of the boundary
+elds actually implies that the just mentioned z2 is part of a collection of 2(p1)(q2)/41
+z2s, each acting in a distinct way on the set of primary boundary elds. this action leaves
+structure constants with no or only i-type boundaries invariant.
+
+21
+
+finally the vacuum expectation values h1i(x)
+
+d of the unit disc with dierent boundary con-
+ditions were computed and it was pointed out that in the present normalisation the bulk-
+boundary couplings (x)bi
+
+1 form one-dimensional representations of the pasquier algebra.
+
+to make contact with dierent conventions in the literature the bulk and boundary elds
+may have to be redened. the normalisations chosen in this paper can be obtained from (56)
+in terms of the bulk two-point functions, or from (53) in terms of the bulk-boundary couplings
+to the identity eld on the boundary.
+
+acknowledgements  this work was supported by the epsrc, the daad and kings
+college london. i am especially grateful to my supervisor g.m.t. watts for suggesting the
+project, encouragement, criticism and helpful conversations. furthermore i wish to thank
+v.b. petkova, p. ruelle and j.-b. zuber for useful discussions.
+
+appendix a: derivation of the ve-point constraint
+
+this appendix was included to illustrate how the notation and techniques for calculating with
+conformal blocks described in [11] were used to rederive the sewing constraints in [10].
+
+the sewing constraints arise from taking two dierent limits in a given correlator where
+the elds approach each other or the boundary and demanding that the two sets of structure
+constants and conformal blocks give rise to the same function.
+
+conformal blocks associated to dierent asymptotic regimes can be transformed into each
+
+other using the fusion or fmatrices. the fmatrices are dened as follows:
+
+i
+
+j
+
+p
+
+k
+
+
+
+(z)
+
+(w)
+
+=xq
+
+f
+
+i
+
+pq(cid:20) j k
+
+(cid:21) i
+
+j
+
+k
+
+q
+
+(z  w)
+
+
+(w)
+
+(71)
+
+the conformal blocks appearing in (71) solve the linear dierential equations associated with
+the (chiral) correlator hi|j(z)k(w)|li.
+for a regular expression in w):
+
+the normalisation convention for conformal blocks chosen in this paper is (the dots stand
+
+i
+
+i
+
+j
+
+p
+
+k
+
+
+
+(1)
+
+(w)
+
+j
+
+k
+
+q
+
+= whphkh(1 +  )
+
+(1  w)
+
+ = (1  w)hqhjhk(1 +  )
+
+(w)
+
+(72)
+
+the example we consider is the derivation of the constraint resulting from taking dierent
+on the
+
+limits in the correlator involving two bulk elds i, j and one boundary eld (aa)
+k
+upper half plane with the boundary condition labelled a.
+
+in the rst limit we take the two bulk elds to the boundary and are left with a three-point
+function on the boundary. in the second limit we start by taking the ope of the two bulk
+
+22
+
+elds and then take the remaining bulk eld to the boundary. let z=xz+iyz and w=xw+iyw.
+the asymptotic behaviour in the two limiting cases is then given by:
+
+uhp!
+
+k
+
+q c (aaa)k
+
+p q c (aaa)1
+
+(x)i
+p (a)bj
+
+hi(z, z)j (w, w) (aa)
+yw0xp,q  x,
+k k h1i(a)
+(a)bi
+yz0
+ (2yz)hphihi(2yw)hqhjhj (xz  xw)hkhphq
+z w xm, m x
+uhp!
+zw
+ (z  w)hmhihj (z  w)
+
+ (xz  x)hqhphk(xw  x)hphkhq
+k k h1i(a)
+
+k c (aaa)1
+
+cij
+
+m (a)bm
+
+hmhihj (2yw)hkhmhm(xw  x)2hk
+
+(73)
+
+on the other hand the correlator can be expressed as a linear combination of conformal
+blocks. we use two sets of conformal blocks to express the correlator in two dierent ways,
+one associated to each asymptotic behaviour in (73). we obtain the following two linear
+combinations:
+
+hi(z, z)j (w, w) (aa)
+
+k
+
+(x)i
+
+i
+
+z  z
+p
+
+p
+
+z
+
+
+
+q
+
+j
+
+
+
+w  w
+
+w
+
+i
+
+k
+
+x
+
+0
+
+m
+
+j
+
+z  w
+m
+
+
+
+
+
+w  w
+
+z  w
+
+k
+
+k
+
+w
+
+k
+
+x
+
+0
+
+cp,q  0
+
+=xp,q
+
+dm, m  0
+
+= xm, m
+
+(74)
+
+taking the limits calculated in (73) for the exact expressions in terms of conformal blocks
+(74) relates the coecients cp,q and dm, m to the products of structure constants obtained by
+applying the ope. the precise relation is:
+
+cp,q  ei 
+
+2 (hp+hqhihihjhj) =x,
+2 (hkhmhm) =x
+dm, m  ei 
+
+(a)bi
+
+p (a)bj
+
+q c (aaa)k
+
+p q c (aaa)1
+
+k k h1i(a)
+
+uhp
+
+cij
+
+m (a)bm
+
+k c (aaa)1
+
+kk h1i(a)
+
+uhp
+
+(75)
+
+the phase factors originate from relating z  z = 2iyz to 2yz etc. the sums over ,  and  in
+(75) take care of elds with multiplicities. fields that transform in the same representation
+of the virasoro algebra show the same asymptotic behaviour and cannot be discriminated by
+conformal blocks. hence their structure constants occur as a sum in front of the according
+conformal block.
+
+23
+
+the two sets of conformal blocks in (74) are related by a basis transformation. this
+transformation can be carried out in several steps making use of two basic moves of braiding
+and fusion implemented by the b and f matrix (see [11] for details). one possible way to
+perform the basis transformation is as follows:
+
+i
+
+z  z
+p
+
+p
+
+z
+
+
+
+q
+
+w
+
+j
+
+w  w
+
+0
+
+
+
+k
+
+i
+
+=xr (cid:18)f(cid:20) j 
+qr(cid:20) k 
+
+=xr,m
+
+f
+
+p k(cid:21)(cid:19)1
+qr 
+
+0
+
+i
+
+z
+
+p j(cid:21)b()
+
+pm (cid:20)  j
+
+i r(cid:21)  0
+
+k
+
+x
+
+
+
+0
+
+p
+
+j
+
+z
+
+w
+
+
+
+k
+
+w
+
+k
+
+x
+
+0
+
+
+
+
+
+r
+
+j
+
+i
+
+z
+
+i
+
+w
+
+m
+
+r
+
+k
+
+z
+
+w
+
+k
+
+x
+
+0
+
+i
+
+z  w
+m
+
+m
+
+w
+
+j
+
+m
+
+w
+
+
+
+z  w
+
+
+
+k
+
+k
+
+x
+
+0
+
+= xr,m, m
+= xr,m, m
+
+f
+
+qr(cid:20) k 
+
+p j(cid:21)b()
+
+
+
+pm (cid:20)  j
+i r(cid:21)f
+r m(cid:20) 
+qr(cid:20) k 
+p j(cid:21)f
+
+m k(cid:21)  0
+pm(cid:20)  r
+i j(cid:21)f
+
+ei(hi+hrhphm)f
+
+
+
+r m(cid:20) 
+
+m k(cid:21)
+
+i
+
+j
+
+m
+
+z  w
+m
+
+
+
+
+
+w  w
+
+z  w
+
+k
+
+k
+
+w
+
+ 0
+
+k
+
+x
+
+0
+
+putting (74), (75) and (76) together we recover the sewing constraint (6):
+
+(76)
+
+(77)
+
+cij
+
+m (a)bm
+
+k c (aaa)1
+
+k k h1i(a)
+
+uhp
+
+x
+
+(a)bi
+
+p (a)bj
+
+q c (aaa)k
+
+p q c (aaa)1
+
+kk h1i(a)
+2 (hk+hphq2hr+hmhmhi+hi+hj +hj)
+
+uhp!
+
+=xp,q  x,
+xr
+
+ei 
+
+qr(cid:20) k 
+p j(cid:21)f
+ f
+
+pm(cid:20)  r
+i j(cid:21)f
+
+r m(cid:20) 
+
+m k(cid:21)
+
+
+
+the summation range for r is principally over all entries in the kac-table (quotiened by z2)
+
+24
+
+but the fmatrix entries will only be nonzero if the following three fusions are allowed:
+
+j
+
+p
+
+r
+
+
+
+
+
+r
+
+k
+
+r
+
+m
+
+(78)
+
+appendix b: some f-matrix identities
+
+the following constitutes a collection of f-matrix identities for virasoro minimal models used
+in the paper. they are either directly taken from [11] or special cases thereof. note that for
+where the -operation was dened as i = (r, q  s) if i has
+the smatrix we have s1
+kac-labels (r, s).
+
+i=s1
+
+i
+
+pq(cid:20) j l
+i k(cid:21)
+k j(cid:21)
+
+i
+
+f
+
+b()
+
+i
+
+i
+
+
+
+f
+
+pq (cid:20) j k
+(cid:21) = ei(hi+hhphq)f
+j k(cid:21) = f
+(cid:21) = f
+pq(cid:20) 
+pq(cid:20) i
+pq(cid:20) j k
+a b(cid:21) = p,q
+a d(cid:21)f
+rq(cid:20) d c
+pr(cid:20) b c
+xr
+1  s1
+1k(cid:20) i j
+i j(cid:21)f
+k1(cid:20) i
+j j(cid:21) =
+s1
+i  s1
+s1
+k1(cid:20) i
+j j(cid:21) =
+j1(cid:20) k k
+i (cid:21)
+j  f
+11(cid:20) i
+i(cid:21) =
+pi(cid:20) j k
+n (cid:21)f
+
+ (cid:21) = f
+
+s1
+s1
+1
+s1
+s1
+
+n1(cid:20) i
+
+k
+
+j
+
+i
+
+i
+
+i
+
+i
+
+i
+
+i
+
+f
+
+f
+
+f
+
+f
+
+k
+
+i
+
+nk(cid:20) i j
+ p(cid:21)f
+
+ei(hp+hq+2hi2hs 1
+
+2 (hk+h))f
+
+a xi (cid:21) = 1
+b(cid:20) b o
+xe xe(cid:21) = 1
+xo1(cid:20) o o
+xo xo(cid:21)
+xe1(cid:20) o o
+
+f
+bxi
+
+a
+
+xi
+
+(cid:20) xi o
+b (cid:21)f
+xe o(cid:21)  f
+1xo(cid:20) xe o
+xo1(cid:20) o o
+xe xe(cid:21) = f
+o o(cid:21) = 1
+11(cid:20) o o
+
+f
+
+f
+
+f
+
+
+
+p1(cid:20) k k
+(cid:21)
+ks(cid:20) i p
+i q(cid:21)f
+
+ei(hphq2hi+2hm+ 1
+
+2 (hk+h))f
+
+=xm
+
+s(cid:20) q p
+i i(cid:21)
+km(cid:20) p i
+q i(cid:21)f
+
+m(cid:20) p q
+i i(cid:21)
+
+xs
+
+references
+
+(79)
+
+(80)
+
+(81)
+
+(82)
+
+(83)
+
+(84)
+
+(85)
+
+(86)
+
+[1] a.a. belavin, a.m. polyakov, a.b. zamolodchikov, innite conformal symmetry in
+
+two-dimensional quantum eld theory, nucl. phys. b241 (1984) 333380.
+
+[2] ph. di francesco, p. mathieu, d. senechal, conformal field theory, springer 1998.
+
+[3] vl.s. dotsenko, v.a. fateev, conformal algebra and multipoint correlation functions in 2d
+
+statistical models, nucl. phys. b240 (1984) 312348. four-point correlation functions and the
+operator agebra in 2d conformal invariant theories with central charge c1, nucl. phys. b251
+(1985) 691734.
+
+25
+
+[4] a. capelli, c. itzykson, j.-b. zuber, modular invariant partition functions in two dimensions,
+
+nucl. phys. b280 (1987) 445465.
+
+[5] j.l. cardy, conformal invariance and surface critical behavior, nucl. phys. b240 (1984)
+
+514532.
+
+[6] j.l. cardy, d.c. lewellen, bulk an boundary operators in conformal eld theory,
+
+phys. lett. b259 (1991) 274278.
+
+[7] g. pradisi, a. sagnotti, ya. s. stanev, the open descendants of nondiagonal su(2) wzw
+
+models phys. lett. b356 (1995) 230238, hep-th/9506014. completeness conditions for
+boundary operators in 2-d conformal eld theory, phys. lett. b381 (1996) 97104,
+hep-th/9603097.
+
+[8] j. fuchs, c. schweigert, a classifying algebra for boundary conditions, phys. lett. b414 (1997)
+
+251259, hep-th/9708141.
+
+[9] r.e. behrend, p.a. pearce, j.-b. zuber, integrable boundaries, conformal boundary conditions
+
+and a-d-e fusion rules, j. phys. a31 (1998) l763-l770, hep-th/9807142. r.e. behrend,
+p.a. pearce, v.b. petkova, j.-b. zuber, on the classication of bulk and boundary conformal
+field theories, phys. lett. b444 (1998) 163166, hep-th/9809097.
+
+[10] d.c. lewellen, sewing constraints for conformal eld theories on surfaces with boundaries,
+
+nucl. phys. b372 (1992) 654682.
+
+[11] g. moore and n. seiberg, lectures on rcft, physics, geometry, and topology, plenum press,
+
+new york, 1990.
+
+[12] r.e. behrend, p.a. pearce, v.b. petkova, j.-b. zuber, boundary conditions in rational
+
+conformal field theories, nucl. phys. b570 (2000) 525589, hep-th/9908036.
+
+[13] j. fuchs, a. klemm, the computation of the operator algebra in nondiagonal conformal eld
+
+theories, annals phys. 194 (1989) 303. v.b. petkova, structure constants of the (a,d) minimal
+c<1 conformal models, phys. lett. b225 (1989) 357362.
+
+[14] v.b. petkova, j.-b. zuber, on structure constants of sl(2) theories, nucl. phys. b438 (1995)
+
+347372, hep-th/9410209.
+
+[15] i. runkel, boundary structure constants for the a-series virasoro minimal models,
+
+nucl. phys. b549 (1999) 563578, hep-th/9811178.
+
+[16] w. eholzer, m. flohr, a. honecker, r. hubel, w. nahm, r. varnhagen, representations of
+w-algebras with two generators and new rational models, nucl. phys. b383 (1992) 249290.
+p. bouwknegt, k. schoutens, w-symmetry in conformal eld theory, phys. rept. 223 (1993)
+183276, hep-th/9210010.
+
+[17] l. alvarez-gaume, c. gomez, g. sierra, quantum group interpretation of some conformal eld
+theories, phys. lett. b220 (1989) 142152. g. felder, j. frohlich, g. keller, braid matrices and
+structure constants for minimal conformal models, comm. math. phys. 124 (1989) 647664.
+p. furlan, a.ch. ganchev, v.b. petkova, fusion matrices and c<1 (quasi) local conformal eld
+theories, int. j. mod. phys. a5 (1990) 27212735.
+
+[18] j.l. cardy, boundary conditions, fusion rules and the verlinde formula, nucl. phys. b324
+
+(1989) 581596.
+
+[19] p. ruelle, symmetric boundary conditions in boundary critical phenomena, j. phys. a32 (1999)
+
+88318850, hep-th/9904100.
+
+[20] j.l. cardy, i. peschel, finite size dependence of the free enery in two-dimensional critical
+
+systems, nucl. phys. b300 (1988) 377399.
+
+[21] v. pasquier, operator content of the ade lattice models, j. phys. a20 (1987) 57075733.
+
+[22] j. fuchs, c. schweigert, symmetry breaking boundaries. 1. general theory, nucl. phys. b558
+
+(1999) 419483, hep-th/9902132. symmetry breaking boundaries. 2. more structures:
+examples, nucl. phys. b568 (2000) 543593, hep-th/9908025.
+
+26
+
+

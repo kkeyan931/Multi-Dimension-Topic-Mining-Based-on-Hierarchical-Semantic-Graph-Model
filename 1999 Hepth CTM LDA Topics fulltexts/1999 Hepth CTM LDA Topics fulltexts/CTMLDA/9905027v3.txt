@@ -1,0 +1,3172 @@
+ua/npps-2-99
+
+9
+9
+9
+1
+
+ 
+
+y
+a
+m
+9
+1
+
+ 
+
+ 
+ 
+
+3
+v
+7
+2
+0
+5
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+extension of worldline computational algorithms for qcd
+
+to open fermionic contours
+
+a. i. karanikas and c. n. ktorides
+
+university of athens
+department of physics
+
+nuclear and particle physics section
+
+panepistimiopolis
+
+gr-15771 athens, greece
+
+abstract
+
+the worldline casting of a gauge eld system with spin-1/2 matter elds has pro-
+vided a, particle-based, rst quantization formalism in the framework of which the
+bern-kosower algorithms for ecient computations in qcd acquire a simple inter-
+pretation. this paper extends the scope of applicability of the worldline scheme so
+as to include open fermionic paths. specic algorithms are established which address
+themselves to the fermionic propagator and which are directly applicable to any other
+process involving external fermionic states. it is also demonstrated that in this frame-
+work the sole agent of dynamics operating in the system is the wilson line (loop)
+operator, which makes a natural entrance in the worldline action; everything else is
+associated with geometrical properties of particle propagation, of which the most im-
+portant component is polyakovs spin factor.
+
+1. introduction
+
+consider a gauge theory with spin-1/2 matter elds, in the dening representation of the
+symmetry group, described by a standard (renormalizable) lagrangian density. a worldline
+transcription of such a system is based, after a wick rotation to euclidean space-time, on a re-
+
+casting of the form r d(x) d(x) es[(x),(x),a(x)]...  r dx( ) dp( ) es[x( ),p( ),a(x( ))]...
+
+according to which the matter elds register as point-like objects whose propagation (in
+phase-space) is furnished by a path integral. to the extent that the functional integration
+over the fermionic elds is gaussian (in the grassmann sense), nothing is lost, in principle,
+from the content of the original system through the above transcription. pioneering work
+that dealt systematically with the subject appears in refs [1-3].
+
+more recent advancements in worldline methodology, especially in connection to gauge
+theories, have been made, independently, by fried [4-6], strassler [7] and our group [8-
+12]. respective methodological tools adopted by the above authors are: (a) schwingers
+functional calculus formalism [13], (b) the string-inspired computational algorithms of bern
+and kosower [14] and (c) polyakovs description of the propagation of particle-like excitations
+in (euclidean) space-times [15]. concerning specic objectives and/or applications aspired
+to by these attempts, the following rough picture emerges. fried and collaborators [4-6]
+as well as the present authors and collaborators [10-12] have so far focused their eorts on
+eikonal-type descriptions in gauge eld theories (with qcd as the ultimate target), along
+with associated issues such as scattering amplitudes at asymptotically large collision energies,
+factorization of soft physics, heavy quark eective theories, etc. in strasslers case, on the
+other hand, emphasis from the beginning was placed on the development of new, more
+ecient rules for performing loop calculations in pqcd as per the realizations of ref [14].
+a key aspect of the polyakov-inspired approach, that we have been advocating, is its
+ability to accentuate geometrical features of particle-like propagation in space-time. to
+illustrate this occurrence consider, rst, the direct performance of the path integration over
+dp( )1. adhering to the use of the rst order form for the dirac operator we were able
+[9] to reproduce polyakovs spin factor which characterizes the closed path propagation of a
+spin-1/2 particle-like entity in euclidean space-time. this quantity has a purely geometrical
+content (it is, in some sense, associated with torsion) and accounts in a self-consistent way,
+for the re-entry of a closed (euclidean) space-time contour by the spin-1/2 particle. by
+contrast, all other approaches to worldline descriptions have adopted the second order form
+for the dirac operator which forces a, conventional type, spin-dependent term of the form
+f  in the worldline action. our rst undertaking, in this paper, is to establish a direct
+connection between polyakovs geometric spin-factor and the dynamical   f term.
+
+a second consequence resulting from our approach is its adaptation to congurations
+involving open worldline contours. in physical terms this means that we are in a position
+to extend our considerations to processes wherein spin-1/2 entities enter as external particle
+states2. by contrast, strasslers applications pertain to n-point functions with gauge eld
+
+1in fact, the characterization worldline strictly applies to the resulting structure which, through this
+
+integration, formulates itself in coordinate space.
+
+2it is in this context that common grounds have been established with the eikonal-based work of fried
+[4-6], who employs schwingers functional calculus as methodological tool and explicitly accommodates spin
+through the   f term.
+
+1
+
+modes as external states which attach themselves to a fermionic loop [7]. the major part
+of our present eort is to extend worldline computational algorithms, hitherto provided
+for diagrams involving fermionic loops, to ones wherein open fermionic paths make their
+entrance.
+
+our ultimate hope is that, through the present work, the elegant separation between
+purely geometrical properties of matter particle paths, on the one hand, and dynamics, on
+the other, will emerge as one of the most potent aspects of the worldline casting of gauge eld
+theories. leaving the elucidation of this remark to an a posteriori discussion, let us proceed
+to exhibit the organization of the present paper. in the next section we display worldline
+expressions which will form the basis of our subsequent considerations. we shall proceed,
+in section 3, to make the connection between the dynamical   f term, appearing in the
+worldline action as a result of adopting the second order form for the dirac operator and
+the geometrical polyakovs spin factor. this is accomplished via a fortuitous application
+of an area derivative operator acting on functionals [16,17]. section 4 constitutes a central
+part of our paper. specically, we undertake the task of carrying out the procedure that will
+lead to an explicit worldline formula for the fermionic greens function to second order in its
+perturbative expansion. a major aspect of this attempt is to present an expression which
+employs super-particle coordinates, i.e. a path integral description which uses both bosonic
+and fermionic variables. we proceed, in section 5, to discuss computational tools which are
+involved in practical applications of the worldlike scheme. a rst such undertaking is carried
+out in section 6 where we establish, to second order, the equivalence between the feynman
+diagrammatic and worldline perturbative expansions of the fermionic propagator in a non-
+abelian gauge theory. a direct one loop calculation is performed in section 7; it produces a
+nal expression in parametrized form which is ready to enter perturbative estimates of higher
+order greens functions with external fermion (as well as gauge eld) legs. our concluding
+remarks are presented in section 8, while some technical matters pertaining to the work in
+section 7 are displayed in an appendix.
+
+2. basic worldline expressions
+
+in this section we shall discuss worldline formulas placing emphasis on fermionic greens
+functions in a background of, non-abelian in general, gauge elds. we shall work in euclidean
+space-time in the context of which the spin-factor can be dened. special emphasis will be
+placed on the second order dirac formalism as our immediate aim (cf. next section) is to
+establish its connection with the spin-factor.
+
+let us commence our considerations with a short presentation of previous results stem-
+ming from the employment of the rst order dirac operator. a systematic procedure which
+takes one from the original eld theoretical casting of the system to worldline formulas can be
+found in [9]. here we shall proceed formally. consider, rst, the eective action functional,
+with dependence on the background gauge eld. its formal expression is
+
+w [a] = ln det[i  d  (m  i)], d =  + iga.
+
+(1)
+
+using schwingers proper time representation [18] and going to euclidean space-time we
+
+2
+
+write
+
+w [a] = t rz 
+
+0
+
+dt
+t
+
+et (d+m).
+
+(2)
+
+computation of the non-dirac  matrix as well as non-color part of the trace in coordinate
+
+space representation leads, after a suitable choice of gauge3, to the worldline result [9]
+
+w [a] = z 
+
+0
+
+dt
+t
+
+et mzx(0)=x(t )
+
+dx( )[ x( )2  1]tr(c)t rcp exp"igz t
+
+0
+
+x  a(x( ))# ,
+
+(3)
+where tr(t rc) denotes trace over -matrix (color), p stands for path ordering and where the
+spin-factor (c) [15] is given by
+
+(c) = p exp(1
+
+8 z t
+
+0
+
+d [x( )][, ])
+
+with
+
+(x( )) =
+
+1
+2
+
+[x( ) x( )  x( )x( )],
+
+x2 = 1,
+
+(4)
+
+(5)
+
+describing the orientation tensor of the local, perpendicular to the path, plane.
+
+as already mentioned, our main preoccupation in this paper will be with fermionic
+greens functions (propagators) whose denition involves open paths. to begin, let us dis-
+cuss worldline expressions for the fermionic greens function, in a (non-abelian) gauge eld
+background. we rst consider the case where the rst order form for the dirac operator is
+adopted. the corresponding schwinger proper time formula for the greens operator is
+
+ig[a] = z 
+
+0
+
+dt et (d+m).
+
+its worldline representation, in phase-space, reads
+
+ig(x, y|a) = z de( )z dh( )z x(0)=x
+
+x(t )=y
+
+dx( )z dp( )exp[iz 1
+
+0
+
+d h( ) e( )]
+
+0
+
+exp[iz 1
+p exp[igz 1
+
+0
+
+d p( )  x( )]p exp[z 1
+
+0
+
+a(x( ))  x( )].
+
+d e( ){m + i  p( )}]
+
+(6)
+
+(7)
+
+the integral over dh( ) on the right hand side supplies our commitment to a choice of
+gauge with respect to the reparametrization invariance requirement. the latter, corresponds
+f ( ) > 0, f (0) = 0, f (1) = 1, under which we have
+to the transformation   t = f ( ),
+e( )  f( )e(t), x( )  f ( ) x(t) and h( )  1
+f ( )
+
+h(t).
+
+the second order formalism for the dirac operator, on the other hand, bases itself on the
+
+operator expression
+
+ig[a] = (  d + m)z 
+
+0
+
+dt et [m2(d)2]
+
+(8)
+
+3we are here referring to a gauge choice with respect to parametrization invariance and mass identication.
+
+more specic comments on this issue will be made shortly.
+
+3
+
+whose phase-space worldline representation turns out to be
+
+ig(x, y|a) = z de( )z dh( )z x(0)=x
+
+x(1)=y
+
+dx( )z dp( )"m 
+
+1
+
+2e(1)
+
+  x(1)#
+
+d p( )  x( )]
+
+0
+
+exp(cid:20)iz 1
+exp(cid:20)z 1
+p exp(cid:20)igz 1
+
+0
+
+0
+
+d h( ) e( )(cid:21) exp[iz 1
+d e( ){p2( ) + m2}(cid:21)
+
+0
+
+a(x( ))  x( ) +
+
+1
+2
+
+gz 1
+
+0
+
+d e( )  f (x( ))(cid:21) .
+
+(9)
+
+as already stated our rst preoccupation in this paper is to establish that the   f term
+in the above formula translates into the analogue of the spin-factor for open fermionic paths.
+the rst step in this direction is to carry out the integration over dp( ).
+
+we obtain
+
+ig(x, y|a) = z de( )z dh( )exp(cid:20)iz 1
+
+0
+
+dx( )[m 
+
+1
+
+2e(1)
+
+d h( ) e( )(cid:21) c(e)
+
+  x(1)]
+
+1
+
+x(1)=y
+
+z x(0)=x
+exp"
+4 z 1
+p exp(cid:20)igz 1
+
+0
+
+0
+
+d
+
+x2( )
+e( )
+
+ m2z 1
+
+0
+
+a(x( ))  x( ) +
+
+d e( )#
+gz 1
+
+1
+2
+
+0
+
+d e( )  f (x( ))(cid:21) ,
+
+(10)
+
+(11)
+
+where
+
+c(e) = n
+
+d/2
+
+n = 1(cid:18) n
+
+4en(cid:19)
+
+can be looked upon as a normalization factor.
+
+our immediate objective is to recast the above expression into a form where the open-line
+analogue of the spin-factor replaces the   f term. the relevant work will be carried out in
+the following section.
+
+3. spin-factor in the second order formalism
+
+we commence our considerations which will lead to the recasting of the   f term in (13)
+by utilizing the area derivative operator for path dependent functionals. we shall follow,
+in this respect, polyakovs proposal [16] for practical reasons. a geometrical denition has
+been given by migdal [17]. let us, then, introduce the operator (area derivative) by
+
+
+
+s(t)
+
+ lim0z +
+
+
+
+d 
+
+2
+
+x(t + /2)x(t  /2)
+
+.
+
+(12)
+
+consider the action of the above operator on the functional
+
+i[ x( )]  exp"
+
+4
+
+1
+
+4 z 1
+
+0
+
+d
+
+x2( )
+
+e( ) #
+
+(13)
+
+which leads to
+
+
+
+s(t)
+
+exp"
+
+with  now given by 4
+
+1
+
+4 z 1
+
+0
+
+d
+
+x2( )
+
+e( ) # =
+
+1
+2
+
+(x(t))"
+
+1
+
+4 z 1
+
+0
+
+d
+
+x2( )
+
+e( ) #
+
+(x( )) =
+
+1
+
+2e2( )
+
+[x( ) x( )  x( )x( )].
+
+on the other hand, we nd
+
+(14)
+
+(15)
+
+p exp(cid:20)igz 1
+= p exp"
+
+0
+
+a(x( ))  x( ) +
+
+i
+
+2 z 1
+
+0
+
+d e( )  
+
+0
+
+1
+2
+
+d e( )  f (x( ))(cid:21) =
+
+gz 1
+s( )# p exp(cid:20)igz 1
+
+
+
+0
+
+d x( )  a(x( ))(cid:21) .
+
+(16)
+
+inserting into (10) we readily derive, after partial integration,
+
+ig(x, y|a) = z de( )z dh( )exp(cid:20)iz 1
+
+0
+
+dx( )[m 
+
+1
+
+2e(1)
+
+d h( ) e( )(cid:21) c(e)
+
+  x(1)]
+
+z x(0)=x
+
+x(1)=y
+1
+
+d
+
+exp[
+
+4 z 1
+4 z 1
+p exp(cid:20)
+
+0
+i
+
+0
+
+x2( )
+e( )
+
+ m2z 1
+
+0
+
+d e( )
+
+d   (x( ))(cid:21) p exp(cid:20)igz 1
+
+0
+
+d x( )  a(x( ))(cid:21) .
+
+(17)
+
+even though the term spin-factor per se pertains, as a geometrical quantity, to closed paths,
+we shall employ, from hereon, this nomenclature for the expression given by eq. (4) even
+when it enters quantities dened on open paths, such as the above.
+
+the same considerations applied to the eective action functional whose formal expres-
+
+sion, in the second order formalism, is
+
+ w [a] =
+
+1
+2
+
+t rz 
+
+0
+
+dt
+t
+
+et (m2(d)2),
+
+(18)
+
+leads to the worldline representation
+
+ w [a] = z de( )z dh( )exp(cid:20)iz 1
+d h( ) e( )(cid:21) c(e)
+ m2z 1
+4 z 1
+d   (x( ))(cid:21) t rcp exp(cid:20)igz 1
+
+zx(0)=x(1)
+trp exp(cid:20)
+
+x2( )
+e( )
+
+dx( )exp[
+
+4 z 1
+
+0
+1
+
+d
+
+i
+
+0
+
+0
+
+0
+
+0
+
+d e( )
+
+d x( )  a(x( ))(cid:21) , (19)
+
+4note that the expression that follows coincides with eq. (5) when e2( ) = 1, which corresponds to a
+
+specic choice of gauge.
+
+5
+
+where c(e)  1
+
+e(1) c(e).
+
+for a proper choice of gauge the above result matches the one that has been obtained
+[9] through the rst order formalism, cf. eq. (3). the notable accomplishment resulting
+from the manipulations that have just been carried out is an apparent dissociation of a
+geometrical feature (cf. spin-factor), characterizing the propagation of particle-like modes,
+from the dynamics operating in the system. the latter seem to be exclusively carried out
+
+by the wilson factor p exphigr 1
+
+involving the spin factor term do, in an implicit manner, associate themselves with dynamical
+input.
+
+0 d x( )  a(x( ))i. as will actually turn out, computations
+
+before proceeding further we shall commit ourselves to a choice of gauge in relation to
+
+reparametrization invariance. designating as dynamical variable the proper time we set
+
+(20)
+
+(21)
+
+  x(t )]exp(cid:20)
+
+0
+
+1
+
+4 z 1
+
+d x2( )(cid:21)
+d x( )  a(x( ))# ,
+
+t = z 
+
+0
+
+d  e( ), t = z 1
+
+0
+
+d e( )
+
+and obtain
+
+ig(x, y|a) = z 
+
+0
+
+dt et m2z x(0)=x
+
+x(t )=y
+
+dx( )[m 
+
+1
+2
+
+p exp"
+
+i
+
+4 z t
+
+0
+
+d   w(x( ))# p exp"igz t
+2 pn
+
+nd
+
+0
+
+where the measure dx( ) is now dened as limn(cid:16) n
+4t(cid:17)
+
+account of our choice of gauge, given by
+
+n=0 ddxn, while w is, on
+
+w(x) =
+
+t
+2
+
+(x x  x x).
+
+(22)
+
+note that |w|2  |x|2, which means that it furnishes the curvature when | x| =const.
+
+turning our attention to the full fermionic greens function we write
+
+ig(x, y) = z 
+
+0
+
+dt et m2z x(0)=x
+
+x(t )=y
+
+dx( )(cid:20)m 
+
+1
+2
+
+  x(t )]exp[
+
+p exp"
+
+i
+
+4 z t
+
+0
+
+d   w(x( ))# < p exp"igz t
+
+0
+
+0
+
+1
+
+d x2( )(cid:21)
+
+4 z 1
+d x( )  a(x( ))# >a,(23)
+
+where the expectation value in the gauge eld sector includes gauge xing terms, ghost
+integration and dirac determinant contribution.
+
+generalizing, we infer that, in the worldline language, quantities of theoretical interest,
+such as n-point greens functions and generating functionals, draw all dynamical input from
+expectation values of wilson lines or loops. such objects have been extensively studied in
+the past, see, for example, [16, 19-23]. any possible non-perturbative application of the
+present formalism will, therefore, be greatly facilitated by relevant, accumulated knowledge.
+even though eq. (23) will serve as the starting point for our subsequent considerations,
+we nd it useful to recast it in a form which adopts particle-based coordinates. along with
+practical consequences, this will facilitate a direct comparison with strasslers (closed path)
+worldline expressions. we shall devote the remainder of the present section to this task.
+
+6
+
+as a rst step, let us cast (23) in the form ig(x, y) = a(u2, m2)u   + b(u2, m2), u 
+
+1
+t (y  x) by writing
+
+ig(x, y) =
+
+dx( )
+
+dt et m2z x(0)=x
+
+x(1)=y
+
+1
+
+0
+
+d z 
+((cid:20)m
+ < p exp"igz t
+
+ 
+
+1
+2
+
+d
+
+ x(t )(cid:21) tr"p exp"
+d x( )  a(x( ))# >a
+d tr(ig), au = 1
+
+0
+
+i
+
+4 z t
+
+0
+
+d   w(x( ))##)
+
+(24)
+
+d tr(ig) and once taking into
+
+which follows via the identications b = 1
+account that tri = d.
+
+we now use the identity
+
+tr(p exp"
+2 z t
+
+exp"
+
+1
+
+0
+
+i
+
+4 z t
+
+0
+
+d   w(x( ))#) = z(0)=(t )=0
+
+[d]2(t )(t )
+
+d    +
+
+1
+
+2 z t
+
+0
+
+d ( )( )w(x( ))#
+
+(25)
+
+0 d   i,
+where the  are grasmann variables whose correlator, with respect to the actionh 1
+2 r t
+
+is determined by taking into consideration that
+
+and
+
+we obtain
+
+{, } = 
+
+1
+
+d z(0)+(t )=0
+
+[d] exp"
+
+1
+
+2 z t
+
+0
+
+d   # = 1.
+
+< (1)(2) >=
+
+1
+2
+
+sign(1  2).
+
+(26)
+
+(27)
+
+(28)
+
+one is thereby led to the following particle-based, to be referred to as super-particle,
+
+representation for the full fermionic propagator
+
+ig(x, y) =
+
+0
+
+1
+
+d
+
+1
+2
+
+x(1)=y
+1
+
+d z 
+dt et m2z x(0)=x
+2(t )(t )exp"
+ < p exp"igz t
+
+ 
+
+dx( )(cid:20)m
+2 z t
+4 z t
+d x( )  a(x( ))# >a .
+
+d x2 
+
+1
+
+0
+
+0
+
+0
+
+ x(t )(cid:21)z(0)+(t )=0
+
+[d]
+
+d    +
+
+1
+
+2 z t
+
+0
+
+d w[x( )]#
+
+(29)
+
+this is an essentially new result which not only extends strasslers expressions to open
+fermionic lines but encodes spin eects through a geometrical quantity entering a particle-
+based action functional. at the same time it underlines the role of the wilson line operator
+as the sole agent of the dynamics operating in the system. the spin factor, in other words,
+has joined the rest of the path-dependent (super) coordinates to account for particle-based
+
+7
+
+characteristics of spin-1/2 matter eld propagation. generalizations of spin factor expres-
+sions pertaining to higher spins have been discussed, from a dierent viewpoint, in ref [24].
+the bottom line is that the spin factor accounts for geometrical features of paths induced
+on them by the nature of the particle-like entity which traverses them.
+
+mention should be made, at this point, of the attempt in ref [25] to tackle the problem
+of open line propagation of spin-1/2 particles in a gauge eld background. the relevant
+methodology has a dierent philosophy (analytical rather than geometrical) and restricts
+itself to situation wherein the gauge eld(s) do not acquire a dynamical character, i.e. they
+remain external. by staying faithful to polyakovs geometric point of view [15], on the other
+hand, we have both attained simplicity in form of worldline expressions while achieving, at
+the same time, extensions beyond the free particle case.
+
+the corresponding expression for the eective action functional is
+
+ w [a] =
+
+[d]z 
+
+0
+
+d x2 
+
+1
+
+1
+
+2 z(0)+(t )=0
+exp"
+4 z t
+t rcp exp"igz t
+
+0
+
+0
+
+x(t )=y
+
+1
+
+dt et m2z x(0)=x
+2 z t
+d    +
+d x( )  a(x( ))# .
+
+0
+
+dx( )
+
+1
+
+2 z t
+
+0
+
+d w(x( ))#
+
+(30)
+
+the above equation corresponds to strasslers result, modulo the presence of the spin-
+factor term in place of   f . it serves as the starting point for computational rules involving
+quark loops. the relevant particle-based action can be read o the above formulas and has
+as follows
+
+s =
+
+1
+
+4 z t
+
+0
+
+d x2 +
+
+1
+
+2 z t
+
+0
+
+d    
+
+1
+
+2 z t
+
+0
+
+d w(x( ))  igz t
+
+0
+
+d z x  a z,
+
+(31)
+
+where the z-elds serve to enforce path ordering when background elds are present.
+
+note that under the supersymmetric transformation x = i ,  =  x the rst
+two terms in (31) remain invariant whilst the last two do not. on the other hand, we can
+easily retrieve the   f term, by partial integration, from the spin-factor. this brings us
+right back to the strassler form for the worldline action which is supersymmetric invariant5.
+we shall refer to (31) as super-worldline particle action.
+
+4. analytic manipulations with the spin factor: fermionic prop-
+
+agator to 2nd order
+
+besides its interpretational appeal as a geometrical agent that accounts for the spin of
+a propagating particle, the spin factor presents practical advantages as it actually expedites
+analytic manipulations involved in the computation of fermionic greens functions and ef-
+fective action functionals. samples of the latter case have been given in [9]. here we focus
+our eorts on calculations pertaining to fermionic propagators.
+
+5note that supersymmetry appears to be manifestly broken in (31) due to the boundary conditions
+
+involved in the partial integration which produced the spin factor.
+
+8
+
+4a. general considerations
+
+according to the resulting expressions in the previous section the spin factor expression
+combines bosonic with fermionic particle-based coordinates. suppose we were to expand
+the relevant exponential. we would then nd ourselves having to compute expectation
+values in the bosonic sector of the type < ( x( )x( )  x( ) x( ))... >x. clearly, the
+only way to get a non-null result is for a four-vector, say k, to make its entrance so that,
+in combination with the four-vector (x  y) which will emerge from the path integration,
+would facilitate the creation of antisymmetric combinations. equivalently, unless the rst
+derivative is discontinuous at some  = i the aforementioned expectation value terms, once
+recast the form < ( x( ) x( +) x( ) x( ))... >x (  0), would lead to a vanishing
+result except at points where a force acts, thereby injecting a four-momentum k on the
+fermionic line.
+
+consider the situation where m such points i are present on a given fermionic line. let
+
+us set
+
+1
+2
+
+[ x(i + )  x(i  )] = lim0 iki,
+
+i = 1, ..., m.
+
+(32)
+
+we surmise (here c denotes an open curve)
+
+(c)  lim0 exp" t
+xi=1z i+
+xi=1
+
+= exp 
+
+t
+2
+
+i
+
+m
+
+4
+
+m
+
+d ( )( )[x( ) x( )  x( ) x( )#
+
+(i)(i)[iki x(i)  iki x(i)].
+
+(33)
+
+momentum conservation can be taken into account by setting pm
+
+clearly, m measures the number of points where a gauge eld is applied on a given
+fermionic path6. this means that m coincides with the perturbative order to which one
+expands the wilson line in a given worldline expression such as, e.g., (29).
+
+i=1 ki = 0.
+
+let us now return to the expansion of the exponential that furnishes the spin factor, only
+
+this time we focus on its fermionic component. from eq (26) we determine
+
+< ( )( ) >=
+
+1
+2
+
+.
+
+(34)
+
+this means that any term in the expansion of order greater than m will inevitably lead
+to mixtures of symmetric and antisymmetric factors, hence a vanishing contribution to the
+propagator. so, not only is m associated with perturbative order but also sets a bound on
+the contributing terms in the expansion of the spin factor.
+
+armed with the above concrete as well as of practical value realizations, we are in position
+to turn our attention to the 2nd order expression of the fermionic greens function and gain
+specic insights with respect to spin factor contributions to its worldline form. this is
+precisely the task that we shall carry out in the next subsection.
+
+4b. spin factor contribution to the second order fermionic greens function
+
+6it is in this context that an earlier comment, to the eect that the computation of the spin-factor
+
+expression requires dynamical input, was made.
+
+9
+
+expanding the wilson exponential in (29) we bring down, to second order in g2, the
+0 d2 x(2) x(1) < a(x(2))a(1)) >a. working in the feynman gauge we
+
+factor r t
+
+write
+
+0 d1r t
+ig(2)(x, y) = g2 1
+d
+ x(2)  x(1)(cid:20)m
+exp"
+
+4 z t
+
+d
+
+1
+
+0
+
+d x2 
+
+cf z
+
+ 
+
+0
+
+1
+
+k2 z 
+
+ddk
+(2)d
+1
+2
+
+dt et m2 z t
+ x(t )(cid:21)z(0)+(t )=0
+2 z t
+d    +
+
+2 z t
+
+1
+
+1
+
+0
+
+d1z t
+
+0
+
+d2z x(0)=x
+
+x(t )=y
+
+dx( )
+
+0
+
+[d( )]2(t )(t )
+
+d w  ik  (x(2)  x(1))# .(35)
+
+0
+
+focusing our attention on the spin-factor expression, let us consider the rst order term,
+to be denoted by (1), in its expansion. according to the general discussion of the previous
+subsection we determine
+
+(1) =
+
+t
+
+2 xi=1,2
+
+(i)(i)[iki x(i)  iki x(i)].
+
+(36)
+
+setting k2 = k1 = k we obtain
+
+(1) =
+
+t
+2
+
+
+
+(2)(2)[ik x(1)  ik x(1)]
+
+t
+2
+
+(1)(1)[ik x(2)  ik x(2)].
+
+(37)
+
+consider, next, the path integration over the  elds. according to (34) the contribution
+from the above terms is zero. had our computation referred to the eective action functional
+w [a] this would be the end of the story, as far as path integration over the fermionic
+coordinates is concerned. for the greens function, on the other hand, a four-spinor factor
+also appears for which we determine (we keep only the antisymmetric contribution, under
+the exchange   )
+
+2 < (t )(t )(i)(i) >= 
+
+1
+2
+
+[  ],
+
+i = 1, 2.
+
+(38)
+
+reserving the same notation for the quantity that will result after the path integration with
+respect to the particle coordinates we write
+
+(1) 
+
+t
+2
+
+ik[ x(2)  x(1)] 
+
+t
+2
+
+ik[ x(2)  x(1)],
+
+(39)
+
+where the arrow serves to signify the fact that a functional integration with respect to the
+x( ) elds remains to be carried out. now, along the way, the full computation of (1) will
+encounter the quantity x(2)  x(1). taking into account that
+
+< x( ) x( ) >x=
+
+2
+t
+
+,
+
+(40)
+
+whose justication is, as we shall see later, intimately connected with reparametrization
+invariance, we are in position to replace (39) by
+
+(1)  ik[ x(1)  x(2)]  ik[ x(1)  x(2)].
+
+(41)
+
+10
+
+next, we consider the contribution from the second order term which, according to our
+
+general discussion, is given by
+
+(2) =
+
+t 2
+8
+
+(2)(2)(1)(1)[k x(2)k x(2)][k x(1)k x(1)]+(1  2). (42)
+
+taking on the task of calculating expectation values in the -sector of the (super)particle
+
+system we determine, once keeping only the symmetric term under the exchange 1  2,
+
+2 < (t )(t )(2)(2)(1)(1) >=
+
+1
+4
+
+[  ][sign(1  2)]2
+
+(43)
+
+as before, we keep the notation (2) for the quantity which results from path integration
+in the super-particle sector. substitution of (46) into (45) furnishes the intermediate result
+
+(2)  
+
+t 2
+8
+
+[k x(2)  k x(2)][k x(1)  k x(1)]g2
+
+f (1, 2)
+
+= 
+
+t 2
+4
+
+(k2  kk) x(1) x(2)g2
+
+f (1, 2),
+
+(44)
+
+where we have, following strassler, set gf (1, 2) = sign(1  2).
+
+further utilization of the bosonic sector path integration allows us to cast (2) in the
+
+more simplied form
+
+(2)  (k2  kk)g2
+
+f (1, 2) = (d  1)k2g2
+
+f (1, 2).
+
+(45)
+
+all higher order terms in the exponential expansion of the spin-factor term give vanishing
+contribution to the greens function. here, we explicitly witness the harmonization of the
+spin-factor with dynamical aspects of the calculation: recognizing the order of the pertur-
+bative expansion the spin-factor series terminates when the number of vertices (points on
+the path where a force is exerted) is saturated.
+
+putting together everything that was so far carried out, we arrive at the following world-
+
+line expression for the fermionic propagator, to second order in perturbation theory,
+
+ig(2)(x, y) = g2cf z
+(cid:20) m
+
+ 
+
+1
+2
+
+d
+
+ddk
+(2)d
+
+1
+
+k2 z 
+
+0
+
+dt et m2z t
+
+0
+
+d1z t
+
+0
+
+d2(2  1)z x(0)=x
+
+x(t )=y
+
+dx( )
+
+ x( )(cid:21) { x(2)  x(1) + ik[ x(1)  x(2)]  ik[ x(1)  x(2)]
+
+g2
+
+f (1, 2)(d  1)k2}exp"
+
+1
+
+4 z t
+
+0
+
+d x2  ik  (x(1)  x(2))# .
+
+(46)
+
+the corresponding expression for the eective action functional w [a] follows in an anal-
+
+ogous way and reads
+
+w [a] =
+
+(2)d t rca(k)a(k)z 
+
+0
+
+dt et m2z t
+
+0
+
+d1z t
+
+0
+
+d2(2  1)
+
+dx( )[ x(1) x(2)  g2
+
+f (1, 2)(k2  kk)
+
+ddk
+
+d
+2
+
+g2z
+zx(0)=x(t )
+exp"
+4 z t
+
+1
+
+0
+
+d x2  ik  (x(1)  x(2))# .
+
+11
+
+(47)
+
+the above results express the embodiment of spin factor contribution to worldline for-
+mulas. clearly, the immediate question is whether (46) furnishes the same perturbative
+expression for the propagator that one extracts, conventionally, through feynman diagram-
+matic, rather than worldline, reasoning. that this is, indeed, the case will be established in
+section 6. more interesting, of course, is the question regarding whether the formalism that
+has been developed in this work can dene autonomous approaches to eld theoretical com-
+putations or, at least, oer practical advantages for higher order perturbative calculations
+for processes involving external fermionic elds. setting this issue aside we shall, in the next
+section, turn our attention to the establishment of a set of rules pertaining to expectation
+values of bosonic eld products.
+
+5. computational tools in the super-particle representation
+
+the novel feature of the worldline formalism is the super-particle mode of description
+which pervades its expressions for each given quantity of physical interest. our spin factor
+manipulations in the previous section has mainly concentrated on aspects surrounding path
+integration over fermionic coordinates. in the present section we shall conduct a systematic
+discussion of the particle-based (super)sector whose ultimate aim is to promote the practical
+side of the worldline scheme.
+
+focusing on the bosonic sector of super-particle actions we realize that its kinetic term has
+0 d x2( ). corresponding propagators can be appropriately dened.
+
+for open lines the greens function is denoted by (,  ). it obeys the equation
+
+the conventional form r t
+
+2
+ 2 (,  )) = (   ),
+
+(48)
+
+with boundary conditions (0,  ) = (t,  ) = 0.
+
+for closed contours the situation demands closer inspection. as argued by strassler [7],
+
+the relevant greens function, to be denoted by gb(,  ), obeys an equation of the form
+
+1
+c
+
+2
+ 2 gb(,  )) = (   ) 
+
+1
+t
+
+,
+
+(49)
+
+where t is the length, according to a chosen parametrization, of the (closed) contour. fol-
+lowing strassler we adopt the convention which sets c = 2.
+
+one obtains, respectively,
+
+(,  ) =
+
+ (t   )
+
+t
+
+(    ) +
+
+ (t   )
+
+t
+
+(   ),
+
+
+
+
+(,  ) = (    ) 
+
+ 
+t
+
+(50)
+
+and
+
+gb(,  ) =
+
+|   |
+
+t
+
+(t  |   |),
+
+
+
+
+gb(,  ) = sign(   ) 
+
+2(   )
+
+t
+
+.
+
+(51)
+
+we also mention the relations
+
+
+
+
+[(, 2)  (, 1)] =
+
+1
+2
+
+
+
+
+[gb(, 1)  gb(, 2)],
+
+2
+   (,  ) =
+
+1
+2
+
+gb(,  ), (52)
+
+12
+
+where the double dot on gb signies second derivative with respect to  . finally, during
+our calculations we shall, following strassler, use the rules gb(,  ) = 0 and g2
+b(,  ) = 0.
+gb(,  ) =  gb( ,  ).
+
+as a rst application let us establish the validity of eq. (40). we readily determine
+
+< x( ) x( ) >x = lim0
+
+= lim0
+
+1
+t
+2
+t
+
+ +
+
+z  
+z  
+
+ +
+
+d  gb(  )
+d (cid:20)(   ) 
+
+1
+
+t(cid:21) =
+
+2
+t
+
+,
+
+(53)
+
+one, thereby, explicitly veries that integration over the bosonic coordinates x( ) produces a
+result induced by parametrization invariance as it yields a constant measure for the velocity:
+< | x|2 >= 2d
+t .
+
+next, we undertake the computation of expectation values of the rst few products of
+derivatives of bosonic elds x( ), with action functional the one that arose in connection
+with our second order fermionic propagator expression, cf. eq. (46). the particle-based
+(bosonic) action reads
+
+s =
+
+d x2 + ik  [x(2)  x(1)].
+
+(54)
+
+1
+
+4 z t
+
+0
+
+the fact that terms of higher than 2nd power are absent in s encourages the employment
+of techniques which base themselves on solutions of the classical equations of motion. the
+latter read
+
+with solution
+
+where ( ) = (yx)
+
+t
+
+xcl
+ ( ) = 2ik[(  2)  (  1)].
+
+xcl
+ ( ) = ( )  2ik[(, 2)  (, 1)],
+
+ + x = u + x.
+
+under the substitution x( )  x( ) + xcl( ) the action becomes
+
+s = scl +
+
+1
+
+4 z t
+
+0
+
+d x2( ),
+
+with
+
+scl =
+
+1
+4
+
+t u2 + ik  u(2  1) + k2gb(1, 2),
+
+consider, rst, the case of < x( ) >. we readily determine
+
+< x( ) >= n 1z x(0)=x
+
+x(t )=y
+
+dx( ) x( )es = xcl
+
+ ( ),
+
+where we have dened
+
+note that
+
+n = z x(0)=x
+
+x(t )=y
+
+dx( )es.
+
+xcl
+ ( ) = u  2ik
+
+[(, 2)  (, 1)]
+= u  ik[ gb(, 1)  gb(, 2)].
+
+
+
+
+13
+
+(55)
+
+(56)
+
+(57)
+
+(58)
+
+(59)
+
+(60)
+
+(61)
+
+which, given the equal time rules mentioned after eq (52) along with the fact that gb(,  ) =
+ gb( ,  ), yields
+
+ (i) = u + ik gb(1, 2),
+xcl
+
+i = 1, 2.
+
+(62)
+
+observe, in passing, the consistency of the above result with substitution (32) associated with
+non-vanishing contributions of the spin factor in the bosonic sector. indeed, we determine
+
+< x(1 + )  x(1  ) >x= ik[ gb(1 + 1, 1)  gb(1  1, 1)] = 2ik = 2ik1. (63)
+
+for the correlator we nd
+
+< x(1) x(2) >x = xcl
+
+ (1) xcl
+
+ (2) + nozx(0)=x(t )=0
+ (1) xcl
+
+ (2) +  gb(1, 2),
+
+= xcl
+
+4r t
+dx( ) x(1) x(2)e 1
+
+0
+
+d x2
+
+(64)
+
+where no =
+
+1
+
+(4t )d/2 .
+
+the last relation brings to surface the fact that gb(i, j) will make regular appear-
+ances into our expressions. an immediate problem can be identied with its delta function
+component whose presence becomes the source of potential ultraviolet problems. the way
+to confront this issue is by performing an integration by parts which replaces gb(i, j)
+by g2
+b(i, j). even at that one could still anticipate problems associated with the end
+point behavior of integrations with respect to the dis, where i denotes a point of gauge
+eld contact with the super-particle contour. as with the case of closed contours [7], what
+saves the situation is the fact that partial integration invariably produces the combination
+g2
+f (i, j) which eliminates any pathological behavior7. the super-particle de-
+scription, which, in our treatment, has been introduced through the spin factor, plays a
+crucial role in producing singularity free expressions.
+
+b(i, j)  g2
+
+in conclusion, our work in this section underlines the parallelism between open and closed
+line computational subtlelties. nothing that arises in the former fails to do so in the latter
+case, or vice versa. the only dierence is that additional terms in the super-particle action
+are induced by the new boundary conditions but which have no fundamental impact, as
+far as divergent behavior is concerned. even though we shall not, in the present paper,
+study physical quantities in which external gauge eld lines attach themselves onto matter
+particle contours we fully expect to encounter analogous computational features, e.g. pinch
+singularities, in these situations as well. we plan to report on such calculations in the near
+future.
+
+6. first application: recovery of feynman diagrammatic expan-
+
+sion to 2nd order
+
+we have already pointed out that nothing is lost to the original content of the eld
+theoretical system on the account of manipulations that have taken place for the purpose of
+casting it into its worldline form. as a rst illustration -which, at the same time, will enable
+
+7as an explicit illustration of this occurrence the reader is referred to the next section where a computation
+
+pertaining to g(2)(x, y) will be carried out.
+
+14
+
+us to see the corresponding particle-based computational tools at work- we intend, in this
+section, to prove the equivalence between the worldline and feynman perturbative expansions
+for the fermionic propagator, to second order. given the notable calculational advantages
+that have already been established for non-abelian gauge eld theories in connection with
+closed particle contours [14, 7, 26], one is encouraged to think that our present extension
+will lead to ecient ways for perturbative estimates, to a given order, for processes involving
+open matter particle contours as well.
+
+let us commence our considerations by dispensing with the 0th order term of the
+fermionic propagator. as per our discussion in the previous section, we expect no contribu-
+tion from the spin factor in the super particle action. indeed, the only available four-vector
+in the free propagation case is u = 1
+t (x  y) and there is no way to generate antisymmetric
+combinations from it. the relevant worldline expression reads
+
+ig(0)(x, y) = z 
+
+0
+
+dt et m2z x(0)=x
+
+x(t )=y
+
+dx( )[m 
+
+1
+2
+
+4r t
+  x(t )]e 1
+
+o
+
+d x2( ).
+
+(65)
+
+the solution of the classical equations of motion is, simply, xcl( ) = , with  as in eq.
+(56). under the substitution x( )  xcl( ) + x( ) path integration is performed with the
+same action but with boundary conditions x(0) = x(t ) = 0. given that the classical value
+of the action is 1
+
+4t u2 and in view of (59) we nally obtain
+ig(0)(x, y) = z 
+= z 
+
+et m2
+1
+(4t )d/2 [m 
+2
+ddq
+dt et m2z
+(2)d eiq(xy)t q2
+integration over dt nally produces the free fermionic propagator.
+
+  u]e 1
+
+4 t u2
+
+dt
+
+0
+
+0
+
+(m  i  q).
+
+(66)
+
+focusing our attention to the mass containing term im in ig(2)(x, y) we rst recall that
+spin factor contributions are already contained in (46). moreover, we have carried out, in the
+previous section, the computation of relevant expectation values with respect to the bosonic
+action given by eq. (54). putting everything, that has already been worked out, together we
+obtain
+
+im = mg2cf z
+
+ddk
+(2)d
+
+1
+
+k2 z 
+
+0
+
+dt
+
+(4t )d/2 et m2 z t
+
+0
+
+d1z t
+
+0
+
+d2(2  1)
+
+nd gb(1, 2) + [u + ik gb(1, 2)]2  (d  1)k2g2
+exp(cid:20)ik  u(2  1)  k2gb(1, 2) 
+
+u2(cid:21) .
+
+t
+4
+
+f (1, 2)o
+
+(67)
+
+our immediate task is to perform an integration by parts in order to get rid of the
+
+undesirable quantity gb. we readily determine
+
+0
+
+0
+
+z t
+= z t
+
+d2(2  1) gb(1, 2)exphik  u(2  1)  k2gb(1, 2)i
+
+d1z t
+d2 gb(2, 0)exphik  u2  k2gb(2, 0)i +z t
+b(1, 2)  ik  u gb(1, 2)]exphik  u(2  1)  k2gb(1, 2)i .
+
+d1z t
+
+d2(2  1)
+
+0
+[k2 g2
+
+0
+
+0
+
+(68)
+
+15
+
+for the reader who is acquainted with closed-contour worldline manipulations the analogy
+with the above practice is familiar; simply the exponential has more terms for open lines.
+the important point is that in both situations the integration by parts goes through on the
+basis of the adopted regularization, namely gb(,  ) = 0.
+
+making the variable change 2  1 = t and 2 + 1 = 2t we readily determine
+
+im = mg2cf z
+
+ddk
+(2)d
+
+1
+
+k2 z 
+
+0
+
+dt
+
+(4t )d/2 t 2et m2 z 1
+
+0
+
+d
+
+(cid:26)(1  )(cid:20)4(d  1)k2(1  )  (d  2)ik  u(1  2) + u2 +
+
+
+
+exp(cid:20)ik  ut   k2t (1  ) 
+
+t
+4
+
+u2(cid:21) .
+
+2d
+
+t (cid:21) 
+
+d
+
+t (cid:27)
+
+(69)
+
+some comments are in order with respect to what has taken place in producing the above
+result. the most obvious one is that  assumes the role of a feynman parameter as per the
+standard diagrammatic manipulation. given its introduction the following practical rules of
+substitution, with regard to the original worldline expression, emerge
+
+gb(1, 2) = 1  2,
+
+g2
+
+b(1, 2)  g2
+
+f (1, 2) = 4(1  ).
+
+(70)
+
+the last relation is especially notable as it explicitly underlines the absence of divergencies
+in the integral over the feynman parameter.
+
+turning our attention to the -matrix part, i, of the second order propagator we need
+
+the following results pertaining to expectation values
+
+<   x(t ) >=
+
+1
+
+(4t )d/2   xcl(t ),
+
+(71)
+
+< k  x(t )  x(i) >=
+
+1
+
+(4t )d/2 [  k gb(i, t ) + k  xcl(t )  xcl(i)],
+
+i = 1, 2,
+
+(72)
+
+< x(t )  x(i) >=
+
+1
+
+(4t )d/2 [d gb(i, t ) + xcl(t )  xcl(i)],
+
+i = 1, 2
+
+(73)
+
+and
+
+<   x(t ) xcl(1)  xcl(2 > =
+
+1
+
+(4t )d/2 [d  xcl(t ) gb(1, 2) +   xcl(1) gb(2, t )
++  xcl(2) gb(1, t ) +   xcl(t ) xcl(1))  xcl(2)].
+
+(74)
+
+as before, we must integrate by parts and make the variable change which introduces
+the feynman parameter . doing so we are led to the following result, in momentum space,
+
+i(q) = ig2cf z
+
+ddk
+(2)d
+
+1
+
+k2 z 
+
+0
+
+dt t 2z 1
+
+0
+
+d(1  )exp[t (m2 + q2  2q  k + k2)]
+
+{  q[(d + 2)m2 + (d  2)q2  2(d  2)q  k] +   k(d  2)(m2 + q2)}.(75)
+
+16
+
+combining (69) and (75) we nally obtain
+
+g(2) = g2cf
+
+1
+
+(q2 + m2)2 z
+
+ddk
+(2)d
+
+1
+k2
+
+1
+
+(q  k)2 + m2 {m[dm2 + (d  4)q2  2(d  2)q  k]
+
+i  q[(d + 2)m2 + (d  2)q2  2(d  2)q  k]  i  k(d  2)(m2 + q2)}
+
+=
+
+1
+
+m  i  q "g2cf z
+
+ddk
+(2)d
+
+1
+k2 
+
+m  i(  q    k)
+
+(q  k)2 + m2
+
+#
+
+1
+
+m  i  q
+
+(76)
+
+which explicitly shows that the worldline perturbative, to second order, term for the fermionic
+propagator coincides with the one obtained via the feynman diagrammatic expansion.
+
+7. one loop calculation in the fermionic propagator
+
+in this section we shall apply the worldline approach to a loop calculation pertaining to
+an open line which extends a recent closed line result by schubert [27], see also ref [28].
+specically, by going back to (35) we shall perform the loop integration, equivalently, the
+integration over ddk, thereby extracting an expression for the second order contribution to
+the fermionic propagator in parametric form. so as not to bore the reader with endless
+manipulations we shall restrict our attention to the mass term entering (35) which reads
+
+im = g2cf z
+
+ddk
+(2)d
+
+{ x(2)  x(1)  g2
+
+0
+
+1
+
+dt et m2 z t
+
+d1z t
+k2 z 
+f (1, 2)(d  1)k2}exp"
+
+0
+
+0
+
+dx( )
+
+d2(2  1)z x(0)=x
+4 z t
+
+x(t )=y
+
+1
+
+0
+
+d x2  ik  (x(1)  x(2))# .(77)
+
+introducing a small mass  for infrared protection, as well as a mass  for the purposes
+
+of dimensional regularization we perform the k-integrations making use of the formulae
+
+4dz
+
+ddk
+(2)d
+
+(k2)
+k2 + 2 eikx =
+
+4d
+
+(4)d/2 z 
+
+0
+
+dl l d
+
+2 e2l  d
+
+2l
+
+
+
+x2
+
+4l2! e x2
+
+4l ,
+
+(78)
+
+where the parentheses around k2 serve to point out that for numerator equal to 1 the terms
+in parentheses inside the integral on the right hand side are also substituted by 1.
+
+isolating the path integral component of im, i.e.
+
+i = z x(0)=x
+
+x(t )=y
+
+dx( )" x(2)  x(1) +
+
+d  1
+4l2 g2
+
+f (1, 2)(x(2)  x(1))2 
+
+(d  1)d
+
+2l
+
+g2
+
+f (1, 2)#
+
+exp"
+
+1
+
+4 z t
+
+0
+
+d x2 
+
+1
+4l
+
+(x(1)  x(2))2# ,
+
+(79)
+
+we nd ourselves having to calculate expectation values of bosonic super-particle eld coor-
+dinates with respect to the action
+
+s =
+
+1
+
+4 z t
+
+0
+
+d x2 +
+
+1
+l
+
+(x(2)  x(1))2.
+
+(80)
+
+17
+
+leaving, for what follows, a number of technical details to the appendix we present the
+
+equations of motion in the form
+
+xcl
+ () =
+
+1
+
+l z t
+
+0
+
+db(, )xcl
+
+ (),
+
+where
+
+b(1, 2) = [(1  1)  (1  2)][(2  1)  (2  2].
+
+next, we introduce the greens function (1)(1, 2) by
+
+z t
+
+0
+
+d[(1  )
+
+2
+2 
+
+1
+l
+
+b(, 1)](1)(, 2) = (1  2),
+
+obeying the boundary conditions (1)(0, ) = (1)(t, ) = 0.
+
+the solutions to the classical equations of motion are readily determined as
+
+(81)
+
+(82)
+
+(83)
+
+xcl
+ () = () 
+
+1
+l
+
+(2  1)u[(1)(, 2)  (1)(, 1)],
+
+(84)
+
+with () as given in (56).
+
+the corresponding expression for the classical action is
+
+scl =
+
+t
+4
+
+u  xcl(t ) =
+
+t u2
+4
+
++
+
+1
+4
+
+u2
+
+(2  1)2
+
+l + gb(1, 2)
+
+.
+
+making the substitution x  x + xcl we have that
+
+< x(1) x(2) >< x(1) x(2) >o + xcl(1) xcl(2)
+< (x(2)  x(1))2 >< (x(2)  x(1))2 >o +(xcl(2)  xcl(1))2,
+
+where
+
+< a >o m 1
+
+o zx(0)=(x(t )=0
+
+dx( )aes[x]
+
+with s[x] as in (80) and m 
+
+o 1 the usual renormalization factor.
+
+from (84) we readily determine
+
+and
+
+xcl(1) = xcl(2) = u +
+
+1
+2
+
+u(1  2)
+
+gb(1, 2)
+
+l + gb(1, 2)
+
+[xcl(2)  xcl(1)]2 = (2  1)2u2 
+
+l
+
+l + gb(1, 2)!2
+
+.
+
+in the appendix we establish that
+
+n 1 < x(1) x(2) >o= d gb(1, 2) 
+
+d
+2
+
+g2
+
+b(1, 2)
+
+l + gb(1, 2)
+
+(85)
+
+(86)
+
+(87)
+
+(88)
+
+(89)
+
+(90)
+
+18
+
+and
+
+n 1 < (x(2)  x(1))2 >o= 2d
+
+lgb(1, 2)
+
+l + gb(1, 2)
+
+,
+
+(91)
+
+where n is dened in the appendix.
+
+putting everything together we obtain (we suppress the 1, 2 of the gs for notational
+
+economy)
+
+im = mg2
+
+cf
+
+(4)d 4dz 
+d gb 
+
+0
+g2
+b
+
+d
+2
+
+l + gb
+
+0
+
+dle2lz 
++ u2"1 +
+
+1
+2
+
+
+
+
++(2  1)2u2
+
+l2
+
+(l + gb)2 
+
+(d  1)d
+
+2l
+
+0
+
+gb
+
+(2  1)
+
+dt t d/2et m2 z t
+l + gb#2
+f#) exp"
+
+g2
+
+t u2
+4
+
++
+
+d1z t
+
+0
+
+d2
+
+(2  1)
+
+(l + gb)d/2
+
+lgb
+
+l + gb
+
+d  1
+4l2 g2
+u2
+4
+
+f (cid:20)2d
+l + gb # .
+
+(2  1)2
+
+
+
++
+
+(92)
+
+after an integration by parts, which rids us of the presence of gb(1, 2) in favor of the
+f , we get, once performing the substitution 2  1 = t, 1 + 2 =
+
+b  g2
+
+combination g2
+2t, l  lt ,
+
+im = mg2
+
+cf
+
+(4)d 4dz 
+
+dlz 
+[l + (1  )]2 
+
+0
+3(1  )
+
+0
+
+"u2(d  1)
+
+dt t 3det (m2+l)z 1
+
+0
+
+d
+
+1  
+
+[l + (1  )]d/2
+
+2d(d  1)
+
+(1  )
+
+t
+
+l + (1  )
+
++u2 +
+
+d
+t
+
+1  2
+
+1   (cid:21) exp"
+
+t u2
+4
+
+
+
+t u2
+
+4
+
+2
+
+l + (1  )# .
+
+the corresponding expression for the fourier transform reads
+
++
+
+(d  2)u2
+
+(1  2)
+
+2
+
+l + (1  )
+
+(93)
+
+im = mg2
+
+cf
+
+(4)d 4dz 
+
+0
+
+dlz 
+
+0
+
+dt t 3d/2z 1
+
+0
+
+d
+
+1  
+
+(l + )d/2
+
+[d(m2  q2 + 2l)  2(d  2)lq2]exp[t (m2 + 2l  q2 +
+
+2
+
+l + 
+
+q2)]
+
+= mg2
+
+cf
+
+(4)d 4dz 1
+
+0
+
+d
+
+d(m2  2) + 2(d  2)(1  )q2
+[m2 + (1  )2 + q2(1  )]2d/2 (2  d/2).(94)
+
+as already mentioned, we shall refrain from working out the gamma-matrix part of the
+propagator. the point is that our methods have produced a one loop result in a parametrized
+form pertaining to a conguration with an open fermionic line, thereby extending the scope
+and use of the approach and methodology of ref. [7].
+
+8. concluding remarks
+
+our eorts, in this work, have centered around the role of the spin factor in the worldline
+approach to gauge theories with fermionic matter elds. placing specic emphasis on open
+
+19
+
+particle path congurations we were able to accommodate the spin attribute of the prop-
+agating entity into a geometrical type of expression (spin factor) which registers as a well
+dened weight factor in the path integral. further to the point, its presence facilitates the
+extraction of simple computational rules which, at the perturbative level at least, produce
+algorithms of the bern-kosower type [14] while extending, at the same time, their applica-
+bility to fermionic greens functions. on the other hand, the dynamics of the particle-based
+casting of the system amounts to emission and absorption of gauge eld modes by the matter
+particle which is solely controlled by a wilson line operator. our scheme thereby achieves a
+neat separation between geometrical and dynamical aspects of physical descriptions in gauge
+eld theories. to summarize, our formulation has not only made it possible to accommodate
+open fermionic paths, equivalently, greens functions, into worldline considerations but has
+produced computational rules that have clear as well as simple interpretations.
+
+the fact that our approach has identied the wilson line operator as the sole agent of
+the dynamics operating in the system is worth some further comments. this occurrence has
+proven to be of central importance to the dynamical considerations we have been pursuing
+in connection to long distance properties of qcd [10-12]. the wider realization that wilson
+line operators carry the dynamics of eikonally-based considerations in qcd is, actually, well
+founded in a variety of approaches which aim at factorizing soft contributions to quantities
+of physical interest, such as form factors and parton-parton scattering amplitudes [29-34]. a
+marked contrast is that in the worldline approach to qcd wilson lines enter directly as an
+indigenous component of the action whereas in standard eld theoretical approaches they
+are brought in, within the context of an operator formalism, for the purpose of representing
+quarks as ordered exponentials of the gluon eld connected at the point where the hard
+scattering occurs. in other words, they enter as sort of tails attached to the quark eld
+operator for the purpose of accounting for long distance behavior. our present work further
+establishes the role of the wilson line operators as the quantity which carries the dynamics
+in a gauge eld theory even beyond soft eects.
+
+be that as it may, our immediate plans are to study situations wherein external gluonic
+elds attach themselves to an open fermionic line thereby extending the present considera-
+tions to vertex functions and compton amplitudes. we expect to report on progress along
+these lines soon.
+
+20
+
+appendix
+
+we display, below, some interim steps associated with the derivation of formulas given in
+section 7. consider the particle-based action functional s as registered in eq. (79). casting
+it in the form
+
+s =
+
+1
+
+4 z t
+
+0
+
+d x2( ) +
+
+1
+
+4l z t
+
+0
+
+d1z t
+
+0
+
+d2b(1, 2|1, 2)x(1)  x(2),
+
+(a.1)
+
+with b(1, 2|1, 2) as given by eq. (82), we are led to the equations of motion given by eq.
+(81) in the text.
+
+considering a solution of the form x =  + z, with  as in (56) we are led to the
+
+relation (we drop, as in the text, the  -arguments in b)
+
+z t
+
+0
+
+d"(  )
+
+2
+2 
+
+1
+l
+
+b(, )# z() = [(  2)  (  1)](1  2)
+
+u
+l
+
+(a.2)
+
+which justies the introduction of (1)(, ) according to (83). one, now, readily determines
+
+xcl
+
+ () =  z t
+
+0
+
+d(1)(, )[(  2)  (  1)](1  2)
+
+u
+l
+
+(a.3)
+
+which produces eq. (84) in the text.
+
+the procedure applied in refs [27,28] for the closed contour case,
+
+employing the notationh(  ) 2
+l(cid:19)
+
+(1)(, ) =< |(cid:18)2 
+
+b
+
+1
+
+2  1
+
+l b(, )i < |(2 b
+| >=< |(cid:18)1 
+
+l(cid:19)
+
+b
+
+1
+
+2| >
+
+l )| > we nd, following
+
+=< |2| > +
+
+< |2b2| > +
+
+1
+l
+
+1
+l2 < |2b2b2| > +...
+
+(a.4)
+
+with the rst term in the series to be denoted, for the present purposes, by (0)(, ); it
+actually coincides with the free bosonic propagator, cf. eq. (50).
+
+straight forward manipulations on the matrix elements entering the above series result
+
+to the following, closed-form, relation
+
+(1)(, ) = (0)(, ) 
+
+[(0)(, 1)  (0)(, 2)][(0)(1, )  (0)(2, )]
+
+l + gb(1, 2)
+
+liberal use of (a.3) and (a.5) leads to the relation
+
+xcl
+ (2)  xcl
+
+ (1) = (2  1)
+
+l
+
+l + gb(1, 2)
+
+(a.5)
+
+(a.6)
+
+which, in turn, leads to eq. (89) in the text.
+
+from (a.3) we obtain, after some straight forward manipulations, for the derivative of
+
+the classical bosonic particle elds
+
+xcl
+ () = u 
+
+1
+2
+
+u(1  2)
+
+gb(, 1)  gb(, 2)
+
+l + gb(1, 2)
+
+(a.7)
+
+21
+
+which justies eq. (88).
+
+turning our attention to expectation values, let us rst furnish an outline derivation of
+
+(90). under the substitution x  xcl + x we have that
+
+< x(1)  x(2) >= [< x(1)  x(2) >o + xcl(1)  xcl(2) < 1 >o]escl
+
+,
+
+(a.8)
+
+where
+
+< 1 >o= zx(0)=x(t )=0
+
+one easily obtains
+
+< 1 >o=
+
+on the other hand
+
+dx( )exp" 1
+
+1
+
+(4t )d/2 "
+
+0
+
+1
+4l
+
+d x2 
+
+4 z t
+l + gb(1, 2)#d/2
+
+l
+
+(x(2)  x(1))2# .
+
+(a.9)
+
+.
+
+(a.10)
+
+< x(1)  x(2) >o= 
+
+2
+
+j(1)j(2) zx(0)=x(t )=0
+
+dx( )
+
+exp" 1
+
+4 z t
+
+0
+
+d x2 
+
+1
+
+4l z t
+
+0
+
+d1z t
+
+0
+
+d2b(1, 2)  iz t
+
+0
+
+d j( )  x( )#j=0
+
+.(a.11)
+
+now, from (a.5) we determine
+
+2
+ (1)(, ) =
+
+1
+2
+
+gb(, ) 
+
+1
+4
+
+[ gb(, 2)  gb(, 1)][ gb(, 2)  gb(, 1)]
+
+l + gb(1, 2)
+
+. (a.12)
+
+which facilitates the carrying out of the (functional) gaussian integration in (a.11). one
+nds
+
+< x(1)  x(2) >o =
+
+l
+
+l + gb(1, 2!d/2
+
+1
+
+(4t )d/2  
+d" gb(1, 2) 
+
+1
+2
+
+b(1, 2)
+
+g2
+l + gb(1, 2)#
+
+(a.13)
+
+as per eq. (90) in the text.
+
+finally, eq. (91) is deduced as follows
+
+< (x(2)  x(1)2 >o = < (x2(2) >o + < (x2(1) >o 2 < (x(2)  (x(1) >o
+= 2d[(1)(2, 2) + (1)(1, 1)  2(1)(1, 2)] < 1 >o
+
+= 2d
+
+lgb(1, 2)
+
+l + gb(1, 2)
+
+< 1 >o .
+
+(a.14)
+
+22
+
+references
+
+[1] e. s. fradkin, nucl. phys. b 76 (1966) 588.
+
+[2] m.b.halpern, a.jevicki and p.senjanovic, phys. rev. d 16 (1977) 2476; m.b.halpern
+
+and w.siegel, phys.rev. d 16 (1977) 2486.
+
+[3] k.bardakci and s.samuel, phys.rev. d 16 (1977) 2500.
+
+[4] h. m. fried, basics of functional methods and eikonal models (editions frontieres,
+
+gif-sur yvette, france, 1990).
+
+[5] h. m. fried and y. m. gambellini, phys. rev. d 51 (1995) 890; 51 (1995) 906.
+
+[6] h. m. fried and y. m. gambellini, phys. rev. d 55 (1997) 2430.
+
+[7] m. j. strassler, nucl. phys. b 385 (1992) 145.
+
+[8] a. i. karanikas and c. n. ktorides, phys. lett b 275 (1992) 403.
+
+[9] a. i. karanikas and c. n. ktorides, phys. rev. d 52 (1995) 5883.
+
+[10] g. c. gellas, a. i. karanikas and c. n. ktorides, ann. phys. (ny) (1997) 228.
+
+[11] g. c. gellas, a. i. karanikas, c. n. ktorides and n. g. stefanis, phys. lett. b 412
+
+(1997) 95.
+
+[12] a. i. karanikas and c. n. ktorides, phys. rev. d 59 (1999) 016003.
+
+[13] j. schwinger, proc. nat. acad. sciences (usa), 37 (1951) 452; harvard lectures (1954).
+
+[14] z. bern and d. a. kosower, phys. rev. d 38 (1988) 1888; nucl. phys. b 321 (1989)
+
+451.
+
+[15] a. m. polyakov, in fields, strings and critical phenomena, edited by e. brezin and j.
+
+zinn-justin (north holland, amsterdam, 1990).
+
+[16] a. m. polyakov, nucl. phys. b 164 (1979) 171.
+
+[17] a. m. migdal, phys. rep. c 102 (1983) 199.
+
+[18] j. schwinger, phys. rev. 82 (1951) 664.
+
+[19] r. a. brandt, f. neri and m-a. sato, phys. rev. d 24 (1981) 879.
+
+[20] r. a. brandt, a. gocksch, f. neri and m-a. sato, phys. rev. d 26 (1982) 3611.
+
+[21] v. s. dotsenko and s. n. vergeles, nucl. phys. b 169 (1981) 527.
+
+[22] n. s. craigie and h. dorn, nucl. phys. b 185 (1981) 204.
+
+[23] a. sen, phys. rev. d 28 (1983) 860.
+
+23
+
+[24] i. a. korchemskaya and g. p. korchemsky, j. phys. a 24 (1991) 4511; g. p. korchem-
+
+sky, phys. lett. b 257 (1993) 124.
+
+[25] e. s. fradkin and d. m. gitman, phys. rev. d 44 (1991) 3230.
+
+[26] p. di vecchia, l. magnea, a. lerda, r. russo and r. marotta, nucl. phys. b 469
+
+(1996) 235.
+
+[27] c. schubert, acta phys. polon. b 27 (1996) 3965.
+
+[28] m. reuter, m. g. schmidt and c. schubert, ann. phys. (ny) 259 (1997) 313.
+
+[29] h. verlinde and e. verlinde, preprint hep-th/9302104 (1993).
+
+[30] l. n. lipatov, nucl. phys. b 452 (1995) 369.
+
+[31] i. balitsky, nucl. phys. b 463 (1996) 99.
+
+[32] j.c. collins and d.s. soper, nucl. phys. b 193 (1981) 381; b 194 (1982) 445.
+
+[33] g.p. korchemsky, phys. lett. b 217 (1988) 330; b 220 (1989) 629.
+
+[34] n. kidonakis, g. oderda and g. sterman, nucl. phys. b 531 (1998) 365.
+
+24
+
+

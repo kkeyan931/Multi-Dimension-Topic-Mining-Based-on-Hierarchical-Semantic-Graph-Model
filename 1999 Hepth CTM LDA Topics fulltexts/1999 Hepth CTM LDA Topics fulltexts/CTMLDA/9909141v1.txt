@@ -1,0 +1,4848 @@
+ufift-hep-99-15
+hep-th/9909141
+
+qcd fishnets revisited
+
+klaus bering1, joel s. rozowsky2 and charles b. thorn3
+
+department of physics, university of florida, gainesville, fl 32611
+
+institute for fundamental theory
+
+(february 17, 2014)
+
+abstract
+
+we look back at early eorts to approximate the large nc feynman diagrams of qcd as very
+large shnet diagrams. we consider more carefully the uniqueness of rules for discretizing
+p + and ix+ which x the shnet model in the strong t hooft coupling limit, and we oer
+some renements that allow more of the crucial qcd interactions to be retained in the shnet
+approximation. this new discretization has a better chance to lead to a physically sensible
+bare qcd string model. not surprisingly the resulting shnet diagrams are both richer in
+structure and harder to evaluate than those considered in older work. as warm-ups we analyze
+arbitrarily large shnets of a paradigm scalar cubic theory and very small shnets of qcd.
+
+9
+9
+9
+1
+
+ 
+
+p
+e
+s
+0
+2
+
+ 
+
+ 
+ 
+
+1
+v
+1
+4
+1
+9
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+1e-mail address: bering@phys.ufl.edu
+2e-mail address: rozowsky@phys.ufl.edu
+3e-mail address: thorn@phys.ufl.edu
+
+1
+
+introduction
+
+with all the recent eort devoted to the search for a solution of large nc qcd [1] as a classical
+string theory [2], it is appropriate to reassess earlier eorts to accomplish this goal. in this article
+we wish to rene and extend the formulation and calculational methods developed in the eort of
+the late seventies to systematize a shnet [3] approximation to large nc qcd [4, 5].
+
+the larger goal here is to set up a discrete model of innite nc qcd which, when analyzed in a
+weak coupling expansion (ncg2  1), reproduces perturbative qcd and, when analyzed in a strong
+coupling limit (ncg2  ), describes what we choose to call a bare qcd string. since qcd is
+supposed to conne at all values of the t hooft coupling, the innite nc glueball should actually
+be noninteracting over the whole range of couplings. however, its composite internal structure is
+generally expected to be quite complicated, and it is only in the strong t hooft coupling limit that
+the internal structure of an innite nc glueball can be as simple as that of the fundamental string
+of string theory. we regard it an open question whether the bare qcd string can be identied
+with one of the known fundamental strings or is an entirely novel object. we hope that our eorts
+will eventually settle this issue. we tentatively identify the bare qcd string with the object whose
+propagation is described by the so-called shnet diagrams.
+
+as shown in [4] the shnet diagrams by no means exhaust the planar diagrams of t hoofts
+nc   limit. fishnets are certainly planar, but they are also very large in both directions:
+there are many lines and many interaction vertices. it is natural to try to associate such diagrams
+with strong t hooft coupling ncg2  , but as with all strong coupling expansions one must
+rst dene a cuto theory which controls the size of the kinetic energy of the system. in [4] the
+choice was to evaluate all graphs on a light front and simultaneously discretize p + = (p 0 + p 3)/2
+and x+ = (x0 + x3)/2. in this model the large t hooft coupling limit singled out large shnet
+diagrams whose continuum limit was a seamless world sheet. as usual with strong coupling limits
+this conclusion is highly sensitive to the cuto model.
+
+what one hopes when resorting to strong coupling methods is that although the limit strongly
+distorts the quantitative details of the continuum theory, the qualitative physics is shared between
+the continuum and lattice models for all couplings. in standard lattice gauge theories this hope is
+usually expressed as requiring that the lattice model exhibit no phase transition as the coupling
+constant is varied from strong to weak coupling. probably the most familiar case in which there is
+a phase transition is compact qed whose strong coupling limit shows connement, but whose
+continuum limit is a theory of free photons.
+
+although the existence of a phase transition at nite coupling is usually extremely dicult
+to detect, it is the case that in some situations our lattice shnets can be seen to be completely
+irrelevant to the physics of large but nite coupling. in [4] this possibility was noted in the context
+of scalar 4 theory. the qualitative physics of the seamless shnet diagrams is that the quanta of
+the eld theory are bound into a linear polymeric chain. however, one can examine at next order
+in the strong coupling expansion the nature of the interaction that should be responsible for this
+binding. for  > 0 this interaction is repulsive, and the seamless world sheet given by the strong
+coupling limit is a purely formal artifact. in contrast, for  < 0 the interaction is attractive, and it
+is qualitatively correct to imagine that the nearest neighbor quanta form very tight bonds in the
+strong coupling limit.
+
+a serious shortcoming of the qcd shnet model attempted in [5] is that the basic gluon-gluon
+quartic interaction retained in the strong coupling limit favored the alignment of the gluon spins.
+this defect was not apparent, however, because the leading shnet structure was explicitly an even
+function of this interaction and in fact described an anti-ferromagnetic spin arrangement. the
+
+1
+
+inherent instability of the system would only be seen at non-leading order. we aim to improve this
+situation in the present work by proposing a discretized model whose shnet approximation retains
+both the contact interactions, with their ferromagnetic tendency, and the one gluon exchange
+interactions with their anti-ferromagnetic tendency.
+
+the rest of the article is organized as follows. in section 2 we give a self contained review of the
+feynman rules in light-cone gauge as well as the discretization rules largely following [4, 5]. however,
+we treat the longitudinal modes dierently. we represent the induced quartic interaction of light-
+cone gauge by the exchange of a short-lived ctitious spin 0 quantum: its propagation is limited to
+a small number of discrete time steps. this idea motivated another departure from [5]. namely, we
+also choose to represent the basic quartic gluon interaction by the exchange of another short-lived
+ctitious spin 0 quantum. in this way all vertices of the discretized feynman rules are cubic, and
+are accordingly all treated on the same footing in the strong coupling limit. in section 3 we show
+our discretization in action by computing the gluon self energy at one loop order. we see how
+the ambiguities inherent in spreading out the quartic vertices begin to be resolved by requiring
+lorentz invariance. the propagators of the ctitious scalars are multiplied by fk, hk, where k is
+
+the number of time steps, andpk fk =pk hk = 1. lorentz invariance of the self-energy constrains
+the moments pk fk/k and pk hk/k. in section 4 we describe the shnet approximation. as a
+
+warm-up, we give a complete analysis of the leading shnet diagrams of a paradigm matrix scalar
+eld theory gtr3. then we describe the more complicated situation of qcd. we do not attempt to
+analyze the arbitrary qcd shnets here. instead in section 5 we study the sum of planar diagrams
+for small values of m , the number of units of p + carried by the evolved system. finally in section
+6 we collect some concluding remarks and sketch future directions for this program of research.
+
+2 light-cone feynman rules and discretization
+
+2.1 propagators
+
+the gluon propagator in light-cone gauge a = 0 is given in momentum space by
+
+d(p) = i
+
+  +p/p+  + p/p+
+
+p2  i
+
+.
+
+(2.1)
+
+the signature of our metric tensor  is taken to be (, +, +, +). in this paper we shall make
+extensive use of the x+ representation
+
+d(p, p+, x+) z dp
+
+2
+
+d(p)eix+p.
+
+(2.2)
+
+evaluating the p integral leads to the following expressions for the individual components of d :
+
+dkl(p, p+, x+) = (x+)
+
+dk(p, p+, x+) = (x+)
+
+kl
+2p+ eix+p2/2p+
+pk
+2p+2 eix+p2/2p+
+
+ ( )
+
+ ( )
+
+kl
+2p+ e p2/2p+
+pk
+2p+2 e p2/2p+
+
+d(p, p+, x+) = i
+
+1
+p+2 eix+p2/2p+
+
+ 
+
+
+
+
+( )
+
+1
+p+2 e p2/2p+
+
+= (cid:20)(x+)
+
+
+x+ (x+)
+p2
+2p+3 + i(x+)
+ (cid:20)( )
+
+p2
+2p+3  ( )
+
+1
+
+p+2(cid:21) eix+p2/2p+
+p+2(cid:21) e p2/2p+
+
+1
+
+,
+
+(2.3)
+
+2
+
+metric has values  =  = 0 and  =  = 1.
+
+where the arrows indicate the imaginary time versions ( = ix+). in this paper latin indices will
+always refer to the transverse components. we shall also nd it convenient to use a complex basis
+
+for transverse indices, dening v   (v 1 + iv 2)/2 and v   (v 1  iv 2)/2. in this basis the
+here we are assuming that a = a+ has not been eliminated from the formalism. since gauss
+law relates a+ to the transverse components through a constraint not involving time derivatives, it
+is possible to explicitly integrate a+ out (see for example [6]) leaving the transverse components as
+the only independent variables. in that case the feynman rules would only employ the transverse
+propagator dkl. graphically, one achieves the same result by showing that the contributions of
+dk and d lead to modied cubic vertices and a new induced quartic vertex which arises from
+the (x+) term in d.
+
+2.2 vertices
+
+3 = 
+
+
+3 = 0
+
+1
+
+2
+
+1
+
+2
+
++
+
+3
+
+= +
+
+3
+
+= g(q2  q1)+
+
+3 = g(q2  q1)
+
+
+3 = g(q2  q1)
+
+
+1
+
+1
+
+2
+
+2
+
+
+
+4
+
+= +g2
+
+
+
+4
+
+= 2g2
+
+figure 1: cubic and quartic gauge vertices for imaginary time.
+
+we shall present the primitive cubic and quartic vertices as t hooft did in his presentation of
+the 1/nc expansion [1]. since the vertex assignments lack permutation symmetry, it is understood
+that all permutations of them must be included. the double line notation makes clear what powers
+of nc must be included with each topology. however, since we shall be dealing exclusively with the
+planar diagrams of the nc   limit, we shall dispense with this renement in order to reduce
+clutter. to correctly use these rules at nite nc, the double line notation should be restored. with
+this understanding, the primitive cubic vertices are given by
+
+3
+
+3
+
+
+
+
++
+
+3
+
+3
+
+3 = 0
+
+= 
+= ig(q2  q1)  g(q2  q1)
+= ig(q2  q1)  g(q2  q1)
+= +
+
+3
+
+= +ig(q2  q1)+  +g(q2  q1)+,
+
+and the primitive quartic vertices by
+
+4
+
+
+
+
+4
+
+= +ig2  +g2
+= 2ig2  2g2,
+
+3
+
+(2.4)
+
+(2.5)
+
+where the arrows indicate the appropriate vertices to use with imaginary time. in light-cone gauge,
+only transverse gluons participate in the quartic vertices. our convention will be that all momenta
+ow into the vertex. also, the index  () will be represented graphically by attaching an outgoing
+(incoming) arrow to a line (see fig. 1). the ordering of indices will be counterclockwise around the
+vertex. as usual, each vertex is associated with an integration over x+ and conserves the transverse
+and + components of momentum. then each unconstrained momentum is integrated with measure
+d2pdp+/(2)3.
+
+2.3 discretization
+
+to give a nonperturbative model for the summation over planar diagrams, it was proposed in ref.
+[4] to simultaneously discretize p+ = lm and imaginary time   ix+ = ka, with k, l running over
+all positive integers. the use of imaginary time converts all oscillating exponentials to damped
+ones, and removes all is from the feynman rules. thus the i occurring in each vertex is combined
+with the dx+ to form d . (because of time translational invariance, the time integral for one vertex
+in each connected diagram should be omitted, leaving one factor of i unabsorbed. conventionally,
+we shall omit this last i in the quantities we calculate.)
+
+it can be easily seen that the lattice constants a, m only enter the sum of graphs in the ratio
+t0  m/a. first notice that only this ratio appears in the exponents. since each propagator is
+nominally integrated over its p+, r dp+  mp provides a factor of m to cancel one from a 1/p+
+prefactor in each propagator. further r d  ap at each vertex which also has a nominal p+
+conserving delta function that supplies a 1/m, so each vertex supplies a factor 1/t0. finally, every
+ index of a propagator will be matched with a + index of a vertex, which will involve a factor
+of p+ and hence supply a factor of m to cancel the extra factor of 1/m in dk and to convert the
+extra factor of 1/ma in d to t0.
+
+the discretization of d involves some ambiguity in the interpretation of the term involving
+(x+). with x+ continuous, this term collapses the two cubic vertices it connects into an instan-
+taneous quartic interaction local in x but p+ dependent and hence nonlocal in x. indeed this is
+precisely the well-known quartic vertex induced by elimination of a+ in the hamiltonian formu-
+lation of light-cone gauge. in this approach the remaining part of d combines nicely with the
+contributions of dk to yield a modied cubic vertex for transverse gluons only:
+
+
+
+3 = 2g(cid:18) q+
+3 = 2g(cid:18) q+
+
+1 + q+
+2
+q+
+1 q+
+1 + q+
+2
+q+
+1 q+
+
+2 (cid:19) (q+
+2 (cid:19) (q+
+
+
+
+1 q
+
+2  q+
+
+2 q
+1 )
+
+1 q
+
+2  q+
+
+2 q
+1 ),
+
+(2.6)
+
+which are the vertices appropriate to imaginary time. with longitudinal gauge elds completely
+eliminated in this way, discretization could then proceed as usual by discretizing the x+ and p+
+parameters of the transverse gluon propagator. in addition, one has to exclude, in some ad hoc
+manner, the p+ = 0 exchange part of the induced quartic vertex which is innite as it stands.
+moreover, the set of tadpole diagrams necessarily excluded in our discretization (see sec. 2.4
+below) is enlarged by the induced quartic interaction and, since the new quartic interactions depend
+non-trivially on p+, the p+ dependence of the necessary counter-terms will be more complicated.
+nevertheless, an attractive feature of such a treatment is that the modied cubic vertex is manifestly
+invariant under the light-cone galilei group: q  q + q+v.
+we shall follow a dierent path, more in the spirit of the sum over histories. the idea is to
+exploit our discretization of x+ to give a more exible interpretation of (x+), which retains a
+
+4
+
+gaussian damping factor and maintains galilei invariance throughout. this can be done by the
+replacement:
+
+d(q, q+ = m m, x+ = ika) 
+
+q2
+2m 3 ekq2/2m t0  fk
+
+t0
+m 2 ekq2/2m t0
+
+fk = 1.
+
+xk>0
+
+(2.7)
+
+the last term on the r.h.s. of eq (2.7) is a satisfactory discretization of the delta function provided
+the fks fall o suciently rapidly with k. the exclusion of f0 ensures damping of transverse
+momentum integrals. in this approach, instead of a new induced quartic vertex we have introduced
+a short lived scalar, whose exchange simulates that vertex in a way that maintains galilei invariance.
+further, by leaving the choice of the fks open we might be able to tune their values to cancel
+unwanted symmetry violations induced by ultraviolet divergences in the continuum limit. the rst
+term on the r.h.s. of eq (2.7) is exactly what is needed to complete the modied cubic vertex (2.6)
+when combining all of the contributions of the longitudinal gluons.
+
+perhaps a more intuitive discretization would be to replace the derivative in d by a discrete
+
+dierence:
+
+d(q, m m,ika)  
+
+t0
+
+m 2 (cid:26) ekq2/2m t0  e(k1)q2/2m t0
+
+eq2/2m t0
+
+k > 1
+k = 1
+
+,
+
+(2.8)
+
+where the special treatment of the case k = 1 simulates the (x+) contribution we know must
+be there in the continuum. unfortunately, this denition violates galilei invariance because of the
+term that propagates only k1 steps in time: newtonian mass conservation is temporarily violated.
+this causes considerable complications in calculations, but nonetheless displays interesting features.
+we wont pursue this option in the main text, but in an appendix we shall see that with a suitable
+counter-term galilei invariance of the one loop self energy can be restored in the continuum limit.
+
+2.4 tadpoles
+
+the exclusion of the propagators with zero  and zero p+ renders every feynman integral nite,
+making our discretization an eective regulator of divergences.4 but it also means that certain
+tadpole feynman diagrams, which involve one or more propagators originating and terminating
+at the same vertex are excluded. in a theory with at most quartic vertices, these diagrams are
+limited to self-energy parts, which generally require counter-terms to enforce lorentz invariance in
+the continuum limit. thus errors induced by excluding these diagrams could simply be absorbed
+in the ultimate value of the counter-terms.
+
+tadpoles arising from the cubic interaction (see fig. 2(a)) represent the vacuum expectation
+value of the color current density. the transverse components of these would vanish anyway because
+they are linear in transverse momentum but we can make sure all these tadpoles vanish by simply
+normal ordering the current density. however tadpoles arising from the quartic interaction, see
+fig.2(b), would give a divergent non-vanishing result if the zero time propagator were inserted. as
+mentioned above one possibility is to absorb them in the self-energy counter-term.
+
+another possibility is to note that, from the point of view of the continuum, one can just
+as well spread the quartic interaction over several time steps, in which case a candidate for the
+
+4the discrete light-cone quantization (dlcq) industry which burgeoned in the mid eighties (for a review see [7])
+only exploited p + discretization leaving ultraviolet divergences unregulated. discretization of ix+ has the eect of
+introducing factors of eap
+
+(which is a popular way to regulate uv divergences) into loop integrals.
+
+2/2p +
+
+5
+
+(a)
+
+(b)
+
+figure 2: tadpoles feynman diagrams coming from cubic and quartic vertices.
+
+figure 3: quartic vertices get replaced by two cubic vertices and a ctitious scalar eld.
+
+tadpole diagrams would emerge. we have already exploited this idea in our discretization of d,
+see eq (2.7). a natural way to do this is to imagine that the quartic interaction is actually the
+concatenation of two cubic interactions mediated by a ctitious scalar eld which is only allowed
+to propagate a few time steps5. we thus redraw the various quartic vertices as in fig. 3. the
+ctitious scalars must be ghosts: to reproduce the quartic couplings, either their coupling to two
+transverse gluons must be taken imaginary or their propagator must be negative. we choose the
+second alternative for which the vertices are given in fig. 4. note that the quartic vertex which
+
+m = + g
+
+t0
+
+m =  g
+
+
+t0
+
+figure 4: the coupling of the transverse components of the gauge eld to the ctitous scalar eld.
+the subscript m indicates that this is a magnetic ghost vertex. this replaces the two quartic
+vertices at the bottom of fig. 1.
+
+involves adjacent like direction spins in one channel can be viewed as a spin zero exchange in only
+one way, whereas the vertex with unlike adjacent spins in both channels becomes two exchange
+diagrams, giving a natural interpretation of the factor of 2 in the eective quartic vertex. if we now
+consider the tadpoles arising from connecting any pair of external lines, we see that there are
+
+5note that in higher dimensions, the ctitious eld would be a transverse two-form instead of a scalar. such an
+additional degree of freedom is presaged by the rst order formulation of gauge theory in which f is treated as
+independent of a and the lagrangian density is trf 2/4 + itrf (a  igaa). going to light-cone gauge in
+this formalism leaves, in addition to ak, the (nondynamical) elds f+ and fkl. our prescription simply gives these
+extra elds a short-lived dynamics.
+
+6
+
+3 diagrams, see fig. 5, but the two with the topology of a cubic tadpole, which cannot be drawn
+in our discretized light-cone formalism, cancel. thus the only remaining tadpole is the bubble
+diagram on the far right of fig. 5, which poses no problem for our formalism.
+
+figure 5: three tadpole diagrams resulting from the spreading out of the quartic gauge vertex.
+
+the ctitious scalar propagator can be taken to be
+
+d(q, m, k) = hkt0ekq2/2m t0
+
+hk = 1,
+
+xk>0
+
+(2.9)
+
+where the hks, like the fks, vanish rapidly with k. the normalization condition guarantees that
+the correct quartic vertex will be reproduced in the continuum limit. the exponential factor damps
+ultraviolet divergences, and with the form we have specied, maintains galilei invariance even for
+nite lattice constants. furthermore, by leaving the choice of the hks open, we gain additional
+exibility to cancel unwanted symmetry violations. the hope is that tuning the fks and hks will
+remove the need for explicit counter-terms.
+
+3 gluon self-energy and counter-terms at one loop
+
+in this section we illustrate the way discretization regulates divergences by computing the one-loop
+contribution to the gluon self-energy part, i , dened as the sum of all one particle irreducible
+diagrams for the two-point function. for this purpose it is convenient to pass from x+ representation
+to energy (e = p) representation. with discretized  , this is accomplished by dening
+
+d(q, m, e) =
+
+ (q, m, e) =
+
+eaked(q, m, k)
+
+eake (q, m, k).
+
+
+
+
+
+xk=1
+xk=1
+
+(3.1)
+
+(3.2)
+
+the exact gluon propagator is then algebraically related to the the bare one and . we dene
+u  eq2/2m t0 = eaeq2/2m t0, in terms of which the bare propagators have the values:
+
+dij
+
+0 (q, m, e) =
+
+di
+
+0 (q, m, e) =
+
+ij
+2m
+qi
+2m 2
+
+u
+1  u
+u
+1  u
+
+.
+
+for d we have, for the discretization of eq (2.7),
+
+d
+
+0
+
+(q, m, e) =
+
+q2
+2m 3
+
+u
+
+1  u 
+
+t0
+
+m 2 xk>0
+
+fkuk.
+
+7
+
+(3.3)
+
+(3.4)
+
+because of light-cone gauge, only ij, i+ and ++ are required. by transverse rotational
+
+invariance, these quantities can be decomposed as
+
+ij = qiqj1 + ij2
+i+ = m qi
+1
+++ = m 2
+1
+
+(3.5)
+
+we shall nd that at the one-loop approximation, 
+the exact propagators would be given by
+
+1 = 
+
+1 = 1 and if that were to hold generally,
+
+dij =
+
+di =
+
+d =
+
+3.1 calculation of 1
+
+ij
+2m
+qi
+2m 2
+t0
+
+m 2 (cid:20)
+
+1  u  u2/2m
+
+u
+
+u
+
+1  u  u2/2m
+pk fkuk
+1 + t01pk fkuk +
+
+q2
+
+2m t0
+
+u
+
+1  u  u2/2m(cid:21) .
+
+(3.6)
+
+figure 6: the two bubble diagrams that contribute to ++.
+
+after these preliminaries, let us now turn to the computation of 1 at one loop. the simplest
+term is ++, which is given in x+ representation by (note that there are 2 equal diagrams that
+contribute (see fig. 6))
+
+ek(p2/2l+(qp)2/2(m l))/t0
+
+++ = 2
+
+g2nc
+t 2
+
+0 z
+
+d2p
+(2)3
+
+m 1
+
+xl=1
+
+(m  2l)2
+4l(m  l)
+
+=
+
+++ =
+
+2g2nc
+162t0
+g2nc
+242t0
+
+m 1
+
+ekq2/2m t0 =
+
+(m  2l)2 1
+
+xl=1
+(m  1)(m  2)( ln(1  u)).
+
+m k
+
+ncg2(m  1)(m  2)
+
+242t0k
+
+ekq2/2m t0
+
+(3.7)
+
+(3.8)
+
+figure 7: the four bubble diagrams that contribute to +.
+
+8
+
+the evaluation of j+ is not much harder. here there are four diagrams that dier only in
+the prefactor of transverse momentum (see fig. 7). since the prefactor is linear in momentum, we
+need only to remember that the gaussian integral over transverse momentum involves the shift
+p  p + lq/m . after this shift the term linear in p integrates to zero, so the net eect is to set
+p = lq/m . thus the net prefactor is
+
+qj
+m
+
+(2l  m )[(1 + l/m ) + (2 + l/m ) + +(1  l/m ) + +(2  l/m ) =
+
+2qj
+m 2 (2l  m )2, (3.9)
+
+which involves the identical sum over l as ++. thus we end up with
+
+j+ =
+
+g2nc
+242t0
+
+qj
+m
+
+(m  1)(m  2)( ln(1  u)).
+
+(3.10)
+
+figure 8: the eight bubble diagrams that contribute to .
+
+the coecient of qiqj in ij may be singled out by computing . this leads to a similar
+calculation to the above because, after the shift in integration variable, p and pp both integrate
+to zero. thus again, prefactors of p may simply be set to lq/m . eight diagrams contribute to
+this quantity, equal in pairs (see fig. 8). the prefactors of these diagrams combine as follows:
+
+2qq
+
+m 2
+
+((m + l)2 + (2m  l)2  (m + l)(2m  l)  (m + l)(2m  l)) =
+
+2qq
+
+m 2
+
+(2l  m )2.(3.11)
+
+so again we have the same sum over l, leading to:
+
+ =
+
+g2nc
+242t0
+
+qq
+m 2 (m  1)(m  2)( ln(1  u)).
+
+the upshot of the calculations so far is that
+
+1 = 
+
+1 = 
+
+1 =
+
+g2nc
+242t0
+
+(1 
+
+3
+m
+
++
+
+2
+m 2 )( ln(1  u)).
+
+(3.12)
+
+(3.13)
+
+the equality of the various s holds even at nite m, a. this can be understood because the
+diagrams we have evaluated show no violation of galilei invariance. our result for 1 can be
+compared with the result from the study of asymptotic freedom in the innite momentum frame
+[8]:
+
+1(q2) =
+
+g2nc
+
+242 (cid:18)ln
+
+2
+
+q2 + 12(cid:19) ,
+
+9
+
+(3.14)
+
+in which a simple cuto k2 < 2 was employed. to make the comparison, note that in the
+continuum limit, a  0, m  , 1  u  (q2  2q+e)/2m t0 = q2/2m t0. thus for us, the
+role of 2 is played by the quantity 2m t0 = 2q+/a. note that if we choose to keep t0 xed, the
+ultraviolet cuto is removed by simply taking m  .
+
+3.2 calculation of 2
+
+finally we turn to the real core of the self energy calculation, the determination of 2, which can
+be inferred from  = qq1 + 2 = 2 + q21/2. seventeen diagrams contribute to this
+quantity, fteen of which do not involve d and are relatively simple to analyze. first consider
+
+figure 9: the three bubble diagrams that contribute to 
+
+a involving only transverse components.
+
+the three diagrams that only involve transverse internal propagators (see fig. 9). the prefactors
+of transverse momentum combine as follows:
+
+(2p  q)(2p  q) + (p + q)(p + q) + (2q  p)(2q  p) = 3(p2 + q2  p  q)
+
+ 3(p2 + (1  l/m + (l/m )2)q2),
+
+(3.15)
+
+where in the last line we have indicated the result of shifting p by lq/m and dropping the term
+linear in p. the transverse integral of the term in q2 is the same as before, but the term in p2
+gives an extra factor 2t0l(m  l)/km . these terms require the sums
+
+m 1
+
+(m 2  lm + l2) =
+
+xl=1
+
+m (m  1)(5m  1)
+
+6
+
+,
+
+m 1
+
+xl=1
+
+l(m  l) =
+
+m (m  1)(m + 1)
+
+6
+
+(3.16)
+
+respectively. the contribution of these three diagrams, 
+
+a , is given by
+
+
+
+a =
+
+g2nc
+
+162 (cid:20) m 2  1
+
+k2m
+
++
+
+5m 2  6m + 1
+
+2km 2t0
+
+q2(cid:21) ekq2/2m t0.
+
+(3.17)
+
+the next class of diagrams consists of the eight graphs with one dj+ propagator, shown in
+
+fig. 10. remembering the single factor +, we nd the prefactors combine as follows:
+
+(2m  l)(cid:20) p
+
+l
+
+(q  2p + q + p) +
+
+p
+l
+
+(m + l)(cid:20) (q  p)
+m  l
+
+(q + 2p + 2q  p) +
+
+(q  2p + q + p)(cid:21)
+(q  p)
+m  l
+
+l
+
+2m  l
+5m 2  2lm + 2l2
+
+p  (2q  p) 
+q2 +
+
+(q  p)  (q + p)
+
+m + l
+m  l
+2m 2  2lm + 2l2
+
+m 2
+
+= 
+
+ 
+
+l(m  l)
+
+(q + 2p + 2q  p)(cid:21)
+
+p2
+
+(3.18)
+
+10
+
+figure 10: the eight bubble diagrams that contribute to 
+b .
+
+where as before the arrow indicates the eect on the prefactors after the usual shift of integration
+variables. performing the by now familiar integrals and sums leads to the following result for the
+contribution of this class of eight diagrams, labeled by 
+b :
+
+
+
+b =
+
+g2nc
+
+242 (cid:20) 5m 2  6m + 1
+
+k2m
+
+14m 2  15m + 1
+
+2km 2t0
+
+
+
+q2(cid:21) ekq2/2m t0 .
+
+(3.19)
+
+combining this with the previous three diagrams yields for the eleven diagrams considered thus far
+
+
+
+a + 
+
+b =
+
+g2nc
+482
+
+13m 2  12m  1
+
+m
+
+(cid:20) 1
+k2 
+
+q2
+
+2km t0(cid:21) ekq2/2m t0.
+
+(3.20)
+
+figure 11: the two bubble diagrams that contribute to 
+c .
+
+the prefactors in the pair of diagrams (shown in fig. 11) involving two dj+ propagators combine
+
+to form
+
+(m + l)(l  2m )
+
+l(m  l)
+
+this time the required sum is just
+
+p  (q  p) 
+
+(m + l)(2m  l)
+
+l(m  l)
+
+p2 
+
+(m + l)(2m  l)
+
+m 2
+
+q2.
+
+(3.21)
+
+(3.22)
+
+m 1
+
+xl=1
+
+(2m 2 + lm  l2) = m (m  1)(13m + 1)/6,
+
+so that these two diagrams simply double the result of the rst eleven. so, in summary, the total
+contributions of the thirteen diagrams that dont involve d to  and  are
+
+
+
+a + 
+
+b + 
+
+c =
+
+
+
+a + 
+
+b + 
+
+c =
+
+g2nc
+242
+g2nc
+242
+
+13m 2  12m  1
+
+m
+
+13m 2  12m  1
+
+m
+
+11
+
+q2
+
+2km t0(cid:21) ekq2/2m t0
+(cid:20) 1
+k2 
+" 
+ln(1  u)#
+uk
+xk=1
+k2 +
+
+2m t0
+
+q2
+
+(3.23)
+
+(3.24)
+
+figure 12: the two bubble diagrams that contribute to 
+
+d which involve a d propagator.
+
+the two diagrams in fig. 12, have a d propagator as one of the internal lines and lead to
+a qualitatively dierent evaluation than the rst thirteen. using (2.7) the gaussian exponents are
+the same as with the rst thirteen diagrams. one nds
+
+ekq2/2m t0(cid:20) m  l
+k2m 2 
+
+fk
+m k
+
++
+
+lq2
+
+2km 3t0(cid:21) + (l  m  l)(cid:27)
+
+
+
+d =
+
+=
+
+m 1
+
+l
+
+g2nc
+
+g2nc
+82
+
+xl=1 (cid:26) (2m  l)2
+42 ekq2/2m t0(cid:20) 1  kfk
+(m  1)(14m  1)
+
+
+6k2m
+
+where we have made use of the identity
+(2m  l)2
+
+m 1
+
+1
+m
+
+xl=1
+
+(4m [(m ) + ]  7(m  1)/2)
+(m  1)(14m  1)q2
+
+k2
+
++
+
+12km 2t0
+
+(cid:21),
+
+= 4m [(m ) + ] 
+
+7
+2
+
+[m  1],
+
+l
+
+(3.25)
+
+(3.26)
+
+where (z) = (z)/(z) is the digamma function and  is eulers constant. at large m , we have
+
+(m )  ln m 
+
+1
+
+2m xn1
+
+b2n
+2nm 2n ,
+
+(3.27)
+
+where b2n are the bernoulli numbers.
+
+figure 13: the two bubble diagrams that contribute to 
+contributions induced by the spread out quartic vertices.
+
+e which correspond to the tadpole
+
+with the quartic vertices realized as the exchange of a magnetic scalar, we have a denite
+proposal for the tadpole contribution to the self-energy, namely the two diagrams of fig. 13, which
+each give equal contributions. calling the tadpole contribution 
+
+e , we nd
+
+
+e = 2
+
+g2nc
+
+(2)3t0 z d2p
+
+m 1
+
+xl=1
+
+hk
+
+2(m  l)
+
+ek[m p2/l(m l)+q2/m ]/2t0
+
+lhk
+m k
+
+ekq2/2m t0
+
+= 
+
+g2nc
+42
+
+m 1
+
+xl=1
+
+= 
+
+g2nc
+82 (m  1)
+
+hk
+k
+
+ekq2/2m t0
+
+12
+
+(3.28)
+
+adding 
+
+d + 
+
+e to the rst thirteen diagrams, gives (in energy representation)
+
+ = 
+a + 
+g2nc
+
+=
+
+b + 
+
+c + 
+
+d + 
+e
+
+uk
+
+42 (cid:20) 
+k2 (cid:18)4m [(m ) + ] 
+xk=1
+k (cid:18)4m [(m ) + ] 
+xk=1
+
+
+uk
+
+fk
+
+
+
+(m  1)(11m  1)
+
+7(m  1)
+
+2
+
+3m
+
+(cid:19) +
+
+uk
+k
+
+
+
+xk=1
+
+
+
+hk
+
+uk
+k
+
+m  1
+
+xk=1
+
+(cid:19) 
+2
+(m  1)(m  2)q2
+
+12m 2t0
+
+(cid:21). (3.29)
+
+to get 2 we must subtract q21/2, which exactly cancels the last term leaving:
+
+2 =
+
+g2nc
+
+42 (cid:20) 
+xk=1
+xk=1
+
+
+hk
+
+uk
+k
+
+
+
+uk
+
+k2 (cid:18)4m [(m ) + ] 
+m  1
+2 
+
+uk
+
+fk
+
+
+
+xk=1
+
+(m  1)(11m  1)
+
+3m
+
+(cid:19)
+7(m  1)
+
+2
+
+k (cid:18)4m [(m ) + ] 
+
+(cid:19)(cid:21).
+
+(3.30)
+
+the rst term inside the large square brackets is exactly the contribution one would obtain using
+the modied cubic vertex (2.6) in the three diagrams of fig. 9. the terms with fk represent the
+tadpole diagram that would have been constructed from the induced quartic vertex had a+ been
+eliminated from the formalism. this is as it should be because summing over all the diagrams
+involving dk and d is the graphical equivalent of the elimination of the a+ degree of freedom.
+the formalism with a+ eliminated gives an extremely ecient calculation of the three bubble
+diagrams, as shown in the next subsection, but no candidate for the tadpoles. but by treating a+
+graphically we are led to a useful proposal for the tadpole diagram.
+
+in order to compare our results to the continuum calculation of ref. [8], we must examine the
+limits u  1 and m  . the behavior of the rst term of eq. (3.30) in this limit is transparent
+once we use the identity
+
+uk
+k2 =
+
+2
+6  ln u ln(1  u) 
+
+(1  u)k
+
+k2
+
+2
+6
+
+
+
++ (1  u)(ln(1  u)  1),
+
+(3.31)
+
+
+
+xk=1
+
+for u  1. the last two terms can be expanded about u = 1:
+xk=1
+
++ (u  1)
+
+xk=1
+
+uk
+k
+
+hk
+k
+
+hk
+
+=
+
+
+
+
+
+
+
+hk + o((u  1)2)
+
+
+
+xk=1
+
+
+
+xk=1
+xk=1
+
+hk
+k
+
+=
+
++ (u  1) + o((u  1)2),
+
+(3.32)
+
+and a similar expansion forpk fkuk/k. the coecient of the linear term is completely determined
+by the normalization conditions on the f s and hs. momentum independent terms in 2 imply a
+(divergent and noncovariant) tachyonic gluon mass squared in perturbation theory. since the gluon
+has only helicity 1, such a mass is inconsistent with poincare invariance of the continuum limit.
+clearly these symmetry violating terms would be cancelled if we could impose the constraints
+
+fk
+k
+
+hk
+k
+
+
+
+
+
+xk=1
+xk=1
+
+=
+
+2
+6
+
+= 
+
+2
+
+18(cid:18)1 
+
+2
+
+m(cid:19) ,
+
+13
+
+(3.33)
+
+(3.34)
+
+but clearly the second of these is impossible with hk independent of m (implicitly assumed in
+(2.9)). the best we can do is to set the r.h.s. of eq. (3.34) to 2/18, which would cancel the
+linear divergence of 2. however, there remains a nite gluon mass which is still inconsistent with
+the poincare invariance of the continuum theory. one option would be to cancel this with a mass
+counter-term, whose coecient would have to be determined order by order.
+
+another approach is to allow hk to be dependent on m . we have the freedom to make this
+replacement as long as we recover the correct continuum limit (m   and a  0) of the theory6.
+with this modication, eq. (3.28) is replaced by
+
+
+e = 
+
+g2nc
+42
+
+lhk(l)
+m k
+
+m 1
+
+xl=1
+
+ekq2/2m t0 ,
+
+(3.35)
+
+where the sum over l is not performed. similarly eq.s (3.29) and (3.30) should now include the
+corrected 
+
+e . thus 2 is given by
+
+2 =
+
+uk
+
+g2nc
+
+42 (cid:20) 
+k2 (cid:18)4m [(m ) + ] 
+xk=1
+lhk(l)
+xk=1
+xl=1
+
+m k 
+
+xk=1
+
+m 1
+
+uk
+
+fk
+
+
+
+
+
+uk
+
+k (cid:18)4m [(m ) + ] 
+
+(cid:19)(cid:21),
+
+(3.36)
+
+(m  1)(11m  1)
+
+3m
+
+(cid:19)
+7(m  1)
+
+2
+
+and the expansion of eq. (3.32) about u = 1 should now be
+
+uk
+
+
+
+
+
+xk=1
+
+m 1
+
+xl=1
+
+lhk(l)
+m k
+
+= 
+
+= 
+
+
+
+m 1
+
+
+
+xk=1
+xk=1
+
+m 1
+
+xl=1
+xl=1
+
+lhk(l)
+m k  (u  1)
+
+lhk(l)
+m k  (u  1)
+
+the constraint equation that replaces (3.34) is
+
++ o((u  1)2)
+
+
+
+m 1
+
+lhk(l)
+
+m
+
+xk=1
+xl=1
+m  1
++ o((u  1)2).
+
+2
+
+l
+m
+
+m 1
+
+xl=1
+
+
+
+xk=1
+
+hk(l)
+
+k
+
+= 
+
+(m  1)(m  2)
+
+6m
+
+2
+6
+
+,
+
+which can be satised if we require
+
+hk(l)
+
+k
+
+
+
+xk=1
+
+= 
+
+2
+
+18 (cid:18)1 
+
+1
+
+l(cid:19) .
+
+(3.37)
+
+(3.38)
+
+(3.39)
+
+we prefer this approach to that of a mass counter-term, since it is possible that this is a uniform
+description that works order by order (at each order the cancellation places constraints on higher
+moments of h). the hope is that this can be used non-perturbatively.
+
+in the continuum limit m (1  u)  q2/2t0 stays nite and we nd that 2 tends to
+
+2 
+
+g2nc
+162
+
+q2
+
+t0 (cid:26)(cid:20)8(ln m + ) 
+
+22
+
+3 (cid:21) ln
+
+q2
+
+2m t0
+
++
+
+4
+
+3(cid:27) .
+
+(3.40)
+
+remembering that our 2 is a factor of q2/t0 times that dened in ref. [8], we nd agreement
+for the coecient of q2 ln q2, provided we identify m e with q+/ and 2m t0 with 2. we do not
+get, nor should we expect, the same (nite) coecient of q2.
+
+6we have the same exibility for the f s in (2.7) but as we will see this is not necessary at least at one loop order.
+
+14
+
+3.3 a brief calculation of 
+
+in the work just completed, we deliberately kept the a+ degree of freedom in the graphical rules
+in order to keep the calculation as close as possible to one in other gauges. however, having seen
+how all of the graphs with longitudinal gluons combine so nicely, it is appropriate to note that the
+calculation with a+ explicitly eliminated, so that the feynman rules refer only to the transverse
+gluons, is much more compact and ecient. with our prescription we can exploit this simplication
+by using the modied cubic vertices eq. (2.6) for the transverse gluons. at the same time we retain
+our replacement of both the bare and induced quartic vertices by the exchange of two short-lived
+scalars. the self-energy diagrams involving those scalars will be exactly as described previously (i.e.
+the terms involving f s and hs). however, all of the remaining contributions to kl are reduced to
+the two or three diagrams involving only transverse gluons and the modied cubic vertices.
+
+only two diagrams contribute to , the last two diagrams in fig. 8, and they each involve a
+
+prefactor
+
+(m p  lq)(m p  lq)  m 2pp,
+
+(3.41)
+
+after the shift in momentum. clearly this integrates to zero so  = 0. finally there are only
+three non-tadpole graphs to consider for , namely those in fig. 9. in this case the relevant
+prefactors from the three diagrams contributing to  combine as
+
+2(cid:20) m 2
+l2(m  l)2 +
+
+l2
+
+(m  l)2m 2 +
+
+(m  l)2
+m 2l2 (cid:21) (m p  lq)2
+
+ 2(cid:20) m 2
+
+l2(m  l)2 +
+
+l2
+
+(m  l)2m 2 +
+
+(m  l)2
+m 2l2 (cid:21) m 2p2.
+
+(3.42)
+
+after the usual shift in momentum. note that because these vertices are manifestly galilei invariant,
+there is no term proportional to q2 in the prefactor. thus after integration over loop momentum
+we are left with the contribution to :
+
+
+
+nontadpole =
+
+=
+
+=
+
+g2nc
+42
+
+g2nc
+42
+
+g2nc
+42
+
+l3
+
++
+
+(m  l)m 2 +
++ 23m 2 + 3m l  l2
+
+m 2
+
+m 1
+
+m 1
+
+1
+k2
+
+1
+k2
+
+l(m  l)
+
+xl=1 (cid:20) m 2
+xl=1 (cid:20) 4m
+k2 m(cid:20)4((m ) + ) 
+
+1
+
+l
+
+11
+3
+
++
+
+4
+m 
+
+(m  l)3
+
+m 2l
+
+(cid:21)
+
+(cid:21)
+3m 2(cid:21) .
+
+1
+
+(3.43)
+
+in this way of organizing the calculation, the longitudinal components of  play no role and the
+new diagrams contributing to  give 2 directly. for the non-tadpole part we nd:
+
+nontadpole
+
+2
+
+=
+
+g2nc
+42
+
+
+
+xk=1
+
+uk
+
+k2 m(cid:20)4((m ) + ) 
+
+11
+3
+
++
+
+4
+m 
+
+1
+
+3m 2(cid:21) ,
+
+(3.44)
+
+which is clearly a much simpler and more compact calculation! to this result must be added the
+contribution of the ctitious scalar diagrams, which represent the tadpoles. needless to say, the
+calculation of more complicated processes should make use of these new feynman rules, which we
+have summarized in fig. 14.
+
+15
+
+0
+
+1
+
+2
+
+1
+
+2
+
+g
+t0
+
+(m2  m1)
+
+1
+
+1
+
+2
+
+2
+
+t0 (cid:16) m1+m2
+2 g
+
+m1m2 (cid:17) (m1q
+
+2  m2q
+1 )
+
+t0 (cid:16) m1+m2
+2 g
+
+m1m2 (cid:17) (m1q
+
+2  m2q
+1 )
+
+1
+
+2m ekq2/2m t0
+
++ g
+t0
+
+ g
+
+t0
+
+t0
+
+m 2 ekq2/2m t0
+
+fk
+hkt0ekq2/2m t0
+
+figure 14: summary of discretized feynman rules using only cubic vertices. we have explicitly
+inserted a factor of 1/t0 for each vertex arising from the discretization.
+
+4 summing planar diagrams: fishnets
+
+the discretized feynman rules given at the end of sec. 3 provide a tool to sum classes of diagrams.
+as described in [4] summing diagrams on a light front has a direct interpretation as the path
+history quantum evolution of a system of particles moving in the transverse space under newtonian
+dynamics. by xing the total discretized p + = m m, the maximum number of particles present
+at any time is m . because the vertices allow particles to fuse and ssion, particle number is not
+conserved and there is quantum mechanical mixing between states with any number of particles
+between 1 and m .
+
+we are particularly interested in the class of planar diagrams singled out by t hoofts nc  
+limit of qcd. it is actually more precise to think of this class of diagrams as drawn on a cylinder
+rather than a plane: at any time the system of particles is ordered around a ring, and interactions
+only exist between neighbors on this ring. thus the stage is set for the particles to bind into a
+closed polymer chain. this was previously investigated in [4] where scalar matrix eld theory with
+quartic couplings, tr4/4 was considered. these interactions are attractive (repulsive) if  < 0
+( > 0). thus bound chains can form only if  < 0, the unstable sign. in the interpretation of
+the sum of diagrams as a sum over histories of a system of particles, this sign assures that all
+histories contribute with a positive weight. using the discretization of p + and ix+, as reviewed
+here in sec. 2, a strong t hooft coupling limit nc   was formulated and analyzed. this
+was achieved by focusing attention on the cylinder diagrams that evolve a system of particles with
+p + = m m a xed large number n steps forward in time. the limit singles out those diagrams in
+which every particle has the minimum p + = m (so the number of particles is maximal = m ), and
+each propagator evolves only one time step. for even m these diagrams include the large shnet
+
+16
+
+diagrams that form a seamless web of quartic vertices and propagators, and the resulting gaussian
+integrals could be identied as a discretized path integral for a relativistic bosonic string quantized
+on the light-cone.
+
+this work on scalar eld theory was immediately followed by a rst attempt to apply these
+in that work qcd was formulated on a light front, with p + and
+ideas to large nc qcd [5].
+ix+ discretized. the ordinary bare vertices of qcd, both cubic and quartic, were used. because
+the quartic coupling in qcd is of order g2, the literal strong coupling limit, as formulated in [4],
+favored shnet diagrams with only the primitive (i.e. non-induced) quartic couplings. actually
+this conclusion required the ad hoc exclusion of the p + = 0 exchange part of the induced quartic
+interactions arising from xing the light-cone gauge. nonetheless, the resulting shnet was very
+interesting: the spin of the gluons played the role of the arrows of a certain six vertex model, known
+as the f-model [9]. in fact the four gluon vertices of the eld theory were exactly the vertices of
+the f-model. the fact that some of the vertex weights were negative did not cause problems for
+the leading strong coupling shnets because those diagrams always had an even number of negative
+weight vertices. however the problem with them reappears at next order because the deletion of a
+single negative vertex reveals a repulsive nearest neighbor interaction in that spin channel7. thus
+that channel could not have formed a bond in the rst place. in some spin channels there were
+also positive weights, so that the bonds could form. however, unfortunately for these shnets,
+the attractive channels are ferromagnetic: the only long polymers that could be formed by these
+interactions would have enormous spin!
+
+the problem is that at strong coupling only the quartic interactions survived with the dis-
+cretization of [5]. the spin-spin interaction from gluon exchange has anti-ferromagnetic behavior,
+and it is possible that a discretization that allowed the exchange interaction to compete with the
+quartic interaction could cure this problem. to explore this possibility, one of us examined the
+relative strengths of quartic and cubic exchange interactions for neighbors on a gluonic chain by
+putting the two gluons in a spherical mit bag [10]. in that context one can see explicitly, not only
+that the cubic exchange of a transverse gluon is anti-ferromagnetic, but that its strength (at least in
+weak coupling perturbation theory) is more than sucient to reverse the ferromagnetic character of
+the quartic interaction. a major shortcoming of the discretization of [5] is that at strong coupling
+the cubic interactions have no opportunity to compete with the quartic interactions.
+
+the discretization developed in sec. 2 of this paper is more promising. in fact, we do away
+with quartic interactions completely: all interactions are cubic! the quartic interactions have
+been replaced by the exchange of ctitious scalars, and these exchanges are not enhanced by strong
+coupling over the exchanges of the ordinary transverse gluons. without quartic vertices the basic
+cells of the densest diagrams are no longer square but hexagonal: the shnet looks like a honeycomb
+(see fig. 15). these shnet diagrams require particles with both 1 and 2 units of p +. thus the
+leading shnet structure is somewhat looser than in the quartic coupling case. the inclusion of
+two dierent values of p + in the leading approximation also sets the stage for the emergence of
+a string degree of freedom (provided string states do form!) corresponding to uctuations in p +.
+such a degree of freedom is expected to be described at long worldsheet wavelength by polyakovs
+liouville eld [11].
+
+because all of our vertices are cubic, the paradigm scalar eld theory is now gtr3/3. of
+course, the presence of factors of transverse momentum in the qcd cubic vertices will cause a
+profound qualitative dierence between gauge and scalar theory. for one thing, the scalar theory
+is super-renormalizable with the cubic coupling carrying dimensions of mass. this means that
+
+7 contrast this with the cubic scalar theory where the sign of the coupling is indeed irrelevant because the deletion
+
+of a single cubic coupling is not allowed by the feynman rules.
+
+17
+
+figure 15: hexagonal cell shnet made of only cubic vertices. the dashed lines indicate the closed
+cylindrical topology.
+
+weak or strong coupling is determined by the size of the ratio g2nc/2, where  is a mass scale
+relevant to the calculated physical quantity. for example, in our strong coupling considerations,
+we can simply take 2 = t0. also, since 3 is unbounded at large  in one direction, the theory is
+ultimately unstable, although this instability is not evident in weak coupling perturbation theory
+if the scalar eld has a non-zero mass. but the topology of graphs and momentum ow is the same
+in both scalar eld theory theory and our version of discretized qcd, so we shall exploit the scalar
+paradigm to illustrate such common features. the absence of spin degrees of freedom in the scalar
+theory is a helpful simplication for at least some issues.
+
+before turning to details, we comment on the ambiguities in our setup contained in the values
+of the f s and hs (see eqs (2.7) and (2.9)). as shown in our study of the gluon self-energy in
+sec. 3, weak coupling perturbation theory constrains moments of these quantities (for example,
+
+at one loop we nd constraints on p fk/k and p hk/k). since strong coupling emphasizes short
+
+times, we expect this limit to put constraints on the fk and hk for low values of k. thus we gain
+complementary or dual information about the theory as we explore both limits. it should be
+stressed here that there is no unique discretized theory to associate with continuum qcd: all
+sorts of lattice details get washed out in the continuum limit. instead our goal is to nd a single
+lattice model that shows continuum qcd at weak coupling and string theory at strong coupling.
+this dual requirement will hopefully help to determine a unique theory.
+
+as in [4] we shall consider the sum of cylinder diagrams that evolve a system with p + = m m
+forward in time by the amount t = n a. for xed initial and nal states, according to our
+prescription, there are only a nite number of diagrams that contribute. this denes a denite
+model that can be studied as a function of the bare couplings. if the complete sum could be done for
+arbitrary m and n , one could then read o the exact spectrum of the continuum theory by studying
+the limit m, n  , with parameters tuned so that the limit is nontrivial. this is presumably
+too ambitious, but in the next section we shall at least be able to deal nonperturbatively with
+some small values of m . one might also envision studying moderate values of m numerically on a
+computer. in the rest of this section we shall discuss the shnet diagrams that describe the innite
+coupling limit of our model.
+
+let us rst consider the scalar paradigm. it is sometimes helpful to dene a transfer matrix t
+which evolves one step forward in time. in order to do this, start with time continuous and express
+the exact time evolution by an amount a in the interaction picture:
+
+ea(h0+v ) = eah0
+
+
+
+xn=0
+
+(a)n
+n!
+
+z a
+
+0
+
+dt1dt2  dtnt [vi (t1) vi(tn)].
+
+(4.1)
+
+18
+
+this expression is exact, and of course it does not correspond to any discretization. our dis-
+cretization is given by approximating each vi (ti)  vi (0) = v and only retaining the term
+t [vi (t1) vi (tn)] when each vi acts on a dierent subsystem of the particles present initially.
+we shall therefore write the transfer matrix for our discretized theory as
+
+t = eah0
+
+(a)n
+n!
+
+[v n],
+
+
+
+xn=0
+
+(4.2)
+
+where we understand [v n] = 0 unless each of the n v s acts on a dierent subsystem of the particles
+present. with this understanding we implement our discretization rule that every line in a diagram
+propagate at least one step in time. these approximations are strictly valid for suciently small a
+at xed coupling parameters. but we use eq. 4.2 to dene a discretized shnet model at xed nite
+a, which we intend to study at all values of the coupling, including g  . although the strong
+coupling limit at xed a (as always) takes one far from the original continuum theory quantitatively,
+we hope that it will lead to a new continuum qcd string theory bearing qualitative resemblance
+to real qcd. but there is, of course, no a priori guarantee of this outcome.
+
+an ecient way to implement the nc   limit is via the fock space approach of [12]. one
+
+chooses a state of the form
+
+|i =
+
+m
+
+x=1
+
+1
+
+c x{mk}z tr[a
+
+n /2
+
+m1
+
+(p1) a
+
+m
+
+(p)]|0i(p1, m1, . . . , p, m),
+
+(4.3)
+
+and applies the transfer matrix keeping only terms that survive the nc   limit. the second
+sum is over all partitions of m , such that m1 + m2 +  + m = m . all such terms retain the
+color trace structure and describe interactions between nearest neighbors as dened by the color
+trace. if we wish also to take the innite t hooft coupling described by the densest shnet, we
+choose m even (m = 2n) and restrict  in the sum to the two values:  = 2n with mk = 1 for all
+k and  = n with mk = 2 for all k, and we require that every particle present participate in an
+interaction at each time step. this leads to the following coupled equations for n and 2n when
+|i is an eigenstate of the transfer matrix:
+j +2
+epj (p2
+c
+(4t0)n(2)3n/2
++ n(p2 + p3, p4 + p5, , p2n + p1)]
+
+[n(p1 + p2, p3 + p4, , p2n1 + p2n)
+
+t2n(p1, , p2n) =
+
+gnn n/2
+
+(4.4)
+
+0)/2t0
+
+1
+2
+
+tn(q1, , qn) =
+
+2gnn n/2
+
+j +2
+
+epj(q2
+
+c
+(4t0)n(2)3n/2
+
+0)/4t0
+
+z yj
+
+d2kj2n(k1, q1  k1, , kn, qn  kn),(4.5)
+
+where t is the eigenvalue of the transfer matrix, and we have included a bare mass 0 for the scalar
+eld. in the continuum limit t  eae. we have suppressed the mks in the arguments of n and
+2n due to their simplicity. clearly, we can eliminate 2n to obtain a single equation for n:
+
+t2n(q1, , qn) =   g2nce52
+
+0
+
+0/4t 2
+
+16t0(2)3 !n
++ n(q1 + k2  k1, , qn + k1  kn)]epi[k2
+
+j /4t0z yj
+
+epj q2
+
+d2kj
+t0
+
+[n(q1, q2, , qn)
+
+i +(qiki)2]/2t0. (4.6)
+
+we see that the 0 dependence is a trivial factor in this strong coupling equation, so we shall set
+0 = 0 in the following. the integral of the rst term in square brackets is elementary yielding a
+
+19
+
+factor nepi q2
+
+i /4t0. dening
+
+and rearranging the equation leads to
+
+g2nc
+
+1282t0
+
+,
+
+ 
+
+(cid:16)t2  nepj q2
+
+j /2t0(cid:17) n(qi)
+j /4t0z yj
+j /2t0z yj
+
+= nepj q2
+= nepj q2
+
+d2kj
+t0
+
+d2kj
+t0
+
+i +(qiki)2]/2t0
+
+n(qi + ki+1  ki)epi[k2
+n(qi/2 + qi+1/2 + ki+1  ki)epi k2
+
+i /t0,
+
+(4.7)
+
+where in the last line we have shifted integration variables to complete the square in the gaussian
+exponent. this equation sums diagrams including not only the basic shnet, but also shnet
+diagrams containing any number of time intervals in which n subsystems each with m = 2 propagate
+freely for arbitrary lengths of time (see fig. 16). this complication is described by the second term
+
+figure 16: fishnet with a section of m = 2 subsystems propagating freely. the dashed lines again
+indicate the closed cylindrical topology.
+
+on the l.h.s. in considering the eect of this term, one should keep in mind that no self mass counter-
+terms have been included in the derivation of (4.7). for example, in weak coupling perturbation
+theory, the self energy bubble by itself would lower the scalar mass squared by an innite amount.
+to keep the scalar mass non-tachyonic at weak coupling one needs a mass counter-term. with
+discrete time, it is convenient (as in our treatment of tadpoles) to spread such a mass counter-term
+over several time steps by introducing a short lived ctitious scalar with a quadratic coupling to
+the real scalar eld of order g. we would then have additional diagrams as in fig. 17, and the
+
+ 
+
+ 
+
+
+ 
+
+ 
+
+
+  
+
+  
+
+
+ 
+
+ 
+
+
+figure 17: additional diagrams introduced by spreading out a mass counter-term.
+
+upshot for eq. (4.7) would be an adjustable coecient in front of the second term on the l.h.s.:
+
+(cid:16)t2  n(1  1)epj q2
+= nepj q2
+
+j /2t0(cid:17) n(qi)
+j /2t0z yj
+
+d2kj
+t0
+
+n(qi/2 + qi+1/2 + ki+1  ki)epi k2
+
+i /t0 .
+
+(4.8)
+
+20
+
+we shall begin by dropping this term completely (i.e. by choosing 1 = 1) to determine the
+contribution of the basic shnet for the scalar cubic theory. later, we shall comment on the eect
+of 1 < 1.
+
+in order to understand the dynamics inherent in the basic shnet, it is helpful to express the
+integral transform on the r.h.s. of (4.7) as an operator in the state space of a rst quantized system
+of n particles. it is straightforward to show that the appropriate operator is given by
+
+  nepj p2
+
+j /2t0et0pi(xi1xi)2/4,
+
+(4.9)
+
+where the ps and xs are the momentum and coordinate operators for the n particle system. here
+ is an operator dened in momentum and coordinate bases by
+
+ z yj
+
+d2pj|pkihmklpl| z yj
+
+d2xj|xlmlkihxk|,
+
+and m is an n  n matrix dened by
+
+mklpl 
+
+pk + pk+1
+
+2
+
+.
+
+(4.10)
+
+(4.11)
+
+it is easy to check that m is invertible provided n is odd. for n even there is a zero eigenvalue
+which must be separated and handled before continuing the analysis. for simplicity, we assume n
+is odd in the following discussion. one can readily verify that  has the following action on the
+coordinates and momenta:
+
+xk = xl(m 1)lk
+pk = mklpl.
+
+(4.12)
+
+(4.13)
+
+because of the gaussian structure of , it also has a linear action on the coordinates and
+
+momenta:
+
+xk = [xl + ipl/t0](m 1)lk
+
+pk = (cid:18)mklpl  i
+
+t0
+2
+
+[xl + ipl/t0][2(m 1)lk  (m 1)l,k+1  (m 1)l,k1](cid:19) .
+
+this linear action can be diagonalized by passing to normal modes:
+
+xl 
+
+pl 
+
+1
+
+nxk
+nxk
+
+1
+
+xke2ilk/n
+
+pke2ilk/n.
+
+one then nds that the modes l all decouple from one another under the action of :
+
+xl =
+
+2[xl + ipl/t0]
+
+1 + e2il/n  =(cid:20)1 + i tan
+pl  i(cid:18)1  cos
+n(cid:21)(cid:20)(cid:18)1 + sin2 l
+
+pl = " 1 + e2il/n
+= (cid:20)1 + i tan
+
+l
+
+l
+
+2l
+
+n(cid:21) [xl + ipl/t0]
+1 + e2il/n # 
+n (cid:19) 2t0[xl + ipl/t0]
+xl(cid:21) .
+n(cid:19) pl  2it0 sin2 l
+
+n
+
+2
+
+21
+
+(4.14)
+
+(4.15)
+
+(4.16)
+
+(4.17)
+
+(4.18)
+
+(4.19)
+
+we can now search for eigenoperators of the form xl + lpl. this leads to a quadratic equation
+
+for l,
+
+with solutions
+
+2
+l 
+
+i
+2t0
+
+l +
+
+1
+
+2t 2
+
+0 sin2(l/n)
+
+= 0,
+
+
+l =
+
+i
+
+4t0  1 s1 +
+
+8
+
+sin2(l/n)! .
+
+these eigenoperators change the eigenvalue of  by a factor
+n(cid:21)
+l t0 sin2 l
+
+l
+
+ = (cid:20)1 + i tan
+= (cid:20)1 + i tan
+
+n(cid:21)(cid:20)1  2i
+n(cid:21)"1 +
+
+1
+2
+
+l
+
+sin2 l
+
+n 
+
+1
+2
+
+sin
+
+l
+
+n # .
+nr8 + sin2 l
+
+(4.20)
+
+(4.21)
+
+note that these eigenvalues are not real because  is not a hermitian operator. however, also
+note that the second factor is positive for both branches and for 0 < l < n. the eigenvalue is
+therefore always in the right half complex plane. we also have that |+| = 1 which implies that
+|+| > 1 > ||. moreover, the rst factor which contains the complex phase can be rewritten in
+two ways
+
+1 + i tan
+
+l
+n
+
+=
+
+1
+
+cos(l/n)
+
+eil/n =
+
+1
+
+cos((n  l)/n)
+
+ei(nl)/n,
+
+(4.22)
+
+which shows that the phase is proportional to the shnet momentum created by the eigenoperator:
+l/n for l < n/2 and (n  l)/n for l > n/2. cyclic symmetry of the initial wavefunction implies
+that the total shnet momentum must be 0.
+the ground state (belonging to the largest eigenvalue ) is determined by the condition that it
+l pl. its wavefunction is therefore
+
+is annihilated by all the eigenoperators which increase t2, xl + +
+proportional to the gaussian (with normalization n )
+
+g = n exp(
+
+n1
+
+xl=1
+
+2t0 sin(l/n)
+
+sin(l/n) +p8 + sin2(l/n)
+
+xl  xnl) ,
+
+(4.23)
+
+which is always damped because x
+obtained in the following way. first, we observe that
+
+l = xnl. the eigenvalue corresponding to this state can be
+
+1 =z d2pk (mklpl) =
+
+1
+
+(det m )2 = 22(n1).
+
+(4.24)
+
+then together with eq. (4.14) we get that
+
+g = n 22(n1)exp
+
+
+
+(nl)/2
+
+xl=1
+
+plpnl
+
+t0 
+
+
+thus with the use of the following identities
+
++ 2t0 sin2 l
+
+n(cid:21)
+
+
+. (4.25)
+
+xlxnl
+
+cos2(l/n)(cid:20) i
+
++
+l
+
+
+
+(nl)/2
+
+xl=1
+
+exp
+
+(1 + )2 e 
+
+1
+
+22
+
+epl pnlexl xnl =
+
+1+
+
+xl xnl,
+
+(4.26)
+
+and
+
+(n1)
+
+we nd that the eigenvalue for the ground state is given by
+
+cos2(l/n) =
+
+1
+
+22(n1)
+
+,
+
+yl=1
+
+(4.27)
+
+(4.28)
+
+t2
+g = n
+
+(n1)/2
+
+yl=1 (cid:20)1 +
+
+1
+2
+
+sin2(l/n) +
+
+1
+2
+
+sin(l/n)q8 + sin2(l/n)(cid:21)2
+
+.
+
+since it is positive, all cyclically symmetric states generated by applying suitable monomials of the
+eigenoperators to the ground state will have positive eigenvalues of .
+
+clearly the long shnet wavelength excitations show behavior identical to those of the continuous
+light-cone quantized bosonic string. the excited states are obtained by applying appropriate zero
+momentum monomials of the eigenoperators xl + 
+l pl to g. from the interpretation t = eae ,
+we see that
+
+1
+a
+
+ln tg
+
+eg = 
+n
+
+=
+
+2az 1
+
+0
+
+dv ln(cid:20) 1
+
+(cid:18)1 +
+
+1
+2
+
+sin2 v +
+
+1
+2
+
+sin vp8 + sin2 v(cid:19)(cid:21) 
+
+t0
+62nm
+
++ o(cid:18) 1
+
+n2(cid:19) , (4.29)
+
+where we have used the euler-maclaurin summation formula for large n
+
+1
+n
+
+n1
+
+xl=1
+
+f (
+
+l
+n
+
+) =z 1
+
+0
+
+dvf (v) 
+
+1
+2n
+
+[f (0) + f (1)] +xk1
+
+b2k
+
+(2k)!n2k [f (2k1)(1)  f (2k1)(0)].
+
+(4.30)
+
+in lattice string theory the bulk term proportional to n contains no physics and can be dropped
+(see [13]). the ground state string mass squared is predicted to be (recall that p + = 2nm)
+
+m 2
+
+g = 2p +eg = 
+
+t02
+
+3
+
+.
+
+we also see that the basic energy splittings are given for l  n by
+lt02
+p + ,
+
+e = p  
+
+l2
+2an
+
+=
+
+or splittings in mass squared of
+
+m2 = 2p +p  = 2lt02.
+
+(4.31)
+
+(4.32)
+
+(4.33)
+
+this result shows that the string arising from our basic cubic shnet has an eective rest tension of
+t0/2, corresponding to a regge slope parameter  = 1/2t0. noting that here the transverse
+dimensionality is 2 and not 24, eq. (4.31) gives the usual result of bosonic string theory, d/6.
+this is all for the basic cubic scalar shnet, in which the second term on the l.h.s. of eq. (4.7)
+is tuned to zero. including that term, we nd a solution for general n intractable. however, quali-
+tatively, we can say that it introduces a continuum threshold at t = n/2(1  1)n/2, corresponding
+to a threshold energy eth = (n/2a) ln((1  1)). as long as the basic shnet described above
+produces a ground state energy eg < eth, we can expect qualitatively similar physics for large n.
+however, for eg = eth we can expect that the seamless shnet structure begins to be disrupted
+
+23
+
+figure 18: typical example of a strong coupling qcd shnet.
+
+with a dramatic qualitative change in the physics. we shall explore this eect for small values of
+m in the next section.
+
+finally, let us turn to qcd. the rst major dierence is that each line can exist in four dierent
+internal states, corresponding to the two polarizations of the transverse gluon (with spin sz = 1)
+and the two ctitious scalars introduced to simulate the quartic interactions (see fig. 18 for an
+example of a generic dense qcd shnet lattice). in the fock space language this can be described
+by axing a 4-valued index to the creation operators. the basic shnet diagrams will be the same
+as in the cubic scalar theory, but with the complication that the vertex value depends on the states
+of the lines entering it. in particular, some of the vertices are linear in the transverse momenta of
+the incoming lines, leading to an interesting spin-orbit coupling on the shnet world sheet. thus
+the qcd shnet dynamics requires the solution of a two-dimensional lattice spin system with a
+nontrivial interplay between the internal spin variables and the structure of the lattice itself.
+contrast this with the shnet contemplated in [5] and based solely on the quartic coupling. in the
+latter situation the spin degrees of freedom decoupled from the transverse coordinate degrees of
+freedom and corresponded to the soluble f-model, one of the 6-vertex models. the shnet model
+we are proposing here has a considerably richer structure, which we shall begin to explore for small
+values of m in the next section.
+
+5 baby fishnets
+
+in section 4 we discussed how our discretized feynman rules can be used to determine the dense
+qcd shnets for strong coupling. this was also discussed in the context of the paradigm cubic
+scalar theory.
+in this section we are interested in the dynamics of the discretized theory away
+from strong coupling. potentially the strong coupling limit will not be described only by the dense
+shnet lattice. while the ultimate goal is to do this for m   (remember p + = m m), we will
+begin by analyzing systems with small values of m (i.e. baby shnets).
+the simplest non-trivial qcd shnet has m = 2. we always understand our shnets to
+propagate color singlet systems so that they have cylindrical topology. then the m = 2 shnet
+has no interesting dynamics due to the fact that color-singlet gluons decouple from gluon bubbles.
+however, the color adjoint m = 2 gluon propagator which plays an important role as a subsystem
+of larger diagrams, can be solved to all orders in perturbation theory due its simplicity. we leave
+investigation of m  3 to the future. another possible avenue of investigation is systems involving
+sources rather than pure glue, (such congurations are discussed in [14]). we also defer exploration
+of such systems.
+
+24
+
+in section 4 we were only able to solve the strong coupling cubic scalar shnet for general n with
+the term on the l.h.s. of eq. (4.8) cancelled via a mass counter-term (we will dene 2 = 1  1).
+but for special cases of m = 2n we can solve (4.8) including 2-term. the simplest of these is the
+m = 2 scalar shnet, however, in this case the only eect of the 2-term is to rescale the solution
+presented in section 4. for the more interesting cases of m = 4, 6 we will see that they too can be
+solved. for m = 6 the solution is computed through the use of an s-wave approximation.
+
+5.1 m = 2 states of qcd
+
+the m = 2 color singlet glueball states display no dynamics, because our discretization with exclu-
+sively cubic vertices only allows interactions via mixing between one gluon and two gluon states,
+and there is no interacting color singlet gluon. (even if the gauge group is u (nc) the abelian gluon
+completely decouples in the pure gauge theory.) to understand this decoupling in terms of our
+feynman rules, note that on a cylinder the gluon self energy bubble can close in two ways as in
+fig. 19. it is then easy to see from our rules that the two diagrams are equal in magnitude and
+opposite in sign. the conclusion is that the m = 2 color singlet channel consists of two free m = 1
+gluons or, in the u (nc) case, a single free m = 2 gluon. this trivial situation is due to the manner
+in which the quartic vertices of the initial gauge theory have been replaced by scalar exchange.
+only the direct channel scalar exchange is allowed at m = 2, and the part of the quartic vertex
+that is described by the crossed channel exchange only makes its appearance for m  3.
+
+(a)
+
+(b)
+
+figure 19: here we see how bubbles of a generic m = 2 shnet lattice can close in 2 ways due to
+the cylindrical topology. the wraparound diagram (a) has the opposite sign to the bubble diagram
+(b), so that they cancel.
+
+thus the only nontrivial m = 2 channels are color non-singlets. moreover, xing m = 2 limits
+the allowed diagrams so drastically that the nonvanishing ones can be explicitly summed to all
+orders in perturbation theory. we rst look at the m = 2 gluon propagator, which can be simply
+read o from sec 3. for simplicity we work in the center of mass frame. the diagrams that
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+ 
+
+ 
+
+
+  
+
+  
+
+
+ 
+
+ 
+
+ 
+
+figure 20: gluon propagator for m = 2.
+
+contribute to the gluon propagator are depicted in fig. 20. the shaded bubble corresponds to all
+the one-loop bubble diagrams that contribute to the transverse gluon self energy,  which is
+obtained by putting m = 2 in eq. (3.36)
+
+ =
+
+g2nc
+
+82 (cid:20)9
+
+
+
+xk=1
+
+uk
+k2  9
+
+
+
+xk=1
+
+fk
+
+uk
+k 
+
+
+
+xk=1
+
+hk(1)
+
+uk
+
+k (cid:21),
+
+(5.1)
+
+25
+
+where u = eae in the center of mass and with
+
+fk = 1,
+
+
+
+xk=1
+
+fk
+k
+
+=
+
+2
+6
+
+,
+
+
+
+xk=1
+
+
+
+xk=1
+
+hk(1) = 1,
+
+hk(1)
+
+k
+
+= 0.
+
+
+
+xk=1
+
+(5.2)
+
+these constraints on the f s and h(1)s have been determined in section 3 at large m (see (3.33)
+and (3.39)) in order to cancel divergences in 2. we tentatively impose the same constraints at all
+nite m in order to have a uniform description for all m . the exact transverse gluon propagator
+for m = 2 is (see (3.6))
+
+d =
+
+=
+
+u
+
+4(1  u)  u
+1  u"4 
+9g2nc
+u
+82
+
+u
+
+(1  u)  
+xk=1
+
+uk
+k2 
+
+
+
+xk=1
+
+fk
+
+uk
+k 
+
+1
+9
+
+
+
+xk=1
+
+hk(1)
+
+uk
+
+k !#1
+
+,
+
+(5.3)
+
+this propagator evolves a spin 1 color adjoint system, which by itself would not correspond to a
+glueball, which must be a color singlet. because of its importance for larger diagrams, it is worth
+understanding the energy eigenstates implied by the propagators pole structure. the (1  u)1
+factor out front is just the massless gluon pole (u = 1 implies e = 0).
+
+zeroes of the quantity in square brackets in eq 5.3 determine any additional eigenvalues:
+
+82
+g2nc
+
+=
+
+9
+4
+
+u
+
+(1  u)  
+xk=1
+
+uk
+k2 
+
+
+
+xk=1
+
+fk
+
+uk
+k 
+
+1
+9
+
+hk(1)
+
+uk
+
+k ! .
+
+
+
+xk=1
+
+(5.4)
+
+even with the f s and h(1)s general, one can note that the r.h.s. tends to  as u  1, with
+behavior completely xed by the constraints. also for u  0 the r.h.s. vanishes quadratically as
+(9  9f1  h1(1))u2/4. therefore if 9  9f1  h1(1) > 0 there would be at least two solutions
+for suciently large g, the lowest of which would tend to u = 0 as g  .
+if, however, the
+inequality were reversed, the r.h.s. might never be positive in which case there would be no solution.
+alternatively, if it did cross the axis there would be at least two solutions the lowest of which would
+tend to some nonzero u = u0 > 0 as g  . it is amusing to see which of these behaviors is
+suggested by a minimal solution of the constraints so far imposed (see (5.2)). for m = 2 we can
+meet the constraints with only the rst two elements of each series nonzero, which are then fully
+determined by the constraints:
+
+f1 = 1 +
+
+2
+3
+
+,
+
+f2 = 2 
+
+2
+3
+
+,
+
+h1(1) = 1,
+
+h2(1) = 2.
+
+(5.5)
+
+the eigenvalue equation then reduces to
+
+82
+g2nc
+
+=
+
+9
+4
+
+u
+
+(1  u)(cid:20)li2(u) (cid:18)f1u + f2
+
+u2
+
+2 (cid:19) 
+
+1
+
+9(cid:18)h1(1)u + h2(1)
+
+u2
+
+2 (cid:19)(cid:21) ,
+
+(5.6)
+
+where li2(u) is the dilogarithm (spence) function [15]. as we can see in fig. 21 this minimal
+choice shows no physical eigenvalue, since there is no positive solution for 82/g2nc for any value
+of u  [0, 1].
+finally, the m = 2 color adjoint magnetic scalar propagator also receives self energy corrections
+which can be summed exactly (see fig. 22).
+(note that the ctitious electric scalar (solid line
+propagator) does not play a role in the m = 2 channel, since its coupling to two m = 1 transverse
+
+26
+
+-0.2
+
+0.2
+
+0.4
+
+u
+
+0.6
+
+0.8
+
+1
+
+-2
+
+-4
+
+-6
+
+-8
+
+figure 21: a plot of eq. (5.6) with 82/g2nc (along the vertical axis) against u.
+
+  
+
+  
+
+  
+
+  
+  
+  
+
+
+  
+
+  
+
+  
+
+  
+  
+  
+
+
+    
+
+
+ 
+
+ 
+
+
+ 
+
+ 
+
+
+  
+
+  
+
+
+     
+
+
+figure 22: magnetic scalar propagator for m = 2. in each bubble the transverse gluon index may
+circulate in either direction.
+
+gluons is zero.) although the magnetic scalars contribution to the dynamics of a color singlet
+m = 2 glueball cancels, its propagator describes a spin 0 m = 2 color adjoint subsystem in larger
+shnets, and so it is also useful to analyze here. in these diagrams the bubbles correspond to the
+one-loop self energy diagrams of the ctitious magnetic scalar (the dashed scalar). the magnetic
+scalar self energy (see fig. 23) is given by
+
+m =
+
+=
+
+g2nc
+2t 2
+0
+g2nc
+162
+
+1
+t0
+g2nc
+162
+
+1
+t0
+
+= 
+
+(2)3 ekp2/t0
+
+
+
+
+
+ukz d2p
+xk=1
+xk=1
+ln(1  u).
+
+uk
+k
+
+the bare magnetic scalar propagator for m = 2 is then
+
+dm = t0
+
+hk(2) uk,
+
+
+
+xk=1
+
+where the hk(2) have to obey the constraints
+
+hk(2) = 1,
+
+
+
+xk=1
+
+hk(2)
+
+k
+
+2
+36
+
+.
+
+= 
+
+
+
+xk=1
+
+the exact propagator is then given by the geometric series
+
+dm = dm
+
+
+
+xl=0
+
+(mdm)l =
+
+dm
+
+1  mdm
+
+.
+
+27
+
+(5.7)
+
+(5.8)
+
+(5.9)
+
+(5.10)
+
+figure 23: the two bubble diagrams that contribute to the magnetic scalar self energy, m.
+
+we again investigate possible energy eigenstates by looking at the pole structure of this amplitude.
+focusing on the denominator we see
+
+dm  " 82
+g2nc 
+
+1
+
+2  
+xk=1
+
+hk(2)uk! ln(1  u)#1
+
+.
+
+(5.11)
+
+again we see the same possible behaviors as in the case of the gluon propagator (except, of course,
+there is no massless pole at u = 1!). in this case we also present the results of choosing a minimal
+set of the hk(2) to satisfy the constraints. doing this yields
+
+h1(2) = 1 
+
+2
+18
+
+,
+
+h2(2) = 2 +
+
+2
+18
+
+.
+
+(5.12)
+
+with this set of parameters the denominator factor in (5.11) will have a pole if there is a solution
+to the following equation
+
+82
+g2nc
+
+=
+
+1
+
+2(cid:0)h1(2)u + h2(2)u2(cid:1) ln(1  u)
+1
+2 |h1(2)| u(1  ||u) ln(1  u),
+
+= 
+
+(5.13)
+
+where   h2(2)/h1(2)  1.646. as we can see in fig. 24, this minimal choice shows a physical
+
+0.2
+
+0.4
+
+u
+
+0.6
+
+0.8
+
+1
+
+-0.2
+
+0.2
+
+-0.2
+
+-0.4
+
+-0.6
+
+-0.8
+
+-1
+
+figure 24: a plot of eq. (5.13) with 82/g2nc (along the vertical axis) against u.
+
+bound state (actually two) with 0 < u < 1 for the coupling greater than some critical value,
+g2nc/82 & 18.28. such a bound state would be signicant because it would mean that the short-
+lived magnetic scalar, which we have introduced as a device, can gain longevity at strong coupling,
+so that it can play the role of a spin 0 gluon in larger diagrams.
+
+28
+
+there is also a solution for negative u for all couplings. from the interpretation u = eae we
+see that these solutions would correspond to complex energies with imaginary part i/a. in fact
+the relation between u and e is fundamentally ambiguous by the imaginary amount 2in/a simply
+due to the discretization of  . we presume this ambiguity is simply a lattice artifact, and it seems
+likely that the solutions with negative u are also artifacts. however, the ultimate proof of their
+artifactual nature must await a more complete understanding of the continuum limit, which will
+involve taking m   as well as a  0.
+
+5.2 strong coupling m = 4 scalar fishnet
+
+clearly we need to be able to deal with large values of m if we are to understand qcd. in this
+section, to better understand what this will involve, we look more closely at the m = 4 sector of
+the simpler paradigm scalar theory. in particular we would like to explore the eect of the 2-term
+on the l.h.s. of the strong coupling eq. (4.8). recall that we have set 1 1 = 2. we dropped this
+term in the analysis of sec. 4 because it made the equation intractable for general n. however, for
+the special case of m = 4 (n  m/2 = 2) it is possible to solve this equation. we also note that
+this case was not covered in sec. 4 (even with the 2-term removed) because of the limitation to
+odd n. the additional special case of m = 6 will be investigated in the following subsection.
+
+for m = 4 the strong coupling eigenvalue equation reads
+
+(cid:16)t2  22e(q2
+
+1+q2
+
+2e(q2
+
+2)/2t0(cid:17) 2(q1, q2) =
+2)/2t0z d2k1
+
+d2k2
+t0
+
+t0
+
+1+q2
+
+2(qt /2 + k2  k1, qt /2 + k1  k2)e(k2
+
+1+k2
+
+2)/t0 ,
+
+(5.14)
+
+where qt = q1 + q2. after the change of variables (kt  k1 + k2 and k  k2 k1) we can integrate
+with respect to kt on the r.h.s. what remains is
+
+(cid:16)t2  22e(q2
+
+1+q2
+
+2)/2t0(cid:17) 2(q1, q2) =
+
+2
+2
+
+e(q2
+
+1+q2
+
+2)/2t0z d2k
+
+t0
+
+2(qt /2 + k, qt /2  k)ek2/2t0 .
+
+(5.15)
+
+then the equation becomes
+
+if we now perform a variable transformation on the qs (qt  q1 + q2 and q  (q1  q2)/2)
+(cid:16)t2  22e(q2
+
+t +4q2)/4t0(cid:17) 2(qt /2 + q, qt /2  q) =
+
+2
+2
+
+e(q2
+
+t +4q2)/4t0z d2k
+
+t0
+
+2(qt /2 + k, qt /2  k)ek2/2t0 .
+
+(5.16)
+
+we can absorb the qt dependence by scaling t = t0 exp(q2
+mass frame.
+
+t /8t0), in eect going to the center of
+
+for the case of t2
+
+0 > 22, we can eliminate the 2 dependence by manipulating this equation
+
+and integrating with respect to d2q. the result
+
+1 =
+
+2
+
+2 z d2q
+
+t0
+
+e3q2/2t0
+
+t2
+0  22eq2/t0
+
+,
+
+(5.17)
+
+is a transcendental equation for the eigenvalue, as is readily seen by direct evaluation of the integral:
+
+2 =
+
+t
+2
+
+ln
+
+t + 
+
+t    1,
+
+29
+
+(5.18)
+
+where t  t0/ and we have assumed 2 > 0. if 2 < 0 we write   i and the equation becomes
+
+1  2 =
+
+t
+
+
+t(cid:19) .
+tan1(cid:18) 
+
+(5.19)
+
+it is immediately clear that a solution exists in this case only for 2 = 2 < 1.
+if we analyze (5.18) we see that by varying t between  and  the r.h.s. takes on values between
+0 and , thus there is a solution to this equation for any value of . for the special case of  = 0,
+a more careful analysis of this equation also yields a solution. for a given eigenvalue solution to
+(5.18) the eigenfunction is given by
+
+2(q) =
+
+eq2/t0
+
+2(cid:0)t2  2eq2/t0(cid:1)z d2k
+
+t0
+
+2(k)ek2/2t0,
+
+(5.20)
+
+where the integral on the r.h.s. represents a number that can be xed by normalization.
+
+if we refer back to (5.16) we see that if t2 < 2, then a delta function term restricting momentum
+
+to energy shell may be added. for s-waves (non s-waves are free), we then have
+
+2(q) = a(cid:18)q2  t0 ln
+
+2
+
+t2(cid:19) +
+
+2(k)ek2/2t0,
+
+(5.21)
+
+where the coecient of the delta function can be xed via the following equation which relates a
+to the normalization of the wavefunction,
+
+t0
+
+eq2/t0
+
+2(cid:0)t2  2eq2/t0 + i(cid:1)z d2k
+2(cid:0)t2  2eq2/t0 + i(cid:1)z d2k
++z d2q
+
+e3q2/2t0
+
+t0
+
+t0
+
+2(k)ek2/2t0.
+
+(5.22)
+
+z d2q
+
+t0
+
+2(q)eq2/2t0 =
+
+a
+
+t0 (cid:12)(cid:12)(cid:12)(cid:12)
+
+t
+
+(cid:12)(cid:12)(cid:12)(cid:12)
+
+in this case, t2 < 2, there is no restriction on the value of t, thus this solution corresponds to
+the continuum. to summarize the spectrum of t2
+0 includes a discrete s-wave bound state and a
+0 < 22. clearly the discrete state will not change drastically in the limit   0,
+continuum for t2
+but the continuum would be dramatically squeezed to a set of measure zero in this limit.
+
+5.3 strong coupling m = 6 scalar fishnet
+
+the starting point for evaluating the strong coupling m = 6 bit scalar shnet diagrams is eq. (4.8).
+for n = m/2 = 3 the equation to solve is
+
+(cid:16)t2  23e(q2
+
+1+q2
+
+2+q2
+
+d2k2
+t0
+3((q1 + q2)/2 + k21, (q2 + q3)/2 + k32, (q3 + q1)/2 + k13)e(k2
+
+3)/2t0(cid:17) 3(q1, q2, q3) = 3e(q2
+
+3)/2t0z d2k1
+
+t0
+
+1+q2
+
+2+q2
+
+d2k3
+t0
+1+k2
+
+2+k2
+
+3)/t0, (5.23)
+
+where we have used kij = ki  kj. by working in the center of mass frame, we can replace
+q3  q1  q2 and the equation becomes
+(cid:16)t2  23e(q2
+
+2+q1q2)/t0z d2k1
+3(q1/2 + q2/2 + k21,q1/2 + k32,q2/2 + k13)e(k2
+
+2+q1q2)/t0(cid:17) 3(q1, q2,q1  q2) = 3e(q2
+
+d2k2
+t0
+2+k2
+
+3)/t0 . (5.24)
+
+d2k3
+t0
+
+t0
+1+k2
+
+1+q2
+
+1+q2
+
+if we change the integration variables k2 and k3 on the r.h.s. to
+
+p1 = q1/2 + q2/2 + k21,
+
+p2 = q1/2 + k32,
+
+(5.25)
+
+30
+
+then we see that 3 in the integrand on the r.h.s. is independent of k1, so the gaussian integral
+over k1 may be trivially performed by completing the square.
+
+once this has been done the result is
+
+(cid:16)t2  23e(q2
+
+1+q2
+
+2+q1q2)/t0(cid:17) 3(q1, q2) =
+
+ exp(cid:20)
+
+2
+
+3t0 (cid:0)p2
+
+3
+3
+
+e(q2
+
+1 + p2
+
+1+q2
+
+2+q1q2)/t0z d2p1
+6t0 (cid:0)q2
+
+2 + p1  p2(cid:1) 
+
+t0
+
+1
+
+d2p2
+t0
+
+3(p1, p2)
+
+1 + q2
+
+2 + q1  q2(cid:1)
+
++
+
+1
+3t0
+
+(p1  q1 + 2p1  q2  p2  q1 + p2  q2)(cid:21) .
+
+(5.26)
+
+in this equation we see that except for the last term in the exponential on the r.h.s. this integral
+equation only depends on the scalar quantity, q2
+2 + q1  q2. this is not surprising since this
+scalar quantity is proportional to q2
+3 and is the only cyclically invariant (qi  qi+1) scalar
+of order q2. we next perform another change of variables,
+
+1 + q2
+
+2 + q2
+
+1 + q2
+
+q1t0
+
+= u1 + u2,
+
+q2t0
+
+= u1  u2,
+
+p1t0
+
+= v1 + v2,
+
+p2t0
+
+= v1  v2,
+
+(5.27)
+
+remembering that qi, pi and now ui, vi are euclidean 2-vectors. with these substitutions our
+equation becomes
+
+1+u2
+
+(cid:16)t2  23e(3u2
+ exp(cid:20)
+3(cid:0)3v2
+
+2
+
+2)(cid:17) 3(u1, u2) =
+6(cid:0)3u2
+
+2(cid:1) 
+
+1
+
+1 + v2
+
+1 + u2
+
+1+u2
+
+2)z d2v1d2v2 3(v1, v2)
+
+43
+32 e(3u2
+2(cid:1) + u1  v1 + u1  v2  u2  v1 +
+
+1
+3
+
+u2  v2(cid:21) .
+
+if we rescale u2 and v2 by a factor of 3, then we can make the o(4) symmetry manifest (up to
+the last four terms in the exponential on the r.h.s.) by combining u1 and u2 (v1 and v2) into a
+euclidean 4-vector u (v). thus the equation may be written as
+
+(5.28)
+
+43
+
+where
+
+(cid:16)t2  23e3u2(cid:17) 3(u) =
+u1  3u3
+u2  3u4
+u3 + 3u1
+u4 + 3u2
+the vector function w has the property that
+
+and
+
+w(u) 
+
+kwk pw(u)  w(u) = 2kuk,
+
+2 e7u2/2z d4v 3(v)e2v2+vw(u),
+
+
+
+u =
+
+
+
+
+
+u1
+u2
+u3
+u4
+
+,
+
+.
+
+(5.29)
+
+(5.30)
+
+(5.31)
+
+so while the function w does break o(4) invariance it does conserve o(4) length. thus we can
+search for an o(4) invariant solution to this equation which is a function only of this length.
+although this will not yield the most general eigenstate, it is expected to include the ground state.
+plugging in this ansatz, the equation simplies to
+
+(cid:16)t2  23e3u 2(cid:17) 3(u ) =
+
+43
+
+2 e7u 2/2z v 3dv 3(v )e2v 2z dvevw(u),
+
+(5.32)
+
+31
+
+where u  kuk and v  kvk. the angular integral on the r.h.s. may be evaluated with standard
+techniques,
+
+z dvevw(u) = 4z 1
+
+1
+
+drp1  r2e2u v r
+
+=
+
+,
+
+(5.33)
+
+22i1(2u v )
+
+u v
+
+where i1(x) is the modied bessel function regular at x = 0.
+
+thus the integral equation to solve is
+
+t23(u ) = 23e3u 2
+
+3(u ) + 83 e7u 2/2
+
+u
+
+z v 2dv i1(2u v )3(v )e2v 2
+
+.
+
+(5.34)
+
+the rst thing to note is that for 2 = 0 the eigenfunction solution is a gaussian of the form
+
+3(u ) = eu 2
+
+,
+
+where
+
+ =
+
+3 + 105
+
+4
+
+.
+
+for this solution the corresponding eigenvalue is
+
+(5.35)
+
+(5.36)
+
+t2 =
+
+643
+
+(cid:0)11 + 105(cid:1)2 .
+
+both of these match the values predicted by equations (4.23) and (4.28) for n = 3. for 2 away
+from zero we can solve this integral equation by means of an iterative procedure. starting with the
+solution for 2 = 0 we can iterate the r.h.s. of (5.34) repeatedly. this is a convenient way of solving
+this equation since the functions generated by the integral on the r.h.s. are always gaussian. thus
+at each iteration step the solution will be of the form
+
+3(u ) =xn
+
+cnenu 2
+
+,
+
+(5.37)
+
+with the number of terms in the sum doubling after each iteration. for a solution of this form it
+can be shown that the corresponding eigenvalue, t2, is given by
+
+t2 = 2 +
+
+.
+
+(5.38)
+
+4pn cn/(2 + n)2
+
+pn cn
+
+we have tested this iteration procedure numerically and for values of 2 small (2 < 0.3) we see
+that the wavefunction/eigenvalue converges to a well-dened function/value. for 2 larger (closer
+to 1) this becomes murkier as one needs a lot more iterations for the convergence to a value distinct
+from 2 to be evident. another interesting phenomenon is that for 2 . 0.11, then t2 becomes
+negative indicating that no physical solution exists.
+
+6 conclusion
+
+in this article, we have rened and extended an approach, proposed in the late seventies, to obtain
+the large nc limit of qcd by directly summing the planar diagrams which survive. the basic tool
+is to dene the planar diagrams using light-front space-time coordinates for which ix+ and the p+
+
+32
+
+carried by each gluon are discretized. this eectively digitizes the sum of diagrams, a rst step
+toward a numerical evaluation. it also regulates the usual divergences of feynman diagrams. we
+identied several shortcomings of the discretized model of qcd attempted in [5], and we proposed
+an improved formulation which at least mitigates, and might well overcome, these defects.
+
+discretization enables a formal strong t hooft coupling limit of the sum of diagrams. a major
+disadvantage of the discretization of [5] was that this formal limit suppressed the cubic gluonic
+interaction essential for the anti-ferromagnetic ordering of glueball mass levels: the dominant
+quartic interaction ordered levels ferromagnetically. our new discretized model replaces the quartic
+interactions by the exchange of two kinds of ctitious short-lived scalars, so that all interactions
+can compete on an equal footing in the strong coupling limit. the ambiguities inherent in such a
+replacement can also be exploited to remove unwanted symmetry violations induced by the usual
+ultraviolet divergences present in the continuum limit.
+
+having dened our discretized model, we explored its physical properties in several ways. we
+rst studied the nature of weak coupling perturbation theory by calculating the gluon self energy
+to one loop order, regaining the known continuum answer. this calculation showed how the dis-
+cretization regulates ultraviolet divergences, and how the ambiguities in the model begin to be xed
+by the restoration of poincare invariance. although we have not done a two loop calculation, there
+is sucient exibility in these ambiguities to hope to achieve poincare invariance to all orders in
+perturbation theory. the discretized model can also be studied in the strong coupling limit, but
+in this article we just began this study for qcd by looking only at states with very small total
+p + = m m for m = 2, where the dynamics is so drastically simplied that it can be solved exactly.
+we defer to a future publication studies of qcd at m = 3 and higher. the continuum limit, of
+course, will require m  .
+as a warmup for going to larger values of m , we evaluated the strong coupling limit in a
+paradigm matrix scalar eld theory with only cubic interactions. not surprisingly, the bosonic
+light-cone string was obtained. although this paradigm model yielded some useful insights into
+the nature of large planar diagrams, we stressed that the corresponding qcd calculation will have
+profound dierences: for one thing the gluons carry spin, and for another their interactions show
+both repulsion and attraction depending on the quantum numbers of the channel. in contrast, the
+interactions of the scalar theory are exclusively attractive. because of this, the strong coupling
+limit forced the p+ carried by each scalar quantum to be minimal, i.e. one discretized unit m. this
+circumstance prevented a liouville degree of freedom, associated with collective uctuations of
+the p + distribution amongst the scalar quanta, from arising. thus the limit must be interpreted
+as a critical string theory.
+
+the diversity of interaction signs of qcd will obviously complicate this outcome. it is possible,
+and a major focus for future study, that cancellations deemphasize the contributions where all
+quanta carry the minimum p+ to such a degree that a collective liouville eld emerges. then the
+strong coupling limit might be a subcritical version of one of the existing string models.
+if so,
+the liouville world-sheet eld could be thought of as a fth dimension, and the dual description
+of our model as a eld theory at weak coupling and a subcritical string theory at strong coupling
+would resemble the ads/cft duality of [2, 16, 17]. another logical possibility, though, is that
+the strong coupling limit of large nc qcd is actually a novel critical string theory with critical
+dimension 4. of course, it could also turn out that the attempt to reach a reasonable poincare
+invariant strong coupling limit of large nc qcd simply fails. after all, continuum qcd is, strictly
+speaking, not an innite coupling theory in any sense of the word. the coupling is scale dependent
+and corresponds to no tunable parameter at all. the strong coupling limit, as everyone knows,
+describes the discretized model and can vary wildly from one discretization to another.
+
+33
+
+much has been said about the holographic nature of the duality mentioned above. we would
+like to conclude with a few comments about this. the hologram metaphor was invented by t
+hooft [18] to describe a possible resolution of the information loss paradox of quantum black
+holes. since the horizon of a black hole is two dimensional, it should be possible to describe all of
+three dimensional physics by a two dimensional quantum theory. the discretized model we have
+presented here is not holographic in this sense. the transverse space of a light front is indeed
+two dimensional, but the third longitudinal dimension has not been eliminated: it is present in the
+disguised form of a variable newtonian mass m m for each gluon. however, the model is holographic
+in the higher dimensional sense described by witten [17]. the fundamental discretized model is
+3 + 1 dimensional, 2 transverse dimensions, variable p+ and x+. however in the strong coupling
+limit we expect 4 + 1 dimensions: the x of light-cone string should emerge as a function of the
+transverse and liouville degrees of freedom. holography in t hoofts sense would require a more
+profound circumstance: there should be no liouville eld and the variable p+ of each gluon must
+itself be a mere collective eect. for example, the gluon with m units of p+ might be thought of
+as a bound system of m minimal p+ bits [19]. in that case, the model presented here would just
+be a stepping stone toward that more fundamental theory.
+
+acknowledgments: we would like to thank m. brisudova for helpful criticism of the manuscript.
+jsr and cbt would also like to acknowledge the aspen center for physics where part of this work
+was completed. this work was supported in part by the department of energy under grant no.
+de-fg02-97er-41029.
+
+a appendix: alternate discretization
+
+in this appendix we explore the ramications of the alternate discretization eq. (2.8) of d. the
+bare propagator in energy representation is
+
+d
+
+0
+
+(q, m, e) =
+
+t0(eae  1)
+
+m 2
+
+u
+1  u
+
+.
+
+(a.1)
+
+the self-energy parts kl, k+ and ++ will of course have dierent values in this discretization,
+but the decompositions (3.5) remain valid. under the assumption that 
+1 = 1, the relations
+of the exact propagators to the s are identical to (3.6) except for d for which the relation is
+
+1 = 
+
+d =
+
+t0
+
+m 2 (cid:20)
+
+u(eae  1  q2/2m t0)
+
+1  u  t0u1(eae  1  q2/2m t0)
+
++
+
+q2
+
+2m t0
+
+u
+
+1  u  u2i /2m(cid:21) .
+
+(a.2)
+
+the only parts of the one loop self energy calculation aected by the dierent discretization
+are the two diagrams, fig. 12, which have a d propagator as one of the internal lines. the
+evaluation is quite dierent for this discretization because the completion of squares in the second
+term of eq. (2.8) leads to dierent factors than the rst term. the contribution of the rst term
+involves the exponent
+
+k
+
+2t0 (cid:18) p2
+
+l
+
++
+
+(q  p)2
+m  l (cid:19) =
+
+k
+
+2t0 (cid:18) m (p  lq/m )2
+l(m  l)
+
++
+
+q2
+
+m (cid:19) ,
+
+(a.3)
+
+whereas the contribution of the second term involves
+
+(k  1)p2
+
+2t0l
+
++
+
+k(q  p)2
+2t0(m  l)
+
+=
+
+1
+
+2t0   m (k  1) + l
+
+l(m  l) (cid:18)p 
+
+lkq
+
+m (k  1) + l(cid:19)2
+
++
+
+m (k  1) + l! , (a.4)
+k(k  1)q2
+
+34
+
+for one of the two diagrams, and for the other a similar expression with p  q p and l  m  l.
+thus the two contribute equally to 
+di :
+
+
+
+d =
+
+g2nc
+42
+
+m 1
+
+xl=1
+
+(2m  l)2
+
+l
+
+ekq2/2m t0" eklq2/2m t0(m (k1)+l)
+
+m (k  1) + l
+
+1
+
+m k# ,
+
+
+
+for k > 1 and by
+
+
+d = 
+
+g2nc
+42
+
+m 1
+
+xl=1
+
+(2m  l)2
+
+l
+
+eq2/2m t0
+
+m
+
+,
+
+for k = 1. translating to energy representation gives the more compact
+
+
+
+d =
+
+g2nc
+42
+
+m 1
+
+xl=1
+
+(2m  l)2
+
+l
+
+uk"u
+
+
+
+xk=1
+
+el(k+1)q2/2m t0(m k+l)
+
+m k + l
+
+1
+
+m k# .
+
+
+
+(a.5)
+
+(a.6)
+
+(a.7)
+
+adding the result of the unchanged rst thirteen diagrams to this and subtracting q21/2 gives
+2 for this discretization:
+
+2 =
+
+g2nc
+242
+
+13m 2  12m  1
+
+m
+
++
+
+g2nc
+42
+
+m 1
+
+xl=1
+
+
+
+xk=1
+(2m  l)2
+
+l
+
+g2nc
+
+482 (cid:18)14 
+uk"u
+
+uk
+k2 +
+
+
+
+xk=1
+
+el(k+1)q2/2m t0(m k+l)
+
+m k + l
+
+15
+m
+
++
+
+1
+
+t0
+
+m 2(cid:19) q2
+
+
+ln(1  u)
+m k# .
+
+1
+
+(a.8)
+
+the violation of galilei invariance caused by the this alternate discretization is apparent from the
+non-polynomial dependence on q2. however, one can easily see that each power of q2 comes with
+an accompanying power of 1/m . at most one power of m is supplied by the prefactors, so all
+powers of q2 higher than the rst are irrelevant in the continuum limit.
+
+in order to compare our results to the continuum calculation of ref. [8], we must examine
+the limits u  1 and m  . the behavior of the rst two terms of eq. (a.8) in this limit is
+transparent once we use the identity (3.31). the continuum limit of the last term requires a bit
+more analysis. first, as mentioned in the previous paragraph, we only need keep two terms in the
+expansion of the exponential:
+
+g2nc
+
+42 (m 1
+xl=1
+
+(2m  l)2
+
+l
+
+
+
+xk=1
+
+uk(cid:20)
+
+u
+
+m k + l 
+
+1
+
+m k(cid:21) +
+
+q2
+2t0
+
+(2m  l)2
+
+m 3
+
+m 1
+
+xl=1
+
+uk+1(k + 1)
+
+(k + l/m )2) .
+
+
+
+xk=1
+
+(a.9)
+
+the sums over l can be approximated using the euler-maclaurin summation formula, see eq. (4.30),
+as long as f is not singular at the endpoints of integration. clearly terms with 1/l in the summand
+must be treated separately, which is easily handled using (3.26). applying these formulae, we nd
+(for large m but arbitrary u),
+
+(2m  l)2
+
+m 1
+
+l
+
+xl=1
+= 
+
+
+
+xk=1
+
+
+
+xk=1
+
+uk+1
+
+k
+
+uk(cid:20)
+xl=1
+
+m 1
+
+u
+
+m k + l 
+
+(2  l/m )2
+k + l/m
+
+1
+
+m k(cid:21)
++ 4m (1  u) ln(1  u)(cid:20)(m ) +  
+
+7
+8
+
++
+
+7
+
+8m(cid:21)
+
+35
+
++ (k + 2)2(cid:18)ln(cid:18)1 +
+8(cid:21) (1  u) ln(1  u)
+
+7
+
+uk+1(k + 1)
+(k + l/m )2
+
+
+
+k
+
+3k
+
+uk+1
+
+ 
+
+m(cid:20) 7
+xk=1
++ 4m(cid:20)ln m +  
+(2m  l)2
+xl=1
+
+
+xk=1
+uk+1(cid:20) 7
+3k 
+
+q2
+2t0
+
+m 3
+
+m 1
+
+
+
+
+
+xk=1
+
+q2
+2t0
+
+1
+
+k(cid:19) 
+
+1
+k
+
++
+
+1
+
+2k2(cid:19) 
+
+1
+3k 
+
+2
+k2 
+
+1
+
+2m (cid:18) 4
+
+k
+
++
+
+1
+
+k + 1(cid:19)(cid:21)
+
+4
+
+3k3  2(k + 1)(k + 2)(cid:26)ln(cid:18)1 +
+
+1
+
+k(cid:19) 
+
+1
+k
+
++
+
+1
+2k2 
+
+1
+
+3k3(cid:27)(cid:21)
+
+(a.10)
+
+the continuum limit also requires 1  u  q2/2m t0 = (q2  2mm e)/2m t0, so u may be set to
+unity in all nonsingular terms without a prefactor of m . then the above terms simplify to
+
+m 1
+
+
+
+l
+
+2
+
+(2m  l)2
+xl=1
+ (cid:18) 
+6 
+(2m  l)2
+xl=1
+
+uk(cid:20)
+xk=1
+3 (cid:19) m +
+xk=1
+
+q2
+2t0
+
+m 3
+
+m 1
+
+
+
+u
+
+m k + l 
+2
+1
+3
+2
+
++
+
++
+
+uk+1(k + 1)
+(k + l/m )2 
+
+1
+
+q2
+
+m k(cid:21)
+2t0 (cid:18) +
+2t0 (cid:20)
+
+q2
+
+7
+
+2q2
+
+t0 (cid:18)ln m +  
+
+3(cid:19) +
+ln(1  u) + (cid:21)
+
+7
+3
+
+35
+
+24(cid:19) ln(1  u)
+
+where we have dened
+
+
+
+ =
+
+ = 12(3)  6
+xk=1
+(3)  2
+
+ = 
+
+72
+18
+
+4
+3
+
++
+
+
+
+xk=1
+
+k + 1
+
+1
+
+k
+
++
+
+1
+k
+
+(k + 2)2
+
+(cid:18)ln(cid:18)1 +
+k(cid:19) 
+k(cid:19) 
+(cid:20)(k + 2)2(cid:18)ln(cid:18)1 +
+(k + 1)(k + 2)(cid:20)ln(cid:18)1 +
+k(cid:19) 
+xk=1
+
+1
+k
+
+
+
+k
+
+1
+
+1
+
+1
+
+1
+
+2k2(cid:19)
+2k2(cid:19) 
+1
+2k2 
+
+1
+k
+
++
+
++
+
+2
+
+k2(cid:21)
+1
+3k 
+3k3(cid:21)
+
+1
+
+which can be numerical evaluated:
+
+  1.188,
+
+  1.991,
+
+  0.633.
+
+putting all this together, we get for the continuum limit,
+
+(a.11)
+
+(a.12)
+
+(a.13)
+
+(a.14)
+
+(a.15)
+
+2 = m
+
+g2nc
+
+242 (cid:20) +
+
++
+
+g2nc
+162
+
+2
+
+g2nc
+
+42 (cid:20) 2
+6 (cid:21) +
+t0 (cid:20)8 ln m + 8 
+
+q2
+
+3
+
++
+
+1
+2 
+3 (cid:21) ln
+
+22
+
+7
+
+6 (cid:21)
+
+q2
+t0
+q2
+
+2m t0
+
++
+
+g2nc
+242
+
+q2
+2t0
+
+[6 + 1]
+
+(a.16)
+
+remembering that our 2 is a factor of q2/t0 times that dened in ref. [8], we nd agreement
+for the coecient of ln q2, provided we identify 2m t0 with 2. the rst two groups of terms on the
+r.h.s. of eq. (a.16) violate important symmetries and must be removed by explicit counter-terms.
+the term linear in q2 violates galilei invariance and the momentum independent terms imply a
+nite gluon mass squared in perturbation theory, thus violating poincare invariance. note that
+
+36
+
+the necessary counter terms are low order polynomials in both the transverse momentum and in
+the discretized p +. without the tadpole contributions the discretization used in the text would
+have required counter-terms with logarithmic m dependence. but we found (at least at one-loop)
+that the tadpoles could be designed to eliminate the need for counter-terms. then the fact that it
+preserves galilei invariance makes it the superior choice.
+
+references
+
+[1] g. t hooft, nucl. phys. b72 (1974) 461.
+
+[2] s. s. gubser, i. r. klebanov, and a. m. polyakov, phys. lett. b428 (1998) 105, hep-
+
+th/9802109.
+
+[3] h. b. nielsen and p. olesen, phys. lett. 32b (1970) 203;
+
+b. sakita and m. a. virasoro, phys. rev. lett. 24 (1970) 1146.
+
+[4] c. b. thorn, phys. lett. 70b (1977) 85; phys. rev. d17 (1978) 1073.
+
+[5] r. brower, r. giles, and c. thorn, phys. rev. d18 (1978) 484.
+
+[6] j. b. kogut and d. e. soper, phys. rev. d1 (1970) 2901;
+
+e. tomboulis, phys. rev. d8 (1973) 2736.
+
+[7] s. j. brodsky, h-c. pauli, and s. j. pinsky, phys. rept. 301, (1998) 299, hep-ph/9705477.
+
+[8] c. b. thorn, phys. rev. d20 (1979) 1934.
+
+[9] e.h. lieb and f.y. wu, in phase transitions and critical phenomena, edited by c. domb
+
+and m.s. green, (academic, new york, 1972), p331.
+
+[10] c. b. thorn, phys. rev. d59 (1999) 116011, hep-th/9810066.
+
+[11] a. m. polyakov, phys. lett. 103b (1981) 207.
+
+[12] c. b. thorn, phys. rev. d20 (1979) 1435.
+
+[13] r. giles and c. b. thorn, phys. rev. d16 (1977) 366.
+
+[14] j. s. rozowsky and c. b. thorn, phys. rev. d60 (1999) 045001, hep-th/9902145.
+
+[15] l. lewin, polylogarithms and associated functions, (north holland, 1981).
+
+[16] j. m. maldacena, adv. theor. math. phys. 2 (1998) 231-252, hep-th/9711200.
+
+[17] e. witten, adv. theor. math. phys. 2 (1998) 253-291, hep-th/9802150.
+
+[18] g. t hooft, dimensional reduction in quantum gravity, in salamfest 1993, gr-qc/9310026.
+
+[19] c. b. thorn, phys. rev. d59 (1999) 025005, hep-th/9807151.
+
+37
+
+

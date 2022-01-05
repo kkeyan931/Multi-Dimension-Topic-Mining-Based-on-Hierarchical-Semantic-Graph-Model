@@ -1,0 +1,8797 @@
+9
+9
+9
+1
+
+ 
+
+g
+u
+a
+4
+
+ 
+
+ 
+ 
+
+1
+v
+6
+3
+0
+8
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+boundary conditions
+
+in rational conformal field theories
+
+february 16, 2014
+
+roger e. behrend
+
+c.n. yang institute for theoretical physics
+
+state university of new york
+
+stony brook, ny 11794-3840, usa
+
+paul a. pearce
+
+department of mathematics and statistics
+
+university of melbourne
+
+parkville, victoria 3052, australia
+
+valentina b. petkova 1
+
+arnold sommerfeld institute for mathematical physics
+
+tu clausthal, leibnizstr. 10
+
+d-38678 clausthal-zellerfeld, germany
+
+jean-bernard zuber
+
+service de physique theorique
+
+cea-saclay
+
+91191 gif-sur-yvette cedex, france
+
+abstract
+
+we develop further the theory of rational conformal field theories (rcfts) on a
+cylinder with specied boundary conditions emphasizing the role of a triplet of alge-
+bras: the verlinde, graph fusion and pasquier algebras. we show that solving cardys
+equation, expressing consistency of a rcft on a cylinder, is equivalent to nding inte-
+ger valued matrix representations of the verlinde algebra. these matrices allow us to
+naturally associate a graph g to each rcft such that the conformal boundary condi-
+tions are labelled by the nodes of g. this approach is carried to completion for s(2)
+theories leading to complete sets of conformal boundary conditions, their associated
+cylinder partition functions and the a-d-e classication. we also review the current
+status for wzw s(3) theories. finally, a systematic generalization of the formalism
+of cardy-lewellen is developed to allow for multiplicities arising from more general
+representations of the verlinde algebra. we obtain information on the bulk-boundary
+coecients and reproduce the relevant algebraic structures from the sewing constraints.
+
+1permanent address: institute for nuclear research and nuclear energy, tzarigradsko chaussee 72, 1784
+
+soa, bulgaria
+
+1
+
+1 .
+
+introduction
+
+1.1 history and motivation
+
+the subject of boundary conformal eld theory has a fairly long history. it was born more
+than ten years ago, in parallel work on open string theory [1, 2, 3, 4, 5, 6, 7, 8] and on
+conformal eld theories (cfts) describing critical systems with boundaries [9]. the work
+of cardy [10] was a landmark, leading to the unication of methods, to the introduction of
+important concepts such as boundary conformal elds and to the systematic investigation of
+their properties and couplings [11, 12]. the subject remained dormant for some time, in spite
+of some activity motivated again by string theory [13, 14] and of beautiful applications to the
+kondo problem [15, 16]. lately, the subject has undergone a revival of interest in connection
+with various problems. on the one hand, work on boundary conditions in integrable eld
+theories and boundary ows [17, 18, 19] and on quantum impurities [20, 21] motivated a
+closer look at boundary cft. on the other hand, within statistical mechanics, integrable
+boltzmann weights satisfying the so-called boundary yang-baxter equation (bybe) were
+constructed in lattice models [22, 23]. finally new progress in string theory was another
+reason to reconsider the problem. generalizations of d-branes as boundary conditions in
+cft have been studied by several groups [24, 25, 26, 27, 28, 29].
+
+in the present work, we want to reconsider several issues in the discussion of boundary
+conditions in (rational) conformal eld theories: what are the general boundary conditions
+that may be imposed, what are the structure constants of the bulk and boundary elds in
+the presence of these boundary conditions. these are the basic questions that we want to
+address. the methods that we use are not essentially new, but are based on the systematic
+exploitation of the work of cardy and lewellen [10, 11, 12].
+
+among the main results of this paper:
+
+ we establish a connection between the classication of boundary conditions and the
+classication of integer valued representations of the fusion algebra. a preliminary
+account of this result was given in [30, 31]. in the same vein, we show that it is natural
+to associate graphs to these problems. in particular, an ade classication of boundary
+conditions for wess-zumino-witten (wzw) and minimal sl(2) theories emerges in a
+natural and simple way. a discussion of the state of the art for sl(3) models is also
+included.
+
+ we point out the deep connections between the features of conformal eld theory in
+the bulk and in the presence of boundaries. the classication of the latter has some
+bearing on the classication of the bulk properties (modular invariants etc). this is
+not a new observation. in particular, in string theory many connections are known
+to exist between open and closed string sectors, but it seems that the point had not
+been stressed enough. a triplet of algebras, specically the graph fusion algebra and its
+dual, the pasquier algebra, appears naturally in our discussion, along with the verlinde
+
+2
+
+algebra.
+
+ we reanalyse in a systematic way the couplings (structure constants) of elds in the
+presence of boundaries and the equations they satisfy, generalising the formalism of
+cardy-lewellen to accomodate the appearance of nontrivial multiplicities. in the di-
+agonal cases we nd a direct relation between the chiral duality identities of moore
+and seiberg and the basic sewing relations of the boundary cft. the main point is
+the observation that the bulk boundary coecients in the diagonal case essentially
+coincide with the matrices s(j) of modular transformations of torus 1-point functions.
+in this way the two basic bulkboundary equations [11, 12] are shown to be equivalent
+to the torus duality identity of [32].
+
+some more particular results include the extension of cardys equation to non-specialized
+characters, thus lifting an ambiguity in the original derivation, the proof of uniqueness of
+
+boundary conditions for bsl(2) wzw and minimal models and bsl(n)1 models, the clarica-
+
+tion of the role of the graph algebra and the recovery of this algebra along with its dual, the
+pasquier algebra, from the boundary sewing constraints.
+
+1.2 background on bulk cft
+
+in this paper, we are only concerned with rational conformal field theories (rcfts). we
+rst establish notations etc.
+in the study of a rcft, one rst species a chiral algebra
+a. it is the virasoro algebra or one of its extensions: current algebra, w algebra etc. the
+generators of this algebra will be denoted generically wn and include the virasoro generators
+ln. at a given level, the theory is rational, i.e. a has only a nite set i of irreducible
+representations vi, i  i. the label i indexes the representation conjugate to i, and i = 1
+refers to the identity (or vacuum) representation. we also suppose that the characters
+i(q) = tr viql0 c
+24 of these representations, the matrix s of modular transformations of the
+k of the vs are all known. the matrix sij is symmetric
+s and the fusion coecients nij
+and unitary and satises s2 = c, where c is the conjugation matrix cij = ji. the fusion
+coecients are assumed to be given in terms of s by the verlinde formula
+
+nij
+
+k =xi
+
+sisjsk
+
+s1
+
+,
+
+(1.1)
+
+an assumption that rules out some cases of rcfts.
+
+a physical conformal theory is then dened by a collection of bulk and boundary elds
+and their 3-point couplings (ope coecients). in particular, the spectrum of bulk elds
+is described by the nite set spec of pairs (j, j) of representations, possibly appearing with
+some multiplicities njj, of the left and right copies of a, such that the hilbert space of the
+theory on an innitely long cylinder reads
+
+h = (j,j)specvj  v j ,
+
+3
+
+(1.2)
+
+with the same multiplicities nj,j. the modular invariant torus partition function
+
+ztorus =xj,j
+
+njjj(q)(cid:16)j(q)(cid:17)
+
+(1.3)
+
+is a convenient way to encode this information. the nite subset e of labels of elements of
+the spectrum that are left-right symmetric will play a central role in the following
+
+e = {j|(j, j = j)  spec} ,
+
+(1.4)
+
+and will be called the set of exponents of the theory. recall that these exponents may come
+with some multiplicities. to distinguish them as dierent elements of the set e a second
+index will be often added, i.e., (j, )  e , for j  i.
+
+in terms of all these data, one is in principle able to compute exactly all correlation
+functions of the cft on an arbitrary 2d surface, with or without boundaries [33, 32, 12].
+these data, however, are subject to consistency constraints: single-valuedness of n-point
+functions on the plane, modular invariance of the torus or annulus partition function, etc,
+all rooted in the locality properties of the theory.
+in this paper, we shall reexamine the
+conditions that stem from surfaces with boundaries (half-plane or disk, cylinder or annulus)
+and explore their consequences.
+
+for later reference, let us also recall that rcfts fall in two classes. in the rst class
+(type i), the hilbert space (1.2) is a diagonal sum of representations of a larger, extended,
+algebra a  a. accordingly, the partition function (1.3) is a sum of squares of sums of
+characters
+
+z = xblocks b |xib
+
+i|2 .
+
+(1.5)
+
+the second class (type ii) is obtained from the rst by letting an automorphism  of the
+fusion rules of the extended algebra a act on the right components, thus resulting in a
+non-block-diagonal partition function
+
+z =xb (cid:16)xib
+
+i(cid:17)(cid:16) xj(b)
+
+j(cid:17) .
+
+(1.6)
+
+for example, in the classical case of s(2) theories, classied by a-d-e dynkin diagrams,
+the a, d2p, e6 and e8 cases are of the rst type, whereas the d2p+1 and e7 are obtained
+respectively from the a4p1 and d10 cases by a z2 automorphism of their fusion rules. we
+shall see below that the study of boundary conditions on a cylinder has some bearing on
+these expressions of torus partition functions.
+
+2 . cardy equation and verlinde algebra
+
+4
+
+2.1 boundary states
+
+as discussed in [34], on the boundary of a domain such as the upper half plane or a semi-
+innite cylinder, one must impose a continuity condition of the form
+
+t (z) = t (z)|z=z
+
+w (z) = w (z)|z=z .
+
+(2.1)
+
+while the rst of these conditions has the direct physical meaning of the absence of energy-
+momentum ow across the boundary, or the preservation of the real boundary by dieo-
+morphisms, the condition(s) on the other w may be generalized to incorporate a possible
+gluing automorphism [35, 24]
+
+w (z) = w (z)|z=z .
+
+(2.2)
+
+a semi-annular domain in the upper half-plane may be conformally mapped into an annulus
+in the complex plane by  = exp(2iw/t ), w = l
+ log z. then as shown by ishibashi [2]
+and cardy [10], the boundary condition becomes
+
+ 2t () = 
+
+2
+
+t ()
+
+ sw w () = ()sw w ()
+
+for || = 1
+
+(2.3)
+
+where sw denotes the spin of w , or more generally
+
+ sw w () = ()sw w () .
+
+through radial quantization, this translates into a condition on boundary states |ai
+
+(cid:16)wn  (1)sw (w n)(cid:17)|ai = 0 .
+
+this includes in particular the condition that
+
+(ln  ln)|ai = 0 ,
+
+(2.4)
+
+(2.5)
+
+assuming that the automorphism  keeps invariant the virasoro generators. for the central
+charge operator we have (k  k)|ai = 0 irrespective of the spin s.
+solutions to this linear system are spanned by special states called ishibashi states [2],
+labelled by the nite set e = {j|(j, j = (j))  spec}, where  depends in particular on
+. to see this, let us consider rst the simpler equation (2.5) in the case when a is the
+virasoro algebra and  is trivial. then observe that one may solve (2.5) in each component
+of (1.2) independently, as these spaces are invariant under the action of the two copies of
+
+a. now we recall that any state a = pn,n an,n|j, ni  |j, ni in vj  vj is in one-to-one
+correspondence with a homomorphism xa = pn,n an,n|j, ni  hj, n| of vj into vj. this
+uses the scalar product in vj. since ln = ln for that scalar product, (2.5) implies that
+lnxa = xaln, i.e. that xa intertwines the action of ln in the two representations vj
+and vj of the virasoro algebra. as these two representations are irreducible, they must be
+equivalent, which by our convention on the labelling of representations, means that j = j.
+
+5
+
+thus the only non-vanishing components of a in h are in diagonal products vj  vj and in
+each one, xa is proportional to the projector pj = pn |j, nihj, n|. to x the normalization
+we choose xa = pj and the corresponding ishibashi state is denoted |jii. this completes
+the proof 2 that there is an independent boundary state |jii for each element of the set
+e = {j|(j, j = j)  spec}.
+the argument is a formal extension of the proof, based on the schur lemma, of the
+existence and uniqueness of an invariant in the tensor product of nite dimensional rep-
+resentations.
+it extends to the odd spin sw case (2.4). we have to use the fact that
+w n = (1)sw u1 wn u with respect to a bilinear (or hermitian) form where u is a uni-
+tary (or antiunitary) operator. one exploits the same denition of the homomorphism
+xa : vj  vj, now vj ,vj being highest weight representations of the chiral algebra a
+generated by wn. however xa corresponds to states in vj  u u vj, where u is a unitary
+(antiunitary) operator implementing the automorphism (wn) = u wn u1
+ . the equation
+(2.4) leads to wnxa = xawn again with the result j = j and xa = pj while the ishibashi
+
+states are given by |jii =pn |j, ni  u u |j, ni.
+the operator u is in general non-trivial, e.g., for the bsl(n)k wzw theories w n =
+w(wn) where w is the horizontal projection of the chevalley involution of the ane algebra
+[36], i.e., it is determined by w(ei) = f i , w(f i) = ei , for the simple roots i of
+sl(n), where e/f  are raising/lowering operators respectively, and for the cartan generators
+w(hi) = hi , i = 1, 2, . . . , n 1. the pair (j, (j)) characterising e refers to the eigenvalues
+of hi on the rst term in |jii.
+if  = w0, where
+w0 represents the longest element of the weyl group, then w0(j) = j and hence (j) =
+w0w(j) = j. on the other hand (j) = j for  coinciding with the chevalley automorphism
+ = w. in the last two of these examples we can identify v j = u u vj with a highest weight
+module v(j) , (j)  i. it should be stressed that all these automorphisms  keep invariant
+the sugawara virasoro generators so the condition (2.5) is also satised on the corresponding
+ishibashi states.
+
+if  is the identity, then (j) = j.
+
+we shall hereafter drop the explicit dependence on .
+
+in fact we still have to dene a norm (or a scalar product) on boundary states, in
+particular on the ishibashi states. we have to face two diculties. first because of the
+innite dimension of the representation vj, the most naive norm, proportional to tr pj,
+would be innite. the second problem concerns non-unitary representations. in such cases,
+the hermitian form on vj is not positive denite, and we may encounter signs in the norm
+of states.
+
+the rst problem requires some regularization of the naive norm. let q
+
+a real number, 0 < q < 1. then hhj|q
+general, allowing some multiplicity  = 1,   , njj for the representations:
+
+12 )|jii = tr pj ql0 c
+
+2 (l0+ l0 c
+
+1
+
+1
+
+i
+
+ be
+24 = j(q). we write in
+
+2 = e
+
+2many thanks to g. watts (private communication) to whom we owe this elegant derivation. some
+
+hhj, |q
+
+1
+
+2 (l0+ l0 c
+
+12 )|j, ii = jj j(q) .
+
+(2.6)
+
+elements had appeared already in m. bauers phd thesis (1989).
+
+6
+
+the norm of |jii should then be some renormalized version of the q  1 limit of (2.6)
+[2, 10], i.e., of the limit in which q = e2i , the modular transform of q, tends to 0. in unitary
+theories, a new scalar product on boundary states may be dened according to
+
+hhjkjii = lim
+q1
+
+q
+
+c
+
+24hhj, |q
+q
+
+c
+
+= jj  lim
+q0
+
+1
+
+2 (l0+ l0 c
+
+12 )|j, ii
+
+24 j(q) = jj s1j ,
+
+(2.7)
+
+where we have used the fact that in a unitary theory, the leading character in the q  0
+limit is that of the identity operator 1(q)  q c
+24 . note that sj1 is, up to a factor 1/s11, the
+quantum dimension of the representation j, a positive number. thus in unitary theories the
+normalization chosen for xj is such that the states |jii are orthogonal for the scalar product
+(2.7), with a square norm equal to s1j. although in non-unitary theories the limit q  0
+in (2.7) does not exist in general, due to the existence of representations of conformal weight
+hi < 0 that will dominate that limit, we may still dene the norm by the same formula as
+(2.7). alternatively, if j0 denotes the unique representation of smallest conformal weight
+hj0 < 0 belonging to e, and ce := c  24hj0, then we may dene
+
+hhjkjii = jj 
+
+s1j
+sj0j
+
+lim
+q0
+
+ce
+24 j(q) .
+
+q
+
+(2.8)
+
+in all cases we thus have
+
+hhjkjii = jjs1j
+in the sequel, we use more compact notations and the
+
+(2.9)
+
+which is now of indenite sign.
+multiplicity label  will be implicit when referring to j  e.
+
+the most general boundary state |ai satisfying condition (2.4) must be a linear combi-
+
+nation of these ishibashi states, which, for later convenience, we write as
+
+|ai =xje
+
+j
+
+aqs1j |jii .
+
+(2.10)
+
+we denote by v = {a} the set labelling the boundary states. we assume that an involution
+a  a in the set v is dened and that j
+a), where j  j is an involution in
+e (in general (j, )  (j, ), see appendix b for examples). we dene conjugate states
+as
+
+a = j
+
+a = (j
+
+.
+
+(2.11)
+
+hb| :=xje
+
+hhj|
+
+j
+b
+
+qs1j
+
+as explained in [24], this conjugate state may be regarded as resulting from the action of an
+antilinear cpt operation. as a consequence
+
+hbkai =xje
+
+j
+
+a(cid:16)j
+b(cid:17)
+
+s1j
+
+hhjkjii =xje
+
+j
+
+a(cid:16)j
+b(cid:17)
+
+7
+
+(2.12)
+
+so that the orthonormality of the boundary states is equivalent to that of the s.
+
+in some cases, such as in the computation of partition functions involving the specialised
+characters in the next section, it is sucient to impose only the virasoro condition (2.5)
+on the boundary states. then the sum in (2.10), when interpreted in terms of ishibashi
+states pertaining to some extended symmetry, may include states |jii with dierent .
+for example, in the minimal bsl(2) models when multiplicities occur in e, one can build
+the ishibashi states using the coulomb gas realisation with a = bu(1). then there are two
+choices of  keeping ln invariant. this allows, in particular, the construction of two dierent
+ishibashi states with the same value of the scaling dimension, i.e., the explicit resolution of
+the degeneracy of states denoted |j, ii above. such mixtures of ishibashi states may be
+used in determining the boundary states of the non-diagonal (a, deven) models.
+
+2.2 the cardy equation
+
+we now consider a conformal eld theory on a nite cylinder. following cardy, the partition
+function may be expressed in two alternative ways. regarded as resulting from the evolution
+of the system between boundary states a and b under the action of the hamiltonian on (i.e.
+the translation operator along) the cylinder, it is
+
+zb|a = hb|(q
+
+1
+
+2 )l0+ l0 c
+
+12|ai
+
+(2.13)
+
+where q
+
+1
+
+2 = e2 l
+
+t describes the aspect-ratio of the cylinder of period t and length l as
+
+l
+
+b
+
+a
+
+a
+
+t
+
+b
+
+t
+
+(a)
+
+l
+
+(b)
+
+figure 1: the two computations of the partition function zb|a: (a) on the cylinder, between the
+boundary states a and b, (b) as a periodic time evolution on the strip, with boundary conditions a
+and b.
+
+in figure 1. decomposing the boundary states on the ishibashi basis and using (2.6), one
+obtains
+
+(2.14)
+
+zb|a =xje
+
+a (j
+j
+
+b )
+
+j(q)
+sj1
+
+where the states |jii are admissible ishibashi states of the system, i.e., the label j runs over
+the set e.
+
+8
+
+on the other hand, zb|a may be regarded as resulting from the periodic time evolution
+under the action of the translation operator along the nite width strip in the presence
+of boundary conditions a and b. the latter manifest themselves only in the nature of the
+hilbert space hba and its decomposition into representations of a single chiral algebra: hba =
+inib
+l , zb|a is a linear form in
+the characters
+
+avi with non-negative integer multiplicities nib
+
+a. if q = e t
+
+zb|a =xii
+
+i(q)nib
+
+a .
+
+(2.15)
+
+we choose to write the modular transformation of characters in the form i(q) =
+
+pj sijj(q), hence j(q) = pi sjii(q) . provided that specialized characters i(q) are
+
+considered, this complex conjugation is immaterial, since i(q) = i(q). we shall, however,
+make later use of unspecialized characters (appendix a), for which it does matter. with
+this convention, and assuming for the time being the independence of characters, the two
+expressions (2.14) and (2.15) are consistent provided
+
+nia
+
+b =xje
+
+sij
+s1j
+
+a (j
+j
+
+b) .
+
+(2.16)
+
+in the sequel we will refer to this as the cardy equation. in the left hand side, we have used
+the rst of the following symmetries
+
+nia
+
+b = nib
+
+a = nib
+
+a
+
+,
+
+(2.17)
+
+which follow from the properties of the modular matrix and of the coecients j
+a.
+
+the boundary states |ai, |bi, are thus such that nia
+
+b is a non-negative integer. unique-
+b  1. the cardy equation (2.16) is a non-linear constraint
+ness of the vacuum implies n1a
+on the components of boundary states |ai and |bi on the basis of ishibashi states. note
+also that it implies that pi nib
+asji vanishes if j / e and, except in cases with multiplicities,
+must factorize into a product of contributions of the a and b boundary states, a non-trivial
+constraint. still, these constraints seem dicult to solve in full generality.
+
+before we proceed, we have to pause on the question of independence of characters.
+in general, it is not true that specialized characters such as those that we have been using
+so far, are linearly independent. for instance, complex conjugate representations i and i
+give rise to the same character i(q). unfortunately, little is known about unspecialized
+characters for general chiral algebras, beside the case of ane algebras. in appendix a, we
+show that in the case of rational conformal eld theories with a current algebra, the previous
+discussion may indeed be repeated if the energy momentum tensor of the theory has been
+modied in such a way that unspecialized characters appear. then using the known modular
+transformations of the latter [36], one derives (2.16). we shall therefore assume that (2.16)
+holds true for general rcft.
+
+we now return to the cardy equation (2.16), and assume that we have found an or-
+
+9
+
+thonormal set of boundary states, i.e.
+
+satisfying
+
+a(j
+j
+
+b) = ab .
+
+xje
+
+(2.18)
+
+moreover we make the stronger assumption that we have found a complete set of such states,
+i.e.
+
+satisfying
+
+a(j
+j
+
+a ) = jj .
+
+(2.19)
+
+xa
+
+(note that this implies that the number of these boundary states must be equal to the
+cardinality of e).
+
+finally we recall that the ratios sij/s1j, for a xed j  i, form a one-dimensional
+
+representation of the fusion algebra, as a consequence of the verlinde formula (1.1):
+
+si1j
+s1j
+
+si2j
+s1j
+
+= xi3i
+
+ni1i2
+
+i3 si3j
+s1j
+
+.
+
+it follows from (2.19), (2.20) that the matrices ni, dened by
+
+also satisfy the (commuting) fusion algebra
+
+(ni)a
+
+b = nia
+
+b
+
+i  i
+
+ni1ni2 = xi3i
+
+ni1i2
+
+i3ni3 .
+
+(2.20)
+
+(2.21)
+
+(2.22)
+
+by (2.18), n1 = i, the unit matrix, and by (2.17), ni = nt
+i .
+
+conversely, given a set of matrices with non-negative integer elements, satisfying ni =
+nt
+i , n1 = i and the fusion algebra, they form a commuting set, and thus each ni commutes
+with its transpose. these matrices are thus normal matrices that may be diagonalized in an
+orthonormal basis. their eigenvalues are of the form sij/s1j for some j, and they may thus
+be written in the form (2.16). if one pretends to determine the spectrum e from the ns, one
+has to impose also that j = 1 appears only once in e, as a manifestation of the uniqueness
+of the vacuum.
+
+we thus conclude that the search for orthonormal and complete solutions to the cardy
+equation is equivalent to the search for n valued representations of the fusion algebra satis-
+fying nt
+
+i = ni.
+
+this is the rst important result of this paper, already presented succinctly in [31]. the
+fact that some solutions to the cardy equation were associated with representations of the
+fusion algebra had been noticed before. in his seminal paper [10], cardy considered the case
+of diagonal theories (for which e = i) and showed that the ni matrices were nothing other
+than the fusion matrices ni, thus obtaining an alternative and more intuitive derivation of
+the verlinde formula. in an antecedent work by saleur and bauer [9], other solutions had
+been obtained in non-diagonal theories, starting from their lattice realization, and the fact
+
+10
+
+that these ni coecients satised the fusion rules had been emphasized in [37]. more recently
+sagnotti and stanev [29] proposed a dierent argument to the same eect, where a notion
+of completeness of boundary conditions is also playing a crucial role.
+
+solutions such that all matrices ni may be written as ni = (n1)i  (n2)i after the
+same suitable permutation of rows and columns can be called reducible. they describe
+sets of decoupled boundary conditions. we thus restrict our attention to irreducible sets of
+matrices.
+
+2.3 wzw s(2) theories
+
+fying representations of the fusion algebra was solved long ago [37]. the integrable highest
+
+for theories with the ane (current) algebra bsl(2) as a chiral algebra, the problem of classi-
+weight representations of bsl(2)k at level k  n are labelled by an integer 1  j  k + 1,
+sij =q 2
+
+k+2 and the cardy equation says that the generator n2 = n2 has eigenvalues
+s2j
+k+2. the only symmetric irreducible matrices with non-negative integer entries
+s1j
+and eigenvalues less than 2 are the adjacency matrices of a-d-e-t graphs [38] of figure 2.
+the tadpole graphs are given by tn := a2n/z2. here the level k is related to the coxeter
+number by g = k + 2. only the a-d-e solutions are retained as their spectrum matches the
+
+k+2 sin ij
+
+= 2 cos j
+
+spectrum of bsl(2) theories, known by their modular invariant partition functions [39]. for
+a theory classied by a dynkin diagram g of a-d-e type, the set e is the set of coxeter
+exponents of g as in table 1. the matrices ni are then dened recursively by n1 = i, n2 = g
+and by equation (2.22) which reduces here to ni+1 = n2nini1, i = 2, 3, . . . , k. they are the
+well known fused adjacency matrices or intertwiners vi, studied in [37, 46] and whose
+properties are recalled in appendix b. one veries that all their entries are non-negative
+
+integers. this set of complete orthonormal solutions of the cardy equation for bsl(2) theories
+is unique up to a relabelling of the states |ai.
+
+2.4 minimal s(2) models
+
+the classication of c < 1 minimal models in the bulk is given in terms of a pair of dynkin
+diagrams (a, g) where g is of a-d-e type [39]. let h be the coxeter number of ah1 and
+g the coxeter number of g as given in table 1. then the complete a-d-e classication is
+
+m(a, g) =
+
+g even
+
+m(ah1, ag1)
+m(ah1, d(g+2)/2),
+m(ah1, e6)
+m(ah1, e7)
+m(ah1, e8)
+
+
+
+with h, g  2 and central charges given by
+c = 1 
+
+6(h  g)2
+
+hg
+
+.
+
+11
+
+(2.23)
+
+(2.24)
+
+an
+
+dn
+
+e6
+
+e7
+
+e8
+
+tn
+
+1
+s
+
+1
+s
+
+1
+s
+
+1
+s
+
+1
+s
+
+1
+s
+
+2
+s
+
+2
+s
+
+2
+s
+
+2
+s
+
+2
+s
+
+2
+s
+
+3
+s
+
+3
+s
+
+6
+s
+s
+3
+
+3
+s
+
+3
+s
+
+3
+s
+
+s
+
+s
+
+4
+s
+
+7
+s
+s
+4
+
+4
+s
+
+s
+
+s
+
+s
+
+5
+s
+
+5
+s
+
+8
+s
+s
+5
+
+s
+
+s
+
+n
+s
+
+
+
+
+
+s
+
+
+
+
+n
+s
+s
+n  1
+
+6
+s
+
+6
+s
+
+s
+
+7
+s
+
+
+n
+s
+
+figure 2: the a-d-e-t graphs.
+
+g
+
+an
+
+dn
+
+e6
+
+e7
+
+e8
+
+tn
+
+g
+
+n + 1
+2n  2
+
+12
+
+18
+
+30
+
+m  exp(g)
+1, 2, 3, . . . , n
+
+1, 3, 5, . . . , 2n  3, n  1
+
+1, 4, 5, 7, 8, 11
+
+1, 5, 7, 9, 11, 13, 17
+
+1, 7, 11, 13, 17, 19, 23, 29
+
+2n + 1
+
+1, 3, 5, . . . , 2n  1
+
+table 1: the coxeter number g and coxeter exponents m of the a-d-e-t graphs.
+
+12
+
+we will use m(a, g) to denote these minimal theories. since g and h must be coprime and
+g is even for all non-a cases, one may always assume, at the price of a possible interchange
+in the (a, a) case, that h is odd, h = 2p + 1.
+
+some members of these series are identied as follows:
+
+m(a2, a3) = critical ising
+m(a4, a3) = tricritical ising
+m(a4, d4) = critical 3-state potts
+m(a6, d4) = tricritical 3-state potts
+
+c = 1/2
+c = 7/10
+c = 4/5
+c = 6/7
+
+(2.25)
+
+we will use g to denote both the dynkin diagram and its adjacency matrix. we use
+r, r1, r2 to denote nodes or exponents of ah1; s, s1, s2 for the nodes (or exponents) of ag1;
+a, a1, a2, b for the nodes of g. we refer the reader to appendix b for more data on these
+matrices and their eigenvectors.
+
+if exp(g) denotes the set of exponents of g (see table 1), the modular invariant partition
+
+function of m(ah1, g) reads
+
+z =
+
+1
+2
+
+h1xr=1 xsexp(g) |rs(q)|2 + o-diagonal terms .
+
+(2.26)
+
+the factor 1
+2 removes the double counting due to the well-known identication of the (r, s)
+and (h  r, g  s) representations of the virasoro algebra. the diagonal terms in z, i.e. the
+left-right symmetric (highest weight) states in the spectrum are thus labelled by the set
+
+e = {j = (r, s)  (h  r, g  s); 1  r  h  1; s  exp(g)} .
+
+(2.27)
+
+each of the unitary minimal models m(ah1, g) with g  h = 1 can be realized
+as the continuum scaling limit of an integrable two-dimensional lattice model at criticality,
+with heights living on the nodes of the graph g.
+in particular, the critical series with
+g  h = 1 is associated with the a-d-e lattice models [41, 42] and the tricritical series with
+g  h = 1 is associated with the dilute lattice models [43, 44]. in the non-unitary cases
+the associated lattice models [45] possess negative boltzmann weights. in the construction
+of the corresponding lattice models as well as in the description of boundary conditions, it
+turns out that the two diagrams of the pair (a, g) do not play a symmetric role.
+
+according to the discussion of the previous section, we have to study the fusion algebras
+of minimal models and their (integer-valued) representations. the verlinde formula for the
+fusion coecients makes use of the matrix s of modular transformations of characters
+
+(2.28)
+
+srs,rs =s 8
+
+gh
+
+(1)(r+s)(r+s) sin rr
+
+g  h
+h
+
+sin ss
+
+g  h
+
+g
+
+with the restriction r, r odd (or any equivalent condition). the fusion coecients are then
+
+found to be tensor products of those relative to the bsl(2) algebras of level h  2 and g  2,
+up to a symmetrization which accounts for the identication (r, s)  (h  r, g  s)
+
+rs
+
+nrs,rs
+
+= nrr
+
+nss
+
+r
+
+s
+
++ nrr
+
+hr
+
+nss
+
+gs
+
+.
+
+(2.29)
+
+13
+
+this may be regarded as the regular representation of the fusion matrices nrs of the virasoro
+algebra of central charge (2.24). our problem is to nd the general non-negative integer
+valued representations of this algebra. one observes that nrs = nr1n1s and that the algebra
+is thus generated by n21 and n12. also, the eigenvalues of n12 and n21 are of the form
+
+s12,rs
+s11,rs
+s21,rs
+s11,rs
+
+= (1)r+s
+= (1)s
+
+2 cos s
+
+g  h
+
+g
+
+= (1)r
+
+2 cos s
+
+h
+g
+
+,
+
+2 cos r
+
+g
+h
+
+.
+
+(2.30)
+
+(2.31)
+
+with 1  r  h  1, 1  s  g  1 and again (r, s)  (h  r, g  s).
+
+turning now to a general (integer valued) representation nrs of the fusion algebra, it
+is still true that it is generated by n12 and n21. in addition, we want the spectrum of the
+nrs to be specied by the set of exponents e of (2.23), that is (r, s) in (2.30-2.31), with
+the eigenvalues labelled by s appearing with some multiplicity in general. to remove the
+redundancy in the labelling of eigenvalues, we will usually take r odd, r = 1, 3,   , h  2,
+and (s, )  exp(g). in the sequel, we will drop this explicit notation for multiplicities. we
+know of course a solution to this problem, namely
+
+nrs = nr  vs + nhr  vgs
+
+(2.32)
+
+in terms of the fusion matrices n of bsl(2) at level h  2 and of the intertwiners v of type g
+
+introduced in the previous subsection (see also appendix b). more explicitly, this describes
+a solution to the cardy equation between boundary states (r1, a) and (r2, b)
+
+nrs;(r1,a)
+
+(r2,b) = nrr1
+
+r2vsa
+
+b + nhr r1
+
+r2vgs a
+
+b ,
+
+(2.33)
+
+with 1  r, r1, r2  h 1 = 2p, 1  s  g  1, and a, b running over the nodes of the dynkin
+diagram g.
+
+because of the properties of the n and v matrices recalled in appendix b, it is readily
+
+seen that
+
+nrs;(r1,a)
+
+(r2,b) = nrs;(r1,a)
+
+(hr2,(b)) = nrs;(hr1,(a))
+
+(r2,b)
+
+(2.34)
+
+for an automorphism  acting on the nodes of the graph g: this is the identity except for the
+a, dodd and e6 cases, for which it is the natural z2 symmetry of the diagram. we conclude
+that this solution describes boundary states of m(ah1, g) labelled by pairs (r, a) of nodes
+of the ah1 and of the g graph, with the identication
+(r, a)  (h  r, (a)).
+
+(2.35)
+
+one checks that the number of independent boundary states |(r, a)i is
+
+number of independent boundary states =
+
+1
+2
+
+(h  1)n
+
+(2.36)
+
+14
+
+with n the number of nodes of g, or the number of its exponents. this number (2.36)
+coincides with the number of independent left-right symmetric highest weight states |r, si
+|r, si in the spectrum of the theory on a cylinder, i.e. with the cardinality of the set e, as it
+should.
+
+with such boundary states, the cylinder partition function reads
+
+z(r1,a)|(r2,b) = z(r2,b)|(r1,a) = z(r1,a)|(hr2,(b)) =xr,s
+
+rs(q)nrr1
+
+r2vsa
+
+b .
+
+(2.37)
+
+here the sum runs over 1  r  h  1, 1  s  g  1.
+
+let us look more closely at (2.33). there exists a basis in which (2.33) takes a factorized
+form. indeed one may use the identications (r, s)  (h  r, g  s) and (2.35) to restrict
+r2 = 0, the r.h.s. of (2.33)
+r, r1, r2 to odd values (recall that h = 2p + 1 is odd). then nhrr1
+factorizes and the following expressions
+
+(r,a) = 2srrs
+(rs)
+a ,
+
+r, r odd, s  exp(g) ,
+
+(2.38)
+
+written in terms of the modular matrix of bsl(2) at level h  2 and of eigenvectors  of g,
+are readily seen to be eigenvectors of nrs. their eigenvalue is of the form srs,rs/s11,rs after
+some reshuing r, s  r, s.
+
+one also shows (see appendix c) that there exists a basis in which
+
+n12 = ip  g =
+
+
+n21 = tp   =
+
+g
+
+0
+
+
+g
+
+
+0
+. . .
+
+. . .
+
+g
+
+
+. . . 
+
+
+
+
+
+
+,
+
+(2.39)
+
+(2.40)
+
+in terms of the tadpole tp adjacency matrix and of , the matrix that realizes the automor-
+phism : a
+
+b = a(b) .
+
+conversely, suppose we only know that the representation nrs has a spectrum specied
+by the set of exponents e. the question is: are these spectral data sucient to guarantee
+that the only nrs are of the form (2.33) in a certain basis? a proof of this fact is relegated to
+appendix c. notice that our discussion has assumed the classication of modular invariants
+
+to be known. it should be possible to extend it as in the case of wzw bsl(2) models and to
+
+classify the representations of the verlinde algebra without this information. a few spurious
+cases involving tadpoles etc. would then have to be discarded.
+
+to recapitulate, we have proved that the only representations of the fusion algebra of
+minimal models are given by (2.33). to our knowledge, this is the rst proof of the uniqueness
+of these (complete orthonormal) boundary states of minimal models.
+
+15
+
+some physical intuition about the meaning of these boundary conditions may be helpful.
+for this we appeal to the lattice realization of the minimal model as a generalized height
+model on the graph g (see [30]). a boundary condition of the type (1, a) describes a xed
+boundary condition, where the height of the model is xed to value a on the graph. the
+interpretation of the other label r is less intuitive. the boundary condition (r, a) is realized
+by attaching an r-times fused weight to height a.
+
+the expression (2.37) for the cylinder partition function encompasses and generalizes
+
+cases that were already known:
+
+ from the work of saleur and bauer [9] who discussed boundary conditions in lattice
+height models of a-d-e type on a cylinder in which the heights on the boundaries
+are xed to the values a respectively b. they showed that in the continuum limit, the
+partition function reads
+
+zb|a =xs
+
+vsa
+
+b1s .
+
+ from the work of cardy [10] who showed how to construct new boundary conditions
+
+by fusion.
+
+ from the work of pasquier and saleur [47], who interpreted the pair of relations
+
+(1b)|(1a) = x 1sv b
+
+z (ah1,g)
+z (ah1,ag1)
+
+sa
+
+(1,s)|(1,1)
+
+= 1s
+
+(2.41)
+
+(2.42)
+
+as expressing the decomposition of the representation of the temperley-lieb algebra
+on the space of paths from a to b on graph g onto the irreducible ones on the paths
+from 1 to s on graph ag1, see point (ii) at the end of appendix b.
+examples
+
+let us illustrate these expressions of boundary states by a few simple cases. in the ising
+model (the (a2, a3) minimal model), h = 3, g = a3, thus n = 3 and there are 1
+2(31)3 = 3
+boundary states, generally denoted [10] +, and f . on the lattice, the rst two describe
+xed boundary conditions on the spin  = 1 or 1 respectively, while f corresponds to free
+boundary conditions.
+
+it is then instructive to consider two related examples, see also [21, 27]. the rst is
+
+the c = 2 d4 solution of bsl(2)4 at level 4, and the other is its cousin, the c = 4/5 minimal
+
+(3-state potts) model, already mentioned in section 2.4 and labelled by the pair (a4, d4).
+in the former case, we nd four boundary states, labelled by 1 to 4, that we attach to
+the nodes of the d4 diagram. all these states satisfy the required boundary conditions.
+
+the set of exponents is e = {1, 3, 3, 5}. but this d4 bsl(2) model is also known to result
+from the conformal embedding of bsl(2)4 into bsl(3)1. regarded as an bsl(3) theory, the model
+admits three boundary states satisfying the more restrictive bsl(3) conditions (ln ln)|ai =
+(jn + jn)|ai = 0, where the choice of  corresponds to the diagonal set (j, j). these
+
+16
+
+three boundary states may be regarded as the three nodes of a triangular graph a(4) (see
+appendix d and figure 10), or as the three extremal nodes of the d4 diagram that have
+survived the additional bsl(3) constraint.
+
+the discussion of the potts model is quite parallel. from the minimal model standpoint,
+
+it is the (a4, d4) model, h = 5, n = 4 and there are 8 boundary states [21, 27]:
+
+a = (1, 1) = (4, 1),
+
+b = (1, 3) = (4, 3),
+
+c = (1, 4) = (4, 4)
+
+bc = (2, 1) = (3, 1), ac = (2, 3) = (3, 3), ab = (2, 4) = (3, 4)
+
+(2.43)
+
+abc = (1, 2) = (4, 2), n = (2, 2) = (3, 2)
+
+on the lattice, the rst three a, b, c describe xed boundary conditions where the spin
+takes at each site of the boundary one of the three possible values. the mixed boundary
+conditions ab, bc, ac describe boundary conditions where the spin on the boundary can
+take on two values independently. the boundary conditions abc and n are free boundary
+conditions but for n the weights depend on whether adjacent spins are equal or not.
+
+the model may also be regarded as the simplest w3 model. in that picture, one may
+impose more stringent boundary conditions. only the six states denoted above a, b, c, ab,
+bc, ac satisfy the additional condition (w (3)
+n)|ai = 0. they correspond to the
+extremal nodes of the pair (t2, d4) or, alternatively, to the nodes of the pair (t2,a(4)). as
+will be discussed in more detail in section 3, the subset of these nodes, to be denoted t , can
+be identied in both examples with the representation labels of the corresponding extended
+chiral algebra. the matrix elements j
+=
+
+a for a  t satisfy [51] the general relation j
+as1j
+
+n + w (3)
+
+sext
+
+{1}{j}
+
+and sext
+a{j}
+sext
+
+a{j}qsext
+p{j}
+
+, where {j} denotes the orbit of the exponent j with respect to the z2 automorphism
+is the verlinde matrix of the extended theory. this relation implies that |ai =
+{1}{j} pj{j} |jii, i.e., we can identifypj{j} |jii = |{j}ii with an extended ishibashi
+a{j}qsext
+
+state. the missing boundary condition corresponds to a twisted boundary condition from
+the point of view of the extended algebra.
+
+we conclude that, as expected, the number and nature of the boundary states reect
+
+the precise conditions that they are supposed to satisfy.
+
+3 . graph fusion algebras
+
+according to the discussion of section 2, given a certain chiral algebra a, the sets of complete
+orthonormal boundary states of rcfts consistent with this algebra are classied by repre-
+sentations of the verlinde algebra of a, on matrices ni with non-negative integral entries.
+or stated dierently: given a certain rcft with a chiral algebra a, the sets of complete
+orthonormal boundary states of this theory consistent with this algebra are classied by rep-
+resentations of the verlinde algebra of a, on matrices ni with non-negative integral entries,
+
+17
+
+with eigenvalues specied by the diagonal part e of the spectrum. these matrices may thus
+be regarded as the adjacency matrices of a collection of |i| graphs. in practice, it is sucient
+to look at the smaller number of matrices representing the generators of the fusion ring. for
+example, one matrix in the case of sl(2) considered above, or the n  1 matrices associated
+with the fundamental representations, in the case of sl(n).
+
+the simplest case is given by the regular representation of the fusion algebra, when
+the matrices ni are the verlinde matrices themselves, ni = ni. this is the case of so-
+called diagonal theories, when all representations of the set i appear once in the spectrum
+spec = {(i, i)|i  i}. this may be regarded as the case of reference from several points
+of view:
+it was the rst case analysed in detail [10]; the corresponding graphs are playing
+a central role; and nally in that case, cardy was able to provide a physical argument
+explaining why the fusion matrices arise naturally. it is the purpose of this section to extend
+these considerations to more general solutions. we shall nd that the role of the fusion
+matrices in the arguments of cardy is now played by two sets of matrices. the rst is the
+set of matrices ni that describe the coecients of the cylinder partition function; the second
+is a new set of matrices na, forming what is called the graph fusion algebra.
+
+on the other hand, since we know that the cylinder partition functions, or equivalently
+the matrices ni, contain some information about the bulk theory, through the knowledge
+of the diagonal spectrum e, it is expected that this classication of boundary conditions
+should have some bearing on the classication of bulk theories, namely on the classication
+of torus partition functions and on bulk structure constants. remarkably, this programme
+works even better than expected and the two classication problems seem to be essentially
+equivalent, at least for type i theories (see end of section 1). this will be explained in
+section 3.3 below.
+
+3.1 more on graphs and intertwiners
+
+suppose we have found a solution to the cardy equation, namely a set of n  n matrices
+b, i = 1,   ,|i|, a, b = 1,   , n. what was said in detail in section 2 and in
+(2.16), (ni)a
+appendix b in the case of bsl(2) can be repeated here. as their entries are non-negative
+integers, these matrices may be regarded as adjacency matrices of a set of |i| graphs gi,
+with n = |gi|  |g| nodes. we shall refer collectively to these |i| graphs as the graph
+g, whereas the basic solution provided by the ns themselves will be called the a graph,
+(borrowing the notation from the s(2) case). the eigenvalues of the matrices ni are specied
+by a set exp(g) in the sense that they are of the form sij/s1j, (j, )  exp(g). moreover
+exp(g) = e if the rcft is given and the diagonal spectrum e is known. but in general,
+the determination of the set exp(g) is part of the problem. the fundamental relation
+pb(ni)a
+ regarded as |g|  |g| matrices, the matrices ni form a representation of the fusion
+
+c may be interpreted in two ways:
+
+k(nk)a
+
+b (nj)b
+
+c =pk nij
+
+algebra (2.22).
+
+18
+
+ regarded as a |i|  |g| rectangular matrix, each matrix na for a xed, (na)j
+
+b := nja
+intertwines the representatives ni and ni in the two representations nina = nani, or
+more explicitly
+
+b
+
+nij
+
+knka
+
+nja
+
+bnib
+
+c .
+
+(3.1)
+
+xk
+
+c =xb
+
+we shall thus occasionally refer to the matrices ni as intertwiners.
+
+the case of graphs and intertwiners pertaining to bsl(2) theories has been discussed at
+length in section 2 and in appendix b. in appendix d, we outline the discussion of bsl(3).
+
+in that case, the fusion algebra is generated by two matrices n(2,1) and n(1,2) (labelled by the
+two fundamental (shifted) weights of sl(3)), and as these two representations are complex
+conjugate to one another, the matrices ni are related by transposition n(2,1) = nt
+(1,2) . then
+according to (2.22), ni is given by the same polynomial of n(1,2) and n(2,1) with integral
+coecients as that representing ni in terms of n(1,2) and n(2,1). it is thus sucient to list
+all possible graphs representing the matrix n(2,1), provided one checks that all ni have non-
+
+negative integral entries. in contrast with the case of bsl(2), no complete solution is known
+for bsl(3). the current state of the art is presented in appendix d with tables, gures and
+
+relevant comments.
+
+3.2 graph fusion algebras
+
+to see what is playing the role of the fusion algebra in the argument of cardy, we have
+to introduce the graph fusion algebra. the graph fusion algebra, as rst discussed by
+pasquier [48], is a fusion-like algebra attached to a connected graph g. let j
+a be the
+common orthonormal eigenvectors of the adjacency matrices g labelled by j  exp(g). in
+general, these eigenvectors can be complex. in the case of degenerate eigenvalues the associ-
+ated eigenvectors need to be suitably chosen. we assume that the graph has a distinguished
+node labelled 1 = 1 such that j
+one then denes the numbers
+
+1 > 0, for all j  exp(g).
+
+nab
+
+c = xjexp(g)
+
+c)
+
+aj
+b (j
+j
+j
+1
+
+(3.2)
+
+and the matrices na with elements ( na)b
+a = na.
+because of orthonormality, n1 = i. since each matrix na has a single non-vanishing entry in
+the row labelled 1, namely ( na)1
+b = ab, the matrices na are linearly independent.
+c are the structure constants of the graph fusion algebra satised by the n matrices
+the nab
+
+c satisfy nab
+
+b and n t
+
+b = ( n1)a
+
+c = nab
+
+c = nac
+
+na nb =xc
+
+nab
+
+c nc
+
+(3.3)
+
+which is an associative and commutative algebra. of course, if the graph g is of type a,
+this boils down to the ordinary verlinde fusion algebra since the matrix  of eigenvectors is
+nothing but the modular matrix s.
+
+19
+
+since the na and ni matrices have the same eigenvectors, it is easy to derive the matrix
+
+relation
+
+ni na =xb
+
+nia
+
+b nb .
+
+(3.4)
+
+in particular for a = 1, n1 = i, and all ni appear as linear combinations with non-negative
+integer coecients of the n s
+
+ni1
+
+c nca
+
+b
+
+(3.5)
+
+nia
+
+b =xc
+
+alternatively (3.4) may be used as a starting point to reconstruct the graph algebra, as
+explained in section 3.5.
+
+it should be stressed that the denition of a graph fusion algebra is not unique.
+
+in
+general, it depends on the choice of the distinguished node 1 and, when there are degenerate
+eigenvalues, also on the choice of the eigenvectors j
+a. to view the graph fusion algebra as a
+proper fusion algebra we would like the structure constants nab
+c to be non-negative integers.
+but even the rationality of these numbers is not obvious and it is therefore surprising that,
+for appropriate choices of the s and of node 1 and for most cases, they turn out to be
+
+integers of either sign. among all the examples known to us in bsl(n) theories, 2  n  5,
+it fails in only two cases: the graph called e (12)
+in figure 11, for which there is no node 1
+satisfying 1 = 1, and whose n algebra involves fractions of denominator 4; and a graph
+occuring in the bsl(4)4 theory, already mentioned in [51] and studied extensively in [53, 54],
+
+finally the non-negativity of the n is only possible for certain graphs which we call
+proper fusion graphs. for example, for the s(2) theories, the a-d-e graphs that admit a
+proper graph fusion algebra are
+
+in which half-integer nab
+
+c of either sign occur.
+
+5
+
+proper a-d-e graphs = an, d2q, e6, e8 .
+
+(3.6)
+
+the choice of distinguished node for the s(2) a-d-e graphs is explained in appendix b.
+
+we note that the set of proper s(2) fusion graphs matches the modular invariant parti-
+tion functions listed as type i at the end of section 1. the situation is somewhat dierent
+for s(3) graphs, for which we have to introduce a further distinction. in this case, some
+graphs with non-negative ns are not associated with type i theories. we reserve the termi-
+nology type i graph for those graphs associated with type i theories (see appendix d and
+
+tables). moreover, as is clear from the bsl(4)4 example above, some type i modular invariant
+
+partition functions are associated with graphs with non-integer and/or non-positive nab
+c. in
+the following, we discard these exceptional cases and restrict ourselves to type i graphs that
+are associated with type i rcfts. in general, the question of precisely which graphs admit
+type i fusion algebras should be related to the classication of type i rcfts, and thus is a
+very interesting open question.
+
+20
+
+3.3 fusion rules and block characters
+
+given a solution to the cardy equation, that is a set of partition functions
+
+za|b(q) =xii
+
+nia
+
+b i(q)
+
+(3.7)
+
+and the corresponding graphs, we assume as in section 3.2 above that there exists a special
+node called 1. we then introduce the combinations of characters (or block characters)
+
+where
+
+c(q) =xii
+
+nic i(q)
+
+nic = ni1
+
+c
+
+is referred to as the basic intertwiner. thanks to (3.5), (3.7) may be rewritten as
+
+za|b(q) =xc
+
+nca
+
+b c(q)
+
+(3.8)
+
+(3.9)
+
+(3.10)
+
+where the coecients are now given by the structure constants of the graph fusion algebra
+of g.
+
+equation (3.10) is a mathematical identity and as such is valid and consistent indepen-
+dent of the choice of the distinguished node and eigenvectors of g. physically, however, the
+case where the nab
+c are non-negative integers is the most interesting. in that case, following
+cardys discussion [10], it is suggested that nab
+c gives the number of times that the propa-
+gating mode or representation c appears in the strip or cylinder with boundary conditions
+a and b. thus if g is a type i graph, i.e. if the structure constants nab
+c are non-negative
+integers, we have a possible interpretation: the nodes a of the graph(s) g under considera-
+tion label a class of representations of some extended chiral algebra. the blocks a are their
+characters, and the integer coecients nab
+
+c are their fusion coecients.
+
+to probe this interpretation, let us see how it confronts the results in the bulk, in
+particular how it is consistent with the form of the torus partition function. there, it has
+been observed already long ago that (for type i theories) the torus partition function (cf
+(1.5)) may be recast in the form
+
+ztorus = xat | a|2 ,
+
+(3.11)
+
+i.e. as a diagonal sum over a subset t of block characters. the subset t corresponds to a
+subalgebra of the n algebra, in the sense that if a, b  t , nab
+c 6= 0 only if c  t . this
+result that was rst observed empirically [49] was subsequently derived in a variety of cases
+of type i s(n) theories based either on conformal embeddings or on orbifolding [51, 52].
+more recently, it was taken as a starting point for an investigation of the algebraic structure
+underlying these theories [53, 54].
+
+21
+
+the following interpretation is thus suggested. the nodes a  t label representations
+of the maximally extended algebra a of the rcft (of type i) under consideration. the
+subalgebra of the n algebra is the conventional fusion algebra of this rcft. the other nodes
+a 6 t might label other twisted representations. the entire n algebra would describe the
+fusion of all, twisted and untwisted, representations of a. this interpretation in terms
+of twisted representations seems corroborated by the fact that some a are known also to
+occur in partition functions on a torus in the presence of twisted boundary conditions. the
+fact that general boundary conditions on a cylinder also appeal to these representations was
+rst observed in the potts model in [21]. see for some work in this direction [55], and the
+more systematic developments [28] on orbifold theories along the lines of [60]. the concept of
+twisted representations in other cases, like conformal embeddings, remains to be understood.
+
+having discussed the situation for type i theories and graphs, we return to rcfts of type
+ii. there the situation is more elusive. on the one hand, as discussed above, the boundary
+conditions on a cylinder are labelled by nodes of an improper graph g, and although we can
+still write an expression of the form (3.10), its physical interpretation is unclear. on the
+other hand, from (1.6), we know [71] that the torus partition function may be expressed in
+terms of block characters pertaining to a parent type i theory with graph g
+
+ztorus = xat
+
+a(q)(cid:16) (a)(q)(cid:17) ,
+
+(3.12)
+
+where t is once again a subset of the nodes of g corresponding to a subalgebra of the n
+algebra, and  is an automorphism of that subalgebra n(a)(b)
+
+(c) = nab
+
+c.
+
+related in that way to the d10 theory. their respective torus partition function read
+
+for example, the bsl(2)16 theory labelled by the dynkin diagram e7 is known to be
+z (d10)
+torus = |1 + 17|2 + |3 + 15|2 + |5 + 13|2 + |7 + 11|2 + 2|9|2
+
+(3.13)
+
+(3.14)
+
+n(d10)
+ia i|2
+
+= xa=1,3,5,7,9,10
+
+ad10
+
+= xa=1,3,5,7,9,10
+
+ad10
+
+|xi
+ xi
+
+z (e7)
+torus = |1 + 17|2 + |5 + 13|2 + |7 + 11|2 + |9|2 + (3 + 15)9 + c.c.) (3.15)
+(3.16)
+
+n(d10)
+
+n(d10)
+
+,
+
+ia i! xi
+
+i(a) i!
+
+with  exchanging the two nodes 3 and 10 of the d10 diagram.
+
+it seems that the parent graph g also plays a role for cylinder partition functions of
+type ii theories. indeed, to obtain cylinder partition functions expanded with non-negative
+coecients in terms of block characters, we just have to expand in the block characters of
+g. specically, we nd
+
+z (g)
+
+b|a (q) = xcg
+
+n(gg)
+ca
+
+b (g)
+
+c
+
+(q)
+
+22
+
+where the g-g intertwiners are given by
+
+n(gg)
+ca
+
+b = xmexp(g)
+
+(g)
+c
+(g)
+1
+
+m
+
+m
+
+(g)
+
+a
+
+m(g)
+
+b
+
+m
+
+which turn out to be non-negative integers n(gg)
+b  0. here it is assumed that exp(g) 
+exp(g). the formula can be derived in the same way as our previous formulas. in particular,
+this formula applies for g = e7 and g = d10. in this case there is an ambiguity as to which
+d10 eigenvector is taken for m = 9 but in fact one can take either. the matrices are changed
+by the z2 symmetry but the cylinder partition functions agree. we also expect this formula
+to hold for the type ii sl(3) theories.
+
+ca
+
+z   =torus
+
+t
+
+
+a
+
+1
+
+(a)
+
+a
+
+1
+
+l
+
+l
+
+figure 3: the torus partition function reconstructed from two cylinder partition functions.
+
+putting everything together, we nally observe that in general for a rectangular torus
+
+with two periods 2l and it , made by pasting together two cylinders, (see figure 3),
+
+z (g)
+
+torus = xat
+
+z (g)
+a|1 z (g)
+
+(a)|1 ,
+
+(3.17)
+
+i.e.
+the partition function may be obtained as the sum over a special set of boundary
+conditions of cylinder partition functions. this expression is of course deeply rooted in all
+the connections between bulk and boundary theories, open and closed strings, etc, but still
+we nd its simplicity intriguing.
+
+3.4 examples
+
+more examples can be given to the previous general scheme.
+
+well posed problem on which we have only partial results.
+
+in particular, classes of
+
+ bsl(n) : the classication of the representations of the fusion algebra of bsl(n)k is a
+graphs pertaining to bsl(3) as well as some cases for higher n have been expounded
+
+from various standpoints in [37, 49, 50, 51, 52, 56], (see appendix d). in all known
+cases, the previous discussion may be repeated: intertwiners, type i graphs, and other
+concepts introduced above, still apply. we refer the reader to the above references.
+
+23
+
+ the case of bsl(n)1 may be described in detail. the representations of bsl(n)1 are
+labelled by an integer 0  i  n  1 (we depart here from our previous convention,
+with i = 0 denoting the identity). the fusion rules are isomorphic to the addition of
+integers modulo n, and the algebra dened by ninj = ni+j mod n is thus generated by
+n1, nj = (n1)j. the eigenvalues of nj are exp 2ij/n. the regular representation
+j = j,i+1 mod n . all the previous
+is provided by n  n matrices, generated by (n1)i
+eigenvalues are reached once and we may thus say that the system has exponents
+ = 0,   , n  1 (mod n). in general, a representation {ni} of the fusion algebra is
+associated with each divisor q of n = p.q, including q = 1 and q = n: q denotes the
+b = ba,1 mod q, for a
+order of the matrix n1 which is qq dimensional and such that (n1)a
+labelling of the nodes a, b = 1,   , q. (this exhausts all integer-valued representations
+of the algebra. indeed the conditions that nt
+1 = nn1 and n1nn1 = i imply that
+the only entries of n1 are 0 and 1, and that n1 is a permutation matrix. being of
+order q and indecomposable, n1 is a matrix of a cycle of length q. q.e.d.) obviously
+the matrices ni = (n1)i are all integer-valued, n0 = i, and nt
+i = ni = nni. the
+graph of adjacency matrix n1 is an oriented q-gon. in that case, we may say that the
+q exponents are 0, p,   , p(q  1).
+this census of representations of the bsl(n)1 fusion algebra matches almost perfectly
+
+that of modular invariant partition functions carried out by itzykson [57] and degio-
+vanni [58]. we recall that according to these authors, a dierent modular invariant is
+associated with each divisor of n, where n = n if n is odd and n = n/2 if it is even.
+thus, only the case n even, q = 1 has to be discarded in our list of representations of
+the fusion algebra, as it does not correspond to a modular invariant.
+
+3.5 algorithmic approaches to graph algebras
+
+in section 3.2, we have introduced the matrices n by (3.2) and derived (3.4). instead of
+looking at the graph as a collection of points we can look at it as a collection of matrices n,
+providing a basis of a commutative associative algebra, and an action of the intertwiners ni
+given by (3.4), that is, we take (3.4) as a starting point. given the graph g, in particular
+c, it is possible in many cases to invert (3.5) and solve for na as linear
+the coecients ni1
+combinations with integral coecients of the intertwiners ni, or equivalently, as polynomials
+of the fundamental adjacency matrices. similarly the relation (3.4) written in terms of the
+eigenvalues j(i) = sji
+s1i
+
+, a(i) = i
+a
+i
+1
+
+j(i) a(i) =xb
+
+nja
+
+b b(i) ,
+
+i  e , j  i ,
+
+(3.18)
+
+is a recursive relation determining (the rows of) the eigenvector matrix i
+a.
+in general,
+typically in the presence of degenerate eigenvalues, the matrix i
+a is not determined uniquely,
+or alternatively, (3.5) cannot be inverted for all a  v. for the type i cases, however, as
+explained above, there exists an extended fusion algebra isomorphic to a subalgebra of the
+
+24
+
+bi , or alternatively express j
+
+graph algebra, so that the extended fusion matrices n ext
+bi can be identied with a subset
+na with the nodes a  t  v [49]. in most of these type i cases one can solve for all na
+in terms of the nis and n ext
+a in terms of the modular matrices
+sij , sext
+bsbl. a particularly simple subclass of type i for which one can go quite far in the
+programme of reconstructing the graph g and all the related structures is presented by the
+orbifold theories, in particular the ones associated with groups generated by simple currents.
+in our approach they can be described by graphs obtained by orbifolding the fundamental
+graphs of the initial diagonal theory, the simplest example being provided by the wzw sl(2)
+d2l series obtained by orbifolding the dynkin diagram a4l3 over the z2 group generated
+by the automorphism . in these cases as well as in their sl(n) generalisations dened in
+[59] involving the group zn , one can algorithmically construct the eigenvector matrix, see
+appendix b for an illustration in the simplest n = 2 case. in a dierent approach, based on
+the original orbifold treatment of [60], an elegant general formula for the eigenvector matrix
+was derived recently in [28]. it should be noted that the same graph (orbi)folding procedure
+leads also to type ii graphs, e.g., the sl(2) dodd series, or their sl(3) generalisations for k 6= 0
+mod 3, see appendix d.
+
+we have assumed up to now in this discussion that the graphs are already known. on
+the other hand the relations (3.4), (2.22) can be taken as the starting point for nding new
+graphs, typically exceptional graphs not covered by the previous algorithmic orbifold con-
+structions. since any graph in the vicinity of the identity resembles the original diagonal
+(a) graph, one can rst try to identify nis for which the r.h.s. of (3.5) reduces to one term,
+a = aai and hence one can identify ni = nai. according to (3.18) this also determines
+i.e., ni1
+ai by i(j) once j
+j
+1 is known. this is a problem which is reduced to the computation of
+some verlinde fusion multiplicities. indeed let us take the rst matrix element a = b = 1 of
+the matrix relation (2.22) we have
+
+j
+
+(3.19)
+
+ni1
+
+xc
+
+cnj1
+
+ni
+
+j n1
+
+1 =x
+
+c =x
+1 6= 0} and  is counted n1
+
+ni
+
+1 times. let us assume rst
+where in the last sum  = {  i|n1
+a are
+that in (3.19) i = j. whenever the r.h.s. of (3.19) is equal to 1, since by denition ni1
+a = aai. furthermore
+integers, the l.h.s. summation reduces to one term, i.e., we recover ni1
+ai as being given by the
+plugging this into the l.h.s. of (3.19) taken for j 6= i we recover nj1
+sum of verlinde fusion multiplicities in the r.h.s. of (3.19), i.e., we determine the multiplicity
+with which nai appears in nj, see (3.5). similarly, a value 2 or 3 for the r.h.s. of (3.19) with
+i = j would lead to 2, respectively 3 terms in (3.5), while 4 could be interpreted either as
+a = 2aai.
+leading to 4 terms with multiplicity one, or 1 term with multiplicity two, i.e., ni1
+what we only need in order to check all these possibilities is to know the content of the set
+1. this data is provided in type i theories for all of which  encodes the content
+, i.e., ni1
+a = multba(i),
+of the identity representation of the extended algebra. more generally, ni1
+identifying a with a representation ba of the extended algebra. the relation (3.19) and its
+consequences just described are the rst steps in a consistent algorithmic procedure proposed
+
+25
+
+by xu [53] (see also [54] for further developments) in the abstract framework of subfactors
+theory, which also reproduces previous results in [37, 49, 51, 52]. in particular, the subset of
+ni which can be identied with some nai are related to irreducible sectors in [53, 54], with
+the sum in the l.h.s. of (3.19) interpreted as a scalar product (i, j). the algorithm reduces
+systematically the determination of ni , na in type i cases to data provided by the verlinde
+fusion matrices n and n ext. all graphs previously found in [37, 49, 51] were recovered by
+
+this method and furthermore a new bsl(4)6 example was found in [52].
+
+finally let us point out that to some extent this algorithm for nding new solutions of
+the equations (3.4) and (2.22), i.e., new graphs, can be applied to type ii cases where we
+1, i.e., the set . one can start with some trial set and compute
+do not know a priori ni1
+p((j,)
+1)2 = 1. then one
+can proceed as in type i. for example the e7 dynkin diagram may be reconstructed using
+ = {1, 9, 17}. dierent (consistent) choices of the set  might lead to the same graph,
+reecting the possibility of dierent choices of the identity node.
+
+)2 = s1jp sj. a rst consistency check is that pje(j
+
+1
+
+in some simple cases it is possible to recover a complete set of boundary conditions by
+applying formula (3.4) to a known subset in such a way that only one term appears in the
+sum in the r.h.s. in terms of the equivalent formula (3.18) for the eigenvalues we obtain a
+new solution i
+a with the verlinde eigenvalue j(i).
+this seems to be the idea of the so called aeck fusion conjecture [16], which clearly has
+a restricted application, with the general formulae (3.4), (3.18) being the correct substitute
+for it.
+
+b , b = b(a, j) , by fusing a given one i
+
+another approach to constructing type i graphs was discussed in [51] and used to nd
+new solutions for higher rank cases. it is based on the use of a relation for the structure
+constants of the pasquier algebra, the dual of the graph algebra, with structure constants
+labelled by elements in the set exp(g) and given by a formula analogous to (3.2), however
+with the summation running over the nodes of the graph; this algebra will be discussed
+further in section 4.4.1 below.
+
+4 . bulk and boundary operator algebras
+
+in this section we investigate the consequences of locality in the presence of boundaries. our
+discussion parallels that of cardy and lewellen [11], but generalises it in two respects: to
+higher rank and to non-diagonal theories. this results in additional multiplicities associated
+with the more general representations of the verlinde algebra (2.22). our presentation makes
+use of concepts used by moore and seiberg for bulk rcfts and extends them appropriately
+for this new setting. this leads to a richer structure in the equations and the appearance
+of a triplet of algebras (ni, na, mj). separately these algebras have appeared before but the
+inter-relation between these algebras has not been shown in this context.
+
+26
+
+4.1 ground state degeneracies
+
+as stressed by aeck and ludwig [15], the logarithm of the partition function, in the limit
+l/t  , contains not only the universal term proportional to l and to the central charge
+(in unitary theories), but also an l independent term, interpreted as a boundary condition
+dependent ground state degeneracy ln gagb. indeed in that limit
+
+ln zb|a 
+
+c
+24
+
+4
+
+l
+t
+
++ ln 1
+
+a + ln 1
+
+b  ln s11
+
+(4.1)
+
+where as before we denote by 1 the representation of conformal weight 0, corresponding to
+the identity operator. we therefore identify
+
+ga =
+
+1
+as11
+
+.
+
+(4.2)
+
+thus in unitary minimal models, using (2.38) and (2.28), we have the following expres-
+
+sion for the boundary states
+
+|(r, a)i = xr,s
+
+rodd,sexp(g)
+
+1
+4
+
+2
+
+and their g factor
+
+a
+
+s(h)
+rr s
+1r s(g)
+1s
+
+qs(h)
+
+|r, sii
+
+g(r,a) = hh1, 1|(r, a)i
+11 s(g)
+
+11
+
+qs(h)
+
+1
+4
+
+= 2
+
+s(h)
+r1 1
+a
+11 s(g)
+
+qs(h)
+
+11
+
+,
+
+for example, for the critical 3-state potts model, we obtain
+
+in terms of the modular matrices s(h) and s(g) of bsl(2) at levels h 2 and g  2, |g  h| = 1.
+3)
+
+(ga : gab : gabc : gn ) = (1 :
+
+5  5
+
+1 + 5
+
+1 + 5
+
+4 = 0.550936
+
+: 3 :
+
+ga = (
+
+)
+
+1
+
+2
+
+2
+
+30
+
+in agreement with [21]. as a particular case of (4.4), the ratio g(r,a)/g(1,a) equals s(h)
+r1 /s(h)
+11 ,
+in agreement with (a.3) of [21] and the fact that one obtains the boundary state |(r, a)i by
+fusion (in the sense of cardy) of boundary states (1, a) and (r, 1).
+
+in non-unitary cases, these expressions have to be slightly amended. if j0 denotes the
+
+representation of smallest conformal weight hj0 < 0 and assumed to belong to e, then
+
+ln zb|a 
+
+ce
+24
+
+4
+
+l
+t
+
++ ln j0
+
+a + ln j0
+
+b  ln s1j0
+
+(4.3)
+
+(4.4)
+
+(4.5)
+
+(4.6)
+
+with ce := c  24hj0. also
+
+ga =
+
+.
+
+1
+
+aqs1j0
+
+for simplicity of notation in most of what follows we shall restrict to unitary theories.
+
+denoting ga = h1ia from now on,
+
+lim
+
+l/t
+
+zb|a e c
+
+6
+
+l
+
+t /gb = h1ia .
+
+27
+
+(4.7)
+
+one can consider furthermore the partition function with some eld insertions at the same
+limit [11], [24], [25]; we shall normalise them similarly so that only a dependence on ga is
+retained, i.e., h1ia will coincide with the 1-point function of the identity operator in this
+limit.
+
+4.2 bulk and boundary elds, ope
+
+4.2.1 boundary elds
+
+according to cardy [10], boundary conditions can be interpreted as created by the insertion
+of elds ba
+j,(x) living on the boundary, im z = 0, x =re z of the upper half-plane z  h+
+b of such elds, to be called
+here j  i , a, b  v , and  accounts for the multiplicity nja
+j a(cid:17) . thus  can be interpreted as a coupling index  = 1, 2 . . . , nja
+of type (cid:16) b
+b and the
+boundary elds as kind of chiral vertex operators (cvo) associated with a second type
+j a(cid:17)
+of couplings (cid:16) b
+, a, b  v , j  i. this is a formal analogy since the boundary states
+|ai,|bi labelled by a, b are superpositions of ishibashi states. the multiplicity index  is
+traditionally omitted, but it should be stressed that even in the sl(2) case, in all but the
+b > 1, so most of
+diagonal cases (e = i), there are always some non-trivial multiplicities nja
+b = ab the index associated with the coupling
+the time we shall retain this index. since n1a
+(cid:16) b
+1 b(cid:17) takes only one value and will be denoted  = 1b, or just 1, or, altogether omitted.
+on the other hand in all non-diagonal cases there is a non-trivial subset {11
+j , j  } of
+boundary elds, with 1    i , where the set  has been introduced in section 3.5.
+
+to make contact with section 2.2, consider the nite strip w = l
+
+ log z equipped with
+the hamiltonian hab = 
+24). the space of states is generated by all the descendent
+states created for xed a, b from the (properly normalised) vacuum state ba
+j,(0)|0i by
+the modes of the virasoro algebra generating the real analytic conformal transformations.
+b of these
+this includes besides the sum over j  i a summation over the multiplicity nja
+states for xed a, b, j, i.e., we can think of the vir representation spaces vj , as being
+labelled by pairs (j, ). the dual vacuum state is dened by a boundary eld placed
+at innity p limx ca,b,j;, x2j h0|ab
+j,(x) where ca,b,j;, is a normalisation constant
+j b(cid:17) . accordingly the trace of the operator et hab
+a is an index of type(cid:16) a
+and  = 1,   , njb
+computed imposing the periodicity w  w + t in time direction can be written as a sum
+over (j, ) of characters j, , with the summation over  leading to (2.15), with a and b
+exchanged.
+
+l (l(h)
+
+0  c
+
+boundary elds ba
+
+j,(x) appear as ordinary elds j(x) decorated by a pair of indices
+in the limit l/t   their 1-, 2- and 3-point functions
+a, b according to some rules.
+are given by the corresponding invariants of j with respect to sl(2, r) with normalisation
+coecients depending on a, b. as for the ordinary elds the 1-point function is non-zero only
+for the identity operator
+
+h0|ba
+
+j,(x)|0i = j1 ba 1a h1ia
+
+(4.8)
+
+28
+
+i,1
+
+da
+
+b = ab. as for the ordinary cvo the product
+with the restriction on a, b coming from n1a
+bc
+j,2 of two boundary elds is dened only for coinciding c = d. similarly the initial
+and the nal indices in a vacuum expectation value of a product of boundary elds, are
+restricted to coincide (due to the periodicity in the strip time direction, the boundary half-
+line being eectively closed) but in distinction with the ordinary cvo they can be arbitrary
+and not just equal to the identity 1. the 2- and 3-point functions read
+
+h0|ab
+
+j,1(x1) bc
+
+i,2(x2)|0i = ji ac
+
+ii ;1 2
+
+c ab
+|x12|2j
+
+,
+
+x1 6= x2 ,
+
+(4.9)
+
+h0|ab
+
+i,1(x1) bc
+
+j,2(x2) cd
+
+k,3(x3)|0it = ad
+
+ijk ;1 2 3 ;t
+
+c abc
+ij |x23|i
+
+jk |x31|j
+
+ki
+
+|x12|k
+
+,
+
+x1 6= x2 6= x3 6= x1 ,
+(4.10)
+
+where k
+
+ij = i + j  k and xij = xi  xj.
+
+the functions (4.9), (4.10) are invariant with respect to sl(2, r), with representations
+denoted by a pair (,  = ), see [40]; here we choose  = 1 corresponding to taking
+the modulus of the multiplier of the sl(2, r) transformations and the expressions in (4.9),
+in the bsl(n)k wzw
+(4.10) imply trivial monodromy of the boundary eld correlators.
+models the elds carry an additional tensor index, or, in a functional realisation, depend on
+an additional (multi)variable x accounting for the representations of the isospin sl(n, r)
+algebra and the n-point functions involve also npoint invariants with respect to this algebra.
+
+for example, in the bsl(2)k wzw case the elds j(x, x) can be described in terms of a
+
+in this case the isospin labels are 2j = 0, 1, . . . , k , and the
+pair of real variables [65].
+il along with any x2j
+2- and 3-point invariant correlators contain additional factors x 2j
+.
+for simplicity we adapt the notation for (at most) the minimal wn models rather than
+their wzw counterparts, omitting the explicit indication of the isospin variables and the
+corresponding invariants. to keep track of the various possible three-point invariants, we
+shall retain the multiplicity index t as in (4.10).
+
+il
+
+i
+
+up to the normalisation constant and up to phases, (4.10) is the 3-point invariant
+function h0|i ,1
+j ,t k ,1k|0i of the ordinary cvo j ,t(x). here t is a coupling index of type
+j k(cid:17) , t = 1, 2, . . . , njk
+(cid:16) i
+i. two kinds of permutations act on these couplings, see [32]: 23
+(cid:16) p
+i j(cid:17)  (cid:16) p
+i p(cid:17) . for simplicity in the sequel we denote the one
+i j(cid:17)  (cid:16) j
+value indices indicating couplings with one label of type i set to 1, like 23(1i) , 1i , or, 1a
+(corresponding to couplings of type (cid:16) i
+i 1(cid:17) , (cid:16) 1
+
+motivated by the form of the 3-point function, the operator product expansion (ope)
+
+1 a(cid:17) resp.), simply by 1.
+
+j i(cid:17) , and 13 : (cid:16) p
+
+i i(cid:17) , or, (cid:16) a
+
+of (primary) boundary elds bc
+
+i,(x) is dened according to
+
+bc
+
+i,1(x1) ca
+
+j,2(x2) = xp , ,t
+= xp,,t
+
+j
+
+(1)fcp" i
+(1)fcp" i
+
+b a# t
+b a# t
+
+j
+
+1 2
+
+29
+
+1 2 xp hp, p|i,t(x12)|j, 0i ba
+
+p,;p (x2)
+
+(4.11)
+
+1
+
+|x12|i+jp
+
+ba
+
+p,(x2) + . . . ,
+
+where p is an index for the descendent states of the representation vp with p  i. the indices
+1 , 2 ,  account for the multiplicity of vertices of type (cid:16) b
+p a(cid:17) , respectively,
+i j(cid:17) , t =
+a, b, c  v , i.e., 1 = 1, 2 . . . , nic
+1, 2, . . . nij
+be omitted. from the 1-point function
+
+b , etc, while t is that of a standard vertex (cid:16) p
+
+p. we will often restrict for simplicity to the sl(2) case, so that the index t can
+
+j a(cid:17) , (cid:16) b
+
+i c(cid:17) , (cid:16) c
+
+j
+
+1
+
+1 2
+
+= pi ac 2 1 t 1 1 ,
+
+= p j b c 1 1 t 1 2  .
+
+(1)fcp" i
+(1)fcp" 1
+
+b a# t
+b a# t
+i j(cid:17)t
+with the normalisation of the cvo (cid:16) p
+b a# t
+with i, j, p  i, a, b, c  v, represent the ope
+coecients of the boundary elds and their determination is part of the problem. they
+are reminiscent of the matrix elements of the fusing (or crossing) matrices f (whence the
+notation here for this second fusing matrix), which serve as ope coecients of the usual
+cvo [32]. the denition (4.11) extends to descendent elds in the l.h.s. as for the usual
+cvo. symbolically (4.11) can be written as
+
+the numerical coecients (1)fcp" i
+
+implied by the second equality in (4.11)
+
+(4.12)
+
+1 2
+
+1 2
+
+j
+
+= xp , ,t
+
+(1)fcp" i
+
+j a(cid:17)2 , x2
+
+b a# t
+1 2 (cid:16) p
+i c(cid:17)1 , x1 (cid:16) c
+(cid:16) b
+and can be depicted similarly as the standard moore-seiberg diagrams, see figure 4. de-
+pa the space of boundary elds of type (cid:16) b
+p b(cid:17)1
+noting by u b
+b while the
+space of standard cvo, u p
+p,
+dim u c
+
+p a(cid:17) , x2
+i j(cid:17)t , x12 (cid:16) b
+we have dim u b
+
+ij, has dimension given by the verlinde fusion multiplicity nij
+
+p. thus we can interpret (1)f as a linear operator
+
+pa = npa
+
+(4.13)
+
+j
+
+ja = nij
+
+c u b
+
+ic  u c
+
+ja  p u p
+
+ij  u b
+pa ,
+
+(4.14)
+
+the dimension of the two sides being identical, according to (2.22). given the 1- and 2-point
+correlators above the computation of the general boundary eld n-point functions is reduced
+
+to the computation of the conformal blocks of the standard cvo (cid:16) p
+
+i j(cid:17)t , x
+
+.
+
+i
+
+j
+
+b
+
+1
+
+x
+
+1
+
+c
+
+a
+
+2 x
+2
+
+f(1)
+
+cp
+
+i
+
+j
+
+t
+
+12x
+a
+
+p
+
+b
+
+
+2x
+
+figure 4: graphical representation of (4.13)
+
+comparing with the 2 and 3point functions, see figure 5(a) and (b), we have
+
+ii ;1 2 = (1)fb1" i
+
+a
+
+c ab
+
+30
+
+i
+
+i
+
+a#1a1
+
+1 2
+
+h1ia ,
+
+(4.15)
+
+c abc
+
+j
+
+(1)fbk" i
+ijk ;1 2 3 ;t =x
+(1)fci" j
+=x
+
+a c# 2313(t)
+b a# t
+
+2 3
+
+1 2
+
+k
+
+a
+
+(1)fc1" k
+(1)fb1" i
+
+a
+
+k
+
+k
+
+ 3
+
+h1ia
+
+a#1a 1
+a#1a1
+1  h1ia .
+
+i
+
+i
+
+(4.16)
+
+i*
+
+i
+
+a
+ x11
+
+b
+
+a
+
+2 2x
+
+f(1)
+
+b1
+
+i*
+
+x12
+a
+
+i
+
+1
+
+a
+
+x2
+
+1 a
+
+1
+
+i*
+
+x1
+
+i
+
+x2
+
+i
+
+1
+
+(a)
+
+i
+
+j
+
+k
+
+a
+
+x
+1
+
+b
+
+c
+
+a
+
+x
+
+2
+
+x
+3
+
+f(1)
+
+c1
+
+x23
+
+1
+a
+
+x3
+
+f(1)
+
+bk
+
+i
+
+x12
+
+a
+
+j
+
+k
+
+i
+x12
+c
+
+j
+
+k
+
+a
+
+x3
+
+k
+
+a
+
+x2
+
+ kk*
+
+(b)
+
+1 a
+
+1
+
+i
+
+x1
+
+j
+
+k
+
+i*
+
+k
+
+1
+
+x2
+
+x3
+
+figure 5:
+
+(a) and (b): boundary eld 2- and 3-point functions
+
+the 2 and 3point normalisation coecients are assumed to satisfy the symmetry
+
+conditions
+
+c ab
+
+ii ;  = c ba
+
+ii ;  = c ab
+
+ii ;13() 13() ,
+
+(4.17)
+
+(4.18)
+
+c abc
+
+ijk ;1 2 3;t = c bca
+
+jki ;2 3 1;t = c acb
+
+kji ;13(3) 13(2) 13(1);t
+
+with coupling indices t of type (cid:16) i
+
+j k(cid:17) , t = 1323(t) , t = 13(t) . the rst equality in both
+
+(4.17) and (4.18) is a cyclic symmetry relation, locality condition on boundary elds, see
+figure 6. the second equality is a mirror (cpt) symmetry sending one of the (closed)
+boundary half-lines to the other. under this antilinear transformation a given eld ba
+j,(x)
+is mapped onto its conjugate ab
+   = 13(), consistent with nia
+
+j,(x), with a permutation of labels 13: (cid:16) b
+
+j a(cid:17) (cid:16) a
+j b(cid:17) ,
+
+b = nib
+
+a .
+
+31
+
+i
+
+j
+
+k
+
+j
+
+k
+
+i
+
+a
+
+x
+1
+
+b
+
+c
+
+a
+
+x
+
+2
+
+x
+3
+
+b
+
+x
+2
+
+c
+
+a
+
+b
+
+x
+
+3
+
+x
+1
+
+-x1
+
+a*
+
+-x2
+
+-x3
+
+b*
+
+c*
+
+a*
+
+i
+
+j
+
+k
+
+figure 6: the cyclic and mirror symmetries of 3-point functions
+
+the cyclic symmetry relations imply
+
+(1)fc1" j
+
+a
+
+j
+
+j
+
+a #1a 1
+
+1 2
+
+h1ia = (1)fa1" j
+
+c
+
+j
+
+j
+
+c#1c1
+
+2 1
+
+h1ic ,
+
+(4.19)
+
+(1)fak" j
+
+x
+(1)fbs" k
+
+c
+
+b
+
+s
+
+c# t
+a# 2313(t)
+
+ 
+
+j
+
+2 
+
+b
+
+(1)fc1" k
+(1)fc1" s
+
+a
+
+k
+
+k
+
+b#1b1
+a #1a 1
+
+ 2
+
+s
+
+ 
+
+s
+
+h1ib
+
+h1ia ,
+
+(4.20)
+
+=x
+
+while the mirror symmetry leads to
+
+(1)fak" j
+
+b
+
+s
+
+c#t
+
+ 
+
+= (1)fak" s
+
+c
+
+j
+
+b#13()23(t)
+
+13() 13()
+
+.
+
+(4.21)
+
+4.2.2 bulk elds and bulk-boundary coecients
+
+we turn to the second ingredient of the cardy-lewellen boundary cft, the bulk elds. the
+half-plane bulk elds i (z, z) , z = x + iy  h+ , z = x iy transform under a representation
+of l(h) [34] realised by dierential operators
+
+lh
+n = ln(i , z) + ln(i , z)
+
+(4.22)
+
+and characterised by a pair i = (i,i) of weights. in cases when there is more than one eld
+with the same labels (i,i) a more involved notation like i = (i,i; ) is needed, but usually
+omitted for simplicity. for type i theories as well as for arbitrary scalar elds both i,i  e,
+while in general i,i  i.
+1,0 determines the 1point
+function of (i,i)(z , z) as well as the 2point function haa
+
+the invariance with respect to the subalgebra spanned by l(h)
+
+p, (i,i)i , e.g.,
+
+h0|aa
+=
+
+p,(x1) (i,i) (z, z)|0i
+c a
+
+p,(i,i), ,t
+
+(z  z)i+ip (x1  z)i+pi (x1  z)i+pi
+
+32
+
+(4.23)
+
+,
+
+x1 > re z .
+
+requiring the symmetry of this function under the exchange of the two elds leads to the
+constraint ii  z. similarly admitting as well anticommuting elds would lead to half-
+integer spins; for simplicity we shall restrict ourselves in this paper to integer spin elds.
+
+the r.h.s. of (4.23) is the 3-point block of the standard cvo h0|p ,1
+
+p(x1) i ,t(z) i ,1i(z)|0i ,
+p. consistently with this the (primary)
+
+bulk eld can be represented via the decomposition
+
+ii(cid:17) , t = 1, 2, . . . , nii
+
+(i,i)(z , z)
+
+with t a coupling index of type(cid:16) p
+= xa, ,pi ,t
+= xa, ,pi ,t
+= xa, ,pi ,t
+
+p,;p (z)
+
+(4.24)
+
+(i,i) xp hp, p|i,t(z  z)|i, 0i aa
+(z  z)i+ip
+
+aa
+
+1
+
+p,(z) + ....
+
+a,bp,t
+
+a,bp,t
+(i,i)
+
+a,bp,t
+(i,i)
+
+1
+
+(2iy)i+ip
+
+aa
+
+p,(x) + ....
+
+which extends to descendent elds (i,i);(i, i). here aa
+p,(z) are unphysical generalised cvo
+obtained extending to the (full) plane the boundary elds of the previous section. their ope
+is determined by the same fusing matrix (1)f , i.e., as in (4.11), the latter extended to complex
+arguments with |x12| replaced by z12; we shall need only this fusing property.
+ii(cid:17)t
+depend on two couplings of dierent types,(cid:16) p
+
+(i,i) (bulk-boundary reection coecients) in this decomposition
+. note that the coecients used
+here dier by a phase from the traditionally normalised coecients [11], [12], which will be
+denoted a,bp,t
+
+p a(cid:17)
+and(cid:16) a
+
+the constants a,bp,t
+
+(i,i)(cl), i.e.,
+
+a,bp,t
+
+(i,i) = ei 
+
+2 (i+ip) a,bp,t
+
+(i,i)(cl) .
+
+the decomposition (4.24), symbolically written as
+
+(i,i)(z, z) = xa, ,p ,t
+
+a,bp,t
+
+(i,i)(cid:16)p
+
+ii(cid:17)t , zz (cid:16) a
+
+p a(cid:17) , z
+
+(4.25)
+
+,
+
+(4.26)
+
+see figure 7, reduces the computation of the npoint functions of (i,i) to the computation of
+the blocks of the generalised cvo ab
+p,(z), which combined with their ope (the extension
+from |x12| to z12 of (4.11)) allows to recover all correlators in terms of standard conformal
+blocks. the invariant 1-point function projected onto the boundary state a reads
+
+h(i,i)(z, z)ia = i i
+
+a p
+b
+
+(i,i)
+
+
+
+(i,i)
+
+a,1ab1,1
+i
+(i,i)
+(z  z)2i h1ia .
+
+i
+
+i
+
+t, z-z
+a
+
+a
+
+p
+
+ z,
+
+(4.27)
+
+figure 7: graphical representation of the decomposition (4.26) of bulk elds
+
+33
+
+omitting the trivial indices  = 1a, s = 1i, and simplifying the label (i, i) to i, we have in
+particular ab1
+
+1 = 1 for any a.
+
+the ope of the half-plane bulk elds (k,k)(z, z) is dened according to
+
+(k,k)(z1, z1) (l,l)(z2, z2)
+
+d(j,j);t,t
+
+(k,k)(l,l) xj , j hj, j|k,t(z12)|l, 0i hj, j|k,t(z12)|l, 0i (j,j);(j, j)(z2, z2)
+
+(j,j)(z2, z2) + ....
+
+(4.28)
+
+= xj ,j ,t ,t
+= xj ,j ,t ,t
+
+d(j,j);t,t
+(k,k)(l,l)
+j
+zj
+12 z
+kl
+the coecients d(j,j);t,t
+
+12
+
+kl
+
+(k,k)(l,l) are related to the full-plane bulk ope coecients, see below.
+
+4.3 boundary cft duality relations
+
+4.3.1 cardy-lewellen equations rederived
+
+we collect in this section the set of equations resulting from the sewing constraints of the
+boundary cft; some of these equations can be interpreted as expressing locality (symmetry)
+of the boundary correlators. for simplicity of notation some of these equations will be written
+
+down without explicitly indicating the coupling indices of type (cid:16) i
+j k(cid:17) and the corresponding
+summations, i.e., essentially for the simplest sl(2) case. however we shall keep the charge
+conjugation in the indices of i so that the general formulae can be easily recovered. in the
+sl(2) wzw case the braiding phases are given by the shifted scaling dimensions sug
+j  j,
+instead of sug
+(since the pair of coordinate and isospin variables is moved as a whole). then
+formulae work equally well with the same fusing and braiding matrices, without additional
+signs, as for the corresponding subfamily (1, 2j + 1) of elds in virasoro minimal models.
+
+j
+
+applying (4.11) in dierent ways to the 4point function of boundary elds , that is
+demanding associativity, leads to a relation connecting the two types of fusing matrices (1)f
+and f , the fusing matrix for the ordinary cvo, which reads symbolically
+
+(1)f (1)f f = (1)f (1)f
+
+(4.29)
+
+or, more explicitly,
+
+(1)fcm" j
+
+b
+
+xm, 2,t3,t2
+
+2 3
+
+k
+
+d#2 t3
+=x1
+
+a
+
+(1)fbl" i m
+d #1 t2
+(1)fbp" i
+a c#1 u3
+
+j
+
+j
+
+fmp" i
+(1)fcl" p k
+
+l k#u2 u3
+a d#1 u2
+
+t2 t3
+
+1 2
+
+1 2
+
+1 3
+
+.
+
+(4.30)
+
+the identity (4.30), when restricted to the s(2) case, is a slightly simplied version of the
+equation (l 3.29) in [12] and can be obtained from the latter using the relation (4.16) and
+
+34
+
+dropping a (non-zero) factor of type (1)fa1. the derivation of this pentagon-like identity
+depicted in figure 8 is analogous to the derivation of the standard pentagon equation for
+the fusing matrices f since the boundary eld n-point blocks are analogs of the ordinary
+(n + 2)-point conformal blocks with an additional constraint due to the delta function in the
+2-point boundary block. the relation resulting from (4.20), with both sides divided by h1ic
+and (4.19) used twice, is also reproduced from the pentagon identity (4.30) for particular
+values of the indices.
+
+j
+
+t
+
+3
+
+k
+
+l
+
+d
+
+a
+
+i
+
+m
+
+b
+
+a
+
+
+1
+
+
+
+2
+
+f(1)
+
+i
+
+j
+
+k
+
+l
+
+a
+
+1
+
+b
+
+
+
+2
+
+c
+
+
+3
+
+d
+
+a
+
+4
+
+f(1)
+
+i
+t2
+
+j
+3t
+
+d
+
+k
+
+l
+
+a
+
+f(1)
+
+l*
+
+a
+
+
+1
+
+f
+
+i
+
+t3
+c
+
+p
+
+a
+
+
+
+1
+
+j
+
+k
+
+l
+
+d
+
+a
+
+
+3
+
+f(1)
+
+p
+
+
+2
+
+i
+
+3
+
+d
+
+j
+
+k
+
+l
+
+a
+
+a
+
+l*
+
+
+1
+
+figure 8: the mixed pentagon identity
+
+following figure 9, one derives imposing the symmetry of the 3-point function h(i,i)(z, z) ba
+j,(x1) (i,i)(z, z) ab
+
+j,(x1) ab
+
+k,(
+
+hba
+
+(i,i)
+
+k,(x2)i,
+(1)fbk" p
+b a#
+j
+b a#
+(1)fak" j
+
+ 
+s
+
+a,bs
+
+(i,i)
+
+b,bp
+
+x
+k#
+=xs , 
+on figure 9 the braiding matrices b() appear, see appendix e. once again using the
+cyclic symmetry relations a factor of type (1)fa1 is dropped in both sides of (4.31) as compared
+with the original equation (l 3.32) in [12].
+
+ei(2i2m+k+jp) fsm" k
+
+i# fmp" i
+
+  xm
+
+i
+
+j
+
+i
+
+j
+
+(4.31)
+
+from the 2-point function h(k,k)(z1, z1)(l,l)(z2, z2)ia using either the ope formula
+
+35
+
+j
+
+i
+
+z-z
+
+s
+
+b
+
+x,
+1
+
+a
+
+
+z
+
+,
+
+i
+
+a
+
+k
+
+
+
+b
+2x,
+
+f(1)
+
+f(1)
+
+i
+
+z-z
+
+p
+
+b
+z
+
+,
+
+i
+
+b
+
+j
+
+a
+1x
+
+
+
+,
+
+k
+
+
+
+b
+x2
+,
+
+f(1)
+
+f(1)
+
+s
+
+j*
+
+j
+
+1x
+
+1
+
+j
+
+1
+
+j*
+
+1x
+
+z
+
+i
+
+z
+
+i
+
+z-z
+
+k
+
+i
+
+k
+
+1
+
+2x
+
+f - 1
+
+i
+
+z
+
+n
+
+k
+
+k
+
+2x
+
+1
+
+b(+)b(-)
+
+i
+
+z
+
+1
+
+i
+
+z
+
+i*
+
+j
+
+k
+
+p*
+1x
+
+k
+
+2x
+
+1
+
+1 b
+
+1 b
+
+1 b
+
+figure 9: derivation of (4.31)
+
+(4.28), or (4.24), we obtain
+
+a,br,s1
+(k,k)
+
+x ,
+=xj
+
+a,br,s2
+(l,l)
+
+(1)fa1" r
+j ei(k+lrj) xt,t
+
+a
+
+ab1
+
+r
+
+r
+
+a #1a 1
+(k,k)(l,l) fjr" k
+
+ 
+
+l
+
+d(j,j);t,t
+
+k
+
+l#2313(s2) 23(s1)
+
+13(t)
+
+t
+
+(4.32)
+
+,
+
+(4.33)
+
+or, equivalently,
+
+d(j,j);t,t
+(k,k)(l,l)
+
+ab1
+
+j ei(k+lj)
+
+= x , ,r ,s1 ,s2
+
+ei r a,br,s1
+(k,k)
+
+a,br,s2
+(l,l)
+
+(1)fa1" r
+
+a
+
+r
+
+r
+
+a #1a 1
+
+ 
+
+frj" l
+
+l
+
+k
+
+k#2313(t) 23(t)
+
+13(s2)
+
+s1
+
+.
+
+the equation (4.32), written symbolically bb (1)f f = db, is analogous to the equation
+resulting from locality of the full-plane 4-point physical functions, which reads ddf f = dd. it
+is however linear in the ope coecients d since while for the plane bulk eld the coecients d
+
+in the decomposition into cvo  =p d    are the same as those in ope expansion, here the
+
+eld decomposition coecients (b) and the ope coecients (d) are dierent .
+
+36
+
+(k,k)
+
+a,bt
+
+a,br
+
+lastly from the 3-point function h(k,k)(z1) (l,l)(z2) aa
+x ,
+=xj ,j
+
+(1)fai" r
+a a#
+(j,j) ei(krj) xs
+
+ei s fjs" i
+
+d(j,j)
+
+a,bi
+
+(k,k)(l,l)
+
+(l,l)
+
+j
+
+ 
+
+t
+
+i,(x)i, we obtain, see figure 10
+(4.34)
+
+l
+
+k# fjr" l
+
+k
+
+s
+
+k# fst" l
+
+r
+
+l
+
+i#
+
+for i = 1 (4.34) reduces to (4.32) using a standard symmetry of the surviving fusing matrix
+f . the sum over s in the r.h.s. of (4.34) represents up to phases one of the sides in (an
+auxiliary) hexagon identity, resulting in permuting {l , i , k} to {k , i , l} i.e., can be written
+as b23()b12()b23() and thus can be replaced by b12()b23()b12(). this gives an
+alternative representation of the r.h.s. of (4.34) obtained from the above by replacing ev-
+erywhere (k , k , j , r)  (l , l , j , t). this is the original form of the equation (l 3.35) in
+[12] with furthermore inverse operator ordering convention and opposite overall sign of the
+phase.
+
+the locality of this 3-point function (the symmetry under the exchange of the elds )
+
+implies also
+
+(k,k)(l,l) = (1)sk+slsj d(j,j);23(t),23(t)
+d(j,j);t,t
+
+(l,l)(k,k)
+
+,
+
+sk := k  k ,
+
+(4.35)
+
+while from the associativity of the ope (4.28) one obtains in particular the relation
+
+d(j,j);t,t
+
+(k,k)(l,l) d(1,1)
+
+(j,j)(j,j) = d(k,k);13(t),13(t)
+
+(4.36)
+all the above equations hold true as well with a sign  = 1, inserted in the expo-
+nents of all the phases in these equations including (4.25), and replacing the bulk-boundary
+coecients b with b. thus when rewritten in terms of the cardy-lewellen normalised
+coecients b(cl) all equalities are true for both choices of sign.
+
+(k,k)(k,k) .
+
+d(1,1)
+
+(l,l)(j,j)
+
+the lewellen equations in the diagonal sl(2) case were recently conrmed in [67]. the seem-
+ingly dierent version of equation (4.31) in [13] is in fact equivalent to the original lewellen equation,
+after taking into account one of the duality relations (a hexagon identity, see (e.6) in appendix e)
+for the braiding matrices. on the other hand the derivation of the versions of (4.32), (4.34) in [13]
+appears to be aected by a missing phase in the intermediate (and needless) formula (17) in [13].
+this phase is compensated in the nal formulae following from (4.32) (like (4.47) below) by an-
+other phase due to the presumably neglected dierence in the normalisation of the bulk-boundary
+coecients (like in (4.25)) as compared with that in [11, 12].
+
+4.3.2 more pentagon relations
+
+before we turn to a discussion on the implications of the cardy-lewellen equations we shall
+it is natural to assume that there exists a
+introduce one more ingredient to the scheme.
+third fusing matrix, a matrix inverting (1)f ,
+(3)f (1)f = i = (1)f (3)f , or more explicitly,
+
+(3)fpb" a j
+
+k#23(2) 23(3)
+
+c
+
+2 t
+
+xb ,2 ,3
+
+(1)fbs" k
+
+c
+
+37
+
+j
+
+a#2 t
+
+2 3
+
+= ps 23(2) 2 23(t) t ,
+
+(4.37)
+
+k
+
+z12
+z2
+
+l
+
+k
+
+j
+a
+
+l
+
+z12
+
+j
+i*
+z -2
+2z
+
+a
+
+i
+
+x
+
+a
+
+k
+
+1z -
+
+z1
+
+k
+
+a
+
+r
+
+a
+
+z1
+
+l
+
+t
+
+z -2
+
+2z
+
+l
+
+z2
+a
+
+i
+
+x
+
+a
+
+f(1)
+
+k
+
+l
+
+j
+
+1 a
+
+1
+
+1z
+
+k*
+z2
+
+j*
+
+2z
+
+k
+
+z12
+
+l
+
+i
+
+f - 1
+
+k
+
+l
+
+k
+
+l
+
+1 a
+
+1
+
+k*
+
+j*
+
+s
+
+i
+
+1z
+
+z
+2
+
+z
+1
+
+2z
+
+i
+
+x
+
+i
+
+x
+
+1
+
+1
+
+k
+
+k
+
+l
+
+1 a
+
+1
+
+k*
+
+1z
+
+z1
+
+s
+
+r*
+z2
+
+b(+)
+
+l
+
+2z
+
+i
+
+x
+
+i
+
+1
+
+f - 1
+
+f(1)
+
+f(1)
+
+k
+
+1 a
+
+1
+
+k*
+
+1z
+
+l
+
+z2
+
+l
+i
+
+t
+z -2
+r*
+2z
+
+k
+
+z1
+
+i
+
+x
+
+1
+
+figure 10: derivation of (4.34)
+
+c
+
+c
+
+= a b k p   t 1k  23(1b) ,
+
+k# 
+(3)fpb" a 1
+1# 
+(3)fpb" a j
+j k(cid:17) , this matrix involves new couplingsof type (cid:16) c
+along with the standard cvos (cid:16) p
+a p(cid:17)
+which can be thought of as obtained by a permutation 23 from the boundary elds (cid:16) c
+p a(cid:17)
+
+,
+whence the notation  = 23(). one can derive a pentagon-like identity for (3)f similar to
+(4.29).
+
+= c b j p   t 23(1j)  23(1b) .
+
+(4.38)
+
+ t
+
+ t
+
+(3)f (3)f f = (3)f (3)f .
+
+furthermore multiplying both sides of (4.30) with (3)fmc" d k
+
+j#23(2) 23(3)
+
+b
+
+ t
+
+(4.39)
+
+and sum-
+
+38
+
+ming over c and the related coupling indices we obtain another equation of this type
+
+(3)f (1)f (1)f = (1)f f .
+
+(4.40)
+
+as in the usual case the pentagonlike identity (4.40) implies various relations obtained for
+particular values of the indices. one of them reproduces the inverse property of (3)f , another
+one reads
+
+(3)f1b" a
+
+a j#23() 
+
+j
+
+1b 1
+j
+
+(1)fa1" j
+
+b
+
+x
+
+j
+
+j
+
+b #1a 1
+
+ 
+
+=
+
+1
+dj
+
+,23()
+
+(4.41)
+
+where dj = sj1/s11 is the quantum dimension. it furthermore implies
+
+dj x,
+
+(3)f1b" a
+
+a j#23() 23()
+
+j
+
+1b 1
+j
+
+(1)fa1" j
+
+b
+
+j
+
+j
+
+b #1a 1
+
+ 
+
+= nb
+
+ja .
+
+(4.42)
+
+the symmetry (4.21) implies a symmetry property of the inverse matrix (3)f
+
+(3)fpa" b
+
+c k# 
+
+j
+
+ t
+
+= (3)fpa" c
+
+b
+
+k
+
+j#12()12()
+
+12() 23(t)
+
+.
+
+(4.43)
+
+comment: such mixed pentagon identities appear in [62] in the study of weak hopf algebras
+as part of a big pentagon identity. at rst sight the structure in [62] seems dierent. the third
+matrix f2 (called an ocneanu cell), introduced along with the analogs of f and (1)f and their
+inverses, does not seem to t the quantity with the same name studied in lattice models which
+satises rather a hexagon-like yang-baxter identity. furthermore, if we try to add dual couplings
+
+of type (cid:16) c
+
+b a(cid:17) and (cid:16) j
+
+a i(cid:17), then the rst has sense at least for type i non-diagonal cases, but the
+
+second cannot be interpreted as a multiplicity.
+
+note that using the inverse matrix (3)f , as introduced here, the half-plane bulk eld
+
+can be also written as a product of generalised boundary elds
+
+h
+
+(i ,i)(z, z) = xa ,b , , (cid:16) xp , ,t
+
+a,bp,t
+(i,i)
+
+(3)fpb" a i
+
+a i#23() 23()
+
+23() 23(t) (cid:17) ab
+
+i,(z) ba
+
+i,(z) ,
+
+compare with the chiral decomposition of the plane physical elds
+
+p
+
+(i,i)(, ) = xk,k,l,l,t,t
+
+(pl)d(l,l);(t,t)
+(j,j)(k,k)
+
+i ,t()  l
+lk
+
+k
+i ,t() .
+
+finally we shall exploit the inverse (3)f of the matrix (1)f to rewrite (4.31) in another
+equivalent form which will be used in the next section. to do this we multiply both sides
+
+and sum over . next using the cyclic symmetry relations
+
+39
+
+of (4.31) with (1)fa1" k
+
+b
+
+k
+
+b#1b
+
+ 2
+
+(4.20) with c = a and applying the inverse to the resulting matrix (1)fbs in the r.h.s. we
+obtain
+
+(1)fa1" s
+
+a
+
+(i,i) h1ia
+
+ei(2i2m+k+jp) fsm" k
+
+a,bs
+
+x
+= xb , , ,2 ,
+= xb , ,
+
+b,bp
+
+(i,i) h1ib
+(1)fb1" p
+
+b
+
+b,bp
+
+(i,i) h1ib
+
+s
+
+a #1a
+  xm
+(3)fsb" a j
+a k#23(2) 23()
+b#1b
+  x2 ,
+
+23()
+
+p
+
+j
+
+(1)fbk" p
+b a#
+a k#23(2) 23()
+
+ 
+
+23()
+
+(3)fsb" a j
+
+i
+
+j
+
+j
+
+i# fmp" i
+b#1b
+b#
+
+(1)fa1" k
+(1)fap" j
+
+k
+
+k
+
+b
+
+b
+
+i
+
+k#
+
+(4.44)
+
+ 2
+
+.
+
+ 2
+
+in the last equality we have used once again the cyclic symmetry relation (4.20).
+
+4.4 consequences of the bulk-boundary equations
+
+4.4.1 the pasquier algebra and its dual
+
+in this section we analyse some important consequences of the set of equations derived. we
+start with equation (4.44), an inverted version of the rst lewellen bulk-boundary equation
+(4.31), in which we take s = 1 = p. this implies k = j ,i = i,  = 1a,  = 1b,  = . the
+sum over m in the l.h.s. is proportional to the modular matrix sji, see (e.9), while the sums
+over the coupling indices 2 ,  are worked out using (4.42), the nal result being
+
+sji
+s1i
+
+ab1
+
+i h1ia =xb
+
+nja
+
+b bb1
+
+i h1ib .
+
+(4.45)
+
+for simplicity we have done this computation in the sl(2) case but it extends straightfor-
+wardly to arbitrary rank leading to the same formula.
+
+comparing (4.45) with (3.18), we see that it can be identied with the realisation (3.18)
+of the graph algebra matrices na.
+i h1ia with the ratio b(i)/a(i). recalling the
+a and
+
+of the relation (3.4) in terms of the eigenvalues a(i) = i
+a
+i
+namely we can identify the ratio bb1
+expression for h1ia in (4.6) we nd a relation between the boundary state coecients i
+the bulk-boundary coecients ab1
+i
+
+i h1ib/ab1
+
+1
+
+ab1
+
+i = eii ab1
+
+i (cl) =
+
+eiis cii
+
+di
+
+,
+
+i
+a
+1
+a
+
+(4.46)
+
+where for the time being cii is an arbitrary constant, c11 = 1. conversely, if we assume the
+identication (4.46) (as, e.g., derived in the sl(2) case by other means in [11], with cii = 1,
+see also [24, 25]) we recover the relation (3.18), or, (3.4) directly from the bulk-boundary
+equations. as discussed in section 3.6, from this relation we reconstruct the graph algebra.
+a = saj, the relation (3.18) coincides with the
+verlinde formula, i.e., the standard fusion algebra realised by its characters. on the other
+
+in the diagonal case e = i, where j
+
+40
+
+hand the verlinde formula is known [13] to be recovered from the diagonal version of the
+other bulk-boundary equation, the cardy-lewellen equation (4.32) to which we now turn.
+this equation simplies for r = 1, leading to k = k , l = l. using (4.46) and denoting
+pi(a) = i
+
+a the equation (4.32) turns into
+
+a/1
+
+pk(a) pl(a) =xj
+
+mkl
+
+j pj(a) ,
+
+(4.47)
+
+where
+
+j
+
+mkl
+
+d(j,j);t,t
+(k,k)(l,l)
+
+=xt,t
+:=vuut dk dl
+
+dj s cjj
+
+ckk cll xt,t
+
+d(j,j);t,t
+
+(k,k)(l,l) fj1" k
+
+l
+
+k
+
+l#1 1
+
+13(t) t
+
+,
+
+(4.48)
+
+j = 0 if the corresponding verlinde multiplicity nkl
+
+j vanishes. alternatively, invert-
+
+and mkl
+ing (4.47),
+
+mkl
+
+j = xav
+
+k
+a l
+a ja
+1
+a
+
+k , l , j  e .
+
+(4.49)
+
+let us rst look at the diagonal case in which according to (4.49) the constants mkl
+j. this is conrmed also directly
+coincide with the verlinde fusion rule multiplicities nkl
+by the alternative expression (4.48) provided by equation (4.32) as we shall now show. in
+the diagonal case, denoting d(j,j);t,t
+(k,k)(l,l), we can use the inverted equation (4.33)
+1 = 1r, with the
+taken for a = 1, a choice which trivialises all summations, since nr1
+result (pointed out in the sl(2) case in [67])
+
+(k,k)(l,l) = c (j,j);t,t
+
+1 = nr1
+
+j
+
+1b1
+j
+1b1
+l
+
+1b1
+k
+
+ei(k+lj) c (j,j);t,t
+
+(k,k)(l,l) = f1j" l
+
+l k#13(t) 23(t)
+
+k
+
+1 1
+
+taking in particular j = 1 (4.50) gives
+
+1b1
+k
+
+1b1
+
+k = e2ik dk c (1,1)
+
+(k,k)(k,k) .
+
+.
+
+(4.50)
+
+(4.51)
+
+comparing with (4.46) taken in the diagonal case we see that we can identify the undeter-
+mined constant cii with the normalisation constant of the bulk 2point function. we shall
+retain this identication of cii in the non-diagonal cases (at the same level as the given diag-
+onal case) which amounts to setting the relative 2-point normalisation to 1. combined with
+(4.36) and (4.46) the relation (4.50) leads to a symmetry of the fusing matrices analogous
+to the cyclic symmetry (4.19)
+
+f1j" l
+
+l k#13(t) 23(t)
+
+k
+
+1 1
+
+dl = f1l" j
+
+j
+
+k
+
+k #23(t) 13(t)
+
+1 1
+
+dj .
+
+(4.52)
+
+inserting (4.50) back into (4.48) and using (4.52) reduces the sum over t to the standard
+pentagon identity specialised for some choice of the indices (cf. the analogous relation (4.41)).
+
+41
+
+finally we are left with the sum over the coupling index t = t(cid:16) j
+
+j and completes the argument. note that the relation (4.50) is a
+verlinde multiplicity nkl
+linear version of the standard (quadratic) relation for the full plane diagonal ope coecients
+which results from locality of the (full) plane bulk elds 4point functions, see appendix e.
+
+k l(cid:17) , which reproduces the
+
+in the general (non-diagonal) sl(2) cases characterised by a xed level (central charge)
+we can express the fusing matrix in the r.h.s. of (4.48) in terms of that in the r.h.s. of (4.50).
+using once again the sl(2) versions of the identities just described, we express it in terms of
+the diagonal ope coecients at the same level, obtaining for nkl
+
+j = 1
+
+mkl
+
+j = d(j,j)
+
+(k,k)(l,l) = d(j,j)
+
+(k,k)(l,l) /c (j,j)
+
+(k,k)(l,l) .
+
+(4.53)
+
+the relative scalar ope coecients d(j,j)
+(k,k)(l,l) have been computed for the sl(2) wzw and
+the virasoro (unitary) minimal models, see, e.g., [50] for an exhaustive list of references.
+now using the expression for eigenvectors (2.38), they can be computed as in (4.49) for all
+minimal models.
+
+1
+
+2
+
+j = mkl
+
+and e (12)
+
+the matrices (mk)l
+
+j can be seen as a matrix realisation of an associative com-
+mutative algebra with identity, distinguished basis and an involution . in (4.47) the algebra
+is realised by its 1-dimensional representations (characters) given by ratios of elements of
+the eigenvector matrix dening ni. this algebra, traditionally called the pasquier algebra
+(malgebra), is dual in the sense of ref. [70] to the graph n algebra considered in section
+3 but unlike its dual, its structure constants are not in general integral, but rather algebraic
+j)2 of these constants are rational num-
+numbers. in the simplest sl(2) case the squares (mkl
+bers for all a-d-e cases; this rule persists for most of the sl(3) cases but is broken by two
+of the graphs e (12)
+corresponding to the exceptional modular invariant at level
+k + 3 = 12, see appendix d. the type ii sl(2) cases, dodd and e7 are again distinguished by
+j is negative and this is a basis inde-
+the fact that the sign of some of the multiplicities mkl
+pendent statement in the sense that there is no choice of basis to make all m j
+kl non-negative,
+contrary to the type i cases deven , e6 , e8, and this is a general fetaure of type ii theories.
+j = 1, i.e.,
+j provide the (relative)
+in cases with trivial verlinde multiplicity the matrix elements mkl
+ope coecients d(j,j)
+j > 1 the relation
+j (4.49) and the ope coecients is not so direct. we conclude
+between the constants mkl
+with an sl(3) wzw example which illustrates the relation (4.48). there are three graphs
+found in [37] which correspond to the exceptional block-diagonal modular invariant at level
+k + 3 = 12, see appendix d, where these graphs are denoted by e (12)
+, i = 1, 2, 3. one can
+pick up triplets of weights (i, j, l) such that the verlinde multiplicity of the diagonal sl(3)
+l = 1 and check the values of the corresponding
+model at level k + 3 = 12 is trivial, nij
+l for each of the three graphs. the result is that,
+pasquier algebra structure constants mij
+comparing in particular e (12)
+and e (12)
+, there exist such triplets leading to dierent values
+l for the two graphs. since for trivial verlinde multiplicities the formula (4.48) gives
+of mij
+a direct relation between the two types of constants, mij
+(i,i)(j,j), this result suggests
+
+the formula (4.53) extends beyond the sl(2) case for (k, l, j) such that nkl
+
+(k,k)(l,l). for non-trivial verlinde multiplicities nkl
+
+l = d(l,l);1,1
+
+i
+
+1
+
+3
+
+42
+
+that there are two dierent solutions for the bulk ope coecients in this case. only one of
+these two non-diagonal solutions, namely the one which can be associated with the type i
+graph e (12)
+1 was recovered in [51], exploiting a set of equations for the m -algebra structure
+constants. this set was derived from the bulk cft locality equations assuming an additional
+(quadratic) constraint on the ope coecients in theories with an extended symmetry; some
+of its consequences were also reproduced in the abstract framework of [53], in particular the
+a = multa(i) discussed in section 3.6. precisely this relation fails (and hence the
+relation ni1
+assumptions on the ope coecients in [51]) for the graph e (12)
+, which otherwise satises all
+the requirements of type i.
+
+3
+
+we conclude with a comment on the ope coecients. as discussed in [24, 25] one can
+relate in the limit l/t   the correlators of the half- and full-plane bulk elds h
+i (z, z)
+i (, ), looking at the two dual representations of the partition function with eld
+and p
+insertions; in particular (4.46) was recovered in this way. though this transformation needs
+to be elaborated for higher rank cases it seems reasonable to expect (and in agreement with
+(4.50)) that using the two choices of the automorphism , discussed in section 2.1, we can
+identify in this way the ope coecients of the two bulk elds with either i = i = (j, j)
+or i = (j, j).
+
+a bit of history: the algebra (4.47) dened through the eigenvectors of the a-d-e cartan
+matrices rst appeared in the context of the sl(2) a-d-e lattice models proposed by pasquier
+[48] a short time before the verlinde fusion rule formula (the a algebra in the sl(2) case) was
+found. the interpretation in terms of a pair of dual c (character)algebras was proposed in
+[49] in the discussion of the set of graphs found in [37] as a generalisation of the dynkin diagrams
+associated with the modular invariants of sl(3) wzw and minimal models. the fact that the
+relative scalar ope coecients d(j,j)
+(k,k)(l,l) of all a-d-e series of the sl(2) wzw (or the subfamily of
+elds (1, s) in unitary minimal models) coincide in a suitable basis with the pasquier algebra (4.47)
+j was the main result of [50]. it was established through a case by case
+structure constants mkl
+check, supported by a lattice model derivation in which the same coecients appear considering
+representations of the temperley-lieb algebra. cft locality constraints resulting in formulae
+quite similar in spirit to (4.48) were furthermore exploited in [51], [52] as an ingredient in the
+construction of generalised pasquier algebras and thus of new examples of graphs related to sl(n)
+modular invariants, extending the results in [37], [49]. the authors of [50], [51], [52] were however
+not aware of the parallel development of boundary cft, and in particular of [11], [12], where the
+equation (4.32) rst appeared. the importance of the algebra obtained from this equation at r = 1
+was recognised and stressed in [13], where a representative example of the sl(2) wzw dodd series
+was considered, for which the set v and the characters i(a) of the algebra were explicitly described.
+presumably the authors of [13] were not aware of the general a-d-e result in [50]. in the same
+framework of boundary cft the pasquier algebra reappeared recently in a systematic study of
+orbifold theories, see [28] and references therein, under the name (total) classifying algebra.
+
+43
+
+4.4.2 relation to the moore-seiberg set of duality equations
+
+we have seen that the two lewellen bulk-boundary equations (4.31) and (4.32) when re-
+stricted to some particular values of the indices p in bbp
+(i,i) become in some sense dual
+to each other, recovering the two dual c-algebras, the graph and pasquier algebras. these
+algebras are identical in the diagonal case, reproducing the verlinde fusion algebra, which
+suggests that in this case the above two equations might be related.
+
+ij (p)) for the 1-point functions (p)
+
+on the other hand let us recall that the original derivation [68, 32] of the verlinde
+formula relies on the use of one of the basic moore-seiberg duality relations, namely the
+equation resulting from the modular property of the two-point functions on the torus, see
+(e.7). it involves the fusing/braiding matrices f or b and the modular matrix sij(p) (in
+general st t
+j (, z) on the torus, the index p standing for the
+, log z = (log z)/ , see [32].
+the alert reader may have already noticed the full analogy between the moore-seiberg
+torus identity (e.7) and the second version (4.44) of equation (4.31). it suggests that the
+quantity taking over the role of the modular matrix s(p) is the bulk-boundary reection
+coecient bp. in the diagonal case this correspondence is precise, i.e., the two are identical
+up to a constant.
+
+(representation) label of the inserted cvos(cid:16) i
+
+p i(cid:17)t , z and(cid:16) j
+
+p j(cid:17)t , z
+
+indeed rst note that equation (4.44), still considered in the general (non-diagonal) case,
+simplies for s = 1, that is k = j ,i = i,  = 1a. inserting in the rst line the expression
+for the modular matrix sij(p), see (e.8) and using (4.41) in the second line we obtain an
+expression for the modular matrix s(p),
+
+ab1
+
+i h1ia
+
+1
+
+fi1" p
+
+i
+
+sij(p)
+
+si1
+
+=xb ,
+
+b,bp
+
+(i,i) h1ib x
+
+p
+
+i#
+
+(1)fbj" p
+
+b a#
+
+j
+
+ 
+
+.
+
+(4.54)
+
+let us concentrate now on the diagonal case i = e. the sums in the r.h.s. of (4.54)
+b = jb,  = 1b.
+can be reduced to one term choosing a = 1 and using (4.12), since nj1
+alternatively, one can take a = 1 directly in the original equation (4.31)  the resulting
+(linear) formula for bp in terms of the fusing matrices f (instead of the formula for its
+square derived in [11]) was rst explicitly written down by runkel [67]. more explicitly we
+have in the sl(2) case,
+
+b = nj1
+
+jbp
+
+(i,i) =
+
+1b1
+i
+di dj
+
+1
+
+fi1" p
+
+i
+
+sij(p)
+
+s11
+
+=
+
+1b1
+i
+di dj
+
+p
+
+i#
+
+1
+
+fj1" p
+
+j
+
+sji(p)
+
+s11
+
+.
+
+p
+
+j#
+
+(4.55)
+
+both (4.54) and (4.55) easily extend beyond the sl(2) case. in particular restoring all coupling
+indices the latter formula reads in general
+
+j,bp,t
+
+(i,i) = 1b1
+
+i xu
+
+f1p" j
+
+j
+
+j
+
+j #u 1323()
+
+1 1
+
+su 2313(t)
+ji
+
+(p)
+
+s1i
+
+.
+
+(4.56)
+
+44
+
+with the help of one of the consequences of the pentagon identity, (4.56) can be inverted
+and brought into a form analogous to that of (4.55).
+
+the coincidence of the two seemingly very dierent quantities, the coecients bp in
+the expansion (4.24) of the half-plane bulk eld and the modular matrix s(p) of the torus
+1point blocks, is quite surprising and needs a better understanding. we were led to this
+observation trying to nd a connection between the two duality schemes, the one of moore-
+seiberg involving the torus, the other, of cardy-lewellen, involving the cylinder. thus to
+bring equation (4.44), derived from the rst of the lewellen bulk-boundary equations (4.31),
+into a form identical to the original moore-seiberg torus duality relation we furthermore
+need to identify the three fusing matrices,
+
+(1)f = f = (3)f .
+
+(4.57)
+this identication is consistent since in the diagonal case i = e both mixed pentagon iden-
+tities (4.30) and (4.40) then become the ordinary moore-seiberg pentagon identity; see also
+[67], where the identication of the boundary eld ope coecients with the fusing matrices
+was rst established by a more elaborate argument. note also that all the other symmetries
+of (1)f we have encountered, such as (4.21), (4.43), are symmetries of the standard fusing
+matrices.
+
+it is now straightforward to show that the rst and third lines in (4.44) reproduce the
+two sides of the moore-seiberg identity (e.7). taking into account (4.55) and (4.57) the
+second lewellen bulk-boundary equation (4.32) is seen also to be a consequence of the rst,
+i.e., of the same moore-seiberg torus duality relation. to show this, one has to insert in
+(4.32) the expression (4.50) for the ope coecients and to compare the equation with (4.44)
+with p = 1, see also appendix e.
+
+we thus see that in the diagonal case the two basic bulk-boundary equations (4.31),
+(4.32) are not independent and are equivalent to one of the basic moore-seiberg duality
+relations. the third bulk-boundary equation (4.34), a more general version of (4.32), is an
+identity which involves again only the moore-seiberg duality matrices f , b , s, and thus can
+be expected, following the completeness argument of [32], to be derivable using the basic
+moore-seiberg duality relations. this in particular implies that any solution of the set of
+moore-seiberg (chiral) duality relations provides a solution of the diagonal boundary cft
+equations.
+
+remark: rewritten in terms of s(p) the diagonal case lewellen equation (4.32), see also (e.10),
+can be also interpreted as a generalised verlinde fusion formula with (non-integral) multiplicities
+f l
+qk given by some particular f matrix elements, see appendix e. the matrices fq are diago-
+nalised by the (non-unitary) s(p) with the usual eigenvalues sqi(1)/s1i(1). because of this they
+realise another representation of the usual verlinde algebra. this formula, which derives from the
+moore-seiberg torus duality identity, appears to have been already considered, following a dierent
+motivation, in [69].
+
+we conclude this section with a few comments on the general non-diagonal cases. the
+cardy-lewellen boundary cft can be looked at as a purely chiral alternative of the usual
+
+45
+
+cft approach in which we combine left and right chiral blocks imposing consistency condi-
+tions. it has its price in that everything eectively splits the set i is replaced by two
+dual sets v and e (for type i, while for type ii we have to retain the whole i to describe
+non-scalar elds), there are two representations of the verlinde fusion algebra and a related
+new fusion algebra (at least in type i cases); there are two types of chiral vertex operators,
+new duality matrices, in particular a second fusing matrix (1)f and its inverse, (3)f, along
+with the standard f , satisfying new duality relations, the mixed pentagon relations, gener-
+alising one of the basic genus zero polynomial identities; instead of one relation involving the
+modular matrix s(p), there are two independent relations  the two bulk-boundary equa-
+tions involving the general reection coecients bp. it remains to nd a consistent solution
+of the equations at least in the sl(2) case. some of the ingredients are already known and
+have been recalled above. in particular the solution for the d-series has just been obtained
+by runkel [80].
+
+5 . conclusions and outlook
+
+in this paper we have reexamined various aspects of boundary eects in rcfts. we have in
+particular analyzed the consistency conditions that determine the allowed boundary states
+and elds and their characteristic data, ope coecients, etc. we have seen that boundary
+conditions are naturally associated with a graph, or a collection of graphs, whose spectral
+properties (eigenvalues) encode the diagonal spectrum of the bulk theory. this legitimates
+empirical observations made previously on the role of graphs in the classication of rcfts.
+we have seen that the torus partition function may be fully reconstructed from the infor-
+
+mation contained in these graphs. we have seen also that in several cases (bsl(2), bsl(n)1
+
+theories), this approach provides a substantially simpler route to the classication of rcfts
+than the study of bulk properties (modular invariants. . . ). we have nally seen that further
+important information about some boundary eects (g-factors, boundary structure con-
+stants) is also encoded in the spectral properties (eigenvectors) of these graphs. the bottom
+line of this analysis is that a triplet of matrix algebras (nj, na, mi) plays a central role in
+the whole discussion. these algebraic structures have been also conrmed by the detailed
+analysis of the basic equations of the boundary eld theory. in the diagonal case the triplet
+of algebras reduces to one, the verlinde fusion algebra. accordingly, we have seen that in
+this case the basic boundary cft lewellen equations can be essentially identied with a set
+of genus 0 and 1 duality identities of moore-seiberg. this leads to an identication of some
+of the basic notions in the two approaches.
+
+the more general representations ni of the verlinde fusion algebra and the dual pair
+{ n , m} of associative, commutative (semisimple) algebras have been introduced in earlier
+work on bulk (and later on boundary) conformal eld theories, but it seems to us that
+the consistency of the whole scheme now appears in its full generality and that boundary
+rcfts reveal these features in a simpler and more compelling way than in the bulk. in a
+
+46
+
+loose sense, the boundary eects expose better the underlying chiral structure of the theory
+and its algebraic pattern. this should certainly not come as a surprise, as this is in the same
+spirit as the old connection between open and closed strings.
+
+the study of a rcft through its boundary conditions, its algebra triplet, etc, still
+requires a lot of work. the derivation of the cardy equation relies on a technical assumption
+that has been only partially justied, namely the proper denition of unspecialized characters
+with linear independence and good modular properties for general chiral algebras. also it
+would be good to have a better understanding of the completeness assumption: given a
+certain number of boundary conditions satisfying the cardy equation, is it obvious that
+we may always supplement them into a complete set in the sense discussed in section 2?
+then many questions have been only partially treated: justify in full generality the validity
+of expressions (3.11, 3.12) which have been established so far only for particular cases;
+understand better the nature and fusion rules of twisted block representations that appear
+in this discussion; set up a general scheme for the systematic classication of integer valued
+representations of fusion algebras; set up with more rigour the formalism of generalized chiral
+vertex operators, their fusing matrices and the ensuing duality equations as a consistent chiral
+approach, alternative to the moore-seiberg scheme, etc, such are some of the outstanding
+problems that are awaiting a proper treatment.
+
+also it remains to see how our discussion of boundary conditions must be generalized
+in theories where there is no choice of a common diagonalising matrix leading to n algebra
+with integer structure constants. it has been suggested in [53, 54] that one way out is to
+drop the axiom of commutativity, replacing this algebra by a non-commutative structure.
+in that respect, a better understanding of the relation of our work with other more abstract
+approaches  ocneanu theory of subfactors, weak hopf algebras  would be most protable.
+directions for future work also include the discussion of other cases: rational or irrational
+theories at c = 1, c = 2, or n = 2 superconformal theories are particularly important
+cases in view of their physical applications to condensed matter or to string theory. the
+generalization to other types of twisted boundary conditions along the cycle of the cylinder,
+as examined recently in [81], might constitute another useful approach. finally the parallel
+discussion of these boundary conditions and algebraic structures in lattice models should be
+extremely instructive and will be the object of a forthcoming publication.
+
+appendix a: the cardy equation
+
+in this appendix, we rederive the cardy equation (section 2.2) in the presence of sources,
+which have the eect of introducing unspecialized characters in the partition function. we
+restrict to a conformal eld theory with a current algebra. let {j } denote the generators
+in the cartan subalgebra, and  be charges coupled to them. we consider the theory on
+the cylinder l  t of section 2.2, call w = u + iv the local variable, 0  v  l, u periodic
+
+47
+
+of period t , and modify the energy-momentum tensor t (w) into
+
+t (w) = t (w) 
+t ( w) = t ( w) 
+
+2i
+
+t xa
+t x
+
+2i
+
+j (w) 
+ j ( w) 
+
+k
+
+2x (cid:16) 2
+t (cid:17)2
+t (cid:17)2
+2x (cid:16) 2
+
+k
+
+(a.1)
+
+(a.2)
+
+.
+
+as an elementary calculation shows, the last term is dictated by the requirement that t 
+satises the conventional ope of an energy momentum tensor. the central charge is not
+aected by the additional terms.
+
+one then computes the evolution operators in the two channels of section 2.2, see
+
+figure 1. for the cylinder, mapped to the plane by  = e2iw/t , the hamiltonian reads
+
+h cyl =
+
+du(t (w) + t ( w)) =
+
+0
+
+1
+
+2z t
+)(cid:16)l(p)
+
+2
+t
+
+= (
+
+1
+
+2i dw(t (w) + t ( w))
+
+0 + l(p)
+
+0 
+
+c
+12
+
++x
+
+(j (p) 
+
+0
+
+ j (p) 
+
+0
+
+)(cid:17)
+
+(a.3)
+
+(a.4)
+
+note that the additional term in (a.1) and (a.2) has not contributed to the integral over
+a closed cycle. taking into account the fact that on boundary states l(p)
+and
+j (p) 
+0
+
+, we nd that the rst expression of the partition function reads
+
+0 = l(p)
+
+0
+
+=  j (p) 
+
+0
+
+zb|a = hb|e 4l
+
+t (l0 c
+
+24 +p
+
+j 
+
+0 )|ai =xje
+24 e2ip
+
+a (j
+j
+
+b)
+
+j(q,   )
+
+sj1
+
+(a.5)
+
+(a.6)
+
+j(q, z) := tr vj ql0 c
+
+zj 
+
+0 ,
+
+and as above q = e4 l
+
+t , hence  = 2i l
+t .
+
+in the other channel, the time evolution on the strip is described by the hamiltonian
+
+where we have dened
+
+d w
+2i
+and upon mapping on the upper half plane h by z = e w
+l , we nd
+
+hba =(cid:16)z il
+
+dw
+2i
+
+0
+
+0
+
+t (w) +z il
+t x
+
+2i
+
+j h
+
+0 
+
+t ( w)(cid:17)
+kx (cid:16)2
+t (cid:17)2
+
+l
+2
+
+hba =
+
+
+l
+
+(l(h)
+
+0 
+
+c
+24
+
+) 
+
+(a.7)
+
+(a.8)
+
+where now the additional piece in (a.1) contributes the last term. since the theory with en-
+ergy momentum tensor (a.1) and (a.2) has still the same operator content and multiplicities
+nia
+
+a as before,we may write
+
+b = nib
+
+tp
+zb|a = tr et hba = e2k l
+
+2
+
+ xi
+
+nia
+
+bi(q, )
+
+(a.9)
+
+l . we then use the modular transformation of unspecialized characters (see [36],
+
+with q = e t
+page 264):
+
+i(q, ) = e2ikp z2
+
+
+
+2 xj
+
+sijj(q,   )
+
+(a.10)
+
+together with the linear independence of the i(q, z) to conclude that (2.16) is indeed true
+in full generality.
+
+48
+
+appendix b: a-d-e diagrams and intertwiners
+
+in this appendix we establish notations on a-d-e dynkin diagrams and on the associated
+intertwiners.
+
+let g be a dynkin diagram of the a-d-e type with coxeter number g. it has n nodes
+that may be coloured with two colours, i.e. its n  n adjacency matrix gab connects only
+nodes of dierent colours. this matrix is symmetric and it may thus be diagonalized in an
+orthonormal basis. we call this orthonormal basis m
+a , it is labelled by the node a and the
+exponent m (see figure 2 and table 1). hence
+
+the s satisfy orthonormality conditions, namely
+
+ga
+
+bs
+
+b = 2 cos
+
+s
+g
+
+s
+a .
+
+xb
+
+xa
+xsexp
+
+s
+a sa
+
+= ss
+
+s
+a s b
+
+= ab
+
+s, s  exp(g)
+
+(b.1)
+
+(b.2)
+
+(b.3)
+
+because of the 2-colourability of g, one may attach a z2 grading  to each node a. one
+proves that if s is an exponent, so is (s) = g  s and the s may be chosen to satisfy
+
+(s)
+a = (1) (a)s
+a .
+
+(b.4)
+
+the a, dodd and e6 diagrams, have
+moreover all graphs having even exponents, v.i.z.
+a z2 automorphism  acting on their nodes and preserving their adjacency matrix (i.e.
+ga
+
+(b), this is the natural z2 symmetry of these graphs) such that
+
+b = g(a)
+
+s
+(a) = (1) (s)s
+a .
+
+(b.5)
+
+finally, one may nd in the graph g a distinguished node labelled a = 1 such that m
+1 > 0
+for all m. this special node is typically an extremal node, i.e. the end of a branch for the
+a-d-e graphs; this is generally the end of a long leg, but for the dodd graphs, for which we
+must choose 1 as the end point of one of the two short legs.
+
+we list hereafter the explicit expressions of eigenvectors of the various dynkin diagrams.
+
+the d g
+
+2 +1 series are the simplest examples of orbifold models. their fundamental graphs
+can be obtained by folding the ag1 dynkin diagram so that the nodes ai = agi  d g
+2 +1 , i =
+1, 2, 3, . . . , g
+21 are identied with the orbit {i} of i under the z2 automorphism , (i) = g
+2 , on the graph, denoted n, n1
+i, while the xed point i = g/2 is resolved into two points a g
+in figure 2. this implies for the adjacency matrix elements gaiaj = ai j + ai (j) = aij , for
+i, j 6= g
+a of g in terms of
+the eigenvectors sij of the a adjacency matrix. to simplify notation we shall use sometimes
+j
+i = j
+ai.
+
+2 j and allows us to determine the eigenvectors j
+
+2 , and ga g
+
+2 ,aj = a g
+
+49
+
+eigenvectors of the d2 adjacency matrix
+
+i = 2 sij ,
+j
+
+j
+
+g
+
+2 ,
+
+=
+
+s g
+
+2 j2
+
+,
+
+g
+2
+
+,
+
+i, j 6=
+g
+j 6=
+;
+2
+
+
+
+( g
+2 ,)
+
+i
+
+= si g
+
+2
+
+,
+
+( g
+2 ,)
+2 , = sext
+{( g
+g
+
+2 ,)}{( g
+
+2 ,)}
+
+g
+2
+
+i 6=
+=
+
+(b.6)
+
+;
+
+1
+2
+
+(s g
+
+2
+
+g
+2
+
++  iq(1)) .
+
+for i odd the orbits {i} belong to i ext and can be identied with the subset t = {ai , i =
+1, 3, . . . , g
+is the extended theory modular matrix. the ex-
+pressions (b.6) can be rewritten in the compact form
+
+2 ,} . the matrix sext
+
+2  1 , a g
+
+{i}{j}
+
+j
+
+a = sa{j}vuut
+
+s1j
+sext
+
+{1}{j}
+
+,
+
+where sa{j} is a rectangular matrix coinciding for a  t with sext
+a{j}
+sai{( g
+
+= 0 and sai{j} =p{i} sj = 2sij for j 6= g/2.
+
+2 ,)} = si g
+
+2
+
+eigenvectors of the d2+1 adjacency matrix
+
+(b.7)
+
+, while for a = ai 6 t ,
+
+j
+ai = (1)
+= (1)
+
+2 ,
+
+g
+
+j
+
+j1
+
+2 2 sij ,
+
+j1
+
+2
+
+1
+2
+
+s g
+
+2j
+
+;
+
+g
+i 6=
+2
+1
+=
+g
+
+,
+
+g
+2
+
+j 6=
+
+; 
+
+g
+2
+g
+
+2 ,
+
+= 
+
+1
+2
+
+.
+
+(b.8)
+
+the identity node is chosen to coincide with one of the fork nodes 1 = a g
+
+by l in figure 2) so that the dual perronfrobenius eigenvector j
+
+a1 = 0). the fundamental node f is identied with g
+
+g
+2
+
+entries (while 
+also a = a for all a, while (a g
+
+2 ,+) = a g
+
+2 ,.
+
+2 ,+ (denoted
+2 ,+ has positive
+21.
+
+1 = j
+2  1, i.e., g = n g
+
+g
+
+next we display the eigenvectors of the exceptional er dynkin diagrams as a matrix
+{j
+a}, with the row index a running over the nodes, following the numbering of figure 2,
+and the column index j over the exponents in the same order as in table 1. there too, sij
+denote the eigenvectors of the diagonal graph adjacency matrix a with the same coxeter
+number.
+
+50
+
+eigenvectors of the e6 adjacency matrix
+
+(j
+
+a) =
+
+(b.9)
+
+
+
+1
+2
+1
+2
+
+a
+b
+c
+b  1
+a  1
+d
+
+1
+2
+
+2
+
+b
+
+b
+a
+a a  1
+2 b
+0 d d
+0
+c
+1
+a a
+2 b
+a
+b
+0 c
+0 d
+2q 3+3
+2q 33
+for i  e ,  = {1 , 7} .
+
+b  1
+c
+
+, d = 1
+
+2
+
+2
+
+3
+
+3
+
+
+
+where a = 1
+
+2q 33
+qs1i pj sji , i
+
+, b = 1
+
+2q 3+3
+6 = (s4i + s8i)r s1ipj
+
+6
+
+6
+
+, c = 1
+
+sji
+
+are determined from i
+
+1 =
+
+eigenvectors of the e7 adjacency matrix
+
+(j
+
+a) =
+
+
+
+13
+0
+
+c
+
+b
+a
+d f e
+c
+f
+16
+d
+b
+
+a
+b
+c
+e
+d
+f
+a  13 a
+c
+b
+b
+d e
+f
+e
+d
+0
+16
+16  16
+16  16
+0
+e
+f
+d
+f
+e
+0
+13 c a
+a c
+b
+1 = qs1jpi sij where  = {1, 9, 17}, and
+5 = 2 s6j for j = 1, 5, 7 .) explicitly,
+
+(b.10)
+
+
+
+where a , b , c , d , e , f are determined from j
+2 = s2j
+j
+s1j
+
+j
+1 (the values in the 5th row come from j
+
+a = [18 + 123 cos 
+b = [18 + 123 cos 11
+c = [18 + 123 cos 13
+
+18 ] 1
+2 ,
+18 ] 1
+18 ] 1
+2 ,
+
+2
+
+d = [12(1 + cos 
+e = [12(1 + cos 5
+f = [12(1 + cos 7
+
+9 )] 1
+9 )] 1
+9 )] 1
+2 .
+
+2
+
+2
+
+eigenvectors of the e8 adjacency matrix
+
+(j
+
+a) =
+
+
+
+c
+
+f
+
+d
+
+d
+
+c
+h
+
+a
+b
+c
+d
+e h g
+f c
+g b
+h g b
+
+d
+a
+g g h e b
+c
+f a d
+e
+c f
+g
+g h
+
+f
+e
+d a f f a
+a f c
+b
+d a
+e h h
+e e
+51
+
+c
+b g h
+a d
+
+e b
+b
+
+
+
+(b.11)
+
+(b.12)
+
+2 = s2j
+s1j
+
+where a , b , c , d , e , f , g , h are determined from j
+  e ,  = {1 , 11 , 19 , 29} . explicitly
+a =(cid:20) 15(3+5)+15(130+585)
+(cid:21) 1
+c =(cid:20) 15(3+5)15(130+585)
+(cid:21) 1
+d =(cid:20) 15(35)15(130585)
+(cid:21) 1
+f =(cid:20) 15(35)+15(130585)
+(cid:21) 1
+
+2
+
+2
+
+2
+
+2
+
+2
+
+2
+
+2
+
+2
+
+2
+
+1 = qs1j pi sij and j
+b =(cid:20)15 +q75  305(cid:21) 1
+e =(cid:20)15 q75 + 305(cid:21) 1
+g =(cid:20)15 +q75 + 305(cid:21) 1
+h =(cid:20)15 q75  305(cid:21) 1
+
+2
+
+2
+
+2
+
+.
+
+j
+
+1 for
+
+(b.13)
+
+to such a graph g, one then attaches matrices vi as follows. the case of reference is
+the ag1 diagram of same coxeter number g as g. for this a graph, both the nodes and
+the exponents take all integer values in {1,   g  1}. the s are then nothing other than
+the entries of the (symmetric, unitary) matrix s of modular transformations of characters
+of the ane algebra bsl2 at level g  2
+
+(a) i
+
+i
+
+= sii =s 2
+
+g
+
+sin
+
+ii
+g
+
+,
+
+(b.14)
+
+in terms of which the fusion coecients ni1i2
+note also that
+
+i3 may be expressed through verlinde formula.
+
+because of property (b.4) applied to (a) = s.
+
+ngi i1
+
+gi2 = nii1
+
+i2
+
+(b.15)
+
+we now return to the graph g of coxeter number g. the fused adjacency matrices vi
+
+with i = 1, . . . , g  1 are n  n matrices dened recursively by the sl(2) fusion algebra
+
+vi = v2 vi1  vi2
+
+2 < i  g
+
+(b.16)
+
+and subject to the initial conditions v1 = i and v2 = g. (one may see that vg = 0). the
+matrices vi are symmetric and mutually commuting with entries given by a verlinde-type
+formula
+
+via
+
+b = (vi)a
+
+b = xmexp(g)
+
+sim
+s1m
+
+m
+a m b
+
+.
+
+(b.17)
+
+regarded as (g  1)  n rectangular matrices, for a xed, the via
+adjacency matrices
+
+i
+
+xi
+regarded as n  n matrices, the vi satisfy not only their dening relation (b.16) but also
+the whole bsl(2) fusion algebra (2.22)
+
+b =xb
+
+(b.18)
+
+via
+
+gb
+
+via
+
+b .
+
+ai
+
+b
+
+(b.19)
+
+ni1i2
+
+i3vi3 .
+
+b intertwine the a and g
+
+vi1vi2 =xi3
+
+52
+
+from their recursive denition and initial conditions, it follows that the entries of the v
+matrices are integers. what is not obvious is that these entries are non-negative integers.
+this follows either from a direct inspection or from an elegant group theoretic argument due
+to dorey [72]. we refer the reader to [37, 46] for the explicit expressions of these intertwiners.
+as a consequence of the existence of the automorphism  dened above (b.5), a z2 symmetry
+on a, dodd, e6 graphs and the identity for deven, e7, e8, one has
+
+vgs a
+
+(b) = vsa
+
+b .
+
+(b.20)
+
+using (b.16) and (3.4) (i.e.
+
+in the notations of this appendix, vi na = pb via
+
+b nb)
+one can express the graph algebra na matrices for all but the deven cases as polynomials
+of v s with integer coecients this in particular ensures that they have integer matrix
+elements. for deven one of the extended fusion algebra generators n ext
+has to be added
+{ g
+2 ,}
+while ni = vi = vgi for i = 1, 2, ..., g
+2  1 . for the three
+since v g
+exceptional cases er we have ni = vi , i = 1, 2, ...r3 , nr1 = vr1vr3 , nr2 = vrvr4 ,
+nr = vr2 + vr4  vr , which translates into relations between the eigenvalues and given j
+allows to express any j
+
+a in terms of the modular matrix s elements.
+
+= n ext
+{ g
+2 ,+}
+
++ n ext
+{ g
+2 ,}
+
+2
+
+1
+
+over recent years, these matrices have made repeated appearances in a variety of prob-
+lems. originally introduced in the discussion of local height probabilities in lattice mod-
+els [48] and of boundary partition functions [9, 37] (see below), they have also appeared in
+the following contexts:
+
+(i). the cells or intertwiners of boltzmann weights of height models [37, 46].
+
+(ii). the decomposition of the representation of the temperley-lieb algebra on the space
+of paths from a to b on graph g onto the irreducible ones on the paths from 1 to s on
+graph ag1 [47] according to r(g)
+
+br(a)
+
+b = svsa
+
+s.
+
+a
+
+1
+
+(iii). the counting of essential paths on graphs [71]; see also recent mathematical work
+
+by xu, bockenhauer and evans [53, 54].
+
+(iv). the expression of the blocks of the partition function (1.2) as (3.11, 3.12), see section
+
+3.3.
+
+(v). for an appropriate choice of the node 1, the integers vsf
+
+b are the coecients of the
+kostant polynomials, in the decomposion of representations of su(2) of dimension s
+onto irreducible representations b of the nite group associated with g in the mckay
+correspondence [73, 74] (f is the node connected to the node representing the identity
+representation and deleted in passing from the ane dynkin diagram to the ordinary
+one).
+
+53
+
+(vi). these same entries seem to appear ubiquituously in the description of s-matrices of
+ane toda theories [75] and in the description of the excitation spectrum of integrable
+lattice models [76, 77, 78].
+
+appendix c: uniqueness of the boundary conditions of
+minimal models
+
+c.1. matrices with spectrum  < 2
+
+we rst recall general results on symmetric matrices with non-negative integer entries and
+with eigenvalues between 2 and 2.
+
+it is a standard result that symmetric matrices with non-negative integer entries and
+eigenvalues  ] 2, 2[ may be classied. a lemma of kronecker asserts that the eigenvalues
+are of the form 2 cos pi
+for integers pi and hi and for the largest one(s), p = 1. one may
+hi
+regard any such matrix as the adjacency matrix of a graph. irreducible matrices correspond
+to connected graphs, and by an abuse of language one may call a matrix bicolourable if the
+graph has that property. one proves [38] that any irreducible bicolourable symmetric matrix
+with spectrum in ] 2, 2[ is the adjacency matrix of one of the simply laced dynkin diagrams
+of type a-d-e.
+
+if one relaxes the assumption of bicolourability, with any symmetric non-bicolourable
+irreducible matrix g one may associate a bicolourable symmetric matrix with a block form
+
+g =   0 g
+g 0 !. the corresponding graph is irreducible and has a z2 symmetry that ex-
+changes the two colours. any eigenvalue  of g gives rise to two eigenvalues  for g and
+one thus concludes that g is of a-d-e type, and its irreducibility forces g = a2p. its z2
+quotient g is what we call the tadpole graph tp = a2p/z2.
+
+finally if one relaxes the assumption of irreducibility, one concludes that any matrix
+(with non-negative entries and spectrum between 2 and 2) is the direct sum of a-d-e or
+tadpole graphs
+
+g = gi
+
+gi of a-d-e or tadpole type
+
+and this decomposition is unique, up to the permutation of factors. the uniqueness may
+be easily proved by induction on the number of terms or on the dimension of the matrix:
+given a matrix g, one rst identies its largest eigenvalue, of the form 1 = 2 cos 
+. by
+h1
+the previous statement, there is an a-d-e or tadpole graph g1 with coxeter number h1
+and exponents mi, such that all its eigenvalues 2 cos mj
+appear in the spectrum of g. thus
+h1
+g = g1  g, and one may apply on g the induction hypothesis. if 1 has multiplicity 1,
+this suces to establish the uniqueness of the decomposition (up to permutations), while the
+case where 1 has non-trivial multiplicity is also easily dealt with. the uniqueness of this
+decomposition implies a property used several times in the text, namely that the spectrum
+
+54
+
+(between 2 and 2) determines the form of the matrix up to a permutation of its rows and
+columns.
+
+c.2. representatives of n12 and n21
+
+we now return to minimal models.
+explicit form of n12 and n21
+it is convenient to work in a basis dierent from that used in (2.38). in the basis r1 = 1,   , p,
+r2 = r1,2p+1r2 = 0
+a  g, the second term in (2.33) does not contribute to n12 since n2p r1
+for 1  r1, r2  p. thus n12 = ip  v2 = ip  g, where ip is the p dimensional unit matrix
+
+n12 = ip  g =
+
+.
+
+(c.1)
+
+g
+
+g
+
+. . .
+
+g
+
+
+
+
+
+as for n21, in the same basis, the second term of (2.33) receives a contribution only from r1 =
+p = 1, while vg1 = , the matrix that realizes the automorphism :
+r2 = p, namely (n2p1)p
+(c.2)
+
+b = a(b) .
+
+a
+
+thus one nds that
+
+after conjugation by a block-diagonal matrix with  and in in alternating positions, which
+leaves the form (c.1) of n12 unchanged, n21 may be recast in the form
+
+0
+in
+
+in
+0
+. . .
+
+in
+. . .
+in
+
+in
+
+
+
+
+.
+
+n21 =
+
+
+0
+
+
+n21 =
+
+
+0
+. . .
+
+
+. . . 
+
+
+
+
+
+= tp   ,
+
+(c.3)
+
+in terms of the tadpole tp adjacency matrix. all the other nrs are obtained as universal
+polynomials of the two matrices n12 and n21.
+
+uniqueness of the form of n12 and n21
+conversely, suppose we only know that the representation nrs has a spectrum specied by
+the set of exponents e. we want to prove that there exists a basis in which n12 and n21 take
+the forms (c.1) and (c.3).
+
+we rst make use of the property that the set exp(g) is stable modulo the coxeter
+number g of g under multiplication by any integer coprime to g and is also stable under the
+
+55
+
+reection s  g  s. we then nd that the spectrum of n12 is made of p copies of exp(g).
+as explained above in c.1, this implies that in some basis
+
+n12 = ip  g .
+
+(c.4)
+
+for the other generator n21, one observes rst that the set of numbers that appear
+
+2p+1o, r = 1, 3   , 2p  1, is simply the set n(1)g+12 cos r
+2p+1o,
+in (2.31), namely n2 cos gr
+r = 1, 3,   , 2p  1, which is (1)g+1 times the spectrum of the tadpole tp. according to
+(2.31), this has to be multiplied by (1)s, as s runs over the exponents of g. thus if g
+is even (which is the general case except when g = a2) the spectrum of n21 is made of as
+many copies of that of tp (resp. tp) as there are odd (resp. even) exponents in g. for
+a2 which has as many even as odd exponents, the same conclusion is still correct! finally
+one notices that these signs are just the eigenvalues of the  matrix, and one thus concludes
+that
+
+(c.5)
+where the sign  means that it holds in some basis obtained from that of (c.4) by a simul-
+taneous permutation of rows and columns. from this expression, one can see that
+
+n21  tp   ,
+
+n21 has no row or column with more than two 1s,
+n21 has exactly n rows and columns with one 1,
+
+(c.6)
+
+(c.7)
+
+properties invariant under permutations of rows and columns.
+
+we also know that n21 must commute with n12. in a basis in which n12 takes the form
+(c.4), n21 may thus be regarded as made of n  n blocks that commute with g. we shall
+combine these facts about n21 as follows:
+
+ a non-vanishing matrix x with elements in n which commutes with g cannot have
+a row or a column of zeros. proof: let 1 be the perron-frobenius eigenvector of g,
+gx = xg implies that x1 is an eigenvector of g with the same eigenvalue, hence
+proportional to 1, x1 = c1, with c 6= 0 since the entries of both x and of 1
+are non-negative. if x had a vanishing row, x1 would have a vanishing component,
+which is impossible for the perron-frobenius eigenvector. if x has a vanishing column,
+one repeats the argument with x t .
+
+ any matrix x with elements in n which commutes with g and which appears in the
+block decomposition of n21 cannot have more than one 1 per row or column. proof: if
+a matrix x with more than one 1 in a row (respectively column) was a block of n21,
+because of the property (c.6), all the other blocks on the left or the right (respectively
+above or below) of x would have to have at least one vanishing row (respectively
+column), which is impossible by (i) above, or to vanish altogether. in the latter case,
+
+56
+
+after a possible reshuing of rows and columns leaving (c.4) invariant, one would have
+
+either n21 =
+
+   0
+
+x 0
+0
+...
+0
+
+
+
+or n21 =
+
+0 x 0   
+x t
+0   
+0
+...
+
+0
+0
+...
+
+
+
+(c.8)
+
+which would lead to a pair n12, n21 reducible in the same basis.
+
+ it follows that the matrices that may appear as blocks in the decomposition of n21
+must be matrices with one 1 on each row and column, i.e. permutation matrices
+that commute with g. these permutation matrices are the symmetries of the dynkin
+diagram, and thus are readily listed:
+
+x =
+
+i, 
+
+= i, i, i = 1,   , 5
+=
+
+i, 
+
+=
+
+i
+
+if g = an, d2q+1, e6
+if g = d4
+if g = d2q, q > 2
+if g = e7, e8
+
+(c.9)
+
+(c.10)
+
+(c.11)
+
+(c.12)
+
+here i denote the 5 non-trivial permutations of the nodes of the d4 diagrams, and
+the matrix  exchanges the two end points of d2q, q > 2.
+
+one then demands that the symmetric matrix n21 made of such blocks is irreducible
+and satises (c.4)-(c.7). this implies that at most one non-vanishing block appears on the
+diagonal. consistency with the form n21  tp   leaves as the only possibility
+
+n21 =
+
+
+
+0 x1
+x t
+1
+0 x t
+2
+0
+
+0
+0 x2
+. . .
+. . .
+
+0
+
+  
+0
+. . .
+
+xp1
+
+
+x t
+
+p1
+
+
+
+(c.13)
+
+where x1, x2, . . . , xp1 are chosen among the symmetry matrices of g. a nal permutation
+of rows and columns by a block diagonal matrix diag(y1, y2,   , yp1, i) brings n21 into
+the form n21 = tp   while leaving the form (c.4) of n12 unchanged, provided yj =
+yj+1x t
+j , hence yj = jxp1xp2    xj. then both n12 and n21 have their canonical forms
+(c.1),(c.3). q.e.d
+
+remark
+
+although it is not required for the present analysis, it may be interesting to look at the
+commutant of matrices of a-d-e type.
+
+for any g of a-d-e type, with the exception of deven, all eigenvalues are distinct. it
+follows that any matrix x that commutes with g may be diagonalized in the same basis
+
+57
+
+as g and consequently be written as a polynomial of g, i.e. as a linear combination of
+i, g, g2,   , gn1. in order to look at cases where entries of x are requested to take values
+0 or 1 only, and with constraints on the number of 1s, it is advantageous to use rather the
+basis of fused graph matrices: x is a linear combination of the linearly independent matrices
+n1 = i, n2 = g,   , nn. the deven case is slightly more involved, since the matrices that
+appear naturally are not independent.
+
+the commutant of an a-d-e matrix is:
+ a linear combination of the graph fusion matrices na for g = a, dodd, e6, e7, e8.
+ a linear combination of the na and of two of the three matrices ab, a 6= b = 1, 3, 4,
+
+that exchange two of the three extremal points of the d4 graph.
+
+ a linear combination of the na and of the two matrices x =  n2q and y = n2q,
+
+where the matrix  exchanges the two end points, for g = d2q, q > 2.
+
+appendix d: dsl(3) modular invariants and graphs
+the wzw dsl(3) theories may be discussed along the same lines as in sections 2 and 3. solu-
+tions ni to the cardy equation are associated with graphs, with specic spectral properties:
+their eigenvalues are given by ratios of elements of the modular s matrix labelled by weights
+of the diagonal spectrum e of the bulk theory. conversely, spectral properties and the fact
+the ns form a representation of the fusion algebra are not restrictive enough to yield the
+list of possible bulk spectra, as occurred in dsl(2) (up to the unwanted tadpole graphs).
+
+there are indeed many solutions, i.e. graphs and representations of the fusion algebra, that
+must be discarded as not corresponding to a modular invariant partition function in the list
+(table 2) of gannon [79]: see [37] for such extra solutions. we may summarise the salient
+features of the analysis as follows, see also the accompanying tables 2 and 3 and figures 11
+and 12.
+
+ at least one graph (or rather one set of n matrices) has been identied for each bulk
+theory, i.e. each modular invariant. but it is not known if this list of graphs and ns
+is exhaustive.
+
+ note that the hypothesis of 3-colourability of the graphs that looked natural on the
+basis of the sl(2) case has to be abandonned if we want to cover all cases. this is
+manifest on table 3 where it appears that in some cases (namely a(n), and d(n), n
+not a multiple of 3, and e(8), the set e is not invariant under the automorphism  of
+(c.1), as it should be if the graph was 3-colourable.
+
+ there are a few pairs or even triplets of isospectral graphs, i.e. dierent sets of ns
+that give distinct solutions of the cardy equation for a given bulk theory. these
+
+58
+
+graphs/representations should not only describe dierent sets of complete orthonormal
+sets of boundary conditions for that bulk theory, but also presumably be associated
+with dierent operator algebras and lattice realisations.
+
+ in table 3, which summarises the state of the art, we have also indicated if the graph
+is of type i or type ii, following the discussion of section 3. some hybrid cases are also
+encountered, in which the m and n structure constants are both non-negative, but
+the n algebra has no subalgebra isomorphic to some extended fusion algebra.
+
+notations and footnotes for tables 2 and 3
+
+(shifted) weights of su(3)  = (1, 2) := 11 + 22, where 1, 2 are the fundamental
+weights of su(3).
+weyl alcove of shifted level, or altitude, n := k + 3 p (n)
+1, 1 + 2  n  1}
+conjugation:  = (2, 1)
+automorphism  of p (n)
+++
+
+++ = { = 11 + 22 | 1, 2 
+
+(1, 2) := (n  1  2, 1) .
+
+(c.1)
+
+triality of weights  () := (1  1) + 2(2  1)  1  2 mod 3 .
+q is the set of weights of triality zero.
+
+(a). one of the two connected parts of the fused dynkin diagram of type an1 (the one that
+possesses the exponent (1, 1)). it looks dierent depending on whether n is even or
+odd. the m, n algebras of a(n) are positive, as they follow simply from the verlinde
+fusion algebra n of bsl(2). if n is odd, a(n) is the connected component of the graph of
+adjacency matrix a2
+n1i made of the nodes a odd (integer spin in sl(2)). for a triplet
+of exponents  = (, ),  = (m, m) and  = (r, r) of a(n), m,
+nr,
+and nab
+c is the restriction of the verlinde an1 algebra to odd a, b, c. for even n, the
+m and n algebras of a(n) = i + a n
+
+2 1 coincide with the verlinde algebra of a n
+
+ = nm
+
+r + nm
+
+2 1.
+
+(b). the orbifold of a(n), see [59].
+(c). the ordinary z3 fold of a(n).
+(d). the unfolded (and 3-colourable) version of a(n). their adjacency matrix is a tensor
+0(cid:19); their m and n algebras are simply
+
+product by the permutation matrix 123 =(cid:18) 0 1
+obtained from those of a(n), thus also  0
+
+0 0
+1 0
+
+0
+1
+
+(e). the z3 fold of e (8).
+
+59
+
+table . list of
+
+sl()
+
+modular invariants; n = k + .
+
+d
+
+k
+
+(n)
+
+
+
+(a
+
+)
+
+z =
+
+j(cid:31)
+
+j
+
+(cid:21)
+
+x
+
+(n)
+
+(cid:21)p
+
+++
+
+x
+
+(n)(cid:3)
+
+(cid:3)
+
+(a
+
+)
+
+z =
+
+(cid:31)
+
+(cid:31)
+
+(cid:3)
+
+(cid:21)
+
+(cid:21)
+
+(n)
+
+(cid:21)p
+
+++
+
+(
+
+p
+
+(n)
+
+++
+
+
+
+(cid:21)q\p
+
+(d
+
+)
+
+z =
+
+p
+
+p
+
+
+
+
+
+(n)
+
+j(cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
+j
+
+if  divides n
+
+
+
+(cid:21)
+
+(cid:27)(cid:21)
+
+(cid:27)
+
+(cid:21)
+
+(cid:21)q\p
+
+(cid:21)p
+
+nq
+
+(cid:21)
+
+(cid:21)
+
+n(cid:28)
+
+(cid:27)
+
+(cid:21)
+
+++
+
+++
+
+(n)
+
+j(cid:31)
+
+j
+
++
+
+(n)
+
+(cid:31)
+
+(cid:31)
+
+if  does not divide n
+
+
+
+(cid:3)
+
+
+
+>
+
+<
+
+
+
+p
+
+p
+
+p
+
+
+
+
+
+(cid:18)
+
+(cid:19)(cid:18)
+
+(cid:19)
+
+(cid:3)
+
+(n)(cid:3)
+
+
+
+(cid:21)q\p
+
+`= 
+
+`= 
+
+(cid:27)
+
+(cid:21)
+
+(cid:27)
+
+(cid:21)
+
+(n)
+
+(cid:31)
+
+`
+
+(cid:31)
+
+`
+
+(cid:3)
+
+if  divides n
+
+(d
+
+)
+
+z =
+
+++
+
+p
+
+p
+
+>
+
+:
+
+(cid:3)
+
+(n)
+
+(n)
+
+(cid:31)
+
+(cid:31)
+
++
+
+(cid:31)
+
+(cid:31)
+
+if  does not divide n
+
+(cid:3)
+
+(cid:21)
+
+(cid:21)
+
+(cid:21)
+
+(cid:0)n(cid:28)
+
+(cid:3)
+
+(cid:21)q\p
+
+(cid:21)p
+
+nq
+
+(cid:27)
+
+(cid:21)
+
+++
+
+++
+
+()
+
+
+
+
+
+
+
+
+
+
+
+
+
+(e
+
+)
+
+z = j(cid:31)
+
++ (cid:31)
+
+j
+
++ j(cid:31)
+
++ (cid:31)
+
+j
+
++ j(cid:31)
+
++ (cid:31)
+
+j
+
++ j(cid:31)
+
++ (cid:31)
+
+j
+
++ j(cid:31)
+
++ (cid:31)
+
+j
+
++ j(cid:31)
+
++ (cid:31)
+
+j
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+0
+6
+
+()(cid:3)
+
+
+
+
+
+(cid:0)
+
+(cid:1)(cid:0)
+
+(cid:1)
+
+(cid:0)
+
+(cid:1)(cid:0)
+
+(cid:1)
+
+(cid:3)
+
+(cid:3)
+
+(e
+
+)
+
+z = j(cid:31)
+
++ (cid:31)
+
+j
+
++
+
+(cid:31)
+
++ (cid:31)
+
+(cid:31)
+
++ (cid:31)
+
++ c:c: + j(cid:31)
+
++ (cid:31)
+
+j
+
++
+
+(cid:31)
+
++ (cid:31)
+
+(cid:31)
+
++ (cid:31)
+
++ c:c:
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+()
+
+
+
+
+
+(e
+
+)
+
+z = j(cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
+j
+
++ j(cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
+j
+
+(;)
+
+( ;)
+
+(; )
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+()
+
+
+
+
+
+
+
+
+
+(e
+
+)
+
+z = j(cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
+j
+
++ j(cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
+j
+
++ j(cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
+j
+
++ j(cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
+j
+
+m s
+
+(;)
+
+( ;)
+
+(; )
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
++ j(cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
+j
+
++ j(cid:31)
+
+j
+
++
+
+(cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
+(cid:31)
+
++ c:c:
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+
+
+
+
+(cid:3)
+
+(cid:0)
+
+(cid:1)
+
+()(cid:3)
+
+
+
+
+
+
+
+
+
+(e
+
+)
+
+z = j(cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
+j
+
++ j(cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
+j
+
++ j(cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
+j
+
++ j(cid:31)
+
+j
+
+m s
+
+(;)
+
+( ;)
+
+(; )
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(cid:0)
+
+(cid:1)(cid:0)
+
+(cid:1)
+
+(cid:0)
+
+(cid:1)
+
+(cid:3)
+
+(cid:3)
+
++
+
+(cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
+(cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
++ c:c: +
+
+(cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
+(cid:31)
+
++ c:c:
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+()
+
+
+
+(e
+
+)
+
+z = j(cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
+j
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(; )
+
+( ;)
+
++ j(cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
++ (cid:31)
+
+j
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+(;)
+
+
+
+table . list of modular invariants and associated known graphs for su ()
+
+footnotes (a){(e) are explained at the end of appendix d.
+
+m odular i nvariant
+
+graphs
+
+altitude
+
+exponents
+
+t ype
+
+(n)
+
+(n)
+
+(n)
+
+a
+
+a
+
+n
+
+p
+
+i
+
+++
+
+(n)(cid:3)
+
+(n)
+
+(a)
+
+n(cid:0)
+
+^
+
+a
+
+a
+
+= (a
+
+? a
+
+)
+
+n
+
+f(j; j )g  (cid:20) j (cid:20) e (
+
+)
+
+m ;
+
+n (cid:21)  
+
+n(cid:0)
+
+n(cid:0)
+
+c
+
+
+
+(n)
+
+(n)
+
+(b)
+
+(n)
+
+n
+
+n
+
+d
+
+d
+
+n =   mod 
+
+p
+
+\ q; with (
+
+;
+
+) triple
+
+i
+
+(n)
+
+(c)
+
+^
+
+a
+
+=z
+
+n =   mod 
+
+p
+
+\ q
+
+m ;
+
+n (cid:21)  
+
+
+
+++
+
+++
+
+(n)
+
+
+
+
+
+(n)(cid:3)
+
+(n)
+
+(d)
+
+d
+
+d
+
+= (cid:27)
+
+(cid:10) (a
+
+? a
+
+)
+
+n
+
+f(j; j ); (n (cid:0) j; j ); (j; n (cid:0) j )g
+
+
+
+n(cid:0)
+
+n(cid:0)
+
+c
+
+ (cid:20) j (cid:20) e (
+
+)
+
+m ;
+
+n (cid:21)  
+
+n(cid:0)
+
+^
+
+
+
+()
+
+()
+
+e
+
+e
+
+
+
+(; ); (; ); (; ); (; ); (; ); (; );
+
+i
+
+(; ); (; ); (; ); (; )(; ); (; )
+
+()(cid:3)
+
+()(cid:3)
+
+(e)
+
+^
+
+e
+
+e
+
+
+
+(; ); (; ); (; ); (; )
+
+m ;
+
+n (cid:21)  
+
+()
+
+()
+
+()
+
+e
+
+e
+
+; i = ; ; 
+
+
+
+(; ); ( ; ); (;  ); (; ); (; ); (; );
+
+e
+
+; i = ;  : i
+
+i
+
+i
+
+and twice (; ); (; ); (; )
+
+e
+
+i i
+
+
+
+()
+
+()(cid:3)
+
+()
+
+e
+
+ms
+
+e
+
+
+
+
+
+(; ); ( ; ); (;  ); (; ); (; ); (; );
+
+i i
+
+()
+
+()
+
+e
+
+ms
+
+e
+
+
+
+
+
+(; ); (; ); (; ); (; ); (; ); (; );
+
+i i
+
+()
+
+()
+
+e
+
+e
+
+
+
+(; ); ( ; ); (;  ); (; ); (; ); (; );
+
+i
+
+(; ); (; ); (; ) and twice (; )
+
+(; ); (; ); (; ); (; ); (; ); (; );
+
+(; ); (; ); (; ) and twice (; )
+
+(; ); ( ; ); (;  ); (; ); (; ); (; );
+
+(; ); (; ); (; ); (; ); (; ); (; );
+
+(; ); (; ); (; ); (; ); (; ); (; )
+
+(4)
+=a
+
+(5)
+=a
+
+(6)
+=a
+
+(4)*
+=a
+
+(5)*
+=a
+
+(6)*
+=a
+
+(7)*
+=a
+
+(8)*
+=a
+
+(5)
+
+d
+
+=
+
+(6)
+
+d
+
+=
+
+(7)
+
+d
+
+=
+
+(8)
+
+d =
+
+(9)
+
+d
+
+=
+
+(6)*
+=
+
+d
+
+(7)*
+=
+
+d
+
+(8)*
+=
+
+d
+
+d
+
+(9)*
+=
+
+figure 11: the known graphs in the case of bsl(3)3. conventions : (a) for the 3-colourable graphs,
+the triality  of nodes is indicated by the colour: black  = 0, grey  = 1, or white  = 2; the graph
+represents the matrix n21 if edges are oriented from black to grey, or grey to white, etc. (b) for the
+non-3-colourable graphs, either the orientation of all edges (of matrix n21, say) is indicated, (d(n),
+3 6 |n, series, e (8)), or all links are unoriented (a(.) series).
+
+62
+
+(8)e
+=
+
+(8)*e
+ =
+
+(12)
+=e
+
+1
+
+(12)
+=e
+
+2
+
+(12)
+=e
+
+3
+
+(12)
+=e
+
+4
+
+(12)
+=e
+
+5
+
+(24)
+=e
+
+figure 12: the known graphs in the case of bsl(3)3, (contd).
+
+63
+
+appendix e: standard formulae for fusing, braiding and
+modular matrices
+
+the fusing (crossing) matrices satisfy several identities implied by the pentagon identity 
+they can be recovered from formulae (4.37), (4.41), (4.16) in the text making the identica-
+tion (4.57).
+
+symmetries:
+
+fpq" k j
+
+l# = fpq" j
+
+i
+
+l
+
+k
+
+i# = fpq" i
+
+k
+
+l
+
+j# = fpq" l
+
+j
+
+i
+
+k#
+
+(e.1)
+
+choice of gauge for sl(2) wzw and virasoro minimal models (and for the minimal wn
+
+i
+
+i
+
+j #1j 1
+
+ 
+
+=vuut dq
+
+didj
+
+ 13()
+
+(e.2)
+
+models):
+
+j
+
+f (0)
+
+q1 " i
+in the sl(2) case denote by qc q
+l# =vuut
+
+fpq" k j
+
+c q
+kjc i
+ql
+kpc p
+c i
+
+jl
+
+i
+
+or,
+
+c p
+
+kic p
+
+jlc 1
+
+pp fpq" k j
+
+i
+
+fusion matrix corresponding to cvo normalised to 1, one has
+
+kj the normalisation of the cvo in this gauge. then for the
+
+f (0)
+
+i
+
+l# =vuut
+pq " k j
+l# = c q
+
+kjc q
+
+kjc q
+c q
+c p
+kic p
+
+ilc 1
+qq
+jlc 1
+pp
+
+qq fqp" k
+
+j
+
+ilc 1
+
+f (0)
+
+i
+
+pq " k j
+l# ,
+l# .
+
+i
+
+(e.3)
+
+(e.4)
+
+this equation coincides with the quadratic relation resulting from locality of the physical 4
+ki c 1
+point function in the diagonal case. hence the constants c i
+pp
+can be identied with the physical ope structure constants in this case. for the minimal
+models these constants were computed in [66]; the matrices f (0) in the gauge (e.2) coincide
+up to signs with a product of standard q 6j symbols [82].
+
+(k,k)(p,p) , c i
+
+ii = c p
+
+kp = c (i,i
+
+kp c 1
+
+braiding matrices
+
+j
+
+k
+
+1 23(2)
+
+bpq" i
+
+l#23(2) 
+
+() = ei(k+lpq) fpq" i
+
+k j#2 
+the q - analogs of the racah identity (hexagon identities)  = 1,
+fmq" j
+xq
+
+j# = ei(m+pijik) fmp" i
+
+k# eiq fqp" i
+
+1 2
+
+k
+
+i
+
+i
+
+i
+
+l
+
+j
+
+(e.5)
+
+i
+
+k# .
+
+(e.6)
+
+recall the moore-seiberg torus duality identity resulting from a relation in the modular
+group of the two puncture torus, namely, s(j1, j2) a = b s(j1, j2) where s(j1, j2) is the
+
+64
+
+modular matrix of two-point blocks, expressed in terms of f and s(p), and a, b are the
+monodromy transformations moving one of the cvo around the a, b cycles, [32]
+
+e2i(im) fsm" i
+sri(s) xm
+sqi(p) ei(pj1j1 ) fsq" r
+
+r
+
+i
+
+j2
+
+j1# fmp" j1
+j1# frp" j2
+
+j2
+
+q
+
+i
+
+j2
+
+i #
+q # .
+
+j1
+
+(e.7)
+
+=xq
+
+choose s = 1 = r. this implies that j1 = j2 = j and that the second sum reduces to
+
+q = j, hence
+
+sji(p)
+
+=
+
+=
+
+=
+
+s1i
+
+j
+s1i
+
+f1p" j
+f1p" j
+fp1" i
+
+i
+
+j
+s1j
+
+i
+
+ei(2i+2j2mp) f1m" i
+ei(2i+2j2m) f1m" i
+ei(2i+2j2mp) fpm" j
+
+j
+
+i
+
+j
+
+i
+
+j
+
+j
+
+j# fmp" j
+i#
+i #
+j # fmp" j
+i# fm1" i
+j# .
+
+j
+
+j
+
+i
+
+i
+
+i
+
+(e.8)
+
+j
+
+j
+
+j # xm
+j # xm
+i # xm
+
+i
+
+the second equality is obtained reversing the sums in (e.7) and solving for sri(s) as above,
+while the third is obtained from the transposed version of (e.7) taking into account s(p)2 =
+c eip.
+
+for p = 1 the formula reproduces the ordinary s = s(1) matrix
+
+e2i(i+jm) f1m" i
+
+i
+
+j
+
+j# fm1" j
+
+i
+
+j
+
+i#
+
+sij
+
+j # xm
+
+si1
+
+j
+
+=
+
+j
+
+f11" j
+= s11 xm
+j # = 1/dj.
+
+j
+
+the value of f11" j
+
+j
+
+e2i(i+jm) dm nij
+
+m .
+
+(e.9)
+
+this equality in particular determines (using the symmetry of sij and the symmetries of f )
+
+inserting (e.8) back into the torus identity (e.7) (or its transposed) taken at p = 1 we
+
+obtain
+
+sir(p)
+
+sji(p)
+
+s1i
+
+s1i
+
+= eip xq
+= eip xq
+
+sqi
+s1i
+sqi
+s1i
+
+r
+
+f1q" r
+fjr" r
+
+q
+
+j
+
+j# fqs" j
+j# .
+
+p
+
+r
+
+65
+
+j
+
+r# fj1" s
+
+j
+
+(e.10)
+
+s
+
+j# dj dr
+
+dq
+
+this relation is easily seen, taking into account (4.55), (4.57), (4.50) (use the rst expression
+for the r.h.s.), to be identical to the bulk-boundary equation (4.32) in the diagonal case.
+inverting (e.10), we obtain the generalised verlinde algebra discussed at the end of in section
+4, see also [69],
+
+sji(p) (eip sir(p)) = fjr" r
+
+q
+
+sqi
+s1i
+
+xi
+
+acknowledgements
+
+p
+
+j# =: (fq)r
+
+j , fk fl =xt
+
+nkl
+
+j fj .
+
+p.a.p. is supported by the australian research council. v.b.p. acknowledges the hospital-
+ity of arnold sommerfeld institute for mathematical physics, tu clausthal, the support
+and hospitality of service de physique theorique, cea-saclay and the partial support of
+the bulgarian national research foundation (contract -643). j.-b.z. acknowledges partial
+support of the eu training and mobility of researchers program (contract fmrx-ct96-
+0012), which made possible an extremely protable stay in sissa, trieste. we acknowledge
+useful discussions with m. bauer, d. bernard, j. fuchs, t. gannon, a. honecker, a. reck-
+nagel, p. ruelle, i. runkel, c. schweigert and g. watts.
+
+references
+
+[1] kawai, h., lewellen, d.c. and tye, s.-h., nucl. phys. b 269 (1986) 1-23, a relation
+
+between tree amplitudes of closed and open strings
+
+[2] ishibashi, n., mod. phys. lett. a 4 (1987) 251-264, the boundary and crosscap
+
+states in conformal field theories
+
+[3] ishibashi, n. and onogi, t., mod. phys. lett. a 4 (1987) 161-168, conformal eld
+
+theories on surfaces with boundaries and cross-caps
+
+[4] callan, c.g., lovelace, c., nappi, c. and yost, s.a., nucl. phys. b 293 (1987) 83-113,
+
+adding holes and crosscaps to the superstring
+
+[5] bern, z. and dunbar, d., phys. lett. b 203 (1988) 109-117, coupling of open to closed
+
+bosonic strings in four dimensions
+
+[6] polchinski, j. and cai, y., nucl. phys. b 296 (1988) 91-128, consistency of open
+
+superstring theories
+
+[7] pradisi, g. and sagnotti, a., phys. lett. b 216 (1989) 59-67, open string orbifolds
+
+[8] bianchi, m. and sagnotti, a., phys. lett. b 247 (1990) 517-524, on the systematics
+
+of open string theories
+
+66
+
+[9] saleur, h. and bauer, m., nucl. phys. b 320 (1989) 591-624, on some relations
+
+between local height probabilities and conformal invariance
+
+[10] cardy, j.l., nucl. phys. b 324 (1989) 581-596, boundary conditions, fusion rules
+
+and the verlinde formula
+
+[11] cardy, j.l. and lewellen, d. c., phys. lett. b 259 (1991) 274-278, bulk and boundary
+
+operators in conformal eld theory
+
+[12] lewellen, d. c., nucl. phys. b 372 (1992) 654-682, sewing constraints for conformal
+
+eld theories on surfaces with boundaries
+
+[13] pradisi, g., sagnotti, a. and stanev, ya.s., phys. lett. b 381 (1996) 97-104, com-
+
+pleteness conditions for boundary operators in 2d conformal eld theory
+
+[14] sagnotti, a. and stanev, ya.s., fortschr. phys. 44 (1996) 585-596, open descendants
+
+in conformal eld theory
+
+[15] aeck, i. and ludwig, a., phys. rev. lett. 67 (1991) 161-164, universal noninteger
+
+ground-state degeneracy in critical quantum systems
+
+[16] aeck, i., conformal field theory approach to the kondo eect, in bosonization and
+conformal symmetry in high energy physics and condensed matter physics, za-
+kopane, (1995) (m.a. nowak and p. wegrzyn, act. phys. pol. 26 (1995), 1869-1932)
+and further references therein
+
+[17] cherednik, i.v., teor. mat. fiz. 61 (1894) 35-44, factorizing particles on a half-line
+
+and root systems
+
+[18] ghoshal, s. and zamolodchikov, a., int. j. mod. phys. a 9 (1994) 3841-3886, err. ibid,
+4353, boundary s matrix and boundary state in two-dimensional integrable quantum
+field theory
+
+[19] corrigan, e., dorey, p.e., rietdijk, r.h., and sasaki, r., phys. lett. b 333 (1994)
+
+83-91, hep-th 9404108 , ane toda field theory on a half-line
+
+[20] oshikawa, m. and aeck, i., nucl. phys. b 495 (1997) 533-582, boundary conformal
+
+eld theory approach to the critical two-dimensional ising model with a defect line
+
+[21] aeck, i., oshikawa, m. and saleur, h., j. phys. a 31 (1998) 5827-5842, cond-mat
+
+9804117, boundary critical phenomena in the three-state potts model
+
+[22] sklyanin, e.k., j. phys. a 21 (1988) 2375-2389, boundary conditions for integrable
+
+quantum systems
+
+67
+
+[23] behrend, r. e., pearce, p. a. and obrien, d. l., j. stat. phys. 84 (1996) 148,
+interaction-round-a-face models with fixed boundary conditions: the abf fusion
+hierarchy; behrend, r. e. and pearce, p. a., j. phys. a29 (1996) 78277835, a
+construction of solutions to reection equations for interaction-round-a-face models
+
+[24] recknagel, a. and schomerus, v., nucl. phys. b 531 (1998) 185-225, dbranes in
+
+gepner models
+
+[25] recknagel, a. and schomerus, v., nucl. phys. b 545 (1999) 233-282, boundary
+
+deformation theory and moduli spaces of dbranes
+
+[26] fuchs, j. and schweigert, c., nucl. phys. b 530 (1998) 99-136, branes; from free
+fields to general backgrounds; phys. lett. 414 (1997) 251-259, a classifying algebra
+for boundary conditions
+
+[27] fuchs, j. and schweigert, c., phys. lett. b 441 (1998) 141-146, completeness of
+
+boundary conditions for the critical three-state potts model
+
+[28] fuchs, j. and schweigert, c., phys. lett. b 447 (1999) 266-276, orbifold analysis of
+broken bulk symmetries ; hep-th/9902132, symmetry breaking boundaries i. general
+theory; birke, l., fuchs, j. and schweigert, c., hep-th/9905038, symmetry breaking
+boundary conditions and wzw orbifolds
+
+[29] sagnotti, a. and stanev, ya.s. in desy meeting on conformal eld theory of d-branes
+
+(hamburg, 7-12 sept., 1998)
+
+[30] behrend, r. e., pearce, p. a. and zuber, j.-b., j. phys. a 31 (1998) l 763-770,
+hep-th/9807142, integrable boundaries, conformal boundary conditions and a-d-e fu-
+sion rules
+
+[31] behrend, r. e., pearce, p. a., petkova, v., and zuber, j.-b., , phys. lett. b 444
+
+(1998) 163-166, on the classication of bulk and boundary conformal eld theories
+
+[32] moore, g. and seiberg, n., , comm. math. phys. 123 (1989) 177-254, classical
+and quantum conformal field theory; lectures on rcft, physics, geometry and
+topology, plenum press, new york, 1990
+
+[33] sonoda, h., nucl. phys. b 281 (1987) 546-572, the energy-momentum tensor on a
+riemann surface; ibid. b284 (1987) 157-192, functional determinants on a punctured
+riemann surface and their application to string theory
+
+[34] cardy, j.l., nucl. phys. b 240 [fs12] (1984) 514-532, conformal invariance and
+surface critical behavior ; ibid b 275 [fs17] (1986) 200-218, eect of boundary conditions
+on the operator content of two-dimensional conformally invariant theories
+
+68
+
+[35] kato, m., okada, t., nucl. phys. b 499 (1997) 583-595, hep-th/9612148, d-branes
+
+on group manifolds
+
+[36] kac, v., innite dimensional lie algebras (cambridge univ. pr., 1995)
+
+[37] di francesco, p. and zuber, j.-b., nucl. phys. b 338 (1990) 602-646, su(n) lattice
+
+integrable models associated with graphs
+
+[38] goodman, f. m., de la harpe, p. and jones, v. f. r., coxeter dynkin diagrams and
+
+towers of algebras ( vol. 14, msri publications, springer, berlin, 1989)
+
+[39] cappelli, a., itzykson, c. and zuber, j.-b., nucl. phys. b 280 (1987) 445-465, modular
+invariant partition functions in two dimensions; comm. math. phys. 113 (1987) 1-
+26, the a-d-e classication of minimal and a(1)
+1 conformal invariant theories; kato,
+a., mod. phys. lett. a 2 (1987) 585-600, classication of modular invariant partition
+functions in two dimensions
+
+[40] gelfand, i.m., graev, m.i. and vilenkin, n.ya, generalised functions, v.5, ch. vii
+
+(academic press, new york, 1966)
+
+[41] andrews, g. e., baxter, r. j. and forrester, p. j., j. stat. phys. 35 (1984) 193266,
+
+eight-vertex sos model and generalized rogers-ramanujan-type identities
+
+[42] pasquier, v., nucl. phys. b 285 (1987) 162172, two-dimensional critical systems
+
+labelled by dynkin diagrams
+
+[43] roche, p., phys. lett. b 285 (1992) 4953, on the construction of integrable dilute
+
+a-d-e models
+
+[44] warnaar, s. o. and nienhuis, b., j. phys. a 26 (1993) 23012316, solvable lattice
+
+models labelled by dynkin diagrams
+
+[45] forrester, p. and baxter, r., j. stat. phys. 38 (1885) 435-472, further exact solutions
+
+of the eight-vertex sos model and generalizations of rogers-ramanujan identities
+
+[46] pearce, p. a. and zhou, y.-k., int. j. mod. phys. b 7 (1993) 3649-3705, intertwiners
+
+and a  d  e lattice models
+
+[47] pasquier, v. and saleur, h., nucl. phys. b 330 (1990) 523-556, common structures
+
+between nite size systems and conformal eld theories through quantum groups
+
+[48] pasquier, v., j. phys. a 20 (1987) 5707-5717, operator content of the ade lattice
+models; and the preprint version of that article, reprinted in v. pasquier, mod`eles
+exacts invariants conformes, th`ese detat, orsay, 1988.
+
+69
+
+[49] di francesco, p. and zuber, j.-b. su(n) lattice integrable models and modular in-
+variance in recent developments in conformal field theories trieste conference,
+(1989, s. randjbar-daemi, e. sezgin and j.-b. zuber eds., world scientic 1990); di
+francesco, p., int. j. mod. phys. a7 (1992) 407-500, integrable lattice models , graphs
+and modular invariant conformal field theories
+
+[50] petkova, v.b. and zuber, j.-b., nucl. phys. b 438 (1995) 347-372, on structure
+
+constants of sl(2) theories
+
+[51] petkova, v.b. and zuber, j.-b., nucl. phys. b 463 (1996) 161-193, from cft to
+
+graphs
+
+[52] petkova, v.b. and zuber, j.-b., hep-th preprint 9701103, conformal field theory
+
+and graphs
+
+[53] xu, f., comm. math. phys. 192 (1998) 349-403, new braided endomorphisms from
+
+conformal inclusions
+
+[54] bockenhauer j. and evans, d. e.,
+
+comm. math. phys. 200 (1999) 57-103,
+hep-th/9805023, modular invariants, graphs and -induction for nets of subfactors;
+hep-th/9812110
+
+[55] honecker, a., nucl. phys. b 400 (1993) 574-596, automorphisms of w-algebras and
+
+extended rational conformal eld theories
+
+[56] zuber, j.-b., generalized dynkin diagrams and root systems, in topological field
+theory, primitive forms and related topics taniguchi symposium, kyoto, 1996 ( m.
+kashiwara, a. matsuo, k. saito and i. satake eds, , birkhauser 1998., )
+
+[57] itzykson, c., nucl. phys. proc. suppl. 5b (1988) 150-165, level one kac-moody
+
+characters and modular invariance
+
+[58] degiovanni, p., comm. math. phys. 127 (1990) 71-99, z/n z conformal eld theories
+
+[59] kostov, i., nucl. phys. b 300 (1988) 559-587 , free eld presentation of the an coset
+
+models on the torus
+
+[60] dijkgraaf, r., vafa, c., verlinde, e. and verlinde, h., comm. math. phys. 123 (1989)
+
+485-526, operator algebra of orbifold models
+
+[61] di francesco, p., mathieu, p. and senechal, d., conformal field theory (springer,
+
+1997)
+
+[62] bohm, g. and szlachanyi, k., q-alg preprint 9509008, a coassociative c- quantum
+
+group with non-integral dimensions
+
+70
+
+[63] roche p., comm. math. phys. 127 (1990) 395-424, ocneanu cell calculus and inte-
+
+grable lattice models
+
+[64] y.-k. zhou and p. a. pearce, int. j. mod. phys. b 8 (1994) 3531-3577, fusion of ade
+
+lattice models
+
+[65] zamolodchikov, a.b. and fateev, v.a., sov. j. nucl. phys. 43 (1986) 657-664, operator
+algebra and correlation functions in the two-dimensional su(2)  su(2) wess-zumino
+model
+
+[66] dotsenko, vl.s. and fateev, v.a., nucl. phys. b 251[fs13] (1985) 691-734, four-
+point correlation functions and the operator algebra in 2d conformal invariant theories
+with central charge c  1
+
+[67] runkel, i., nucl. phys. b 549 (1999) 563-578, boundary structure constants for the
+
+a-series virasoro minimal models
+
+[68] verlinde, e., nucl. phys. b 300 (1988) 360-376, fusion rules and modular transfor-
+
+mations in 2-d conformal field theory
+
+[69] bantay, p. and vecsernyes, p., hep-th preprint 9506186, mapping class group repre-
+
+sentations and generalised verlinde formula
+
+[70] bannai, e., and ito, t., algebraic combinatorics i: association schemes, (benjamin-
+
+cummings, 1984)
+
+[71] ocneanu, a., paths on coxeter diagrams: from platonic solids and singularities to
+minimal models and subactors in low dimensional topology, statistical mechanics and
+quantum field theory fields institute, waterloo, ontario, april 2630, 1995. (notes
+taken by s. goto, , )
+
+[72] dorey, p., int. j. mod. phys. a 8 (1993) 193-208, partition functions, intertwiners
+
+and the coxeter element
+
+[73] mckay, j., proc. symp. pure math. 37 (1980) 183-186, graphs, singularities, and
+
+finite groups
+
+[74] kostant, b., asterisque (societe mathematique de france),
+
+(1988) 209-255, the
+
+mckay correspondence, the coxeter element and representation theory
+
+[75] braden, h., corrigan, e., dorey, p. and sasaki, r., nucl. phys. b 338 (1990) 689-746,
+
+ane toda field theory and exact s matrices
+
+[76] mccoy, b.m., and orrick, w., phys. lett. a 230 (1997) 24-32, single particle exci-
+
+tations in the lattice e8 ising model
+
+71
+
+[77] batchelor, m.t. and seaton, k.a., cond-mat preprint 9803206, excitations in the
+
+diluate al lattice model: e6, e7 and e8 mass spectra
+
+[78] suzuki, j.,
+
+cond-mat preprint 9805241, quantum jacobi-trudi formula and e8
+
+structure in the ising model in a field
+
+[79] gannon, t., comm. math. phys. 161 (1994) 233-263, the classication of ane
+su(3) modular invariant partition functions; ann. inst. h. poincare, phys.theor. 65
+(1996) 15-56, hep-th/9404185, the classication of su(3) modular invariant revisited,
+
+[80] runkel, i., hep-th preprint 9908nnn, structure constants for the d-series virasoro
+
+minimal models
+
+[81] ruelle, p., hep-th preprint 9904100, symmetric boundary conditions in boundary
+
+critical phenomena
+
+[82] kirillov, a.n. and reshetikhin, n.yu.,
+
+in new developments of the theory of knots
+
+(t. kohno ed. , world sc. 1990., )
+
+72
+
+

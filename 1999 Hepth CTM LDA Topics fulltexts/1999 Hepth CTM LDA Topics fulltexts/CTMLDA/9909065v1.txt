@@ -1,0 +1,3001 @@
+9
+9
+9
+1
+
+ 
+
+p
+e
+s
+0
+1
+
+ 
+
+ 
+ 
+
+1
+v
+5
+6
+0
+9
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+short distance behaviour of correlators in the
+
+2d ising model in a magnetic eld
+
+dftt 41/99
+gef-th 5/99
+
+m. casellea, p. grinzaa and n. magnolib
+
+a dipartimento di fisica teorica delluniversit`a di torino and
+
+istituto nazionale di fisica nucleare, sezione di torino
+
+via p.giuria 1, i-10125 torino, italy
+
+b dipartimento di fisica, universit`a di genova and
+
+istituto nazionale di fisica nucleare, sezione di genova
+
+via dodecaneso 33, i-16146 genova, italy
+
+abstract
+
+we study the hi, hi, hi correlators in the 2d ising model
+perturbed by a magnetic eld. we compare the results of a set of
+high precision montecarlo simulations with the predictions of two dif-
+ferent approximations: the form factor approach, based on the exact
+s-matrix description of the model, and a short distance perturbative
+expansion around the conformal point. both methods give very good
+results, the rst one performs better for distances larger than the
+correlation length, while the second one is more precise for distances
+smaller than the correlation length. in order to improve this agree-
+ment we extend the perturbative analysis to the second order in the
+derivatives of the ope constants.
+
+email: caselle@to.infn.it
+email: grinza@to.infn.it
+email: magnoli@ge.infn.it
+
+1 introduction
+
+in these last years much progress has been done in the study of two di-
+mensional statistical systems in the neighbourhood of critical points. in the
+framework of quantum eld theory these systems can be seen as conformal
+field theories (cfts) perturbed by some relevant operator. since the sem-
+inal work of belavin, polyakov and zamolodchikov [1] we have an almost
+complete understanding of cfts (at least for the minimal models): we have
+complete lists of all the operators of the theories and explicit expressions for
+the correlators. however much less is known on their relevant perturbations.
+in some cases it has been possible to show that these perturbations give rise
+in these cases again we have a rather precise
+to integrable models [2, 3].
+description of the theory.
+in particular it is possible to obtain the exact
+asymptotic expression for the large distance behaviour of the correlators [4].
+from this information several important results (and in particular all the
+universal amplitude ratios) can be obtained.
+
+however in comparing with numerical simulations or with experiments
+one is often interested in the short distance behaviour of the correlators
+(short here means for distances smaller or equal than the correlation length)
+and this is not easily accessible in integrable systems. moreover integrable
+perturbations represent only a small subset of the possible theories. for
+instance in the case of the ising model both the purely thermal and the
+purely magnetic perturbations are integrable, but for any combination of
+them the exact integrability is lost.
+
+for these reasons, besides the s-matrix results, it is important to develop
+a perturbative approach well dened in the short distance regime of the the-
+ory and such that it does not rely on the exact integrability of the model.
+this is however a rather dicult task. in fact any naive perturbative expan-
+sion of the (massless) cft along a relevant direction, is aected by infrared
+divergences (ir) and some non-trivial strategy is needed.
+
+recently, in [5, 6], a new approach has been proposed to overcome this
+diculty (see [7]-[15] for relevant related works and preexisting ideas). the
+method is based on wilsons operator product expansion (ope). roughly
+speaking the main idea of this new approach is that the wilsons coecients
+of the ope, being well dened at short distance, can be assumed to have a
+regular, ir safe, perturbative expansion with respect to the coupling. for
+this reason we shall refer to it in the following as the irs (infrared safe)
+
+1
+
+perturbative approach.
+
+the main requirement of this irs approach is the the knowledge of the
+wilson coecients (and their derivatives with respect to the perturbing cou-
+pling). for this reason it is particularly ecient if applied to perturbations
+of exactly solved theories like 2d critical cfts (but the framework is quite
+general and in principle could be extended also to higher dimensions).
+
+the price one has to pay to control in this way the ir divergences is
+that one needs, as an external input information, the expectation values
+of the operators involved in the expansion. there are at this point two
+possibilities. the rst one is to concentrate only on observables in which
+these expectation values exactly cancel. this is a small but very interesting
+subset of the informations that we can obtain with the irs perturbation.
+
+the second possibility is to obtain the desired expectation values with
+some other method or extract them from numerical simulations (an inter-
+esting numerical approach to obtain these vev is based on the truncated
+conformal space technique, see [16, 17] and references therein).
+
+from this point of view, the irs approach becomes particularly pow-
+erful if applied to integrable perturbations, since in this case some of the
+expectation values can be deduced from the s-matrix of the model.
+
+the last step one has to face in comparing the results of the irs method
+with simulations or experiments is the presence of a nonuniversal normaliza-
+tion factor between the operators in the continuum quantum eld theory and
+their lattice discretizations. these normalizations (and the related normal-
+ization of the coupling of the perturbation) can be xed if an exact solution
+of the lattice model exists at the critical point. actually much less is needed.
+one only needs the exact expression (or even only its large distance asymp-
+totic form) of a correlator involving the operators in which we are interested.
+this makes the ising model perturbed by a magnetic eld a perfect candi-
+date for testing the irs method. in fact it is well known that this model
+is exactly integrable [2, 3] and all the amplitude ratios and expectation val-
+ues of the primary elds are known. moreover the ising model is exactly
+solvable at the critical point and the exact expression is known for several
+correlators [18, 19].
+
+in fact the irs approach was successfully tested with the magnetic per-
+turbation of the ising model in [6]. the aim of this paper is to make a further
+step in this direction. in particular we have three goals:
+
+2
+
+a] we want to show that it is possible to extend the analysis of [5, 6] to
+higher orders in the perturbative coupling and discuss the technical
+problems that one has to aord following this route.
+
+b] compare the results of the method with new high precision montecarlo
+
+simulations so as to test the range of applicability of the method.
+
+c] compare the irs method with the results obtained in the s-matrix frame-
+
+work with the so called form factor (ff) approach.
+
+this paper is organized as follows. sect. 2 is devoted to a general de-
+scription of the ising model in a magnetic eld both on the lattice and in the
+continuum. the aim of this section is to x conventions and normalizations
+which will be useful in the following. in sect. 3 we shall briey describe the
+irs method, while in sect. 4 we shall extend it to second order derivatives of
+the magnetic eld. in sect. 5 we shall briey describe our montecarlo simu-
+lation while in sect. 6 we shall compare the results of our simulations with
+irs and ff predictions. finally sect. 7 will be devoted to some concluding
+remarks. the details of the calculation of the second order derivative of the
+wilson coecient are collected in the appendix. we have reported in three
+tables at the end of the paper a sample of the results of our simulations.
+
+2 ising model in a magnetic eld.
+
+the continuum theory, which is the starting point of the irs expansion is
+given by the action:
+
+a = a0 + hz d2x (x)
+
+(1)
+
+where a0 is the action of the conformal eld theory which describes the
+ising model at the critical point. let us start our analysis by looking in detail
+at this cft.
+
+2.1 the ising model at the critical point
+
+the ising model at the critical point is described by the unitary minimal
+cft with central charge c = 1/2. it contains three conformal families whose
+
+3
+
+primary elds 1, ,  have scaling dimensions x = 0, 1/8, 1 respectively. the
+fusion rule algebra is
+
+= [1]
+[][]
+[][] = []
+[][] = [1] + [].
+
+(2)
+
+once the operator content is known, the only remaining information
+which is needed to completely identify the theory are the ope constants.
+the ope algebra is dened as
+
+i(r)j(0) =x{k}
+
+c{k}ij (r){k}(0)
+
+(3)
+
+where with the notation {k} we mean that the sum runs over all the elds
+of the conformal family [k]. the structure functions c k
+ij(r) are c-number
+functions of r which must be single valued in order to take into account
+locality. in the large r limit they decay with a power like behaviour
+
+whose amplitude is given by
+
+ij(r)  |r|dim(c k
+c k
+
+ij )
+
+c k
+ij  lim
+r
+
+ij(r) |r|dim(c k
+ij ).
+c k
+
+(4)
+
+(5)
+
+the actual value of these constants depends on the normalization of the
+elds, which can be chosen by xing the long distance behaviour of, for
+instance, the  and  correlators. in this paper we follow the commonly
+adopted convention which is:
+
+h(x)(0)i =
+
+h(x)(0)i =
+
+1
+4
+
+1
+|x|
+1
+|x|2 ,
+
+,
+
+|x|  
+
+|x|  .
+
+(6)
+
+(7)
+
+with these conventions we have, for the structure constants among primary
+elds
+
+c 
+, = c 
+
+, = c 
+
+, = 0
+
+c 1
+, = c 
+
+,1 = c 1
+
+, = c 
+
+,1 = 1
+
+and
+
+c 
+, = c 
+
+, =
+
+1
+2
+
+.
+
+4
+
+(8)
+
+(9)
+
+(10)
+
+2.2 the ising model in a magnetic eld
+
+if we switch on the magnetic eld h, the structure functions acquire a h
+dependence so that we have in general
+
+i(r)j(0) =x{k}
+
+c{k}ij (h, r){k}(0)
+
+.
+
+(11)
+
+also the mean values of the  and  operators acquire a dependence on
+h. standard renormalization group arguments allow one to relate this h
+dependence to the scaling dimensions of the operators of the theory and lead
+to the following expressions:
+
+hih = ah
+hih = ah
+
+1
+
+15 + ...
+
+8
+
+15 + ...
+
+(12)
+
+(13)
+
+the exact value of the two constants a and a can be found in [20] and [21]
+respectively
+
+a =
+
+15 (sin 2
+
+2 c2
+3 + sin 2
+
+5 + sin 
+15 )
+
+= 1.27758227.. ,
+
+(14)
+
+with
+
+and
+
+c =
+
+4 sin 
+
+5(cid:17)
+5 (cid:16) 1
+3(cid:17) (cid:16) 8
+15(cid:17)
+(cid:16) 2
+
+
+
+42(cid:16) 3
+4(cid:17) 2(cid:16) 13
+16(cid:17)
+4(cid:17) 2(cid:16) 3
+16(cid:17)
+(cid:16) 1
+
+
+
+4
+5
+
+,
+
+a = 2.00314...
+
+.
+
+(15)
+
+(16)
+
+notice however that these amplitudes are not universal. they depend on the
+details of the regularization scheme. thus some further work is needed to
+obtain their value on the lattice.
+
+2.3 the lattice model
+
+the lattice version of the above model is dened by the following partition
+function:
+
+z = xi=1
+
+e(phi,ji ij +hpi
+
+i)
+
+5
+
+(17)
+
+where the notation hi, ji denotes nearest neighbour sites in the lattice which
+we assume to be a two dimensional square lattice of size l. in order to select
+only the magnetic perturbation,  must be xed to its critical value:
+
+ = c =
+
+1
+2
+
+log (2 + 1) = 0.4406868...
+
+nally by dening hl = ch we nd
+
+z = xi=1
+
+ecphi,ji ij +hlpi
+
+i
+
+(18)
+
+in the following we shall denote the lattice discretization of the operators ,
+ with the index l. the magnetization m(h) is dened as usual:
+
+m(h) 
+
+1
+n
+
+
+hl
+
+(log z)|=c = h
+
+1
+
+n xi
+
+ii.
+
+(19)
+
+where n  l2 denotes the number of sites of the lattice. this result suggests
+the following denition for the lattice discretization of 
+
+l 
+
+1
+
+n xi
+
+i
+
+,
+
+so that the mean value of l coincides with m(h):
+
+hli  m(h)
+similarly, we dene the internal energy as:
+
+e(h) 
+
+1
+2n
+
+
+hl
+
+(log z)|=c = h
+
+1
+
+2n xhi,ji
+
+iji
+
+(20)
+
+(21)
+
+(22)
+
+for the energy operator one must also take into account the presence of an
+additional bulk contribution at the critical point. this constant can be easily
+evaluated (for instance by using kramer-wannier duality) to be 0 = 12
+.
+this result suggests, for the lattice discretization of , the following denition
+
+l 
+
+1
+
+2n xhi,ji
+
+ij 
+
+1
+2
+
+6
+
+(23)
+
+(24)
+
+(25)
+
+(26)
+
+1
+15
+
+l + ...
+
+hlih = al
+h
+hlih = al
+h
+, al
+
+8
+15
+
+l + ...
+
+so that the mean value of l coincides with the singular part of e(h):
+
+hli  e(h) 
+
+1
+2
+
+according to the above discussion we expect:
+
+where the lattice amplitudes al
+amplitudes evaluated in the continuum.
+
+ are dierent from the corresponding
+
+in order to relate the lattice results with the continuum ones, we must
+1.
+x the relative normalizations of  versus l ,  versus l and h versus hl
+the simplest way to do this is to look at the analogous of eq.(6,7) at the
+critical point (namely for hl = 0) [22]. from the exact solution of the ising
+model [18] we know that
+
+hijih=0 =
+
+r2
+
+|rij|1/4
+
+(27)
+
+where rij denotes the distance on the lattice between the sites i and j and
+we know from [19] that:
+
+r2
+
+ = e3(1)25/24 = 0.70338...
+
+by comparing this result with eq.(6) we nd
+
+l = r = 0.83868...
+
+(28)
+
+(29)
+
+from this we can also obtain the normalization of the lattice magnetic
+eld which must exactly compensate that of the spin operator in the pertur-
+bation term h. we nd:
+
+hl = (r)1h = 1.1923...h
+
+(30)
+
+1this essentially amounts to measure all the quantities in units of the lattice spacing.
+
+for this reason we can x in the following the lattice spacing to 1 and neglect it.
+
+7
+
+combining these two results we obtain the value in lattice units of the
+
+constant a
+
+al
+
+ = (r)16/15a = 1.058...
+
+(31)
+
+in the case of the energy operator the connected correlator on the lattice, at
+hl = 0 and for any value of , has the following expression [23]:
+
+hl(0)l(r)ic =  
+
+!2hk 2
+
+1 (r)  k 2
+
+0 (r)i
+
+(32)
+
+where k0 and k1 are modied bessel functions,  is a parameter related to
+the reduced temperature, dened as
+
+ = 4|  c|
+
+(33)
+
+and with the index c we denote the connected correlator (notice that thanks
+to the denition (23) no disconnected part must be subtracted at the critical
+point and the index c becomes redundant). this expression has a nite value
+in the   0 limit (namely at the critical point). in fact the bessel functions
+dierence can be expanded in the small argument limit as
+
+hk 2
+1 (r)  k 2
+
+0 (r)i =
+
+1
+(r)2 + ...
+
+thus giving, exactly at the critical point:
+
+hl(0)l(r)i =
+
+1
+
+(r)2 
+
+r2
+
+
+|r|2 .
+
+hence r = 1/. by comparing this result with eq.(7) we nd
+
+l = r =
+
+
+
+
+and from this we obtain the expression in lattice units of a
+
+al
+
+ = (r)8/15(r)a = 0.58051...
+
+(34)
+
+(35)
+
+(36)
+
+(37)
+
+8
+
+2.4 correlators
+
+in the remaining part of this paper we shall be mainly interested in the
+dependence on the external magnetic eld of the following correlators:
+
+g,  h(0)(r)i
+g,  h(0)(r)i
+g,  kh(0)(r)i
+
+(38)
+
+(39)
+
+(40)
+where k  sign(h). we already know the behaviour at the critical point of
+the rst two of them, which is given by eq. (6), (7) in the continuum (or
+equivalently eq.(27), (35) on the lattice), while the ope constants reported
+in eq.(8) immediately tell us that h(0)(r)i = 0.
+for small values of h we may expect to add to these results correction
+terms functions of h and r. however standard renormalization group argu-
+ments show that these two variables are actually related and that there is a
+natural scaling variable which describes the short distance expansion of these
+correlators in a magnetic eld which is t  |h| |r|15/8. in order to obtain an
+explicit expansion in powers of t we must absorb the scaling dimensions of
+the various operators in the expansion 2. to this end let us dene
+
+f,  h(0)(r)i|r|1/4
+f,  h(0)(r)i|r|2
+f,  kh(0)(r)i|r|9/8
+
+(41)
+
+(42)
+
+(43)
+
+where k  sign(h).
+the powers which appear in the t expansion of the functions f can be
+immediately deduced from the analysis of the ope via the irs method, that
+will be described in the following section.
+
+2 on the contrary, in the large distance regime where one may use the predictions
+obtained with the form factor approach, the natural normalization is that of the g,
+functions dened above.
+
+9
+
+3 the infrared safe approach
+
+the goal of the method presented in ref. [5] is to obtain informations about
+the short distance behavior of a conformal eld theory perturbed by relevant
+operators.
+
+the general idea behind this approach, (for preexisting ideas see
+
+[9,
+10, 11, 12, 13]) is the fact that wilson coecients, being short distance
+objects, can be taken to have a regular, ir safe, perturbative expansion with
+respect to the coupling. this ope approach leaves unxed some constants
+that parameterize the vacuum expectation values of operators that appear
+in conformal eld theory.
+
+in [5] it was found that the correlators of the perturbed cft are given
+in terms of the derivatives of the wilson coecients (calculated at h = 0
+point). to be precise, they appear in the following way
+
+hi(r)j(0)ih =x{k}
+
+c{k}ij (h, r)h{k}(0)ih =
+
+x{k}(cid:20)c{k}ij (0, r) + hc{k}ij (0, r) h +
+
+hc{k}ij (0, r) h2 +   (cid:21) h{k}(0)ih.
+it was also shown that a general formula could be written for the n  th
+derivative of the wilson coecients with respect to h. here we will write
+only the rst and the second order derivatives for the wilson coecients,
+
+1
+2
+
+2
+
+xb
+
+1
+hc b
+
+a1a2hbxri =
+
+= z 
+
+d2zh[z ab 
+
+a1a2b! xr]i
+
+c b
+
+xb
+
+(44)
+
+and
+
+xb
+
+hc b
+2
+
+a1a2hbxri =
+
+= z 
+xb
+
++
+
+d2zz 
+
+hc b
+
+d2zh[zz ab 
+a1a2z 
+d2zh[zbxr]i.
+
+a1a2b! xr]i +
+
+c b
+
+xb
+
+(45)
+
+10
+
+the general structure of this formula is a sum of the naive perturbative
+term plus n (for the n  th order coecient) infrared counterterms. the
+asterisk reminds that the sum on the counterterms is truncated and is per-
+formed up to a given infrared dimension (see again [5]).
+
+the construction of the irs expansion requires two steps.
+ first, one must select by using the ope rules which operators can ap-
+pear in the various expansions, identify their scaling dimensions, select
+the dominant ones and give their expression in terms of the structure
+constants and of their derivatives.
+
+ second, one must evaluate the derivatives of the structure constants by
+using eq.(44) or (45) to reduce them to suitable integrals over correla-
+tors evaluated at the critical point. this allows in principle to complete
+the analysis, since the explicit form of all possible critical correlators is
+known. however in general these integrals are highly non trivial and
+their evaluation represents the major problem of the whole approach.
+
+these two steps where performed in [6] for all the terms in the expansion
+involving at most rst order derivatives of the structure constants. this
+allows to obtain the rst three terms in the expansion of the hi and hi
+correlators (which are reported for completeness at the end of this section).
+on the contrary for the hi in this way one can only obtain the rst two
+terms of the expansion. moreover one can verify by an explicit calculation
+that the second of them is identically zero ([5]). thus in the hi correlator,
+in order to reach the rst non trivial correction to scaling, it is mandatory
+to extend the analysis of [6] and to deal with second order derivatives of
+the wilson coecients. we shall address this problem in the next section.
+in particular, in sect. 4.1 we shall discuss the rst step of the irs analysis,
+and select among the possible candidates the one with the lowest power of
+t which, as anticipated, turns out to involve a second order derivative of a
+structure constant. then in sect. 4.2 (and in the appendix) we shall explicitly
+evaluate this contribution. let us conclude this section by listing for all the
+three correlators the rst three terms of the irs expansion
+
+f, = b1
+f, = b1
+
+ + b2
+ + b2
+
+t8/15 + b3
+t16/15 + b3
+
+t16/15 + o(t2)
+t2 + o(t32/15)
+
+(46)
+
+(47)
+
+11
+
+f, = b1
+where the coecients bi
+
+t1/15 + b2
+ are
+
+t + b3
+
+t23/15 + o(t31/15)
+
+(48)
+
+
+
+1
+
+b1
+b2
+b3
+b1
+b2
+
+b3
+
+
+
+
+
+ = dc 1
+ = adc 
+ = a dhc 
+ = dc 1
+ = a dhc 
+2 d2
+ = adc 
+ = dhc 1
+ = a dhc 
+
+ =
+
+hc 1
+
+
+
+
+
+
+b1
+b2
+b3
+
+
+
+
+
+
+
+ij are given by (44) and the notation dhc k
+
+the derivatives of c k
+ij is the
+extension of the denition given in eq.(5) to the derivatives of the wilson
+coecients. the rst order derivatives have been calculated in [6] we re-
+port here for completeness their numerical value (notice a slight change with
+respect to [6] due to the dierent choice of normalizations).
+
+dhc 
+ = 0.40374
+dhc 
+ = 0
+dhc 1
+ = 3.29627
+dhc 
+ = 0.90900
+
+the second order derivative which appears in last one in the hi correlator
+requires a more involved calculation which we shall discuss in the next section
+and in the appendix.
+
+4 second order corrections
+
+4.1 dimensional analysis
+
+to estimate the higher order corrections to hi we must analyse two kinds
+of possible contributions.
+
+12
+
+ the expectation values of secondary operators multiplied by the wilson
+
+coecients and their rst derivatives.
+
+ the second derivatives of wilson coecients.
+
+we would like to understand which is the most important of these terms.
+in the ising model there are two secondary operators at rst level, obtained
+by acting on  and  with the virasoro generator l1 and its hermitian
+conjugate (the action of l1 on 1 gives 0). we start by considering
+
+1  l1 l1
+1  l1 l1
+
+and
+
+(50)
+where lk, lk are virasoro generators. it is clear that the expectation value
+of this kind of operators is zero being total derivatives. so let us go to second
+level of the algebra. there are two possible terms:
+
+l2
+1
+
+l2
+1,
+
+l2 l2
+
+(51)
+
+where  is a generic primary eld. in this situation we have to consider also
+the identity operator.
+
+in the identity sector the only contribution is given by
+
+t t = l2 l2 1
+
+(52)
+
+i.e. the energy-momentum tensor. again a simple dimensional analysis shows
+that
+
+dim t t = 4,
+
+ht tih = at t|h|32/15
+
+(49)
+
+(53)
+
+(54)
+
+giving
+
+xb
+
+t32/15.
+
+at t dc t t
+
+
+
+it is clear that the terms containing secondary operators (of second level) of
+ and  are of higher order in t and will not be considered here.
+
+a second possible contribution is given by the higher order derivative
+
+hc b
+2
+
+a1a2hbxri =
+
+= z 
+xb
+
++
+
+d2zz 
+
+hc b
+
+d2zh[zz ab 
+a1a2z 
+d2zh[zbxr]i.
+
+a1a2b! xr]i +
+
+c b
+
+xb
+
+(55)
+
+13
+
+let us x xr = 1. an elementary computation shows that the series is
+truncated and only those operators having xb  15
+
+8 appear in it.
+
+it follows that
+
+2
+hc 1
+
+ =
+
+= z 
+
++ hc 
+
+d2zz 
+z 
+d2zz 
+
+but hc 
+
+ = 0, and we can say that
+
+2
+hc 1
+
+ =z 
+
+d2zhzz(r0  c 1
+
+)i.
+
+d2zhzz(r0  c 1
+d2zhz0i
+
+)i +
+
+(56)
+
+(57)
+
+(58)
+
+(59)
+
+again from dimensional analysis we get
+
+and the contribution to hi of the second order derivative is given by
+
+ =
+
+14
+8
+
+dim 2
+
+hdc 1
+
+1
+2
+
+2
+hc 1
+
+ t2.
+
+it is also clear that, being xr = 1 the lowest dimension operator, deriva-
+tives of wilson coecients relative to  and  will give terms with a higher
+power in t.
+
+let us write nally the perturbative expansion of this correlator
+
+ +
+
+f = dc 1
+
+1
+2
+
+ t2 + o(t32/15).
+
+2
+
+hdc 1
+
+4.2 the wilson derivative
+
+let us remember that
+
+2
+hc 1
+
+ =z 
+
+d2zz 
+
+d2zhzz(r0  c 1
+)i
+
+(60)
+
+(61)
+
+where h(z1)(z2)(z3)(z4)i denotes the correlator at the critical point which
+can be written as
+
+h(z1)(z2)(z3)(z4)i = |z12(z32 + z42)  2z32z42|2
+4|z42z32z41z31||z43|2|z12|1/4 .
+
+(62)
+
+14
+
+by xing the values of z1 = z, z2 = w, z4 = 0 and by rescaling r we can
+
+choose z3 = 1, we get
+
+2
+hc 1
+
+ =z 
+
+d2wz 
+
+d2z
+
+|z(1  w) + w(1  z)|2
+
+4|w(1  w)z(1  z)||z  w|1/4 +   
+
+(63)
+
+where the dots indicate the counterterms.
+
+the explicit calculation of this integral can be done using a technique
+developed by mathur, [24]. the general idea behind this approach is to
+factorize the integral in a holomorphic and antiholomorphic part using stokes
+theorem. the calculation is reported in the appendix. after this calculation,
+in order to get rid of the infrared cuto we perform a mellin transform of the
+integral and the infrared counterterm (see [6] for more details). in this we
+we end up with a nite result when the infrared cuto goes to innity. the
+nal result is
+
+hc 1
+
+d2
+
+ = 93.0915899 . . . .
+
+(64)
+
+5 the montecarlo simulation
+
+it has been recently shown [25] that in the case of the 2d ising model in a
+magnetic eld, algorithms based on the exact (or approximate) diagonaliza-
+tion of the transfer matrix are much more eective than standard montecarlo
+simulations. in particular this is true for all possible observables involved in
+the large distance behaviour of the model. the only exception is represented
+by the short distance behaviour of the point-point correlators which is the
+subject of the present paper. in fact in order to reach lattices as large as
+possible in the transfer-matrix programs discussed in [25] only zero momen-
+tum projected observables could be studied, while we are instead interested
+in point-point correlators. moreover, we need to have a window as large as
+possible between the region (few lattice spacings) dominated by the lattice
+artifacts and the correlation length. this windows shrinks to zero in the
+transfer matrix approach where only small values of the correlation length
+can be studied.
+
+for these reasons we decided to perform our tests with standard monte-
+carlo simulations. we used a swendsen-wang type algorithm, modied so
+as to take into account the presence of an external magnetic eld. for a
+detailed description of the algorithm see for instance [26, 27].
+
+15
+
+5.1 finite size eects.
+as a preliminary test we performed a simulation at hl = 4.4069104 (which
+corresponds to h = 0.001) with lattice size l = 128 which exactly coincides
+with one of the simulations reported in [26] and found results in complete
+agreement with those quoted in [26]. then for the same value of hl we
+performed a set of high precision simulations varying the lattice size so as to
+check the presence of possible nite size eects. in particular we compared
+our estimates of the mean magnetization, susceptibility and internal energy
+with the known exact results, extrapolated at the value of hl at which we
+performed the simulations 3.
+
+table 1: finite size eects at hl = 4.4069104. in the rst column we report
+the lattice sizes used in the simulations, in the remaining three columns the
+mean values of the magnetization, susceptibility and internal energy. in the
+last row we report the exact results obtained by using the known values of
+the amplitudes for these quantities.
+
+l m
+120
+140
+160
+200
+exact
+
+0.63110(16)
+0.63247(16)
+0.63245(14)
+0.63255(11)
+0.63260
+
+
+113(1)
+98.4(6)
+96.4(4)
+95.4(3)
+95.7
+
+e
+0.71638(3)
+0.71645(3)
+0.71639(3)
+0.71643(3)
+0.71642
+
+the comparison is reported in tab.1.
+
+it turns out that lattice sizes at
+least larger than 12 times the correlation length are needed to be sure that
+nite size eects are under control (with this we mean that the systematic
+
+3if one is interested in a high precision comparison, also the contribution of secondary
+elds should be taken into account in extracting these exact estimates. the amplitude of
+some of these secondary elds have been evaluated numerically in [25]. in the case of m
+and , for the values of hl in which we are interested, the contributions of the secondary
+elds are strictly smaller than the statistical errors of the results of our simulations and
+hence can be neglected in the comparison. on the contrary for the internal energy it turns
+out that the amplitude of the rst correction is rather large (see [25] for details) and must
+be taken into account. in fact, if we would neglect it, instead of the value reported in
+tab.1 we would nd e = 0.71652 in clear disagreement with the montecarlo results. this
+represents a non trivial test of the results of [25].
+
+16
+
+errors induced by the nite size of the lattice are smaller than the statistical
+errors of the simulations and can be neglected). a side consequence of this
+observation is that the simulations reported in [26] are indeed aected by
+rather large nite size eects.
+
+it is interesting to notice that the magnetic observables are more aected
+by nite size eects than the thermal one. as one can easily expect the
+largest corrections appear in the case of the susceptibility.
+
+5.2 the simulation
+
+once we were sure to have nite size eects under control we performed a
+set of high precision simulations of the model for three dierent values of the
+magnetic eld.
+
+an important quantity to understand the range of validity of the irs
+approximation is the correlation length. roughly speaking we expect that
+the irs results should give a reasonable approximation for distances equal or
+smaller than the correlation length, while above it the form factor approach
+should give results of better quality. for this reason it is important to have
+a good estimate of . this can be easily obtained from the knowledge of the
+spectrum of the theory. we nd, in lattice units:
+
+(hl) = 0.24935...h 8
+
+15
+
+l
+
+(65)
+
+(see [25] for details on the continuum to lattice conversion of ). in tab.
+
+2 we have reported the expected values of  in our cases.
+
+table 2: values of the correlations lengths for the three choices of hl.
+
+hl
+
+4.4069  104
+2.2034  104
+1.1017  104
+
+
+
+15.4
+22.4
+32.2
+
+for all the values of hl that we simulated, we studied the three cor-
+relators: h(0)(r)i, h(0)(r)i and h(0)(r)i, for r = 1,   , lmax, where
+the maximum distance lmax was chosen to be roughly twice the correlation
+length. in this way we can test our results also in the large distance regime,
+where predictions from the form factor approach are expected to give very
+
+17
+
+precise estimates for the correlators. notice that when studying the large dis-
+tance behaviour of correlators one is usually interested in the zero momentum
+projection of the connected part of the correlator. on the contrary in the
+present case we are interested in the pointpoint correlators without mean
+value subtraction or zero momentum projections. this must be taken into
+account when comparing the data with those obtained with the form factor
+approach. some informations on the simulations are reported in tab.3.
+
+table 3: some informations on the simulations. lmax denotes the maximum
+distance at which the correlators have been evaluated, its value almost co-
+incides with twice the correlation length. l denotes the lattice size, hl the
+magnetic eld. in the third column we have reported the number of measures
+while in the fourth column we have reported the number of sw sweeps which
+separates two measures.
+
+hl
+
+4.4069  104
+2.2034  104
+1.1017  104
+
+l measures
+4  105
+200
+2  105
+300
+1  105
+400
+
+sweep/measures lmax
+30
+45
+65
+
+5
+5
+10
+
+we report an example of our results (for the value hl = 4.4069 104) in
+the rst columns of tabs. 7, 8 and 9. the quoted errors have been obtained
+with a standard jacknife method.
+
+6 discussion of the results
+
+in g.s 1-8 and tab.7, 8 and 9 we compare our estimates for the correlators
+with the irs and form factor predictions. for completeness we briey recall
+here the form factor results (see [28, 29] for details) and give the numerical
+values (once all the conversion factors are taken into account) of the constants
+in the irs approach.
+
+6.1 form factor results
+
+the scattering theory which describes the scaling limit of the ising model in
+a magnetic eld [3] contains eight dierent species of self-conjugated particles
+
+18
+
+aa, a = 1, . . . , 8 with masses
+
+m2 = 2m1 cos
+
+m3 = 2m1 cos
+
+m4 = 2m2 cos
+
+m5 = 2m2 cos
+
+m6 = 2m2 cos
+
+m7 = 4m2 cos
+
+m8 = 4m2 cos
+
+
+5
+
+30
+7
+30
+2
+15
+
+30
+
+5
+
+5
+
+= (1.6180339887..) m1 ,
+
+= (1.9890437907..) m1 ,
+
+= (2.4048671724..) m1 ,
+
+= (2.9562952015..) m1 ,
+
+(66)
+
+= (3.2183404585..) m1 ,
+
+cos
+
+cos
+
+7
+30
+2
+15
+
+= (3.8911568233..) m1 ,
+
+= (4.7833861168..) m1
+
+m1(hl) denotes the overall mass scale and coincides with 1/, hence its value
+in lattice units is
+
+8
+m1(hl) = 4.0104... h
+15
+l
+
+.
+
+the spin-spin correlator is given by
+
+g(r) = m 2(hl)(1 +
+
+i |2
+|f 
+
+
+k0(mir))
+
+8xi=1
+
+where k0(x) is the modied bessel function and f 
+i denotes the overlap
+(measured in units of the magnetization) of the ith state with the  operator.
+m(hl) denotes the magnetization and its hl dependence is given in (12, 31).
+
+similarly the spin-energy and energy-energy correlators are given by
+
+(67)
+
+(68)
+
+kg(r) = m(hl)e(hl)(1 +
+
+k0(mir))
+
+(69)
+
+i | |f 
+|f 
+i |
+
+
+8xi=1
+i |2
+8xi=1
+|f 
+
+
+g(r) = e2(hl)(1 +
+
+k0(mir))
+
+(70)
+
+the constants f 
+
+i and f 
+
+i have been evaluated in [28, 29]. their value is
+
+reported in tab.4 and 5.
+
+in eq.s (68), (69) and (70) one is neglecting the states above the pair
+production threshold. hence one expects systematic errors of the order
+
+19
+
+table 4: overlap amplitudes for the spin operator.
+
+f 
+1 = 0.64090211
+f 
+2 = 0.33867436
+f 
+3 = 0.18662854
+f 
+4 = 0.14277176
+f 
+5 = 0.06032607
+f 
+6 = 0.04338937
+f 
+7 = 0.01642569
+f 
+8 = 0.00303607
+
+table 5: overlap amplitudes for the energy operator.
+
+f 
+1 = 3.70658437
+f 
+2 = 3.42228876
+f 
+3 = 2.38433446
+f 
+4 = 2.26840624
+f 
+5 = 1.21338371
+f 
+6 = 0.96176431
+f 
+7 = 0.45230320
+f 
+8 = 0.10584899
+
+o (e2m1r). for distances larger than the correlation length these deviations
+are very small but become increasingly relevant as the correlation length is
+approached. it would be important to have an estimate of the magnitude
+of these corrections. from this point of view the present case is a perfect
+laboratory since we know that all other possible sources of systematic errors
+are under control. we report an example of the results obtained with the ff
+approach (for the value hl = 4.4069  104) in the last column of tabs. 7, 8
+and 9.
+
+6.2
+
+irs approach
+
+by using the results of sect. 3 and 4 and the exact knowledge of the constants
+r and r one can easily write the constants bi
+ in lattice units. they are
+reported in tab.6.
+
+we report an example of our results (obtained by plugging the values of
+
+20
+
+tab.6 in eqs.(46), (47) and (48) in the particular case hl = 4.4069 104), in
+the second column of tabs. 7, 8 and 9 .
+
+table 6: coecients of the irs expansion in lattice units.
+
+b1
+ = 0.7034...
+b2
+ = 0.6414...
+b3
+ = 0.3007...
+b1
+ = 0.1013...
+b2
+ = 0
+b3
+ = 3.3172...
+b1
+ = 0.1685...
+b2
+ = 0.7380...
+b3
+ = 0.3712...
+
+6.3 comparison with mc results
+
+6.3.1 lattice artifacts
+
+it is interesting to see that lattice artifacts are conned to a remarkably small
+region of few lattice spacings, which shows a negligible dependence on the
+magnetic eld or on the type of correlator. since the lattice artifacts decrease
+so quickly it is rather easy to nd where does the region of applicability of
+the irs results starts, by simply looking at the distance lmin where for the
+rst time the irs prediction becomes compatible (within the errors) with the
+mc data or, if this never happens, looking at the location of the minimum
+dierence between irs predictions and the mc simulations 4. it turns out
+that for all correlators and hl values lmin ranges between 7 and 9 lattice
+spacings. this tells us that, at least in the case of the ising model perturbed
+by a magnetic eld, the irs method has a large window of applicability,
+which becomes larger and larger as the critical point is approached. this is
+well exemplied by g.6 and 7 where the dierence between mc data and
+
+4we may expect that higher orders in the t expansion improve the large distance
+behaviour of the irs results, but they give a negligible contribution around lmin where
+the discrepancy between montecarlo data and irs predictions is completely dominated by
+lattice artifacts.
+
+21
+
+irs predictions is plotted, for the  correlator in the short range region,
+rst in units of the lattice spacing and then in units of the correlation length.
+it would be interesting to test if this behaviour also holds for other models
+or for dierent realizations of this one.
+
+6.3.2 hl dependence
+
+in the range lmin < r <  the agreement between irs predictions and
+mc results is always very good.
+in particular, it seems that the method
+reaches its better results in the case of  correlator. as expected, the irs
+approximation becomes better and better as we approach the critical point
+(see g.s 3, 4 and 5). first because the range of validity becomes larger
+and second because the systematic deviations due to the terms neglected in
+the expansion, which are proportional to higher powers of hl become less
+important. in particular for the  correlator at hl = 1.1017  104 there
+is a wide range (more than 40 lattice spacings) in which the irs prediction
+coincides with the mc results within the errors (see g.8).
+
+6.3.3 irs versus ff.
+
+looking at tables 7, 8, 9 and at the g.s 1-5 we see that, as expected, the
+ff approach performs better than the irs one for distances larger than the
+correlation length and that the opposite is true for distances smaller than .
+it is interesting to see that for distances of the order of the correlation length
+the irs and ff methods give comparable performances. some interesting
+informations on the systematic errors involved in the two approximations can
+be extracted from the data.
+
+1] while the systematic errors in the irs approach have a polynomial be-
+haviour in the distance r (which is contained in t), those of the ff
+approach have an exponential behaviour. this is clearly visible in g.2
+where the deviations are plotted as a function of r for the correlator
+g at hl = 4.4069  104 and in g.3-5 where they are plotted for all
+the correlators and all the values of hl as functions of r/. this makes
+the irs method still reasonably reliable even for distances twice the
+correlation length.
+
+22
+
+2] we may obtain a rough estimate of the magnitude of the systematic er-
+rors involved in the irs approach with the following argument. since
+t  |h| |r|15/8, looking at eq.(65) we see that for distances of the order
+of the correlation length we have t  0.25. depending on the corre-
+lator chosen, we would expect deviations of the order o(t2), o(t31/15),
+o(t32/15). since in general the bi
+ constants are of order unity, this
+amounts to an expected deviation for the f functions of order f 
+0.06.
+
+3] however, looking at the data (and taking into account the normalization
+between f, and g, functions) we see that the actual values of f
+are much smaller (in some case more than one order of magnitude) than
+expected. most probably, this is due to the fact that the bi
+, constants
+are randomly distributed around zero and cancellations among higher
+order terms occur.
+
+4] a similar analysis is more dicult to perform in the case of the ff
+method. in this case we know that the systematic errors are of order
+o(e2m1r). however it is dicult to give a more precise estimate of
+the corrections since it would require some information on the order
+of magnitude of the amplitude in front of the cut contribution in the
+correlators.
+
+5] in the large distance regime r  1.5  the performances of the ff ap-
+proach are very good. for instance, in this region, for the lowest value
+of h that we studied: hl = 1.1017  104 the ff predictions for the 
+correlator coincide with the mc results within the errors (see g.5).
+
+6.3.4 convergence of the irs expansion
+
+it is interesting to see how the performances of the irs method improve
+as higher terms are added in the expansion.
+in g.8 we have plotted the
+dierence between the mc data for the hi correlator at hl = 1.1017 104
+and the irs results with one (pluses), two (crosses) and three (diamonds)
+terms in the expansion. similar behaviours are realized also in the other
+correlators.
+
+23
+
+7 concluding remarks
+
+in this paper we have compared the predictions of the irs and ff approx-
+imations for the ,  and  correlators with the results of a set of high
+precision mc simulations of the 2d ising model perturbed by a magnetic eld.
+to this end we have extended the irs approach to second order derivatives
+of the structure constants. our main results are:
+
+ lattice artifacts are conned in a small region of few lattice spacings.
+ there is a wide region ranging from  7  9 lattice spacings to the
+correlation length in which the mc data are in good agreement with
+the irs results.
+
+ the agreement improves as the critical point is approached.
+ for distances smaller than  the irs gives a better approximation than
+the ff method, while the opposite is true for distances larger than .
+
+it would be very interesting to extend this analysis to other models in
+this same universality class. in particular one could study the model recently
+introduced in [30, 31] for which an exact bethe ansatz solution, out of the
+critical point exists. another interesting application of the method would be
+the study of the correlators in the case of the most general perturbation of the
+ising critical point (i.e. a mixed situation with both magnetic and thermal
+perturbations). in this case the exact integrability is lost but the irs method
+is still valid and could give important informations on the behaviour of the
+correlators. in particular it would allow us to compare our approximation
+with the interesting results, directly obtained on the lattice, in [32].
+
+appendix
+
+hc 1
+
+ involves the calculation of the integral
+
+the evaluation of the coecient d2
+z =z d2w|w|e|1w|f wr(1w)sz d2z|z||1z|zn(1  z)m|zw| (71)
+where n, m, r, s  n and , , , e, f  r.
+it is useful to introduce the following theorem (see [24], [6]). let us consider
+
+24
+
+an integral of the form
+
+i =z d2w
+=1,n , { f(w)}n
+
+f(w)q
+
+f(w)
+
+(72)
+
+nx,=1
+
+where {f(w)}n
+=1,n are two sets of independent functions
+and q is a constant matrix. let us assume that f(w) e (f(w)) have
+the same monodromies, in particular the two sets of functions f(w) and
+g  ( f(w)) must have the same branch points {wk}m+1
+0 = |w0| < |w1| <    < |wm| < |wm+1| = 
+
+k=0 such that
+
+and they have to be analytic elsewhere.
+if we assume now that the matrix q is invariant under the monodromy group
+action
+
+(73)
+
+(74)
+
+q = m t
+
+kqmk ,
+
+k
+
+where mk are the monodromy matrices of f and g related to the branch
+points wk, it follows that we are able to express i in terms of one-dimensional
+integrals (see [24], [6] for more details)
+
+i =
+
+i
+2
+
+mxk=1i (k)
+
+ (cid:20)(cid:16)(1  mk+1)1  (1  mk)1(cid:17)t
+
+q(cid:21)
+
+i (k)
+
+
+
+where t is the transposition and
+
+i (k)  zck
+i (k)  z ck
+
+dwf (w)
+
+dw f(w)
+
+(75)
+
+(76)
+
+where ck ( ck) are counter-clockwise (clockwise) circumferences enclosing all
+the branch points of modulus lower than wk, starting at wk+ (innitesimally
+over the cut at wk) and ending at wk (innitesimally under the cut at wk).
+
+now we are able to evaluate both the z-plane and w-plane integrations
+
+of (71) using the previous lemma.
+first, to perform the z-plane integration, we pose
+
+iz(w, w) =z d2z|z||1  z|zn(1  z)m|z  w|
+
+(77)
+
+25
+
+so the z-plane integration involves the following branch points
+
+z0 = 0,
+
+z1 = w,
+
+z2 = 1,
+
+z = .
+
+thus, the application of (75) gives
+
+iz(w, w) =
+
+where
+
+and
+
+t (1)
+12 =
+
+1 t (2)
+
+12
+
+2 i
+i (2)
+
+i
+
+2hi (1)
+
+1 t (1)
+
+12
+
+i
+
+2 i +
+2hi (2)
+i (1)
+ei(ei  1)
+
+(ei(+)  1)(ei  1)
+
+are the only non vanishing entries of the matrices
+
+t (2)
+12 =
+
+ei(+)(ei  1)
+
+(ei(++)  1)(ei(+)  1)
+t (1) = (cid:16)(1  m2)1  (1  m1)1(cid:17)t
+t (2) = (cid:16)(1  m)1  (1  m2)1(cid:17)t
+
+q
+
+q.
+
+this imply that we have to take in account only the integrals
+
+1 = (ei  1)w1+/2+/2+n (/2 + n + 1)(/2 + 1)
+i (1)
+
+(/2 + /2 + 2 + n)
+
+
+
+ f (/2, /2 + n + 1; /2 + /2 + 2 + n; w);
+2 = (ei  1)w1+/2+/2 (/2 + 1)(/2 + 1)
+i (1)
+
+(/2 + /2 + 2)
+ f (m  /2, /2 + 1; /2 + /2 + 2; w)
+
+and
+
+(78)
+
+(79)
+
+(80)
+
+(81)
+
+(82)
+
+(83)
+
+1 = (ei(++)  1)()m (/2  /2  /2  n  1)(/2 + 1)
+i (2)
+
+
+
+(/2  /2  n)
+
+ f (/2,/2  /2  /2  n  1;/2  /2  n; w);
+
+(/2  /2  /2  m  1)(/2 + 1 + m)
+
+i (2)
+2 = (ei(++)  1)
+
+(/2  /2)
+
+ f (/2,/2  /2  /2  m  1;/2  /2; w).
+
+
+(84)
+
+26
+
+finally, putting all these relations in (79), we can recover the wanted result
+for iz(w, w).
+
+the w-plane integration is very similar to the previous one. now we have
+
+to evaluate
+
+z =z d2w|w|e|1  w|f wr(1  w)s iz(w, w)
+
+which involves w0 = 0, w1 = 1, w =  as branch points. hence the
+solution is given by (75), i.e.
+
+(85)
+
+(86)
+
+(87)
+
+(88)
+
+z =
+
+i
+
+2hi (1)t (1) i (1)i
+
+where
+
+t (1) =(cid:16)(1  m)1  (1  m0)1(cid:17)t
+
+q.
+
+the contribution coming from i (1) is
+
+0
+
+1 = (eie  1)z 1
+i (1)
+2 = (ei(e++)  1)z 1
+i (1)
+1 = (eie  1)z 1
+i (1)
+2 = (ei(e++)  1)z 1
+i (1)
+
+0
+
+dzf1 = (eie  1) j1
+
+dzf2 = (ei(e++)  1) j2
+
+dz f1 = (eie  1) j1
+
+0
+
+dz f2 = (ei(e++)  1) j2
+that, in terms of generalized hypergeometric functions, becomes
+
+0
+
+j1 = b(/2  /2  /2  n  1, /2 + 1)b(1 + e/2, 1 + f /2 + s)
+
+3f2(    
+
+2
+
+ n  1,
+
+, 1 +
+
+
+2
+
+e
+2
+
+;   
+
+2
+
+e + f
+
+ n, 2 +
+
+2
+
++ s); 1)
+
+j2 = b(1 + /2, 1 + /2 + n)b(2 + e/2 + /2 + /2 + n, 1 + f /2 + s)
+
+ + 
+
+
+2
+
+, 2 +
+
+2
+ +  + e + f
+
+3f2(
++
+
++ n + s); 1)
+
++ n + e/2, 1 +
+
+
+2
+
++ n; 2 +
+
+ + 
+
+2
+
++ n, 3 +
+
+j1 = b(/2  /2  /2  m  1, /2 + 1 + m)b(1 + e/2 + k, 1 + f /2)
++ k); 1)
+
+, 1 + e/2 + k;   
+
+3f2(    
+
+e + f
+
+, 2 +
+
+ m  1, 
+
+2
+
+2
+
+2
+
+2
+
+2
+
+27
+
+j2 = b(1 + /2, 1 + /2)b(2 + e/2 + /2 + /2 + k, 1 + f /2)
+
+3f2(
+2  m, 2 +
+ +  + e + f
+
++
+
++ k); 1).
+
+2
+
+ +  + e
+
+2
+
++ k, 1 +
+
+
+2
+
+; 2 +
+
+ + 
+
+2
+
+, 3 +
+
+thus the solution has the form
+
+z = t11j1 j1 + t12j1 j2 + t21j2 j1 + t22j2 j2
+
+(90)
+
+(89)
+
+where the matrix elements tij are the following
+t11 = 1s(e/2)s(/2)s(( +  + )/2) 
+
+ (cid:18)s(/2)s(/2)s(f /2)s(( +  + e + f + 2)/2) +
++ s(/2)s(( +  + )/2)s(( + e + f + )/2)s((f +  + )/2)(cid:19)
+t22 = 1s(/2)s(/2)s(( + e + )/2) 
+
+ (cid:18)s(/2)s(/2)s((e + f )/2)s(1/2( + f + )) +
++ s(/2)s(( +  + )/2)s(f /2)s((e + f +  + )/2))(cid:19)
+t12 = t12 = 1s(/2)s(/2)s(e/2)s(/2) 
+
+ s(( + e + )/2)s(( +  + )/2)s(( + )/2)
+
+with
+
+ = s(( + )/2)
+
+ (cid:18)(s(/2)s(/2)s((e + f )/2)s(( +  + e + f + 2)/2) +
++ s(/2)s(( +  + )/2)s(( + e + f + )/2)s((e + f +  + )/2)(cid:19)
+
+and s(x) = sin(x).
+for all details on the calculation we refer to [33].
+
+28
+
+acknowledgements we thank f.gliozzi, r.guida, m. hasenbusch and
+r.tateo for helpful discussions and for a critical reading of the paper. this
+work was partially supported by the european commission tmr programme
+erbfmrx-ct96-0045.
+
+29
+
+references
+
+[1] a.a. belavin, a.m. polyakov and a.b. zamolodchikov, nucl. phys.
+
+b241(1984)333.
+
+[2] a.b. zamolodchikov, al b. zamolodchikov, ann. phys. 120 (1979), 253.
+
+for a review see g. mussardo, phys. rep. 218 (1992), 215.
+
+[3] a.b. zamolodchikov, in advanced studies in pure mathematics 19
+
+(1989), 641; int. journ. mod. phys. a3 (1988), 743.
+
+[4] f.a. smirnov, form factors in completely integrable models of quan-
+
+tum field theory, (world scientic) 1992.
+
+j.l. cardy and g. mussardo, nucl. phys. b410 [fs] (1993), 451.
+
+[5] r. guida and n. magnoli, nucl. phys. b471 (1996) 361.
+
+[6] r. guida and n. magnoli, nucl. phys. b483 (1997) 563.
+
+[7] h. saleur and c.itzykson, journ. of stat. phys. 48 (1987) 449.
+
+a. cappelli and j.i. latorre, nucl.phys. b340 (1990) 659.
+
+a.w.w. ludwig and j.l. cardy, nucl.phys. b285[fs19](1987) 687-718.
+
+[8] vl. s. dotsenko, nucl. phys. b314 (1989) 687.
+
+[9] al.b. zamolodchikov, nucl.phys. b 348 (1991) 619
+
+[10] h.sonoda, nucl.phys. b383 (1992) 172; nucl.phys. b394 (1993) 302.
+
+[11] b. mikhak and a.m. zarkesh, nucl.phys. b430 [fs](1994) 656.
+
+[12] k.g. wilson, phys.rev. 179 (1969) 1499.
+
+[13] f.j. wegner, j. phys. a8 (1975) 710.
+
+[14] e. brezin, j.c. le guillou and j. zinn-justin, phys. rev. letters 32
+
+(1974) 473.
+
+see also e.brezin, j.c. le guillou and j. zinn-justin, in phase tran-
+sitions and critical phenomena vol. 6, c. domb and m.s. green eds.
+(academic press, london 1976).
+
+30
+
+[15] m.c. bergere and f. david, annals of phys. 142 (1982) 416.
+
+[16] v.p. yurov and al.b. zamolodchikov, int. j. mod. phys. a5 (1990)
+
+3221.
+
+[17] r. guida and n. magnoli, phys. lett. b411 (1997) 127
+
+[18] see for instance: b.m. mccoy and t.t. wu, the two dimensional ising
+
+model (harvard university press, cambridge, 1973)
+
+[19] t.t. wu phys. rev. 149 (1966) 380.
+
+[20] v.fateev phys. lett. b324 (1994), 45.
+
+[21] v.fateev, s.lukyanov, a.zamolodchikov, al.zamolodchikov nucl.
+
+phys. b516 (1998) 652
+
+[22] smilga phys. rev. d55 (1997) 443.
+
+[23] r. hecht, phys. rev. 158 (1967) 557.
+
+[24] s.d. mathur, nucl. phys. b369 (1992) 433.
+
+[25] m.caselle and m.hasenbusch in preparation
+
+[26] p.g. lauwers and v. rittenberg, phys. lett. b233 (1989) 197, and
+
+preprint bonn university bonn-he-89-11 (unpublished).
+
+[27] c.destri, f. di renzo, e.onofri, o.rossi and g.p.tecchiolli, phys. lett.
+
+b278 (1992) 311
+
+[28] g. delno, g. mussardo, nucl. phys. b 455 (1995), 724;
+
+[29] g. delno, p. simonetti, phys. lett. b 383 (1996), 450.
+
+[30] v.bazhanov, b. nienhuis ans s.o. warnaar, phys. lett. b322 (1994)
+
+198.
+
+[31] u. grimm, b. nienhuis, phys. rev. e55 (1997) 5011.
+
+[32] b.m. mccoy and t.t. wu, phys. rev. d18 (1978) 1259.
+
+b. m. mccoy and mu-lin yan, nucl. phys.b257[fs14](1985) 303-339.
+
+[33] p. grinza, tesi di laurea, torino university, 1998
+
+31
+
+g
+
+0.75
+
+0.7
+
+0.65
+
+0.6
+
+0.55
+
+0.5
+
+0.45
+
+0.4
+
+0
+
+fig.1
+
+5
+
+10
+
+15
+r
+
+20
+
+25
+
+30
+
+fig. 1: comparison of the montecarlo estimates (pluses), the irs results (rotated
+squares) and the form factor results (squares) for the correlator g at hl = 4.4069
+104.
+
+32
+
+fig.2
+
+f
+f
+i
+d
+
+-0.0008
+
+-0.0006
+
+-0.0004
+
+-0.0002
+
+0
+
+0.0002
+
+0
+
+10
+
+20
+
+40
+
+50
+
+60
+
+30
+
+r
+
+fig. 2: dierences between mc estimates and irs results (crosses) and between
+mc and form factor results (pluses) for the correlator g at hl = 1.1017  104.
+in this gure, and in all the following ones the errors in the mc estimates are not
+reported since they are smaller than the symbol size.
+
+33
+
+f
+f
+i
+d
+
+-0.01
+
+-0.008
+
+-0.006
+
+-0.004
+
+-0.002
+
+0
+
+0
+
+fig.3
+
+0.5
+
+1
+r/xi
+
+1.5
+
+2
+
+dierences between mc estimates and irs results (crosses for hl =
+fig. 3:
+4.4069  104, dotted squares for 2.2034  104 and circles for 1.1017  104) and
+between mc and form factor results (pluses for hl = 4.4069  104, diamonds for
+2.2034 104 and lled squares for 1.1017 104)diamonds) for the correlator g.
+distances are measured in units of the correlation length.
+
+34
+
+fig.4
+
+-0.0008
+
+-0.0006
+
+-0.0004
+
+-0.0002
+
+0
+
+f
+f
+i
+d
+
+0.0002
+
+0
+
+0.5
+
+1
+r/xi
+
+1.5
+
+2
+
+fig. 4: same as g.3, but for the g correlator. notice the dierent scale on the y
+axis
+
+35
+
+fig.5
+
+-0.001
+
+-0.0008
+
+-0.0006
+
+-0.0004
+
+-0.0002
+
+0
+
+0.0002
+
+0.0004
+
+f
+f
+i
+d
+
+0
+
+0.2 0.4 0.6 0.8
+
+1
+
+1.2 1.4 1.6 1.8
+
+2
+
+2.2
+
+r/xi
+
+fig. 5: same as g.3, but for the g correlator.
+
+36
+
+f
+f
+i
+d
+
+-0.004
+
+-0.0035
+
+-0.003
+
+-0.0025
+
+-0.002
+
+-0.0015
+
+-0.001
+
+-0.0005
+
+0
+
+0
+
+fig.6
+
+2
+
+4
+
+6
+
+8
+
+10
+
+r
+
+fig. 6: dierences between mc estimates and irs results for hl = 4.4069  104
+(pluses), hl = 2.2034  104 (crosses) and hl = 1.1017  104 (diamonds) for the 
+correlator, in the short distance region dominated by the lattice artifacts.
+
+37
+
+fig.7
+
+f
+f
+i
+d
+
+-0.004
+
+-0.0035
+
+-0.003
+
+-0.0025
+
+-0.002
+
+-0.0015
+
+-0.001
+
+-0.0005
+
+0
+
+0
+
+0.05
+
+0.1
+
+0.15
+
+0.2
+r/xi
+
+0.25
+
+0.3
+
+0.35
+
+0.4
+
+fig. 7: same as in g.6, but with distances measured in units of the correlation
+length.
+
+38
+
+fig.8
+
+f
+f
+i
+d
+
+-0.004
+-0.0035
+-0.003
+-0.0025
+-0.002
+-0.0015
+-0.001
+-0.0005
+0
+0.0005
+0.001
+
+0
+
+0.5
+
+1
+r/xi
+
+1.5
+
+2
+
+fig. 8: dierence between the mc data for the hi correlator at hl = 1.1017104
+and the irs results with one (pluses), two (crosses) and three (diamonds) terms in
+the expansion.
+
+39
+
+table 7: comparison of the montecarlo estimates (second column), the irs
+results (third column) and the form factor (ff) results (fourth column) for
+the correlator g at hl = 4.4069  104. in the rst column is reported the
+distance in lattice units.
+
+r
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+
+mc
+
+0.71643( 2)
+0.61138( 3)
+0.55862( 4)
+0.52628( 5)
+0.50401( 6)
+0.48757( 6)
+0.47487( 7)
+0.46475( 7)
+0.45651( 7)
+0.44968( 8)
+0.44393( 8)
+0.43904( 8)
+0.43484( 9)
+0.43120( 9)
+0.42803( 9)
+0.42526(10)
+0.42281(10)
+0.42065(10)
+0.41874(10)
+0.41702(10)
+0.41549(11)
+0.41412(11)
+0.41290(11)
+0.41179(11)
+0.41079(11)
+0.40988(12)
+0.40907(12)
+0.40832(12)
+0.40765(12)
+0.40703(12)
+
+irs
+
+0.71371
+0.60871
+0.55764
+0.52590
+0.50385
+0.48750
+0.47483
+0.46472
+0.45647
+0.44961
+0.44383
+0.43889
+0.43463
+0.43093
+0.42768
+0.42481
+0.42226
+0.41998
+0.41792
+0.41606
+0.41436
+0.41280
+0.41137
+0.41003
+0.40879
+0.40762
+0.40652
+0.40547
+0.40447
+0.40351
+
+ff
+
+0.60030
+0.54956
+0.52068
+0.50087
+0.48606
+0.47446
+0.46506
+0.45729
+0.45075
+0.44519
+0.44040
+0.43624
+0.43261
+0.42942
+0.42661
+0.42412
+0.42190
+0.41992
+0.41815
+0.41656
+0.41513
+0.41384
+0.41268
+0.41163
+0.41067
+0.40980
+0.40902
+0.40830
+0.40765
+0.40705
+
+40
+
+table 8: comparison of the montecarlo estimates (second column), the irs
+results (third column) and the form factor (ff) results (fourth column) for
+the correlator g at hl = 4.4069  104. in the rst column is reported the
+distance in lattice units.
+
+r
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+
+mc
+
+0.104067( 2)
+0.029348( 2)
+0.012327( 3)
+0.006674( 2)
+0.004190( 2)
+0.002879( 2)
+0.002103( 2)
+0.001606( 2)
+0.001268( 2)
+0.001029( 2)
+0.000854( 2)
+0.000720( 2)
+0.000615( 2)
+0.000534( 2)
+0.000469( 2)
+0.000415( 2)
+0.000370( 2)
+0.000334( 2)
+0.000305( 2)
+0.000280( 2)
+0.000258( 2)
+0.000239( 2)
+0.000221( 2)
+0.000205( 2)
+0.000194( 2)
+0.000184( 2)
+0.000174( 2)
+0.000166( 2)
+0.000158( 2)
+0.000152( 2)
+
+irs
+
+0.101321
+0.025332
+0.011262
+0.006340
+0.004064
+0.002829
+0.002087
+0.001608
+0.001281
+0.001049
+0.000880
+0.000753
+0.000657
+0.000582
+0.000524
+0.000478
+0.000442
+0.000414
+0.000392
+0.000375
+0.000362
+0.000353
+0.000347
+0.000344
+0.000342
+0.000343
+0.000345
+0.000349
+0.000354
+0.000360
+
+ff
+
+0.002747
+0.002010
+0.001597
+0.001319
+0.001114
+0.000957
+0.000832
+0.000731
+0.000647
+0.000577
+0.000518
+0.000467
+0.000424
+0.000387
+0.000354
+0.000326
+0.000301
+0.000280
+0.000261
+0.000244
+0.000229
+0.000215
+0.000203
+0.000193
+0.000183
+0.000174
+0.000167
+0.000160
+0.000154
+0.000148
+
+41
+
+table 9: comparison of the montecarlo estimates (second column), the irs
+results (third column) and the form factor (ff) results (fourth column) for
+the correlator g at hl = 4.4069  104. in the rst column is reported the
+distance in lattice units.
+
+r
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+
+mc
+
+irs
+
+ff
+
+0.104077(19) 0.101011
+0.053137(12) 0.050882
+0.034975(11) 0.034286
+0.026275(11) 0.026062
+0.021240(11) 0.021181
+0.017966(11) 0.017967
+0.015676(11) 0.015704
+0.013990(10) 0.014032
+0.012705(10) 0.012753
+0.011699(10) 0.011748
+0.010891(10) 0.010942
+0.010231(11) 0.010282
+0.009685(11) 0.009736
+0.009228(11) 0.009277
+0.008841(11) 0.008888
+0.008510(11) 0.008555
+0.008224(11) 0.008268
+0.007978(11) 0.008018
+0.007765(10) 0.007800
+0.007577(10) 0.007608
+0.007411(11) 0.007438
+0.007265(11) 0.007287
+0.007134(11) 0.007152
+0.007018(11) 0.007031
+0.006914(11) 0.006922
+0.006822(11) 0.006823
+0.006740(11) 0.006733
+0.006667(11) 0.006650
+0.006600(12) 0.006575
+0.006539(12) 0.006505
+
+0.027495
+0.021822
+0.018614
+0.016427
+0.014807
+0.013546
+0.012533
+0.011701
+0.011007
+0.010421
+0.009920
+0.009488
+0.009114
+0.008788
+0.008502
+0.008250
+0.008028
+0.007830
+0.007654
+0.007497
+0.007357
+0.007231
+0.007118
+0.007016
+0.006924
+0.006841
+0.006766
+0.006698
+0.006637
+0.006580
+
+42
+
+

@@ -1,0 +1,2239 @@
+duke-cgtp-99-06
+
+hep-th/9909108
+
+0
+0
+0
+2
+
+ 
+
+g
+u
+a
+9
+1
+
+ 
+
+ 
+ 
+
+3
+v
+8
+0
+1
+9
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+discrete torsion and gerbes i
+
+eric r. sharpe
+
+department of physics
+
+box 90305
+
+duke university
+
+durham, nc 27708
+
+ersharpe@cgtp.duke.edu
+
+in this technical note we give a purely geometric understanding of discrete torsion, as an
+analogue of orbifold wilson lines for two-form tensor eld potentials. in order to introduce
+discrete torsion in this context, we describe gerbes and the description of certain type ii
+supergravity tensor eld potentials as connections on gerbes. discrete torsion then naturally
+appears in describing the action of the orbifold group on (1-)gerbes, just as orbifold wilson
+lines appear in describing the action of the orbifold group on the gauge bundle. our results
+are not restricted to trivial gerbes  in other words, our description of discrete torsion applies
+equally well to compactications with nontrivial h-eld strengths. we also describe a specic
+program for rigorously deriving analogues of discrete torsion for many of the other type ii
+tensor elds, and we are able to make specic conjectures for the results.
+
+september 1999
+
+1
+
+contents
+
+1 introduction
+
+2 orbifold wilson lines
+
+2.1 basics of orbifold wilson lines . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.2 equivariant bundles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.3 equivariant bundles with connection . . . . . . . . . . . . . . . . . . . . . .
+
+2.4 example: heterotic orbifolds . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.5 discussion in terms of cech cohomology . . . . . . . . . . . . . . . . . . . .
+
+3 n-gerbes
+
+3.1 description in terms of cohomology . . . . . . . . . . . . . . . . . . . . . . .
+
+3.2 description in terms of transition functions . . . . . . . . . . . . . . . . . . .
+
+3.3 connections on gerbes
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3.4 gauge transformations of gerbes . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3.5 gerbes versus k theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3.6 why gerbes? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+4 discrete torsion
+
+4.1 basics of discrete torsion . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+4.2 equivariant gerbes
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+4.3 equivariant gerbes with connection . . . . . . . . . . . . . . . . . . . . . . .
+
+4.4 analogues of discrete torsion . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+5 conclusions
+
+6 acknowledgements
+
+2
+
+4
+
+6
+
+7
+
+10
+
+12
+
+14
+
+14
+
+17
+
+18
+
+20
+
+21
+
+23
+
+24
+
+25
+
+26
+
+26
+
+30
+
+32
+
+33
+
+34
+
+35
+
+a review of group cohomology
+
+references
+
+35
+
+38
+
+3
+
+1 introduction
+
+historically discrete torsion has been a rather mysterious aspect of string theory. discrete
+torsion was originally discovered [1] as an ambiguity in the choice of phases to assign to
+twisted sectors of string orbifold partition functions. although other work has been done
+on the subject (see, for example, [2, 3, 4, 5, 6]), no work done to date has succeeded in
+giving any sort of genuinely deep understanding of discrete torsion. in fact, discrete torsion
+has sometimes been referred to has an inherently stringy degree of freedom, without any
+geometric analogue.
+
+in this paper we shall give a purely geometric understanding of discrete torsion. speci-
+cally, we describe discrete torsion as a precise analogue of orbifold wilson lines, for 2-form
+elds rather than vector elds. put another way, we shall argue that discrete torsion can be
+understood as orbifold wilson surfaces.
+
+our description of discrete torsion hinges on a deeper understanding of type ii b-elds
+than is common in the literature. more specically, just as vector potentials (gauge elds)
+are understood as connections on bundles, we describe b-elds as connections on (1-)gerbes.
+although gerbes seem to be well-known in some circles, their usefulness does not seem to be
+widely appreciated. we shall review a recent description of transition functions for gerbes,
+given in [7, 8], which provides a simplied language in which to discuss gerbes, and then shall
+discuss gerbes themselves (in the language of stacks) in detail in [9]. as accessible accounts
+of gerbes which provide the level of detail we need do not seem to exist, we provide such
+an overview in [9]. in a later paper [10] we shall provide a simplied way of understanding
+orbifold group actions on b elds, and shall also derive additional physical manifestations
+of discrete torsion from the ideas presented here.
+
+let us take a moment to give some general explanation of our ideas.
+
+in dening an
+orbifold of a physical theory, the orbifold group  must dene a symmetry of the theory.
+specifying the action of the orbifold group on the underlying topological space is, however,
+not sucient when bundles or other objects (such as gerbes) are present  specifying an action
+of the orbifold group  on a space does not uniquely specify an action of  on a bundle. put
+another way, for any given action of  on the base space, there can be multiple inequivalent
+actions of  on a bundle or a gerbe. this fact is usually glossed over in descriptions of
+orbifolds.
+
+what is the physical meaning of this ambiguity in the lifting of the action of  to a
+bundle? specifying a specic action of  on a bundle with connection implicitly denes an
+orbifold wilson line. in other words, orbifold wilson lines are precisely choices of actions of
+ on a bundle with connection. we shall show that, similarly, discrete torsion is a choice of
+an action of  on a (1-)gerbe with connection.
+
+technically, specifying a lift of  to a bundle, or a gerbe, is known as specifying an
+
+4
+
+equivariant structure on the bundle or gerbe. thus, in the paper we shall often speak of
+classifying equivariant structures, which means classifying lifts of .
+
+our results are not restricted to trivial gerbes  in other words, our description of discrete
+torsion applies equally well to compactications with nontrivial h-eld strengths. also, we
+do not make any assumptions concerning the nature of   it does not matter whether 
+is abelian or nonabelian. it also does not matter whether  acts freely on the underlying
+topological space  in our description, freely-acting orbifolds are understood in precisely the
+same way as orbifolds with xed points.
+
+we are also able to describe analogues of discrete torsion for the type iia rr 1-form and
+the iib rr 2-form elds. in addition, our approach makes it clear that there should exist
+analogues of discrete torsion for the other tensor elds appearing in supergravity theories.
+we describe a specic program for rigorously deriving analogues of discrete torsion for many
+of the other type ii tensor eld potentials (specically, those which can be understood in
+terms of gerbes), and conjecture the results  that analogues of discrete torsion for p-form
+elds are measured by h p(, u(1)), where  is the orbifold group.
+
+we begin in section 2 by reviewing orbifold wilson lines in language that will easily
+generalize. more specically, we describe orbifold wilson lines as an ambiguity in lifting
+the action of an orbifold group to a bundle with connection. in section 3 we give a basic
+discussion of n-gerbes, describing how they can be used to understand many of the tensor
+eld potentials appearing in supergravity theories. this discussion is necessary because we
+shall describe discrete torsion as a precise analogue of orbifold u(1) wilson lines for 1-
+gerbes. in section 4 we outline precisely how one can derive discrete torsion as an ambiguity
+in specifying the action of an orbifold group on a 1-gerbe with connection, in other words, as
+an analogue of orbifold wilson lines. we do not give a rigorous derivation of discrete torsion
+in this paper; see instead [9]. finally, we include an appendix on group cohomology, which
+is used a great deal in this paper and may not be familiar to the reader.
+
+in this paper we concentrate on developing some degree of physical intuition for our
+results on discrete torsion, and give simplied (and rather loose) derivations. a rigorous
+derivation of our results on 1-gerbes, together with a detailed description of 1-gerbes, is
+provided in a separate paper [9].
+
+we should remark that our purpose in writing this paper and [9] was primarily con-
+ceptual, rather than computational, in nature. in these papers we give a new conceptual
+understanding of discrete torsion. along the way we provide some fringe benets, such as an
+understanding of orbifold wilson lines for nontrivial bundles, a description of discrete torsion
+in backgrounds with nontrivial torsion1, and a thorough pedagogical review of 1-gerbes in
+terms of sheaves of categories. however, we do not provide signicant new computational
+methods.
+
+1torsion in the sense of, nontrivial 3-form curvature, as opposed to the mathematical senses.
+
+5
+
+we should mention that there are a few issues concerning discrete torsion which we
+shall not address in either this paper or [9]. first, we shall only discuss discrete torsion
+for orbifold singularities. one might wonder if discrete torsion, or some close analogue, can
+be dened for non-orbifold singularities, such as conifold singularities; we shall not address
+this matter here. second, we shall not attempt to discuss how turning on discrete torsion
+alters the moduli space structure, i.e., how discrete torsion changes the allowed resolutions
+of singularities. see instead [2] for a preliminary discussion of this matter. these matters
+will be discussed in [10].
+
+we should also mention that in an earlier version of this paper, we made a slightly
+stronger claim than appears here. namely, in earlier versions of this paper we claimed that
+the dierence between any two equivariant structures on a 1-gerbe with connection is dened
+by an element of h 2(, u(1)). however, we have since corrected a minor error in [9]. here,
+we only claim that the dierence between equivariant structures is an element of a group
+which includes h 2(, u(1))  in other words, there are additional degrees of freedom which
+we missed previously. these additional degrees of freedom will be discussed in more detail
+in [10].
+
+2 orbifold wilson lines
+
+we shall begin by making a close examination of principal bundles and heterotic string
+orbifolds, in order to carefully review the notion of an orbifold wilson line. in the next
+section, we describe gerbes, which provide the generalization of line bundles required to
+describe higher rank tensor potentials in supergravity theories. once we have given a basic
+description of gerbes, we shall describe how the notion of orbifold wilson line generalizes
+to the case of gerbes, and in the process, recover discrete torsion (and its analogues for
+the other tensor potentials appearing in supergravity theories) as a precise analogue of an
+orbifold wilson line for a gerbe.
+
+let x be a smooth manifold, and  a discrete group acting by dieomorphisms on x.
+in this section we shall discuss how to extend the action of  to a bundle on x and to a
+connection on the bundle. we shall explicitly recover, for example, the orbifold wilson lines
+that crop up in toroidal heterotic orbifolds. in the next section we shall generalize the same
+methods to describe discrete torsion as an analogue of orbifold wilson lines for higher-degree
+gerbes.
+
+6
+
+2.1 basics of orbifold wilson lines
+
+before we begin discussing orbifold wilson lines in mathematical detail, we shall take a
+moment to discuss them in generality. we should point out that in this paper we will always
+assume that gauge bundles in question are abelian; that is, any principal g-bundle appearing
+implicitly or explicitly has abelian g.
+
+in constructing heterotic orbifolds, people often mention orbifold wilson lines. what are
+they? in constructing a heterotic toroidal orbifold, one can combine the action of  on x
+with a gauge transformation, so as to create wilson lines on the quotient space. the action
+on the gauge bundle denes the lift of  to the bundle. such wilson lines are typically called
+orbifold wilson lines.
+
+the simple description above works precisely in the case that the bundle being orbifolded
+is trivial. in this case, there is a canonical (in fact, trivial) lift that leaves the bers invariant,
+and any other lift can be described as combining a gauge transformation with the action
+of  on the base. in general, when the bundle is nontrivial, there is no canonical lift, and
+so one has to work harder. a specication of a lift of  to a bundle is known technically
+as a choice of equivariant structure on the bundle, and so to derive orbifold wilson lines
+in the general context we will speak of classifying equivariant structures. we shall study
+equivariant structures in much more detail in the next subsection. in the remainder of this
+subsection, we shall attempt to give some intuition for the relevant ideas.
+
+consider for simplicity the special case of an orbifold group  acting freely (without xed
+points) on a space x. how precisely do we describe a wilson line on the quotient space? let
+x  x, and pick some path from x to g  x for some g  . in essence, a wilson loop on the
+quotient space x/ is the composition of the (nonclosed) wilson loop along this path from
+x to g  x with a gauge transformation describing the action of g   on the corresponding
+principal bundle. it should be clear from this description that equivariant structures on a
+bundle are encoding information about wilson lines on the quotient space, among other
+things. for this reason, choices of equivariant structures are often called orbifold wilson
+lines.
+
+how should orbifold wilson lines be classied? again, for simplicity assume  acts freely
+on x. we shall examine how at connections on the quotient space are related to at
+connections on the cover, in order to shed some light. (in later sections we shall not assume
+that bundles under consideration admit at connections; we make this assumption here in
+order to perform an enlightening calculation.) first, recall that for any g, the moduli space
+of at g-connections on x/, for abelian g, is given by
+
+where g acts by conjugation. for abelian g, conjugation acts trivially, and so the moduli
+
+hom (1(x/), g) /g
+
+7
+
+space of at g-connections on x/ is simply
+
+hom (1(x/), g)
+
+thus, in order to study orbifold wilson lines on x, we need to understand how 1(x/)
+is related to 1(x). assuming  is discrete and x is connected, then from the long exact
+sequence for homotopy2 we nd the short exact sequence
+
+0  1(x)  1(x/)  0()  0
+
+so 1(x/) is an extension of 0() =  by 1(x). as 1(x/) receives a contribution from
+, we see that orbifolding enhances the space of possible wilson lines by hom(, g), roughly
+speaking. more precisely, we have the long exact sequence
+
+0  hom(, g)  hom (1(x/), g)  hom (1(x), g)    
+
+for example, for the special case g = u(1), we have the short exact sequence3
+
+0  h 1(, u(1))  hom (1(x/), u(1))  hom (1(x), u(1))  0
+
+where h 1(, u(1)) denotes group cohomology of  with trivial action on the coecients
+u(1). thus, we see explicitly that for  discrete and freely-acting, at u(1)-connections on
+the quotient space pick up a contribution from the group cohomology group h 1(, u(1)),
+which we can identify with orbifold u(1) wilson lines.
+
+the results of the discussion above are important and bear repeating. we just argued
+that, for  discrete and freely-acting, at u(1) connections on the quotient get a contri-
+bution from h 1(, u(1)). we shall argue in later sections that for general abelian g and
+general discrete  (not necessarily freely-acting), orbifold g wilson lines are classied by
+h 1(, g), where h 1(, g) denotes group cohomology of , with coecients4 g.
+in later
+sections we shall also not make any assumptions concerning the nature of the bundle  we
+shall not assume the bundle in question admits at connections. we shall rigorously de-
+rive the classication of orbifold wilson lines as a classication of equivariant structures on
+principal bundles with connection. when we classify equivariant structures on gerbes with
+connection5, we shall recover a classication which includes h 2(, u(1)).
+
+at this point we shall take a moment to clarify an issue that may have been puzzling
+the reader. we claimed in the introduction that we would describe discrete torsion in terms
+
+2applied to the principal  bundle
+
+  x  x/
+
+whose existence follows from the fact that  acts freely.
+
+3using the fact that u (1) = r/z is an injective z-module [11, section i.7].
+4technically, we are also assuming that the action of  on the coecients g is trivial. we shall make this
+
+assumption on group cohomology throughout this paper.
+
+5and band c(u (1)), technically.
+
+8
+
+of orbifold wilson lines for b elds. however, discrete torsion is measured in terms of
+group cohomology, whereas (for at connections) wilson lines are given by hom(1, g)/g.
+however, for the special case g = u(1),
+
+hom (1, g) /g = h 1(, u(1))
+
+where h 1(, u(1)) is group cohomology. it should now be clear to the reader that the usual
+classication of discrete torsion  given by h 2(, u(1))  is quite similar to this formal
+classication of orbifold u(1) wilson lines  given by h 1(, u(1)). in particular, the reader
+should now be less surprised that orbifold wilson lines and discrete torsion are related.
+
+one issue we have glossed over so far concerns fake wilson lines, which we shall now
+take a moment to discuss. consider for example the orbifold c2/z2. this space is simply-
+connected, yet the usual prescriptions for orbifold wilson lines tell us that there is a physical
+degree of freedom (given by hom(z2, g)) which we would usually associate with wilson
+lines. such degrees of freedom are often referred to as fake wilson lines [12].
+
+this degree of freedom is in fact physical  not some unphysical artifact. in the next few
+sections we shall see mathematically that one will recover degrees of freedom measured by
+
+h 1(, g) = hom(, g)
+
+for -orbifolds of spaces with g-bundles (with g abelian), regardless of whether or not  is
+freely acting.
+
+how precisely should fake wilson lines be interpreted on the quotient space? it can be
+shown [17, chapter 14] that if one quotients the total spaces of bundles, using equivariant
+structures dening fake wilson lines, then the resulting object over the quotient space is
+not a ber bundle. (for example, a z2 orbifold of a rank n complex vector bundle over c2
+with nontrivial orbifold wilson lines is not a ber bundle over the quotient space c2/z2
+ one gets an object whose ber over most points is cn, appropriate for a rank n vector
+bundle, but whose ber over the singularity is cn/z2.) we have not pursued this question
+in depth, but we do have a strong suspicion. in the case that x/ is an algebraic variety6,
+it is possible to construct (reexive) sheaves which are closely related to, but not quite the
+same as, bundles. for example, on c2/z2, in addition to line bundles there are also reexive
+rank 1 sheaves. we nd it very tempting to conjecture that these reexive rank 1 sheaves
+correspond to quotients of equivariant line bundles on c2 with nontrivial fake wilson lines,
+and that more generally, fake wilson lines on quotient spaces that are algebraic varieties
+have an interpretation in terms of reexive sheaves which are not locally free. moreover,
+isomorphism classes of reexive sheaves on ane spaces c2/ are classied in the same
+way as orbifold wilson lines [18], a fact that forms one corner of the celebrated mckay
+correspondence. we shall have nothing further to say on this matter in this paper.
+
+6 technically, a noetherian normal variety.
+
+9
+
+before we move on to discuss lifts  of  acting on line bundles with connection, we shall
+discuss some amusing technical points regarding equivariant bundles. one natural question
+to ask is the following: given some equivariant structure on a bundle p , how can one compute
+the characteristic classes of the quotient bundle p/?
+
+the basic idea is to construct a principle g-bundle on e  x, such that the projection
+to x/ yields the quotient bundle. we shall not work out the details here; see instead [13],
+where this program is pursued in detail. in principle one could follow the same program
+for the equivariant gerbes we shall construct in later sections, and discuss their equivariant
+characteristic classes. however, we shall not pursue this direction in this paper.
+
+in passing we should also note that on rare occasions, equivariant bundles and equivariant
+bundles with connection have been discussed in the physics literature in terms of v-bundles
+[14, 15, 16]. the language of v-bundles is rather dierent from the language we shall use in
+this paper to describe orbifold wilson lines, though it is technically equivalent.
+
+2.2 equivariant bundles
+
+let p be a principal g-bundle on x for some abelian lie group g (e.g., g = u(1)n for some
+positive n). given the action of  on x, we would like to study lifts of the action of  on x
+to the total space of p .
+
+what precisely is a lift of the action of ? let  : p  x denote the projection, then
+a lift of the action of an element g   is a dieomorphism g : p  p such that g is a
+morphism of principal g-bundles. the statement that g is a morphism of bundles means
+precisely that the following diagram commutes:
+
+p
+ 
+x
+
+g
+
+ p
+
+ 
+
+(1)
+
+g
+
+ x
+
+the statement that g is a morphism of principal g-bundles, not merely a morphism of
+bundles, means that, in addition to the commutativity of the diagram above, the action of
+g on the total space must commute with g. in other words, g(h  p) = h  g(p) for all h  g
+and p  p . furthermore, in order to lift the action of the entire group  and not just its
+elements, we shall impose the constraint that
+
+for all g1, g2  .
+
+gg1  g2 = g1  g2
+
+(2)
+
+the constraint given in equation (2) is quite important; one is not always guaranteed of
+nding lifts that satisfy (2). as an example7, we shall examine the nontrivial z2 bundle over
+
+7we would like to thank a. knutson for pointing out this example to us.
+
+10
+
+s1. consider the group  = z2 that acts on the base s1 as a half-rotation of the circle. on
+the total space of the nontrivial z2 bundle, essentially a 720 object,  must act by rotation
+by either +180 or 180, in order to cover the action of  on the base s1 (i.e., in order
+for diagram (1) to commute). unfortunately, neither such action on the total space of the
+bundle squares to the identity, and so equation (2) can not be satised in this case.
+
+as the example just given demonstrates, although trivial bundles admit lifts of orbifold
+group actions, not all nontrivial bundles admit lifts of orbifold group actions. rather than
+digress to explain conditions for the existence of lifts, we shall simply assume lifts exist in
+all examples considered in this paper. (we shall make a similar assumption when discussing
+equivariant gerbes.)
+
+a lift of the action of  to a bundle is also called a choice of (-)equivariant structure on
+
+the bundle.
+
+in passing, we should also mention that instead of speaking of lifts, we could equivalently
+work in terms of pullbacks. loosely speaking, in terms of pullbacks, a bundle p is almost
+equivariantizable with respect to the action of  if, for all g  , g p = p . as above, not
+all bundles will necessarily be equivariant with respect to some given , but we shall not
+discuss relevant constraints in this paper. more precisely, an equivariant bundle p is dened
+to be a bundle with a choice of equivariant structure, which can be dened as a specic set of
+isomorphisms g : g p  p for all g  , subject to the obvious analogue of equation (2).
+
+it is easy to check that the denitions of equivariant structures in terms of lifts and in
+terms of pullbacks are equivalent. for completeness, we shall outline the argument here. let
+g : g p  p dene an equivariant structure (in terms of pullbacks) on a principal bundle
+p . then, we can dene a lift g of g   as, g = g1  (g1). the reader can easily check
+that g does indeed dene a lift of g, as dened above. conversely, given a lift g of g  , we
+can dene an equivariant structure (in terms of pullbacks) g : g p  p by, 1
+g = g   g.
+it is easy to check that the two constructions given here are inverses of one another.
+
+how many possible lifts of the action of a given g   exist? given any one lift, we can
+certainly make any other lift by composing the action of the lift with a gauge transformation.
+more precisely, given a set of lifts {g|g  }, we can construct a new set of lifts {g } by
+composing each g with a gauge transformation g : x  g such that g2(x)  g1(g1
+2 x) =
+g2g1(x) for all x  x. moreover, any two lifts dier by a set of such gauge transformations.
+we can rephrase this by saying that any two lifts of the action of  to p dier by an element
+of hom(, c (g)) = h 1(, c (g)).
+
+now, from our knowledge of orbifold wilson lines, we will eventually want (equiva-
+lence classes of) lifts to be classied by h 1(, g) = hom(, g), but above we only have
+h 1(, c (g)). what have we forgotten?
+
+so far we have only studied how to extend the action of  to the total space of a bundle.
+
+11
+
+we have not yet spoken about further requiring the action of  to preserve the connection
+on the bundle. this requirement will place additional constraints on the lifts. when we are
+done, we will see that by considering lifts of the action of  to line bundles with connection,
+instead of just line bundles, we will recover the classication h 1(, g), as desired.
+
+for more information on equivariant bundles, see for example [17].
+
+2.3 equivariant bundles with connection
+
+in the previous subsection we described the action of the group  on principal g-bundles, for
+g an abelian lie group. in this section we shall extend this discussion to include consideration
+of a connection on a bundle. we shall argue that equivalence classes of lifts of the action of
+ to pairs (line bundle, connection) are classied by the group cohomology group h 1(, g).
+(more precisely, we shall nd a non-canonical correspondence between equivariant structures
+on principal g-bundles with connection and elements of h 1(, g). in special cases, such as
+trivial principal g-bundles, there will be a canonical correspondence.) for more information
+on connection-preserving lifts, see8 [13] and [23, section 1.13].
+
+before going on, we shall take a moment to very briey review connections on principal
+bundles and what it means for a lift to preserve a connection. one way to think of a
+connection on a bundle is as a set of gauge elds a, one for each element of a good cover
+of the base. however, there is a slightly more elegant description which we shall use instead
+[22, section vbis.a]. if p is the total space of a principal g-bundle on x, then a connection
+on p is a map t p  lie g, or a (lie g)-valued 1-form on p , satisfying certain properties
+we shall not describe here (see instead, for example, [21, section 11.4] or [22, section v bis
+a1]). given an open set u  x such that p |u is trivial, let s : u  p be a section, and let
+ denote the connection on p , i.e., the corresponding (lie g)-valued 1-form, then we can
+recover a gauge eld on the base x as s. any two distinct sections s1, s2 : u  p dene
+2  (dg)g1. if  : x  g
+gauge elds diering by a gauge transformation, i.e., s
+denes a gauge transformation, then it acts on the connection  as ([22, section v bis,
+problem 1], [23, section 1.10])
+
+1 = s
+
+(p)  ((p)) (p) 1((p))  d ln(  )(p)
+
+for p  p and  : p  x the projection. clearly, a gauge transformation  : x  g will
+
+8there is also related information in [19, sections 2.4, 2.5] and [20, section v.2]. these references analyze
+a distinct but related problem; their discussion might at rst confuse the reader. specically, instead of
+considering representations of  in the group of all connection-preserving lifts of dieomorphisms of the
+base, they study the space of connection-preserving lifts itself, and argue that it is a central extension of the
+group of bundle-with-connection-preserving dieomorphisms of the base by u (1), for principal u (1)-bundles.
+the reader might be then tempted to argue that lifts of  should be classied by h 2(, u (1)), but this is not
+quite correct. in particular, when viewing the set of all connection-preserving lifts as a central extension, the
+elements that project to  will not, in general, form a representation of , i.e., will not satisfy equation (2).
+
+12
+
+preserve the connection (not just up to gauge equivalence) if and only if  is a constant map.
+
+how does a morphism of principal bundles act on a connection? let  : p1  p2 denote a
+morphism of principal bundles, then if 2 is a connection on p2,  2 (dened in the obvious
+way) is a connection on p1. more relevantly to the problem under discussion, if g   and
+g denotes the lift of g, then we shall say that g preserves the connection  if g  = , not
+just up to gauge transformation.
+
+in order to get a well-dened connection living over the quotient x/, we shall demand
+that the lift of the action of  preserves the connection itself, not just its gauge-equivalence
+class. (if this were not the case, then we would not be able to immediately write down a
+well-dened connection over the quotient space.) phrased another way, a lift of the action
+of  on x will yield a well-dened connection on the quotient precisely if it can be deformed
+by an element of h 1(, c (g)) so that it preserves the connection itself, not just its gauge-
+equivalence class. phrased another way still, if we merely demanded that the lift of 
+preserve only the gauge-equivalence class of the connection, then naively spoke of the gauge-
+equivalence class descending to the quotient, we would not be guaranteed of nding any
+representatives of the quotiented gauge-equivalence class.
+
+necessary and sucient conditions for a lift of  to preserve the connection are known
+and easy to describe [23]. in fact, the action of g   on the base x is liftable to a map of
+bundle with connection if and only if the action of g preserves the values9 of wilson loops
+on the base [23, prop. 1.12.2]. (note that even for bundles with a non-at connection 
+nontrivial bundles  one can still dene wilson loops  however, only in the special case
+of a at connection will the value of a wilson loop depend only on the homotopy class of
+the loop.) the reader should not be surprised by this result, as this fact is often implicitly
+claimed in the literature on toroidal heterotic orbifolds, for example.
+
+now, how many lifts of  preserve the connection itself? let {g} denote a lift of {g  }
+that preserves the connection itself. we can compose {g} with an element of h 1(, c (g)) to
+get another lift, but only the constant elements, namely those in h 1(, g)  h 1(, c (g)),
+will act so as to preserve the connection itself. thus, h 1(, g) acts on the set of connection-
+preserving lifts of , and it should be clear this action is both transitive and free.
+
+note that in the very special case that the equivariant bundle on x is trivial, then there
+is (distinguished) trivial lift, and so there is a canonical correspondence between elements
+of h 1(, g) and connection-preserving lifts. for more general bundles, there is no such
+distinguished lift.
+
+as this result is important, we shall repeat it. we have just shown that (-)equivariant
+structures on g-bundles with connection can be (noncanonically) identied with elements of
+
+9strictly speaking, preserves the values of the wilson loops up to conjugation; however, for bundles with
+
+abelian structure group, conjugation acts trivially.
+
+13
+
+h 1(, g). in special cases, such as trivial bundles, there is a canonical identication.
+
+in passing, note that our analysis of equivariant structures on bundles with connection
+did not assume  was freely-acting or that  be abelian: our analysis applies equally well to
+cases in which  has xed points on the base space, as well as cases in which  is nonabelian.
+
+2.4 example: heterotic orbifolds
+
+as a more explicit example, let us consider how to dene a toroidal heterotic orbifold. here
+we have some principal g bundle (for some g) over the torus, which for simplicity we shall
+assume to be trivial10. we shall also assume the connection on the bundle on the torus is
+not merely at, but actually trivial. in these special circumstances, any dieomorphism of
+the base lifts to an action on the bundle.
+
+now, to dene a lift of an action of  on the torus to the total space of the principal
+bundle is trivial. since the total space of a trivial principal bundle is just x  g, clearly we
+can lift the action of  to the total space by dening it to be trivial on the ber g. (more
+generally, for a nontrivial bundle, demanding that the group  lift to an action on the total
+space of the bundle is not trivial. depending upon both x and the bundle in question, there
+are often obstructions.) given any one such lift, we can nd all other possible lifts simply
+by composing the trivial lift with a gauge transformation.
+
+in order to get a well-dened connection on the quotient space, however, there are some
+constraints on the possible lifts. first, note that in these special circumstances, we can
+describe any lift as the composition of the trivial lift with a gauge transformation. for any
+g  , let g : x  g denote the corresponding gauge transformation. then in order
+to preserve the connection itself, g must be constant, in other words, g = (g) for some
+ :   g. these (g) dene the usual orbifold wilson lines.
+
+2.5 discussion in terms of cech cohomology
+
+eventually in this paper we will work through arguments closely analogous to those above
+to derive analogues of orbifold wilson lines for gerbes. in order to do this properly is some-
+what dicult and time-consuming  (1-)gerbes are properly described in terms of sheaves of
+categories, and their full analysis can be somewhat lengthy. in order to give some general
+intuition for the results at the level of hitchins [7, 8] discussion of gerbes, we will eventu-
+ally give a rather loose derivation of the results in terms of cech cohomology. (a rigorous
+
+10although the bundle has a at connection, it need not be topologically trivial or even trivializable  this
+is a stronger constraint than necessary, which we are introducing in order to keep this warm-up example
+simple.
+
+14
+
+derivation will appear in [9].)
+
+as a warm-up for that eventual discussion, in this section we shall very briey describe
+how one can re-derive orbifold wilson lines while working at the level of cech cohomol-
+ogy, i.e., at the level of transition functions for bundles. we feel that such an approach is
+philosophically somewhat awed  the transition functions of a bundle do not really cap-
+ture all information about the bundle. for example, gauge transformations of a bundle are
+completely invisible at the level of transition functions. thus, we do not nd the notion
+of dening an equivariant structure on a bundle by putting an equivariant structure on its
+transition functions to be completely satisfying. thus, when we study equivariant gerbes,
+we shall not limit ourselves to only discussing equivariant structures on gerbe transition
+functions, but shall also discuss equivariant structures on the gerbes themselves.
+
+experts will note that in this subsection we implicitly make some assumptions regarding
+the behavior of bundle trivializations under the action of the orbifold group. as our purpose
+in this subsection is not to give a rigorous derivation but merely to perform an enlightening
+calculation, we shall gloss over such issues.
+
+let p be a principal g-bundle on a manifold x, and let  be a group acting on x
+by dieomorphisms. let {u} be a good invariant cover of x, by which we means that
+each u is invariant under , and each u is a disjoint union of contractible open sets. for
+example, one can often get good invariant covers of a space x from good covers of the
+quotient x/. note that a good invariant cover is not a good cover, in general. we shall
+assume good invariant covers exist in this subsection, though it is not clear that this need be
+true in general. (again, our purpose in this subsection is to present enlightening calculations
+and plausibility arguments, not completely rigorous proofs.)
+
+let h denote transition functions for the bundle p . assume p has an equivariant
+structure, which at the level of transition functions means that for all g   there exist
+functions g
+
+ : u  g such that
+
+g h ( = h  g ) = g
+
+ h (g
+
+)1
+
+(3)
+
+the functions g
+ are local trivialization realizations of an isomorphism of principal g-bundles
+g : p  g p for each g  . it should be clear that g = (g)1 where the g were dened
+in the section on equivariant bundles.
+
+the g partially specify an equivariant structure on p , but we also need a little more
+
+information. in particular, we must also demand that for g1, g2  ,
+
+g2
+ g 
+
+2g1
+
+ = g1g2
+
+
+
+(4)
+
+note that this is the appropriate cech version of equation (2).
+
+now, suppose g
+
+ and  g
+
+ dene two distinct equivariant structures on p , with respect to
+
+15
+
+the same group . dene g
+
+ : u  u(1) by,
+
+g
+
+ 
+
+g
+
+ g
+
+
+from the fact that both g
+fact that
+
+ and g
+
+ must satisfy equation (3), we can immediately derive the
+
+ = g
+g
+
+
+
+on u = u  u, and so the g
+ dene a function g : x  u(1). this is a gauge
+transformation describing the dierence between two equivariant structures. it is almost,
+but not quite, the same as the gauge transformation g described in the section on equivariant
+bundles.
+
+from equation (4), we see that the g must obey
+
+g2  g 
+
+2g1 = g1g2
+
+thus, any two equivariant structures on p dier by an element of h 1(, c (g)), as
+
+described in the section on equivariant bundles.
+
+we shall now recover the fact that equivariant structures on bundles with connection
+
+dier by elements of h 1(, g), for abelian g.
+
+let a be a (lie g)-valued one-form on the open set u, dening a connection on p . in
+
+other words, on overlaps u = u  u,
+
+a  a = d ln h
+
+under the action of g  , since
+
+we know that
+
+g a = a + d ln g
+
+
+g h = g
+
+ h (g
+
+)1
+
+from this we see that if g
+
+ dene two distinct equivariant structures on the
+transition functions, then we must have g
+ be constant, in order for g a to be well-
+dened. thus, we recover the fact that g is constant, and so the subset of h 1(, c (g))
+that describes equivariant bundles with connection is given by h 1(, g), as claimed.
+
+ and  g
+
+/g
+
+in essence, we have been using a form of equivariant cech cohomology. the mathematics
+literature seems to contain multiple11 versions of equivariant cech cohomology, unfortunately
+none of them are quite adequate for our eventual needs (i.e., none of them correspond to the
+precise way we set up equivariant structures on gerbes), and so we shall not speak about
+them further.
+
+11one version of equivariant cech cohomology is described in [24, chapitre v]. another version is described
+
+in [25, section 2] and [26, section 5].
+
+16
+
+3 n-gerbes
+
+discrete torsion has long been associated with the two-form b-elds of supergravity theories.
+the reader should not be surprised, therefore, that a deep understanding of discrete torsion
+hinges on a deep understanding of the two-form b elds. we shall argue that b elds should
+be understood as connections on 1-gerbes, and that discrete torsion arises when lifting the
+action of an orbifold group to a 1-gerbe with connection.
+
+why might one want a new mathematical object to describe b-elds in type ii string
+theory? the reason is a dilemma that has no doubt puzzled for many years. the torsion12 h
+is dened to be h = db. so long as h is taken to be cohomologically trivial, this is certainly
+a sensible denition. unfortunately, in general one often wants to speak of h which is not
+a cohomologically trivial element of h 3(r). in such a case, the relation h = db can only
+hold locally. (this point has been made previously in, for example, [27].)
+
+we shall see shortly that such h can be understood globally as a connection on a 1-gerbe.
+more generally, many of the tensor eld potentials appearing in type ii string theories naively
+appear to have a natural and obvious interpretation in terms of connections on n-gerbes,
+though for the sake of simplifying the discussion we will usually only discuss the two-form
+tensor eld in examples.
+
+in passing, we should also mention that although some tensor eld potentials may be
+understood in terms of gerbes, it is not clear that all tensor eld potentials have such an
+understanding. one notable exception is the b-eld of heterotic string theory. recall that
+one has the anomaly cancellation constraint
+
+dh  tr r  r  tr f  f
+
+if the heterotic b eld were a 1-gerbe connection, then we shall see that the curvature h
+would be a closed form, whereas that is certainly not the case here in general. moreover, many
+other tensor eld potentials have nontrivial interactions and mixed gauge transformations,
+and it is not at all clear whether these phenomena can be understood in terms of gerbes. as
+a result, one should be somewhat careful about blindly identifying all tensor eld potentials
+with connections on gerbes. these issues should not arise for the comparatively simpler cases
+of type ii 2-form potentials (with other background elds turned o), which is the primary
+case of interest for us in this paper.
+
+we should also mention a slight technical caveat. we shall only be discussing gerbes with
+band c (u(1)) [9], which means, in less technical language, that there exist more general
+gerbes than those discussed in this section. for example, some theories contain multiple
+coupled tensor multiplets (for one example, see [28]), which would be described in terms of
+connections on gerbes with band c (u(1)n ). we shall not discuss gerbes with general
+bands in this paper; see instead [9].
+
+12no relation to the various mathematical concepts of torsion.
+
+17
+
+in this section we will give a description of gerbes and connections on gerbes, due to [7, 8].
+we shall begin by dening gerbes themselves, then afterwards we shall describe connections
+on gerbes. in the next section we will discuss the analogue of orbifold wilson lines for
+gerbes.
+
+3.1 description in terms of cohomology
+
+we shall begin by describing characteristic classes of abstract objects called n-gerbes,
+following the discussion in [7, 8]. these characteristic classes, which for n-gerbes on a
+space x, are elements of the sheaf cohomology group h n+1(x, c (u(1))). this is closely
+analogous to describing a line bundle in terms of chern classes. more intrinsic denitions of
+gerbes are given in the next section and in [9]. gerbes themselves take considerably longer
+to dene; by rst describing their characteristic classes, we hope to give the reader some
+basic intuitions for these objects.
+
+in passing we should comment on our usage of the terminology n-gerbe. we are
+following the simplied conventions of [7, 8].
+in general, an n-gerbe should, morally, be
+understood in terms of sheaves of multicategories. unfortunately, n-categories for n > 2 are
+not well understood at present. as a result, although 1-gerbes and, to a slightly lesser extent,
+2-gerbes are well understood, higher degree gerbes are not on as rm a footing. it seems
+reasonably clear that such objects should exist, however, and one can certainly describe
+many properties that a general n-gerbe should possess in terms of characteristic classes (as
+in this section) and deligne cohomology. thus, we shall often speak (loosely) of general
+n-gerbes, though for n > 2 the reader should probably take such remarks with a small grain
+of salt.
+
+a couple of paragraphs ago we mentioned that the characteristic classes of gerbes could
+be understood in terms of sheaf cohomology, and more specically that the characteristic
+classes of possible n-gerbes on a space x live in h n+1(x, c (u(1))). for those readers
+not acquainted with sheaf cohomology, we can express this somewhat more simply (and
+loosely) in terms of cech cocycles with respect to some xed open cover. let u be a
+reasonably nice13 open cover of x. then an element of h n+1(x, c (u(1))) is essentially
+dened by a set of smooth functions h0 n+1 : u0 n+1  u(1), one for each overlap
+u0 n+1 = u0      un+1, subject to the constraint
+
+(h)0n+2 = 1
+
+(5)
+
+where h is dened by
+
+13specically, a good open cover.
+
+(h)0 n+2 
+
+n+2yi=0
+
+h()i
+0  i n+2
+
+18
+
+on the intersection u0      un+2. two such sets of functions h0 n+1, h
+identied with the same element of h n+2(x, c (u(1))) if and only if
+
+0 n+1 are
+
+h0 n+1 = h
+
+0 n+1
+
+n+1yi=0
+
+f ()i
+0  in+1
+
+(6)
+
+for some functions f0 n : u0      un  u(1).
+
+as a special case, let us see how this duplicates line bundles. in the classication of n-
+gerbes implicit in the description of characteristic classes above, it should be clear that line
+bundles are very special examples of n-gerbes, specically, 0-gerbes. a 0-gerbe is specied
+by an element of h 1(x, c (u(1))), that is, a set of smooth functions h : u  u  u(1),
+such that
+
+hh1
+
+ h = 1
+
+on triple intersections u  u  u (this is the specialization of equation (5)). the reader
+should immediately recognize this as dening transition functions for a smooth u(1) bundle
+on x. equation (5) is precisely the statement that transition functions agree on triple
+overlaps. moreover, two u(1) line bundles are equivalent if and only if their transition
+functions h, h
+
+ are related by [29, chapter 5.2]
+
+h = h
+
+f/f
+
+for some set of functions f : u  u(1). the reader should immediately recognize this as
+the specialization of equation (6).
+
+although the sheaf cohomology group h 1(x, c (u(1))) precisely describes (equivalence
+classes of) transition functions for 0-gerbes (smooth principal u(1) bundles), the same is not
+true for higher degree gerbes  an element of sheaf cohomology for a higher degree gerbe
+does not dene a set of transition functions. (we shall study transition functions for gerbes
+in the next subsection.)
+
+we can rewrite these characteristic classes of n-gerbes in a format that is more accessible
+
+to calculation. using the short exact sequence of (c ) sheaves
+
+0  c (z) = z  c (r)  c (u(1))  0
+
+one can immediately prove, from the associated long exact sequence, that for n  0,
+
+h n+1(x, c (u(1))) = h n+2(x, z)
+
+as a special case, this implies that 0-gerbes are classied by elements of h 2(x, z), and
+
+indeed it is a standard fact that c  line bundles are classied by their rst chern class.
+
+in general, any two trivializations of a trivializable n-gerbe, that is, one described by a
+cohomologically trivial (n + 1)-cocycle, dier by an (n  1)-gerbe. this should be clear from
+
+19
+
+the description above  any cohomologically trivial (n + 1)-cocycle is a coboundary of some
+n-cochain, and any two such cochains dier by an n-cocycle, dening an (n  1)-gerbe.
+
+before going on, we should mention that in the remainder of this paper (as well as [9]) we
+shall usually abbreviate 1-gerbes to simply gerbes. unfortunately, on rare occasion we
+shall also use gerbes as shorthand for n-gerbes. the usage should be clear from context.
+
+3.2 description in terms of transition functions
+
+in the previous section we described n-gerbes in terms of sheaf cohomology, which is precisely
+analogous to describing line bundles in terms of chern classes. traditionally gerbes are
+typically dened in terms of sheaves of multicategories, as we shall do in [9]. in this section,
+we shall give a simplied account, due to [7, 8], which amounts to describing gerbes in terms
+of transition functions. in [9] we shall review sheaves of categories and the description of
+1-gerbes in such language, in addition to giving a geometric rst-principles derivation of
+discrete torsion.
+
+before grappling with transition functions for n-gerbes, we shall begin with a description
+of transition functions for 1-gerbes. let {u} be a good cover of x, then we can dene a
+1-gerbe on x in terms of two pieces of data:
+
+1. a principal u(1) bundle l over each u = u  u (subject to the convention
+
+l = l1
+
+), such that l  l  l is trivializable on u
+
+2. an explicit trivialization  : u  u(1) of l  l  l on u
+
+then,  naturally denes a cech 2-cochain, and it should be clear that  = 1, i.e., the
+canonical section of the canonically trivial bundle dened by tensoring the obvious twelve
+factors of principal u(1) bundles.
+
+thus,  denes a 2-cocycle, and it should be clear that this 2-cocycle is the same 2-cocycle
+
+dening the 1-gerbe in the description in the previous subsection.
+
+we should take a moment to clarify the precise relationship between the construction
+above and 1-gerbes dened in terms of sheaves of categories. in the description of gerbes in
+terms of sheaves of categories, one can dene transition functions for the gerbe with respect
+to a local trivialization, in precise analogy to transition functions for bundles. however, for
+1-gerbes the objects one associates to overlaps of open sets are not maps into the group,
+but rather line bundles, subject to a constraint on triple overlaps. put more directly, the
+description given in the paragraphs above precisely describes transition functions for a 1-
+gerbe. the corresponding element of sheaf cohomology is merely a characteristic class,
+classifying isomorphism classes.
+
+20
+
+thus, the description of 1-gerbes given so far in this section is technically a description of
+transition functions for 1-gerbes. the reader may well wonder what is a 1-gerbe; the answer
+is, a special kind of sheaf of categories. sheaves of categories and related concepts have been
+banished to [9], but we shall give a very quick avor of the construction here.
+
+sometimes one speaks of objects of the 1-gerbe. these are line bundles l over open
+sets u, such that l = l  l1
+ . objects exist locally on x, but in general will not exist
+globally (unless the 1-gerbe is trivializable, meaning the associated cech 2-cocycle is trivial
+in cohomology).
+
+in more formal treatments of gerbes, one often associates sheaves of categories with
+gerbes14. in this description, the objects mentioned above are precisely objects of a cate-
+gory associated to some open set on x. we shall not go into a detailed description of gerbes
+as sheaves of categories in this section; see instead [9].
+
+now that we have discussed 1-gerbes, how are n-gerbes dened? in principle an analogous
+description should hold true  transition functions for an n-gerbe should consist of associating
+an (n  1)-gerbe to each overlap, subject to constraints at triple overlaps. although we are
+well-acquainted with more intrinsic denitions of 1-gerbes [9], we have not worked through
+higher n-gerbes in comparable detail, and so we hesitate to say much more concerning
+transition functions for higher order gerbes. we hope to return to this elsewhere [30].
+
+3.3 connections on gerbes
+
+now that we have stated the denition of an n-gerbe, we shall dene a connection on an
+n-gerbe, which is a straightforward generalization of the notion of connection on a c  line
+bundle.
+
+for simplicity, x some good open cover u of x. a connection on an n-gerbe is dened
+by a choice of h  n+2(x) such that dh = 0 (a closed (n + 2)-form on x), and a choice
+of (b)  c 1(n+1), that is, a choice of smooth (n + 1)-form on u for each , such that on
+each u, h|u = db, and such that on overlaps u  u, b  b = da, where a is a
+smooth n-form on u. in general there will more more terms, of lower-degree-forms, lling
+out an entire cocycle in the cech-de rham complex.
+
+to be complete, we need to specify how the forms on various open sets are related by
+the transition functions for the n-gerbe. for simplicity, consider a 1-gerbe. here, we have a
+globally-dened 3-form h, a family of 2-forms b, one for each open set u, a family of 1-
+
+14more precisely, there is a standard method to associate sheaves of 1-categories and 2-categories to 1-
+gerbes and 2-gerbes, respectively. the higher-degree gerbes outlined in [7, 8] presumably correspond to
+sheaves of higher-degree multicategories, however the precise denitions required have not been worked out,
+to our knowledge.
+
+21
+
+forms a, one for each intersection u = u  u. recall transition functions for a 1-gerbe
+consist of line bundles l associated to each u; the 1-forms a are precisely connections15
+on the u(1) bundles l. if  denotes the specied trivialization of l  l  l on
+u, then we have
+
+a + a + a = d ln 
+
+then, as per the description above,
+
+on overlaps u, and
+
+b  b = da
+
+h|u = db
+
+in principle, similar remarks hold for more general n-gerbes.
+
+the reader should immediately recognize that a connection on a 1-gerbe is precisely the
+same thing as a type ii string theory b-eld. (the point that b elds and the relation
+h = db should really only be understood locally has been made previously in the physics
+literature, albeit not usually in terms of connections on gerbes; see for example [27].) this
+relationship seems to be well understood in certain parts of the eld; we repeat it here simply
+to make this note more self-contained. in general, the reader should recognize that tensor
+eld potentials appearing in type ii supergravities often look like connections on gerbes.
+
+the reader should also notice that a connection on a 0-gerbe precisely coincides with
+the usual notion of connection on a smooth line bundle. to make this more clear, change
+notation as follows: change h to f , and change b to a. for a connection on a smooth line
+bundle, locally we have the relation f = da, but globally this does not hold if f is a nonzero
+element of h 2(x, r).
+
+in the special case that f descends from an element of h 2(x, z) via the natural map
+h 2(x, z)  h 2(x, r), then there exists a c  line bundle whose rst chern class is rep-
+resented by f . (in particular, kahler forms can be interpreted as the rst chern classes of
+(holomorphic) line bundles precisely when the kahler form lies in the image of h 2(x, z) in
+h 2(x, r).) analogously, for an n-gerbe, when the curvature h descends from an element
+of h n+2(x, z), then there exists an n-gerbe whose characteristic class is dened by h.
+
+in fact, we have been slightly sloppy about certain details. suppose that h n+2(x, z)
+contains torsion16, that is, elements of nite order, then if an n-gerbe-connection denes
+an n-gerbe, it does not do so uniquely  one will get several n-gerbes, each of which has a
+characteristic class that descends to the same element of h n+2(x, r). are these extra degrees
+of freedom physically relevant  in other words, must there be an actual gerbe underlying
+these connections?
+
+15note we are implicitly using the fact that the {u} form a good cover, so each u is contractible.
+16in the mathematical sense.
+
+22
+
+it is easy to see that an actual gerbe must underlie such connections. the point is that
+torsion elements of h n+2(x, z) contain physically relevant information, as was noted in, for
+example, [4].
+
+given that n-gerbes can be loosely interpreted as one generalization of line bundles, the
+reader may wonder if there is some gerbe-analogue of the holonomy of a at u(1) connection.
+indeed, it is possible to dene the holonomy of a at n-gerbe-connection, though we shall
+not do so here. such holonomies have been observed in physics previously; one example is
+[28].
+
+as mentioned earlier, gerbes are often described in terms of sheaves of categories. there
+is a corresponding notion of connection in such a description, which we have summarized in
+[9] and can also be found in [19, section 5.3].
+
+3.4 gauge transformations of gerbes
+
+for principal u(1)-bundles there is a well-dened notion of gauge transformation: a gauge
+transformation is dened by a map f : x  u(1). what is the analogue for n-gerbes?
+
+we shall begin by describing gauge transformations for 1-gerbes. it can be shown that
+the analogue of a gauge transformation for a 1-gerbe is given by a principal u(1)-bundle, and
+a gauge transformation of a 1-gerbe with connection is dened by a principal u(1)-bundle
+with connection. (strictly speaking, an equivalence class of principal u(1)-bundles, but we
+shall defer such technicalities to later discussions.) a rigorous derivation of this fact and
+related material is given in [9]. we shall describe the implications of this fact for connections
+on 1-gerbes, and for transition functions.
+
+intuitively, how does a principal u(1)-bundle act on a 1-gerbe? very roughly, the general
+idea is that given a bundle with connection a, under a gauge transformation the b eld
+will transform as b 7 b + da. (at the same level, we can see that only equivalence classes
+of bundles with connection are relevant. if a and a dier by a gauge transformation (of
+bundles), then da = da, and so they dene the same action on b.) in terms of sheaves
+of categories, a 1-gerbe is locally a category of all principal u(1)-bundles, so given any one
+object in that category, we can tensor with a principal u(1)-bundle to recover another object.
+this is essentially the action, in somewhat loose language.
+
+to properly describe how a principal u(1)-bundle acts on a 1-gerbe requires understand-
+ing 1-gerbes in terms of sheaves of categories. the reader might well ask, however, how a
+bundle acts on the transition functions for a 1-gerbe? we described transition functions for
+1-gerbes by associating principal u(1) bundles to intersections u, together with an explicit
+trivialization of cech coboundaries. the reader should (correctly) guess that a gauge trans-
+formation of a 1-gerbe, at the level of transition functions, should be a gauge transformation
+
+23
+
+of the bundle on each coordinate overlap, such that the gauge transformations preserve the
+trivializations on triple intersections. in other words, a gauge transformation of a 1-gerbe
+should be a set of maps g : u  u(1), subject to the condition that g = 1. put more
+simply still, a gauge transformation of a 1-gerbe is precisely a principal u(1)-bundle. note
+that as expected by analogy with bundles, the transition functions are invariant (the bundles
+on coordinate overlaps are unchanged by gauge transformations). note that by analogy with
+bundles, one should expect a gauge transformation to leave transition functions invariant 
+and indeed, our 1-gerbe gauge transformation does leave the transition functions invariant,
+as a gauge transformation of each bundle is an automorphism of the bundle.
+
+how does a gauge transformation of a 1-gerbe act on a connection on the 1-gerbe?
+principal bundles have well-dened actions on gerbes; a unique specication of the action
+of a principal u(1)-bundle, call it p , on a gerbe connection is equivalent to a choice of
+connection on p . let {h : u  u(1)} be transition functions for p , and {a} a set
+of 1-forms on elements of the cover {u} dening a connection on p . let (b, a, g)
+be a set of data dening a connection on a 1-gerbe. then under the action of p , this data
+transforms as follows:
+
+b 7 b   b + da
+a
+g
+
+7 a  a + d ln h
+7 g + h
+
+= g
+
+more generally, the reader should correctly guess that a gauge transformation of an n-
+
+gerbe is an (n  1)-gerbe. we shall not attempt to justify this statement here, however.
+
+3.5 gerbes versus k theory
+
+it has recently been claimed that the ramond-ramond tensor eld potentials of type ii
+theories can be understood in terms of k theory, so we feel we should take a moment to
+justify our assumption of a gerbe description of certain elds.
+
+in this paper, when we discuss discrete torsion, we have in mind the ns two-form eld
+potential of type ii theories, and we implicitly assume that the other tensor eld potentials
+have vanishing vacuum expectation value, to assure that the curvature of the b eld is a
+closed form. in these circumstances, the b eld is well-described as a connection on a gerbe.
+
+however, in general terms the basic ideas presented in this paper should also hold more
+generally. at some level, the point of this paper is that in any theory containing elds
+with gauge invariances, specifying the orbifold group action on the base space does not
+suce to dene the action of the orbifold group on the theory, because the orbifold group
+
+24
+
+action can always be combined with gauge transformations. to properly understand possible
+equivariant structures (equivalently, orbifold group actions) on tensor eld potentials not
+described as gerbes involves certain technical distinctions, but the basic point is the same.
+
+3.6 why gerbes?
+
+so far we have presented gerbes as being a natural mathematical structure for which many
+of the tensor eld potentials of supergravities can be understood as connections. a doubting
+thomas might argue, are gerbes really necessary? after all, in supergravity theories, we only
+see the tensor elds themselves; why not only speak of tensor elds on coordinate charts,
+and forget about more abstract underlying structures?
+
+we shall answer this question with another question: why bundles? whenever one
+sees a vector eld with the usual gauge invariances, it is commonplace to associate it with
+some bundle. one can ask, why? in supergravity and gauge theories containing vector
+elds, one does not see a bundle, only a set of vector elds on coordinate charts. bundles
+(formulated as topological spaces) describe auxiliary spaces  bers  which are bered over
+spacetime, but these auxiliary structures are neither seen nor detected in physics. there are
+no extra dimensions in the theory corresponding to the ber of a ber bundle, so why work
+with bundles at all? since using bundles means invoking physically meaningless auxiliary
+structures, why not just ignore bundles and only work with vector elds on coordinate
+patches?
+
+part of the reason people speak of bundles and not just vector elds on coordinate patches
+is that bundles give an insightful, elegant way of thinking about vector elds on coordinate
+patches. for example, recent discussions of brane charges in terms of k-theory [31, 32] would
+have been far more obscure if the notion of bundles was not commonly accepted.
+
+similarly, the notion of a gerbe gives an insightful and elegant structure in which to un-
+derstand many of the tensor eld potentials appearing in supergravity theories. in principle,
+one could understand tensor elds without thinking about gerbes, in the same way that one
+can understand vector elds without thinking about bundles. however, just as bundles give
+an insightful and useful way to think about vector elds, so gerbes give an insightful and
+useful way to think about tensor elds.
+
+a slightly more subtle question that could be asked is the following.
+
+in [9], we shall
+describe 1-gerbes in terms of sheaves of categories; however, this description is not unique
+ gerbes can be described in several dierent ways. if one should work with gerbes, which
+description is relevant?
+
+a closely analogous problem arises in dealing with bundles. a bundle has multiple de-
+scriptions  as a topological space, or a special kind of sheaf, for example. connections on
+
+25
+
+bundles can be described in terms of vector elds, or, in special circumstances, as holomor-
+phic structures on certain topological spaces. the correct description one should use varies
+depending upon the application and ones personal taste. similarly, which description of
+gerbes is relevant varies depending upon both the application and personal inclination.
+
+4 discrete torsion
+
+in dening orbifolds, it is well-known that the riemannian space being orbifolded must
+have a well-dened action of the orbifold group . however, after our discussion of gerbes,
+the reader should suspect that something has been omitted from standard discussions of
+orbifolds in string theory. namely, if we understand some of the tensor elds appearing
+in type ii supergravities in terms of connections on gerbes, then we must also specify the
+precise -action on the gerbes. this action need not be trivial, and (to our knowledge) has
+been completely neglected in previous discussions of type ii orbifolds.
+
+we shall nd that the set of actions of an orbifold group  on a 1-gerbe is naturally acted
+upon by a group which includes h 2(, u(1)), just as the set of orbifold group actions on a
+principal u(1)-bundle with connection is naturally acted upon by h 1(, u(1)). in special
+cases, such as trivial gerbes for example, there will be a canonical orbifold group action, and
+in such cases we can identify the set of orbifold group actions is identied with a group. the
+possible equivariant structures (meaning, the possible orbifold group actions) correspond to
+analogues of orbifold wilson lines for b-elds, in the same way that equivariant structures
+on a principal u(1)-bundle with connection correspond to orbifold wilson lines.
+
+it is natural to speculate that the action of an orbifold group  on an n-gerbe is described
+by a group including h n+1(, u(1)), in a fashion analogous to the above. this can be checked
+for 2-gerbes in the same fashion as for 1-gerbes described in this paper, and we are presently
+studying this issue [30]. for gerbes of higher degree, a precise understanding in terms of
+sheaves of multicategories is not yet known, and so one can only make somewhat more
+limited remarks [30].
+
+4.1 basics of discrete torsion
+
+discrete torsion was originally discovered as an ambiguity in the choice of phases of dierent
+twisted sector contributions to partition functions of orbifold string theories. the possible
+inequivalent choices of phases are counted by elements of the group cohomology group17
+h 2(, u(1)), where  is the orbifold group. since its discovery, discrete torsion has been
+considered a rather mysterious quantity.
+
+17where the action of the group  on the coecients u (1) is trivial.
+
+26
+
+our description of discrete torsion essentially boils down to the observation that discrete
+torsion is the analogue of orbifold wilson lines for 2-form-elds rather than vectors. recall
+orbifold wilson lines could be described as a (discrete) ambiguity in lifting the orbifold action
+on a space to a bundle with connection. a similar ambiguity arises in lifting orbifold actions
+to gerbes with connection, and this ambiguity is partially measured by h 2(, u(1)) [9]. more
+precisely, in general the set of lifts of orbifold actions (in more technical language, the set
+of equivariant structures on a (1-)gerbe with connection) is (noncanonically) isomorphic to
+a group which includes h 2(, u(1)), viewed as a set rather than a group. in special cases,
+such as trivial gerbes, there exists a canonical isomorphism.
+
+just as for bundles, not all nontrivial gerbes admit lifts of orbifold group actions. we
+shall not attempt to study conditions under which a nontrivial gerbe admits such a lift;
+rather, we shall simply assume that lifts exist in all examples in this paper.
+
+how does this description of discrete torsion as an analogue of orbifold wilson lines mesh
+with the original denition in terms of distinct phases associated to twisted sectors of string
+partition functions? recall there are factors
+
+exp(cid:18)z b(cid:19)
+
+(7)
+
+in the partition function, contributing the holonomy of the b-eld. (we have used  to
+denote the embedding map  :   x of the worldsheet into spacetime.) because of these
+holonomy factors, distinct lifts of the orbifold action to the 1-gerbe with connection (i.e.,
+distinct equivariant structures on the 1-gerbe with connection) yield distinct phases in the
+twisted sectors of orbifold partition functions  we recover the original description of discrete
+torsion [1].
+
+put another way, we do not just derive some set of discrete degrees of freedom that
+happen coincidentally to also be measured by h 2(, u(1)); the discrete degrees of freedom
+we recover necessarily describe discrete torsion. the passage from lifts of orbifold actions to
+phase factors is provided by the partition function factors (7).
+
+in passing, we should mention that the phase factors (7) were the original reason that dis-
+crete torsion, viewed as a set of phases of twisted sector contributions to partition functions,
+was associated with b-elds at all [1]. in some sense, our description of discrete torsion is a
+natural outgrowth of some of the original ideas in [1].
+
+in passing, we should also briey speak to discrete torsion on d-branes as discussed in
+[5, 6].
+in those references, d-branes on orbifolds with discrete torsion were argued to be
+described by specifying a projective representation of the orbifold group on the bundle on
+the worldvolume. we believe (although we have not checked in total detail) that this can be
+derived from our description of discrete torsion, using the interconnection between b-eld
+backgrounds and bundles on worldvolumes of d-branes, as recently described in [35, section
+6].
+
+27
+
+it is one thing to classify possible lifts of orbifold actions to gerbes with connection; it is
+quite another to describe precisely the characteristic classes and holonomies of the resulting
+gerbe on the quotient space. in principle, both could be determined as for orbifold wilson
+lines:
+for a gerbe on a space x, with orbifold action , construct a gerbe on the space
+e  x, such that the projection to x/ yields the quotient gerbe, analogously to the
+program pursued in [13]. we shall not pursue this program here.
+
+suppose the (discrete) orbifold group  acting on x acts freely, i.e., without xed points.
+in section 2.1, we studied moduli spaces of at connections on quotient spaces, in order to
+gain insight into orbifold wilson lines. in particular, we argued that (for bundles admitting
+at connections) orbifold u(1) wilson lines could be understood directly in terms of extra
+elements of hom(1, u(1)) in the quotient space, for  a freely-acting discrete group.
+in
+other words, in this case orbifold wilson lines were precisely wilson lines on the quotient
+space. we shall perform analogous calculations here. (in the next few paragraphs we shall
+implicitly only consider at n-gerbes  but only for the purposes of performing illuminating
+calculations. we do not make such assumptions elsewhere.)
+
+for gerbes, the interpretation is slightly more obscure. first, note that in the case 
+acts freely, we have a principal  bundle   x  x/, so we can apply the long exact
+sequence for homotopy to nd that n(x) = n(x/) for n > 1 and  discrete. in other
+words, although the fundamental group of x/ received a contribution from , the higher
+homotopy groups of x/ are identical to those of x. thus, the higher-dimensional analogues
+of orbifold wilson lines (for at n-gerbes) can not correspond to extra elements of homotopy
+groups. we shall nd, rather, that the higher-dimensional analogues correspond to extra
+elements of
+
+homz ( hn(x/), u(1) )
+
+we shall now describe the homology of the quotient x/. one way to compute the
+homology of the quotient space x/ is as the limit of the cartan-leray spectral sequence
+[36, section vii.7]
+
+e2
+
+p,q = hp(, hq(x))
+
+(8)
+
+note that the group homology appearing in the denition above has the property that, in
+general,  acts nontrivially18 on the coecients hq(x), even if  acts freely on x.
+
+in special cases, the homology of x/ can be computed more directly. for example, for
+any path-connected space y , for any n > 1 such that r(y ) = 0 for all 1 < r < n, we have
+that [37, theorem ii] the following sequence is exact:
+
+0  n(y )  hn(y )  hn(1(y ), z)  0
+
+18an example should make this clear. let x be the disjoint union of 2 identical disks, and let  be a z2
+exchanging the two disks. then h0(x) = z2, and  exchanges the two z factors, i.e.,  acts nontrivially on
+h0(x).
+
+28
+
+where the group homology hn(1(y ), z) is dened by the group 1(y ) having trivial action
+on the coecients z. using the results above, we nd that for path-connected x such that
+r(x) = 0 for 1 < r < n for some n > 1, the following sequence is exact:
+
+0  n(x)  hn(x/)  hn(1(x/), z)  0
+
+in the special case that 1(x) = 0, we can rewrite this as
+
+0  n(x)  hn(x/)  hn(, z)  0
+
+moreover, using the hurewicz theorem, applying the functor homz(, u(1)), and using a
+relevant universal coecient theorem, we can rewrite the short exact sequence above as19
+
+0  h n(, u(1))  homz (hn(x/), u(1))  homz (hn(x), u(1))  0
+
+(technically we are also assuming that x/ is a path-connected space.)
+
+from the calculation above we can extract two important lessons. first, for n = 2, we
+see that (in special cases), the holonomy of a b-eld (of a at 1-gerbe) on the quotient x/,
+as measured by hom(h2(x/), u(1)), diers from the possible holonomies on the covering
+space by h 2(, u(1)), and so we can understand discrete torsion in such cases as being
+precisely the extra contribution to hom(h2(x), u(1)) on the quotient. (more generally, the
+precise relationship between group cohomology and holonomies of b-elds is described by
+the spectral sequence (8).)
+
+the second, and more basic, lesson we can extract from the calculation above is that
+it is quite reasonable to believe that there exist analogues of discrete torsion and orbifold
+wilson lines for the higher-ranking tensor elds appearing in supergravity theories, and that
+those analogues of discrete torsion should be measured by higher-degree group cohomology
+h n(, u(1)). we shall return to this point later. in this paper, we only derive20 discrete
+torsion for b-elds, and in so doing nd h 2(, u(1)). however, our general methods should
+apply equally well to higher-ranking tensor elds, and it is extremely tempting to conjecture
+that the analogue of discrete torsion for an n-gerbe is measured by h n+1(, u(1)).
+
+before we go on to outline how discrete torsion can be derived, we shall mention that
+in this paper, when speaking of an n-gerbe on a space x, we shall assume that x has (r)
+dimension at least n.
+
+19this result has been independently derived, using other methods, by p. aspinwall.
+20our derivation in [9] is not restricted to at 1-gerbes; the restriction to at 1-gerbes in the previous
+few paragraphs was for purposes of making illustrative calculations only. we should also mention that our
+derivation in [9] does not assume  is freely acting, or that it is abelian  our derivation holds equally well
+regardless.
+
+29
+
+4.2 equivariant gerbes
+
+in this section we shall try to give some intuitive understanding of the classication of
+equivariant structures on 1-gerbes, that is, the classication of lifts of the orbifold action to
+1-gerbes. more precisely, we shall study what equivariant structures on 1-gerbes mean at the
+level of transition functions for 1-gerbes. we shall not be able to rigorously derive results on
+equivariant gerbes in this fashion  such derivations are instead given in [9]. however, we
+hope that this approach should give the reader some intuitive understanding of our results,
+without requiring them to gain a detailed understanding of 1-gerbes in terms of stacks.
+
+let c denote a 1-gerbe on a space x, and let  denote a group acting on x by homeo-
+morphisms. let {u} be a good invariant cover of x  namely, a cover such that each u
+is invariant under  and each u is a disjoint union of contractible open sets. (for example,
+we can often obtain such a cover as the inverse image of a good cover on the quotient x/.)
+note that a good invariant cover is not usually a good cover.
+
+in order to dene c at the level of transition functions for the cover {u}, recall we need
+to specify a line bundle l on each overlap u  u  u, and an explicit trivialization
+ : u  u(1) of l  l  l on u.
+
+now, let us describe how one denes an equivariant structure on the 1-gerbe c at the level
+ g l
+of transition functions. first, we need g l
+denote a specic choice of isomorphism. since {u} is a good invariant cover of x, we can
+represent each g
+
+= l for all g  . let g
+
+ by a function g
+
+ : u  u(1).
+
+ : l
+
+note that the  necessarily now obey
+
+g  ( =   g ) =  g
+
+ g
+
+ g
+
+
+(9)
+
+before going on, we should pause to derive an implication of equation (9). let g
+
+g
+ denote a pair of maps (partially) dening equivariant structures on c. dene
+
+ and
+
+then the g
+
+ satisfy
+
+g
+ 
+
+g
+
+g
+
+
+g
+ g
+
+ g
+
+ = 1
+
+for all g  , and so dene transition functions for a bundle on x we shall denote tg.
+thus, even though we have not nished describing equivariant structures on the 1-gerbe c
+at the level of transition functions, we can already derive the fact that any two equivariant
+structures will dier by, among other things, a set of principal u(1)-bundles tg, one for each
+g  .
+
+30
+
+before we can claim to have dened an equivariant structure on the transition functions
+in particular, how do the  behave under
+
+for c, we need to ll in a few more details.
+composition of actions of elements of ? we shall demand that for any pair g1, g2  ,
+
+(g2
+
+) g 
+
+2(g1
+
+) = (g1g2
+
+ ) h(g1, g2) h(g1, g2)1
+
+
+(10)
+
+for some functions h(g1, g2) : u  u(1). we shall also demand that the functions h(g1, g2)
+satisfy
+
+h(g1, g2) h(g1g2, g3) = h(g2, g3) h(g1, g2g3)
+
+(11)
+
+these constraints probably seem relatively unnatural to the reader.
+in our discussion of
+equivariant gerbes in terms of stacks, we shall show how these constraints (or, rather, their
+more complete versions for stacks) are quite natural.
+
+we can attempt to rewrite equations (10) and (11) somewhat more invariantly in terms
+ is the local trivialization
+ : l  g l, then equation (10) states that
+
+of the line bundles l on overlaps u = u  u. recall that g
+representation of the bundle morphism g
+the two bundle morphisms
+
+(g 
+
+2g1
+
+)  g2
+
+ : l  (g1g2)l
+
+and
+
+g1g2
+
+
+: l  (g1g2)l
+
+are related by a gauge transformation on (g1g2)l dened by h(g1, g2)h(g1, g2)1
+
+ , i.e.,
+
+(g 
+
+2g1
+
+)  g2
+
+ =   g1g2
+
+
+
+where  : (g1g2)l  (g1g2)l is the gauge transformation dened by the function
+h(g1, g2)h(g1, g2)1
+
+ on u.
+
+given two distinct equivariant structures on the same transition functions, labelled by
+
+,  and h, h, if we dene functions
+
+(g1, g2) 
+
+h(g1, g2)
+h(g1, g2)
+
+then from equation (10) we have the relation
+
+(g2
+
+) g 
+
+2(g1
+
+) = (g1g2
+
+ ) (g1, g2) (g1, g2)1
+
+
+(12)
+
+the functions (g1, g2) dene local trivialization realizations of isomorphisms of princi-
+pal u(1)-bundles. we denote these bundle isomorphisms by g1,g2, and so we can rewrite
+equation (12) more invariantly as the denition of g1,g2:
+
+g1,g2 : tg1g2
+
+ tg2  g 
+
+2tg1
+
+31
+
+furthermore, from equation (11) we see that the bundles tg and isomorphisms g1,g2 are
+
+further related by
+
+tg1g2g3
+
+g1,g2 g3 
+tg2g3  (g2g3)tg1
+
+g1g2 ,g3
+
+tg3  g 
+
+3tg1g2
+ g1 ,g2
+3(tg2  g 
+
+g2 ,g3 tg3  g 
+
+2tg1)
+
+(13)
+
+so far we have argued that the dierence between two equivariant structures on a 1-
+gerbe is determined by the data (tg, g1,g2), where the  are required to make diagram (13)
+commute. however, it should also be said that the bundles tg are only determined up to
+g, we can replace
+isomorphism. given a set of principal bundle isomorphisms g : tg  t 
+
+the data (tg, g1,g2) by the data (cid:16)t 
+
+dierence between equivariant structures.
+
+g, g1g2  g1,g2  (g2  g 
+
+2g1)1(cid:17) and describe the same
+
+4.3 equivariant gerbes with connection
+
+to properly derive the classication of equivariant gerbes with connection at the level of
+transition functions is rather messy and not very illuminating, so instead we shall settle
+for outlining the main points. (a complete derivation, in terms of gerbes as stacks, can be
+found in [9], and a complete derivation at the level of transition functions, as well as related
+information, will appear in [10].)
+
+in the previous section, we argued that any two equivariant structures on a (1-)gerbe
+dier by a set of principal u(1) bundles tg (g  ), together with appropriate bundle
+isomorphisms g1,g2, such that diagram (13) commutes, modulo isomorphisms of bundles.
+
+a gauge transformation of a gerbe with connection is dened by a principal u(1)-bundle
+with connection, so the reader should not be surprised to hear that the dierence between two
+equivariant structures on a 1-gerbe with connection is dened by bundles tg with connection,
+together with connection-preserving maps g1,g2 such that diagram (13) commutes. also, the
+connections on the bundles tg are constrained to be at.
+
+note that this structure is closely analogous to the discussion of orbifold u(1) wilson
+lines. in both cases, we nd that the dierence between two equivariant structures is deter-
+mined by a set of gauge transformations, such that the gauge transformation associated to
+the product g1g2 is isomorphic to the product of the gauge transformations associated to g1
+and g2. the constraint for bundles that the gauge transformations be constant becomes the
+present constraint that the gerbe gauge transformations dened by bundles with connection,
+must have a at connection.
+
+just as before, the bundles tg are only dened up to equivalence. we can replace any of
+the bundles tg with connection with an isomorphic bundle with connection (changing g1,g2
+appropriately), and describe the same dierence between equivariant structures.
+
+32
+
+where does h 2(, u(1)) appear in this structure? assume for simplicity that x is con-
+nected. take all the bundles tg to be topologically trivial, with gauge-trivial connections.
+then, by replacing these bundles with isomorphic bundles, we can assume without loss of
+generality that each bundle tg is the canonical trivial bundle, with identically zero connec-
+tion. the morphisms g1,g2 are now gauge transformations of the canonical trivial bundle,
+and since they must preserve the connection, they must be constant maps. from commutivity
+of diagram (13), it is clear that any set of g1,g2 denes a cocycle representative of an element
+of h 2(, u(1)) (with trivial action of  on the coecients u(1)), in the inhomogeneous rep-
+resentation. now, we still can act on any of the tg by constant gauge transformations to get
+isomorphic equivariant structures, and it is easy to see that these dene group coboundaries.
+
+now, in general not every set of data (tg, g1,g2) corresponds to topologically-trivial tg
+with gauge-trivial connection  the tg are only constrained to be at, so it is not dicult
+to nd new degrees of freedom that do not correspond to elements of h 2(, u(1)). we shall
+discuss these further in [10].
+
+in special cases, such as trivial gerbes, there exist canonical trivial equivariant struc-
+tures, and so elements of the group h 2(, u(1)) can be identied with (some of) the equiv-
+ariant structures. more generally, the identication of (some) equivariant structures with
+h 2(, u(1)) is not canonical21.
+
+4.4 analogues of discrete torsion
+
+so far in this paper we have outlined how orbifold wilson lines and discrete torsion both
+appear as an ambiguity in the choice of orbifold group action on some tensor eld potential.
+although we have only concerned ourselves with vector elds and ns-ns b elds, in principle
+analogous ambiguity exists for every tensor eld potential appearing in string theory.
+
+put another way, in general whenever one has a theory containing elds with gauge
+invariances, specifying an orbifold group action on the base space does not suce to dene
+the orbifold group action on the elds of the theory, as one can combine any orbifold group
+action with gauge transformations.
+
+for example, the other rr tensor eld potentials of type ii theories should also have
+analogues of discrete torsion, given as the ambiguity in the choice of orbifold group action
+on the elds.
+it has recently been pointed out that these elds should be understood in
+terms of k-theory, so given some cheeger-simons-type description of k-theory, one should
+be able to calculate the analogues of discrete torsion for these other elds.
+
+what might analogues of discrete torsion be for other tensor eld potentials? there is
+an obvious conjecture. for vector elds, we found that the set of equivariant structures is
+
+21technically, in general the set of equivariant structures on a gerbe with connection is merely a torsor.
+
+33
+
+a torsor under the group h 1(, u(1)). for b elds, we found that the set of equivariant
+structures is a torsor under a group which includes h 2(, u(1)). therefore, for a rank p
+tensor eld potential, it is tempting to conjecture that the set of equivariant structures is a
+torsor under some group which includes h p(, u(1)). we are presently studying this matter
+[30].
+
+the reader might well ask how such degrees of freedom could be seen in perturbative
+string theory. orbifold wilson lines and discrete torsion both crop up unavoidably; but how
+could one turn on analogues for rr elds? the answer surely lies in the description of rr
+eld backgrounds in perturbative string theory. judging from the results in, for example,
+[38, 39, 40, 41, 42], it seems reasonable to assume that one can understand ramond-ramond
+backgrounds in conformal eld theory after coupling to the superconformal ghosts, so in
+principle analogues of discrete torsion for rr elds in conformal eld theory might emerge
+when considering orbifolds of such backgrounds. unfortunately, it might also be true that
+the rr analogues of discrete torsion are simply not visible in string perturbation theory.
+
+it is quite possible that there may also be certain analogues of modular invariance con-
+ditions for these analogues of discrete torsion. we have only discussed gerbes in isolation,
+whereas in type ii theories, the gerbes interact with one another (and so cannot really be
+understood as gerbes). it is quite conceivable that, in order for any given orbifold to dene
+a symmetry of the full physical theory, there are nontrivial constraints among analogues of
+discrete torsion for various gerbes. we have nothing particularly concrete to say on this
+matter, though we hope to return to it in [30].
+
+it is not clear, however, whether all analogues of modular invariance conditions can be
+described in this fashion. for example, in [43] it was argued that there existed a constraint
+on orbifold wilson lines associated to the iia rr 1-form, arising nonperturbatively. (we
+are referring to the so-called black hole level matching of that reference.) unfortunately
+we are not able to address the existence and interpretation of such constraints.
+
+5 conclusions
+
+in this paper we have given a geometric description of discrete torsion, as a precise analogue
+of orbifold wilson lines. put another way, we have described discrete torsion as orbifold
+wilson surfaces. after giving a mathematically precise discussion of orbifold wilson lines,
+we outlined how the classication of orbifold wilson lines (as equivariant structures on
+bundles with connection) could be extended to discrete torsion (as equivariant structures
+on 1-gerbes with connection). although we outlined how this result on discrete torsion was
+proven, we have deferred a rigorous examination to [9].
+
+34
+
+6 acknowledgements
+
+we would like to thank p. aspinwall, d. freed, a. knutson, d. morrison, and r. plesser for
+useful conversations, and e. silverstein for pointing out reference [13]. we would also like
+to thank j. stashe for extremely extensive comments on the rst version of this paper, and
+we would like to apologize for taking so long to implement his suggestions.
+
+a review of group cohomology
+
+for a complete technical overview of group cohomology, the standard reference is [36]. for
+much shorter and more accessible accounts, we recommend [45, section iv.4] and [46].
+
+let g and m be groups, m abelian, with a (possibly trivial) action of g on m by group
+automorphisms. we shall assume that the action of g commutes with the group operation
+of m on itself.
+
+dene c n(g, m) to be the set of all maps
+
+ : g      g = gn+1  m
+
+such that (gg0, gg1,    , ggn) = g(g0, g1,    , gn) for all g, gi  g. (this representation of
+the cochains is known as a homogeneous representation, because of the obvious analogy with
+projective spaces.)
+
+dene a coboundary operator  : c n(g, m)  c n+1(g, m) by
+
+()(g0,    , gn+1) =
+
+n+1xk=0
+
+()k(g0,    , gk,    , gn+1)
+
+note that 2 = 1.
+
+dene z n(g, m) to be the set of cocycles, that is,   ker   c n(g, m). dene
+bn(g, m) to be the set of coboundaries, that is,   im   c n(g, m). then dene the
+group cohomology to be h n(g, m) = z n(g, m)/bn(g, m).
+
+there is an alternative presentation of group cohomology, which can be dened as follows.
+given a cochain   c n(g, m), which is to say, a map gn+1  m, dene a map  : gn  m
+as,
+
+(g1, g2,    , gn) = (e, g1, g1g2, g1g2g3,    , g1g2    gn)
+
+this is known as an inhomogeneous representation, that is, these are called inhomogeneous
+cochains. it is then easy to demonstrate that
+
+()(g1, g2,    , gn+1) = g1(g2,    , gn+1)
+
+35
+
++
+
+nxk=1
+
+()k(g1, g2,    , gkgk+1,    , gn+1)
+
++ ()n+1(g1, g2,    , gn)
+
+in the group cohomology appearing in this paper, and to our knowledge in the physics
+literature to date22, we always assume that the action of the group on the coecients is
+trivial.
+
+when the action of g on m is assumed trivial, if  : g  m is a homogeneous 0-cochain,
+then it is easy to check that  is constant. from the denitions of coboundaries for homoge-
+neous and inhomogeneous cochains, it is easy to derive that the associated inhomogeneous
+0-cochain  must always be the identity of m. to repeat, if  is an inhomogeneous 0-cochain,
+then  = 1  m.
+
+as a consequence, for trivial action of g on m, we have that h 1(g, m) = z 1(g, m),
+
+that is, h 1(g, m) is precisely the set of group homomorphisms g  m.
+
+for group 2-cochains (dened with trivial group action on the coecients), there is
+a gauge choice that is often used. from manipulating the group 2-cocycle condition (in
+inhomogeneous representation), it is easy to check that (1, g) = (g, 1) = (1, 1) for any
+g. for convenience, one often sets (1, 1) = 1 (just pick a group coboundary conveniently).
+then, in this gauge, (1, g) = (g, 1) = 1 for all g. one is still free to add any group
+coboundary in this gauge, modulo the constraint that if (g) denes a group coboundary,
+one needs (1) = 1 in order to stay in the gauge.
+
+in passing, we shall mention that more formally, for any g-module m, we can dene
+
+group cohomology as
+
+h n(g, m)  extn
+
+z[g](z, m)
+
+where z[g] is the free z-module generated by the elements of g. in other words, any element
+of z[g] can be written uniquely in the form
+
+xgg
+
+a(g)g
+
+where a(g)  z. this denition of group cohomology does not make any assumptions
+concerning the nature of the g-action on m.
+
+in addition to group cohomology, one can also dene group homology in a very similar
+manner, though we shall not do so here. for the case of group homology and cohomology
+dened by groups with trivial actions on the coecients, there exist precise analogues of
+the usual universal coecient theorems for homology and cohomology [36, exercise iii.1.3].
+there is also a kunneth formula [36, section v.5].
+
+22for example, experts should note that it is this latter, inhomogeneous form, restricted to the special
+
+case that the action of g on m is trivial, which appears in [46].
+
+36
+
+for reference, we shall now list some commonly used group homology and cohomology
+groups. first, the homology groups hi(zn, z), where the group zn acts trivially on the
+coecients z, are given by
+
+the cohomology groups h i(zn, u(1)), where the group zn acts trivially on the coecients
+u(1), are given by
+
+hi(zn, z) = 
+
+h i(zn, u(1)) = 
+
+
+z i = 0
+i odd
+zn
+i even, i > 0
+0
+
+u(1)
+zn
+0
+
+i = 0
+i odd
+i even, i > 0
+
+from the kunneth formula [36, section v.5], we nd that the homology groups hi(zn 
+
+zm, z), where the group acts trivially on the coecients z, are given by
+
+hi(zn  zm, z) = 
+
+
+in other words,
+
+z
+
+zn  zm l(i1)/2 torz
+li/2 (zn z zm)
+
+1 (zn, zm)
+
+i = 0
+i odd
+i even, i > 0
+
+h0(zn  zm, z) = z
+h1(zn  zm, z) = zn  zm
+h2(zn  zm, z) = (zn z zm)
+h3(zn  zm, z) = zn  zm  torz
+h4(zn  zm, z) = (zn z zm)  (zn z zm)
+
+1 (zn, zm)
+
+and so forth.
+
+using the identities
+
+zn z zm = zgcd(n,m)
+1 (zn, zm) = zgcd(n,m)
+
+torz
+
+and the appropriate universal coecient theorem, one can compute the cohomology groups
+h i(zn  zm, u(1)), where the group zn  zm is assumed to act trivially on the coecients
+u(1):
+
+h i(zn  zm, u(1)) = 
+
+
+u(1)
+
+zn  zm l(i1)/2 zgcd(n,m)
+li/2 zgcd (n,m)
+
+i = 0
+i odd
+i even, i > 0
+
+37
+
+in other words,
+
+h 0(zn  zm, u(1)) = u(1)
+h 1(zn  zm, u(1)) = zn  zm
+h 2(zn  zm, u(1)) = zgcd(n,m)
+h 3(zn  zm, u(1)) = zn  zm  zgcd(n,m)
+h 4(zn  zm, u(1)) = zgcd(n,m)  zgcd(n,m)
+
+and so forth. note that we have used the notation  and  in this subsection interchangeably.
+
+references
+
+[1] c. vafa, modular invariance and discrete torsion on orbifolds, nucl. phys. b273
+
+(1986) 592-606.
+
+[2] c. vafa and e. witten, on orbifolds with discrete torsion, j. geom. phys. 15 (1995)
+
+189-214, hep-th/9409188.
+
+[3] p. aspinwall, d. morrison, and m. gross, stable singularities in string theory, comm.
+
+math. phys. 178 (1996) 115-134, hep-th/9503208.
+
+[4] e. witten, baryons and branes in anti de sitter space, jhep 9807 (1998) 006,
+
+hep-th/9805112.
+
+[5] m. douglas, d-branes and discrete torsion, hep-th/9807235.
+
+[6] m. douglas and b. fiol, d-branes and discrete torsion ii, hep-th/9903031.
+
+[7] n. hitchin, lectures on special lagrangian submanifolds, math.dg/9907034, and lec-
+tures given at the harvard winter school on vector bundles, lagrangian submanifolds,
+and mirror symmetry, january 1999.
+
+[8] d. chatterjee, on the construction of abelian gerbs, ph.d. thesis, cambridge uni-
+
+versity, 1998.
+
+[9] e. sharpe, discrete torsion and gerbes ii, hep-th/9909120.
+
+[10] e. sharpe, discrete torsion, to appear.
+
+[11] p. j. hilton and u. stammbach, a course in homological algebra, springer-verlag,
+
+new york, 1971.
+
+[12] l. dixon, symmetry breaking in string theories via orbifolds, ph.d. thesis, princeton
+
+university, 1986.
+
+38
+
+[13] d. freed and c. vafa, global anomalies on orbifolds, comm. math. phys. 110 (1987)
+
+349-389; erratum ibid. comm. math. phys. 117 (1988) 349-351.
+
+[14] b. greene, c. lazaroiu, and p. yi, d-particles on t 4/zn orbifolds and their resolu-
+
+tion, nucl. phys. b539 (1999) 135-165, hep-th/9807040.
+
+[15] i. satake, the gauss-bonnet theorem for v-manifolds, j. math. soc. japan 9 (1957)
+
+464-492.
+
+[16] t. kawasaki, the index of elliptic operators over v-manifolds, nagoya math. j. 84
+
+(1981) 135-157.
+
+[17] j. j. duistermmat, the heat kernel lefschetz fixed point formula for the spin-c
+dirac operator, progress in nonlinear dierential equations and their applications
+18, birkhauser, boston, 1996.
+
+[18] m. artin and j.-l. verdier, reexive modules over rational double points, math.
+
+ann. 270 (1985) 79-82.
+
+[19] j. l. brylinski, loop spaces, characteristic classes and geometric quantization,
+
+birkhauser, boston, 1993.
+
+[20] v. guillemin and s. sternberg, geometric asymptotics, math. surveys 14, american
+
+mathematical society, providence, rhode island, 1977.
+
+[21] d. martin, manifold theory, ellis horwood, new york, 1991.
+
+[22] y. choquet-bruhat, c. dewitt-morette, and m. dillard-bleick, analysis, manifolds,
+
+and physics: part i, north-holland, amsterdam, 1977.
+
+[23] b. kostant, quantization and unitary representations, pp. 87-208 of lectures in
+modern analysis and applications iii, r. m. dudley et al, lecture notes in math.
+170, springer-verlag, berlin, 1970.
+
+[24] a. grothendieck, sur quelques points dalg`ebre homologique, tohoku math. j. 9
+
+(1957) 119-221.
+
+[25] j. packer, i. raeburn, and d. williams, the equivariant brauer group of principal
+
+bundles, j. operator theory 36 (1996) 73-105.
+
+[26] i. raeburn and d. williams, dixmier-douady classes of dynamical systems and
+
+crossed products, can. j. math. 45 (1993) 1032-1066.
+
+[27] d. freed, j. harvey, r. minasian, and g. moore, gravitational anomaly can-
+cellation for m-theory fivebranes, adv. theor. math. phys. 2 (1998) 601-618,
+hep-th/9803205.
+
+39
+
+[28] o. j. ganor, six-dimensional tensionless strings in the large n limit, nucl. phys.
+
+b489 (1997) 95-121, hep-th/9605201.
+
+[29] d. husemoller, fibre bundles, third edition, springer-verlag, new york, 1966, 1994.
+
+[30] e. sharpe, work in progress.
+
+[31] r. minasian and g. moore, k theory and ramond-ramond charge, jhep 9711
+
+(1997) 002, hep-th/9710230.
+
+[32] e. witten, d-branes and k theory, jhep 9812 (1998) 019, hep-th/9810188.
+
+[33] j. harvey, magnetic monopoles, duality, and supersymmetry, hep-th/9603086.
+
+[34] c. hull and p. townsend, unity of superstring dualities, nucl. phys. b438 (1995)
+
+109-137, hep-th/9410167.
+
+[35] d. freed and e. witten, anomalies in string theory with d-branes, hep-th/9907189.
+
+[36] k. brown, cohomology of groups, springer-verlag, new york, 1982.
+
+[37] s. eilenberg and s. mac lane, relations between homology and homotopy groups of
+
+spaces, ann. math. 46 (1945) 480-509.
+
+[38] n. berkovits, c. vafa, and e. witten, conformal eld theory of ads background with
+
+ramond-ramond ux, jhep 9903 (1999) 018, hep-th/9902098.
+
+[39] d. berenstein and r. leigh, superstring perturbation theory and ramond-ramond
+
+backgrounds, hep-th/9904104.
+
+[40] j. de boer and s. shatashvili, two-dimensional conformal eld theories on ads2d+1
+
+backgrounds, hep-th/9905032.
+
+[41] n. berkovits, m. bershadsky, t. hauer, s. zhukov, and b. zweibach, superstring
+
+theory on ads2  s2 as a supersymmetric coset, hep-th/9907200.
+
+[42] n. berkovits, quantization of the type ii superstring in a curved six-dimensional
+
+background, hep-th/9908041.
+
+[43] s. ferrara, j. harvey, a. strominger, and c. vafa, second-quantized mirror symme-
+
+try, phys. lett. b361 (1995) 59-65, hep-th/9505162.
+
+[44] m. douglas, enhanced gauge symmetry in m(atrix) theory, jhep 9707 (1997) 004,
+
+hep-th/9612126.
+
+[45] y. choquet-bruhat and c. dewitt-morette, analysis, manifolds, and physics: part
+
+ii, north-holland, amsterdam, 1989.
+
+[46] r. dijkgraaf and e. witten, topological gauge theories and group cohomology,
+
+comm. math. phys. 129 (1990) 393-429.
+
+40
+
+

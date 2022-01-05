@@ -1,0 +1,741 @@
+0
+0
+0
+2
+
+ 
+r
+a
+
+m
+8
+
+ 
+
+ 
+ 
+
+2
+v
+0
+7
+1
+2
+1
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+on the antipode of kreimers hopf algebra
+
+hector figueroa
+
+department of mathematics, universidad de costa rica, 2060 san jose, costa rica
+
+jose m. graciabonda
+
+department of physics, universidad de costa rica, 2060 san jose, costa rica
+
+we give a new formula for the antipode of the algebra of rooted trees, directly in terms of the
+bialgebra structure. the equivalence, proved in this paper, among the three available formulae
+for the antipode, reects the equivalence among the bogoliubovparasiukhepp, zimmermann,
+and dysonsalam renormalization schemes.
+
+keywords: antipode, rooted tree, renormalization.
+
+1. introduction
+
+more than two years ago, kreimer [9] discovered that there is a hopf algebra struc-
+ture encoding zimmermanns forest formula [14] in perturbative renormalization theory.
+shortly afterwards, an essential coincidence was found between kreimers algebra and the
+hopf algebras introduced by connes and moscovici in connection with the index problem
+for k-cycles on foliations [5].
+
+a unied treatment in terms of the algebra of rooted trees hr was developed in [2]:
+there to each (supercially divergent) feynman diagram a sum of rooted trees is assigned;
+the assignment is straightforward when the diagram contains only disjoint or nested subdi-
+vergences (as it then leads to a single tree), but it does not work smoothly for overlapping
+divergences [13].
+
+the central role in the application of kreimerconnesmoscovici algebras is played
+by the antipode. in [2] two equivalent denitions of the antipode in hr were given, rep-
+resenting respectively in the framework of the algebra of rooted trees the recursive
+bogoliubovparasiukhepp procedure for renormalizing feynman integrals with subdiver-
+gences, and zimmermanns forest formula which solves that recursion; that indeed they
+correspond to the antipode of the hopf algebra of rooted trees is implied rather than
+proven.
+
+here we construct the antipode for hr, giving a new formula for computing it in terms
+of the coproduct; and then we show its equivalence to each of the formulae by connes and
+kreimer. it turns out that this new formula corresponds to the dysonsalam procedure
+for renormalization.
+
+2. the antipode of the hopf algebra of rooted trees
+
+to establish the notation, we briey recall some basic facts concerning the antipode
+
+of a hopf algebra (consult [1,6,8,12] for proofs), and then the algebra of rooted trees.
+
+given a unital algebra (a, m, u) and a counital coalgebra (c, , ) over a eld f, the
+convolution of two elements f, g of the vector space of f-linear maps hom(c, a) is dened
+as the map f  g  hom(c, a) given by the composition
+
+ c  c
+
+c
+
+f g
+ a  a
+
+m a.
+
+1
+
+this product turns hom(c, a) into a unital algebra, where the unit is the map u  . in
+this paper f is the eld of real numbers r.
+
+a bialgebra h = (a, m, u, , ) in which the identity map idh is invertible under
+convolution is a hopf algebra, and its (necessarily unique) convolution inverse s is called
+the antipode. the property idh s = s  idh = u   boils down to the commutativity of
+the diagram:
+
+h  h
+
+o
+
+h
+
+ /
+
+/ h  h
+
+id s
+
+u
+
+sid
+
+m /
+
+/ h
+
+mo
+
+h  h.
+
+h  h
+j  a
+
+j , then
+
+(2.1)
+
+(2.2)
+
+in particular, if (a) = pj a
+and likewise (a)1h = pj s(a
+
+j)a
+j .
+
+(a)1h = u  (a) = m  (id s)  (a) = pj a
+
+js(a
+
+j ),
+
+the antipode is always a unital algebra and a counital coalgebra antihomomorphism.
+when h is either commutative or cocommutative, s2 = id; in particular, s is bijective in
+such cases. another important property is that a bialgebra morphism : h  h  between
+hopf algebras is automatically compatible with the antipodes:   s = s   [7,12].
+
+a rooted tree is a nite set of points, called vertices, joined by oriented lines that do
+not intersect, so that all the vertices have exactly one incoming line, except the root which
+has only outgoing lines. in particular, there is a unique branch that joins the root with
+any other vertex. one actually works with isomorphic classes of trees. two rooted trees
+are isomorphic if the number of vertices with given length and fertility is the same for all
+possible choices of lengths and fertilities, where the fertility of a vertex is the number of
+its outgoing lines and its length is the number of lines that make up the unique branch
+joining it to the root.
+
+for concrete examples, it will be convenient to have a list of a few isomorphic classes
+
+of rooted trees, say with four vertices or fewer:
+
+ t1
+
+t2
+
+
+
+
+
+t31
+
+
+
+
+
+
+
+t32
+
+
+9999
+
+
+
+
+t41
+
+
+
+
+
+
+
+
+
+t42
+
+
+9999
+
+
+
+
+
+
+t43
+
+
+9999
+ 
+
+
+
+
+
+t44
+
+
+9999
+
+
+
+
+a simple cut c of a tree t is a subset of its lines such that the path from the branch to
+any other vertex includes at most one line of c. deleting the cut branches produces several
+subtrees; the component containing the original root (the trunk) is denoted rc(t ). the
+remaining branches also form rooted trees, where in each case the new root is the vertex
+immediately below the deleted line; pc(t ) denotes the set of these pruned branches. here,
+for instance, are the possible simple cuts of t42:
+
+
+9999
+
+
+
+
+
+
+
+
+9999
+
+
+
+
+
+
+
+9999
+
+
+
+
+
+
+
+2
+
+
+9999
+
+
+
+
+
+
+
+
+9999
+
+
+
+
+
+
+
+
+
+
+o
+
+
+o
+o
+o
+the set of nontrivial simple cuts of a tree t will be denoted by c(t ); we consider also
+
+the empty cut c = , for which r(t ) = t and p(t ) = .
+
+the algebra of rooted trees hr is the commutative algebra generated by symbols t ,
+one for each isomorphism class of rooted trees, plus a unit 1 corresponding to the empty
+tree; the product of trees is written as the juxtaposition of their symbols. the counit
+ : hr  r is the linear map dened by (1) := 1r and (t1t2 . . . tn) = 0 if t1, . . . , tn
+are trees. kreimer dened a map : hr  hr  hr on the generators, extending it as
+an algebra homomorphism, as follows:
+
+1 := 1  1; t := t  1 + 1  t + xcc(t )
+
+pc(t )  rc(t ).
+
+(2.3)
+
+notice that pc(t ) is the product of the several subtrees pruned by the cut c. for instance,
+
+(t1) = t1  1 + 1  t1,
+(t2) = t2  1 + 1  t2 + t1  t1,
+(t31) = t31  1 + 1  t31 + t2  t1 + t1  t2,
+(t32) = t32  1 + 1  t32 + 2t1  t2 + t2
+1  t1,
+(t41) = t41  1 + 1  t41 + t31  t1 + t2  t2 + t1  t31,
+(t42) = t42  1 + 1  t42 + t1  t32 + t2  t2 + t1  t31 + t2t1  t1 + t2
+(t43) = t43  1 + 1  t43 + 3t1  t32 + 3t2
+1  t2 + t3
+(t44) = t44  1 + 1  t44 + t32  t1 + 2t1  t31 + t2
+
+1  t1,
+1  t2.
+
+1  t2,
+
+(2.4)
+
+a most useful tool is the sprouting of a new root; namely the morphism l: hr  hr
+
+given by the linear map dened by
+
+l(t1 . . . tk) := t,
+
+where t is the rooted tree obtained by conjuring up a new vertex as its root and extending
+lines from this vertex to each root of t1, . . . , tk. for instance,
+
+l(cid:16) 
+
+ (cid:17) =
+
+99
+
+
+
+
+99
+ 
+
+and l(cid:16)
+
+
+
+
+
+(cid:17) =
+
+
+99
+ 
+
+
+
+the proof that  is indeed a coproduct is based on the formula
+
+  l = l  1 + (id l)  .
+
+(2.5)
+
+(2.6)
+
+for details see [2] or [6].
+
+when dealing with particular hopf algebras, the antipode is often determined by
+specic properties of the algebras in question, and the dening property of the antipode
+is scarcely used. the latter turns out to be extremely useful in our context, however. we
+compute the antipode s: hr  hr by exploiting its very denition as the convolution
+inverse of the identity in hr, via a geometric series:
+
+s := (id)1 = (u    (u    id))1 = u   + (u    id) + (u    id)2 +   
+
+3
+
+lemma 2.1. if t is a rooted tree with n vertices, the geometric series expansion of s(t )
+has at most n + 1 terms.
+
+proof. the claim is certainly true for t1. assume that it holds for all trees with n vertices.
+let t be a rooted tree with n + 1 vertices; then
+
+(u    id)(n+2)(t ) = (u    id)  (u    id)(n+1)(t )
+
+= m  [(u    id)  (u    id)(n+1)]  (t )
+= m  [(u    id)  (u    id)(n+1)]
+
+(cid:18)t  1 + 1  t + xcc(t )
+
+pc(t )  rc(t )(cid:19).
+
+the rst and second term vanish because (u    id)1 = 0. by the induction hypothesis
+the third term is zero.
+(cid:3)
+
+as an immediate corollary we obtain that s so dened is indeed the antipode.
+one of the advantages of this formulation is that we obtain a fully explicit formula for
+
+s from the coproduct table. if a  h n, (a) = pi1
+
+and in general (a
+
+i1  a
+a
+i1,...,ik+1 , then
+
+i1 , (a
+
+i1 ) = pi2
+
+i1,...,ik ) = pik+1
+
+a
+i1,...,ik+1  a
+(u    id)k+1(a) = (1)k+1 xi1,...,ik
+
+b
+i1
+
+b
+i1i2    b
+
+i1,...,ik
+
+b
+i1,...,ik
+
+,
+
+i1i2  a
+a
+
+i1i2
+
+(2.7)
+
+where
+
+and
+
+b
+
+i1,...,ij := (cid:26) 0
+
+a
+i1,...,ij
+
+i1,...,ij = 1 or a
+
+i1,...,ij = 1,
+
+if a
+otherwise,
+
+b
+
+i1,...,ij := (cid:26) 0
+
+a
+i1,...,ij
+
+i1,...,ij = 1,
+
+if a
+otherwise.
+
+for instance, using (2.4),
+
+s(t42) = t42 + (t1t32 + t2
+= t42 + t1t32 + t2
+
+2 + t1t31 + 2t2
+2 + t1t31  3t2
+
+1t2)  (5t2
+1t2 + t4
+1.
+
+1t2 + 2t4
+
+1) + 3t4
+1
+
+similarly, if we denote by t the rooted tree in (2.5) with 5 vertices, then
+
+s(t) = t + (2t1t42 + 2t2t31 + t2
+2 + 2t2
+= t + 2t1t42 + 2t2t31  t2
+
+1t32 + 6t1t2
+
+ (2t2
+
+1t32 + 3t1t2
+2)
+1t31 + 8t3
+1t32  3t1t2
+
+1t2 + t5
+
+1) + (12t3
+
+2  2t2
+
+1t31 + 4t3
+
+1t2 + 6t5
+1)  6t5
+1
+1t2  t5
+1.
+
+the reader will nd without diculty that these formulae correspond to the original
+dysonsalam procedure for renormalizing feynman graphs with subdivergences: see, for
+instance, [11].
+
+4
+
+in correspondence with bogoliubovs recursive formula for renormalization, equations
+m  (s  id)  (t ) = 0 and (2.4) suggest to dene the antipode recursively, as indeed done
+by connes and kreimer:
+
+sb(t ) := t  xcc(t )
+
+sb(pc(t ))rc(t ).
+
+for instance,
+
+sb(t42) = t42  sb(t1)t32  sb(t2)t2  sb(t1)t31  sb(t2t1)t1  sb(t2
+
+1)t2,
+
+which gives again (2.7). we next check that sb is indeed the antipode.
+
+proposition 2.2. if t is any rooted tree, then s(t ) = sb(t ).
+
+proof. for convenience, we abbreviate  := u    id. the statement holds, by a direct
+check, if t has 1, 2 or 3 vertices. if it holds for all rooted trees with at most n vertices and
+if t is a rooted tree with n + 1 vertices, then
+
+s(t ) = (t ) +
+
+j  (cid:19)  (t )
+
+pc(t )  rc(t )(cid:19)
+
+n
+
+xj=1
+
+n
+
+n
+
+= t + m 
+
+j  (t ) = t + m (cid:18) n
+xj=1
+j  (cid:18)t  1 + 1  t + xcc(t )
+xj=1
+= t  xcc(t )
+xj=1
+= t  xcc(t )
+
+sb(pc(t )) rc(t ) = sb(t ),
+
+j(pc(t )) rc(t )
+
+where the penultimate equality uses the inductive hypothesis.
+
+(cid:3)
+
+zimmermanns forest formula corresponds to the following nonrecursive formula for
+
+the antipode:
+
+sz(1) := 1, sz (t ) :=  xdd(t )
+
+(1)#dpd(t )rd(t ),
+
+where d(t ) is the set of all cuts, not necessarily simple, including the empty cut, and #d
+is the cardinality of d.
+
+proposition 2.3. if t is any rooted tree, then s(t ) = sz(t ).
+
+proof. first we prove that, for an arbitrary rooted tree t ,
+
+s(l(t )) = l(t )  s(t ) t1  xcc(t )
+
+s(pc(t )) l(rc(t )).
+
+(2.8)
+
+5
+
+indeed, if t has n vertices, then, by lemma 2.1 and (2.6),
+
+j  (cid:19)  (l(t ))
+
+s(l(t )) = l(t ) + m (cid:18) n
+xj=1
+xj=1
+j  (cid:0)l(t )  1 + (id l)  (t )(cid:1)
+xj=1
+
+= l(t ) + m 
+
+n
+
+n
+
+= l(t ) + m 
+
+j  
+
+(cid:18)l(t )  1 + t  t1 + 1  l(t ) + xcc(t )
+
+pc(t )  l(rc(t ))(cid:19)
+
+= l(t )  s(t ) t1  xcc(t )
+
+s(pc(t )) l(rc(t )).
+
+suppose that sz were also to satisfy (2.8). since any rooted tree can be written as
+an image of l, and on the right side s is applied only to rooted trees of strictly fewer
+vertices, the proposition will follow by induction on the number of the vertices. it remains,
+therefore, to prove that (2.8) holds for sz.
+
+for a given rooted tree t , let 0 be the new line in l(t ), and v1, . . . , vk the vertices
+of length one with respect to the root of t . now d(l(t )) = a  b where d  a or b
+according as 0  d or not. thus,
+
+sz(l(t )) = (cid:18)xda
+
++ xdb
+
+(cid:19)(1)#dpd(l(t )) rd(l(t )).
+
+(2.9)
+
+if d  a, then e = d\{0} is a cut of t ; moreover, rd(l(t )) = t1, pd(l(t )) = pe(t )re(t )
+and #d = #e + 1, so that the rst sum of (2.9) equals s(t ) t1.
+
+for a given d  b \ {} and each j  k =: { 1, . . . , k }, let j be the line in d closer to
+the root that is linked to vj (if any). then c := { j: j  k } is a simple cut of t . if #c is
+odd, we set c := c, whereas if #c is even, we set c := c\{s}, where s is the smallest integer
+in k for which there is a line with the required property. in either case, we take e := d \ c.
+clearly rd(l(t )) = l(rc(t )), (1)#d+1 = (1)#e, and pd(l(t )) = pe(tc)re(tc), where
+we use the temporary notation tc := pc(t ). it follows that the second sum of (2.9) equals
+
+xcc(t ) xed(tc)
+
+(1)#epe(tc) re(tc) l(rc(t )) =  xcc(t )
+
+sz(pc(t )) l(rc(t )).
+
+finally, since the summand for the empty cut is l(t ), the proposition is proved.
+
+(cid:3)
+
+in summary, modulo the distiction between the antipode and the twisted or renor-
+malized antipode [3,4,10], kreimers algebraic approach reects, within the framework of
+the algebra of rooted trees, the equivalence of the dysonsalam, the bogoliubovparasiuk
+hepp and the zimmermann procedures for renormalizing feynman diagrams.
+
+6
+
+acknowledgements
+
+the geometric series trick was pointed out to us by earl taft; we are greatly indebted
+to him. we thank stephen a. fulling for a good suggestion and joseph c. varilly for illu-
+minating discussions and texnical help. we acknowledge support from the vicerrectora
+de investigacion de la universidad de costa rica.
+
+references
+
+[1] v. chari and a. pressley, a guide to quantum groups, cambridge university press,
+
+cambridge, 1994.
+
+[2] a. connes and d. kreimer, hopf algebras, renormalization and noncommutative
+
+geometry, commun. math. phys. 199 (1998), 203242.
+
+[3] a. connes and d. kreimer, renormalization in quantum eld theory and the rie-
+
+mannhilbert problem, hep-th/9909126, ihes, bures-sur-yvette, 1999.
+
+[4] a. connes and d. kreimer, renormalization in quantum eld theory and the rie-
+mannhilbert problem i: the hopf algebra structure of graphs and the main theorem,
+hep-th/9912092, ihes, bures-sur-yvette, 1999.
+
+[5] a. connes and h. moscovici, hopf algebras, cyclic cohomology and the transverse
+
+index theorem, commun. math. phys. 198 (1998), 198246.
+
+[6] j. m. graciabonda, j. c. varilly and h. figueroa, elements of noncommutative
+
+geometry, birkhauser, boston, 2000, forthcoming.
+
+[7] m. hazewinkel, formal groups and applications, academic press, new york, 1978.
+
+[8] c. kassel, quantum groups, springer, berlin, 1995.
+[9] d. kreimer, on the hopf algebra structure of perturbative quantum eld theories,
+
+adv. theor. math. phys. 2 (1998), 303334.
+
+[10] d. kreimer, chens iterated integral represents the operator product expansion,
+
+adv. theor. math. phys. 3 (1999), 3; hep-th/9901099.
+
+[11] e. b. manoukian, renormalization, academic press, london, 1983.
+
+[12] m. e. sweedler, hopf algebras, benjamin, new york, 1969.
+[13] r. wulkenhaar, on feynman graphs as elements of a hopf algebra, hep-th/9912220,
+
+luminy, 1999.
+
+[14] w. zimmermann, convergence of bogoliubovs method of renormalization in mo-
+
+mentum space, commun. math. phys. 15 (1969), 208234.
+
+7
+
+

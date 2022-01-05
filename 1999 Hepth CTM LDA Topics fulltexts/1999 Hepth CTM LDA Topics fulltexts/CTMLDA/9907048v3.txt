@@ -1,0 +1,5126 @@
+9
+9
+9
+1
+
+ 
+
+v
+o
+n
+3
+
+ 
+
+ 
+ 
+
+3
+v
+8
+4
+0
+7
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+on the path integral representation for wilson loops
+
+and the nonabelian stokes theorem
+
+m. faber, a. n. ivanov , n. i. troitskaya, m. zach
+
+february 17, 2014
+
+institut fur kernphysik, technische universitat wien,
+
+wiedner hauptstr. 810, a1040 vienna, austria
+
+abstract
+
+we discuss the derivation of the path integral representation over gauge degrees
+of freedom for wilson loops in su (n ) gauge theory and 4dimensional euclidean
+spacetime by using wellknown properties of group characters. a discretized form
+of the path integral is naturally provided by the properties of group characters
+and does not need any articial regularization. we show that the path integral
+over gauge degrees of freedom for wilson loops derived by diakonov and petrov
+(phys. lett. b224 (1989) 131) by using a special regularization is erroneous and
+predicts zero for the wilson loop. this property is obtained by direct evaluation of
+path integrals for wilson loops dened for pure su (2) gauge elds and z(2) center
+vortices with spatial azimuthal symmetry. further we show that both derivations
+given by diakonov and petrov for their regularized path integral, if done correctly,
+predict also zero for wilson loops. therefore, the application of their path integral
+representation of wilson loops cannot give a new way to check connement in lattice
+as has been declared by diakonov and petrov (phys. lett. b242 (1990) 425). from
+the path integral representation which we consider we conclude that no new non
+abelian stokes theorem can exist for wilson loops except the oldfashioned one
+derived by means of the path-ordering procedure.
+
+pacs: 11.10.z, 11.15.q, 12.38.t, 12.38.aw, 12.90.+b
+
+keywords: nonabelian gauge theory, connement
+
+the work supported in part by jubilaumsfonds of the austrian national bank project no.7232
+email: faber@kph.tuwien.ac.at, tel.: +4315880114261, fax: +4315880114299
+email: ivanov@kph.tuwien.ac.at, tel.: +4315880114261, fax: +4315880114299
+permanent address: state technical university, department of nuclear physics, 195251 st. peters-
+
+burg, russian federation
+
+email: zach@kph.tuwien.ac.at, tel.: +4315880114266, fax: +4315880114299
+
+1
+
+1 introduction
+
+the hypothesis of quark connement, bridging the hypothesis of the existence of
+quarks and the failure of the detection of quarks as isolated objects, is a challenge for
+qcd. as a criterion of colour connement in qcd, wilson [1] suggested to consider the
+average value of an operator
+
+w (c) =
+
+1
+n
+
+trpc ei g hc dx a(x) =
+
+1
+n
+
+tr u(cxx),
+
+(1.1)
+
+dened on an closed loop c, where a(x) = ta aa
+(x) is a gauge eld, ta (a = 1, . . . , n 21)
+are the generators of the su(n) gauge group in fundamental representation normalized
+by the condition tr (tatb) = ab/2, g is the gauge coupling constant and pc is the operator
+ordering colour matrices along the path c. the trace in eq.(1.1) is computed over colour
+indices. the operator
+
+u(cyx) = pcyxe
+
+i g rcyx dz a(z)
+
+,
+
+(1.2)
+
+makes a parallel transport along the path cyx from x to y. for wilson loops the contour c
+denes a closed path cxx. for determinations of the parallel transport operator u(cyx) the
+action of the pathordering operator pcyx is dened by the following limiting procedure
+[2]
+
+u(cyx) = pcxy e
+
+i g rcyx dz a(z)
+
+= lim
+n
+
+n
+
+yk=1
+
+u(cxkxk1) =
+
+= lim
+n
+
+u(cyxn1) . . . u(cx2x1) u(cx1x) = lim
+n
+
+ei g (xk  xk1)  a(xk1),
+
+(1.3)
+
+n
+
+yk=1
+
+where cxkxk1 is an innitesimal segment of the path cyx with x0 = x and xn = y. the
+parallel transport operator u(cxkxk1) for an innitesimal segment cxkxk1 is dened by
+[2]:
+
+u(cxkxk1) = e
+
+i g rcxk xk1
+
+dz a(z)
+
+= ei g (xk  xk1)  a(xk1).
+
+(1.4)
+
+in accordance with the denition of the pathordering procedure (1.3) the parallel trans-
+port operator u(cyx) has the property
+
+u(cyx) = u(cyx1) u(cx1x),
+
+(1.5)
+
+where x1 belongs to the path cyx. under gauge transformations with a gauge function
+(z),
+
+a(z)  a
+
+ (z) = (z)a(z)(z) +
+
+1
+ig
+
+(z)(z),
+
+the operator u(cyx) has a very simple transformation law
+
+u(cyx)  u (cyx) = (y) u(cyx) (x).
+
+2
+
+(1.6)
+
+(1.7)
+
+we would like to stress that this equation is valid even if the gauge functions (x) and
+(y) dier signicantly for adjacent points x and y.
+
+as has been postulated by wilson [1] the average value of the wilson loop < w (c) >
+
+in the connement regime should show arealaw fallo [1]
+
+< w (c) > e a,
+
+(1.8)
+
+where  and a are the string tension and the minimal area of the loop, respectively. as
+usually the minimal area is a rectangle of size l  t . in this case the exponent a can
+be represented in the equivalent form  a = v (l) t , where v (l) = l is the interquark
+potential and l is the relative distance between quark and antiquark.
+the paper is organized as follows. in sect. 2 we discuss the path integral representation
+for wilson loops by using wellknown properties of group characters. the discretized form
+of this path integral is naturally provided by properties of group characters and does
+not need any articial regularization. we derive a closed expression for wilson loops in
+irreducible representation j of su(2). in sect. 3 we extend the path integral representation
+to the gauge group su(n). as an example, we give an explicit representation for wilson
+loops in the fundamental representation of su(3). in sects. 4 and 5 we evaluate the path
+integral for wilson loops, suggested in ref.[3], for two specic gauge eld congurations
+(i) a pure gauge eld in the fundamental representation of su(2) and (ii) z(2) center
+vortices with spatial azimuthal symmetry, respectively. we show that this path integral
+representation fails to describe the original wilson loop for both cases.
+in sect. 6 we
+show that the regularized evolution operator in ref.[3] representing wilson loops in the
+form of the path integral over gauge degrees of freedom has been evaluated incorrectly by
+diakonov and petrov. the correct value for the evolution operator is zero. this result
+agrees with those obtained in sects. 4 and 5. in sect. 7 we criticize the removal of the
+oscillating factor from the evolution operator suggested in ref.[3] via a shift of energy
+levels of the axialsymmetric top. we show that such a removal is prohibited. it leads to
+a change of symmetry of the starting system from su(2) to u(2). keeping the oscillating
+factor one gets a vanishing value of wilson loops in agreement with our results in sects. 4,
+5 and 6. in the appendix we evaluate the coecients of the expansion used for the path
+integrals in sects. 4 and 5.
+
+2 path integral representation for wilson loops
+
+attempts to derive a path integral representation for wilson loops (1.1), where the path
+ordering operator is replaced by a path integral, have been undertaken in refs.[35].
+the path integral representations have been derived for wilson loops in terms of gauge
+degrees of freedom (bosonic variables) [3,4] and fermionic degrees of freedom (grassmann
+variables) [5]. for the derivation of the quoted path integral representations for wilson
+loop dierent mathematical machineries have been used. below we discuss the derivation
+of the path integral representation for wilson loops in terms of gauge degrees of freedom
+by using wellknown properties of group characters. in this case a discretized form of path
+integrals is naturally provided by the properties of group characters and the completeness
+condition of gauge functions. it coincides with the standard discretization of feynman
+path integrals [6] and does not need any articial regularization.
+
+3
+
+we argue that the path integral representation for wilson loops suggested by diakonov
+and petrov in ref.[3] is erroneous. for the derivation of this path integral representation
+diakonov and petrov have used a special regularization drawing an analogy with an axial
+symmetric top. the moments of inertia of this top are taken nally to zero. as we show
+below this path integral amounts to zero for wilson loops dened for su(2). therefore,
+it is not a surprise that the application of this erroneous path integral representation
+to the evaluation of the average value of wilson loops has led to the conclusion that
+for large loops the arealaw fallo is present for colour charges taken in any irreducible
+representation r of su(n) [7]. this statement has not been supported by numerical
+simulations within lattice qcd [8]. as has been veried, e.g. in ref.[8] for su(3), in the
+conned phase and at large distances, colour charges with nonzero nality have string
+tensions of the corresponding fundamental representation, whereas colour charges with
+zero nality are screened by gluons and cannot form a string at large distances. hence,
+the results obtained in ref.[6] cannot give a new way to check connement in lattice as
+has been declared by diakonov and petrov.
+
+for the derivation of wilson loops in the form of a path integral over gauge degrees of
+freedom by using wellknown properties of group characters it is convenient to represent
+w (c) in terms of characters of irreducible representations of su(n) [911]
+
+wr(c) =
+
+1
+dr
+
+[ur(cxx)],
+
+(2.1)
+
+where the matrix ur(cxx) realizes an irreducible and drdimensional matrix representation
+r of the group su(n) with the character [ur(cxx)] = tr[ur(cxx)].
+
+in order to introduce the path integral over gauge degrees of freedom we suggest to
+
+use
+
+z dr[ur
+
+r] [rvr] =
+
+1
+dr
+
+[urvr],
+
+(2.2)
+
+where the matrices ur and vr belong to the irreducible representation r, and dr is the
+
+haar measure normalized to unity r dr = 1. the completeness condition for gauge
+
+functions r reads
+
+z dr(
+
+r)a1b1
+
+(r)a2b2
+
+=
+
+1
+dr
+
+a1b2
+
+b1a2
+
+.
+
+(2.3)
+
+by using the completeness condition it is convenient to represent the wilson loop in the
+form of the integral
+
+wr(c) =
+
+1
+
+dr z dr(x)[r(x)ur(cxx)
+
+r(x)].
+
+(2.4)
+
+according to eq.(1.3) and eq.(1.5) the matrix ur(cxx) can be decomposed in
+
+ur(cxx) = lim
+n
+
+ur(cxxn1)ur(cxn1xn2) . . . ur(cx2x1)ur(cx1x).
+
+(2.5)
+
+substituting eq.(2.5) in eq.(2.4) and applying (n  1)times eq.(2.2) we end up with
+
+wr(c) =
+
+lim
+
+nz . . .z dr(x1) . . . r(xn) dr[r(xn)ur(cxnxn1)
+
+1
+d2
+r
+. . . dr[r(x1)ur(cx1xn)
+
+r(xn)].
+
+r(xn1)]
+
+(2.6)
+
+4
+
+using relations r(xk)ur(cxkxk1)
+
+r(xk1) = u 
+
+r (cxkxk1) we get
+
+wr(c) =
+
+1
+d2
+r
+
+lim
+
+nz . . .z dr(x1) . . . dr(xn) dr[u 
+
+r (cxnxn1)] . . . dr[u 
+
+r (cx1xn)].(2.7)
+
+the integrations over r(xk) (k = 1, . . . , n) are well dened. these are standard integra-
+tions on the compact lie group su(n).
+
+we should emphasize that the integrations over r(xk) (k = 1, . . . , n) are not corre-
+
+lated and should be carried out independently.
+
+since eq.(2.3) is the completeness condition for group elements, the discretization
+of wilson loops given by eqs.(2.6) and (2.7) reproduces the standard discretization of
+feynman path integrals [6] where innitesimal time steps can be described by a classical
+motion. therefore, the discretized expression (2.7) can be represented formally by
+
+wr(c) =
+
+1
+d2
+
+r z yxc
+
+[dr dr(x)] [u 
+
+r (cxx)].
+
+(2.8)
+
+conversely the evaluation of this path integral corresponds to the discretization given
+by eqs.(2.6) and (2.7). the measure of the integration over r(x) is well dened and
+normalized to unity
+
+z yxc
+
+dr(x) = lim
+
+nz dr(xn)z dr(xn1) . . .z dr(x1) = 1.
+
+(2.9)
+
+thus, for the determination of the path integral over gauge degrees of freedom (2.8) we
+do not need to use any regularization, since the discretization given by eqs.(2.6) and (2.7)
+are well dened.
+
+we would like to emphasize that eq.(2.8) is a continuum analogy of the lattice version
+of the path integral over gauge degrees of freedom for wilson loops used in eq.(2.13) of
+ref.[11] for the evaluation of the average value of wilson loops in connection with z(2)
+center vortices.
+
+now let us to proceed to the evaluation of the characters [u 
+
+r (cxkxk1)]. due to the
+innitesimality of the segments cxkxk1 we can omit the path ordering operator in the
+denition of u 
+r (cxkxk1)] with
+u 
+
+r (cxkxk1) [2]. this allows us to evaluate the character [u 
+
+r (cxkxk1) taken in the form [2]
+
+u 
+
+r (cxkxk1) = exp igzcxk xk1
+
+dxa
+
+ (x).
+
+(2.10)
+
+the evaluation of the characters of u 
+r (cxkxk1) given by eq.(2.10) runs as follows. first
+let us consider the simplest case, the su(2) gauge group, where we have r = j =
+0, 1/2, 1, . . . and dj = 2j + 1. the character [u 
+
+j (cxkxk1)] is equal to [9,10,12]
+
+[u 
+
+j (cxkxk1)] =
+
+=
+
+j
+
+xmj =j
+xmj =j
+
+j
+
+< mj|u 
+
+j (cxkxk1)|mj >=
+
+ei mj [cxkxk1; a],
+
+(2.11)
+
+5
+
+where mj is the magnetic colour quantum number, |mj > and mj [cxkxk1; a] are the
+eigenstates and eigenvalues of the operator
+
+[cxkxk1; a] = gzcxk xk1
+
+dxa
+
+ (x),
+
+(2.12)
+
+i.e. [cxkxk1; a]|mj > = mj [cxkxk1; a]|mj(xk1) >. the standard procedure for
+the evaluation of the eigenvalues gives [cxkxk1; a] in the form
+
+[cxkxk1; a] = gzcxk xk1 qg[a](x)dxdx,
+
+where the metric tensor can be given formally by the expression
+
+g[a](x) = 2 tr[a
+
+ a
+
+ ](x).
+
+(2.13)
+
+(2.14)
+
+in order to nd an explicit expression for the metric tensor we should x a gauge. as an
+example let us take the fockschwinger gauge
+
+xa(x) = 0.
+
+(2.15)
+
+in this case the gauge eld a(x) can be expressed in terms of the eld strength tensor
+g(x) as follows
+
+a(x) =
+
+1
+
+z0
+
+ds s x g(xs).
+
+(2.16)
+
+this can be proven by using the obvious relation
+
+xg(x) = xa(x)  xa(x)  ig[xa(x), a(x)] =
+
+
+x
+
+= a(x) + x
+
+a(x),
+
+(2.17)
+
+valid for the fockschwinger gauge xa(x) = 0. replacing x  xs we can represent the
+r.h.s. of eq.(2.17) as a total derivative with respect to s
+
+sxg(xs) = a(xs) + x
+
+
+x
+
+a(xs) =
+
+d
+ds
+
+[sa(xs)].
+
+(2.18)
+
+integrating out s  [0, 1] we arrive at eq.(2.16).
+
+using eq.(2.16) we obtain the metric tensor g[a](x) in the form
+
+g[a](x) = 2xx
+
+1
+
+z0
+
+1
+
+z0
+
+dsdssstr[g
+
+(xs)g
+
+(xs )] =
+
+= 2xx
+
+1
+
+z0
+
+1
+
+z0
+
+dsdssstr[(xs)g(xs)(xs)(xs )g(xs )(xs )].
+
+(2.19)
+
+6
+
+for the derivation of eq.(2.19) we dene the operator [cxkxk1; a] of eq.(2.12) following
+the denition of the phase of the parallel transport operator u(cxkxk1) given by eq.(1.4)
+[2]
+
+[cxkxk1; a] = gzcxk xk1
+
+dxa
+
+ (x) = (xk  xk1)a
+
+ (xk1) =
+
+= (xk  xk1)
+
+1
+
+z0
+
+dss x
+
+k1 g
+
+(xk1s).
+
+(2.20)
+
+the parameter s is to some extent an order parameter distinguishing the gauge functions
+(xk) and (xk1) entering the relation (xk)u(cxkxk1)(xk1) = u (cxkxk1).
+
+substituting eq.(2.11) in eq.(2.7) we arrive at the expression for wilson loops dened
+
+for su(2)
+
+wj(c) =
+
+1
+
+j
+
+n
+
+j =j
+
+(2j + 1)2 lim
+xm(n)
+xm(n1)
+
+z dj(xn) (2j + 1)
+z dj(xn1) (2j + 1)
+...
+z dj(x1) (2j + 1)
+
+j
+
+j
+
+j
+
+i g m(n)
+e
+
+j
+
+rcx1xn qg[a](x) dxdx
+
+i g m(n1)
+e
+
+j
+
+rcxnxn1 qg[a](x) dxdx
+
+=j
+
+xm(1)
+the magnetic quantum number m(k)
+cxk+1xk, where cxn+1xn = cx1xn.
+
+j
+
+j =j
+
+i g m(1)
+j
+e
+
+rcx2x1 qg[a](x) dxdx .
+
+(2.21)
+
+(k = 1, . . . , n) belongs to the innitesimal segment
+
+in compact form eq.(2.21) can be written as a path integral over gauge functions
+
+wj(c) =
+
+1
+
+(2j + 1)2 z yxc
+
+dj(x) x{mj (x)}
+
+(2j + 1) e
+
+ighc mj(x)qg[a](x) dxdx . (2.22)
+
+the integrals along the innitesimal segments cxkxk1 we determine as [2]
+
+zcxk xk1
+
+mj(x)qg[a](x) dxdx = mj(xk1)qg[a](xk1) x x =
+
+= m(k1)
+
+j qg[a](xk1) x x.
+
+(2.23)
+
+where x = xk  xk1.
+comparing the path integral (2.22) with that suggested in eq.(23) of ref.[3] one nds
+rather strong disagreement. first, this concerns the contribution of dierent states mj of
+the representation j. in the case of the path integral (2.22) there is a summation over all
+values of the magnetic colour quantum number mj, whereas the representation of ref.[3]
+contains only one term with mj = j. second, ref.[3] claims that in the integrand of
+
+7
+
+their path integral the exponent should depend only on the gauge eld projected onto
+the third axis in colour space. however, this is only possible if the gauge functions are
+slowly varying with x, i.e. (xk)(xk1)  1. in this case the parallel transport operator
+u (cxkxk1) would read [13]
+
+u (cxkxk1) = exp i g zcxk xk1
+
+dx a
+
+ (x) = 1 + i g (xi  xi1)  a(xi1),
+
+(2.24)
+
+and the evaluation of the character [u 
+
+j (cxkxk1] would run as follows
+
+j (cxkxk1)]|mj >= 1 + (ta
+
+< mj|[u 
+= 1 + mj i g (xk  xk1)  [a(xk1)](3) = e
+
+j )mj mj i g (xk  xk1)  [a(xk1)](a) =
+ (x)](3)
+,
+
+dx mj(x)[a
+
+i grcxk xk1
+
+(2.25)
+
+where we have used the matrix elements of the generators of su(2), i.e. (ta
+more generally the exponent on the r.h.s. of eq.(2.25) can be written as
+
+j )mj mj = mj a3.
+
+zcxk xk1
+
+dx mj(x) [a
+
+ (x)](3) = 2zcxk xk1
+
+dx mj(x) tr[t3
+
+j a
+
+ (x)].
+
+(2.26)
+
+this gives the path integral representation for wilson loops dened for su(2) in the
+following form
+
+wj(c) =
+
+1
+
+(2j + 1)2 z yxc
+
+dj(x) x{mj (x)}
+
+(2j + 1) e2ighc dx mj(x) tr[t3
+
+j a
+
+ (x)].
+
+(2.27)
+
+j a
+
+the exponent contains the gauge eld projected onto the third axis in colour space
+tr[t3
+ (x)]. nevertheless, eq.(2.27) diers form eq.(23) of ref.[3] by a summation over all
+values of the colour magnetic quantum number mj of the given irreducible representation
+j.
+
+the repeated application of eq.(2.2) induces that the integrations over the gauge func-
+tion at xk are completely independent of the integrations at xk1. there is no mechanism
+which leads to gauge functions smoothly varying with xk (k = 1, . . . n). in this sense the
+situation is opposite to the quantum mechanical path integral. in quantum mechanics
+the integration over all paths is restricted by the kinetic term of the lagrange function.
+in the semiclassical limit h  0 due to the kinetic term the uctuations of all trajectories
+are shrunk to zero around a classical trajectory. however, in the case of the integration
+over gauge functions for the path integral representation of the wilson loop, there is
+neither a suppression factor nor a semiclassical limit like h  0. the key point of the
+application of eq.(2.2) and, therefore, the path integral representation for wilson loops is
+that all integrations over (xk) (k = 1, . . . , n) are completely independent and can dier
+substantially even if the points, where the gauge functions (xk) and (xk1) are dened,
+are innitesimally close to each other.
+
+for the derivation of eq.(23) of ref.[3] diakonov and petrov have used at an in-
+termediate step a regularization drawing an analogy with an axialsymmetric top with
+moments of inertia i and ik. within this regularization the evolution operator repre-
+senting wilson loops has been replaced by a path integral over dynamical variables of this
+
+8
+
+axialsymmetric top which correspond to gauge degrees of freedom of the nonabelian
+gauge eld. the regularized expression of the evolution operator has been obtained in
+the limit i, ik  0. the moments of inertia have been used as parameters like h  0.
+unfortunately, as we show in sect. 6 the limit i, ik  0 has been evaluated incorrectly.
+
+3 the su (n ) extension
+
+the extension of the path integral representation given in eq.(2.24) to su(n) is rather
+straightforward and reduces to the evaluation of the character of the matrix u 
+r (cxkxk1)
+in the irreducible representation r of su(n). the character can be given by [12]
+
+[u 
+
+r (cxkxk1)] = tr(eipn 1
+
+= x~mr
+
+=1 h[cxkxk1; a]) =
+
+ ~mr ei ~mr  ~[cxkxk1; a],
+
+(3.1)
+
+where h ( = 1, . . . , n1) are diagonal drdr traceless matrices realizing the representa-
+tion of the cartan subalgebra, i.e. [h, h] = 0, of the generators of the su(n) [12]. the
+sum runs over all the weights ~mr = (mr 1, . . . , mr n 1) of the irreducible representation r
+
+and  ~mr is the multiplicity of the weight ~mr and p ~mr  ~mr = dr. the components of the
+vector ~[cxkxk1; a] are dened by
+
+[cxkxk1; a] = gzcxk xk1
+
+ [(x)],
+
+(3.2)
+
+where we have introduced the notation (x) = taa(x) = dz  a(x). the functions
+ [(x)] are proportional to the roots of the equation deth(x)  i = 0.
+the path integral representation of wilson loops dened for the irreducible represen-
+
+tation r of su(n) reads
+
+wr(c) =
+
+1
+d2
+
+r z yxc
+
+dr(x) x{ ~mr(x)}
+
+dr  ~mr(x) ei g hc ~mr(x)  ~ [(x)].
+
+(3.3)
+
+let us consider in more details the path integral representation of wilson loops dened
+for the fundamental representation 3 of su(3). the character 3[u 
+
+3 (c)] is dened as
+
+3[u 
+
+3 (c)] = tr(cid:16)eih11[c; a] + ih22[c; a](cid:17) = ei2[c; a]/3
++ei1[c; a]/23 ei2[c; a]/6 + ei1[c; a]/23 ei2[c; a]/6,
+
+(3.4)
+where h1 = t3/3 and h2 = t8/3 [12]. for the representation 3 of su(3) the equation
+det[  ] = 0 takes the form
+
+3  
+
+1
+2
+
+tr 2(x)  det (x) = 0.
+
+(3.5)
+
+9
+
+the roots of eq.(3.5) read
+
+(1) = 
+
+
+
+(2) = 
+
++
+
+(3) = s 2
+
+1
+
+1
+
+1
+
+3
+
+3
+
+1
+
+6 qtr 2(x) cos  1
+2 qtr 2(x) sin  1
+6 qtr 2(x) cos  1
+2 qtr 2(x) sin 1
+3 qtr 2(x) cos 1
+
+3
+
+3
+
+3
+
+arccosvuut2 det"1 + 12
+arccosvuut2 det"1 + 12
+arccosvuut2 det"1 + 12
+arccosvuut2 det"1 + 12
+arccosvuut2 det"1 + 12
+
+tatr(ta2(x))
+
+tr 2(x)
+
+tatr(ta2(x))
+
+tr 2(x)
+
+tatr(ta2(x))
+
+tr 2(x)
+
+tatr(ta2(x))
+
+tr 2(x)
+
+tatr(ta2(x))
+
+tr 2(x)
+
+#!
+#!,
+#!
+#!,
+#!.
+
+(3.6)
+
+in terms of the roots (i) (i = 1, 2, 3) the phases 1,2[c; a] are dened as
+
+1[c; a] = g6icqtr 2(x) sin  1
+2[c; a] = g6icqtr 2(x) cos  1
+
+3
+
+3
+
+arccosvuut2 det"1 + 12
+arccosvuut2 det"1 + 12
+
+tatr(ta2(x))
+
+tr 2(x)
+
+tatr(ta2(x))
+
+tr 2(x)
+
+#!,
+#!,
+
+(3.7)
+
+where tr 2(x) = 1
+path integral representation for wilson loops reads
+
+2 g[a](x) dxdx. thus, in the fundamental representation 3 the
+
+w3(c) =
+
+1
+
+9 z yxchd3(x)  3i (cid:16)ei1[c; a]/23ei2[c; a]/6
++ei1[c; a]/23 ei2[c; a]/6 + ei2[c; a]/3(cid:17),
+
+where the phases 1,2[c; a] are given by eq.(3.7).
+
+(3.8)
+
+4 wilson loop for pure gauge eld
+
+as has been pointed out in ref.[3] the path integral over gauge degrees of freedom repre-
+senting wilson loops is not of the feynman type, therefore, it depends explicitly on how
+one understands it, i.e. how it is discretized and regularized. we would like to empha-
+size that the regularization procedure applied in ref.[3] has led to an expression for wilson
+loops which supports the hypothesis of maximal abelian projection [14]. according to
+this hypothesis only abelian degrees of freedom of nonabelian gauge elds are respon-
+sible for connement. this is to full extent a dynamical hypothesis. it is quite obvious
+that such a dynamical hypothesis cannot be derived only by means of a regularization
+procedure.
+
+10
+
+in order to show that the problem touched in this paper is not of marginal interest
+and to check if path integral expressions that look dierently supercially could actually
+compute the same number we evaluate below explicitly the path integrals representing
+wilson loop for a pure su(2) gauge eld. as has been stated in ref.[3] for wilson loops
+c a gauge eld along a given curve can be always written as a pure gauge and the
+derivation of the path integral representation for wilson loops can be provided for the
+gauge eld taken without loss of generality in the pure gauge form. we would like to
+show that for the pure su(2) gauge eld the path integral representation for wilson loops
+suggested in ref.[3] fails for a correct description of wilson loops. since a pure gauge
+eld is equivalent to a zero gauge eld wilson loops should be unity.
+
+of course, any correct path integral representation for wilson loops should lead to
+the same result. the evaluation of wilson loops within the path integral representation
+eq.(2.8) is rather trivial and transparent.
+indeed, we have not corrupted the starting
+expression for wilson loops (2.1) by any articial regularization. thereby, the general
+formula (2.8) evaluated through the discretization given by eqs.(2.7) and (2.6) is com-
+pletely identical to the original expression (2.1). the former gives a unit value for wilson
+loops dened for an arbitrary contour c and an irreducible representation j of su(2):
+wj (c) = 1.
+
+let us focus now on the path integral representation suggested in ref.[3]
+
+wj (c) = z yxc
+
+d(x) e2ijghc dx tr[t3a
+
+ (x)],
+
+(4.1)
+
+where all matrices are taken in the irreducible representation j. following the discretiza-
+tion suggested in ref.[3] we arrive at the expression
+
+wj (c) = lim
+n
+
+n
+
+yk=1z d(xk) e
+
+2ijgrcxk+1xk
+
+dx tr[t3a
+
+ (x)]
+
+.
+
+setting a(x) = u(x)u (x)/ig we get
+
+a
+
+ (x) =
+
+1
+ig
+
+((x)u(x))((x)u(x)).
+
+by a gauge transformation (x)u(x)  (x) we reduce eq.(4.1) to the form
+
+wj (c) = z yxc
+
+d(x) e2j hc dx tr[t3(x)(x)].
+
+(4.2)
+
+(4.3)
+
+(4.4)
+
+for simplicity we consider wilson loops in the fundamental representation of su(2),
+w1/2(c). the result can be generalized to any irreducible representation j.
+
+for the evaluation of the path integral eq.(4.4) it is convenient to use a standard s
+parameterization of wilson loops c [2]: x  x(s), with s  [0, 1] and x(0) = x(1) =
+x.
+
+the wilson loop (4.4) reads in the sparameterization
+
+w1/2(c) = z y0s1
+
+d(s) exp
+
+1
+
+z0
+
+ds tr"t3 d(s)
+
+ds
+
+(s)#.
+
+(4.5)
+
+11
+
+the discretized form of the path integral (4.5) is given by
+
+n
+
+n
+
+= lim
+
+yk=1
+
+wj (c) = lim
+
+nz
+dk etr[t3k+1
+nz
+yk=1
+ etr[t3n
+n1] e2jtr[t3n1
+
+dk exp sk+1,k tr"t3 k+1  k
+
+sk+1,k
+
+
+
+k# =
+
+k] = lim
+
+nz . . .z dndn1dn2 . . . d1
+
+n2] . . . etr[t32
+
+1] etr[t31
+n],
+
+(4.6)
+
+where n+1 = 1.
+
+for the subsequent integration over k we suggest to use a formula of ref.[15] modied
+
+for our case
+
+z d eztr[t3a + bt3] = xj
+
+a2
+j (z)
+2j + 1
+
+j[(t3)2ab],
+
+where the coecients aj(z) are dened by the expansion [15]
+
+eztr[t3u] = xj
+
+aj(z) j[t3u].
+
+(4.7)
+
+(4.8)
+
+in the particular case z = 2j and for the fundamental representation j = 1/2 we have
+z = 1. the trace tr[t3u] in the exponent of the l.h.s. of eq.(4.8) should be evaluated
+for the fundamental representation of su(2). by virtue of the orthogonality relation for
+characters [9,10,15]
+
+z du j[au ] j[ub] =
+
+jj
+
+2j + 1
+
+j[ab],
+
+(4.9)
+
+where du is the haar measure for the su(2) group, the coecients aj(z) for j 6= 0 can
+be determined by [15]
+
+aj(z) =
+
+3
+
+j(j + 1) z du j[t3u ] eztr[t3u].
+
+(4.10)
+
+we have used here that j[(t3)2] = j(j + 1)(2j + 1)/3. the coecient a0(z) is dened by
+
+a0(z) = z du eztr[t3u].
+
+(4.11)
+
+the coecients aj(z) obey a completeness condition. for its derivation we notice that
+tr[t3u ] = tr[t3u] which can be easily seen from the standard parameterization of the
+matrix u in terms of an angle  and a unit vector ~n (see eq.(3.96) of ref.[10])
+
+u = e+i ~n  ~ /2 = cos
+u  = ei ~n  ~ /2 = cos
+
+
++ i(~n  ~ ) sin
+2
+
+2  i(~n  ~ ) sin
+
+
+2
+
+2
+
+,
+
+,
+
+the expansion of eztr[t3u ] we represent as follows
+
+eztr[t3u ] = xj
+
+bj(z) j[t3u ].
+
+12
+
+(4.12)
+
+(4.13)
+
+let us show that bj(z) = aj(z). using the orthogonality relation (4.9) we obtain
+
+bj(z) =
+
+3
+
+j(j + 1) z du j[t3u] eztr[t3u ], j 6= 0,
+
+b0(z) = z du eztr[t3u ].
+
+(4.14)
+
+then, making the change u   u we get bj(z) = aj(z) by virtue of the invariance of the
+haar measure du  = du.
+thus, taking the product of the expansions (4.8) and (4.13) with bj(z) = aj(z) and
+
+integrating over u we get
+
+z du eztr[t3u] eztr[t3u ] = xj xj
+= xj
+0(z) +xj>0
+
+j[(t3)2] = a2
+
+a2
+j (z)
+2j + 1
+
+aj(z) aj(z)z du j[t3u ] j[t3u] =
+
+1
+3
+
+j(j + 1) a2
+
+j (z).
+
+(4.15)
+
+the l.h.s. of eq.(4.15) is equal to unity due to the relation tr[t3u ] = tr[t3u] and the
+normalization of the haar measure r du = 1. therefore, the completeness condition for
+the coecients aj(z) reads
+
+a2
+
+0(z) +xj>0
+
+1
+3
+
+j(j + 1) a2
+
+j (z) = 1.
+
+(4.16)
+
+the coecient a0(z) we evaluate below. the evaluation of coecients aj(z) for an arbi-
+trary j is given in the appendix. for the evaluation of a0(z) one can use, for example,
+the standard parameterization (4.12) and the denition of the haar measure du (see
+eq.(3.97) of ref.[10])
+
+du =
+
+1
+
+42 d~n d sin2 
+
+2
+
+,
+
+(4.17)
+
+where d~n is the uniform measure on the unit sphere s2 [9]. as a result for a0(z) we
+obtain
+
+a0(z) = z du eztr[t3u] = 2j1(z)/z,
+
+(4.18)
+
+where j1(z) is a bessel function [16]. in the particular case, z = 1, we get a0(1) = a0 =
+2j1(1) = 0.88 [16].
+
+for the integration over k we suppose, rst, that n is an even number. then, inte-
+
+grating over n1, n3,. . ., 1 we obtain
+
+w1/2(c) = lim
+
+nz . . .z dndn2dn4 . . . d2
+
+(2jn1 + 1)"
+(2jn3 + 1)"
+
+ajn1
+
+2jn1 + 1#2
+2jn3 + 1#2
+
+ajn3
+
+ xjn1
+ xjn3
+
+jn1[(t3)2n
+
+n2]
+
+jn3[(t3)2n2
+
+n4] . . .
+
+13
+
+(2j4 + 1)" aj4
+(2j2 + 1)" aj2
+
+2j4 + 1#2
+2j2 + 1#2
+
+ xj4
+ xj2
+
+j4[(t3)24
+2]
+
+j2[(t3)22
+
+n],
+
+where we have denoted aj(1) = aj.
+
+after the integration over n, n2,. . ., 2 we arrive at the expression
+
+w1/2(c) = lim
+
+j[(t3)n] =
+
+(2j + 1)" aj
+0 +xj>0
+(2j + 1)" aj
+
+2j + 1#n
+(2j + 1)" aj
+2j + 1#n
+
+nxj
+n(cid:16)an
+nxj>0
+
+= lim
+
+= lim
+
+2j + 1#n
+
+j[(t3)n](cid:17) =
+
+j[(t3)n],
+
+(4.19)
+
+(4.20)
+
+where we have used that limn an
+given by eq.(4.18).
+
+0 = 0 by virtue of the relation a0 = 2j1(1) = 0.88 < 1
+
+the expression (4.20) is valid too if n is an odd number. however,
+
+in this case
+
+j[(t3)n] = 0 and we get immediately w1/2(c) = 0.
+
+in order to estimate j[(t3)n] for n an even number and at n   we suggest to apply
+
+the following procedure
+
+j
+
+mn =
+
+j[(t3)n] =
+
+=
+
+(n + 1)
+
+2i
+
+xm=j
+zi
+
+i
+
+j
+
+xm=j
+
+ems ds
+
+sn+1 =
+
+(n + 1)
+
+2i
+
+i
+
+zi
+
+sh(2j + 1)
+
+sh
+
+s
+2
+
+s
+2
+
+ds
+sn+1 .
+
+(4.21)
+
+as n  , we can evaluate the integral over s by using the saddlepoint approach and
+get j[(t3)n]  jn.
+
+the wilson loop is then dened by
+
+w1/2(c) = lim
+
+nxj>0
+
+(2j + 1)" j aj
+
+2j + 1#n
+
+= lim
+
+nxj>0
+
+(2j + 1) exp"n n(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+< s j
+
+2j + 1
+
+j + 1
+
+1
+
+< 1.
+
+#.
+
+(4.22)
+
+j aj
+
+2j + 1(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+(4.23)
+
+by using the completeness condition for the coecients aj given by eq.(4.16) we obtain
+the constraint
+
+< q3(1  a2
+
+0)s j
+
+j + 1
+
+1
+
+2j + 1
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+j aj
+
+2j + 1(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+this proves that the wilson loop w1/2(c) vanishes in the limit n  , w1/2(c) = 0.
+thus, the wilson loop w1/2(c) for an arbitrary contour c and a pure gauge eld
+represented by the path integral derived in ref.[3] vanishes, instead of being equal to
+unity, w1/2(c) = 1. this shows that the path integral representation suggested in ref.[3]
+fails for the correct description of wilson loops.
+
+14
+
+5 wilson loop for z(2) center vortices
+
+in this section we evaluate explicitly the path integral (4.1) for wilson loops pierced by
+a z(2) center vortex with spatial azimuthal symmetry. some problems of z(2) center
+vortices with spatial azimuthal symmetry have been analysed by diakonov in his recent
+publication [17] for the gauge group su(2). in this system the main dynamical variable
+is the azimuthal component of the nonabelian gauge eld aa
+() (a = 1, 2, 3) depending
+only on , the radius in the transversal plane. for a circular wilson loop in the irreducible
+representation j one gets
+
+wj () =
+
+1
+
+2j + 1
+
+j
+
+xm=j
+
+ei2m() =
+
+1
+
+sin[(2j + 1)()]
+
+2j + 1
+
+sin[()]
+
+,
+
+(5.1)
+
+where () = qaa
+
+(). the gauge coupling constant g is included in the denition
+of the gauge eld. for wilson loops in the fundamental representation j = 1/2 we have
+
+()aa
+
+w1/2() = cos[()].
+
+(5.2)
+
+in the case of z(2) center vortices with spatial azimuthal symmetry and for the funda-
+mental representation of su(2) eq.(4.2) takes the form
+
+w1/2() = lim
+n
+
+k + t3k+1
+
+k] =
+
+n
+
+= lim
+
+yk=1z dk etr[t3(i2/n)k+1a()
+nz . . .z dndn1dn2 . . . d1
+ e tr[t3(i2/n)na()
+n1 + t3n
+ etr[t3(i2/n)n1a()
+ e tr[t3(i2/n)2a()
+ etr[t3(i2/n)1a()
+
+1 + t32
+1]
+n + t31
+n],
+
+n1]
+n2 + t3n1
+
+n2] . . .
+
+where we have used cxk+1xk = 2/n, (xk) = k and n+1 = 1.
+
+for the subsequent evaluation it is convenient to introduce the matrix
+
+q(a) = (cid:16)1 + i
+
+2
+n
+
+ a()(cid:17).
+
+in terms of q(a) the path integral (5.3) reads
+
+w1/2() = lim
+
+ etr[t3n1q(a)
+
+nz . . .z dndn1dn2 . . . d1 etr[t3nq(a)
+1] e tr[t31q(a)
+n],
+
+n2] . . . etr[t32q(a)
+
+n1]
+
+the integration over k we carry out with the help of eq.(4.7) taken in the from
+
+k + q(a)
+
+k1t3k] =
+
+z dk etr[t3k+1q(a)
+= xj
+
+2j + 1
+
+a2
+j
+
+j[(t3)2k+1q2(a)
+
+k1]
+
+15
+
+(5.3)
+
+(5.4)
+
+(5.5)
+
+(5.6)
+
+and the orthogonality relation (4.9). the coecients aj obey the completeness condition
+(4.16) with the constraint (4.23).
+
+the number n may be both even or odd. let n be an even number, then integrating
+
+over n1, n3,. . ., 1 by using eq.(5.6) we obtain
+
+jn1[(t3)2nq2(a)
+
+n2]
+
+jn3[(t3)2n2q2(a)
+
+n4] . . .
+
+w1/2() = lim
+
+nz . . .z dndn2dn4 . . . d2
+
+ajn3
+
+ajn1
+
+(2jn1 + 1)"
+(2jn3 + 1)"
+(2j4 + 1)" aj4
+(2j2 + 1)" aj2
+
+2jn1 + 1#2
+2jn3 + 1#2
+2j4 + 1#2
+2j2 + 1#2
+
+ xjn1
+ xjn3
+ xj4
+ xj2
+
+j4[(t3)24q2(a)
+2]
+
+j2[(t3)22q2(a)
+
+n].
+
+(5.7)
+
+(5.8)
+
+the integration over n, n2, . . ., 2 gives
+
+wj () = lim
+
+2j + 1#n
+(2j + 1)" aj
+2j + 1#n
+0 +xj>0" aj
+2j + 1#n
+
+nxj
+n(cid:16)an
+nxj>0" aj
+
+= lim
+
+= lim
+
+z dn j[(t3)nnqn(a)
+j[(t3)n] j[qn(a)](cid:17) =
+
+n] =
+
+j[(t3)n] j[qn(a)],
+
+where we have set limn an
+
+0 = 0.
+
+the integration over n we have carried out by means of eq.(2.3). one can easily
+show that eq.(5.8) is also valid for odd n, as well as eq.(4.12). in this case due to the
+relation j[(t3)n] = 0 we obtain again w1/2() = 0.
+
+for even n we should use the relation j[(t3)n]  jn at n   which follows from
+
+eq.(4.13). this reduces the r.h.s. of eq.(5.7) to the form
+
+w1/2() = lim
+
+nxj>0" jaj
+
+2j + 1#n
+
+j[qn(a)],
+
+(5.9)
+
+the evaluation of the character j[qn(a)] for n   runs as follows
+
+j[qn(a)] = jh(cid:16)1 + i
+
+2
+n
+
+ a()(cid:17)ni  jhei2a()i =
+
+sin[(2j + 1)()]
+
+=
+
+sin[()]
+
+.
+
+(5.10)
+
+substituting eq.(5.10) in eq.(5.9) we obtain
+
+w1/2() = lim
+
+nxj>0" jaj
+
+2j + 1#n sin[(2j + 1)()]
+
+sin[()]
+
+.
+
+(5.11)
+
+16
+
+due to the constraint eq.(4.23) the wilson loop vanishes in the limit n  , w1/2() = 0.
+thus, we have shown that the the path integral for wilson loops suggested in ref.[3] gives
+zero for a eld conguration with a z(2) center vortex, w1/2() = 0, instead of the correct
+result w1/2() = cos (), eq.(5.2).
+
+we hope that the examples considered in sect.4 and 5 demonstrate that the path
+integral representation for wilson loops derived in ref.[3] is erroneous. nevertheless, in
+sect. 6 we evaluate explicitly the regularized evolution operator zreg(r2, r1) suggested by
+diakonov and petrov for the representation of the wilson loop in ref.[3]. we show that
+this regularized evolution operator zreg(r2, r1) has been evaluated incorrectly in ref.[3].
+the correct evaluation gives zreg(r2, r1) = 0 which agrees with our results obtained
+above.
+
+6 path integral for the evolution operator z(r2, r1)
+
+as has been suggested in ref.[3] the functional z(r2, r1) dened by (see eq.(8) of ref.[3])
+
+z(r2, r1) =
+
+r2
+
+zr1
+
+dr(t) exp it
+
+t2
+
+zt1
+
+tr (ir r 3)!,
+
+(6.1)
+
+where r = dr/dt and t = 1/2, 1, 3/2, . . . is the colour isospin quantum number, should
+be regularized by the analogy to an axialsymmetric top. the regularized expression has
+been dened in eq.(9) of ref.[3] by
+
+zreg(r2, r1) =
+
+r2
+
+zr1
+
+dr(t) exp i
+
+t2
+
+zt1 h1
+
+2
+
+i (2
+
+1 + 2
+
+2) +
+
+1
+2
+
+ik 2
+
+3 + t 3i!,
+
+(6.2)
+
+where a = i tr(r r a) are angular velocities of the top, a are pauli matrices a = 1, 2, 3,
+i and ik are the moments of inertia of the top which should be taken to zero. according
+to the prescription of ref.[3] one should take rst the limit ik  0 and then i  0.
+
+for the conrmation of the result, given in eq.(13) of ref.[3],
+
+zreg(r2, r1) = (2t + 1) dt
+
+t t (r2r
+
+1),
+
+(6.3)
+
+where dt (u) is a wigner rotational matrix in the representation t , the authors of ref.[3]
+suggested to evaluate the evolution operator (6.2) explicitly by means of the discretization
+of the path integral over r. the discretized form of the evolution operator eq.(6.2) is
+given by eq.(14) of ref.[3] and reads1
+
+zreg(rn +1, r0) =
+
+lim
+
+drn
+
+n z
+
+n
+
+yn=1
+
+n    0
+2 h(tr vn1)2 + (tr vn2)2i  i
+
+i
+
+ exp" n
+
+xn=0   i
+
+1we are using the notations of ref.[3]
+
+17
+
+ik
+2
+
+(tr vn3)2  t (tr vn3)!#, (6.4)
+
+where rn = r(sn) with sn = t1+n  and a = itr (rnr
+of the angular velocities [3] and vn = rnr
+neighbouring points. the normalization factor n is determined by
+
+n+1a)/ is the discretized analogy
+n+1 are the relative orientations of the top at
+
+n =   i
+
+2is ik
+
+2i !n +1
+
+.
+
+(6.5)
+
+(see eq.(19) of ref.[3]). according to the prescription of ref.[3] one should take the limits
+  0 and ik, i  0 but keeping the ratios ii/, where (i = k,), much greater than
+unity, ii/  1.
+
+let us rewrite the exponent of the integrand of eq.(6.4) in equivalent form
+
+zreg(rn +1, r0) =
+
+lim
+
+2is ik
+  i
+
+2i !n +1
+
+z
+
+n
+
+yn=1
+
+drn
+
+n    0
+(tr vna)2  i
+
+i
+2
+
+ exp" n
+
+xn=0   i
+
+ik  i
+
+2
+
+(tr vn3)2  t (tr vn3)!#.
+
+(6.6)
+
+now let us show that if vn is a rotation in the fundamental representation of su(2), so
+
+for this aim, rst, recall that
+
+(tr vna)2 = 4 + (tr vn)2.
+
+tr (vna) = tr (v 
+
+n a).
+
+(6.7)
+
+(6.8)
+
+since vn is a rotation matrix in the fundamental representation of su(2), it can be taken
+in the general standard parameterization given by eq.(4.12). by virtue of the relation
+(6.8) we can rewrite (tr vna)2 as follows
+
+(tr vna)2 = tr (vna)tr (v 
+= 2 tr (rnr
+
+n+1rn+1r
+
+n a) = 2 tr(cid:16)(cid:16)vn 
+
+tr vn(cid:17)(cid:16)v 
+n 
+
+tr vn(cid:17)(cid:17) =
+
+n) + (tr vn)2 = 2 tr 1 + (tr vn)2 = 4 + (tr vn)2. (6.9)
+
+1
+2
+
+1
+2
+
+by using the relation eq.(6.7) we can recast the r.h.s. of eq.(6.6) into the form
+
+zreg(rn +1, r0) =
+
+lim
+
+n  
+  0
+xn=0   i
+
+ z
+
+n
+
+yn=1
+
+drn exp" n
+
+2is ik
+"  i
+
+2i !n +1
+
+exp in(n + 1)
+
+i
+
+ !#
+
+i
+2
+
+(tr vn)2  i
+
+ik  i
+
+2
+
+(tr vn3)2  t (tr vn3)!#. (6.10)
+
+now let us proceed to the evaluation of the integrals over rn (n = 1, 2, ..., n). for this
+aim it is convenient to rewrite the r.h.s. of eq.(6.10) in the following form
+
+zreg(rn +1, r0) =
+
+lim
+
+n    0
+
+2is ik
+"  i
+
+2i !n +1
+
+exp in(n + 1)
+
+i
+
+ !#
+
+18
+
+i
+
+ zz . . .zz drn drn 1 . . . dr2 dr1
+ exp   i
+ik  i
+ i
+t htr (rn r
+
+2 h(tr rn r
+h(tr rn r
+n +13) + tr (rn 1r
+
+2
+
+n +1)2 + (tr rn 1r
+
+n )2 + . . . + (tr r2r
+
+n +13)2 + (tr rn 1r
+
+n 3)2 + . . . + (tr r2r
+
+0)2i
+1)2 + (tr r1r
+03)2i
+13)2 + (tr r1r
+
+03)i!.
+
+n 3) + . . . + tr (r2r
+
+13) + tr (r1r
+
+(6.11)
+
+in the fundamental representation and the parameterization [18] (see appendix) we have
+
+tr vn = tr (rnr
+
+= 2 cos
+
+cos
+
+n+1) =
+n+1
+
+2
+n+1
+
+2
+
+n
+2
+n
+2
+
++2 sin
+
+sin
+
+2
+
+= 2 cos  n  n+1
+2 cos  n + n+1
+tr (vn3) = tr (rnr
+
+2
+
+2
+
+2
+
+2
+
+n+1 + n+1
+
+cos  n + n
+cos n  n
+
+! cos  n  n+1
+! sin  n  n+1
+
+!
+
+! =
+n+1  n+1
+! cos n  n+1
+!
+!,
+! sin  n  n+1
+
+2
+
+2
+
+2
+
+2
+
+2
+
+n+13) =
+
+= 2 i cos
+n
+2
+
++2 i sin
+
+n
+2
+
+cos
+
+n+1
+
+2
+
+sin
+
+n+1
+
+2
+
+=  2 i cos n  n+1
+2 i cos  n + n+1
+
+2
+
+2
+
+2
+
+2
+
+sin n + n
+
+
+sin  n  n
+! cos  n  n+1
+! sin  n  n+1
+
+2
+
+2
+
+n+1 + n+1
+
+2
+
+
+n+1  n+1
+
+2
+
+!
+! =
+
+! sin  n  n+1
+!.
+! cos  n  n+1
+
+2
+
+2
+
+the haar measure rn is dened by (see eq.(a.2)):
+
+drn =
+
+1
+82 sin n dn dn dn.
+
+!
+
+(6.12)
+
+(6.13)
+
+due to the assumption ii/  1, where (i = k,), the integrals over rn are concentrated
+around unit elements. expanding tr (vn) and tr (vn3) around unit elements we get
+
+tr vn = tr (rnr
+
+tr (vn3) = tr (rnr
+
+1
+4
+
+(n  n+1)2 
+
+n+1) = 2 
+n+13) =  i (n  n+1 + n  n+1).
+
+1
+4
+
+(n  n+1 + n  n+1)2,
+
+for the subsequent integration it is convenient to make a change of variables
+
+n + n
+
+2
+
+ n,
+n  n  n.
+
+19
+
+(6.14)
+
+(6.15)
+
+the jacobian of this transformation is equal to unity. after this change of variables (6.14)
+reads
+
+tr vn = tr (rnr
+
+tr (vn3) = tr (rnr
+
+1
+4
+
+(n  n+1)2  (n  n+1)2,
+
+n+1) = 2 
+n+13) =  2 i (n  n+1).
+
+(6.16)
+
+since both tr vn and tr (vn3) do not depend on n, we can integrate out n. this
+changes only the haar measure as follows
+
+drn =
+
+1
+4
+
+n dn dn.
+
+(6.17)
+
+the integration over n and n we will carry out in the limits   n   and
+  n  .
+
+substituting expansions (6.16) in the integrand of eq.(6.11) we obtain
+
+zreg(rn +1, r0) =
+
+lim
+
+2is ik
+  i
+
+2i !n +1  1
+
+4!n
+
+n    0
+z
+
+
+
+
+
+dn
+
+z
+
+ exp i
+
+
+
+z
+
+i
+2
+
+
+
+
+
+
+
+
+
+
+
+dn 1
+
+dn n
+
+z
+
+dn 1 n 1 . . .
+
+z
+[(n +1  n )2 + (n  n 1)2 + . . . + (2  1)2 + (1  0)2]
+
+z
+
+z
+
+z
+
+d2 2
+
+d1
+
+d2
+
+ik
+2
+
++ i
+
+[(n +1  n )2 + (n  n 1)2 + . . . + (2  1)2 + (1  0)2]
+2 i t [(n +1  n ) + (n  n 1) + . . . + (2  1) + (1  0)]! =
+= e 2 i t (n +1  0)
+
+2i !n +1  1
+
+2is ik
+  i
+
+4!n
+
+lim
+
+d1 1
+
+d1 1
+
+
+
+n    0
+z
+
+dn 1
+
+
+
+
+
+dn
+
+z
+
+ exp i
+
+
+
+z
+
+i
+2
+
+
+
+
+
+
+
+
+
+dn n
+
+z
+
+dn 1 n 1 . . .
+
+z
+[(n +1  n )2 + (n  n 1)2 + . . . + (2  1)2 + (1  0)2]
+
+z
+
+z
+
+z
+
+d2 2
+
+d1
+
+d2
+
++ i
+
+ik
+2
+
+[(n +1  n )2 + (n  n 1)2 + . . . + (2  1)2 + (1  0)2]!.
+
+(6.18)
+
+the integration over n gives
+
+dn 1 . . .
+
+
+
+z
+
+d2
+
+
+
+z
+
+d1
+
+
+
+
+
+dn
+
+z
+z
+ exp i
+
+ik
+2
+
+[(n +1  n )2 + (n  n 1)2 + . . . + (2  1)2 + (1  0)2]! =
+
+20
+
+2
+3
+
+2i
+ik
+
+2vuut
+ik !ns 1
+
+2i
+ik
+
+. . .vuut
+exp i
+
+n + 1
+
+n  1
+
+n vuut
+
+ik
+
+2(n + 1)
+
+2i
+ik
+
+n
+
+n + 1
+
+exp i
+(n +1  0)2!.
+
+ik
+
+2(n + 1)
+
+(n +1  0)2! =
+
+(6.19)
+
+by taking into account the normalization factor the result of the integration over n reads
+
+1
+
+2i
+
+2i
+ik
+
+= vuut
+=  vuut
+ s ik
+ exp i
+= s
+= s ik
+
+
+
+
+
+dn
+
+2i !n +1 
+z
+[(n +1  n )2 + (n  n 1)2 + . . . + (2  1)2 + (1  0)2]! =
+
+dn 1 . . .
+
+z
+
+z
+
+z
+
+ik
+2
+
+d2
+
+d1
+
+
+
+ik
+
+2i(n + 1)
+
+exp i
+
+ik
+
+2(n + 1)
+
+(n +1  0)2! =
+
+exp i
+
+ik
+2t
+
+(n +1  0)2!,
+
+(6.20)
+
+2it
+
+where we have replaced (n + 1)  = t2  t1 = t. the obtained result is exact. by
+replacing ik  m, n +1  xb, 0  xa and t  (tb  ta) we arrive at the expression
+for the green function, the evolution operator, of a free particle with a mass m given by
+eq.(2.51) of ref.[6].
+
+thus, after the integration over n the evolution operator zreg(rn +1, r0) can be
+
+written in the form
+
+zreg(rn +1, r0) =
+
+= s ik
+
+2it
+
+exp i
+
+ik
+2t
+
+(n +1  0)2! e 2 i t (n +1  0) f [i, n +1, 0],
+
+(6.21)
+
+where f [i, n +1, 0] is a functional dened by the integrals over n
+
+f [i, n +1, 0] =
+
+=
+
+lim
+
+n    0
+ exp i
+
+i
+2
+
+2i!n +1  1
+  i
+
+4!n 
+z
+
+dn n
+
+
+
+z
+
+dn 1 n 1 . . .
+
+
+
+z
+
+d2 2
+
+
+
+z
+
+d1 1
+
+[(n +1  n )2 + (n  n 1)2 + . . . + (2  1)2 + (1  0)2]!.
+
+(6.22)
+
+formally we do not need to evaluate the functional f [i, n +1, 0] explicitly.
+in fact,
+the functional f [i, n +1, 0] should be a regular function of variables i, n +1 and 0
+restricted in the limit i  0. therefore, taking the limit ik  0 for the evolution
+operator zreg(rn +1, r0) dened by eq.(6.21) we get
+
+z(r2, r1) = lim
+
+ik,i0
+
+zreg(rn +1, r0) = 0.
+
+(6.23)
+
+this agrees with our results obtained in sects. 4 and 5.
+
+21
+
+nevertheless, in spite of this very denite result let us proceed to the explicit evaluation
+of the functional f [i, n +1, 0]. it is convenient to rewrite the integrand of eq.(6.22) in
+the equivalent form
+
+f [i, n +1, 0] =
+
+lim
+
+2i! 1
+  i
+
+ !n   1
+
+4!n
+
+.
+
+(6.24)
+
+n  
+  0
+
+z
+jn
+
+
+
+
+
+z
+
+
+
+z
+
+
+
+z
+
+
+j1
+
+
+j2
+
+
+
+
+
+. . .
+
+d1
+
+d2
+
+[(n +1  n )2 + (n  n 1)2 + . . . + (2  1)2 + (1  0)2
+
+after k integrations we get
+
+dn
+
+i
+2
+
+jn 1
+
+dn 1 . . .
+
+
+ exp i
++jn n + jn 1 n 1 + . . . + j2 2 + j1 1]!(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)jn =jn1=...=j2=j1=0
+z
+
+d1 exp i
+
+z
+
+i
+2
+
+d2
+
+dk
+
+z
+
+dk1 . . .
+
+z
+[(k+1  k)2 + (k  k1)2
++ . . . + (2  1)2 + (1  0)2 + jk k + jk1 k1 + . . . + j2 2 + j1 1]! =
+= s 2i
+ exp i
+
+k s 2i
+k  1
+i
+k  1
+k
+
+2(k + 1)
+k  1
+k
+
+k
+k + 1 
+
+jk1 +
+
+k + 1
+
+jk +
+
+i
+
+k
+
+1
+
+
+
+
+
+
+
+1
+
+i
+
+i
+
+2
+3
+
+2
+3
+
+j2 +
+
+k + 1
+
++ . . . +
+
+i
+
+k
+k + 1 
+ " 
+i
+
+. . .s 2i
+
+2s 2i
+k+1  k
+k  2
+k  1
+k  1   
+
+k
+1
+1
+2 (cid:16)j1  0(cid:17)2
+2 
+2 
+2
+1
+0(cid:17)2
+j1 
+3 
+3
+1
+4
+1
+0(cid:17)2
+42 2
+0 
+2 
+5 
++
+1
+5
+1
+0(cid:17)2
+52 2
+2 
+6 
++
+k  1
+k  2
+k  1   
+
+k
+
+1
+4
+j1 
+jk2 + . . . +
+
+ exp i
+2
+1
+4 (cid:16)j3 +
+2 
+
+3
+1
+2
+3
+j1 
+3 
+4 
++
+2
+4
+1
+2
+3
+3 
+5 
+4 
+2
+k  1
+k  2
+
+k  1
+k
+1
+k
+k2 2
+k + 1 
+
+0#!.
+
+1
+2 
+
+j2 +
+
+1
+5
+
+1
+2
+
++
+
++
+
++
+
++
+
++
+
+3
+
+
+
+i
+
+exp i
+k
+k + 1 
+k  2
+k  1   
+j1 
+5 (cid:16)j4 +
+4
+5 
+
+1
+2
+4
+
+3
+4
+
+jk2
+
+(0  k+1)2!
+k  2
+
+k  1
+j1!!
+1
+2
+3 
+2
+2
+1
+1
+0(cid:17)2
+3 
+2 
+2
+2
+3
+4 
+3
+2
+3
+4 
+3
+jk1
+
+j3 +
+
+3
+4
+
+j2
+
+j2
+
++
+
+4
+5 
+j3 +
+k  1
+k
+2
+3 
+
+k + 1 (cid:16)jk +
+k  1
+k  2
+k  1   
+k
+
+
+
+k  1
+k
+2
+
+k
+k + 1 
+1
+1
+3 (cid:16)j2 +
+2
+0 
+2 
+2
+1
+3
+1
+1
+32 2
+2 
+4 
+2 
+0 
+4
+1
+5
+6 (cid:16)j5 +
+2 
+j4 +
+5
+1
+2 
+0  . . . 
+2
+j2 +
+3
+
+k
+
+by performing n integrations we obtain
+
+
+
+z
+
+dn
+
+
+
+z
+
+dn 1 . . .
+
+
+
+z
+
+d2
+
+
+
+z
+
+d1 exp i
+
+i
+2
+
+[(n +1  n )2 + (n  n 1)2
+
+22
+
+1
+22 2
+
+0
+
+1
+2
+
+j1 
+
+1
+k
+
+0(cid:17)2
+
+(6.25)
+
++ . . . + (2  1)2 + (1  0)2 + jn n + jn 1 n 1 + . . . + j2 2 + j1 1]! =
+=  s 2i
+ exp i
+
+i
+2t
+n
+n + 1 
+
+n + 1
+
+jn +
+
+j2 +
+
++ . . . +
+
+2it
+
+exp i
+
+i
+
+n
+n + 1 
+ " 
+i
+
+i !n +1s i
+n +1  n
+n  1
+n  2
+n 
+n  1   
+1
+2 (cid:16)j1  0(cid:17)2
+2
+1
+3 
+j1 
+3
+4
+1
+0(cid:17)2
+5 
+2 
++
+1
+0(cid:17)2
+2 
++
+jn 2 + . . . +
+
+1
+2 
+
+j2 +
+
+1
+2
+
+1
+5
+
+ exp i
+2
+1
+4 (cid:16)j3 +
+2 
+
+3
+3
+1
+1
+2
+j1 
+3 
+4 
++
+4
+2
+1
+2
+3
+4
+j1 
+4 
+3 
+5 
+2
+n  2
+n  1
+n 
+n  1
+1
+0(cid:17)2
+2 
++
+
+1
+n
+
+
+
+2
+3
+1
+2 
+0(cid:17)2
+1
+42 2
+0 
+1
+5
+52 2
+6 
+n  1
+n 
+0#!,
+
+n
+n + 1 
+
+1
+n 2 2
+
++
+
++
+
++
+
++
+
+3
+
+2
+
+jn 1 +
+
+(n +1  0)2!
+n  1
+n
+n  1
+n
+n 
+n + 1 
+1
+1
+1
+3 (cid:16)j2 +
+2
+2 
+0 
+2
+2
+4
+1
+1
+3
+1
+32 2
+2 
+0 
+4 
+2 
+4
+5
+1
+6 (cid:16)j5 +
+2 
+j4 +
+5
+1
+2 
+0  . . . 
+n  2
+2
+n  1   
+3
+
+j2 +
+
+n
+
+n + 1 (cid:16)jn +
+n  1
+n 
+
+n  1
+n
+n + 1 
+n 
+n  2
+2
+n  1   
+3 
+0(cid:17)2
+j1 
+5 (cid:16)j4 +
+4
+5 
+
+j3 +
+
+3
+4
+
+3
+4
+
+1
+2
+
+j3 +
+
++
+
+n  2
+n  1
+j1!!
+1
+2
+2
+1
+2 
+3 
+2
+3
+4 
+3
+2
+3
+4 
+3
+jn 1
+
+j2
+
+j2
+
+4
+5 
+n  1
+n
+n  2
+n  1   
+
+jn 2
+
+1
+22 2
+
+0
+
+2
+3 
+
+1
+2
+
+j1
+
+(6.26)
+
+where we have replaced (n + 1)  = t2  t1 = t.
+now we can evaluate the derivatives with respect to j1, j2, . . . , jn 1, jn . due to the
+constraint i/  1 we can keep only the leading order contributions in powers of i/ 
+1. the result reads
+
+
+j1
+
+
+j2
+
+. . .
+
+
+
+jn 1
+
+
+jn
+
+
+
+z
+
+dn
+
+
+
+z
+
+dn 1 . . .
+
+
+
+z
+
+d2
+
+
+
+z
+
+d1
+
+[(n +1  n )2 + (n  n 1)2 + . . . + (2  1)2 + (1  0)2
+
+=
+
+1
+
+i
+2
+
+2it
+
+exp i
+
+ exp i
++jn n + jn 1 n 1 + . . . + j2 2 + j1 1]!(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)jn =jn1=...=j2=j1=0
+ !n
+=  s 2i
+(n +1  0)2! ii
+n(n + 1)#!
+ n +1
+ n +1
+ n +1
+ n +1
+
+i !n +1s i
++ 0" 1
+1  2
++ 0" 2
+2  3
++ 0" 3
+3  4
++ 0" 4
+4  5
+
+n(n + 1)#!
+n(n + 1)#! . . . n +1
+
+i
+2t
+1
+3  4
++ . . . +
+
+1
+2  3
+2
++
+3  4
++ . . . +
+
+n(n + 1)#!
+
+n + 1
+3
+
+n + 1
+4
+
+n + 1
+2
+
++ . . . +
+
++ . . . +
+
+n + 1
+
++
+
++
+
+4
+
+3
+
+1
+
+2
+
+23
+
+n
+
+n + 1
+
++ 0
+
+n
+
+n(n + 1)! =
+
+1
+
+3
+
+=  s 2i
+ n +1
+ n +1
+=  s 2i
+yk=1 n +1
+
+
+n
+
+i !n +1s i
+
+exp i
+
+i
+2t
+
+2it
+n
+
++ 0
+
++ 0
+
+2
+
+n + 1! n +1
+n + 1!  . . .   n +1
+n  2
+
+n + 1
+
+n + 1
+
+n + 1
+
+ !n
+(n +1  0)2! ii
+n + 1!
+n  1
+
++ 0
+
+1
+
+n
+
++ 0
+
+n + 1
+
+n + 1! =
+ !n
+(n +1  0)2! ii
+
+i !n +1s i
+
+2it
+
+k
+
+n + 1
+
++ 0
+
+exp i
+i
+2t
+n + 1 !.
+n + 1  k
+
+(6.27)
+
+substituting eq.(6.27) in eq.(6.24) we obtain the functional f [i, n +1, 0]:
+
+f [i, n +1, 0] = s i
+
+2it
+
+i
+2t
+
+exp i
+2i !n +1 n
+
+(n +1  0)2!
+yk=1 n +1
+
+n + 1
+
+k
+
+2!n s i
+  1
+
+
+
+lim
+
+n    0
+
++ 0
+
+n + 1 !.
+n + 1  k
+
+(6.28)
+
+in order to understand the behaviour of the functional f [i, n +1, 0] in the limit n  
+we suggest to evaluate the product
+
+n
+
+[n +1, 0] =
+
+yk=1 n +1
+at n  1 by using the regularization.
+[n +1, 0] runs the following way
+
+k
+
+n + 1
+
++ 0
+
+n + 1 !
+n + 1  k
+
+(6.29)
+
+in the regularization the evaluation of
+
+n [n +1, 0] =
+
+n n +1
+
+k
+
+n + 1
+
++ 0
+
+n + 1 ! =
+n + 1  k
+
+n
+
+d
+
+xk=1
+ds n +1
+z0
+
+dz
+(s)
+
+
+
+n
+
+=
+
+xk=1
+= 
+
+(1)
+d
+ds
+
+n
+
+xk=1
+z0
+
+
+
+d
+ds
+
+= 
+
+dz
+(s)
+
+= (n + 1)
+
+= (n + 1)
+
+=
+
+n + 1  k
+
+n + 1
+
+k
+
+=
+
++ 0
+
+n + 1 !s(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)s=0
+n + 1 ! z# zs1(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)s=0
+n + 1  k
+ e0 z
+
+zs2(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)s=0
+
+zs1(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)s=0
+
+=
+
+=
+
+k
+
+n + 1
+
++ 0
+
+exp"  n +1
+
+
+
+
+
+z0
+ds " 1
+s  1
+
+dz
+(s)
+
+d
+ds
+
+d
+
+e0 z  en +1 z
+n +1  0
+n + 1
+
+1  exp(cid:16) 
+
+z(cid:17)
+e0 z  en +1 z
+n +1  0
+0  1s
+1s
+n +1  0 #s=0
+
+n +1
+
+=
+
+24
+
+= (n + 1)"1 
+
+n +1 n n +1  0 n 0
+
+# =
+
+n +1 n
+
+n +1  0
+e
+n +1  0 n
+n +1  0
+
+e
+0
+
+.
+
+= (n + 1)
+
+thus, the function [n +1, 0] is dened by
+
+(6.30)
+
+,
+
+(6.31)
+
+[n +1, 0] = exp
+
+
+(n + 1)
+
+n +1 n
+
+e
+n +1  0 n
+n +1  0
+
+e
+0
+
+
+
+
+where e = 2.71828 . . .. due to the constraint i/  1 the euler angles n +1 and 0 are
+less than unity and the ratio in eq.(6.31) is always positive
+
+n +1 n
+
+e
+n +1  0 n
+n +1  0
+
+e
+0
+
+> 0.
+
+(6.32)
+
+the functional f [i, n +1, 0] is then dened by
+
+f [i, n +1, 0] = s i
+
+2it
+
+i
+2t
+
+(n +1  0)2!
+
+exp i
+2i !n +1
+
+2!n s i
+  1
+
+
+
+lim
+
+n  
+  0
+
+exp
+
+
+(n + 1)
+
+n +1 n
+
+e
+n +1  0 n
+n +1  0
+
+e
+0
+
+
+
+
+. (6.33)
+
+thus f [i, n +1, 0] vanishes in the limit n  . this result retains itself even if we
+change the normalization factor of the evolution operator
+
+n =   i
+
+2is ik
+
+2i !n +1
+
+ (2)n  s ik
+
+i !n +1
+
+.
+
+(6.34)
+
+the renormalized functional f [i, n +1, 0], dened by
+
+f [i, n +1, 0] = s i
+
+2it
+
+exp i
+
+i
+2t
+
+(n +1  0)2!
+
+ lim
+
+n
+
+exp
+
+
+(n + 1)
+
+n +1 n
+
+e
+n +1  0 n
+n +1  0
+
+e
+0
+
+,
+
+(6.35)
+
+
+
+
+vanishes in the limit n   since the euler angles n +1 and 0 are small compared with
+unity due to the constraint i/  1 [3]. the vanishing of the functional f [i, n +1, 0]
+in the limit n   agrees with our results obtained in sects. 4 and 5.
+
+substituting eq.(6.35) in eq.(6.21) we obtain
+
+zreg(rn +1, r0) = 0.
+
+(6.36)
+
+25
+
+this leads to the vanishing of the evolution operator z(r2, r1) given by eq.(6.1) or eq.(8)
+of ref.[3], z(r2, r1) = 0.
+
+thus, the evolution operator z(r2, r1) suggested in ref.[3] for the description of
+wilson loops in terms of path integrals over gauge degrees of freedom is equal to zero
+identically. this agrees with our results obtained in sects. 4 and 5. as we have shown the
+vanishing of z(r2, r1) does not depend on the specic regularization and discretization
+of the path integral. in fact, this is an intrinsic property of the path integral given by
+eq.(6.1) that becomes obvious if the evaluation is carried out correctly.
+
+7 evolution operator z(r2, r1) and shift of energy
+
+levels of an axialsymmetric top
+
+in this section we criticize the analysis of the evolution operator z(r2, r1) carried out
+by diakonov and petrov via the canonical quantization of the axialsymmetric top (see
+eq.(12) of ref.[3]). below we use the notations of ref.[3].
+
+the parallel transport operator
+
+w(t2, t1) = "p exp i
+
+x(t2)
+
+zx(t1)
+
+aa
+
+(x) t a dx!#
+
+= "p exp i
+
+t2
+
+zt1
+
+a(t) dt!#
+
+,
+
+(7.1)
+
+where a(t) = aa
+(x) t a dx/dt is a tangent component of the yangmills eld and t a (a =
+1, 2, 3) are the generators of su(2) group in the representation t , has been reduced to
+the form
+
+w(t2, t1) = dt
+
+(u(t2)u (t1)),
+
+(7.2)
+
+(see eq.(5) of ref.[3]) due to the statement [3]: the potential a(t) along a given curve
+can be always written as a pure gauge
+
+a(t) = i dt
+
+(u(t))
+
+d
+dt
+
+dt
+
+(u (t))
+
+(7.3)
+
+(see eq.(4) of ref.[3]).
+
+by using the parallel transport operator eq.(7.2) the wilson loop wt (c) in the rep-
+
+resentation t has been dened by
+
+wt (c) = x
+
+w(t2, t1) = x
+
+dt
+
+(u(t2)u (t1)).
+
+(7.4)
+
+(see eq.(25) of ref.[3]). in terms of the evolution operator z(r2, r1) given by eq.(6.1)
+(see eq.(8) of ref.[3]) the parallel transport operator w(t2, t1) has been recast into the
+form
+
+w dp
+
+ (t2, t1) = zz dr1 dr2 xt ,m
+
+(2t  + 1) dt 
+
+m(u(t2)r
+
+2)dt 
+
+m(r1u (t1)) z(r2, r1), (7.5)
+
+where the index dp means that the parallel transport operator is taken in the diakonov
+petrov (dp) representation. the wilson loop w dp
+
+t (c) in the dprepresentation reads
+
+w dp
+
+t (c) = zz dr1 dr2 xt ,m,
+
+(2t  + 1) dt 
+
+m(u(t2)r
+
+2)dt 
+
+m(r1u (t1)) z(r2, r1).
+
+(7.6)
+
+26
+
+of course, if the dprepresentation were correct we should get w dp
+wt (c) is determined by eq.(7.4).
+
+t (c) = wt (c), where
+
+the regularized evolution operator zreg(r2, r1) given by eq.(6.3) (see also eq.(9) of
+ref.[3]) can be represented in the form of a sum over possible intermediate states, i.e.
+eigenfunctions of the axialsymmetric top
+
+zreg(r2, r1) = xj,m,k
+
+(2j + 1) dj
+
+mk(r2)dj
+
+km(r
+
+1) ei(t2  t1) ejm,
+
+(7.7)
+
+(see eq.(12) of ref.[3]), where ejm are the eigenvalues of the hamiltonian of the axial
+symmetric top
+
+ejm =
+
+j(j + 1)  m2
+
+2i
+
++
+
+(m  t )2
+
+2ik
+
+(7.8)
+
+(see eq.(11) of ref.[3]).
+
+as has been stated in ref.[3]: if we now take to zero i,k  0 (rst ik, then i)
+we see that in the sum (12) only the lowest energy intermediate state survives with m =
+j = t . the resulting phase factor from the lowest energy state can be absorbed in the
+normalization factor in eq.(9) since that corresponds to a shift in the energy scale.
+
+the statement concerning the possibility to absorb the uctuating factor exp[i(t2 
+t1) t /2i] in the normalization of the path integral representing the evolution operator
+is the main one allowing the r.h.s. of eqs.(7.5) and (7.6) to escape from the vanishing in
+the limit i  0.
+in reality such a removal of the uctuating factor is prohibited since this leads to
+the change of the starting symmetry of the system from su(2) to u(2).
+in order to
+make this more transparent we suggest to insert zreg(r2, r1) of eq.(7.7) into eq.(7.6)
+and to express the wilson loop w dp
+t (c) in terms of a sum over possible intermediate
+states, the eigenfunctions of the axialsymmetric top. the main idea of this substitution
+is the following: as the wilson loop is a physical quantity which can be measured, all
+irrelevant normalization factors should be canceled for the evaluation of it. therefore, if
+the oscillating factor exp[ i (t2  t1) t /2i] can be really removed by a renormalization
+of something, the wilson loop should not depend on this factor.
+substituting eq.(7.7) in eq.(7.6) and integrating over r1 and r2 we obtain the fol-
+
+lowing expansion for the parallel transport operator in the dprepresentation
+
+w dp
+
+ (t2, t1) = xt 
+
+t 
+
+xm=t 
+
+(u(t2)u (t1)) ei(t2  t1) et m.
+dt 
+
+(7.9)
+
+setting  =  and summing over  we get the dprepresentation for wilson loops
+
+w dp
+
+t (c) = x
+
+w dp
+
+ (t2, t1) = xt 
+
+t 
+
+xm=t 
+
+(u(t2)u (t1)) ei(t2  t1) et m.
+dt 
+
+(7.10)
+
+due to the denition (7.4) the r.h.s. of eq.(7.10) can be rewritten in the form
+
+w dp
+
+t (c) = x
+
+w dp
+
+ (t2, t1) = xt 
+
+xm=t 
+
+t 
+
+wt (c) ei(t2  t1) et m,
+
+(7.11)
+
+27
+
+where wt (c) is the wilson loop in the t  representation determined by eq.(7.4). the
+relation (7.11) agrees to some extent with our expansion given by eq.(7.1).
+
+following ref.[3] and taking the limit ik  0 we obtain m = t . this reduces the
+
+r.h.s. of eq.(7.11) to the form
+
+w dp
+
+t (c) = xt 
+
+wt (c) exp"  i(t2  t1)
+
+t (t  + 1)  t 2
+
+2i
+
+#.
+
+(7.12)
+
+now according to the prescription of ref.[3] we should take the limit i  0. following
+again ref.[3] and setting t  = t we arrive at the relation
+
+w dp
+
+t (c) = wt (c) exp"  i(t2  t1)
+
+t
+
+2i# =
+
+dt
+
+(u(t2)u (t1)) exp"  i(t2  t1)
+
+t
+
+2i#.
+
+= x
+
+(7.13)
+
+thus, wilson loops in the dprepresentation dier from original wilson loops by the
+oscillating factor exp[i(t2  t1) t /2i]. the only possibility to remove the oscillating
+factor exp[i(t2  t1) t /2i] is to absorb this phase factors in the matrices u(t2) and
+u (t1) which describe the degrees of freedom of the gauge potential a(t) via the relation
+(7.2). this yields the changes
+
+u(t2)  u (t2) = u(t2) ei t2 t /2i,
+u (t1)  u (t1) = u (t1) e i t1 t /2i.
+
+(7.14)
+
+however, the matrices u (t2) and u (t1) are now the elements of the u(2) group but not
+of su(2). thus, the shift of the energy level of the ground state of the axialsymmetric
+top suggested by diakonov and petrov in order to remove the oscillating factor changes
+crucially the starting symmetry of the theory from su(2) to u(2). since the former is
+not allowed the oscillating factor exp[i(t2  t1) t /2i] cannot be removed. as a result
+in the limit i  0 we obtain
+
+w dp
+
+t (c) = 0.
+
+(7.15)
+
+the vanishing of wilson loops in the dprepresentation agrees with our results obtained
+in sects. 4, 5 and 6 and conrms our claim that this path integral representation of wilson
+loops is incorrect.
+
+8 the nonabelian stokes theorem
+
+the derivation of the arealaw fallo promoted great interests in the nonabelian stokes
+theorem expressing the exponent of wilson loops in terms of a surface integral over the
+2dimensional surface s with the boundary c = s [19]
+
+trpcei g hc dx a(x) = trps e
+
+i g 1
+
+2 rrs
+
+d(y) u(cxy) g(y) u(cyx)
+
+,
+
+(8.1)
+
+28
+
+where ps is the surface ordering operator [19], d(y) is a 2dimensional surface element
+in 4dimensional spacetime, x is a current point on the contour c, i.e. x  c, y is a
+point on the surface s, i.e. y  s, and g(y) = a(y)  a(y)  ig[a(y), a(y)]
+is the eld strength tensor. the procedure for the derivation of the nonabelian stokes
+theorem in the form of eq.(8.1) contains a summation of contributions of closed paths
+around innitesimal areas and these paths are linked to the reference point x on the
+contour c via parallel transport operators. the existence of closed paths linked to the
+references point x on the contour c is a necessary and a sucient condition for the
+derivation of the nonabelian stokes theorem eq.(8.1).
+
+due to the absence of closed paths it is rather clear that the path integral represen-
+tation for wilson loops cannot be applied to the derivation of the nonabelian stokes
+theorem. in fact, the evaluation of the path integral over gauge degrees of freedom de-
+mands the decomposition of the closed contour c into a set of innitesimal segments
+which can be never closed. let us prove this statement by assuming the converse. sup-
+pose that by representing the path integral over gauge degrees of freedom in the form of
+the ndimensional integral (2.7) we have a closed segment. let the segment cxkxk1 be
+closed and the point x belong to the segment cxkxk1, x  cxkxk1. by using eq.(2.2)
+we can represent the character [u 
+
+r (cxkxk1)] by
+
+r (cxkxk1)] = [u 
+
+[u 
+= [(xi)ur(cxix)ur(cxxi1)(xi1)] =
+
+r (cxix)u 
+
+r (cxxi1)] =
+
+= drz dr(x)[r(xi)ur(cxix)
+= drz dr(x)[u 
+r (cxix)] [u 
+
+r (cxxi1)].
+
+r(x)] [r(x)ur(cxxi1)(xi1)] =
+
+(8.2)
+
+this transforms a (n  1)dimensional integral with one closed innitesimal segment
+into a ndimensional integral without closed segments. since nally n tends to innity
+there is no closed segments for the representation for the path integral in the form of a
+(n  1)dimensional integral. as this statement is general and valid for any path integral
+representation of wilson loops, so one can conclude that no further nonabelian stokes
+theorem can be derived within any path integral approach to wilson loops.
+
+9 conclusion
+
+by using well dened properties of group characters we have shown that the path integral
+over gauge degrees of freedom of the wilson loop which was used in eq.(2.13) of ref.[11]
+for a lattice evaluation of the average value of wilson loops can be derived in continuum
+spacetime in nonabelian gauge theories with the gauge group su(n). the resultant
+integrand of the path integral contains a phase factor which is not projected onto abelian
+degrees of freedom of nonabelian gauge elds and diers substantially from the repre-
+sentation given in ref.[3]. the important point of our representation is the summation
+over all states of the given irreducible representation r of su(n). for example, in su(2)
+the phase factor is summed over all values of the colourmagnetic quantum number mj
+of the irreducible representation j of colour charges. this contradicts eq.(23) of ref.[3],
+where only term with the highest value of the colourmagnetic quantum number mj = j
+
+29
+
+are taken into account and the other 2j terms are lost. this loss is caused by an arti-
+cial regularization procedure applied in ref.[3] for the denition of the path integral over
+gauge degrees of freedom.
+
+as has been stated by diakonov and petrov in ref.[3] the path integral over gauge
+degrees of freedom representing wilson loops is not of the feynman type, therefore, it
+depends explicitly on how one understands it, i.e. how it is discretized and regularized.
+in order to understand the path integral over gauge degrees of freedom diakonov and
+petrov [3] suggested a regularization procedure drawing an analogy between gauge degrees
+of freedom and dynamical variables of the axialsymmetric top with moments of inertia
+i and ik. the nal expression for the path integral of the wilson loop has been obtained
+in the limit i, ik  0.
+in order to make the incorrectness of this expression more transparent we have eval-
+uated the path integral for specic gauge eld congurations (i) a pure gauge eld and
+(ii) z(2) center vortices with spatial azimuthal symmetry. the direct evaluation of path
+integrals representing wilson loops for these gauge eld congurations has given the value
+zero for both cases. these results do not agree with the correct values.
+
+one can show that eq.(5.11) can be generalized for any contour of a wilson loop in
+
+su(2)
+
+w1/2(c) = z yxc
+
+d(x) eighc dx tr[t3a
+
+ (x)] =
+
+= lim
+
+nxj>0" jaj
+
+2j + 1#n
+
+(2j + 1)wj(c) = 0,
+
+(9.1)
+
+where wj(c) in the r.h.s. is dened by eq.(2.1) in terms of the pathordering operator
+pc. further, the result (9.1) can be extended to any irreducible representation of su(2).
+thus, we argue that the path integral suggested in ref.[3] to represent wilson loops is
+identically zero for wilson loops independent on the gauge eld conguration, the shape
+of the contour c and the irreducible representation of su(2).
+
+this statement we have supported by a direct evaluation of the evolution operator
+zreg(r2, r1) dened by eq.(14) of ref.[3], representing the assumption by diakonov and
+petrov for wilson loops in terms of the path integral over gauge degrees of freedom. as we
+have shown in sect. 6 the regularized evolution operator zreg(r2, r1), evaluated correctly,
+is equal to zero. this agrees with our results obtained in sects. 4 and 5. in sect. 7 we have
+shown that the removal of the oscillating factor from the evolution operator suggested in
+ref.[3] via a shift of energy levels of the axialsymmetric top is prohibited. such a shift
+of energy levels leads to a change of the starting symmetry of the system from su(2) to
+u(2). by virtue of the oscillating factor the wilson loop vanishes in the limit ik, i  0
+in agreement with our results in sects. 4, 5 and 6.
+we hope that the considerations in sects. 47 are more than enough to persuade even
+the most distrustful reader that the path integral representation for the wilson derived
+by diakonov and petrov by means of special regularization and understanding of the path
+integral over gauge degrees of freedom is erroneous.
+
+the use of an erroneous path integral representation for wilson loops in ref.[7] has
+led to the conclusion that for large distances the average value of wilson loops shows
+arealaw fallo for any irreducible representation r of su(n). unfortunately, this result
+
+30
+
+is not supported by numerical simulations of lattice qcd [8]. at large distances, colour
+charges with nonzero nality have string tensions of the corresponding fundamental
+representation, whereas colour charges with zero nality are screened by gluons and
+cannot form a string. therefore, the result obtained in ref.[7] cannot be considered as
+a new check of connement in lattice calculations as has been argued by the authors of
+ref.[7].
+
+we would like to accentuate that the problem we have touched in this paper is not of
+marginal interest and a path integral, if derived by means of an unjustied regularization
+procedure, would hardly compute the same physical number as the correct one. we argue
+that no regularization procedure can lead to specic dynamical constraints. in fact, the
+regularization procedure drawing the analogy with the axialsymmetric top has led to
+the result supporting the hypothesis of maximal abelian projection pointed out by t
+hooft [14]. any proof of this to full extent dynamical hypothesis through a regularization
+procedure and through specic understanding of the path integral should have seemed
+dubious and suspicious.
+
+finally, we have shown that within any path integral representation for wilson loops in
+terms of gauge degrees of freedom no nonabelian stokes theorem in addition to eq.(8.1)
+can be derived. indeed, the stokes theorem replaces a line integral over a closed contour
+by a surface integral with the closed contour as the boundary of a surface. however,
+approximating the path integral by an ndimensional integral at n   there are no
+closed paths linking two adjacent points along wilson loops. thereby, the line integrals
+over these open paths cannot be replaced by surface integrals. thus, we argue that any
+non-abelian stokes theorem can be derived only within the denition of wilson loops
+through the path ordering procedure (8.1). of course, one can represent the surface
+ordering operator ps in eq.(8.1) in terms of a path integral over gauge degrees of freedom,
+but this should not be a new nonabelian stokes theorem in comparison with the old
+one given by eq.(8.1). that is why the claims of ref.[35] concerning new versions of
+the nonabelian stokes theorems derived within path integral representations for wilson
+loops seem unjustied.
+
+discussions with jan thomassen are appreciated.
+
+31
+
+appendix. coecients aj(z)
+
+in this appendix we evaluate the coecients aj(z) of the expansion (4.8) and show that
+the completeness condition given by the series (4.16) converges to unity.
+
+it is convenient to rewrite eq.(4.8) as follows
+
+ez1/2[t3u] = xj
+
+aj(z) j[t3u] = a0(z) + a1/2(z) 1/2[t3u]
+
++a1(z) 1[t3u] + a3/2(z) 3/2[t3u] + a2(z) 2[t3u] + a5/2(z) 5/2[t3u] + . . .
+
+(a.1)
+
+for the evaluation of the coecients a0(z), a1/2(z), a1(z), a3/2(z), a2(z) and a5/2(z) we
+would make use the parameterization of the matrices u in terms of the euler angles , 
+and  ranging over the regions 0    2, 0     and 0    2, respectively [18].
+then, the haar measure du normalized to unity is dened by [18]
+
+du =
+
+1
+82 sin  d d d.
+
+(a.2)
+
+in the notation of ref.[18] the characters are given by
+
+
+2
+
+sin
+
+ + 
+
+2
+
+,
+
+1/2[t3u] =  i cos
+1[t3u] =  2 i cos2 
+
+3/2[t3u] =  12 i cos3 
+
+2
+
+sin
+
+ + 
+
+2
+
+sin ( + ),
+
+2
+cos2  + 
+
+2
+
++ 2 i cos
+
+
+2
+
+sin
+
+ + 
+
+2
+
+,
+
+2
+
+sin ( + ) cos( + )
+
+2[t3u] =  8 i cos4 
++ i (1 + cos ) (1  2 cos ) sin ( + ),
+2  2 sin3  + 
+
+ + 
+
+2
+
+5/2[t3u] =  80 i cos5 
+
+2 !
++ sin5  + 
+
+2   sin
+2  12 cos3 
+
+2! 3 sin
+
+i 15 cos5 
+
+ + 
+
+2 !
+2  4 sin3  + 
+2! sin
+
+ + 
+
+
+
+2
+
+,
+
+ i 10 cos5 
+
+2  12 cos3 
+
+2
+
++ 3 cos
+
+the coecients a0(z), a1/2(z), a1(z), a3/2(z), a2(z) and a5/2(z) are dened by the integrals
+(4.10) and (4.11)
+
+. . .
+
+(a.3)
+
+a0(z) = z du ez 1/2[t3u] =
+
+1
+82
+
+2
+
+z0
+
+d
+
+2
+
+z0
+
+d
+
+
+
+z0
+
+d sin  ei z cos
+
+
+2
+
+sin
+
+ + 
+
+2
+
+,
+
+a1/2(z) = 4z du 1/2[t3u ] ez 1/2[t3u] =
+
+32
+
+=
+
+i
+
+22
+
+2
+
+z0
+
+d
+
+2
+
+z0
+
+d
+
+
+
+z0
+
+a1(z) =
+
+d sin " cos
+
+3
+
+2
+
+sin
+
+
+2
+
+ + 
+
+# ei z cos
+2 z du 1[t3u ] ez 1/2[t3u] =
+sin ( + )# ei z cos
+
+
+2
+
+sin
+
+ + 
+
+2
+
+,
+
+
+2
+
+sin
+
+ + 
+
+2
+
+,
+
+=
+
+3i
+82
+
+2
+
+z0
+
+d
+
+a3/2(z) =
+
+2
+
+
+
+d
+
+z0
+
+d sin " cos2 
+
+z0
+5 z du 3/2[t3u ] ez 1/2[t3u] =
+
+2
+
+4
+
+i
+
+52
+
+"6 cos3 
+
+2
+
+sin
+
+ + 
+
+2
+
+cos2  + 
+
+2  cos
+
+
+2
+
+sin
+
+ + 
+
+2
+
+d sin 
+
+
+2
+
+sin
+
+ + 
+
+2
+
+,
+
+
+
+2
+
+2
+
+d
+
+d
+
+z0
+
+z0
+z0
+# ei z cos
+z0
+
+z0
+
+2
+
+
+
+2
+
+a2(z) =
+
+"8 cos4 
+
+2
+
+i
+
+1
+
+2 z du 2[t3u ] ez 1/2[t3u] =
+sin ( + ) cos( + )  (1 + cos ) (1  2 cos ) sin ( + )#
+
+d sin 
+
+162
+
+z0
+
+d
+
+d
+
+ ei z cos
+
+
+2
+
+sin
+
+ + 
+
+2
+
+,
+
+a5/2(z) =
+
+d sin 
+
+2
+
+2
+
+
+
+12
+
+35 z du 3/2[t3u ] ez 1/2[t3u] =
+"80 cos5 
++ 15 cos5 
+
+2   sin
+2  12 cos3 
+
+ + 
+
+3i
+
+d
+
+d
+
+z0
+
+702
+
+z0
+z0
+2 !
++ sin5  + 
+2 !
+2  4 sin3  + 
+
+2
+
+ + 
+
+2  2 sin3  + 
+2! 3 sin
+2! sin
+
+ + 
+
+
+
+2
+
++ 10 cos5 
+
+2  12 cos3 
+
+2
+
++ 3 cos
+
+# ei z cos
+
+
+2
+
+sin
+
+ + 
+
+2
+
+,
+
+the integration over angle variables gives
+
+. . .
+
+a0(z) = 2
+
+j1(z)
+
+z
+
+, a1/2(z) = 8
+
+j2(z)
+
+z
+
+, a1(z) = 0 ,
+
+a3/2(z) =
+
+16
+5
+
+j4(z)
+
+z
+
+, a2(z) = 0 , a5/2(z) =
+
+72
+35
+
+j6(z)
+
+z
+
+, . . .
+
+one can show that for an arbitrary j the coecient aj(z) is dened by
+
+aj(z) = 
+
+
+3(2j + 1)
+j(j + 1)
+
+j2j+1(z)
+
+z
+
+0
+
+,
+
+,
+
+j = 1/2, 3/2, 5/2, . . . ,
+
+j = 1, 2, . . .
+
+33
+
+(a.4)
+
+(a.5)
+
+(a.6)
+
+this implies the following general formula
+
+z du j[t3u ] ez 1/2[t3u] = 
+
+
+(2j + 1)
+
+j2j+1(z)
+
+z
+
+0
+
+,
+
+,
+
+j = 1/2, 3/2, 5/2, . . . ,
+
+(a.7)
+
+j = 1, 2, . . .
+
+the completeness condition (4.16) for arbitrary z takes the form
+
+4
+
+j 2
+1 (z)
+z2 + 3
+
+
+
+xj=1/2
+
+(2j + 1)2
+j(j + 1)
+
+j 2
+2j+1(z)
+
+z2
+
+= 1.
+
+(a.8)
+
+the numerical values of a0(z), a1/2(z), a3/2(z) and a5/2(z) for the particular case z = 1
+read
+
+a0(1) = 0.88 ,
+
+a1/2(1) = 0.92 ,
+
+a3/2(1) = 0.01,
+
+,
+
+a5/2(1) = 4  105.
+
+(a.9)
+
+for the completeness condition (4.16) we obtain at z = 1
+
+a2
+0(1) +
+
+
+
+1
+3
+
+1
+4
+
+5
+4
+
+j (1) = a2
+
+0(1) +
+
+j(j + 1) a2
+
+xj=1/2
+= 0.774 + 0.212 + 1.25  104 + 5  109 + . . . = 0.986 + . . .
+
+a2
+1/2(1) +
+
+a2
+3/2(1) +
+
+a2
+5/2(1) + . . . =
+
+(a.10)
+
+35
+12
+
+thus, this series converges slowly to unity.
+
+34
+
+references
+
+[1] k. g. wilson, phys. rev. d10 (1974) 2445; k. g. wilson, in new phenomena in
+
+subnuclear physics (erice, 1975), ed. a. zichichi, new york, plenum, 1975.
+
+[2] d. grensing and g. grensing, z. phys. c33 (1986) 307.
+
+[3] d. i. dyakonov and v. yu. petrov, phys. lett. b224 (1989) 131.
+
+[4] f. a. lunev, nucl.phys. b494 (1997) 433.
+
+[5] b. broda, j. math. phys. 33 (1992) 1511.
+
+[6] h. kleinert, in path integrals in quantum mechanics, statistics and polymer
+
+physics, world scientic publishing co., singapore 1990.
+
+[7] d. i. diakonov and v. yu. petrov, phys. lett. b242 (1990) 425.
+
+[8] m. muller, w. beirl, m. faber and h. markum, nucl. phys. b (proc. suppl.) 26 (1992)
+
+423.
+
+[9] m. hamermesh, in group theory and its application to physical
+problems, pergamon press, londonparis, 1962, p.336; j. d. talman, in spe-
+cial functions, a group theoretic approach, w. a. benjamin, inc. newyork,
+amsterdam, 1968, pp.7378.
+
+[10] i. montvay and g. munster, in quantum fields on a lattice, cambridge
+
+university press, new york, 1994, pp. 110113 and pp.132133.
+
+[11] m. faber, j. greensite and s. olejnik, jhepa 01 (1999) 008, hep-lat/9810008.
+
+[12] r. e. behrends, j. dreitlen, c. fronsdal and b. w. lee, rev. mod. phys. 34 (1962)
+1; m. gourdin, in unitary symmetry and their applications to high energy
+physics, northholland publishing company, amsterdam, 1967.
+
+[13] l. durand and e. mendel, phys. lett. b85 (1979) 241; p. ramond, in field
+theory: a modern primer, the benjamin cumming publishing company, inc.,
+londonamsterdamdon millsontariosydneytokyo, 1981, pp.275277.
+
+[14] g. t hooft, nucl. phys. b190 (1981) 455.
+
+[15] i. bars, j. math. phys. 21 (1980) 2678.
+
+[16] m. abramovitz and i. a. stegun, in handbook of mathematical func-
+tions, national bureau of standards applied mathematics series  55, 1972, p.355.
+[17] d. diakonov, potential energy of yangmills vortices in three and four dimensions,
+hepth/9905084, may 1999; vortex solution in 2+1 dimensional pure yangmills
+theory at high temperature, hepth/9908069, august 1999.
+
+[18] d. m. brink and g. r. satchler, in angular momentum, oxford university
+
+press, amen house, london, 1962.
+
+35
+
+[19] m. b. halpern, phys. rev. d19 (1979) 517; i. ya. arefeva, theor. math. phys. 43
+(1980) 353; n. bralic, phys. rev. d22 (1980) 3090; p. m. fishbane, s. gasiorowicz
+and p. kaus, phys. rev. d24 (1981) 2324; r. l. karp, f. mansouri and j. s. rno,
+product integral representations of wilson lines and wilson loops, and nonabelian
+stokes theorem, uctp10199, hepth/9903221 march 1999.
+
+36
+
+

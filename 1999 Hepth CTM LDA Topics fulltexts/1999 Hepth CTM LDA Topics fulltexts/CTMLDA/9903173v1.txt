@@ -1,0 +1,1459 @@
+wegner-houghton equation and derivative expansion
+
+alo bonanno (1,2), vincenzo branchina (3), herve mohrbach (4) and dario zappal`a  (2,5)
+
+(1)istituto di astronomia, universit`a di catania, viale andrea doria 6, 95125, catania, italy
+
+(2) infn,sezione di catania, corso italia 57, 95129, catania, italy
+
+(3)laboratory of theoretical physics , university of strasbourg, 3,rue de luniversite, 67000, strasbourg france
+
+(5)dipartimento di fisica, universit`a di catania, corso italia 57, 95129, catania, italy
+
+(4)lpli-institut de physique, f-57070 metz, france
+
+(february 1, 2008)
+
+we study the derivative expansion for the eective action in the framework of the exact renor-
+malization group for a single component scalar theory. by truncating the expansion to the rst two
+terms, the potential uk and the kinetic coecient zk, our analysis suggests that a set of coupled
+dierential equations for these two functions can be established under certain smoothness conditions
+for the background eld and that sharp and smooth cut-o give the same result. in addition we
+nd that, dierently from the case of the potential, a further expansion is needed to obtain the
+dierential equation for zk, according to the relative weight between the kinetic and the potential
+terms. as a result, two dierent approximations to the zk equation are obtained. finally a numer-
+ical analysis of the coupled equations for uk and zk is performed at the non-gaussian xed point in
+d < 4 dimensions to determine the anomalous dimension of the eld.
+
+pacs 11.10.hi , 11.10.gh
+
+preprint infnct/1-99
+
+i. introduction
+
+the dynamics of a quantum system with very many (an innite number of) degrees of freedom, the subject of
+quantum field theory, involves very many scales at once. as it is by now well understood this is the source
+of the main diculties encountered in the study of such a system. in perturbation theory one of the most striking
+manifestation of these diculties is the appearance of divergent quantities. the origin of this nonsensical result should
+probably be addressed to a wrong choice of the representation. in fact, unlike any problem with a nite number of
+degrees of freedom, in the present case the choice of the representation is part of the solution of the dynamical problem
+due to the existence of inequivalent representations, but up to now not very much progress has been made in this
+direction. moreover there are phenomena, such as the chiral symmetry breaking, where it is necessary to resort to
+non perturbative methods, since no small parameter is available for a perturbative expansion. typical tools for this
+kind of investigations are the schwinger-dyson equations as well as the variational approximations. unfortunately
+even within these approaches divergent quantities are still present and, unlike the perturbative case, a systematic way
+of handling these divergences is still lacking. this has cast serious doubts on the validity of the results obtained with
+these methods.
+
+from a dierent stand point the renormalization group method, more precisely the wilson formulation of the
+renormalization group (rg) [1], has been invented to handle those dynamical problems involving very many scales.
+the main idea of the method is to break the original problem into a series of subproblems each involving a more
+restricted scale range and to seek for its solution by iteratively solving these subproblems. the advantage of this
+method is that it is non perturbative by construction and that no problem of divergences is ever encountered.
+
+there are dierent (more or less equivalent) ways to implement this program. the realization in terms of dierential
+equations in the momentum space [27], generally named exact renormalization group equations, has been widely
+studied in the last years and even employed as a tool for investigating many problems related to phase transitions
+where the ow of the physical parameters cannot be controlled by simple perturbative calculations.
+
+among the various existing formulations of the exact rg equations, the wegner-houghton (wh) equation [2] is
+particularly appealing for the transparency of its physical interpretation, and the most straightforward approximation
+
+9
+9
+9
+1
+
+ 
+r
+a
+
+ 
+
+m
+0
+2
+
+ 
+ 
+
+1
+v
+3
+7
+1
+3
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+bonanno@axpfct.ct.infn.it
+branchina@sbgvax.in2p3.fr
+mohrbach@sbgvax.in2p3.fr
+dario.zappala@ct.infn.it
+
+1
+
+to this equation, obtained by restricting the problem to analyzing the rg evolution of the costant (x-independent)
+part of the action, namely the local potential approximation (lpa), has been shown to contain many interesting
+features. for instance the exactness of the lpa for n   has been found in [2] (n is the number of scalar elds
+i), as well as the xed point structure of the scalar theory has been recovered in the lpa [4,8]; furthermore, the
+typically non-perturbative feature of convexity of the eective potential is already contained in the lpa [5,9,10].
+
+in order to extract informations on the dynamics of the eld, however, it is necessary to improve the lpa by
+including the eects of the eld uctuations. the natural extension of the lpa is the obtained by considering a
+derivative expansion of the action, that is by adding in the general form of the action terms with higher and higher
+number of derivatives of the elds. this expansion is motivated by the expectation that, for a suciently smooth
+background conguration, the action should be quasi-local. a set of two coupled equations for the local potential
+uk() (k is the momentum scale at which the action sk is dened) and the coecient zk() of the lowest order
+derivative term,  has been deduced and studied by resorting to a smooth cut-o [8,11] that allows a weighted
+integration of the various modes appearing in the original action. an equation for zk() which allows to recover the
+lowest order perturbative anomalous dimension of the eld in four dimensions has also been obtained [12] from the
+wh equation by making use of a sharp cut-o to integrate out the ultraviolet modes.
+
+in this paper we critically reconsider the set of coupled equations for uk() and zk() and more generally discuss
+the derivative expansion in the framework of the wh equation. in particular, after a brief review in sect.ii of the
+wh method and the derivation of the lpa, in sect. iii motivated by the result of [12] we check the reliability of the
+equations derived in that paper and evaluate the anomalous dimension of the g33 theory in d = 6 dimensions to the
+order o(g2
+3) and, afterwards, the anomalous dimension of the scalar theory at the wilson-fisher (wf) xed point in
+d < 4 dimensions.
+
+in sect. iv we move to a critical revision of the derivation of this system of coupled dierential equations for uk and
+zk. this gives us the possibility of reconsidering the longstanding problem which aects the implementation of the
+derivative expansion of the wh equation. as soon as a non-constant eld is considered, the dierential equation for
+zk() (and, more generally, the equations for the higher order coecients in the derivative expansion), is aected by
+the presence of some non-analytical terms that apparently spoil the very dierential nature of the equation. the origin
+of these terms is analysed in detail and the derivation of the equation for zk in the momentum space is presented.
+we shall see that under a specic assumption of smoothness of the background eld, it is possible to derive the
+dierential equation and that the dangerous terms are actually negligible. the fate of these non-analytical terms
+when the sharp cut-o is replaced with a smooth one is also discussed and we shall show that for a suciently slow
+uctuating background eld, both sharp and smooth cut-o produce the same equations. in addition we show that
+the assuption about the relative weight between kinetic and potential terms in the action is crucial in the derivation
+itself of the zk equation. our conclusions are summarized in sect.v.
+
+ii. lpa and loop expansion
+
+let us call s[] the action of a scalar eld  which contains all the fourier components q such that 0 < |q| < .
+for the sake of simplicity in this paper we shall only consider the single component scalar theory.usually we want to
+describe a physical process as the scattering of two bosons with momenta p such that p << . as already mentioned
+the origin of the diculties in perturbation theory is due the fact that we have to take into account the contributions
+to this process coming from all the fourier modes between p and . actually the action s[], often called the
+wilsonian eective action at the scale , is more appropriate to describe the physics of the system at scales p  .
+at a scale p <<  it would seem more convenient to directly deal with an eective action sp[] that describes the
+physical phenomena taking into account only those scales around p. the renormalization group method provides
+this eective action. let us dene sp[], in the euclidean version of the theory, through the equation
+
+e 1
+
+h sp[] =z [d]e 1
+
+h s[+]
+
+(1)
+
+where we have split the original eld (x) into a background eld (x) containing only the modes between zero and
+p and a uctuation eld (x) containing those between p and ,
+
+(x) = (x) + (x).
+
+(2)
+
+sp[], called the wilsonian eective action at the scale p, contains, within its parameters, the eect of the interactions
+among the modes in the range [p, ] and the modes below p and therefore it is the eective action we were looking
+for. the dicult task here is to perform the integration over the high frequency modes . the above integral can
+
+2
+
+be approximated by means of the loop expansion which amounts to a series expansion in powers of h. the one loop
+approximation gives the o(h) correction to the tree level result sp[] = s[] and corresponds to a gaussian integral
+over the uctuation  obtained expanding s[ + ] up to 2 [13].
+
+we may now pose the question in a dierent way and ask how does the wilsonian eective action sk evolve once
+in this case the gaussian
+we integrate the modes in the shell [k  k, k] with an innitesimal k to get skk.
+approximation, i.e. the one loop result, becomes exact [2]. the problem of the evaluation of the eective action at
+the scale k in eq. (1) can then be turned into the problem of solving a rst order dierential equation for sk[] with
+respect to the variable k. the action s[] is the the boundary condition for this equation. this is the wegner-
+houghton method. actually the problem of solving this dierential equation for sk is as dicult as to perform the
+integral in eq. (1) and we have to resort sooner or later to some approximation if we want to make any progress. as
+a rst step let us go back to eq. (1) which, replacing  with k and p with k  k, is the dening equation for skk
+in terms of sk
+
+e 1
+
+h skk[] =z [d]e 1
+
+h sk[+]
+
+(3)
+
+our second step is to insert in the above equation an ansatz for sk[]. at this point we make the assumption that
+
+a good approximation to sk[] is provided by the derivative expansion (d is the number of dimensions)
+
+sk[] =z ddxhuk() +
+
+1
+2
+
+zk()  + yk()( )2 + i
+
+(4)
+
+by inserting eq. (4) into (3) we should be able to derive an innite system of coupled dierential equations for the
+coecients functions uk, zk, yk,.
+the lowest order approximation in the derivative expansion is the lpa. replacing in eq. (4) zk = 1, yk = 0,,
+and then considering a constant background eld (x) = 0 we get from eq. (3) an evolution equation for uk(0)
+only
+
+k
+
+
+k
+
+uk(0) = 
+
+hkdnd
+
+2
+
+ln(k2 + u
+
+
+
+k (0)).
+
+(5)
+
+here the  means derivative with respect to 0 and the result of the angular integration is nd = 2/((4)d/2(d/2)).
+this equation has been found again and again (see for instance [14,4]) and the consensus on this equation is
+
+unanimous.
+
+the equation above is a non perturbative evolution equation for uk. suppose that the potential uk(0) has a
+
+polynomial expansion and for the sake of simplicity let us require the z(2) symmetry 0  0
+
+uk(0) = g0(k) +
+
+1
+2
+
+g2(k)2
+
+0 +
+
+1
+4!
+
+g4(k)4
+
+0 +
+
+1
+6!
+
+g6(k)6
+
+0 +
+
+1
+8!
+
+g8(k)8
+
+0 + 
+
+(6)
+
+by taking 2n times (n = 0, 1, 2, ) the derivatives of eq. (5) with respect to 0 at 0 = 0 we get an innite system
+of coupled equations for the coupling constants g2n(k):
+
+g2(k) = 
+
+hkdnd
+
+g4(k)
+
+2
+
+k2 + g2(k)
+
+g4(k) = 
+
+g6(k) = 
+
+hkdnd
+
+2
+
+hkdnd
+
+2
+
+"
+"
+
+g6(k)
+
+k2 + g2(k)  3
+
+g2
+4(k)
+
+(k2 + g2(k))2#
+g4(k)g6(k)
+(k2 + g2(k))2 + 30
+
+g8(k)
+
+k2 + g2(k)  15
+
+k
+
+k
+
+
+k
+
+
+k
+
+k
+
+
+k
+
+
+g3
+4(k)
+
+(k2 + g2(k))3#
+
+(7)
+
+a diagrammatic interpretation of the above equations is straightforward, provided one identies g2n with the 2n
+external legs vertices and the denominators (k2 + g2(k))m with m propagators joining the various vertices; in fact each
+r.h.s.in eqs. (7) represents the sum of all the one loop diagrams with xed number of external legs that can be arranged
+combining the g2n. it is then clear that the above system is an approximation to the innite set of schwinger-dyson
+equations for the greens functions at zero external momenta. of course as it is true for the complete schwinger-dyson
+system, eq. (7) is indeterminate. to make contact with perturbation theory, more precisely with the h expansion, we
+
+3
+
+can seek for solutions where each coupling constant is developed in an h-power series g2n = g(0)
+2n +.
+as it is well known in this case the solution of the schwinger-dyson equations and a fortiori of our system becomes
+unique and it may be easily veried that the ultraviolet behavior of the coupling constants ow at o(h) coincides
+with the usual one-loop result. let us consider for instance the one loop contribution to the perturbative -function
+for the 4 theory. it is recovered in the ultraviolet regime, k2 >> g2, by retaining in the r.h.s. the o(h0) values of
+the couplings, that is their boundary values at k = , g4() = g4, g6() = g8() =  = 0. however eqs. (7) show
+that g6 is o(g3
+4) eect. it is then clear that higher
+loops perturbative contributions to the -function are present in eqs. (7) due to the fact that all vertices in the r.h.s.
+are k-dependent. it is also easy to realize that, in order to recover the full two-loop g4 -function, it is necessary to
+go beyond the lpa since the g6 and g2 contributions are not sucient to get the complete o(g3
+
+4) and then g6 in the r.h.s. of the -function of g4 provides a o(g3
+
+2n + hg(1)
+
+2n + h2g(2)
+
+4) eect.
+
+going back to eqs. (7), in order to better exploit the non-perturbative character of this system, a dierent kind
+of truncation is needed. a rst step toward its non-perturbative analysis has been taken in [15]. however, due to
+the appearance of non-trivial saddle points in the renormalization group equation studied in that paper, the results
+should be taken quite cautiously.
+
+the rst step beyond the lpa is discussed in the next section.
+
+iii. derivative expansion and anomalous dimension
+
+by turning on the scale and eld dependence in zk we allow for a non-trivial lowest order derivative term in the
+action (4), thus obtaining the rst improvement to the lpa where it was set z = 1. in this case we have to deal
+with two coupled equations for uk and zk which can again be reduced to an innite set of coupled equations if one
+assumes a polynomial expansion for both uk and zk.
+
+in [12] a specic procedure has been carried out in order to determine a dierential equation for zk in the sharp
+cut-o limit and it has been shown that in d = 4 for the o(n ) symmetric 4 theory, the perturbative anomalous
+dimension of the eld to o(g2
+4) can be obtained from that equation. however it was also noticed that, following
+a dierent and, in principle, correct procedure, a dierent equation for zk is obtained.
+in practice the gaussian
+integration of the uctuation (x) in eq. (3) yields a contribution to skk proportional to ln[(2sk/)|=]
+and both procedures require to expand the logarithm in order to derive the dierential equation for zk. in one case,
+following the steps outlined in [16] for the one component theory, we split the logarithm (again  indicates derivation
+with respect to the eld)
+
+ln[(2sk/)|=] = ln(cid:16)(zk)0 + (uk)
+
+
+
+0 + (cid:17)
+
+(8)
+
+
+
+0 are evaluated at the constant eld conguration 0 and  is the x dependent part of the
+where (zk)0 and (uk)
+propagator; the expansion is performed taking  small with respect to the non-uctuating part. in the other case,
+according to the procedure developed in [17],
+
+ln[(2sk/)|=] = ln(cid:16)zkk2 + u
+
+
+
+k + zk(  k2) + c(cid:17)
+
+(9)
+
+where zkk2 is added and subtracted and the remaining part of the propagator c is proportional to derivatives of the
+eld. in the latter case the expansion is made requiring that c and the dierence zk(  k2) are small. this is
+justied due to the eld derivative term in c, which is small within the derivative expansion framework, and to the
+fact that (x  y) yields in the innitesimal integration shell [k  k, k] a factor k2 which makes the dierence in
+eq. (9) vanishing. it is not surprising that two expansions obtained for dierent choices of the expansion parameter,
+can be not straightforwardly comparable. as a consequence of the dierent nature of the expansions in eqs. (8) and
+(9), we end up with two dierent equations for zk. we will come back to this point in the next section.
+
+the point of view chosen in [12] was to test the reliability of these expansions by comparing the values of the
+anomalous dimension of the eld  at the lowest non-vanishing perturbative order obtained from the equations with
+the result of the usual perturbative method. it turned out that the equation obtained from the expansion (9) provides
+a value of  in agreement with perturbation theory in d = 4.
+
+in order to support the result of [12] and to show that it is not an accidental coincidence, one can easily repeat the
+calculation of the anomalous dimension performed in [12] for the case of the cubic theory 3 in d = 6. obviously eqs.
+(6,7) are not consistent with the symmetry of the latter theory, but the complete equation for the potential (5) and the
+equation for zk, deduced in [12], are still valid because they do not require any assumption on the internal symmetry
+of uk and zk. the explicit form of the zk equation as deduced from the expansion of eq. (9) in d dimensions is
+(a = zkk2 + u
+
+
+
+k and h = 1)
+
+4
+
+k
+
+
+k
+
+zk = 
+
+kdnd
+
+2
+
+
+
+k
+
+(cid:16) z
+a 
+
+
+
+ka
+2z
+a2 
+
+2
+
+
+
+k
+
+k2
+
+z
+da2 +
+
+2zka2
+3a3 +
+
+8z
+
+
+
+kzkak2
+3da3 
+
+2z 2
+
+ka2k2
+da4
+
+(cid:17)
+
+(10)
+
+and, in order to get a perturbative estimate of the anomalous dimension, we replace, in the r.h.s. of eq. (10), uk and
+zk with the corresponding bare quantities, namely g33/3! and 1 (we perform our calculation in the ultraviolet regime
+where the mass term in the potential can be neglected). the integration of eq. (10), from  down to a generic value
+k < , is then straightforward yielding, in d = 6, zk = g2
+3/(3843)ln(/k). the anomalous dimension is immediately
+deduced from this -independent expression of zk
+
+ = k
+
+
+k
+
+log(zk) =
+
+g2
+3
+
+384 3
+
+(11)
+
+and it is in agreement with the perturbative diagrammatic computation [18]. actually the usual perturbative approach
+in this case is very simple since it involves a one-loop computation and, correspondingly, we need only one integration
+of eq. (10) to get the answer, dierently from the d = 4 case where, on one side a two-loop diagram is to be evaluated
+and, on the other side, a two step integration of eq. (10) is required [12] to determine the lowest (non-vanishing)
+perturbative contribution to . however, the above calculation is similar to the one performed for the 4 theory in
+four dimensions since in both cases the anomalous dimension is perturbatively expressed as expansion in powers of
+the marginal dimensionless coupling appearing in the potential. the running of these couplings with the scale k is
+only logarithmic thus justifying their replacement with the bare constant g3 for d = 6 and g4 for d = 4. the same
+argument holds for the eld independent part of zk which is dimensionless and can be replaced with its bare value 1.
+the further important step is to check whether this equation is able to reproduce the value of  at the non-gaussian
+
+(wf) xed point which appears in the scalar theory below four dimensions.
+
+in order to get informations at a xed point it is convenient to express all dimensionful quantities in terms of the
+running scale k and rewrite the coupled equations (5,10) in terms of dimensionless variables which can be conveniently
+introduced through the relations t = ln(k/), x = k(2d)/2(2/nd)1/2, u(x, t) = 2kduk/nd, z(x, t) = kzk. in
+these relations powers of nd/2 have also been included in order to get a simpler form of the dierential equations;
+
+indeed the constant  = nd/2 disappears from eqs. (5),(10) after the replacement uk  uk,   , zk  zk.
+
+furthermore, since we are interested in carrying out a numerical analysis of the problem, instead of directly attacking
+eq. (5) which contains a logarithm, we shall consider the corresponding equation for the derivative of the potential,
+as already performed in [4]. actually the presence of the logarithm causes a stiness of our set of equations which
+is a source of many numerical drawbacks. therefore, by rearranging the equations in terms of the derivative of the
+scaled potential f (x, t) = u(x, t)/x we nally get the two coupled dierential equations (a = z + f  and this time 
+means derivation with respect to x)
+
+f
+t
+
+= df  +
+
+(d  2 + )
+
+2
+
+(f + xf ) 
+
+z + f 
+
+a
+
+(12)
+
+(13)
+
+z
+t  z 
+
+(d  2 + )
+
+2
+
+xz = (cid:16) z
+a 
+
+2za
+a2 
+
+z2
+da2 +
+
+2za2
+3a3 +
+
+8zza
+3da3 
+
+2z2a2
+
+da4 (cid:17)
+
+and the xed points correspond to t-independent (f /t = z/t = 0) solutions of eqs. (12,13). in the following
+part of this section we shall consider only t-independent solutions of eqs. (12,13).
+
+as discussed in [4,8,19], eq. (12) alone allows to determine the xed point structure of the theory and specically the
+appearance of the wf xed point is shown for d < 4. it is easy to check that the gaussian xed point, corresponding
+to f = 0, z = const 6= 0,  = 0, is a solution of (12,13) for generic d, whereas the determination of the non-gaussian
+xed point with the corresponding value of  requires a numerical analysis.
+eqs. (12,13) are solved by requiring the usual normalization of the kinetic term in the action and two constraints
+
+on f  and z at x = 0 which preserve the z(2) symmetry   
+
+z(0) = 1
+
+f (0) = 0
+
+z(0) = 0
+
+(14)
+
+as explained in [8], from eqs. (12,13), one can easily determine the asymptotic behavior of the solutions f (x) and
+z(x) for large x, up to two (one for each solution) multiplicative constants, cf , cz. thus we have enough boundary
+conditions to integrate our equations and to deterimine the three unknown constants cf , cz and . in order to deal
+with a two point boundary problem, we have used, as also suggested in [8], the shooting method embedded in a
+newton-raphson algorithm [20]. the results shown below have been obtained by requiring that the dierence between
+the constraints in (14) and the shooting variables is less than  = 107.
+
+5
+
+in d = 3 the value obtained for the anomalous dimension is  = 0.071, quite dierent from the world best
+determination  = 0.035, quoted in [8], or the value determined through the -expansion to the order o(3),  = 0.037
+(see [18]). the result is very poor even if compared to the one obtained starting from the equation for zk derived
+resorting to a smooth cut-o [8].
+
+however it should be noticed that the situation is less bad if d increases. this is illustrated by comparing the value
+obtained for  at the wf xed point in d = 3.4,  = 9.74 103 with the estimate of  obtained from the -expansion
+[18] to o(3),  = 10.70 103, and o(4),  = 9.62 103. in d = 3.6 we get  = 4.30 103 to be compared with
+the value from the -expansion to o(3),  = 4.16 103 and to o(4),  = 3.95 103. in d = 3.4 and d = 3.6 the
+dierences between the various estimates are below 10%. in figs. 1,2,3 we show f (x) and z(x) obtained at the wf
+xed point for d = 3, 3.4, 3.6.
+
+all curves for f (x) in fig. 1 intersect the x-axis at non-vanishing values of x, which correspond to non-zero minima
+in the potentials; the curves z(x) in d = 3.4 and d = 3.6 are plotted in fig. 2; analogously to what is found in [8]
+for the corresponding variable in the smooth cut-o framework in d = 3, z(x) has a maximum and then decreases
+for large x (even the dashed curve, although less evidently, smoothly decreases after a maximum at about x = 8).
+conversely, as shown in fig. 3, z(x) in d = 3 is increasing: no maximum has been found even enlarging the x range
+to the limits allowed by the integration routine (in practice the upper limit can be pushed up to about x = 12).
+moreover, close to x = 0, z(x) < 1 and the curve has a minimum which is not present in the curves in fig. 2.
+
+in order to justify this peculiar behavior, we notice that the leading terms within the brackets in the r.h.s. of eq.
+(13) are the ones proportional to z and not z, namely (2za2)/(3a3)  (2z2a2)/(da4), that is, as long as d is not
+close to 3, these two terms are dominant since z >> z but in d = 3 and in the ultraviolet limit, when a  z  1,
+they practically cancel out and the behavior of eq. (13) is sensibly modied.
+in conclusion, only close to three dimensions, where the infrared eects become more and more important, eqs.
+
+(12,13) fail to reproduce the known results about the anomalous dimension.
+
+iv. wh equation and non-analytical terms
+
+we now move to another point which, in some sense, is preliminary to the analysis of the coupled equations for the
+various parameters entering the local action, namely the rise of some undesirable terms as soon as one goes beyond
+the lpa in the derivative expansion. the presence of non-analytical terms has been recognized since long time [21]in
+relation with the use of a sharp cut-o and recently reconsidered in [7,22,23]. here, in order to get a clearer insight
+into this problem, we shall study the origin of these terms working out the various steps for the determination of the
+dierential equation for zk.
+
+let us go back to eq. (3) and (4). the lpa approximation corresponds to setting zk = 1, dropping yk and all the
+others higher order derivative coecients and nally restricting to a constant background  = 0. in order to get the
+equation for zk, we have to release the condition zk = 1 and collect all terms proportional to  in the r.h.s. of
+eq. (3) and, to this purpose, it is necessary to retain a non-constant background (x) = 0 + (x). let us choose
+for the non-uniform component of the background (x) a single mode with |q| << k (the reason for this choice will
+become apparent later)
+
+(x) =
+
+1
+
+v nqeiqx + qeiqxo
+
+(15)
+
+here v is the volume factor. as before, the uctuation (x), which must be integrated out, contains fourier modes
+only in the shell [k  k, k]
+
+(x) =
+
+peipx
+
+1
+
+v x[p]
+
+(16)
+
+the square bracket in eq. (16), [p], is a reminder that the sum is restricted only to those values of p such that
+k  k  |p|  k.
+therefore the original eld is split into three parts, (x) = 0 + (x) + (x). in order to pick up contributions up to
+the second derivative term , the functions uk(0 + (x) + (x)) and zk(0 + (x) + (x)) must be expanded
+around 0 up to 2(x), and since the gaussian functional integration is exact, as mentioned before, we only need to
+consider terms in (x) up to o(2(x)). due to the condition q << k the linear terms in (x) drop out after the spatial
+integration. let us consider now the terms proportional to 2(x). to illustrate the various steps made to derive the
+equation and the related problems we do not need to consider here all of them. it will be sucient to consider for
+instance those coming from the expansion of the potential. performing the spatial integration with the help of eqs.
+
+6
+
+(15,16) (in the following we shall consider, with no loss of generality the four dimensional case d = 4 and, in order to
+avoid any misunderstanding of notations, the n times derived potential is indicated here as u (n)
+
+) we have
+
+k
+
+k (0)
+
+u (2)
+2
+
+z d4x2(x) =
+
+u (2)
+
+k (0)
+
+2 x[p]
+
+pp
+
+k (0)
+
+u (3)
+2
+
+z d4x(x)2(x) =
+
+u (3)
+
+k (0)
+
+2v  q x[p] [pq]
+
+ppq + q x[p] [p+q]
+
+pp+q!
+
+k (0)
+
+u (4)
+4
+u (4)
+
+z d4x2(x)2(x)
+4v 
+q x[p] [p2q]
+2
+
+k (0)
+
+=
+
+pp2q + 2qqx[p]
+
+pp + 2
+
+q x[p] [p+2q]
+
+pp+2q
+
+
+one more comment about the notation. all sums above are single summations over p and the range spanned by p
+in each sum is obtained by requiring that all quantities in square brackets are constrained into the shell [k  k, k].
+for instance in the rst sum in eq. (18), [p] [p  q] indicates the double constraint (k  k)  |p|,|  p  q|  k,
+which in turn determines the values of p selected in the summation. then, as soon as we turn on a non-uniform
+background (x), we end up with a deformation of the integration region. the new integration region for p is now
+given by the overlap of two shells with one of the two depending on q. only at q = 0 the two shells are both reduced
+to the original one. the reason for the appearance of the non-analitycal terms has to be traced back to this boundary
+eect.
+
+in order to deal with shorter expressions we limit ourselves to the case of a -independent zk. then, with the help
+of eqs. (17,18,19), we can easily expand the action sk[0 +  + ] around 0 and perform the quadratic integration
+in  obtaining (h = 1)
+
+(17)
+
+(18)
+
+(19)
+
+(20)
+
+exp{skk[0 + ]} = exp{sk[0 + ]} exp
+
+(1 +
+
+2x[p]
+g(p)g(p + q) + x[p] [pq]
+
+qq" x[p] [p+q]
+
+k (0)
+
+u (3)
+
+4v
+
+1
+
+2
+
+lng1(p)
+
+g(p)g(p  q)#)
+k (0) + u (4)
+
+qqx[p]
+
+where we have introduced the propagator-like notation g1(p) = zkp2 + u (2)
+
+k (0)qq/v .
+
+since we are just interested in the zk evolution, we again neglect cubic and higher powers of  and expand g(p),
+g(p + q), g(p  q) around q = 0 up to o(q2), obtaining (a(p) = zkk2 + u (2)
+u (4)
+k (0)
+2v
+
+skk[0 + ] = sk[0 + ] +
+
+k (0) )
+
+a(p)
+
+1
+
+1
+
+ln(cid:16)a(p)(cid:17) +
+2x[p]
+qq( x[p] [p+q]
+a2(p)h1 
+
+q2zk
+a(p)
+
++
+
+1
+
+uk
+
+
+
+2
+(3)(0)
+4v
+
++ x[p] [pq]
+
+1
+
+a2(p)h1 
+4(p  q)2z 2
+
+k
+
+a2(p)
+
+4(p  q)2z 2
+
+k
+
+a2(p)
+
+i
+
+(21)
+
+q2zk
+a(p)
+
++
+
+i)
+
+at this point if we just neglect the boundary problem and everywhere integrate the momentum p within the shell
+
+[k  k, k], from the terms in eq. (21) not depending on  we get
+
+k
+
+
+k
+
+uk(0) = 
+
+k4
+162 ln(zkk2 + u
+
+
+
+k (0))
+
+(22)
+
+7
+
+this equation replaces eq. (5) in d = 4. from the terms proportional to qq, we get the second derivative with
+respect to 0 of eq. (22). this is simply because those terms come from an expansion of eq. (22) evaluated at
+(x) = 0 + (x) around 0.
+
+finally if we collect the terms proportional to q2qq we get the evolution equation for zk
+
+k
+
+
+k
+
+zk = 
+
+k4
+
+162  zku (3)
+
+2
+k (0)
+a(k)3
+
+ku (3)
+z 2
+
+2
+k (0)
+a(k)4
+
+k2
+
+
+
+!
+
+(23)
+
+in the absence of the boundary problem and under the assumption of a eld independent zk, (22) and (23) are the
+system of coupled dierential equations for uk and zk. in the more general case of a eld dependent zk by following
+the same steps as before we nd that the equation that replaces (23) is
+
+k
+
+
+k
+
+zk = 
+
+k4
+
+162(cid:16) z
+
+(24)
+
+
+
+k
+
+a 
+
+
+
+ka
+2z
+a2 
+
+2
+
+
+
+k
+
+k2
+
+z
+4a2 +
+
+zka2
+a3 +
+
+z
+
+
+
+kzkak2
+
+a3
+
+ka2k2
+z 2
+a4
+
+
+
+(cid:17)
+
+several comments are in order. this equation has already been derived by following dierent steps in [24,25]. as
+already noticed in [12] it is substantially dierent from eq.(10), namely both equations contain the same kind of terms
+but with dierent numerical coecients. in the previous section we have already explained that to derive eq. (10),
+an expansion where the kinetic term zk(  k2) is considered small w.r. to the potential term zkk2 + u
+k is
+used. the expansion that leads to eq.(24) is of a completely dierent nature. in this latter case the potential term is
+considered small w.r. to the kinetic term. it is then not surprising that we get dierent results. it is well known that
+no one of these expansions can be considered as denitely superior to the other. the choice of one of them is rather
+dictated by the physical problem under investigation.
+
+
+
+it may be stressed at this point that the fact of having derived two evolution equations for zk, namely eqs. (24) and
+(10), is not the consequence of having used two dierent denitions of this parameter (which is actually introduced
+by the derivative expansion (4) of the action whose evolution is determined by the integration in eq. (3), with the
+boundary condition z = 1). rather, it is the consequence of having used two dierent approximations, which in
+turn are necessary since the full problem cannot be solved exactly. more specically, as we have just seen, we need
+to insert explicitly a non-uniform ( and slowly varying, so that higher derivatives terms in the derivative expansion
+can be safely neglected) background eld to read the dierential evolution equation for the coecient zk. now the
+uctuation operator
+is obviously no longer diagonal in momentum space. to determine then a dierential
+equation for zk, we need a further expansion in which a piece of the propagator is considered small with respect to the
+rest of the propagator. in the derivation of eqs.(10) and (24) above this additional expansions correspond respectively
+to the physical case where the kinetic energy is small with respect to the potential energy and viceversa.
+
+(x)(y)
+
+2sk
+
+the method exposed above to obtain eq. (10) is dierent from the methods used respectively in [24] and [25].
+nevertheless the expansion adopted in the three cases, namely a small coupling expansion, is the same and this
+explains why these methods all lead to the same equation.
+
+finally eq. (24) is obtained by neglecting the boundary eects due to the deformation of the integration shell. let
+us now go back to eq. (21) and work out explicitly the consequences of this boundary distortion. to illustrate this
+problem we just need to consider one term. let us take for example the term
+
+uk
+
+2
+(3)(0)
+4v
+
+qq x[p] [p+q]
+
+1
+
+a2(p)
+
+zkq2
+a(p)
+
+(25)
+
+to further simplify the point, let us write down explicitly the above indicated sum in d = 1 dimensions. the only
+additional complications that would appear when considering higher dimensions are some factors coming from the
+angular integrations. by trivially replacing the sums with the integrals we get as a result of the overlap of the two
+shells (l is the volume of the system)
+
+1
+
+a2(p)
+
+zkq2
+a(p)
+
+x[p] [p+q]
+
+= zkq2 l
+
+2(z k+k
+
+k+q
+
+dp
+
+(zkp2 + u (2)
+
+k ())
+
+3 +z k
+
+kk+q
+
+dp
+
+(zkp2 + u (2)
+
+k ())
+
+3)
+
+= zkq2 l
+2
+
+2
+
+(zkk2 + u (2)
+
+k ())
+
+3(cid:16)k  q(cid:17)
+
+(26)
+
+it must be noted that the companion term in eq.(21), which diers from the one in eq. (26) only for the integration
+limits, gives the same result and we do not get any cancellation of the term proportional to q. the above result
+
+8
+
+explains our previous statement that the appearance of non analytic terms in q2 is simply due to the distortion of the
+integration domain induced by the non uniform background conguration.
+
+in eq. (26) a term proportional to q appears which is not proportional to k. this in turn seems to imply that
+the very possibility to establish a dierential equation for zk is in danger and actually the presence of such terms
+has been considered as a serious drawback that blocks the way to any application of the wh method beyond the
+lpa approximation. that consideration has convinced some authors that to overcome this problem a smooth cut-o
+rather than a sharp cut-o should be used. we shall come back to the smooth cut-o later.
+
+the above derivation actually teaches us that there is no serious drawback as far as we correctly interpret our
+equations. the undesired non-analytic terms that appear on the r.h.s. of the dening equation for skk and that
+are not contained in the original derivative expansion ansatz, always appear in combination with k as in the example
+above. this means that as long as we keep q << k, that is as long as the non-uniformity of the background eld
+is small compared to the width of the shell within which the modes are treated as independent, these terms can
+be coherently neglected and the equations above are the correct wh rg equations in this approximation. this is
+actually one important result of our analysis. the very possibility to implement the rg trasformations as a system
+of dierential equations for uk and zk ( i.e. to consider such a truncation to the innite system of equations for all
+the coecient functions that appear in the derivative expansion as a good approximation) is intimately related to the
+nature of the background eld (x) that we consider. it has to be suciently smooth over the scale k otherwise the
+dierential equations simply cease to be valid. the important point here is that not only we learn that it is possible
+and perfectly legitimate to establish dierential equations that implement the innitesimal rg transformation even
+beyond the lpa approximation, but we also obtain the limit of validity of these equations.
+
+it is worth at this point to pause for a moment and review all the steps and approximations involved in the above
+
+derivation. first note that the wilsonian renormalization group transformation gives:
+
+skk() = skk() + k() + o((k)2)
+
+(27)
+
+from the derivation of eq.(27) it is clear that k is the momentum range above which the modes are considered as
+independent, that is any momentum function f (p) that appears in the above equation is practically constant within
+this range. this in turn means that we can neglect the o((k)2) terms or, in other words, that the above equation
+can be rewritten as a dierential equation. this is what is meant when the above equation is referred as an exact
+dierential renormalization group equation and this is also the meaning of the equivalent statement saying that the
+gaussian integration is exact. actually all that means that the o((k)2) terms can be consistently neglected.
+next we approximate sk by a derivative expansion. we have seen that as soon as we go beyond the lowest order and
+allow for a non constant background eld we encounter singularities that make the formal mathematical limit k  0
+ill dened. we have seen above that this is none of a problem as far as the scale at which singular terms appear is
+kept far from the resolution scale k. this is nothing but the condition q << k.
+the two points above can be easily understood by considering the following hydrodynamical example. to give
+a dierential form to the equation for, say, the density  of a uid we need two conditions to be satised. the
+innitesimal volume d3x has to be suciently small so that the density as well as any other macroscopic quantity
+can be considered as constant within this volume. at the same time it has to be suciently large so that a
+macroscopic number of molecules is contained within this volume. under the above conditions we can write the
+evolution equation for the density in a dierential form because the o((d3x)2) contributions can be neglected and
+because due to the second condition we can neglect the singularities coming from the molecular scale a , once
+our resolution scale dx has been taken much bigger than a : dx >> a. the complete analogy between the
+approximations involved in the derivation of our equations and the hydrodynamical example should be, by now, clear.
+obviously the dierential equation for  obtained this way becomes less reliable and ultimately totally wrong when
+we want to describe physical phenomena whose resolution scale approaches the molecular scale a. the same warning
+applies to our case when the background eld is not suciently smooth within k, and this happens when q  k.
+let us now turn our attention to the smooth cut-o procedure. to illustrate the point we can again reconsider
+the previous example and implement the constraint in eq.(25) by means of dierences between theta functions in the
+following way
+
+1
+
+a2(p)
+
+zkq2
+a(p)
+
+x[p] [p+q]
+
+= zkq2 l
+
+2 z +
+
+
+
+dp
+
+0(p2, k2, (k  k)2)0((p + q)2, k2, (k  k)2)
+
+(zkp2 + u (2)
+
+3
+k (0))
+
+(28)
+
+where we have dened 0(p2, k2, (k  k)2) = (p2  (k  k)2)  (p2  k2).
+the eect of a smooth cut-o is implemented here by replacing the 0(p2, k2, (k k)2) function with a smoothened
+version (p2, k2, (k  k)2) where  has the dimension of a momentum and is a new cut-o that we introduce in
+the theory; in the limit   0 it should give 0. it is easy to see that all the non-analytic terms disappear. in fact
+
+9
+
+by expanding the function ((p + q)2, k2, (k  k)2) around p2 we get (from now on we omit k and k  k in the
+argument of the  function)
+
+((p + q)2) = (p2) +
+
+d(p2)
+
+dp2 (cid:16)2pq + q2(cid:17) +
+
+1
+2
+
+d2(p2)
+
+d(p2)2 (cid:16)2pq + q2(cid:17)2
+
++ 
+
+(29)
+
+being now the integration region symmetric all contributions from odd powers of p vanish and consequentely odd
+powers of q are absent. as we shall see in a moment we have gained nothing from having made the non-analytic
+terms disappear. let us focus on the function  and regard it as a function of |p|. the scale  gives the size of the
+region over which  as a function of |p| changes signicantly from zero to one. this means that its rst derivative
+with respect to |p| is o( 1
+ ) in the two regions around k and k  k, and zero everywhere else. analogously its second
+derivative is o( 1
+we could expect that  is introduced just as an intermediate step and that the nal results are obtained after sending
+ to zero and they are nite. the above result shows that this is not the case. as a consequence of the introduction of
+the smoothening cut-o  we have generated 1
+ divergences which have already been noticed in [7,22,23]. this could
+appear at a rst sight as a disaster and again we might wonder whether it is possible to establish dierential equations
+for uk and zk ( and more generally for the coecient functions of the derivative expansion) under these conditions.
+actually we can repeat here the same kind of considerations that we have done in connection with the appearance of
+the non analytic terms. after performing the integration in the momentum p we see that
+
+2 ) in the same region and zero everywhere else, and so on.
+
+i) the terms proportional (p2) give contributions o(k). this is because the integration region where the integrand
+
+is signicantly dierent from zero is the shell [k  k, k];
+
+ii) the terms proportional to d(p2)
+
+q, and so on. this is because
+the region over which the integrand is signicantly dierent from zero has now a width of  and we get then a factor
+ coming from the width and a factor 1
+iii) the terms proportional to d2(p2)
+
+give contributions proportional to (cid:16) q
+d(p2)2 give contributions proportional to (cid:16) q
+
+k(cid:17)3
+k(cid:17)q, (cid:16) q
+k(cid:17)2(cid:16) q
+(cid:17)q, (cid:16) q
+
+ coming from the derivative;
+
+dp2
+
+and so on. this is because the region over which the integrand is signicantly dierent from zero has a width  as
+before but this time we get a contribution o( 1
+
+k(cid:17)6(cid:16) q
+(cid:17)q,
+let us now comment on the above results. first we make the choice   q, that is a very good choice for 
+once we remember its role of smoothening parameter around the points k and k  k and that we want to integrate
+essentially only the modes within the shell. it is now apparent that as long as we keep the scale q << k the dominant
+contributions come from the terms proportional to (p2) and all the contributions coming from the derivatives of
+(p2) can be coherently neglected and the nal output is practically equivalent to the sharp cut-o one.
+
+2 ) from the second derivative of .
+
+(cid:17)q, (cid:16) q
+
+(cid:17)q, (cid:16) q
+
+k(cid:17)4(cid:16) q
+
+an important comment has to be made at this point. the particular choice of the smoothening function  that we
+have done above, more precisely the fact that we have chosen it to be an even function of |p|, is responsible for getting
+only even powers of q in the above results, in other words we do not get non analytic terms in q2. but this is absolutely
+irrelevant because what matters to establish the dierential equations is the condition q << k irrespectively of the
+fact that we have odd or even powers of q. in fact had we chosen  to have an odd dependence on |p| we would have
+also found odd powers of q. nevertheless under the conditions q << k and q << k, we can equally well neglect all
+the terms apart from the rst and again recover the dierential equations.
+
+what we have just seen proves that actually there is no conict between the sharp and the smooth cut-o approach.
+these two procedures, once correctly implemented, give precisely the same results as it should be expected. we have
+also learned under which conditions the couple of dierential equations for uk and zk are valid.
+
+another additional comment peculiar to the smooth cut-o procedure has to be made. due to the disappearance
+of the non-analytic terms there has been in recent years some preference for the smooth cut-o implementation of
+the dierential rg transformations w.r. to the sharp cut-o. as we can easily see from the points (i) (ii) and (iii)
+a large value of  looks even more ecient in suppressing the undesired terms and we could be led to the conclusion
+that we can accomodate such large values of  within the smooth cut-o approach. some results have been recently
+derived by making use of this apparent better exibility of the smooth cut-o versus the sharp cut-o. actually the
+condition of having a small  ( where small means not too big compared to k) is necessary to be coherent with the
+very strategy of the rg method as exposed before. substantially only the modes within the shell have to be integrated
+out. by considering larger values of  we move toward the independent mode approximation. the conclusion is that
+those results that have been obtained within the framework of the smooth cut-o procedure with the help of cut-o
+functions whose typical width is of o(k), where k is the uv cut-o, have to be taken with a grain of salt and the
+improvement w.r. to the perturbative result (independent mode approximation) is not very much under control.
+
+10
+
+v. summary and conclusions
+
+we have carefully analysed the derivative expansion for the eective action and shown how the exact renormalization
+group equations for the coecient functions uk and zk are obtained. the most important lesson we have learned is
+that the system of coupled dierential equations for them can actually be established provided the background eld
+around which the quantum uctuations are integrated is suciently smooth. the width k in fourier space measures
+the momentum range within which the modes are treated as independent, meaning that any function f (p) that has
+to be integrated in the shell [k  k, k] is considered to be constant within it. the key point of the method is that this
+shell has to be on the one hand suciently small, i.e. k << k, where k is the uv cut-o, so that the feed-back of the
+higher energy modes on the lower ones is correctly taken into account. on the other hand, and this is the crucial point
+that we want to emphasize here, it has to be suciently large in such a way that within this range the background
+eld can be considered practically at, i.e. q << k. having made clear this point we have seen that the non-analytic
+terms are no more source of problems and the dierential equations can be safely established under these conditions.
+we have also proven that the introduction of a smooth cut-o practically does not change our conclusions. in fact,
+under the conditions quoted above, sharp and smooth cut-o produce precisely the same results. a word of caution
+has to be said regarding the results that have been obtained within the smooth cut-o procedure by allowing the
+smoothening scale  to take values o(k). in this case the danger is that the width of the shell k gets innitesimal
+w.r. to the smoothening scale which means that the modes are practically all treated as independent and then there
+is no control on the possible improvement on the perturbative results.
+
+another important point we have learned from the above analysis is that depending on the physical problem at
+hand dierent expansions can be envisaged and this lead to dierent equations. the typical situations illustrated are
+the one in which the kinetic energy term is considered small compared to the potential and the opposite one. these
+two cases respectively produce eq.(10) and eq.(24) above.
+
+one third important result of our analysis is that ( see sec. iii) the study of the coupled system of equations for
+uk and zk has shown that we are unable to reproduce the value of  at the wilson-fisher xed point in d = 3
+dimensions. our previous results teach us that the reason of this failure is not to be searched in an intrinsic weakness
+of the sharp cut-o procedure versus the smooth cut-o. presumably the reason is that we enter a region where the
+equations themselves are no longer valid. an indication for that can be seen in the behaviour of zk. when it deviates
+from zk = 1, then less smooth congurations play an important role. we may expect that a better result could
+be obtained once some other coecient functions of the derivative expansion are added and the new set of coupled
+dierential equations derived.
+
+we would like to thank j. alexandre, m. reuter and j. polonyi for helpful discussions.
+
+acknowledgments
+
+[1] l. p. kadano, physica 2, 263 (1966); k. wilson, phys. rev. b4, 3184 (1971); k. wilson and j. kogut, phys. rep. 12,
+
+75 (1974).
+
+[2] f. j. wegner and a. houghton, phys. rev a8, 401 (1972).
+[3] j. polchinski, nucl. phys. b 231, 269 (1984).
+[4] a. hasenfratz and p. hasenfratz, nucl phys. b270, 685 (1986).
+[5] c. wetterich, nucl. phys. b352, 529 (1991).
+[6] c. wetterich, phys. lett. b 301, 90 (1993).
+[7] t. r. morris, int. j. mod. phys. a 9, 2411 (1994).
+[8] t. r. morris, phys. lett. b 329, 241 (1994).
+[9] a. ringwald and c. wetterich, nucl.phys. b 334, 506 (1990).
+
+[10] j.alexandre, v.branchina and j.polonyi, instability induced renormalization, e-print archive: cond-mat/9803007.
+[11] t. papenbrock and c. wetterich, z. phys. c 65, 519 (1995).
+[12] a. bonanno and d. zappal`a, phys. rev. d 57, 7383 (1998).
+[13] see [10] for the more general case when the saddle point of the gaussian integral is not the trivial one  = 0 as it is
+
+implicitly supposed in the present text.
+
+[14] j.f. nicoll, t.s. chang and h.e. stanley, phys. rev. lett. 33, 540 (1974).
+
+11
+
+[15] j.alexandre, v.branchina and j.polonyi, phys. rev. d 58 : 016002 (1998).
+[16] i. aitchison and c. m. fraser, phys. lett. b 146, 63 (1984); phys. rev. d 31, 2605 (1985); c. m. fraser, z. phys. c 28,
+
+101 (1985).
+
+[17] j. a. zuk, j. phys. a 18,1795 (1985); phys. rev. d 32, 2653 (1985).
+[18] j. zinn-justin, quantum field theory and critical phenomena oxford science publications, (1990), clarendon press
+
+oxford.
+
+[19] t. r. morris, in rg96, e-print archive: hep-th/9610012.
+[20] w. h. press et al., numerical recipes, the art of scientic computing, 2nd edition (1992), cambridge university press.
+[21] j. sak, phys. rev. b 8,281 (1973).
+[22] c. wetterich, z. phys. c 57, 451 (1993).
+[23] t. r. morris, nucl. phys. b 458 [fs], 477 (1996).
+[24] a. bonanno and d. zappal`a, phys. rev. d 55 , 6135 (1997); phys. rev. d 56, 3759 (1997).
+[25] j. alexandre, phd thesis, louis pasteur university, strasbourg, renormalisation en presence de condensat.
+
+12
+
+0.5
+
+f(x)
+
+0.0
+
+0.5
+
+0.0
+
+0.5
+
+1.0
+
+                                                             x
+
+1.5
+
+2.0
+
+2.5
+
+fig. 1. the derivative of the wf xed point potentials f (x), in d = 3 (dot-dashed line), d = 3.4 (dashed line), d = 3.6
+
+(solid line).
+
+13
+
+1.050
+
+z(x)
+
+1.000
+
+0.0
+
+2.0
+
+4.0
+
+                                                             x
+
+6.0
+
+8.0
+
+fig. 2. z(x), at the wf xed point in d = 3.4 (solid line), d = 3.6 (dashed line).
+
+14
+
+1.5
+
+z(x)
+
+1.0
+
+0.0
+
+2.0
+
+4.0
+
+                                                             x
+
+6.0
+
+fig. 3. z(x), at the wf xed point in d = 3.
+
+15
+
+

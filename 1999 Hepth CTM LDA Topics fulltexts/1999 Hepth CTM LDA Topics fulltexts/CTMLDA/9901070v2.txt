@@ -1,0 +1,1015 @@
+9
+9
+9
+1
+
+ 
+r
+a
+
+ 
+
+m
+7
+1
+
+ 
+ 
+
+2
+v
+0
+7
+0
+1
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+chiral symmetry in supersymmetric three
+
+dimensional quantum electrodynamics
+
+m. l. walker and c. j. burden
+
+department of theoretical physics,
+
+research school of physical sciences and engineering,
+
+australian national university, canberra, a.c.t. 0200 australia
+e-mail: mlw105@rsphysse.anu.edu.au, conrad.burden@anu.edu.au
+
+abstract
+
+we describe the investigation of spontaneous mass-generation and
+chiral symmetry breaking in supersymmetric qed3 using numerical so-
+lutions of the dyson-schwinger equation together with the cjt eective
+action and supersymmetric ward identities. we nd that, within the
+quenched, bare vertex approximation, the chirally symmetric solution is
+favoured.
+
+1 introduction
+
+any realistic attempt to unify gravity with the other fundamental forces of
+nature must almost certainly be supersymmetric. whilst perturbative re-
+sults are often easier to nd in supersymmetric eld theories than in ordinary
+gauge theories, especially with the use of superelds, the development of non-
+perturbative tools for supersymmetric theories has not yet reached maturity.
+in this paper we apply a nonperturbative tool which has proved to be eec-
+tive in the study of strong interactions, namely dyson-schwinger equations
+(dses) 1, to one of the simplest supersymmetric gauge theories.
+
+we choose as our gauge theory supersymmetric quantum electrodynamics
+in three space-time dimensions (sqed3).
+in its nonsupersymmetric form,
+three dimensional quantum electrodynamics (qed3) with four component
+spinors 2 exhibits the interesting nonperturbative phenomena of connement
+and, at least for small numbers of avours, chiral symmetry breaking. much of
+what is known about the behaviour of qed3 has been learnt from numerical
+dse 3 or lattice 4 calculations. considering the success of dse techniques in
+nonsupersymmetric theories, there is a surprising scarcity of applications of
+the method to supersymmetric theories in the literature, and an almost total
+absence of numerical dse calculations in particular.
+
+the version of sqed3 which we consider is the four-component fermion
+version rst proposed by pisarski 2, who approached the model by dimensional
+reduction from sqed4. herein, we develop sqed3 using the wess zumino
+construction 5. our construction produces supersymmetry multiplets which
+
+1
+
+dier slightly from those of pisarski because of an extra degree of freedom in
+the charge conjugation matrix. pisarskis approach was an analytic one based
+on a 1/navor expansion. his analysis indicates the existence of a dynamical
+mass generating solution in the large navor limit.
+
+koopmans and steringa 6 have analysed sqed3 with 2-component fermions
+using dses and claim the critical number nc = 3.24 of avours below which
+spontaneous mass generation occurs. this result should be treated with some
+caution however as it ignores the possibility of spontaneous parity violation 7
+and the generation of a photon mass via a chern-simons term when the num-
+ber of two-component fermions is odd. furthermore, there is no indication
+whether spontaneous mass generation corresponds to the stable vacuum of the
+theory.
+
+the above treatments use a component formalism to study sqed3. by
+contrast, clark and love 8 develop dses for sqed4 using a supereld formal-
+ism. while more elegant as a mathematical formalism, the supereld approach
+has the disadvantage that each dse contains an innite number of terms. this
+is dealt with by truncating from the chiral multiplet self energy diagrams con-
+taining seagull and higher order n-point vertices. they nd that the eective
+mass contains a prefactor which vanishes in feynman gauge and conclude that
+there can be no spontaneous mass generation in sqed4.
+
+the work of clark and love has been criticised by kaiser and selipsky 9
+on two grounds. firstly they argue that the truncation of seagull diagrams is
+too severe as it ignores contributions even at the one-loop level. secondly they
+point out that innities arising from infrared divergences which plague the su-
+pereld formalism can counter the vanishing prefactor and allow spontaneous
+mass generation. these criticisms highlight some of the dangers of attempting
+to extract phenomenological consequences of supersymmetric dses by work-
+ing solely with the supereld formalism.
+in fact, analyses in the literature
+of sqcd 10, have generally found the component formalism to be the most
+ecient way to proceed.
+
+in this paper we present a rst detailed numerical analysis of the chiral
+multiplet dse for a supersymmetric gauge theory. we work with the com-
+ponent formalism rather than the supereld formalism to avoid the problems
+encountered by clark and love. by choosing to work in three dimensions,
+and with the component formalism, we nd that all integrals encountered are
+infrared and ultraviolet convergent.
+
+section 2 describes the four-component fermion cliord algebra of qed3
+and gives the supersymmetry multiplets. in section 3 we present the sqed3
+lagrangian and chiral multiplet propagator dses. we explain how supersym-
+metric ward identities can be used to simplify what would otherwise be an
+
+2
+
+arduous problem and present our numerical solutions for quenched sqed3
+in the bare vertex approximation. we present both chirally symmetric and
+asymmetric solutions and use the cornwall-jackiw-tomboulis (cjt) eective
+potential to determine that the massless solution is dynamically favoured.
+
+2 the algebra of sqed3
+
+in 2+1 dimensions there are two inequivalent, irreducible representations of
+the cliord algebra, given in terms of 2  2 matrices. these two representa-
+tions dier by a minus sign 11, and have the undesirable property that either
+one leads to a version of qed3 which is parity non-invariant. to circumvent
+this property, it is common to consider a four-component version of qed3
+incorporating dirac matrices which are a direct sum of the two inequivalent
+representations 2. the dirac matrix algebra we employ here is constructed as
+follows 12:
+
+the 4  4 matrices  satisfy {, } = 2 ,  = diag(1, 1, 1) where
+
+ takes the values 0,1 and 2. we take the complete set of 16 matrices
+
+{a} = {i, 4, 5, 45, , 4, 5, 45},
+
+0 = (cid:18) 3 0
+
+0 3(cid:19) , 1,2 = i(cid:18) 1,2
+
+0
+
+0 1,2(cid:19) ,
+
+4 =  4 = (cid:18) 0 i
+
+i 0(cid:19) , 5 =  5 = (cid:18) 0 ii
+
+ii 0 (cid:19) , 45 =  45 = i45,
+
+4 = i4, 5 = i5, 45 = 45.
+
+the matrices i, 4, 5, 45 are the pauli matrices in block form and as such
+generate a u (2) algebra. the parity and charge conjugation rules for four-
+component dirac spinors are given by
+
+p(x)p 1 = (x0, x1, x2), p (x)p 1 = (x0, x1, x2)1,
+
+cc 1 = c t , c c 1 = t c 1,
+
+where
+
+ = 14eip 45, c = 2eic 45 ,
+
+(2.1)
+
+(2.2)
+
+and (0  p , c < 2). a majorana spinor is one for which  = c t . the
+arbitrary phases c and p are important for classifying the bound states in
+qed3 12.
+
+3
+
+we have
+
+where
+
+c 1(cid:18) 4
+
+1(cid:18) 4
+
+4
+
+5 (cid:19) ,
+
+t
+
+5(cid:19) c = rc (cid:18) t
+5(cid:19)  = rp (cid:18) 4
+
+5(cid:19) ,
+
+rp = (cid:18)  cos 2p  sin 2p
+
+ sin 2p cos 2p (cid:19) , rc = (cid:18)  cos 2c sin 2c
+
+sin 2c cos 2c (cid:19) .
+
+(2.3)
+
+(2.4)
+
+the rst step in the extension of qed3 to supersymmetry is the construc-
+
+tion of chiral multiplets. a reasonable tentative suggestion is
+
+a = i
+b = 5
+ = (f + i5g) + i 6 (a + i5b)
+f =  6 
+g = i5 6 ,
+
+(2.5)
+
+where a, b, f and g are real and  and  are majorana. if the superalgebra is
+to hold then the commutator of two of these transformations must obey
+
+[ 1, 2 ]x = 221x,
+
+(2.6)
+
+where x is any component of the multiplet. for the case of a we have
+
+[ 1, 2 ]a = 21a  i251b  (1  2).
+
+now, since  is majorana
+
+12 = 21,
+
+as required, but using equations (2.3) and (2.4)
+
+i152 = 2(5 cos 2c + 4 sin 2c )1,
+
+(2.7)
+
+(2.8)
+
+which does not cancel 251. a similar situation arises if a is replaced by
+any other member of the multiplet. to stop this blowing out of terms we could
+simply set c = 0. this would be unfortunate though as the angular freedom
+c in the matrix c would be lost. as stated earlier, this angle is important
+for classifying the bound states in qed3 so we would like to preserve it if
+possible to see what eects it has (if any) in the supersymmetric theory. to
+
+4
+
+this end we dene the rotated dirac matrices. this can be done by making
+the substitution
+
+(cid:18) 4
+5(cid:19)  (cid:18) p
+
+w (cid:19) = (cid:18) cos c  sin c
+
+sin c cos c (cid:19)(cid:18) 4
+
+5(cid:19) = m (cid:18) 4
+
+5(cid:19) ,
+
+(2.9)
+
+in the cliord algebra. (note that ip w = 45 so the matrices i, p , w , 45
+again generate an su (2) algebra.) then
+
+c 1(cid:18) p
+
+w (cid:19) c = (cid:18) t
+
+p
+t
+
+w (cid:19) ,
+
+since
+
+m rcm 1 = (cid:18) 1 0
+
+0 1(cid:19) .
+
+(2.10)
+
+(2.11)
+
+the rotated matrices can be used to dene a supersymmetry transformation
+consistent with eq. (2.6). in order to do this, all terms except 12 generated
+by 12x must be symmetric under interchange of 1, 2, i.e.
+
+2w 1 = 1w 2.
+
+(2.12)
+
+in this sense w is well-behaved but p and 45 are problem matrices because
+
+2(p , 45)1 = 1(p , 45)2.
+
+(2.13)
+
+making the substitution (2.9) gives the 2+1 dimensional chiral multiplet
+
+a = i
+b = w 
+ = (f + iw g) + i(a + iw b)
+f =  6 
+g = iw 6 ,
+
+(2.14)
+
+which is the analogue of the standard chiral multiplet in 3 + 1 dimensions.
+
+the relative dierence between the arbitrary phases p and c is xed by
+the imposition of supersymmetry. indeed, from equations (2.3) and (2.9) we
+have that
+
+1(cid:18) p
+
+w (cid:19)  = m rp m 1(cid:18) p
+w (cid:19)
+
+where
+
+m rp m 1 = (cid:18)  cos 2(p + c )  sin 2(p + c )
+
+ sin 2(p + c ) cos 2(p + c ) (cid:19) .
+
+(2.15)
+
+5
+
+if the form of the chiral multiplet transformation eq. (2.14) is to be maintained
+under parity transformations, the o-diagonal terms in this matrix must be set
+to zero. p must therefore be set to one of
+
+and we choose the former. the cliord algebra to be used is now
+
+p = c ,   c
+
+(2.16)
+
+a = {i, p , w , 45, , p , w , 45}
+
+(2.17)
+
+c = 2eic 45,  = 1p .
+
+with the cliord algebra and chiral multiplets established we now look
+for a general multiplet. this is very similar to the standard general multiplet
+in 3+1 dimensions except for an extra scalar eld k, which makes up the
+bosonic degree of freedom lost when the vector eld is taken from 3+1 to 2+1
+dimensions. our general multiplet v is dened by the following elds and
+transformations:
+
+c = w 
+ = (m + iw n ) + i(a + iw c)  p k
+m = (6  + i)
+n = iw (6  + i)
+a =   i
+k = ip 
+ = 1
+d = iw6 .
+
+2 (  )a  + iw d + ip 6 k
+
+(2.18)
+
+3 solving the dses of sqed3
+
+repeating the method of wess and zumino 5 yields the sqed3 lagrangian
+
+l = |f |2 + |g|2 + |a|2 + |b|2   6 
+
+m(af + af  + bg + bg  + i )
+
+iea(a
+
+
+
+  a + b
+
+
+
+  b + ) + ek p 
+
+e[(a + iw b)  (a + iw b)]
+
+(3.1)
+
++ied(ab  ab)  e2(k 2  aa)(|a|2 + |b|2)
+
+ 1
+
+4 f  f  1
+
+2
+
+ 6  + 1
+
+2 kk + 1
+
+2 d2
+
+6
+
+which becomes that found by pisarski 2 by dimensional reduction of sqed4
+when c is set to zero and the scalar elds are trivially redened.
+
+the chiral limit is dened by taking m  0. in this limit the bare la-
+grangian is invariant with respect to a global u (2) symmetry generated by i,
+4, 5 and 45. in the non-supersymmetric chiral theory, spontaneous mass
+generation leads to a nonperturbative breaking of the chiral generators 4 and
+5. here we shall explore the possibility of chiral symmetry breaking in sqed3
+by considering the chiral multiplet propagator dses. we shall use wittens
+result that supersymmetry remains unbroken 13,2.
+
+(
+
+-
+
+) --1 (
+
+-
+
+)-1=
+2
+
+-
+
+figure 1: the dyson-schwinger equation for the electron propagator in sqed3.
+
+the electron propagator dse in sqed3 is more complicated than that in
+the non-supersymmetric version since the electron interacts not only with the
+photon, but also with the photino, the k and its own superpartners a and b.
+the dse for the electron is illustrated in fig.1, where a solid line indicates an
+electron propagator, dashed line an a or b propagator, a wavy line a photon
+propagator, an alternating dash-and-dot line a k propagator and a wave with
+a solid line through it a photino propagator.
+
+the dse for the scalar partners is shown in fig.2. it would appear prima
+facie that we have two coupled dses to solve, the second considerably more
+complicated than the rst. we are saved from this eort however, by the
+existence of supersymmetric ward identities (wi) 14. the supersymmetric wi
+relating the scalar two point functions to the electron propagator is
+
+h i = ihaf i  i 6 phaai = ihbgi  i 6 phbbi.
+
+(3.2)
+
+substituting in the fermion propagator ansatz
+
+s(p)  h i =
+
+i
+
+6 pa(p2) + b(p2)
+
+(3.3)
+
+7
+
+) --1 (
+
+)-1=
+
+-
+
+-
+-
+
+(
+-
+
+-
+
+figure 2: the dyson-schwinger equation for the a and b propagator in sqed3.
+
+gives the scalar propagator
+
+d(p2)  haai = hbbi =
+
+a(p2)
+
+p2a2(p2)  b2(p2)
+
+,
+
+(3.4)
+
+and the a to f amplitude
+
+haf i = hbgi =
+
+b(p2)
+
+p2a2(p2)  b2(p2)
+
+=
+
+b(p2)
+a(p2)
+
+d(p2).
+
+(3.5)
+
+if nonperturbative chiral symmetry breaking is allowed for, the two point func-
+tion haf i is potentially non-zero in the chiral limit even though perturbation
+theory predicts it should be identically zero.
+
+clearly it suces to solve only the fermion dse to determine the scalar
+functions a(p2) and b(p2). to do the calculations we perform a wick rotation
+to euclidean space. our euclidean conventions are the same as those set out
+in appendix b of reference 12. spacelike momenta satisfy p2 > 0, and the
+fermion and boson propagators take the form
+
+s(p) =
+
+d(p) =
+
+1
+
+i  pa(p2) + b(p2)
+
+a(p2
+
+p2a(p2) + b2(p2)
+
+,
+
+,
+
+8
+
+(3.6)
+
+(3.7)
+
+b(p)
+
+0.06
+
+0.04
+
+0.02
+
+0
+
+0
+
+0.1
+
+0.2
+
+0.3
+
+p
+
+figure 3: the chirally asymmetric solution for the propagator function b(p2) in feynman
+gauge,  = 1. if chiral symmetry is not broken, b is identically zero.
+
+respectively. we use the chirally quenched approximation 8 which is known to
+be compliant with u (1) gauge invariance, that is, we take the propagators of
+the photon and its superpartners to be bare. the class of covariant gauges, for
+which the photon propagator is given by
+
+d (k) = (  kk/k2)
+
+1
+k2 + 
+
+kk
+k4
+
+will be considered. the corresponding k and photino propagators are
+
+dk(k) =
+
+d(k) =
+
+1
+k2 ,
+1
+
+i  k
+
+,
+
+respectively. we also employ the bare vertex or rainbow approximation
+
+(q, p) = ie,
+p (q, p) = iep ,
+
+9
+
+(3.8)
+
+(3.9)
+
+(3.10)
+
+(3.11)
+
+(3.12)
+
+5
+
+4
+
+a(p)
+
+3
+
+2
+
+1
+
+0
+
+0.1
+
+0.2
+
+0.3
+
+p
+
+figure 4: the chirally asymmetric (solid curve) and symmetric (dashed curve) solutions for
+the propagator function a(p2) in feynman gauge,  = 1.
+
+(q, p) = ie,
+ (q, p) = ie,
+
+(3.13)
+
+(3.14)
+
+for the euclidean electronphoton, electron-k and electron-a-photino vertices
+respectively. the euclidean space dse with these approximations reduces
+after angular integration to the following coupled integral equations for b(p2)
+and a(p2):
+
+b(p2) = ( + 3)
+
+a(p2) = (  1)
+
+dq
+
+0
+
+e2
+
+42p z 
+42p2 z 
+
+e2
+
+p + q
+
+qb(q2)
+
+q2a2(q2) + b(q2)
+
+p  q(cid:12)(cid:12)(cid:12)(cid:12)
+q2a2(q2) + b(q2) (cid:18) p2 + q2
+
+qa(q2)
+
+2p
+
+dq
+
+0
+
++
+
+e2
+
+22p z 
+
+0
+
+dq
+
+qa(q2)
+
+q2a2(q2) + b(q2)
+
++ 1
+
+we solve equations (3.15) and (3.16) numerically using the standard itera-
+tive procedure introduced by applequist et al.7. the functions a(p2) and b(p2)
+
+(3.15)
+
+ln(cid:12)(cid:12)(cid:12)(cid:12)
+
+p + q
+
+p  q(cid:12)(cid:12)(cid:12)(cid:12)
+
+ q(cid:19)
+
+(3.16)
+
+ln(cid:12)(cid:12)(cid:12)(cid:12)
+p  q(cid:12)(cid:12)(cid:12)(cid:12)
+
+p + q
+
+ln(cid:12)(cid:12)(cid:12)(cid:12)
+
+10
+
+0.003
+
+0.002
+
+>
+
+
+<
+
+0.001
+
+0
+
+0
+
+0.5
+
+
+1
+
+figure 5: the chiral condensate of quenched sqed3 (solid curve) and qed3 (short dashes)
+in the bare vertex approximation. also plotted is the chiral condensate of quenched qed3
+using the minimal ball-chiu ansatz for the fermion-photon vertex (dashed-dot curve) and
+the chiral condensate of quenched sqed3 using the partial approximation to the ball-chiu
+ansatz described in the text (long dashes).
+
+are dened on a non-uniform grid of fty-one points concentrated at small mo-
+menta where the function varies more rapidly. the integrand is interpolated
+using a cubic spline using an ultraviolet cut-o of p = 1000e2.
+
+we show in gures 3 and 4 both the chirally symmetric and asymmetric
+solutions to the massless (m = 0), feynman gauge ( = 1) electron dse of
+fig.1. the results are plotted in units with e2 = 1. it is apparent in gure
+3 that mass generation is remarkably suppressed and both graphs descend
+steeply to the values assumed when there is no dressing. we have tested the
+convergence of our numerical iteration procedure by varying the initial guess
+for a and b and the ultra-violet cuto. these changes had no signicant eect
+on the solution obtained.
+
+the dse is the rst functional derivative with the respect to the electron
+propagator of the cjt eective potential 15 and its solutions are therefore
+stationary points. to ascertain if the chirally asymmetric solution to the dse
+
+11
+
+is dynamically favoured we make use of the cjt eective potential which,
+when evaluated at a stationary point, is given by 16
+
+v [s, d] = z
+
+d3p
+
+(2)3 (cid:8)tr ln[1  s(p)s(p)] + 1
+
+2 tr[s(p)s(p)](cid:9)
+
+d3p
+
+2z
+
+(2)3 (cid:8)tr ln[1  d(p)d(p)] + 1
+
+2 tr[d(p)d(p)](cid:9) ,(3.17)
+
+where s(p) = s(p)1  s1
+bare(p). this
+formula neglects the contribution from the photon and its superpartners since
+it is calculated in the quenched approximation. note that there is another
+term in eq. (3.17), given by
+
+bare(p) and d(p) = d(p)1  d1
+
+z
+
+d3p
+(2)3
+
+d3q
+(2)3 [d(q) + dk(q)] d(p),
+
+(3.18)
+
+corresponding to the vacuum graphs giving rise to the tadpole contributions
+in the boson sde. as we have written it, eq. (3.17) only gives half of these
+particular diagrams. however in the quenched approximation eq. (3.18) is
+zero by dimensional reduction 17.
+
+in table 1 we list the dierence
+
+va[s, d]  vs[s, d] = 2z
+
+d3p
+
+(2)3 (cid:26)ln(cid:20)
+
+p2as(p2)2
+
+p2aa(p2)2 + ba(p2)2(cid:21)
+
+
+
+p2aa(p2)
+
+p2aa(p2)2 + ba(p2)2 +
+
+1
+
+as(p2)(cid:27) ,
+
+(3.19)
+
+between the eective potentials calculated for the chirally asymmetric and
+symmetric solutions for a range of values of the gauge parameter . our cal-
+culation conrms that the asymmetric solution is dynamically favoured in the
+nonsupersymmetric case. for sqed3, however, we nd that chiral symmetry
+is not spontaneously broken, at least in the quenched, rainbow approximation.
+it is clear from table 1 that the calculated eective potential is dependent
+on the gauge parameter . this is an artifact of the rainbow approximation
+which, for dressed electron propagators, violates the u (1) ward-takahashi
+identity (wti). another useful indicator of gauge symmetry breaking is the
+u (1) invariant chiral condensate
+
+h i = trs(x = 0) =
+
+2
+
+2 z 
+
+0
+
+dp
+
+p2b(p2)
+
+p2a2(p2) + b2(p2)
+
+,
+
+(3.20)
+
+calculated in the asymmetric phase. in figure 5 we plot the chiral condensate
+for quenched rainbow sqed3 and qed3. while the calculated condensate for
+
+12
+
+table 1: the dierence va[s, d]vs[s, d] between the cjt eective potential of the chirally
+asymmetric solution and the chirally symmetric solution for qed3 and sqed3 at dierent
+values of the gauge parameter .
+
+
+
+0
+
+sqed3
+
+qed3
+
+4.62  103
+
+1.32  105
+
+0.5
+
+4.29  103
+
+6.02  106
+
+1
+
+4.07  103
+
+3.44  106
+
+sqed3 is surprisingly insensitive to the choice of gauge, the condensate for
+qed3 is, as expected, strongly gauge dependent.
+
+for qed3 the invariance of the chiral condensate can be considerably
+improved by replacing the bare vertex with the minimal ball-chiu vertex
+ansatz 18, which is specically designed to respect the u (1) wti and be free
+of kinematic singularities. for comparison, the qed3 condensate obtained
+in this way in reference 19 is plotted in figure 5. here we attempt a similar
+substitution for sqed3. note that the photons supersymmetric partners k
+and  are completely invariant under a gauge transformation and their ver-
+tices are not directly constrained by the wti. compliance with the wti can
+therefore be achieved by replacing the bare photon-fermion vertex with the
+minimal ball-chiu ansatz whilst the remaining vertices are kept bare. this
+method incurs the penalty of breaking supersymmetry. the resulting chiral
+condensate is plotted in figure 5. suprisingly the variation of the condensate
+with respect to the gauge parameter was found to be an order of magnitude
+greater than in the bare case. we attribute this to the violation of super-
+symmetry and conclude that any attempt to improve the vertex must remain
+supersymmetric.
+
+4 conclusions
+
+we have used the method of wess and zumino 5 to obtain a lagrangian for
+sqed3 with four-component fermions. the lagrangian derived in this way
+agrees with that obtained by dimensional reduction 2 except that our form
+retains an angular degree of freedom associated with the denition of parity
+and charge conjugation in (2 + 1) dimensions 12. this is eected by taking
+suitable linear combinations of the dirac matrices 4 and 5.
+it was found
+that supersymmetry constrains the angles p and c associated with parity
+
+13
+
+and charge conjugation transformations in qed3 12 to be related by p = c
+or   c .
+
+the dse of sqed3 was solved numerically in quenched, rainbow approx-
+imation after using supersymmetric wis to relate scalar and fermion propa-
+gators within the chiral multiplet. application of the cjt eective potential
+revealed that the chirally symmetric solution is dynamically preferred, in con-
+trast to the situation in qed3. we conclude that chiral symmetry is not
+broken in sqed3 in the quenched, rainbow approximation.
+
+although the rainbow approximation violates the u(1) gauge symmetry,
+we nd the chiral condensate to be relatively insensitive to the choice of gauge
+xing parameter. we believe this to be fortuitous however, since replacing
+the bare vertex with an ansatz which respects the u (1) wti but not the
+supersymmetric wis produces a chiral condensate which is signicantly gauge
+dependent. work on developing a vertex ansatz which respects both the u (1)
+gauge and supersymmetric wis is currently in progress.
+
+acknowledgements
+
+the authors gratefully acknowledge stimulating discussions with v. miransky.
+we are also grateful to the special research centre for the subatomic structure
+of matter, adelaide, for hosting the workshop on nonperturbative methods
+in quantum field theory which made these discussions possible.
+
+references
+
+1. c. d. roberts and a. g. williams, prog. part. nucl. phys. 33, 475
+
+(1994).
+
+2. r.d. pisarski, phys. rev. d 29, 2423 (1984).
+3. p. maris, phys. rev. d 54, 4049 (1996) and references therein.
+4. e. dagotto, j. b. kogut and a. kocic, nucl. phys. b334 279, (1990).
+5. j. wess and b. zumino, nucl. phys. b 78, 1 (1974).
+6. m. koopmans and j.j. steringa, phys. lett. b 226, 309 (1989).
+7. t. w. appelquist et al., phys. rev. d 33, 3774 (1986).
+8. t.e. clark and s.t. love, nucl. phys. b 310, 371 (1988).
+9. a. kaiser and s. selipsky, hep-th 9708087.
+10. y. shamir, nucl. phys. b 352, 469 (1991); y. shamir, phys. rev. lett.
+66, 3101 (1991); t. w. appelquist, a. nyeler and s. b. selipsky, phys.
+lett. b 425, 300 (1998).
+
+11. m.f. sohnius, phys. rep. 128, 39 (1985).
+12. c.j. burden, nucl. phys. b 387, 419 (1992).
+13. e. witten, nucl. phys. b 202, 253 (1982).
+
+14
+
+14. j. iliopoulis and b zumino, nucl. phys. b 76, 310 (1974).
+15. j.m. cornwall r. jackiw and e. tomboulis, phys. rev. d 10, 2428
+
+(1974).
+
+16. k. stam, phys. lett. b 152, 238 (1985); c.j. burden and c.d. roberts,
+
+phys. rev. d 47, 5581 (1993).
+
+17. c. itzykson and j.b. zuber, quantum field theory, mcgraw hill inc.
+
+(1980).
+
+18. j.s. ball and t.w. chiu, phys. rev. d 22, 2543 (1980).
+19. c. j. burden, and. c. d. roberts, phys. rev. d44, 540 (1991).
+
+15
+
+

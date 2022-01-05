@@ -1,0 +1,5373 @@
+renormalization proof for spontaneously broken
+
+yang-mills theory with flow equations
+
+christoph kopper
+
+centre de physique theorique de lecole polytechnique
+
+f-91128 palaiseau, france
+
+volkhard f. muller
+
+fachbereich physik, universitat kaiserslautern
+
+d-67653 kaiserslautern, germany
+
+abstract
+
+abstract: in this paper we present a renormalizability proof for spontaneously bro-
+ken su (2) gauge theory. it is based on flow equations, i.e. on the wilson renormal-
+ization group adapted to perturbation theory. the power counting part of the proof,
+which is conceptually and technically simple, follows the same lines as that for any
+other renormalizable theory. the main diculty stems from the fact that the regular-
+ization violates gauge invariance. we prove that there exists a class of renormalization
+conditions such that the renormalized green functions satisfy the slavnov-taylor iden-
+tities of su (2) yang-mills theory on which the gauge invariance of the renormalized
+theory is based.
+
+9
+9
+9
+1
+
+ 
+
+g
+u
+a
+5
+
+ 
+
+ 
+ 
+
+2
+v
+4
+1
+1
+2
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+1
+
+1 introduction
+
+in the early seventies wilson and his collaborators published their ideas on the renormaliza-
+tion group and eective lagrangians [wiko], which have stimulated the progress of quantum
+eld theory and statistical mechanics ever since. in 1984 polchinski [pol] showed that these
+ideas are suited as a basis for perturbative renormalization theory.1 he proved euclidean
+massive 4
+4 to be renormalizable without introducing feynman diagrams, thus sidestepping
+the associated complicated analysis of their divergence/convergence properties. instead, the
+problem is solved by bounding inductively the solutions of a system of rst order dieren-
+tial equations, the flow equations (fe), which are a reduction of the wilson fe to their
+perturbative content.
+over the past decade polchinskis argument has been considerably simplied technically,
+extended to physical renormalization conditions and has been rendered rigorous [kksa].
+beyond it has been applied, again in mathematical rigour, to nearly all situations of physical
+interest: the 4
+4 proof itself already also holds for any other massive theory with global sym-
+metries only and renormalizable power counting, like e.g. the yukawa-models, o(n)-models
+etc. it could then be extended to euclidean massless 4
+4 [kk1] and qed4 [kk2] and also
+to theories in minkowski-space [kksc]. the fe method also served to extract properties
+of, or bounds on green functions which were harder - if at all - to get by other methods.
+we mention composite operator renormalization together with (generalized) zimmermann
+identities [kk3], wilsons operator product expansion [kk4], symanzik improvement in the
+convergence of the regularized theory [ke1, wie], de calan-rivasseau large order bounds
+on perturbation theory [ke2], bounds on the singularities of green functions at exceptional
+momenta [kk1], analyticity properties of green functions in minkowski space [kksc] and
+decoupling theorems [kim]. a recent review (in german) on previous work on fes can be
+found in [kop]. we should also mention that the interest in fes over the last decade goes far
+beyond mathematical physics and has led to many interesting results, ideas and calculations
+in theoretical physics. to give few examples we mention that critical exponents for 4
+4-type
+theories have been calculated in [tewe]. truncated fe have also been applied to the bound
+state problem in [ell], to yang-mills theory in [ehw], in particular to the study of vacuum
+condensates in [rewe].
+
+among the entries in our list on solved renormalization problems there is still one missing,
+which is of fundamental importance in physics, namely nonabelian gauge theory. the present
+paper is intended to close this gap by treating spontaneously broken su(2)-yang-mills theory,
+
+1wilson himself remarked already in the late sixties that this should be possible, as we learned from e.
+
+brezin.
+
+2
+
+which corresponds to the weak sector of the standard model.2 another interesting problem,
+which should be studied, is qcd where the problem of gauge invariance is intertwined with
+the infrared problem. since the latter has already been extensively studied we chose the
+spontaneously broken theory which is infrared nite and thus simpler. on the other hand
+the slavnov-taylor identities (sti) or ward identities of the spontaneously broken symmetry
+are more complicated to analyse.3
+
+the (ultraviolet) power counting part of the fe renormalization proof is (up to nota-
+tional and other minor changes) the same and simple for all the above mentioned theories,
+which renders the method attractive. gauge theories, however, present a diculty coming
+from the wellknown fact that gauge symmetry is broken by cutos in momentum space, and
+it is just the ow of such a cuto which produces the fe. what we have to show is that
+gauge invariance is restored when the cutos are taken away. on the level of the green
+functions (which are not gauge invariant) this means that we have to verify the sti of the
+theory. they then allow to argue that physical quantities such as the s-matrix are gauge-
+invariant[zij]. on analysing the fe for a gauge theory one realizes that the restoration of
+the sti depends on the choice of the renormalization conditions chosen and cannot be true
+in general. more precisely, since gauge invariance is violated in the regularized theory, the
+renormalization group ow will generally produce nonvanishing contributions to all those
+relevant parameters of the theory, which are forbidden by gauge invariance, e.g. a nonin-
+variant gauge eld selfcoupling of the form ( ~a2)2. the question is then: can we use the
+freedom in adjusting the renormalization conditions such that the sti are nevertheless re-
+stored in the end? to answer this question a rst observation, already encountered when
+treating qed, is crucial: the violation of the sti in the regularized theory can be expressed
+through green functions carrying an operator insertion, which depends on the regulators.
+fe theory for such insertions tells us that these green functions will vanish once the cutos
+are removed, if we achieve renormalization conditions on the theory such that the inserted
+green functions (uniquely calculated from those) have vanishing renormalization conditions
+for all relevant terms, i.e. up to the dimension of the insertion (which is 5 in our case).
+comparing the number of relevant terms for the su(2) theory - 37 (see app.a)- and for the
+insertion - 53 (see app.c)-, we realize that it is not possible to make vanish 53 terms on
+adjusting 37 free parameters, unless there are linear interdependences. it is again the fe
+
+2 for vanishing weinberg angle. this is however not of decisive importance for the line of the argument.
+it matters insofar as the explicit description and treatment of the whole su(2)u(1)-theory would require
+much more space.
+
+3 we mention also that fe and sti for pure yang-mills theory in the limit case without uv cuto have
+
+been considered in [bam2].
+
+3
+
+(in its global integrated form) which helps us to make transparent these interdependences.
+the problem of how to nd ones way through the sti and adjusting the renormalization
+conditions appropriately is somewhat complicated through spontaneous symmetry breaking,
+since the latter mixes green functions of dierent dimension.
+
+one may of course ask the question whether such a proof of the renormalizability of
+yang-mills theory is still necessary in view of the fact that the problem has been settled
+in the seventies by the pioneering work of t hooft and veltman and successors. with-
+out going into details or giving references on work which has made entrance into nearly all
+textbooks on quantum eld theory or particle physics we would still like to mention that
+there rests a bit of uneasiness on the mathematical physicists side on the form in which
+the subject has settled in the course of time. this is because the standard way in which
+the argument is presented nowadays is based on two main ingredients: the existence of an
+invariant regularization scheme, i.e. dimensional regularization, and algebraic manipula-
+tions on generating functionals, which can be given rigorous meaning for regularized path
+integral formulations. to date nobody has achieved a (rigorous) denition of dimensionally
+regularized path integrals so that there remains a gap in the reasoning which could only be
+closed if the analysis of the sti were directly performed on individual feynman graphs, a
+presumably awkward procedure. these arguments do not apply to the lattice regularization
+4, which allows for a (particularly transparent) path integral formulation while respecting
+gauge invariance. it violates euclidean or lorentz symmetry however. we emphasize the
+work of rei as a largely coherent and rigorous analysis of the perturbative renormalization
+problem of (qcd type) gauge theories on the lattice [rei]. his work is based on an adap-
+tation of bphz renormalization to the lattice, where quite a number of new problems appear.
+
+as a guide to the logical structure of the paper we now expose the main line of arguments.
+our starting point is a massive uv regularized theory. the generating functional l,0 of the
+connected amputated green functions (cag) with momenta in the interval [, 0] satises
+a ow equation (35) with respect to , which when reduced to its perturbative content (37)
+permits to bound inductively the l-loop n-point functions l,0
+in such a way (39, 43) that
+their existence for 0   becomes obvious. this is true for all theories renormalizable by
+power counting under the condition that all relevant terms, i.e. local terms of mass dimension
+ 4 are xed by (0-independent) renormalization conditions (r.c.). in gauge theories the
+number of such terms is generally much bigger than the number of free parameters of the
+theory. for our model the respective numbers are 37 (listed in app.a) and 8 (cf. (121)).
+
+l,n
+
+4the above mentioned algebraic analysis is however based on the continuum formulation.
+
+4
+
+so most of the r.c. cannot be freely chosen for a gauge theory. a priori it does not seem
+possible to guess which r.c. are the right ones.
+
+1
+
+1
+
+1
+
+and l0,0
+
+1
+
+1
+
+1
+
+1
+
+1
+(see app.c) are functions of the 37 r.c.
+
+thus we analyse the action l0,0 for general r.c. and expose the violation of the sti as a
+functional associated with an operator insertion, which turns out to be of dimension 5. we
+denote it as l1 = l0,0
+(75). this is achieved on using an uv regularized version (62, 66) of
+the brs transformation (13, 14, 18). general results from fe theory tell us that l0,0
+1 will
+vanish for 0   if all its relevant terms, i.e. the local parts of dimension  5, are xed to
+be 0 by the r.c. and if the irrelevant terms in l0,0
+vanish suciently rapidly for 0  
+(110). the 53 renormalization parts for l0,0
+for
+l0,0 and 7 free parameters in the brs transformation (see app.b). thus if the model can
+be renormalized respecting the sti there must be linear interdependences among the 53
+relations. these are not explicit in the theory l0,0, since l0,0 contains irrelevant terms
+of arbitrary dimension which are not known explicitly. we therefore derive the violated
+slavnov-taylor identities (vsti) also in terms of the bare functionals l0,0 and l0,0
+(98,
+99), using again the fe for that purpose. the fe may also be used (104, 113-120) to relate
+l0,0
+with each other (111, 112) so that - respecting the inductive procedure, i.e.
+climbing up in the loop order l, and for given l in the number of external legs n - we may
+hope to satisfy the sti (for 0  ) as well by imposing the relevant terms in l0,0
+to
+vanish (instead of those in l0,0
+). since l0,0 does not contain unknown5 irrelevant terms
+an explicit analysis of the bare sti is possible, and we can make vanish 53 terms order by
+order in l on appropriately xing l0,0 and the free brs constants. however starting at
+the wrong end - i.e. xing counter terms instead of r.c. - we cannot prove renormalizability.
+thus the task is threefold :
+i) reveal a number of free renormalization constants corresponding to the free parameters
+of the theory (121).
+ii) satisfy a subset of the sti for the relevant parts by choosing appropriate r.c. for l0,0
+(125, 127). this subset has to be chosen suciently large to get hold on the niteness
+problem, with the help of the fe and afterwards also of the sti themselves.
+iii) satisfy the remaining sti for the relevant parts by choosing the appropriate l-loop terms
+in l0,0 (122, 123, 124). it is possible indeed to show that all remaining sti ((128, 129, 130)
+and those mentioned after (131)) can be satised. these are far more than the constants
+xed in iii). all this has to be done respecting the order of the inductive procedure.
+if it were not possible to make ends meet (i.e. if either the subset in ii) is too small to prove
+niteness, or the one in iii) is too small in order to satisfy all sti) we would face what is
+
+5 l0,0 will include some well-behaved irrelevant terms (107, 108) linked to the particular nature of the
+
+cuto (30) chosen.
+
+5
+
+called an anomaly.
+
+our procedure is complicated by a technical point. the analysis of the relevant part of
+the sti at  = 0 is much more complicated for l0,0 than for 0,0, the generating functional
+of the one-particle irreducible functions. for l0,0 many more terms of the same loop order
+may appear in a single sti. passing to one-particle irreducible objects achieves to a con-
+siderable degree the disentangling of the l-loop renormalization parts in the inhomogeneous
+linear equations of app.c. so app.c has indeed been written for the 0,0- and not for the
+l0,0-functional. the price to pay is that we have to provide for the necessary machinery
+for the -functional (ow equations (87), sti (82)) too, using the legendre transform (78,
+79). this should not obscure the fact that all results of this paper are to be obtained from
+l0,0.
+
+this paper is organized as follows. in chapter 2 we introduce the classical action of the
+model and x notations. in chapter 3 we introduce the concepts from fe theory and recall
+the statements on renormalizability we need. as regards the general aspects on bounding
+inductively solutions of the fe we tend to be short as long as the reasoning follows the lines of
+previous papers. in chapter 4 we derive the vsti for the regularized theory in various forms,
+comment on the adaptation of the renormalization results to the vertex functions, analyse
+the above mentioned operator insertion and show how to make vanish its relevant parts step
+by step on disposing of the freedom in choosing the renormalization conditions. this is the
+key part of the paper. with the aid of the results from chapter 3 it permits to prove that
+the sti are restored and thus solves the renormalization problem for spontaneously broken
+su(2) yang-mills theory.
+
+2 classical theory and tree approximation
+
+we collect some basic properties of the classical euclidean su(2)- yang-mills-higgs model in
+four dimensional euclidean spacetime, mainly to introduce the notation and the conventions.
+we largely follow the textbook of faddeev and slavnov [fasl].
+
+the action considered involves the real yang-mills eld {aa
+
+}a=1,2,3 and the complex
+scalar doublet {}=1,2. all bosonic elds appearing in this paper may be viewed as smooth
+functions of (suciently) rapid fall-o. details do not matter in view of the fact that we do
+not perform any nonperturbative analysis of path integrals. the action has the form
+
+sinv =z dx(cid:26)1
+
+4
+
+f a
+f a
+
+ +
+
+1
+2
+
+() + (  2)2(cid:27) ,
+
+(1)
+
+6
+
+with the curvature tensor
+
+(x) = aa
+f a
+
+(x)  aa
+
+(x) + gabcab
+
+(x)ac
+
+(x)
+
+and the covariant derivative
+
+ =  + g
+
+1
+2i
+
+aaa
+
+(x)
+
+(2)
+
+(3)
+
+acting on the su(2)-spinor . the parameters g, ,  are real positive, abc is totally skew
+symmetric, 123 = +1, and {a}a=1,2,3 are the standard pauli matrices. for simplicity the
+wave function normalizations of the elds are chosen equal to one. the action (1) is invariant
+under local gauge transformations of the elds
+
+1
+2i
+
+aaa
+
+(x)  u(x)
+
+1
+2i
+
+aaa
+
+(x)u(x) + g1u(x)u(x) , (x)  u(x)(x)
+
+(4)
+
+with u : ir4  su(2) smooth. a stable ground state of the action (1) implies spontaneous
+symmetry breaking, taken into account by reparametrizing the complex scalar doublet as
+
+(x) =
+
+
+b2(x) + ib1(x)
+
+ + h(x)  ib3(x) 
+ ,
+
+(5)
+
+where {ba(x)}a=1,2,3 is a real triplet and h(x) the real higgs eld. moreover, in place of the
+parameters ,  we introduce the masses
+
+m =
+
+1
+2
+
+g, m = (82)
+
+1
+
+2 .
+
+aiming at a quantized theory we choose the t hooft gauge xing
+
+sg.f. = z dx
+
+1
+2
+
+(aa
+
+  mba)2,
+
+(6)
+
+(7)
+
+with   ir+, implemented by anticommuting faddeev-popov ghost and antighost elds
+{ca}a=1,2,3 and {ca}a=1,2,3 , respectively, via
+
+sgh = z dxca{( + m2)ab +
+
+1
+2
+
+gm hab +
+
+1
+2
+
+gmacbbc  gacbac
+
+}cb.
+
+(8)
+
+hence, the total classical action is
+
+which we decompose as
+
+sbrs = sinv + sg.f. + sgh,
+
+sbrs = z dx {lquad(x) + lint(x)}
+
+7
+
+(9a)
+
+(9b)
+
+into its quadratic part, with   ,
+
+lquad =
+
+1
+4
+
+(aa
+
+  aa
+
+)2 +
+
++
+
+1
+2
+
+h( + m 2)h +
+
+(aa
+
+)2 +
+
+1
+2
+
+m2aa
+
+aa
+
+
+
+ba( + m2)ba
+
+1
+2
+1
+2
+
+ca( + m2)ca ,
+
+(10)
+
+and into its interaction part
+
+lint = gabc(aa
+
+)ab
+
+ac
+
+ +
+
+1
+4
+
+g2(abcab
+
+ac
+
+)2
+
+gn(h)aa
+
+ba  haa
+
+ba  abcaa
+
+(bb)bco
+
++
+
++
+
++
+
+
+
+1
+2
+1
+8
+1
+4
+1
+2
+
+gaa
+
+aa
+m 2
+m
+
+n4mh + g(h2 + baba)o
+m(cid:19)2
+g2(cid:18)m
+
+h(h2 + baba) +
+
+1
+32
+
+g
+
+gmcanhab + acbbco cb
+
+gacb(ca)ac
+
+cb.
+
+(h2 + baba)2
+
+(11)
+
+in (10) we recognize that all elds are massive and that no coupling term aa
+the propagators of the yang-mills eld aa
+and the goldstone eld ba, are thus (respectively)
+
+ba appears.
+, of the higgs eld h, and of the ghost eld ca
+
+c ab
+
+(p) =
+
+ab
+
+p2 + m2 { (1)
+
+pp
+
+p2 + m2 } , c(p) =
+
+1
+
+p2 + m 2 , sab(p) =
+
+ab
+
+p2 + m2 . (12)
+
+the classical action sbrs in (9b) has the following properties
+
+i) euclidean invariance: sbrs is an o(4)-scalar.
+
+ii) rigid so(3)-isosymmetry: the elds {aa
+
+}, {ba}, {ca}, {ca} are isovectors and h is an
+
+isoscalar; sbrs is invariant under global so(3)-transformations.
+
+iii) brs-invariance: introducing the classical composite elds
+
+a
+
+(x) =nab + garbar
+
+(x)o cb(x),
+
+(x) = 
+
+gba(x)ca(x),
+
+a(x) = (cid:26)(m +
+
+1
+2
+
+g h(x))ab +
+
+1
+2
+
+garbbr(x)(cid:27) cb(x),
+
+1
+2
+
+1
+2
+
+a(x) =
+
+gapqcp(x)cq(x) ,
+
+8
+
+(13a)
+
+(13b)
+
+(13c)
+
+(13d)
+
+the brs-transformations of the elds are dened as
+
+aa
+
+(x)  aa
+
+(x)  a
+
+(x),
+
+h(x)  h(x)  (x),
+
+ba(x)  ba(x)  a(x),
+
+ca(x)  ca(x)  a(x),
+
+ca(x)  ca(x) 
+
+1
+
+
+(aa
+
+(x)  mba(x)) .
+
+(14a)
+
+(14b)
+
+(14c)
+
+(14d)
+
+(14e)
+
+in these transformations  is a spacetime independent grassmann element that commutes
+with the elds {aa
+, h, ba} but anticommutes with the (anti-)ghosts {ca, ca}. to show the
+brs-invariance of the total classical action (9) one rst observes that the composite classical
+elds (13) are themselves invariant under the brs-transformations (14). moreover, we can
+write (8) in the form
+
+sgh = z dxca{a
+
+ + ma}.
+
+(15)
+
+using these properties the brs-invariance of (9) is straightforward (if somewhat tedious) to
+verify.
+
+it is convenient to add to the classical action (9) source terms both for the elds and the
+
+composite elds (13), dening
+
+sc = sbrs +z dx{a
+
+a
+
+ +  + aa + aa} z dx{ja
+
+aa
+
+ + sh + baba + aca + caa}. (16)
+
+the sources a
+, , a have dimension 2, ghost number -1 and are grassmann elements,
+whereas a has dimension 2 and ghost number -2; the sources a and a have ghost number
++1 and -1, respectively, and are grassmann elements. the brs-transformation (14) of sc
+can be written as
+
+employing the brs-operator d, dened by
+
+sc  sc + dsc
+
+d = z dx(ja
+
+
+
+
+a
+
+
++ s
+
+
+
+
++ ba 
+
+a + a 
+
+a + a  1
+
+
+
+(17)
+
+(18)
+
+
+
+
+ja
+
+
+ m
+
+
+
+ba!) .
+
+(observe that  anticommutes with , , too.)
+
+for some purposes it will turn out convenient to regard the elds and functionals thereof
+
+in momentum space. our conventions are
+
+(x) = zp
+
+eipx (p) , zp
+
+= z
+
+d4p
+(2)4 ,
+
+(19)
+
+9
+
+where mostly we will omit the hat on (p). from (19) we obtain
+
+
+
+(x)
+
+= z d4p eipx
+
+
+
+ (p)
+
+= (2)4zp
+
+eipx
+
+
+
+ (p)
+
+.
+
+for functionals with operator insertions like e.g.
+
+s(x)
+
+:=
+
+sc
+(x)
+
+we dene s(p)
+
+:= z d4x eipx s(x)
+
+(20)
+
+(again in abusively shortened notation). for later use it will be convenient to introduce a
+shortened collective notation for the elds, sources and propagators. as for the latter, we
+will sometimes denote all propagators (12) collectively by c. furthermore we write
+
+for the bosonic elds  = (aa
+
+, h, ba) with corresponding sources j = (ja
+
+, s, ba ) ,
+
+for all elds  = ( , ca, ca) and for their sources k = (j , a, a) ,
+
+and for the insertion sources  = (a
+
+, , a, a) and  = (a
+
+, , a) .
+
+(21)
+(22)
+
+(23)
+
+the quantization of the classical theory amounts to constructing a well-dened version of the
+formal functional integral respresentation for the generating functional w of the connected
+green functions such that these functions satisfy the system of sti. considering the formal
+expression for the modied generating functional
+
+exp
+
+1
+h
+
+w = n z [da dh db dc dc] exp{
+
+1
+h
+
+sc}
+
+(24)
+
+we observe that the quadratic part (10) appearing in sc constitutes a well-dened gaussian
+measure6. in a formal loop expansion of the remaining part of the exponent the emerging
+order h0, i.e. the tree approximation, is well-dened and satises
+
+dw |h0 = 0 ,
+
+(25)
+
+which follows from (17) when using the invariance of the (formal) measure in (24) under
+brs transformations. in the sequel we will inductively tackle all orders hl, l  in, of the
+loop expansion.
+
+6once we have introduced the regularization (30) the support of the measure consists of suciently
+
+well-behaved functions.
+
+10
+
+3 flow equations: renormalizability without slavnov-
+
+taylor identities
+
+3.1 the flow equations for the su(2) yang-mills higgs model
+
+the fe of wilsons renormalization group is obtained as a dierential equation w.r.t. the
+ow parameter , which is the energy scale down to which the degrees of freedom have been
+integrated out, starting from the uv region. we will consider the generating functional of
+the connected amputated green functions (cag) which we denote as
+
+l,0( , c, c)
+
+(26)
+
+with the following explanations: we have introduced an uv regularization7 0 to have a
+well-dened starting point, so that
+
+0    0 <  .
+
+(27)
+
+the functional l,0(, c, c) is to be viewed as a formal power series in h, since we are
+studying the perturbative renormalization problem in the loop expansion. to be more precise
+on its denition we write it as
+
+l,0 =
+
+
+
+x|n|=3
+
+l,0
+
+l=0,n +
+
+hl
+
+
+
+xl=1
+
+
+
+x|n|=1
+
+l,0
+
+l,n
+
+.
+
+(28)
+
+here the multiindex n denotes the number of eld variables of each species appearing:
+
+n = {na, nh, nb, nc, nc },
+
+|n| := na + nh + nb + nc + nc .
+
+(29)
+
+so for |n| = 4 we are e.g. regarding a four point function. (28) implies that, by denition,
+at 0 loop order l,0 contains no contribution from the one- or two-point functions. with
+this restriction it is the generating functional of the cag of the following theory:
+i) the propagators are those from (12) including the regulating factor
+
+,0(p2) =
+
+0(p2)  (p2)
+
+0(0)
+
+with (p2) = e 1
+
+6 [(p2+m2)(p2+m2)(p2+m 2)] .
+
+(30)
+
+7furthermore we should restrict the theory to a nite volume v as long as eld independent vacuum
+terms are generated by the ow, which diverge in innite volume by translation invariance. we do not make
+this explicit here and refer the interested reader to previous work [kksa, kk3].
+
+11
+
+in the sequel this choice of the cuto function turns out to be technically convenient8. besides
+being explicit it permits to verify easily the following bounds on the regularized propagators
+c ,0(p) := c(p) ,0(p2)
+
+3|w| p(|p|/) (p2)
+
+c ,
+,
+
+for 0    m
+for m    0
+
+.
+
+(31)
+
+
+
+
+|(
+
+|w|
+
+yi=1
+
+
+
+pi
+
+)
+
+
+
+
+c ,0(p)|  
+
+
+here and in the following p denotes (each time it appears possibly a new) polynomial with
+nonnegative coecients. these as well as the constant c depend on , m, m, |w|, but not
+on p, , 0.
+ii) the vertices are to be taken from our starting bare action (interaction lagrangian inclu-
+ding counter terms)
+
+l0 := l0,0 .
+
+(32)
+
+in the case of an invariant regularization we would choose here sbrs from (9b), modied
+by including counter terms of any order hl, l  1, of the same structure and by excluding
+the 0-loop quadratic part.
+in our case such a restricted choice would not allow to prove
+restoration of the sti. therefore we will allow at rst for all counter terms permitted by the
+unbroken global symmetries of the theory, i.e. o(4) and so(3)iso.
+
+these terms will then become unique functions of the renormalization conditions chosen.
+there are 37 such local terms of dimension  4, corresponding to those listed in appendix
+a. at the tree level l = 0 we shall always consider the terms with |n| + |w|  4 to be given
+by (11). we denote by
+
+(2)4(|n|1)n
+
+(p)l,0
+
+l
+
+|0 = (p1 + . . . + p|n|) l,0
+
+l,n (p1, . . . , p|n|1)
+
+(33)
+
+the n-point cag of loop order l involving the indicated number of (a, h, b, c, c) elds.
+we will also write ~p for (p1, . . . , p|n|1) in the following. we stay somewhat unprecise about
+the momentum assignment to the elds since this would unnecessarily blow up the notation.
+we also omit vector and isovector indices. finally we will also use the shorthand
+
+w :=
+
+|n|1
+
+yi=1
+
+(
+
+4
+
+y=1
+
+
+
+pi
+
+)wi, with w = (wi,1, . . . , w|n|1,4), |w| =x wi, .
+
+(34)
+
+8there is of course a lot of arbitrariness in this choice. what is needed is a suciently well-behaved
+function tending to 1 for   0, 0  , which is essentially supported for momenta between  and 0.
+the verication of the restoration of the sti in ch.4 would be somewhat easier using a suitable regulating
+function with compact support of the type (p) = k( p2+m2
+), where k(x) = 1, x  1, k(x) = 0, x  2,
+k monotonic and smooth. but the choice (30) allows to perform the analytic continuation to minkowski
+space as shown in [kksc], and it has the advantage that ((p))1 is well-dened. avoiding its appearance
+is possible, but sometimes needs detours.
+
+2
+
+12
+
+the flow equations (fe) have been derived quite generally several times, so we tend to be
+short. the wilson fe written for l,0 takes the form9
+
+e 1
+
+h (l,0 + i ,0 ) = eh(,0) e 1
+
+h l0
+
+.
+
+(35)
+
+here (, 0) is the functional laplace operator which in our theory takes the form
+
+(, 0) =
+
+1
+2
+
+h
+
+
+
+aa
+
+
+, c ,0
+
+
+
+
+
+aa
+
+
+i+
+
+1
+2
+
+h
+
+
+h
+
+, c ,0 
+h
+
+i+
+
+1
+2
+
+h
+
+
+
+ba , s,0 
+
+ba i+ h
+
+using our shorthand notation we obtain the fe for the cag l,0
+w.r.t. , expanding l as in (28) and using (33)
+
+l,n
+
+
+
+ca , s,0 
+
+ca i .
+(36)
+from (35) on deriving
+
+w l,0
+
+l,n (~p) = xn,|n|=|n|+2
+
+cnzk
+
+(c ,0(k)) wl,0
+
+l1,n(~p, k, k)
+
+(37)
+
+l1,n1(p1, . . . , p|n1|1)(w3c ,0(p)) w2l,0
+
+l2,n2(p, . . . , p|n|1)#s,a
+
+.
+
+ x
+
+"cn1,n2 w1l,0
+
+l1+l2=l, w1+w2+w3=w
+n1 ,n2 ,|n1|+|n2|=|n|+2
+the constants cn, cn1,n2 are combinatorial. the eld assignment of the propagators c ,0
+is not written, it is implicit in the multiindices n, n1, n2 related to n. on the r.h.s. the
+integrated momentum k refers to that of the elds from n  n, and p = p1 + . . . + p|n1|1.
+furthermore the subscripts s, a indicate (anti)symmetrization according to the statistics of
+the various elds, since we assume the l,0
+
+to be (anti)symmetrized from the beginning.
+
+l,n
+
+3.2 renormalizability
+
+the system of dierential fe (37) can be integrated inductively, using mixed boundary
+conditions (b.c.) :
+a1) at  = 0 the n point functions with |n| + |w| > 4, i.e. the irrelevant ones, are supposed
+to be smooth functions of ~p, 0 obeying the bounds
+
+|wl0,0
+
+l,n
+
+(~p)|  4|n||w|
+
+0
+
+p1(log
+
+0
+m
+
+) p2(
+
+|~p|
+0
+
+) ,
+
+|n| + |w|  5 .
+
+(38)
+
+the standard case are b.c., where the r.h.s. of (38) vanishes. we need to be slightly more
+general to compensate for eects of the cuto function 0,0, see ch.4, (107, 108).
+a2) at  = 0 the cag with |n| + |w|  4, i.e.
+the relevant ones, are xed, order by
+order in h at the renormalization point, which we choose at ~p = 0 for simplicity. the
+
+9i ,0 is the vacuum functional which strictly speaking exists only in nite volume. since it plays hardly
+any role in the following, we do not discuss this issue here and refer to [kksa, kk3] for further comments.
+
+13
+
+renormalization conditions (r.c.) may be chosen weakly 0-dependent, we restrict to smooth
+uniformly bounded functions of 0 converging for 0  . of course we always restrict to
+b.c. respecting the global (euclidean and iso-)symmetries.
+with the fe we can inductively obtain the following bounds on the cag l,0
+
+:
+
+l,n
+
+proposition 1 :
+
+|wl,0
+
+l,n (~p)|  ( + m)4|n||w| p1(log
+
+ + m
+
+m
+
+) p2(
+
+|~p|
+
+ + m
+
+) .
+
+(39)
+
+the polynomials p1, p2 have nonnegative coecients depending on l, n, w, , m, m, but
+not on ~p, , 0.
+
+we do not present a proof of the proposition since the line of thought is the same as in
+the references [kksa, kk3, kop] and restrict to few comments. it proceeds by induction
+upwards in the number of loops and for given loop order upwards in |n| (in contrast to the
+procedure employed when expanding in a coupling constant : there one proceeds downwards
+in |n|. for given l, n we proceed downwards in |w|, starting from some arbitrary10 |wmax|  3.
+thus we have to start at loop order l = 0 and from |n| = 3, since l,0
+l=0 does not contain
+contributions for |n|  2. (37) immediately gives
+
+l,0
+
+0,n (~p) = l0,0
+
+0,n
+
+(~p) ,
+
+|n| = 3 ,
+
+0,n
+
+since the r.h.s. vanishes. thus the bound is satised. for |n| = 4, l = 0 we may also x the
+b.c. at  = 0, if we want to read them o the action (11), since here the second term on
+the r.h.s. of (37) contributes and leads to a one particle reducible dierence between l,0
+0,n
+and l0,0
+. this digression of the rules a1), a2) is a pure matter of convenience however.
+the inductive proof then proceeds by inserting the induction hypothesis on the r.h.s. of
+the fe (which has already been bounded) and performing the momentum and -integrals,
+starting from the respective b.c. and using the bound (31). an important point to note
+is the following : which bounds for the l,0 can be obtained, depends only on the b.c.
+imposed and on the propagators (and dimensionality). note nally that for the purpose of
+renormalizability only the bound on l0,0 in the limit 0   is needed. the rest is of
+technical nature. in the next chapter we want to make use of the following also somewhat
+technical
+
+corollary : for given l0 > 0 and n0, w0 with |n0| + |w0|  4 we assume that the b.c. on
+
+10the minimal value of 3 is needed, because for the relevant terms the passage from the xed momentum,
+at which the renormalization conditions are imposed, to any momentum is achieved by the schlomilch or
+integrated taylor formula [kksa,pol]. for the two point function there thus appear up to three derivatives.
+if one also wants to prove smoothness one has to admit for arbitrarily high |wmax|.
+
+14
+
+the cag wl,0
+l,n , (|w|  |wmax| ), have been imposed in agreement with a1), a2) for l < l0
+and arbitrary n, w ; and for l = l0 and |n| < |n0| and |w|  |w0|. suppose that we x the
+b.c. for w0l,0
+
+l0,n0 on the wrong side, i.e. at 0, such that it obeys the bound
+
+|w0l0,0
+
+l0,n0 (0)|  4|n0||w0|
+
+0
+
+then we also have
+
+|w0l,0
+
+l0,n0(0)|  4|n0||w0|
+
+0
+
+p(log(0/m)) .
+
+p(log(0/m)) .
+
+(40)
+
+(41)
+
+proof : due to our assumptions, the r.h.s. of the fe (37) is bounded by (39), since the
+bounds on all terms preceding (l0, n0, w0) in the induction remain unchanged apart from
+those with |w| > |w0|. those are not needed however because we only make a statement at
+the renormalization point ~p = 0 and thus do not require a bound on the taylor remainder.
+the deterioration of the bound then stems from both the b.c. contribution (40) and from
+the fact that the r.h.s. of the fe has to be integrated from 0 to  (instead of integrating
+from 0 to ), i.e. from the wrong side. this gives the bound
+
+|w0l,0
+
+l0,n0(0)|  4|n0||w0|
+
+0
+
+p1(log(0/m)) + |z 0
+
+
+
+d 4|n0||w0|1 p2(log(/m))|
+
+ 4|n0||w0|
+
+0
+
+p3(log(0/m)) .
+
+note that the bound does not improve, if we set the b.c. for w0l0,0
+we remark that statements similar to that of the corollary could also be extended to general
+external momenta, they are not needed however. in response to the remarks made before
+one may ask oneself whether the previous bounds (39) may be improved, if the b.c. are in
+some sense smaller. this is indeed the case. regard e.g. the cag containing an odd number
+of scalar elds, i.e. nh + nb  2in  1. then the following improved bounds hold :
+
+l0,n0 (0) equal to zero.
+
+|wl,0
+
+l,n (~p)|  ( + m)3|n||w| p1(log
+
+ + m
+
+m
+
+) p2(
+
+|~p|
+
+ + m
+
+) .
+
+(42)
+
+the main reason why we may expect an improvement of power counting for those terms in
+our theory is that, as can be seen in app.a , at l = 0 the terms in question are all proportional
+to a mass factor. since we will not need such sharpened statements we do not give a proof
+of (42) here. as usual the bound on the green functions should be complemented by a
+convergence statement, since (39, 42) would still admit bounded but oscillating solutions11.
+convergence follows from
+
+11a possibility generally only envisaged by mathematical physicists since such oscillations are counterin-
+
+tuitive to any experience from calculations
+
+15
+
+proposition 2 :
+
+|0wl,0
+
+l,n (~p)| 
+
+1
+2
+0
+
+( + m)5|n||w| p1(log(0/m)) p2(
+
+|~p|
+
+ + m
+
+) .
+
+(43)
+
+as before the nonnegative coecients in the (new) polynomials pi may depend on l, n, w, ,
+m, m, but not on ~p, , 0. for the proof, which follows the same inductive scheme, we
+refer again to the earlier references [kksa, kk3, kop].
+
+3.3 bounds on green functions with operator insertions
+
+the problem of renormalizing green functions with operator insertions has been studied
+quite generally in [kk3, kk4]. again we state the propositions needed for su(2) yang-
+mills theory without proofs, restricting to remarks on the (minor) modications needed. we
+have to deal with two kinds of operator insertions here. the rst are the brs insertions
+(13a)-(13d). these are dened as operator insertions of dimension 2, ghost number one
+for (13a)-(13c) and ghost number 2 for (13d), which transform as vector-isovector, scalar-
+isoscalar, scalar-isovector and scalar-isovector respectively. by the general renormalization
+theory we thus have to allow for all counter terms of dimension  2 and of the same symmetry
+properties. in the bare action the insertions take the form
+
+1 ca(x) + r0
+
+2 g arbar
+
+(x) cb(x),
+
+(x) = r0
+a
+
+(x) = r0
+3
+
+1
+2
+
+g ba(x)ca(x),
+
+a(x) = r0
+
+4 m ca(x) + r0
+5
+
+1
+2
+
+g h(x) ca(x) + r0
+6
+
+1
+2
+
+g arbbr(x) cb(x),
+
+a(x) = r0
+7
+
+1
+2
+
+where we demand
+
+g apqcp(x)cq(x) ,
+
+r0
+
+i = 1 + o(h) ,
+
+(44a)
+
+(44b)
+
+(44c)
+
+(44d)
+
+(45)
+
+i.e. the counter terms are again viewed as formal power series in h, and we of course assume
+the insertions to agree with (13a-13d) at the tree level.
+
+the following remark might be helpful, as regards the transformation (14e) of the anti-
+ghost : we do not introduce constants r0
+11, corresponding to the terms of dimension
+ 2 with the same symmetry properties (besides the ones in (14e) these are h ba and abccbcc).
+the claim implicit (not only here, but throughout the literature) and veried in ch.4 is then
+that it is possible to obtain a nite renormalized theory12 satisfying the sti, by xing these
+
+8, . . . , r0
+
+12this is related to the fact that (14e) is linear in .
+
+16
+
+constants at  = 0, i.e. on the wrong side ; in fact setting r0
+11 = 0.
+in the more general case one would have to admit arbitrary values for these four constants
+and to introduce another source for the respective composite operator. the (violated) sti
+(see below (75, 82, 98)) would then take a more symmetric form, the terms involving aa
+, ba
+being replaced by another one of the form hca, d lai.
+
+9 = 1, r0
+
+10, r0
+
+8, r0
+
+the insertions may be generated by the respective sources as in (16), we set
+
+l0,0
+
+
+
+and also
+
+= z dx {a
+
+(x)a
+
+(x) + (x)(x) + a(x)a(x) + a(x)a(x)} ,
+
+l0,0 = l0,0 + l0,0
+
+
+
+.
+
+(46)
+
+(47)
+
+we again get a wilson fe (cf. (35)) for l,0 generating the cag with operator insertions13
+
+e 1
+
+h ( l,0 + i ,0 ) = eh(,0) e 1
+
+h
+
+restricting our attention to cag with one insertion, e.g.
+
+l,0
+
+(x) :=
+
+ l,0
+(x)
+
+|=0
+
+l0 ,0 .
+
+(48)
+
+(49)
+
+(similarly for the other insertions) we obtain by deriving (48) w.r.t.  a linear fe for l,0
+(x) .
+writing similarly as in(33)
+
+(2)4(|n|1)n
+
+(p)l,0
+
+(q);l|0 = (q + p1 + . . . + p|n|) l,0
+
+(q);l,n(p1, . . . , p|n|1)
+
+(50)
+
+we obtain the dierential fe for cag with one insertion
+
+w l,0
+
+(q);l,n(~p) = xn,|n|=|n|+2
+
+cnzk
+
+(c ,0(k)) wl,0
+
+(q);l1,n(~p, k, k)
+
+(51)
+
+ x
+
+l1+l2=l, w1+w2+w3=w
+n1 ,n2 ,|n1|+|n2|=|n|+2
+
+"cn1,n2 w1l,0
+
+(q);l1,n1(p1, . . . , p|n1|1)(w3c ,0(p)) w2l,0
+
+l2,n2(p, . . . , p|n|1)#s,a
+
+the notation being that of (37). since ghost and antighost in (36) do not appear symmetri-
+cally, the c (c)-derivative appears once in n1 (n2) and once in n2 (n1). in the following we
+denote for shortness by (q) any of the sources a
+(q), (q), a(q), a(q). obviously each of
+the insertions leads to a fe as (51). in the derivation of (51) no use is made of the specic
+
+13we will only regard insertions with nonvanishing ghost number. therefore the vacuum functional i equals
+i, since there are no vacuum diagrams with nonvanishing ghost number, due to ghost number conservation
+under the ow. thus we will always write i subsequently.
+
+17
+
+kind of insertion considered. thus even more generally we replace (q) by (q) when talking
+of an insertion of dimension d (instead of 2). this is because we also want to cover the
+cag with one insertion of dimension 5 describing the brs violating terms of the regularized
+theory. this insertion is analysed in ch.4.1. the particular kind of insertion chosen only
+comes into play when considering the b.c., which are xed as follows :
+b1) at  = 0 the n point functions wl,0
+are supposed to obey the bounds (cf. a1, (38))
+
+(q);l,n with |n| + |w| > d, i.e. the irrelevant ones,
+
+|wl0,0
+
+(q);l,n(~p)|  d|n||w|
+
+0
+
+p1(log
+
+0
+m
+
+) p2(
+
+|~p|
+0
+
+) ,
+
+|n| + |w| > d .
+
+(52)
+
+b2) at  = 0 the cag with |n| + |w|  d, i.e. the relevant ones, are xed, order by order
+in h at the renormalization point ~p = 0, with the same restrictions as in a2).
+again (51) lends itself to an inductive scheme through which we may prove the renormal-
+izability of the cag with insertion. for the l,0
+(q);l,n there are seven free r.c. which x the
+seven parameters r0
+from (67) we
+have to x 53 r.c. corresponding to the list in app.c. under these conditions our inductive
+scheme may now also be employed to prove boundedness and convergence of inserted green
+functions.
+
+i from (45). for the cag l,0
+
+(q);l,n with insertion l0,0
+
+1
+
+proposition 3:
+
+|wl,0
+
+(q);l,n(~p)|  ( + m)d|n||w| p1(log
+
+ + m
+
+m
+
+) p2(
+
+|~p|
+
+ + m
+
+) ,
+
+|0wl,0
+
+(q);l,n(~p)| 
+
+( + m)d+1|n||w|
+
+2
+0
+
+p1(log(0/m)) p2(
+
+|~p|
+
+ + m
+
+) .
+
+(53)
+
+(54)
+
+(q);l,n, we need a stronger result for the brs violating insertions l,0
+
+whereas the bounds from proposition 3 are sucient for our purposes as regards the func-
+tions l,0
+(q);l,n, which we
+can achieve on imposing further restrictions on the b.c. it is important in this respect that
+the fe for the inserted cag is linear. this implies e.g. that multiplying all cag with a
+- independent factor gives a new solution. if we want to show that the cag l,0
+(q);l,n from
+ch.4.1 vanish in the limit 0  , the strategy is thus to reveal a negative power of 0,
+which can be factorized from the cag l,0
+(q);l,n. it is quite conceivably a sucient condition
+for achieving this, to require that all r.c. be bounded by a negative power of 0. the main
+issue of ch.4 will be to prove that there exist r.c. on the cag such that the inserted cag
+describing brs violation obey such suppressed r.c. once this is accomplished we can rely
+on the following proposition for the restoration of brs invariance :
+
+proposition 4: replace the statements from b2) on the renormalization conditions by
+
+18
+
+b3) at  = 0 the l0,0
+functions of 0 bounded by
+
+(q);l,n with |n| + |w|  d are xed at order hl and ~p = 0 to be smooth
+
+1
+0
+
+p(log(0/m)) .
+
+(55)
+
+(56)
+
+then we have the bound
+
+|wl,0
+
+(q);l,n(~p)| 
+
+1
+0
+
+( + m)d+1|n||w| p1(log(0/m)) p2(
+
+|~p|
+
+ + m
+
+) .
+
+again we do not give a proof, but refer to our previous remarks, to [kk3] and in particular
+to prop.7 in the paper on qed [kk2], where similar results were obtained in the more
+complicated situation of a massless theory. proposition 4 obviously shows that the cag
+l,0
+(q);l,n vanish for 0  . we remark that in ch.4 we will arrange for r.c. such that the
+bound (55) can be set to 0. this does not improve (56), because of the nonvanishing b.c.
+for the irrelevant terms (see b1), (52) above).
+
+4 restoration of the slavnov-taylor identities
+
+4.1 violated slavnov-taylor identities for connected and proper
+
+green functions
+
+once the physical free parameters of the theory, i.e. g, , m and the gauge xing pa-
+rameter  14 have been xed, the yang-mills-higgs theory should be uniquely determined
+up to normalizations of the elds. the standard tool to enforce this uniqueness are the
+slavnov-taylor-identities. whereas their role is twofold in renormalization procedures based
+on invariant regularization schemes - apart from assuring uniqueness and physical gauge
+invariance, they also serve as a technical tool to show inductively that the theory can be
+renormalized without introducing counter terms not present in the bare action - we only have
+to ensure their validity for the rst purpose. at an intermediate stage they are inevitably
+violated by the regularization in momentum space, as gauge invariance is. we want to show
+that they hold after removing the regularization, if we choose the renormalization conditions
+properly. our starting point is the generating functional of the regularized green functions
+at the physical value  = 0 of the ow parameter. remembering (21,22) we write
+
+h, ki = z dx {x
+
+ (x)j (x) + ca(x)a(x) + a(x)ca(x)} .
+
+(57)
+
+14on which physical quantities should not depend
+
+19
+
+the gaussian measure d0() corresponding to the quadratic form 1
+
+h q0 with
+
+q0 =
+
+1
+2
+
+haa
+
+, (c 0,0)1
+
+ aa
+
+ i +
+
+1
+2
+
+hh, (c 0,0)1h i +
+
+1
+2
+
+hba, (s0,0)1ba i  hca, (s0,0)1ca i
+
+(58)
+
+(59)
+
+is given by its characteristic functional
+
+z d0() e
+
+1
+
+h h, ki = e
+
+1
+
+h p (k)
+
+with
+
+p (k) =
+
+1
+2
+
+hja
+
+, c 0,0
+
+
+
+ja
+ i +
+
+1
+2
+
+hs, c 0,0 si +
+
+1
+2
+
+hba, s0,0bai  ha, s0,0ai .
+
+(60)
+
+the generating functional of the regularized green functions may now be written as
+
+z 0,0(k) = z d0() e 1
+
+h l0 ,0 + 1
+
+h h, ki .
+
+(61)
+
+dening regularized brs variations of the elds through
+
+brs  (x) = (0,0 )(x)  ,
+
+brs ca(x) = (0,0a)(x)  ,
+
+(62)
+
+brs ca(x) = [0,0(
+
+1
+
+
+aa
+
+  m ba)](x)  ,
+
+the brs transform of the gaussian measure is given by
+
+d0() 7 d0()(cid:26)1 +
+
+h , (c 0,0
+
+
+
+1
+
+hx
+
+)10,0 i  
+
+1
+h
+
+hca, (s0,0)10,0ai  (63)
+
++
+
+1
+h
+
+h
+
+1
+
+
+aa
+
+  m ba, 0,0(s0,0)1cai (cid:27) = d0()(cid:26)1 
+
+1
+h
+
+brs q0(cid:27) .
+
+the brs-variation of the measure has mass dimension 5, since 0,0 just cancels its inverse
+appearing in the inverted propagators in (63). this is convenient, and it is the basic reason
+why we regularized the brs-transformation. requiring the invariance of the functional inte-
+gral in (61) under (regularized) brs-transformations of the eld variables 15, (62) provides
+us with the violated slavnov-taylor identities (vsti) :
+
+0 != z d0() e 1
+
+h l0 ,0 + 1
+
+h h, ki {brs h, ki  brs (q0 + l0,0)} .
+
+(64)
+
+15these transformations of variables and consequently (64) can be given rigorous meaning for the regular-
+ized gaussian integrals. arguing formally (64) amounts to the somewhat sloppy statement that the jacobian
+of the brs-transformation equals 1 which in turn has rigorous meaning for the lattice regularization, see
+e.g. [rei].
+
+20
+
+the brs variations in (64) can be generated using an appropriate operator insertion:
+i) first we dene the modied generating functional using (47)
+
+z 0,0(k, ) = z d0() e 1
+
+h
+
+l0 ,0 + 1
+
+h h, ki
+
+together with the regularized brs operator (compare to (18))
+
+d0 = x
+
+hj , 0,0
+
+
+
+
+i + ha, 0,0
+
+
+a i + h(
+
+1
+
+
+
+
+
+ja
+
+
+ m
+
+
+ba ), 0,0ai .
+
+(65)
+
+(66)
+
+ii) secondly we dene the terms emerging from the brs-noninvariance of the action to form
+the insertion l0,0
+
+with ghost number 1
+
+1
+
+l0,0
+
+1
+
+ := brs (q0 + l0,0) .
+
+(67)
+
+due to the regularizing factor 0,0 in (62) the insertion l0,0
+(67) we introduce the generating functional
+
+1
+
+is not a local operator. using
+
+z 0,0
+
+
+
+(k) := z d0() e 1
+
+h (l0 ,0 +  l
+
+0 ,0
+1
+
+) + 1
+
+h h, ki
+
+for   ir. now the vsti (64) can be rewritten as
+
+d0
+
+z 0,0(k, )|0 =
+
+d
+d
+
+z 0,0
+
+
+
+(k)|=0 .
+
+(68)
+
+(69)
+
+the modied functionals from (65, 68) permit to dene the generating functionals of the
+corresponding cag with the respective insertions
+
+z 0,0(k, ) = e
+
+1
+
+h p (k) e 1
+
+h (i 0,0 + l0,0 ( ,c,c;)),
+
+z 0,0
+
+
+
+(k) = e
+
+with the relations
+
+1
+
+h p (k) e 1
+
+h (i 0,0 +l
+
+0,0
+
+
+( ,c,c)),
+
+(70)
+
+(71)
+
+ (x) =z dy c 0,0
+
+
+
+(xy)j (y), ca(x) = z dy s0,0(xy)a(y), ca(x) = z dy s0,0(xy)a(y)
+
+(72)
+
+between the variables of the z and l functionals. introducing the shorthand
+
+d = (cid:18)( + m2) 
+
+1  
+
+
+
+ ,  + m 2 ,  + m2  d(cid:19)
+
+(73)
+
+for the inverted nonregularized propagators and also (remember (49))
+
+l1 := l0,0
+
+1 =
+
+d
+d
+
+l0,0
+
+
+
+|=0 , l := l0,0 = l0,0|0 (= l0,0
+
+
+
+|=0) ,
+
+(74)
+
+21
+
+since we will mostly regard the theory with  set to 0 in this section, we obtain from (69)
+via (70, 71, 72) the vsti for the connected amputated functions cag
+
+l1 = hca, d(
+
+1
+
+
+aa
+
+ m ba)i  hca, 0,0(
+
+l
+aa
+
+
+m
+
+l
+
+ba )i +x
+
+(75)
+since we also have to regard the proper vertex functions we dene in an intermediate step
+the generating functional of connected nonamputated green functions16
+
+h , d l i  hca, d lai .
+
+1
+h
+
+w (k, ) =
+
+e
+
+z(k, )
+z(0, 0)
+
+(leaving out again the upper indices 0, 0). from this we derive using (69, 71, 72)
+
+d0
+
+w (k, )|=0 = l1( , c, c) .
+
+(76)
+
+(77)
+
+the legendre transform of w now leads us to the generating functional of the proper vertex
+functions. we set
+
+( , c, c; ) + w (j , , ; ) = z dy {x
+
+ j + c  +  c}
+
+with the relations
+
+j (x) =
+
+
+
+ (x)
+ w
+a(x)
+
+,
+
+,  (x) =
+
+ w
+j (x)
+
+,
+
+a(x) = 
+
+
+
+ca(x)
+
+, ca(x) =
+
+ w
+a(x)
+
+.
+
+a(x) =
+
+
+
+ca(x)
+
+, ca(x) = 
+
+(78)
+
+(79)
+
+note that (78) says that j , . . . may be viewed as a formal power series in h with coecients
+depending on the classical elds  , . . . these series may be inverted to express  , . . . as
+series in terms of j , . . . as a consequence of (78) the relations
+
+
+
+
++
+
+ w
+
+
+= 0
+
+(80)
+
+and an analogous one for the derivative w.r.t. the source a hold. similarly as before we
+write
+
+ = |0 ,  (x) =
+
+|0 .
+
+(81)
+
+
+
+ (x)
+
+then the vsti for the proper vertex functions emerging from (77) (where the upper indices
+ = 0, 0 in (82,83,84) are understood) read
+
+h
+
+x
+
+
+
+
+, 0,0 i  h
+
+
+ca i = 1(, c, c)
+16noting again that vacuum functionals should only appear before taking the innite volume limit
+
+
+ca , 0,0ai  h(
+
+aa
+
+  m ba), 0,0
+
+1
+
+
+(82)
+
+22
+
+with
+
+and
+
+1(, c, c) = l1(, c, c)
+
+(83)
+
+ (x) =z dy c (x  y)
+
+
+
+ (y)
+
+, ca(x) = z dy s(x  y)
+
+
+
+ca(y)
+
+, ca =z dy
+
+
+
+ca(y)
+
+s(y  x) .
+
+(84)
+
+4.2 flow equations and renormalizability of vertex functions
+
+in this section we shortly comment on ow equations for proper vertex functions. such
+fe have been analysed previously in [kksc] for 4
+4-theory, to prove analyticity statements
+in minkowski space. they have been derived and applied before in the literature, see e.g.
+[bam1, wet]. writing (70, 76, 78) with general  instead of  = 0 we may derive fe
+similarly as in the previous chapter by deriving w.r.t. . deriving (76) we obtain
+
+ w ,0(k, ) = p ,0(k)   l,0( , c, c) ,
+
+and (78) then implies
+
+ ,0 +  w ,0 = 0 .
+
+(85)
+
+(86)
+
+combining both equations and using the fe derived from (48) for the functional l,0 we
+obtain the fe for ,0 :
+
+ ,0( , c, c) 
+
+1
+
+2x zp
+
+ (p) (c ,0
+
+
+
+(p))1 (p) + zp
+
+= h ((, 0)) l,0( , c, c) .
+
+ca(p) (s,0(p))1ca(p)
+
+(87)
+
+the functional on the r.h.s. has to be viewed as depending on the (classical) elds  , c, c .
+in momentum space the elds  , c, c are given in terms of those through
+
+ (p) = (2)4 c ,0
+
+
+
+(p)
+
+,0
+ (p)
+
+, ca(p) = (2)4 s,0(p)
+
+,0
+ca(p)
+
+,
+
+ca(p) = (2)4 s,0(p)
+
+,0
+ca(p)
+
+corresponding to (84). the r.h.s of (87) is expressed in terms of  , c, c 17 using the
+following relations (and the chain rule)
+
+(2)4 (c ,0
+
+
+
+(p))1 (p) = 
+
+ l,0
+ (p)
+
++
+
+,0
+ (p)
+
+,
+
+17 note that (, 0) in (87) is still the one in terms of the elds  , c, c.
+
+23
+
+(2)4 (s,0(p))1ca(p) =
+
+(2)4 (s,0(p))1ca(p) = 
+
+
+
+ l,0
+ca(p)
+ l,0
+ca(p)
+
+,
+
+,0
+ca(p)
+,0
+ca(p)
+
++
+
+(88)
+
+.
+
+the inverted propagators appearing in (87, 88) remain only at the tree level, they cancel at
+loop order  1.
+considering rst the functional without insertions we may again inductively bound the
+functions w,0
+proceeding as in ch.3 upwards in l (note the factor of h on the r.h.s.),
+for given l upwards in |n|, and for given l, |n| downwards in the number of momentum
+derivatives. the induction starts from the tree order vertex functional
+
+l,n
+
+,0
+
+l=0 =
+
+1
+
+2x zp
+
+ (p) (c ,0
+
+
+
+(p))1 (p)  zp
+
+ca(p) (s,0(p))1ca(p)
+
++ (,0
+
+3
+
++ ,0
+
+4
+
+)l=0 + l0
+
+irr|l=0 .
+
+(89)
+
+the tree level three and four point functions from the third term are given in app.a, the last
+term is the tree level contribution to the irrelevant extension of l0 in (107, 108). imposing
+b.c. analogous to those imposed on the cag from ch.3.2 in a1), a2) we may then derive
+the bounds
+
+proposition 5 :
+
+|w,0
+
+l,n (~p)|  ( + m)4|n||w| p1(log
+
+ + m
+
+m
+
+) p2(
+
+|~p|
+
+ + m
+
+)
+
+(90)
+
+with the same comments as for proposition 1.
+
+we again skip the proof. finally we note that to obtain the analogous renormalizability
+statements for vertex functions with one insertion the fe (87) has to be derived w.r.t. the
+corresponding source. again a fe linear in terms of the inserted vertex functions, but
+involving also the noninserted ones, emerges. its solutions are bounded in the same way as
+the corresponding cag from ch.3.
+
+since the analysis of the sti is more transparent in terms of the vertex functions, the
+renormalization conditions will be imposed on those. we may then directly infer the nite-
+ness of the theory from the results of this section. we could also calculate from the b.c. on
+the vertex functions those for the cag, which then also satisfy a1),a2) and conclude on
+the niteness by ch.3, so that we might have skipped this section altogether, paying instead
+more attention on how to calculate b.c. on l from those for  and vice versa. generally
+speaking it seems to us that fe for vertex functions are useful in their own right. never-
+theless the cag should perhaps be viewed as the primary objects of interest, since the
+
+24
+
+fe for them takes a closed functional form. this closed form is of fundamental importance
+for the analysis of the linear relations among the sti and thus crucial for the proof of the
+theorem and in particular lemma 2 below.
+
+4.3 violated slavnov-taylor identities for the bare functional l0
+
+in this section we use again the abbreviations
+
+ = (0, 0) , l = l0,0, l = l0,0, l0 = l0,0, l0 = l0,0, l0
+
+1 = l0,0
+
+1
+
+.
+
+(91)
+
+our starting point are the vsti (75). by commuting the functional dierential operator
+appearing on the rhs of (75) with the renormalization group ow we will obtain the vsti
+in terms of l0. we introduce some further abbreviations:
+
+
+
+ra(x)
+
+=
+
+1
+
+
+
+
+
+aa
+(x)
+
+ m
+
+
+
+ba(x)
+
+, x = hdca, (
+
+1
+
+
+aa
+
+  m ba)i ,
+
+(92)
+
+y = hca, 0,0
+
+
+
+ra i  x
+
+h , d
+
+
+
+
+i + hca, d
+
+
+a i .
+
+now we can write (75) in the form
+
+l1 = e
+
+1
+h
+
+l (x + hy ) e 1
+
+h
+
+l|0 .
+
+the last two factors may be rewritten as (remember (48))
+
+(x + hy ) e 1
+
+h
+
+l = e
+
+1
+
+h i eh  eh  (x + hy ) eh  e 1
+
+h
+
+l0
+
+= e
+
+1
+
+h i eh (cid:18)x + hy  h[, x + hy ] +
+
+h2
+2
+
+[, [, x + hy ]](cid:19) e 1
+
+h
+
+l0 .
+
+we have to calculate the commutators
+
+[, y ] = h
+
+
+ca , 0,0s
+
+
+
+
+, 0,0
+
+
+
+
+i + h
+
+
+ca , 0,0
+
+
+a i ,
+
+(93)
+
+(94)
+
+(95a)
+
+(95b)
+
+(95c)
+
+[, x] = hca, 0,0
+
+
+
+h
+
+ra i  x
+
+ra i  h
+
+[, [, x]] = 2 h
+
+1
+
+
+
+ca , 0,0(
+
+ca , 0,0s
+
+aa
+
+  m ba)i ,
+
+
+ra i .
+
+from these relations we obtain
+
+(x + hy ) e 1
+
+h
+
+l = e
+
+1
+
+h i eh (cid:26)hca, d (
+
+1
+
+
+aa
+
+  m ba)i  h
+
+ l0
+ca , 0,0(
+
+1
+
+
+aa
+
+  m ba)i (96)
+
+25
+
+h , d
+
++ x
+
+ l0
+
+note that due to the form of l0 the contribution
+
+a i + x
+
+i  hca, d
+
+ l0
+
+
+ l0
+
+h
+
+, 0,0
+
+ l0
+
+
+i  h
+
+ l0
+ca , 0,0
+
+ l0
+
+a i(cid:27)e 1
+
+h
+
+l0
+
+.
+
+
+
+
+h
+
+hx
+
+, 0,0
+
+
+
+
+i l0  h h
+
+
+ca , 0,0
+
+
+a i l0
+
+vanishes and thus may be omitted in the parentheses in (96). on the other hand using (93,
+74) we can also express (x + hy ) e 1
+
+l|0 in terms of l0
+1:
+
+h
+
+(x + hy ) e 1
+
+h
+
+l|0 = l1 e 1
+
+h
+
+l|0
+
+(97)
+
+= h
+
+d
+d
+
+e 1
+
+h l|=0 = (h
+
+d
+d
+
+e
+
+1
+
+h i eh e 1
+
+h l0
+
+|=0) = e
+
+1
+
+h i eh l0
+
+1 e 1
+
+h l0
+
+.
+
+remember that l|0 = l|=0 = l. equality of (96) for   0 and (97) and invertibility
+of exp h (in perturbation theory) now obviously give
+
+hca, d (
+
+1
+
+
+aa
+
+  m ba)i  h
+
+1
+
+
+aa
+
+  m ba)i
+
+(98)
+
++ x
+
+h , d l0
+
+ i  hca, d l0
+
+ai + x
+
+h
+
+ i  h
+
+l0
+ca , 0,0l0
+
+ai = l0
+
+1 .
+
+(98) is the vsti for the bare functional l0.
+it turns out that it plays -unexpectedly- a
+prominent role in the analysis of how the sti can be restored. since we impose renormal-
+ization conditions in momentum space we also express (98) through the fourier transformed
+elds (using the conventions from ch.2)
+
+l0
+ca , 0,0(
+l0
+
+
+, 0,0l0
+
+ca(p)(p2 +  m2){
+
+i
+
+
+paa
+
+(p)  m ba(p)}
+
+(99)
+
+paa
+
+(p)  m ba(p)} 0,0(p2)
+
+l0
+
+1 = zp
+ (2)4zp
+
+l0
+ca(p)
+
+{
+
+i
+
+1  
+
+
+
++zp
+
+aa
+
+(p)[(p2 + m2) +
+
+pp]l0
+a
+
+h(p)(p2 + m 2)l0
+
+(p)
+
+ (p) + zp
+
++ zp
+
+ba(p)(p2 + m2)l0
+
+a(p)  zp
+
+ca(p)(p2 + m2)l0
+
+a(p)
+
++ (2)4zp
+
+0,0(p2)(cid:26) l0
+
+aa
+
+(p)
+
+l0
+(p) +
+a
+
+l0
+h(p)
+
+l0
+
+(p) +
+
+l0
+
+ba(p)
+
+l0
+
+a(p) 
+
+l0
+ca(p)
+
+l0
+
+a(p)(cid:27) .
+
+26
+
+4.4 choice of renormalization conditions and restoration of the
+
+slavnov-taylor-identities
+
+we have derived the sti in the previous two subsections for all three functionals , l, l0.
+in fact the l-functional is only needed as a connecting link between the other two. as we
+mentioned before this threefold description will be required to recognize the linear interde-
+pendences among the sti projected onto the relevant parts of the various functionals. for
+this purpose we also need termwise equivalence relations among the relevant parts of  and
+l0. these termwise equivalence relations are simplied, if we assume that the renormaliza-
+tion conditions for the functionals  or l are chosen such that:
+
+ :=
+
+
+
+h(x)
+
+|0 = 0 
+
+l
+
+h(x)
+
+|0 = 0 .
+
+(100)
+
+the condition (100) on the absence of tadpoles, although probably not indispensable, sim-
+plies the subsequent formulae, and it is not really a physical restriction, but rather one on
+the parametrization of the theory. here and in the following we use the shorthand notation
+
+wn
+
+f |0
+
+to denote the derivative of the functional f (which might be l or ) w.r.t. n elds , eval-
+uated at   0, followed by removing the global -function and performing the derivatives
+w. when we write
+
+we set in addition all momenta to 0 afterwards, and
+
+wn
+
+f |0,0
+
+wn
+
+f |0,0,l
+
+(101)
+
+is the l-th order coecient in the loop expansion of the previous expression. we now state
+
+lemma 1: under the assumption (100) we have:
+if for given l, n, w and for all l, n, w with l < l and (n, w)  (n, w) or with l = l and
+(n, w)  (n, w) we have wn
+
+ 1|0,0,l = 0, then18
+
+wn
+
+1|0,0,l = 0  wn
+
+l1|0,0,l = 0 .
+
+(102)
+
+proof: (102) follows from (83, 84) on noting that all propagators are nite and nonvanishing
+and that all possible factorizations appearing when we apply the chain rule in going from
+
+18we use the set theoretic relations for the multiindices n, w though strictly speaking they are sequences.
+
+the symbol  means by denition strict inclusion.
+
+27
+
+the l- to the -functions or vice versa vanish due to the conditions on the lower dimension
+terms.
+lemma 1 suggests that we satisfy the sti for the relevant terms proceeding upwards in the
+number of elds and momentum derivatives. the subsequent comparison of the vsti for l
+(75) and l0 (98) shows that we also should proceed upwards in the number of loops. before
+proceeding to the termwise comparison it is instructive to note quite generally that from
+
+l1 =
+
+d
+d
+
+l|=0 and l0
+
+1 =
+
+d
+d
+
+l0
+
+|=0
+
+it follows similarly as in (97) that
+
+l1 e 1
+
+h (l+i) = ehl0
+
+1 e 1
+
+h l0
+
+,
+
+and from the (perturbative) invertibility of eh we then obtain the relation
+
+l1 = 0  l0
+
+1 = 0 .
+
+(103)
+
+(104)
+
+(105)
+
+our goal is to arrange for renormalization conditions such that the relevant terms in 1
+vanish, proceeding inductively in the number of loops l. these relevant terms are listed
+in app.c, (i  xxix). by the statements from ch.2 and 4.2 and app.c there are no
+nonvanishing relevant terms in 1 and l0
+1 at the tree level in the limit 0   (this limit
+remains formal before we have stated how to renormalize the theory in agreement with the
+sti). since in the relevant part of the vsti there are contributions stemming from  (106)
+for nite 0 which might conspire to give nite contributions in the vsti when combining
+with divergent terms, our strategy is to compensate for them by introducing irrelevant terms
+in the bare action l0. in this respect it is important to note that the termwise identities
+(i-xxix) take the same form for  and l0 apart from the crucial fact that
+i) l0 contains only those irrelevant terms we are going to introduce explicitly,
+and from the fact that
+ii) there appear additional terms in (98) as compared to (82) which just replace those 0-loop
+terms, excluded in l0 by its denition19, so that as a consequence the termwise identities
+look as before (when ignoring the irrelevant terms).
+we will shortly denote the relevant terms in l0 by adding a sub- or superscript 0 to the
+corresponding term appearing in . in the same way we denote (i  xxix) written for l0
+as (i 0  xxix 0). in a number of sti the irrelevant terms introduced in l0 below (107,
+108) will make appearance, namely in iii, v, v ii, v iii. for those terms the sti for l0
+
+19these terms contribute only when performing up to three eld derivatives.
+
+28
+
+are rewritten explicitly in app.c including these terms. we use similar notation as in app.a
+and app.c, in particular the shorthand
+
+ := 0,0(0) :=
+
+d0,0(p2)
+
+dp2
+
+|p2=0 = 
+
+m4 + (1 + )m2m 2
+
+6
+0
+
+(106)
+
+and add the following contribution20 to l0
+
+l0
+
+irr = zpzq(cid:26)rstar
+
+(p)as
+
+(q)bt(p  q) [  (p2  q2) iaab
+
+10 + (pp  qq)iaab
+
+20
+
+]
+
+(107)
+
++ cr(p)cr(q)h(p  q) [ p2 icch
+
+10 + q2 icch
+
+20 + pq icch
+30 ]
+
++ rstcr(p)cs(q)bt(p  q) [ p2 iccb
+
+10 + q2 iccb
+
+20 + pq iccb
+
+30 ] .
+
+we have presented l0 directly in momentum space, where we perform the analysis of the
+sti. the letter i was chosen to remind of irrelevant, and we listed all terms of the respective
+eld content allowed by the global symmetries, which are of second order in the momenta.
+the constants i . . . will be chosen as follows:
+
+2 iaab
+
+10 m r0
+
+4 =   m2
+
+0 g r0
+2 ,
+
+iaab
+20 = 0 ,
+
+(108)
+
+m(iccb
+
+10  iccb
+
+30 ) =   [m f ccb
+
+0  bb
+0
+
+1
+2
+
+g r0
+
+6] ,
+
+m
+2
+
+icch
+30 =  hh
+0
+
+g
+2
+
+r0
+3 ,
+
+m
+2
+
+(2icch
+
+10  icch
+
+30 ) =  [m f cch
+
+0 + bb
+0
+
+g
+2
+
+m r0
+
+4(2 iccb
+
+10  iccb
+
+30 ) =  cc
+
+r0
+
+5] ,
+
+m
+2
+0 g r0
+7 ,
+
+(2icch
+
+20  icch
+
+30 ) = 2 f bbh
+
+0 m r0
+4 ,
+
+iccb
+20 =  f ccb
+
+0
+
+.
+
+these relations are written in terms of the linear combinations which appear in the respective
+sti and are needed to verify them. by the general results of ch.3 and ch.4.2 the theory
+stays nite when adding such irrelevant dimension 5 terms to the bare action, under
+the condition that these terms can be bounded by 1
+). if the relevant
+terms appearing in (108) obey a1)(38), this bound is obvious from the fact that  = o(6
+0 ).
+after this modication of the bare action we may state our
+
+0 p1(log(0/m)) p2( |~p|
+
+0
+
+induction hypothesis: for l  1 and all l  l  1
+i) we assume that the theory to order l has been renormalized according to a1)(38) and
+a2) for the  (or equivalently for the l) functional.
+ii) furthermore we assume
+
+wn
+
+1|0,0,l = 0 , wn
+
+l0
+
+1|0,0,l = 0 ,
+
+for (n, w) with |n| + |w|  5 .
+
+(109)
+
+20we remark that when working with a regulator as in footnote 7, we could spare the detour (107,108),
+
+because then  would be zero.
+
+29
+
+iii) finally we assume that
+
+|wn
+
+l0,0
+
+1
+
+|0,l |  o(5|n||w|
+
+0
+
+) p1(log
+
+0
+m
+
+) p2(
+
+|~p|
+0
+
+) ,
+
+for (n, w) with |n| + |w| > 5 . (110)
+
+all these statements are fullled at the tree level by our assumptions on the tree level action.
+the rest of this section is devoted to prove the
+
+theorem: the induction hypothesis holds at loop order l.
+
+proof : at loop order l we rst prove the crucial
+
+lemma 2: for given (n, w) with |n| + |w|  5 under the assumptions (100, 109) and if
+
+w
+
+n
+ l1|0,0,l = 0 ,
+
+w
+
+n
+ l0
+
+1|0,0,l = 0 for (n, w)  (n, w) and n  n
+
+(111)
+
+the following equality holds:
+
+wn
+
+l1|0,0,l = wn
+
+l0
+
+1|0,0,l .
+
+proof: due to the induction assumption ii), lemma 1 and (111) we nd
+
+(cid:20)(h)
+
+d
+d
+
+wn
+
+ e 1
+
+h l(cid:21)|0,0,=0,l = wn
+
+ l1|0,0,l
+
+(112)
+
+(113)
+
+noting that factorized terms give vanishing contribution, since |n| + |w|  5. on the other
+hand we also obtain (cf. (104))
+
+(cid:20) (h)
+
+d
+d
+
+wn
+
+ e 1
+
+h
+
+l(cid:21)|0,=0, l = (cid:20)wn
+
+ (eh l0
+
+1 eh e 1
+
+h
+
+l )(cid:21)|0, l .
+
+(114)
+
+note that here we do not yet restrict to vanishing momenta ~p, but assume that the mo-
+menta of the elds appearing in the derivatives to be called p1, . . . p|n| have been chosen
+nonexceptional 21. later we take ~p  0 22. we may rewrite the term eh l0
+
+1 eh as
+
+eh l0
+
+1 eh = l0
+
+1 +
+
+h
+ !
+
+5
+
+x=1
+
+[ , l0
+
+1] ,
+
+with the denition
+
+[ ,  ] := [ , [. . . [ ,  ] . . .]]
+
+.
+
+(115)
+
+(116)
+
+21i.e. no subsum vanishes
+22we point out that (113) should strictly speaking also be viewed as being obtained rst for nonexceptional
+~p, where correction terms appear, which then smoothly tend to 0 for ~p  0, so that we need not pay attention
+to them.
+
+ times
+
+{z
+
+}
+
+|
+
+30
+
+in (115) we used that l0
+
+1 is of degree 5 in the elds. we may then dene
+
+1 e 1
+p 0
+
+h
+
+l = ( l0
+
+1 +
+
+h
+ !
+
+5
+
+x=1
+
+[ , l0
+
+1] ) e 1
+
+h
+
+l ,
+
+(117)
+
+1 as given by the sum over the contributions from the connected amputated
+
+and recognize p 0
+diagrams containing
+i) exactly one vertex from l0
+1
+ii) up to 5 vertices from l, which are all directly linked to the vertex from l0
+propagator from 
+iii) multiplied by the monomial in the elds produced by the derivatives from  acting on
+the respective term in (l), multiplied by the respective power of h and a combinatoric
+factor to be read from (117).
+we now have to regard
+
+1 via a
+
+wn
+
+(p 0
+
+1 e 1
+
+h l)|0, l .
+
+(118)
+
+after performing the eld and momentum derivatives and after splitting o the global (p1 +
+. . . + p|n|)-function we let all momenta go to 0 so that then
+
+wn
+
+(p 0
+
+1 e 1
+
+h l)|0,0, l .
+
+(119)
+
+1, |n| external lines of the kind specied in n
+
+is given by
+the sum over all l-loop connected amputated diagrams containing exactly one vertex from
+l0
+, up to 5 vertices from l directly linked to
+the one from l0
+1 via a propagator, and weighed with a combinatoric factor as above. the
+functions are derived w.r.t. external momenta as indicated through w and taken at 0 external
+momenta in the end.
+
+note that the restriction on the momenta avoids the production of disconnected terms by
+momentum conservation. now remembering (100) and the fact that l does not contain
+0-loop two point functions we can use the induction hypothesis (109) and (111) to conclude
+that all contributions to (119) vanish apart from the term
+
+wn
+
+l0
+
+1|0, 0, l = wn
+
+l0,0
+
+1
+
+|0, 0, l .
+
+(120)
+
+any other contribution would require nonvanishing wn
+(n, w) and n  n. the term (120) then equals wn
+comments.
+
+ l0
+
+1|0, 0, l with l < l or (n, w) 
+l1|0, 0, l by (113, 114) and subsequent
+
+after these preparations we present the renormalization conditions at l-loop order, lower
+orders being already xed by induction. this means we x the 37 relevant terms of the theory
+
+31
+
+and the 7 normalization parameters ri appearing in the brs transformation at order hl 23:
+a) we x  = 0 (100), and we choose freely in  the 8 terms24
+
+trans , long ,
+
+bb
+
+
+
+cc
+
+
+
+,
+
+, ab, f bbh, r2, r3 .
+
+(121)
+
+this then xes uniquely the corresponding terms in l. in fact we could interchange r1 with
+long, r4 with ab, and/or f aaa with r2 in (121). we made the previous choice since it
+simplies the check of the sti.
+this means that we may choose freely all eld normalizations with the exception of h25, one
+global normalization for the brs-transformations and the two couplings through f aaa and
+f bbh. our simplifying assumption  = 0 (100) is related to the freedom in choosing the
+vacuum expectation value of the higgs eld.
+b) we x in l0 the following relevant terms:
+
+r0
+
+6 = r0
+
+7 = r0
+
+2 , r0
+
+5 =
+
+(r0
+2)2
+r0
+3
+
+.
+
+(122)
+
+6, r0
+
+3 and r0
+
+7 are xed to equal r0
+
+this means that r0
+2, which in turn is uniquely given at l loop order
+by our free choice of r2, and by lower loop order constants xed before. similarly r0
+5 is xed
+through r0
+2 at l loop order. remember again that, by the fe for 1pi functions, an l-
+loop contribution depends only on lower loop order terms and the l-loop boundary condition
+for the term in question.
+c) all those r0-terms in l0 having no tree correspondence are chosen equal to zero (11 terms
+to be read from app.a), i.e.
+
+rhba
+20
+
+, . . . , rcccc
+
+0 = 0 .
+
+(123)
+
+d) furthermore we x in l0 the following relevant terms
+
+f bba
+
+0
+
+= 
+
+r0
+3
+2r0
+2
+
+f hba
+
+10
+
+, f ccb
+
+0 = 
+
+r0
+3
+r0
+2
+
+f cch
+
+0
+
+, f aahh
+
+0
+
+=
+
+r0
+5
+r0
+3
+
+f aabb
+
+10
+
+.
+
+(124)
+
+more precisely (124) should be understood as follows: the f -terms on the rhs in (124) will
+be uniquely xed as functions of (a subset of) the ones xed previously in a)-c). then we
+x each of the three terms on the lhs as a function of those on the rhs.
+
+finally also the remaining 18 relevant constants will be uniquely xed as functions of the
+previous ones in our sweep through the sti. since 17 relevant terms (those from b)-d)) are
+xed on the wrong side, namely in l0, one may wonder, how we will get a nite theory in the
+
+23we mostly leave out the index l of the loop order for readibility in the rest of this subsection.
+24cf. app.a (137) for the notation
+25remember that h, ba stem from the same complex scalar doublet (5)
+
+32
+
+end. the tool to achieve this will in fact again be the sti, once we know they are satised.
+this is not unexpected from the traditional use made of the sti in renormalization proofs.
+now we rst satisfy a subset of the sti (i-viii) containing only up to three eld derivatives
+by choosing appropriately
+
+m2[cc, r1] (ia), bb[cc, r4] (iia) , r1 (ib) , r4 (iib) , f aaa[  m2] (iiib) ,
+
+(125)
+
+f hba
+
+1
+
+[r5, (f cch, bb)] (v iic) , f aah[f hba
+
+1
+
+](v ib) , f cca
+
+1
+
+[f bba, rcca
+
+2
+
+] (ivb) ,
+
+f cch[f aah, f hba
+
+1
+
+, rhba
+
+2
+
+] (v ia) , cc[r7, f ccb] (v iiia) , hh[r5, bb, f cch] (v iia) ,
+
+hh[f hba
+
+1
+
+,  hh] (v iib) .
+
+we wrote in brackets the sti which is satised by the respective choice of a renormalization
+constant and in square brackets the other relevant constants at loop order l , on which this
+choice depends. in the square brackets we omitted the terms from (121), which are freely
+chosen, and r1 and r4, which by (125) depend on such terms only. note however that ib
+and iib cannot be solved for r1 and r4 depending only on such terms, before we know that
+ia and iia hold. therefore we indicated the dependence on r1 and r4 in the rst two terms.
+at this stage r1 and r4 can already be seen to be nite. all other terms, depending on
+constants xed on the wrong side, might diverge with 0. we come back to the niteness
+problem later and rst convince ourselves that the system (125) is consistent, i.e. solvable.
+this is a problem only, if a term is present before and within square brackets at the same
+time, when we successively replace each term within square brackets by those on which it
+depends at l loop.26 checking the list we nd that this happens only for f cch, which, when
+from (125), depends on itself. solving for f cch it appears with a coecient
+substituting f hba
+1/ +  m2(r4/r1). since we know that r1, r4 are nite, this coecient does not vanish
+for 0 large.27 as a result we may replace f cch[f hba
+
+, rhba
+
+] by
+
+1
+
+1
+
+2
+
+f cch[rhba
+
+2
+
+] .
+
+(126)
+
+after this change one rapidly realizes the solvability of (125).
+
+now we impose renormalization conditions for the remaining 6 relevant terms by satis-
+
+fying the following relations among (i  xxix) for .
+
+f bbbb (x) , f bbhh (xx) , f hhhh (xix) , f hhh (ix) , f aabb
+
+1
+
+(xiii2) , f aaaa
+
+1
+
+(xivc) .
+(127)
+
+26e.g. at l loop r6 depends on r2 only by (122), whereas f bba depends on r3, r2, f hba
+27 is supposed to be nite, but    may be taken after 0  .
+
+1
+
+by (124).
+
+33
+
+the order is important for the rst four terms, for the last two it is arbitrary. again we wrote
+in parentheses the relation which is satised by and which xes the respective renormalization
+condition.
+
+at this stage the 37 + 7 relevant parameters are completely xed. all the remaining
+relations among the sti will now be veried for l0. since there are no dimension 3 terms
+left, we start with the dimension 4 terms which have not yet been veried. iv 0
+a is the only
+relation left among (i 0  v iii 0): using (123) it takes the form
+
+2m r0
+
+4 f bba
+
+0
+
++ g/2 r0
+
+6 ab
+
+0 + 1/ f ccb
+
+0 = 0 .
+
+(128)
+
+from (125) we know v ia and v ib to be true. lemma 2 then implies v i 0
+b to be
+true as well. these relations together with (122, 123, 124) then allow to verify (128). now
+
+a and v i 0
+
+xi 0 , xii 0 , xiii 0
+1
+
+(129)
+
+are the last relations of dimension  4 to be analysed. they follow directly from (122, 123,
+124). by lemma 2 we pass from l0
+therefore lemma 1 now tells us that all terms in 1 of dimension  5 vanish i they vanish
+in l1, and lemma 2 tells us that all terms in l0
+1 of dimension  5 vanish i they vanish in
+l1.
+
+1 to l1 for xi, xii, xiii1.
+
+among the relations containing 4 or more eld derivatives the following ones
+
+xiv 0
+
+a , xiv 0
+
+b , xiv 0
+
+d , xiv 0
+
+e , xv 0
+
+1a , xv 0
+
+1b , xv 0
+
+2a , xv 0
+
+2b , xv 0
+
+2c , xv i 0
+
+a , xv i 0
+b ,
+(130)
+
+xv i 0
+
+c , xv ii 0
+
+a , xv ii 0
+
+b , xv iii 0
+
+a , xv iii 0
+
+b , xv iii 0
+
+c , xxi 0 , xxii 0  xxix 0
+
+remain to be veried. only those written in (131) are not immediately obvious from (122,
+123, 124). they can be veried using the relations we wrote in parentheses
+
+xv 0
+
+1a (122, v i 0
+
+b , xiii 0
+
+2 ) , xv ii 0
+
+a (124, xiii 0
+
+2 , v i 0
+
+b ) .
+
+(131)
+
+we have not yet checked the following ve relations of dimension 5 involving three elds
+only : iiia, v, v iid, v iiib, v iiic , which are the most delicate ones. they contain
+terms multiplied by . for iiia this is true when inserting f aaa from iiib. we rst forget
+about these corrections and at the same time about the modication of l0 by (107, 108)
+and convince ourselves that the 5 sti are fullled in this case. to do so we use the following
+relations
+
+i 0
+b , ii 0
+
+b , iv 0
+
+b , v ii 0
+c .
+
+(132)
+
+34
+
+first we can verify v 0 using (124, 122) and v ii 0
+amounts to show that
+
+c . next we regard iii 0
+
+a and realize that it
+
+g r0
+
+2(1 + long,0) = f cca
+1,0 .
+
+(133)
+
+2/r0
+
+1)(1 + 
+
+cc
+
+d
+
+2 ab
+
+) by i 0
+
+4 f bba
+
+0
+
+b , ii 0
+
+0  4 r0
+
+a from iv 0
+
+b follows similarly as iii 0
+
+b , the rhs equals g/m r0
+
+by iv 0
+the lhs equals g (r0
+b .
+using ii 0
+b for the rst and v 0 for the second term we recognize now that (133) holds. v ii 0
+follows directly from (122), and v iii 0
+b and v 0, v iii 0
+c
+follows from (122). now we also take into account the correction terms : those relations
+among (i 0  xxix 0) which are aected by l0
+irr (107) are listed explicitly in app.c. on
+inspection one realizes that the choice (108) exactly cancels all terms   in (i 0  xxix 0).
+thus all sti are fullled in our theory, and item ii) of the induction hypothesis is satised
+to loop order l. what remains to show is that the theory dened up to l-loop order is nite
+for 0  . as we noted, apart from the 9 evidently nite constants in (121), niteness of
+r1 and r4 can be inferred from (125). to proceed further it is important to note that all
+irrelevant terms appearing in the sti apart from those in (107, 108) are a priori nite at
+l-loop since they only depend on the renormalization conditions at order l  l  1. the next
+step is then to convince oneself of the fact that (f aaa)0,0 has a nite limit for 0  .
+as we see from iiib the niteness of f aaa follows, if we can show that  m2 has a nite
+limit. from (122, 123, 124) it is evident that all relevant parameters xed on the wrong side
+(at  = 0) satisfy the bound assumed in the corollary from ch.3.2. from this corollary
+(adapted to the -functional) and the induction hypothesis we therefore conclude that m2
+0 . this proves the niteness of f aaa.28 then
+is bounded by 2
+we go through the sti as follows:
+
+m ), whereas   6
+
+0 p(log 0
+
+f aaaa
+
+1
+
+(xivc), raacc
+
+1
+
+(xivb), raaaa
+
+2
+
+(xiva), raacc
+
+2
+
+(xive), rbbcc
+
+1
+
+(xv1b),
+
+(134)
+
+rcccc (xv iiib) , rcca
+
+2
+
+(xv iiic) , raabb
+
+2
+
+(xxii) .
+
+in parentheses we wrote the sti from which the niteness of the respective relevant term
+may be inferred.
+at l-loop
+order. we now infer from v iid that
+
+in rcccc (xv iiib) note that xv iiib does not depend on rcca
+
+2
+
+rhba
+2
+
+= 2m  [f bbh
+
+0
+
+r0
+4
+r1
+
+]|l + f inite has a nite limit for 0   .
+
+(135)
+
+here the rst contribution stems from the irrelevant term m
+r0
+4
+in (108). in v iid this contribution appears among the irrelevant terms and originates from
+the b.c. at  = 0. note that f bbh
+4 diverge at most linearly with 0 using the results
+
+30 ) = 2m  f bbh
+
+20  icch
+
+2 (2icch
+
+, r0
+
+0
+
+0
+
+28 using the sti we may in fact show at this stage that m2 diverges at most logarithmically.
+
+35
+
+2
+
+niteness follows now
+
+2
+
+1
+
+hh
+
+
+
+1
+
+1
+
+(v ib), f ccb(iva), cc(v iiia), bb(iia),
+
+(ivb), f aabb
+
+(xv1a), f aah(xiii2), f hba
+
+(v iib) , f bbhh (xx) , f hhh (ix) , f hhhh (xix) , f aahh (xv iia) .
+
+from ch.3.2 and ch.4.2. disposing of the niteness of r2 and rhba
+also for
+r6 (xv ia), r7 (xv iiia), rhhcc (xv iib), rhbcc (xxv iii), rbbcc
+(xxv ii), f bbbb (x) .
+similarly as in (135) we may now conclude from v the niteness of f bba (v ) . next we
+pass through the following niteness chain
+f cca
+m2(ia), and then we can establish niteness of f cch (v ia) , r5 (v iic or xv ib) .
+finally it is easy to convince oneself of the niteness of the remaining constants
+hh (v iia) ,
+in regarding the previous series of niteness statements it is interesting to note that it is
+rst extracted for the pure gauge sector and last for the terms involving the h eld.29 by
+now all of the 44 relevant constants are known to be nite, and thus item i) of the induction
+hypothesis to loop order l is veried.30 once i) ii) are veried, item iii) immediately follows
+from the general bounds in ch.3.2 on noting that
+a) from our choice of the bare action it is evident that wn
+b) the irrelevant terms in l0
+obey the required bound as a consequence of the previous niteness statements
+c) all other irrelevant terms in l0
+1 are generated by momentum derivatives acting on the
+regulating factor 0,0(p), which automatically produces (more than) the required negative
+powers of 0.
+
+1 generated from those introduced in (107) on brs transformation
+
+l0
+
+1|0,0,l = 0 , |n| > 5 ,
+
+so the induction hypothesis holds to l-loop order. this ends the proof of the theorem.
+once the theorem is proven, proposition 4 tells us that the sti hold in the limit 0  .
+
+concluding remarks
+we have presented a renormalization proof for spontaneously broken yang-mills theory based
+on the wilson renormalization group. the renormalization conditions admissible in view of
+the sti could be stated explicitly in (121) to (127).31 we tried to avoid any equivocality
+as regards the analytical status of the statements we made, in particular for which values
+of the cutos they hold. we did not make use of unregularized path integrals. we think
+that the analytical aspect is generally somewhat neglected in the recent literature including
+textbooks. we did not attempt at generality on the symmetry or group theoretical aspects,
+
+29this is reminiscent of the fact that the radiative corrections in the scalar boson sector are more rapidly
+
+divergent, namely quadratically, than all other ones.
+
+30the smoothness assumption directly follows from the smoothness of the regulator and from the b.c.
+
+which depend on 0 only through the regulator.
+
+31using in particular (123) it should be possible to derive the antighost equation of motion often used in
+
+textbooks [fasl], [zij].
+
+36
+
+which have been studied extensively in the literature, and restricted for simplicity to the
+physically interesting su(2) case. we think it would be worth-while to extend the work
+- with the same precision on the analytical status - to the physical consequences to be
+drawn from the sti, in particular the gauge invariance of the s-matrix. further interesting
+problems to be treated in this context are the renormalization of qcd and the analysis of
+anomaly problems and of the action principle.
+
+appendix a
+
+here we consider the generating functional for the proper vertex functions
+
+(a, h, b, c, c) =
+
+4
+
+xn=1
+
+n + (n>4),
+
+n counting the number of elds, and extract its relevant part, i.e. its local eld content with
+mass dimension not greater than four. generally we will not underline the eld variable
+symbols in the appendices, though of course all  functional arguments should be understood
+as such. in app.a and app.b the regulators are not explicited, apart from the subsequent
+comments on the two-point functions, where contributions arising for nite 0 are explicited.
+1) one-point function:
+
+2) two-point functions:
+
+1 = h(0).
+
+2 = zp( 1
+
+2
+
+aa
+
+(p)aa
+
+(p)aa
+
+ (p) +
+
+1
+2
+
+h(p)h(p)hh(p) +
+
+1
+2
+
+ba(p)ba(p)bb(p)
+
+ca(p)ca(p)cc(p) + aa
+
+(p)ba(p)ab
+
+ (p)),
+
+ (p) = (m2 + m2) + (p2  pp)(1 + trans(p2)) +
+aa
+
+1
+
+
+pp(1 + long(p2)) ,
+
+hh(p) = p2 + m 2 + hh(p2) , bb(p) = p2 + m2 + bb(p2) ,
+
+cc(p) = p2 + m2 + cc(p2) , ab
+
+ (p) = ipab(p2) .
+
+besides the unregularized tree order there emerge 10 relevant parameters from the vari-
+cc(0) and
+ous self energies: m2, trans(0), long(0), hh(0), hh(0), bb(0), bb(0), cc(0),
+
+ab(0), where we used the notation p(0)  (p2p)(0).
+
+by (78, 79, 84) the 0-loop-order functional 0,0
+
+2,l=0 carries the inverted regulating factor
+
+37
+
+(0,0)1(p2) = 1   p2 + o((p2)2) with  = (m4 + (1 + )m2m 2)/6
+all self energies vanish at order l = 0 , whereas
+
+0 . therefore
+
+hh
+
+l=0(0) =   m 2 ,
+
+bb
+l=0(0) = cc
+
+l=0(0) =    m2 ,
+
+(136)
+
+trans|l=0(0) =   m2 , long|l=0(0) =    m2 .
+
+to clearly isolate the tree level cuto eects from the loop contributions we introduce the
+notation
+
+(0) = (0)  (0)|l=0 ,
+
+(0) = (0)  (0)|l=0 .
+
+(137)
+
+3) three-point functions:
+only the relevant part is given explicitly: r = o(h) denotes a relevant parameter which
+vanishes in the tree order, otherwise a relevant parameter is denoted by f . moreover, we
+indicate an irrelevant part by a symbol on, n  in, indicating that this part vanishes as an
+n-th power of the momentum in the limit when all momenta tend to zero homogeneously.
+
+3 = zpzq(rstar
+
+(p)as
+
+(q)at
+
+(p  q)aaa
+
+ (p, q)
+
++ar
+
+(p)ar
+
+(q)h(p  q)aah
+
+ (p, q) + rstbr(p)bs(q)at
+
+(p  q)bba
+
+
+
+(p, q)
+
++h(p)br(q)ar
+
+(p  q)hba
+
+
+
+(p, q) + rstcr(p)cs(q)at
+
+(p  q)cca
+
+ (p, q)
+
++br(p)br(q)h(p  q)bbh(p, q) + h(p)h(q)h(p  q)hhh(p, q)
+
++cr(p)cr(q)h(p  q)cch(p, q) + rstcr(p)cs(q)bt(p  q)ccb(p, q)),
+
+aaa
+ (p, q) = i(p  q)f aaa + o3,
+
+aah
+ (p, q) = f aah + o2,
+
+bba
+
+
+
+(p, q) = i(p  q)f bba + o3,
+
+f aaa =  1
+
+f aah = 1
+
+f bba =  1
+
+2 g + raaa,
+2mg + raah,
+4 g + rbba,
+
+hba
+
+
+
+(p, q) = i(p  q)f hba
++i(p + q)rhba
+
+1
+
+2 + o3,
+
+f hba
+
+1
+
+= 1
+
+2g + rhba
+
+1
+
+,
+
+cca
+ (p, q) = ipf cca
+
+1 + iqrcca
+
+2 + o3,
+
+f cca
+
+1
+
+= g + rcca
+
+1
+
+,
+
+bbh(p, q) = f bbh + o2,
+
+hhh(p, q) = f hhh + o2,
+
+cch(p, q) = f cch + o2,
+
+ccb(p, q) = f ccb + o2,
+
+38
+
+f bbh = 1
+
+f hhh = 1
+
+f cch =  1
+
+f ccb = 1
+
+4g m 2
+4g m 2
+
+m + rbbh,
+m + rhhh,
+2 gm + rcch,
+2gm + rccb.
+
+the 3-point functions aab and bbb have no relevant local content.
+
+4) four-point functions: with parameters r and f dened as before
+
+4|rel = zkzpzq(cid:26)abcarsab
+
+(k)ac
+
+(p)ar
+
+(q)as
+
+(k  p  q)f aaaa
+
+1
+
++ar
+
+(k)ar
+
+(p)as
+
+(q)as
+
+(k  p  q)raaaa
+
+2
+
++aa
+
+(k)ab
+
+(p)cr(q)cs(k  p  q)(abrsraacc
+
+1
+
++ arbsraacc
+
+2
+
+)
+
++aa
+
+(k)ab
+
+(p)br(q)bs(k  p  q)(abrsf aabb
+
+1
+
++ arbsraabb
+
+2
+
+)
+
++ba(k)bb(p)cr(q)cs(k  p  q)(abrsrbbcc
+
+1
+
++ arbsrbbcc
+
+2
+
+)
+
++h(k)h(p)h(q)h(k  p  q)f hhhh
+
++br(k)br(p)h(q)h(k  p  q)f bbhh
+
++br(k)br(p)bs(q)bs(k  p  q)f bbbb
+
++ar
+
+(k)ar
+
+(p)h(q)h(k  p  q)f aahh
+
++h(k)h(p)cr(q)cr(k  p  q)rhhcc
+
++ca(k)ca(p)cr(q)cr(k  p  q)rcccc
+
++rsth(k)br(p)cs(q)ct(k  p  q)rhbcc(cid:27),
+
+1
+
+,
+
+= 1
+f aabb
+f bbhh = 1
++ rhhhh,
++ rbbbb, f aahh = 1
+
+1
+
+8g2 + raabb
+16 g2(cid:16) m
+m(cid:17)2
+
+8g2 + raahh.
+
+,
+
++ rbbhh,
+
+1
+
+= 1
+f aaaa
+f hhhh = 1
+f bbbb = 1
+
+1
+
+4g2 + raaaa
+32 g2(cid:16) m
+m(cid:17)2
+32 g2(cid:16) m
+m(cid:17)2
+
+hence, in total  involves 1 + 10 + 11 + 15 = 37 relevant parameters.
+
+appendix b
+
+we also have to consider the vertex functions with operator insertions stemming from the
+brs-transforms. these insertions have mass dimension  2.
+only the respective relevant part of the four vertex functions with insertions is listed:
+
+a
+
+(p)|rel = ipca(p)r1 + arbzq
+(p)|rel = zq
+
+br(q)cr(p  q)(
+
+1
+2
+
+ar
+
+(q)cb(p  q)gr2,
+
+gr3),
+
+39
+
+a(p)|rel = mca(p)r4 +zq
+a(p)|rel = arszq
+
+cr(q)cs(p  q)
+
+1
+2
+
+gr7.
+
+h(q)ca(p  q)
+
+1
+2
+
+gr5 + arbzq
+
+br(q)cb(p  q)
+
+1
+2
+
+gr6,
+
+there appear 7 relevant parameters
+
+ri = 1 + ri,
+
+ri = o(h),
+
+i = 1, ..., 7.
+
+all other 2-point functions, and the higher ones, of course, are of irrelevant type.
+
+appendix c
+
+here we present the 53 conditions which result upon requiring that the functional 1, (83),
+has a vanishing local part for (mass) dimensions smaller or equal to ve
+
+1(a, h, b, c, c)|dim5
+
+!
+= 0.
+
+into most of these conditions also irrelevant contributions enter which are not given explicitly
+but are simply indicated by irr. to recognize the local origin, we keep the momentum
+factors arising. the -distribution emerging from the functional derivatives and forcing the
+sum of the corresponding momenta to zero is not written. relations explicitly rewritten for
+l0 carry a zero in the numbering. in those, the irrelevant terms from (107,108) are the only
+ones appearing and are written explicitly.
+
+the sti for  are supposed to be written for the case  = 0, 0  . note that
+they take dierent form for 0 <  and 0   only, if  appears, which is the case
+in ib, iib, iiib, v, v iib, v iic, v iid, v iiib, v iiic . for the l0-functional we write for the
+loop level two-point functions 0 instead of  and 0, 0 instead of ,
+
+.
+
+two elds
+
+i) aa
+
+(q)cr(k)1|0
+
+a) 0 != qn(m2 + m2)r1 +pab(0)mr4 + m2 + 1
+b) 0 != q2qn 1
+
+ (1+long(0))r1+ 1
+
+cc
+
+(1+ 
+
+pcc(0)o,
+
+(0)) [m2r1pab(0)mr4 1
+
+pcc(0)]+irro.
+
+ii) ba(q)cr(k)1|0
+
+a) 0 != m(m2 +pbb(0))r4  m(m2 +pcc(0)) + ( 1
+
+2 g)r3,
+
+40
+
+b) 0 != q2npab(0)r1+m(1+ 
+
+bb
+
+(0))r4m(1+ 
+
+cc
+
+(0)) m[cc(0)bb(0)r4]+irro.
+
+three elds
+
+iii) ar
+
+(p)as
+
+ (q)ct(k)1|0
+
+ (f cca
+
+a) 0 != (pp qq)n2f aaar11
+b) 0 != ( p2  q2)n2f aaar1 + (1 + trans(0))gr2 +  m2gr2 + irro,
+b0) 0 != ( p2  q2)n2f aaa
+
+1 + (1 + 0,trans(0))gr0
+
+)+h 1
+
+2 +  m2
+
+1 rcca
+
+0 r0
+
+0 gr0
+
+2
+
+(1+ long(0))(1+ trans(0))i gr2+irro,
+
+2 + 2 iaab
+
+10 m r0
+
+4o,
+
+iv) ar
+
+(p)bs(q)ct(k)1|0
+
+2 gpab(0)r6 + 1
+
+a) 0 != pn2f bbamr4 + 1
+b) 0 != qngpab(0)r2 + 4f bbamr4 + m(f cca
+0 != (p2 q2)(cid:26)2r1f bba + (1 + 
+
+v) br(p)bs(q)ct(k)1|0
+
+(0)) g
+
+bb
+
+f ccb  mrcca
+
+1  rcca
+
+2
+
+2 + irro,
+) + irro,
+
+2 r6  [m f ccb  bb(0) g
+
+2 r6] + irr(cid:27),
+
+v 0) 0 != (p2q2)(cid:26)2r0
+
+1f bba
+
+0
+
+vi) ar
+
+(p)h(q)ct(k)1|0
+
++ (1 + 
+
+bb
+0
+
+(0)) g
+
+2r0
+
+6  [m f ccb
+
+0  bb
+
+0
+
+(0) g
+
+2r0
+
+6]  m(iccb
+
+10  iccb
+
+30 )(cid:27),
+
+a) 0 != pn  2r1f aah + mr4(f hba
+b) 0 != qn2r1f aah + 2mr4f hba
+
+1
+
++ irro,
+
+1  rhba
+
+2
+
+) +pab(0) 1
+
+2gr5  1
+
+f cch + irro,
+
+vii) h(p)bs(q)ct(k)1|0
+
+hh
+
+hh
+
+2gr5,
+
+(0)) 1
+
+1 r0
+
+0 (0)) 1
+
+a) 0 != (m 2 +phh(0))( 1
+b) 0 != p2nf hba
+1 r1  (1 + 
+b0) 0 != p2nf hba
+1  (1 + 
+c) 0 != q2n  f hba
+c0) 0 != q2n  f hba
+d) 0 != k2nrhba
+d0) 0 != k2nrhba
+
+2gr3) + 2mf bbhr4 + mf cch + (m2 +pbb(0)) 1
+
+2gr3   phh(0) 1
+2gr0
+
+2gr3 + irro,
+30 o,
+3   phh
+2 m icch
+2gr0
+2gr5] + irro,
+2gr5 + [mf cch +pbb(0) 1
+2gr0
+2 m (2icch
+2gr0
+2 r1 +  2mf bbhr4 + irro,
+
+1 r1 + (1 + 
+1 + (1 + 
+
+0 +pbb
+30 )o,
+
+1 +  2mf bbh
+
+5 + [mf cch
+
+2 m (2icch
+
+20  icch
+
+0 r0
+
+10 r0
+
+20 r0
+
+0 (0) 1
+
+5] + 1
+
+4 + 1
+
+3 + 1
+
+(0)) 1
+
+(0)) 1
+
+(0) 1
+
+bb
+0
+
+bb
+
+0
+
+10  icch
+
+30 )o,
+
+41
+
+viii) ct(q)cs(p)cr(k)1|0
+
+cc
+
+1 r1  rcca
+
+a) 0 != 2mf ccbr4  (m2 +pcc(0))gr7,
+b) 0 != k2nf cca
+b0) 0 != k2nf cca
+c) 0 != (p2 + q2)nrcca
+c0) 0 != (p2 + q2)nrcca
+
+2 r1  (1 + 
+1  (1 + 
+
+2 r1 +  mf ccbr4 + irro.
+
+1 +  mf ccb
+
+0 r0
+
+1  rcca
+
+20 r0
+
+10 r0
+
+20 r0
+
+4 + m r0
+
+cc
+0 (0))gr0
+
+7  pcc
+20 o.
+
+4 iccb
+
+(0))gr7   pcc(0))gr7 + irro,
+
+0 (0))gr0
+
+7 + m r0
+
+4(2iccb
+
+10  iccb
+
+30 )o,
+
+four elds
+
+ix) h(p)h(q)b1(k)c1(l)1|0
+
+0 != 6f hhh( 1
+
+2 gr3) + 4f bbhhmr4 + 2f bbhgr5 + 2mrhhcc + irr.
+
+x) b1(k)b1(p)b2(q)c2(l)1|0
+
+0 != f bbhgr3 + 8f bbbbmr4 + m(cid:16)2rbbcc
+
+1
+
++ rbbcc
+
+2
+
+(cid:17) + irr.
+
+xi) h(l)c3(k)c1(p)c2(q)1|0
+
+0 != 2rhbccmr4 + f ccbgr5 + f cchgr7 + irr.
+
+xii) c2(k)c2(l)c1(p)b1(q)1|0
+
+0 != f cch( 1
+
+2 gr3) + (2rbbcc
+
+1
+
+ rbbcc
+
+2
+
+)mr4 + f ccb( 1
+
+2gr6  gr7) + 2mrcccc + irr.
+
+xiii)1 a1
+
+(k)a2
+
+ (p)b1(q)c2(l)1|0
+
+0 != 2raabb
+
+2
+
+r4 + raacc
+
+2
+
++ irr.
+
+xiii)2 a1
+
+(k)a1
+
+ (p)b2(q)c2(l)1|0
+
+0 != f aahgr3 + 4f aabb
+
+1
+
+mr4 + 2mraacc
+
+1
+
++ irr.
+
+xiv) a1
+
+(p)a1
+
+ (q)a2
+
+(k)c2(l)1|0
+
+a) 0 != 2ln4(f aaaa
+b) 0 != (p + q)n 2
+
+1
+
+raacc
+
+1
+
++ raaaa
+
+2
+
+)r1 + 2f aaagr2 + 1
+
+ raacc
+
+1
+
++ irro,
+
++ irro,
+
+42
+
+c) 0 != (l + l)n4f aaaa
+e) 0 != (q + p)n 1
+
+d) 0 != (p + q) {0 + irr},
+ raacc
+
+1
+
+2
+
+r1  2f aaagr2 + irro,
++ irro.
+
+xv)1 b1(p)b1(q)a2
+
+(k)c2(l)1|0
+
+1
+
+a) 0 != ln4f aabb
+b) 0 != knrbbcc
+
+r1 + 2f bbagr6 + irro,
++ irro,
+
+1
+
+xv)2 b1(p)b2(q)a1
+
+(k)c2(l)1|0
+
+2
+
+a) 0 != pn2raabb
+b) 0 != qn2raabb
+c) 0 != kn  2raabb
+
+2
+
+2
+
+xvi) h(p)a1
+
+(k)b2(q)c3(l)1|0
+
+r1 + 2f bbagr2 + f hba
+
+gr3 + irro,
+r1  2f bbagr2 + 2f bbagr6 + irro,
+
+1
+
+r1 + f hba
+
+1
+
+1
+
+2gr3 + rhba
+
+2
+
+1
+
+2gr3 + f bbagr6  1
+
+rbbcc
+
+2
+
++ irro,
+
+1
+
+a) 0 != pnf hba
+b) 0 != qnf hba
+c) 0 != knf hba
+
+1
+
+1
+
+g(r6  r2)  rhba
+
+2
+
+gr2 + irro,
+
+gr2  rhba
+
+2
+
+1
+
+2gr6  rhba
+
+2
+
+gr2 + 2f bbagr5 + irro,
+2gr6 + f bbagr5  1
+
+1
+
+rhbcc + irro,
+
+xvii) h(p)h(q)a1
+
+(k)c1(l)1|0
+
+a) 0 != ln4f aahhr1  f hba
+b) 0 != knrhba
+
+gr5 + 2
+
+rhhcc + irro.
+
+gr5 + irro,
+
+1
+
+2
+
+xviii) a2
+
+(k)c2(p)c1(q)c1(l)1|0
+
+1
+
+a) 0 != lnf cca
+b) 0 != pn2raacc
+c) 0 != qn  raacc
+
+g(r2  r7) + 2
+
+ rcccc + irro,
+
+1 r1 + rcca
+
+2 g(r2  r7) + 2
+
+2 r1  rcca
+
+2 gr7 + 2
+
+rcccc + irro,
+
+ rcccc + irro.
+
+five elds
+
+xix) h(p)h(q)h(k)b1(l)c1(l)1|0
+
+0 != 2f hhhhr3 + f hhbbr5 + irr.
+
+43
+
+xx) h(p)b1(q)b1(k)b2(l)c2(l)1|0
+
+0 != f bbhhr3 + 2f bbbbr5 + irr.
+
+xxi) a1
+
+(k)a1
+
+ (p)h(k)b2(l)c2(l)1|0
+
+0 != f aahhr3 + f aabb
+
+1
+
+r5 + irr.
+
+xxii) a1
+
+(k)b1(p)c1(l)a2
+
+ (q)b3(l)1|0
+
+0 != raabb
+
+2
+
+(r6  2r2) + irr.
+
+xxiii) a1
+
+(k)b1(q)a2
+
+ (p)c2(l)h(l)1|0
+
+0 != raabb
+
+2
+
+r5 + irr.
+
+xxiv) a3
+
+(k)a3
+
+ (p)c2(q)c3(l)c1(l)1|0
+
+0 != raacc
+
+2 r2 + raacc
+
+1 r7 + irr.
+
+xxv) a3
+
+(k)c3(q)a2
+
+ (p)c3(l)c1(l)1|0
+
+0 != raacc
+
+2
+
+(3r2  r7) + irr.
+
+xxvi) b1(p)b1(q)c1(k)c2(l)c3(l)1|0
+
+0 != rbbcc
+
+2
+
+(r6  r7)  rbbcc
+
+1 r7 + irr.
+
+xxvii) b1(p)c1(k)b2(q)c3(l)c1(l)1|0
+
+0 != rhbccr3 + rbbcc
+
+2
+
+(3r6  2r7) + irr.
+
+xxviii) h(p)h(q)c1(k)c2(l)c3(l)1|0
+
+0 != rhbccr5 + rhhccr7 + irr.
+
+xxix) h(p)b1(q)c1(l)c2(k)c2(l)1|0
+
+0 != 2rhhccr3  2rbbcc
+
+1 r5 + rbbcc
+
+2 r5 + rhbcc(r6 + 2r7) + irr.
+
+44
+
+these 53 conditions are fullled in the (tree) order h0 for  = 0 and 0  . for nite 0
+we have also to take into account the tree order irrelevant contribution from (107, 108) to
+the classical action.
+
+references:
+
+[bam1] m.bonini, m.dattanasio, g.marchesini: ward identities and wilson renormalization
+
+group for qed. nucl.phys. b418, 81-112 (1994)
+
+[bam2] m.bonini, m.dattanasio, g.marchesini: brs symmetry for yang-mills theory with
+
+exact renormalization group. nucl.phys. b437, 163-186 (1995)
+
+[ell] u.ellwanger: flow equations and bound states in quantum field theory. zeitsch.f.
+
+physik c38, 619-629 (1993)
+
+[ehw] u.ellwanger, m.hirsch, a.weber, flow equations for the relevant part of the pure
+
+yang-mills action. zeitsch.f.physik c69, 687-697 (1996)
+
+[fasl] l.d.faddeev, a.a.slavnov: gauge fields: introduction to quantum theory. ben-
+
+jamin, reading (mass.), 1980
+
+[ke1] g.keller: the perturbative construction of symanziks improved action for 4
+
+4 and
+
+qed4. helv.phys.acta 66, 453 (1993)
+
+[ke2] g.keller: local borel summability of euclidean 4
+
+4: a simple proof via dierential
+
+flow equations. commun.math.phys. 161, 311-323 (1994)
+
+[kim] c.kim: a renormalization group flow approach to decoupling and irrelevant ope-
+
+rators. ann.phys.(n.y.) 243, 117-143(1995)
+
+[kk1] g.keller, ch.kopper: perturbative renormalization of massless 4
+
+4 with flow equa-
+
+tions. commun.math.phys. 161, 515-532 (1994)
+
+[kk2] g.keller, ch.kopper: perturbative renormalization of qed via ow equations. phys.
+
+lett. b273, 323-332 (1991)
+renormalizability proof for qed based on flow equations. commun.math.phys.
+176, 193-226 (1996)
+
+[kk3] g.keller, ch.kopper: perturbative renormalization of composite operators via flow
+
+equations i. commun.math.phys. 148, 445-467 (1992)
+
+45
+
+[kk4] g.keller, ch.kopper: perturbative renormalization of composite operators via flow
+
+equations ii: short distance expansion. commun.math.phys. 153, 245-276 (1993)
+
+[kksa] g.keller, ch.kopper, m.salmhofer: perturbative renormalization and eective la-
+
+grangians in 4
+
+4. helv.phys.acta 65, 32-52 (1991)
+
+[kksc] g.keller, ch.kopper, c.schophaus: perturbative renormalization with flow equa-
+
+tions in minkowski space. helv.phys.acta 70, 247-274 (1997)
+
+[kop] ch.kopper: renormierungstheorie mit flugleichungen. shaker verlag, aachen, 1998
+
+[pol] j. polchinski: renormalization and eective lagrangians. nucl.phys.b231, 269-295
+
+(1984)
+
+[rei] th.rei: lattice gauge theory: renormalization to all orders in the loop expansion.
+
+nucl.phys. b313, 417-463(1989), and previous work of this author cited there.
+
+[rewe] m.reuter, ch.wetterich: gluon condensation in nonperturbative flow equations.
+
+phys.rev. d56, 7893-7916 (1997)
+
+[tewe] n.tetradis, ch.wetterich: critical exponents from the average action. nucl.phys.
+
+b422, 541-592 (1994)
+
+[wet] ch.wetterich: exact evolution equation for the eective potential. phys.lett.b301,
+
+90-94 (1993)
+
+[wie] ch.wieczerkowski: symanziks improved actions from the viewpoint of the renorma-
+
+lization group. commun.math.phys. 120, 148-176 (1988)
+
+[wiko] k.wilson, j.b.kogut: the renormalization group and the -expansion. phys.rep.
+
+12c, 75-199 (1974)
+
+[zij] j.zinn-justin: quantum field theory and critical phenomena, clarendon press,ox-
+
+ford, 3rd ed. 1997
+
+46
+
+

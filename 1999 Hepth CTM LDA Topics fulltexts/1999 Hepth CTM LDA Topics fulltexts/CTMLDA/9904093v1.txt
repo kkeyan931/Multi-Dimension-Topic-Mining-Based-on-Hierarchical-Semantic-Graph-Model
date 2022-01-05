@@ -1,0 +1,2270 @@
+9
+9
+9
+1
+
+ 
+r
+p
+a
+3
+1
+
+ 
+
+ 
+ 
+
+1
+v
+3
+9
+0
+4
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+wegner-houghton equation in low dimensions
+
+j.m. carmonaa, j. polonyib, a. taranconc
+
+a dipartimento di fisica, universit`a di pisa,
+via buonarroti, 2, ed. b, 56127 pisa (italy)
+
+b laboratoire de physique theorique, universite louis pasteur,
+
+3, rue de luniversite, 67084 strasbourg cedex (france), and
+
+department of atomic physics, l. eotvos university, budapest, hungary
+
+c departamento de fsica teorica, universidad de zaragoza,
+
+pedro cerbuna 12, 50009 zaragoza (spain)
+
+carmona@mailbox.difi.unipi.it
+
+polonyi@fresnel.u-strasbg.fr
+
+tarancon@sol.unizar.es
+
+february 16, 2014
+
+abstract
+
+we consider scalar eld theories in dimensions lower than four in
+the context of the wegner-houghton renormalization group equations
+(whrg). the renormalized trajectory makes a non-perturbative in-
+terpolation between the ultraviolet and the infrared scaling regimes.
+strong indication is found that in two dimensions and below the mod-
+els with polynomial interaction are always non-perturbative in the
+infrared scaling regime. finally we check that these results do not
+depend on the regularization and we develop a lattice version of the
+whrg in two dimensions.
+
+pacs: 11.10.hi 11.10.kk 11.15.bt 11.10.jj
+key words: wegner-houghton equations. renormalization group. low di-
+mensional theories. lattice renormalization group.
+
+1 introduction
+
+asymptotically free models gained importance both in high energy and in
+condensed matter physics. this is obvious for the latter, where the low
+dimensional phenomena invoke eective theories below the upper critical
+dimension, d = 4, which are super-renormalizable and their hamiltonians
+contain asymptotically free coupling constants only. in the former case the
+impressive success of the perturbation methods in qed was overshadowed by
+the discovery of the uv landau pole, which made the high energy structure
+of the theory non-perturbative and spoiled the proof of perturbative renor-
+malizability. such a deterioration of the perturbation expansion has been
+observed in the four-dimensional 4 model, too. this model which served as
+the training ground for perturbative renormalization turned out to be non-
+renormalizable, as qed. the lesson is that the cuto can not be removed
+from the non-asymptotically free models, in agreement with the identica-
+tion of the non-renormalizable coupling constants with the irrelevant param-
+eters of the ultraviolet scaling regime described by the renormalization group
+method [1]. in other words, only the asymptotically free models can provide
+structureless high energy physics where the cuto can be pushed away at
+will.
+
+what kind of non-perturbative mechanisms do we encounter as we follow
+the renormalization group ow? this depends on the momentum scale the
+non-perturbative eect originates. the non-perturbative eects may arise at
+nite, i.e. cuto-independent scales only because the perturbation expansion
+is reliable in the uv regime where the kinetic energy dominates the action. to
+distinguish dierent nite energy mechanisms we recall that unless the model
+possesses unbroken scale invariance there are always two scaling regimes, an
+ultraviolet and an infrared one separated by a crossover at the characteristic
+scale of the model. if there is a dimensional coupling constant, say a mass
+parameter m, in the lagrangian then the uv and ir scaling regimes are sep-
+arated by a crossover at p = pcr  m because m2/p2 or p2/m2 is treated as
+a small quantity in the uv or the ir side, respectively. the ir scaling laws
+are trivial because the radiative corrections to the evolution are suppressed
+by p2/m2 and what is left is the scale dependence governed by the canonical
+dimensions of the coupling constants. if there are no dimensional coupling
+constants in the lagrangian, i.e. the model possesses classical scale invari-
+ance then a crossover can be identied where one of the coupling constants
+reach the value 1, g(pcr) = 1. the expression for the dimensionless running
+
+2
+
+coupling constant g(p) must contain a dimensional parameter, usually called
+the -parameter and pcr  4. it is worthwhile noting that one can intro-
+duce the -parameter even in the presence of any parameter with positive
+mass dimension in the lagrangian so long as the ir dynamics remains sta-
+ble when this latter is removed. in fact, let us write this parameter as m
+where m dened in this manner is the mass scale of the model. the running
+coupling constant depends on the ratio m/p, g(p) = f (m/p) where the limit
+m  0 is convergent. in other words, the evolution of the classically scale
+invariant system is recovered as p  .
+non-perturbative eects may originate in the ir scaling regimes. the
+classically scale invariant models at the lower critical dimension, such as the
+two-dimensional sigma and the gross-neveu model do not support long range
+order. thus the ir scaling laws must contain a dynamically generated mass
+scale. another source of non-perturbative dynamics comes from the infrared
+or collinear divergences.
+
+the asymptotically free coupling constants may generate non-perturbative
+eects in the uv scaling regime, as well, due to their growth. the question is
+whether the scale parameter 4 or the mass m is reached rst as we lower the
+cuto. the system remains perturbative for m > 4 because the ir scaling
+laws cut o the growth of the asymptotically free coupling constants before
+they would reach a dangerously large value. the dynamics of the modes
+p < 4 becomes non-perturbative when 4 > m. the four-dimensional
+yang-mills models develops linearly rising potential between static external
+charges. this is believed to happen due to the large value of the asymptoti-
+cally free coupling constant at the ultraviolet side of the crossover, indicated
+by the infrared landau pole in perturbative qcd. the quark masses are
+supposed to play no important role in the vacuum structure and the chiral
+limit m  0 is assumed to be safe and convergent, though non-perturbative.
+the infrared singularities are easier to isolate, as it has already been
+achieved for non-asymptotically free models [2] and superrenormalizable the-
+ories [3]. the more complex non-perturbative features should arise at the
+ultraviolet side of the crossover where no asymptotic analysis is available.
+the study of the scaling laws in this regime is the goal of the present pa-
+per.
+in order to defuse the infrared problem we turn to the scalar model
+with polynomial interaction in the phase where no spontaneous symmetry
+breaking occurs. the term n in the lagrangian of the d-dimensional scalar
+model is asymptotically free for n < 2d/(d  2), so we have to trace the
+evolution of a large number of coupling constants at low dimensions. a
+
+3
+
+powerful realization of the renormalization group idea which is needed here
+is based on the innitesimal renormalization group step and known as the
+wegner-houghton equation [4] what we use in the local potential approxi-
+mation in this work. the higher order terms of the gradient expansion are
+non-renormalizable according to the power counting. we believe that these
+coupling constants which are irrelevant in the ultraviolet scaling regime do
+not modify our qualitative conclusion.
+
+the study of the asymptotically free three-dimensional 6 model can bring
+some light into the ir landau pole problem of four-dimensional gauge the-
+ories by considering the role of the non-renormalizable couplings in the ir
+extrapolation of the uv scaling regime. we will show that they aect consid-
+erably the evolution of the relevant couplings. this points to the possibility
+that the non-renormalizable couplings could suppress the landau pole. the
+full solution of the theory where all possible coupling constants are followed
+by the renormalization group equation should necessarily yield a non-singular
+renormalization group ow so long as the theory possesses local interactions.
+this suggests that the introduction of the hadronic composite operators in
+qcd could defuse its landau pole problem [5].
+
+it is well known that massive lagrangians generate trivial infrared scal-
+ing laws, i.e. the gaussian mass term is the only relevant operator in the
+infrared scaling regime. this is because the uctuations are exponentially
+suppressed beyond the correlation length so the evolution of the coupling
+constants slows down at the infrared side of the crossover. the theories with
+dimensional transmutation, i.e. dynamically generated scale parameter or
+infrared instability only can support non-perturbative dynamics in the ir
+scaling regime.
+
+suppose that we x the values of the coupling constants at the cuto. the
+appearance of non-perturbative eects is obvious if the uv scaling regime is
+suciently long, when the asymptotically free coupling constants are growing
+in a large scale region. the numerical results showed in this paper suggest
+that the length of the uv scaling regime which is needed to generate non-
+perturbative dynamics in the infrared shrinks to zero as the number of the
+asymptotically free coupling constants tends to innity. in other words, the
+-parameter tends to the cuto as the lower critical dimension is approached,
+d  2. such a behavior limits considerably the values of the coupling con-
+stants for a perturbative system in dimension 3 and renders all two- and
+lower dimensional eld theories with polynomial couplings non-perturbative.
+this makes the understanding of the noncritical low dimensional condensed
+
+4
+
+matter systems more involved. viewed with interest in particle physics our
+conclusion suggests an interesting analogy between the infrared landau pole
+of the conning four-dimensional yang-mills theories and the low dimen-
+sional scalar models and opens the possibility of an unexpected, nontrivial
+structure in the asymptotic states in the low dimensional scalar models. the
+one-dimensional models belong to rst quantized quantum mechanics and our
+result is a manifestation of the failure of the convergence of the perturbation
+expansion for an anharmonic oscillator.
+
+another important issue addressed in this paper is the way the non-
+universal eects die out as the cuto is lowered. this question is of cen-
+tral importance for eective theories where it provides an upper limit for
+the ultraviolet cuto. we studied this question in the framework of lattice
+regulation by tailoring the wegner-houghton equation for lattice regulated
+models. as a result, the approach to the universal low energy physics can
+be compared for momentum space cuto in the continuum and for lattice
+regularization.
+
+the organization of this paper is the following. the innitesimal renor-
+malization group step, the wegner-houghton equation, is described in sec-
+tion ii. the running coupling constants are introduced and their evolution
+equations are given in section iii for scalar models. the asymptotic uv evo-
+lution is discussed in section iv for d = 2, 3 and 4. section v is devoted to
+the demonstration of the diculties in nding a perturbative model in d = 2.
+the wegner-houghton equation is derived in the lattice regularization and
+its solution is presented in section vi. section vii is for the conclusions.
+
+2 the wegner-houghton equation
+
+the wegner-houghton (wh) equation [4] describes the evolution of the ef-
+fective action as the cuto is lowered. as mentioned in the introduction we
+shall consider scalar model with an intrinsic mass scale which allows to clearly
+distinguish the uv and ir scaling regimes regimes. we derive the wh equa-
+tion for a scalar eld theory by using a sharp momentum space cuto [5, 6]:
+we will call this regularization procedure the continuum regularization. in
+section 6 we consider an alternative, the lattice regularization.
+
+denote the bare action by sk[], where k is the uv cuto. then, accord-
+
+5
+
+ing to the usual wilson-kadano procedure,
+
+e 1
+
+ sk [] =z d e 1
+
+ sk[+]
+
+(1)
+
+where k < k in the euclidean space-time. the fourier transform of the elds
+(x) and (x) is non-vanishing only for p < k and k < p < k, respectively.
+the right hand side is evaluated by means of the loop expansion, so that
+eq. (1) gives
+
+sk[] = sk[ + 
+
+0] +
+
+
+
+2
+
+tr log 2s + o(2),
+
+where
+
+2s(x, y) =
+
+2sk[ + 
+0]
+(x)(y)
+
+,
+
+and the saddle point, 
+
+0, is dened by the extremum condition
+
+sk[ + 
+0]
+
+
+
+= 0,
+
+(2)
+
+(3)
+
+(4)
+
+in which the infrared background eld, (x), is held xed. it can be proved
+0 = 0, as long as the matrix 2s(x, y) is
+that the saddle point is trivial, 
+invertible and the ir background eld is homogeneous, (x) = .
+
+now, each successive loop integral in the n-loop contributions which are
+
+not explicitly written in eq. (2) brings a suppression factor
+
+kd  kd
+kd = o(cid:18) k  k
+k (cid:19)
+
+(5)
+
+due to the integration volume in the momentum space. thus k/k = (k 
+k)/k appears as a new small parameter which suppresses the higher loop
+contributions in the blocking relation and the exact functional dierential
+equation obtained in the limit k  0 includes the one-loop contribution
+only. but we should bear in mind that the loop expansion had to be used
+at the initial stage of the derivation so the resulting exact equation might
+be unreliable in the strong coupling situation. all we know is that the loop
+corrections to the evolution equation obtained in the one loop level are van-
+ishing.
+
+6
+
+we will use the gradient expansion for the action,
+
+s[] =
+
+
+
+xn=0z ddx un((x), 2n),
+
+(6)
+
+where un is an homogeneous function of order 2n in the derivative. in the
+leading order of this expansion, the so-called local potential approximation,
+we have
+
+s[] =z ddx(cid:20) z()
+
+2
+
+()2 + u()(cid:21) ,
+
+(7)
+
+and furthermore the simplication z() = 1 will be used to derive a simple
+dierential equation for the potential u. this local potential will be then
+the only function characterizing the action. if we use now a homogeneous
+infrared background eld, (x) = , we obtain from eqs. (2) and (7) an
+equation for the local potential uk( = ):
+
+ukk() = uk() +
+
+1
+2
+
+tr log[(cid:3) + u 
+
+k ()] + o(k2),
+
+where we have introduced the notation
+
+u 
+
+k () =
+
+2uk()
+
+2
+
+, (cid:3) = 
+
+(8)
+
+(9)
+
+and the trace is taken in the subspace of the eliminated modes. we can
+explicitly write the trace in momentum space and get
+
+ukk() = uk() +
+
+ddp
+(2)d log[p2 + u 
+
+k ()] + o(k2),
+
+(10)
+
+1
+
+2z
+
+where the integration extends over the shell k  k < p < k. in the limit
+k  0 one then nds the dierential equation
+
+k
+
+
+k
+
+uk() = 
+
+dkd
+2(2)d log[k2 + u 
+
+k ()],
+
+where d denotes the d-dimensional solid angle
+
+d =
+
+.
+
+2d/2
+
+(cid:0) d
+2(cid:1)
+
+7
+
+(11)
+
+(12)
+
+the wegner-houghton equation (11) represents the one-loop resummed
+in
+fact, an expansion of the logarithm in the second derivative of the potential
+gives
+
+mixing of the coupling constants of the potential uk = pn(gn/n!)n.
+
+k
+
+
+k
+
+uk() = 
+
+dkd
+2(2)d
+
+
+
+xn=1
+
+1
+
+n(cid:18) u 
+
+k2 + u 
+
+k ()
+
+k ()(cid:19)n
+
+,
+
+(13)
+
+up to a eld independent constant. this is the usual one loop resummation
+of the eective potential [7] except that the loop momentum is now restricted
+to the subspace of the modes to be eliminated. actually, the fact that the
+r.h.s. includes the running potential uk() rather than the bare one, u(),
+indicates that the contributions of the successive eliminations of the degrees
+of freedom are piled up during the integration of the dierential equation and
+the solution of the renormalization group equation resums the perturbation
+series. the solution of the dierential equation interpolates between the bare
+and the eective potential as k is lowered from the original cuto  to zero.
+finally, let us note that the derivation of eq. (11) shows that the restoring
+force for the uctuations into the equilibrium is proportional to the argument
+of the logarithm function. thus a nontrivial saddle point should be used when
+
+k2 + u 
+
+k ()  0.
+
+3 evolution of the coupling constants
+
+our eective action is
+
+sk =z ddx(cid:20)1
+
+2
+
+((x))2 + uk((x))(cid:21) ,
+
+(14)
+
+(15)
+
+and the initial condition for the evolution equation is given at k = . the
+potential uk() is assumed to be polynomial so it is expanded as
+
+uk() =
+
+1
+n!
+
+n
+
+xn=0
+
+gn(0)(  0)n.
+
+(16)
+
+we study the model in the symmetric phase, where the saddle point is trivial,
+0 = 0. the polynomial structure of the potential is consistent because we
+
+8
+
+avoid the singularity of eq. (11) at k2
+occurs in a region around  = 0 in the symmetry broken phase [6].
+
+cr = u 
+
+kcr() (recall eq. (14)) which
+
+taking the n-th derivative of eq. (16) at  = 0 we obtain the coupling
+
+constant gn(k), and dene the corresponding beta function by
+
+gn(k) =
+
+n = k
+
+n
+n uk()|=0,
+n
+d
+n k
+dk
+
+gn(k) =
+
+
+k
+
+uk().
+
+by taking the successive derivatives of eq. (11), we obtain
+
+n = 
+
+dkd
+2(2)dpn(g2, . . . , gn+2),
+
+where
+
+and
+
+gn =
+
+gn
+
+k2 + g2
+
+pn =
+
+n
+n log[k2 + u 
+
+k ()]
+
+is a polynom of order n in the variables gj, j = 2, . . . , n + 2,
+
+(17)
+
+(18)
+
+(19)
+
+(20)
+
+p1 = g3,
+p2 = g4  g2
+3,
+p3 = g5  3g3g4 + 2g3
+3,
+p4 = g6  4g5g3  3g2
+4 + 12g2
+p5 = g7  5g6g3  10g5g4 + 20g5g2
+p6 = g8  6g7g3  15g6g4  10g2
+
+3g4  6g4
+3,
+
+120g5g3
+
+3  270g2
+
+4g2
+
+3 + 360g4g4
+
+(21)
+4g3  60g4g3
+3 + 24g5
+3,
+3 + 120g5g4g3 + 30g3
+4
+
+3 + 30g2
+5 + 30g6g2
+3  120g6
+3.
+
+the coupling constants dened through eq. (16) are dimensional param-
+eters (the eld variable  has dimension (d2)/2). however, the correspond-
+ing dimensionless parameters have more physical sense. we obtain them in
+the following way:
+
+gn(k) = kn(1 d
+
+2 )dgn(k) = (k)n(1 d
+
+2 )dgn(k),
+
+(22)
+
+9
+
+where now k runs from 1 to 0. their beta functions are
+
+n = (cid:20)n(cid:18)1 
+
+d
+
+2(cid:19) + d(cid:21) gn + kn(1 d
+
+2 )dn,
+
+(23)
+
+where the rst and the second term stands for the tree-level and the loop
+corrections, respectively. one can see that the super-renormalizable coupling
+constants follow asymptotically free scaling law at the tree level.
+
+4 uv scaling laws and their extensions
+
+one can distinguish an ultraviolet and an infrared scaling regime, for k2 
+|m2(k)| and for k2  |m2(k)|, respectively.
+in the uv regime the scale
+dependence comes dominantly from the k2 term of the propagator, see the
+denominator of eq. (19); the k-dependence is generated by the phase factor
+kd in the ir regime where k2 could be neglected in the inverse propagator.
+we will begin at the uv scale with the usual 4 potential (g2  m2)
+
+v() =
+
+1
+2
+
+m22 +
+
+1
+4!
+
+g44 +
+
+1
+6!
+
+g66,
+
+(24)
+
+and see how the dierent couplings are generated when we move towards the
+ir regime.
+
+one ignores the g2 term in the denominator of eq. (19) in the asymptotic
+
+uv regime and nds
+
+dg2
+dk
+dg4
+dk
+dg6
+dk
+
+= 
+
+=
+
+= 
+
+d
+2(2)d kd3g4,
+2(2)d kd3(cid:18) 3
+4  g6(cid:19) ,
+d
+k2 g2
+2(2)d 3g4kd5(cid:18) 10
+k2 g2
+
+d
+
+4  5g6(cid:19) ,
+
+(25)
+
+where in the last equation we omitted the contribution of g8. consider the
+usual strategy in which the coupling constants gn are neglected for n > 4
+and the resulting equation is easy to integrate,
+
+1
+
+g4(k)
+
+=
+
+1
+
+g4()
+
++
+
+(cid:1)4d(cid:17)
+3d(cid:16)1 (cid:0) k
+(4  d)2(2)dk4d .
+
+10
+
+(26)
+
+this expression agrees with the result of the minimal subtraction (ms), a
+scheme which proved to be specially convenient in the ultraviolet scaling
+regime.
+it is based on the analytical continuation of the loop integrals in
+the ultraviolet domain so the resulting beta functions are mass independent,
+i.e. the terms o(g2/k2) are neglected. when extrapolating to the infrared
+regime we nd erroneously the mass independent result g4  k4d (g4 
+log k in d = 4), g4 tends to zero as k  0. this can be understood by
+inspecting (25) where we nd large positive values in the infrared for g4 6= 0
+(this conclusion remains valid for nite g6, as well). when the mass term is
+retained the beta function assumes the correct behavior and becomes o(kd)
+in the infrared. note that the term with g6 acts in the opposite manner than
+g4, c.f. the dierent signs in the right hand side of (25), so that it can change
+the evolution considerably.
+
+it is instructive to look into the evolution of the dimensionless coupling
+
+constant,
+
+1
+
+g4(k)
+
+= (cid:0) k
+
+(cid:1)4d
+
+g4()
+
++
+
+3d(cid:16)1 (cid:0) k
+(cid:1)4d(cid:17)
+(4  d)2(2)d
+
+.
+
+(27)
+
+for 4d > 0 the one-loop  = 4d universal critical exponent is reached for
+suciently below the cuto where k/  0. the latter condition is needed to
+get rid of the non-universal cuto eects. the scaling changes qualitatively
+as d  4 because the non-universal k   behavior is spread over the whole
+k range due to the smallness of 4 d. this is what happens in the expansion
+
+1 (cid:18) k
+
+(cid:19)4d
+
+ (d  4) ln
+
+k
+
+
+,
+
+(28)
+
+employed in the dimensional regularization scheme. this generalizes to any
+dimension: the marginal coupling constant follows the scaling law extended
+from the non-universal cuto regime.
+the evolution for g2 is of the form
+
+it predicts
+
+dg2
+dk
+
+d
+2(2)d g4kd3.
+
+= 
+
+dg2
+dk  k,
+
+g2  k2 + const
+
+11
+
+(29)
+
+(30)
+
+in lacking of any dimensional constant.
+
+in the ir scaling regime we neglect the k2 term in the denominator of
+eq. (19) and using eqs. (18) and (21), we get for g4 (assuming again g6 = 0),
+
+dg4
+dk
+
+=
+
+3d
+
+2(2)d kd1 g2
+
+4
+g2
+2
+
+.
+
+(31)
+
+this evolution is much slower comparing with eq. (26). in fact, for d > 1 we
+have now a suppression factor kd1 which makes the coupling to stabilize at
+the attractive ir xed point. in the same way, we obtain for g2
+
+dg2
+dk
+
+= 
+
+d
+
+2(2)d kd1 g4
+
+g2
+
+,
+
+(32)
+
+with a variation which is slower than that predicted by the uv scaling and
+a suppression factor for k  0.
+we see that the extraction of the scaling in the limit k  0 from the
+uv scaling laws, which is the commonly accepted practice in perturbation
+theory is incorrect when the ms scheme is used. one has to come back to
+the complete scaling laws in order to describe correctly the ir scaling.
+
+four-dimensional asymptotically free gauge models present an infrared
+landau pole in perturbation theory. but this behavior results from the ex-
+trapolation from the uv scaling laws. as we have just remarked, the ir limit
+of the uv regime is not correct in general, and the mass term can change
+considerably the actual behavior in the ir. moreover, at the ir side of the
+uv regime, there are nonlinear eects that make important the contribution
+of the irrelevant (non-renormalizable) couplings (see fig. 3 (b), commented
+in the next section), therefore even the ir limit of the uv scaling can be
+inuenced by these couplings. these ideas have been considered qualitatively
+in the previous paragraphs, after inspection of eq. (25). let us now examine
+them more quantitatively.
+
+we take as an example of asymptotically free model the scalar theory in
+three dimensions. we know from the epsilon-expansion result [8] that below
+four dimensions, the 4 theory does not present an infrared landau pole,
+but a xed point located at
+
+ =
+
+162
+
+3
+
+,
+
+(33)
+
+at order  = 4  d. this is the wilson-fisher xed point. for nite , for
+example in two and three dimensions, we can get this one-loop result from
+
+12
+
+our beta functions of the dimensionless coupling constants obtained from
+eqs. (23) and (18) in the asymptotic uv regime (that is, ignoring g2), which
+for the g4 coupling give
+
+4 = (4  d)g4 + 3g2
+
+4
+
+d
+2(2)d ,
+
+giving the ir xed point
+
+g
+4 =
+
+(4  d)2(2)d
+
+3d
+
+.
+
+restricting ourselves to the d = 3 case, we nd
+
+g
+4 =
+
+42
+3  13.15947.
+
+(34)
+
+(35)
+
+(36)
+
+however, in three dimensions g6 is a marginal coupling, and it can be gen-
+erated by the rg ow, modifying the position of the xed point (36). if we
+include g6 in our analysis, we get the beta functions
+
+4 = g4 +
+6 = 3
+
+3
+42 g2
+42 g4 (10g2
+
+4 
+4  5g6).
+
+1
+42 g6 ,
+
+(37)
+
+it is immediate to see that the zeros of these beta functions are at the point
+
+4 = 42  39.4784,
+g
+g
+6 = 324  3117.091.
+
+(38)
+
+but now let us consider the inclusion of a non-renormalizable coupling, g8.
+the beta functions for the (g4, g6, g8) model are
+
+4 = g4 +
+6 = 3
+
+3
+42 g2
+42 g4 (10g2
+
+1
+42 g6 ,
+4 
+4  5g6) 
+
+8 = g8 
+
+7
+42 (90g4
+
+4 + 60g2
+
+1
+42 g8 ,
+4 g6  5g2
+
+6  4g4g8).
+
+(39)
+
+13
+
+210(cid:16)195 + 29625(cid:17)  69.01,
+6 = 42g
+g
+4  11563,
+4  2.11  106.
+
+4  60g2
+
+4 + 3g2
+
+g
+8 = 15g3
+
+(40)
+
+from them, one obtains the xed point
+
+42
+
+g
+4 =
+
+these values are also obtained in the numerical integration of eqs. (39),
+independently of the initial values for the dierent couplings (if they are
+dierent from zero, which corresponds to the gaussian xed point). as
+we have expected, the non-renormalizable coupling g8 modies the position
+of the xed point without changing the blocking procedure, turning to a
+situation of strong coupling dynamics in the ir. this is because the linearity
+which one assumes to ignore the irrelevant coupling constants is no longer
+valid in the strong coupling regime. as g4 and g6 approach their large ir
+xed point the linearization fails and new scaling laws are found which in turn
+generate new relevant operators [6], overlapping with 8. thus the strong
+coupling dynamics may induce a new (and articial) ir scaling regime even if
+the uv scaling laws are extrapolated down to low energies. nothing unusual
+happens for innitesimal  when one stays in the vicinity of the gaussian
+xed point.
+
+so far we considered the extrapolation of the uv scaling laws to the
+ir regime. does the conclusion concerning the importance of the non-
+renormalizable coupling constant g8 remains valid when the true evolution
+equation, with g2 6= 0, is considered? the mass slows down the evolution
+but this may happen too late and the strong coupling eects can be found
+on the true renormalization group trajectory for small enough renormal-
+ized mass, close enough to the critical point. when the mass is large then
+crossover freezes the evolution of the coupling constants earlier and the
+linearization remains valid. to demonstrate this case recall that the ir limit
+of the uv regime means a xed point for the dimensionless couplings. for
+a super-renormalizable coupling constant such as g4, which has positive di-
+mension, this would mean that the dimensional coupling goes to zero when
+k  0. however, we know that for a relevant coupling, the dimensionless
+quantity diverges when k  0, so that the dimensional coupling will take
+a nite value at the ir. this reasoning can be explicitly checked in fig. 1,
+in which we consider the d = 3 scalar theory with just one coupling, g4.
+the white points follow the evolution of the uv regime and its extrapola-
+tion to k = 0. we observe that indeed the dimensionless coupling reaches
+
+14
+
+figure 1: numerical rg evolution for the (a) dimensionless g4 coupling and
+(b) dimensional g4 coupling in the d = 3 g44 scalar theory. black points
+result from the integration of the complete beta function with g2 = 0.052,
+while white points show just the uv regime (see text). in (a), the ir limit
+of the uv regime is given by the xed point (36).
+
+the xed point given by eq. (36), while the dimensional coupling goes to
+zero. however, if one considers the complete beta function, i.e. retaining
+g2 (black points), the behavior is the same in the uv regime, but then the
+true trajectory separates from the ir limit of this regime and enters into the
+actual ir regime, which implies a divergent dimensionless coupling at k = 0,
+and a certain nite value of the dimensional coupling, as explained above.
+one can however see numerically that this nite value is stable and almost
+does not change when one introduces more and more non-renormalizable
+couplings in the rg evolution. this is what one expects when the crossover
+captures the coupling constants and slows down their evolution in the regime
+of linearizability where the non-renormalizable couplings are unimportant.
+
+in the same way, it might well be that the ir landau pole observed in
+four-dimensional gauge theories is just an artifact of a wrong ir limit or the
+
+15
+
+truncation of the renormalized action. first, the nature of the singularity
+can change when one adds non-renormalizable couplings, and then the ir
+landau pole would be the reection of the insucient functional form of the
+blocked action, and second, the true ir trajectory can be quite dierent from
+the ir limit of the uv scaling.
+
+5 asymptotic freedom and the perturbation
+
+expansion
+
+we examine in this section the scaling laws in dimensions d = 2, 3 and 4
+from the point of view of the applicability of the perturbation expansion. we
+adopt the convention that a model with positive renormalized mass square is
+non-perturbative in the vertex gnn if the radiative correction o(gn) to the
+self energy is stronger than the mass term, i.e.
+
+gn(k)
+
+((n  2)/2)! 2(n2)/2 m2(k)  1
+
+(41)
+
+where m2(k) = g2(k). the question we are interested in is whether this
+inequality is satised in the infrared, which would indicate the invalidity
+of renormalized perturbation expansion. since the neglected higher order
+vertices may inuence the evolution while we lower the cuto, we have to
+address the problem of the system of coupled equations numerically.
+
+there are two asymptotic scaling regimes, k   and k  0 in our
+model. the latter one is trivial as mentioned above, the beta functions (18)
+are suppressed by the factor kd and the evolution of the dimensional coupling
+constants slows down as k  0. the asymptotic uv scaling is more involved.
+the super-renormalizable (relevant) and the renormalizable (marginal) cou-
+pling constants, gn with n < 2d/(d  2) and n = 2d/(d  2) according to the
+power counting, respectively, follow their autonomous evolution, the univer-
+sal renormalized trajectory1. the non-renormalizable (irrelevant) coupling
+constants forget quickly their initial value and take values which are gen-
+erated by the universal ow. this general trend is demonstrated by the
+renormalization group ow shown for d = 4 and 3 in figs. 2 and 3, respec-
+tively. the dimensionless coupling constants are displayed as the functions of
+the cuto which is measured in the units of the initial cuto value, k  k.
+1ignoring the triviality in d = 4 where the tree level marginal coupling constant g4 is
+
+actually irrelevant due to the radiative corrections.
+
+16
+
+the evolution of a non-renormalizable coupling constant, g6 in four di-
+mensions, is shown in fig. 2. the irrelevance is expressed by the indepen-
+dence of g6(k) on the initial value g6(1) for k  12. the value given in the
+leading order of the perturbation expansion,3 o(g3
+4), is reached at k  0.3
+for not too large values of g6(1). since the model is in the weak coupling
+regime the evolution is rather slow after arriving at this universal value if the
+cuto is high enough to provide a long scaling regime. in our case the scale
+window 0.3 < k < 1 was insucient and the plateau is reduced into a peak at
+k  0.3 before the crossover. but the bringing of g6(1) close to the universal
+value creates a plateau even with this limited range of the scales as it can
+be seen for g6(1) = 9  108. such a scale independence is the ultimate goal
+of the improved action program [9]. as the initial value increases beyond
+the plateau level the coupling constant decreases in a monotonous manner
+as the cuto is lowered. in order to check the critical exponent coming from
+the linearized blocking we need a g6(k) larger than the universal value since
+the latter originates in the nonlinear level, o(g3
+4). the evolution follows the
+linear relation g6  k2 for k < 1 indicated by the dashed line in the last plot
+of fig. 2. the infrared scaling regime is 0 < k < 0.1 where g6(k) tends to
+zero with k along the universal trajectory. the theory remains perturbative
+in d = 4 since it has no relevant non-gaussian coupling constant.
+
+the three-dimensional renormalization group ow is depicted in fig. 3.
+the asymptotic infrared scaling laws are rather simple, the super-renormal-
+izable coupling constants diverge, the renormalizable one n = 6 converges
+and the non-renormalizable ones tend to zero in the infrared, k  0. the
+ultraviolet scaling law, above k  0.1 indicates the weak, radiative correction
+generated relevance of g6 for the given initial conditions, gn(1). the insensi-
+tivity on the initial condition g8(1) for k < 0.3 seen in the last plot supports
+the irrelevance of g8. in fact, the evolution of g8(k) follows the linearized
+scaling law as long as its value is far form the universal o(g4
+4) value. it is
+worthwhile noting that the non-renormalizable coupling constants gn(k) al-
+ways develop a peak of sign (1)1+n/2 around the crossover, k  0.1. the
+appearance of the peak can be understood as the result of the increase of
+|gn(k)| from zero as the cuto is lowered in the ultraviolet scaling regime and
+the decrease in the infrared side of the crossover.
+
+2the dierent initial value for the non-renormalizable coupling constants may induce
+a dierent overall scale factor. this eect is very weak in our case due to the smallness of
+the renormalizable coupling constants.
+
+3which is not applicable for the strongly coupled case (38) or (40).
+
+17
+
+figure 2: renormalization group ow for the dimensionless coupling constant
+g6(k) in d = 4. the initial conditions are g2(1) = g4(1) = 0.01, together with
+the values of g6(1) = 0.0, 4  108, 9  108, 107 for the dierent lines in
+plot (a), and g6(1) = 103 for plot (b). in this last plot the points of the
+numerical renormalization group ow are joined by the linearized scaling
+g6  k2, shown by a dashed line.
+
+non-perturbative phenomena may arise at the low energy edge of the
+uv scaling regime due to the increase of the asymptotically free coupling
+constants, g4 and g6 if the scaling regime is long enough and the initial value of
+the coupling constants g4(1) and g6(1) are large enough. there is however no
+problem in nding a perturbative, asymptotically free theory in the infrared.
+the parameter with the highest energy dimension in the lagrangian is g2 =
+m2 for d > 2. thus g2 is the largest among the dimensionless coupling
+constants according to eq. (23), and it dominates the action and renders
+the theory perturbative in the ir limit. the comparison of this conclusion
+with eq. (40) reveals the necessity of treating the ir scaling laws properly
+in establishing the validity of the renormalized perturbation expansion.
+
+as d approaches 2 more and more coupling constants become super-
+
+18
+
+a
+
+b
+
+figure 3: (a) renormalization group ow for the dimensionless coupling
+constants gn(k), n = 2, 4, 6 and 8 in d = 3. the initial conditions are
+g2(1) = g4(1) = 0.01, gn(1) = 0 for n  6. (b) evolution of g8(k) with the
+same initial conditions that before except for g8(1) = 6  105, together with
+the linearized scaling law g8(k)  k, indicated by the dashed line.
+
+renormalizable. the fastest increasing dimensionless non-gaussian coupling
+constant during the decrease of the cuto is g4. the critical exponent, the
+measure of the speed of the increase become degenerate for innitely many
+coupling constants when d = 2. the specialty of the lower critical dimension
+is the existence of innitely many super-renormalizable coupling constants,
+gn, with equal critical dimension. this degeneracy of the dimensions evolves
+the non-gaussian pieces of the action with the same rate as the mass term
+on the tree level and the theories are not obviously perturbative any more.
+in other words, it remains for the radiative corrections, the last term in the
+right hand side of eq. (23) to determine if the theory runs into weak- or
+strong-coupling regime at the infrared.
+
+the renormalization group equations were integrated out numerically in
+two dimensions with the initial conditions (gi
+n =
+0, n > 4) to nd the evolution of the coupling constants. the result, depicted
+in fig. 4, shows a marked increase at the low energy end of the uv scaling
+regime. this increase originates from the asymptotically free evolution. the
+relevant behavior of a coupling constant is dened on the linearized level of
+the blocking, i.e.
+in the leading order of the perturbation expansion. this
+one-loop result can be obtained by replacing the running coupling constants
+
+2 = 0.001, gi
+
+4 = 0.01, gi
+
+19
+
+figure 4: renormalization group ow for the dimensional coupling constants
+in d = 2. the initial conditions are g2(1) = g4(1) = 0.01, gn(1) = 0 for n  6.
+
+in the beta functions by their initial values at the cuto. the local potential
+obtained in the one-loop approximation is
+
+uk() = v() +
+
+1
+
+2zk<p<
+
+d2p
+(2)2 log[p2 + v 
+
+ ()] =
+
+1
+
+8(cid:8)[2 + v 
+
+[k2 + v 
+
+ ()] log[2 + v 
+
+ ()]
+
+ ()] log[k2 + v 
+
+ ()]  2 + k2(cid:9) ,
+
+(42)
+
+(43)
+
+v 
+ () = m2() +
+
+g4()
+
+2
+
+2.
+
+20
+
+with
+
+figure 5: evolution of the dimensional coupling constants obtained in the
+one-loop approximation (squares) and numerically (circles) for d = 2.
+
+the comparison of the numerical solution with the one-loop evolution is
+shown in fig. 5. the one-loop formula (42) cannot be extended down to
+k = 0, because there will be a value of k such that k2+m2() = 0, since m2()
+is negative. but we only want to compare the results in the perturbative
+regime. so we have stopped the evolution in fig. 5 at k  0.3. one can also
+see an increase in the one-loop solution at small k which accumulates and
+drives the system non-perturbative at lower values of k.
+
+4 = 0.01, gi
+
+the numerical results of fig. 4 show that the initial conditions (gi
+
+2 =
+0.001, gi
+n = 0, n > 4) correspond to a non-perturbative system.
+can we nd initial conditions which yield perturbative dynamics? in order
+to answer this question the left hand side of the inequality (41) is plotted
+against the initial value for g2 on fig. 6, for the dierent couplings up to
+n = 20, at a value of gi
+4 = 0.001. the result does not change qualitatively
+
+21
+
+figure 6: the left hand side of eq. (41) as a function of the bare mass square
+for n = 4,   , 20 in d = 2.
+
+for dierent values of bare g4. it supports the general trend of having the
+systems more perturbative when the gaussian part of the action is increased.
+the higher order coupling constants tend to grow faster but it seems that
+gn can be brought into the perturbative regime for suciently large initial
+mass square. at gi
+2 = 0.01, for example, all the couplings are perturbative,
+and this perturbative character is more pronounced for the high couplings.
+however, the separation between the values of the l.h.s. ratio of eq. (41) at
+gi
+2 = 0.01 is smaller as we go to higher couplings, and one can ask whether
+it has got a limiting value or the trend can be reversed for a suciently
+high order coupling. indeed, fig. 7 reveals that this happens for the n = 24
+coupling (n = 26), which suggests that one will have a non-perturbative
+situation also at this value of bare g2 going to a suciently high order coupling
+constant. the situation is the same, even stronger, below two dimensions:
+the existence of an innite number of relevant couplings makes that one
+cannot assure perturbativity by looking to a nite number of couplings, no
+matter what the initial conditions are. we take this and similar other failures
+in nding a perturbative theory observed at dierent initial conditions as a
+strong numerical indication of the non-perturbative nature of any two and
+lower dimensional scalar eld theory with polynomial interaction.
+
+22
+
+figure 7: the same as fig. 6 but now including the n = 24 coupling.
+
+6 lattice wegner-houghton equation
+
+the previous sections dealt with the renormalization group ow at nite
+scales. we address now a dierent issue, the manner the sensitivity on the
+initial values of the irrelevant coupling constants is reached in the asymp-
+totic ultraviolet scaling regime. the renormalization group equation will be
+presented with a dierent cuto, on the lattice. since the change of the
+cuto amounts to the introduction of irrelevant coupling constants the lat-
+tice renormalization group ow must converge at the one obtained in the
+continuum.
+
+some words of caution are in order at this point. one would object the
+interpretation of the modication of the cuto as the introduction of new
+irrelevant coupling constants by recalling that the theory ceases to be renor-
+malizable in the presence of the non-renormalizable (irrelevant) couplings.
+the resolution of the apparent paradox is based on the dierence between
+the ways the renormalization group is used in statistical and high energy
+physics. we are interested in the dynamics close to the cuto in statisti-
+cal physics and this is respected by the employment of the blocking which
+keeps the complete dynamics unchanged below the actual cuto. the price
+of this precision is the appearance of the innitely many irrelevant coupling
+constants in the action. we seek the dynamics at nite, xed scales in high
+
+23
+
+energy physics. since the cuto is sent to the innity this boils down the
+problem of keeping the physics cuto independent far from the cuto only.
+the obvious gain of such an ease of the conditions is the freedom from the
+adjustment of the non-renormalizable parameters. thus one can remove
+the cuto when the non-renormalizable parameters are present in the action
+without any problem4 as long as the renormalization conditions are imposed
+far from the cuto.
+
+the lattice regularization of the scalar model can be described by using
+the momentum space as the introduction of the non-renormalizable higher
+order derivative terms,
+
+()2 
+
+a
+2i
+
+)2
+
+(44)
+
+4
+a2 (sin
+=   
+x=0
+
+1
+
+(2 + 1)!(cid:16) a
+2(cid:17)2
+
+2+1!2
+
+.
+
+the cuto dependence of the non-renormalizable coupling constants follow
+a tree-level relation arising from the taylor expansion of the sine function.
+this is sucient to establish convergent physics at nite scales when a  0
+[10], a claim to be veried in this section numerically by means of the im-
+plementation of the wegner-houghton scheme on the lattice. the only eect
+the dierent adjustments of the non-renormalized coupling constants may
+leave on the nite scale physics can be comprised in an overall scale factor.
+an addition bonus will be the verication of the regularization independence
+of the results described in the previous section.
+
+it is rather straightforward to repeat the steps leading to eq. (11) on the
+lattice.
+it is shown in the appendix that the only change required is the
+modication of the solid angle factor, (k): the lattice evolution equation
+(71) is obtained from eq. (11) by replacing eq. (12) by eq. (68). one recovers
+the continuum solid angle for d = 2, 2 = 2, in eq. (68) as k  0, thus
+the wh equations agree in the ir limit. in fact, one sees numerically that
+the behavior of the evolution of the dierent coupling constants in the lattice
+rg is qualitatively the same than in the continuum case. but the question
+we are interested in is the relation between the regularizations in the uv,
+where the coupling constants are introduced, when the physics is the same
+at nite scales. it is shown in the appendix that there is a natural relation
+
+4ignoring again the possibility of the triviality, the appearance of an uv landau pole.
+
+24
+
+between the cutos, 2 = 8/a2, which matches the nite scale physics. we
+shall follow the renormalization group ow in terms of the coupling constants
+whose dimension is removed by the initial value of the cuto,
+
+gn  gn/2,
+in order to avoid the singularities at k = 0.
+
+(45)
+
+let us consider 4 lattice theory which can be studied either numerically
+or analytically and whose properties can be matched to those of the contin-
+uum theory by the adjustment of g2 and g4. but the situation is more involved
+in two dimensions. the reason is again that there are innitely many renor-
+malizable coupling constants and one cannot match the nite scale physics
+by adjusting g2 and g4. this is demonstrated in fig. 8 where the lattice
+model with the initial conditions m2(8) = g2(8) = 0.001, g4(8) = 0.01, and
+gn(8) = 0, n > 4 (where we have already made the rescaling eq. (45)) was
+evolved in the infrared direction. as the system reached k = kend the contin-
+uum wh equation was used to increase the cuto. the result is a perfect
+matching of the models in the uv which gives the same low energy physics
+in the ir. as we can see in fig. 8, the lattice 4 model in two dimensions
+is not the continuum 4 theory. it contains contributions of innitely many
+renormalizable other coupling constants. of course, numerically we had to
+truncate the equations at a certain coupling (here, at o(22)) but we checked
+that these truncation eect hardly inuences the values of the low order
+coupling constants.
+
+end > k2
+
+we have taken for the parameter k2
+
+cr  0.01. we had to use k2
+
+end the value k2 = 0.3 in fig. 8, while
+the crossover is at k2
+cr, because the high
+order couplings have very large values at the crossover which requires very
+ne discretization in the numerical resolution of our dierential equations
+to ensure that the way back to the uv is done accurately. however, k2
+end
+should also be suciently small that the ow be universal there, in other
+words to make sure that the irrelevant lattice contributions are suppressed
+for k2 < k2
+cr.
+
+the choice k2
+
+end > 0 introduces an uncertainty in the matching. to assess
+it we repeated the go-return evolution described above and checked the
+discretization errors for k2
+end = 0.8, 0.5 and 0.3. after then we took the
+appropriate bare parameters at the uv end points in both regularizations
+
+25
+
+figure 8: matching of lattice and continuum regularizations; we start with
+lattice eld theory at the uv, go down to the ir (circles) and then we come
+back to the uv with the continuum regularization (squares); see text.
+
+and followed the evolutions down to k = 0. the relative dierence,
+
+gn  |gcont
+
+n
+
+n
+
+n
+
+(0)  glatt
+|glatt
+
+(0)|
+
+(0)|
+
+(46)
+
+is shown in table 1 for the dierent coupling constants at k = 0. the
+smallness of the deviation assures that the ir behavior has practically been
+obtained with k2
+end = 0.3, and one can trust the conclusions, the approach of
+the ow to a universal curve, extracted from fig. 8.
+
+the rst two plots in fig. 8 show that the mass and the quartic coupling
+constant run parallel in the suv region of the lattice regularization and
+in the continuum. the approach to the universal curve starts for k2 < 4,
+
+26
+
+k2
+end = 0.8 k2
+0.0166
+0.0028
+0.0188
+0.0199
+0.1793
+0.0680
+0.0522
+0.9300
+0.2116
+0.0584
+
+end = 0.5 k2
+0.0096
+0.0011
+0.0116
+0.0135
+0.0992
+0.0424
+0.0340
+0.5558
+0.1261
+0.0389
+
+end = 0.3
+0.0052
+0.0002
+0.0069
+0.0092
+0.0494
+0.0259
+0.0221
+0.3226
+0.0731
+0.0259
+
+g2
+g4
+g6
+g8
+g10
+g12
+g14
+g16
+g18
+g20
+
+table 1: relative dierences between the continuum and lattice coupling
+constants at k = 0, eq. (46), after having matched the couplings at the uv
+using the parameter k2
+
+end.
+
+below the suv regime only. the fact that the renormalization group ow
+converges to the universal one in the 2d-th part of the brioullin zone only
+sets an unexpected high lower limit on the lattice size when the continuum
+limit is sought in numerical simulations. the higher order vertices seem to
+converge to the universal curve from the very beginning but the dierence
+between the two regularizations is surprisingly large. the universal trajectory
+of the 4 model is reached later by the higher order vertices. this eect
+appears to be a counterpart of the non-perturbative features seen in figs. 6, 7
+and introduces a large uncertainty in identifying two-dimensional models in
+dierent regularizations.
+
+7 conclusions
+
+the renormalization group ow of scalar models with polynomial interaction
+is considered in the rst part of this paper by solving the wegner-houghton
+equation numerically in the local potential approximation for d = 2, 3 and
+4. a lesson learn for qcd in studying the three-dimensional 6 model is the
+possibility of avoiding the ir landau pole by following the evolution of the
+non-renormalizable operators.
+
+no model with polynomial interaction was found in two dimensions whose
+
+27
+
+all coupling strength remain small. this suggests the conclusion that every
+two- and lower dimensional models with polynomial interaction are non-
+perturbative at the infrared due to the strong increase of the super-renor-
+malizable coupling constants. this conclusion does not invalidate the well
+known results for two-dimensional systems, such as the applicability of the
+bethe ansatz, bosonization and the availability of certain exact information
+for models with conform invariance. instead, it makes the asymptotic state
+structure and the relation between the the dressed particles and the states
+created by the application of the eld operator from the vacuum more in-
+volved.
+
+in the second part of the paper the innitesimal renormalization group
+scheme is generalized for lattice regularization. the matching of the con-
+tinuum and the lattice regularizations is carried out numerically and the
+approach of the universal renormalization group ow is demonstrated for the
+two-dimensional 4 lattice model.
+
+appendix
+
+the details of the derivation of the wegner-houghton equation in the lattice
+regularization are given in this appendix. let us consider the scalar eld
+theory regularized on a lattice of lattice spacing a = 1. we want to derive
+a wh equation similar to eq. (11). we integrate over spherical shells in the
+momentum space for the continuum regularization, because the propagator
+has spherical symmetry. this is no longer the case on the lattice, where we
+have
+
+(cid:3) =
+
+d
+
+x=1
+
+p2
+,
+
+p = 2 sin
+
+p
+2
+
+.
+
+(47)
+
+let us see the surfaces of equal value of the lattice propagator in two dimen-
+sions by performing the following change of variables:
+
+(px, py)  (p, )
+
+2 = p2
+
+4 sin2 px
+
+2 + 4 sin2 py
+tan  = sin(py/2)
+sin(px/2)
+
+
+
+
+(48)
+
+28
+
+- p
+
+p
+
+p
+
+p
+
+py
+
+- p
+
+- p
+
+- p
+
+p
+
+px
+
+figure 9: lines of equal value of the lattice propagator. to the inside, the
+lines drawn correspond to p2 = 7.9, 7, 6, 5, 4, 3, 2, 0.5, 0.1.
+
+we can see in fig. 9 the form of the curves of constant propagator for several
+values of p2. p can be identied as the momentum scale that runs from
+the cuto at p2 = 2 = 8 to the ir p2 = 0. it is also clear in that gure that
+the value p2 = 4 separates two regimes, still in the ultraviolet region, that
+we could call super-uv (suv), for 8 > p2 > 4, and normal-uv regimes. for
+p2  0, the lines are spheres, and our change of variables (48) reduces to the
+usual relation between cartesian and polar coordinates.
+the absolute value of the jacobian of the transformation (48) is found to
+
+be
+
+j =
+
+jp
+
+,
+
+(49)
+
+r(cid:16)1  p2
+
+4 cos2 (cid:17)(cid:16)1  p2
+
+4 sin2 (cid:17)
+
+where jp is the usual jacobian for the polar change of variables, jp = p.
+the transformation (48) can be easily generalized to three and four dimen-
+sions; however, we can only treat analytically the integral that appears in
+the derivation of the wh equation in the d = 2 case.
+
+to derive the equivalent of the wegner-houghton equation (11) in the
+bidimensional lattice regularization we will start from eq. (8), and calculate
+
+29
+
+the trace by integrating in momentum space over a shell k  k < p < k,
+where p is the parameter we have introduced in eq. (48),
+
+1
+2
+
+tr log[(cid:3) + u 
+
+k ] =
+
+1
+
+1
+
+d2p
+
+(2)2 log[4 sin2 px
+
+2z
+2(2)2z dz k
+k
+2(2)2 k log[k2 + u 
+
+kk
+
+k ] (k),
+
++ 4 sin2 py
+2
+
++ u 
+
+k ] =
+
+2
+
+dp j log[p2 + u 
+
+k ] 
+
+(50)
+
+.
+
+(51)
+
+with
+
+(k) =z d
+
+8
+
+p64  16k2 + k4 sin2 2
+
+we have to distinguish two dierent regimes in making the integration: (i)
+
+k2 < 4.
+
+in this region the range of values for  is (0, 2).
+
+(k) =z 2
+
+0
+
+d
+
+8
+
+p64  16k2 + k4 sin2 2
+
+=
+
+4
+
+xi=1
+
+i(k),
+
+(52)
+
+where we have split the interval (0, 2) into four intervals (0, /2), (/2, ),
+etc. let us consider 1(k). with the change of variable x = tan  and the
+notation
+
+k2 = 4  k2,
+this integral can be brought into the form
+
+(53)
+
+,
+
+(54)
+
+1(k) =
+
+1
+
+kz 
+
+0
+
+2 dx
+
+p(x2 + b2)(x2 + b2)
+
+where b2 = 4/k2. the integral in eq. (54) is related to the elliptic integral of
+the rst kind [11] f (, t),
+
+1(k) = f (cid:20)
+
+2
+
+,
+
+k
+4
+
+8  k2(cid:21) ; f (, t) =z 
+
+0
+
+d
+
+p1  t2 sin2 
+
+.
+
+(55)
+
+30
+
+the result is the same for the other integrals i, i = 2, 3, 4. but f (/2, t) is
+a complete elliptic integral, which can be expressed in terms of the hyperge-
+ometric function [11, 12]
+
+f (, ; ; z) =
+
+()
+
+()()
+
+
+
+xn=0
+
+( + n)( + n)
+
+( + n)
+
+zn
+n!
+
+as
+
+(k) = 2f(cid:18)1
+
+2
+
+,
+
+1
+2
+
+; 1;
+
+(8  k2)k2
+
+16
+
+(cid:19) .
+
+(56)
+
+(57)
+
+(ii) 4 < k2 < 8. this is the suv region. we split again the integral into
+four integrations in the corresponding quadrants. by using the same change
+of variables as above, we have to calculate
+
+where
+
+i(k) =z
+
+4 dx
+
+px2(k4 + 16)  4k2(1 + x4)
+k2 = k2  4.
+
+,
+
+(58)
+
+(59)
+
+special care is needed at the limits of integration (recall fig. 9). it can be
+seen that the four integrals can be put together in the form
+
+(k) = 4z 2/k
+kz 2/k
+
+k/2
+
+k/2
+
+8
+
+4 dx
+
+=
+
+px2(k4 + 16)  4k2(1 + x4)
+p(x  k/2)(2/k  x)(x + k/2)(x + 2/k)
+
+dx
+
+.
+
+(60)
+
+this integral is related again [11] to an elliptic integral and an hypergeometric
+function:
+
+(k) =
+
+32
+
+k2 f(cid:20) 
+
+2
+
+,
+
+8
+
+k2  1(cid:21) =
+
+16
+
+k2 f (cid:18)1
+
+2
+
+,
+
+1
+2
+
+; 1,
+
+(8  k2)2
+
+k4
+
+(cid:19) .
+
+(61)
+
+we would like to have a common expression for (k) for both cases (i)
+and (ii). from eqs. (57) and (61), we nd in fact that the expressions dier
+
+31
+
+in a factor 2 for k2 = 4! the reason is that actually our integral is divergent
+at this point. from eq. (51) we see that the divergent integral is
+
+(k2 = 4) =z 2
+
+0
+
+d
+
+2
+
+| sin 2|
+
+(62)
+
+(in fact, the hypergeometric function (56) converges in general only in the
+unit circle |z| < 1 [11]). we will see, however, that this divergence is inte-
+grable during the rg evolution from k2 = 8 to k2 = 0, and therefore it has
+no physical signicance. in order to have a consistent, single expression for
+the cases 8 < k2 < 4 and 4 < k2 < 0, we will make use of the following
+property of the hypergeometric functions [11]:
+
+f (cid:18)1
+
+2
+
+,
+
+1
+2
+
+; 1, z2(cid:19) =
+
+1
+
+1 + z
+
+f(cid:18)1
+
+2
+
+,
+
+1
+2
+
+; 1,
+
+4z
+
+(1 + z2)2(cid:19) ,
+
+0  z < 1.
+
+(63)
+
+let us consider the expression (57) which is valid for k2 < 4. using the
+
+property (63) one nds,
+
+(k) = 2f(cid:18)1
+
+2
+
+,
+
+1
+2
+
+; 1,
+
+where we have set
+
+4z
+
+(1 + z2)2(cid:19) = 2(1 + z)f (cid:18)1
+
+2
+
+,
+
+1
+2
+
+; 1; z2(cid:19) ,
+
+4z
+
+(1 + z2)2 =
+
+(8  k2)k2
+
+16
+
+.
+
+this equation has two solutions for z as a function of k:
+
+z =
+
+k2
+8  k2
+
+;
+
+8  k2
+k2
+
+,
+
+(64)
+
+(65)
+
+(66)
+
+but only the rst one is admissible for eq. (64), because it gives z < 1 for
+k2 < 4, while the second solution gives a value greater than 1 in this region.
+now, if we dene k = 8  k2, then we have z = (8  k2)/k2, and eq. (64)
+becomes
+
+(k) = 2
+
+8
+k2
+
+f(cid:18) 1
+
+2
+
+,
+
+1
+2
+
+; 1; z2(cid:19) .
+
+(67)
+
+32
+
+comparing this last expression with the result (61) for the case 8 < k2 < 4,
+we can nally write
+
+,
+
+2
+
+1
+2
+
+16
+k2
+
+(k) =
+
+f(cid:18)1
+and (k2 = k2
+k2 = 8  k2
+the hypergeometric function f (cid:0) 1
+
+; 1; z2(cid:19) , with z =
+
+if k2 = 8 . . . 4,
+if k2 = 4 . . . 0.
+
+8  k2
+k2
+
+(68)
+
+from its denition (56). one can obtain a high precision in the evaluation
+of the series with a reasonable number of terms (say, around 50) when z is
+not very close to 1, say, for 0.7 > z > 0. for 1 > z > 0.7 we have used the
+following alternative formula [12]
+
+2 ; 1; z2(cid:1) can be computed directly
+
+2 , 1
+
+f (, ;  + ; z) =
+
+where [12]
+
+
+
+xn=0
+
+( + )
+
+( + n)( + n)
+
+[2(n + 1)
+
+(n!)2
+
+(()())2
+( + n)  ( + n)  log(1  z)](1  z)n,
+(|arg(1  z)| < ,|1  z| < 1),
+
+(z) =
+
+d log (z)
+
+dz
+
+,
+
+(69)
+
+(70)
+
+which gives a better convergence for the function f (cid:0) 1
+because it is a series in the variable (1  z2).
+regularization in two dimensions is
+
+in conclusion, our generalization of the wh equation (11) for a lattice
+
+2 , 1
+
+2 ; 1; z2(cid:1) near z = 1
+
+k
+
+
+k
+
+uk() = 
+
+(k)k2
+2(2)2 log[k2 + u 
+
+k ()],
+
+(71)
+
+where k is the parameter p of eq. (48), and (k) is given by eq. (68).
+
+acknowledgements
+
+we wish to thank v. branchina, s.b. liao, j. alexandre and h. mohrbach for
+useful discussions. work partially supported by the spanish mec, accion
+
+33
+
+integrada hispano-francesa hf1997-0041, the french program, actions in-
+tegrees franco-espagnol, picasso 98064. j.m.c. is a ue fellow. he also thanks
+the spanish mec, the cai european program and dga (consi+d) for
+nancial support.
+
+references
+
+[1] k.g. wilson, rev. mod. phys., 47, 773 (1975); rev. mod. phys., 55,
+
+583 (1983).
+
+[2] f. bloch and h. nordsieck, phys. rev. 52, 54 (1937); t. kinoshita, j.
+math. phys. 3, 650 (1962); t. d. lee and m. nauenberg, phys. rev.
+133, 1549 (1964).
+
+[3] r. jackiw and s. templeton, phys. rev. d 23 2291, (1981).
+
+[4] f.j. wegner and a. houghton, phys. rev. a 8, 40 (1973).
+
+[5] j. polonyi, connement and renormalization, in the proceedings of the
+international school enrico fermi, course 80: selected topics in non-
+perturbative qcd, varenna, 1995.
+
+[6] j. alexandre, v. branchina and j. polonyi, phys. rev. d 58, 16002
+
+(1998).
+
+[7] s. coleman and e. weinberg, phys. rev. d 7, 1888 (1973).
+
+[8] k.g. wilson and m.e. fisher, phys. rev. lett. 28, 240 (1972).
+
+[9] k. symanzik, in new developments in gauge theories, ed. g. t hooft et
+
+al. (plenum, n.y., 1980).
+
+[10] t. reisz, comm. math. phys. 117, 79 (1988).
+
+[11] i.s. gradshteyn and i.m. ryzhik, table of integrals, series, and prod-
+
+ucts, academic press (1980).
+
+[12] handbook of mathematical functions, ed. by m. abramowitz and
+
+i.a. stegun, dover publications (new york, 1965).
+
+[13] j. zinn-justin, quantum field theory and critical phenomena, ox-
+
+ford university press (1996).
+
+34
+
+

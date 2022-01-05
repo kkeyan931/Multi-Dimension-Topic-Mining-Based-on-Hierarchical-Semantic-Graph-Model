@@ -1,0 +1,4280 @@
+hep-th/9902157
+uuitp-1/99
+february 1999
+
+9
+9
+9
+1
+
+ 
+
+b
+e
+f
+3
+2
+
+ 
+
+ 
+ 
+
+1
+v
+7
+5
+1
+2
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+generalized statistics in one dimension
+
+les houches lectures, summer 1998
+
+alexios p. polychronakos1
+
+institutionen for teoretisk fysik, box 803
+
+s-751 08 uppsala, sweden
+
+and
+
+physics department, university of ioannina
+
+45110 ioannina, greece
+
+abstract
+
+an exposition of the dierent denitions and approaches to quantum
+statistics is given, with emphasis in one-dimensional situations. permuta-
+tion statistics, scattering statistics and exclusion statistics are analyzed. the
+calogero model, matrix model and spin chain models constitute specic real-
+izations.
+
+1e-mail: poly@teorfys.uu.se
+
+1 introduction
+
+quantum statistics, as the name suggests, is the way that the quantum mechanical
+properties of particles inuence their statistical mechanics. two features of quantum
+mechanics are crucial for the dierence between classical and quantum statistics: the
+indistinguishability of quantum particles and the nite room that exists in a given
+domain of the phase space of a quantum system.
+
+the rst feature can be incorporated by hand into classical statistical mechanics
+(although there is no underlying principle for doing so) and this will resolve the
+gibbs paradox, although by itself it would change little else. the second feature
+can likewise be incorporated in an ad hoc way, which will assign a unique value to
+the additive constant of the entropy of a classical system, but again without further
+physical impact. it is the combination of the two that produces nontrivial results,
+especially in the domain where quantum phenomena prevail, that is, high densities
+or low temperatures.
+
+the statistics of observed particles seem to be exhausted by the two well-known
+cases of bose and fermi. in this sense, the quest for more exotic possibilities seems
+to be a bit academic or even quixotic. it is, nevertheless, of interest to explore the
+possibilities as a way of obtaining a more lucid eective description of the dynamics
+of (otherwise normal) interacting particles. in this sense, we are trading one kind of
+intuition for another, hoping to make a prot in the bargain.
+
+there are several approaches to dening or implementing quantum statistics.
+they are roughly classied into fundamental (group theoretic, operator etc.) and
+phenomenological (statistical). while exploring them we must keep in mind that,
+at the end of the day, we should provide a realization, that is, a system which
+is (more or less) physical and exhibits these statistics through its dynamics. the
+less the number of space dimensions, the more easy it is to nd such realizations.
+the concept itself of statistics, actually, depends crucially on the dimensionality
+of space. topological considerations allow for generalized abelian statistics in 2+1
+dimensions [1, 2, 3, 4]. such particles, called anyons, have found use in the physics of
+the quantum hall eect and (probaby) high-temperature superconductivity. there
+are excellent reviews on anyons [5] and we will not deal with them here.
+
+in these lectures the bulk of the material will concern one-dimensional situations,
+although some considerations in principle applicable to any dimension will also be
+included. the purpose is to present enough of the concepts and material on the
+subject to spur the interest of the reader for further study. you are warned that
+all formulae in these lectures are simply mnemonics of the correct results: mistakes
+abound! (the written version is only marginally better.) one standard exercise
+proposed here is to rederive all results, xing the signs and factors in the process.
+hopefully substance survived the sloppyness.
+
+so, right to the task.
+
+2
+
+2 permutation group approach
+
+as a way of introduction and covering standard ground, we will study the context in
+which statistics initially arose, namely the permutation group in quantum mechanics
+[6]-[14]. the main emphasis will be in connecting to the path integral and pointing
+the possibilities for generalizations within this approach.
+
+the main themes of this lecture are:
+
+a) eliminating the gauge multiplicity of states originating from particle permuta-
+tions. this will, in general, lead to the appearance of internal degrees of freedom
+that are the residue of identities (distinguishability) of particles.
+b) implementing the path integral for identical particles. their indistinguishability
+calls for including paths that lead to any permutation of the nal position. deter-
+mining the right weights of these sectors (which are not necessarily phases) will x
+the statistics.
+
+2.1 realization of the reduced hilbert space
+
+we will work in the rst-quantized picture, in which the number of particles is
+xed but the particles are nevertheless taken to be indistinguishable. this is to
+be contrasted to the weaker statement that the particles are merely identical. to
+x the ideas, let us call {xi} the coordinates of these particles, with i = 1 . . . n
+enumerating the particles, and assume, for now, that there are no internal degrees
+of freedom. the xi can be in a space of any dimension. the hilbert space of this
+system is spanned by the position eigenstates |x1, . . . xn > |x >. let us also dene
+the operators p  sn that permute the quantum numbers of the particles. there
+are n! such operators forming the permutation (or symmetric) group of n objects
+sn . the collection of the above states for a set of distinct xi transforms in the
+n!-dimensional regular (dening) representation of sn
+
+p|x > |p x >= |xp (1), . . . xp (n ) >
+
+(1)
+
+notice that if any of the coordinates xi coincide the above is not the full dening
+representation any more. the set of such states, however, is of measure zero (the
+coordinate space assumed continuous) and thus they can be safely ignored. (we
+assume that there are no interactions singular at coincidence points that might
+dynamically make such states of nonzero weight.)
+
+if the particles are identical then the hamiltonian treats them all equally and
+
+thus we have
+
+[h, p ] = 0
+
+(2)
+
+for any p . if however, the particles are also indistinguishable, this means that there
+is no physical way to ever be able to tell the particles from each other. thus, not
+only the hamiltonian, but all conceivable perturbations of this hamiltonian must
+commute with the permutation operators. (these perturbations would correspond
+
+3
+
+to various devices, dies and other tricks that we would attach to the system in our
+eort to tell the particles from each other.) in short, the permutation operators
+must commute with all physical observables a:
+
+[a, p ] = 0
+
+(3)
+
+when such an operator p commutes with all (physical) operators in a system we
+have a superselection rule: there is no possible transition or interference between
+states corresponding to dierent eigenvalues of this operator and thus we can choose
+a subspace with a xed eigenvalue and stay with it for ever. (this is also called
+picking a theta-vacuum in particle gauge theories.) in our case, there is a whole set
+of operators commuting with everything else (the group sn ) and thus the generalized
+theta-vacuum states consist of irreducible representations (irreps) of sn . further,
+states that are connected to each other through the action of operators p cannot
+be distinguished by any physical operator and therefore must be identied as a
+unique physical state. in other words, the permutation group must be viewed as
+a discrete gauge group producing unphysical transformations, that is, copies of the
+same physical system. we must, therefore:
+
+ project on a subspace corresponding to a particular irrep r of sn
+ identify elements within this subspace grouping in the same irrep as a unique
+
+physical state.
+the above procedure and choice of r corresponds to a choice of statistics.
+
+we will implement this in the coordinate representation |x1, . . . xn > |x >.
+projecting the hilbert space to an irrep r of sn amounts to keeping only linear
+combinations of states within this multiplet that transform in r, that is,
+
+|a; x >= xp
+
+ca(p )p|x > ,
+
+a = 1, . . . dr , dr = dim(r).
+
+(4)
+
+where the sum is over all elements of the permutation group and ca(p ) are appro-
+priately chosen coecients. if we denote with rab(p ) the matrix elements of the
+permutation p in the representations r,
+
+p|a, x >= xb
+
+rab(p 1)|b, x >
+
+(5)
+
+(the appearance of p 1 above is necessary so that successive transformations com-
+bine in the right order.)
+
+the dening representation decomposes into irreducible components, classied
+by young tableaux, each appearing with a certain multiplicity. should we keep only
+one irrep out of each multiplicity or the whole multiplet? to decide it, note that if
+instead of the base state |x > for the construction of the states |a, x > we choose
+a dierent permutation po|x >, then although the new states |a, pox > constructed
+through (5) still transform in the irrep r, in general they are not linear combinations
+of |a, x > but rather span a dierent copy of r. since we can continuously move
+
+4
+
+in the conguration space from |x > to po|x >, we conclude that we must keep
+all irreps r within each multiplet. (in other words, although for each point in the
+hilbert space |x > this multiplet is reducible, the ber of these representations over
+the hilbert space is connected and irreducible.)
+
+to realize explicitly the above, we construct the states
+
+|ab, x >= s dr
+
+n! xp
+
+rab(p )p|x >
+
+(6)
+
+using the group property of the representation r(p1)r(p2) = r(p1p2), we deduce
+that under the action of the group sn and under change of base point x the above
+states transform as:
+
+p|ab, x >= xc
+
+rac(p 1)|cb, x > ,
+
+|ab, p x >= xc
+
+rcb(p 1)|ac, x >
+
+(7)
+
+thus we see that the rst index in these states labels the dierent elements of a
+single irrep r, while the second index labels the dierent equivalent irreps in the
+multiplet. since both indices take dr values, we recover the standard result that
+each irrep of sn is embedded in the dening representation a number of times equal
+to its dimension.
+
+consider now the matrix element < ab, x|a|cd, y >, where a is any physical
+operator, that is, any operator commuting with all elements p of sn . substituting
+the denition (6) and using the unitarity of p (p  = p 1) and of r (r
+ab(p ) =
+rba(p 1)) we obtain, after a change in summation variable,
+
+< ab, x|a|cd, y >=
+
+dr
+
+n! xp,p ,e
+
+rbe(p )rea(p 1)rcd(p ) < x|ap |y >
+
+(8)
+
+using further the orthogonality (shurs) relation (see, e.g., [15])
+
+rab(p )rcd(p 1) =
+
+n!
+dr
+
+adbc
+
+xp
+
+we nally obtain
+
+< ab, x|a|cd, y >= xp
+
+acrbd(p ) < x|a|p y >
+
+(9)
+
+(10)
+
+it is clear from (10) that there is no possible transition between states with dierent
+rst index. further, for states with the same index, the amplitude is independent
+of the index. thus, the rst index a in the state |ab, x > propagates trivially. since
+this is the index that corresponds to the dierent but physically equivalent states
+within each irrep r, we conclude that the required projection of the hilbert space
+to the physical subspace amounts to simply omitting this index from all states.
+(that is, freeze this index to the same xed value for all states of the theory; no
+
+5
+
+physical quantity will ever depend on the choice of this value.) on the other hand,
+the second index, corresponding to dierent equivalent irreps, does not propagate
+trivially and must, as argued before, be kept. we are led therefore to the physical
+states |ba, x > |a, x >.
+
+let us rst choose a = 1. then (10) provides the overlap between the states
+
+< ab, x|cd, y >= xp
+
+acrbd(p )(x  p y)
+
+(11)
+
+for x in the neighborhood of y it is p = 1 which contributes to the normalization, for
+which rbd(1) = bd and we recover the standard continuous normalization between
+the states.
+
+choose, now, a = eiht, where h is the hamiltonian, and thus nd the propa-
+gator g(ab, x; cd, y|t) between the states of the system. projecting to the physical
+states |ba, x > |a, x > we obtain the propagator
+
+gr(a, x; b, y|t) = xp
+
+rab(p ) g(x, p y; t)
+
+(12)
+
+where g(x, p y; t) = < x|eihtp|y > is the usual many-body propagator. we
+note that, due to the transformation property (7), the states |a, p x > are linear
+combinations of states |a, x >. therefore, projecting down to the physical subspace
+corresponding to r amounts to trading the original n! copies of physically equivalent
+states |p x > for a number dr of global internal degrees of freedom for the system,
+labeled by the index a.
+
+2.2 path integral and generalized statistics
+
+it is now easy to write down the path integral corresponding to identical particles
+quantized in the r-irrep of sn . g(x, p y; t) can be expressed as an n-body path
+integral in the standard way, with particles starting from positions xi and ending
+in positions p yi = yp (i). since all permutations of particle positions are physically
+equivalent, (12) instructs us to sum over all sectors where particles end up in such
+permuted positions, weighted with the factors rab(p ) depending on the internal
+degrees of freedom of the initial and nal states. from (6, 11) we can write the
+completeness relation within the physical subspace
+
+ir = z dn x
+
+n! xa |a, x >< a, x|
+
+(13)
+
+and with the use of (13) it is easy to prove that the above path integral is unitary,
+that is,
+
+z dn y
+n! xb
+
+g(a, x; b, y|t) g(b, y; c, z|t) = g(a, x; c, z|t + t)
+
+(14)
+
+we can extend this construction to a more general class of statistics, which
+includes the cases of the so-called parabosons and parafermions as special cases.
+
+6
+
+the generalization consists in allowing more than one irrep to appear in the hilbert
+space, and keeping more than one state in each irrep. this seems unmotivated
+and against the spirit of the reduction by the full superselection rule, but it is
+consistent. it could mean, for instance, that the particles have some hidden internal
+degrees of freedom accounting for the extra degeneracy, which are invisible to the
+present hamiltonian but may become dynamically relevant later. (this, then, would
+augment the space of physical operators in the theory.) the most general situation
+is that we include cr states from each irrep r. the statistics is xed by the set of
+non-negative integers cr.
+
+the generalization of the results to this more general situation is straightforward.
+the internal degree of freedom now takes values a = (r, a, ), where a = 1, . . . dr
+labels the inequivalent r-irreps and and  = 1, . . . cr labels the states kept within
+each irrep. (a, ) constitute the internal degrees of freedom within each irrep. so,
+
+overall, a takes pr crdr dierent values. the propagator (and corresponding path
+
+integral) is obviously
+
+where
+
+gs(a, x; b, y|t) = xp
+
+s(p )ab g(x, p y; t)
+
+s(p )ab = ra,rb  (ra)ab(p )
+
+(15)
+
+(16)
+
+the denition of parabosons (parafermions) of order p is that we include once all
+irreps with up to p rows (columns) in their young tableaux. we have, therefore,
+cr = 1 for such irreps and cr = 0 for the rest. we note that the irreps for
+parafermions are the duals of those for parabosons (the dual of a tableau is the
+tableau with rows and columns interchanged). in an appropriate basis, the repre-
+sentation matrices of dual irreps r, r are real and satisfy
+
+rab(p ) = (1)p rab(p )
+
+(17)
+where (1)p is the parity of the permutation. we arrive then at the relation between
+the weights for parabosons and parafermions of order p:
+spf (p )ab = (1)p spb(p )ab
+
+(18)
+
+this extends a similar relation for ordinary fermions and bosons [13], for which there
+are no internal degrees of freedom and sb(p ) = 1.
+
+from the path integral we can evaluate the partition function, by simply shifting
+to the euclidean periodic propagator ge() = eh and summing over all initial
+and nal states, with the measure implied by (13). given that
+
+we get the expression in terms of the characters of sn
+
+raa(p ) = trr(p ) = r(p )
+
+xa
+
+zs(t ) = z dn x
+
+n! xp
+
+s(p ) < x|ge()|p x >
+
+7
+
+(19)
+
+(20)
+
+where
+
+we also note the inversion formula
+
+s(p ) = xr
+
+cr r(p )
+
+cr =
+
+1
+
+n! xp
+
+s(p )r(p )
+
+(21)
+
+(22)
+
+which allows to recover cr if we know s(p ) for all permutations. the interpretation
+in terms of a periodic euclidean path integral is obvious. the characters r(p ) are
+a set of integers, and thus the statistical factors s(p ) weighing each topological
+sector of the path integral are (positive or negative) integers. in the case of para-
+bosons of any order p, however, we note that the statistical weights are positive (or
+zero) integers. the ones for parafermions can be either positive or negative, as given
+by
+
+spf (p ) = (1)p spb(p ) , spb(p )  0
+
+(23)
+
+we do not have a general formula for spb(p ) for arbitrary p. for non-interacting
+particles the partition function can be expressed in terms of the characters of su(n)
+(shurs functions) [16, 17].
+
+we note here that the case of distinguishable particles (innite statistics [10,
+18, 19]), is also included in this formalism, by accepting all states in each irrep, that
+is, cr = dr. since r appears exactly dr times in the dening representation of sn ,
+s(p ) above becomes the trace of p in the dening representation. but all p 6= 1 are
+o-diagonal in the dening representation, so we get sinf (p ) = n! p,1, recovering
+
+z(t ) = z dn x < x|ge()|x >
+
+(24)
+
+for distinguishable particles.
+
+2.3 cluster decomposition and factorizability
+
+parastatistics particle obey the cluster decomposition principle, in the sense that the
+density matrix obtained by tracing over a subset of particles which decouple from
+the system can be constructed as a possible density matrix of the reduced system of
+remaining particles [8, 12]. from (21), however, we see that the partition function
+of two dynamically isolated sets of particles n1 and n2 does not factorize into the
+product of the two partition functions, since the statistical weights s(p ) in general
+do not factorize into s(p1)s(p2) when p is the product of two commuting elements
+p1 and p2. equivalently, this means that the occupation degeneracy d(p1, p2, . . .)
+of p1, p2, . . . particles occupying a set of levels 1, 2, . . . does not factorize into the
+product of individual occupation degeneracies for each level i. there is an eective
+coupling between the particles. this has important physical implications. if the
+two sets of particles are totally isolated, it does not make sense to evaluate the
+partition function of the total system, since the statistical distribution can never
+
+8
+
+relax to the one predicted by that partition function. the individual partition
+functions of the subsystems are the relevant ones.
+if, however, the two sets are
+only weakly coupled, then initially each set will distribute according to its reduced
+partition function, but after some relaxation time (depending on the strength of
+the coupling between the two sets) they will relax to the joint distribution function,
+which, we stress, will not even approximately equal the product of the individual
+ones. thus, cluster decomposition holds in an absolute sense but fails in a more
+realistic sense. in contrast, fermions and bosons respect cluster decomposition in
+both senses.
+
+we summarize by pointing out that the most general statistics of the type ex-
+amined here is parametrized by any of three possible sets of numbers. the rst is,
+as just stated, the number of states cr accepted for each irrep r of sn . the second
+is the statistical weights s(p ) appearing in the partition function (euclidean path
+integral). these weights are invariant under conjugation of p  qp q1. finally,
+we could use the degeneracy of a many-body occupancy state, call it d[pi], as our
+denition. (this was the starting point of the rst known attempt to generalized
+statistics, the gentile statistics.
+[20]) these three sets contain as many elements
+as the partitions of n and are all equivalent.
+
+what are the restrictions or criteria to be imposed on the above parameters?
+the rst one is unitarity, that is, the existence of a well-dened hilbert space with
+positive metric. this requires that cr be non-negative (no negative norm states)
+integers (no fractional dimension states). the other will be what we call strong
+cluster decomposition principle or factorizability, that the partition function of
+isolated systems factorizes. this is a physical criterion, rather than a consistency
+requirement. to summarize:
+
+ unitarity: cr non-negative integers
+ factorizability: s(p ) = qncycles(p ) s(n)
+
+or d[pi] = qi d(pi)
+
+factorizability, in particular, implies that the grand partition function in the case of
+noninteracting particles will be obtained by exponentiating the sum of all connected
+path integrals (p a cyclic permutation of degree n) with weights s(n)/n (1/n is
+the symmetry factor of this path integral, corresponding to cyclic relabelings of the
+particles). the grand partition function will factorize into a product of partition
+functions for each level i. thus, s(n) are cluster coecients connected to d(n) in
+the standard way
+
+
+
+xp=0
+
+d(p)zp = exp  
+xn=1
+
+s(n)
+
+n
+
+zn!
+
+(25)
+
+the above formula, in fact, provides the easiest way to relate d[pi] and s(p ) in the
+general case (no strong cluster property) but we will not enter into this.
+
+if we assume that s(1) = d(1) = 1, then it is easy to verify that the only solution
+of the above two criteria is ordinary fermions and bosons. the situation is dierent,
+however, when s(1) = d(1) = q > 1 (this would mean, e.g., that the particles come
+a priori in q dierent avors). the possibilities are manifold. all these generalized
+
+9
+
+statistics share the following generic features:
+
+(indeed, d(1, 1, . . . 1) = d(1)n = qn.)
+
+ the degeneracy of the state where n particles occupy dierent levels is qn.
+ if state a can be obtained from state b by lumping together particles that
+previously occupied dierent levels, then d(a)  d(b). (e.g., d(3)  d(2, 1) 
+d(1, 1, 1).)
+the above possibilities include the obvious special cases of q1 bosonic avors and
+q2 fermionic ones (q1 + q2 = q), for which s(n) = q1  (1)nq2, along with many
+other. as an example, we give the rst few degeneracies for many-particle level
+occupation for all statistics with q = 2:
+
+d(1) = 2, d(2) = 4, d(3) = 8
+d(1) = 2, d(2) = 3, d(3) = 6, 5, 4(b + b)
+d(1) = 2, d(2) = 2, d(3) = 4, 3, 2(b + f ), 1, 0
+d(1) = 2, d(2) = 1, d(3) = 2, 1, 0(f + f )
+d(1) = 2, d(2) = 0, d(3) = 0
+the specic choices denoted by b + b, b + f and f + f are the ones corre-
+sponding to two bosonic, one bosonic and one fermionic, and two fermionic avors
+respectively. the topmost statistics could be termed superbosons and the bottom
+one superfermions of order 2. we also remark here that the (p, q)-statistics
+introduced in [12] can be realized as particles with p bosonic and q fermionic avors,
+where we identify each multiplet transforming irreducibly under the supergroup
+su(p, q) as a unique physical state.
+
+finally, we comment on gentile statistics [20]. the rule is simply that up to p
+particles can be put in each single-particle level. this corresponds to d(n) = 1 for
+n  p, and d(n) = 0 otherwise. this has been criticized [14] on the grounds that x-
+ing the allowed occupations for each single-particle state is not a statement invariant
+under change of single-particle basis. it should be clear from this lecture that any
+statistics satisfying the unitarity requirement is consistent and basis-independent.
+therefore, gentile statistics must violate unitarity. indeed, it is easy to check that
+all weights cr for such statistics are integers (this is generic for all statistics with
+integer d(n)), but not necessarily positive. in the specic case of p = 2, e.g., where
+up to double occupancy of each level is allowed, the degeneracies of each irrep of sn
+(parametrized, as usual, by the length of young tableau rows) up to n = 5 are
+
+c2 = c21 = c22 = c221 = 1, c111 = c1111 = c2111 = 1, else cr = 0
+
+(26)
+
+we see that representations 111, 1111, 2111 correspond to ghost (negative norm)
+states and their eect is to subtract (rather than add) degrees of freedom.
+
+in conclusion, we see that the permutation group approach to generalizing statis-
+tics gives results of rather limited interest. the resulting statistics can be though
+of as particles with internal degrees of freedom, with perhaps some superselection
+rule that forbids the manifestation of all possible internal states. to nd something
+more exotic we must consider other approaches.
+
+10
+
+3 one-dimensional systems: calogero model
+
+let us now specialize in one dimension and see in what dierent angle we can
+approach the problem of statistics. the peculiarity of a lineal world is that, kine-
+matically, particles cannot exchange positions without bumping onto each other.
+this has tangible physical consequences and makes the notion of statistics in one
+dimension rather special. lets see:
+
+a. since congurations related by particle permutation are gauge copies of
+each other, we could gauge x and restrict ourselves to only one gauge copy. in
+one dimension the conguration space of n indistinguishable particles breaks into
+n! sectors classied by the ordering of the coordinates: x1 < . . . < xn and its
+permutations. restricting to one sector we are faced with the problem of boundary
+conditions on the wavefunction at the boundary of this space, when two or more
+coordinates become equal, so that we preserve hermiticity. the choice of boundary
+conditions can be interpreted as a choice of statistics. we mention two possibilities:
+
+a) a linear local boundary condition:
+
+ + n|boundary = 0
+
+(27)
+
+where n is the normal derivative at the boundary [21]. clearly  = 0 (neumann)
+corresponds to fermions; we can analytically extend  in the other sectors in an
+antisymmetric way. similarly,  =  (dirichlet) corresponds to bosons. any other
+choice would be some intermediate statistics. , however, introduces a length scale
+and is not a very satisfactory statistics denition. at any rate, this system is equiv-
+alent to bosons with a delta-function two-body interaction of strength proportional
+to 1.
+
+b) fix the analytical behavior of  at the boundary as
+
+  x as x  0
+
+(28)
+
+this way the probability current would scale as n  x21 and would vanish if
+ > 1
+2 or  = 0. this would dene the statistics through the dimensionless parameter
+. notice that this behavior would require a two-body potential behaving like (1)
+near coincidence points. this is the rst glimpse at the inverse-square potential
+arising in the statistics context.
+
+x2
+
+b. we could, alternatively, examine the scattering phase  between particles. at
+
+high relative energies the two-body scattering phase approaches the values
+
+  0 for bosons,
+
+   for fermions
+
+(29)
+
+irrespective of the details of their interaction (provided it is not too singular). the
+corresponding many-body phase is the sum of two-body ones. so, if we see a system
+where this phase goes to the value  we can interpret it as one with generalized
+statistics of order  [21].
+
+11
+
+as we shall see, this denition also leads to the inverse-square potential. there
+are hints from algebraic considerations also pointing to this type of potential [22,
+23, 24]. this is enough motivation, at any rate, to examine particles with that type
+of two-body interaction potentials. this is known as the calogero model, or, more
+completely, as the calogero-sutherland-moser (csm) model [25, 26, 27].
+
+3.1 the calogero-sutherland-moser model
+
+this is a system of nonrelativistic identical particles on the line with pairwise inverse-
+square interactions. the basic hamiltonian is
+
+h =
+
+1
+2
+
+n
+
+xi=1
+
+p2
+
+i +xi<j
+
+g
+
+(xi  xj)2
+
+(30)
+
+this is the free (scattering) calogero system on the line [25]. the particle masses
+m have been scaled to unity. this is the only scale-free two-body potential that
+one can have (the potential, quantum mechanically, scales like the kinetic term).
+an external harmonic oscillator potential can also be added to conne the system
+without spoiling its features. this is the harmonic calogero model. alternatively,
+one could consider a periodic version of the system. the particles now interact
+through innitely many periodic copies of themselves and the two-body potential
+becomes
+
+(we scaled the length of the box to 2). this is the sutherland model [26]. there
+are other versions of this class of models that will not concern us here. the classic
+report [28] covers these systems in detail. see also [29] for recent mathematical
+work.
+
+classically the coupling constant g should be positive to ensure particles are not
+sucked into each other. quantum mechanically the uncertainty principle works in
+our favor and the minimum allowed value for g is g =  1
+4 (we put henceforth h = 1).
+for later convenience, it is useful to parametrize g in the fashion
+
+g = (  1)
+
+(32)
+
+in which case the minimum value is naturally obtained for  = 1
+2.
+
+the above system is integrable, which means that there are n integrals of motion
+in convolution, that is, n functions on phase space with vanishing poisson brackets:
+
+{in, im} = 0 , n, m = 1 . . . n
+
+(33)
+
+for the scattering system (no external potential) i1 is the total momentum, i2 is the
+total energy amd the higher in are higher polynomials in the momenta also involving
+the two-body potentials. we will not belabor here their form nor prove integrability
+
+12
+
+
+
+v (x) =
+
+xn=
+
+g
+
+(x + 2n)2 =
+
+g
+
+2(cid:17)2
+(cid:16)2 sin x
+
+(31)
+
+at this point, since this is beyond our scope and will, at any rate, be dealt with in
+later lectures. we will only state without proof the qualitative features relevant to
+our purposes.
+
+the key interesting property of the above model, that sets it apart from other
+merely integrable models, is that, both classically and quantum mechanically, it
+mimics as closely as possible a system of free particles. let us rst look at its classical
+behavior. the motion is a scattering event. asymptotically, at times t = , the
+particles are far away, the potentials drop o to zero and motion is free. when they
+come together, of course, they interact and steer away from their straight paths.
+interestingly, however, when they are done interacting, they resume their previous
+free paths as if nothing happened. not only are their asymptotic momenta the same
+as before scattering, but also the asymptotic positions (scattering parameters) are
+the same. there is no time delay of the particles at the scattering region. the only
+eect is an overall reshuing of the particles. thus, if one cannot tell particles from
+each other, and if one only looks at scattering properties, the system looks free!
+
+this behavior carries over to quantum mechanics. the asymptotic scattering
+momenta are the same before and after scattering. the fact that there is, further,
+no time delay translates into the fact that the scattering phase shift is independent
+of the momenta. thus it can only be a function of the coupling constant and the
+total number of particles. it is, actually, a very suggestive function:
+
+sc =
+
+n(n  1)
+
+2
+
+
+
+(34)
+
+thus the phase is simply  times the total number of two-body exchanges that
+would occur in the scattering of free particles. clearly the case  = 0 would corre-
+spond to free bosons and  = 1 to free fermions (for these two values the potential
+vanishes and the system is, indeed, free). for any other value we can interpret this
+system as free particles with generalized statistics .
+
+a word on the permutation properties of this system is in order. the inverse-
+square potential is quantum mechanically impenetrable, and thus the ordinary
+statistics of the particles (symmetry of the wavefunction) is irrelevant: if the particles
+are in one of the n! ordering sectors they will stay there for ever. the wavefunction
+could be extended to the other sectors in a symmetric, antisymmetric or any other
+way, but this is irrelevant for physics. no interference between the sectors will ever
+take place. all states have a trivial n! degeneracy. (that is to say all states in all
+irreps of sn have the same physical properties.) permutation statistics are therefore
+irrelevant and we can safely talk about the eective statistics as produced by their
+coupling constant .
+
+the behavior of the wavefunction near coincidence points in as in (28). this
+system, thus, satises both our boundary condition and scattering phase criteria for
+generalized statistics.
+
+let us also review the properties of the conned systems. in the presence of an
+
+13
+
+external harmonic potential of the form
+
+1
+2
+
+2x2
+i
+
+v = xi
+
+the energy spectrum of a system of uncoupled particles would be
+
+e =
+
+n
+2
+
+ni
+
+ +xi
+
+the ni are nonnegative integers satisfying
+
+n1  . . .  nn for bosons
+n1 < . . . < nn for fermions
+
+the actual spectrum of this model is
+
+e =
+
+n
+2
+
+ + 
+
+n(n  1)
+
+2
+
+ni
+
+ +xi
+
+(35)
+
+(36)
+
+(37)
+
+(38)
+
+(39)
+
+with ni being pseudo-excitation numbers obeying bosonic selection rules: ni  ni+1.
+dening the quasi-excitation numbers
+
+we can check that the expression of the spectrum in terms of the ni is identical to
+the free one (36) but with the quantum numbers now obeying the selection rule
+
+ni = ni + (i  1)
+
+(40)
+
+ni  ni+1  
+
+(41)
+
+this is a sort of exclusion principle that requires the particle quantum numbers to
+be at least a distance  apart (as contrasted to 1 for fermions and 0 for bosons).
+again, a generalized statistics interpretation is manifest [30].
+
+let us clarify that the above numbers ni are no more integers. they do, however,
+increase in integer increments. the rule is that the ground state is determined by
+the minimal allowed nonnegative values for ni obeying (41) while the excited states
+are obtained by all integer increments of these values that still obey (41).
+
+the periodic (sutherland) model has similar properties. its spectrum is
+
+1
+2
+
+e = xi
+
+k2
+
+i + xi<j
+
+(kj  ki) + 2 n(n 2  1)
+
+24
+
+(42)
+
+with the pseudo-momenta ki being integers satisfying bosonic rules: ki  ki+1. this
+looks rather dierent than the corresponding free expression (for  = 0). dening,
+however, again quasi-momenta
+
+pi = ki + (cid:18)i 
+
+n + 1
+
+2 (cid:19)
+
+14
+
+(43)
+
+we can check that the expression for the spectrum becomes
+
+1
+2
+
+p2
+i
+
+e = xi
+
+that is, the free expression. the quasi-momenta satisfy
+
+pi  pi+1  
+
+(44)
+
+(45)
+
+that is, the same selection rule as the ni before. again, we observe a generalization of
+the fermionic and bosonic selection rules corresponding to statistics . the ground
+state is the minimal (nearest to zero) numbers satisfying (45) while excitations
+correspond to integer increments (or decrements) of the pi still satisfying (45).
+
+let us note that the above rule for  = 1 reproduces the fermionic spectrum of
+particles with periodic boundary conditions for odd n and anti-periodic ones for
+even n:
+in the odd (even) n case the momenta are quantized to (half-) integers.
+this has a natural interpretation: when we take a particle around the circle it goes
+over n  1 other particles. if we require the phase shift of the wavefunction in this
+process to agree with the minus signs picked up from the n1 fermion exchanges we
+recover the previous rule. we stress that, for free particles, this is not a consistency
+requirement but rather an aesthetic rule. at any rate, this is what the sutherland
+model chooses to do!
+
+in conclusion we see that the csm model can be though of as a system of particles
+obeying generalized statistics. this manifests in terms of the boundary conditions of
+the wavefunction, the scattering phases and, most signicantly, through a peculiar
+level repulsion of their quantum numbers generalizing the fermi exclusion principle.
+
+3.2 large-n properties of the csm model and duality
+
+let us examine, now, the properties of the csm model as the number of particles
+grows large. at zero temperature, a non-interacting fermion system would form
+a fermi sea. the corresponding fermi surface in one dimension degenerates to
+points. for the system in an external harmonic potential there is just one point
+corresponding to the highest excitation nf = n  1. for the free periodic system
+we would have two fermi momenta at pf =  n 1
+2 . excitations over this ground
+state are, then, conveniently classied in terms of particles (a lled fermi sea with
+an isolated particle above or below) and holes (a lled sea with one unoccupied state
+inside it).
+
+interestingly, the csm model presents a similar picture. the qualitative features
+of both the calogero and the sutherland model are similar, so we pick the latter as
+most closely representing a gas of free particles in a box. from (45) above we see
+that the ground state also forms a quasi-fermi sea (or should we call it a luttinger
+sea ?) with fermi levels rescaled by a factor : pf =  n 1
+2 . its minimal excitations
+are analogous to the ones of a fermi sea, but not quite:
+
+15
+
+ a particle would be an isolated occupied quasimomentum above or below a
+
+completely lled sea of quasimomenta. particles
+are excited in units of 1 (the increments of their quasimomentum).
+take up a space  in quasimomentum (since they cannot be packed closer than 
+units apart).
+
+ a hole would be an isolated empty space inside an otherwise occupied sea.
+interestingly, the minimal such excitation is not obtained by removing one particle
+from the sea, but rather by incrementing all quasimomenta of the sea above the
+place where we want to create the hole by one unit. holes
+are excited in units of . indeed, since the distance of quasimomenta in the sea is
+, the possible positions of the hole are at distances  apart.
+take up a unit space in quasimomentum. indeed, incrementing all quasimomenta
+above a given place in the sea by two units creates two holes in that place, and so
+on; by locally reshuing quasimomenta we can then separate these holes.
+
+note that holes are not antiparticles. removing a particle for the sea creates a
+
+gap of  spaces and, from above,  holes. the correspondence is
+
+1 particle   holes
+
+(46)
+
+we already observe a sort of duality between the two types of excitations. this can
+be summarized as
+
+particle  hole ,
+
+ 
+
+1
+
+
+,
+
+p  p
+
+(47)
+
+under the above, the spectrum of excitations of the model remains invariant. this
+is the simplest manifestation of a coupling-constant duality that goes over to the
+correlation functions and greens functions of the model [31, 32, 33, 34]. obviously,
+this duality is spoiled by nonperturbative eects, since holes are conned within the
+sea while there is no ceiling for particle excitations.
+
+this concludes our brief physicists tour of the csm model. we are now going
+
+to examine the most useful ways of analyzing this system.
+
+4 one-dimensional systems: matrix model
+
+identical particles can be formulated in terms of their phase space variables modulo
+permutations. this leads to the symmetric group approach of section 1. we could
+try other approaches. for instance, we could formulate them in terms of the eigen-
+values of an n  n matrix. there is no a priori ordering of these eigenvalues, so this
+certainly encodes identical particles. it is clear that the permutation symmetry of
+the problem has been promoted to the continuous symmetry of unitary conjugations
+of this matrix, which leaves the eigenvalues intact. this should be viewed as a gauge
+symmetry and would open the road to yet another denition of statistics.
+
+16
+
+4.1 hermitian matrix model
+
+with this introductory remark as motivation, let us examine a matrix model that
+parallels as closely as possible particle mechanics. the kinematical variable is a
+hermitian n  n matrix m and the lagrangian reads
+m 2  v (m)(cid:27)
+
+l = tr(cid:26)1
+
+(48)
+
+2
+
+v (x) is a scalar potential evaluated for the matrix variable m.
+
+clearly the above has a time-translation invariance which leads to the conserved
+
+energy
+
+h = tr(cid:26) 1
+
+2
+
+m 2 + v (m)(cid:27)
+
+(49)
+
+moreover, the action is invariant under time-independent unitary conjugations of
+the matrix m:
+
+this nonabelian su(n) symmetry leads to the conserved hermitian traceless matrix
+
+m  umu 1
+
+(50)
+
+j = i[m,
+
+m ]
+
+(51)
+
+where [ , ] denotes ordinary matrix commutator. these are the gauge charges that,
+when xed, will determine the statistics of the model. but let us rst examine the
+system classically. we are interested in the dynamics of the eigenvalue of m, so we
+parametrize it as
+
+m = uu 1
+
+(52)
+where u(t) is the unitary angular part of the matrix and (t) = diag{x1, . . . xn}
+are the eigenvalues. clearly the conserved quantity j has to do with invariance
+under rotations of the angular part of m and thus corresponds to the angular
+momentum of u(t). we dene the gauge potential
+
+m , j and the lagrangian l become, in this parametrization,
+
+a = u 1 u
+
+m = u (cid:16)  + [, a](cid:17) u 1
+j = iu ([, [, a]]) u 1  uku 1
+l = tr(cid:26)1
+2 + [, a]2  v ()(cid:27)
+xi=1
+xi 
+
+xi,j=1
+
+(xi  xj)2aijaji
+
+2
+n
+
+n
+
+1
+2
+
+=
+
+1
+2
+
+the matrix elements of a and k are related
+
+kjk = i [, [, a]]jk = i(xj  xk)2ajk
+
+17
+
+(53)
+
+(54)
+
+(55)
+
+(56)
+
+(57)
+
+(58)
+
+finally, solving (58) for ajk and putting into (57) we obtain
+
+l = xi
+
+1
+2
+
+x2
+i +
+
+1
+
+2 xi6=j
+
+kijkji
+
+(xi  xj)2 xi
+
+v (xi)
+
+(59)
+
+the rst two terms are kinetic, coming from m 2, while the last one is potential.
+therefore, the hamiltonian h is
+
+h = xi
+
+1
+2
+
+p2
+i +
+
+1
+
+2 xi6=j
+
+kijkji
+
+(xi  xj)2 +xi
+
+v (xi)
+
+(60)
+
+note that the eigenvalues are kinematically coupled by an inverse-square type poten-
+tial with the angular momentum degrees of freedom. the connection of the matrix
+model to the calogero model along the lines presented here and below was rst es-
+tablished in [35]. also, the hamiltonian (60) has been proposed independently of the
+matrix model as an su(n)-generalization of the classical calogero system [36, 37].
+
+we can now examine special cases:
+a) the most gauge invariant sector is, of course, the one in which the angular
+momentum charges vanish, that is, j = 0. in that case, (60) for k = 0 becomes the
+hamiltonian of non-interacting particles in an external potential v (x). this would
+be the case of standard particles.
+
+b) for the next simplest case the angular momentum j should be as trivial
+as possible without vanishing. only its eigenvalues are really relevant, since we
+can always perform a time-independent unitary transformation v which would shift
+u  v u and would rotate j  v jv 1. the simplest choice would be to take the
+eigenvalues of j to be equal. unfortunately, this is not possible since the traceless
+condition would make them vanish. the simplest possible choice is to take all the
+eigenvalues equal to  except one, which would cancel the trace by being (1  n).
+this can be written in terms of an arbitrary column n-vector v as
+
+in which case k becomes
+
+j = (vv  1) ,
+
+vv = n
+
+k = (uu  1) ,
+
+u = u 1v
+
+from (58) we see that kii = 0 (no sum on i) and thus
+
+uiu
+
+i = 1 (no sum)
+
+so the coecient of the inverse-square potential in (60) becomes
+
+kijkji = uiu
+
+j uju
+
+i = 2
+
+(i 6= j)
+
+finally, (60) becomes
+
+h = xi
+
+1
+2
+
+pi +xi<j
+
+2
+
+(xi  xj)2 +xi
+
+v (xi)
+
+18
+
+(61)
+
+(62)
+
+(63)
+
+(64)
+
+(65)
+
+this is the calogero model! the potential strength g = 2 is related to the conserved
+charge . quantum mechanically, picking this charge will amount to a choice of
+statistics. we also get, at this stage, an arbitrary external potential v (x).
+
+c) more general choices of j amount to more variety in its eigenvalues. kijkji
+now, in general, becomes time-dependent and the dynamics more complicated. we
+postpone the discussion for the quantum case where it will be shown that this
+corresponds to calogero particles having also internal degrees of freedom. this
+will be a generalization of the discussion of the rst section, with irreps of su(n)
+substituting the irreps of sn .
+
+now that we have this new approach we can use matrix technology to demon-
+strate the integrability of the calogero model [35, 28]. for v (x) = 0 the matrix
+motion becomes free and m is conserved. the conjugation-invariant quantities
+
+are also conserved and in involution (the matrix elements of
+have vanishing poisson brackets). from (54) and (58) we have
+
+m are momenta and
+
+in = tr m n
+
+(66)
+
+mjk = u 1 jk xj  (1  jk)
+= u 1 jk xj  (1  jk)
+
+ikjk
+
+xj  xk! u
+xj  xk! u
+
+iuju
+k
+
+(67)
+
+(68)
+
+when the above expression is inserted in the trace in = tr m n clearly u drops
+and products of the form uiu
+i will appear which reduce to powers of
+. therefore, the in reduce to expressions involving only xi,
+xi and the coupling
+constant . these are the conserved integrals of the calogero model.
+
+k . . . u
+
+j uju
+
+starting from the matrix model the actual motion of the calogero model can be
+
+obtained. the solution for m is
+
+m = b + ct
+
+for arbitrary matrices b, c. the conserved charge becomes
+m ] = i[b, c] = i(uu  1)
+
+j = i[m,
+
+(69)
+
+(70)
+
+by unitary transformations we can choose the phases of u such that ui = 1; choices
+for b, c, then, that satisfy (70) are
+
+bjk = jk qj , cjk = jkpj  (1  jk)
+
+i
+
+qj  qk
+
+(71)
+
+qi and pi are the initial conditions for xi and xi at time t = 0. diagonalizing, then,
+m = b + ct for the above b, c produces the motion of the system. another choice
+is
+
+bjk = jkaj + (1  jk)
+
+, cjk = jkpj
+
+(72)
+
+i
+
+pj  pk
+19
+
+pi and ai are asymptotic momenta and impact parameters. for t   the o-
+diagonal elements of b produce a perturbation of order t1 to the eigenvalues, so
+the motion is determined by the diagonal elements ai + pit alone. we recover the
+result that the motion at asymptotic regions is the same as if the particles were free.
+we conclude by mentioning that the matrix model is also integrable and solvable
+22x2. the non-hermitian
+
+in the presence of a harmonic oscillator potential v (x) = 1
+matrix q = m + im evolves as
+
+q(t) = eitq(0)
+
+(73)
+
+and the matrix qq is conserved. we leave it as an exercise to derive the conserved
+integrals and the motion of the corresponding calogero problem.
+
+external potentials with up to quartic dependence on x also lead to integrable,
+although not so solvable, models [38]. it is an open question to prove this is all there
+is, or to nd yet more integrable potentials. for the purposes of statistics this is a
+rather academic issue.
+
+finally, we may wonder what restricts us to one dimension. we chose a model
+with one matrix, and its eigenvalues corresponded to coordinates of particles on the
+line. we could, indeed, start with an appropriate model with many matrices, which
+would reproduce particle motion in higher dimensions [39]. the integrability and
+solvability properties of such extended models, however, are much less pleasant. the
+question of whether they represent a workable extension of statistics remains open.
+
+4.2 the unitary matrix model
+
+the hermitian matrix model works well for particles on the line but has trouble
+representing particles on periodic spaces. the most natural candidate for such
+models would be a unitary n n matrix u. its eigenvalues are phases and naturally
+live on the circle. we start, therefore, with a lagrangian that represents the invariant
+kinetic energy on the space of such matrices:
+
+l = 
+
+1
+2
+
+tr(u 1 u )2
+
+(74)
+
+a potential could in principle be included but we are interested in the translationally
+invariant case and will omit it. the treatment is similar as before, and we just
+summarize the relevant facts.
+
+the lagrangian is, in fact, invariant under separate left- and right-multiplications
+of u by time-independent unitary matrices and and there are two corresponding
+conserved matrix angular momenta l and r:
+
+l = i u u 1
+u  v u :
+u  uw 1 : r = iu 1 u
+
+20
+
+(75)
+(76)
+
+the unitary conjugation that preserves the eigenvalues corresponds to w = v and
+its generator is
+
+j = l + r = i[ u , u 1]
+
+the rest of the discussion is as previously. parametrizing
+
+u = v v 1 with  = diag{eixi, . . . eixn}
+
+the hamiltonian becomes, after a few steps,
+
+h = xi
+
+1
+2
+
+p2
+i +
+
+1
+
+2 xi6=j
+
+kijkji
+
+4 sin2 xixj
+
+2
+
+where, as before,
+
+k = v 1jv
+
+(77)
+
+(78)
+
+(79)
+
+(80)
+
+choosing j = k = 0 reproduces free particles on the circle, while choosing j =
+(uu  1) we obtain kijkji = 2 and we recover the sutherland inverse-sine-square
+model
+
+h = xi
+
+1
+2
+
+x2
+i +
+
+1
+
+2 xi6=j
+
+2
+
+4 sin2 xixj
+
+2
+
+(81)
+
+this model is integrable and solvable by the same techniques as the hermitian
+
+one. the conserved invariant quantities are
+
+in = trln = tr(r)n = tr(iu 1 u )n
+
+and the solution is
+
+u = beict
+
+with b a unitary and c a hermitian matrix satisfying
+
+bcb1  c = j
+
+for the sutherland case with j = (uu  1), ui = 1, b, c become
+
+bjk = jkeiqj , cjk = jk pj + (1  jk)
+
+i
+
+ei(qj qk)  1
+
+(82)
+
+(83)
+
+(84)
+
+(85)
+
+where, clearly, qi and pi are initial positions and momenta.
+
+we conclude by mentioning that, upon scaling x  x, t  2t, the sutherland
+
+model goes over to the free calogero model. this is the innite volume limit.
+
+21
+
+4.3 quantization and spectrum
+
+we will, now, perform the quantization of this system on a periodic space, using
+the unitary matrix model. we begin by dening a canonical momentum matrix
+conjugate to the coordinate u
+
+ =
+
+l
+ u
+
+= u 1 uu 1
+
+the poisson brackets are
+
+{ujk, lm} = jmlk
+
+(86)
+
+(87)
+
+ is somewhat unpleasant, being neither unitary nor hermitian. we prefer to work
+in terms of the hermitian matrices l and r dened previously
+l = i u u 1 = iu , r = iu 1 u = iu
+
+(88)
+
+using (87) we derive the following poisson brackets:
+
+{ljk, llm} = i(ljmlk  jmllk)
+{ljk, rlm} = 0
+{rjk, rlm} = i(rjmlk  jmrlk)
+
+(89)
+(90)
+(91)
+
+the above is nothing but two copies of the u(n) algebra in disguise. to see this,
+expand the matrices l and r in the basis of the fundamental generators of su(n)
+t a plus the unit matrix:
+
+n 21
+
+l = lo + 2
+
+r = ro + 2
+
+lat a
+
+rat a
+
+n 21
+
+xa=1
+xa=1
+
+with lo, la, ro, ra numbers. then use the su(n) commutation relations
+
+as well as the normalization
+
+[t a, t b] = if abct c
+
+tr(t at b) =
+
+1
+2
+
+ab
+
+to show that the expansion coecients satisfy the poisson algebra
+
+{la, lb} = f abclc
+{la, rb} = 0
+{ra, rb} = f abcrc
+while lo, ro are central. note that the u(1) charges
+
+lo = ro =
+
+1
+n
+
+tr(iu 1 u ) =
+
+1
+
+n xi
+
+xi
+
+22
+
+(92)
+
+(93)
+
+(94)
+
+(95)
+
+(96)
+(97)
+(98)
+
+(99)
+
+are essentially the total momentum of the system.
+
+we are now ready to perform quantization. in the u-representation, where states
+
+are functions of u,  becomes the matrix derivative jk = iu , acting as
+
+u tr(ub) = b ,
+
+u tr(u 1b) = u 1bu 1
+
+(100)
+
+where b is a constant matrix, and similarly on expressions containing more us. l
+and r, upon proper ordering, are represented as
+
+l = uu , r = u  u
+
+(101)
+
+where in r it is understood that we rst act with the derivative and then right-
+multiply the result by u. with this ordering, l and r become the proper u(n)
+operators acting as
+
+ltr(ub) = ub , ltr(u 1b) = bu 1
+rtr(ub) = bu , rtr(u 1b) = u 1b
+
+it is also useful to express their action on arbitrary functions of u as
+
+tr(il)f (u) = f ((1  i)u)  f (u)
+tr(ir)f (u) = f (u(1 + i))  f (u)
+
+(102)
+
+(103)
+
+(104)
+(105)
+
+where  is an arbitrary innitesimal hermitian matrix, emphasizing their role as
+generators of left- and right-multiplication on u. correspondingly, the operators la
+and ra satisfy the su(n) algebra. their action can be obtained by taking  = t a
+with  an innitesimal scalar parameter, that is,
+
+ilaf (u) = f ((1  it a)u)  f (u)
+iraf (u) = f (u(1 + it a))  f (u)
+
+(106)
+(107)
+
+the hamiltonian, being classically the kinetic term on the manifold of unitary ma-
+trices u(n), quantum mechanically becomes the laplacian operator on the manifold
+[40]. using (92,93) it is expressed as
+
+h =
+
+1
+2
+
+trl2 = xa
+
+(la)2 +
+
+1
+2
+
+n(lo)2 = xa
+
+(ra)2 +
+
+1
+2
+
+(ro)2 =
+
+1
+2
+
+trr2
+
+(108)
+
+it is, therefore, the common quadratic casimir of the left- and right-su(n) algebra
+plus the square of the u(1) charge, the two parts identiable as the relative and
+center-of-mass energy respectively.
+
+quantum mechanical states grouping into irreducible representations of the l
+and r su(n) algebras will, thus, be degenerate multiplets of the hamiltonian. the
+u(1) (center of mass) part trivially separates: we can boost any state by any desired
+total momentum np by multiplying the wavefunction by (det u)p . we will examine
+only the su(n) part from now on.
+
+23
+
+a natural basis of states for the hilbert space are the matrix elements of the
+unitary irreducible representations (irreps) of su(n). let r denote such an irrep,
+r(u) the matrix that represents u in this irrep and r(u) the  matrix element
+of this matrix. clearly  and  range from 1 to the dimensionality of r, dr. r(u)
+are a complete orthonormal basis of wavefunctions for u, that is
+
+z [du]r(u)r
+
+(u) = rr
+
+(109)
+
+with [du] the volume element on the space of su(n) matrices as implied by the
+metric ds2 = tr(u 1du)2, also called the haar measure.
+we will, now, show that each r(u) is an eigenstate of the hamiltonian with
+eigenvalue equal to the quadratic casimir of r, cr. qualitatively, after the discus-
+sion of the last paragraphs, this should be obvious: l and r generate the trans-
+formations u  v 1u and u  uw . r(u) transforms in the conjugate irrep r
+under l and in the irrep r under r. since h is the common quadratic casimir of l
+and r we conclude that all d2
+r states r(u) are energy eigenstates with eigenvalue
+cr = c r.
+
+(if you are confused about l generating u  v 1u rather than u  v u, think
+of the dierence between active and passive transformations, which is relevant when
+shifting from classical to quantum: (x  a) shifts the wavefunction by +a. also,
+although classical transformations on u compose properly,
+
+(110)
+quantum mechanically the operators v that perform the shift u  v u on the
+argument of the wavefunction would compose
+
+v1(v2u) = (v1v2)u
+
+v1( v2f (u)) = v1f (v2u) = f (v2v1u) = ( v2 v1)f (u)
+
+(111)
+
+therefore we need to invert the action of v to get the right composition law. see
+also the discussion of irreps of sn in the section about permutation group statistics.)
+let us prove the fact hr(u) = crr(u) more analytically. since r(u) is a
+
+representation, it obeys the group property
+
+r(uv ) = x
+
+rr(v )
+
+from (106) we have
+
+(1 + i)lar(u) = r((1  it a)u) = r(1  it a)r(u)
+
+= r(u)  ira
+
+r(u)
+
+(112)
+
+(113)
+(114)
+
+where ra = r(t a) is the a-th generator of su(n) in the r representation. so
+
+lar(u) = ra
+
+r(u)
+
+24
+
+(115)
+
+and
+
+xa
+
+(la)2r(u) = xa
+
+ra
+
+ra
+
+r(u) = xa
+
+(ra)2
+
+r(u)
+
+(116)
+
+the sum pa(ra)2 appearing above is the quadratic casimir in the irrep r and is
+
+proportional to the identity matrix . so, nally,
+
+hr(u) = crr(u)
+
+(117)
+
+incidentally, the spectrum spanned by cr for all r is nothing but the spectrum of
+n free fermions on the circle with the ground state energy and the center-of-mass
+energy subtracted, where the lengths ri of the rows of the young tableau of r
+correspond to the bosonized fermion momenta
+
+pi = ri  i + 1
+
+(118)
+
+and where the center-of-mass energy has been subtracted. the condition ri 
+ri+1 for the rows amounts to the fermionic condition pi > pi+1. the spectrum of
+the full matrix model, then, is identical to the free fermion one but with dierent
+degeneracies.
+
+we have, therefore, identied all energy eigenstates of the matrix model.
+
+it
+remains to implement the quantum analog of the choice of angular momentum j,
+identify the corresponding reduced quantum model, and pick the subspace of states
+of the full model that belongs to the reduced model.
+
+j obeys itself the su(n) algebra (it is traceless, no u(1) charge). a choice of
+value for j amounts to a choice of irrep r for this algebra. states within the same
+irrep are related by unitary transformations of u and give the same dynamics; they
+will be discarded as gauge copies, and only the choice of irrep will be relevant. since
+j = l + r, we see that states transforming under (l, r) in the ( r, r) irreps will
+transform in the r  r under j. so, only irreps r that are contained in the direct
+product of two mutually conjugate irreps can be obtained for j. this amounts to
+irreps r with a number of boxes in their young tableau that is an integer multiple
+of n. (to get a feeling of this, consider the case n = 2. then j is an orbital-like
+realization of the angular momentum through derivatives of u and clearly cannot
+admit spinor representations.)
+
+we must, therefore, project the d2
+
+r states in r(u) to the subspace of states
+transforming as r under l+r. call g( r, ; r, |r, ) the clebsch-gordan coecient
+that projects these states to the  state of r. then the relevant states for this model
+become
+
+r(u) = x,
+
+r(u)g( r, ; r, |r, )
+
+(119)
+
+the index  labeling the states within r, as we argued before, counts the dr gauge
+copies and does not imply a true degeneracy of states. the degeneracy of the states
+produced by each r is, then, given by the number of times that the irrep r is
+contained in the direct product r  r or, equivalently, the number of times that r
+
+25
+
+is contained in r  r. calling this integer d(r, r; r), we obtain for the spectrum
+and degeneracies:
+(120)
+
+er = cr , dr = d(r, r; r)
+
+in particular, if dr = 0 the corresponding energy level is absent from the spectrum.
+concluding, we mention that an approach which also reproduces the spectrum
+and states of the sutherland model is two-dimensional yang-mills theory on the
+circle [41, 42]. this approach is essentially equivalent to the matrix model above
+and we will not be concerned with it.
+
+4.4 reduction to spin-particle systems
+
+so we have derived the spectrum, degeneracy and wavefunctions of the matrix model
+restricted to the sector j = r. classically these restrictions represented free particles
+(j = 0), sutherland particles (j = (vv  1)) or something more general. what
+are the corresponding quantum systems?
+to nd these, let us reproduce here the expression of the reduced hamiltonian
+
+in one of these sectors:
+
+h = xi
+
+1
+2
+
+p2
+i +
+
+1
+
+2 xi6=j
+
+kijkji
+
+4 sin2 xixj
+
+2  eo
+
+(121)
+
+this expression remains valid quantum mechanically upon a proper denition (or-
+dering) of the operator k. the only residual quantum eect is a constant term
+eo that comes from the change of measure from the matrix space to the space of
+eigenvalues.
+
+let us expand a bit on this without entering too deeply into the calculations.
+(for details se, e.g., [43].) the haar measure in terms of the diagonal and angular
+part of u has the form
+
+where [dv ] is the haar measure of v and  is the vandermonde determinant
+
+[du] = 2 [dv ]
+
+2 sin
+
+xi  xj
+
+2
+
+ = yi<j
+
+(122)
+
+(123)
+
+to see this, write the line element tr(u 1du)2 in terms of v and xi using (78)
+and obtain
+
+ tr(u 1du)2 = xi
+
+dx2
+
+i xi,j
+
+4 sin2 xi  xj
+
+2
+
+(v 1dv )ij(v 1dv )ji
+
+(124)
+
+this metric is diagonal in dxi and (v 1dv )ij. the square root of the determinant
+of this metric, which gives the measure (volume element) on the space, is clearly 2
+times the part coming from v which is the standard haar measure for v . (we get
+two powers of 4 sin2 xixj
+in the determinant, one from the real and one from the
+
+2
+
+26
+
+imaginary part of (v 1dv )ij, so the square root of the determinant has one power
+of 2.)
+
+to bring the kinetic xi-part into a at form (plain second derivatives in xi)
+we must multiply the wavefunction with the square root of the relevant measure
+(compare with the change from cartesian to radial coordinate in spherical potential
+problems). the net result is that the wavefunction  in terms of xi and v is the
+original wavefunction (u) of the matrix model times the vandermonde determi-
+nant. this, however, also produces an additive constant eo which comes from the
+action of the entire xi-kinetic operator on . noticing that  is nothing but the
+ground state wavefunction of n free fermions on the circle, we see that eo is the
+relevant fermionic ground state energy
+
+eo =
+
+n(n 2  1)
+
+24
+
+(125)
+
+this is the famous fermionization of the eigenvalues produced by the matrix model
+measure.
+
+to determine the proper ordering for k we examine its properties as a gener-
+ator of transformations. since u = v v 1, and j generates u  v uv 1 =
+(v v )(v v )1, we see that j generates left-multiplications of the angular part v
+of u. k = v 1jv , on the other hand, generates right-multiplications of v , as can
+be see from its form or by explicit calculation through its poisson brackets. as a
+result, it also obeys the su(n) algebra. its proper quantum denition, then, is such
+that it satises, as an operator, the su(n) algebra. it clearly commutes with the
+diagonal part xi and its momentum pi, since it has no action on it. its dynamics are
+fully determined by the hamiltonian (121) and its su(n) commutation relations.
+
+we can, therefore, in the context of the particle model (121), forget where k
+came from and consider it as an independent set of dynamical su(n) operators. k,
+however, obeys some constraints. the rst is that, as is obvious from k = v 1jv ,
+k carries the same irrep r as j. the second is subtler: a right-multiplication of
+v with a diagonal matrix will clearly leave u = v v 1 invariant. therefore, this
+change of v has no counterpart on the physical degrees of freedom of the model
+and is a gauge transformation. as a result, we get the gauss law that physical
+states should remain invariant under such transformations. since k generates right-
+multiplications of v , and kii (no sum) generates the diagonal ones, we nally obtain
+
+(no sum) kii = 0 (on physical states)
+
+(126)
+
+(a more pedestrian but less illuminating way to see it is: j = i[u 1, u ], being a
+commutator, vanishes when sandwiched between the same eigenstate of u. since k
+is essentially j in the basis where u is diagonal, its diagonal elements vanish.) note
+that the constraint (126) is preserved by the hamiltonian (121).
+
+the above fully xes the reduced model hilbert space as the product of the
+n-particle hilbert space times the dr-dimensional space of k, with the constraint
+(126) also imposed. the further casting of the model into something with a more
+
+27
+
+direct physical interpretation relies upon a convenient realization of k. any such
+realization will do: simply break the representation of su(n) that it carries into
+irreps r and read o the spectrum for each r from the results of the previous section.
+mi,
+
+we shall implement k in a construction `a la jordan-wigner. let ami, a
+
+m = 1, . . . q, i = 1, . . . n be a set of nq independent bosonic oscillators [42]:
+
+then
+
+[ami, a
+
+nj] = mnij
+
+q
+
+k a =
+
+amit a
+
+ijamj
+
+xm=1
+
+(127)
+
+(128)
+
+is a realization of the su(n) algebra. (t a
+corresponding matrix elements of k are
+
+ij are the matrix elements of t a.) the
+
+kij =
+
+q
+
+xm=1(a
+
+miamj 
+
+1
+
+n  xk
+
+a
+
+mkamk! ij)
+
+(129)
+
+correspondingly, the coecient of the sutherland potential in (121) is (for i 6= j)
+(130)
+
+miani a
+a
+
+a
+miami
+
+kijkji = xm,n
+
+njamj +xm
+
+we already see that the degrees of freedom of k are redistributed into degrees of
+freedom for each particle in the above. specically, dening
+
+si,mn = a
+
+miani 
+
+1
+
+q   q
+xs=1
+
+a
+
+siasi! mn
+
+(131)
+
+and comparing with (129) we see that the si are n independent sets of operators
+each satisfying the su(q) algebra. before expressing kijkji in terms of the si let
+us see what the constraint (126) implies:
+
+kii =
+
+q
+
+xm=1
+
+a
+miami 
+
+1
+
+n xm,k
+
+a
+mkamk = 0
+
+(132)
+
+pm,k a
+
+mkamk commutes with all kij and all si,mn. it is, therefore, a casimir and can
+be chosen as a xed integer n equal to the total number operator of the subspace
+of the oscillator fock space in which the model lives. the above constraint, then,
+implies
+
+q
+
+a
+miami = 
+
+(133)
+
+xm=1
+
+(we see why we had to choose the total number operator to be a multiple of n:
+the operator in (133) above is also a number operator and can have only integer
+eigenvalues.) using this in (131) we can express
+
+a
+miani = si,mn +
+
+
+q
+
+mn
+
+28
+
+(134)
+
+and therefore
+
+kijkji = xmn
+
+si,mnsj,nm +
+
+( + q)
+
+q
+
+= ~si  ~sj +
+
+( + q)
+
+q
+
+(135)
+
+where ~si  ~si = tr(sisj) is the su(q)-invariant scalar product of the two su(q)
+vectors. we nally obtain the hamiltonian as [42]
+
+h = xi
+
+1
+2
+
+p2
+i +
+
+1
+
+2 xi6=j
+
+2~si  ~sj + (+q)
+q
+4 sin2 xixj
+
+2
+
+(136)
+
+so it is a sutherland-like model but where the particles also carry su(q) internal
+degrees of freedom (spins) and the potential contains a pairwise antiferromagnetic
+interaction between the spins.
+
+it remains to specify the representation in which the su(q) spins are and nd
+the irreps contained in this realization of k, therefore obtaining the spectrum. a
+realization of the form (129) for q = 1 in terms of bosonic oscillators contains all
+totally symmetric irreps of s(n) (that is, the ones with a single row in their young
+tableau). (129) is essentially the direct product of q such independent realizations,
+so it contains all direct products of q totally symmetric irreps. this produces all
+irreps with up to q rows in their young tableau, perhaps more than once each.
+the constraint (133), however, implies that the total number of boxes in the young
+tableau of these irreps is n. we recover once more the constraint that we derived
+before based on the origin of r as a component of r  r.
+similarly, the realization (131) of si contains all the totally symmetric irreps of
+su(q). (133) implies that the number of boxes of these irreps is equal to , so the
+spins si are each in the -fold symmetric irrep of su(q). solving this model amounts
+to decomposing the tensor product of these n spins into irreducible components of
+su(q). each such component corresponds to a subspace of the hilbert space with
+a xed total spin s. this same irrep, interpreted as an irrep r of su(n), will be
+the corresponding irrep of k, and also of j, and thus will determine the spectrum
+of this sector through (120).
+
+let us elucidate the above by reproducing the two simplest cases: free particles
+
+and (spinless) sutherland particles, comparing with the classical treatment.
+
+a) free particles correspond to j = k = 0. so there is no spin and no potential
+and we have non-interacting particles. from (120) we see that all dr are one, and
+thus the spectrum is the free fermion one, as commented before. the matrix model
+naturally quantizes free particles as fermions.
+
+b) spinless sutherland particles correspond, classically, to j = (vv  1). so
+j is rank one (ignoring the trace). quantum mechanically this corresponds to the
+irrep r of j having only one row and therefore only one independent casimir. since
+q in the realization above corresponds to the number of rows, we must have q = 1.
+spins, therefore, are absent. the strength of the potential becomes ( + 1) where
+
+29
+
+n is the number of boxes in the one row of r. by standard young tableau rules we
+see that the degeneracy dr is one if the row lengths of r satisfy
+
+ri  ri+1 + 
+
+(137)
+
+else it is zero. the spectrum of this model is, then, the same as the spectrum of free
+particles but with the selection rule for their momenta
+
+pi  pi+1 +  + 1
+
+(138)
+
+we recover the minimum distance selection rule of the csm model that led to
+the interpretation as particles with generalized statistics! only, in this case, the
+statistics parameter  + 1 is a positive integer.
+
+we mention here that a jordan-wigner realization of k in terms of fermionic os-
+cillators is also useful and leads to particles with spins interacting via ferromagnetic
+sutherland-type potentials. the hamiltonian becomes [42]
+2~si  ~sj + (q)
+q
+4 sin2 xixj
+
+p2
+i 
+
+(139)
+
+2
+
+1
+2
+
+h = xi
+
+1
+
+2 xi6=j
+
+where now the spins are in the -fold antisymmetric irrep of su(q). we will not
+elaborate further and leave the details as an exercise to the reader.
+
+in conclusion, the matrix model has provided us with the following:
+1. an augmentation of the permutation group into the su(n) group and a
+
+corresponding possibility to dene statistics through the irreps of su(n).
+
+2. a realization of generalized scalar statistics but with quantized statistics
+
+parameter  + 1 in terms of the csm model.
+
+3. a realization of generalized non-abelian statistics in terms of particles with
+internal degrees of freedom interacting through a generalized csm-type potential.
+
+4. a systematic way of solving the above models.
+
+what the matrix models has not provided is
+
+1. a realization of generalized statistics for fractional statistics parameter.
+2. a realization of spin-csm systems with the spins in arbitrary (non-symmetric)
+
+representations.
+
+3. a control of the coupling strength of the potential for the spin-csm models.
+(note that the coecient of ~si  ~sj terms is xed to 2 and also the constant therm
+( + q) is entirely xed by the spin representation.)
+there exist generalizations of the above models both at the classical [44, 45]
+and the quantum level [46]. they all share, however, the limitations spelled out
+above, especially (3). these restrictions are important, in the quest of more general
+statistics but also from the more practical point of view of solving spin-chain models
+with spins not in the fundamental representation, as we will shortly explain. for
+this reason, yet a dierent approach will be pursued in the next section, namely, the
+operator approach.
+
+30
+
+5 operator approaches
+
+the matrix model connection provided us with a powerful tool that not only allowed
+us to generalize statistics but also led to the full quantum solution of a set of spin-
+generalized csm models.
+
+as noted, however, in the conclusion of the preceding lecture, the matrix model
+xes the coecient of the spin-interaction and scalar interaction terms to 2 and
+(  q) respectively. we cannot choose these coecients at will.
+we would like to have an approach that defeats this restriction and leads to spin
+models with arbitrary coupling strengths. (this is necessary to attack spin-chain
+systems through the innite-coupling limit trick to be explained later.) such an
+approach should also be able to bypass the excursion to matrix models and deal
+more directly with these systems in an algebraic way. this will be achieved with
+the exchange operator formalism [47] (also known as the dunkl operator formalism
+[48]).
+
+5.1 exchange operator formalism
+
+consider the operators mij that permute the coordinate degrees of freedom of n
+particles in one dimension which could, in principle, also have internal degrees of
+freedom (m for metathesis, to avoid confusion with momenta pi). they satisfy the
+permutation algebra (symmetric group), in particular
+
+mij = m 1
+
+ij = m 
+
+ij = mji
+
+[mij, mkl] = 0
+mijmjk = mikmij
+
+if i, j, k, l distinct
+
+if i, j, k distinct
+
+any operator ai on the phase space satisfying
+
+mijak = akmij
+mijai = ajmij
+
+if i, j, k distinct
+
+(140)
+(141)
+(142)
+
+(143)
+(144)
+
+will be called a one-particle operator (even though it may involve the coordinates
+and momenta of many particles).
+
+we construct the following one-particle operators [47]:
+
+i = pi +xj6=i
+
+iw (xi  xj)mij  pi +xj6=i
+
+iwijmij
+
+(145)
+
+we shall view the i as generalized momenta. to ensure their hermiticity the pre-
+potential w (x) should satisfy
+
+w (x) = w (x)
+
+31
+
+(146)
+
+we shall construct the corresponding free hamiltonian from i
+
+1
+2
+
+2
+i
+
+h = xi
+
+(147)
+
+in terms of the original pi this hamiltonian will, in general contain linear terms. to
+ensure that such terms are absent we must further impose
+
+w (x) = w (x) = real
+
+(148)
+
+with the above restriction the hamiltonian h and commutation relations of the i
+become
+
+[i, j] = xk
+i +xi<j(cid:16)w 2
+
+p2
+
+wijk(mijk  mjik)
+ijmij(cid:17) + xi<j<k
+
+ij + w 
+
+1
+2
+
+h = xi
+
+wijkmijk
+
+where we dened the three-body potential and cyclic permutation
+
+wijk = wijwjk + wjkwki + wkiwij
+mijk = mijmjk
+
+(149)
+
+(150)
+
+(151)
+(152)
+
+to obtain an interesting and tractable model, wijk, which appears in the commuta-
+tor [i, j] and also as a three-body potential, should vanish or at most be a constant.
+this leads to a functional equation for w (x):
+
+w (x)w (y)  w (x + y) [w (x) + w (y)] = const(= wijk)
+
+(153)
+
+we present the solutions:
+
+a) wijk = 0  w (x) = /x
+b) wijk = 2 < 0  w (x) =  cot x
+c) wijk = +2 > 0  w (x) =  coth x
+a) in this case the i become [48, 47, 49]
+
+lets examine each case.
+
+and satisfy
+
+i = pi +xj6=i
+
+i
+xij
+
+mij
+
+[i, j] = 0
+
+(154)
+
+(155)
+
+the i commute, so we can consider them as independent momenta. the hamilto-
+nian reads
+
+(156)
+
+1
+2
+
+h = xi
+
+(  mij)
+
+x2
+ij
+
+p2
+
+i +xi<j
+
+32
+
+we obtain a calogero-like model with exchange interactions. yet it is nothing
+but a free model in the commuting momenta i. integrability is immediate: the
+permutation-invariant quantities
+
+n
+i
+
+in = xi
+
+(157)
+
+obviously commute with each other. if we assume that the particles carry no internal
+degrees of freedom and are bosons or fermions then mij = 1 on physical states. the
+model becomes the standard calogero model and we have proved its integrability
+in one scoop. (you may be left with a question mark: the hamiltonian and the
+other integrals in become the standard calogero ones if mij = 1, so these reduced
+integrals will commute on the bosonic or fermionic subspace; but will they also
+commute on the full hilbert space? prove for yourself that this is indeed the case.)
+we can also construct harmonic oscillator operators [47, 49]. the commutators
+
+between xi and i are
+
+[xi, i] = i
+[xi, j] = imij
+
+1 + xj6=i
+
+mij
+
+(i 6= j)
+
+dening
+
+we can show
+
+ai =
+
+a
+i =
+
+1
+2
+1
+2
+
+(i  ixi)
+(i + ixi)
+
+i ] = (cid:16)1 + xj6=i
+j] = mij
+
+mij(cid:17)
+(i 6= j)
+
+[ai, a
+[ai, aj] = [a
+
+[ai, a
+
+i , a
+
+j] = 0
+
+(158)
+
+(159)
+
+(160)
+
+(161)
+
+(162)
+
+(163)
+
+(164)
+
+this is an extended version of the heisenberg algebra involving the permutation
+operators. the corresponding oscillator hamiltonian reads
+
+1
+2
+
+h = xi
+
+and satises
+
+(a
+
+i ai + aia
+
+i ) = xi
+
+1
+2
+
+p2
+
+i +xi
+
+1
+2
+
+2xi +xi<j
+
+(  mij)
+
+x2
+ij
+
+[h, a
+
+i ] = a
+
+i
+
+[h, ai] = ai ,
+
+33
+
+(165)
+
+(166)
+
+this is the harmonic calogero model with exchange interactions, which becomes
+again the standard model on bosonic or fermionic subspaces for particles without
+internal degrees of freedom. since
+
+h = xi
+
+a
+i ai +
+
+1
+2
+
+n +
+
+1
+2
+
+xi6=j
+
+mij
+
+(167)
+
+we see that on bosonic or fermionic spaces the state annihilated by all ai (if it
+exists) will be the ground state. solving ai = 0 we obtain for the ground state
+wavefunction
+
+x2
+i
+
+2 pi
+
+b = yi<j |xij|e 1
+f = yi<jnsgn(xij)|xij|o e 1
+
+x2
+i
+
+(168)
+
+(169)
+
+2 pi
+
+for  > 0 the bosonic state is acceptable, while for  < 0 the fermionic one is
+acceptable. in the wrong combinations of statistics and sign of  the ground state
+is not annihilated by the ai, but it is still annihilated by all permutation-invariant
+combinations of the ai.
+
+from (166) we see that we can nd the spectrum of this model for fermions
+or bosons by acting on the ground state with all possible permutation-symmetric
+homogeneous polynomials in the a
+
+i . a basis bor these is, e.g.,
+
+(a
+
+i )n
+
+an = xi
+
+(170)
+
+so the spectrum is identical to non-interacting fermions or bosons, but with a dif-
+ferent ground state energy. for the right combinations of  and statistics, where
+(169) are the correct ground state wavefunctions, the ground state energy is
+
+eo =
+
+n
+2
+
+ +
+
+n(n  1)
+
+2
+
+||
+
+which is the correct calogero result.
+
+finally, the quantities
+
+in = xi
+
+hn
+
+i = xi
+
+(a
+
+i ai)n
+
+(171)
+
+(172)
+
+can be shown to commute [47], and therefore this system is also integrable. it is left
+as an exercise to nd the commutation relations of the hi and show that [in, im] = 0.
+
+b) in the case w (x) =  cot x we have
+
+i = pi + i cot xijmij
+
+[i, j] = 2xk
+
+(mijk  mjik)
+
+34
+
+(173)
+
+(174)
+
+so the momenta are now coupled. the hamiltonian becomes
+
+h = xi
+
+1
+2
+
+p2
+
+i +xi<j
+
+sin2 xij  2
+(  mij)
+
+
+n(n  1)
+
+2
+
++ xi<j<k
+
+mijk
+
+
+(175)
+
+we obtain the sutherland model with exchange interactions plus an extra term.
+on bosonic or fermionic states this becomes an overall constant and we recover the
+standard sutherland model. again, since h is by construction positive denite, if a
+state satisfying i = 0 exists it will be the ground state. we obtain
+
+b = yi<j | sin xij|
+f = yi<j
+
+sgn(xij)| sin xij|
+
+(176)
+
+(177)
+
+which are acceptable for the same combinations of  and statistics as before. for
+both cases mijk = 1 so
+
+eo = 2 n(n 2  1)
+
+24
+
+(178)
+
+is the correct sutherland model ground state energy. the excited states can again
+be obtained in a (rather complicated) algebraic way [50]. finally, the quantities
+
+i = i + xj6=i
+
+mij = pi + eixixj6=i
+
+2
+
+eixi  eixj
+
+mij
+
+(179)
+
+can be shown to have the same commutation relations as the hi dened previously
+for the harmonic system. therefore, the integrals constructed from them
+
+n
+i
+
+in = xi
+
+(180)
+
+commute and the model is integrable.
+
+c) for w (x) =  coth x we have a similar commutation relation and a hamiltonian
+
+h = xi
+
+1
+2
+
+p2
+
+i +xi<j
+
+(  mij)
+sinh2 xij
+
+n(n  1)
+
+2
+
++ 2
+
+
++ xi<j<k
+
+mijk
+
+
+(181)
+
+this is the inverse-hyperbolic-sine-square model and supports only scattering states.
+its integrability can be obtained as for the sutherland model above, or simply as
+an analytic continuation of that model for imaginary period of space. we will not
+examine it any further.
+
+in conclusion, an exchange-family of models was introduced, solved and related
+to the standard csm models in spaces of denite symmetry. it is remarkable that
+all these proofs work directly, and only, at the quantum domain (there is no classical
+analog of mij).
+
+35
+
+5.2 systems with internal degrees of freedom
+
+we can easily extend the previous results for particles with internal degrees of free-
+dom. for this, assume that the particles are distinguishable or, equivalently, that
+they carry a number q of (discrete) internal degrees of freedom (species) that can
+be used to (partially) distinguish them. their states are spanned by |x,  >, where
+ = 1, . . . q counts internal states. the total permutation operator tij, then is
+
+tij = mijij
+
+(182)
+
+where ij is the operator that permutes the internal states of particles i and j.
+
+let us, then, simply take states that are bosonic or fermionic under total particle
+
+exchange: tij = 1. on such states
+
+and the calogero and sutherland exchange model hamiltonians become [51]
+
+mij = ij
+
+(183)
+
+(184)
+
+(185)
+
+1
+2
+
+2xi +xi<j
+
+(  ij)
+
+x2
+ij
+
+hc = xi
+
+hs = xi
+
+1
+2
+
+p2
+
+i +xi<j
+
+1
+2
+
+p2
+
+i +xi
+sin2 xij  2
+(  ij)
+
+
+n(n  1)
+
+2
+
++ xi<j<k
+
+ijk
+
+
+we get the calogero and sutherland models with spin-exchange interactions. from
+the completeness relation for the fundamental su(q) generators t a
+
+q21
+
+xa=1
+
+t a
+t a
+
+ =
+
+1
+2
+
+ 
+
+1
+2q
+
+
+
+we deduce the form of the operators ij
+
+ij = 2~si  ~sj +
+
+1
+q
+
+(186)
+
+(187)
+
+where sa
+i acts as t a on the internal states of particle i. so the spin-dependent
+interaction coecient of the potential in the hamiltonian takes the form [52, 53, 51,
+54]
+
+  2~si  ~sj   +
+
+1
+
+q!
+
+(188)
+
+we have recovered the ferromagnetic and antiferromagnetic spin model of the pre-
+vious section but with arbitrary coecient! on the other hand, the spins are nec-
+essarily in the fundamental of su(q). so we have obtained a generalization of the
+coupling constant with respect to the matrix model but a restriction of the allowed
+spins.
+
+36
+
+note that  here is an arbitrary parameter, while  in (136) was the size of the
+symmetric representation of si. for  = 1 and spins in the fundamental, the matrix
+model and exchange-operator model agree. it is interesting to note that we can go
+from ferromagnetic to antiferromagnetic interactions either by changing the sign of
+ or by changing the statistics of the particles.
+
+the solution of the above models can be obtained algebraically. for the spin-
+sutherland model this is rather complicated and is related to the so-called yangian
+symmetry [55, 56, 57, 58]. for the spin-calogero model it is easier [59]. let us
+concentrate on the model with interaction (2~si ~sj 1
+q ) and dene the operators
+i )nsa
+
+i )n ,
+
+(189)
+
+(a
+
+i
+
+a
+
+n = xi
+
+(aa
+
+n) = xi
+
+(a
+
+and their hermitian conjugates. these form a complete set for all permutation-
+symmetric creation and annihilation operators for all species of particles. yet the
+commutators among themselves and with h do not involve . they create, therefore,
+the same spectrum of excitations over the ground state as n noninteracting bosons
+or fermions with q species. for  > 0 the ground state is the bosonic one:
+
+b = yi<j |xij|e 1
+
+2 pi
+
+x2
+
+i s({i})
+
+(190)
+
+where s is a totally symmetric state in the i. the set of all s forms the n-
+
+fold symmetric irrep of the total spin s = pi si. therefore the ground state is
+(n + q  1)!/n!(q  1)! times degenerate. for  < 0 the above is not normalizable
+any more. but we remember that we can obtain the same model by starting from
+fermions and the opposite coupling  > 0. the ground state, then, is of a fermionic
+type
+
+f = xp
+
+(1)p  yi
+
+i,i!yi<j |xij|x
+
+i ,j
+ij
+
+x2
+i
+
+e
+
+1
+
+2 pi
+
+(191)
+
+where p are total particle permutations and i are a set of xed values for the
+indices i that determine the state. clearly the ground state will be obtained for
+the minimal total power of xi appearing above, and that will happen for a maximally
+dierent set of values i. these states form the n-fold antisymmetric irrep of the
+total spin s, where n = n(modq). the ground state is, thus, q!/n!(q  n)! times
+degenerate. the above spectra will come handy later.
+
+5.3 asymptotic bethe ansatz approach
+
+we already mentioned that there are elaborate algebraic approaches to derive the
+spectrum of the spin-sutherland model, based on the yangian symmetry. we will,
+instead, take a lower-key approach which reproduces the same spectra and is phys-
+ically more lucid, although not as rigorous. we will take the aba route.
+
+consider distinguishable particles of the exchange-calogero type without external
+potential, coming in with asymptotic momenta ki and scattering o each other.
+
+37
+
+before scattering, their positions are in some denite ordering determined by the
+ordering of their momenta (it is the inverse of that ordering).
+
+the key observation is that, after scattering, the particles have simply gone
+through each other with no backscattering [60]. the impenetrable 1/x2 potential
+has become completely penetrable in the presence of the exchange term! you can
+prove this fact by examining the asymptotic properties of a simultaneous eigenstate
+of 1, . . . n which is obviously an energy eigenstate: at xi   the prepotential
+terms are vanishing and we simply have eigenstates of the individual pi. since
+there are no pieces with the values of pi permuted (coming from backscattering)
+we have complete transmission.
+(to explicitly see how it works, it is instructive
+to consider the two-body problem, decompose it into symmetric and antisymmetric
+parts, scatter and recombine the parts after scattering. a relative phase of  between
+the two parts is what produces the eect.)
+
+(puzzle: what happens with the correspondence principle? with h back in, the
+interaction coecient is (  hmij). how can a term of order h produce such a
+dramatic eect, particles going through each other, in the h  0 limit?)
+so the only eect of the scattering is a phase shift of the wavefunction which, as
+we have said, is the sum of two-body phases
+
+sc =
+
+n(n  1)
+
+2
+
+
+
+(192)
+
+this is true on an innite space. on a periodic space we can still use the above
+result, together with the requirement for periodicity for the wavefunction, to derive
+the spectrum. this is the aba method and is expected to reproduce the correct
+results in the thermodynamic limit of many particles at constant density [60]. it
+gives, in fact, the exact answer for the sutherland model [26], so we can expect it to
+work also in the present case. for a space of period 2 the result is
+
+2ki +x
+
+sgn(ki  kj) = 2ni
+
+(193)
+
+the left hand side counts the total phase picked up by a particle going round the
+space and scattering o to the other particles in the way. ni are arbitrary integers,
+ensuring periodicity. there are, however, some constraints on the choice of of ni
+that are imposed by continuity from the  = 0 case:
+if ki  kj then ni  nj
+if ni = nj there is a unique solution, that is, ki < kj and ki > kj represent the
+same state.
+these rules are important to avoid overcounting and to discard spurious solutions.
+with these, the spectrum obtained is the same as the one derived with more rigorous
+methods. for the ordering n1  . . . nn the solution for ki is
+
+ki = ni + (i 
+
+n + 1
+
+2
+
+)
+
+38
+
+(194)
+
+and similarly for other orderings. we see that the aba momenta ki are the same
+as the quasimomenta that we have previously dened.
+
+the bottom line is that the spectrum and degeneracies are the same as those
+of distinguishable particles obeying generalized selection rules for their momentum.
+still, what xes the degeneracy of states is the dierent ways that we can distribute
+the particles to the quantum numbers ni, rather than ki (see, especially, the second
+rule above). a state of n particles with the same ni, for instance, is nondegener-
+ate although they, seemingly, have dierent ki which would imply a permutation
+degeneracy.
+
+for particles with spin the construction above, in combination with the trick of
+the previous subsection of starting with fermions or bosons, produces a spectrum
+with degeneracies the same as those of free particles (the ni are free quantum
+numbers). as argued before, for ferromagnetic interactions we must choose bosons
+and combine their spins accordingly, while for antiferromagnetic interactions we
+must choose fermions. to spell it out, this means the following:
+1. choose a set of quantum numbers ni. the ordering is immaterial, since we have
+identical particles, so you can choose n1  . . . nn .
+2. place your particles on these quantum numbers and put their spins in the ap-
+propriate state. for the ferromagnetic case treat them as bosons: the total spin
+of particles with the same ni transforms in the symmetric tensor product of their
+spins. for the antiferromagnetic case treat them as fermions: the total spin of of
+particles with the same ni transforms in the antisymmetric tensor product of their
+spins; clearly up to q can have the same ni in this case.
+
+3. calculate the energy of this state in terms of the aba momenta (194): e = pi k2
+
+i .
+it should be obvious that similar rules applied to the spin-calogero system reproduce
+the spectrum derived in the last subsection. this method can be used to calculate
+both the statistical mechanics (large n) of these systems and the few-body spectra.
+
+5.4 the freezing trick and spin models
+
+now that we have a tractable way of solving spin-csm systems with arbitrary
+strength of interaction we can introduce the freezing trick [65] and deal with spin
+chain models.
+
+consider, rst, the previous ferromagnetic or antiferromagnetic spin-sutherland
+model. take the limit   . the potential between the particles goes to innity,
+so for any nite-energy state the particles will be nearly frozen to their classical
+equilibrium positions. in fact, even the excitation energies around that conguration
+will go to innity: the ground state energy scales like 2, while the excitations scale
+like nn + n2 with n some excitation parameter. so, to leading order in  the
+spectrum becomes linear and of order . these excitations correspond, essentially, to
+phonon modes of small oscillations around the equilibrium positions of particles. the
+stiness of oscillations is, of course, proportional to the strength of the potential
+2 and the spectrum is proportional to the frequency, of order .
+
+39
+
+the quantum uctuations of the particle positions in any state will scale like
+the inverse square root of the oscillator frequency, that is, like 1/. but, in the
+hamiltonian, the piece coupling the spins to the kinematical degrees of freedom is
+proportional to 1/ sin2 xij. in the large- limit, thus, this term becomes a constant
+equal to its classical equilibrium value; so, in that limit, spin and kinematical degrees
+of freedom decouple. (note that the spin part is also of order .) the hamiltonian
+becomes
+
+with hs the spinless sutherland hamiltonian and hspin the spin part
+
+h = hs + hspin
+
+hspin = xi<j
+
+2~si  ~sj
+4 sin2 xij
+2
+
+(195)
+
+(196)
+
+where the classical equilibrium positions xj are equidistant points on the circle:
+
+xj =
+
+2j
+n
+
+(197)
+
+the hamiltonian (196) above describes a spin chain consisting of a regular peri-
+odic lattice of spins in the fundamental of su(q) coupled through mutual ferro- or
+antiferromagnetic interactions of strength inversely proportional to their chord dis-
+tance. it is the well known su(q) haldane-shastry (hs) model [61, 62]. according
+to the above, its spectrum can be found by taking the full spectrum of the corre-
+sponding spin-sutherland model in the large- limit, modding out the spectrum of
+the spinless model and rescaling by a factor 1/. each state will inherit the spin
+representation of its parent spin-sutherland state. so, both the energy and the
+total spin of the states of the hs model can be determined this way. commuting
+integrals of this model [63] can also be obtained this way [64]. at the level of the
+partition function at some temperature t we have
+
+zspin(t ) = lim
+
+
+z(t )
+zs(t )
+
+(198)
+
+from this, the thermodynamics of the spin chain model can be extracted [60].
+
+we will not give the details of this construction here. we urge anyone interested
+to solve this way a few-site (two or three) spin chain, see how it works and deduce
+the construction rules for the spectrum of a general spin chain. let us simply
+state that the many degeneracies of the spectrum of the hs model (larger that the
+total spin su(q) symmetry would imply), which is algebraically explained by the
+existence of the yangian symmetry, can, in this approach, be explained in terms of
+the degeneracies of free particles. (the degeneracies are not identical, due to the
+modding procedure, but related.)
+
+for the spin-calogero model a similar limit can be taken, scaling also the external
+oscillator frequency as    to keep the system bound. the classical equilibrium
+
+40
+
+positions of this model are at the roots of the n-th hermite polynomial. we ob-
+tain, therefore, a non-regular lattice of spins interacting with a strength inversely
+proportional to the square of their distance [65]. the spectrum of this model can
+be found quite easily with the above method. again, we refer to the literature for
+details [59, 66].
+
+in the continuum limit (n  ) the antiferromagnetic version of both the above
+models become c = 1 conformal eld theories, the hs containing both chiral sectors
+while the inhomogeneous harmonic one containing just one sector.
+
+other models exist and can be solved in this spirit: hierarchical (many-coupling)
+models [67], supersymmetric models [68], twisted models [69] etc. all, however,
+work only for the fundamental representation of some internal group. the big,
+important open problem is to crack a particle system with a higher representation
+for the spins and arbitrary coupling strength. if this is done, through the freezing
+trick we will be able to solve a spin chain with spins in a higher representation. this
+is interesting since we could then see if the antiferromagnetic system for integer
+su(2) spins develops a mass gap, according to the haldane conjecture [70].
+
+6 exclusion statistics
+
+so far we approached the problem of statistics in a fundamental way, trying to give
+a reasonable denition and presenting systems that realized this denition. in this
+last section we shall give a phenomenological approach, based on the state-counting
+properties of a system whose dynamics may remain, otherwise, undetermined. it
+is based on a notion already familiar from the csm model, the notion of state
+repulsion or exclusion. this will lead to haldanes exclusion statistics.
+
+6.1 motivation from the csm model
+
+although haldane derived his denition from the properties of the hs spin chain,
+we will use the csm model instead. consider the principal quantum number of
+this model, that is, the one in terms of which the energy eigenvalues are a sum of
+independent terms: quasiexcitation numbers ni for the calogero and quasimomenta
+pi for the sutherland model. they obey an enhanced exclusion principle where
+nearby values can be no closer that  units. it seems as if each of them occupies
+ places in the single-particle hilbert space, instead of one. so, let us dene the
+dimensionality d(n) of the hilbert space of states available to an additional particle
+given that there are already n particles in the system. (some high-energy cuto
+is needed, of course, to make this nite.) the exclusion statistics parameter g is,
+then dened as [71]
+
+g = 
+
+d
+n
+
+(199)
+
+if this parameter is independent of n, or becomes a constant for high enough n,
+then we say that the system obeys exclusion statistics of order g. clearly g = 0, 1
+
+41
+
+corresponds to bosons and fermions, respectively. from the discussion of the csm
+model we would conclude that it obeys exclusion statistics with g = .
+
+note that, in principle, this denition applies to systems of arbitrary dimension-
+ality. the fact that only one-dimensional exclusion statistics systems have been as
+yet identied presumably points to something essentially one-dimensional in this
+denition. note also that g can be fractional: d(n) could be either ill-dened (as,
+in fact, in the csm model) so that it can assume approximate fractional values,
+or it could depend on n in a way that g becomes constant only for large enough
+n, like, e.g., d(n) = [n/2] with [ ] the integer part, giving g = 1/2.
+
+6.2 semiclassics  heuristics
+
+before examining the consequences of (199) let us make some heuristic semiclassical
+arguments about phase space volume and exclusion to give more substance to it.
+please view the following discussion simply as additional motivation -do not take it
+seriously!
+
+semiclassically, the number of states of a system is given by the volume of its
+phase space in units of h for each pair of canonical variables. let us consider for
+simplicity the minimal space (q, p). it could correspond, for instance, to the relative
+coordinate and momentum of two particles on the line. the standard lagrangian
+would look like
+
+l = p q  h(p, q)
+
+(200)
+
+if we want the presence of the one particle to knock out g states out of the
+hilbert space, we should include some term in the classical action that, eectively,
+reduces the volume (in this case, area) of phase space by gh. this area is given as
+
+a = zd
+
+dpdq = id
+
+pdq
+
+(201)
+
+where v is a domain in phase space and d its boundary. if the domain does not
+include the point q = p = 0 the area should be the standard one, since we are talking
+about a region of phase space where the particles are apart. if, on the other hand,
+q = p = 0 is included, the particles are together and the area should diminish by
+gh = 2g (taking h = 1).
+
+this reminds us of the aharonov-bohm eect. there must be a dirac string
+piercing the point (0, 0) in phase space giving this extra contribution when circled.
+so we must add to the action a term
+
+g = gz pdq  qdp
+
+p2 + 2q2 = gz d atan
+
+q
+
+p !
+
+(202)
+
+where  is any positive constant. this amounts to adding to the lagrangian the
+extra term
+
+(203)
+
+lg = g
+
+p q  q q
+p2 + 2q2
+
+42
+
+this extra contribution is a total time derivative (a topological term) so it will not
+change the equations of motion.
+it is expected, though, that it will change the
+quantum mechanical states as described above.
+
+let us consider the above in the specic example of two particles in an external
+harmonic oscillator potential. after separating the center of mass phase space, the
+lagrangian for the relative part becomes
+
+lg = p q  g
+
+p q  q q
+p2 + 2q2 
+
+1
+2
+
+2(p2 + q2)
+
+(204)
+
+for later convenience we chose  =  in the g-term. the eect of this term is to
+shift the poisson brackets between p and q. we will follow the simple approach to
+canonical quantization of dening new polar variables ,  as
+
+p + iq = ei
+
+in terms of these the lagrangian becomes
+
+l = (
+
+1
+2
+
+2  g)  
+
+1
+2
+
+2
+
+so the canonical momentum of  is
+
+and the hamiltonian becomes
+
+ =
+
+1
+2
+
+2  g
+
+h = ( + g)
+
+(205)
+
+(206)
+
+(207)
+
+(208)
+
+quantum mechanically the operator  is not quite well dened. in the absence of g,
+it would correspond to the phase of the annihilation operator which cannot be a
+well-dened hermitian operator: ei should be unitary, yet it decreases the eigenvalue
+of 2 = aa by one unit, which is impossible for the ground state. nevertheless, we
+will proceed qualitatively and see what we get in this case.
+
+ being a phase, its momentum  should be quantized to integer values. since
+the particles are identical, the change of relative coordinates p  p, q  q should
+also be a symmetry. this corresponds to    + . choosing the wavefunction to
+transform as  itself under this shift, which amounts to quantizing the particles as
+bosons or fermions, further restricts the values of  to even or odd integers. finally,
+since 2 is a positive denite operator, we have
+
+1
+2
+
+2 =  + g  0
+
+(209)
+
+(clearly the problems with the denition of  are hidden in the above constraint).
+
+choosing the even eigenvalues for  (bosonic case), and for g not greater that
+
+2, the spectrum of the relative hamiltonian becomes
+
+e = (2n + g)
+
+(210)
+
+43
+
+for n a nonnegative integer. this is the excitation spectrum of the calogero model!
+to see this, add the center of mass oscillator energy ecm = m for m a nonnegative
+integer and dene
+
+then the full spectrum becomes
+
+n1 = n , n2 = m + n + g
+
+e = (n1 + n2) with n1  n2  g
+
+(211)
+
+(212)
+
+that is, the excitations of the calogero model in terms of the quasiexcitation numbers
+n1,2 satisfying the least distance  constraint for  = g.
+
+this will serve as enough motivation that the idea of phase space exclusion should
+be related to eigenvalue repulsion `a la csm model. the questions about the ground
+state energy, g > 2 etc. that are left hanging are simply set aside -this model is not
+treated seriously here. if anyone is interested, of course, they are welcome to polish
+it!
+
+6.3 exclusion statistical mechanics
+
+we will implement exclusion statistics in terms of the possible quantum numbers
+of n particles placed in k single-particle states. arranging the k states in a lin-
+ear fashion and implementing the least distance g constraint for the particles, for
+integer g we get [71, 72]
+
+d(k, n) =
+
+[k  (g  1)(n  1)]!
+n![k  g(n  1)  1]!
+
+(213)
+
+possible combinations for allowed values for the particle quantum numbers (to prove
+it is a simple combinatorial matter). extrapolated to arbitrary (fractional) g, this
+denes the state multiplicity of n particles placed in k states. clearly g = 0, 1
+reproduces the bose and fermi result.
+
+this can be used to derive the statistical mechanical properties of a grand en-
+semble of such particles. considering all k states to be at nearby energy  and
+maximizing the gibbs factor
+
+d(k, n)e()n = maximum
+
+(214)
+
+in terms of n for xed temperature t = 1/k and chemical potential  we obtain
+for the distribution n = n/k for large n, k [30, 72, 73]
+
+n =
+
+w
+
+1 + (g  1)w
+
+,
+
+w
+
+(1  w)g = e()
+
+(215)
+
+the expression for n cannot be found analytically except for a few values of g.
+
+it is obvious from the above that fractional statistics particles are not indepen-
+dent, in the sense that one cannot derive their statistical mechanics by considering
+
+44
+
+each single-particle state as an independent system to be lled by particles. (op-
+erator constructions that incorporate some of the features of exclusion statistics do
+exist [74] but they further require specic interactions, else they produce gentile
+statistics.) there is no microscopic formulation: we need to start from k states and
+take the limit of large k. further, it is not clear how we could implement exclusion
+statistics for an interacting system, where we cannot use single-particle states as a
+convenient basis. in the following we will sketch how the above diculties can be
+overcome [75].
+
+the starting point will be the grand partition function for particles in k states
+
+of like energy
+
+
+
+z(k, z) =
+
+d(k, n)zn
+
+(216)
+
+xn =0
+
+where z = exp (  ) is the fugacity. z(k, z) should be extensive, which means
+that, for large k it should become the k-th power of a function of z
+
+lim
+k
+
+1
+k
+
+ln z(k, x) = lim
+k
+
+1
+k
+
+
+
+ln
+
+xn =0
+
+d(k, n)zn = lnxn
+
+pnzn
+
+(217)
+
+in the above we introduced the quantities pn which play a role analogous to the
+allowed states of occupation of a single level in the cases of fermions and bosons:
+pn = 1 for bosons, while p0,1 = 1, pn>1 = 0 for fermions. we can call them a priori
+probabilities of occupation [75] or fractional dimensionality of states [76] according
+to taste.
+
+that pn exist should be guaranteed from the proper extensive behavior of the
+exclusion statistical mechanics. the problem is to calculate them. for this, we make
+a technical trick: to derive the multiplicity of states d(k, n) above we placed the k
+states on a line. lets place them on a circle instead, and implement the minimum
+distance g rule there. that shouldnt inuence the statistical behavior at large k.
+this modies the combinatorics into
+
+d(k, n) =
+
+k[k  (g  1)n  1]!
+
+n!(k  gn)!
+
+(218)
+
+we can check that d(k, n) leads to the same statistical distribution n (215) as
+d(k, n). we now notice that z(k, z) dened in terms of d(k, n) becomes an
+exact k-th power for all k. we can, then, calculate pn from d(1, n). the result is
+
+pn =
+
+n
+
+ym=2(cid:16)1 
+
+gn
+
+m(cid:17)
+
+(219)
+
+unless g = 0, 1, pn are fractional and always become negative for some values of n
+[77]. so their interpretation as probabilities or space dimensions must be taken with
+a grain of salt. they are, at any rate, useful tools for describing these systems.
+
+the single-level grand partition function z(z) can be shown to satisfy
+
+z g  z g1 = x
+
+45
+
+(220)
+
+from which the corresponding relation (215) for n = zz ln z follows.
+
+remember that the csm system enjoyed a particle-hole coupling-inverting du-
+ality. since exclusion statistics are directly extracted from the properties of these
+systems, we anticipate a similar duality here [77, 47]. indeed, we can show that the
+grand partition function satises
+
+1
+
+z(g, xg)
+
++
+
+1
+
+z(g1, x)
+
+= 1
+
+(221)
+
+note that, interestingly, a similar relation holds for gentile statistics of maximum
+occupancy p. the grand partition function obviously is
+
+z(p, z) = 1 + z + z2 . . . + zp =
+
+(222)
+
+zp+1  1
+z  1
+
+identifying the maximum occupancy p of gentile statistics states with the parameter
+1/g, the above expression satises (221) although z(p, z) is not a priori dened for
+fractional p.
+
+from the distribution function n(g, z) (215) we can derive in the standard way
+
+the low-temperature sommerfeld expansion for the energy
+
+e(t ) = z d()n(g, ) = e(0) +
+
+
+
+xn=0
+
+cn(g)t n+1en
+
+(223)
+
+where () is the density of states and  is xed through
+
+n = z d()n(g, )
+
+(224)
+
+en are t - and g-independent energy integrals. the coecients cn essentially de-
+termine the low-temperature heat capacity of the system. the are calculated as
+[78]
+
+c0 = 0
+
+(third law of thermodynamics)
+
+2
+6
+
+c1 =
+c2 = 2(3)(1  g) etc.
+
+(same as in conformal eld theory)
+
+(225)
+
+(226)
+
+(227)
+
+where (x) is the riemann zeta function. in general, cn is a polynomial of degree
+n  1 in g.
+cients wn:
+
+the grand potential g = kt ln z can be expressed in terms of cluster coe-
+
+we nd for wn:
+
+
+
+
+
+pnzn =
+
+ln
+
+xn=0
+
+xn=1
+
+wn
+n
+
+zn
+
+wn =
+
+n1
+
+ym=1(cid:16)1 
+
+gn
+
+m(cid:17)
+
+46
+
+(228)
+
+(229)
+
+which is remarkably similar to pn (except for the range of m). similar results
+were obtained in [79] for the case of anyons in a strong magnetic eld. this is not
+surprising: the lowest landau level becomes, essentially, a two-dimensional phase
+space, so this is yet another realization of fractional statistics in an eectively one-
+dimensional space.
+
+note that the connection between pn and wn is the same as the one between
+disconnected and connected diagrams in eld theory. this, in view also of the
+discussion of the rst section, will lead us to a path-integral representation for the
+partition function of exclusion statistics particles in an arbitrary external potential.
+
+6.4 exclusion statistics path integral
+
+we start from the usual euclidean path integral with periodic time  for n particles
+with action the sum of n one-particle actions; we further sum over all particle
+numbers n with chemical potential weights en /n! to obtain the grand partition
+function. since the particles are identical we include a symmetry factor of 1/n!, but
+we must also sum over paths where particles have exchanged nal positions. thus
+the path integral for each n decomposes into sectors labeled by the elements of the
+permutation group p erm(n). (see the discussion in section 1.) such permuted
+sectors will be summed with appropriate extra weighting factors, to be determined
+in the sequel.
+
+by the usual argument, the gibbs grand potential (the logarithm of the grand
+partition function) will be given by the sum of all connected path integrals. it is
+obvious that these are the ones where the nal positions of the particles are a cyclic
+permutation of the original ones, since these are the only elements of sn that cannot
+be written as a product of commuting elements. clearly all diagrams corresponding
+to dierent cyclic permutations are equal. there are (n  1)! such permutations.
+so, overall, this diagram will carry a factor of ((n  1)!/n! = 1/n. this is nothing
+but the symmetry factor, familiar from feynman diagrams, corresponding to cyclic
+relabelings of particle coordinates (compare, already, with the factors 1/n included
+in (228)).
+
+cyclic permutation diagrams being connected, they only contain one thread of
+particle worldline. they really correspond to one particle wrapping n times around
+euclidean time and thus will reproduce the single-particle partition function with
+temperature parameter n. so, in the grand partition function they will contribute
+the terms proportional to en en = zn (the rst factor is the single-particle
+boltzmann factor for temperature parameter n and the second is the chemical
+potential factor).
+
+but these are the terms appearing in (228) for each energy level! the extra
+weighting factors that must be included for these diagrams in order to reproduce
+exclusion statistics are, then, identied to the cluster coecients wn . for g = 0, 1
+we have wn = 1 and wn = ()n 1, respectively, which is, indeed, the correct factor
+implied by r(p ) as discussed in section 1, where r is the trivial (bosons) or the
+
+47
+
+antisymmetric (fermions) irrep of sn and p a cyclic permutation.
+
+in conclusion, if we weight these congurations with the extra factors wn we will
+reproduce the grand potential of a distribution of g-ons on the energy levels of the
+one-body problem, that is [75]
+
+(, ) =
+
+
+
+xn =1
+
+en wn
+
+n z epn
+
+n=1 se [xn(tn)]
+
+dxn(tn)
+
+(230)
+
+n
+
+yn=1
+
+where se is the one-particle euclidean action and the paths obey the boundary
+conditions
+
+xn() = xn+1(0) ,
+
+xn () = x0(0)
+
+(231)
+
+(x can be in arbitrary dimensions.)
+
+by exponentiating, the full n-body partition function will be the path integral
+over all disconnected components, with appropriate symmetry factors and a factor
+of wn for each connected n-particle component. more directly, we can omit the
+symmetry factors, sum explicitly over all equivalent permutations in each sector
+and divide by n!:
+
+z(, ) =
+
+
+
+xn =1
+
+en
+
+n! xp
+
+wp z epn
+
+n=1 se [xn(tn)]
+
+n
+
+yn=1
+
+dxn(tn)
+
+(232)
+
+where the paths obey the boundary condition
+
+{x1(), . . . xn ()} = p{x1(0), . . . xn (0)}
+
+(233)
+
+the weighting factor wp for each permutation depends only on the conjugacy class
+of the permutation and is calculated through wn as
+
+wp = wn1    wnk
+
+(234)
+
+where n1, . . . nk are the cycles of p .
+
+it is clear that the above path integral is not unitary, since the weights wn are
+not phases and they do not provide true representations of the permutation group
+(unlike the g = 0, 1 cases). this does not matter:
+it is simply used as a tool to
+derive the statistical mechanics of exclusion statistics. we are not going to calculate
+and propagators or other processes with it.
+
+once we have the path integral (232) we can easily extend the notion of exclusion
+
+statistics to interacting particles: we simply replace the action pn se[xn] by the full
+
+interacting n-particle action, thus circumventing all diculties with combinatorial
+formulae.
+in the interacting case one has to work with the full grand partition
+function, rather than the grand potential, since topologically disconnected diagrams
+are still dynamically connected through the interactions and do not factorize.
+
+in conclusion, we have a path-integral way of dening exclusion statistics for
+interacting systems through appropriate symmetry factors included in each permu-
+tation sector (analogous to s(p ) of section 1), calculated via (228). there is, yet,
+no application of this procedure to an interesting interacting situation.
+
+48
+
+6.5
+
+is this the only exclusion statistics?
+
+after giving so much motivation for it, the question seems almost oensive! but let
+us examine it for the sake of ensuring that we have the full picture.
+
+exclusion statistics in terms of repulsion rules for the quantum numbers is,
+certainly, as we dened it. but we started from (199) which denes statistics in terms
+of the hilbert space dimension of an additional particle in the system. consider,
+then, a chunk of k levels in the csm model (k quasimomentum values in the
+sutherland model or k quasiexcitation levels for the harmonic calogero model).
+place n particles there, and see what space is left for an additional particle.
+
+if the n particles are packed densely (like, e.g., in the fermi sea-like ground
+state) they certainly take up a piece of approximately n spaces. so the levels left
+for an extra particle are d = k  n and we get g = d/n =  as expected.
+what if, however, the n particles are sparse in k; that is, if the distances
+between them are all bigger than, say, 2? then each particle makes unavailable 
+states either way around it, so, overall, the available space for the extra particle has
+diminished by (2  1)n. in this situation we would get g = 2  1. clearly this
+denition implies dierent statistics for dierent situations (dense or dilute).
+can we dene another statistics that matches closer the hilbert space denition?
+clearly any choice of combinatorial formula for d(k, n) that has the right extensive
+properties is an alternative denition of some statistics. alternatively, each choice
+of pn or wn amounts to some statistics. lets make the simplest choice:
+
+(235)
+which, in the path integral, corresponds to one factor of  for each unavoidable
+particle crossing. this leads to the statistical distribution n
+
+wn = ()n1
+
+n =
+
+1
+
+e() + 
+
+(236)
+
+which was analyzed in [80] as the simplest imaginable generalization of the fermi and
+bose distribution. the combinatorial formula for d(k, n) for the above -statistics
+is
+
+k(k  )(k  2)    (k  (n  1))
+
+=
+
+(237)
+
+n!
+
+d = n
+
+( k
+ )!
+n!( k
+  n)!
+
+this can be thought as a realization of the exclusion statistics hilbert space idea:
+the rst particle put in the system has k states to choose, the next has k 
+ due to the presence of the previous one an so on, and dividing by n! avoids
+overcounting. fermions and bosons correspond to  = 1 and  = 1 respectively.
+ = 0 corresponds to boltzmann classical statistics. this should also be clear from
+the path integral: no congurations where particles have exchanged positions are
+allowed, since their weighting factor is zero, but factors of 1/n! are still included.
+the corresponding single-level pn are
+
+pn =
+
+n1
+
+ym=1
+
+1  m
+1 + m
+
+49
+
+(238)
+
+for  = 1/p with p integer (a fraction of a fermion), the above probabilities are all
+positive for n up to p and vanish beyond that. for  < 0 all probabilities are positive
+and nonzero. thus, the above system has a bosonic ( < 0) and a fermionic ( > 0)
+sector, with boltzmann statistics as the separator.
+it is a plausible alternative
+denition of exclusion statistics, and has many appealing features, not shared by
+the standard exclusion statistics, such as positive probabilities, a maximum single-
+level occupancy in accordance with the fraction of a fermion that  represents, and
+analytic expressions for all thermodynamic quantities.
+
+this should demonstrate that the route to alternative denitions, with nice fea-
+tures too, is open. the real issue is whether a dynamical system realizes these other
+statistics, and, at this point, this is not clear.
+
+7 epilogue
+
+the topic of statistics will not cease fascinating at least a few physicists working
+in various elds. it challenges our understanding of the fundamentals of quantum
+mechanics and matter, expands the mathematical tools of the trade, promises new
+results in specic systems and is fun to think about.
+
+it is anyones guess whether considerations coming purely out of statistics will
+produce a (major or minor) breakthrough in any physics problem. a safer predic-
+tion, however, is that the idea of generalized statistics will re-emerge in dierent
+contexts as we strive to understand new physical systems and develop useful frames
+of mind. after all, statistics has barely been touched for objects such as strings
+and membranes, which are increasingly the entities of theoretical choice for the
+fundamental constituents of the universe. the future promises to be fun!
+
+references
+
+[1] j.m. leinaas and j. myrheim, nuovo cimento 37b, 1 (1977).
+
+[2] g.a. goldin, r. meniko and d.h. sharp, j. math. phys. 21, 650 (1980); 22,
+
+1664 (1981); phys. rev. d28, 830 (1983).
+
+[3] f. wilczek, phys. rev. lett. 48, 1114 (1982); 49, 957 (1982).
+
+[4] y.s. wu, phys. rev. lett. 52, 2103 (1984).
+
+[5] j. myrheim, anyons (notes for the course on geometric phases, ictp, trieste
+
+6-17 sept. 1993) and lecture notes in in this les houches lectures.
+
+[6] h.s. green, phys. rev. 90, 270 (1953).
+
+[7] o. steinmann, nuovo cimento 44, a755 (1966).
+
+50
+
+[8] p.v. landsho and h.p. stapp, ann. of phys. 45, 72 (1967).
+
+[9] y. ohnuki and s. kamefuchi, phys. rev. 170, 1279 (1968); ann. of phys. 51,
+
+337 (1969).
+
+[10] s. doplicher, r. haag and j. roberts, comm. math. phys. 23, 199 (1971); 35,
+
+49 (1974).
+
+[11] a.m.l. messiah and o.w. greenberg, phys. rev. b136, 248 (1964); b138,
+
+1155 (1965).
+
+[12] j.b. hartle and j.r. taylor, phys. rev. 178, 2043 (1969); r.h. stolt and
+j.r. taylor, phys. rev. d1, 2226 (1970); nucl. phys. b19, 1 (1970); j.b. har-
+tle, r.h. stolt and j.c. taylor, phys. rev. d2, 1759 (1970).
+
+[13] m.g.g. laidlaw and c.m. dewitt, phys. rev. d3, 1375 (1971).
+
+[14] o.w. greenberg et al!, hep-ph/9306225.
+
+[15] m. hammermesh, group theory, addison-wesley eds. (1962).
+
+[16] p. suranyi, phys. rev. lett. 65, 2329 (1990).
+
+[17] s. chaturvedi, phys. rev. e54, 1378 (1996).
+
+[18] a.b. govorkov, theor. math. phys. 54, 234 (1983).
+
+[19] o.w. greenberg, phys. rev. lett. 64, 705 (1990).
+
+[20] g. gentile, nuovo cimento 17, 493 (1940).
+
+[21] a.p. polychronakos, nucl. phys. b324, 597 (1989).
+
+[22] j.m. leinaas and j. myrheim, phys. rev. b37, 9286 (1988).
+
+[23] s. isakov and j.m. leinaas, nucl. phys. b463, 194 (1996).
+
+[24] s. isakov, j.m. leinaas, j. myrheim, a.p. polychronakos and r. vernhagen,
+
+phys. lett. b430, 151 (1988).
+
+[25] f. calogero, jour. of math. phys. 10, 2191 and 2197 (1969); 12, 419 (1971).
+
+[26] b. sutherland, phys. rev. a4, 2019 (1971); phys. rev. a5, 1372 (1972); phys.
+
+rev. lett. 34, 1083 (1975).
+
+[27] j. moser, adv. math. 16, 1 (1975).
+
+[28] m.a. olshanetskii and a.m. perelomov, phys. rep. 71, 314 (1981); 94, 6
+
+(1983).
+
+51
+
+[29] e. d hoker and d.h. phong, nucl. phys. b530, 537 and 611 (1998).
+
+[30] s. b. isakov, mod. phys. lett. a b8, 319 (1994) and int. jour. mod. phys. a9,
+
+2563 (1994).
+
+[31] m. gaudin, saclay preprint spht-92-158.
+
+[32] j.a. minahan and a.p. polychronakos, phys. rev. b50, 4236 (1994).
+
+[33] f. lesage, v. pasquier and d. serban, nucl. phys. b435, 585 (1995).
+
+[34] z.n.c. ha, phys. rev. lett. 73, 1574 (1994). erratum, ibid. 74, 620 (1995).
+
+[35] d. kazhdan, b. kostant and s. sternberg, comm. pure appl. math. 31, 481
+
+(1978).
+
+[36] j. gibbons and t. hermsen, physica d11 (1984) 337.
+
+[37] s. wojciechowski, phys. lett. a111 (1985) 101.
+
+[38] a.p. polychronakos, phys. lett. b277, 102 (1992).
+
+[39] a.p. polychronakos, phys. lett. b408, 117 (1997).
+
+[40] a physicists exposition of relevant material is in y. nambu, from su(3) to
+gravity, eds. e. gotsman and g. tauber; phys. rev. d26 (1992) 2875, and
+references thereint
+
+[41] a. gorsky and n. nekrasov, nucl. phys. b414 (1994) 213.
+
+[42] j.a. minahan and a.p. polychronakos, phys. lett. b326 (1994) 288.
+
+[43] h. mehta, random matrices (academic press, new york, 1991).
+
+[44] j. blom and e. langmann, phys. lett. b429, 336 (1988).
+
+[45] a.p. polychronakos, uuitp-8-98, hep-th/9810211, to appear in nucl. phys. b.
+
+[46] a.p. polychronakos, uuitp-7-98, hep-th/9806189, to appear in nucl. phys. b.
+
+[47] a. p. polychronakos, phys. rev. lett. 69, 703 (1992).
+
+[48] c.f. dunkl, trans. amer. math. soc. 311, 167 (1989).
+
+[49] l. brink, t.h. hansson and m. vassiliev, phys. lett. b286, 109 (1992).
+
+[50] l. lapointe and l. vinet, comm. math. phys. 178, 425 (1996).
+
+[51] j.a. minahan and a.p. polychronakos, phys. lett. b302, 265 (1993).
+
+[52] z.n.c. ha and f.d.m. haldane, phys. rev. b46, 9359 (1992).
+
+52
+
+[53] n. kawakami, phys. rev. b46, 1005 and 3191 (1992).
+
+[54] k. hikami and m. wadati, phys. lett. a173, 263 (1993).
+
+[55] f.d.m. haldane, z.n.c. ha, j.c. talstra, d. bernard and v. pasquier, phys.
+
+rev. lett. 69, 2021 (1992).
+
+[56] d. bernard, m. gaudin, f.d.m. haldane and v. pasquier, j. phys a26, 5219
+
+(1993).
+
+[57] i. cherednik, rims-1144 (1997) and references therein.
+
+[58] j. avan and a. jevicki, nucl. phys. b469, 287 (1996) and b486, 650 (1997).
+
+[59] a. p. polychronakos, nucl. phys. b419, 553 (1994).
+
+[60] b. sutherland and b.s. shastry, phys. rev. lett. 70, 4029 (1993).
+
+[61] f.d.m. haldane, phys. rev. lett. 60, 635 (1988) and 66, 1529 (1991).
+
+[62] b.s. shastry,phys. rev. lett. 60, 639 (1988) and 69, 164 (1992).
+
+[63] v.i. inozemtsev, j. stat. phys 59, 1143 (1989).
+
+[64] m. fowler and j.a. minahan, phys. rev. lett. 70, 2325 (1993).
+
+[65] a. p. polychronakos, phys. rev. lett. 70, 2329 (1993).
+
+[66] h. frahm, j. phys a26, l473 (1993).
+
+[67] n. kawakami and y. kuramoto, yitp-k-1065 (1994).
+
+[68] y. kato and y. kuramoto, cond-mat/9409031.
+
+[69] t. fukui and n. kawakami, yitp-95-17 (1996) and nucl. phys. b483, 663
+
+(1997).
+
+[70] f.d.m. haldane, phys. lett. 93a, 464 (1983) and phys. rev. lett. 50, 1153
+
+(1983).
+
+[71] f.d.m. haldane, phys. rev. lett. 67 (1991) 937
+
+[72] y.-s. wu, phys. rev. lett. 73 (1994) 922
+
+[73] a.k. rajakopal, phys. rev. lett. 74, 1048 (1995).
+
+[74] d. karabali and v.p. nair, nucl. phys. b438, 551 (1995).
+
+[75] a.p. polychronakos, phys. lett. b365, 202 (1996).
+
+[76] a.v. ilinskaia, k.n. ilinski and j.m.f. gunn, nucl. phys. b458, 562 (1996).
+
+53
+
+[77] c. nayak and f. wilczek, phys. rev. lett. 73, 2740 (1994).
+
+[78] d. arovas, s. isakov, j. myrheim and a.p. polychronakos, phys. lett. a212,
+
+299 (1996).
+
+[79] a.d. de veigy and s. ouvry, phys. rev. lett. 72, 600 (1994) and mod. phys.
+
+lett. a a10, 1 (1995).
+
+[80] r. acharya and p. narayana swamy, j. phys. a27, 7247 (1994).
+
+54
+
+

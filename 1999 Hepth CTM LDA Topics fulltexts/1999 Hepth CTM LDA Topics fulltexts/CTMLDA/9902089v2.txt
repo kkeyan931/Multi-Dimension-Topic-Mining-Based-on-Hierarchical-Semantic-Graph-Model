@@ -1,0 +1,1782 @@
+9
+9
+9
+1
+
+ 
+
+b
+e
+f
+1
+2
+
+ 
+
+ 
+ 
+
+2
+v
+9
+8
+0
+2
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+eigenvalue dynamics and the matrix chain
+
+pupt-1827
+
+l.d. paniak
+
+joseph henry laboratories, department of physics
+
+princeton university
+
+princeton, new jersey 08544, usa
+
+e-mail: paniak@feynman.princeton.edu
+
+abstract
+
+we introduce a general method for transforming the equations of motion following
+
+from a das-jevicki-sakita hamiltonian, with boundary conditions, into a boundary
+
+value problem in one-dimensional quantum mechanics. for the particular case of a one-
+dimensional chain of interacting n  n hermitean matrices, the corresponding large
+n boundary value problem is mapped into a linear fredholm equation with hilbert-
+
+schmidt type kernel. the equivalence of this kernel, in special cases, to a second order
+
+dierential operator allows us recover all previously known explicit solutions for the
+
+matrix eigenvalues. in the general case, the distribution of eigenvalues is formally derived
+
+through a series of saddle-point approximations. the critical behaviour of the system,
+
+including a previously observed kosterlitz-thouless transition, is interpreted in terms of
+
+the stationary points. in particular we show that a previously conjectured innite series
+
+of sub-leading critical points are due to expansion about unstable stationary points and
+
+consequently not realized.
+
+1 introduction
+
+the utility of studying the statistical mechanics of systems which can be encoded in terms
+
+of matrix variables has been evident over the past twenty years. from the generalization of
+
+wigner and dysons work by brezin, itzykson, parisi and zuber [1] to the use of matrix models
+
+in low dimensional gravity (see [2] for reviews), to modern implementations of matrix strings
+
+[3], matrix models have proven to be a convenient framework for calculation. remarkably,
+
+throughout this period the dynamics of matrix models have been considered only in the sta-
+
+tionary case where solutions of the equations of motion are assumed to be time-independent.
+
+there arise circumstances though where the time evolution of a system governed by an action
+
+over matrix variables is relevant, especially if there are denite initial and nal conditions on
+
+the state of the system. examples include two-dimensional yang-mills theory on the cylinder
+
+and sphere [4, 5], matrix model approaches to the continuous hirota equation [6] and lattice
+
+qcd [7] and, the case we will focus on here, linear chains of interacting hermitean matrices.
+
+it is our goal to give a coherent framework in which in to study this class of matrix model
+
+problems.
+
+when an action over matrix variables can eectively be reduced to the eigenvalues, the
+
+treatment of the eigenvalues as a single, collective coordinate [8] provides a convenient view-
+
+point for determining the hamiltonian of the system. for the matrix actions we will consider
+
+here the particular form is known as the das-jevicki-sakita hamiltonian [9]. the associated
+
+equations of motion are the non-linear euler equations of uid dynamics in one dimension
+
+and with the addition of appropriate boundary conditions present a dicult mathematical
+
+problem. here we will show how these boundary value problems can be interpreted in the
+
+familiar framework of the semi-classical limit of one-dimensional quantum mechanics. while
+
+in general solutions are still dicult to obtain, we will focus our attention on the case of a
+one-dimensional chain of interacting n  n hermitean matrices which was shown to be a
+das-jevicki-sakita-type system by matytsin [10] in the limit of large n. in this situation a
+
+restatement of the equations of motion in terms of quantum mechanics allows one to consider
+
+a linear problem which is most conveniently stated as a fredholm integral equation. formal
+
+solution of this equation in terms of iterations of the integral kernel, which can be evaluated
+
+by saddle-point methods, will provide a framework for detailing the nature and position of
+
+critical points which arise in the system.
+
+an interesting system from a statistical mechanical point of view, the one-dimensional
+
+matrix chain was discussed previously as a model for string theory with a discrete target
+
+space [12].
+
+in addition to this direct application, the matrix chain is related by duality
+
+1
+
+transformation to string theory on a circle with radius r = 1/a [13, 14], string theory at
+
+a nite temperature [15] and to o(2) sigma models coupled to two dimensional quantum
+gravity [16, 17]. the model itself consists of hermitean matrices x on the sites {x} of a
+one-dimensional lattice interacting with nearest neighbours. the action of the system is
+
+sv = axx
+
+trv (x) xx
+
+tr(x  x+1)2
+
+2a
+
+(1.1)
+
+where a is the lattice spacing and v is the potential at each site. assuming the site potentials
+
+v (x) to be analytic in x, the action can be reduced to the eigenvalues of the matrix variables
+by su(n) gauge rotations  and the known result for the correlator [11]
+
+i[x, x+1] = z d en trxx+1
+
+(1.2)
+
+consequently, in the limit of large n, the calculation of the partition function reduces to
+
+determining solutions of equations of motion for the eigenvalues. despite its relative simplicity
+
+and importance in low-dimensional string theory and quantum gravity, explicit solutions of
+
+the matrix chain are only known for a few particular choices of potential v .
+
+in section
+
+four we will show these cases arise when the equations of motion are equivalent to certain
+
+sturm-liouville eigenvalue problems.
+
+this model exhibits a remarkable range of behaviour as one adjusts the lattice spacing, a.
+
+for instance, in the limit of vanishing a one recovers the canonical example of a das-jevicki-
+
+sakita system, matrix quantum mechanics (restricted to a singlet sector)
+
+sm qm = z dx tr[
+
+1
+2
+
+2(x) + v ((x))]
+
+(1.3)
+
+in fact, the methods we will introduce in the next section and use to study the matrix chain
+
+nd their most natural form when applied to such matrix mechanical systems on a nite
+interval x  [0, t ].
+
+more interestingly, xing the potential v to satisfy v (0) = 4, at critical lattice spacing
+a = 1, the matrix chain was argued to undergo a kosterlitz-thouless phase transition [13].
+
+the physics of this phase transition are most transparent in the dual picture of string theory
+
+on the circle. here strings wrapping around the non-contractible target space play the role
+of vortices which are liberated when the radius r  1/a becomes suciently small. in terms
+of a discrete lattice, at suciently small lattice spacing a < 1 the universal behaviour of
+
+the system is that of the continuous model (1.3) due to communication between lattice sites.
+
+when the spacing is larger than unity this communication is broken and the system can be
+
+expected to factorize into a product of single d = 0 matrix models, which in fact it does as
+a  . the main objective of studying the matrix chain is to understand precisely how this
+
+2
+
+change of character from d = 1 matrix quantum mechanics to isolated d = 0 matrix models
+
+takes place at a = 1.
+
+in addition to a = 0 and a = 1, it was argued in [16] and [17] that at a discrete innity of
+
+lattice spacings non-analytic behaviour arises in the distribution of eigenvalues of the matrix
+
+variables x. considering iterative approximation of a functional solution to the equations of
+motion, it was argued these critical points arise when a = sin (p/2q) where p  q are each
+positive integers. in section five, where we develop the general solution for the distribution
+
+of eigenvalues as a series of saddle-point integrations, we will show that this behaviour is not
+
+realized in the matrix chain. in fact it will be shown that such critical behaviour arises when
+
+unstable stationary points are mistakenly considered relevant in saddle-point approximations.
+
+moreover, in constructing the general solution it will become clear that a countable innity of
+
+unstable stationary points appear in intermediate steps each of which can lead to misleading
+
+results.
+
+in addition to the details just outlined, we recall the kazakov-migdal (lattice) model
+
+of induced qcd as an interesting application of the techniques developed here. since the
+
+d-dimensional model is eectively reducible to the one-dimensional case, the non-trivial be-
+
+haviour of the matrix chain demonstrated here may help to overcome some of the apparent
+
+deciencies of that model of gauge interaction.
+
+2 collective eld theory to quantum mechanics
+
+to begin we will demonstrate a non-linear change of variable which allows the equations of
+
+motion derived from a das-jevicki-sakita hamiltonian [9]
+
+h[, ] =
+
+1
+
+2 z dx (x)
+
+
+x !2
+  (x)
+
+2
+3
+
+
+
+2(x)
+
+
++z dx (x)v(x, t)
+
+(2.1)
+
+to be determined as a temporal boundary problem in one-dimensional quantum mechanics.
+
+in (2.1), () is a probability distribution function which returns the fraction of eigenvalues
+
+of the matrix variables x with value . in the present context of collective eld theory, 
+plays the role of a coordinate and  is the canonically conjugate momentum. here we have
+included a potential v which is most generally time- dependent. independent of time, (2.1)
+describes the evolution of the matrix quantum mechanics (1.3) with v = v .
+
+the equations of motion following from this hamiltonian are given by the functional
+
+3
+
+variations with respect to the canonical variables
+
+
+t
+
+ =
+
+h
+
+
+,
+
+
+t
+
+v = 
+
+
+
+x   h
+ !
+
+where, for convenience, we have dened the velocity eld
+
+v(x, t) =
+
+
+x
+
+(2.2)
+
+(2.3)
+
+explicitly we see that the equations of motion are of the form of the euler equations for a
+one-dimensional inviscid uid experiencing a time-dependent force derived from v
+
+1
+
+v
+t
+
++
+
+2  v2
+
+x  2 2
+
+x ! = 
+
+
+t
+
++
+
+(v) = 0
+
+
+x
+
+xv(x, t)
+
+(2.4)
+
+as in all evolution problems we need to specify boundary conditions to supplement the
+
+equations of motion. in the case of matrix quantum mechanics the classical treatment of [1]
+
+assumed free boundary conditions for the evolution of the system over innite time. in this
+
+case one is led to a study of the ground state of the system and the equations of motion (2.4)
+
+are solved for the stationary case of v = 0. in general though we are interested in arbitrary
+
+boundary conditions for the evolution of the system through some time t . to be denite we
+
+will specify the generic conditions on the elds v and  at time t = 0 and t = t
+
+(x, 0) = 0(x)
+
+(x, t ) = t (x)
+
+,
+
+,
+
+v(x, 0) = v0(x)
+
+v(x, t ) = vt (x)
+
+(2.5)
+
+we would now like to rewrite the equations of motion in terms of a single quasi-linear rst
+
+order dierential equation. introducing the complex function
+
+f (x, t) = v(x, t) + i(x, t)
+
+it is easy to see that (2.4) leads to
+
+f
+t
+
++ f
+
+f
+x
+
+
+xv(x, t)
+
+= 
+
+(2.6)
+
+(2.7)
+
+for vanishing potential and real f this is the hopf equation which is the prototypical one di-
+
+mensional model of an equation which admits wave solutions complete with shocks and other
+
+inherently non-linear behaviour [18]. we would like to solve this equation with the boundary
+
+conditions given in (2.5). while the solution of the (complex) hopf equation is known explic-
+
+itly [10] in terms of initial data, typically we are interested in cases where boundary data is
+
+4
+
+supplied. in these situations the explicit solution leads to an ill-posed, inverse-type problem
+
+for the boundary conditions. consequently we would like to nd a more natural presentation
+
+of the problem. to this end we will consider a generalized version of (2.7) and introduce a
+
+dispersive term [18] which will serve to smooth out the solutions and allow one to calculate
+
+the details of the solution f in terms of boundary conditions. adding such a term leads to a
+
+complex version of the forced burgers equation
+
+ih
+
+2f
+x2 =
+
+f
+t
+
++ f
+
+f
+x
+
++
+
+
+xv(x, t)
+
+(2.8)
+
+obviously, in the limit as h  0 the forced hopf equation (2.7) is recovered. the useful-
+ness of this addition to the problem is that there exists a well-known (to mathematicians)
+
+change of variable which will reduce (2.8) to a second order, linear dierential equation. this
+
+transformation is known as the cole-hopf transform and is given
+
+f (x, t) = 2ih
+
+
+x
+
+log (x, t)
+
+(2.9)
+
+as is readily veried, this transformation leads (up to an irrelevant additive constant of
+
+integration) to the schrodinger equation
+
+h = "h2 2
+
+x2 + v(x, t)
+
+2
+
+#  = ih
+
+
+t
+
+
+
+(2.10)
+
+consequently we see that the time evolution of the collective eld hamiltonian (2.1) is given
+by the semi-classical (h  0) limit of one-dimensional quantum mechanics with the same
+potential, up to a factor.
+
+restricting to time independent potentials1 v(x, t) = v(x), the boundary conditions (2.5)
+
+enter into the picture as the start and end points of evolution by h through time t
+
+(x, t ) = eiht /h(x, 0)
+
+where the wavefunction is dened in terms of the eigenvalue density and velocity
+
+(x, t) = exp(cid:20)
+
+
+
+2h z x
+
+d (, t) +
+
+i
+
+2h z x
+
+d v(, t)(cid:21)
+
+(2.11)
+
+(2.12)
+
+given the greens function g(x, u|t ) for the schrodinger problem it may be convenient
+
+to cast (2.11) as an integral equation
+
+exp(cid:20)
+
+
+
+2h z x
+
+d t () +
+
+i
+
+d vt ()(cid:21) =
+
+2h z x
+z du g(x, u|t ) exp(cid:20)
+
+
+
+2h z u
+
+d 0() +
+
+(2.13)
+
+d v0()(cid:21)
+
+i
+
+2h z u
+
+1this restriction is not essential. in the general case the time evolution of the system is given by a dyson
+
+series expansion.
+
+5
+
+in applications the implementation of boundary conditions and greens function varies de-
+
+pending on the situation. for example, in investigations of the continuous hirota equation [6]
+one is interested in the case of time-dependent potentials v(x, t) leading to non-trivial greens
+functions. here the initial and nal velocities are specied and the initial and nal eigenvalue
+
+distributions are identied (0 = t ) so that (2.13) takes on the form of a non-linear integral
+equation for 0.
+
+another, more familiar application is that of two-dimensional yang-mills theory [4, 5, 19].
+
+in this case the coordinates (x, u) in (2.13) are replaced by their periodic counter-parts since
+
+the matrix variables are unitary rather than hermitean. the greens function is that of the
+
+heat equation on a circle and the boundary conditions on  and v specify the topology of the
+
+two-dimensional space-time. in general these cases again lead to non-linear integral equations
+
+for the unknown elds but as we will now see, there are situations where the general integral
+
+equation (2.13) leads to a tractable, linear equation.
+
+3 an application: the matrix chain
+
+an application of the preceding formalism, which we will be investigating for the remainder of
+
+this paper is that of the one-dimensional matrix chain. instead of (1.1), it will be convenient
+
+to consider a dierent form of the action
+
+su = xx
+
+tru(x) xx
+
+trxx+1
+
+(3.1)
+
+where we have rescaled the matrix eld x and the new site potential u is related to v by
+
+u(x) = av (ax) + 2
+
+x
+
+(3.2)
+
+the evolution of eigenvalues in this system, in the limit of large n, was shown by matytsin
+[10] to be given by the das-jevicki-sakita hamiltonian (2.1) with vanishing potential v. here
+the boundary conditions (2.5), which play a crucial role, are given by
+
+0(x)  (x, 0) = (x, 1)
+v(x, 0) = v(x, 1) =
+
+1
+2
+
+u (x)  x
+
+(3.3)
+
+the objective is to solve for the initial and nal eigenvalue density 0 in terms of the potential
+u.
+
+with v = 0, and  = ih, the schrodinger equation (2.10) reduces to the linear heat
+equation. substituting the well known greens function in (2.13) and implementing the
+
+6
+
+boundary conditions (3.3), we nd a linear integral equation of second fredholm type for the
+
+initial eigenvalue density 0(x) = (x, 0) in terms of the eective potential u(x)
+
+where
+
+(x) =
+
+
+
+4 z du e
+
+(xu)2
+
+4 +
+
+x2u (x)+u2u (u)
+
+4
+
+(u)
+
+(x) = exp(cid:20)
+
+i
+
+2 z x
+
+d 0()(cid:21)
+
+(3.4)
+
+(3.5)
+
+and we have introduced the constant  which does not aect the asymptotic solution but
+
+is convenient for later discussion.
+
+in this form (3.4) has the natural interpretation of an
+
+eigen-problem with eigenvector  and associated eigenvalue . it is interesting to note that
+
+the same integral equation arose in the context of matrix chains previously [12, 13]. in these
+
+instances the authors were seeking the lowest lying eigenvalues  in order to calculate the
+partition function. here we are most concerned with the asymptotic (  0) form of the
+eigenfunctions  in order to recover 0.
+
+hence we have re-stated the dierential form of the boundary value problem (eqns. (2.4)
+
+and (2.5)) for the matrix chain as a well-posed, linear problem for the eigenvalue density 0.
+moreover, the integral form (3.4) allows one to write equations for the eigenvalue density
+
+immediately. formally, in the limit of vanishing , the integral in (3.4) can be calculated
+
+by saddle-point methods. this calculation is particularly straightforward when only a single
+
+stationary point, us contributes to the integral (3.4). this stationary point is determined by
+the extrema condition
+
+x = u (us)/2 + i0(us)
+
+(3.6)
+
+likewise, at this stationary point 0 can be formally evaluated using its relation to  from
+equation (3.5)
+
+us = u (x)/2  i0(x)
+
+(3.7)
+
+labeling x by g+ in equation (3.6) and us by g in equation (3.7), we see the saddle-point
+evaluation of the integral equation (3.4) leads to matytsins solution [10] of the boundary
+
+value problem
+
+x = g+(g(x)) = g(g+(x))
+
+(3.8)
+
+this form of the solution of the problem is well-suited to detailed local analysis as demon-
+
+strated in [16, 17]. however, for a global analysis which can accommodate the existence of
+
+multiple stationary points, we will take the (well-studied) integral form (3.4) over the func-
+
+tional equation (3.8). before considering the particular characteristics of solutions though,
+
+we will utilize the interpretation of integral operators as self-adjoint operators to recover all
+
+previously known explicit solutions 0 of the matrix chain.
+
+7
+
+4 integral and dierential operators
+
+an analysis of an integral equation centers on the properties of the kernel k. in our case, the
+
+kernel of (3.4) is
+
+k(x, u) =
+
+1
+4
+
+xu
+
+2 
+
+e
+
+u (x)+u (u)
+
+4
+
+(4.1)
+
+this positive denite kernel is real, symmetric and hence hermitean. in the following we will
+
+assume the kernel to have many convenient properties which follow from the boundedness of
+
+all n-fold iterations
+
+z dx1    dxn1k(x1, x2)    k(xn1, xn) < 
+
+(4.2)
+
+consequently we will only consider potentials u(x) which increase at innity faster than x2.
+
+under such conditions k denes a compact operator and represents a self-adjoint operator
+
+on the space of square-integrable functions. from classical operator theory [20] there is a
+countable innity of orthogonal eigenfunctions {n(x)} which form a complete set on this
+space. it is our goal to obtain, as a function of the site potential u, the asymptotic form of
+
+these eigenfunctions which determine the large n solution of the eigenvalue distribution 0
+through (3.5).
+
+there are a number of cases in which the kernel k is equivalent to familiar self-adjoint
+
+operators in physics.
+
+in fact only in these instances are explicit solutions of the large n
+
+matrix chain known. in each case the eigenvalue distribution 0 is the solution of a quadratic
+equation. here we will show that such situations arise by considering the   0 limit of
+second order self-adjoint dierential operators l for which l and k share a complete set of
+eigenfunctions and dene the same action on the hilbert space.
+
+in order to determine the conditions that l must satisfy to be equivalent to the integral
+
+kernel we act on n as dened by the integral equation (3.4)
+
+enn(x) = lxn(x) = z du lxk(x, u)n(u)
+
+likewise, acting under the integral sign and using the self-adjoint property of l
+
+enn(x) = z du k(x, u)lun(u) = z du n(u)luk(x, u)
+
+(4.3)
+
+(4.4)
+
+subtracting (4.4) from (4.3) we nd that l will be equivalent to the integral kernel k, if and
+only if we satisfy the natural commutativity condition
+
+(lx  lu)k(x, u) = 0
+
+(4.5)
+
+8
+
+it follows from the symmetry of the kernel that the action of l generates symmetric functions
+of x and u which will cancel out in (4.5),
+
+lxk(x, u) = h(x + u, xu)k(x, u) = xmn
+
+amn(x + u)m(xu)nk(x, u)
+
+(4.6)
+
+where h is an arbitrary function of two variables with taylor expansion coecients {amn}.
+this construction is valid for any dierential operator but for simplicity we will consider
+
+only second order dierential operators of sturm-liouville form
+
+lx = 42 d
+
+dx  a2(x)
+
+d
+
+dx! + a0(x)
+
+(4.7)
+
+now it is a simple matter to nd the potentials u and associated coecients a2 and a0 which
+are consistent with the symmetry condition (4.6). since a second order l can only produce
+quadratic polynomials in u, (4.6) leads to the equation
+
+ a2(x)(u  u (x)/2)2  2 (a2(x)(u  u (x)/2)) + a0(x) = xm+n2
+
+amn(x + u)m(xu)n (4.8)
+
+expanding each side of the second equality in powers of u and equating coecients gives, to
+
+leading order in , the result
+
+a11x2 + (2a20 + a01)x + a10
+
+a02x2 + a11x + a20
+
+u (x) = 
+a2(x) = (a02x2 + a11x + a20)
+a0(x) = a00 + a10x + a20x2 
+
+(a11x2 + (a01 + 2a20)x + a10)2
+
+4(a02x2 + a11x + a20)
+
+(4.9)
+
+having determined the coecients a2 and a0, we can solve for the explicit form of the asso-
+ciated eigenvalue distribution. the dierential form of the integral equation (3.4) is
+
+lx(x) = e(x)
+
+(4.10)
+
+where the eigenvalue e is related to that of the integral form by  = ee/. in the limit of van-
+
+ishing , the solution of this dierential equation is given simply by the wkb approximation
+
+which implies the replacement of derivatives with momenta
+
+i
+
+d
+dx 
+
+
+2
+
+0
+
+(4.11)
+
+with this substitution, (4.10) reduces to a quadratic equation in the eigenvalue distribution
+
+which is solved by
+
+0(x) =
+
+1
+
+e  a0(x)
+
+vuut
+= q4(a02x2 + a11x + a20)(a00 + a10x + a20x2  e)  (a11x2 + (a01 + 2a20)x + a10)2
+
+a2(x)
+
+(4.12)
+
+2(a02x2 + a11x + a20)
+
+9
+
+since 0 is to be interpreted as a probability distribution describing the eigenvalues of the
+matrix variables, it must be properly normalized. this is carried out by integrating 0 over
+the positive support of (a0  e)/a2 and xing the undetermined constant e to satisfy
+
+z dx0(x) = 1
+
+(4.13)
+
+integrating (4.9), we nd the most general potential of the matrix chain which is consistent
+
+with a second order, self-adjoint dierential operator
+
+u(x) = 
+
+
+
+2a2
+
+x 
+
+a11
+a02
+a01a02  a2
+
+11
+
+02a10  a01a02a11 + a3
+
+11  2a02a11a20
+
+a2
+
+02q4a02a20  a2
+logha20 + a11x + a02x2i
+
+11
+
+2a2
+02
+
+arctan
+
+
+a11 + 2a02x
+
+q4a02a20  a2
+
+11
+
+
+
+
+(4.14)
+
+contained in this general form are a number of previously examined examples of the matrix
+
+chain. first, setting a11 = 0 and a10 = 0 recovers the symmetric double penner-type potential
+rst considered by matytsin [10]. also the asymmetric double penner considered in connection
+
+with the kazakov-migdal model of induced qcd [21] can be recovered (see [22] for recent
+
+work).
+in each of these cases the eigenfunctions  are related to prolate spheroidal wave
+functions. additionally, with a20 = 1, the limit a02  0 recovers the quadratic potential case
+solved by gross [23] and makeenko [24]. with u  = (a01 + 2)x  2m2x, l is the schrodinger
+operator for the simple harmonic oscillator and the general expression for the distribution of
+
+eigenvalues (4.12), properly normalized, reduces to
+
+0(x) =
+
+1
+
+q2m4  1  (m4  1)x2
+
+(4.15)
+
+in each of these cases the analytic structure of the eigenvalue distribution (4.12) is what one
+
+would expect of a d = 0 one-matrix model with a particular potential. this correspondence
+
+was previously suggested for arbitrary potential in the matrix chain, but such a simple solution
+
+of the integral equation (3.4) is not possible.
+
+in fact with further computation it can be
+
+argued that higher, nite, order self-adjoint dierential operators are equivalent to the integral
+kernel k only if they are functions of the second order operator lx we have constructed
+above. consequently, the large n eigenvalue distribution 0 of the matrix chain is the solution
+of a polynomial equation only for potentials of the form (4.14). this suggests that for a
+
+generic potential the solution of the matrix chain problem follows from the semi-classical
+
+approximation to a pseudo-dierential operator as suggested by naively extending the results
+
+for nite chains of matrices [25]. we will not pursue this line of reasoning here but return
+
+in the next section to the integral form (3.4) and give a method for obtaining the general
+
+solution and describe its unique features.
+
+10
+
+5 general solution and classication of critical points
+
+a phase transition in a system is characterized by a change in the analytic structure of
+
+observables as functions of external parameters. in standard matrix models this is commonly
+taken to include a change in analytic structure of the distribution of eigenvalues2.
+
+in the
+
+present case we have shown that the distribution of eigenvalues for a linear chain of hermitean
+
+matrices is determined completely by a linear integral equation (3.4) involving the kernel k
+
+(4.1). in this section we will go further and solve for the asymptotic eigenfunctions  as a
+
+series of iterations of k. given that iterations of k are calculable by saddle-point methods
+
+and the relation (3.5), we can eectively solve for the distribution of eigenvalues 0.
+particular we will be able to determine the critical structure of the matrix chain by analyzing
+
+in
+
+changes in the analytic structure of the kernel k and its iterations.
+
+we begin by slightly generalizing the problem of nding the eigenfunctions  in order to
+
+make use of well-known techniques [20]. instead of the integral equation (3.4) let us consider
+
+for a moment an inhomogeneous version with c some real constant
+
+(x) = c + z du k(x, u)(u)  c + k
+
+(5.1)
+
+since there are no constant eigenfunctions of the kernel k, the unique solution of (5.1) is
+
+given by the neumann series which builds the solution up through an iterative procedure
+
+0 = c
+
+1 = c + k0
+
+...
+
+n = c + kn1
+
+taking the limit of this process generates the solution
+
+(x) =  1 +
+
+
+
+xn=1
+
+nz du k n(x, u)! c  r(x; )c
+
+(5.2)
+
+(5.3)
+
+where r is commonly referred to as the resolvent kernel and k n is given by the convolution
+
+of n kernels
+
+k n(x, u) = z dz1    dzn1k(x, z1)k(z1, z2)    k(zn1, u)
+
+(5.4)
+
+2this assumption of a physical phase transition following from a change in the analytic structure of
+
+the eigenvalue distribution does not always hold [26]. nevertheless, in the absence of calculating physical
+
+observables, we will take a change in structure of the eigenvalue distribution to be a strong hint of a physical
+
+transition.
+
+11
+
+the convergence of the resolvent kernel is guaranteed by the boundedness of k n and the
+
+hilbert-schmidt theory of integral equations [20]. in order to recover the homogeneous solu-
+
+tion we should set c = 0 which leads to a trivial solution for . fortunately for us only the c
+
+independent logarithmic derivative of  is required to recover the eigenvalue distribution 0
+of the matrix chain. from the denition of , (3.5) and (5.3) we have the result
+
+0(x) = lim
+0
+
+2i
+
+
+d
+dx
+
+log (x) = lim
+0
+
+2i
+
+
+d
+dx
+
+log r(x; )
+
+(5.5)
+
+hence we can extract the eigenvalue distribution from the resolvent kernel r, which is
+
+expressible solely in terms of iterations of the kernel k as dened in (5.3). this is an important
+
+observation since the iterated kernels are calculable in the limit of vanishing . explicitly, the
+nth iterated kernel can be written for n  2
+(4)n/2 e
+
+z dz1    dzn1 es/2
+
+k n(x, u) =
+
+(5.6)
+
+u (x)+u (u)
+
+1
+
+4
+
+where the action s is given by
+
+s =
+
+n1
+
+xi=1
+
+u(zi) 
+
+n2
+
+xi=1
+
+zizi+1  z1x  zn1u
+
+(5.7)
+
+evaluating the integral over ~z = {z1, . . . , zn1} is a straightforward application of saddle-
+point methods in the limit of vanishing . in this limit the dominant contributions to the
+
+integral come from the vicinity of the stationary points of the function s
+
+= 0
+
+(5.8)
+
+s
+
+zi(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)~z
+
+in general there are many such stationary points, which we will label by . expanding s up
+
+to quadratic order about the stationary points, the resulting gaussian integrations give the
+
+approximation to the iterated kernel
+
+k n+1(x, u) =
+
+1
+4
+
+e
+
+u (x)+u (u)
+
+4 x
+
+(1)n(~z)
+qdet hn(~z)
+
+es(~z)/2
+
+(5.9)
+
+where n(~z) is the number of negative eigenvalues of the n n hessian hn of second deriva-
+tives of s evaluated at the stationary point
+
+hn(~z) =
+
+=
+
+2s
+
+zizj(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)~z
+
+
+
+
+
+u (z
+1 )
+1
+
+0
+
+12
+
+0
+
+1
+u (z
+  
+  
+
+  
+  
+
+0
+2 ) 1
+  
+0 1 u (z
+n )
+
+0
+  
+
+
+
+
+
+(5.10)
+
+while we have counted contributions from all stationary points of s in (5.9), the only relevant
+
+ones are those with minimum action. the contributions of other, irrelevant, stationary points
+
+are exponentially suppressed in the limit of vanishing .
+
+unfortunately it is dicult to calculate the iterated kernels and the resolvent in closed
+
+form to obtain explicit results for the eigenvalue distribution. it is possible though to extract
+
+enough qualitative information from (5.9) to outline a one-dimensional phase diagram of the
+
+matrix chain. to be denite we will consider a quartic potential
+
+u() = 4 + m22
+
+(5.11)
+
+this simple form is convenient since it allows a clear view of the intrinsic behaviour of the
+
+matrix chain which depends on the strength of the quadratic term.
+
+starting with m2 large and positive we expect that the eigenvalue distribution will be
+
+localized near the origin where the quadratic term of the potential is dominant. consequently,
+
+the solution (4.15) for the pure quadratic potential is a good approximation to the true
+
+solution and is smooth deformation of it. making contact with the saddle-point evaluation
+of the iterated kernels (5.9) it is easy to convince oneself that for large m2 there is only one
+stationary point of the action (5.7) and it is located near the origin ~z = 0. as m2 is decreased,
+the solution (4.15) of the pure quadratic potential becomes unstable at m2 = 1 and in fact
+
+this instability is present in the full solution. information about the stability of stationary
+points is contained in the eigenvalues r of the hessian hs(z), which evaluated at the origin
+in z-space give
+
+r = 2m2  2 cos
+
+r
+
+s + 1
+
+,
+
+r = 1, . . . , s
+
+(5.12)
+
+consequently we see that when evaluating arbitrarily high iterations of the kernel, k n, the
+hessian at the origin will being to develop negative eigenvalues at m2 = 1 and this stationary
+
+point becomes unstable. since s is bounded from below for our choice of potential, there are
+
+other stationary points where s has a lower magnitude and it is these which will dominate
+the integral (5.6) for k n.
+
+this degeneration at m2 = 1 signals a phase transition in the matrix chain and the physical
+
+meaning of it can be found by returning to the original form of the matrix chain action (1.1).
+
+the potential there, v is related to the current u by the one dimensional lattice spacing a
+
+through
+
+(5.13)
+taking two derivatives with respect to  and xing (without loss of generality) v (0) = 4
+to agree with the conventions of [16], we nd
+
+u() = av (a) + 2
+
+m2 = 1  2a2
+
+13
+
+(5.14)
+
+hence, the instability at m2 = 1 corresponds to the limit of vanishing lattice spacing and we
+
+are observing a phase transition to d = 1 matrix quantum mechanics (i.e. (1.3)) from the
+m2 > 1 phase where the solutions are qualitatively what one would expect from a d = 0
+
+single matrix model. in fact this observation can be made more concrete by returning to the
+
+integral equation (3.4) but in terms of the potential v and lattice spacing a,
+
+e i
+
+2r x
+
+d 0() =
+
+
+
+4 z du e
+
+(xu)2
+
+4a a
+
+v (x)+v (u)
+
+4
+
+d 0()
+
+e i
+
+2r u
+
+(5.15)
+
+it is a straightforward calculation to show that for vanishing , and to leading order in van-
+
+ishing a, (5.15) is solved by
+
+0(x) =
+
+1
+
+qe  v (x)
+
+(5.16)
+
+which is the well-known solution for the ground state of matrix quantum mechanics [1].
+
+as m2 is decreased further below this transition point, the stationary point of s at the
+
+origin ~z = 0 is seen to become progressively more unstable as the number of negative eigen-
+
+values of the hessian (5.12) grows. here the stationary points relevant to the saddle-point
+
+integrations (5.9) are not in the neighbourhood of the origin and are stable under changes in
+m2. the only instability that occurs with the relevant stationary points in this phase is due
+
+to a zz2 symmetry of the action s. recalling its denition
+
+s =
+
+n1
+
+xi=1
+
+u(zi) 
+
+n2
+
+xi=1
+
+zizi+1  z1x  zn1u
+
+(5.17)
+
+we see that for vanishing x and u there is a symmetry under zi  zi. it follows that a
+relevant stationary point at ~z has a mirror image at ~z and as x and u are tuned through
+the origin the relevant stationary point can change from one to the other. in this way non-
+
+analytic behaviour arises in the solution of the eigenvalue distribution 0, presumably of the
+form
+
+0  |x|
+
+(5.18)
+
+which is consistent with the critical behaviour of d = 1 matrix quantum mechanics. of course
+
+this detail is dicult to verify without explicit calculation.
+
+in addition to this standard behaviour it was argued in [16] that there exist a countable
+
+innity of additional points in this phase where the eigenvalue distribution 0 exhibits sub-
+leading non-analyticities. in fact we can reproduce these results if we assume, incorrectly,
+
+that the origin ~z = 0 is a relevant stationary point in the evaluation of 0. considering the
+vanishing of hessian eigenvalues (5.12), we see that the naive saddle-point approximation to
+k s+1 (5.9) will break down when
+
+(5.19)
+
+r
+
+s + 1
+
+m2 = cos
+
+14
+
+it is well known that at degenerate stationary points there is a change in the analytic structure
+
+of a saddle-point approximated integral so it is natural to assume that when (5.19) is satised,
+k s+1 and the eigenvalue distribution 0 will exhibit non-analyticities.
+spacing the degeneracy condition (5.19) can be found by comparing with (5.14). the result
+
+in terms of lattice
+
+a = s 1  cos r
+
+s+1
+
+2
+
+= sin
+
+r
+
+2(s + 1)
+
+(5.20)
+
+with r and s ranging over positive integers is exactly the condition for subleading critical
+
+behaviour as found in [16]. again we stress that this behaviour is not realized in the matrix
+
+chain and only arises when one takes into account unstable stationary points in the evaluation
+
+of saddle-point integrations. this is the main shortcoming of the functional form (3.8):
+
+in
+
+general there are a countable innity of solutions and it is a dicult task to discover the true
+
+solution with minimum action.
+
+there is one more phase transition in the matrix chain as m2 decreases further. from (5.12)
+we see that as m2  1 all eigenvalues of the hessian at the origin become negative and this
+stationary point is degenerate in all directions. on the surface, besides this observation of
+
+an irrelevant stationary point, there is little change in the system. the relevant stationary
+
+points are found by solving polynomial equations and their stability is determined locally as
+a smooth function of m2. this is misleading though since m2 = 1 corresponds to a lattice
+spacing of unity which, in our scaling, is where a kosterlitz-thouless phase transition was
+
+shown to occur [13, 15, 16]. the only overt sign of the transition here is that the integral
+
+kernel k again changes analytic structure to
+
+k(x, u) =
+
+1
+4
+
+e
+
+(x+u)2
+
+4  x4+u4
+
+4
+
+(5.21)
+
+near the origin it has the form of a translation kernel which is of a dierent character than
+
+the original kernel (4.1). if we consider the higher, quartic terms to only make the kernel
+
+well-dened, the behaviour of the eigenvalue distribution 0 can be found by restricting the
+range of integration in the integral equation (3.4)
+
+e i
+
+2r x
+
+d kt () =
+
+1
+
+4 z b
+
+b
+
+(x+u)2
+
+4
+
+du e
+
+e i
+
+2r u
+
+d kt ()
+
+(5.22)
+
+in this form it is clear that the solution will depend only on the constant b which sets a scale
+[16], otherwise it is a universal quantity. unfortunately the asymptotic (  0) solutions of
+this equation are not known and so remains the eigenvalue distribution kt of the matrix
+chain at the kosterlitz-thouless transition.
+
+finally, for m2 < 1 there persists a pair of zz2 related stationary points that at u and x
+vanishing trade o relevance. it is conjectured that this non-analytic behaviour is what one
+
+15
+
+would nd in a d = 0 single matrix model, i.e.
+
+0  |x|2
+
+(5.23)
+
+it would seem that the same mechanism which produced the critical exponents of matrix
+quantum mechanics for 1 < m2 < 1 produces dierent exponents here. this may be
+because of the total degeneracy of the origin but explicit calculations of the iterated kernels
+
+(5.9) and the eigenvalue distribution 0 are needed to make denite statements about the
+characteristics of the solutions of this phase of the model.
+
+6 conclusions and an application
+
+to review, we have demonstrated a general technique for expressing the equations of motion
+
+for systems whose time evolution is governed by das-jevicki-sakita hamiltonians with bound-
+
+ary conditions as an evolution problem in one-dimensional quantum mechanics. specifying
+
+to the particular example of the one-dimensional chain of interacting hermitean matrices we
+
+showed that in this case the general formalism reduces to a linear integral equation for the
+
+large-n eigenvalue density of the matrices. analyzing the associated integral kernel we were
+
+able to recover all previous explicit solutions of the matrix chain from asymptotic solution
+
+of particular second order ordinary dierential equations. in the general case, the solution
+
+of the integral equation was developed in terms of iterations of the kernel and from this
+
+solution the critical behavior of the system was found and a universal integral equation for
+
+the distribution of eigenvalues at the kosterlitz-thouless point was presented. in addition it
+
+was demonstrated that the sub-leading critical behaviour observed in [16] results from con-
+
+tributions from unstable stationary points in saddle-point approximations and hence is not
+
+observed.
+
+what was not accomplished here is the explicit calculation of a non-trivial solution to the
+
+large-n matrix chain using the formalism developed here. it would be nice to nd a potential
+
+for which the series of iterated kernels could be explicitly calculated and summed and the
+
+eigenvalue distribution extracted. this is of particular interest in testing the conjectures
+
+involving the existence of a kosterlitz-thouless phase transition in the system. with a global
+
+solution for kt one would be in a position to calculate explicitly the free energy of the matrix
+chain and check the critical behaviour. of course only the leading non-analytic part of the free
+
+energy is required but in order to obtain this one should have a denite idea of the analytic
+
+structure of the distribution of eigenvalues.
+
+the calculations we have performed here are not only relevant to string theory in one
+
+16
+
+dimension but also for other problems related to the matrix chain. an example is the kazakov-
+
+migdal lattice model of induced qcd in d-dimensions [7]. devised as a lattice model of gauge
+
+interactions where the self-interaction of adjoint scalar elds x are supposed to induce the
+standard wilson term which is left out, it is dened by the following action
+
+skm = xx
+
+trv (x)  xhxyi
+
+trxyyyxx
+
+(6.1)
+
+here the sub-scripts label sites on a hyper-cubic lattice on which the n  n adjoint scalar
+elds x reside. nearest neighbour interactions are mediated by su(n) gauge elds  residing
+on the lattice links. from the large n saddle-point equations it can be shown [10] that the
+
+one-dimensional matrix chain we have considered (3.1), with potential u, is equivalent to the
+
+kazakov-migdal model with a potential satisfying
+
+v (x) = du (x)  2(d  1)zdz
+
+0(z)
+x  z
+
+(6.2)
+
+where the eigenvalue density 0 is common to both models.
+
+the one drawback of this model of induced qcd is that the action (6.1) has a zzn
+symmetry under the center of the gauge group which leads to super-connement of gauge
+
+degrees of freedom, even on the lattice scale [27]. obviously this not a feature that one would
+
+like to have in the continuum limit of the model and the easiest way to avoid it is for the
+
+system not to realize this symmetry faithfully in its solution. unfortunately for the potentials
+
+u of logarithmic form, for which we have 0 explicitly (see section four), this symmetry
+persists [21, 28].
+it would be interesting to see if solutions of the matrix chain for more
+
+general potentials might lead to non-trivial propagation of gauge elds in the continuum limit
+
+of the kazakov-migdal model. this can be checked in principle using the solution of the
+
+matrix chain for the eigenvalue density 0 and the formalisms of [29] and [30] which express
+the correlation of gauge elds in the model in terms of 0.
+
+acknowledgments
+
+we would like to thank s. jaimungal, v. kazakov, i. klebanov and e. lieb for helpful
+
+comments and the niels bohr institute for its hospitality during a visit in which this work was
+
+begun. this work was completed with the support of the natural sciences and engineering
+
+research council of canada.
+
+17
+
+references
+
+[1] e. brezin, c. itzykson, g. parisi and j.-b. zuber, comm. math. phys. 59 (1978), 35.
+
+[2] p. ginsparg and g. moore, lectures on 2d gravity and 2d string theory, yctp-p23-
+
+92, la-ur-92-3479; hep-th/9304011.
+
+p. difrancesco, p. ginsparg and j. zinn-justin, phys. rep. 254 (1995), 1; hep-
+
+th/9306153.
+
+[3] t. banks, w. fischler, s. shenker and l. susskind, phys. rev. d55 (1997), 5112; hep-
+
+th/9610043.
+
+n. ishibashi, h. kawai, y. kitazawa and a. tsuchiya, nucl. phys. b498 (1997), 467;
+
+hep-th/9612115.
+
+r. dijkgraaf, e. verlinde and h. verlinde, nucl. phys. b500 (1997), 43; hep-th/9703030.
+
+[4] m. caselle, a. dadda, l magnea and s. panzeri, two-dimensional qcd on the sphere
+
+and on the cylinder in proceedings of the 1993 trieste summer school in high energy
+
+physics and cosmology; hep-th/9309107.
+
+[5] d. gross and a. matytsin, nucl. phys. b437 (1995), 541; hep-th/9410054.
+
+[6] v. kazakov, a matrix model solution of the hirota equation, to appear in the proceed-
+
+ings of the nato advanced research workshop new developments in field theory,
+
+zakopane, poland, june 14-20, 1997. yitp-97/044, lptens-97/44; hep-th/9711019
+
+[7] v. kazakov and a. migdal, nucl. phys. b397 (1993) 214; hep-th/9206015.
+
+[8] b. sakita, phys. rev. d21 (1980), 1067;
+
+a. jevicki and b. sakita, nucl. phys. b165 (1980), 511.
+
+[9] s.r. das and a. jevicki, mod. phys. lett a5 (1990), 1639;
+
+d. gross and i. klebanov, nucl. phys. b352 (1990), 671;
+
+a.m. sengupta and s.r. wadia, int. j. mod. phys. a6 (1991), 1961.
+
+[10] a. matytsin, nucl. phys. b411 (1994), 805; hep-th/9306077.
+
+[11] harish-chandra, amer. j. math. 79 (1957), 87;
+
+c. itzykson and j.-b. zuber, j.math.phys. 21 (1980) 411.
+
+[12] g. parisi, phys. lett. b238 (1990), 213.
+
+[13] d. gross and i. klebanov, nucl. phys. b344 (1990), 475.
+
+18
+
+[14] d. gross and i. klebanov, nucl. phys. b354 (1991), 459.
+
+[15] d. boulatov and v. kazakov, int. j. mod. phys. a8 (1993), 809;
+
+nucl. phys. proc. suppl. 25a (1992), 38.
+
+[16] a. matytsin and p. zaugg, nucl. phys. b497 (1997), 658; hep-th/9711170.
+
+[17] a. matytsin and p. zaugg, nucl. phys. b497 (1997), 699; hep-th/9701148.
+
+[18] g.b. whitham, linear and nonlinear waves, wiley-interscience, new york (1974).
+
+[19] l. paniak, ph.d. thesis, university of british columbia (1998).
+
+[20] j.a. cochran, the analysis of linear integral equations, mcgraw-hill, new york (1972).
+
+d. porter and d.s.g. stirling, integral equations: a rigorous and practical treatment,
+
+cambridge university press, cambridge (1990).
+
+[21] yu. makeenko, phys. lett. b314 (1993), 197; hep-th/9306043.
+
+yu. makeenko, int. j. mod. phys. a10 (1995), 2615; hep-th/9408029.
+
+l. paniak and n. weiss, j. math. phys. 36 (1995); hep-th/9501037.
+
+[22] l. chekhov and k. palamarchuk, two-logarithm matrix model with an external eld,
+
+smi-th-26/98; hep-th/9811200.
+
+[23] d. gross, phys. lett. b293 (1992), 181; hep-th/9208002.
+
+[24] yu. makeenko, mod. phys. lett. a8 (1993) 209; hep-th/9208045.
+
+m.i. dobroliubov, yu. makeenko and g.w. semeno, mod. phys. lett. a8 (1993) 2387;
+
+hep-th/9306037.
+
+[25] m. douglas, phys. lett. b238 (1990), 176.
+
+p. ginsparg, m. goulian, m.r. plesser and j. zinn-justin, nucl. phys. b342 (1990),
+
+539.
+
+[26] b. durhuus and p. olesen, nucl. phys. b184 (1981), 461.
+
+[27] i. kogan, g. semeno and n. weiss, phys. rev. lett. 69 (1992), 3435; hep-th/9206095.
+
+[28] m.i. dobroliubov, a. morozov, g.w. semeno and n. weiss, int. j. mod. phys. a9
+
+(1994), 5033; hep-th/9312145.
+
+[29] s.l. shatashvili, commun. math. phys. 154 (1993), 421; hep-th/9209083.
+
+[30] a. morozov, mod. phys. lett. a7 (1992), 3503; hep-th/9209074.
+
+19
+
+

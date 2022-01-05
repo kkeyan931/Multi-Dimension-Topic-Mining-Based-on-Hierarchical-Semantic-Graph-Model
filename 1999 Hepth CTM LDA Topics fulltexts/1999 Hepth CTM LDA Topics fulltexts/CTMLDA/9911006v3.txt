@@ -1,0 +1,929 @@
+soliton solutions of a gauged o(3) sigma model with interpolating potential
+
+pradip mukherjee
+
+department of physics, presidency college,
+86/1 college street, kolkata-700073, india.
+
+soliton modes in a gauged sigma model with interpolating potential have been investigated.
+numerical solutions using a fourth order runge  kutta method are discussed. by tuning the inter-
+polation parameter the transition from symmetrybreaking to the symmetric phase is highlighted.
+
+pacs numbers: 11.10.kk; 11.10.lm; 11.15.-q
+
+9
+0
+0
+2
+
+ 
+c
+e
+d
+3
+1
+
+ 
+
+ 
+ 
+
+3
+v
+6
+0
+0
+1
+1
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+i.
+
+introduction
+
+the o(3) nonlinear sigma model has long been the subject of intense research due to its theoretical and phenomeno-
+logical basis. this theory describes classical (anti) ferromagnetic spin systems at their critical points in euclidean
+space, while in the minkowski one it delineates the long wavelength limit of quantum antiferromagnets. the model
+exhibits solitons, hopf instantons and novel spin and statistics in 2+1 space-time dimensions with inclusion of the
+chern-simons term.
+
+the soliton solutions of the model exhibit scale invariance which poses diculty in the particle interpretation on
+quantization. a popular means of breaking this scale invariance is to gauge a u(1) subgroup of the o(3) symmetry
+of the model by coupling the sigma model elds with a gauge eld through the corresponding u(1) current.21 this
+class of gauged o(3) sigma models in three dimensions have been studied over a long time1,2,3,4,5,6,7. initially the
+gauge eld dynamics was assumed to be dictated by the maxwell term1. later the extension of the model with the
+chern - simons coupling was investigated2. a particular form of self - interaction was required to be included in
+these models in order to saturate the bogomolnyi bounds8. the form of the assumed self - interaction potential is
+of crucial importance. the minima of the potential determine the vaccum structure of the theory. the solutions
+change remarkably when the vaccum structure exhibits spontaneous breaking of the symmetry of the gauge group.
+thus it was demonstrated that the observed degeneracy of the solutions of1,2 is lifted when potentials with symmetry
+breaking minima were incorporated4,5. the studies of the gauged o(3) sigma model is important due to their intrinsic
+interest and also due to the fact that the soliton solutions of the gauged o(3) chern-simons model may be relevant
+in planar condensed matter systems9,10,11. recently gauged nonlinear sigma model was considered in order to obtain
+self-dual cosmic string solutions12,13. this explains the continuing interest in such models in the literature1,2,3,4,5,6,7.
+a particular aspect of the gauged o(3) sigma models where the gauge eld dynamics is governed by the maxwell
+term can be identied by comparing the results of1 and5.
+in1 the vaccum is symmetric and the n = 1 soliton
+solution does not exist, n being the topological charge. here, solutions exists for n = 2 onwards. moreover, these
+soliton solutions have arbitrary magnetic ux. when we achieve symmetrybreaking vaccum by chosing the potential
+appropriately5 soliton solutions are obtained for n = 1.22these solutions have quntized magnetic ux and qualify as
+magnetic vortices. it will be interesting to follow the solutions from the symmetrybreaking to the symmetric phase.
+this is the motivation of the present paper.
+
+we will consider a generalisation of the models of1 and5 with an adjustable real parameter v in the expression of
+the self - interaction potential which interpolates between the symmetric and the symmetrybreaking vaccua. this
+will in particular allow us to investigate the soliton solutions in the entire regime of the symmetrybreaking vacuum
+structures and also to follow the collapse of the n = 1 soliton as we move from the assymmetric to the symmetric
+phase. the solitons of the model are obtained as the solutions of the self  dual equation obtained by saturating the
+bogomolnyi bounds. unfortunately, these equations fall outside the liouville class even after assuming a rotationally
+symmetric ansatz. thus exact analytical solutions are not obtainable and numerical methods are to be invoked.
+
+the organisation of the paper is as follows. in the following section we present a brief review of the o(3) nonlinear
+sigma model. this will be helpful in presenting our work in the proper context. in section 3 our model is introduced.
+general topological classications of the soliton solutions of the model has been discussed here.
+in section 4 the
+saturation of the self-dual limits has been examined and the bogomolnyi equations have been written down. also
+the analytical form of the bogomolnyi equations has been worked out assuming a rotationally symmetyric ansatz.
+these equuations, even in the rotationally symmetric scenario, are not exactly integrable. a numerical solution has
+been performed to understand the details of the solution. a fourth order runge  kutta algorithm is adopted with
+provision of tuning the potential appropriately. in section 5 the numerical method and some results are presented.
+we conclude in section 6.
+
+2
+
+ii. o(3) nonlinear sigma models
+
+it will be useful to start with a brief review of the nonlinear o(3) sigma model14. the lagrangian of the model is
+
+given by,
+
+here  is a triplet of scalar elds constituting a vector in the internal space with unit norm
+
+l =
+
+1
+2
+
+  
+
+a = na  , (a = 1, 2, 3)
+   = aa = 1
+
+(1)
+
+(2)
+(3)
+
+the vectors na constitute a basis of unit orthogonal vectors in the internal space. we work in the minkowskian space
+- time with the metric tensor diagonal, g = (1, 1, 1).
+
+the nite energy solutions of the model (1) satises the boundary condition
+
+lima = a
+
+(0)
+
+(4)
+
+at physiacal innity. the condition (4) corresponds to one point compactication of the physical innity. the physical
+space r2 becomes topologically equivalent to s2 due to this compactication. the static nite energy solutions of the
+model are then maps from this sphere to the internal sphere. such solutions are classied by the homotopy15
+
+we can construct a current
+
+2(s2) = z
+
+k =
+
+1
+8
+
+  (   )
+
+which is conserved irrespective of the equation of motion. the corresponding charge
+
+t = z d2xk0
+
+=
+
+1
+
+8 z d2xij   (i  j)
+
+gives the winding number of the mapping (5)16.
+
+(5)
+
+(6)
+
+(7)
+
+iii. our model - topological classification of the soliton solutions
+
+in the class of gauged models of our interest here a u(1) subgroup of the rotation symmetry of the model (1) is
+gauged. we chose this to be the so(2) [u(1)] subgroup of rotations about the 3 - axis in the internal space. the
+lagrangian of our model is given by
+
+l =
+
+1
+2
+
+d  d 
+
+1
+4
+
+f f  + u ()
+
+d is the covariant derivative given by
+
+d =  + an3  
+
+(8)
+
+(9)
+
+the so(2) (u(1)) subgroup is gauged by the vector potential a whose dynamics is dictated by the maxwell term.
+here f are the electromagnetic eld tensor,
+
+u () is the self - interaction potential required for saturating the self - dual limits. we chose
+
+f = a   a
+
+u () = 
+
+1
+2
+
+(v  3)2
+
+(10)
+
+(11)
+
+where v is a real parameter. substituting v = 0 we get back the model of5 whereas v = 1 gives the model of1.
+
+we observe that the minima of the potential arise when ,
+
+which is equivalent to the condition
+
+3 = v
+
+2
+1 + 2
+
+2 = 1  v2
+
+on account of the constraint (3). the values of v must be restricted to
+
+|v|  1
+
+3
+
+(12)
+
+(13)
+
+(14)
+
+the condition (13) denotes a latitudinal circle (i.e. circle with xed latitude) on the unit sphere in the internal space.
+by varying v from -1 to +1 we span the sphere from the south pole to the north pole. it is clear that the nite energy
+solutions of the model must satisfy (13) at physical innity. for v 6= 1 this boundary condition corresponds to the
+spontaneous breaking of the symmetry of the gauge group and in the limit
+
+|v|  1
+
+(15)
+
+the asymmetric phase changes to the symmetric phase. we call the potential (11) interpolating in this sense. in the
+asymmetric phase the soliton solutions are classied according to the homotopy
+
+1(s1) = z
+
+(16)
+
+instead of (5). in the symmetric phase, however, this new topology disappears and the solitons are classied according
+to (5) as in the usual sigma model (1). a remarkable fallout of this change of topology is the disappearence of the
+soliton with unit charge. the fundamental solitonic mode n = 1 (n being the vorticity) ceases to exist in the symmetric
+phase. the modes corresponding to n = 2 onwards still persist but the magnetic ux associated with them ceases to
+remain quantised.
+
+in the asymmetric phase the vorticity is the winding number i.e. the number of times by which the innite physical
+circle winds over the latitudinal circle (13). associated with this is a uniqe mapping of the internal sphere where the
+degree of mapping is usually fractional. by inspection we construct a current
+
+k =
+
+1
+8
+
+[  d   d  f (v  3)]
+
+(17)
+
+generalising the topological current (6). the current (17) is manifestly gauge invariant and diers from (6) by the
+curl of a vector eld. the conservation principle
+
+thus automatically follows from the conservation of (6). the corresponding conserved charge is
+
+k  = 0
+
+using (17) and (19) we can write
+
+t = z d2xk0
+
+t = z d2x[
+
+1
+8
+
+ij   (i  j )]
+
+
+
+1
+
+4 zboundary
+
+(v  3)ard
+
+(18)
+
+(19)
+
+(20)
+
+where r, are polar coordinates in the physical space and a = e  a. using the boundary condition (12) we nd
+that t is equal to the degree of the mapping of the internal sphere. note that this situation is dierent from3 where
+the topological charge usually diers from the degree of the mapping. in this context it is interesting to observe that
+the current (17) is not unique because we can always add an arbitrary multiple of
+
+with it without aecting its conservation. we chose (17) because it generates proper topological charge.
+
+1
+8
+
+f 
+
+iv. self dual equations in the rotationally symmetric ansatz
+
+in the previous section we have discussed the general topological classication of the solutions of the equations of
+motion following from (8). in the present section we will discuss the solution of the equations of motion. the euler -
+lagrange equations of the system (8) is derived subject to the constraint (3) by the lagrange multiplier technique
+
+4
+
+where
+
+using (21) we get
+
+d(d ) = [d(d )  ] + n3(v  3)
+
++ (v  3)3
+
+ f  = j
+
+j = n3  j and j =   d
+
+dj = (v  3)(n3  )3
+
+from (22) we nd,for static congurations
+
+2a0 = a0(1  2
+3)
+
+from the last equation it is evident that we can chose
+
+a0 = 0
+
+(21)
+(22)
+
+(23)
+
+(24)
+
+(25)
+
+(26)
+
+as a consequence we nd that the excitations of the model are electrically neutral.
+
+the equations (21) and (22) are second order dierential equations in time. as is well known, rst order equations
+which are the solutions of the equations of motion can be derived by minimizing the energy functional in the static
+limit. keeping this goal in mind we now construct the energy functional from the symmetric energy - momentum
+tensor following from (8). the energy
+
+e =
+
+1
+
+2 z d2x(cid:20)d0  d0  di  di + (v  3)2  2(f 
+
+0 f0 
+
+1
+4
+
+ff )(cid:21) .
+
+for static conguration and the choice a0 = 0, e becomes
+
+e =
+
+1
+
+2 z d2x[(di)  (di) + f 2
+
+12 + (v  3)2]
+
+several observations about the nite energy solutions can be made at this stage from (28). by dening
+
+we get
+
+ = 1 + i2
+
+di  di = |(i + iai)|2 + (i3)2
+
+the boundary condition (13) dictates that
+
+  (1  v2)
+
+1
+
+2 ein
+
+at innity. from (28) we observe that for nite energy congurations we require
+
+a = e
+
+n
+r
+
+(27)
+
+(28)
+
+(29)
+
+(30)
+
+(31)
+
+(32)
+
+on the boundary. this scenario is exactly identical with the observations of5 and leads to the quantisation of the
+magnetic ux
+
+ = z bd2x = zboundary
+
+ard = 2n
+
+(33)
+
+5
+
+the basic mechanism leading to this quantisation remains operative so far as v is less than 1. at v = 1, however, the
+gauge eld a becomes arbitrary on the boundary except for the requirement that the magnetic eld b should vanish
+on the boundary. remember that not all the vortices present in the broaken phase survives this demand. specically,
+the n = 1 vortex becomes inadmissible.
+
+now the search for the self - dual conditions proceed in the usual way. we rearrange the energy functional as
+
+e =
+
+1
+
+2 z d2x[
+
+1
+2
+
+(di  ij   dj )2 + (f 12  (v  3))2]  4t
+
+equation (34) gives the bogomolnyi conditions
+
+di  ij  dj = 0
+f12  (v  3) = 0
+
+(34)
+
+(35)
+(36)
+
+which minimize the energy functional in a particular topological sector, the upper sign corresponds to +ve and the
+lower sign corresponds to -ve value of the topological charge.
+
+we will now turn towards the analysis of the self - dual equations using the rotationally symmetric ansatz18
+
+1(r, ) = sin g(r) cos n
+2(r, ) = sin g(r) sin n
+3(r, ) = cos g(r)
+na(r)
+
+a(r, ) = e
+
+r
+
+from (12) we observe that we require the boundary condition
+
+and equation (32) dictates that
+
+g(r)  cos1 v as r  
+
+a(r)  1 as r  
+
+(37)
+
+(38)
+
+(39)
+
+remember that equation (32) was obtained so as the solutions have nite energy. again for the elds to be well
+dened at the origin we require
+
+substituting the ansatz(37) into (35) and (36) we nd that
+
+g(r)  0 or  and a(r)  0 as r  0
+
+g (r) = 
+
+sin g,
+
+a(r) = 
+
+(v  cos g)
+
+n(a + 1)
+
+r
+
+r
+n
+
+(40)
+
+(41)
+
+(42)
+
+where the upper sign holds for +ve t and the lower sign corresponds to -ve t.equations (41) and (42) are not exactly
+integrable. in the following section we will discuss the numerical solution of the boundary value problem dened by
+(41) and (42) with (38) to (40).
+
+using the ansatz (37) we can explicitly compute the topological charge t by performing the integration in (19).the
+
+result is
+
+the second term of (43) vanishes due to the boundary condition (38). also, when g(0) = 0,
+
+t = 
+
+n
+2
+
+[cos g()  cos g(0)] 
+
+1
+2
+
+[v  cos g()]
+
+and, when g(0) = ,
+
+t =
+
+n
+2
+
+(1  v)
+
+t = 
+
+n
+2
+
+(1 + v)
+
+(43)
+
+(44)
+
+(45)
+
+it is evident that t is in general fractional. due to (20) it is equal to the degree of mapping of the internal sphere.
+this can also be checked explicitly.
+
+from the above analysis we nd that g(0) = 0 corresponds to +ve t and g(0) =  corresponds to -ve t. we
+shall restrict our attention on negetive t which will be useful for comparision of results with those available in the
+literature. the boundary value problem of interest is then
+
+6
+
+with
+
+a(r) = 
+
+r
+n
+
+g (r) = 
+
+r
+
+n(a + 1)
+
+sin g
+
+(v  cos g)
+
+g(0) = , a(0) = 0
+g() = cos1 v, a() = 0
+
+(46)
+
+(47)
+
+(48)
+
+in addition we require a(r)  0 as r  . this condition follows from (46), (47) and (48) and should be considered
+as a consistency condition to be satised by their soloutions.
+
+v. numerical solution
+
+the simultaneous equations (46) and (47) subject to the boundary conditions (48) are not amenable to exact
+solution. they can however be integrated numerically. we have already mentioned the quenching of the n = 1
+solution in the limit v  1. this is connected with the transition from the symmetry breaking to the symmetric
+phase. the numerical solution is thus interesting because it will enable us to see how the solutions change as we
+follow them from the deep assymetric phase (v = 0) to the symmetric phase (v = 1). in the following we provide the
+results of numerical solution to highlight these issues.
+
+let us note some details of the numerical method. a fourth order runge  kutta method was employed. the point
+r = 0 is a regular singular point of the equation. so it was not possible to start the code from r = 0. instead, we
+start it from a small value of r. the behaviour of the functions near r = 0 can be easily derived from (46) and(47)
+
+g(r)   + arn
+
+a(r)  
+
+r2
+2n
+
+(1 + v)
+
+(49)
+
+(50)
+
+here a is an arbitrary constant which xes the values of g and a at innity. in the symmetrybreaking phase the
+numerical solution depends sensitively on the value of a.23there is a critical value of a, a = acrit for which the
+boundary conditions are satised. if the value of a is larger than acrit the conditions at innity are overshooted,
+whereas, if the value is smaller than the critical value g(r) vanishes asymptotically after reaching a maximum. the
+situation is comparable with similar ndings elsewhere19. the values of g and a were calulated at a small value of r
+using (49) and (50). the parameter a was tuned to match boundary conditions at the other end. interestingly, this
+matching is not obtainable when n = 1 and v = 1. this is consistent with the quenching of the n = 1 mode in the
+symmetric vacuum situation.
+
+after the brief discussion of the numerical technique we will present a summary of the results. as may be recalled,
+the purpose of the paper is to study the solutions throughout the asymmetric phase with an eye to the disappearence
+of the n = 1 mode. accordingly proles of g and a will be given for n = 1, for dierent values of v. in gures 1 and
+2 these proles are shown for v = 0, .2, .4, .6, .8. the corresponding magnetic eld distributions are given in gure 3.
+another interesting issue is the change of the matter and the gauge proles with the topological charge. in gures 4
+and 5 this is demonstrated for dierent n values for a constant v.
+
+7
+
+n=1, v= 0
+ v = .2
+v=.4
+v=.6
+ v = .8
+
+ 2
+
+ 4
+
+ 6
+
+ 8
+
+ 10
+
+r
+
+ 6
+
+ 5.5
+
+ 5
+
+)
+r
+(
+g
+
+ 4.5
+
+ 4
+
+ 3.5
+
+ 3
+
+ 0
+
+fig. 1: the matter prole. the function g(r) is plotted against r for n = 1 and dierent v values, indicated on the right hand
+top corner.
+
+ 0
+
+-0.1
+
+-0.2
+
+-0.3
+
+-0.4
+
+)
+r
+(
+a
+
+-0.5
+
+-0.6
+
+-0.7
+
+-0.8
+
+-0.9
+
+-1
+
+ 0
+
+n=1, v = 0
+v = 0.2
+v = 0.4
+v = 0.6
+v = .8
+
+ 2
+
+ 4
+
+ 6
+
+ 8
+
+ 10
+
+r
+
+fig. 2: the gauge eld prole. the function a(r) is plotted against r for n = 1 and dierent v values.
+
+)
+r
+(
+
+b
+
+ 1.8
+
+ 1.6
+
+ 1.4
+
+ 1.2
+
+ 1
+
+ 0.8
+
+ 0.6
+
+ 0.4
+
+ 0.2
+
+ 0
+
+ 0
+
+n=1, v = 0
+v = .2
+v=.4
+v = .6
+v = .8
+
+ 2
+
+ 4
+
+ 6
+
+ 8
+
+ 10
+
+r
+
+fig. 3: the magnetic eld proles. plot of the function b(r) against r.
+
+the o(3) sigma model in (2+1) dimensional space  time with its u(1) subgroup gauged was mooted1 as a possible
+mechanism to break the scale  invariance of the soutions of the original 3 - dimensional o(3) sigma model. the
+
+vi. conclusion
+
+8
+
+n = 1
+n = 2
+
+ 6
+
+ 5.5
+
+ 5
+
+)
+r
+(
+g
+
+ 4.5
+
+ 4
+
+ 3.5
+
+ 0
+
+ 2
+
+ 4
+
+ 6
+
+ 8
+
+ 10
+
+r
+
+fig. 4: the matter proles for dierent n (v = .4).
+
+ 0
+
+-0.1
+
+-0.2
+
+-0.3
+
+-0.4
+
+)
+r
+(
+g
+
+-0.5
+
+-0.6
+
+-0.7
+
+-0.8
+
+-0.9
+
+-1
+
+ 0
+
+n = 1
+n = 2
+
+ 2
+
+ 4
+
+ 6
+
+ 8
+
+ 10
+
+r
+
+fig. 5: the gauge eld proles for dierent n (v =.4).
+
+model nds possible applications in such diverse areas such as planar condensed matter physics9,10,11, gravitating
+cosmic strings11,12 and as such is being continuously explored in the literature1,2,3,4,5,6,7,17. an interesting aspect of
+the gauged o(3) sigma models is the qualitative change of the soliton modes in the symmetric and symmetrybreaking
+vacuum scenario, as can be appreciated by a comparision of solutions given in1,5. in this paper we have considered a
+gauged o(3) sigma model with the gauge eld dynamics determined by the maxwell term as in1,5. an interpolating
+potential was included to invesigate the solutions in the entire symmetrybreaking regime . this potential depends
+on a free parameter, the variation of which eects transition from the asymmetric to symmetric phase. we have
+discussed the transition of the associated topology of the soliton solutions. the bogomolnyi bound was saturated to
+give the self  dual solutions of the equation of motion. the self - dual equations are, however, not exactly solvable.
+they were studied numerically to trace out the solutions in the entire asymmetric phase with particular emphasis on
+the n = 1 mode. our analysis may be interesting from the point of view of applications, particularly in condensed
+matter physics.
+
+the author likes to thank muktish acharyya for his assistance in the mumerical solution.
+
+vii. acknowledgement
+
+ mukhpradip@gmail.com; also visiting associate, s. n. bose national centre for basic sciences, jd block, sector iii, salt
+
+lake city, calcutta -700 098, india
+
+9
+
+1 b.j. schroers, phys. lett. b 356 (1995) 291.
+2 p.k. ghosh and s.k. ghosh, phys. lett. b366 (1996) 199.
+3 k. kimm, k. lee and t. lee, phys. rev. d 53 (1996) 4436.
+4 p. mukherjee, phys. lett. b 403 (1997) 70.
+5 p. mukherjee, phys. rev. d 58 (1998) 105025.
+6 k. c. mendes, r. r. landim, c. a. s. almeida, mod.phys.lett. a20 (2005) 1005
+7 m. s. cunha, r. r. landim, c. a. s. almeida phys.rev. d74 (2006) 067701.
+8 e.b. bogomolnyi, sov. j. nucl. phys. 24 (1976) 449.
+9 p. k. panigrahi , s roy , and w. scherer , phys. rev. lett. 61 (1998) 2827
+10 p. k. panigrahi , s. roy and w. scherer, phys. rev. d38 (1998) 3199
+11 c han, phys. rev. d47 (1993) 5521.
+12 y. verbin, s. madsen, a.l. larsen, phys.rev. d67 (2003) 085019.
+13 h. r. vanaie, n. riazi, int.j.mod.phys. a19 (2004) 3595.
+14 a.a. belavin and a.m. polyakov, jetp lett. 22 (1975) 245.
+15 f. j. hilton, an introduction to homotopy theory ( cambridge university press, cambridge, england, 1953 ).
+16 r.rajaraman, solitons and instantons ( north holland publishing company, amsterdam, 1989 ).
+17 b.j. schroers, nucl.phys. b475 (1996) 440.
+18 y.s. wu and a. zee, phys. lett. b147 (1984) 325 .
+19 r. jackiw, k. lee and e. weinberg, phys. rev. d 42 (1990) 3488 .
+20 f. wilczek and a. zee, phys. rev. lett. 51 (1983) 2250; m. bowick, d. karabali and l. c. r. wijewardhana, nucl. phys.
+
+b 271 (1986) 417; r. banerjee, nucl. phys. b 419 (1994) 611.
+
+21 this is dierent from the minimal coupling via the topological current discussed previously20.
+22 the disappearence of the n = 1 soliton has been shown to follow from general analytical method in17.
+23 this should be contrasted with the symmetric vacuum solution where a may have arbitrary values.
+
+

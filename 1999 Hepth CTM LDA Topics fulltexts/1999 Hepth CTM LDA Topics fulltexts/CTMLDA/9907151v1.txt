@@ -1,0 +1,2127 @@
+9
+9
+9
+1
+
+ 
+l
+u
+j
+ 
+
+8
+1
+
+ 
+ 
+
+1
+v
+1
+5
+1
+7
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+july 18, 1999
+
+computations in large n matrix mechanics
+
+charles schwartz
+
+department of physics, university of california
+
+berkeley, california 94720
+
+abstract
+
+the algebraic formulation of large n matrix mechanics recently
+developed by halpern and schwartz leads to a practical method of nu-
+merical computation for both action and hamiltonian problems. the
+new technique posits a boundary condition on the planar connected
+parts xw, namely that they should decrease rapidly with increasing or-
+der. this leads to algebraic/variational schemes of computation which
+show remarkably rapid convergence in numerical tests on some many-
+matrix models. the method allows the calculation of all moments of
+the ground state, in a sequence of approximations, and excited states
+can be determined as well. there are two unexpected ndings: a large
+d expansion and a new selection rule for certain types of interaction.
+
+e-mail: schwartz@physics.berkeley.edu
+
+1 introduction
+
+large n matrix mechanics [1] diers from ordinary quantum mechanics in
+that the canonical commutator
+
+in the one-matrix case, is replaced by the relation
+
+i[p, q] = i,
+
+i[, ] =| 0ih0 |
+
+(1.1)
+
+(1.2)
+
+where | 0i is the ground state in the reduced hilbert space. the original
+matrix-valued coordinates rs,
+r, s = 1 . . . n are represented by the single
+operator  in this reduced hilbert space. [2]
+
+the solution of the one-matrix large n hamiltonian problem with an
+arbitrary potential v () was given some years ago [3]; and only a couple of
+two-matrix problems in the action formalism have previously been solved. [4,
+5]
+
+the many-matrix problem involves several noncommuting operators m
+and their conjugate momenta. following halpern and schwartz [6], this
+system is described at equal times by a symmetric free algebra which involves
+a pair (tilde and untilde) for each hermitian operator
+
+[ m, n] = [m, n] = 0,
+
+m, n = 1 . . . d
+i[m, n] = i[m, n] = mn | 0ih0 |
+m | 0i = m | 0i
+
+m | 0i = m | 0i,
+
+and the ground state energy is given by
+
+e0 = n 2h0 |
+
+1
+2
+
+dxm=1
+
+mm + v () | 0i
+
+(1.3a)
+(1.3b)
+(1.3c)
+
+(1.4)
+
+where () refers to the set of operators {m}. we shall use the summation
+convention in what follows.
+in ordinary quantum mechanics systems of several interacting bodies are
+most commonly attacked from the schrodinger equation in coordinate space,
+using the direct product basis | q1, q2, . . . qdi. that approach is not available
+
+1
+
+in the large n reduced hilbert space because of the noncommutativity of
+the operators m. a basis of states in this reduced space may be written as
+
+| wi  w | 0i
+
+(1.5)
+
+where we use the word notation for ordered products of operators
+
+w = m1m2 . . . mn,
+
+w = m1m2 . . . mn,
+
+mi = 1 . . . d
+
+(1.6)
+
+and we write [w] = n for the length of the word w. see app. a for a collection
+of relevant denitions and formulas.
+
+the new approximation technique presented in this paper lies close to the
+heisenberg (matrix) formulation rather than the schrodinger (wavefunction)
+formulation and makes use of the set of polynomials tw() introduced in
+ref. [7].
+
+(1  mm + x())1 = xw
+
+wtw()
+
+x() = xw
+
+wxw,
+
+x0 = 0,
+
+h0 | tw() | 0i = w,0
+
+(1.7a)
+
+(1.7b)
+
+where the m are a dummy set of (noncommuting) parameters and the num-
+bers xw were identied as the planar connected parts dened in earlier dia-
+grammatic studies. [8] various properties of these xw are given in app. a,
+including their relation to the ordinary moments zw  h0 | w | 0i of the
+ground state.
+
+the core idea of the present work is to truncate the set of these xs
+
+set xw = 0
+
+f or all [w] > n
+
+(1.8)
+
+and solve the (now nite) set of algebraic equations, calling this the n-
+th order approximation. then increase n, step by step, and see whether
+the numerical results appear to converge. this is an intuitive/experimental
+approach for now, since we have no mathematical proof that this method
+should work.
+
+with even a small number of the xs determined, one can approximate all
+the moments of the ground state and the accuracy of these results increases
+systematically as one proceeds to higher orders of approximation. the ex-
+cited states of a hamiltonian system are also amenable to this method.
+
+2
+
+the recent algebraic developments by halpern and schwartz [6, 7] pro-
+vide a wealth of formal denitions and relations for many-matrix problems,
+unifying the study of both action and hamiltonian systems. these start
+with the denitions of generalized creation and annihilation operators in the
+reduced hilbert space,
+
+m | 0i = ifm() | 0i,
+bm = fm() + im,
+
+h0 | m = ih0 | fm()
+bm | 0i = h0 | b
+m = 0
+
+bmb
+
+n = emn()
+
+emn() | 0i = 2i[n, fm()] | 0i
+
+(1.9a)
+(1.9b)
+(1.9c)
+(1.9d)
+
+which is the interacting cuntz algebra. (in the case of non-interacting har-
+monic oscillators, we have emn  mn and eqs. (1.9b, 1.9c) reduce to the
+original cuntz algebra.)
+in the practical work of this paper there is a basic distinction between
+the two types of problems. for action problems we start out knowing the
+functions fm() explicitly and this lets us work directly with the algebraic
+equations for the connected parts xw derived in ref. [7] (see sec. 5). for
+hamiltonian problems we do not know fm() beforehand and so part of
+the method presented here involves a constructive representation of these
+operators, for which task we use the polynomials tw() (see sec. 6).
+
+in sec. 2 we test the idea on a simple example: a one-matrix action
+problem and in sec. 3 we try to give some understanding of why this method
+apparently works well. counting of the variables in many-matrix problems
+and making use of symmetry to keep things manageable is discussed in sec 4,
+followed in sec. 5 by some algebraic results for a model action problem with
+d interacting matrices. the plan of attack for many-matrix hamiltonian
+problems is set out in sec. 6 and numerical results for a set of model potentials
+are presented in sec. 7. we note not only the extremely rapid convergence
+found in these examples but also an unexpected selection rule. section 8
+presents more details of this computational program; and a related method
+for calculating excited states is given in sec. 9. several appendices discuss
+further details and possible extensions of this work.
+
+3
+
+2 first test: one-matrix action problem
+
+we start with a simple problem: a one-matrix action at large n. as given
+in ref. [7] for the quartic action (f = 3), we have the following equation
+for the connected parts xn:
+
+x(x + 1)2  2x2 
+
+1
+2
+
+4 = 0,
+
+x = xn>0
+
+nxn
+
+(2.1)
+
+which leads to the recursion formula
+
+xn =
+
+1
+2
+
+n,4 
+
+n2xp=2
+
+xp(
+
+np2xq=2
+
+xqxnpq + 2xnp),
+
+n = 4, 6, . . . .
+
+(2.2)
+
+for one-matrix problems we replace the word label w by n = [w]. we can
+compare this with the schwinger-dyson equations for the ordinary moments
+zn = h0 | n | 0i, which may be written as
+
+2zn+4 =
+
+nxm=0
+
+zmznm,
+
+z0 = 1
+
+(2.3)
+
+and only even n enter because of the parity symmetry in this problem. if we
+have the value of x2 = z2 (which we know from other analysis to be (2/3)3/2),
+then we can compute all the higher ones from these recursion formulas. table
+1 shows some numerical results and we see that the ratio xn/zn decreases
+fairly rapidly as n increases.
+
+table 1. xn and zn for f = 3 action problem
+10
+
+4
+
+2
+
+6
+
+20
+
+n
+xn
+zn
+
+xn/zn
+
+.544331
+.544331
+1.00000
+
+-.0925926 .0403208
+.544331
+.500000
+-.185185
+.074074
+
+.0143736
+.816497
+.017604
+
+-.00311591
+
+3.95996
+.000787
+
+now we want to turn this process around and calculate the value of x2
+from the recursion formula (2.2) using the idea that xn should decrease
+rapidly at large n  a sort of boundary condition. that is, we consider x2 as
+an unknown parameter and then search for that value that will allow us to
+
+4
+
+truncate the equations (2.2) with xn+2 = 0; and then we step up the value
+of n and repeat the process. table 2 contains the results of this computation
+and we see that the residual error at each level of approximation decreases
+quite rapidly as we increase n.
+
+table 2. compute x2 by truncation: xn+2 = 0
+
+n+2
+
+4
+
+6
+
+8
+
+10
+
+20
+
+approx. x2
+
+error
+
+.500000
+-.044331
+
+.534522
+-.009809
+
+.541429
+-.002902
+
+.543344
+-.000987
+
+.544321
+-.000010
+
+we view this as a sort of eigenvalue problem for the connected parts
+xn and recognize a certain similarity here with the familiar procedure for
+numerical integration of the one-dimensional schrodinger equation in some
+given potential. while that other problem involves a continuous variable
+(x) obeying a linear (dierential) equation our current problem involves a
+discrete set xn obeying a nonlinear (algebraic) equation.
+
+3 why should this method work?
+
+to understand what is going on here it may help to consider the ordinary
+moments
+
+zn = h0 | n | 0i = z dq (q) qn
+
+(3.1)
+
+for a one-matrix problem. these zn, for a typical ground state density (q),
+are a rather monotonous sequence of numbers. the innite set of coupled
+equations for these moments (schwinger-dyson equations in one language)
+contains all the information about the ground state; but one would not try
+to truncate this innite system of equations by setting the zn equal to zero
+after some cuto n = n.
+
+(in earlier work [9] on moment equations for the one- and two-body
+schrodinger equation, the asymptotic behavior of these moments as n  
+was inferred from the dierential equation for the wavefunction and this al-
+lowed a backward iteration procedure.)
+
+now, by contrast, observe the denition of the planar connected parts,
+
+5
+
+again for the one-matrix problem:
+
+xn+1 = h0 | tn() | 0i = z dq (q) q tn(q)
+
+where the polynomials tn have the property
+
+h0 | tn() | 0i = 0
+
+n > 0.
+
+(3.2)
+
+(3.3)
+
+clearly, the xn are just an algebraic combination of the zn. but eq. (3.3)
+tells us that the polynomials tn are oscillatory within the domain of inte-
+gration; and this suggests that the xn, given by (3.2), can be thought of
+as something like the fourier coecients of the density (q). therefore, if
+the ground state is reasonably smooth and the polynomials tn are reason-
+ably appropriate, then we would expect that the higher fourier coecients
+(the xn) could decrease rapidly. this is the motivation to try a truncation
+scheme on the xs.
+
+a further advantage of the xs is that they are directly sensitive to the
+interactions in many-matrix problems. in ref. [7] it was shown that in many-
+matrix problems without interactions, the xw vanish if there is any mixing
+of letters in the word w.
+
+once one has determined, approximately, even a small number of the xs,
+this allows one to give approximate values for all of the zs in any one- or
+many-matrix problem by use of the general algebraic relation (a.2) between
+the generating functions for these two sets of parameters.
+
+with these encouraging results, we go on to study the problems of many
+
+matrices in large n action and hamiltonian systems.
+
+4 many matrices - counting the variables
+
+with d matrices, the number of words of length n is dn and this number
+grows very rapidly. if we have some symmetries in the action or the hamil-
+tonian, then we can reduce the number of independent variables xw that
+we have to handle at each level of approximation. in this paper we consider
+model problems with the following invariance properties of the ground state
+| 0i.
+parity symmetry: change the sign of m (and m) for any m.
+permutation symmetry: make any permutation among the d labels m, n, . . . .
+
+6
+
+in addition, there is the general invariance of the xw (as of the trace opera-
+tion in the unreduced space) under a cyclic permutation of the letters in the
+word w.
+
+with these conditions, the number of independent xws is greatly reduced
+- to what we shall call a set of basic words at each level n - as shown in
+table 3.
+
+table 3. count of dn  basic words
+d=5
+n
+251
+2
+4
+6253
+6
+156259
+39062559
+8
+10
+12
+
+d=3
+91
+813
+7299
+656141
+59049257
+
+d=2
+41
+163
+644
+25612
+102428
+409694
+
+d=9
+811
+65613
+5314419
+
+at each level of approximation (signied by the maximum word length
+n) we shall deal with a number of basic words (the dimension d of our
+parameter space). from table 3 we read o these dimensions:
+for d=2,
+d=1,4,8,20,48,. . . ; for d=3, d=1,4,13,54,. . . ; for d=5, d=1,4,13,72,. . . ; for
+d=9, d=1,4,13,. . . . the rst task of the computer program is to make a
+table of all dn words at each n, identify each word with an equivalence class
+according to the symmetries described above and assign one member of each
+class as a basic word wi,
+
+i = 1 . . . d.
+
+5 many-matrix action problems
+
+5.1 general algebraic machinery
+
+for action problems, we have the dual basis system of equations derived by
+halpern and schwartz [7]:
+
+m = gm()  emn() bn,
+b
+
+x(b) = xw
+
+x wb w = xw
+
+m = bm(1 + x(b))
+
+xwb w.
+
+(5.1a)
+(5.1b)
+
+7
+
+here, the operators bm, b
+
+m obey the simple cuntz algebra
+
+bmb
+
+n = mn
+
+(5.2)
+
+and the role of these operators is to generate an innite set of coupled al-
+gebraic equations for the connected parts xw, as will be shown by example
+below. the functions gm = 2fm and emn, dened earlier in (1.9a, 1.9d),
+are immediately known once we specify the action s. then we shall proceed
+with the sequence of truncation approximations, generalizing the one-matrix
+example of sec. 2.
+
+5.2 a model problem
+
+we take for our model problem here the d-matrix action
+
+s = 
+
+1
+4n
+
+dxm,n=1
+
+t r([m, n])2
+
+in the unreduced hilbert space. this gives us the reduced operators,
+
+(mnn + nnm  2nmn)
+(nn + xnn)
+
+gm() = xn6=m
+emm() = xn6=m
+em6=n() = mn  2nm
+
+(5.3)
+
+(5.4a)
+
+(5.4b)
+
+(5.4c)
+
+where we note that this s has the symmetries mentioned in the previous
+section and this leads to the simplications xm = 0, xmn = mnx11.
+
+the equations (5.1a) now look like this
+
+dxn6=m=1{
+
+b
+
+m =
+( bn bn bm x + bm( bn bn x  x11)  2 bn bm bn x) +
+( bn x bn bm x + bm x bn bn x  2 bn x bm bn x) +
+( bn bn x bm x + bm bn x bn x  2 bn bm x bn x) +
+( bn x bn x bm x + bm x bn x bn x  2 bn x bm x bn x)}.
+
+(5.5)
+
+8
+
+this system of equations is equivalent to the schwinger-dyson set of
+equations but it is packaged to emphasize the role of the xs and it leads
+directly to our sequence of approximations. the rst line of terms in (5.5)
+has only one x and its rst few terms are
+(xmnnp+xnnmp2xnmnp)b
+p (5.6)
+where the usual constraint on the sum (n 6= m) is understood. the second
+and third lines have two xs and their rst few terms are
+
+p+(xmnnpqr+xnnmpqr2xnmnpqr)b
+
+qb
+
+rb
+
+2x11xmpb
+p + (2x11xmpqr + xnpxmnqr + xmpxnnqr 
+2xnpxnmqr + xnnpqxmr + xnmpqxnr  2xmnpqxnr)b
+
+rb
+
+qb
+p
+
+and the fourth line, with three xs, starts o as
+
+(xnpxnqxmr + xmpxnqxnr  2xnpxmqxnr)b
+collecting the linear terms in b gives us the equation
+
+rb
+
+qb
+p.
+
+1 = 2(d  1)(x1122  x1212 + x 2
+11)
+
+(5.7)
+
+(5.8)
+
+(5.9)
+
+where we have used the symmetry properties to list the basic words: (11) at
+n = 2 and (1111), (1122), (1212) at n = 4. this equation is exact and leads
+to our lowest (second) order approximation: we set all xs with word length
+greater than 2 equal to zero and we get
+
+x11  1/q2(d  1).
+
+(5.10)
+
+next, we collect the cubic terms in b. for our fourth order approxima-
+
+tion we drop all xws with [w] > 4:
+
+0 = x11{(2d  2 + mp + mr)xmpqr  2mpxmqrp  2mrxmrpq +
+
+(mpqr + mrpq)[(d  1)x1122 + x1111  xmmqq]} +
+x 3
+11[pqmrmp + qrmpmq  2prmqmp]
+
+(5.11)
+
+where pq = 1  pq. these equations are now evaluated for varying choices
+of the labels m, p, q, r, which must be paired. we nd
+
+x1111 + 3(d  1)x1122  2x1212 + x 2
+2x1122  dx1212 + x 2
+
+x1111 + x1122 = 0 f or m = p = q = r (5.12a)
+11 = 0 f or m = p 6= q = r (5.12b)
+(5.12c)
+11 = 0 f or m = q 6= p = r.
+
+9
+
+the solution of this set of equations (for d 6= 2) is
+
+x1111 = x1122 =
+
+1
+3
+
+x1212 =
+
+1
+
+3d + 2
+
+x 2
+11
+
+(5.13)
+
+and, putting these results back into (5.9), we nd the fourth order approxi-
+mation for x11
+
+x11  [2(d  1)(1 
+
+3d + 2
+
+4
+
+)] 1
+2 .
+
+(5.14)
+
+for d = 2 the equations (5.12) are indeterminate; but for this case a
+
+scaling argument leads to the conclusion that the system is not bounded.
+
+it was very pleasing to nd, in the fourth order calculation above, that the
+number of independent equations was just equal to the number of unknowns
+and we found a unique solution. will this circumstance continue at higher
+orders of approximation? i have no general answer.
+
+one should program a computer to carry the above sequence of approxi-
+mations to higher order; only algebraic work is required at each step. i have
+not done this yet, giving priority to the more dicult hamiltonian problems,
+reported in sec. 6.
+
+5.3 a large d expansion
+
+from the result above one is led to speculate that this truncation sequence
+of approximations may be related to a large d expansion. the algebraic
+calculations described above have been carried out to the sixth order, with
+9 equations in 9 unknowns, and solved in the approximation that d >> 1.
+this leads to the following result:
+
+(x11)2 = 2(d  1)[1 
+
+4
+
+3d + 2 
+
+185
+81d2 + o(d3)].
+
+(5.15)
+
+we do not have a systematic theory of such a large d approximation but
+the following crude attempt may be instructive. look back at the formula
+for gm, eq. (5.4a), and replace the operator pair nn by its ground state
+average, which is x11. this butchered gm is then
+
+gm  2m,
+
+ = (d  1)x11
+
+(5.16)
+
+which is the formula for a system of noninteracting harmonic oscillators. the
+oscillator result xmn = mn/(2) then gives immediately the leading term
+
+10
+
+in (5.15). the higher order terms in 1/d are then expected to come from a
+perturbation theory expansion about this oscillator approximation. also, if
+one looks at the computer results for the hamiltonian problems (sec. 7) one
+may discern a suggestion of more rapid convergence for larger values of d.
+
+6 many-matrix hamiltonian problems
+
+6.1 choosing the model problems
+
+we shall study the hamiltonians for d bosonic matrices, given in the unre-
+duced hilbert space as
+
+h =
+
+1
+2
+
+dxm=1
+
+t r(mm) + nt r(v (
+
+
+n
+
+))
+
+with the following choices of the potential:
+
+v1() =
+
+v2() =
+
+v3() =
+
+1
+4
+
+1
+4
+
+1
+4
+
+v4() = 
+
+(
+
+2
+m)2
+
+4
+m
+
+dxm=1
+dxm=1
+dxm<n=1
+dxm<n=1
+
+1
+8
+
+2
+m2
+n
+
+[m, n]2
+
+(6.1)
+
+(6.2a)
+
+(6.2b)
+
+(6.2c)
+
+(6.2d)
+
+or, if desired, any linear combination of them. the rst potential, which is
+just the non-interacting case, is used for verication of the computational
+procedure. the third and fourth potentials have at directions, which
+make them particularly interesting. (will the calculations converge nicely,
+indicating a bound state, or will they not?) all four potentials have the
+symmetries (parity and permutation) described in sec. 4. the additional
+so(d) symmetry of v2 and v4 is not used at the outset but will be noted in
+the results.
+
+the following subsections outline the method and further details are given
+
+in sec. 8 and in apps. a and b.
+
+11
+
+6.2 construction of fm()
+
+a central construct of our previous work [6, 7] is the reduced operator fm(),
+dened in (1.9a). we will represent this quantity by a nite linear expansion
+in the polynomials tw()
+
+fm() = xw
+
+r(m)
+
+w tw()
+
+(6.3)
+
+at each level of approximation and then see how to determine the coecients
+r. (see subsec 8.1 for more details.).
+
+for any reduced operator a which depends on the s one has the identity
+
+2h0 | a()fm() | 0i = h0 | i[m, a()] | 0i
+
+(6.4)
+
+which is proved using the denition (1.9a) and (1.3c). choosing a = tw and
+using the formulas (a.7) and (1.7b) this gives
+
+h0 | tw()fm() | 0i =
+
+1
+2
+
+w,m
+
+(6.5)
+
+for any word w. we impose these relations on the approximate expansion
+(6.3) and obtain
+
+xw
+
+1
+2
+
+kw,wr(m)
+
+w =
+
+w,m
+
+(6.6)
+
+(6.7)
+
+where
+
+kw,w  h0 | tw()tw() | 0i.
+
+this matrix k is numerically evaluated in terms of the xs, as detailed in
+app. b, and then we determine the expansion coecients r from a straight-
+forward matrix inversion calculation. of course, we make this a square (and
+positive) matrix, as detailed in eqs. (8.5, 8.6). this completes the rst part
+of the tting problem, which we would term the kinematic part since it as-
+sures that we are doing our best, at any given level of approximation, to
+represent the basic commutator algebra (1.3b).
+
+now we turn to the second part, which involves the dynamics of any
+
+particular hamiltonian.
+
+12
+
+6.3 minimizing the energy
+
+the kinetic energy of the ground state can be expressed as
+
+k.e./n 2 =
+
+=
+
+1
+2h0 | mm | 0i =
+1
+4h0 | i[m, fm] | 0i =
+
+1
+2h0 | fmfm | 0i
+d
+4
+
+1
+4
+
+r(m)
+
+m =
+
+r(1)
+1
+
+(6.8)
+
+using the methods and results of the previous subsection.
+
+the potential energy of the ground state is expressed directly in terms of
+
+the xs using (a.3b):
+
+h0 | 4
+m2
+
+m | 0i = x1111 + 2x 2
+n | 0i = x1122 + x 2
+
+h0 | 2
+
+h0 | mnmn | 0i = x1212, m 6= n
+
+11
+
+11, m 6= n
+
+(6.9a)
+(6.9b)
+(6.9c)
+
+where we have used the specied symmetries to write these formulas in terms
+of the four basic words at the second and fourth orders.
+
+we program the computer to evaluate the ground state energy e =
+e0/n 2 at the n-th order approximation with any assigned numerical val-
+ues for the quantities xw for [w]  n. the nal step of this scheme is to vary
+this set of xs so as to minimize e. this procedure is without mathematical
+justication; it just seems like the natural thing to do.
+
+what is more, this part of the method is far from straightforward as a
+computational task because the energy e is a very nonlinear function of the
+many variables x. in subsec. 8.2 we describe the techniques used to search
+for this minimum. the numerical results are presented next.
+
+7 numerical results
+
+the tables that follow give the outputs of the computations and are designed
+to show at a glance the convergence of the approximation scheme described
+above.
+
+table 4 shows the energy (e/d) calculated for the potential v2, for several
+values of d and at several levels of approximation and table 5 gives the
+corresponding values of x11 = h0 | 2
+
+1 | 0i.
+
+13
+
+d
+1
+4
+
+table 4. calculated values of e/d for potential v2
+n
+2
+4
+6
+8
+10
+
+d=2
+.429
+.42672
+.426672
+.42667093
+.426670885
+
+d=3
+.472
+.47035
+.4703152
+.47031461
+
+d=5
+.5408
+.53921
+.539189
+
+8,13
+20,54
+
+48
+
+d=9
+.6412
+.64007
+.640058
+
+d
+1
+4
+
+table 5. calculated values of x11 for potential v2
+d=9
+n
+.292
+2
+.29365
+4
+6
+.293667
+8
+10
+
+d=2
+.437
+.4428
+.443007
+.4430170
+.44301744
+
+d=3
+.397
+.4010
+.401106
+.4011103
+
+d=5
+.347
+.34912
+.349171
+
+8,13
+20,54
+
+48
+
+we note how rapidly these numbers converge as one goes down each
+column in the tables. for each step increasing the order of approximation,
+we see one or two orders of magnitude increase in accuracy, somewhat better
+for e than for x. also, one sees in these tables that the rst approximation
+(a back of the envelope computation) is accurate to about one percent.
+such is the power of the x. for comparison, table 6 presents results for the
+one-matrix problem, d=1 and v1, computed by the same program. we see
+that the results of the many-matrix computations (above) converge about as
+rapidly as the one-matrix results, although the amount of work required to
+obtain the former is much greater.
+
+table 6. computed results for the one-matrix problem: v1
+n d e
+2
+4
+6
+8
+10
+
+x11
+.50
+.5100
+.51057
+.510611
+.5106136
+
+.375
+.3717
+.371638
+.3716339
+.37163373
+
+1
+2
+3
+4
+5
+
+14
+
+table 7 gives the e/d results computed for the potential v3 and one sees
+
+rapid convergence here as well.
+
+d
+1
+4
+
+table 7. calculated values of e/d for potential v3
+n
+2
+4
+6
+8
+10
+
+d=2
+.236
+.2312
+.231036
+.2310258
+.23102504
+
+d=3
+.298
+.29470
+.294625
+.29462242
+
+d=5
+.375
+.373207
+.3731823
+
+8,13
+20,54
+
+48
+
+d=9
+.4725
+.471358
+.47134965
+
+in table 8 we see the results for the potential v4, which has the greatest
+amount of at directions among our models. here the rate of convergence
+is noticeably slower than in the previous models, but still looks convincingly
+good.
+
+d
+1
+4
+
+table 8. calculated values of e/d for potential v4
+n
+2
+4
+6
+8
+10
+
+d=2
+.24
+.224
+.2232
+.22299
+.222964
+
+d=5
+.38
+.370
+.36944
+.369431
+
+d=3
+.30
+.289
+.2890
+.28895
+
+d=9
+.47
+.4690
+.468940
+
+20,54,72
+
+8,13
+
+48
+
+also, in the several tables above, one sees a suggestion of more rapid
+convergence for larger values of d; see the discussion of the large d expansion
+in subsec. 5.3.
+
+in another experiment, we studied the one-matrix problem with potential
+
+v () =
+
+1
+2
+
+2 
+
+g
+4
+
+4
+
+15
+
+(7.1)
+
+as the parameter g approached the value 8/3 where the bound state dis-
+appears. the numerical procedure searching to minimize the energy worked
+well until one approached very close to this critical value; then it failed dra-
+matically.
+
+other xw values are also produced in these computations, albeit with a
+
+somewhat lesser accuracy. table 9 has some of these for the potential v2.
+
+d=2
+
+table 9. computed values of some other xw for v2
+xw
+x1111
+x1122
+x1212
+
+-.0132659 -.0082358
+-.0066329 -.0041179
+
+-.004201
+-.002101
+
+-.001798
+-.000899
+
+0.0
+
+d=3
+
+d=5
+
+d=9
+
+0.0
+
+0.0
+
+0.0
+
+if there is rotational symmetry in the ground state, one can derive the fol-
+lowing relation among the fourth order xs,
+
+x1111 = 2x1122 + x1212
+
+(7.2)
+
+and the data in table 9 satisfy this relation, as does the corresponding data
+for the potential v4, which is also rotationally invariant.
+
+there is another, unexpected, phenomenon seen in the data of table 9:
+namely that x1212 = 0. an increasing number of other xws also vanish when
+one looks at higher orders. this result also appears for the potential v3, but
+not for v4. when a particular xw goes to zero, so does the corresponding
+coecient rw. the empirical rule is this: write out the word w and remove
+any pair of matching adjacent letters; repeat this process; the xw will vanish
+unless this process can reduce the original word to null.
+i do not have a
+full explanation for this newly discovered selection rule but it appears to be
+related to the fact that these potentials (see (6.2b) and (6.2c)) involve only
+pairs (mm) of each operator. this new symmetry is particular to large n
+matrix mechanics with its noncommuting coordinate operators; it would not
+arise in ordinary quantum mechanics.
+
+16
+
+from an experimental (numerical) perspective, but lacking any formal
+proof, it appears that these types of large n problems are now solvable. it
+will be important for others to repeat this work independently in order to
+verify these results.
+
+8 details of the computational program
+
+8.1 the full fm
+
+the expression (6.3) for fm() needs to be rened. the motivation for what
+follows comes from app. e in ref. [6] where the ground state wavefunction
+(the action) is modeled and one sees the consequent structure of fm().
+
+corresponding to each basic word wi we want to have a group of terms
+
+(in the tw()) with a common coecient r(m)
+
+:
+
+i
+
+fm() =
+
+dxi=1
+
+r(m)
+
+i fm,i().
+
+for the rst stage in this construction we dene
+
+mtw()  xwmw
+
+tw()
+
+which, one can show, will guarantee that the atness condition [6]
+
+is satised.
+
+[m, fn()]  [n, gfm()] = 0
+
+(8.1)
+
+(8.2)
+
+(8.3)
+
+for the second stage we take all permutations among the m = 1 . . . d
+
+letters that occur in the basic words wi.
+
+fm,i() =
+
+1
+
+c(wi) (d  1)!
+
+m xperms
+
+p ermute twi()
+
+(8.4)
+
+where the constant c(w), the number of subcycles in the word w, is dened
+in app. a. the normalization constants used above are convenient but not
+essential.
+
+now we construct the matrix elements
+
+ti,j = h0 | f 
+
+m,i()fm,j() | 0i
+
+(no sum)
+
+(8.5)
+
+17
+
+where these are linear combinations of the kw,w dened in (6.7) and eq.(6.6)
+is replaced by
+
+dxj=1
+
+ti,j r(m)
+
+j =
+
+1
+2
+
+i,1,
+
+i = 1 . . . d .
+
+(8.6)
+
+in order to save computing time in evaluating each ti,j it is important to nd
+and to count repeated evaluations of the same k elements. i am not sure
+that i have done this job completely in my program.
+
+8.2 searching
+
+the hardest part of this program is searching for the minimum energy in
+i =
+the parameter space of the basic word connected parts: xwi  xi,
+1 . . . d. the rst method used ts a quadratic function to e(x) evaluated at
+d(d+1)/2 nearby points and then nds the extremum:
+
+bi = e(xi + )  e(x),
+
+ai,j = e(xi + , xj + )  e(x)  bi  bj
+
+(8.7a)
+
+dxj=1
+
+ai,j vj = bi 
+
+1
+2
+
+ai,i,
+
+x
+i = xi  vi.
+
+(8.7b)
+
+if one is close enough to the minimum, iterating this procedure should con-
+verge rapidly. for most of the data presented in sec. 7 this method worked,
+although i am sure that more sophisticated techniques could have been more
+ecient. for the largest size computation carried out (d=5, n=8, d=72)
+the time for each evaluation of the energy was about one minute and each
+iteration of this search procedure took about 44 hours on a common desktop
+microcomputer.
+
+sometimes, however, this approach failed. for the potential v4, beyond
+the sixth order calculation (for d=2 and d=3) this method diverged or led
+to impossible output (see the next subsection). what succeeded in those
+cases was a second method: start by solving the numerical problem for some
+other potential (like v3 where the rst search method worked well) and then
+gradually change a coupling constant g inserted into the potential and solve
+again, repeating in small steps until one arrives at the desired result. at each
+new step one can start eciently with a sort of perturbation theory
+
+dxj=1
+
+ai,jj = 2 2e(x)
+g xi
+
+,
+
+x
+i = xi  (g)i
+
+(8.8)
+
+18
+
+which involves the matrix ai,j (8.7a) which one has already calculated at the
+previous step.
+
+just because the numerical search appears to converge is no proof that we
+have found the correct solution. in work on the potential v4 for d = 2 we had
+some results at the sixth order (d=8) which rst appeared well converged
+by the rst searching method; but a later check on the rotational symmetry
+(7.2) showed that this was a false solution. repeating this calculation using
+the second search method described above led to satisfactory results. the
+fact that the false energy value was o only in the fth decimal place stands
+as a cautionary note on this new numerical technique.
+
+another numerical searching procedure is suggested by the algebraic work
+in sec. 5. one could vary only the subset of xws with [w] = n, keeping all
+others xed; then cycle through the choices of n*.
+
+it should be repeated that this is all experimental work that is in need of
+sound mathematical justication and guidance. the multidimensional energy
+surface e(x) is a very complicated nonlinear function of the parameters x.
+in fact, there are singularities which may lie not far away from the desired
+minimum. one can see the simplest example of this situation in the 2x2
+matrix equation (8.6) for the d=1 case.
+
+8.3 constraints
+
+the quantities xw cannot be regarded as completely independent variables.
+for example, in the one-matrix case one has
+
+h0 | (2 < 2 >)2 | 0i  0
+
+(8.9)
+
+which leads to the inequality x4  (x2)2.
+
+using the general schwarz inequality, we can write
+
+|h0 | twtw | 0i|2  h0 | t wtw | 0ih0 | t wtw | 0i
+
+(8.10)
+
+for all words w and w. this implies many constraints upon the allowed values
+of the x parameters as we search to minimize the energy. it is unclear how
+best to implement these constraints; in the computations reported here i
+only checked that the matrix (8.5) satised
+
+|ti,j|2  ti,i tj,j,
+
+ti,i > 0 i, j
+
+(8.11)
+
+19
+
+at each evaluation. a failure of this test signals that the search has strayed
+into forbidden territory.
+
+an entirely dierent sort of constraint comes from the use of a purely
+real (rather than complex) representation for the  operators. this implies
+that we should have xw = x 
+w = x w. with the extensive symmetry of the
+problems studied here many of these constraints are automatic; but at the
+10th order for d = 2 and at the 8th order for d > 2, one nds some basic
+words that do not satisfy w  w. rather than imposing this constraint, we
+are satised to nd that this equality comes out in the numerical results.
+
+9 excited states
+
+after the ground state problem is solved, we consider excited (adjoint) states
+in the reduced hilbert space:
+
+h | 0i = e0 | 0i,
+
+h | ei = e | ei
+
+(9.1)
+
+where it should be remembered that we do not know the form of the reduced
+hamiltonian h [6] but only that it generates time translations. with the
+postulate
+
+for some operator u we nd the identity
+
+| ei = u | 0i
+
+(e  e0)h0 | u u | 0i = ih0 | u  u | 0i.
+
+now we make the construction, as with f before,
+
+u = xw
+
+rwtw(),
+
+u  = xw
+
+r
+wt w()
+
+and we have, using (a.9),
+
+u = xw
+
+rw xw=w1mw2
+
+tw1mtw2
+
+where the rw are as yet undetermined constants.
+
+we can now write (9.3) as
+
+(9.2)
+
+(9.3)
+
+(9.4)
+
+(9.5)
+
+e  e0 = (xw,w
+
+r
+
+wl w,wrw)/(xw,w
+
+r
+wk w,wrw)
+
+(9.6)
+
+20
+
+where the matrix kw,w was dened earlier and from (a.10) we have
+
+lw,w  ih0 | tw tw | 0i =
+
+1
+
+2 xw=umv xw=umv
+
+ku,vku,v.
+
+(9.7)
+
+finally, vary the coecients r to nd stationary values of (9.6) and we get
+a traditional linear matrix problem, where e  e0 is an eigenvalue of the
+matrix l with respect to the metric matrix k.
+the evaluation of the matrix k and thus also of l is done entirely in terms
+of the xws, which were already solved with the ground state problem. thus
+(although i have not done any explicit numerical calculations for excited
+states) the complete spectrum of h can be calculated. the lowest order
+approximation, u = tm(), gives em  e0 = 1/(2xmm).
+
+acknowledgements
+
+i am grateful to m. b. halpern for his advice on numerous occasions and
+
+i also thank k. bardakci and m. rieel for helpful conversations.
+
+appendix a. useful formulas old and new
+
+further conventions on the word notation:
+
+w = 0 is the null word.
+w = m means that the word w consists of a single letter m.
+w  w means that the two words dier by at most a cyclic permutation of
+w  w means that the two words are equivalent under some larger symmetry.
+w1w2 = w3 means that the second word is appended to the rst word and
+
+their letters.
+
+the result is the third word.
+
+w = umv means that the word w is decomposed as indicated.
+w is the word formed by reversing the sequence of letters in the word w.
+c(w), the number of subcycles in the word w, is dened as the largest integer
+
+k such that w = uk for any word u with [u] > 0.
+
+basic relations among t () and x [7]:
+
+tmw = mtw  xw=w1w2
+
+xmw1tw2
+
+(a.1a)
+
+21
+
+twm = twm  xw=w1w2
+
+tw1xw2m
+
+xmw = h0 | mtw | 0i = h0 | twm | 0i = xwm
+
+t 
+w = t w,
+
+x 
+
+w = x w.
+
+relation between x and z:
+
+z(j) = 1 + x(jz(j)).
+
+(a.1b)
+
+(a.1c)
+(a.1d)
+
+(a.2)
+
+examples (for the case of parity symmetry, which means that each letter
+must appear an even number of times or else the z and x vanish):
+
+(a.3a)
+
+(a.3b)
+
+zmn = h0 | mn | 0i = mnxmm
+
+zmnpq = znpqm = 
+
+
+xmmmm + 2x 2
+xmmpp + xmmxpp
+xmnmn
+
+mm if m = n = p = q
+if m = n 6= p = q
+
+if p = m 6= n = q.
+
+for one-matrix problems the label w is replaced by n = [w]. for systems
+with parity selection rule:
+
+t1 = ,
+
+t0 = 1,
+t3 = 3  2x2,
+x4 =< 4 > 2x 2
+2 ,
+
+t2 = 2  x2,
+
+t4 = 4  32x2  x4 + x 2
+
+x6 =< 6 > 6x4x2  5x 3
+2 .
+
+x2 =< 2 > (a.4a)
+(a.4b)
+(a.4c)
+
+2
+
+below are some new relations involving t () that are used in the present
+
+work. start with the generating function
+
+y = 1/(1  mm + x()) = xw
+
+wtw()
+
+and calculate the commutator,
+
+now expand in powers of  and match terms to nd:
+
+i[m, y ] = y m | 0ih0 | y.
+
+i[m, tw()] = xw=w1mw2
+
+tw1() | 0ih0 | tw2().
+
+the other version of this relation
+
+i[m, tw] = xw=w1mw2
+
+tw2 | 0ih0 | tw1
+
+22
+
+(a.5)
+
+(a.6)
+
+(a.7)
+
+(a.8)
+
+comes from eq.(d.11) in ref. [7]. in a very similar way one gets the time
+derivative equation
+
+d
+dt
+
+tw() = xw=w1mw2
+
+tw1mtw2
+
+(a.9)
+
+where we have used d
+
+dt m = m. combining the last two equations leads to
+
+ih0 | tw
+
+d
+dt
+
+tw | 0i = 
+
+1
+
+2 xw=umv xw=umvh0 | tutv | 0ih0 | tutv | 0i
+
+(a.10)
+
+which is surprisingly simple.
+
+appendix b. evaluating < twtw
+
+ >
+
+we seek some recursive procedure for evaluation of the matrix elements
+
+kw,w = h0 | tw()tw() | 0i = kw,w
+
+(b.1)
+
+in terms of the connected parts xw. using equations (a.1a) and (a.1b) it is
+relatively easy to nd the following relations
+
+kwm,w = kw,mw + xw=uv
+
+xmukw,v  xw=uv
+
+xvmku,w
+
+(b.2)
+
+with the boundary counditions kw,0 = k0,w = w,0. this looks very nice
+as a recursive computer program but it turns out to be expensive: the time
+required grows exponentially as one increases the size of the words. one
+could save time by building a table of all the k matrix elements one might
+need, but that requires enormous amounts of space.
+
+an alternative method is given by the following formula
+
+kw,w = xw=uv xw=uv
+
+ku,vxvu,
+
+[v] > 0,
+
+[u] > 0,
+
+k0,0 = 1
+
+(b.3)
+
+which may be derived by combining equation (a.1a) with the expansion
+
+m = xw
+
+xmwg w()
+
+23
+
+(b.4)
+
+from ref. [7] and also using the identity
+
+h0 | twtwg w | 0i = xw=uvh0 | tw1tw2 | 0i w,uw1 w,w2v
+
+(b.5)
+
+which is similar to the ward identities derived in app. e of ref. [7].
+
+the program uses (b.3) to build a small table of ks each time one of
+them is called for and the time for this grows as n4 rather than exponentially.
+still, this is the main time consuming part of the computations.
+
+appendix c. some alternative computational schemes
+
+one alternative scheme is to start out by tting the quantity emn()
+
+instead of fm(),
+
+the denition (1.9d) is
+
+emn() = xw
+
+r(mn)
+
+w
+
+tw().
+
+emn() | 0i = 2i[n, fm()] | 0i
+
+and using (a.7), we nd
+
+r(mn)
+
+w = 2r(m)
+wn
+
+(c.1)
+
+(c.2)
+
+(c.3)
+
+upon comparison with (6.3). next, we use the formal expansion from ref. [7]
+
+(e1)mn = xw
+
+xwmng w()
+
+to write the system of conditions
+
+h0 | tw(emn(e1)np  m,p) | 0i = 0
+xw,w
+wn =
+
+xnpwh0 | twtwg w | 0ir(m)
+
+1
+2
+
+m,pw,0
+
+(c.4)
+
+(c.5a)
+
+(c.5b)
+
+and one can show, using (b.3), that this reduces to equations identical to
+(6.6). so this method is not alternative at all.
+
+a second alternative scheme does away with minimizing the energy and
+
+works instead from the equations of motion:
+
+m | 0i = i fm() | 0i = v 
+
+m() | 0i.
+
+(c.6)
+
+24
+
+using the representation (6.3) for fm, this leads us to a new system of equa-
+tions
+
+(c.7)
+
+ ixw h0 | tw tw | 0ir(m)
+
+w = h0 | twv 
+
+m | 0i
+
+where the matrix elements on the left side are the quantities lw,w dened
+in sec. 9. one now has two sets of matrix equations - (6.6) and (c.7) -
+determining the same set of expansion coecients: call the solutions r and
+r. one would now seek a set of values for the parameters xwi that would
+make these two sets of solutions the same. computationally, the way to do
+this would presumably be to minimize the error,
+i|2
+|ri  r
+
+error = xi
+
+(c.8)
+
+and this denes another nonlinear search procedure. but what weight func-
+tion ought optimally to be put into this error calculation?
+
+a third alternative is to use the monomials w instead of the polynomials
+tw() as a basis for the tting of the operators fm or u. this leads to much
+simpler formulas for the matrix elements of k and l, expressed in terms of
+the moments zw = h0 | w | 0i. then one would use the relation (a.2) to
+evaluate each zw in terms of the chosen set of parameters xw. i believe that
+this approach has drawbacks in both speed and numerical accuracy; but it
+should be explored.
+
+appendix d. is this method useful in ordinary qm?
+
+with the apparent success of this approximation method in large n
+matrix mechanics, one goes back to ordinary quantum mechanics to see if
+we have a new useful calculational technique. the formalism developed in
+ref. [7] is easily modied to t the standard commutation relation
+
+with the following construction:
+
+i[pi, qj] = iji
+
+y = eiqix() = x
+
+x() = x
+
+cx
+
+25
+
+t(q)
+
+(d.1)
+
+(d.2a)
+
+(d.2b)
+
+z() = h0 | eiqi | 0i = x
+
+ch0 | q | 0i.
+
+(d.2c)
+
+here  represents the unordered set of occupation numbers {i} (remember
+that the qis commute with one another now) and
+
+c = 1/yi
+
+(i)! .
+
+in the simple one-matrix case we have
+
+z() =
+
+x() =
+
+xn=0
+xn=1
+
+nzn/n!,
+
+zn = h0 | qn | 0i = z dq qn(q)
+
+nxn/n! = ln(z())
+
+(d.3)
+
+(d.4a)
+
+(d.4b)
+
+and we want to test whether the ratio xn/zn decreases rapidly with n, as we
+saw for the large n situation in sec. 2. for the case of a harmonic oscillator,
+we have the same result in both theories, namely xn vanishes for n > 2.
+
+one simple (non-oscillator) model that allows analytic calculations is a
+constant density (q) over some nite range of q. here we nd that the ratio
+xn/zn decays rapidly with n for the large n situation but this ratio grows
+very rapidly for the ordinary quantum mechanics situation.
+
+we have also applied the method of this paper to the quantum mechanical
+
+nonlinear oscillator,
+
+h =
+
+1
+2
+
+p2 +
+
+1
+4
+
+q4.
+
+(d.5)
+
+numerical results for the ground state are shown in table 10. the conver-
+gence seen here is fairly good, although not as good as for the similar large
+n problem, shown in table 6. (the accuracy shown here is comparable to
+that obtained with conventional variational calculations of this schrodinger
+equation, at the same levels of approximation.)
+
+table 10. results for the schrodinger equation (d.5)
+n d e
+2
+4
+6
+8
+
+x11
+.437
+.4525
+.45512
+.45571
+
+1
+2
+3
+4
+
+.429
+.4217
+.4210
+.42086
+
+26
+
+it must be reported, however, that the results shown in table 10 were not
+obtained easily. the problem of nearby singularities in the energy surface,
+mentioned in subsec. 8.2, was more severe in this ordinary quantum me-
+chanics problem than in the large n problems. for the calculations through
+d = 3 i used the second searching method, starting from the harmonic os-
+cillator and then moving gradually to the quartic potential in steps of size
+1/8. for d = 4 i had to decrease the step size to 1/16; and for d = 5 i gave
+up after failing in the search procedure with step size 1/32.
+
+in conclusion, i am still in doubt about the answer to the question posed
+
+in the heading of this appendix.
+
+references
+
+[1] m. b. halpern, nucl. phys. b188, 61 (1981).
+
+[2] k. bardakci, nucl. phys. b178, 263 (1981).
+
+[3] m. b. halpern and c. schwartz, phys. rev. d24, 2146 (1981).
+
+[4] m. staudacher, phys. lett. b305, 332 (1993).
+
+[5] v. a. kazakov and p. zinn-justin, two-matrix model with abab
+
+interaction, hep-th/9808043.
+
+[6] m. b. halpern and c. schwartz, the algebras of large n matrix me-
+chanics, hep-th/9809197, to appear in ijmpa. this paper provides a
+brief overview of related work in the eld.
+
+[7] m. b. halpern and c. schwartz, innite dimensional free algebra and
+the forms of the master field, hep-th/9903131, to appear in ijmpa.
+
+[8] p. cvitanovic, p. g. lauwers, p. n. scharbach, nucl. phys. b203, 385
+
+(1982).
+
+[9] b. blankenbecler, t. degrand and r. i. sugar, phys. rev. d21, 1055
+
+(1980).
+
+27
+
+

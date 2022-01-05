@@ -1,0 +1,5429 @@
+9
+9
+9
+1
+
+ 
+r
+p
+a
+1
+2
+
+ 
+
+ 
+ 
+
+1
+v
+5
+4
+1
+4
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+conformal eld theory:
+
+a case study
+
+krzysztof gawedzki
+
+c.n.r.s., i.h.e.s., 91440 bures-sur-yvette, france
+
+abstract
+
+this is a set of introductory lecture notes devoted to the wess-zumino-witten
+model of two-dimensional conformal eld theory. we review the construction of
+the exact solution of the model from the functional integral point of view. the
+boundary version of the theory is also briey discussed.
+
+1
+
+introduction
+
+quantum eld theory is a structure at the root of our understanding of physical world
+from the subnuclear scales to the astrophysical and the cosmological ones. the concept
+of a quantum eld is very rich and still poorly understood although much progress have
+been achieved over some 70 years of its history. the main problem is that, among
+various formulations of quantum eld theory it is still the original lagrangian approach
+which is by far the most insightful, but it is also the least precise way to talk about
+quantum elds. the strong point of the lagrangian approach is that it is rooted in the
+classical theory. as such, it permits a perturbative analysis of the eld theory in powers
+of the planck constant and also captures some semi-classical non-perturbative eects
+(solitons, instantons). on the other hand, however, it masks genuinely non-perturbative
+eects. in the quest for a deeper understanding of quantum eld theory an important
+role has been played by two dimensional models. much of what we have learned about
+nonperturbative phenomena in quantum eld theory has its origin in such models. one
+could cite the thirring model with its anomalous dimensions and the fermion-boson
+equivalence to the sine-gordon model, the schwinger model with the connement of
+electric charge, the non-linear sigma model with the non-perturbative mass generation,
+and so on.
+
+the two-dimensional models exhibiting conformal invariance have played a specially
+important role. on one side, they are not without direct physical importance, de-
+scribing, in their euclidean versions, the long-distance behavior of the two-dimensional
+
+1
+
+statistical-mechanical systems, like the ising or the potts models, at the second order
+phase transitions. on the other hand, the (quantum) conformal eld theory (cft)
+models constitute the essential building blocks of the classical vacua of string theory,
+a candidate theory of everything, including quantum gravity. the two-dimensional
+space-time plays simply the role of a string world sheet parametrizing the string evolu-
+tion, similarly as the one-dimensional time axis plays the role of a world line of point
+particles. the recent developments seem to indicate that string theory, or what will
+eventually emerge from it, provides the appropriate language to talk about general
+quantum elds, whence the central place of two-dimensional cft in the quantum eld
+theory edice.
+
+due to the innite-dimensional nature of the conformal symmetry in two space-
+time dimensions, the two-dimensional models of cft lend themselves to a genuinely
+non-perturbative approach based on the innite symmetries and the concept of the
+operator product expansion [1]. in the present lectures, we shall discuss a specic model
+of two-dimensional cft, the so called wess-zumino-(novikov)-witten model (wzw)
+[2][3][4]. it is an example of a non-linear sigma model with the classical elds on the
+space-time taking values in a manifold which for the wzw model is taken as a group
+manifold of a compact lie group g. we shall root our treatment in the lagrangian
+approach and will work slowly our way towards a non-perturbative formulation. this
+will, hopefully, provide a better understanding of the emerging structure which, to a
+large extent, is common to all cft models. in fact, the wzw theory is a prototype of
+general (rational) cft models which may be obtained from the wzw one by dierent
+variants of the so called coset construction. in view of the stringy applications, where
+the perturbation expansion is built by considering two-dimensional conformal theories
+on surfaces of arbitrary topology, we shall dene and study the wzw model on a
+general riemann surface.
+
+a word of warning is due to a more advanced audience. the purpose of these
+notes is not to present a complete up-to-date account of the wzw theory, even less of
+cft. that would largely overpass the scope of a summer-school lecture notes. as a
+result, we limit ourselves to the simplest version of the model leaving completely aside
+the ramications involving models with non-simply connected groups, orbifolds, etc, as
+well as applications to string theory. we prot, however, from this simple example to
+introduce on the way some of the main concepts of two-dimensional cft. much of the
+material presented is not new, even old, by the time-scale standard of the subject, with
+the possible exception of the last section devoted to the boundary wzw models. the
+author still hopes that the following exposition, which he failed to present at the 1998
+istanbul summer school, may be useful to a young reader starting in the eld.
+
+the notes are organized as follows.
+
+in sect. 2, we discuss a simple quantum-
+mechanical version of the wzw model: the quantum particle on a group manifold.
+this simple model, exactly solvable by harmonic analysis on the group, permits to de-
+scribe many structures similar to the ones present in the two-dimensional theory and to
+understand better the origin of those. sect. 3 is devoted to the denition of the action
+functional of the wzw model. the action contains a topological term, which requires
+
+2
+
+a special treatment. we discuss separately the case of the surfaces without and with
+boundary, in the latter case postponing the discussion of local boundary conditions to
+the last section. in sect. 4, we introduce the basic objects of the (euclidean) quan-
+tum wzw theory: the quantum amplitudes taking values in the spaces of states of the
+theory and the correlation functions. we state the innite-dimensional symmetry prop-
+erties of the theory related to the chiral gauge transformations and to the conformal
+transformations. the symmetries give rise to the action of the two copies of the current
+and virasoro algebras in the hilbert space of states of the theory constructed with
+the use of the representation theory of those algebras. we discuss briey the operator
+product expansions which encode the symmetry properties of the correlation functions.
+sect. 5 is devoted to the relation between the wzw theory and the schrodinger picture
+quantum states of the topological three-dimensional chern-simons theory. the relation
+is established via the ward identities expressing the behavior of the wzw correlation
+functions, coupled to external gauge eld, under the chiral gauge transformations. we
+discuss the structure of the spaces of the chern-simons states, the fusion ring giving
+rise to the verlinde formula for their dimensions and their hilbert-space scalar prod-
+uct, as well as the knizhnik-zamolodchikov connection which permits to compare the
+states for dierent complex structures. in particular, we explain how the knowledge
+of the scalar product of the chern-simons states permits to obtain exact expressions
+for the correlation functions of the wzw theory. in sect. 6 we give a brief account of
+the coset construction of a large family of cft models which may be solved exactly,
+given the exact solution of the wzw model. finally, sect. 7 is devoted to the wzw
+theory with local boundary conditions. again, for the sake of simplicity, we restrict
+ourselves to a simple family of the conditions that do not break the innite-dimensional
+symmetries of the theory. we discuss how to dene the action functional of the model
+in the presence of such boundary conditions and what are the elementary properties of
+the corresponding spaces of states, quantum amplitudes and correlation functions.
+
+2 quantum mechanics of a particle on a group
+
+2.1 the geodesic ow on a group
+
+non-linear sigma models describe eld theories with elds taking values in manifolds.
+these lectures will be devoted to a special type of sigma models, known under the
+name of wess-zumino(-novikov)-witten (or wzw) models. they are prototypes of
+conformal eld theories in two-dimensional space-time. as such they play a role in string
+theory whose classical solutions are built out of two-dimensional quantum conformal
+eld theory models by a cohomological construction. before we plunge, however, into
+the details of the wzw theory, we shall discuss a simpler but largely parallel model in
+one dimension, i.e. in the domain of mechanics rather than of eld theory.
+
+one-dimensional sigma models describe the geodesic ows on manifolds m endowed
+with a riemannian or a pseudo-riemannian metric . the classical action for the
+
+3
+
+trajectory [0, t ] 7 x(t)  m of such a system is
+(x) dx
+
+s(x) = 1
+
+2 z t
+
+0
+
+dx
+dt dt
+
+(2.1)
+
+dt
+
+and the classical solutions s = 0 correspond to the geodesic curves in m parametrized
+if m = rn, for example, and  = m , we obtain the
+by a rescaled length.
+action of the free, non-relativistic particle of mass m undergoing linear classical motions
+x(t) = x0 + p
+m t. the action (2.1) is not parametrization-invariant but it may be viewed
+as a gauged-xed version of the action
+
+sp (x) = 1
+
+2 z t
+
+0
+
+(x) dx
+
+dt
+
+dx
+
+dt  1
+
+2 dt + 1
+
+2 z t
+
+0
+
+1
+
+2 dt ,
+
+
+
+where the reparametrization invariance is restored by coupling the system `a la polyakov
+to the metric (t)(dt)2 on the word-line of the particle. the  = 1 gauge reproduces
+then the action (2.1), whereas extremizing over , one obtains the relativistic action
+
+sr(x) = z t
+
+0 (cid:18)(x) dx
+
+dt
+
+dx
+
+2
+
+dt (cid:19) 1
+
+dt
+
+given by the geodesic length of the trajectory.
+
+the exact solvability of the geodesic equations can be achieved in suciently sym-
+metric situations. in particular, we shall be interested in the case when m is a manifold
+of a compact lie group g and when  is a left-right invariant metric on g given by k
+2
+times a positive bilinear ad-invariant form tr(xy ) on the lie algebra1 g. for matrix
+algebras, as the algebra su(n) of the hermitian n  n traceless matrices, the form is
+given by the matrix trace in the dening representation, hence the notation. the posi-
+tive constant k will play the role of a coupling constant. the action (2.1) may be then
+rewritten as
+
+s(g) =  k
+
+4 z t
+
+0
+
+tr (g1 d
+
+dt g)2dt.
+
+the variation of the action under the innitesimal change of g vanishing on the bound-
+ary is
+
+s(g) = k
+
+2 z t
+
+0
+
+tr (g1g) d
+
+dt (g1 d
+
+dt g)) dt .
+
+consequently, the classical trajectories are solutions of the equations
+
+d
+
+dt (g1 d
+
+dt g) = 0.
+
+(2.2)
+
+the case g = tn, where tn = rn/zn is the n-dimensional torus, is the prototype of
+an integrable system whose trajectories are periodic or quasiperiodic motions with the
+
+1we use the physicists convention in which the exponential map between the lie algebra and the
+
+group is x 7 eix
+
+4
+
+angles evolving linearly in time. the case g = so(3) corresponds to the symmetric top
+whose positions are parametrized by rigid rotations. the classical trajectories solving
+eq. (2.2) have a simple form:
+
+(2.3)
+where g,r are xed elements in g and  may be taken in the cartan subalgebra t  g.
+for the later convenience, we have introduced the factor 1
+
+g(t) = g eit/k g1
+
+k in the exponential.
+
+,
+
+r
+
+the space p of classical solutions forms the phase space of the system. it may be
+d
+dt g. as
+
+parametrized by the initial data (g(0), p(0)) where the momentum2 p(t) = k
+2i
+usually, the phase space p comes equipped with the symplectic form
+
+ = 1
+
+i d tr (p g1dg),
+
+(2.4)
+
+where the right hand side may be calculated at any instance of time giving a result
+independent of time. the symplectic structure on p allows to associate the vector elds
+xf to functions f on p by the relation df = xf , where x denotes the contraction
+of a vector eld x with a dierential form . these are the hamiltonian vector elds
+that preserve the symplectic form: lxf  = 0, where lx is the lie derivative that
+acts on dierential forms by lx  = x d + dx . the poisson bracket of functions is
+dened by: {f, g} = xf (g). in particular, the time evolution is induced by the vector
+eld associated with the classical hamiltonian
+k tr p2 =  k
+
+4 tr (g1 d
+
+h = 1
+
+dt g)2
+
+which stays constant during the evolution. in the alternative way (2.3) to parametrize
+the solutions, h = 1
+
+4k tr2 and the symplectic structure splits:
+
+ dg)2  d g1
+and r is given by the same formula with the subscript  replaced by r.
+
+ =   r ,
+
+2 tr [(g1
+
+where  = i
+
+ dg ]
+
+(2.5)
+
+there are two commuting actions of the group g on p: from the left g(t) 7 g0g(t)
+and from the right g(t) 7 g(t)g1
+0 . both preserve the symplectic structure and the
+hamiltonian h. the vector elds corresponding to the left and right actions of the
+innitesimal generators ta  g are induced by the functions
+2 tr (ta gg1
+ )
+2 tr (tagrg1
+r ),
+respectively. note that, if we normalize tas so that tr (tatb) = 1
+
+dt g1) = 1
+dt g) =  1
+
+2 tr (ta g d
+2 tr (ta g1 d
+
+eja = ki
+
+ja = ki
+
+2 ab, then
+
+h = 2
+
+k jaja = 2
+
+k ejaeja
+(summation convention!). the symplectic form  gives, for  xed, the canonical
+symplectic form on the (co)adjoint orbit {gg1
+| g  g} passing through . the
+left action of the group is g 7 g0g so that it coincides with the (co)adjoint action
+on the orbit. as is well known, upon geometric quantization of the coadjoint orbits for
+appropriate , this action gives rise to irreducible representations of g.
+
+
+
+2we identify g with its dual using the bilinear form tr(xy )
+
+5
+
+2.2 the quantization
+the geodesic motion on a group is easy to quantize. as the hilbert space h one takes
+the space l2(g, dg) of functions on g square integrable with respect to the normalized
+haar measure dg. the two commuting actions of g in h:
+
+f 7
+
+h
+
+f = f (h1 ),
+
+h
+
+f 7 f
+
+= f ( h),
+
+give rise to the actions
+
+j af = 1
+i
+
+eita
+
+f ,
+
+d
+
+d(cid:12)(cid:12)(cid:12)(cid:12)=0
+
+[j a, j b] = if abc j c
+
+eita
+
+i
+
+d
+
+f
+
+ej af = 1
+
+d(cid:12)(cid:12)(cid:12)(cid:12)=0
+[ej a, ej b] = if abc ej c ,
+
+of the innitesimal generators ta of g. the commutation relations
+
+reect the relation [ta, tb] = if abc tc in the lie algebra g. the quantum hamiltonian
+
+h = 2
+
+k j aj a = 2
+
+k ej a ej a
+
+coincides with  2
+adjoint operator.
+
+k times the laplace-beltrami operator on g and is a positive self-
+
+the irreducible representations r of the compact lie group g are nite dimen-
+sional and are necessarily unitarizable so that we may assume that they act in nite-
+dimensional vector spaces vr preserving their scalar product. we shall denote by gr
+and xr the endomorphisms of vr representing g  g and x  g. up to isomorphism,
+the irreducible representation of g may be characterized by their highest weights.
+let us recall what this means. the complexied lie algebra may be decomposed into
+the eigenspaces of the adjoint action of its cartan subalgebra t as
+
+gc = tc  (
+
+ce)
+
+(2.6)
+
+where [x, e] = tr (x) e for all x  t. the set of the roots   t may be divided
+into the positive roots and their negatives. we shall normalize the invariant form tr on
+g so that the long roots have the length squared 2 (this agrees with the normalization
+of the matrix trace for g = su(n)). the step generators e may be chosen so that
+[e, e] is equal to the coroot   2
+tr 2 corresponding to . the elements   t
+such that tr () is integer for all roots are called weights. a non-zero vector v  vr
+(unique up to normalization) is called a highest weight (hw) vector if it is an eigen-
+vector of the action of the cartan algebra: xrv = tr (rx) v and if (e)rv = 0 for all
+positive roots . the element r of the cartan algebra, a weight, is called the highest
+weight (hw) of the representation r and it determines completely r. all weights
+  t such that tr () is a non-negative integer for each positive  appear as hws
+of irreducible representations3 of g. the representations r may be obtained by the
+geometric quantization of the (co)adjoint orbit passing through r. for the su(2) lie
+
+3such  are usually called dominant weights
+
+6
+
+algebra spanned by the pauli matrices i, one usually takes 3 as the positive root and
+2 (1  i2) as the corresponding step generators. the hws are of
+the matrices  = 1
+the form j3 with j = 0, 1
+
+2 , 1, . . . called the spin of the representation.
+
+with respect to the left-right action of g  g, the hilbert space l2(g, dg) decom-
+
+poses as
+
+h = r
+
+vr  v
+
+r
+
+,
+
+(2.7)
+
+r
+
+where the (innite) sum is over the (equivalence classes of) irreducible representations
+of g and r denotes the representation complex-conjugate to r, i.e. v
+= v r and
+= gr. recall that the complex conjugate vector space v is composed of the vectors
+g
+v  v , denoted for distinction by v, with the multiplication by scalars dened by
+v = v. a linear transformation a of v , when viewed as a transformation a of v , is
+still linear. the above factorization of the hilbert space reects the classical splitting
+(2.5). let (gij
+r ) be the (unitary) matrix of the endomorphism gr with respect to a xed
+orthonormal bases (ei
+
+r) in vr. the decomposition (2.7) is given by the assignment
+
+r
+
+vr  v
+
+r  ei
+
+r  ej
+
+r
+
+7 d
+
+1
+2
+
+r gij
+
+r  l2(g, dg) .
+
+(2.8)
+
+the schur orthogonality relations
+
+zg
+
+r grs
+gij
+
+r dg = 1
+dr
+
+rr ir js
+
+assure that this assignment preserves the scalar product. the matrix elements gij
+a dense subspace in l2(g, dg).
+
+r span
+
+the function on g invariant under the adjoint action g 7 adg0(g)  g0 g g1
+
+called class functions. they are constant on the conjugacy classes
+
+0
+
+are
+
+c = {g0 e2i/kg1
+
+0
+
+| g0  g}
+
+(2.9)
+
+with  in the cartan algebra t. the characters r(g) = trv
+representations r are class functions. the schur relations imply that
+
+r
+
+gr of the irreducible
+
+zg
+
+r (g) r(g) dg = rr .
+
+the class functions in l2(g, dg) form a closed subspace and the characters r form an
+orthonormal bases of it. note that under the isomorphism (2.7),
+
+r = d 1
+
+r ei
+
+2
+
+r  ei
+
+r
+
+(2.10)
+
+(sum over i !).
+
+the hamiltonian h becomes diagonal in the decomposition (2.7) of the hilbert
+k cr where cr is the value of the
+in terms of the hws, cr =
+
+as the multiplication by 2
+space. it acts on vr  v
+quadratic casimir c = tata in the representation r.
+
+r
+
+7
+
+1
+
+2 tr (r(r + 2)), where , the weyl vector, is equal to half the sum of the positive
+roots. the hamiltonian generates a 1-parameter family of unitary transformation eith
+describing the time evolution of the quantum system. in the euclidean spirit, we shall
+be more interested, however, in the semigroup of the thermal density matrices e h
+obtained by the wick rotation of time  = it  0. their (heat) kernels are given by:
+
+e h(g0, g1) = xr
+
+dr e 2
+
+k  cr r(g0g1
+
+1 ).
+
+in particular, at  = 0, we obtain a representation for the delta-function concentrated
+at an alement g0  g:
+
+g0(g1) = xr
+
+dr r(g0g1
+
+1 ).
+
+we shall also need below the delta-functions concentrated on the conjugacy classes c.
+they may be obtained by smearing the delta-function g over c :
+
+c
+
+(g1) = zg
+drzg
+= xr
+
+g0 e 2i /kg1
+
+0
+
+(g0)
+
+ij
+
+r (e2i/k)
+
+(g1) dg0 = xr
+r (g1)in
+r (g0)n
+
+j
+
+drzg
+
+r dg = xr
+
+r(g0 e2i/kg1
+
+0 g1
+
+1 ) dg0
+
+r(e2i/k) r(g1) ,
+
+where we have used the schur relations. it follows from the correspondence (2.10) that
+in the language of the isomorphism (2.7),
+
+c = xr
+
+r(1) 1
+
+2 r(e2i/k) e
+
+i
+
+r  ei
+r .
+
+(2.11)
+
+is not a normalizable state in h but it denes an antilinear functional
+more exactly, c
+on a dense subspace in h, e.g. the one of vectors with a nite number of components
+in the decomposition (2.7).
+
+the delta-functions c
+
+may be used to disintegrate the haar measure dg into the
+
+measures along the conjugacy classes and over the set of dierent conjugacy classes:
+
+dg = 1
+
+|t| |(e2i/k)|2 c
+
+(g) d dg .
+
+(2.12)
+
+we shall choose the measure d such that it corresponds to the normalized haar measure
+on the cartan group t  g under the exponential map  7 e2i/k. then
+
+(e2i/k) = y>0
+
+(ei tr ()/k  ei tr ()/k)
+
+(2.13)
+
+is the so called weyl denominator. in particular, for class functions constant on the
+conjugacy classes one obtains the weyl formula:
+
+zg
+
+f dg = z f (e2i/k) |(e2i/k)|2 d ,
+
+(2.14)
+
+where each conjugacy class should be represented ones. we shall employ this represen-
+tation of the integral of class functions later.
+
+8
+
+the feynman-kac formula allows to express the heat kernel on the group as a path
+
+integral:
+
+e h(g0, g1) =
+
+z
+
+g: [0,]  g
+
+g(0)=g0, g()=g1
+
+es(g) dg ,
+
+where dg stands for the product of the haar measures dg(t). the integral on the right
+hand side may be given a rigorous meaning as the one with respect to the brownian
+bridge measure dwg0,g1(g) supported by continuous paths in g. the path integral may
+be also used to dene the thermal correlation function
+
+< yn
+
+g
+
+injn
+
+rn
+
+(tn) > 
+
+r nqn=1
+
+ginjn
+
+rn
+
+(tn) es(g) dg
+
+r es(g) dg
+
+,
+
+(2.15)
+
+where on the right hand side one integrates over the periodic paths g : [0, ]  g.
+upon ordering the (euclidean) times t1  . . .  tn , the above path integral may be
+expressed in the operator language:
+
+< yn
+
+g
+
+=
+
+injn
+
+rn
+
+(tn) >
+
+trh (cid:16)et1h gi1j1
+
+r1
+
+e(t2t1)hgi2j2
+r2
+trh e h
+
+   e(tn tn1 )h g
+
+j
+
+n
+
+i
+n
+rn
+
+e(tn )h(cid:17)
+
+,
+
+(2.16)
+
+where the functions gij
+
+r on g are viewed as the multiplication operators in l2(g, dg).
+
+the right hand side of eq. (2.16) may be calculated using harmonic analysis on g.
+
+indeed, what is really needed for such a computation are the matrix elements
+
+i1
+
+r1  ej1
+(e
+
+r1
+
+, g
+
+ij
+
+i2
+r e
+
+r2  ej2
+
+r2
+
+) = d
+
+1
+2
+
+r1 d
+
+1
+2
+
+r2 zg
+
+gi2j2
+r2
+
+g
+
+i1j1
+
+r1
+
+g
+
+ij
+
+r dg
+
+(2.17)
+
+encoding the decomposition of the tensor product of the irreducible representations
+
+vr  vr1 = r2
+
+m
+
+r2
+
+r1r  vr2
+
+.
+
+(2.18)
+
+in particular, the dimensions n r2
+from the traces of the above matrix elements:
+
+r1r of the multiplicity spaces m r2
+
+r1r may be obtained
+
+r2
+
+r1r = zg
+
+n
+
+r2
+
+(g) r1
+
+(g) r(g) dg .
+
+the nite combinations with integer coecients p niri
+of characters of irreducible
+representations form a subring rg in the commutative ring of class functions. the
+identity
+
+r r1
+
+= xr2
+
+r2
+
+n
+
+r r1
+
+r2
+
+(2.19)
+
+shows that the integers n r2
+
+r1r = n r2
+
+r r1
+
+play the role of structure constants of this ring.
+
+9
+
+one can dene a version of the correlation functions by replacing the integral over
+the periodic paths g : [0, ]  g in eq. (2.15) by the one over the paths constraint to
+xed conjugacy classes on the boundary of the interval:
+
+r
+
+g:[0,]g
+
+nqn=1
+r
+
+g:[0,]g
+
+ginjn
+
+rn
+
+(tn) c1
+(g(0)) c2
+
+c1
+
+(g(0)) c2
+
+(g()) es(g) dg
+
+(g()) es(g) dg
+
+ < yn
+
+g
+
+injn (tn) >,12
+
+.
+
+(2.20)
+
+for g = su(2) = {x0 + ixii | x2
+2-spheres with xed x0 so that one integrates over the paths as in fig. 1.
+
+i = 1} = s3, the conjugacy classes are the
+
+0 + x2
+
+3s
+
+2
+
+s
+
+2s
+
+fig. 1
+
+the above functional integral may be rewritten in the operator language as
+
+< yn
+
+g
+
+injn (tn) >,12
+
+= (cid:16)c1
+
+, et1h gi1j1
+r1
+
+   e(tn tn1 )h g
+, eh c2(cid:17)
+(cid:16)c1
+
+j
+
+n
+
+i
+n
+rn
+
+e(tn )h c2(cid:17)
+
+. (2.21)
+
+are generalized functions rather than normalizable states in l2(g, dg),
+although c
+the matrix elements on the right hand side are nite and may again be computed by
+harmonic analysis on g.
+
+we shall encounter eld-theoretical generalization of the above quantum-mechanical
+
+constructions below.
+
+3 the wzw action
+
+3.1 two-dimensional sigma models
+
+the two-dimensional sigma models describe eld theories with elds mapping a surface
+ to a target manifold m, both equipped with metric structures. such eld congu-
+rations represent evolution of a string in the target m with  being the string world
+
+10
+
+sheet. the (euclidean) action functional of the eld conguration x :   m is
+
+4 z
+
+s(x) = 1
+
+(x) x  x   ,
+
+(3.1)
+
+where  is the riemannian metric on m,  the one on  and   qdet  is the
+
+riemannian volume density on . in particular, if m = rn with the standard metric,
+we obtain the quadratic action of the free eld on a two-dimensional surface leading to
+linear classical equations. the general case, however, results in a non-linear classical
+theory.
+
+the term s does not change under the local rescalings  7 e2 of the metric
+on  i.e. it possesses two-dimensional conformal invariance. for oriented , conformal
+classes of the metric are in one to one correspondence with complex structures on 
+such that zz = z z = 0 in the holomorphic coordinates and that the latter preserve the
+orientation. the action s may be written using explicitly only the complex structure
+of :
+
+s(x) = i
+
+2 z
+
+(x) x  x  ,
+
+(3.2)
+
+where  = dzz and  = dzz. one-dimensional complex manifolds are called riemann
+surfaces. it follows that the action s(x) may be dened on such surfaces.
+
+to the s term, one may add the expression
+
+s(x) = 1
+
+4i z
+
+(x) x x 
+
+(3.3)
+
+where  =  are the coecients of a 2-form  on m. geometrically, s is
+proportional to the integral of the pullback of  by x:
+
+s(x) = 1
+
+4i z
+
+x .
+
+(3.4)
+
+the imaginary coecient is required by the unitarity of the theory after the wick
+rotation to the minkowski signature. the term s does not use the metric on  but
+only the orientation and is often called a topological term. hence the classical two-
+dimensional conformal invariance of the model with the action s = s + s.
+
+on the quantum level, the sigma model requires a renormalization which often
+
+imposes the addition to the action of further terms
+
+stach(x) = 1
+
+2 zt (x)
+
+and
+
+sdil(x) = 1
+
+2 zd(x) r  ,
+
+(3.5)
+
+where where t and d are functions on m called tachyonic and dilatonic potentials,
+respectively, and r is the scalar curvature of the metric . the renormalization breaks
+the conformal invariance (note that stach and sdil are not conformal invariant). we shall
+be interested, however, in the case of the wzw model [2], an example of a cft, where
+the classical conformal invariance is (almost) not broken on the quantum level.
+
+11
+
+the wzw model is the two-dimensional counterpart of the particle on a group and
+may be thought of as describing the movement of a string on a group manifold m = g
+equipped with the invariant metric  described before. we then have for g :   g,
+
+s(g) = k
+
+tr (g1g)(g1 g),
+
+(3.6)
+
+4i z
+
+where k is a positive constant. the quantization of a model with such an action leads,
+however, to a theory without conformal invariance. to restore the latter, one adds to
+the s term, following witten [2], a topological term, the so called wess-zumino (wz)
+term sw z. in the rst approximation, sw z = ks where  is a 2-form on g such that
+d is equal to the canonical 3-form   1
+3 tr (g1dg)3 on g. if the group g is abelian,
+such a description is indeed possible and the overall action is a simple version of the free
+eld one. in the non-abelian case, however, the diculty comes from the fact that the
+3-form  is closed but not globally exact so that the forms  exist only locally and are
+dened only up to closed 2-forms. hence the denition of the wz term of the action
+requires a more rened discussion.
+
+3.2 particle in the eld of a magnetic monopole
+
+it may be useful to recall a simpler situation where one is confronted with a similar
+problem. suppose that we want to dene the contribution sdir(x) to the action of a
+mechanical particle of the term
+
+ez t
+
+0
+
+a(x)
+
+dx
+dt
+
+dt = ez xa
+
+describing the coupling to the abelian gauge eld a = adx with the eld strength
+2 (a  a), or in the language of dierential forms, with f = da, where
+f = 1
+f = fdxdx. the constant e stands for the electric charge of the particle. for
+concreteness, suppose that f corresponds to the magnetic eld of a monopole of
+magnetic charge  placed at the origin of r3:
+
+f = 1
+
+2  
+
+x
+
+|x|3 .
+
+there is no global 1-form a on r3 without the origin such that da = f . for a closed
+trajectory t 7 x(t), however, we may pose
+
+sdir(x) = ezdexf ,
+
+ez
+s2exf
+
+12
+
+where ex is a map of a disc d into r3 \ {0} coinciding on the boundary of the disc with
+x. for two dierent extensions ex, however, the above prescription may give dierent
+
+results. their dierence may be written as the integral
+
+(3.7)
+
+(3.8)
+
+over the 2-sphere s2 obtained by gluing the two disc d, one with the inverted orien-
+
+tation, along the boundary and for the map ex : s2  r3 \ {0} glued from the two
+
+extensions of x to the respective discs, see fig. 2.
+
+d
+
+0
+
+x
+
+d
+
+fig. 2
+
+the ambiguities (3.8) are the periods of the closed form f over the cycles of the 2nd
+integer homology h2(r3 \ {0}) = z. they take discrete values which are multiples of
+4e. the latter value is obtained for the unit sphere in r3, a generator of h2(r3 \
+{0}). the discrete ambiguities are acceptable in classical mechanics where one studies
+the extrema of the action.
+in quantum mechanics, however, we have to give sense
+to the feynman amplitudes eisdir(x) , hence only the ambiguities in the action with
+values in 2z are admissible. demanding that the quantum-mechanical amplitudes be
+unambiguously dened reproduces this way the dirac quantization condition e  1
+2 z.
+for open trajectories [0, t ]  t 7 x(t), the amplitudes eier xa may not, in general,
+be unambiguously assigned numerical values. they may be only dened as maps be-
+tween the bers lx(0) and lx(t ) of a line bundle l. geometrically, they give the parallel
+transport in the bundle corresponding to a u(1)-connection with the curvature form f .
+we shall recover the analogous situation below when discussing how to give meaning
+to the wz term in the action of the wzw model.
+
+3.3 wess-zumino action on surfaces without boundary
+
+let us rst consider the case of compact riemann surfaces without boundary.
+
+fig. 3
+
+13
+
+topologically, such surfaces are characterized by the genus g equal to the number
+of handles of the surface. they may be viewed as world sheets of a closed string
+created from the vacuum, undergoing in the evolution g splittings and recombinations
+and nally disappearing into the vacuum, see fig. 3 where a surface of genus 2 was
+represented. at genus zero, there is only one (up to dieomorphisms) riemann surface,
+the riemann sphere cp 1 = c  {}, see fig. 4(a).
+
+
+
+z
+
+(a)
+
+0
+
+fig. 4
+
+z
+
+(b)
+
+1
+
+at genus one, there is a complex one-parameter family of riemann surfaces: the complex
+tori t = c/(z +  z) with  in the upper half plane h + of the complex numbers such
+that im > 0, see fig. 4(b). the tori t and t , where  = a+b
+d ) in the
+c+d
+modular group sl(2, z), may be identied by the map z 7 z = (c +d)1z. the space
+of the dieomorphism classes (i.e. the moduli space) of genus one riemann surfaces
+is equal to h +/sl(2, z) and has complex dimension 1. for higher genera, the moduli
+spaces of riemann surfaces have complex dimension 3(g  1).
+
+for ( a
+
+c
+
+b
+
+let us return to the discussion of the action of the wzw model. assume that g
+is connected and simply connected and that  is a compact riemann surface without
+boundary. following [2] and mimicking the trick used for a particle in a monopole eld,
+
+one may extend the eld g :   g to a map eg : b  g of a 3-manifold b such that
+
+b =  and set:
+
+w z
+
+s
+
+(g) = k
+
+4i zbeg .
+
+is contained in the domain of denition of a 2-form  such that d = , but it makes
+
+by the stokes formula, this expression coincides with ks(g) whenever the image of eg
+sense in the general case. the price is that the result depends on the extension eg of the
+
+eld g. the ambiguities have the form of the integrals
+
+(3.9)
+
+(3.10)
+
+over 3-manifolds eb without boundary with eg : eb  g, see fig. 5.
+
+k
+
+4i z
+ebeg
+
+14
+
+
+
+b
+
+b
+
+b
+
+g
+
+g
+
+fig. 5
+
+they are proportional to the periods of the 3-form  over the integer homology h3(g).
+such discrete contributions do not eect the classical equations of motion s = 0. in
+quantum mechanics, however, where we deal with the feynman amplitudes4 es(g),
+only ambiguities in 2iz are allowed. hence we have to nd conditions under which
+the periods (3.10) lie in 2iz.
+
+recall that we normalized the invariant form tr on the lie algebra g of g so that
+
+the long roots in t have length squared 2. when g = su(2) = {x  r4 | |x|2 = 1},
+the 3-form  equals then to 4 times the volume form of the unit 3-sphere. since the
+volume of the latter is equal to 22, we infer that
+
+1
+
+4i zsu (2)
+
+ = 2i .
+
+(3.11)
+
+for the other simple, simply connected groups, the roots  determine the sub-algebras
+su(2)  g, obtained by identifying the corresponding coroot  = 2 
+tr 2 and the step
+generators e with the pauli matrices 3 and , respectively. by exponentiation, we
+obtain the su(2) subgroups of g. clearly,
+
+1
+
+4i zsu (2)
+
+ =  4i
+tr 2 .
+
+(3.12)
+
+2
+
+the ratio
+tr 2 is equal to 1 for long roots and is a positive integer for the others. it
+appears that any of the subgroups su(2) = s3 for  a long root generates h3(g) = z.
+thus the unambiguous denition of the amplitudes esw z (g) requires that the coupling
+constant k, called the level of the model, be a (positive) integer, in the analogy to the
+dirac quantization of the magnetic charge.
+
+it is easy to see that, although the action sw z(g) cannot be expressed, in general,
+
+as a local integral over , the variation of s w z has such a form:
+
+w z
+
+s
+
+(g) = k
+
+4i z
+
+tr (g1g)(g1dg)2.
+
+(3.13)
+
+the above formula is a special case of the general, very useful, geometric identity:
+
+r f = r lf  , where lx is the lie derivative. applied to f = g and  =  it gives,
+
+4there is no i in front of s since we work with the euclidean action
+
+15
+
+in conjunction with the stokes formula, the above relation. it is also important to note
+the behavior of s w z under the point-wise multiplication of elds, a basic property of
+the wz term:
+
+w z
+
+s
+
+(g1g2) = s
+
+w z
+
+(g1) + s
+
+w z
+
+(g2) + w (g1, g2) ,
+
+where
+
+w (g1, g2) = k
+
+4i z
+
+tr (g1
+
+1 dg1)(g2dg1
+
+2 ).
+
+(3.14)
+
+(3.15)
+
+the relation follows easily from the denition (3.9), again by applying the stokes for-
+mula.
+
+the complete action of the wzw model on a closed riemann surface  is the sum
+of the - and the wz-terms with the same coupling constant k: s(g) = s(g)+s w z (g).
+since s is unambiguous, it has the same ambiguities as sw z, requiring that k be a
+(positive) integer. the relations (3.13) and (3.14) get also contributions from s and
+become:
+
+2i z
+
+tr (g1g)(g1 g),
+
+s(g) =  k
+s(g1g2) = s(g1) + s(g2) + k
+
+2i z
+
+tr (g1
+
+1
+
+g1)(g2g1
+
+2 ).
+
+(3.16)
+
+(3.17)
+
+the last relation is often called the polyakov-wiegmann formula. from eq. (3.16), we
+obtain the classical equations of motion
+
+(g1 g) = 0
+
+or, equivalently,
+
+(gg1) = 0 .
+
+(3.18)
+
+they have few solutions with values in g (this would not be the case if we considered
+ with a minkowski metric). in all the above formulae, however, we could have taken
+elds g with values in the complexied group gc. for such elds, the general local
+solutions of eqs. (3.18) have the form
+
+g(z, z) = g(z) gr(z)1
+
+(3.19)
+
+where g (gr) are local holomorphic (anti-holomorphic) maps with values in gc. thus
+eqs. (3.18) constitute a non-linear generalization of the laplace equation in two dimen-
+sions whose solutions are harmonic functions which are, locally, sums of holomorphic
+and anti-holomorphic ones. in particular, multiplying a solution (3.19) by a holomor-
+phic map into gc on the left and by an anti-holomorphic one on the right we obtain
+another solution. similarly, composing a solution with a local holomorphic map or
+inverting it in gc after composition with a local anti-holomorphic map of  one pro-
+duces new solutions. hence a rich symmetry structure of the classical theory. this
+structure will be preserved by the quantization leading to the current and virasoro
+algebra symmetries of the quantum wzw model.
+
+16
+
+3.4 wess-zumino action on surfaces with boundary
+
+what if the surface  has a boundary? of course only the wz term in the action
+causes problems due to its non-local character. the term s is dened unambiguously
+for any compact surface. it will be convenient to represent  as  \ (n
+n) where dn
+are disjoint unit discs { z | |z|  1} embedded in a closed surface  without boundary,
+see fig.6.
+
+d
+
+o
+
+d
+3
+
+d
+1
+
+
+
+
+
+d
+2
+
+fig. 6
+
+note that the boundaries of  are then naturally parametrized by the unit circles. one
+way to proceed in the presence of boundaries is to extend the eld g :   g to a map
+(g) pertaining to the surface , as stressed
+g :   g and to consider the action sw z
+by a subscript. we are again confronted with the question as to how the action on 
+depends on the extension of the eld. the answer is easy to work out. if g = gh is
+another extension of g then, by eq. (3.14),
+
+
+
+s
+
+w z
+
+ (g) = s
+
+w z
+
+ (g) + s
+
+w z
+
+ (h) + w(g, h) .
+
+(3.20)
+
+it will be convenient to localize the changes in the discs dn by rewriting the last formula
+as
+
+s
+
+w z
+
+ (g) = s
+
+w z
+
+ (g) +xn (cid:16)s
+
+w z
+
+s2 (hn) + wdn
+
+(g, h)(cid:17) ,
+
+(3.21)
+
+where hn, mapping spheres (compactied planes) s2
+by
+unity and wdn
+are as in eq. (3.15) but with the integration restricted to dn. to account
+for the change (3.21), we shall dene the following equivalence relation between the pairs
+(g, z) where g : d  g and z  c:
+
+n to g, extend the maps h|dn
+
+(g, z)  (gh, z esw z
+
+s2 (h)wd (g,h))
+
+for h : s2  g equal to unity outside the unit disc d  s2. the set of equivalence
+classes forms a complex line bundle l over the loop group lg of the boundary values of
+the maps g. comparing to eq. (3.21), we infer that for g :   g with  as above, the
+amplitude esw z
+ (g) makes sense as the element of a tensor product of the line bundles
+l, one for each boundary component of ,
+
+esw z
+
+ (g)  n lg|
+
+,
+
+dn
+
+17
+
+where lh denotes the ber of l over the loop h  lg. hence the wz amplitudes
+esw z
+ (g) take values in line bundles instead of having numerical values, exactly as for
+the amplitudes giving the parallel transport in a u(1)-gauge eld mentioned before.
+
+the line bundle l is an interesting object. it carries a hermitian structure given
+by the absolute value of z. the bers of l over g and g where g ia a reversed loop,
+g(ei) = g(ei), may be naturally paired so that, for g : e  g, where e is obtained
+from two surfaces  and  by gluing them along some boundary components, see
+fig. 7,
+
+h esw z
+
+
+
+(g| ), esw z
+
+
+
+(g| ) i = es
+e
+
+(g)
+
+.
+
+(3.22)
+
+
+
+
+
+
+
+fig. 7
+
+l may be also equipped with a product structure such that
+es (g1)  es (g2) = es (g1g2) ew (g1,g2) ,
+
+(3.23)
+
+compare to eq. (3.14). under the product, the elements of unit length in l form a
+group bg which is a central extension of the loop group lg by the circle group u(1):
+
+1  u(1)  bg  lg  1 .
+
+the second arrow sends ei to the equivalence class of (1, ei). the extensions for k > 1
+are powers of the universal one corresponding to k = 1. on the innitesimal level, one
+obtains the central extensions of the loop algebra lg of the maps of the circle s1 to the
+lie algebra g by the real line:
+
+(3.24)
+
+(3.25)
+
+0  r  bg  lg  0 .
+
+the lie algebra bg, called the current or the ane kac-moody algebra, may be de-
+
+scribed explicitly in terms of the complexied generators ta
+taein in lgc and the central element k satisfying the commutation relations:
+
+n corresponding to the loops
+
+[ta
+n, tb
+
+m] = if abc tc
+
+n+m + 1
+
+2 k n abn+m,0 .
+
+(3.26)
+
+18
+
+the algebra bg is the same for all levels k but the central element k  bg is the image of
+k  r under the second arrow in the exact sequences (3.25). note that the generators
+0 span a subalgebra g  bg. as we shall see, the group bg and the algebra bg play in the
+ta
+wzw theory a similar role to that of g and g for the particle on the group.
+
+3.5 coupling to gauge eld
+we may couple the wzw model to the gauge eld ia  i(a10 + a01), a 1-form with
+values in the lie algebra g (or, more generally, gc), where a10 = ta aa
+zdz and a01 =
+ta aa
+zdz are, respectively, a 1,0- and a 0,1-form (the chiral components of the gauge eld).
+in most what follows, we shall treat the gauge eld as external, i.e. non-dynamical.
+nevertheless, the coupling will allow to test the variation of the quantum system under
+the changes of the gauge eld background and, nally, will facilitate the exact solution
+of the model. for a surface without boundary, we dene
+
+s(g, a) = s(g) + ik
+
+2 z
+
+tr [a10(g1 g) + (gg1) a01 + ga10g1a01] .
+
+(3.27)
+
+under the local gauge transformations h :   g, the gauge elds transform in the
+standard way:
+
+a10 7 ha10 = ha10 h1 + hh1 ,
+
+a01 7 ha01 = ha01h1 + h h1 .
+
+the reaction of the action to the chiral changes of the gauge is encoded in the identity
+
+s(g, a) = s(h1gh1
+
+2 , h2a10 + h1a01) + s(h2, a10) + s(h1
+
+1 , a01)
+
+(3.28)
+
+which follows in a direct manner from the polyakov-wiegmann formula (3.17). for
+the later convenience, we have chosen a modied way of coupling to the gauge eld,
+as compared to the more standard way with the addition of the term a10a01 in
+the brackets on the right hand side of eq. (3.27). the latter way would render the
+action invariant with respect to the diagonal (i.e. non-chiral) gauge transformations
+with h1 = h2.
+
+for surfaces with boundary, we dene es(g,a) by the same prescription but on the
+level of the amplitudes with values in the product of line bundles. the denition (3.23)
+of the product implies then the transformation rule:
+
+es(g,a) = es(h1
+
+1 ,a01)  es(h1g h1
+
+2 ,
+
+h2a10 +
+
+h1a01)  es(h2,a10)
+
+(3.29)
+
+which extends the property (3.28) to the case with boundaries.
+
+4 quantization of the wzw model
+
+4.1 quantum amplitudes
+
+the feynman quantization prescription instructs us that in the quantum wzw model
+we should sum the amplitudes of dierent classical congurations. this leads to formal
+
+19
+
+functional integrals such as, for example,
+
+a = z es(g) dg ,
+
+where one integrates over the maps g :   g and dg stands for the local product
+qdg() of the haar measures. if  is closed, then the above integral should take a
+numerical value z called the partition function (because of the statistical physics
+analogy). for  with boundary, it should dene, instead, a hilbert space state. let
+(l) denote the space of sections of the line bundle l over the loop group lg. (l)
+plays the role of the space of states of the quantized theory. if  has a boundary, we
+should x in the functional integration the boundary values g = (gn) of elds g :   g:
+
+a(g) =
+
+z
+
+g|dn
+
+= gn
+
+es(g) dg .
+
+(l)
+the result, in its dependence on g, should give an element of the tensor product n
+of the state spaces: the quantum amplitude corresponding to the surface . more
+generally, we shall consider the quantum amplitudes in the presence of external gauge
+eld:
+
+a(g; a)  =
+
+z
+
+g|dn
+
+= gn
+
+es(g,a) dg
+
+(4.1)
+
+again with the values in n
+(l). we would like to give a rigorous meaning to such
+objects. in general, the functional integrals require complicated renormalization proce-
+dures which, besides, work only in some cases (of the so called renormalizable theories)
+and even then, in most instances, have been implemented only on the level of formal
+perturbation series. the wzw models are perturbatively renormalizable. in this case,
+however, one may follow a shortcut by exploiting formal symmetry properties of the
+functional integrals and showing that they x uniquely the quantum amplitudes. this
+will be the line of thought adopted below, although we shall only describe the essential
+points of the argument and make detours to introduce other important notions.
+
+let us start by discussing the formal structure of the space of states (l). the
+
+scalar product and the bilinear form
+
+(, ) = zlg
+
+((g), (g)) dg ,
+
+h, i = zlgh(g), (g)i dg ,
+
+(4.2)
+
+which employ the hermitian structure and the duality (3.22) on the line bundle l,
+should turn (l) into a hilbert space h and should allow the identication of h with
+its dual. the space (l) carries also two commuting actions of the group bg :  7 bh
+and  7 bh . they are dened by:
+bh
+(g) = bh  (h1g)
+
+where g and h are elements of the loup group lg and h is the projection of bh  bg.
+formally, these actions preserve the scalar product and the bilinear form in (l). on
+
+(4.3)
+
+bh
+
+(g) = (gh) bh1 ,
+
+20
+
+innitesimal level, they give rise to two commuting actions of the current algebra bg in
+(l). we shall denote by j a
+n the operators in (l) corresponding to the left
+and right action of the generators ta
+n of bg. the central generator k acts in (l) as
+multiplication by k. of course, j a
+
+n satisfy the commutation relation (3.26).
+
+n and ej a
+
+as stressed by segal in [5], there are two important properties of the quantum
+amplitudes a which are crucial for their rigorous construction. the rst one, is the
+gluing property
+
+n and ej a
+
+(gn, gn) = z ha(gn, gn0), a (gn0, gn)i dgn0
+
+(4.4)
+
+which states that for a surface e glued along boundary components of two pieces  and
+, as in fig. 7, the functional integral may be computed iteratively, by rst keeping the
+values of g xed on the gluing circle and integrating over them only after the integration
+over the elds on  and , see eq. (3.22). using the bilinear form on (l) applied to
+the glued channel, we may write this relation as the identity
+
+ae
+
+= ha , a i .
+
+(4.5)
+
+it is often more convenient to view the quantum amplitudes a as operators from
+the tensor product of some of the boundary spaces h into the others. this is always
+possible because of the linear isomorphism between h and its dual. then eq. (4.5)
+may be simply rewritten with the use of the product of operators:
+
+= a a .
+
+(4.6)
+
+one may also glue two boundary components in a single connected surface . the
+
+amplitude for the resulting surface e is then obtained from that of  by pairing the
+
+two corresponding factors in the product of the hilbert spaces or, in the operator
+interpretation, by the partial trace applied to the glued channel:
+
+ae
+
+ae
+
+ae
+
+= trh a .
+
+(4.7)
+
+in fact, as pointed out in [5], the last relation encompasses also the previous one if one
+introduces the amplitudes for the disconnected riemann surfaces dening them as the
+tensor product of the amplitudes of the components. clearly, similar gluing relation
+should hold for the amplitudes in external gauge eld.
+
+the second important property of the quantum amplitudes follows formally from
+the transformation property (3.29) of the classical amplitudes under the chiral gauge
+transformations h1,2 :   g. it reads:
+
+bh1a(a)bh2 = a(h2a10 + h1a01)
+
+(4.8)
+
+1 = es (h1
+
+for bh1
+
+1 ,a01) and bh2 = es (h2,a10) . the identity (4.8) expresses the covari-
+
+ance of the quantum amplitudes under the chiral gauge transformations. it is at the
+basis of the rich symmetry structure of the quantized wzw theory.
+
+21
+
+where k, a non-negative integer called the level, is the value taken in the representation
+
+4.2 the spectrum
+to give a rigorous construction of the hilbert space h of the wzw model, whose
+vectors represent quantum states of a closed string moving on the group manifold, one
+may resort to the representation theory of the current algebras. the algebra bg possesses
+a distinguished family of irreducible unitary representations labeled by pairs br = (k, r),
+by the central generator k of bg and where r is an irreducible representation of g
+(and of g). the irreducible unitary representations br act in spaces v
+possessing a
+br
+(unique) subspace vr  v
+n with n > 0 and carrying
+the irreducible representation r of the subalgebra g  bg generated by ta
+0. they are
+characterized by this property. not all irreducible representations r of g appear for
+the xed level k but only the ones corresponding to the the so called integrable hws
+which satisfy the condition
+
+annihilated by all the generators ta
+
+br
+
+tr (r)  k ,
+
+(4.9)
+
+where  =  is the highest root of g, i.e. such a root that  +  is not a root for any
+
+positive root . given k, there is only a nite number of integrable hws. for dsu(2),
+
+2, 1, . . . , k
+
+is canonically isomorphic to v
+
+2 . if r satises the condition
+. the scalar
+
+the integrable hws correspond to spins j = 0, 1
+(4.9) then so does 
+product on v
+
+and the space v
+
+r
+
+may then be viewed as a bilinear pairing between v
+
+and v
+
+.
+
+br
+
+the rigorous denition of the hilbert space of states h for the wzw model of level
+
+k makes the two notions of the level coincide:
+
+br
+
+br
+
+br
+
+br
+
+h =
+
+
+
+br of level k
+
+(cid:18)v
+
+br(cid:19)
+
+br  v
+
+,
+
+(4.10)
+
+where the symbol (. . .) stands for the hilbert space completion. this is the loop group
+analogue of the decomposition (2.7) of l2(g, dg). the operators j a
+n representing
+the action of the generators ta
+satisfy the unitarity conditions
+n = j a
+j a
+n. it is not dicult to motivate the above choice of the hilbert
+space. one may, indeed, realize the space (4.10) as a space of sections of l. formally,
+this may be done by the assignment (compare to the relation (2.8))
+
+n in, respectively, v
+
+n and ej a
+
+n = ej a
+
+n, ej a
+
+and v
+
+br
+
+br
+
+r  ei
+
+r  ej
+
+r
+
+7 z gij
+
+r (0) esd (g) dg ,
+
+(4.11)
+
+v
+
+br  v
+
+br  vr  v
+
+where the normalization constant  will be xed later. the functional integral on the
+right hand side, as a function of g|d = h is the corresponding section of l. one may
+argue that the above integral is given, up to normalization, by its semi-classical value,
+
+(gcl)ij
+
+r (0) esd (gcl)
+
+(4.12)
+
+where gcl : d  gc is the solution of the classical equations (3.18) with the boundary
+condition gcl|d = h. as shown in [6], the expression (4.12) denes a non-singular
+section of l only if the hw of r is integrable at level k (recall that the action s(gcl) is
+
+22
+
+proportional to k). one obtains then a rigorous embedding of the space br vrvr into
+(l), and, identifying the actions of the current algebra bg in (l) and in br vbr  vbr
+,
+also of the latter space. the formal scalar product and the formal bilinear form (4.2)
+on (l) correspond to the scalar product and the bilinear form on h induced by the
+and
+scalar product on the representation spaces v
+
+and the bilinear pairing between v
+
+v
+
+(the latter induces the pairing between the br and br summands in h).
+br
+the action of the pair of the current algebras in h leads to the (projective) action in
+h of the algebra of conformal symmetries. let us discuss how this occurs. the spaces
+vbr of the irreducible unitary representations br of bg appear to carry also the unitary
+representations of the virasoro algebra v ir, the central extension of the algebra of
+the vector elds v ect(s1) on the circle,
+
+br
+
+br
+
+0  r  v ir  v ect(s1)  0 .
+
+(4.13)
+
+the complex generators n of v ir corresponding to the vector elds iein satisfy the
+commutation relations
+
+[n, m] = (n  m)n+m + 1
+
+12 c (n3  n)n+m,0 ,
+
+(4.14)
+
+v
+
+where c is the central generator, the image of 1 under the second arrow in the exact
+sequence (4.13). the action of the generators n in the spaces of the representations
+
+br  v
+
+br of bg gives rise to the set of operators ln and eln acting in the space of states
+. they implement a projective action of v ect(s1)  v ect(s1), the lie
+br
+algebra of minkowskian conformal transformations. v ect(s1)  v ect(s1) is, indeed,
+the lie algebra of the innitesimal transformations preserving the conformal class of the
+minkowski metric dx2 dt2 = dx+dx, where x = x t are the light-cone coordinates
+on the cylinder with periodic space-coordinate x.
+
+br
+
+explicitly, the operators lns and elns are given in terms of the operators j a
+ej a
+n, generating the actions of bg, by the so called sugawara construction:
+xm=0
+
+for n 6= 0 ,
+
+j a
+nmj a
+
+ln = 1
+
+l0 = 2
+
+j a
+nj a
+
+k+h
+
+k+h
+
+m
+
+xm=
+
+n
+
+(4.15)
+
+n and
+
+of the quadratic casimir in the adjoint representation of g and is equal to n for the
+
+and similarly for eln. above, h (the dual coxeter number) stands for the value
+su(n) group. the operators ln and eln satisfy the relations (4.14) with c acting as
+
+k+h , the value of the virasoro central charge of the
+
+the multiplication by c = k dim(g)
+wzw theory. besides,
+
+[ln, j a
+
+m] = mj a
+
+n+m
+
+and similarly for [eln, ej a
+ln = ln.
+conformal dimensions r = cr
+
+in particular l0 is a self-adjoint operator, bounded below on v
+
+m]. the operators ln (and eln) satisfy the unitarity conditions
+by the
+k+h , the eigenvalue of l0 on the subspace vr  v
+.
+br
+
+br
+
+23
+
+the latter subspace is annihilated by all ln with n > 0. the hamiltonian of the wzw
+
+tensor product of the hw vectors in the subspace v
+trivial representation r = 1 gives the vacuum state  of the theory annihilated by
+
+12 whereas l0  el0 denes the momentum operator p . the
+b1  h corresponding to the
+
+theory is h = l0 + el0  c
+l0 and el0.
+
+b1  v
+
+a certain role in what follows will be played by the characters of the representations
+v
+. to avoid domain problems,
+dened as traces of loop group operators acting in v
+br
+one often considers only the endomorphisms g
+representing the action of the
+elements g  g (or in gc) and obtained by the integration of the action of the generators
+ta
+0. one then denes
+
+of v
+
+br
+
+br
+
+br
+
+e2i (l0 c
+
+24 ) g
+
+,
+
+(4.16)
+
+
+
+(, g) = trvbr
+
+br
+
+br
+
+where  is a complex number in the upper half plane: im > 0. the presence of the
+factor e2i l0 renders the trace nite. the characters 
+(, g) are class functions of
+g and may be explicitly computed. their decomposition into characters of g encodes
+the multiplicities of the eigenvalues of the virasoro generator l0 in the subspaces of v
+transforming according to a given representation of g.
+
+br
+
+br
+
+the central charge c entering the commutation relations of the virasoro generators
+is an important characteristic of a conformal eld theory. it appears also in the rigorous
+version of the quantum amplitudes a. it enters into them in a somewhat subtle way,
+measuring their change under the local rescalings  7 e2 of the metric of  (recall
+that the amplitudes of the classical congurations es(g) were invariant under such
+rescalings). under the change  7 e2 with  vanishing around the boundary,
+
+a
+
+7 e
+
+c
+
+12 r
+
+[ 1
+
+2     + r +(e21)]
+
+a
+
+(4.17)
+
+due to renormalization eects, with  depending on the renormalization prescription.
+we shall use the prescription corresponding to  = 0. the same transformation rule
+is obeyed by the amplitudes a(a) in external gauge eld. hence, the quantum am-
+plitudes are only projectively invariant under the conformal rescalings of the metric .
+this is an example of the standard eect leading to projective actions of symmetries in
+quantum theory. due to this eect, some care will have to be taken when making sense
+out of formal properties of the quantum amplitudes, like the gluing property (4.4). we
+shall always assume that the metric  of , which, together with the orientation of ,
+denes its complex structure, is of the special form around the boundary. namely, that,
+in terms of the complex coordinate of the unit discs dn holomorphically embedded into
+the surface  without boundary such that  = \(n
+n), it is equal to the cylindrical
+metric |z|2|dz|2. upon gluing of surfaces along boundary components, such metrics
+will automatically give smooth metrics on the resulting surfaces.
+
+d
+
+o
+
+in particular, the metrics on the unit discs d will have the form e2|dz|2 with
+ =  ln|z| around the boundary of d. unless otherwise stated, we shall also assume
+that  = 0 around the center of d. consider the riemann sphere cp 1 = c  {}
+
+24
+
+composed from the two copies of the disc d glued along the boundary. the choice
+
+ = z 1
+
+2
+
+cp 1
+
+(4.18)
+
+for the normalizing constant will make precise the assignment (4.11). this choice guar-
+antees that the change of  under the rescalings of the metric on d will cancel the
+
+change of the functional integral r gij
+
+r es(g) dg.
+
+4.3 correlation functions
+
+the formalism of green functions encoding the action of eld operators constitutes a
+traditional tool in quantum eld theory. in the minkowski space, the green functions
+allow to express easily the scattering matrix elements (at least for the massive theories,
+via the lsz formalism) whereas in the euclidean space they coincide with correlation
+functions of continuum statistical models, providing a bridge between quantum eld
+theory and statistical mechanics.
+in the context of cft, the correlation functions
+dened on a general riemann surface  without boundary constitute a somewhat easier
+objects to deal with than the quantum amplitudes a for surfaces with boundary.
+besides, even considered on the simplest riemann surface, the riemann sphere cp 1,
+they already contain the full information about the model. formally, the correlation
+functions of the wzw model are given by the functional integrals
+
+< yn
+
+ginjn
+
+rn
+
+(n) > (a) = z(a)1z yn
+
+ginjn
+
+rn
+
+es (g,a) dg ,
+
+(4.19)
+
+where n are disjoint points in a riemann surface  without boundary. for the riemann
+surface without boundary  obtained by gluing unit discs dn to a surface  with
+boundary5, see fig. 6, and for the points n placed at the centers of the discs dn,
+the correlation functions without the gauge eld may be expressed, with the use of
+the assignment (4.11) and of the gluing property (4.5), by the scalar products of the
+quantum amplitudes a with special vectors in the hilbert space of states:
+
+< yn
+
+ginjn
+
+rn
+
+(n) > = z1
+
+
+
+(n
+
+(ein
+rn  ein
+
+rn
+
+), a ) .
+
+the normalization factor is given by the partition function of the surface with boundary
+ dened by
+
+z = z yn
+
+n
+
+(4.20)
+
+with n as in eq. (4.18). the combination of the partition functions on the right hand
+side does not change under local rescalings of the metric inside the discs dn.
+
+on the level of correlation functions, the symmetry properties of the theory are
+encoded in the so called ward identities. for example, the behavior (3.28) of the action
+
+5the metric  on  is assumed to come from metrics on  and on the discs dn of the type described
+
+above
+
+25
+
+under the chiral gauge transformations with for h1 = h and h2 = 1 implies formally
+that
+
+z(a) < n
+
+grn (n) > (a)
+
+= es(h1,a01) n
+
+h1
+
+rn
+
+(n) z(a10 + ha01) < n
+
+grn (n) > (a10 + ha01) ,
+
+(4.21)
+
+. similarly, for h1 = 1 and h2 = h, we obtain the mirror relation:
+
+end(vrn ) and collecting all the matrix
+
+where we view grn as taking value in n
+elements q ginjn
+z(a) < n
+
+grn (n) > (a)
+
+rn
+
+= es(h,a10) z(ha10 + a01) < n
+
+grn (n) > (ha10 + a01) n
+
+hrn (n) .
+
+(4.22)
+
+these are the ward identities expressing the symmetry of the correlation functions
+under the chiral gauge transformations.
+
+it is useful and customary to introduce more general correlation functions with in-
+sertions of currents testing the reaction of the functions (4.19) to innitesimal changes
+of the gauge elds. on the surface  they are dened by
+
+z < j a(zm)yn
+
+g
+
+injn
+
+rn
+
+(n) > = 
+
+
+aa
+
+ginjn
+
+rn
+
+(n) > (a) ,
+
+(4.23)
+
+z(zm)(cid:12)(cid:12)(cid:12)(cid:12)a=0z(a) < yn
+z(zm)(cid:12)(cid:12)(cid:12)(cid:12)a=0z (a) < yn
+
+where zm is the complex coordinate of the disc dm, or by
+
+g
+
+rn
+
+injn
+
+
+aa
+
+(n) > = 
+
+its is not very dicult to show, expanding the ward identities (4.21) and (4.22) to the
+
+z < ej a(zm)yn
+rst order in h around 1, that the insertions of j a(z) (ej a(z)) are analytic (anti-analytic)
+in z 6= 0 but that they have simple poles at z = 0, the location point of one of the
+insertions gr(), with the behavior
+
+(n) > (a) . (4.24)
+
+ginjn
+
+rn
+
+1
+z
+
+ta
+r gr() + . . . ,
+
+j a(z) gr() = 
+where the dots denote non-singular terms. the latter are related to the action of the
+current algebra generators in the space of states by the following relations involving the
+contour integrals6:
+
+ej a(z) gr() =
+
+r +    ,
+
+gr() ta
+
+(4.25)
+
+1
+z
+
+1
+
+2i z
+2i z
+ 1
+
+|zm|=
+
+< j a(zm)yn
+< ej a(zm)yn
+
+|zm|=
+
+ginjn
+
+rn
+
+ginjn
+
+rn
+
+(n) > zp
+
+mdzm = z1
+
+
+
+#
+
+(j a
+p
+
+(n
+
+ein
+rm  ein
+
+rn
+
+), a ) ,
+
+(n) > zp
+
+mdzm = z1
+
+
+
+(n
+
+#
+
+(ein
+
+rn  ej a
+
+p
+
+ein
+rn
+
+), a )
+
+(4.26)
+
+(4.27)
+
+6oriented counter-clockwise
+
+26
+
+with  < 1 and the superscript # indicating that the operator appears only for n = m.
+eqs. (4.25) are examples of the operator product expansions, in this case, the ones
+stating that gr() are primary elds of the current algebra, in the cft jargon.
+
+multiple current insertions, see fig. 8, integrated over contours of increasing radii
+
+lead to multiple insertions of the current algebra generators. for example:
+
+1
+
+2i z
+
+1
+
+2i z
+
+|zm|=1
+
+|wm|=2
+
+< j a(zm) j b(wm)yn
+
+ginjn
+
+rn
+
+(n) > zp
+
+m wq
+
+m dzm dwm
+
+= z1
+(n
+for 1 > 2 whereas for 1 < 2 the order of j a
+p j b
+q should be reversed. in particular, the
+commutator [j a
+q ] corresponds to the dierence of the two double contour integrals.
+it follows, that general matrix elements of the quantum amplitudes a may be read of
+the correlation function in the external gauge. it is then enough to nd the latter to
+describe the complete theory.
+
+ein
+rn  ein
+
+), a )
+
+p , j b
+
+(j a
+p
+
+rn
+
+
+
+#
+
+#
+j b
+q
+
+d2
+
+rg
+
+(
+)
+22
+
+a
+(z)
+j
+
+1d
+
+g
+
+(
+r
+1
+1
+(w)
+
+j b
+
+)
+1
+
+
+
+fig. 8
+
+the action of the virasoro generators may be interpreted similarly in terms of the
+insertions of the energy-momentum tensor into the correlation functions which test
+their variation under the changes of the metric on the surface:
+
+z < t (zm)yn
+z < et (zm)yn
+
+ginjn
+
+rn
+
+(n) > = 4
+
+ginjn
+
+rn
+
+(n) > = 4
+
+
+
+zz(zm) z < yn
+ z z(zm) z < yn
+
+
+
+ginjn
+
+rn
+
+(n) > ,
+
+ginjn
+
+rn
+
+(n) >
+
+.
+
+(4.28)
+
+under the local rescaling of the metric  7 e2 with  vanishing around the insertion
+points n, the correlation functions (4.19) are invariant. this is not any more the case for
+general  due to (the wave function) renormalization of the insertions. for general ,
+(n), where
+the correlation functions pick up the product of local factors equal to e2rn
+the conformal dimension r of the elds gr() coincide with the lowest eigenvalues
+of the virasoro generator l0 in the hw representations of the current algebra discussed
+
+27
+
+before. the partition functions transform under the metric rescaling according to the
+rule (4.17). the innitesimal versions of the above transformation properties together
+with the covariance of the whole scheme under innitesimal dieomorphisms of the
+
+surface  may be shown to imply that the insertions of t (zm) (et (zm)) are analytic
+(anti-analytic)7 in zm for zm 6= 0 with the singular part given by the operator product
+expansion
+
+t (z) gr() =
+
+et (z) gr() =
+
+1
+z2 r gr() +
+1
+z2 r gr() +
+
+1
+z
+1
+z
+
+z gr() + . . . ,
+
+z gr() + . . . .
+
+the latter expansions state that gr() are primary elds of the virasoro algebra. the
+insertions of the energy momentum tensor encode the action of the virasoro algebra
+generators in the space of states:
+
+1
+
+2i z
+2i z
+ 1
+
+|zm|=
+
+|zm|=
+
+< t (zm)yn
+< et (zm)yn
+
+ginjn
+
+rn
+
+ginjn
+
+rn
+
+(n) > zp+1
+
+m dzm = z1
+
+
+
+(n) > zp+1
+
+m dzm = z1
+
+
+
+(n
+
+(n
+
+(l
+
+rn
+
+#
+
+p ein
+
+rn  ein
+rn  el
+
+p ein
+
+#
+
+rn
+
+(ein
+
+), a ) ,
+
+), a ) .
+
+(4.29)
+
+(4.30)
+
+the ward identities of the chiral gauge symmetry together with the transformation
+properties under the local rescalings of the metric and under dieomorphisms of the
+surface, expanded to the second order in the symmetry generators, yield the operator
+product expansions
+
+j a(z)j b(w) =
+
+t (z)t (w) =
+
+t (z)j a(w) =
+
+ej a(z) ej b( w) =
+et (z) et (w) =
+et (z) ej a( w) =
+
+j c(w) + . . . ,
+
+if abc
+z  w
+2
+(z  w)2 t (w) +
+
+kab
+
+c
+
+2(z  w)2 +
+2(z  w)4 +
+(z  w)2 j a(w) +
+
+1
+
+1
+
+z  w
+
+wt (w) + . . . ,
+
+1
+
+z  w
+
+wj a(w) + . . . ,
+
+(4.31)
+
+kab
+
+if abc
+
+c
+
+2(z  w)2 +
+2(z  w)4 +
+(z  w)2 ej a( w) +
+
+1
+
+z  w ej c( w) + . . . ,
+(z  w)2 et ( w) +
+
+2
+
+1
+
+z  w
+
+1
+
+z  w
+
+ w ej a(w) + . . . ,
+
+ w et ( w) + . . . ,
+
+where the dots denote the non-singular terms analytic (anti-analytic) in z around w.
+the above expansions hold when inserted into the correlation functions as above with z
+and w corresponding to the values of the same local coordinate for two dierent points
+
+7in the standard metric |dz|2 around the insertion point
+
+28
+
+and in the standard metric. they encode through the relations (4.26), (4.27), (4.29) and
+(4.30) the commutation relations of the current and virasoro generators j a
+obtained from the above expansions by the deformation of the integration contours
+
+n, ln, eln
+
+n, ej a
+
+z
+
+dz z
+
+|z|=+
+
+|w|=
+
+dw  z
+
+|z|=
+
+dz z
+
+dw = z
+
+dw z
+
+|w|=
+
+|w|=
+
+|zw|=
+
+dz ,
+
+(4.32)
+
+see fig. 9, and the use of the residue theorem.
+
+z
+
+z
+
+w
+
+z
+
+w
+
+fig. 9
+
+the operator expansion algebra of the insertions into the correlation functions sub-
+stitutes then for the operator commutation relations but allows to encode also more
+complicated algebraic relations between the cft operators, see the last section. it is
+the basic technique of two-dimensional cft.
+
+as we have discussed before, the action of the virasoro generators in the space of
+states of the wzw model may be expressed in terms of the current algebra action, see
+eq. (4.15). this relation may be translated into the language of the insertions into the
+correlation functions, giving rise to the sugawara construction of the energy-momentum
+tensor:
+
+t (w) = lim
+zw
+
+1
+
+k+h (cid:18)j a(z)j a(w)  k dim(g)
+2(zw)2(cid:19)
+
+and similarly for et ( w).
+
+5 chiral wzw theory and the chern-simons states
+
+as we have seen, the whole information about the quantum amplitudes of the wzw
+theory resides in the correlation functions (4.19) in an external gauge eld. we shall
+look now more closely into the gauge-eld dependence of these functions. by (formal)
+analytic continuation, the chiral ward identities (4.21) and (4.22) should also hold
+for the complexied gauge elds a with values in gc and for the complexied gauge
+transformations h with values in gc. as we shall see, they give a powerful tool for
+analysis of the correlation functions.
+
+29
+
+let us consider rst the ward identity (4.21). the holomorphic maps  on the space
+
+a01 of gc-valued 0,1-gauge elds a01 with values in n
+
+vrn satisfying the equation
+
+(a01) = es(h1,a01) n
+
+h1
+
+rn
+
+(n) (ha01)
+
+(5.1)
+
+for h in the group gc of gc-valued gauge transformations have an interesting geometric
+interpretation. on one side, they may be viewed as holomorphic sections of a vector
+vrn over the orbit space8 n = a01/gc. mathemati-
+bundle w with typical ber n
+cally, the orbit space n is the moduli space of the holomorphic gc-bundles and the
+mathematicians like to view s as non-abelian generalizations of the classical theta
+functions. indeed, the latter are holomorphic sections of a line bundle over the moduli
+space (the jacobian) of the holomorhic c-bundles over a riemann surface.
+
+5.1 states of the chern-simons theory
+
+physically, the holomorphic maps  satisfying the ward identity (5.1) may be identied
+as the quantum states of the three-dimensional chern-simons (cs) gauge theory [7].
+the classical phase space of the cs theory on the 3-manifold   r is composed of
+the at g-valued gauge elds ia on  modulo g-valued gauge transformations. the
+atness condition is
+
+f (a)  da + a2 = 0 .
+
+(5.2)
+
+in the holomorphic quantization `a la bargmann, the quantum states of the theory
+are described as holomorphic functionals  on the space a01 with the condition (5.2)
+imposed as a quantum constraint:
+
+f (a) (a01) = 0 ,
+
+(5.3)
+
+with f (a) as in eq. (5.2) but with a01 acting as the multiplication operator and a10
+as the dierentiation: aa
+. the constraint (5.3) is closely related to the
+innitesimal ward identity:
+
+z =  2
+
+k
+
+
+
+aa
+z
+
+(f (a) + 4i
+
+k xn
+
+n tata
+
+rn
+
+) (a) = 0
+
+(5.4)
+
+obtained by expanding the global ward identity (5.1) to the rst order in h around 1.
+the innitesimal identity (5.4) is equivalent to its global version (5.1). in the absence
+of insertions, it coincides with eq. (5.3). the modications involving the insertions
+correspond in the cs gauge theory language to the insertions of the wilson lines {n}r
+in representations rn.
+
+it is a crucial fact that the (k-dependent) spaces w(, r) of the holomorphic maps
+s satisfying the ward identities (5.1) or (5.4) are nite-dimensional, with the dimen-
+sion given by the celebrated verlinde formula [8]. in particular, only representations
+
+8this space requires a careful denition with a special treatment of bad orbits
+
+30
+
+rn with hws rn integrable at level k may give rise to non-trivial spaces w(, r).
+it is instructive to look more carefully into the case of the riemann sphere cp 1. on
+cp 1 all gauge elds a01 may be written in the form h1 h or may be approximated
+by the elds of this form. in other words, the gauge orbit of a01 = 0 is dense in a01.
+but by eq. (5.1),
+
+(h1 h) = es(h) n
+
+h1
+
+rn
+
+(n) (0) ,
+
+(5.5)
+
+where (0)  n
+vrn is an element of a nite-dimensional space. hence (0) determines
+ on a dense set of gauge elds a, so everywhere. in fact, (0) belongs to the subspace
+vrn )g of tensors invariant under the diagonal action of g, as is easy to see by taking
+(n
+constant h in eq. (5.5). we obtain then a natural embedding
+
+w
+
+cp 1 (, r)  (n
+
+vrn )
+
+g
+
+.
+
+(5.6)
+
+the images of w
+cp 1 (, r) in the spaces of invariant tensors are, in general, proper
+vrn )g depending on k. the reason is that the s dened by eq. (5.5)
+subspaces of (n
+on a01 = h1 h do not extend holomorphically to all of a01 for all invariant tensors
+(0). in particular, the image of w
+cp 1 (, r), which is zero if some of hws rn are
+not integrable at level k, becomes the whole space of invariant tensors for suciently
+large k.
+
+for genus one, i.e. on the complex tori t = c/(z +  z), a dense set of gauge elds
+
+is formed by the gauge orbits of the elds
+
+a01
+
+u = 
+
+im u dz
+
+with u in the complexied cartan algebra tc  gc. it is then enough to know the cs
+states  only on the gauge elds a01
+u . in particular, in the case with no insertions, the
+holomorphic functions  dened by
+
+(u) = e  k
+
+2 im  tr u2
+
+(a01
+u )
+
+characterize completely the cs states .
+
+it appears that the functions (u) are arbitrary combinations of the characters
+
+(, e2iu) of the hw representations of the current algebra bg, see eq. (4.16). this
+
+br
+fact implies an important property of the latter. recall that the tori t and t  for
+ =  1
+ may be identied by the map z 7 z = z/ . under this identication,
+(, e2iu) of the
+u if u = u/ .
+7 a01
+a01
+u
+current algebra are combinations of the characters 
+
+it follows then that the characters 
+
+(, e2iu):
+
+br
+
+
+
+(, e2iu
+
+br
+
+br
+
+(, e2iu) .
+
+) = x
+br
+
+s
+
+r
+
+r 
+br
+
+hence the modular transformation  7 1/ (and more generally, the transformations
+of sl(2, z)) may be implemented on the characters of the current algebra. the sym-
+metric unitary matrices (s r
+r ) representing the action of the transformation  7 1/
+
+31
+
+may be expressed explicitly by the characters r of the group g and by the weyl
+denominator of eq. (2.13),
+
+s
+
+r
+
+r = 1
+
+1
+
+4 |t| 1
+
+2 r (e2ibr /bk) (e2ibr /bk) = s
+
+r
+r = s r
+
+r
+
+(5.7)
+
+in the notation: b   +  and bk  k + h with  the weyl vector and h the dual
+coxeter number. the normalizing factor |bt| is the number of the cartan group elements
+of the form e2ib/bk with  a weight. 1
+k+2(cid:19) 1
+j = (cid:18) 2
+
+4 is a fourth root of unity. for the su(2) group,
+
+the above formula reduces to
+
+sin  (2j+1)(2j+1)
+
+(5.8)
+
+j
+
+s
+
+k+2
+
+.
+
+1
+
+2
+
+5.2 verlinde dimensions and the fusion ring
+
+the dimensions cnr of the spaces w(, r) are independent of the complex structure
+
+of  and the locations  of the insertion points (but dependent on the level k of the
+theory suppressed in the notation). they are given by the verlinde formula which, in the
+present context, is a natural generalization of the classical formula for the dimensions
+nr of the spaces (vrn )g of group g invariant tensors. the dimensions nr may be
+computed from the characters of the representations rn:
+
+nr = zgyn
+
+rn (g) dg = z yn
+
+rn (e2i/k) |(e2i/k)|2 d ,
+
+(5.9)
+
+where we have used the relation (2.14). for simple, simply connected groups, the last
+integral may be taken over the symplex
+
+k = {   t | tr ()  0 for  > 0, tr ()  k }
+
+(5.10)
+
+r r1r2
+
+coincide with the dimensions n r2
+r r1
+
+whose elements label the conjugacy classes classes c in a one to one way. note that the
+weights in the symplex k are exactly the hws integrable at level k, see the denition
+of the multiplicity
+(4.9). the numbers n
+spaces in the decomposition (2.18) of the tensor product of representations, i.e. with
+the structure constants of the character ring rg of the group g, see eq. (2.19). for
+example for the su(2) group, n j2
+= 1 if |j  j1|  j2  j + j1 and j + j1 + j2 is an
+j j1
+integer and n j2
+= 0 otherwise. the ring rg comes with an additive z-valued form 
+given by the integral over g.  assigns to the combination p niri
+j j1
+of characters the
+coecient of the character 1 = 1 of the trivial representation r = 1. the dimensions
+nr are the values of  on the product of the characters rn in rg.
+
+the dimensions cn, r of the spaces w(, r) are given by the formula
+
+cn, r = 1
+
+yn
+
+|bt| xweights
+
+k
+
+rn (e2ib/bk) |(e2ib/bk)|
+
+2g
+
+ ,
+
+(5.11)
+
+32
+
+in the notations from the end of the last subsection and with g denoting the genus of
+the surface . the above equation is a rewrite of the original verlinde formula:
+
+(s
+
+r
+
+rn
+
+r
+
+/s
+
+1 ) (s
+
+2g
+
+
+
+r
+
+1 )
+
+(5.12)
+
+cn,  = x
+br yn
+
+which may be easily obtained from eq. (5.11) with the use of the explicit expression
+r). for the particular case of  = cp 1, eq. (5.11) is
+(5.7) for the modular matrix (sr
+clearly a deformation of eq. (5.9). more exactly, the sum in eq. (5.11) is a riemann
+sum approximation of the integral in eq. (5.9). the genus zero 3-point dimensions
+
+r r1
+
+ditively generated by the representations r with the hws integrable at level k. the
+
+r r1r2  cn r2
+give the structure constants of a commutative ring crg which is ad-
+cn
+(k-dependent) ring crg is called the fusion ring of the wzw model. for the su(2)
+group and all spins  k
+= 1 if |j  j1|  j2  j + j1 and j + j1 + j2 is an integer
+ k and cn j2
+= 0 otherwise. the fusion ring is a deformation of the character ring
+rg. more exactly,
+
+2 , cn j2
+
+j, j1
+
+j j1
+
+crg = rg/bi ,
+
+(5.13)
+
+r with integrable hws. the coecient at the generator corresponding to the trivial
+
+where bi is the (k-dependent) ideal in rg composed of the functions vanishing on the
+cartan group elements e2ib/bk for weights   k. the isomorphism identies the
+image of r in rg/bi with the generator of crg corresponding to r for representations
+representation denes an additive z-valued form b on crg. for all rn with integrable
+hws, the genus zero verlinde dimensions cnr are given by the values of b on the
+image in the fusion ring of the product of the characters rn . for xed representations,
+cn r2
+for suciently high k. the fusion ring may be also identied as the
+character ring of the quantum deformation uq(g) of the enveloping algebra of g for
+q = ei/(k+h), an example of the intricate relations between the wzw model and the
+quantum groups.
+
+= n r2
+r r1
+
+r r1
+
+5.3 holomorphic factorization
+
+consider now the ward identity (4.22) for the mirror chiral gauge transformations. the
+anti-holomorphic maps  of the space a10 of the gc-valued 1,0-gauge elds a10 with
+values in n
+
+such that
+
+v
+
+rn
+
+(a10) = es(h,a10) n
+
+h t
+
+rn
+
+(n) (ha10)
+
+are the complex conjugates of the holomorphic maps  satisfying the relation (5.1):
+
+(a10) = ((a10)) ,
+
+(5.14)
+
+where the star denotes the anti-linear involution of the complexied lie algebra gc
+leaving g invariant (it coincides with the hermitian conjugation for g = su(n)).
+it
+follows that the correlation functions, in their dependence of the external gauge eld,
+
+33
+
+are sesqui-linear combinations of the elements of the space w(, r) of holomorphic
+solutions of eq. (5.1):
+
+z(a) < n
+
+grn (n) > (a) = h  (a01)  ((a01)) ,
+
+(5.15)
+
+where the states  form a basis of w(, r) and the right hand side should be summed
+over  and . the equality involves the natural identication of the vector spaces
+end(vrn ). the partition function z(a) has to be given by
+(n
+in particular, on the
+similar expressions pertaining to the case without insertions.
+complex torus t , and in the vanishing gauge eld,
+
+vrn )  (n
+
+) = n
+
+v
+
+rn
+
+zt
+
+= x
+br,br
+
+hbrbr
+
+ch
+
+br
+
+(, 1) ch
+
+(, 1) .
+
+br
+
+(5.16)
+
+the matrices (h ) should be specied for a given choice of the basis () for each
+complex structure on the surface and for each conguration of the insertions points so
+that, if we did not have means to compute them, the above formulae would mean little
+progress towards the solution of the wzw theory. fortunately, there exist eective
+ways to determine the coecients h .
+
+5.4 scalar product of the chern-simons states
+
+it was argued in [9], see also [10] for a formal functional integral argument, that the
+matrices (h ) appearing in eq. (5.15) are inverse to the matrices (h) with matrix
+elements
+
+h = (,  )
+
+given by the scalar product of the cs states. according to the rules of holomorphic
+quantization, the latter is given by the functional integral
+
+(, ) = z
+
+a01
+
+((a01), (a01))v
+
+rn
+
+e k
+
+2 kak2
+
+da
+
+(5.17)
+
+over the g-valued gauge elds ia = i((a01) + a01) with kak2  ir tr (a01) a01.
+
+this is again a formal expression. the point is, however, that the da-integral may be
+calculated exactly by reducing it to doable gaussian (i.e. free eld) functional integrals.
+ones this is done, the exact solution for the correlation functions follows by eq. (5.15).
+note that the above solution for coecients h  guarantees that the right hand side of
+eq. (5.15) is independent of the choice of a basis of the cs states. let us briey sketch
+how one achieves the reduction of the integral (5.17) to the free eld ones.
+
+in the rst step, the integral (5.17) may be rewritten by a trick resembling the
+faddeev-popov treatment of gauge theory functional integrals. the reparametrization
+of the gauge elds
+
+a01 = h1
+
+a01(n)
+
+34
+
+(5.18)
+
+by the chiral gc-valued gauge transforms of a (local) slice n 7 a01(n) in the space
+a01 cutting each gauge orbit in one point, see fig. 10,
+
+c
+
+c
+
+01
+
+01
+
+c
+
+c
+
+n
+
+fig. 10
+
+permits to rewrite the functional integral expression for the norm squared of a cs state
+in the new variables as
+
+kk2 = z ((a01(n),(hh)1
+
+rn
+
+(a01(n))v
+
+rn
+
+e(k+2h)s(hh,a01(n)) d(hh) d(n). (5.19)
+
+to obtain the expression on the right hand side, we have used eq. (5.1). the term
+2h s(hh) in the action comes from the jacobian of the change of variables (5.18)
+contributing also to the measure d(n) on the local slice in a01.
+
+unlike in the standard faddeev-popov setup, the integral over the group of gauge
+transformations did not drop out since the integrand in eq. (5.17) is invariant only
+under the g-valued gauge transformations.
+instead, we are left with a functional
+integral (5.19) similar to the one for the original correlation functions, see eq. (4.19),
+except that it is over elds hh . these elds may be considered as taking values in
+the contractible hyperbolic space gc/g. d(hh) is the formal product of the gc-
+invariant measures on gc/g. the gain is that the functional integral (5.19) for the
+hyperbolic wzw model correlation functions is doable. for example for g = su(2)
+and for  = cp 1, where we may set a01(n) = 0 (in this case the gauge orbit of a01 = 0
+gives already a dense open subset a01),
+
+s(hh) =  i
+
+2 z     i
+
+2 z ( + )v  (  + )v
+
+0
+
+0
+
+0
+
+v
+
+e/2 ) ( 1
+
+in the iwasawa parametrization h = ( e/2
+1 ) u of the 3-dimensional hyper-
+boloid sl(2, c)/su(2) by   r and v  c, with u  su(2). although the action
+is not quadratic in the elds, it is quadratic in the complex eld v so that the v integral
+can be explicitly computed. somewhat miraculously, the resulting integral appears to
+depend on the remaining eld  again in a gaussian way so that the integration may
+be carried out further. the same happens for more complicated groups and on surfaces
+with handles, except that the procedure requires more steps. at the end, one obtains
+explicit nite-dimensional integrals. hence, the integral (5.19) belongs to the class of
+functional integrals that may be explicitly evaluated. the gaussian functional inte-
+grals encountered in its computation require mild renormalizations (the zeta-function
+
+35
+
+or similar regularization of determinants, wick ordering of insertions) but these are well
+understood. they are responsible for the mild non-invariance of the wzw correlation
+functions under the local rescalings of the metric, leading to the values of the virasoro
+central charge and of the conformal dimensions discussed above.
+
+on the complex tori t with no insertions and in the constant metric |dz|2, the
+scalar product of the cs states takes a particularly simple form: the current algebra
+(, ) appear to give an orthonormal basis of the space of states. it follows
+characters 
+that the toroidal partition function in the constant metric is
+
+br
+
+z( ) = x
+br
+
+|
+br
+
+(, 1)|2 ,
+
+(5.20)
+
+see eq. (5.16). the exact normalization of the constant metric on t is not important
+since at genus one constant rescalings of the metric, exceptionally, do not eect the
+partition functions. the latter fact has an important consequence. it implies that the
+partition function z( ) has to be a modular invariant:
+
+z( ) = z( a +b
+c +d )
+
+b
+
+c
+
+d )  sl(2, z). this is indeed the property of the right hand side of eq. (5.20)
+for ( a
+since the matrices implementing the modular transformations on the characters of the
+current algebra are unitary.
+
+explicit nite-dimensional integral formulae for the scalar product (5.17) have been
+obtained for general groups at genus zero and one and, for g = su(2), for higher
+genera. it is clear that the case of general group and genus >1 could be treated along
+the same lines, but the explicit calculation has not been done. it should be also said
+that the general proof of the convergence of the resulting nite-dimensional integrals is
+also missing, although several special cases have been settled completely.
+
+5.5 case of g = su (2) at genus zero
+
+to give a feeling about the form of the explicit expressions for the scalar product of
+the cs states, let as describe the result for g = su(2) and  = cp 1 with insertions
+at points zn in the standard complex coordinate z. in this case, as we have discussed
+vjn )su (2) , where we label
+above, the cs states correspond to invariant tensors v in (n
+the irreducible representations of su(2) by spins. the spin j representation acts in
+the space vj spanned by the vectors ()
+is the
+normalized hw vector annihilated by (+)j , with i denoting the pauli matrices. for
+the scalar product of the cs states, the procedure described in the previous subsection
+gives the following integral expression:
+
+j vj with  = 0, 1, . . . , 2j , where vj
+
+kvk2 = f (, z, j, k)z
+
+cj
+
+(cid:12)(cid:12)(cid:12) ( v, (z, y) )v
+
+rn
+
+2
+
+e 2
+
+k+2 u (z,y)(cid:12)(cid:12)(cid:12)
+
+jya=1
+
+d2ya .
+
+(5.21)
+
+36
+
+let us explain the terms on the right hand side. first,
+
+f (, z, j, k) = e
+
+1
+
+2i(k+2)r   (cid:18) det()
+
+area (cid:19)3/2yn
+
+e2 jn(jn+1)
+
+k+2
+
+(zn)
+
+(5.22)
+
+carries the dependence on the metric e2|dz|2 on cp 1, with det() denoting the
+zeta-function regularized determinant of the (minus) laplacian on cp 1 with omission of
+4ir  
+the zero eigenvalue. the -dependence of (det()/area) is given by a term e
+leading altogether to the value 3k
+k+2 of the virasoro central charge of the wzw theory
+(recall that this is the inverse of the scalar product that enters the wzw correlation
+functions). similarly, the conformal weight j of the elds gj() of the su(2) wzw
+theory may be read from eq. (5.22) to be j(j+1)
+k+2 . next, (z, y) is a meromorphic
+n
+
+vjn -valued function of z and y = (y1, . . . , yj ), where j = pn jn :
+
+1
+
+(z, y) =
+
+jyr=1(cid:16)xn
+
+1
+
+yrzn
+
+()jn(cid:17) n
+
+vjn .
+
+(5.23)
+
+finally, u(z, y) is a multivalued function
+
+u(z, y) = xn<m
+
+jnjm ln(zn  zm)  xn,r
+
+jn ln(zn  yr) + xr<s
+
+ln(yr  ys) .
+
+(5.24)
+
+the integral (5.21) is over a positive density with singularities at the coinciding yr s
+and the question arises as to whether it converges. a natural conjecture states that the
+integral is convergent if and only if the invariant tensor v is in the image of the space
+of states w(cp 1, z, j) explicitly described as the set of v  (n
+
+vjn )su2 such that
+
+(vjn , yn
+
+(+)pn
+
+jn
+
+ezn (+)jn v)vjn
+
+= 0
+
+for x pn  j  k  1.
+
+(5.25)
+
+in particular, for two or three points, the image does not depend on the location of
+
+the insertions and gives the whole space of invariant tensors if p jn  k and zero
+
+otherwise. in this case, the integrals in eq. (5.21) may indeed be computed in a closed
+form conrming the conjecture. numerous other special cases have been checked. in
+general, the only if part of the conjecture is easy but the if part remains to be
+veried.
+
+5.6 knizhnik-zamolodchikov connection
+
+there is another way to construct the matrices (h ) entering the formula (5.15) for
+the correlation functions. let us describe it briey.
+
+the spaces w(, r) of the cs states depend on the complex structure of the surface
+ and on the insertion points. they form, in a natural way, a holomorphic vector bundle
+w whose base is the space of complex structures on a given smooth surface  and of
+non-coinciding insertions  (modulo dieomorphisms). the scalar product of the cs
+states equips this bundle with a hermitian structure. in turn, a hermitian structure on
+
+37
+
+a holomorphic vector bundle determines a unique connection such that the covariant
+derivatives of the structure and of the holomorphic sections vanish. although the scalar
+product of the cs states has been rigorously dened in the general case only modulo
+the convergence of nite-dimensional integrals (see the end of the last subsection), the
+connection on the bundle of the states may be easily constructed with full mathematical
+rigor. it appears to be projectively at (i.e. with a curvature that is a scalar 2-form
+on the base space), a crucial fact. in other words, the parallel transport of a cs state
+around a closed loop in the space of complex structures and insertions at most changes
+its normalization.
+
+for the genus zero case, there is only one complex structure modulo dieomorphisms.
+if we x it as the standard complex structure on cp 1, then we are only left with the
+freedom to move the insertion points z. the bundle w is in this case a subbundle of
+vrn )g and
+the trivial bundle with the ber formed by the invariant group tensors (n
+the connection may be extended to this trivial bundle. the covariant derivatives of the
+sections of the latter are given explicitly by the equations:
+
+zn v = zn v ,
+
+zn v = zn v + 2
+
+k+h xm6=n
+
+ta
+ta
+rn
+rm
+zmzn
+
+v
+
+(5.26)
+
+which go back to the work [3] of knizhnik-zamolodchikov on the wzw theory. in fact
+the above connection is at as long as the insertion points stay away from innity and
+the article [3] studied their horizontal sections such that v = 0. the higher genus
+generalizations of these equations were rst considered by bernard [11][12] and we shall
+call the connection on the bundle w the knizhnik-zamolodchikov (kz) connection for
+genus zero or the knizhnik-zamolodchikov-bernard (kzb) one for higher genera.
+
+in general, the kzb connection can be made at by some choices (as in the case of
+genus zero, where the curvature has been concentrated at innity). for a at connec-
+tion, one may choose locally a basis () of horizontal sections. the gain from such a
+choice of the basis of the cs states is that the coecients h  in eq. (5.15) become then
+independent of the complex structure or the positions of the insertions. indeed, since
+h = (, ) and the kzb connection preserves the scalar product of the states,
+the above scalar products are constant for horizontal . since the horizontal sec-
+tions are, in particular, holomorphic, eq. (5.15) gives then a holomorphic factorization
+of the correlation functions into sesqui-linear combinations of the conformal blocks
+holomorphic in their dependence on the complex structure and positions of insertions.
+such a nite factorization is the characteristic feature of rational cfts. as we see,
+the conformal blocks of the wzw theory are given by the horizontal sections  of
+the bundle w of the cs states. for example, at genus zero with no insertions, the
+conformal blocks are formed by the characters of the current algebra and eq. (5.20)
+provides a particular realization of the holomorphic factorization.
+
+since the kzb connection, although at, has nevertheless a non-trivial holonomy,
+the conformal blocks are, in general, multivalued. the coecients h  in eq. (5.15)
+may then be xed, up to normalization, by demanding that the correlation functions be
+uni-valued. the overall normalization may be xed, in turn, by considering the limits
+
+38
+
+2 eld g 1
+
+when the insertion points coincide. this was the strategy used in the original work
+() of the su(2)
+[3] to compute the 4-point correlation function of the spin 1
+wzw model on the riemann sphere. the horizontality relations for the conformal
+blocks reduce in this case to the hypergeometric equation and the calculations of the
+conformal blocks and of their monodromy are easy to perform. for general genus-zero
+conformal blocks, one obtains generalizations of the hypergeometric equation whose
+solutions may be expressed by contour integrals [13][14]. the latter are, essentially, the
+holomorphic versions of the integrals (5.21) so that the two strategies to obtain explicit
+solutions for the correlation functions, one based on the study of the monodromy of the
+conformal blocks and the other one involving a calculation of the scalar product of the
+cs states, are closely related.
+
+2
+
+there appears to be a very rich structure behind the connection (5.26) and its gen-
+eralizations. it is closely related to the integrable systems of mechanics and statistical
+mechanics, see e.g. [21][22]. the holonomy of the connection gives representations of the
+braid groups which played an important role in the construction of the jones-witten
+invariants of knots and 3-manifold invariants [7]. the perturbative solutions of the
+horizontality equations enter the vasiliev invariants of knots [23]. the kz connection
+is also closely connected to quantum groups [24] and to drinfelds quasi-hopf algebras
+[25], to mention only some interrelated topics.
+
+6 coset theories
+
+there is a rich family of cfts which may be obtained from the wzw models by a
+simple procedure known under the name of a coset construction [15][16]. on the
+functional integral level, the procedure consists of coupling the g-group wzw theory
+to a gauge eld ib = i(b10 + b01) with values in a subalgebra h  g . the eld b is
+then integrated over with gauge-invariant insertions [17][18][19][20]. let h  g be the
+subgroup of g corresponding to h. choose elements tn in the space (end(vrn , vrn ))h
+of the intertwiners of the action of h in the irreducible g- and h-representation spaces.
+the simplest correlation functions of the g/h coset theory take the form
+
+<
+
+nyi=1
+
+trvrn
+
+(tn grn(xn)tn) >
+
+= 1
+
+z yn
+z g/h
+ = r ek s(g,b) k
+
+
+
+trvrn
+
+(tn grn(xn) tn) ek s(g,b) k
+
+2 kbk2
+
+dg db ,
+
+(6.1)
+
+where z g/h
+2 kbk2 dg db is the partition function of the g/h theory.
+note that the g-eld integrals are the ones of the wzw theory and are given by eq.
+(5.15). consequently,
+
+ < yn
+z g/h
+
+trvrn
+
+(tn grn(xn)tn) >
+
+= h z (tn(b01), tn(b01) )vrn
+
+e k
+
+2 kbk2
+
+db .
+
+(6.2)
+
+39
+
+the composition with tn denes a linear map t between the spaces of the group g
+and the group h cs states, i.e. t : w(, r)  w(, r) with
+
+(t )(b01) = n
+
+tn (b01) .
+
+(6.3)
+
+indeed, it is straightforward to check that the right hand side satises the the group h
+version of the ward identity (5.1). eq. (6.2) may be rewritten with the use of the map
+t as
+
+trvrn
+
+ < yn
+z g/h
+ ) denote the (branching) matrix of the linear map t in the bases () and
+
+(tn grn(xn)tn) > = h  (t  , t ) = trw
+
+let (t 
+() of, respectively, w(, r) and w(, r), i.e. t  = t 
+
+  . then
+
+(,r)t t .
+
+
+
+(6.4)
+
+g/h
+
+ < yn
+z
+
+trvrn
+
+(tn grn(xn)tn) > = h  t 
+
+ h t 
+ ,
+
+where h = (, ). since the above relations hold also for the partition function,
+it follows that the calculation of the coset theory correlation functions (6.1) reduces to
+that of the scalar products of group g and group h cs states, both given by explicit,
+nite-dimensional integrals.
+
+6
+
+among the simplest examples of the coset theories is the case with the group
+g = su(2)  su(2) with level (k, 1) (for product groups, the levels may be taken
+independently for each group) and with h being the diagonal su(2) subgroup. the
+resulting theories coincide with the unitary minimal series of cfts with the virasoro
+central charges c = 1 
+(k+2)(k+3) , rst considered by belavin-polyakov-zamolodchikov
+[1]. the hilbert spaces of these theories are built from irreducible unitary representa-
+tions of the virasoro algebras with 0 < c < 1. the simpliest one of them with k = 1
+and c = 1
+2 describes the continuum limit of the ising model at critical temperature
+or the scaling limit of the massless 4
+2 theory. in particular, in the continuum limit
+() where g takes
+the spins in the critical ising model are represented by elds tr g 1
+values in the rst su(2). the corresponding correlation functions may be computed
+as above. one obtains this way for the 4-point function on the complex plane (or the
+riemann sphere) an explicit expression in terms of the hypergeometric function.
+
+2
+
+the g/h coset theory with h = g is a prototype of a two-dimensional topological
+eld theory. as follows from eq. (6.4), the correlation functions of the elds tr gr()
+are equal to the dimension of the spaces w(, r) , normalized by the dimension of
+w(,) and are given by the verlinde formula (5.11).
+in particular, they do not
+depend on the position of the insertion points, a characteristic feature of the correlation
+functions in topological eld theories.
+
+7 boundary conditions in the wzw theory
+
+discussing in sects. 3.4 and 4.1 above the classical and the quantum amplitudes for
+the wzw model on surfaces with boundary, we have admitted an arbitrary behavior
+
+40
+
+of the elds on the boundary. in physical situations, one often has to constrain this
+behavior by imposing the boundary conditions (bc) on the elds. the simplest example
+is provided by the dirichlet or neumann bcs for the free elds which x to zero,
+respectively, the tangent or the normal derivative of the eld (the absorbing versus
+the reecting condition). such conditions leave unbroken an innite-dimensional set of
+symmetries of the free eld theory. we shall be interested in bcs in the wzw model
+with a similar property.
+
+the theory of boundary cfts was pioneered by cardy [26] and cardy-lewellen
+[27].
+it found its applications e.g. in the theory of isolated impurities in condensed
+matter physics (in the so called kondo problem, a traditional playground for theoretical
+ideas) [28]. in string theory, the use of the neumann bc for free open strings has a
+long tradition [29]. the realization that one should also consider free open strings
+with the dirichlet bc came much later and gave rise to a theory of dirichlet- or d-
+branes [30]: the end of an open string, some of whose coordinates are restricted by
+the dirichlet bc, moves on a surface (brane) of a lower dimension. the d-branes
+provide the basic tool in the analysis of the non-perturbative eects in string theory: of
+the stringy solitons and of the strong-weak coupling dualities [30]. the general theory
+of boundary cfts is slowly becoming an important technique of string theory (see
+e.g. [31]). here, for the sake of illustration, we shall discuss a particular class of bcs
+for the wzw theory. these conditions constrain the group g valued eld g to stay over
+the boundary components in xed conjugacy classes of g. such bcs were discussed in
+[33], see also [32]. they clearly generalize the dirichlet bc of the free elds, contrary
+to the claim in [33] (based on the conventions of reference [34]) associating them to the
+neumann bc. our presentation, along similar lines, claries, hopefully, some of the
+discussions of the above papers.
+
+7.1 the action
+as before, we shall represent a riemann surface  with boundary as  \ (m
+m),
+where dm are disjoint unit discs embedded in a closed surface  without boundary,
+see fig. 6. we have seen in sect. 3.4 that the classical amplitudes es(g) of the elds
+g :   g of the wzw model take values in a line bundle l rather than being numbers.
+the line bundle l over the loop group lg is not trivial but it may be trivialized over
+certain subsets of lg, for example the ones formed by the loops taking values in special
+conjugacy classes c. it will then be possible to give numerical values to the amplitudes
+es (g) for g :   g satisfying the bcs
+
+d
+
+o
+
+in order to achieve this goal, we shall x the 2-forms
+
+g(dm)  cm .
+
+ = tr (g1dg)(1  adg)1(g1dg) = tr (g1
+
+0 dg0)e2i/k (g1
+
+0 dg0)e2i/k
+
+(7.1)
+
+(7.2)
+
+on the conjugacy classes c composed of the elements g = g0 e2i/kg1
+(the operator
+(1  adg) is invertible on the vectors tangent to c). it is easy to check by a direct
+
+0
+
+41
+
+calculation that d coincides with the restriction of the 3-form  = 1
+c.
+
+3 tr (g1dg)3 to
+
+since the conjugacy classes in a simply connected group g are simply connected,
+any eld g :   g satisfying the bcs (7.1) may be extended to a eld g :   g
+in such a way that g(dm)  cm and then to a eld eg on a 3-manifold b such that
+b = , see fig. 11.
+
+d
+1
+
+
+
+b
+
+d
+2
+
+g
+
+fig. 11
+
+c
+1
+
+g
+
+2c
+
+having done this, we dene the wess-zumino part of the action as
+
+s
+
+w z
+
+ (g) = k
+
+dm
+
+m .
+
+4i xm zdmeg| 
+meg| 
+
+4i zbeg  k
+4i xm z
+ebeg  k
+m and for maps eg : eb  g such that eg(s2
+
+m
+
+s2
+
+s2
+m
+
+(7.3)
+
+m)  cm,
+
+the ambiguities in this denition are the values of the integrals
+
+k
+
+4i z
+for 3-manifolds eb with  eb = m
+
+see fig. 12.
+
+s2
+
+b
+
+b
+
+s
+2
+
+
+
+s
+2
+
+g
+
+b
+
+fig. 12
+
+c1
+
+g
+
+2c
+
+in other words, they are proportional to the periods of (, ) over the cycles of the
+relative integer homology h3(g,m cm), as noticed in [32].
+
+42
+
+it is not dicult to get a hold on these ambiguities. let us glue the unit 3-balls bm
+
+k
+
+have discussed in sect. 3.3, the rst term, involving the integral over the 3-manifold
+
+to eb along the boundary spheres s2
+m to obtain a 3-manifold eb without boundary and
+let us extend eg to a map eg : eb  g. the expression (7.3) may be now rewritten as
+4i xm (cid:16)zbmegm  zbmegmm(cid:17),
+4i z
+ebeg  k
+
+where egm are the restrictions of eg to bm and they satisfy egm(bm)  cm . as we
+without boundary eb, takes values in 2iz as long as k is an integer.
+i = 1} = s3,
+let us consider the other terms. for g = su(2) = {x0 + ixii | x2
+the conjugacy classes corresponding to  = j 3 , with 0  2j  k, are the 2-spheres
+with x0 = cos 2j
+2 corresponding to the center elements).
+they are boundaries of two 3-balls bj and bj with x0  cos 2j
+k , see
+fig. 13.
+
+k xed (except for j = 0 or k
+
+k and x0  cos 2j
+
+0 + x2
+
+cj
+
+0x
+
+b
+
+j
+
+j2
+k
+
+3
+su(2) = s
+
+fig. 13
+
+  zbj
+
+(cid:17) = 4ij .
+
+(7.4)
+
+a direct calculation shows that
+
+k
+
+4i(cid:16)zbj
+
+2  j). we infer that j, between 0
+2 , must be an integer or a half-integer for the ambiguity to belong to 2iz. this
+
+if we used bj instead of bj, the result would be 4i( k
+and k
+result has already been stated in [33].
+
+for the other groups, the restrictions come from the the 2-spheres in c of the form
+(7.5)
+
+{ g0 e2i/k g1
+
+0
+
+| g0  su(2) } ,
+
+where su(2) is the su(2) subgroup of g corresponding to a root , see sect. 3.3.
+2  tr (), we observe that the rst term com-
+decomposing  = ( 1
+mutes with the generators , e of the lie algebra of su(2) and plays a spectator
+
+2  tr ()) + 1
+
+43
+
+2 z
+1 h2, a)  ik
+= h2|dm
+
+role. the calculation of the ambiguity is now essentially the same as for g = su(2)
+tr 2 due to the dierent normalization
+with j replaced by 1
+of tr 2. we infer the condition
+
+2 tr () and an overall factor
+
+2
+
+2
+
+tr 2 tr () = tr ()  z .
+
+since the conjugacy classes c are in one to one correspondence with  in the symplex
+(5.10), the admissible conjugacy classes are in one to one correspondence with the hws
+ integrable at level k, see the denition (4.9).
+
+the full action s(g) of the boundary wzw model is still obtained by adding
+to the wz action sw z the s term of eq. (3.6). the coupling to the gauge eld is
+given again by eq. (3.27). the behavior of the complete action under the chiral gauge
+transformation may be shown to obey the following bc version of the eq. (3.28):
+
+s(g, a) = s(h1gh1
+
+2 , h2a01 + h1a01) + s(h1
+
+tr (h2a10 h1a01) ,
+
+(7.6)
+
+provided that g satises the bcs (7.1) and that h1|dm
+. note that under
+this conditions, the eld h1gh1
+is constrained on the boundary to the same conjugacy
+2
+classes as g and h1h1
+to the trivial one so that the actions on the right hand side make
+2
+sense. the above relation will be employed below to infer the chiral gauge symmetry
+ward identities for the boundary wzw theory. it may be used as the principle that
+selects the bcs (7.1).
+
+w z
+
+summarizing: if the eld g :   g satises the bcs (7.1) with integrable weights
+m, then the amplitude es
+(g) , and consequently also es (g) and es (g,a), may be
+well dened as complex numbers. of course, the mixed case, where the bcs (7.1) with
+integrable m are satised only on some boundary components of  and no conditions
+are imposed on the other (free) boundary components can be treated in the same
+way. it results in the amplitudes
+
+
+
+es (g,a)  n freelg|
+
+dn
+
+.
+
+7.2 quantum amplitudes and correlation functions
+
+the functional integral denition (4.1) of the quantum amplitudes of the wzw model
+may be naturally generalized to the case where on some boundary components of  we
+impose the bcs (7.1) with integrable weights m. the resulting amplitudes a,(a)
+will be now elements of n free
+(l). they may be represented as (partial) contractions
+of the amplitudes a(a) with all boundaries free with appropriate states:
+
+the non-normalizable states9 b are given by cardys formula [26]:
+
+1
+
+(7.7)
+
+9technically, antilinear forms on a dense subspace of the hilbert space h
+
+a,(a) = (m bm , a(a) ) .
+b = x
+r ebi
+br  ebi
+br
+br
+
+r) 1
+
+2 s
+
+(s
+
+r
+
+,
+
+44
+
+where r denotes the representation of g with the hw , the vectors ebi
+br
+and the sum overbi is understood. note the analogy with
+thonormal basis of the space v
+eq. (2.11) for the delta-function supported by a conjugacy class c. the matrix (s r
+r )
+has replaced the one with the elements (r(e2i/k)) and the representation spaces v
+br
+of the current algebras those of the nite-dimensional group. the state b should be
+gacy class c. the non-normalizable states ebi
+
+interpreted as a delta-function concentrated on the loops in lg contained in the conju-
+are called the ishibashi states [35]
+
+and generalize the (properly normalized) characters of the group, see eq. (2.10).
+
+form an or-
+
+br
+
+br  ebi
+br
+
+the correlation functions < grn(n) >,(a) in the presence of the boundaries with
+elds constrained by the the bcs (7.1) may be again dened by the functional integral
+(4.19) taking numerical values. the transformation property (7.6) of the action implies
+now that
+
+z,(a) < n
+
+grn(n) >, (a) = es(h1
+
+1 h2,a) + i k
+
+2 r
+
+tr (
+
+h2a10 h1a01)
+
+ n
+
+(h1)1
+
+rn
+
+(n) < n
+
+grn(n) >, (h2a01 + h1a01) n
+
+z,(h2a10 + h1a01)
+(h2)rn(n) .
+
+(7.8)
+
+this is the chiral gauge symmetry ward identity for the boundary wzw correlation
+functions, a variant of the identities (4.21) and (4.22) in presence of the bcs. note,
+however, that the identity (7.8) may be factorized as the latter ones only if we assume
+that h1 and h2 are equal to 1 on the boundary. the general case where on the boundary
+h1 = h2 requires the presence of both gauge transformations h1 and h2.
+
+it is illuminating to rewrite the ward identity (7.8) in a dierent way. to this
+
+end, let us dene a doubled riemann surface without boundary e by gluing  to its
+
+complex conjugate  along the boundary components, see fig. 14.
+
+
+
+
+
+
+
+
+
+
+
+fig. 14
+
+
+
+we shall denote by  the anti-holomorphic involution of e exchanging  with its
+complex conjugate: () =  . each chiral gauge eld ea01 on the riemann surface e
+
+45
+
+denes a complexied gauge eld a = (a01 + a01)| on the surface . let us dene
+a holomorphic functional
+
+of the chiral gauge elds on the doubled surface by
+
+ : ea01  (n
+
+vrn )  (n
+
+v
+
+rn
+
+)
+
+( ea01) = z,(a) < n
+
+grn(n) >, (a) ,
+
+) with end(vrn ). let eh be a gc-valued
+where we identify the space (vrn ) (v
+gauge transformation on e. we shall pose h1 = eh| and h2 = eh|. note that h1 = h2
+
+on the boundary of . it is not dicult to prove that
+
+rn
+
+es (h1
+
+1 h2,a) + i k
+
+2 r
+
+tr (
+
+h2a10 h1a01)
+
+the ward identity (7.8) implies then that
+
+= es
+e
+
+(eh1,ea01)
+
+.
+
+(7.9)
+
+( ea01) = = es
+e
+
+(eh1,ea01)
+
+(n eh1
+
+rn
+
+(n))  (n eh1
+
+rn
+
+( n)) (ehea01) ,
+
+i.e. that  is a cs state on the doubled surface e with the doubled insertions at points
+n and at their complex conjugates n, associated, respectively, to the representations
+rn and to the complex conjugate representations rn.
+
+e
+
+surface to the subspace of the doubled complex structures and insertions. these
+properties are often summarized by saying that the boundary cft is chiral since its
+
+we infer that the correlations functions of the boundary wzw theory on a surface
+ may be viewed, in their gauge eld dependence, as the special states  belonging
+to the space w
+may be shown, moreover, to be preserved by the parallel transport with respect to the
+
+(, , r, r) of the cs states on the doubled surface e. the states 
+kzb connection on the restriction of the bundle fw of the cs states on the doubled
+correlation functions are given by special conformal blocks of the wzw theory on e.
+it would be desirable to characterize geometrically the cs states  . some of their
+special properties are easy to nd. for example, they are preserved by the antilinear
+(, , r, r) induced by the involution  of the doubled
+involution  7  of w
+e
+surface e and dened by
+( ea01) = (( ea01)) .
+
+a complete geometric characterization of the states  for dierent choices  of the
+bcs seems, however, still missing.
+
+(7.10)
+
+7.3 piece-wise boundary conditions
+
+up to now, we have imposed the boundary conditions forcing the elds to take val-
+ues in the special conjugacy classes uniformly on the component circles of . since
+
+46
+
+the conditions are local, it should be also possible to do this locally on the pieces of
+the boundary. suppose that the boundary  is divided into intervals ir (the entire
+boundary circles are also admitted). we shall associate integrable weight labels r to
+some of these intervals in such a way that two labeled intervals in the same boundary
+component are separated by an unlabeled (free) one, see fig. 15.
+
+
+
+1
+
+
+
+3
+
+
+
+2
+
+
+
+
+
+4
+
+
+
+5
+
+fig. 15
+
+
+
+6
+
+we shall now consider the elds g on  which on the labeled intervals take values in the
+corresponding conjugacy classes cr and are not restricted on the free intervals. one
+may still dene the classical amplitudes esw z (g) for such elds although this requires
+a more local ( cech cohomology type) technique than the one developed above [36]. let
+us sketch how this is done.
+
+,
+
+
+
+
+g
+
+fig. 16
+
+o
+
+o
+
+g
+
+k
+
+recall from the end of sect. 3.1 that s w z (g) in the rst approximation is equal to
+
+4i r g where d =  is the canonical closed 3-form on g. the problem stemmed
+
+47
+
+from the fact that such 2-forms  exist only locally. however, on the sets of a suciently
+ne open covering (o) of g, we may choose 2-forms  such that d = . choose
+a triangulation t of  with the triangles t, edges e and vertices v. if t is ne enough
+then each of the simplices s of t is mapped by g into an open set, say os, see fig. 16.
+4i ptrt gt].
+the main contribution to the amplitude es
+the above expression depends, however, on the choice of the forms  and of the
+triangulation. the idea is to compensate this dependence by contributions from sim-
+plices of lower dimension. let 0 1
+be 1-forms dened on the non-empty
+intersections o0 1  o0  o1
+
+(g) will come from exp[ k
+
+= 1 0
+
+such that
+
+w z
+
+
+
+and let f0 1 2
+indices, satisfying
+
+be functions on the triple intersections o0 1 2
+
+, antisymmetric in the
+
+d0 1
+
+= 1  0
+
+and such that on the four-fold intersections
+
+df0 1 2
+
+= 1 2  0 2
+
++ 0 1
+
+f1 2 3  f0 2 3
+
++ f0 1 3  f0 1 2  82 z .
+
+such data may, indeed, be chosen. we dene then
+
+w z
+
+
+
+es
+
+(g) = exph  k
+
+4i(cid:16)xt
+
+z
+
+t
+
+gt  xet
+
+z
+
+e
+
+get + xvet
+
+()fv et(g(v))(cid:17)i,
+
+(7.11)
+
+where in the last sum the sign is taken according to the orientation of the vertices
+v inherited from the triangles t via the edges e. one may show that for the surface
+without boundary, the above expression does not depend on the choices involved and
+coincides with the denition given in sect. 3.3.
+
+in the presence of boundary circles with unconstrained elds, the above expression
+may be used to dene the amplitudes with values in a line bundle and it provides an
+alternative construction of the bundle l over the loop group [36]. in the presence of
+the boundary conditions on the intervals ir we shall still employ the same denition,
+but with some care. namely, we include neighborhoods o of the conjugacy classes
+c into the open covering (o) of g. we choose 2-forms  on o coinciding with 
+of eq. (7.2) when restricted to c. the triangulations used in eq. (7.11) are required
+to be compatible with the splitting of the boundary. to the simplices in the labeled
+intervals ir we asign the open sets or , see fig. 16. the amplitudes resulting from
+eq. (7.11) coincide then with those dened in the previous section for the special case
+when the labeled intervals ll entire circles. in the general case,
+
+w z
+
+
+
+es
+
+(g)  yfree ir
+
+(lir )g|
+
+ir
+
+(7.12)
+
+where lir is a line bundle over the space of maps from an interval ir to g taking on the
+boundary of ir the values in the conjugacy classes cr and c
+r specied by the labels
+of the neighboring intervals10.
+
+10if ir is a full circle, lir = l
+
+48
+
+the space of sections (lir ) plays, as before, the role of the space of states of the
+wzw theory but, this time, on the interval and with boundary conditions specied by
+the conjugacy classes cr and c
+r . in the string language, these are states of the open
+string moving on the group with the ends on the branes cr and c
+
+r , see fig. 17.
+
+
+1
+
+
+2
+
+c1
+
+c2
+
+g
+
+fig. 17
+
+g
+
+one may still dene an action of the central extension of the loop group in the spaces
+(lir ) (a single one) and base on its analysis a rigorous construction of the open-string
+hilbert spaces of states h  , as we did in sect. 4.1 for the closed-string states, see
+eq. (4.10). one obtains
+
+h  = 
+br
+
+.
+
+(7.13)
+
+m
+
+r
+
+  v
+
+br
+
+the multiplicity spaces may be naturally identied with the spaces of the genus zero cs
+states w(cp 1, , r) with three insertion points in representations r, r and r. in
+particular, the dimension of the multiplicity spaces is given by the fusion ring structure
+constants cn r
+. the spaces h  carry the obvious action of the current algebra bg
+and of the virasoro algebra, the latter obtained by the sugawara construction (4.15).
+the generator l0  c
+24 gives the hamiltonian of the open string sectors. the spaces
+h with the same bc on both sides contain the vacua , i.e. the states annihilated
+by l0 (unique up to normalization).
+
+rr
+
+7.4 elementary quantum amplitudes
+
+the quantum amplitudes with the general boundary conditions are given now by the
+formal functional integrals.
+
+a,i,(a) =
+
+z
+
+es (g,a) dg
+
+(7.14)
+
+g(ir)cr
+and, should take values in the space free ir hr 
+along free boundary intervals with opposite boundary weight assignment, generalizing
+the gluing properties (4.6) or (4.7). as discussed in detail by segal in [5] for the closed
+string sector, the general amplitudes may be constructed by gluing from the elementary
+ones for the geometries listed on fig. 18.
+
+. they should possess a gluing property
+
+r
+
+49
+
+(a)
+
+q
+
+0
+
+(d)
+
+
+
+(b)
+
+w+q
+1
+w
+
+1
+
+
+
+(e)
+
+
+
+w+q
+1
+w
+
+
+
+
+
+0
+(f)
+
+
+
+1
+
+fig. 18
+
+(c)
+
+
+
+
+
+(g)
+
+the elementary amplitudes (a) and (b) represent, respectively, the vacuum state 
+in the closed string space h, and the vacua  in the open string spaces h. the
+amplitudes (c) for arbitrary annuli encode the action of the pair of virasoro algebras in
+h. in particular, for a complex number q 6= 0 inside the unit disc one may consider the
+annular regions aq = { z | |q|  |z|  1}, see fig. 19, obtained from cp 1 by taking
+out the unit discs embedded by the maps z 7 qz and z 7 z1.
+
+q
+
+0
+
+qa
+
+1
+
+t
+
+fig. 19
+
+viewing the amplitude of aq as an operator from the space h associated to the rst
+boundary component to h associated to the second boundary, one has:
+
+the gluing of the two boundary circles of aq leads to the complex torus t where
+
+aq aaq = q l0 qel0 .
+z1
+
+50
+
+q = e2i . according to the gluing relation (4.7), this produces the toroidal partition
+function
+
+z(t ) = zaq trh (q l0 qel0) .
+
+(7.15)
+
+upon choosing a at metric on t and working out the partition function11 zaq , one
+obtains nally
+
+which is nothing else but eq. (5.20).
+
+z( ) = trh q l0 c
+
+24 qel0 c
+
+24
+
+(7.16)
+
+the amplitude for a disc pw,q,q1 with two round holes, as in fig. 18(d), gives rise to
+a 3-linear form on h which may be also viewed as an operator from the space h  h
+associated to the inner discs to h corresponding to the outer one. it is customary in
+cft to rewrite this amplitude as an operator (e; w) in h labeled by the vectors e in
+(a dense subspace of) h and the point w inside the unit disc:
+(ql0 qel0 e)  (ql0
+
+(e; w) e = zpw,q,q1 apw,q,q1
+
+the combination with the powers of l0 and el0 assures the independence of the expres-
+
+sion of q and q1. the vectors e can be recovered from the operators (e; w) by acting
+with them on the vacuum vector
+
+1
+
+qel0
+
+(7.17)
+
+1
+
+e) .
+
+(e; w)  = e .
+
+lim
+w0
+
+(7.18)
+
+pictorially, this corresponds to lling up the central whole of pw,q,q1 by gluing a disc to
+its boundary. the operators (e; w) satisfy an important relation:
+
+(e; z) (e; w) = ((e; z  w) e; w) .
+
+(7.19)
+
+the above identity holds for 0 < |w| < |z| and 0 < |z  w| < 1. it results from the two
+ways that one may obtain the disc with three holes by gluing two discs with two holes,
+see fig. 20.
+
+z
+
+w
+
+z
+
+w
+
+0
+
+1
+
+0
+
+1
+
+fig. 20
+
+11zaq is a ratio of two partition function on the riemann sphere and may be easily found from the
+relation (4.17) to be equal to |q| c
+
+12
+
+51
+
+the relation (7.19) may be viewed as a global form of the operator product expansion.
+the local forms may be extracted from it by expanding the vector (e; z  w) into
+in particular, for specially chosen vectors e and e
+terms homogeneous in (z  w).
+one obtains the operator versions of the relations (4.25) and (4.31), hence the name
+of the latter. the vector-operator correspondence together with the operator product
+expansion (7.19) are the cornerstones of the non-perturbative approach to cft.
+
+the amplitudes corresponding to the surfaces with boundary of fig. 18(e) represent
+the action of the virasoro algebra in the open string spaces h . the surfaces (f) give
+rise, in turn, to the amplitudes which, applied to vectors ql0
+e  h, dene the
+action of the closed string sector elds (e, w) in the open string spaces h . finally,
+the amplitudes of the disc (g) with three labeled and three free boundary intervals
+dene 3-linear forms on the corresponding open string spaces. as before in the closed
+string sector, one may interpret them in terms of boundary operators labeled by vectors
+in, say, h and mapping from h to h .
+
+qel0
+
+1
+
+1
+
+the gluing properties give rise to non-trivial relations between various amplitudes.
+for example, gluing along the free sides a rectangle with a local bc imposed on the
+two other sides, see fig. 21, one obtain a nite cylinder zl with the bcs imposed on
+the boundary components.
+
+l
+
+i
+
+
+
+0
+
+
+
+0
+
+zl
+
+
+
+
+
+
+
+
+
+
+
+fig. 21
+
+its amplitude az
+side, using the decomposition (7.13), we infer that
+
+l
+
+(in the at metric) may be computed in two ways. on one hand
+
+az
+
+l
+
+= trh
+
+
+
+ql0 c
+
+24 = x
+br cn r
+
+rr
+
+trvbr
+
+ql0 c
+
+24 = x
+br cn r
+
+rr
+
+br
+
+with  = li
+
+2 and q = e2i . on the other hand, we may express this amplitude as a
+matrix element of the close string amplitude between the boundary states b and b .
+with q = e2i  and  =  1
+
+l , we obtain
+
+ = 2i
+
+
+
+(, 1)
+
+(7.20)
+
+az
+
+l
+
+= (cid:16)b , (q)
+
+1
+
+2 (l0 c
+
+24 )(q)
+
+1
+
+2 (el0 c
+
+24 ) b(cid:17) .
+
+(7.21)
+
+upon the substitution of cardys expression (7.7) for the boundary states b, this
+becomes
+br(cid:17)
+24 ) ebi
+br  ebi
+az
+
+br  ebi
+br
+
+r (cid:16)ebi
+
+2 (el0 c
+
+r ) 1
+
+2 (l0 c
+
+24 ) (q)
+
+r
+r (s
+
+1
+
+r) 1
+
+, (q)
+
+2 s
+
+2 s
+
+(s
+
+r
+
+
+
+l
+
+1
+
+1
+
+1
+
+= x
+br,br
+
+52
+
+, (q)
+
+1
+
+2 (l0 c
+
+(q)l0 c
+
+, (q)
+
+br(cid:17)(cid:16)ebi
+24 ) ebi
+br
+24 = x
+r )1 s
+br
+
+(s
+
+1
+
+1
+
+2 (l0 c
+
+r
+r s
+
+br(cid:17)
+24 ) ebi
+r 
+br
+
+
+
+r
+
+(, 1) .
+
+(7.22)
+
+with the use of the modular transformation property (5.7), we nally obtain:
+
+(s
+
+1
+
+r )1 s
+
+r
+r s
+
+(s
+
+1
+
+r )1 s
+
+r
+r s
+
+= x
+br
+= x
+br
+
+r
+
+r
+
+
+
+
+
+r
+
+r (cid:16)ebi
+br
+trvbr
+= x
+br,br
+
+az
+
+l
+
+(s
+
+1
+
+r )1 s
+
+r
+r s
+
+r
+
+
+
+r s
+
+(, 1) .
+
+r
+
+r 
+br
+
+l
+
+by virtue of the verlinde formula (5.12), the last identity coincides with eq. (7.20). we
+have, in fact, inverted here the logic of reference [26], where the consistency of the two
+ways of computing the amplitude az
+was used to obtain the expression (7.7) for the
+boundary states b.
+
+the whole system of elementary amplitudes represents an intriguing algebraic struc-
+ture which is common to all (rational) boundary cfts. already the case of boundary
+topological eld theories, where the amplitudes depend only on the surface topology,
+leads to an interesting construction that remains to be fully understood.
+it entan-
+gles a commutative algebra structure on the closed string space of states and a non-
+commutative algebroid in the open string sector. an example of such a structure was
+inherent in the work of kontsevich [37] on the deformation quantization of general pois-
+son manifolds, see [38]. certainly, the two-dimensional cft did not unveal yet all of
+its secrets.
+
+references
+
+[1] a. a. belavin, a. m. polyakov, a. b. zamolodchikov, innite conformal symmetry
+
+in two-dimensional quantum eld theory, nucl. phys. b 241, 333-380 (1984)
+
+[2] e. witten, non-abelian bosonization in two dimensions, commun. math. phys.
+
+92, 455-472 (1984)
+
+[3] v. knizhnik, a. b. zamolodchikov, current algebra and wess-zumino model in
+
+two dimensions, nucl. phys. b 247, 83-103 (1984)
+
+[4] d. gepner, e. witten, string theory on group manifolds, nucl. phys. b 278,
+
+493-549 (1986)
+
+[5] g. segal, two-dimensional conformal eld theories and modular functors, in: ixth
+international congress on mathematical physics (swansee 1988), hilger, bristol
+1989, pp. 22-37
+
+[6] g. felder, k. gawedzki, a. kupiainen, spectra of wess-zumino-witten models
+
+with arbitrary simple groups, commun. math. phys. 117, 127-158 (1988)
+
+53
+
+[7] e. witten, quantum eld theory and the jones polynomial, commun. math. phys.
+
+121, 351-399 (1989)
+
+[8] e. verlinde, fusion rules and modular transformations in 2d conformal eld the-
+
+ory. nucl. phys. b 300 [fs 22], 360-376 (1988)
+
+[9] k. gawedzki, quadrature of conformal eld theories, nucl. phys. b 328, 733-752
+
+(1989)
+
+[10] e. witten, on holomorphic factorization of wzw and coset models, commun.
+
+math. phys. 144, 189-212 (1992)
+
+[11] d. bernard, on the wess-zumino-witten models on the torus, nucl. phys. b 303
+
+77-93 (1988)
+
+[12] d. bernard, on the wess-zumino-witten models on riemann surfaces, nucl.
+
+phys. b 309 145-174 (1988)
+
+[13] p. christe, r. flume, the four-point correlations of all primary operators of the
+d=2 conformal invariant su(2) -model with wess-zumino term, nucl. phys. b
+282 466-494 (1987)
+
+[14] bernard, d., felder, g., fock representations and brst cohomology in sl(2)
+
+current algebra, commun. math. phys. 127, 145-168 (1990)
+
+[15] p. goddard, a. kent, d. olive, virasoro algebras and coset space models, phys.
+
+lett. b 152, 88-92 (1985)
+
+[16] p. goddard, a. kent, d. olive, unitary representations of the virasoro and super-
+
+virasoro algebras, commun. math. phys. 103, 105-119 (1986)
+
+[17] k. bardakci, e. rabinovici, b. saring, string models with c < 1 components, nucl.
+
+phys. b 299, 151-182 (1988)
+
+[18] k. gawedzki, a. kupiainen, g/h conformal eld theory from gauged wzw model,
+
+phys. lett. b 215, 119-123 (1988)
+
+[19] d. karabali, q. park, h. j. schnitzer, z. yang, a gko construction based on a
+path integral formulation of gauged wess-zumino-witten actions, phys. lett. b
+216, 307-312 (1989)
+
+[20] k. gawedzki, a. kupiainen, coset construction from functional integrals, nucl.
+
+phys. b 320, 625-668 (1989)
+
+[21] k. gawedzki, p. tran-ngoc-bich, hitchin systems at low genera, ihes/p/98/21
+
+preprint, hep-th/9803101
+
+[22] i. b. frenkel, n. yu. reshetikhin, quantum ane algebras and holomorphic dif-
+
+ference equations, commun. math. phys. 146, 1-60 (1992)
+
+[23] m. kontsevich, vassilievs knot invariants, adv. sov. math. 16, 137-150 (1993)
+
+54
+
+[24] g. felder, c. wieczerkowski, topological representations of the quantum group
+
+uq(sl2), commun. math. phys. 138, 583-605 (1991)
+
+[25] v. g. drinfeld, quasi-hopf algebras, leningr. math. j. 1, 1419-1457 (1990)
+
+[26] j. l. cardy, boundary conditions, fusion rules and the verlinde formula, nucl.
+
+phys. b 324, 581-598 (1989)
+
+[27] j. l. cardy, d. c. lewellen, bulk and boundary operators in conformal eld theory,
+
+phys. lett. b 259, 274-278 (1991)
+
+[28] i. aeck, conformal eld theory approach to the kondo eect, acta phys. polon.
+
+b 26, 1869-1932 (1995)
+
+[29] m. b. green, j. h. schwarz, e. witten, superstring theory, cambridge university
+
+press, cambridge 1987
+
+[30] j. polchinski, tasi lectures on d-branes, hep-th/9611050
+
+[31] a. recknagel, v. schomerus, moduli spaces of d-branes in cft-backgrounds,
+
+hep-th/9903139
+
+[32] c. klimcik, p. severa, open strings and d-branes in wznw model, nucl. phys.
+
+b 488, 653-676 (1997)
+
+[33] a. alekseev, v. schomerus, d-branes in the wzw model, hep-th/9812193
+
+[34] m. kato, t. okada, d-branes on group manifolds, nucl. phys. b 499, 583-595
+
+(1997)
+
+[35] n. ishibashi, the boundary and crosscap states in conformal eld theories, mod.
+
+phys. lett. a 4, 251-263 (1989)
+
+[36] k. gawedzki, topological actions in two-dimensional quantum eld theory, in:
+non-perturbative quantum eld theory, eds. g. t hooft, a. jae, g. mack, p.
+mitter ,r. stora, plenum, new york 1988, pp. 101-142
+
+[37] m. kontsevich, deformation quantization of poisson manifolds, i, q-alg/9709040
+
+[38] a. s. cattaneo, g. felder, path integral approach to the kontsevich quantization
+
+formula, math/9902090
+
+55
+
+

@@ -1,0 +1,13982 @@
+cu-tp 924
+duke-cgtp-99-05
+hep-th/9907186
+july 1999
+
+9
+9
+9
+1
+
+ 
+l
+u
+j
+ 
+
+6
+2
+
+ 
+ 
+
+1
+v
+6
+8
+1
+7
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+d3-branes on partial resolutions of abelian quotient
+
+singularities of calabi-yau threefolds
+
+chris beasley1,a, brian r. greene2,b, c. i. lazaroiu3,c, m. r. plesser1,d
+
+1 center for geometry and theoretical physics
+
+box 90318, duke university
+
+durham, nc 27708-0318
+
+2departments of physics and mathematics
+
+3department of physics
+
+columbia university
+
+n.y., n.y. 10027
+
+abstract
+
+we investigate eld theories on the worldvolume of a d3-brane transverse to partial
+resolutions of a z3  z3 calabi-yau threefold quotient singularity. we deduce the
+eld content and lagrangian of such theories and present a systematic method for
+mapping the moment map levels characterizing the partial resolutions of the singularity
+to the fayet-iliopoulos parameters of the d-brane worldvolume theory. as opposed to
+the simpler cases studied before, we nd a complex web of partial resolutions and
+associated eld-theoretic fayet-iliopoulos deformations. the analysis is performed
+by toric methods, leading to a structure which can be eciently described in the
+language of convex geometry. for the worldvolume theory, the analysis of the moduli
+space has an elegant description in terms of quivers. as a by-product, we present a
+systematic way of extracting the birational geometry of the classical moduli spaces,
+thus generalizing previous work on resolution of singularities by d-branes.
+
+a ceb5@cgtp.duke.edu
+b greene@phys.columbia.edu
+c lazaroiu@phys.columbia.edu
+d plesser@cgtp.duke.edu
+
+introduction
+
+in this paper we perform a systematic study of the worldvolume eld theory of one
+d3-brane transverse to partial resolutions of a calabi-yau quotient singularity, by
+generalizing and improving on the approach pioneered in [1]. particular examples of
+such systems have been studied before in [1, 2], where it was shown that they exhibit
+interesting phenomena such as topology change and projection of non-geometric phases.
+the main purpose of the present paper is to improve on the previous analysis of such
+systems, and to give a systematic and computationally ecient way to approach more
+complicated singularities. as a simple illustration of our methods, we re-analyze the
+case of c3/z2  z2 gorenstein singularities (a rst analysis of which was presented in
+[2]), then we proceed to the analysis of the new and considerably more complicated
+case of a d3-brane transverse to a c3/z3  z3 singularity.
+
+the motivation of the present work is to prepare the ground for a detailed analysis
+of the conformal eld theory on a large number of d3-branes transverse to partial
+resolutions of a c3/z3  z3 gorenstein singularity [4]. such an analysis is motivated
+by investigations of the ads/cft conjecture [3] for spaces of the form ads5  x5 with
+x5 an einstein-sasaki ve-manifold describing the angular part of the tangent cone to
+a partial resolution of such a singularity. as explained in [5, 6], the partial resolutions
+of interest for the ads/cft conjecture are those1 for which the tangent cone at the
+singular point can be written as a complex cone over a del pezzo surface, so that x5 is
+a circle bundle over the del pezzo. since one knows how to obtain the associated eld
+theory only in the case when the partial resolution is toric, one is currently restricted
+to toric del pezzos, which amounts to considering only the surfaces f0 = p1  p1
+and dp1, dp2, dp3 (the blow-ups of p 2 at one, two and three points respectively). of
+these, only dp3 and f0 are known to admit a circle bundle x5 over themselves which
+carries a regular einstein-sasaki structure, a result which follows from the work of tian
+and yau on the positive case of the calabi conjecture [7, 8, 9]. their investigations
+showed that all del pezzo surfaces dpk with k  3 admit a kahler-einstein metric of
+positive curvature. this allows one to prove the existence of regular einstein-sasaki
+ve-manifolds x5 which form the total space of a circle bundle over sp3.the case of
+f0 follows from more elementary results.
+
+from the work of [7], it is also known that dp1 and dp2 do not admit such met-
+rics, which raises the dicult mathematical question of whether a (possibly singular)
+associated ve-manifold, carrying a (possibly non-regular) einstein-sasaki structure
+exists, and the physical question of what is the status of the ads/cft conjecture in
+such a situation. it is known (see, for example [10, 6]) that the complex cone over each
+toric del pezzo surface can be realized as the tangent cone to some partial resolution of
+c3/z3  z3. however, it is in principle possible that such partial resolutions are sim-
+ply inaccessible from the point of view of the worldvolume eld theory of a d3-brane
+transverse to our space, namely that they cannot be realized physically by turning on
+
+1we exclude the cases x5 = s 5 and x5 = s 5/z3, which can be studied by direct methods.
+
+2
+
+fayet-iliopoulos parameters in our theory. as discussed in [1, 2], the partial resolutions
+of the singularity are realized as moduli spaces of the d-brane theory, in the presence
+of certain fayet-iliopoulos terms. namely, the space of all possible fayet-iliopoulos
+parameters admits a partition into cones, and the complex structure of the classical
+moduli space of the worldvolume theory does not change as long as the fayet-iliopoulos
+parameters remain inside of a given cone. however, there is no apriori reason to expect
+that all partial resolutions can be obtained as moduli spaces in this manner. in other
+words, it is in principle possible that some partial resolutions are never realized in the
+eld theory in the way outlined above, no matter how one chooses the fayet-iliopoulos
+terms. one purpose of the present paper is to test this possibility directly, by inves-
+tigating the full list of eld theoretic realizations of the partial resolutions of interest.
+as we will discover, these partial resolutions are in fact realized for some choices of
+fayet-iliopoulos terms. this shows that the solution of the puzzle is necessarily more
+subtle. the complexity of the analysis is quite pronounced, in marked contrast with
+cases considered before. therefore, it turns out to be necessary to rene the techniques
+available for studying the problem, and to follow a systematic approach towards its
+resolution.
+
+the structure of this paper is as follows. in section 1, we present an overview of
+our results for the case of z3  z3, in nontechnical language. in section 2, we give a
+systematic presentation of our method in a very general context. since this approach
+leads to cumbersome notation, we illustrate the abstract methods by an application
+to the example of a d3-brane transverse to a c3/z2  z2 quotient singularity and
+its partial resolutions.
+in section 3, we give a systematic presentation of the case
+c3/z3  z3. section 4 presents our conclusions. the appendix lists certain data
+relevant to the model c3/z3  z3. throughout the paper, we assume some familiarity
+with toric geometry as well as with some basic concepts of algebraic and symplectic
+geometry.
+
+1 overview of the case c3/z3  z3
+
+1.1 the geometric realization of the complex cones over
+f0, dp1, dp2 and dp3
+in [2] it was shown how a certain partial resolution of the c3/z2z2 singularity (which
+leads to the conifold singularity) can be realized in the moduli space of d-branes. this
+approach was used in [6] to deduce the worldvolume theory of n parallel d3 branes
+transverse to a conifold singularity, as well as the corresponding worldvolume theories
+at certain other conical singularities which can be obtained as partial resolutions of
+c3/z2  z2. in this manner, a systematic procedure was presented for deducing the
+cft side of the ads/cft correspondence in the case of nonspherical horizons. in
+particular, the results of [11] (originally obtained by making use of arguments entirely
+dependent on the high symmetry of the conifold), were reobtained in a systematic
+
+3
+
+manner and generalized. in this section, we will apply methods similar to [6] to the
+conical singularities discussed in the introduction.
+
+as it turns out, each of these singularities can be realized as a partial resolution of
+c3/z3  z3. to explain this, consider a set of generators g1 = (1, 0), g2 = (0, 1) of the
+group z3  z3. we choose the action of z3  z3 on c3 to be given by:
+
+r(g1) : (x, y, z) 7 (x, 1y, z)
+
+r(g2) : (x, y, z) 7 (x, y, 1z) ,
+
+(1)
+
+2i
+3 . as is the case with any abelian quotient singularity, this is an ane
+where  = e
+toric variety. thus, it can be described by a cone c in r3 which cuts the plane
+x + y + z = 1 along a convex polygon. in our case, this polygon is a triangle with
+vertices v1, v2, v3 which contains 7 other integral points {w1, . . . , w7}, only one of which
+lies in its interior. we label these vectors as follows (see figure1(a)):
+
+v1 = (0, 3)
+
+v2 = (0, 0)
+
+v3 = (3, 0) w1 = (0, 2) w2 = (0, 1)
+
+w3 = (1, 0) w4 = (2, 0) w5 = (1, 2) w6 = (2, 1) w7 = (1, 1)
+
+.
+
+(2)
+
+4
+
+v
+
+1
+
+1w
+
+w2
+
+v
+
+2
+
+w
+
+5
+
+w
+7
+
+w
+6
+
+w
+3
+
+w
+4
+
+v
+
+3
+
+figure 1(a). z3  z3 orbifold.
+
+w
+
+5
+
+w
+7
+
+w
+6
+
+w2
+
+w
+3
+
+figure 1(b). cone over f0.
+
+1w
+
+w
+6
+
+w7
+
+w
+
+w3
+4
+
+figure 1(c). cone over dp1
+
+w
+
+5
+
+w
+7
+
+w
+6
+
+w
+3
+
+w2
+
+v
+
+2
+
+figure 1(d). cone over dp2
+
+1w
+
+w2
+
+w
+
+5
+
+w
+7
+
+w
+6
+
+w
+3
+
+w
+4
+
+figure 1(e). cone over dp3
+
+figure 1. toric presentations of the partial resolutions of interest
+
+to nd the associated symplectic quotient description of this toric singularity, con-
+
+5
+
+sider the basis of linear relations between these vectors given by2:
+
+v3  3 w3 + 2 v2
+
+= 0
+
+w6  2 w3  w2 + 2 v2 = 0
+
+w4  2 w3 + v2
+
+= 0
+
+w5  w3  2 w2 + 2 v2 = 0
+
+w7  w3  w2 + v2
+
+v1  3 w2 + 2 v2
+
+w1  2 w2 + v2
+
+= 0
+
+= 0
+
+= 0
+
+(3)
+
+introduce homogeneous coordinates xi, yj on c10 corresponding to vi, wj. then the
+u (1)7-action is determined by the matrix of linear relations:
+
+x3 y6 y4 y5 y7
+
+y3 x1 y1
+
+y2 x2
+
+1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0 3
+
+0 2
+
+0 2
+
+0 1
+
+1 1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0 1
+
+0
+
+0
+
+0 2
+
+0 1
+
+0 3
+
+1 2
+
+2
+
+2
+
+1
+
+2
+
+1
+
+2
+
+1
+
+
+
+
+
+
+
+
+
+while the associated moment map equations, for a central level  = (1...7) are:
+
+|x3|2  3 |y3|2 + 2 |x2|2
+
+= 1
+|y6|2  2 |y3|2  |y2|2 + 2 |x2|2 = 2
+
+|y4|2  2 |y3|2 + |x2|2
+
+= 3
+|y5|2  |y3|2  2 |y2|2 + 2 |x2|2 = 4
+|y7|2  |y3|2  |y2|2 + |x2|2
+
+= 5
+
+(4)
+
+(5)
+
+|x1|2  3 |y2|2 + 2 |x2|2
+|x1|2  2 |y2|2 + |x2|2
+
+= 6
+
+= 7
+
+if all i = 0, then we obtain the unresolved c3/z3  z3 orbifold singularity.
+
+2we consider only linear relations such that the sum of all charge vectors equals zero. equivalently, we
+
+consider linear relations between the lifts of the vectors in figure 1(a) to the plane z = 1 in r3.
+
+6
+
+conversely, for generic values of i, the singularity is completely resolved and the
+symplectic quotient leads to a smooth manifold. however, if the i lie in particular
+cones of some codimension, the symplectic quotient is singular. the singularity is
+determined by the cone, and is the same for all points in its interior.
+
+as an extreme example, consider the one-dimensional cone in which all i = 0 except
+for 5 > 0. in this cone, we see from (5) that there is a vicinity of the origin of the space
+of homogeneous coordinates on which y7 cannot vanish (this coordinate corresponds to
+the center of the triangle in gure 1(a)). we can thus perform explicitly one of the u (1)
+quotients by xing its value to be real and positive. since its value is then determined
+by the remaining homogeneous variables, we have eectively eliminated one coordinate
+and one quotient from the problem. note that the higher the dimension of the cone in
+which the i lie, the larger is the number of coordinates we can eliminate, and the milder
+the singularity we obtain. the extreme case of the c3/z3  z3 singularity corresponds
+to  = 0 (a zero-dimensional cone), while a complete resolution corresponds to a
+generic vector , i.e. one which belongs to a seven-dimensional cone.
+
+the procedure described above gives a symplectic description of the various reso-
+lutions.3 it is not hard to see that, with appropriate choices of levels , one can realize
+the singularity corresponding to any subpolygon of the triangle shown in figure 1(a).
+for the geometrically-inclined reader, we mention that the discussion above is a
+concrete realization of very general results of symplectic geometry and geometric
+invariant theory. such results assure us that the space of moment map levels has a
+canonical partition into conical chambers, which together form a fan  in r7(). as 
+varies inside of a given chamber, the algebraic structure of our toric variety does not
+change (even though the kahler metric induced by the symplectic reduction changes).
+when  crosses a wall separating two chambers, the toric variety undergoes a birational
+transformation known as a toric op; the variety is singular precisely when  lies on a
+wall (this is the same mathematical structure which underlies topology change in the
+moduli space of conformal eld theories [13]). the procedure we just described gives
+one practical way of identifying these walls and chambers.
+
+the complex cones over the del pezzo surfaces of interest are well-known to be
+ane toric varieties themselves[10], and are described by the polygons listed in figure
+1. the particular presentations shown there allow us to realize these cones as tangent
+cones to partial resolutions of the c3/z3  z3 singularity. this amounts to viewing
+the polygons as inscribed in the triangle of figure 1(a) and turning on appropriate
+levels  in order to eliminate precisely the integral points which lie on the triangle
+
+3to be rigorous, this procedure yields not the partial resolutions but their tangent cones. in fact, the
+partial resolutions are only quasiprojective varieties, while the tangent cones are ane. as discussed for
+example in [12], the partial resolutions are associated to triangulations of the rst set of points in figure
+1, and therefore their fans are not of ane type, i.e. do not coincide with the fan of all faces of a single
+3-dimensional cone. however, the procedure above suces to correctly identify the chambers in r7()
+parameterizing the resolutions. note that the singularities we wish to realize (the complex cones over the
+toric del pezzo surfaces) are ane toric varieties, and therefore they will only correspond to the tangent
+cones to the partial resolutions we will identify below.
+
+7
+
+but not on the del pezzo polytope. the subspaces of r7() leading to the desired
+partial resolutions, as well as the corresponding charge matrices describing these as
+toric varieties are listed in table 1.
+
+cone over
+
+f0
+
+cone over
+
+dp1
+
+cone over
+
+dp2
+
+cone over
+
+dp3
+
+2  25, 4  25
+
+= 0
+1  25, 3  5, 25 + 6 > 0
+> 0
+
+5 + 7, 5
+
+1  4 5 + 2 7, 4  2 5
+
+2  3 5 + 7, 3  2 5 + 7 = 0
+> 0
+> 0
+> 0
+
+5  7, 2 5  7
+
+5 + 6  7
+
+2, 4, 5
+
+= 0
+
+1, 3, 6, 7 > 0
+
+2  2 7, 3  7, 4  2 7 = 0
+= 0
+> 0
+
+1  2 7, 6  27, 7
+
+5  7
+
+y6
+1
+0
+
+
+
+
+y6
+1
+0
+
+
+
+
+y6
+1
+0
+0
+
+y6
+1
+0
+0
+0
+
+
+
+
+
+
+y5
+y7
+0 2
+1 2
+
+y4
+y7
+0 3
+1 2
+
+y3
+0
+1
+
+y3
+1
+0
+
+y2
+1
+0
+
+
+
+
+y1
+1
+1
+
+
+
+
+y5
+0
+1
+0
+
+y4
+0
+1
+0
+0
+
+y3
+
+y2
+y7
+0 2 1
+0 1 2
+1 1 1
+
+x2
+2
+2
+1
+
+
+
+
+y5
+0
+0
+1
+0
+
+y3
+
+y7
+y1
+0 2 2
+0 2 1
+0 1 2
+1 1 1
+
+y2
+3
+2
+2
+1
+
+
+
+
+table 1. charge matrices for partial resolutions of the z3  z3 orbifold.
+
+being ane varieties, the complex cones over the del pezzo surfaces of interest
+can be presented as the ane spectrum spec(r) of their coordinate ring r. this
+ring admits a presentation r = c[z]/i with c[z] a polynomial ring and i an ideal
+of relations.
+in the context of toric geometry, the generators zi are the invariant
+coordinates under the complex torus action in the holomorphic quotient description,
+while i is the ideal of monomial relations constraining them. it is well-known [12, 14]
+that the invariants z and monomial relations can be determined as follows. if c is the
+cone over the polygon p describing our variety (where the polygon is embedded in the
+ane plane x+ y + z = 1 of r3), then one considers the dual cone c v, which is the cone
+over the dual (polar) polygon p v. while the cone c and the polygon p are appropriate
+for the holomorphic quotient description of the toric variety, their duals c v, p v are
+appropriate for the description in terms of invariants z and monomial relations i.
+more precisely, there will be one invariant zi associated to each integral point of the
+dual polygon p v. moreover, any integral linear relation between the primitive integral
+vectors lying in the cone c v corresponds to a monomial relation among the variables
+
+8
+
+z. explicitly, a linear relation of the form pi ai ui between the vectors ui associated
+to the invariant coordinates zi yields the monomial relation izai
+i = 1. hence the
+entire information characterizing the ring r is contained in the dual polygons, which
+are listed in figure 2.
+
+z
+1
+
+z
+4
+
+z
+
+2
+
+z
+
+3
+
+z 2
+
+z
+9
+
+z1
+
+z
+8
+
+z
+5
+
+z
+6
+
+z3
+
+z
+7
+
+4z
+
+figure 2(a). z3  z3 orbifold. figure 2(b). cone over f0.
+
+z
+1
+
+z2
+
+z
+3
+
+z
+
+5
+
+4z
+
+z 8
+
+z6
+
+z7
+
+z9
+
+z1
+
+z2
+
+z3
+
+z5
+
+z4
+
+z6
+
+z7
+
+z8
+
+figure 2(c).
+
+cone over
+
+dp1
+
+figure 2(d).
+
+cone over
+
+dp2
+
+z1
+
+z2
+
+z3
+
+z5
+
+z4
+
+z6
+
+z7
+
+figure 2(e).
+
+cone over
+
+dp3
+
+figure 2. geometric picture of the generators of r and the relations between them.
+
+1.2 partial resolutions of the moduli space
+
+the moduli space for one d-brane in the presence of fayet-iliopoulos terms can be
+analyzed by the methods pioneered in [1]. in the case of c3/z3  z3, the main points
+of the analysis are as follows. the classical moduli space in the presence of fayet-
+iliopoulos terms is obtained by imposing the d- and f-atness constraints and further
+
+9
+
+dividing by the gauge group of the worldvolume theory, which in this case turns out to
+be the torus u (1)8. if we denote the solution set of the f-atness constraints by z, then
+the symplectic quotient which gives the moduli space (where the d-atness constraints
+play the role of moment map equations) is isomorphic, as a complex variety, with the
+holomorphic quotient of z by the complexication (c)8 of the gauge group. for one
+d-brane on an abelian quotient singularity, the set z (which in the case c3/z3  z3
+is complex eleven-dimensional, see section 3) has the structure of an algebraic variety
+dened by a collection of monomial relations. therefore, z is an ane toric variety,
+and by virtue of [15] it admits an alternate presentation as a holomorphic quotient:
+
+z = c42/(c)31 .
+
+(6)
+
+the procedure for precisely identifying the quotient above (the mysterious numbers
+42, 31 and the precise (c)31 action) is slightly technical and is explained in detail in
+section 2. then the moduli space can be obtained in the form:
+
+m = (z  s)/(c)8 = (c42  z)/(c)39 ,
+
+(7)
+
+where s, z are certain exceptional sets which have complex codimension at least
+two in the respective spaces. note that z depends on the choice of fayet-iliopoulos
+parameters , which explains the dependence of the complex geometry of the moduli
+space on these parameters. in symplectic quotient language, the symplectic reduction
+of z by u (1)8 is performed at a level characterized by the fayet-iliopoulos parameters
+  r8. when re-writing z itself as a symplectic quotient (with zero moment map
+level 0  r31) we are rewriting m as a double symplectic quotient. to arrive at a
+presentation equivalent to the last entry in (7), we then rewrite this double quotient
+as a single symplectic quotient, with certain overall moment map levels ()  r39.
+the crucial point of this analysis is that the levels  are not arbitrary in r39, but are
+determined by fayet-iliopoulos terms   r8. therefore, as  covers the whole of r8,
+the parameters () will cover only a subspace of r39. as shown in sections 2 and 3,
+the precise relation between  and  is given by an injective linear map:
+
+r8() w r39() ,
+
+(8)
+
+such that () = w. therefore, () will only vary inside of an 8-dimensional sub-
+space w of r39. this non-genericity of the level  is responsible for the fact that the
+symplectic quotient description m = {x  c42|(x) = ()}/u (1)39 is not minimal,
+in the sense that, depending on the sign of the various components of (), it will in
+general be possible to eliminate many of the homogeneous variables of c42 essentially
+by the same procedure as that discussed in subsection 1.1. in the holomorphic quo-
+tient language, this is reected by the fact that the toric generators one obtains for
+the description (c42  z)/(c)39 appear with multiplicities, so the toric description
+is non-minimal as well. in order to obtain a minimal description, one must eliminate
+all multiplicities in the list of toric generators or, equivalently, eliminate the redundant
+
+10
+
+homogeneous coordinates in the manner outlined above. in our case, this reduces the
+full quotient to the form (c10  f)/(c)7, which is precisely what we would expect
+from the geometric description of the partial resolutions. this reduced quotient has
+a symplectic quotient description as well, and we let ()  r7 denote the associated
+moment map levels.
+
+as in the previous subsection, which homogeneous coordinates can be eliminated
+depends on the sign of the various components of (). a systematic analysis shows
+that this procedure denes a certain fan  in r39(). since w is an injective linear
+function, it follows that there exists a similar division of r8() into cones i obtained
+by taking the inverse image of the cones  through the map w (geometrically, this
+amounts to intersecting the system of cones  of r39 with the subspace w ). which
+homogeneous coordinates of the full quotient can be eliminated, and hence the minimal
+description of m as a toric variety will thus depend on where  lies in r8 with respect
+to the cones . note that not all of the cones i will be 8-dimensional. in fact, it is
+not hard to see that those cones i which have dimension less than 8 will form faces
+of the 8-dimensional ones.
+
+as we discuss in sections 2 and 3, the reduction of the quotient (c42  z)/(c)39
+
+to the quotient (c10  f)/(c)7 induces a piecewise-linear map
+
+r39()  r7() ,
+
+(9)
+
+such that  = (). therefore, the dependence of  on  is given by the composite
+map:
+
+ :=   w : r8()  r7() ,
+
+(10)
+
+so that  = (). clearly  is a piecewise-linear map, which is linear on each of the
+cones i . note that  need not have dierent linear expressions on each of the cones
+i
+
+4.
+the discussion above shows that understanding how to realize the various partial
+resolutions of c3/z3  z3 in terms of the worldvolume theory of the d3-brane amounts
+to computing the map . indeed, this map connects the fayet -iliopoulos parameters 
+of the d-brane worldvolume theory to the toric levels  discussed in section 2. there-
+fore, given a choice of partial resolution (described in the language of section 2 by a
+choice of ), the map  allows us to determine if and how this geometric choice is
+physically realized in the d-brane theory.
+
+clearly  must take the fan  into a renement of the natural fan  carried by
+r7(), which was discussed in the previous subsection. hence the fan  is a renement
+of the preimage of  through . the full information about the d-brane realization
+of the various partial resolutions is encoded in this preimage. by using our methods,
+one can in principle reconstruct the preimage from the smaller pieces provided by the
+cones i.
+
+4in technical terms, the fan associated to  as a piecewise-linear function is subordinate to the fan dened
+
+by the cones i , i.e. this later fan is a renement of the fan of .
+
+11
+
+a systematic procedure for determining the map  is developed in the next section.
+in the case of c3/z3  z3, the complexity of the computation turns out to be markedly
+greater than in cases considered before [1, 2]. as we explain in section 2, the complexity
+is characterized by an integer c5, which depends on the combinatorial data of the
+problem, and for which we do not have an analytic expression. in a typical example
+considered in [1], such as a z2  z2 quotient singularity, one had c = 9, while our case
+case we have c = 42.
+
+the result of the analysis is that each of the complex cones over f0, dp1, dp2 and
+dp3 is indeed realized in the moduli space of the worldvolume theory. the details of
+how this conclusion can be reached are discussed in the next sections.
+
+2 the classical moduli space for one d-brane
+transverse to an abelian calabi-yau quotient sin-
+gularity
+
+in this section, we spell out in detail our algorithm for the analysis of the moduli space
+of one d-brane on an abelian quotient singularity.
+
+the algorithm presented here is essentially a systematic version of the approach
+taken in [1] and is carried out in the language of the quiver formalism [17] (see [18]
+for a discussion in the context of d-brane moduli spaces), which turns out to be a
+very eective way of implementing the projection conditions and analyzing the d-
+and f- atness constraints. the main novel result is the construction of the map  in
+subsection 2.8. as a simple illustration, we re-consider the realization of the conifold in
+the moduli space of a d-brane transverse to a z2  z2 calabi-yau quotient singularity
+[2].
+
+2.1 the quotient group and its representation on c3
+
+consider a nite abelian group . choosing a system of generators allows us to present
+the group as:
+
+ = zt1  ...  ztd
+
+,
+
+(11)
+
+where the integers t1..td  2 are the torsion indices of . the elements of the group
+are then written in the form:
+
+with ua  zta (a = 1..d), while the group operation becomes:
+
+u = (u1..ud) ,
+
+u + v = ( (u1 + v1)mod t1, ..., (ud + vd)mod td ) .
+
+(12)
+
+(13)
+
+5c is the number of facets of the cone of exponents associated to the f-atness constraints, as discussed
+
+in subsection 2.7.
+
+12
+
+the irreducible representations of our group are given by its characters   hom(, u (1)),
+
+which are in one to one correspondence with the elements of . indeed, every character
+is of the form:
+
+(14)
+
+w(u) = a=1..de
+
+2i
+ta
+
+wa (u  ),
+
+where w = (w1...wd) is an element of  called the weight associated to . in fact, this
+correspondence gives an isomorphism between  and the multiplicative group of its
+characters:
+
+w+w = ww
+w = w .
+
+1
+
+(15)
+
+we let  act on c3 by a special unitary representation . since this representation
+decomposes into 3 irreducibles, we can always nd coordinates (x1, x2, x3) on c3 such
+that  takes the form:
+
+(x1, x2, x3)
+
+(u)
+ (u)(x) = (w1(u)x1, w2(u)x2, w3(u)x3) .
+
+(16)
+
+special unitarity requires that w1 + w2 + w3 = 0 (a relation which has to be understood
+as holding in the group ).
+
+example: the z2  z2 quotient singularity
+
+the group  = z2  z2 has d = 2 torsion indices t1 = 2, t2 = 2. consider its action
+on c3 given by the weights w1 = (1, 1), w2 = (1, 0), w3 = (0, 1) (which do satisfy
+w1 + w2 + w3 = (0, 0) in our group) and associated characters:
+
+1(u1, u2) = ei(u1+u2) = (1)(u1+u2)
+2(u1, u2) = eiu1 = (1)u1
+,
+
+3(u1, u2) = eiu2 = (1)u2
+
+with u = (u1, u2), u1, u2 = 0, 1. the generators (1, 0), (0, 1) of the group act as:
+
+(x1, x2, x3)
+
+(1,0)
+ (x1, x2, x3)
+
+(x1, x2, x3)
+
+(0,1)
+ (x1, x2, x3) .
+
+(17)
+
+(18)
+
+2.2 solving the projection constraints
+
+the low-energy theory on the worldvolume of a d-brane transverse to a quotient singu-
+larity is given by a projection of a supersymmetric gauge theory with 16 supercharges[16].
+the gauge group is determined by the singularity. the projection will be described in
+more detail below. it results in an abelian gauge theory with a reduced supersymmetry
+and, when appropriate, a superpotential. the classical moduli space of supersymmet-
+ric vacua of this theory is found to be the tangent cone to the transverse space; this is
+
+13
+
+reasonable, since motion of the brane along this space is a supersymmetry-preserving
+deformation, while the low-energy limit restricts us to small motions. the gauge theory
+admits fayet-iliopoulos terms; these are expected to parameterize the deformations of
+the singularity itself. how this works is the subject of this paper, and will be made
+clear in what follows. we note here that this picture is a bit imprecise. as noted in
+[16, 6] the abelian gauge symmetry is in fact broken by twisted closed-string modes.
+as described in detail in [6], this fact may safely be ignored in our discussion below.
+
+let || denote the number of elements of our group. the low-energy theory for
+a d3-brane near this singularity is found as a projection of the theory of || branes
+moving on the covering space. this is an n = 4 theory with u (||) gauge symmetry,
+containing (in n = 1 language) a vector multiplet and three chiral multiplets in the
+adjoint representation of the gauge group. as is by now familiar, the three chiral
+multiplets represent a nonabelian version of the positions of the || branes in the
+three complex dimensional transverse space. the quotient theory is obtained by a
+projection, restricting attention to elds invariant under the action of , which we lift
+to the chan-paton indices via its regular representation.
+
+we label the entries of the adjoint elds by
+
+x i = (x i
+
+vv)v,v .
+
+(19)
+
+the spacetime indices of the matrices x i transform in the representation (16) and the
+chiral elds surviving the projection are thus those modes which satisfy
+
+r(u)x ir(u)1 = wi(u)x i
+
+,
+
+(20)
+
+where r(u) is the regular representation of . since  is abelian, r decomposes into
+the sum of all irreducible representations, each taken with multiplicity one. therefore,
+we can always assume (after performing a unitary transformation x i  u x iu 1) that
+r(u) are given by the diagonal matrices:
+
+r(u)v,v = v(u)v ,v (v, v  ) .
+
+then the projection conditions take the form:
+
+vv+wi(u)x i
+
+v,v = x i
+
+v,v ,
+
+(21)
+
+(22)
+
+which require that all elements of x i must be zero except for the following entries:
+
+xi(v) := x i
+
+vwi,v .
+
+(23)
+
+the set of surviving elds xi(v) can be elegantly described in the language of
+graph theory[17]. for this, consider a set of points (nodes) which are in one to one
+correspondence with the elements of . for each node v  , and for each i = 1..3,
+draw an edge from v to v  wi. such an edge is associated with a surviving component
+xi(v) of the matrix x i and will be called an edge of type i. if wi = 0, then the edge
+
+14
+
+connects the node v with itself, and is thus a loop, which cannot carry an orientation.
+if wi 6= 0, the edge is given the orientation from v to v  wi (such oriented edges will be
+called arrows). the graph q thus obtained is called the mckay quiver of the quotient
+singularity c3/. we denote the set of its nodes by q0   and the set of its edges by
+q1. since we have 3 types of edges leaving each vertex, the total number of edges in
+the graph is equal to 3||. the mckay quiver can be thought of as the superposition
+of 3 graphs qi (i = 1..3), where qi is obtained from q by keeping only the edges of
+type i. the edges of qi represent the surviving components of the matrix x i. in the
+absence of the projection conditions, qi would coincide with the full graph on the set of
+nodes , i.e. it would contain an edge connecting any two elements of  (in particular,
+it would contain a loop at each vertex). the projection conditions eliminate some of
+these edges, in a manner controlled by the weight wi. the surviving components of x i
+can be read from the quiver as follows. if a  q1 is an edge of q, then the associated
+eld is given by:
+
+x(a) := xtype(a)(tail(a)) = x type(a)
+
+head(a),tail(a)
+
+,
+
+(24)
+
+where tail(a), head(a)   are the tail, respectively head of the edge a (in case a is
+a loop at a node v, we dene tail(a) = head(a) to be given by v; otherwise, a is an
+arrow going from tail(a) to head(a)). throughout this paper, we will represent arrows
+of type 1 by light grey lines, arrows of type 2 by dark grey lines and arrows of type
+3 by black lines. in a color postscript rendering, these arrows appear respectively as
+green, blue and red.
+
+example:z2  z2 singularity
+
+in this case, we have || = 4 so the quiver will have 4 nodes.
+the edges v  v  wi are:
+(1)type 1 (the surviving components of x 1):
+
+(0, 0)  (1, 1),
+
+(0, 1)  (1, 0),
+
+(1, 0)  (0, 1),
+
+(1, 1)  (0, 0) ;
+
+(25)
+
+(2)type 2 (the surviving components of x 2):
+
+(0, 0)  (1, 0),
+
+(0, 1)  (1, 1),
+
+(1, 0)  (0, 0),
+
+(1, 1)  (0, 1) ;
+
+(26)
+
+(3)type 3 (the surviving components of x 3):
+
+(0, 0)  (0, 1),
+
+(0, 1)  (0, 0),
+
+(1, 0)  (1, 1),
+
+(1, 1)  (1, 0) .
+
+(27)
+
+indexing the group elements as follows:
+
+(0, 0)  1
+(1, 0)  2
+(0, 1)  3
+(1, 1)  4
+
+15
+
+we can rewrite the edges as:
+
+(1) type 1:
+
+(2)type 2:
+
+(3)type 3:
+
+1  4,
+
+3  2,
+
+2  3,
+
+4  1 ;
+
+1  2,
+
+3  4,
+
+2  1,
+
+4  3 ;
+
+1  3,
+
+3  1,
+
+2  4,
+
+4  2 .
+
+(28)
+
+(29)
+
+(30)
+
+the quiver is drawn below:
+
+   2
+
+ 3
+
+ 1
+
+ 4
+
+figure 3. the quiver for the isolated z2  z2 quotient singularity.
+
+the arrows of various types are drawn with dierent shades of gray: light gray for type 1
+
+(elds xuv), dark for type 2 (elds yuv), medium for type 3 (elds zuv). in color rendering,
+
+these correspond to 3 dierent colors: green for type 1, blue for type 2, red for type 3.
+
+2.3 the action of the surviving gauge group
+
+the gauge elds in the theory do not carry transverse space indices, so the projection
+conditions on these are:
+
+r(u)u r1(u) = u .
+
+(31)
+
+16
+
+if we index the entries of u by the elements of :
+
+then (31) becomes:
+
+u = (uv,v)v,v ,
+
+vv(u)uv,v = uv,v ,
+
+which shows that the surviving entries of u are given by:
+
+uv = uv,v  u (1) .
+
+(32)
+
+(33)
+
+(34)
+
+therefore, the projected gauge group is given by diagonal unitary matrices and is
+isomorphic with vu (1)  u (1). its action on the surviving elds xi(u) is:
+
+xi(u)
+
+u =(uv)vu (1)
+
+
+
+uuwiu 1
+
+u xi(u) = ei(uwi u)xi(u)
+
+(35)
+
+where we wrote uv = eiv with v  r. therefore, the charge of xi(u) with respect to
+the v-th u (1) factor is:
+
+(36)
+note that the diagonal subgroup u (1)diag given by uv = ei with v =  independent
+of v acts trivially on all surviving elds, so the eective gauge group is given by g =
+u (1)/u (1)diag .
+
+qi
+v(u) = v,uwi  v,u .
+
+the action (35) can be translated into quiver language as follows. if a  q1 is an
+
+edge of the quiver, then the eld x(a) given by (24) transforms as:
+
+x(a)  ei(head(a)tail(a))x(a) .
+
+(37)
+
+one can imagine the various u (1) factors of the surviving gauge group to be sitting at
+the nodes of the quiver, having the natural action (37) on the variables x(a) associated
+to its edges. note that each edge is charged with respect to the u (1) factors associated
+to its terminal points (its tail and its head). the action of u (1) on x(a) is encoded
+by the ||  3|| matrix of charges d = (dv,a)v,aq1 with entries:
+
+dv,a = v,head(a)  v,tail(a)
+
+.
+
+(38)
+
+(this is just another way of writing equation (36)). in graph-theoretic language, d is
+the incidence matrix of the quiver, where the incidence index of an arrow a on a node
+v is 1 if v = tail(a), +1 if v = head(a) and zero otherwise, while the incidence index
+of a loop with any node (including the node where the loop sits) is dened to be zero.
+
+2.4 the d-atness constraints
+the moment map  : cq1  r for the action of u (1) on the space cq1 of all
+surviving elds is given by:
+
+v(x) = xi = 1..3
+
+u  
+
+v(u)|xi(u)|2
+qi
+
+17
+
+(39)
+
+which in quiver language becomes:
+
+v(x) = xaq1
+
+dv,a|x(a)|2 = xaq1,head(a)=v
+
+|x(a)|2  xaq1,tail(a)=v
+
+|x(a)|2 ,
+
+(40)
+
+or, in matrix form:
+
+where p is the vector in rq1
+
++ with components:
+
+ = d p ,
+
+pa := |x(a)|2 .
+
+(41)
+
+(42)
+
+the d-atness constraints in the presence of fayet-iliopoulos terms (v) (v  )
+
+read:
+
+note that the moment map satises the condition:
+
+v(x) = v for all v   .
+
+v(x) = 0 ,
+
+xv
+
+(43)
+
+(44)
+
+which is a consequence of the trivial action of u (1)diag. this is also reected in the
+structure of the incidence matrix d, by the fact that the sum of all of its rows is zero.
+consistency requires that the fayet-iliopoulos terms also satisfy:
+
+v = 0 .
+
+xv
+
+therefore, we can always express 0 (where 0 is the identity element of ) as :
+
+0 =  xv{0}
+
+v .
+
+(45)
+
+(46)
+
+it follows that the space of allowed fayet-iliopoulos parameters is in fact only (||  1)-
+dimensional, and will be denoted by r||1(), where the vector  is given by  =
+(v)v{0}. similarly, the rst equation of the system (43) (the one corresponding to
+v = 0) is a consequence of the other ||  1 equations. eliminating it allows us to
+rewrite the moment map conditions in the form:
+
+p =  ,
+
+(47)
+
+where  is the (||  1)  3|| matrix obtained by deleting the rst row of d.
+
+example:z2  z2 singularity
+
+18
+
+with the above enumeration of the group elements, the incidence matrix is:
+
+1 1
+
+1
+
+0 1
+
+0
+
+1 1
+
+0 1
+
+0
+
+0
+
+1
+
+0
+
+0 1
+
+0
+
+1
+
+d =
+
+
+
+
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0
+
+1 1
+
+0 1
+
+0 1
+
+0
+
+0 1
+
+0
+
+1 1
+
+1
+
+0 1
+
+0
+
+1
+
+1
+
+0
+
+1
+
+0
+
+0
+
+1
+
+0
+
+,
+
+(48)
+
+
+
+
+
+while the matrix  is given by (the rst row of d corresponds to the neutral element
+of the group with our choice of enumeration):
+
+ = 
+
+
+0
+
+1
+
+0 1
+
+1
+
+1 1
+
+0
+
+0
+
+1 1
+
+0
+
+0
+
+0 1
+
+0
+
+1
+
+0 1
+
+0
+
+1
+
+0 1
+
+1
+
+0
+
+0
+
+0 1 0
+
+0
+
+1 1 0
+
+1
+
+0 1
+
+.
+
+(49)
+
+
+
+
+2.5 the f-atness constraints
+
+the n = 4 theory includes a superpotential:
+
+this can be expressed in terms of the surviving elds as 6:
+
+w = ijkt r(x ix jx k) .
+
+w = ijk xv
+
+xk(v  wi  wj)xj(v  wi)xi(v) .
+
+supersymmetric vacua of the n = 4 theory satisfy the f-atness conditions:
+
+[x i, x j] = 0 (1  i < j  3).
+
+taking (23) into account these reduce to:
+
+(50)
+
+(51)
+
+(52)
+
+xj(v  wi)xi(v)  xi(v  wj)xj(v) = 0 , for all 1  i < j  3 and v   ,
+
+(53)
+
+in agreement with the condition that (51) is stationary.
+
+6note that the trace in (50) closes on the projected elds precisely due to the special unitarity condition
+
+w1 + w2 + w3 = 0.
+
+19
+
+a
+
+a
+
+b
+
+b
+
+figure 4. pictorial description of the f-atness constraints.
+
+the arrows on opposite sides have the same types.
+
+the constraints (53) can be viewed as monomial relations:
+
+xj(v  wi)xi(v)[xi(v  wj)]1[xj(v)]1 = 1
+
+(54)
+
+among the surviving elds. the solution of these equations denes a complex subvariety
+z of the space cq1 of all variables {xi(v)}, which we call the variety of commuting
+matrices. this algebraic variety can be described by the set of all its regular functions,
+which are obtained by restricting the regular functions dened on cq1 (which are just
+the polynomials in the variables {xi(v)}) to the subset z. the restriction of such a
+polynomial is achieved by simplifying each of its monomials with respect to the relations
+if x = (xi(v))i=1..3,v denotes the general point of cq1, then a monomial of
+(54).
+the polynomial ring c[x] has the form i,v[xi(v)]si(v), with si(v) some nonnegative
+integer exponents. for simplicity of notation, we will write this as xs, where s =
+(si(v))i=1..3,v is a vector in the lattice zq1 whose components are nonnegative. the
+ane space cq1 can be described by the collection of all such exponents, i.e. by the
+set of those points m of the lattice zq1 which belong to the cone c  rq1 dened by
+the inequalities mi(v)  0 for all i, v (c is the rst octant in rq1).
+
+on the other hand, the relations (54) are equivalent with:
+
+xm = 1
+
+for all m  r ,
+
+(55)
+
+where r is the sublattice of zq1 (which we will call the lattice of relations) spanned
+by the vectors:
+
+r(ij) := ej(v  wi) + ei(v)  ei(v  wj)  ej(v) ,
+
+(56)
+
+where (ei(v))i=1..3,v is the canonical basis of zq1. in general, the 3|| vectors (56)
+are not linearly independent. in fact, it is not hard to see that they span a subspace
+of dimension  = 2(||  1), so that the lattice of relations has rank .
+
+picking such an integral basis {r1..r} of r, we can form a  by 3|| matrix r
+whose rows are given by the components of r1..r. the conditions (54) show that two
+
+20
+
+of the ambient space cq1 will restrict to the same function on z
+monomials xs, xs
+if the (nonnegative) integral vectors s, s  zq1 are such that s  s belongs to the
+sublattice r. therefore, one can describe z by considering the collection of those
+points of the quotient lattice zq1/r which lie in the image  of the cone c via the
+natural projection map p : zq1  zq1/r. the lattice zq1/r can be identied with
+the orthogonal complement m of the lattice r in zq1. clearly m coincides with the
+set of integral vectors which lie in the kernel of the matrix r. therefore, a basis of the
+lattice m can be obtained by computing a basis of the integral kernel of r. if v1..v||+2
+is such a basis, then one can form a 3|| by || + 2 matrix k whose columns are given
+by the the components of v1..v||+2. then it is not hard to see that the projection map
+p : zq1  zq1/r can be identied with the transpose k t of the matrix k, viewed as
+a linear map from zq1 to m . therefore, once one has computed the matrix k, using
+its columns as a basis of m identies m with z||+2 and the projection p(c) with the
+cone  = k t(c) generated by the columns of k t, i.e. by the rows of k. in conclusion,
+the toric variety z is described by the cone of exponents in z||+2 which is generated
+by the rows of k.
+
+example:z2  z2 singularity
+
+in this case, the number of independent monomial relations is 2(||  1) = 6, so the
+complex dimension of the variety of commuting matrixes is dimz = || + 2 = 6. the
+matrix of an integral basis of the lattice of monomial relations is:
+
+r =
+
+
+
+
+
+0 0 0
+
+0 0 0
+
+0 0 0
+
+0
+
+0
+
+0
+
+
+
+
+
+(57)
+
+1 0 0 1 0 0 1
+
+0 1 0 1 0 0
+
+0
+
+0 0 1 1 0 0 1
+
+1 0 1
+
+1
+
+0
+
+1
+
+0
+
+0 1
+
+2 1
+
+0 1
+
+1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1 1
+
+1 1
+
+0 1
+
+0 1 0
+
+0 1
+
+1
+
+0 0
+
+0
+
+0
+
+1 1
+
+1 1
+
+21
+
+and a basis of its integral kernel is given by the columns of:
+
+1 1 1 1 2
+
+1 0
+
+0
+
+1 1
+
+1 1 1 0 1
+
+k =
+
+
+
+
+
+1 0
+
+0 1
+
+0 0
+
+0 1
+
+0 0
+
+0 0
+
+0 0
+
+0 0
+
+0 0
+
+0
+
+0
+
+1
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0
+
+1
+
+0
+
+1
+
+0
+
+1
+
+0
+
+0
+
+1
+
+0
+
+0
+
+1
+
+.
+
+(58)
+
+
+
+
+
+0
+
+0
+
+0 1
+
+1 1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1 1
+
+1
+
+0
+
+0
+
+0
+
+1
+
+0
+
+the lattice m is isomorphic with z6 and the 12 vectors given by the rows of k generate
+the cone of exponents   r6 of the toric variety z.
+
+2.6 the action of the projected gauge group on the vari-
+ety of commuting matrices
+
+let q := ||  1 denote the rank of the eective gauge group. a monomial xm of
+the ambient space has a u (1)q charge given by the q-vector m. since the exponent
+vectors are identied modulo the lattice r when imposing the f-atness constraints,
+we can describe the restriction of the u (1)q action to the variety of commuting matrices
+by the descent of the map  : zq1  zq to a map v : m  zq. the fact that d
+does indeed factor through the projection p : zq1  m follows from the fact that the
+relations (56) obviously lie in the kernel of . since we identify p with k t, it follows
+that v can be obtained as the unique matrix satisfying the condition:
+
+v k t =  .
+
+(59)
+
+note that v has dimensions q  (|| + 2).
+
+example:z2  z2 singularity
+
+22
+
+the integral matrix v satisfying v k t =  is given by:
+
+v =
+
+
+
+
+0
+
+0
+
+0 1
+
+0
+
+0 1
+
+1
+
+0 1
+
+1
+
+0
+
+1
+
+1 1
+
+1
+
+0 1
+
+
+
+
+(60)
+
+2.7 the degenerate holomorphic quotient presentation of
+the moduli space
+
+once we have obtained the generators k of the cone of exponents for z and the
+restriction v of the u (1)q action to z, a symplectic quotient presentation of the moduli
+space can be obtained by the methods of [1]. we will simply summarize the steps of
+that construction, referring the reader to [1] for details.
+
+since z is dened by monomial relations inside of the ane space cq1, it will be
+an ane toric variety (of complex dimension || + 2) whose toric generators are the
+generators of the cone v dual to the cone of exponents . if c is the number of these
+vectors7 and t is the (|| + 2)  c matrix having them as its columns, then one can
+construct a (c  ||  2)  c matrix of charges q whose rows form an integral basis for
+the kernel of t . note that we do not have an analytic expression for the number c of
+toric generators, since this number depends in a complicated way on the combinatorial
+properties of the cone .
+
+at this stage, we have a toric variety z, presented as a holomorphic quotient
+cc/(c)c||2, which is further divided by the (c)q = (c)||1 action given by the
+charges encoded by the rows of v . this double quotient can be reduced to the form
+cc/(c)c3 by choosing a lift of the (c)q action to the space cc. such a lift can
+be given by rst choosing a left inverse u of the matrix t t (i.e u t t = id, with u a
+(|| + 2)  c matrix) and then lifting the (c)q action to cc as the action specied
+by the charge matrix v u . it follows that the moduli space can be described by the
+holomorphic quotient cc/(c)c3 associated to the (c  3)  c charge matrix qtotal
+obtained by stacking q and v u . in what follows, we will always place the matrix q
+above the matrix v u when constructing the matrix qtotal.
+
+example:z2  z2 singularity
+
+7c coincides with the number of facets of . this is the integer mentioned in subsection 1.2, which
+
+essentially controls the computational complexity of the problem.
+
+23
+
+a choice for the matrices t, u, q, qtotal is:
+
+0 1 0 1 1 0 0 0 0
+
+0 0 1 0 0 1 0 1 0
+
+0 0 0 0 1 1 0 0 1
+
+1 0 0 0 0 0 1 1 0
+
+0 0 0 1 0 0 1 1 0
+
+0 0 0 1 0 0 1 0 1
+
+1 0 1 1 1 0 2
+
+0 1 1 0 1 0 1
+
+
+
+
+
+1
+
+1
+
+1
+
+1
+
+0 0
+
+0
+
+0
+
+0
+
+1
+
+1 1 1
+
+0
+
+0
+
+1
+
+0
+
+0 1
+
+1
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0 0 0 0
+
+0 0 0 0
+
+0 1 0 0
+
+0 0 0 0
+
+1
+
+0 1 0 0 0 0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1 1
+
+1
+
+1 0 0 0 1 0
+
+
+
+
+
+
+
+
+0 1
+
+1 1 0 2
+
+1 1
+
+0 1 0 1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+0
+
+0
+
+t =
+
+q =
+
+u =
+
+qtotal =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(61)
+
+.
+
+(62)
+
+
+
+
+
+0
+
+0
+
+0
+
+0
+
+0 1
+
+1 1
+
+0
+
+1
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+1
+
+1
+
+0
+
+0
+
+1 1 1
+
+0 1
+
+0 1
+
+0
+
+1
+
+0 1 1 0
+
+0
+
+1
+
+in particular, in this example we have c = 9.
+
+2.8 the reduction of the holomorphic quotient
+
+to simplify notation in the sequel, we let r = c  3 denote the number of rows of
+qtotal. taking the transpose of the kernel of qtotal gives a 3  c matrix gtotal such
+that qtotal(gtotal)t = 0r3 (note that the columns of gtotal, which play the role of
+toric generators, are naturally associated with the columns of qtotal). the rows of
+qtotal form a basis of integral linear relations among these generators. in general, the
+holomorphic quotient description of the moduli space given by the charge matrix qtotal
+is degenerate (not minimal) in the sense that the toric generators are not all distinct.
+
+24
+
+in order to make the following discussion clear, note that one can always reorder
+the columns of gtotal such that identical generators appear consecutively (for example,
+one can sort gtotal in decreasing lexicographic order on its columns, a convention which
+we will follow everywhere in this paper). while performing this rearrangement, one
+must also reorder the columns of qtotal accordingly, since each generator is associated
+to such a column. hence we let gt be the matrix obtained from gtotal by sorting its
+columns in decreasing lexicographic order, and qt be the matrix obtained from qtotal
+by performing the same permutation on its columns.
+
+the columns of gt will form a number b of blocks (1)...(b) (appearing in gt
+in this order), such that each block (k) consists of mk copies of the same column
+(k), and such that the 3-vectors (1)..(b) are all distinct. hence each block (k) is
+a matrix of dimensions 3  mk. in general, some of these will consist of one column
+only (then mk = 1), while other blocks will be multiple, i.e. will consist of mk  2
+repetitions of (k). we let n be the number of non-multiple blocks and s the number
+of multiple blocks, so that n + s = b. then the list of all toric generators consists
+of m1 copies of (1), m2 copies of (2)... mb copies of (b). it is convenient to index
+these as (k)
+mk = (k) are the mk copies
+of (k) appearing in the block (k). we also index the homogeneous coordinates of
+the holomorphic quotient by z(k)
+corresponds to the
+column (k)
+|2  0, we can write the moment map
+equations for the symplectic description of our quotient as:
+
+(i = 1..mk, k = 1..b) where (k)
+
+(k = 1..b, i = 1..mk) where z(k)
+
+1 = ... = (k)
+
+i
+
+of qt. if we also dene p(k)
+
+i = |z(k)
+
+i
+
+i
+
+i
+
+i
+
+qtp =  ,
+
+p =
+
+p(1)
+1
+...
+p(1)
+m1
+...
+p(b)
+1
+...
+p(b)
+mb
+
+
+
+
+
+
+
+
+
+= 
+
+
+p(1)
+...
+p(b)
+
+
+
+
+,
+
+(63)
+
+(64)
+
+and where  is the r-vector whose rst r  q components are
+
+where:
+
+with p(k) = 
+
+
+p(k)
+1
+...
+p(k)
+mk
+
+
+
+
+zero and whose last q components are given by the vector of d-brane fayet-iliopoulos
+parameters .
+
+the rows of the matrix qt form a basis for the lattice s of integral linear relations
+among the toric generators. in fact, this is the only piece of information needed to
+reconstruct the holomorphic quotient, and any basis of the lattice s contains the same
+data. in particular, one always has the freedom to perform invertible row operations
+
+25
+
+on qt. such a transformation (which corresponds to a change of integral basis of s)
+has the form:
+
+qt  w qt
+
+,
+
+(65)
+
+with w an r  r integral matrix which is invertible over the integers 8. the pres-
+ence of multiplicities in the list of toric generators implies that one can always nd a
+transformation w which brings the matrix qt to a form which is particularly suited
+for discussing the reduction procedure. this canonical form can be found as follows.
+since each multiple generator (k) appears mk  2 times, we can always nd mk  1
+elements of the lattice s which correspond to the following mk  1 obvious relations:
+
+2
+
+(k)
+1 = (k)
+(k)
+2 = (k)
+......
+(k)
+mk1 = (k)
+mk
+
+3
+
+(66)
+
+i
+
+certainly not all relations among (k)
+are of this form, but it is clear that all of the
+remaining relations must come from whatever linear relations exist among the distinct
+vectors (1)...(b) obtained by eliminating all multiplicities in our list. a basis for the
+latter type of relations is given by the rows of the reduced charge matrix qreduced, which
+is dened as follows. dene the matrix greduced to be obtained from gtotal by removing
+all column multiplicities (that is, greduced consists of the distinct columns (1)..(b) in
+this order (the inverse lexicographic order, in our conventions). then qreduced is any
+matrix whose rows give an integral basis for the kernel of greduced. note that qreduced
+has b = n + s columns and let p be the number of its rows. we clearly have p = b  3.
+we conclude that one can always nd a basis of linear relations among (k)
+i which
+consists of all of the equality relations (66) together with the relations given by the
+rows of qreduced.
+
+remember that q = ||  1 denotes the number of u (1) factors of the projected
+gauge group on the worldvolume (which coincides with the number of rows of the
+matrix v ). the arguments above show that qt can always be brought to the form:
+
+qcan =
+
+v (1)
+c(m1)
+
+0(m21)m1
+0(m31)m1
+0(m41)m1
+
+...
+
+v (2)
+
+0(m11)m2
+
+c(m2)
+
+0(m31)m2
+0(m41)m2
+
+...
+
+v (3)
+
+0(m11)m3
+0(m21)m3
+
+c(m3)
+
+0(m41)m3
+
+...
+
+v (4)
+
+0(m11)m4
+0(m21)m4
+0(m31)m4
+
+c(m4)
+
+...
+
+0(mb1)m1
+
+0(mb1)m2
+
+0(mb1)m3
+
+0(mb1)m4
+
+
+
+
+
+8that is, the determinant of w must be 1.
+
+26
+
+v (b)
+
+...
+... 0(m11)mb
+... 0(m21)mb
+..
+0(m31)mb
+... 0(m41)mb
+...
+...
+
+c(mb)
+
+...
+
+
+
+
+
+(67)
+
+where we dened the canonical (m  1)  m block c(m) to be given by:
+
+c(m) :=
+
+
+
+
+
+0
+0
+
+1 1
+0
+0
+..
+0
+
+0
+1 1
+0
+..
+0
+
+.. 0
+.. 0
+1 1 .. 0
+..
+..
+0
+
+0
+0
+0
+..
+..
+.. 1 1
+
+..
+0
+
+
+
+
+
+(68)
+
+if m  1 and to be a zero by 1 block (i.e. a missing element in a column) if m = 1
+(similarly, 0(m1)m is dened to be a missing element in a column if m = 1). the
+p  mk blocks v (k) appearing in qcan are dened by:
+
+v (k) =
+
+v(k)
+1
+v(k)
+2
+..
+v(k)
+p
+
+
+
+
+
+0 0 .. 0
+0 0 .. 0
+..
+..
+0 0 .. 0
+
+..
+
+..
+
+
+
+
+
+(69)
+
+(no zero columns are present in the case mk = 1), where the p-vector v(k) = 
+
+
+is the k-th column of qreduced. note that the rows of qcan are naturally divided into
+s+1 blocks, with the rst block consisting of the rst p rows and the next s blocks each
+consisting of mk 1 rows for those mk which are dierent from 1. in particular, we have
+(mk  1),
+
+(mk  1) and c = pk=1..b mk. if we let let m = p k = 1..b
+
+r = p +p k = 1..b
+
+mk  2
+
+mk  2
+
+then we can write the row and column dimensions of qcan as r = p + m and c = b + m ,
+and since r = c  3 we deduce that p = b  3.
+
+v(k)
+1
+..
+v(k)
+p
+
+
+
+
+the transformation (65) performed in order to bring qt to the form qcan brings
+
+the moment map equations (63) to the form:
+
+with the vector   rc given by:
+
+qcanp =  ,
+
+ = w0 ,
+
+(70)
+
+(71)
+
+where w0 is the r  q matrix obtained by keeping only the last q columns of w .
+
+since the rows of qcan are naturally divided into blocks, we divide the r = p + m -
+(mk  1)-vectors (k) (for those k
+
+vector  accordingly into a p-vector (0) and s
+associated to multiple blocks, which we will call k1..ks) such that:
+
+ =
+
+(0)
+(k1)
+...
+(ks)
+
+
+
+
+
+
+
+.
+
+27
+
+(72)
+
+then we can write:
+
+(0) = w(0)
+(k) = w(k)
+
+for all k associated to multiple blocks,
+
+(73)
+
+where w(0) is the p  q matrix formed by the rst p rows of w0, and w(k) (for those k
+corresponding to multiple blocks) are the (mk  1)  q matrices given by the rows of
+w0 associated to the other row blocks of qcan.
+
+in order to reduce the holomorphic quotient, we must eliminate mk1 homogeneous
+variables out of the mk variables associated with each multiple block (mk  2). this
+is possible provided that the levels  of the moment map are such that the mk  1
+variables to be eliminated in each multiple block are assured to be nonzero. due to the
+structure of qcan, the various canonical blocks are decoupled from each other, and
+we can discuss reduction within each canonical block separately. indeed, the moment
+map equations (70) have the form:
+
+qreduced
+
+c(mk)
+
+
+
+
+
+
+
+
+p(0)
+1
+p(1)
+1
+...
+p(b)
+1
+p(k)
+1
+p(k)
+2
+...
+p(k)
+mk
+
+
+
+
+
+
+
+
+= (0)
+
+= (k)
+
+(74)
+
+(75)
+
+where k runs over all multiple blocks. let us consider the equations involving the
+homogeneous variables z(k)
+mk associated with the multiple block k. the equations
+c(mk)p(k) = (k) can be solved in terms of p(k)
+1
+
+1 ..z(k)
+
+and (k):
+
+1
+
+1
+
+p(k)
+1 = p(k)
+1  (k)
+p(k)
+2 = p(k)
+1  (k)
+1  (k)
+3 = p(k)
+p(k)
+.......
+1  ...  (k)
+j1
+.......
+mk1 .
+are constrained by the conditions p(k)
+
+1  ...  (k)
+
+mk = p(k)
+p(k)
+
+p(k)
+i = p(k)
+
+1  (k)
+
+1  (k)
+
+2
+
+(76)
+
+the values of p(k)
+1
+which are equivalent to:
+
+1  0, p(k)
+
+2  0, ..., p(k)
+
+mk  0,
+
+1  max(0, (k)
+p(k)
+
+1 , (k)
+
+1 + (k)
+
+2 , ..., (k)
+
+1 + .. + (k)
+
+m1) .
+
+(77)
+
+28
+
+if the maximum in the right hand side is attained precisely at (k)
+no other point), i.e. if the strict inequalities:
+
+1 + ... + (k)
+
+i1 (and at
+
+(k)
+1 + .. + (k)
+(k)
+1 + .. + (k)
+i1 > (k)
+
+1
+
+i1 > 0,
+i1 > (k)
+1 + (k)
+2
+...
+1 + ... + (k)
+1 + .. + (k)
+...
+
+i2
+
+i
+
+1 + .. + (k)
+(k)
+
+(k)
+1 + .. + (k)
+(k)
+1 + .. + (k)
+
+i1 > (k)
+i1 > (k)
+
+(78)
+
+1 + .. + (k)
+(k)
+
+i1 > (k)
+
+1 + .. + (k)
+
+mk1
+
+j = p(k)
+
+1  pl=1..j1 (k)
+
+hold, then equation (77) assures that p(k)
+l > 0 for all j 6= i,
+so that we can eliminate all homogeneous variables associated to the canonical block
+except for that associated to its i-th column. (if the maximum is attained precisely
+at 0, then p(k)
+j > 0 for all j 6= 1 and we can eliminate all variables except for that
+associated to the rst column. this case corresponds to i = 1). the inequalities (78)
+(taken for all values of i in turn) divide the space rmk1((k)) of values of (k) into mk
+distinct chambers (k)
+(i = 1..mk), which are maximal-dimensional polyhedral cones
+in rmk1((k)).
+, then we can eliminate all of
+the homogeneous variables z(k)
+. in order to perform this
+reduction, we must rst eliminate the variables z(k)
+( j 6= i) from the rst equations of
+(74). this can be done as follows. since the the rows of c(mk) are linearly independent,
+there exists a unique p  (mk  1) matrix fi(mk) such that:
+
+if (k) belongs to the interior of (k)
+
+except for the variable z(k)
+
+j
+
+j
+
+i
+
+i
+
+i
+
+fi(mk)c(mk) =
+
+
+
+
+
+1
+
+v(k)
+v(k)
+
+2
+..
+
+v(k)
+
+p
+
+1
+
+0 .. 0 v(k)
+0 .. 0 v(k)
+2
+..
+..
+0 .. 0 v(k)
+
+..
+
+..
+
+p
+
+0 .. 0
+0 .. 0
+..
+..
+0 .. 0
+
+..
+
+
+
+
+
+(79)
+
+(for i = 1, the matrix on the right hand side is dened to be the null p  (mk  1)
+matrix). in fact, it is not hard to see that fi(mk) is given by:
+
+fi(mk) =
+
+
+
+
+
+1
+
+v(k)
+v(k)
+
+2
+..
+
+1
+
+v(k)
+v(k)
+
+2
+..
+
+v(k)
+
+p
+
+v(k)
+
+p
+
+1
+
+.. v(k)
+.. v(k)
+..
+.. v(k)
+
+2
+..
+
+p
+
+0 0 .. 0
+0 0 .. 0
+..
+.. 0
+0 0 .. 0
+
+..
+
+
+
+
+
+,
+
+(80)
+
+where the rst i  1 columns are copies of the vector v(k) and the other columns are
+zero (for i = 1, f1(mk) is dened to be the null p  (mk  1) matrix). multiplying
+
+29
+
+c(mk) to the left by fi(mk) and adding the result to v (k) produces the matrix:
+
+0 0 .. 0 v(k)
+0 0 .. 0 v(k)
+i
+..
+..
+0 0 .. 0 v(k)
+
+..
+
+..
+
+..
+
+i
+
+i
+
+
+
+
+
+0 .. 0
+0 .. 0
+..
+..
+0 .. 0
+
+..
+
+
+
+
+
+(81)
+
+j
+
+hence performing this invertible row operation allows us to bring qcan to a form in
+which all entries associated to the homogeneous variables z(k)
+(j 6= i) are zero except
+for those appearing in the canonical block c(mk). once qcan has been brought to this
+form, and once we know that (k) lies in the interior of the cone (k)
+6= 0
+for all j 6= i), then we can eliminate these variables by using the (c)mk1 subgroup
+associated with the rows of c(mk) in order to set each of them equal to 19. since these
+variables have been eliminated from the rest of the charge matrix, this will not have
+any eect on the remaining part of the holomorphic quotient. note, however, that
+performing the row operations v (k)  v (k) + fi(mk)c(mk) (which is needed in order
+eliminate our variables from the rst p rows of qcan) will induce a redenition of (0)
+given by:
+
+(so that z(k)
+
+j
+
+i
+
+(0)  (0) + fi(mk)(k)
+
+.
+
+(82)
+
+applying the above discussion to each of the s multiple blocks leads to the following
+pattern of reduction. for each multiple block k (mk  2) we have a partition of the
+space rmk1((k)) into mk chambers (k)
+(i = 1..mk) which adjoin along common
+faces. if, for each k with mk  2, (k) lies in the interior of one of these chambers (k)
+,
+ik
+then we can reduce each of the multiple blocks k to its ik-th column. this is achieved
+by performing the following invertible row operation on qcan:
+
+i
+
+qcan  q
+
+can =
+
+fi1(m1)
+
+0
+
+0
+..
+0
+
+fi2 (m2)
+
+..
+0
+
+
+
+
+0
+0
+..
+
+..
+..
+..
+.. fis(ms)
+
+
+
+
+qcan ,
+
+(83)
+
+which replaces the rst p components (0) of  with the p-vector given by:
+
+ = i1...is = (0) + xk = 1..b
+
+fik (mk)(k)
+
+.
+
+mk 6= 1
+
+(84)
+
+performing the reduction of z(k)
+(j 6= ik) eliminates all except for the rst p rows of
+q
+can and all of its columns except for the non-multiple columns and those containing
+the ik-th column of each multiple block. the result is a toric variety based on the
+
+j
+
+9here we are tacitly using the well-known equivalence between the symplectic and holomorphic quotient
+
+[19].
+
+30
+
+reduced matrices of generators and charges greduced and qreduced, in a phase given by
+the moment map level i1..ik.
+
+the crucial equations (84) can be described with the help of a piecewise-linear
+function  : rr  rp which we dene as follows. for each set of s indices i1 =
+1..mk1..is = 1..mks (remember that k1..ks  {1..b} index the multiple blocks), we let
+i1..is be the cone (or wedge) in rr dened by:
+
+i1..is = rp  (1)
+
+i1  ...  (s)
+
+is
+
+.
+
+(85)
+
+the collection of these cones (which has  k = 1..b
+mk  1
+
+mk = k=1..bmk elements) divides
+
+the space rr() into chambers which adjoin along common walls. if  belongs to the
+chamber i1..is, then the value of  at  is given by the linear expression:
+
+() = (0) + xk = 1..b
+
+mk 6= 1
+
+fik (mk)(k)
+
+(86)
+
+which appears in the right hand side of (84). it is obvious that these expressions agree
+on the walls, so that  is a continuous piecewise linear function. in fact, one can give
+an analytic expression for , if one notices that:
+
+fik(mk)(k) = ( xj=1..ik1
+
+(k)
+j
+
+)v(k)
+
+,
+
+(87)
+
+where the sum is dened to be zero if ik = 1. since for   i1..is we have (k)  (k)
+ik
+and since by the denition of the cones (k)
+
+this implies that:
+
+i
+
+,
+
+xj=1..ik1
+
+(k)
+j = max(0, (k)
+
+1 , (k)
+
+1 + (k)
+
+2 , ..., (k)
+
+1 + ... + (k)
+
+m(k)1) ,
+
+it follows that for any   rr, the value of  at  is given by:
+
+() = (0)  xk = 1..b
+
+mk 6= 1
+
+max(0, (k)
+
+1 , (k)
+
+1 + (k)
+
+2 , ..., (k)
+
+1 + ... + (k)
+
+m(k)1)v(k)
+
+(88)
+
+.
+
+(89)
+
+the important information for us is the map  : rq  rp from the d-brane fayet-
+iliopoulos parameters  to the eective moment map levels  in the reduced toric
+presentation of the moduli space. this immediately follows from the above and from
+(73):
+
+() = w(0) xk = 1..b
+
+max[0, xj=1..q
+
+w(k)
+1j j, xj=1..q
+
+mk 6= 1
+
+(w(k)
+
+1j + w(k)
+
+2j )j, ..., xj=1..q
+
+(w(k)
+
+1j + .. + w(k)
+
+m(k)1,j
+
+)j]v(k) .
+
+31
+
+(90)
+
+in conclusion, the relation between the d-brane fayet-iliopoulos parameters and the
+eective moment map levels is given by the piecewise-linear function .
+
+since  is clearly continuous, its linear regions form a subdivision of rq() into
+chambers which are polyhedral cones10. these chambers can be found from (78) as fol-
+lows. for each k associated to a multiple block, consider the vectors e1(mk)...emk (mk)
+in rmk1((k)) given by:
+
+ej(mk) =
+
+1
+1
+...
+1
+0
+0
+...
+0
+
+
+
+
+
+
+
+
+
+,
+
+(91)
+
+where the rst j  1 entries are equal to 1 (for j = 1, we dene e1(mk) to be the null
+(mk  1)-vector). then the equations (78) (for a xed i  {1..mk}) can be rewritten
+as follows:
+
+hei(mk)  ej(mk), (k)i > 0 for all j = 1..mk , j 6= i .
+
+using (k) = w(k) reduces these equations to:
+
+hf (k)
+
+i  f (k)
+
+j
+
+, i > 0 for all j = 1..mk , j 6= i ,
+
+where the q-vectors f (k)
+
+i
+
+are given by:
+
+f (k)
+i = [w(k)]tei(mk) .
+
+(92)
+
+(93)
+
+(94)
+
+i1  ..  (ks)
+
+it is now clear that () will belong to i1..is if and only if  belongs to the cone
+i1..is = (k1)
+is the cone in rq() dened by the mk  1
+inequalities (93). in general, the set of all cones i1..is will be a renement of the true
+linear chamber structure of , since the action of the matrices [w(k)]t may collapse or
+identify some of the cones (k)
+
+, where (k)
+
+is
+
+i
+
+.
+
+i
+
+2.9 determining the preimage of an eective wall
+
+for the purposes of the present paper, an important question is the following. given a
+convex subset h of the space of eective moment map levels rp(), what is its preimage
+via the map  ? in particular, is this preimage nonzero ? that is, are the values of 
+associated to h indeed realized by the d-brane theory ?.
+
+10more precisely, these regions form an integral polyhedral fan in rq().
+
+32
+
+once the map  has been identied, this question can be answered as follows. for
+simplicity of notation, consider only the case when h is determined by a set of linear
+equations11:
+
+ha(t), i = 0 (t = 1..g).
+
+(95)
+
+then () belongs to h if and only if ha(t), ()i = 0 for all t. in order to solve these
+conditions, one can simply look for the solution in each of the cones i1..is, where 
+is given by a linear expression. fixing such a cone, it is not hard to see that the set
+1(h)  i1..is consists of all values of  which satisfy the inequalities (93) together
+with the equalities:
+
+where the components  = 1..q of the q-vector c(t)i1..is are given by:
+
+hc(t)i1..is, i = 0 , (t = 1..g)
+
+c(t)
+
+i1..is = x=1..p
+
+w(0)
+a(t)  xk = 1..b
+
+xj=1..ik1
+
+w(k)
+
+j hv(k), a(t)i .
+
+mk 6= 1
+
+(96)
+
+(97)
+
+for each i1..ik, this system gives a subcone of the cone i1..is (the cut of this cone
+with the subspace (96)). running over all such cuts allows for a complete solution of
+the problem, although the resulting presentation of the solution need not be the most
+economical one.
+
+example:z2  z2 singularity
+
+in this case, a basis for the kernel of the matrix qtotal of (61) is given by the rows
+
+of:
+
+gtotal =
+
+1 0 0 1 0
+
+0
+
+2
+
+1
+
+1
+
+0 1 0 0 0 1 1 1 1
+
+0 0 1 0 1
+
+2
+
+0
+
+1
+
+1
+
+
+
+
+.
+
+
+
+
+sorting the columns of gtotal in decreasing lexicographic order gives the matrix:
+
+gt =
+
+
+
+
+2
+
+1 1
+
+1
+
+1
+
+0 0 0
+
+0
+
+1 0 0 1 1 1 0 0 1
+
+0
+
+0 0
+
+1
+
+1
+
+0 1 1
+
+2
+
+,
+
+
+
+
+(98)
+
+(99)
+
+11in general, h is given by a set of linear equalities and inequalities; the exposition can be generalized
+
+immediately to this situation.
+
+33
+
+while doing the same permutation on the columns of qtotal gives:
+
+qt =
+
+
+
+
+
+2
+
+1
+
+1
+
+0
+
+0
+
+1
+
+0
+
+0
+
+1
+
+0
+
+1
+
+0
+
+1
+
+1
+
+1
+
+1
+
+0 1 1 0
+
+1 1 1 0
+
+0 1 1
+
+0
+
+0
+
+1
+
+0 1 1
+
+0 1 1
+
+0
+
+1
+
+0
+
+0
+
+0
+
+1
+
+1
+
+0
+
+0
+
+0 1 0
+
+0
+
+1
+
+1
+
+0 1 0
+
+
+
+
+
+.
+
+(100)
+
+the matrix gt has only 6 distinct columns, appearing with multiplicities:
+
+m1 = 1 m2 = 2 m3 = 2
+m4 = 1 m5 = 2 m6 = 1
+
+(101)
+
+thus gt is formed of 4 blocks of columns given as follows:
+
+(1) = 
+
+
+
+
+(4) =
+
+2
+
+1
+
+0
+0
+
+1
+
+0
+
+
+
+
+
+
+(2) = 
+
+
+
+
+(5) =
+
+1 1
+
+0 0
+
+0 0
+0 0
+
+0 0
+
+1 1
+
+
+
+
+
+
+(3) = 
+
+
+(6) =
+
+
+
+
+1
+
+1
+
+1 1
+
+1
+
+1
+
+
+
+
+0
+
+1
+
+2
+
+
+
+
+.
+
+(102)
+
+the multiple blocks are (2), (3) and (5). keeping only one copy of each distinct
+column (without changing the decreasing lexicographic order) gives the matrix:
+
+gred =
+
+2 1 1 0 0 0
+
+0 1 0 2 1 0
+
+1 1 1 1 1 1
+
+
+
+
+.
+
+
+
+
+(103)
+
+the columns of gred generate the cone over the following two-dimensional lattice poly-
+tope which lies in the hyperplane z = 1 of r3:
+
+34
+
+4
+
+5
+
+2
+
+6
+
+3
+
+1
+
+figure 5. the polytope associated to the z2  z2 quotient singularity.
+
+a basis of linear relations between the columns of gred is given by the rows of the
+
+reduced charge matrix:
+
+qred =
+
+1 0 2 0
+
+0
+
+1
+
+0 1 1 0 1 1
+
+0 0
+
+0
+
+1 2 1
+
+
+
+
+,
+
+
+
+
+whose number of rows is p = 3. the canonical form of qtotal is:
+
+qcan =
+
+
+
+
+
+1 0
+
+0 2
+
+0 1
+
+0 1
+
+0 0
+
+0
+
+0 1 1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0 1
+
+1 2
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+1
+
+1
+
+0
+
+0
+
+0 0
+
+0 0
+
+0
+
+0
+
+1 1 0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1 1 0
+
+and it involves three copies of the canonical block:
+
+c(2) = h 1 1 i .
+
+35
+
+
+
+
+
+(104)
+
+(105)
+
+(106)
+
+the transition matrix w satisfying w qtotal = qcan is given by:
+
+w =
+
+
+
+
+
+1 2 1 1 1
+
+0
+
+1 1 1 1 1 1
+
+0
+
+0
+
+1
+
+0
+
+1
+
+0
+
+2
+
+0
+
+1 1
+
+0 1
+
+0
+
+0
+
+0
+
+0 1 1
+
+1
+
+1
+
+1
+
+0
+
+0
+
+1
+
+
+
+
+
+and has determinant +1. its last q = ||  1 = 3 columns give the matrix:
+
+w0 =
+
+which is formed of 4 row blocks:
+
+w(0) =
+
+
+
+
+
+
+
+
+1 1
+
+0
+
+1 1 1
+
+1
+
+0 1
+
+0 1 1
+
+1
+
+1
+
+1
+
+0
+
+0
+
+1
+
+1 1
+
+0
+
+1 1 1
+
+1
+
+0 1
+
+
+
+
+
+
+
+
+(associated to the rst p = 3 rows),
+
+(associated to the next m2  1 = 1 rows),
+
+w(2) = h 0 1 1 i
+
+(associated to the next m3  1 = 1 rows),
+
+w(3) = h 1 1 0 i
+
+w(5) = h 1 0 1 i
+
+(107)
+
+(108)
+
+(109)
+
+(110)
+
+(111)
+
+(112)
+
+(associated to the next m5  1 = 1 rows). the piecewise-linear function  is given by:
+
+() =
+
+1  2
+
+1  2  3
+
+1  3
+
+
+
+
+
+
+max[0, 23]
+
+
+
+
+0
+
+1
+
+0
+
+
+
+
+max[0, 1+2]
+
+2
+
+1
+
+0
+
+
+
+
+
+
+max[0, 1+3]
+
+(113)
+
+0
+
+1
+
+2
+
+
+
+
+
+
+
+,
+
+36
+
+where we used the vectors:
+
+v(2) = 
+
+
+0
+
+1
+
+0
+
+
+
+
+, v(3) = 
+
+
+2
+
+1
+
+0
+
+
+
+
+, v(5) = 
+
+
+0
+
+1
+
+2
+
+
+
+
+,
+
+(114)
+
+given by the second, third and fths columns of qreduced. this function has 8 linear
+pieces, which are the octants in r3() determined by the vectors (see figure 6):
+
+g1 =
+
+
+
+
+1
+
+1
+
+1
+
+
+
+
+, g2 =
+
+
+
+
+1
+
+1
+
+1
+
+
+
+
+, g3 =
+
+
+
+
+1
+
+1
+
+1
+
+
+
+
+.
+
+(115)
+
+g2
+
+1
+
+xi_3
+
+0
+
+-1
+
+g3
+
+-1
+
+0
+xi_2
+
+-1
+
+0
+
+xi_1
+
+g1
+
+1
+
+1
+
+figure 6. the linear regions of .
+
+the images of these vectors and their opposites under the map  are:
+
+f1 = (g1) =
+
+, f2 = (g2) =
+
+, f3 = (g3) =
+
+(116)
+so that all of the 8 linear chambers of  in r3() are mapped onto the cone in r3()
+generated by f1, f2 and f3 (these vectors are drawn in figure 7).
+
+
+
+
+0
+
+1
+
+0
+
+
+
+
+,
+
+
+
+
+2
+
+1
+
+0
+
+
+
+
+
+
+
+0
+
+1
+
+2
+
+
+
+
+37
+
+3
+
+f2
+
+f3
+
+2
+
+1
+
+f1
+
+figure 7. the image of the linear regions of .
+
+the conifold singularity can be realized in the region 2 = 0, 1 > 0, 3 > 0 of r3(),
+which denes a two-dimensional cone in the space of eective moment map levels (this
+particular realization corresponds to eliminating the points 1 and 4 in figure 5). the
+preimage of this cone via the map  is the the union of the boundaries of the opposite
+1 = hh1, h2, h3, h4i+ in r3(), given
+cones 
+by the generators:
+
+1 = hh1, h2, h3, h4i+ and 
+
+2 = 
+
+h1 =
+
+1
+
+0
+
+1
+
+
+
+
+
+
+
+, h2 =
+
+
+
+
+1
+
+1
+
+0
+
+
+
+
+, h3 =
+
+
+
+
+0
+
+1
+
+0
+
+
+
+
+, h4 =
+
+0
+
+0
+
+1
+
+
+
+
+
+
+
+.
+
+(117)
+
+this region in r3() is shown in figure 8. the conifold transition is realized in the
+d-brane theory when we vary  such as to cross this boundary.
+
+38
+
+g2
+
+1
+
+xi_3
+
+0
+
+-1
+
+g3
+
+-1
+
+h4
+
+h1
+
+h3
+
+h2
+
+-1
+
+0
+xi_2
+
+0
+xi_1
+
+g1
+
+1
+
+1
+
+figure 8. the realization of the conifold region
+in the space of d-brane fayet-iliopoulos parameters.
+
+3 the case  = z3  z3
+
+in this section, we apply the algorithm discussed above to the example of interest
+in this paper  the worldvolume realization of partial resolutions of the c3/z3  z3
+quotient singularity.
+
+the group  = z3  z3 has d = 2 torsion indices t1 = 3, t2 = 3. we consider its
+action on c3 given by the weights w1 = (1, 1), w2 = (2, 0), w3 = (0, 3) (which satisfy
+w1 + w2 + w3 = (0, 0) in our group).
+
+in this case, we have || = 9 so the quiver will have 9 nodes. the edges v  v  wi
+
+can be obtained as above. indexing the group elements as follows:
+
+(0, 0)  1
+(0, 1)  4
+(0, 2)  7
+
+39
+
+(1, 0)  2
+(1, 1)  5
+(1, 2)  8
+(2, 0)  3
+(2, 1)  6
+(2, 2)  9 ,
+
+we obtain the quiver drawn below:
+
+5
+
+6
+
+4
+
+7
+
+3
+
+8
+
+2
+
+9
+
+1
+
+figure 9. the quiver describing the z3  z3 orbifold theory.
+
+with the above enumeration of the group elements, one obtains the 927 incidence
+matrix d and the 8  27 matrix  given in the appendix (the rst row of d corresponds
+to the neutral element of the group with our choice of enumeration).
+
+the number of independent monomial relations is 2(||  1) = 16, so the complex
+dimension of the variety of commuting matrixes is dimz = || + 2 = 11. the matrix
+
+40
+
+of an integral basis of the lattice of monomial relations is:
+
+r =
+
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+
+
+
+
+1
+0
+0
+0
+1
+0
+0
+0
+1
+0
+1
+0
+0
+0
+1
+0
+(118)
+(this has type 16  27) and a basis of its integral kernel is given by the columns of the
+27  11 matrix:
+
+1
+0
+1
+0
+0
+1
+1 1
+2
+0
+1
+0
+1
+0
+1
+1
+0
+0
+0
+0
+0
+0
+1
+1
+1
+0
+0
+1
+1
+0
+1
+0
+
+0
+0
+0
+0
+0
+0
+1
+0
+1
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0 1
+1 1
+
+0
+0
+0
+1
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+1
+0 1
+0
+0
+0
+0
+0 1
+0
+0
+0
+1
+0
+0
+0
+0
+
+0 1
+0 1
+0 1
+0 1
+0 1
+0 1
+0 1
+1 1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+1
+0
+1
+1
+0
+1
+1
+0
+1
+0
+0
+1
+0
+0
+0
+
+1
+0
+0
+1
+0
+0
+1
+0
+0
+0
+1
+0
+0
+1
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+
+0
+0
+0
+1
+1
+0
+1
+0
+0
+0
+0
+0
+1
+1
+1
+1
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+
+0
+1
+0
+0
+0
+1
+0
+0
+1
+1
+0
+0
+0
+0
+0
+1
+
+0
+0
+1
+0
+1
+1
+0
+0
+0
+1
+1
+0
+0
+0
+1
+1
+
+
+
+
+
+,
+
+k =
+
+1
+0
+1 1
+0
+1
+1
+0
+1 1
+0
+1
+1
+0
+1 1
+0
+1
+1
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+
+
+
+
+0
+0
+
+0
+0
+
+0
+1 1
+0
+1
+0
+0
+1 1 1
+1
+1
+1
+0
+0
+1 1
+1
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+1
+0
+0
+1
+0
+1
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+1
+0
+0
+1
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+1
+0
+0
+0
+1
+0
+0
+0
+0
+1
+0
+1
+0
+0
+0
+1
+0
+0
+1
+0
+0
+0
+0
+0
+
+1
+1
+1
+1
+2
+1
+1
+1
+0
+0
+0
+0
+1
+1
+0
+0
+0
+0
+0
+1
+0
+0
+1
+0
+0
+0
+0
+
+0
+0
+0
+1
+1
+0
+1
+0
+0
+0
+0
+0
+0
+1
+1
+0
+0
+0
+1
+1
+0
+0
+0
+1
+0
+0
+0
+
+1
+0
+0
+0
+1
+0
+0
+0
+0
+1
+0
+1
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+1
+0
+0
+
+0
+1
+0
+0
+0
+1
+0
+0
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+1
+0
+
+0
+0
+1
+0
+1
+1
+0
+0
+0
+0
+1
+1
+0
+0
+0
+0
+0
+0
+1
+1
+0
+0
+0
+0
+0
+0
+1
+
+
+
+
+
+.
+
+(119)
+
+the lattice m is isomorphic with z11 and the 16 vectors given by the rows of k
+generate the cone of exponents   r11 of the toric variety z.
+
+the integral matrix v satisfying v k t =  is given by:
+
+v =
+
+0
+0
+0
+1
+0
+0
+0
+1
+
+
+
+
+0
+0
+0
+0
+0
+1
+1
+0
+
+0
+0
+0
+0
+0
+0
+1
+1
+
+0
+0
+0
+0
+0
+1
+0
+1
+
+0
+1
+0
+0
+1
+0
+0
+0
+
+0
+0
+1
+0
+0
+1
+0
+0
+
+0
+0
+0
+1
+0
+0
+1
+0
+
+0
+0
+0
+0
+1
+0
+0
+1
+
+0
+0
+0
+0
+0
+1
+0
+0
+
+1
+0
+0
+0
+0
+0
+1
+0
+
+0
+1
+0
+0
+0
+0
+0
+1
+
+
+
+
+.
+
+(120)
+
+a choice for the matrices t, u, q, qtotal results in the manner explained above. the
+types of these matrices are:
+
+t : 11  42 u : 11  42 q : 31  42 qtotal : 39  42 .
+
+(121)
+
+in particular, in this example we have c = 42. these matrices, as well as the 3  39
+matrix gt and the 39  42 matrix qt, are listed in the appendix.
+
+41
+
+the matrix gt has only 6 distinct columns, appearing with multiplicities:
+
+m1 = 1 m2 = 3 m3 = 3 m4 = 3 m5 = 21
+m6 = 3 m7 = 1 m8 = 3 m9 = 3 m10 = 1
+
+.
+
+(122)
+
+thus gt has 7 multiple blocks and 3 non-multiple columns. keeping only one copy of
+each distinct column (without changing the decreasing lexicographic order) gives the
+matrix:
+
+gred = 
+
+
+2
+2
+0 1
+
+3
+1
+1 1
+
+1
+1
+
+1
+1
+0 1
+
+0
+2
+
+0 1 0
+
+1 1 0 1
+
+0 0
+0
+1 0 1
+2
+
+
+
+
+.
+
+(123)
+
+this allows us to present the moduli space as a 3-dimensional toric variety with 10
+toric generators and matrix of charges:
+
+qred =
+
+
+
+
+
+0
+
+1 0 0 0 0 3 0 0
+2
+0 1 0 0 0 2 0 0 1 2
+0 0 1 0 0 2 0 0
+1
+0 0 0 1 0 1 0 0 2 2
+0 0 0 0 1 1 0 0 1 1
+1 0 3 2
+0 0 0 0 0
+0 1 2 1
+0 0 0 0 0
+
+0
+0
+
+0
+
+,
+
+(124)
+
+
+
+
+
+which has p = 7 rows. the canonical form of qtotal, as well as the transition matrix
+w (which has determinant 1) are listed in the appendix. the the 39  8 matrix w0
+given by the last 8 columns of w can now be used to determine the piecewise-linear
+function ,which we display in the appendix. our procedure above gives 15309 cones
+ in r8(), which form a renement of the fan associated to . by intersecting them
+with the preimages of the regions h of r7() listed in table 1, we nd:
+
+(a)936 maximal-dimensional cones in 1(hf0) leading to the complex cone over
+
+f0
+
+(b)864 maximal-dimensional cones in 1(hdp1) leading to the complex cone over
+
+dp1
+
+(c)1152 maximal-dimensional cones in 1(hdp2) leading to the complex cone over
+
+dp2
+
+(d)1602 maximal-dimensional cones in 1(hdp3) leading to the complex cone over
+
+dp3
+we consider each case in turn:
+
+(a) a maximal-dimensional cone in 1(hf0) is generated by the columns of the
+
+42
+
+matrix:
+
+
+
+
+
+1
+1
+1
+0 1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+0
+0
+0 1 1
+1
+
+0
+0
+0
+0
+0
+1
+0
+0 1 1
+
+0
+
+0
+0
+0
+1
+0
+0
+0
+
+
+
+
+
+and maps to the cone in r7() generated by the columns of:
+
+
+
+
+
+2 0 0 2 1
+0 0 0 2 0
+1 0 0 1 0
+0 0 0 2 0
+0 0 0 1 0
+0 2 1 2 0
+0 1 0 1 0
+
+
+
+
+
+.
+
+(125)
+
+(126)
+
+(b)one maximal-dimensional cone in this class is generated by the columns of the
+
+matrix:
+
+
+
+
+
+0
+0
+0
+1
+1
+0 1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+1
+0 1
+0
+0
+0
+0 1
+1
+0
+0
+1
+0
+0
+0
+0
+0 1 1
+0
+0
+
+
+
+
+
+and maps to the cone in r7() generated by the columns of:
+
+
+
+
+
+0 4 2 0 1
+0 3 2 0 0
+0 2 1 0 0
+1 2 2 0 0
+0 1 1 0 0
+2 1 2 1 0
+0 0 1 0 0
+
+
+
+
+
+.
+
+(127)
+
+(128)
+
+(c)one maximal-dimensional cone in this class is generated by the columns of the
+
+43
+
+matrix:
+
+
+
+
+
+1
+0
+0
+0
+0
+1
+0
+1 1
+
+1
+1
+0
+0 1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+0
+0
+0 1 1
+0
+
+0
+
+
+
+
+
+and maps to the cone in r7() generated by the columns of:
+
+
+
+
+
+
+
+
+2 1 0 0
+0 0 0 0
+1 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 2 1
+0 0 1 0
+
+0
+0
+0
+1
+0
+0
+0
+1 1
+
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0 1
+0
+
+
+
+
+
+
+
+
+(129)
+
+(130)
+
+(131)
+
+(132)
+
+(d)one maximal-dimensional cone in this class is generated by the columns of the
+
+matrix:
+
+and maps to the cone in r7() generated by the columns of:
+
+
+
+
+
+2 1 0
+2 0 0
+1 0 0
+2 0 0
+1 0 0
+2 0 1
+1 0 0
+
+
+
+
+
+.
+
+4 conclusions
+
+we considered the status of the ads/cft conjecture for nontrivial horizons built as
+u (1) bundles over toric del pezzo surfaces. by explicit computation, we discovered
+
+44
+
+that all such geometries (including those cases for which the existence of an einstein-
+sasaki structure is problematic) can in fact be realized in the moduli space of d3-
+branes transverse to a calabi-yau quotient singularity. by investigating the classical
+moduli spaces of the associated worldvolume theories, we discovered a highly intricate
+situation, whose complexity is markedly greater than in cases considered before. this
+required the development of a systematic approach to the problem, thus improving on
+the methods presented in [1].
+
+in this paper, we conned ourselves to geometric aspects and to classical properties
+of the moduli space of the associated eld theories. the quantum-mechanical aspects of
+these theories and especially of their conformal limits are currently under investigation
+[4].
+
+45
+
+
+
+3
+z
+/
+3
+c
+
+e
+s
+a
+c
+
+e
+h
+t
+
+r
+o
+f
+
+t
+n
+a
+v
+e
+l
+e
+r
+
+s
+e
+c
+i
+r
+t
+a
+m
+
+s
+u
+o
+i
+r
+a
+v
+
+a
+
+3
+z
+
+t =
+
+u =
+
+d =
+
+ =
+
+1
+0
+0
+0
+0
+0
+0
+0
+1
+
+0
+0
+0
+0
+0
+0
+0
+1
+
+
+
+
+
+
+
+0
+1
+0
+0
+0
+0
+1
+0
+0
+
+1
+0
+0
+0
+0
+1
+0
+0
+
+0
+0
+1
+0
+0
+0
+0
+1
+0
+
+0
+1
+0
+0
+0
+0
+1
+0
+
+0
+0
+1
+1
+0
+0
+0
+0
+0
+
+0
+1
+1
+0
+0
+0
+0
+0
+
+1
+0
+0
+0
+1
+0
+0
+0
+0
+
+0
+0
+0
+1
+0
+0
+0
+0
+
+0
+1
+0
+0
+0
+1
+0
+0
+0
+
+1
+0
+0
+0
+1
+0
+0
+0
+
+0
+0
+0
+0
+0
+1
+1
+0
+0
+
+0
+0
+0
+0
+1
+1
+0
+0
+
+0
+0
+0
+1
+0
+0
+0
+1
+0
+
+0
+0
+1
+0
+0
+0
+1
+0
+
+0
+0
+0
+0
+1
+0
+0
+0
+1
+
+0
+0
+0
+1
+0
+0
+0
+1
+
+1
+1
+0
+0
+0
+0
+0
+0
+0
+
+1
+0
+0
+0
+0
+0
+0
+0
+
+0
+1
+1
+0
+0
+0
+0
+0
+0
+
+1
+1
+0
+0
+0
+0
+0
+0
+
+1
+0
+1
+0
+0
+0
+0
+0
+0
+
+0
+1
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+1
+1
+0
+0
+0
+0
+
+0
+0
+1
+1
+0
+0
+0
+0
+
+0
+0
+0
+0
+1
+1
+0
+0
+0
+
+0
+0
+0
+1
+1
+0
+0
+0
+
+0
+0
+0
+1
+0
+1
+0
+0
+0
+
+0
+0
+1
+0
+1
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+1
+1
+0
+
+0
+0
+0
+0
+0
+1
+1
+0
+
+0
+0
+0
+0
+0
+0
+0
+1
+1
+
+0
+0
+0
+0
+0
+0
+1
+1
+
+0
+0
+0
+0
+0
+0
+1
+0
+1
+
+0
+0
+0
+0
+0
+1
+0
+1
+
+1
+0
+0
+1
+0
+0
+0
+0
+0
+
+0
+0
+1
+0
+0
+0
+0
+0
+
+0
+1
+0
+0
+1
+0
+0
+0
+0
+
+1
+0
+0
+1
+0
+0
+0
+0
+
+0
+0
+1
+0
+0
+1
+0
+0
+0
+
+0
+1
+0
+0
+1
+0
+0
+0
+
+0
+0
+0
+1
+0
+0
+1
+0
+0
+
+0
+0
+1
+0
+0
+1
+0
+0
+
+0
+0
+0
+0
+1
+0
+0
+1
+0
+
+0
+0
+0
+1
+0
+0
+1
+0
+
+0
+0
+0
+0
+0
+1
+0
+0
+1
+
+0
+0
+0
+0
+1
+0
+0
+1
+
+1
+0
+0
+0
+0
+0
+1
+0
+0
+
+0
+0
+0
+0
+0
+1
+0
+0
+
+0
+1
+0
+0
+0
+0
+0
+1
+0
+
+1
+0
+0
+0
+0
+0
+1
+0
+
+0
+0
+1
+0
+0
+0
+0
+0
+1
+
+0
+1
+0
+0
+0
+0
+0
+1
+
+
+
+
+
+
+
+6
+4
+
+0
+0
+1
+0
+0
+0
+0
+1
+0
+0
+0
+
+0
+0
+0
+1
+0
+0
+1
+1
+1
+1
+0
+
+0
+0
+1
+0
+0
+0
+0
+1
+0
+1
+0
+
+0
+1
+1
+2
+0
+1
+2
+1
+2
+1
+1
+
+0
+1
+0
+0
+0
+0
+1
+1
+0
+0
+0
+
+0
+1
+1
+2
+0
+0
+1
+1
+1
+0
+1
+
+0
+0
+0
+0
+1
+1
+1
+1
+0
+0
+0
+
+0
+0
+0
+0
+1
+0
+0
+0
+1
+0
+0
+
+0
+0
+0
+0
+0
+1
+1
+1
+0
+0
+0
+
+0
+1
+1
+3
+1
+0
+2
+1
+0
+0
+1
+
+0
+0
+1
+0
+0
+1
+0
+1
+0
+1
+0
+
+0
+1
+1
+2
+0
+1
+2
+1
+1
+0
+1
+
+0
+0
+1
+0
+0
+1
+0
+1
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+1
+2
+0
+0
+1
+1
+1
+0
+1
+
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+0
+0
+1
+0
+0
+0
+0
+0
+0
+1
+
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+1
+0
+0
+1
+0
+1
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+1
+0
+1
+0
+0
+0
+0
+1
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+1
+0
+1
+0
+0
+0
+1
+1
+0
+
+0
+0
+0
+1
+0
+0
+0
+0
+1
+0
+1
+
+1
+0
+0
+0
+1
+0
+0
+0
+1
+1
+1
+
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+1
+
+1
+1
+0
+0
+1
+0
+0
+0
+1
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+1
+0
+0
+1
+0
+1
+0
+1
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+1
+0
+0
+0
+0
+0
+0
+1
+0
+1
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+0
+0
+0
+0
+0
+0
+0
+1
+1
+1
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+1
+0
+0
+0
+0
+1
+0
+1
+0
+1
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+1
+0
+1
+1
+0
+0
+0
+1
+
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+1
+1
+1
+1
+1
+1
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+0
+0
+1
+0
+1
+0
+0
+0
+1
+1
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+0
+0
+1
+0
+1
+0
+0
+0
+0
+1
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+1
+0
+1
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+1
+1
+1
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+1
+1
+1
+1
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+1
+0
+0
+0
+0
+1
+1
+1
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+0
+0
+1
+1
+1
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+0
+0
+1
+0
+0
+0
+0
+0
+0
+1
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+0
+0
+1
+0
+0
+0
+0
+0
+1
+1
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+1
+0
+0
+0
+0
+1
+1
+1
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+1
+1
+1
+1
+1
+1
+1
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+1
+0
+1
+1
+0
+1
+1
+1
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+1
+1
+1
+1
+0
+0
+0
+1
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+1
+1
+0
+0
+0
+0
+1
+1
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+1
+0
+1
+0
+0
+1
+0
+0
+0
+1
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+1
+0
+0
+0
+0
+1
+1
+1
+0
+1
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+1
+1
+1
+1
+0
+0
+1
+1
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+q =
+
+
+
+
+
+qtotal =
+
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+
+
+
+
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+1
+1
+1
+1
+1
+1
+0
+0
+0
+0
+0
+0
+1
+1
+1
+1
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+1
+1
+1
+2
+2
+2
+1
+1
+1
+1
+0
+0
+1
+1
+1
+1
+0
+0
+1
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+
+0
+0
+1
+1
+1
+0
+0
+0
+0
+1
+1
+1
+1
+0
+0
+1
+1
+0
+0
+0
+0
+0
+1
+1
+0
+0
+1
+1
+0
+0
+0
+
+0
+1
+2
+1
+2
+2
+1
+1
+0
+1
+2
+1
+0
+1
+1
+0
+0
+0
+0
+0
+1
+1
+0
+1
+1
+0
+0
+1
+0
+0
+0
+
+1
+0
+0
+1
+1
+0
+1
+0
+1
+0
+1
+0
+0
+0
+1
+1
+0
+1
+1
+1
+0
+1
+0
+1
+1
+0
+1
+0
+0
+0
+0
+
+1
+1
+1
+1
+2
+1
+1
+0
+1
+1
+0
+0
+0
+0
+1
+1
+0
+1
+0
+1
+1
+0
+1
+0
+1
+0
+1
+1
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+
+1
+1
+2
+2
+3
+1
+1
+0
+1
+2
+1
+1
+1
+1
+1
+1
+0
+1
+0
+1
+1
+0
+1
+0
+0
+1
+1
+1
+0
+1
+1
+
+1
+1
+2
+1
+2
+1
+1
+1
+1
+1
+1
+1
+0
+1
+2
+1
+0
+1
+1
+1
+0
+0
+1
+1
+1
+1
+1
+1
+1
+1
+0
+
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+1
+1
+0
+0
+0
+
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+1
+2
+1
+0
+1
+1
+
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+1
+1
+0
+1
+1
+
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+1
+1
+0
+0
+
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+2
+0
+2
+0
+2
+0
+2
+
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+2
+1
+1
+0
+1
+
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+1
+1
+1
+0
+1
+
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+1
+0
+1
+0
+1
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+1
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+1
+1
+1
+1
+1
+1
+0
+0
+0
+0
+0
+0
+1
+1
+1
+1
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+1
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+1
+1
+1
+2
+2
+2
+1
+1
+1
+1
+0
+0
+1
+1
+1
+1
+0
+0
+1
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+1
+1
+1
+0
+0
+0
+0
+1
+1
+1
+1
+0
+0
+1
+1
+0
+0
+0
+0
+0
+1
+1
+0
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+1
+2
+1
+2
+2
+1
+1
+0
+1
+2
+1
+0
+1
+1
+0
+0
+0
+0
+0
+1
+1
+0
+1
+1
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+0
+0
+1
+1
+0
+1
+0
+1
+0
+1
+0
+0
+0
+1
+1
+0
+1
+1
+1
+0
+1
+0
+1
+1
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+1
+1
+1
+2
+1
+1
+0
+1
+1
+0
+0
+0
+0
+1
+1
+0
+1
+0
+1
+1
+0
+1
+0
+1
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+1
+2
+2
+3
+1
+1
+0
+1
+2
+1
+1
+1
+1
+1
+1
+0
+1
+0
+1
+1
+0
+1
+0
+0
+1
+1
+1
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+1
+2
+2
+2
+1
+1
+0
+0
+1
+1
+1
+1
+1
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+1
+1
+0
+1
+1
+0
+1
+
+1
+1
+2
+1
+2
+1
+1
+1
+1
+2
+2
+1
+1
+1
+1
+0
+0
+0
+0
+0
+0
+0
+1
+1
+0
+0
+0
+1
+1
+1
+1
+
+1
+1
+2
+2
+2
+1
+1
+0
+0
+1
+1
+1
+7
+1
+4
+1
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+1
+1
+0
+1
+1
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+1
+2
+1
+2
+1
+1
+1
+1
+1
+1
+1
+0
+1
+2
+1
+0
+1
+1
+1
+0
+0
+1
+1
+1
+1
+1
+1
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+
+
+
+
+1
+1
+2
+1
+2
+1
+1
+1
+1
+2
+2
+1
+1
+1
+1
+0
+0
+0
+0
+0
+0
+0
+1
+1
+0
+0
+0
+1
+1
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+
+
+
+
+
+1
+1
+
+g t =(cid:20) 3
+
+
+q t =
+
+
+
+2
+0
+1
+
+2
+0
+1
+
+2
+0
+11
+
+2
+1
+0
+
+2
+1
+0
+
+2
+1
+0
+
+1
+1
+1
+
+1
+1
+1
+
+1
+1
+1
+
+1
+0
+0
+
+1
+0
+0
+
+1
+0
+0
+
+1
+0
+0
+
+1
+0
+0
+
+1
+0
+0
+
+1
+0
+0
+
+1
+0
+0
+
+1
+0
+0
+
+1
+0
+0
+
+1
+0
+0
+
+1
+0
+0
+
+1
+0
+0
+
+1
+0
+0
+
+1
+0
+0
+
+1
+0
+0
+
+1
+0
+0
+
+1
+0
+0
+
+1
+0
+0
+
+1
+0
+0
+
+1
+0
+0
+
+1
+1
+1
+
+1
+1
+1
+
+1
+1
+1
+
+0
+2
+1
+
+0
+1
+0
+
+0
+1
+0
+
+0
+1
+0
+
+0
+0
+1
+
+0
+0
+1
+
+0
+0
+1
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+1
+2
+2
+3
+1
+1
+0
+1
+2
+1
+1
+1
+1
+1
+1
+0
+1
+0
+1
+1
+0
+1
+0
+0
+1
+1
+1
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+1
+2
+1
+2
+1
+1
+1
+1
+1
+1
+1
+0
+1
+2
+1
+0
+1
+1
+1
+0
+0
+1
+1
+1
+1
+1
+1
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+1
+1
+1
+0
+1
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+1
+2
+1
+2
+1
+1
+1
+1
+2
+2
+1
+1
+1
+1
+0
+0
+0
+0
+0
+0
+0
+1
+1
+0
+0
+0
+1
+1
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+1
+2
+2
+2
+1
+1
+0
+0
+1
+1
+1
+1
+1
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+1
+1
+0
+1
+1
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+1
+1
+1
+1
+1
+1
+0
+0
+0
+0
+0
+0
+1
+1
+1
+1
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+0
+0
+1
+1
+0
+1
+0
+1
+0
+1
+0
+0
+0
+1
+1
+0
+1
+1
+1
+0
+1
+0
+1
+1
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+1
+1
+0
+0
+0
+
+0
+1
+2
+1
+2
+2
+1
+1
+0
+1
+2
+1
+0
+1
+1
+0
+0
+0
+0
+0
+1
+1
+0
+1
+1
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+1
+2
+1
+0
+1
+1
+
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+1
+1
+0
+1
+1
+
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+2
+1
+1
+0
+1
+
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+1
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+1
+1
+1
+0
+0
+0
+0
+1
+1
+1
+1
+0
+0
+1
+1
+0
+0
+0
+0
+0
+1
+1
+0
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+1
+1
+1
+2
+2
+2
+1
+1
+1
+1
+0
+0
+1
+1
+1
+1
+0
+0
+1
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+1
+1
+1
+2
+1
+1
+0
+1
+1
+0
+0
+0
+0
+1
+1
+0
+1
+0
+1
+1
+0
+1
+0
+1
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+1
+1
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+1
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+2
+0
+2
+0
+2
+0
+2
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+8
+4
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+1
+0
+1
+0
+1
+
+0
+1
+
+2 (cid:21)
+
+
+
+
+w =
+
+1
+2
+0
+1
+0
+0
+0
+2
+0
+1
+0
+2
+0
+0
+0
+1
+1
+0
+0
+1
+2
+1
+1
+1
+1
+1
+0
+0
+1
+0
+0
+0
+2
+0
+1
+0
+0
+0
+0
+
+
+
+
+
+5
+5
+2
+0
+1
+0
+0
+2
+1
+3
+2
+3
+1
+0
+0
+1
+1
+0
+0
+1
+2
+1
+3
+2
+1
+2
+1
+0
+1
+1
+1
+1
+3
+2
+1
+0
+0
+0
+0
+
+5
+4
+2
+1
+1
+0
+0
+1
+0
+3
+2
+1
+0
+1
+1
+1
+1
+0
+0
+0
+0
+0
+2
+1
+0
+1
+1
+0
+1
+0
+1
+0
+2
+2
+1
+0
+0
+0
+0
+
+0
+1
+0
+1
+1
+0
+0
+2
+1
+0
+0
+1
+1
+1
+0
+0
+0
+0
+0
+0
+1
+1
+0
+0
+1
+1
+0
+1
+2
+2
+1
+1
+2
+0
+0
+0
+1
+1
+2
+
+6
+3
+2
+2
+1
+1
+0
+2
+2
+4
+2
+0
+2
+4
+2
+2
+2
+0
+0
+0
+0
+0
+2
+2
+0
+0
+2
+0
+2
+4
+2
+2
+0
+2
+2
+0
+2
+1
+2
+
+5
+4
+2
+1
+0
+0
+0
+0
+2
+3
+2
+2
+2
+2
+1
+1
+1
+0
+0
+1
+2
+1
+2
+2
+1
+1
+2
+1
+0
+2
+1
+1
+2
+2
+1
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+4
+3
+2
+1
+0
+0
+0
+0
+1
+2
+1
+1
+1
+2
+1
+1
+1
+0
+0
+0
+1
+1
+1
+1
+0
+0
+1
+0
+0
+1
+1
+0
+2
+1
+2
+0
+0
+0
+0
+
+3
+2
+2
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+
+1
+0
+0
+0
+1
+1
+0
+1
+1
+2
+1
+0
+1
+2
+1
+1
+1
+0
+0
+0
+0
+0
+1
+1
+0
+0
+1
+0
+1
+2
+1
+1
+0
+1
+1
+0
+1
+1
+1
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+
+1
+1
+0
+0
+0
+0
+0
+0
+1
+1
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+1
+0
+0
+1
+0
+0
+1
+1
+1
+0
+1
+0
+0
+0
+0
+
+1
+0
+0
+0
+1
+1
+0
+1
+1
+1
+0
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+0
+1
+1
+1
+1
+0
+0
+0
+1
+0
+1
+0
+1
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+
+1
+0
+0
+1
+0
+0
+0
+1
+0
+1
+0
+1
+0
+1
+1
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+1
+1
+0
+1
+0
+0
+1
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+0
+0
+0
+0
+0
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+1
+0
+1
+1
+0
+0
+0
+1
+0
+0
+1
+1
+0
+1
+1
+0
+1
+0
+0
+1
+1
+1
+0
+0
+0
+0
+1
+1
+0
+0
+0
+0
+1
+1
+1
+0
+0
+0
+0
+
+1
+1
+0
+0
+0
+0
+0
+0
+1
+1
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+1
+0
+0
+1
+0
+0
+1
+1
+1
+0
+1
+0
+0
+0
+0
+
+0
+0
+0
+1
+0
+1
+1
+0
+1
+0
+0
+1
+1
+1
+0
+0
+0
+0
+1
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+1
+1
+1
+
+1
+1
+1
+1
+0
+1
+1
+0
+0
+0
+1
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+1
+1
+1
+1
+1
+1
+1
+0
+1
+0
+1
+1
+1
+1
+0
+1
+1
+1
+
+1
+1
+0
+1
+0
+1
+1
+1
+0
+1
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+0
+0
+0
+0
+0
+0
+1
+1
+0
+1
+2
+0
+1
+0
+1
+1
+1
+
+0
+1
+0
+0
+1
+1
+0
+1
+0
+0
+0
+1
+0
+1
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+1
+0
+0
+1
+1
+0
+1
+1
+0
+0
+1
+0
+0
+1
+
+1
+0
+1
+0
+0
+1
+0
+0
+1
+0
+1
+1
+1
+0
+0
+0
+0
+1
+1
+0
+1
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+1
+1
+1
+0
+0
+1
+
+1
+1
+0
+1
+1
+1
+0
+0
+0
+1
+0
+0
+0
+0
+1
+1
+1
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+1
+1
+0
+0
+1
+
+
+
+
+
+9
+4
+
+
+
+
+
+() =
+
+where
+
+2  3 + 5  6 + 8  9 + 3 m1
+
+3 + 5  6  7  9  m2 + 2 m3 + m4
+
+2 + 5 + 8  m5 + 2 m6
+
+2 + 4 + 5 + 6  9  m7 + m8 + 2 m9
+
+7  9  m10 + m11 + m12
+
+4 + 5 + 6  7  8  9 + 3 m13
+
+4 + 5 + 6  m14 + 2 m15
+
+,
+
+
+
+
+
+m1 = max(0, 3 + 6 + 9 , 2  5  8)
+
+m2 = max(2  6  7  3  4  8 , 0, 2  6  7)
+
+m3 = max(0, 3 + 6 + 9 , 2  5  8)
+
+m4 = max(0, 7 + 8 + 9 , 4  5  6)
+
+m5 = max(0, 3 + 6 + 9 , 2 + 3 + 5 + 6 + 8 + 9)
+
+m6 = max(0, 3 + 6 + 9 , 2  5  8)
+
+m7 = max(0, 2 + 6 + 7 , 2 + 3 + 4 + 6 + 7 + 8)
+
+m8 = max(0, 3 + 6 + 9 , 2  5  8)
+
+m9 = max(0, 7 + 8 + 9 , 4  5  6)
+
+m10 = max(3 , 0, 2  4  5  7  9 , 4  5  7  9 , 4  5  7 , 2  4  5  7 , 2  4  5  7  9 
+
+8 , 2  5  7  9 , 5  7  9 , 2  4  5  7  9  8  6 , 3 + 8, 3  5 , 5 , 7 , 2  5  7 , 3  7 , 3 +
+
+6 , 3  5  7, 5  7 , 3 + 6 + 8 , 2  4  5  6  7  9)
+
+m11 = max(0, 3 + 6 + 9 , 2  5  8)
+
+m12 = max(0, 7 + 8 + 9 , 4  5  6)
+
+m13 = max(0, 7 + 8 + 9 , 4  5  6)
+
+m14 = max(0, 7 + 8 + 9 , 4 + 5 + 6 + 7 + 8 + 9)
+
+m15 = max(0, 7 + 8 + 9 , 4  5  6)
+
+50
+
+references
+
+[1] m. r. douglas, b. r. greene, d. r. morrison, orbifold resolution by d-branes,
+
+nucl. phys. b506 (1997) 84106.
+
+[2] b. r. greene, d-brane topology changing transitions, hep-th/9711124, t. muto,
+
+d-branes on orbifolds and topology change, hep-th/9711090.
+
+[3] j. maldacena, the large n limit of superconformal eld theories and supergravity,
+
+adv. theor. math. phys. 2 (1998) 231252, hep-th/9711200.
+
+[4] chris beasley, b. greene,c. i. lazaroiu,r. plesser, in preparation.
+
+[5] b. s. acharya, j. m. figueroa-ofarrill, c. m. hull, b. spence, branes at conical
+singularities and holography, adv. theor. math. phys. 2 (1998) 1249-1286, hep-
+th/9808014.
+
+[6] david r. morrison and m. ronen plesser, non-spherical horizons, i, hep-
+
+th/9810201.
+
+[7] g. tian, s. t. yau, kahler-einstein metrics on compact surfaces with c1 > 0,
+
+commun math phys, 112, 175-203 (1987).
+
+[8] g. tian,kahler-einstein metrics with positive scalar curvature, invent. math. 137,
+
+137(1997).
+
+[9] g. tian, on calabis conjecture for complex surfaces with positive rst chern
+
+class,invent. math. 101,101172 (1990).
+
+[10] k. altmann, deformations of ane torus varieties, beitrage algebra geom. 34
+(1993), no. 1, 119150; the versal deformation of an isolated toric gorenstein
+singularity, invent. math. 128 (1997) 443479.
+
+[11] i. r. klebanov and e. witten, superconformal eld theory on threebranes at a
+
+calabi-yau singularity, nucl.phys. b536 (1998) 199-218, hep-th/9807080.
+
+[12] t. oda, convex bodies and algebraic geometry: an introduction to the theory of
+toric varieties, ergebnisse der mathematik und ihrer grenzgebiete; 3.folge, 15,
+springer, 1988;
+
+[13] p. s. aspinwall, b. r. greene, and d. r. morrison, calabi-yau moduli space,
+mirror manifolds, and spacetime topology change in string theory, nucl. phys.
+b416 (1994) 414480, hep-th/9309097, e. witten,phases of n = 2 theories in
+two dimensions,nucl.phys. b403 (1993) 159-222.
+
+[14] w. fulton, introduction to toric varieties , princeton university press, 1993.
+
+[15] d. a. cox, the homogeneous coordinate ring of a toric variety, alg-
+
+geom/9210008.
+
+[16] m. r. douglas, g. moore, d-branes, quivers, and ale instantons, hep-
+
+th/9603167.
+
+51
+
+[17] a. v. sardo inrri, partial resolutions of orbifold singularities via moduli spaces
+of hym-type bundles, alg-geom/9610004; resolutions of orbifold singularities and
+the transportation problem on the mckay quiver, alg-geom/9610005.
+
+[18] brian r. greene, c. i. lazaroiu, mark raugas d-branes on nonabelian threefold
+
+quotient singularities, hep-th/9811201.
+
+[19] m. audin, the topology of torus actions on symplectic manifolds, progress in
+
+mathematics 93, birkhauser, 1991.
+
+52
+
+

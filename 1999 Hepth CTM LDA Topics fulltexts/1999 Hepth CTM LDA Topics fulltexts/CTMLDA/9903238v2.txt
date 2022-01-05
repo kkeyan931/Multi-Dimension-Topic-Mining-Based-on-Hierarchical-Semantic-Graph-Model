@@ -1,0 +1,1947 @@
+9
+9
+9
+1
+
+ 
+r
+a
+
+ 
+
+m
+8
+2
+
+ 
+ 
+
+2
+v
+8
+3
+2
+3
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+surface terms as counterterms in the ads/cft correspondence
+
+roberto emparana, cliord v. johnsonb, robert c. myersc
+
+hep-th/9903238
+
+a department of mathematical sciences, university of durham, dh1 3le, uk.
+
+departamento de fsica teorica, universidad del pas vasco, apdo. 644, e-48080 bilbao, spain.
+
+b department of physics and astronomy, university of kentucky, lexington, ky 405060055, usa.
+
+cphysics department, mcgill university, montreal, pq, h3a 2t8, canada.
+
+aroberto.emparan@durham.ac.uk, bcvj@pa.uky.edu, crcm@hep.physics.mcgill.ca
+
+we examine the recently proposed technique of adding boundary counterterms to the gravita-
+tional action for spacetimes which are locally asymptotic to antide sitter. in particular, we explic-
+itly identify higher order counterterms, which allow us to consider spacetimes of dimensions d  7.
+as the counterterms eliminate the need of background subtraction in calculating the action, we
+apply this technique to study examples where the appropriate background was ambiguous or un-
+known: topological black holes, taubnutads and taubboltads. we also identify certain cases
+where the covariant counterterms fail to render the action nite, and we comment on the dual eld
+theory interpretation of this result. in some examples, the case of vanishing cosmological constant
+may be recovered in a limit, which allows us to check results and resolve ambiguities in certain
+asymptotically at spacetime computations in the literature.
+
+i. introduction
+
+the ads/cft correspondence asserts that there is an equivalence between a gravitational theory in d-dimensional
+antide sitter (ads) space and a conformal eld theory (cft) living in a (d1)dimensional boundary space [1].
+this equivalence or duality is best understood in the context of string theory with d=5, where the duality relates
+type iib superstring theory on ads5s5, and n =4 supersymmetric yangmills theory with gauge group su (n ) in
+four dimensions [2,3]. the precise formulation of the ads/cft correspondence is made by equating the partition
+functions of the two theories:
+
+zads(0,i) = zcf t (0,i) .
+
+(1)
+
+here the elds 0,i have two interpretations: on the gravity side, these elds correspond to the boundary data or
+boundary values (up to a certain rescaling [1]) for the bulk elds i which propagate in the ads space. on the eld
+theory side, these elds correspond to external source currents coupled to various cft operators. thus correlation
+functions of the operators in the cft can be determined through a calculation using the dynamics of gravity in
+ads space [1,3].
+in certain instances, one can consider evaluating the ads partition function in a saddlepoint
+approximation:
+
+eiads(i) =der 0,ioiecf t
+
+(2)
+
+where iads(i) is the classical gravitational action as a functional of the (super)gravity elds, and oi are the dual
+cft operators. hence in this approximation, the ads action becomes the generating function of the connected
+correlation functions in the cft [1,3]. this framework is also naturally extended to considering cft states for which
+certain operators acquire expectation values by considering solutions of the gravitational equations which are only
+asymptotically ads [4,5].
+
+one aspect of the duality which will be interesting for the present investigation is the choice of the background
+metric ij required to dene the eld theory. this metric is related by an innite conformal transformation to the
+induced metric hij on the boundary of the ads space [1]. since the boundary conformal transformation is divergent,
+
+1
+
+one regularizes the calculation by considering the induced metric for a family of surfaces which approach the boundary
+in a limit. this regularization procedure then will depend on the choices of coordinates in the asymptotic ads region,
+i.e., it depends on the precise family of surfaces chosen. with dierent choices then, the background geometry
+inherited by the cft takes a completely dierent form. for example, depending on the choice of radial slicing for
+adsn+1, the boundary geometry can be s1sn, sn+1, s1irn. we will discuss these and other possibilities in
+section ii. this procedure therefore allows one to study the cft with dierent background geometries. from the
+point of view of the gravity theory, this procedure is interesting because naively the expressions on the left-hand side
+of eqns. (1) and (2) are coordinate invariant. however, the asymptotic regularization explicitly breaks this covariance.
+returning to eqn. (2), considering the gravitational path integral in the saddle-point approximation has a long
+history in the quantum gravity literature, in particular in context of black hole thermodynamics [6]  see refs. [7]
+and [8] for discussions relevant for ads. there is a problem that must be faced with this approach in that typically
+the gravity action diverges. for d = n+1 spacetime dimensions, the familiar (euclidean) action has two contributions
+
+ibulk + isurf = 
+
+1
+
+16gzm
+
+dn+1xg(cid:18)r +
+
+n(n  1)
+
+l2
+
+(cid:19) 
+
+1
+
+8gzm
+
+dnxhk .
+
+(3)
+
+the rst term is just the einsteinhilbertantidesitter action with cosmological constant = n(n1)
+. the second
+integral is the gibbonshawking boundary term which is required so that upon variation with metric xed at the
+boundary, the action yields the einstein equations [6]. here, k is the trace of the extrinsic curvature of the boundary
+m as embedded in m. in the ads context, both of these expressions are divergent because the volumes of both
+m and m are innite (and the integrands are nonzero). the traditional approach to circumvent this problem
+is to perform a background subtraction. that is, one produces a nite result by subtracting from eqn. (3) the
+contribution of a background reference spacetime, so that one can compare the properties of the solution of interest
+relative to those of the reference state. note, however, that this subtraction requires that the asymptotic boundary
+geometries of the two solutions can be matched in order to render the surface contribution nite.1 aside from being
+a technical nuisance, there are certain cases where an appropriate reference solution is ambiguous or unknown, e.g.,
+topological black holes [913], and taubnutads and taubboltads [14,15]  see discussion below.
+
+2l2
+
+in the context of the ads/cft correspondence, there does not seem to be room for a background subtraction in, for
+example, eqn.(2). remarkably ads space oers an alternative approach! the divergences that arise in eqn. (3) are all
+proportional to local integrals of the background cft metric ij [1,16]. thus these divergences can be eliminated by
+extending the regularization procedure for the action with a counterterm subtraction. that is eqn. (3) is modied
+to include the subtraction of a nite set of boundary integrals (with divergent coecients) involving curvature scalars
+constructed from the background metric ij [17]. recently a remarkable insight was provided by ref. [18] (see also
+ref. [19]): if the counterterms are expressed in terms of the induced metric hij, rather than ij , then they naturally
+appear with the appropriate divergences as the volume of the regulator surface grows as it approaches the boundary of
+ads. thus in the counterterm subtraction approach, one may produce a nite gravitational action by supplementing
+the contributions in eqn. (3) with an extra surface integral
+
+ict =
+
+1
+
+8gzm
+
+dnxh f (l,r,r) ,
+
+(4)
+
+where the counterterms depend only on the curvature r (and its derivatives) of the induced boundary metric hij 
+see section iii for explicit expressions. that this construction is unique to asymptotically ads spaces is apparent
+because the ads curvature scale l is essential in dening the counterterms. note that these expressions are universal
+depending only on l and the spacetime dimension. once these are xed, one may use the same counterterms to
+regulate the action for any choice of coordinates on any asymptotically ads solution.2
+
+even outside of the ads/cft correspondence, counterterm subtraction provides a remarkable new theoretical tool
+with which to investigate gravitational physics. together eqns. (3) and (4) provide a nite covariant denition of the
+gravitational action for asymptotically ads spaces. as a simple example, one might consider the energy of a gravitating
+system in ads space. traditionally the denition of energy in gravity required a background reference solution in
+asymptotically ads spaces [8,20], just as in asymptotically at spaces [21]. combined the quasilocal formulation of
+brown and york [22], the ads action with counterterms provides a denition of energy that is independent of any
+
+1again, there is the implicit need for a regularization procedure with regards to the asymptotic boundary.
+2actually this is not quite the complete story  see below, and section vi.
+
+2
+
+reference solution [18]. using this technique, one discovers a nite energy for ads5 with an irs3 boundary. in the
+context of the ads/cft correspondence, one can interpret this energy as the casimir energy of the dual eld theory
+in the latter background geometry [18]. a similar casimir energy arises in ads3 [18], where there is a well known
+dierence between the energy m =  1/(8g) of global ads3 and that of the m =0 state (which is only locally ads3).
+thus one might revisit euclidean quantum gravity with this new theoretical tool in hand. in particular, one can
+address the cases where the background subtraction technique was not possible or (due to ambiguiuties) the results
+were disputed. this is one of the primary objectives of the current investigation.
+
+the issue of the correct reference state has been disputed for topological black holes [913], in particular for the
+hyperbolic ads black holes. the latter are black hole solutions where the horizon is a hyperbolic space h n instead
+of a sphere. as it happens, there is among these solutions one which is locally (though not globally) equal to ads.
+however, in order for it to be regular, the euclidean time has to take a xed nite value  in other words, it is a nite
+temperature solution. as such, it is not an adequate reference state for matching calculations, which would require a
+solution that admits arbitrary euclidean period. in section iv, we apply the counterterm subtraction prescription to
+compute the action, and discover some intriguing results. we are led to speculate on a connection to the precusor
+states recently discussed in ref. [30].
+
+the taubnut solution is known to admit an extension to include a cosmological constant [23], and as such, the
+taubnutantidesitter (tnads) solution has been studied recently in refs. [14,15]. the boundary geometry can
+not be matched to that of ads space, and so there is no known reference solution with which to make a background
+subtraction.
+instead in refs. [14,15], the analog of the selfdual tn solution (i.e., the one with a nut, a zero
+dimensional xed point set, at its origin) was used as the reference state in a background subtraction calculation of
+the action of the taubboltantidesitter (tbads) solution. in section v, we use the counterterm subtraction for
+a backgroundless calculation of the action of tnads. this allows us to study the thermodynamics of this solution
+in and of itself. in particular, we can study its local intrinsic stability, and nd its entropy, as a function of the nut
+charge. this leads to some surprises.
+
+as mentioned above, the counterterm subtraction approach can not be extended in a straightforward way to
+asymptotically at (af) spacetimes (and for that matter, to spacetimes which do not asymptote to ads) because the
+ads scale is an essential ingredient in the denition of the counterterms (4). however, one can apply this technique
+in a casebycase manner to the computation of the action of those asymptotically at solutions which can obtained
+as limits of ads solutions. a simple example is the computation of the action of the schwarzschild solution by
+rst embedding it in ads. there exists a schwarzschildads solution [7]  discussed extensively in the context of
+the ads/cft correspondence recently [1,4]  which for black holes that are much smaller than the cosmological
+length scale l||1/2 approximates the asymptotically at schwarzschild solution. we can compute the action of
+this schwarzschildads black hole by using the counterterm prescription, and then take the limit l. in this way
+we almost recover the standard result that is obtained by matching the af solution to minkowski spacetime.
+
+the preceding is a satisfying, but somewhat trivial example. however, there are other cases of af spaces where
+the computation of the action, using the more traditional background subtraction technique, has been the subject
+of some controversy. one such case is that of the taubnut solutions, which are only asymptotically locally at
+(alf). in ref. [25] the action of generic euclidean taubnut solutions (of which only the selfdual taubnut and
+taubbolt instantons are regular) was computed by trying to match the solutions to minkowski space, in order to
+perform a regularizing subtraction. however, since the large radius slices of euclidean taubnut space are squashed
+threespheres, in contrast to the minkowskian slices s1s2, the matching is not really well dened. therefore, it
+was proposed in ref. [24] that the proper background to be subtracted is instead the selfdual taubnut instanton,
+which has the lowest possible energy among the regular euclidean taubnut solutionsthe only other regular
+solution is the taubbolt instanton3. it was noticed in ref. [14] that there existed a branch of solutions which tends
+to the alf taubnut solution as l. (these are the analogue of the small schwarzschild black hole branch
+of solutions on ref. [7].) therefore, after applying the counterterm subtraction procedure to compute the action of
+the asymptotically tnads solution, we take the limit l. this limit provides then a background independent
+result for the action of the alf taubnut solutions. remarkably, we nd that the result agrees precisely with the
+one given in [24]. furthermore, we show that the counterterm prescription results are reproduced by performing an
+imperfect matching to ads similar to the one in the alf case.
+
+a simple application of the counterterm subtraction is to calculate the action of (euclidean) adsn+1 for dierent
+
+3some care should be exercised, since often in the literature the name taubnut solution is used to refer specically to
+the selfdual taubnut instanton, instead of the full, twoparameter taubnut solution.
+
+3
+
+choices of coordinates, i.e., with dierent boundary geometries. in section vi, we present an extensive analysis of
+the multislicing phenomenon for (euclidean) adsn+1 with n4, showing the results for the action in each case. it
+is interesting to note the appearance of dierent casimir energy in dierent cases. a more dramatic result is that
+for certain boundary geometries, such as sn and h n, one nds that the counterterm subtraction is insucient. that
+is a divergence that is logarithmic in the asymptotic radius appears, and can not be eliminated by the addition of
+a local counterterm as in eqn. (4). these divergences which can arise for even n have been noted previously in the
+context of the ads/cft correspondence [1,17]. there they may be related to a conformal anomaly for the dual cft
+in certain background geometries which is well known to be connected to the appearance of logarithmic divergences
+in the eective eld theory action [26]. of course, this presents a limitation on counterterm subtraction as a general
+tool to investigate asymptotically ads spaces in odd spacetime dimensions.
+
+certainly our results have many interesting implications for the dual eld theory via the ads/cft correspondence.
+we will only make limited comments on this aspect of the work here, leaving a more general study of the eld theoretic
+interpretation for a future paper.
+
+while this work was being completed, we were informed that r. mann [27] had also considered the application of
+
+the ads action with counterterms to the solutions considered in sections iv and v.
+
+ii. the many faces of ads
+
+as described in the previous section, counterterm subtraction works by subtracting the integral of various boundary
+curvature invariants (4) from the standard action (3). this leaves unspecied the way in which the boundary of ads
+is approached, i.e., the choice of radial coordinate dening the family of surfaces which approach the boundary as
+a limit. depending on this choice, the slices at constant radius can have dierent geometry or even dierent topology.
+even if the spaces are locally equivalent to one another, the computation of the action will in general lead to dierent
+results, since the boundary terms in the action will take dierent values. in the end, since all dierent forms of a
+spacetime will be related by dieomorphisms, with possible addition or subtraction of points, and possibly as well,
+identications under discrete subgroups, the dierent results for the action will bear a relation to one another, too.
+here we will describe some of the many possible faces of the boundary of ads. in subsequent sections, we will
+consider these metrics as examples for the application of the counterterm subtraction technique, and compare the
+results. clearly, such a comparison would have been impossible had we required a background for the calculation.
+
+let us rst present euclidean adsn+1 in the following three familiar metrics,
+
+r2
+
+l2(cid:19) d 2 +
+ds2 =(cid:18)k +
+where the (n1)dimensional metric d2
+k,n1 =
+
+k,n1 is
+
+d2
+
+l2d2
+
+pn1
+
+l2d2
+
+r2
+l2 d2
+
+k,n1 ,
+
+dr2
+
+l2(cid:1) +
+(cid:0)k + r2
+
+n1
+
+i=1 dx2
+i
+
+n1
+
+for k = +1
+for k = 0
+for k = 1 ,
+
+n1 is the unit metric on sn1. by h n1 we mean the (n1)dimensional hyperbolic space, whose unit
+where d2
+n1 can be obtained by analytic continuation of that on sn1. it is straightforward to see that all of the
+metric d2
+above solutions are locally equivalent to each other. in the above we are assuming that n>2 for k=1, since for n=2
+one does not have a hyperbolic metric h 1.
+k,n as lnk,n. in this way, k=+1,n will be equal
+
+for later use in the paper, we will write the volume of the space d2
+
+to the volume n of the unit nsphere.
+
+next we consider euclidean adsn+1 with metric
+
+(5)
+
+(6)
+
+r2
+l2 d2
+
+k,n ,
+
+(7)
+
+where the ndimensional metric d2
+k,n is dened precisely in the same way as above in eqn. (6). for k=0, this simply
+reproduces the k=0 metric in eqn. (5). one might note that a transformation of the radial coordinate brings these
+metrics into the form
+
+ds2 =
+
+dr2
+
+l2(cid:1) +
+(cid:0)k + r2
+
+4
+
+where
+
+ds2 = l2d2 + f 2
+
+k ()d2
+
+k,n ,
+
+sinh  for k = +1
+e
+cosh  for k = 1 .
+
+for k = 0
+
+fk() =
+l2(cid:1) +(cid:18)k +
+(cid:0)k + r2
+k, m and de2
+
+ds2 =
+
+dr2
+
+(8)
+
+(9)
+
+(10)
+
+one nal ads metric which we will consider is
+
+r2
+
+l2(cid:19) db2
+
+r2
+
+l2 de2
+
+k, m +
+
+k, m ,
+
+where again the metrics db2
+k, m are dened in eqn. (6). for k = 0 we once again reproduce the k = 0
+metric in eqn. (5). for k = 1, we assume that both m, m  2. for k = +1, the boundary geometry is h ms m, while
+for k = 1, we simply interchange the hyperbolic space and the sphere. however, in the latter case, the coordinate
+transformation r2 = r2  l2 puts the metric back in the k = +1 form with m m.
+geometries:
+
+thus with the metrics in eqns. (5), (7) and (10), we have displayed adsn+1 with a wide variety of boundary
+
+irn, s1  sn1, s1  irn1, s1  h n1, sn, h n, sm  h nm .
+
+all of these ads metrics are maximally symetric, i.e.,
+
+rijkl = 
+
+1
+l2 (gik gjl  gil gjk) ,
+
+(11)
+
+(12)
+
+which ensures that the geometry is conformally at. this condition also ensures the geometries are all locally ads.
+
+it is interesting to notice the form of some of the boundary geometries we get here upon analytic continuation to
+
+minkowski signature, since they are rather common :
+
+sn : static euclidean de sitter space
+h n : (global) anti  de sitter space
+irn : minkowski space .
+
+(13)
+
+furthermore, if we assume a specic analytic continuation to lorentzian spacetime, e.g., s1sn  ir(time)sn,
+then
+
+ir  sn1
+ir  h n1 : the static open universe .
+
+: the einstein static universe
+
+(14)
+
+the ads/cft correspondence implies then an equivalence between, on the one hand, quantum gravity in ads and,
+on the other hand, a cft on any of the above backgrounds. we nd it particularly amusing that, when the boundary
+is taken to be h n, quantum gravity in adsn+1 can be dual to a cft on an adsn background! it should be kept in
+mind that the geometry on the boundary is not dynamical, since there are no gravitational degrees of freedom in the
+dual cft.
+
+there is an important feature that distinguishes the solutions with k=1 from those with k=0, +1: there is a nite
+minimum radius r=l at which grr diverges. in eqn. (5), the killing vector  also has xed point set (a bolt)
+at this radius. in this case, the euclidean solution will be regular only if the coordinate  is identied with period
+=2l. in the metric (7) with k=1, the minimum radius r=r+ simply denotes the boundary of a coordinate patch
+as is evident from the form of the metric in eqn. (8) with the new radial coordinate . in the case of eqn. (10) with
+k=1 r=r+ is the location of a conical singularity. for k=+1, the minimum radius is r=r+=0 and the geometry
+is smooth at this point in metrics (5) and (7), but it corresponds to a conical singularity in eqn. (10). for k=0, the
+minimum radius is again r=r+=0 which in this case is an innite proper distance away and so there is no problem
+with the curvature here. note that the geometries with conical singularities or a bolt are only locally ads, that is
+they describe ads spacetime with additional discrete identications of points.
+
+eqn. (12) is an extremely restrictive condition. if one is simply interested in solving einsteins equations with a
+
+negative cosmological constant
+
+5
+
+rij = 
+
+n  2
+l2 gij ,
+
+(15)
+
+then the above metrics remain solutions when the boundary geometries are replaced by arbitrary einstein spaces. in
+
+all of the metrics (5,7,10), one may replace any of the sp factors (with p>1) by a space satisfying erab=(p  1)/l2 gab.
+similarly any h p factors can be replaced by a space satisfying brab= (p 1)/l2 gab, and irp factors can be replaced by
+any ricci at solution, i.e., rab=0. for example, then sp can be replaced by a product of spheres sp1spq where
+pq
+i =(p  1)/(pi  1) l2. these generalized
+solutions will no longer be conformally at or locally ads. furthermore generically a true curvature singularity is
+introduced at the minimum radius, e.g., rijklrijkl grows without bound as r approaches r+.
+
+i=1 pi = p with pi > 2 and the radii of the individual spheres is scaled so r2
+
+iii. counterterm action
+
+the detailed form of the boundary counterterms was originally explored in ref. [17], where they were derived in
+terms of the background (eld theory) metric ij . the insight provided by ref. [18] was that the counterterms should
+be written in terms of the induced metric on the boundary hij. in this way, they naturally appear with the appropriate
+(innite volume) divergences to cancel those arising from the classical gravitational action. the focus of ref. [18] was
+to construct a nite boundary stress-tensor without using a reference background. however, the proposed prescription
+naturally provides the construction of a nite action which can then be employed, for example, to calculate the action
+of euclidean gravitational instantons. this will be the primary application which we consider in the following.
+
+hence the full (euclidean) gravitational action in d = n+1 spacetime dimensions has three contributions
+
+iads = ibulk(gij) + isurf (gij ) + ict(hij) .
+
+(16)
+
+the rst two terms, comprising the familiar classical action, were given in eqn. (3). here, hij is the induced metric
+on the boundary m which may be dened as hij = gij  ninj where n is an outward pointing unit normal vector to
+m. in the gibbons-hawking boundary term isurf , the trace of the extrinsic curvature is dened by k=hijinj.4
+the counterterm action ict(hij) may be arranged as an expansion in powers of the boundary curvature (and its
+derivatives). the number of terms that appears grows with the dimension of the spacetime. the rst few terms are
+explicitly
+
+ict =
+
+1
+
+8gzm
+
+dnxh(cid:20) n  1
+
+l
+
++
+
+l
+
+2(n  2)r +
+
+l3
+
+2(n  4)(n  2)2(cid:18)rabrab 
+
+n
+
+4(n  1)r2(cid:19) + . . .(cid:21) ,
+
+(17)
+
+where r and rab are the ricci scalar and ricci tensor for the boundary metric, respectively. combined these three
+counterterms are sucient5 to cancel divergences for n  6. in this covariant form, the rst term originally appeared
+in ref. [19], while the second term rst appeared in ref. [18]. we derived the third term by demanding that the
+innite volume divergences were cancelled when using the metric (10). any of these terms may be derived with the
+construction provided by ref. [17] for the appropriate curvature integral in terms of the cft metric ij . one then
+simply substitutes the induced boundary metric hij to produce the covariant counterterms appearing in ict. to go
+to higher dimensions, resorting to this construction seems inescapable as the simple asymptotically ads metrics
+presented in section ii can not be used to distinguish all of the curvature invariants that can appear in the higher
+order counterterms. it is important to note that the fact that we have counterterms for dimensions up to d=7 means
+that we can now study all (known) ads applications which arise in string theory and mtheory.
+
+other matter eld actions, for example an action for maxwell elds, can be added to eqn. (16). although, at least
+for black hole solutions, the addition of gauge elds does not seem to require new counterterms [29], we must remain
+alert to the possibility that extra matter elds may require the addition of new, nongeometric surface counterterms
+to the action. this issue will not be considered further here.
+
+as a simple example, we will consider calculating the action (16) with the metric (5) for ads with boundary
+
+s1mk. let us present the contributions of the individual terms in the action:
+
+4our conventions dier by signs from refs. [18,22], but are chosen to conform with standard practice in general relativity, as
+
+in, e.g., ref. [28].
+5or almost, see section iv.
+
+6
+
+(18)
+
+k3
+16
+
+l6
+
+r6 + (cid:19)(cid:21) ,
+
+l2
+
+r2(cid:19)(cid:21) ,
+r2(cid:19)1/2#
+
+l2
+r2 
+l2
+
+k2
+8
+
+l4
+r4 +
+
+r2(cid:19)1/2#
+
+ibulk =
+
+isurf =
+
+i 1
+ct =
+
+=
+
+i 2
+ct =
+
+=
+
+i 3
+ct =
+
+=
+
+k,n1
+
+k,n1
+
+k,n1
+
+k,n1
+
+k,n1
+
+l2
+
+k
+2
+
++ + rn(cid:3) ,
+
+8gl2 (cid:2)rn
+8gl2 (cid:20)rn(cid:18)n  k(n  1)
+8gl2 "rn(n  1)(cid:18)1 + k
+8gl2 (cid:20)rn(n  1)(cid:18)1 +
+8gl2 "rn(n  1)
+8gl2 (cid:20)rn(n  1)(cid:18) k
+8gl2 "rn(n  1)(cid:18)
+8gl2 (cid:20)rn(n  1)(cid:18) 
+
+l2
+r2 +
+l4
+k2
+8
+
+k2
+8
+
+k
+2
+
+l2
+
+2
+
+r2(cid:18)1 + k
+
+k,n1
+
+k,n1
+
+k,n1
+
+k2
+4
+
+l4
+r4 
+
+r4(cid:19)(cid:18)1 + k
+
+l4
+r4 
+
+k3
+16
+
+l2
+
+l6
+
+k3
+16
+
+r6 + (cid:19)(cid:21) ,
+r2(cid:19)1/2#
+r6 + (cid:19)(cid:21) ,
+
+l6
+
+k,n1/l2, and  is the period of  . we have also
+where k,n1 is the (dimensionless) volume of the space with metric d2
+separated the contributions of the individual counterterms in (17), so i i
+ct is the integral of the ith term in the action.
+now for a particular boundary dimension only some of the counterterms may be included to cancel the divergences.
+so for n=2i1, 2i, one keeps only up to i i
+
+ct. for any odd value of n, one has then
+
+for the even values of n, an extra constant term makes an appearance so that
+
+ik,n+1 = 
+
+k,n1
+
+8gl2 (cid:0)rn
+
++ + o(ln+1/r)(cid:1) .
+
+ik,n+1 = 
+
+k,n1
+
+8gl2 (cid:18)rn
+
++ 
+
+k
+2
+
+l2n,2 +
+
+3k2
+8
+
+l4n,4 
+
+5k
+16
+
+l6n,6 + . . . + o(ln+1/r)(cid:19) .
+
+(19)
+
+(20)
+
+as we have explained above, for k=+1, 0, we have  arbitrary and r+=0, whereas for k=1, r+=l and =2l.
+
+note that for even n, the coecients of the higher counter terms are actually divergent, even though they formally
+evaluate to a nite result. further in either of these results, eqns. (19) and (20), there are extra terms of order 1/r,
+which then vanish when the limit r is to be taken to approach the ads boundary. however consider the case
+of n odd, then we would have the option of in fact keeping all of the higher order counter terms in eqn. (17), i.e.,
+including the terms which actually vanish in the boundary limit. this would give a result where in fact all of the
+inverse powers rp would be cancelled so that not only would the action be nite, but it would be independent of the
+regulator radius!
+
+given the explicit counterterms in eqn. (17), we can only really evaluate the action for n6. however, keeping in
+mind that the higher order counterterms ensure the cancellation of divergences order by order, it is clear that the
+formulae (19) and (20) will be unchanged for n > 6. further we can show that the coecient of the extra contributions
+for n even will be6
+
+(k)n/2 (n  1)!!2
+
+n!
+
+ln .
+
+(21)
+
+6these correspond to the coecients in the small x expansion of 1/1 + x.
+
+7
+
+iv. ads black holes
+
+in this section we turn to the study of black hole solutions, using the counterterm subtraction scheme.
+
+in the
+presence of a negative cosmological constant, the horizon of a black hole admits a much larger variety of geometries
+and topologies than in asymptotically at situations. this is consistent with the variety of boundary topologies that
+we can obtain for ads itself, depending upon how we choose to radially foliate it, as discussed in section ii. the
+case (k=1 below) of spherical black holes has already been studied using this counterterm subtraction scheme in ref.
+[18], but we compute and list those results in what follows for completeness and for comparison with the at and
+hyperbolic cases.
+
+in ref. [13] it was shown that the einsteinantidesitter system in n+1 dimensions admits the following solutions:
+
+with
+
+ds2 = vk(r)dt2 +
+
+dr2
+vk(r)
+
++
+
+r2
+l2 d2
+
+k,n1 ,
+
+vk(r) = k 
+
+
+rn2 +
+
+r2
+l2 ,
+
+(22)
+
+(23)
+
+k,n1 is dened as in eqn. (6). thus it represents sn1, irn1 and h n1 for
+where the (n1) dimensional metric d2
+k = +1, 0 and 1, respectively. a spacetime that is locally the same as antide sitter space is recovered when =0
+for which the metric reduces to that in eqn. (5).
+
+by going to the euclidean section one nds that the euclidean time period (the inverse temperature) has to be
+
+ =
+
+4l2r+
++ + k(n  2)l2 .
+
+nr2
+
+(24)
+
+here, r+ is the largest positive root of v (r), typically associated to the outer horizon of a black hole. for k=1 and
+=0 (global ads), there is no such root, but the correct results are obtained by setting r+=0. now, it is important
+to notice that, whereas for k={1, 0}, the locally ads solution corresponds to r+=0, this is not true for k=  1. ads
+space with hyperbolic slicing has a bifurcate killing horizon at r=l, and a xed temperature =2l. by contrast,
+there exists an extremal k=1 solution, with a degenerate horizon at r=re and parameter =e, satisfying
+
+(25)
+
+(26)
+
+(27)
+
+(28)
+
+re =r n  2
+
+n
+
+l ,
+
+e = 
+
+2
+
+n  2(cid:18) n  2
+
+n (cid:19)n/2
+
+ln2.
+
+in particular,
+
+e = 
+
+2l
+33
+
+,
+
+re =
+
+l
+3
+
+,
+
+for n = 3 ,
+
+e = 
+
+l2
+4
+
+e = 
+
+4l4
+27
+
+,
+
+,
+
+,
+
+re =
+
+l
+2
+re =r 2
+
+3
+
+for n = 4 ,
+
+l,
+
+for n = 6 .
+
+therefore, in a calculation for k=1 of the action, with background matching, the question arises concerning which
+is the correct background to subtract: on the one hand, the locally ads solution which has the higher symmetry
+might be physically appealing. however, since its period  is xed, matching it to a solution with a dierent value of
+ would introduce a conical singularity at the horizon [11]. on the other hand, the extremal solution, with a lower
+value of  (and as we will see, of the energy), has arbitrary  and therefore can be matched to any other solution.
+hence, the extremal solution was the preferred background for the matching calculations in refs. [1113].
+
+it is clear from this discussion that the method of counterterm subtraction can be of help here. for the solutions
+
+described above we obtain:
+
+8
+
+ik,n+1 =
+
+=
+
++ +
+
+k,n1
+
+8gl2 (cid:18)rn
+16gl2 (cid:18)krn2
+
+l2
+2 
++ l2  rn
+
+k,n1
+
+k
+2
+
+l2n,2 +
+
++  kl2n,2 +
+
+5k
+16
+
+3k2
+l4n,4 
+8
+3k2
+l4n,4 
+4
+
+l6n,6 + . . .(cid:19)
+l6n,6 + . . .(cid:19) ,
+
+5k
+8
+
+(29)
+
+where again k,n1 is the (dimensionless) volume associated with the unit metric d2
+compute the energy and entropy of the solutions by application of standard thermodynamical formulas. one nds
+
+k,n1/l2. using eqn.(29) we can
+
+where we denote by
+
+e =
+
+(n  1)k,n1
+
+16g
+
+ + e0
+
+k ,
+
+e0
+
+k =
+
+k,n1
+
+16g (cid:18)kn,2 +
+
+3k2
+4
+
+l2n,4 
+
+5k
+8
+
+l4n,6 + . . .(cid:19) ,
+
+(30)
+
+(31)
+
+the terms that are independent of the black hole parameters (e.g., of the temperature). their contribution to the
+action is therefore of the form e0
+
+k. note that on can extrapolate this casimir energy to
+
+for arbitrary even n using eqn. (21).
+
+the entropy,
+
+e0
+
+k =
+
+k,n1
+8g
+
+(k)n/2 (n  1)!!2
+
+n!
+
+ln2 ,
+
+s =
+
+k,n1rn1
+
++
+
+4g
+
+,
+
+(32)
+
+(33)
+
+satises the area law, and is independent of the extra terms e0
+as in a background calculation.
+
+k. not surprisingly, the result is therefore the same
+
+curiously, the results for n=3 and n=4 show dierent qualitative features. for n=3 the result that we obtain
+is the same as one would obtain by performing a background subtraction from the locally ads4 solution neglecting
+the conical singularity that would appear for k=1. this is rather similar to what we will nd for tnads in the
+next section: the method of counterterm subtraction appears to reproduce the results of an imperfect matching
+calculation. as a result, the extremal solution (26) has negative energy, whereas the locally ads solution, with =0,
+has vanishing action and energy.
+
+by contrast, the result for the hyperbolic n=4 black holes supports the opposite scenario! the action (29) in this
+case reproduces precisely that obtained by taking the extremal state (27) as the reference state, and not the locally
+ads state (notice that i=0 for the values in eqn. (27)). for n=4 and k=1, the energy (30) of the extremal state
+vanishes, a conrmation that this is to be taken as the ground state of the theory. the term e0
+k is independent of the
+black hole parameters (e.g. the temperature), and its contribution to the action is therefore simply of the form e0
+k.
+for k=1 this term has been identied in ref. [18] as precisely the casimir energy associated to n =4 superyang
+mills theory on the static einstein spacetime irs3, which is the spacetime obtained as the boundary of ads in
+this case. this agreement is a striking outcome of the counterterm subtraction method. notice that the interpretation
+as a casimir energy is the only possible one, given that the ads solution is the one with the lowest action and energy
+among that familyi.e., it is the ground state.
+
+we would like to see whether a similar correspondence holds for k=1. in this case it is crucial to notice that the
+ground state is not the locally ads solution. the latter should be regarded as an excited state of the system. the
+ground state is the extremal solution, which has zero energy. by translating this into the ads/cft correspondence
+we would not expect to nd a casimir energy for the eld theory calculations on the open static universe irh 3.
+indeed, the eective action and renormalized stressenergy tensor for conformal elds vanish on that space (see, e.g.,
+ref. [26]). this is in perfect agreement with the zero energy results that we nd for the ground state (27) of the theory.
+there are, however, some aspects that are in need of further exploration. in particular, from the entropy formula
+we see that for k=1, not only the does locally ads solution have nonzero entropy, but so does the extremal ground
+state. in particular, for n=4,
+
+sext =
+
+k=1,3l3
+
+27/2g
+
+.
+
+9
+
+(34)
+
+in this respect, this ground state bears resemblance to the extremal black hole ground state state discussed in [29],
+which had nonvanishing entropy as well. it is of great interest to understand this result (34) from a eldtheoretical
+point of view. the precursor states of ref. [30] constructed in standard eld theory might be extremely relevant
+to such a discussion. as proposed in ref. [30], these are degrees of freedom that do not contribute to the energy
+density, although they store information. this looks precisely like what is needed to account for an entropy like we
+have found in (34). perhaps the entropy of this ground state and the one presented in ref. [29] represents the count
+of the number of precursor degrees of freedom in the eld theory.
+
+for black holes in ads6 (i.e., n=5, and in fact, all odd values of n) the conclusions are essentially the same as in
+ads4. however, the situation for ads7 is somewhat enigmatic. in this case, the action does not vanish either for the
+extremal black hole or for the locally ads solution! also, the energy is nonzero for both. perhaps this is consistent
+with yet to be understood properties of the (2, 0) superconformal eld theory that resides on the worldvolume of the
+m5brane [33].
+
+finally, it is of interest to note that because the small schwarzschild black holes (in the sense of ref. [7]) survive
+the l limit, (i.e., the cosmological constant goes to zero), the surface counterterm subtraction method supplies
+results for the action, energy and entropy for ordinary schwarzschild black holes. for odd n, these results coincide
+precisely with those obtained by the background subtraction method, using minkowski spacetime as a reference. for
+even n, the results would again coincide with the standard results in asymptotically at space, except for the constant
+contribution of the casimir energy (32) (and the analogous term in the action). in this case because for n  4 this
+energy is proportional to ln2, it becomes an innite constant in the limit l. we will see that this ability to take
+the at space limit occurs for other interesting solutions in the next section, and allows us to address and resolve
+certain situations which were fraught with uncertainties and/or ambiguiuties in the literature.
+
+v. the antide sitter nutcracker
+
+as we mentioned in the introduction, the issue of choosing a correct reference state for background subtraction has
+been a matter of some controversy for taubnut and taubbolt solutions, in the asymptotically locally at situation
+[24,25] as well as in the asymptotically locally ads case [14,15].
+
+note that in this section n will be used to denote the nut charge, not the number of dimensionswe will only
+
+deal with fourdimensional solutions.
+
+a. spherical nuts and bolts
+
+the taubnutantidesitter (tnads) solution is
+
+ds2 = v (r)(d + 2n cos d)2 +
+
+dr2
+v (r)
+
++ (r2  n2)(d2 + sin2 d2) ,
+
+where
+
+v =
+
+(r2 + n2)  2mr + l2(r4  6n2r2  3n4)
+
+r2  n2
+
+.
+
+(35)
+
+(36)
+
+here we will simply sketch some of the features of the solution. for a detailed analysis we refer the reader to ref. [14].
+if n=0 we recover the schwarzschildads solutions with m as a mass parameter. the analytically continued time,  ,
+parameterizes a circle, s1, which is bred over the two sphere s2, with coordinates  and . the nontrivial bration
+is a result of a nonvanishing nut charge n. as a result, the boundary as r is described as a squashed
+threesphere, where 4n2/l2 parameterizes the squashing.
+
+euclidean regularity of the solution restricts the period of  to be
+
+=8n .
+
+(37)
+
+in addition, the mass parameter has to be restricted so that the xed point set of the killing vector  at radial
+position r=r+ is a regular one. hence one nds nut or bolt solutions, depending on whether the xed point set
+is zero or two dimensional, respectively. in particular, for nut solutions
+
+10
+
+r+ = n,
+
+mn = n 
+
+4n3
+l2
+
+.
+
+(38)
+
+in what follows, by tn-ads we will mean the taubnutads solutions with this particular value of m. notice
+that mn vanishes for the value n=l/2. it was shown in ref. [14] that for this particular value the solution is precisely
+ads4, with the slicing in which the sections at constant r are round threespheres. in contrast, the solution with
+n=m=0 corresponds to ads4 with slices of geometry s1s2. for taubboltads (tbads) the expressions are
+more complicated [14]:
+
+mb =
+
+b + n2
+r2
+2rb
+
++
+
+1
+
+2l2(cid:18)r3
+
+b  6n2rb  3
+
+r+ = rb =
+
+l2
+
+12n 1 r1  48
+
+n2
+l2 + 144
+
+n4
+
+rb(cid:19) .
+l4! .
+
+n4
+
+(39)
+
+(40)
+
+for rb to be real the discriminant must be nonnegative. furthermore we must take the part of the solution which
+corresponds to rb>n. this gives:
+
+n   1
+
+6 
+
+2
+
+12! 1
+3
+
+l .
+
+(41)
+
+it is only for this range of parameters that one can construct real euclidean tbads solutions. notice, in particular,
+that the ads value l=2n lies outside this range.
+
+in refs. [14,15], the action of the tbads solutions was computed by matching the solutions to a tnads solution
+with the same value of the nut charge. the thermodynamics of tbads solutions were then found to be rather similar
+to that of schwarzschildads black holes. however, this method precluded an analysis of the tnads solutions by
+themselves, since they acted as reference states. a completely rigourous calculation of the action of tnads could
+not be performed using the reference background method, simply because it is not possible to match pure ads
+(the intuitively obvious candidate background) to tnads, as they have incompatible slices for all n except n=l/2.
+equipped with the counterterm subtraction procedure, we can now compute the action for tnads, without any
+reference to a background.
+with
+
+(42)
+
+(43)
+
+h =pv (r)(r2  n2) sin  ,
+
+r =
+
+2
+
+r2  n2 
+
+2n2
+
+(r2  n2)2 v (r) ,
+
+we nd, for a solution with generic values of m and n
+
+i =
+
+4n
+
+gl2 (cid:0)l2m + 3n2r+  r3
++(cid:1) ,
+
+where, as we said above, r+ is the minimum possible value of r, where there is a xed point of the killing vector  .
+there are several things to note about this result. the rst is a consistency check: if we subtract the values we
+obtain for the tbads and tnads solutions, ibolt  inut, we recover (after some algebra), the result obtained in
+refs. [14,15] for the action of tbads with tnads as a reference. of course this consistency is to be expected in
+general. the standard background subtraction requires the asymptotic geometry of the solution and its reference
+state match. hence the counterterms which depend only on the intrinsic boundary geometry must be equal, and will
+cancel if one takes the dierence of the counterterm subtracted actions.
+
+next, in the at space limit l we obtain
+
+in particular, in this limit we nd
+
+i 
+
+4nm
+
+g
+
+.
+
+inut 
+
+4n2
+
+g
+
+,
+
+ibolt 
+
+5n2
+
+g
+
+.
+
+11
+
+(44)
+
+(45)
+
+these are precisely the results that were obtained in ref. [24] by an imperfect match of the taubnut solution to
+euclidean minkowski space. indeed, the same imperfect match to ads can be seen to reproduce the result (43)
+above. even if it is not possible to match the squashed s3 at the boundary to the boundary of ads4 with the slicing
+s1s2, a nite result can nevertheless be obtained by neglecting the nontrivial bering and performing a standard
+background subtraction. proceeding this way the bulk (volume) term yields, at large r
+
+ibulk =
+
+4n
+
+gl2 (cid:0)l2m + 3n2r+  r3
++(cid:1) +
+
+n3r
+gl2 + o(1/r) .
+
+(46)
+
+in contrast to other action calculations in ads, the bulk term, even after subtraction, is not nite by itself, rather
+one needs to take into account the gibbonshawking boundary term:
+
+isurf = 
+
+1
+
+8gzm
+
+d3xh(k  k0) = 
+
+n3r
+gl2 + o(1/r) .
+
+(47)
+
+by adding (46) and (47) and taking r   we therefore recover eqn. (43).
+
+we therefore conclude that the fact that the match to the background is an imperfect one does not appear to be as
+bad as it looks at rst sight. certainly, the result (44) of ref. [24] in the alf limit is on a better standing after having
+recovered it from a counterterm calculation.
+
+now we return to the result (43), and specialize to nut solutions using eqn.(38):
+
+itnads =
+
+4n2
+
+g (cid:18)1 
+
+2n2
+
+l2 (cid:19) .
+
+(48)
+
+for n=l/2 we recover the value for ads4 with boundary s3, which will be obtained and discussed in section vi,
+whereas for n=0 we recover the value (zero) for ads4 with boundary s1s2. again, these special cases may be
+regarded as consistency checks on the internal consistency of our implementation of the procedure.
+notice that the action becomes negative for n>n0=l/2. more interestingly, being able to vary the value of the
+
+euclidean period =8n we can compute the energy of the solutions,
+
+e = i =
+
+mn
+g
+
+,
+
+(49)
+
+which conrms the interpretation of m as a mass parameter. we may go further and compute the entropy and specic
+heat:
+
+s = i  i =
+
+c = s =
+
+6n2
+
+4n2
+
+g (cid:18)1 
+g (cid:18)1 + 12
+
+l2 (cid:19) ,
+l2(cid:19) .
+
+8n2
+
+n2
+
+(50)
+
+(51)
+
+as had been already noticed in ref. [14], the mass (energy) becomes negative for n>l/2. more strikingly, the entropy
+becomes negative for n>l/6! in particular, the entropy of ads4 (n=l/2) is negative (equal to minus its action,
+since it has e=0). whereas a negative mass may not be too troublesome (one may shift the energy scale), a negative
+entropy certainly would appear to be a sign of pathological behavior.
+
+in ref. [31] it was pointed out that in spaces where euclidean time is nontrivially bered there appeared a contri-
+bution to the entropy other than the usual one coming from the bolts (the latter yields the black hole area law). this
+extra entropy can be associated to misner strings [32] (a geometric analog of dirac strings), and we would expect it
+to contribute to the entropy of tnads. indeed, in the absence of a bolt this appears to be the only possible source
+of gravitational entropy for the tnads solution. however, the area of the misner strings in tnads is innite, so
+it seems dicult to relate it to the expression we obtained in eqn. (50).
+the fact that the specic heat becomes negative for n<l/12 is an indication that the solutions become thermally
+unstable, making them unusable for equilibrium thermodynamics7 (in the canonical ensemble). so if we declare that
+
+7nevertheless, a negative specic heat is not so bad as a negative entropy; as a matter of fact, as is well known, the schwarzschild
+black hole in asymptotically at space has negative specic heatand so does the alf taubnut solution.
+
+12
+
+the physically relevant solutions are those with both positive entropy and positive specic heat, then the valid range
+for the nut charge is
+
+l
+12  n 
+
+l
+6
+
+.
+
+(52)
+
+solutions in this range have positive action and positive energy.
+
+finally, we note that the results for the energy, entropy and specic heat of tbads can be recovered by combining
+
+those for tnads above, and those for tbads with the tnads subtraction in ref. [14].
+
+b. remarks upon field theory on squashed threespheres
+
+as discussed in ref. [14,15], the study of solutions with nut charge which are locally asymptotically ads is relevant
+to the 2+1 dimensional exotic [34] conformal eld theories which live on the world volume of m2branes (and
+closely related theorie)8), after placing them on squashed threespheres. following that work, in ref. [35] the eective
+actions of various elds on squashed threespheres have been computed.
+
+we do not expect to see in those particular eld theory results any signal of the apparently pathological behaviour
+(e.g., negative entropy) which we have found, and indeed we do not. the diculty essentially lies in the fact that the
+eld theory results can only be used at weak coupling, whereas supergravity is describing a strongly coupled regime
+of the eld theory. the unusual behaviour belongs only to the low temperature phase of the eld theory, and strong
+coupling eects change the picture drastically. recall the phase structure described in ref. [14]:
+
+ at high t (small n) we have both tnads and tbads as possible solutions, but the latter has the lower free
+energy, and is therefore preferred. it was shown in ref. [14] that at high t , tbads gives the expected behaviour
+f  t 3 which, not surprisingly, is the result found in ref. [35]. this is a deconned phase.
+ at low t (large n), however, the only existing phase is tnads. there is a phase transition separating this regime
+from the deconned phase mentioned above. this phase transition prevents us from obtaining information from the
+results in ref. [35], since at weak coupling, where those results were obtained, one does not get the conned phases.
+it is in this large n region that the entropy becomes negative. in fact, all of the negative entropy regime is within the
+region where the only regular solution is tnads: tbads is absent there.
+
+so we discover that the supergravity studies give us new information on the strongly coupled phases of the theory
+
+on the worldvolume of the m2brane, and related theories, after compactication on squashed threespheres.
+
+c. flat and hyperbolic taubnutads
+
+a solution where the nuts and bolts are at planes instead of spheres can be found as well, and was analyzed in
+
+ref. [14],
+
+where now,
+
+ds2 = v (r)(cid:16)d +
+
+n
+
+l2 (xdy  ydx)(cid:17)2
+
++
+
+dr2
+v (r)
+
++
+
+r2  n2
+
+l2
+
+(dx2 + dy2) ,
+
+v = 2mr + l2(r4  6n2r2  3n4)
+
+r2  n2
+
+.
+
+(53)
+
+(54)
+
+the bration is in this case a trivial one, and as a result the euclidean period  is independent of n. zero dimensional
+xed point sets of  (nuts) exist for mn=  4n3
+l2 . solutions with bolts have a higher value of m. the result for the
+counterterm calculation of the action for a solution with generic m and n is
+
+8recall there is a problem with the spin structure of tbads, and so the mtheory interpretation is unclear [14], although
+there is almost certainly a dual cft nonetheless.
+
+13
+
+i =
+
+l2
+
+8gl2(cid:0)ml2  r3
+
++ + 3n2r+(cid:1) ,
+
+where, as usual, r+ is the radial position of the xed point set (r+=n for a nut), and l2 accounts for the area of the
+(x, y) plane, l/2{x, y}l/2. it can be easily checked that the action of ref. [14], where the nut solution was taken
+as a reference background, can be recovered from (55) as i(bolt) i(nut). moreover, (55) is the same result we would
+obtain had we performed a background subtraction calculation with imperfect matching to ads4 (the latter in its
+at incarnation as n=m=0 in eqn.(53)). we note that for the nut values the action is negative, which reects the
+fact that its energy is negativeits entropy vanishes, as could have been expected in the absence of bolts or misner
+strings, so in fact we nd inut=enut.
+
+the last possibility is that of having hyperbolic xed point sets of  . the explicit solution is
+
+ds2 = v (r)(d + 2n(cosh   1)d)2 +
+
+dr2
+v (r)
+
++ (r2  n2)(d2 + sinh2 d2) ,
+
+with
+
+v = (r2 + n2)  2mr + l2(r4  6n2r2  3n4)
+
+r2  n2
+
+.
+
+(56)
+
+(57)
+
+the bration is trivial, and, again, there are no misner strings. however, it was found in ref. [14] that there are no
+hyperbolic nuts.: it is not possible to make r=n into a regular xed point of  . nevertheless, bolt solutions can be
+constructed. this is rather analogous to the situation we encounter for hyperbolic black holes in sec.iv. the result
+for the action is again formally very similar to (43) and (55),
+
+(55)
+
+(58)
+
+i =
+
+
+
++(cid:1) ,
+8gl2(cid:0)l2m + 3n2r+  r3
+
+where  is the area of the hyperbolic space (if quotients of h 2 are taken to yield surfaces of genus g>1 (this is not
+essential) then =4(g1)).
+
+vi. ads revisited
+
+many of the quantities we have been computing can be translated into eld theory results by using the dictionary
+
+provided by the ads/cft correspondence [2,36], namely,
+
+c =
+
+3l
+2g
+
+for ads3 , n 3/2 
+
+l2
+g
+
+for ads4 , n 2 =
+
+l3
+2g
+
+for ads5, n 3 
+
+l5
+g
+
+for ads7 ,
+
+(59)
+
+where c is the central charge of the dual cft in two dimensions. the powers of n displayed above are measures
+of the number of unconned degrees of freedom: for ads5, n is the rank of the gauge group of the dual n =4
+supersymmetric four dimensional su (n ) yangmills theory. meanwhile, for ads4 and ads7, the dual eld theories
+are the ones [33,34] that describe the worldvolume dynamics of n parallel m2branes, and m5branes, respectively.
+the details of these latter two theories are still rather indirectly and poorly understood, and the precise numerical
+relationship between factors (missing in eqn.(59) for these cases) will not be needed here, as we will make no precise
+numerical comparison. while there is almost certainly a dual conformal eld theory for the case of ads6, we will not
+comment upon it further. note again that ads for all of the dimensions listed arecases that can be handled with the
+counterterms that we now have.
+
+in section iii, we considered the counterterm action for ads with the boundary geometries s1m n1
+
+. in those
+cases, the action is nite and interestingly for even n, an extra contribution appears of the form e0
+k is a
+constant energy  see eqn. (32) in section iv. this constant energy is readily interpreted in the dual eld theory as
+a casimir energy of the conformal eld theory on s1m n1
+k  see ref. [39] for another discussion of casimir energies
+in the ads/cft correspondence. we can consider these results for n=2, 4 in more detail: the well known casimir
+energy of (1+1) dimensional cft when going from the innite plane to the cylinder irs1 is reproduced by the term
+n=2 in eqn. (32). similarly, the casimir energy of four dimensional yangmills theory on irs3 is precisely the value
+of e0
+
+k where e0
+
+k
+
+k=+1 for n=4 [18].
+
+14
+
+we found there as well that for the theory on irh 3, even if e0
+
+k=16=0, the result is consistent with the absence
+of a casimir energy after identifying correctly the ground state of the theory. we remarked as well upon the striking
+appearance of a nonzero entropy for this ground state, which strongly suggests the presence of degrees of freedom
+which can contribute to the entropy but not to the energy density, just like the precursor states identied in ref. [30].
+(this also reminds us of the nonzero entropy extremal ground state studied in ref. [29].)
+
+we can translate some of our results for the cases of ads4 and ads7 as well, nding that the casimir energies
+derived by using eqn.(59) are correctly proportional to the number of degrees of freedom in the theory, as can be
+deduced from the power of n which appears in each case: the scaling with n is precisely the same as had been
+obtained from computations of black brane entropies [37].
+
+let us now consider adsn+1 with boundary geometries sn and h n as described by the metrics in eqn. (7). in order
+to notationally distinguish them from the family s1mk, we will denote them with a 
+k. the results for the action
+are somewhat more complicated to express for generic n in an explicit form. for the three contributions (the bulk
+term, the gibbonshawking surface term, and the counterterm action) we nd
+
+i 
+bulk =
+
+nk,n
+
+8gl z r
+
+r+
+
+dr
+
+rn
+
+r2 + kl2
+
+,
+
+(60)
+
+which can be expressed in terms of hypergeometric functions, but we will only need its expansion for large r. the
+lower integration limit is r+=0 for k=+1, 0, and r+=l for k=1.
+
+i 1
+ct =
+
+(n  1)k,n
+
+8gl
+
+rn ,
+
+i 2
+ct =
+
+(n  1)k,n
+
+8gl
+
+rn(cid:18)
+
+n
+
+2(n  2)
+
+i 
+surf = 
+
+nk,n
+8gl
+
+rnr1 + k
+r2 (cid:19) ,
+
+kl2
+
+l2
+r2 ,
+
+(61)
+
+i 3
+ct =
+
+(n  1)k,n
+
+8gl
+
+rn(cid:18)
+
+n
+
+8(n  4)
+
+k2l4
+
+r4 (cid:19) , (62)
+
+where we have separated the contributions of the individual terms in the counterterm action (17), as was done in
+eqn. (18). again the limit r remains to be taken. our counterterms allow us to deal with n=2, . . . , 6. we
+therefore nd for i 
+
+k,n+1
+
+i 
+k,3 = k
+
+lk,2
+
+16g(cid:18)1 + 2 log
+
+2r
+
+l (cid:19) ,
+
+k,5 = k2 3l3k,4
+i 
+
+64g (cid:18)1 + 4 log
+
+2r
+
+l (cid:19) ,
+
+i 
+k,7 = k
+
+i 
+k,4 =
+
+l2k,3
+4g
+
+k,+1 ,
+
+i 
+k,6 = 0 ,
+
+5l5k,6
+
+64g (cid:18) 5
+
+4  3 log
+
+2r
+
+l (cid:19) , (63)
+
+(64)
+
+where we have omitted contributions which vanish in the limit r. here the most striking result is that for
+even n, (63) there remain logarithmically divergent contributions from the bulk terms that are not cancelled by the
+boundary counterterms. furthermore given their logarithmic nature, there is no way that they can be cancelled by a
+counterterm which is a local integral over the boundary of a curvature invariant. the appearance of these divergences
+then presents a limitation for the utility of the counterterm subtraction technique for investigations of asymptotically
+ads solutions in odd dimensions.
+
+however, these divergences do not signal a problem for the ads/cft correspondence, but rather provide a remark-
+able consistency check. the possible existence of logarithmic divergences for odd spacetime dimensions was noted
+in refs. [4,17], where the coecients of the divergent terms were related to the conformal anomaly in the dual eld
+theory. it is a standard result of eld theory in curved spacetime [26,40] that the appearance of a conformal anomaly
+in a classically conformally invariant theory is due to logarithmic uv divergences (at least at the oneloop level)
+appearing in the quantum eld theory. thus we have the uv/ir relation [41] of the ads/cft correspondence at
+work here: the appearance of an innite volume singularity in the ads calculation is a reection of the existence of a
+uv divergence in the cft.
+
+further, if we make the association of the ads radius with an energy scale, we see that the divergence is logarithmic
+as required by the eld theory. for n=4, it is straightforward to verify that in fact the n =4 sym theory has a
+conformal anomaly on s4 or h 4, and further a perturbative weak coupling calculation reveals a logarithmic singularity
+in the eective action for the background metric at oneloop [40,38]. that is, despite the remarkable niteness
+properties of n =4 sym to higher loops in at space [42], in curved spacetimes the n =4 supersymmetry is only
+
+15
+
+enough to protect against potential quadratic and linear divergences.
+in general though, there is the possibility
+of oneloop logarithmic divergences. one can show though that for the n =4 sym theory, the coecient of these
+divergent terms will always vanish on product space geometries [38]. this is consistent with the fact that no logarithmic
+singularities were found in the actions (20) for the boundary geometries s1mk.
+let us now write some of these results in terms of eld theory parameters. the result for n=4 should be related
+to n =4 supersymmetric fourdimensional yangmills theory on static de sitter space (s4) or antide sitter space
+(h 4). we nd a pleasingly simple result,
+
+i 
+
+k,5 = k2 n 2
+
+4 (cid:18)1  4 log
+
+2r
+
+l (cid:19) .
+
+(65)
+
+note the fact that the action does not change sign when going from s4 to h 4 (i.e., k=+1  k=1) has its counterpart
+in the eld theory in the fact that the divergent term in the eective action is given by curvature squared terms. in
+fact, this result generalizes to no sign change for n=4k where the conformal anomaly is proportional to the 2k power
+of curvatures, and a change of sign for n=4k+2, where the relevant power is 2k+1 [40].
+
+the nite part for the action would be expected to follow from eldtheoretical calculations as well. the scaling n 2
+is just expected from the number of degrees of freedom of the theory, and the absence of any other factors follows
+from dimensional arguments. related to this is the fact that the trace anomaly < t c
+c > can be computed exactly
+within the ads/cft correspondence [17]. having that, the full stress tensor follows in this case since the symmetry
+of the geometry will dictate that < tab >= hab < t c
+c > /n. therefore, it is not surprising that a calculation of the
+stress tensor in the manner described in ref. [18] reproduces this result.
+
+for ads3 we can write the result as
+
+i 
+k,3 = k
+
+c
+
+6|g1|(cid:18)1 + 2 log
+
+2r
+
+l (cid:19) .
+
+(66)
+
+where g is the genus of the twodimensional boundary surface, i.e., for the hyperbolic case we have taken quotients
+by discrete groups in order to nd genus g surfaces (this is not essential). this is the result for the casimir energy of
+the (1+1) dimensional conformal eld theory on a surface of genus g.
+
+in the same vein, we would expect that the presence of a logarithmic running factor for ads7 can be interpreted in
+
+terms of the eective eld theory for the m5brane when dened on six dimensional de sitter space.
+
+it is clear that in the present paper we have only scratched the surface of the full subject, and more detailed and
+extensive comparisons between the results of euclidean quantum gravity and the dual eld theories are possible. we
+hope to report on progress on this in the future.
+
+acknowledgments
+
+re is supported by epsrc through grant gr/l38158 (uk), and by grant upv 063.310eb187/98 (spain).
+support for cvjs research was provided by an nsf career grant, #phy9733173. rcms research was supported by
+nserc (canada) and fonds fcar du quebec. this paper is report #s dtp99/21, uk/9904 and mcgill/9912.
+we would like to thank vijay balasubramanian, cli burgess, andrew chamblin, ivo sachs and joe straley for
+comments and useful conversations.
+
+references
+
+[1] e. witten, adv. theor. math. phys. 2 (1998) 253, hep-th/9802150.
+[2] j. maldacena, adv. theor. math. phys. 2 (1998) 231, hep-th/9711200.
+[3] s. s. gubser, i. r. klebanov, and a. m. polyakov, phys. lett. b428 (1998) 105, hep-th/9802109.
+
+16
+
+[4] e. witten, adv. theor. math. phys.2 (1998) 505, hep-th/9803131.
+[5] v. balasubramanian, p. kraus and a. lawrence, phys. rev. d59 (1999) 046003, hep-th/9805171;
+
+v. balasubramanian, p. kraus, a. lawrence and s.p. trivedi, hep-th/9808017.
+
+[6] g.w. gibbons and s.w. hawking, phys. rev. d15, 2752 (1977);
+
+s.w. hawking, in general relativity, eds. s.w. hawking and w. israel (cambridge university press, 1979).
+
+[7] s.w. hawking and d.n. page, commun. math. phys. 87, 577 (1983).
+[8] s.w. hawking and g.t. horowitz, class. quant. grav. 13 (1996) 1487, gr-qc/950101.
+[9] r.b. mann, class. quant. grav. 14, l109 (1997) gr-qc/9607071.
+
+[10] d.r. brill, j. louko and p. peldan, phys. rev. d56, 3600 (1997) gr-qc/9705012.
+[11] l. vanzo, phys. rev. d56, 6475 (1997) gr-qc/9705004.
+[12] r. emparan, phys. lett. b432, 74 (1998) hep-th/9804031.
+[13] d. birmingham, to appear in classical and quantum gravity, hep-th/9808032.
+[14] a. chamblin, r. emparan, c.v. johnson and r.c. myers, phys. rev. d59, 064010 (1999) hep-th/9808177.
+[15] s.w. hawking, c.j. hunter and d.n. page, phys. rev. d59, 044033 (1999) hep-th/9809035.
+[16] c. feerman and c.r. graham, conformal invariants, elie cartan et les mathematiques daujourdhui (asterisque,
+
+1985) 95.
+
+[17] m. henningson and k. skenderis, jhep 07, 023 (1998) hep-th/9806087; hep-th/9812032.
+[18] v. balasubramanian and p. kraus, hep-th/9902121.
+[19] s. hyun, w.t. kim and j. lee, phys. rev. d59, 084020 (1999) hep-th/9811005.
+[20] l.f. abbott and s. deser, nucl. phys. b195, 76 (1982).
+[21] r. arnowitt, s. deser and c. misner, in gravitation: an introduction to current research, ed. l. witten, wiley, new
+
+york (1962).
+
+[22] j.d. brown and j.w. york, phys. rev. d47, 1407 (1993).
+[23] d. kramer, e. herlt, m. maccallum and h. stephani, exact solutions of einsteins field equations, ed. e. schmutzer,
+
+cambridge university press, 1979.
+
+[24] g.w. gibbons and m.j. perry, phys. rev. d22, 313 (1980).
+[25] c.j. hunter, phys. rev. d59, 024009 (1999) gr-qc/9807010.
+[26] n.d. birrell and p.c.w. davies, quantum elds in curved space, cambridge university press, cambridge (1982).
+[27] r.b. mann, hep-th/9903229.
+[28] r.m. wald, general relativity, the university of chicago press, chicago (1984).
+[29] a. chamblin, r. emparan, c.v. johnson and r.c. myers, in preparation.
+[30] j. polchinski, l. susskind, and n. toumbas, hep-th/9902182.
+[31] g. w. gibbons and s. w. hawking, commun. math. phys. 66 (1979) 291.
+[32] c. misner, jour. math. phys. 4 (1963) 924.
+[33] e. witten, hep-th/9507121.
+
+a. strominger, phys. lett. b383, 44 (1996) hep-th/9512059.
+
+[34] s. sethi and l. susskind, phys. lett. b400, 265 (1997) hep-th/9702101.
+t. banks and n. seiberg, nucl. phys. b497, 41 (1997) hep-th/9702187.
+
+[35] j.s. dowker, hep-th/9812202.
+[36] j.d. brown and m. henneaux, commun. math. phys. 104, 207 (1986).
+[37] i.r. klebanov and a.a. tseytlin, nucl. phys. b475, 164 (1996) hep-th/9604089.
+[38] c. burgess, r.c. myers, and n.r. constable, unpublished.
+[39] g.t. horowitz and r.c. myers, phys. rev. d59, 026005 (1999) hep-th/9808079;
+
+r.c. myers, hep-th/9903203.
+
+[40] see m.j. du, class. quant. grav. 11, 1387 (1994) hep-th/9308075, and the references therein.
+[41] l. susskind and e. witten, hep-th/9805114.
+[42] m. grisaru, m. rocek and w. siegel, nucl. phys. b183 (1981) 141; phys. rev. lett. 45 (1980) 1063;
+
+s. mandelstam, nucl. phys. b213 (1983) 149;
+l. brink, o. lindgren and b.e.w. nilsson, nucl. phys. b212 (1983) 401.
+
+17
+
+

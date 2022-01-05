@@ -1,0 +1,2285 @@
+9
+9
+9
+1
+
+ 
+
+n
+u
+j
+ 
+
+8
+1
+
+ 
+ 
+
+1
+v
+4
+4
+1
+6
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+heat kernel asymptotics with mixed boundary
+
+conditions
+
+thomas p. branson, peter b. gilkey,
+
+klaus kirsten, and dmitri v. vassilevich
+
+february 1, 2008
+
+abstract
+
+we calculate the coecient a5 of the heat kernel asymptotics for
+an operator of laplace type with mixed boundary conditions on a
+general compact manifold.
+
+1 introduction
+
+let v be a vector bundle over a smooth compact riemannian manifold m of
+dimension m with smooth boundary m. let d be a second order operator
+of laplace type on c (v ); this means the leading symbol of d is given by
+the metric tensor, or equivalently, that d has the form given in equations
+(1) and (2) below. note that many natural second order operators which
+arise in applications are of laplace type.
+if the boundary is non-empty,
+then we must impose suitable boundary conditions. we assume given a
+decomposition v |m = vn  vd; extend the decomposition to be parallel
+with respect to the normal geodesic rays on a collared neighborhood of the
+boundary. let s be an auxiliary endomorphism of the bundle vn and let ;m
+
+research partially supported by the esi (austria), ihes (france), and the nsf (usa)
+research partially supported by the dfg under contract number bo1112/4-2 and the
+
+epsrc under grant no gr/m45726
+
+research partially supported by the alexander von humboldt foundation (germany),
+
+ictp (italy) and gracenas (russia)
+
+1
+
+be the covariant derivative of   c (v ) with respect to the inward unit
+normal. decompose  = n  d and set
+b := d|vd  (n
+
+;m + sn )|vn .
+
+dirichlet boundary conditions correspond to vanishing vn ; robin (i.e. modi-
+ed neumann) boundary conditions correspond to vanishing vd. let db be
+the realization of d;   domain(db) if and only if b = 0. this is an ellip-
+tic boundary value problem and satises the lopatinski-shapiro condition.
+let f be an auxiliary smooth function on m, for use in localization or
+smearing. let etdb be the fundamental solution of the heat equation; this
+is trace class on l2(v ) and as t  0, there is an asymptotic expansion:
+
+trl2(f etdb) = xn0
+
+t(nm)/2an(f, d,b);
+
+see [11, 12, 16] for details. the invariants an(f, d,b) are locally computable
+in terms of geometric invariants and form the focus of our study.
+the study of these invariants can be physically motivated. consider a
+eld theory in which d denes the quadratic form of the action; see, for
+example [9]. we note that consistent local boundary conditions for elds
+of non-zero spin are inevitably mixed ones. the one-loop eective action is
+(formally) given by log det(d). the heat kernel coecients up to am de-
+scribe ultraviolet divergencies of the theory. the coecient am also denes
+the scale anomaly. the leading term in the large mass expansion of the ef-
+fective action is given by am+1; the lower coecients are usually absorbed
+in renormalizations. variations of the heat kernel coecients give vacuum
+expectation values of currents, see [4] for example. the study of these coe-
+cients is important for renormalization and calculation of anomalies in higher
+dimensional models [17], and for large mass expansion and calculation of cur-
+rents in four dimensions.
+
+mckean and singer [14] studied the invariants a0, a1, and a2. kennedy
+et al. [10] studied the invariant a3. moss and dowker [15] studied a4 for
+the scalar laplacian. branson and gilkey [1] determined a4 in the vector
+valued case; a minor error in the calculation of two of the coecients was
+later corrected by vassilevich [18]. these results are summarized in theorem
+2.1. many other authors have also studied these coecients.
+
+we say the boundary conditions are pure if vn or vd vanishes. the
+coecient a5 has been determined previously for pure boundary conditions.
+branson, gilkey and vassilevich [3] studied the special cases of a domain m
+in at space and of a curved domain with totally geodesic boundary. kirsten
+[13] generalized these results to arbitrary manifolds and boundaries; see also
+dowker and kirsten [6] for related work. we summarize the results of those
+
+2
+
+papers in lemmas 2.2 and 2.3. the main result of this paper is theorem 2.4
+which gives a5 for general mixed boundary conditions.
+
+we have decoupled the calculation of a5 in the general setting into three
+pieces. the rst piece, a1
+5, was computed in [3]; it gives a5 for pure boundary
+conditions if the boundary is totally geodesic. the second piece a2
+5 was
+computed in [13]; it contains the terms involving the second fundamental
+form which are necessary to deal with the case where the boundary is not
+totally geodesic [13]. the nal piece a3
+5 is computed in this paper; it contains
+the additional 42 terms which describe the interaction of vn and vd for
+general mixed boundary conditions. our purpose in this paper is not purely
+combinatorial; determining these additional coecients requires us to derive
+new functorial properties of the invariants which are important in their own
+right.
+
+in 3, we use invariance theory to show that the computation of a5 can
+be decomposed into the three pieces discussed above and to show that the
+undetermined coecients wi describing the interaction of vn and vd are
+universal coecients which are dimension free. the remainder of the paper is
+devoted to computing these coecients; see the cross reference table following
+theorem 2.4. we postpone until appendices a, b, and c the discussion of
+some combinatorial formulas we shall need.
+
+we use three dierent technical tools in the proof of theorem 2.4.
+1. the index theorem. let p : c (v )  c (w ) be an elliptic
+complex of dirac type.
+impose suitable boundary conditions. let
+d := p p and d := p p  be the associated operators of laplace type.
+an observation of bott shows that with suitable boundary conditions
+am(1, d,b) am(1, d,b) = index(p ) and an(1, d,b) an(1, d,b) = 0
+if n 6= m; this is often called the local index formula. we shall apply
+this observation in 4 and in 7.
+
+2. conformal variations. let d() = e2f d. we then have that
+d
+d|=0an(1, d,b) = (m  n)an(f, d,b). furthermore, if m = n + 2,
+then d
+
+d|=0an(e2f f, e2f d,b) = 0. we use these identities in 6.
+
+3. calculations on the ball. the invariant an was computed for the
+laplacians on spinors and on 1-forms on the ball in [5, 7]; we use this
+computation in 5.
+
+2 statement of results
+
+if d is an operator of laplace type, then locally we have:
+
+d = (g + a + b).
+
+(1)
+
+3
+
+here g acts by scalar multiplication; a and b are matrix valued. we
+can also express d covariantly. there is a unique connection  on v and a
+unique endomorphism e of v so that
+
+d = (tr(2) + e).
+
+(2)
+
+let  be the local 1-form of the connection . we may express:
+
+2g(a + g
+
+ = 1
+e = b  g( +   
+
+iv ) and
+
+).
+
+if d is the scalar laplacian, then  is the at connection and e = 0. if
+d = d + d on the bundle of p forms, then  is levi-civita connection
+and the endomorphism e is given in terms of curvature by the weitzenbock
+formulas. let  be the scalar curvature. if d is the spin laplacian, then 
+is the spin connection, and the lichnerowicz formula gives e =  1
+4  .
+we adopt the following notational conventions to express the asymptotic
+coecients an in terms of geometrical invariants. let roman indices i, j, k,
+and l range from 1 through the dimension m of the manifold and index a
+local orthonormal frame {e1, ..., em} for the tangent bundle of the manifold.
+let roman indices a, b, c, and d range from 1 through m  1 and index a
+local orthonormal frame for the tangent bundle of the boundary m. on
+the boundary, we shall let em be the inward unit normal vector eld. we
+shall not introduce bundle indices explicitly. let tr(a) be the ber trace of
+an endomorphism a of v . greek indices will index coordinate frames. we
+adopt the einstein convention and sum over repeated indices.
+let rijkl be the components of the curvature tensor of the levi-civita
+connection, let ij := rikkj be the components of the ricci tensor, and let
+ := ii be the scalar curvature. with our sign convention, r1212 = 1 on the
+unit sphere s2 in euclidean space. let ij be the endomorphism-valued com-
+ponents of the curvature of the connection  on v . let  be the christoel
+symbols of the levi-civita connection. let lab := (eaeb, em) = abm give
+the second fundamental form. we use the levi-civita connections and the
+connection  to covariantly dierentiate tensors of all types. let ; denote
+multiple covariant dierentiation with respect to the levi-civita connection
+of m and let : denote multiple tangential covariant dierentiation on the
+boundary with respect to the levi-civita connection of the boundary; the
+dierence between ; and : is measured by the second fundamental form.
+thus, for example, e;a = e:a since there are no tangential indices in e to be
+dierentiated. on the other hand, e;ab 6= e:ab since the index a is also being
+dierentiated. since l and s are only dened on the boundary, these tensors
+can only be dierentiated tangentially. let dx and dy be the riemannian
+
+4
+
+volume elements on m and on m respectively. let f1  c (m) and let
+f2  c (m). let
+
+f1[m] := r m f1(x)dx and f2[m] = r m f2(y)dy.
+
+let  be orthogonal projection on vd and let + be orthogonal projec-
+tion on vn . let  := +  ;  = +1 on vn and  = 1 on vd. extend
+ to be parallel along normal geodesic rays. we refer to [1] for the proof of
+the following result:
+
+theorem 2.1
+
+1. a0(f, d,b) = (4)m/2tr(f )[m].
+2. a1(f, d,b) = 1
+3. a2(f, d,b) = 1
+
+4(4)(m1)/2tr(f )[m].
+6(4)m/2{tr(6f e + f  )[m]
++tr(2f laa + 3f;m + 12f s)[m]}.
+
+4. a3(f, d,b) = 1
+
+384 (4)(m1)/2tr{f (96e + 16 + 8f ramam
+
++(13+  7)laalbb + (2+ + 10)lablab + 96slaa + 192s2
+12:a:a) + f;m((6+ + 30)laa + 96s) + 24f;mm}[m].
+
+5. a4(f, d,b) = 1
+
+360 (4)m/2{tr{f (60e;ii + 60 e + 180e2
++30ijij + 12;ii + 5 2  2ijij + 2rijklrijkl)}[m]
++tr{f{(240+  120)e;m + (42+  18);m
++24laa:bb + 0lab:ab + 120elaa + 20 laa + 4ramamlbb
+12rambmlab +4rabcblac +0am:a + 1
++(168+  264)lablablcc + (224+ + 320)lablbclac}
++720se + 120s + 0sramam + 144slaalbb + 48slablab
++480s2laa + 480s3 + 120s:aa + 60:aam  12:a:albb
+24:a:blab  120:a:as} + f;m(180e + 30 + 0ramam
++ 1
+7{(84+  180)laalbb + (84+ + 60)lablab}
++72slaa + 240s2  18:a:a) + f;mm(24laa + 120s)
++30f;iim}[m]}.
+
+21{(280+ +40)laalbblcc
+
+we introduce some additional notation to discuss a5. let:
+
+5
+
+a1
+5 := f{360e;mm + 1440e;ms
+
++720e2 + 240e:aa + 240 e + 48;ii + 20 2
+8ijij + 8rijklrijkl  120mme  20mm
++480 s2 + 12;mm + 24mm:aa + 15mm;mm
++270;ms + 120mms2 + 960ss:aa + 16rammbab
+17mmmm  10rammbrammb + 2880es2 + 1440s4}
+
+2 +  60);m + 240 s  90mms + 270s:aa
+
++f;m{( 195
+
++(630+  450)e;m + 1440es + 720s3}
+
++f;mm{60  90mm + 360e + 360s2}
++180sf;mmm + 45f;mmmm.
+
+s denote pure dirichlet boundary conditions if vn vanishes; s plays no
+s denote neumann boundary conditions modied
+
+let b
+role here. similarly let b+
+by s if vd vanishes. the following result was proved in [3].
+
+lemma 2.2 if the boundary of m is totally geodesic, then we have
+
+a5(f, d,b
+
+s ) = 1
+
+5760 (4)(m1)/2tr{a1
+
+5 + 120f abab
++(90+ + 360)f amam + 600f s:as:a}[m].
+
+next we introduce terms involving the second fundamental form l. let:
+
+5 := f{(90+ + 450)laae;m + ( 111
+a2
+
+2 + + 42)laa;m
+
+8 +  355
+
+2 + + 75
+
+4 +  285
+
+16 + + 413
+4 + + 11
+4 + + 29
+
+16 )laa:blcc:b + (238+  58)lab:alcc:b
+4 )lab:albc:c + ( 535
+8 )lab:clab:c
+4 )lab:clac:b + (111+  6)laa:bblcc
+
++30+labrammb;m + 240laas:bb + 420labs:ab + 390laa:bs:b
++480lab:as:b + 420laa:bbs + 60lab:abs
++( 487
++( 49
++( 151
++(15+ + 30)lab:ablcc + ( 15
+2 )lab:aclbc
++( 945
+4 )laa:bclbc + (114+  54)lbc:aalbc
++1440laase + 30laasmm + 240laas  60lababs
++180labsrammb + (195+  105)laalbbe
++(30+ + 150)lablabe + ( 195
++(5+ + 25)lablab + ( 275
++( 275
++( 109
++( 133
++ 315
+
+4 )lcclabrammb + 16lablacbc
+2 )lablacrbmmc  32lablcdracbd
+128 )laalbblccldd
+
+8 + + 215
+4 +  49
+2 + + 47
+2 lcclablabs + ( 2041
+
+8 )lablabmm + (+  14)lcclabab
+
+6 +  105
+16 + + 215
+
+6 )laalbb
+
+16 )laalbbmm
+
+128 + + 65
+
+6
+
+32 + + 141
+
++150lablbclacs + ( 417
++1080laalbbs2 +360lablabs2 +( 375
++ 885
++2160laas3 + ( 231
+
+4 laalbblccs + (25+  17
+8 + + 327
+
+2 )lddlablbclac
+8 )lablbclcdlda}
+
+32 )lcclddlablab
+
+32 + 777
+
+32 )lablablcdlcd
+
++f;m{(90+ + 450)laae + ( 165
+
+8 +  255
++(15+ + 75)laa + 600laas2 + ( 1215
+ 45
++( 165
++( 459
+32 + + 495
++(54+ + 225
+
+4 lab:ab + (15+  30)labab
+4 )labrammb + 705
+32 )laalbblcc + ( 267
+2 )lablbclac}
+16 +  1215
+
++f;mm{30laas + ( 315
+
+16 )laalbb
+
+4 + + 465
+
++( 645
+
+8 + + 945
+
+8 )lablab
++f;mmm(30+ + 105)laa.
+
+8 )laamm
+
+8 +  315
+
+8 )laa:bb
+
+4 laalbbs  75
+16 +  1485
+
+2 lablabs
+16 )lcclablab
+
+the following result was proved in [13].
+
+lemma 2.3 we have:
+
+a5(f, d,b
+
+s ) = 1
+
+5760 (4)(m1)/2tr{a1
+
+5 + a2
+
+5 + 120f abab
+
++(90+ + 360)f amam + 600f s:as:a}[m].
+
+to generalize lemma 2.3 to mixed boundary conditions, we introduce the
+
+additional terms describing the interaction of vn and vd. let:
+5( ~w) := f{w1e2 + w2ee + w3s:as:a + w4s:as:a
+a3
+
++w5abab + w6abab + w7abab + w8amam
++w9amam + w10amam + w11(ams:a  ams:a)
++w12:aamlcc + w13:a:bab + w14:a:bab
++w15:aam;m + w16:aab:b + w17:abmlab + w18:ae:a
++w19:a:ae + w20:a:ae + w21:aae + w22:a:a
++w23:a:amm + w24:a:bab + w25:a:brmabm
++w26:a:albblcc + w27:a:blaclbc + w28:a:alcdlcd
++w29:a:blablcc + w30:as:alcc + w31:as:blab
++w32:a:a:b:b + w33:a:b:a:b + w34:aa:bb + w35:ab:ab
++w36:a:a:bb + w37:b:aab} + f;m{w38:as:a + w39:a:alcc
++w40:a:blab + w41:aam} + f;mm{w42:a:a}.
+
+7
+
+the following theorem represents the main result of this paper:
+
+theorem 2.4 we have
+
+a5(f, d,b) = 1
+
+5760 (4)(m1)/2tr(a1
+
+1 + a2
+
+5 + a3
+
+5( ~w))[m]
+
+where the universal constants ~w = (w1, ..., w42) are given by:
+
+4
+
+w5 =  105
+w3 = 120 w4 = 720
+w1 = 180 w2 = 180
+w7 = 105
+w10 = 45
+w9 = 180
+w8 = 45
+w6 = 120
+4
+w15 = 90
+w13 = 180 w14 = 90
+w12 = 45
+w11 = 360
+w19 = 180 w20 = 90
+w18 = 300
+w17 = 180
+w16 = 120
+w25 = 30
+w24 = 60
+w21 = 240
+w22 = 30 w23 = 0
+w28 =  195
+w27 =  75
+w26 =  675
+w29 =  675
+w30 = 330
+w33 = 15
+w34 =  15
+w31 = 300 w32 = 15
+w35 =  105
+8
+w38 = 210 w39 =  165
+w37 =  135
+w40 =  405
+w36 = 15
+w42 = 30
+w41 = 135
+
+32
+
+16
+
+2
+
+8
+
+8
+
+4
+
+16
+
+4
+
+4
+
+2
+
+the remainder of this paper is devoted to the evaluation of these con-
+
+stants; the various coecients are determined in the following sections:
+
+w1
+w7
+w13
+w19
+w25
+w31
+w37
+
+4 w2
+7 w8
+7 w14
+3 w20
+6 w26
+6 w32
+6 w38
+
+4 w3
+4 w9
+7 w15
+4 w21
+5 w27
+6 w33
+6 w39
+
+4 w4
+4 w10
+4 w16
+6 w22
+6 w28
+6 w34
+6 w40
+
+4 w5
+4 w11
+6 w17
+3 w23
+6 w29
+6 w35
+6 w41
+
+7 w6
+4 w12
+7 w18
+6 w24
+6 w30
+6 w36
+7 w42
+
+3
+7
+6
+6
+6
+6
+6
+
+3 invariance theory
+
+the main result of this section is the following technical result.
+
+lemma 3.1 there exist universal constants wi so that
+5 + a3
+
+5760 (4)(m1)/2tr(a1
+
+a5(f, d,b) = 1
+
+1 + a2
+
+5( ~w))[m].
+
+let n (f ) = f;m...m be the th normal covariant derivative of the smear-
+ing function f . let rijkl, ij, and e have order 2; let lab and s have order
+1, and let  have order 0. we increase the order by 1 for every explicit
+covariant derivative. the following lemma is proved in [1] and summarizes
+some of the properties of the invariants an that we shall need.
+
+lemma 3.2
+
+8
+
+1. there exists an invariant local formula am
+
+n (x, d) on m which
+is homogeneous of order n and which vanishes if n is odd, and there
+exist invariant local formulas am
+n, (y, d,b) on m which are
+homogeneous of order n    1 so that
+
+n, = am
+
+n = am
+
+an(f, d,b) = tr(f am
+
+n )[m] + x0n1
+
+tr(n (f )am
+
+n, )[m].
+
+2. let m = m1  m2 for m1 closed. let d = d1  1 + 1  d2. then
+
+am
+
+n (x, d) = xp+q=n
+n, (y, d,b) = xp+q=n
+3. let d = d1  d2 over m. then
+
+am
+
+am1
+p (x1, d1)am2
+
+q (x2, d2) and
+
+p (x1, d1)am2
+am1
+
+q, (y2, d2,b).
+
+n (x, d1) + am
+
+n (x, d2) and
+
+am
+n (x, d) = am
+am
+n, (y, d,b) = am
+
+n, (y, d1,b) + am
+
+n, (y, d2,b).
+
+4. we have the following variational formulas:
+
+d
+
+d|=0am2(e2f f, e2f d,b) = 0 and
+d|=0an(1, e2f d,b) = (m  n)an(f, d,b).
+
+d
+
+5. let p : c (v1)  c (v2) be an elliptic complex of dirac type. let
+d := p p and let d := p p  be the associated operators of laplace
+type. with suitable boundary conditions, we have:
+
+am(1, d,b)  am(1, d, b) = index(p ) and
+an(1, d,b)  an(1, d, b) = 0 if n 6= m.
+
+the invariants which do not involve the interaction between vd and vn
+were determined in [3, 13]. there are no interior invariants since 5 is odd.
+to complete the proof of lemma 3.1, we must exhibit a spanning set for the
+space of boundary invariants which are homogeneous of order 4; assertion 2
+and 3 of lemma 3.2 show that the constants wi are dimension free. we can
+eliminate some terms from consideration:
+
+lemma 3.3 let x be an arbitrary scalar monomial.
+
+1. the following invariants do not appear in a5: x:ae:a, :a:abb,
+am(s:a + s:a), :a:bxab, ams:a, f;m:as:a, (:aa  :aa)e,
+xij:akl, and :ajk;i.
+
+9
+
+2. the following invariants are linear combinations of the invariants den-
+
+5: :aa:bb, :ab:ab, :aa:bb, :ab:ab, :ab:a:b,
+
+ing a3
+:ab:b:a, and :aa:b:b.
+
+3. we have the following relations: tr(:a:b:a:b) = 0,
+
+tr(:axa) = 0, (tr:a:ax) = 0, tr(:abxab) = 0, and
+tr(:axa) = 0.
+
+proof: we use arguments of [2] to prove the rst assertion. let the smearing
+function f be real. suppose that the bundle v , the operator d, and the
+endomorphisms s and  are real. it then follows that tr(f etdb) is real.
+thus all the coecients must be real. suppose next that v is complex, that
+ is hermitian, and that e, s, and  are self-adjoint. then the operator
+db is self-adjoint and again tr(f etdb) is real. the curvature tensor ij is
+anti-hermitian as it is a commutator of two covariant derivatives. the terms
+in the rst assertion have purely imaginary trace and thus do will not appear
+in the formula for am
+
+.
+
+5
+
+let {a, b} := ab + ba be the anti-commutator. we dierentiate the
+
+identity 2 = 1 to see
+
+{, :a} = 0,
+{:ab, } + {:a, :b} = 0,
+{:aab, } + {:aa, :b} + 2{:ab, :a} = 0.
+
+we use the ricci identity to see that, at the cost of getting additional
+terms involving , the fourth derivative of  can be reduced to terms with
+lower derivatives. thus
+
+{:aabb, } + (fewer derivatives in ) = 0.
+
+we dierentiate the relation s = s = s to see that:
+
+s:a + s:a = s:a = :as + s:a
+s:ab = s:ab + s:a:b + s:b:a + s:ab
+= :abs + :as:b + :bs:a + s:ab.
+
+(3)
+
+we also observe that:
+
+1
+2
+
+tr(:a:b:ab) =
+tr(:a:a:bb) = tr(:a:a:b:b).
+
+tr(:a:b{, :ab}) =
+
+1
+2
+
+tr(:a:a:b:b)
+
+we use equation (3) to see that we do not need a , a :a nor a :aa touching
+an s. we use the identities tr(:as:blab) = 0 and
+
+tr(s:ablab) = tr(s:a:blab) = tr(s:a:blab)
+
+10
+
+together with equation (3) to see that tr(:as) = 0, tr(s:b) = tr(s:b),
+
+tr(s:as:a) = tr(2s:as:a  s:as:a), and
+tr(s:ablab) = tr(s:ablab  s:ablab  2s:a:blab)
+
+= tr(s:ablab  s:a:blab). 
+
+in addition to the relations of lemma 3.3, we note that terms obtained
+
+by commuting the order of derivatives are controlled by the ricci identity.
+
+proof of lemma 3.1: we have eliminated most of the additional possible
+terms which might otherwise be thought to appear in the local formula for
+a5. note that terms of the form :abxab are controlled by :a:bxab. there
+are, however, a few remaining terms to be eliminated. we order these terms
+by length and complete the proof by eliminating these terms.
+
+1. (terms of length 2). as ab is antisymmetric, we have tr(:abab) = 0.
+
+2. (terms of length 3). we use the ricci identity to see that
+
+:abab =
+
+1
+2
+
+(:ab  :ba)ab =
+
+1
+2
+
+[, ab]ab.
+
+the terms on the right hand side are controlled and thus we may omit
+tr(:ab) from our list of invariants. a similar argument shows we
+may omit tr(:abab) from our list of invariants. we use lemma 3.3
+to exclude the invariant :aae  :aae. we control the invariant
+:aae + :aae by :a:ae.
+
+3. (terms of length 4). by equation (3), tr(:abab) = 0. 
+the following relations follow from lemma 2.3 and from the product
+
+formula of assertion 2 of lemma 3.2.
+
+lemma 3.4 we have w3 + w4 = 600, w19 = 180, w22 = 30, w5 + w7 = 0,
+and w6 = 120.
+
+4 two dimensional calculations
+
+let d be an operator of laplace type on the trivial vector bundle over the
+cylinder m := s1  [0, 1], which we endow with the standard at metric. we
+specialize the formula for a5 to the situation at hand. we set l = 0, r = 0,
+f = 1, m = 2, and a = b = c = 1. this yields the expression:
+
+a5(1, d,b) = 57601(4)1/2tr{360e;22 + 1440e;2s + 720e2
+
+11
+
++240e:11 + 960ss:11 + 2880es2 + 1440s4 + w1e2
++w2ee + w3s:1s:1 + w4s:1s:1 + w81212
++w91212 + w101212 + w11(12s:1  12s:1)
++w15:112;2 + w18:1e:1 + w19:1:1e + w20:1:1e
++w21:11e + w32:1:1:1:1 + w33:1:1:1:1 + w34:11:11
++w35:11:11 + w36:1:1:11 + w37:1:111}[m].
+
+we use the relation w3 + w4 = 600 to see that
+
+tr(960ss:11 + w3s:1s:1 + w4s:1s:1)[m]
+
+= tr(360s:1s:1  2w4s:1s:1)[m].
+
+we integrate by parts to see f:1g[m] = f g:1[m]. we use this relation to
+see tr(:1:1:11)[m] = 0 and to simplify the expression for a5. this shows:
+
+a5(1, d,b) = 57601(4)1/2tr{360e;22 + 1440e;2s + 720e2
+
++2880es2 + 1440s4 + w1e2 + w2ee  360s:1s:1
+2w4s:1s:1 + w81212 + w91212 + w101212
++w11(12s:1  12s:1) + w15:112;2 + w19:1:1e
++w20:1:1e + (240  w18 + w21):11e
++(w32 + w33):1:1:1:1 + (w34 + w35  w37):11:11}[m].
+
+lemma 4.1 we have
+
+w1 = 180 w2 = 180
+w8 = 45 w9 = 180
+w15 = 90
+
+w3 = 120 w4 = 720
+w10 = 45 w11 = 360
+
+w19 = 180 w20 = 90 w21  w18 = 60
+
+proof: we apply the local index formula of lemma 3.2 (5). let i, j, and k
+be real skew-adjoint 4  4 matrices satisfying the quaternion relations. let
+
+a := a0 + ia1 + ja2 + ka3
+b := b0 + ib1 + jb2 + kb3
+
+for ~a  r  1r3
+for ~b  1r  r3
+
+be matrix valued functions on m. then a = a and b = b. let
+p := i1 + j2 + a + b and p  := i1 + j2 + a  b
+
+be operators of dirac type and let d := p p and d := p p  be the associated
+operators of laplace type. let  := 1i; we note that 2 = 1, i = i,
+and j = j. let  := 1
+2(1  ) be the complementary projections on
+
+12
+
+the 1 eigenspaces of . we dene admissible boundary operators b and b
+of mixed type which make d and d self-adjoint:
+
+b := ()|m  (p )|m , and b := ()|m  (p )|m .
+since p intertwines d and d and since the index of this complex is zero,
+
+an(1, d,b) = an(1, d, b).
+
+obtain the following system of equations.
+
+if we interchange b and b, then we interchange the roles of p and p  and
+the roles of d and d. thus the terms of odd degree in b must vanish in
+an(1, d,b). let a = 1a,
+b = 1b, a = 2a, and b = 2b. we rst study
+the terms which are bilinear in the jets of a and b. these terms change sign
+if we interchange the roles of d and d and hence their coecient in a5 must
+be zero. let j := 2tr(i) and k := 21tr(i). we use lemmas a.1-a.3 to
+(a0 b3j )
+b3j )
+( a0
+(a1 b3k)
+(a3 b0j )
+( a3b0j )
+( a3 b2k)
+(a0a0b2j )
+
+0 = 2w8 + 2w10 + 2w15
+0 = 2w8 + 2w10
+0 = 2w9 + 2(240  w18 + w21)
+0 = 2w2  2w1
+0 = 2w2 + 2w1 + 1
+0 = 2(240  w18 + w21)  360
+0 = 4w8 + 4w10 + 1440  12w15
+
+21440
+
+this implies that:
+
+w8 = 45, w9 = 180, w10 = 45, w2 = 180,
+w1 = 180, (240  w18 + w21) = 180, w15 = 90.
+
+next we set a0 = a1 = a2 = 0, we let a3 be a constant, and we assume
+b = b(x1). this yields the following system of equations we use to complete
+the proof of lemma 4.1.
+
+0 = 4w20  6(240  w18 + w21) + 2  720
+0 = 8w20  2w4 + 8(240  w18 + w21)
+0 = 4w8 + 4w10  4w15
+0 = 4w19 + 1
+
++ 2(360)  2880 + 2  1440
+ 2(4w8 + 4w10 + 4w15 + 4w19)
+
+22880  2w11. 
+
+(b0b2
+
+(a3b3
+
+3k, b0 b3b3k)
+2k)
+3j )
+2j )
+
+(b3b3b1j , b1b2
+(b1b2
+
+5 calculations on the ball
+
+in this section, we compare the results of calculations on the ball performed
+in [5, 7] with the formula from theorem 2.4 to establish the following result:
+
+13
+
+lemma 5.1 we have the following relations:
+
+135 = 2w27 + 4w33 + 2w35
+705 = 16w28 + 16w29  4w31 + 16w32  16w33 + 16w34  16w37
+1725 = 2w3 + 32w26  8w30
+675 = 32w26
+1935 = 16w28 + 16w29  8w30 + 32w32 + 32w34 + 16w35 + 32w36  32w37
+585 = 4w27  2w31 + 8w32 + 16w33 + 8w34 + 12w35  8w36  8w37.
+
+proof: we start with the dirac spinors. let i  m2[m/2] be the dirac gamma
+matrices; these satisfy the cliord commutation relation jk +kj = 2kj.
+let p =  be an operator of dirac type. we assume that the connection
+is compatible, in other words  = 0, or in index notation, [, ] = 0. for
+m even, let
+
+5 := (1)m/21 . . . m.
+
+we then have (5)2 = 1 and 5j + j5 = 0. we refer to [2] for further
+information concerning the spectral geometry of the dirac operator with local
+boundary conditions. we use formulas from [2]. consider the boundary value
+problem for the corresponding laplacian d = p 2. we set
+
+ := 5m and s :=  1
+
+2 laa+
+
+to dene admissible boundary conditions. the endomorphism e, the rie-
+mann curvature and  are zero. since lab:c = 0 and lab = ab, we have:
+
+:a = lac5c, :ab = laclbc, s:a =  1
+
+4lbb:a, s:ab = 1
+
+4lddlaclbc.
+
+dowker, apps, kirsten and bordag showed in [5] that:
+
+a5(1, d,bs) =
+
+2m+12m/2
+
+( m
+2 )
+
+ 
+
++
+
+2560
+
+29(m  1)
+11(m  1)3
+
+3840
+
++
+
+91(m  1)2
+30720
+89(m  1)4
+122880 ! .
+
+
+
+we have vol(sm1) = 2m/2/( m
+2 ). we compare coecients of the powers
+of m  1 in the above equation with the general formula of theorem 2.4 to
+establish the rst three equations of lemma 5.1.
+next we study vector elds (or 1-forms) on the unit ball with absolute
+boundary conditions. for these boundary conditions,  can be viewed as a
+matrix acting in the tangent space to m:
+
+mm = 1, ba = ba, and
+
+s = +.
+
+14
+
+as above, e = 0, r = 0, and  = 0. we have that:
+
+(:a)mb = (:a)bm = 2ab
+(:ab)mm = 4ab ,
+
+(:ab)cd = 2(cdad + acbd).
+
+we use [7] (see also [8, 19]) to see the following relationship from which
+
+the nal assertions of lemma 5.1 follow:
+
+(4)(m1)/2
+vol sm1 a5 =
+
+1309 (m  1)
+
+15360
+26587 (m  1)4
+
+737280
+
+
+
+6313 (m  1)2
+
++
+36864
+2041 (m  1)5
+
+737280
+
++
+
+6359 (m  1)3
+
+46080
+
+. 
+
+6 conformal relations
+
+lemma 6.1 we have the following relations:
+
+w16 = 120
+w18 = 300
+w24 = 60 w25 = 30
+16 w29 =  675
+w28 =  195
+w33 = 15
+w32 = 15
+8
+4
+w36 = 15 w37 =  135
+w40 =  405
+w42 = 30
+
+8
+
+8
+
+2
+
+32
+
+w21 = 240
+w23 = 0
+w26 =  675
+w27 =  75
+w30 = 330 w31 = 300
+w34 =  15
+w35 =  105
+w38 = 210 w39 =  165
+
+16
+
+4
+
+4
+
+2
+
+proof: we use lemma 3.2 (4). consider the variations d() = e2f d,
+g() = e2f g, and f () = e2f f . we set
+
+s() = ef +{m(0)  m() + s}.
+
+to x the boundary conditions. let ei be an orthonormal frame for the
+tangent and cotangent bundles of m with respect to the reference metric
+g(0). let ei() = ef ei and ei() = ef ei be the corresponding frames for the
+metric g(). we remark that contraction and dierentiation do not commute;
+
+d
+
+d|=0(ii) = ( d
+
+d|=0)ii  2f ii
+
+for example. although the christoel symbols  are not tensorial, their
+variation is tensorial. we have the following relations; a more extensive
+list is given in [3]. conformal variations of the new invariants are listed in
+appendix b.
+
+k = ikf;j + jkf;i  ijf;k,
+
+( d
+d|=0)ij
+( d
+d|=0l)ab = abf;m  f lab,
+d
+d|=0(s) = f s + +
+d|=0(e) = 2f e + 1
+( d
+d|=0r)ijkl = ikf;jl + jlf;ik  if;jk  jkf;il + 2f rijkl.
+
+2(m  2)f;m,
+2(m  2)f;ii, and
+
+d
+
+1
+
+15
+
+the following relations are obtained from lemma 3.2 (4) by comparing
+coecients before various terms (listed on the left). lemma 6.1 follows from
+these relations.
+
+4(m  2)w30
+
+term
+f :ae:a
+
+f;m:as:a
+
+f;mm:a:a
+
+f;mlbb:a:a 0 = 1
+
+f :aab:b
+
+f :ab:ab
+
+0 = (m  2)w19  4(m  1)w22  2w23  2(m  1)w24
+0 = (m  2)w19  4(m  1)w22  2w23
+
+coecient
+0 = 2w18  (m  3)w21  360 + 1440(m  2)
+ 240(m  3)  960(m  1) + 240
+0 = (m  1)w30  1
+2(m  2)w3 + 480(m  2)
++ w31 + (m  5)w38
+0 = 1
+2(m  2)w19  2(m  1)w22  (m  1)w23
+ w24  w25  (m  5)w42
+2(m  2)w19  2(m  1)w22  w23  w24 + w29
++ 2(m  1)w26 + 2w28  1
++ (m  5)w39
+ 2w25  2(m  3)w34 + 2w35 + (m  1)w37
+ mw24  w25 + 4w35
++ (m  1)w29 + (m  5)w40
++ (m  1)w37
+ (m  5)w41
+ 8w23  (2m + 4)w24  2w25 + 12w35
++ 4w23 + 4w24  4w35
+f abab
+f;mf;m:a:a 0 = w40 + 5w42 + 6w39  5
+
+4(m  2)w31  (m  2)w24  w25 + 2w27
+0 = (m  2)w24  w25  2(m  3)w34  2w35
+2(m  2)w11  (m  1)w12  2w15  w17
+
+0 = w15 + (m  5)w16 + 4(m  2)w19  16(m  1)w22
+0 = w15  (m  5)w16  2(m  2)w19 + 8(m  1)w22
+0 =  1
+2(m  5)w16  (m  2)w24  w25 + 2w35
+
+2w15  1
+
+f;m:a:blab 0 =  1
+f :aa:bb
+
+f :a:bab
+
+f :aab:b
+
+f;m:aam 0 = + 1
+
+4w38. 
+
+7 two more index theorem examples
+
+the only remaining universal constants to be determined are the coecients
+of the following terms:
+
+p := 1
+
+2(w5  w7)f (abab  abab) + w12f :aamlcc
++w13f :a:bab + w14f :a:bab
++w17f :abmlab + w41f;m:aam.
+
+(4)
+
+lemma 7.1 we have
+
+16
+
+2(w5  w7) = 105
+ 1
+w13 = 180
+
+4
+
+w17 = 180 w12 = 45
+w14 = 90
+
+let m be the generalized cylinder m := s1  s1....  s1  [0, 1] for m even
+with the conformally at metric
+
+ds2 = e2f (dx2
+
+1 + ... + dx2
+
+m).
+
+let i be skew-adjoint matrices satisfying the cliord relations. let
+
+a := ef (ii) and a := emf (ii)e(m1)f .
+
+let d[0] := aa and d[1] := aa be the associated laplacians. we set
+
+5 := (1)m/21 . . . m,  := 5m
+b[0] := ()|m  (a)|m , and
+b[1] := ()|m  (a)|m .
+
+we use the local index formula of lemma 3.2 (5) to see that
+
+a5(1, d[0],b[0]) = a5(1, d[1],b[1]).
+
+we use this relationship to derive certain additional relations among the
+coecients appearing in equation (4). let a comma denote ordinary partial
+dierentiation. for simplicity we put f|m = 0. this implies also f,a|m = 0,
+but, in general, f,ma|m 6= 0. we compute:
+
+d[1] = e2f{  2
+
+i  1
+
+2 mf,i[i, j]j + (2  m)f,ii
+
++(m  1)f,if,i  (m  1)f,ii},
+
+2(m  2)f,i[i, j]j + (2  m)f,ii},
+
+d[0] = e2f{2
+i + 1
+[1]
+i =  1
+4 m[i, j]f,j,
+[1]
+ij =  1
+4 m{f,ki[j, k]  f,kj[i, k}
++ 1
+4m2 {f,jf,k[i, k] + f,if,k[j, k] + f,kf,k[i, j]} ,
+
+4 f,if,i(m2  4)},
+
+e[1] = e2f (m  1){f,ii + 1
+s[1] = (m  1)f,m+,
+[0]
+i = 1
+[0]
+ij = 1
+
+4(m  2)[i, j]f,j,
+4(m  2){f,ki[j, k]  f,kj[i, k}
++ 1
+4(m  2)2 {f,jf,k[i, k] + f,if,k[j, k] + f,kf,k[i, j]} ,
+4e2f (m  1)(m  2)2f,if,i, and
+
+e[0] = 1
+s[0] = 0.
+
+17
+
+the metric and hence the riemann tensor is the same for both operators:
+
+ri
+
+jkl = f,jf,kil + f,if,ljk  f,jf,lik  f,if,kjl
+
++f,pf,p(jlik  jkil).
+
+we can now compute the invariants a5(1, d[i],b[i]). in equation (4), the
+terms 1
+2(w5  w7), w12, w13 and w17 contribute to a5 in this setting. the
+invariants that appear in these contributions are f,amf,am, f,mmf 2
+,m, and
+thus only terms of these types need to be kept during the calculation. in
+appendix c we have listed all contributions appearing in a5(1, d[1],b[1]) 
+a5(1, d[0],b[0]). we therefore have the relations:
+
+,m, f 4
+
+coecient
+
+term
+f,amf,am 0 = 105 + 4(1/2)(w5  w7)
+f 2
+,mf,mm 0 = 135  w12 + w17 + m(45 + w12)
+f 4
+,m
+
+0 = 180 + w13.
+
+(5)
+
+we use lemma 3.4 to determine w5 and w7; w41 is now determined by the
+conformal relation of the previous section. this determines all the coecients
+but w14.
+
+let m be as in lemma 6.1, let a = i(i + fi), let fm be imaginary, and
+fa be real. it is obvious that a5(1, aa) = a5(1, aa). since a = i(ifi),
+the heat kernel for aa is obtained from that for aa by changing sign before
+fi. therefore, all coecients before odd powers of fi must vanish. thus the
+coecient before f 2
+mfa,a in a5(1, aa) is zero. as above, s = 0. we compute:
+
+a =
+
+1
+2
+
+[b, a]fb  amfm
+
+m = fm
+am = fm,a  2amf 2
+ab = 
+
+m
+
+1
+(fc,a[b, c]  fc,b[a, c])   (fm,ba  fm,ab)m
+2
+[a, b]f 2
+1
++
+2
+
+fcfm(2acb + 2bca + c[a, b] + [a, b]c)
+
+m
+
+e = fa,a  (m  1)f 2
+
+m + 2(m  3)amfafm.
+
+since we are looking for the terms with f 2
+to the m-th coordinate are not considered. we compute:
+
+mfa,a, all derivatives with respect
+
+:a = 2fmam
+:ab = 2amfm,b + ([c, b]a + a[c, b])mfcfm + 4abf 2
+:aa = 2amfm,a + 4(m  1)f 2
+
+m.
+
+m
+
+18
+
+only four invariants contain f 2
+
+mfa,a:
+
+invariant
+:a:bab
+e2
+:ae:a
+:a:ae
+
+coecient of f 2
+8(m  2)
+2(m  1)
+2(m + 1)
+4(m  1)
+
+mfa,a coecient in a5
+
+w14
+720
+180
+90
+
+since all coecients before odd powers of fi must vanish, w14 = 90. this
+completes the proof of lemma 7.1 and thereby of the main result of this
+paper, theorem 2.4. 
+
+a appendix
+
+we adopt the notation of 4. let
+
+ := 1i,
+m = s1  [0, 1],
+a := a0 + ia1 + ja2 + ka3, b := b0 + ib1 + jb2 + kb3,
+p  := i1 + j2 + a  b,
+p := i1 + j2 + a + b,
+d = p p ,
+
+a section f satises the boundary conditions (bf = 0) if and only if we have
+f|m = 0 and p f|m = 0.
+lemma a.1 we have the following relations:
+
+3 + b2
+
+0 + a2
+
+0 + 2b2
+0 + b2
+
++(b1 + b2 + 2a2
+
+1 = a1  a0i + b3j  b2k and 2 = a2  a0j  b3i + b1k.
+12 = ( a2  a1) + (b3 + a0 + 2b3b1  2a0b2)i + ( a0  b3 + 2a0b1 + 2b2b3)j
+e = (b1 + b2 + a2
+:1 = 1(2b3k  2b2j), :1 = 2(b2k  b3j) and 2
+:11 = 1((4b2
+3  4b2
+s = +(1a3 + b2).
+s:1 = +(1 a3 + b2) + 1(1a3 + b2)(b3k  b2j).
+:1s  s:1 = 2(1a3 + b2)(b3j  b2k).
+
++( a3  b0  2a3b1 + 2b0b2)j + ( a2 + a1  2a0a3 + 2b0b3)k.
+3 + 4b2
+2.
+2)i + (2b2  4a0b3)j + (2b3 + 4a0b2)k).
+
+3)k.
+3) + (b0  a3 + 2a3b2 + 2b0b1)i
+:1 = 4b2
+
+proof: we compute that:
+1  2
+
+2 + (ia + ai + ib  bi)1 + (ja + aj + jb  bj)2
+
++i a + i b + j a + j b + ab  ba + a2  b2
+
+2 (ia + ai + ib  bi) = a1  a0i + b3j  b2k
+2 (ja + aj + jb  bj) = a2  a0j  b3i + b1k
+
+d = p p = 2
+1 =  1
+2 =  1
+0k + 2a0b1j + 2b2
+12  21 = 2a2
+12 = 12  21 + 12  21
+= ( a2  a1) + (b3 + a0 + 2b3b1  2a0b2)i + ( a0  b3 + 2a0b1 + 2b2b3)j
+
+3k + 2b3b1i  2a0b2i + 2b2b3j
+
+19
+
++(b1 + b2 + 2a2
+
+0 + 2b2
+
+3)k
+
+2
+
+= a2
+
+:11 = 1:1 + [1, :1]
+
+1  b2
+0 + a2
+
+2  b2
+1 + a2
+
+1 + a2
+2 + a2
+3 + b2
+
+0 + b2
+0 + b2
+0 + b2
+
+2 (j a + aj + j b  bj)
+
+2(i a + ai + i b  bi) j a j b + 1
+2 ( aj  j a  j b  bj)
+1  2
+
+e = e1 + e2 for
+e1 = i a  i b  j a  j b  1  2
+= i a i b + 1
+2( ai  i a  i b  bi) + 1
+= 1
+= a3j  a2k + b1  b0i  a3i + a1k + b2  b0j
+e2 = b2  a2 + ba  ab  2
+= b2
+0  b2
+3 + 2b0b1i + 2b0b2j + 2b0b3k
+a2
+2 + a2
++2(a2b1  a1b2)k + 2(a3b2  a2b3)i + 2(a1b3  a3b1)j
+a2
+a2
+0 + a2
++2b0b1i + 2b0b2j + 2b0b3k
+
+3  2a0a1i  2a0a2j  2a0a3k
+2 + 2a1a0i  2a1b3j + 2a1b2k
+1 + 2a2a0j + 2a2b3i  2a2b1k
+
+3 + b2
+3 + b2
+3  2a0a3k + 2a3b2i  2a3b1j
+:1 = 1[1, i)] = 1[a0i + b3j  b2k, i]
+= 21(b3k  b2j)
+= 1[2b3k  2b2j  4a0b3j + 4a0b2k  4b2
+suppose f = 0 on the boundary. then
+p f = (i1 + j2  j(ja + jb))f
+= j+(2 + 2  2  ja  jb)+f
+s = +( 1
+= 1
+2+(ja + aj  jb  bj)+
+= +(a3i + a1k + b2  b0j)+
+= +(ia3 + b2) = +(1a3 + b2)
+s:1 = +(1 a3 + b2) + 1
+if e is a local invariant, let (e) = tr(e(d,b))  tr(e( d, b)). then
+(an(1,))[m] = 0. we compute (e) for the terms appearing in the formula
+for a5 contained in 4. we organize these terms into two lemmas to group
+the data involved. in lemma a.2, we determine the terms which are bilinear
+in a and b or which involve a0a0b2. in lemma a.3, we study terms in a3
+and in the jets of b.
+
+2(ja + aj + jb  bj)  ja  jb)+
+
+the lemma now follows. 
+
+2 :1(1a3 + b2).
+
+3i  4b2
+
+2i].
+
+lemma a.2 terms which are bilinear in a and b, and the term a0b2a0j .
+(w8)
+(w9)
+(w10)
+(720)
+(w2)
+(w1)
+
+12) = 2(a0 b3  a0b3)j + 4a0b2a0j + . . .
+(2
+12) = 2{ a2 b3  a1 b3}k + . . .
+(2
+(1212) = (2a0
+(e2) = (2a3 b1 + 2a3b2)k + . . .
+(ee) = 2(a3 b0 + a3b0)j + . . .
+b0)j + . . .
+(e2) = 2(a3
+
+b3 + 4a0b2a0)j + . . .
+
+b3 + 2 a0
+
+b0 + a3
+
+20
+
+b1)k + . . ..
+
+(:11e) = 2( a3 b2  a2 b3 + a1 b3)k + . . .
+(:11:11) = 0 + . . .
+(e:22) = 2(2
+2(a3b2) + 2b121a3 + a3
+{s:1s:1} = a3 b2k + . . ..
+(se:2) = 1
+
+2(a312b1 + a32
+
+2 b2 + b22a3)k
+
+( 1
+
+2 a312b0 + a0a0b2)j + . . .
+
+(s2e) = 0 + . . .
+(s4) = 0 + . . .
+(s:1s:1) = 0 + . . .
+(:1:1e) = 0 + . . .
+(:1:1e) = 0 + . . .
+(4
+((s:1  :1s)12) = 0 + . . .
+((:112:2)) = 2b321a0j  12a0b2a0j + . . .
+
+:1) = 0 + . . .
+
+(240  w18 + w21)
+(w34 + w35  w37)
+(360)
+(360)
+(1440)
+
+(2880)
+(1440)
+(2w4)
+(w19)
+(w20)
+(w32 + w33)
+(w11)
+(w15)
+
+lemma a.3 a0 = a1 = a2 = 0, let a3 be constant, and let b = b(x1).
+
+3 + b2
+
+3)j
+3)  4(b0 + 2a3b2)b0b1
+
+3 + b2
+
+12) = (4b3b3b1  4b1b2
+12) = 0.
+
+ 8a3b1b0b2}j
+0 + b2
+0 + b2
+
+3) + 4b0b0b1}j
+3)(b0 + 2a3b2)
+2) + 4b0b2
+
+(2
+3)j
+(2
+((12)2) = (4b3b3b1 + 4b1b2
+((e)2) = {2b1(a2
+0 + b2
+(e2) = {2b1(a2
+3 + b2
+3 + b2
+(e2) = {2(a2
+ 4b1b0b1}k
+(:11e) = {4(b0 + 2a3b2)(b2
++ 4b0b3 b3}k
+(:11:11) = 0
+b0 + 8b2
+(e:22) = (4b2
+3 + b2
+{s:1s:1} = {2a3b2(b2
+(se:2) = {2a3b2
+1b2}k  {2a3b0b1b2}j
+3)b1 + 2a3b0b1b2}j
+(s2e) = { 1
+2  a2
+2(b2
+3)(b0 + 2a3b2) + a3b2(a2
+2  a2
+2 (b2
+(s4) = (2a3b3
+2  2a3
+3b2)k
+3 + b2
+(s:1s:1) = a3b2(b2
+2)k
+2)b1j
+(:1:1e) = (4b2
+2)(b0 + 2a3b2)k
+(:1:1e) = 4(b2
+(4
+b1j
+((s:1  :1s)12) = 2b2
+(:112:2) = 4b3b3b1 + 4b1b2
+3.
+
+1a3b2)k
+2)}k
+
+3 + 4b2
+
+:1) = 0.
+
+{ 1
+
+3 + b2
+
+2
+
+1
+
+b2
+
+3 + b2
+
+0 + b2
+
+3)}k
+
+(w8)
+(w9 = 180)
+(w10)
+
+(w2)
+(w1)
+
+(720)
+
+(240  w18 + w21)
+(w34 + w35  w37)
+(360)
+(360)
+(1440)
+(2880)
+
+(1440)
+(2w4)
+(w19)
+(w20)
+(w32 + w33)
+(w11)
+(w15)
+
+21
+
+b appendix
+
+term
+
+w1 e2
+w2
+w3
+
+ee
+s:as:a
+
+s:as:a
+
+w16 :aab:b
+
++ m2
+
+2 f;m:as:a
+
+w4
+w11 am[, s:a]
+w12 :aamlcc
+w15 :aam;m
+
+let ds2() = e2f ds2 dene a conformal variation.
+in this appendix, we
+summarize the computation of the conformal variations we needed in section
+6. we integrate by parts where necessary to bring the variations into standard
+form so that f is not dierentiated with respect to tangential coordinates.
+we will be dealing with terms which are homogeneous of order 4. if f is
+constant, then d
+d|=0x = 4f x. to avoid writing the conformal weight
+term repeatedly, we dene lx := d
+d x|=0 + 4f x. note that lx = 0 if x
+only involves  and  terms; consequently these terms have been omitted in
+the interests of brevity.
+l
+(m  2)(f e:aa  f;melaa + f;mme)
+(m  2)(f e:aa  f;melaa + f;mme)
+2f s:as:a + 2f ss:aa  (m  2)f;ms:aa
+2f s:as:a + 2f ss:aa  (m  2)f;ms:aa
+m2
+2 f;m:aam
+(m  1)f;m:aam
+f :a:bab  f :aab:b  1
++ 1
+2f abab  2:aamf;m
+(m  5)f :a:bab  (m  5):aab:b
++ m5
+2 f (abab + abab)
+:aamf;m
+2f :aae + 2f :ae:a
+m2
+2 :a:af;mm  m2
++(m  2):ab:abf + (m  2):bba:af
++4(m  2):a:babf  2(m  2):aab:bf
+(m  2):a:bf (ab + rmbam  lablcc + laclbc)
+0
+(m  3)f :aae  (m  3)f :ae:a
+2(m  1):a:af;mm + 2(m  1):a:alccf;m
+4(m  1):ab:abf  4(m  1):bba:af
+16(m  1):a:babf + 8(m  1):aab:bf
++4(m  1):a:bf (rmbam  ab  lablcc + laclbc)
+(m  1):a:af;mm + :a:alccf;m  2:ab:abf
+2:bba:af  8:a:babf + 4:aab:bf
++2f :a:b(  ab + rmbam  lablcc + laclbc)
+
+w17 :abmlab
+w18 :ae:a
+w19 :a:ae
+
+w20 :a:ae
+w21 :aae
+w22 :a:a
+
+2 :a:alccf;m
+
+w23 :a:amm
+
+2 f abab
+
+22
+
+w24 :a:aab
+
+:a:af;mm + :a:alccf;m + (m  2):a:blabf;m
+m:ab:abf + 2(1  m):aab:bf
+(2m + 4)f :a:bab  (m  2):aa:bbf
++4f :aab:b  (m  2)f abab
++(m  2)f abab
++mf :a:b[  ab + rmbam  lablcc + laclbc]
+2f :a:bab  f :ab:ab  f :aa:bb  f abab
++f abab + f :a:b[  ab + rmbam  lablcc
++laclbc]
+
+w25 :a:brmabm :a:af;mm + :a:blabf;m  2f :aab:b
+
+1
+
+w26 :a:albblcc 2(m  1)f;mlcc:a:a
+w27 :a:blaclbc 2:a:blabf;m
+w28 :a:alcdlcd 2f;mlcc:a:a
+w29 :a:blablcc :a:alccf;m  (m  1):a:blabf;m
+w30 :as:albb
+w31 :as:blab
+w34 :aa:bb
+w35 :ab:ab
+
+4(m  2)f;m:a:blab
+
+4(m  2)f;m:a:alcc  (m  1)f;m:as:a
+:as:af;m + 1
+2(m  3)f :aa:bb  2(m  3)f :a:bba
+4f :ab:ab + 2f abab  2f abab
+2f :aa:bb + 2f :b:aab  4f :a:b[  ab + rmbam
+lablcc + laclbc] + 12f :a:bab  4f :aab:b
+0
+(m  1)f :b:aab + (m  1)f :bb:aa
+
+w36 :a:a:bb
+w37 :b:aab
+
+c appendix
+
+in the proof of lemma 7.1, we used the local index theorem. we list in
+this appendix the terms giving non-zero contributions to a5(d[1])  a5(d[0]).
+coecients of corresponding invariants are given an the right hand side in
+the formulae below. let a comma denote ordinary partial dierentiation.
+the terms with f,mf,mmm are dropped since they are not needed for the
+calculations. we omit the factor of trv iv .
+coef term
+1440 e;ms
+
+1
+
+1
+
+,m
+
+,mf,mm
+
+ s2
+;ms
+
+2(m  1)2( 1
+2(m2  8)f 2
+f,amf,am  1
+2 (m2  4)f 4
+2(m  1)3f 2
+,m(2f,mm  (m  2)f 2
+480
+,m)
+(m  1)2(f,amf,am  (m  4)f,mmf 2
+,m + (m  2)f 4
+,m)
+270
+120 mms2  1
+2(m  1)3f 2
+,mf,mm
+ 1
+2(m  1)2(f,amf,am + 1
+1080 ss:aa
+,mf,mm + 1
+2(m  1)3(f 2
+2880 es2
+1440 s4
+2(m  1)4f 4
+,m
+
+2m2(m  1)f 4
+,m)
+4(m2  4)f 4
+,m)
+
+1
+
+1
+
+23
+
+,m
+
+1
+
+1
+
+1
+
+1
+
+315
+
+4
+
+2
+
+1
+
+1
+
+1
+
+,m
+
+,m
+
+,m
+
+,m
+
+,m
+
+,mf,mm
+
+,mf,mm + 1
+
+270 lbbs:aa
+1440 lbbse
+
+,mf,mm  2(m  2)f 4
+
+2160 lbbs3
+1080 laalbbs2
+360 lablabs2
+885
+
+30 lbbsmm
+240 lbbs
+-60 lababs
+180 labsrammb
+45 laalbbe
+90 lablabe
+
+laalbblccs  1
+lcclablabs  1
+150 lablbclcas  1
+w12 :aamlbb
+w13 :a:bab
+90 :aam;m
+120 :aab:b
+
+(m  1)2(2(m  3)f 2
+f,amf,am)
+2 (m  1)2f,maf,ma
+ 1
+2 (m  1)3(f 2
+4(m2  4)f 4
+,m)
+2 (m  1)3f 2
+,mf,mm
+2 (m  1)3(2f 2
+,mf,mm + (m  2)f 4
+,m)
+ 1
+,mf,mm + (2  m)f 4
+2 (m  1)2(f 2
+,m)
+2 (m  1)2f 2
+,mf,mm
+,mf,mm + (m  2)f 4
+(m  1)3(f 2
+,m)
+,mf,mm + (m  2)f 4
+(m  1)2(f 2
+,m)
+ 1
+2 (m  1)4f 4
+2 (m  1)4f 4
+2 (m  1)3f 4
+2 (m  1)4f 4
+2 (m  1)3f 4
+2 (m  1)2f 4
+2(m  1)3f 2
+2(m  1)2(m  2)(m2 + (m  2)2)f 4
+2(m  1)(2(m  1)f 2
+2 (m  2)((m2  (m  2)2)f,amf,am
++(m  1)(m4  (m  2)4)f 4
+,m)
+2(m  1)2f 2
+w17 :abmlab
+,mf,mm + 1
+(m  1)2(m2f 2
+180 :a:ae
+(m  2)4)f 4
+,m)
+4(m  1)3(2f 2
+30 :a:a
+4(m  1)3f 2
+0 :a:amm
+4(m  1)2(f 2
+60 :a:bab
+30 :a:brmabm 4(m  1)2f 2
+(m  1)(4f,amf,am + (m  1)(m4  (m  2)4)f 4
+,m)
+:aa:bb
+(m  1)(4(m  1)f,amf,am + (m4  (m  2)4)f 4
+:ab:ab
+,m)
+(m  1)2(m4  (m  2)4)f 4
+:a:a:b:b
+:a:b:a:b (m  1)(m  3)(m4  (m  2)4)f 4
+4(m  1)3f 4
+:a:blablcc
+4(m  1)4f 4
+:a:albblcc
+4(m  1)2f 4
+:a:blaclcb
+4(m  1)3f 4
+:a:alcdlcd
+ 1
+2 m2(m  1)3f 4
+ 1
+2 m2(m  1)2f 4
+2 (m  1)2f,amf,am
+
+4 (m2(m2  4)
+,mf,mm + (m  2)f 4
+,m)
+,mf,mm
+,mf,mm + (m  2)f 4
+,m)
+,mf,mm
+
+4
+
+8
+
+32
+
+ 675
+ 675
+ 75
+ 195
+330 :as:albb
+300 :as:blab
+720 s:as:a
+
+16
+
+,m
+,mf,mm + f,amf,am)
+
+ 105
+
+,mf,mm
+
+2
+15
+4
+15
+8
+
+,m
+
+,m
+
+,m
+
+,m
+
+,m
+
+,m
+
+255
+
+4
+
+,m
+
+,m
+
+coef term
+270 laae;m
+
+,m
+
+1
+
+24
+
+coef term
+
+1
+
+ 1
+2(m  1)(m  2)(m4  (m  2)4)f 4
+0 abab + abab
+4(m  1)(m  2)f,amf,am
+2(w5  w7) abab  abab
+45 amam + amam 2(m  1)(m  2)f,amf,am
+ 1
+2m2(m  1)2f 2
+360 ams:a  ams:a
+
+,mf,mm
+
+,m
+
+references
+
+[1] t.p. branson and p.b. gilkey, the asymptotics of the laplacian on a
+manifold with boundary, commun. partial di. eq. 15 (1990), 245272.
+
+[2] , residues of the eta function for an operator of dirac type with local
+boundary conditions, di. geom. and its applications 2 (1992), 249
+267.
+
+[3] t.p. branson, p.b. gilkey and d.v. vassilevich, the asymptotics of the
+laplacian on a manifold with boundary ii, boll. unione mat. ital. (7)
+11b suppl. fasc. 2 (1997), 3967, hep-th/9504029.
+
+[4] t.p. branson, p.b. gilkey and d.v. vassilevich, vacuum expectation
+value asymptotics for second order dierential operators on manifolds
+with boundary, j. math. phys. 39 (1998), 1040-1049.
+
+[5] j.s. dowker, j.s. apps, k. kirsten and m. bordag, spectral invariants
+for the dirac operator on the d ball with various boundary conditions,
+class. quantum grav. 13 (1996), 29112920.
+
+[6] j.s. dowker and k. kirsten, smeared heat-kernel coecients on the ball
+
+and generalized cone, hep-th/9803094.
+
+[7] j.s. dowker and k. kirsten, spinors and forms on the ball and the
+generalized cone, communications in analysis and geometry 7 (1999),
+451-489.
+
+[8] e. elizalde, m. lygren and d.v. vassilevich, zeta function for the
+laplace operator acting on forms in a ball with gauge boundary con-
+ditions, commun. math. phys. 183 (1997), 645660.
+
+[9] g. esposito, a. kamenshchik and g. pollifrone, euclidean quantum
+gravity on manifolds with boundary, kluwer, 1997 isbn: 0-7923-4472-
+3.
+
+[10] g. kennedy, r. critchley, and j.s. dowker, finite temperature eld the-
+ory with boundaries: stress tensor and surface action renormalization,
+ann. phys. 125 (1980), 346400.
+
+25
+
+[11] p. greiner, an asymptotic expansion for the heat equation, arch. rat.
+
+mech. anal. 41 (1971), 163218.
+
+[12] g. grubb, functional calculus of pseudo-dierential boundary prob-
+
+lems, progress in math. 65, birkhauser 1986.
+
+[13] k. kirsten, the a5 heat kernel coecient on a manifold with boundary,
+
+class. quantum grav. 15 (1998), l5l12.
+
+[14] h.p. mckean and i.m.singer, curvature and eigenvalues of the lapla-
+
+cian, j. di. geo. 1 (1967), 4369.
+
+[15] i. moss and j.s. dowker, the correct b4 coecient, phys. letters b
+
+229 (1989), 261263.
+
+[16] r.t. seeley, singular integrals and boundary problems, amer. j. math.
+
+88 (1966), 781809.
+
+[17] e. sezgin,topics in m-theory, contribution to the abdus salam memo-
+
+rial meeting, hep-th/9809204.
+
+[18] d.v. vassilevich, vector elds on a disk with mixed boundary conditions,
+
+j. math. phys. 36 (1995), 31743182.
+
+[19] d.v. vassilevich, heat kernel for antisymmetric tensor eld on a disk,
+
+phys. lett. b 348 (1995), 3943.
+
+t. branson, department of mathematics, the university of iowa, iowa city
+ia 52242 usa. email: branson@math.uiowa.edu
+p. gilkey, department of mathematics, university of oregon, eugene or
+97403 usa. email: gilkey@darkwing.uoregon.edu
+k. kirsten, department of physics and astronomy, the university of manch-
+ester, oxford road, manchester, england. email: klaus@a13.ph.man.ac.uk
+d. vassilevich, institute for theoretical physics, university of leipzig, au-
+gustusplatz 10, 04109 leipzig, germany. email: vassil@itp.uni-leipzig.de
+
+26
+
+

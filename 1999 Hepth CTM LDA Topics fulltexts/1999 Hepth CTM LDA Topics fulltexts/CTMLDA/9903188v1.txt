@@ -1,0 +1,962 @@
+9
+9
+9
+1
+
+ 
+r
+a
+
+ 
+
+m
+2
+2
+
+ 
+ 
+
+1
+v
+8
+8
+1
+3
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+a density matrix renormalization group approach to
+
+an asymptotically free model with bound states
+
+m.a. martn-delgado1 and g. sierra2,
+
+1departamento de fsica teorica, universidad complutense , madrid, spain.
+
+2instituto de matematicas y fsica fundamental, c.s.i.c., madrid, spain.
+
+we apply the dmrg method to the 2 dimensional delta function poten-
+
+tial which is a simple quantum mechanical model with asymptotic freedom
+
+and formation of bound states. the system block and the environment block
+
+of the dmrg contain the low energy and high energy degrees of freedom,
+
+respectively. the ground state energy and the lowest excited states are ob-
+
+tained with an unprecedent accuracy. we compare the dmrg method with
+
+the similarity rg method and propose its generalization to eld theoretical
+
+models in high energy physics.
+
+pacs number: 11.10hi, 11.10.gh, 02.70.-c
+
+]a hallmark of an asymptotically free theory such as qcd is that it contains many
+degrees of freedom, with very dierent energy scales, which are coupled by the interaction
+
+hamiltonian. perturbative methods are valid for short distance physics but they fail for
+
+small momentum transfers or for energy scales where the bound states are formed. the
+
+existence of multiple energy scales suggests that the renormalization group approach is
+
+the correct strategy to attack these non perturbative problems. in recent years there has
+
+been several proposals to extract eective low energy hamiltonians using rg methods.
+
+of particular interest is the light-front hamiltonian approach advocated in references [1,2]
+
+which uses a similarity rg method (srg) [3,4]. in this method the rg ow is given by an
+
+unitary transformation which diagonalizes the hamiltonian by succesive elimination of the
+
+o-diagonal matrix elements. the srg-cuto can be seen as the width of the band which
+
+1
+
+contains the non vanishing o-diagonal matrix elements of the hamiltonian. at the end of
+
+the srg ow the width is zero and the corresponding hamiltonian contains it its diagonal
+
+all the eigenvalues of the original one.
+
+in this letter we shall propose an alternative rg approach to study asymptotically free
+
+models using the density matrix renormalization group (dmrg). we shall also show the
+
+relations and dierences between the dmrg and the srg methods. the dmrg was pro-
+
+posed by white in 1992 to solve the problems of the old real space rg methods encountered
+
+in the 70s, which led in those days to their abandon in favour of montecarlo techniques
+
+[5]. the dmrg has by now become a standard numerical rg method applied to many
+
+body problems in condensed matter and other branches of physics ( see references [6,7]
+
+for reviews). it is thus challenging to test how the dmrg handles the subtle dynamics of
+
+asymptotically free theories. to our knowledge this is the rst paper devoted to the subject.
+
+for this reason we have choosen as a theoretical lab a simple model possesing the essen-
+
+tial properties of asymptotic freedom and formation of bound states, which are shared by
+
+realistic theories like qcd.
+
+the natural candidate for such a simple model is provided by a 2d quantum mechanical
+
+particle subject to a delta function potential [8]. the solution of the 2d delta function
+
+schrodinger equation requires a regularization and renormalization schemes as in an ordinary
+
+quantum eld theory. we shall use for our purposes the lattice regularization introduced
+
+by glazek and wilson in their srg study of the problem [9,10]. these authors formulated
+
+the problem in momentum space where the states are labelled by an integer n that ranges
+
+between an infrared cuto m and an ultraviolet cuto n (i.e. m  n  n). the kinetic
+energy en of the state n increases exponentially as en = b2n, where b is an arbitrary constant
+greater than one. for numerical computations we shall take the value b = 2 as in references
+[9,10]. the interaction hamiltonian between the states n and m is given by genem,
+
+where g is the coupling constant of the problem. the discrete lattice hamiltonian h is
+
+dened by the matrix elements
+
+2
+
+hnm = n,mb2n  g bn+m, m  n, m  n
+
+(1)
+
+an overall shift of the levels by a constant term, i.e. n  n + n0, implies that hnm scales
+with the factor b2n0. this is a discrete version of scale invariance, which is broken by the
+
+infrared and ultraviolets cutos m and n. the latter symmetry implies that all the scales
+
+contribute to the observables. as an illustration of this fact let us calculate the energy of the
+
+trial wave function (n) = cbm n, which yields a good approximation to the exact ground
+
+state (gs) for large values of n (c is a normalization constant). a simple computation yields
+
+[9]
+
+hhi = c2b2m [(n  m + 1)  g(n  m + 1)2]
+
+(2)
+
+this result means that all the scales contribute on equal footing to the gs energy, which
+
+makes very hard an accurate determination of its value by methods other than the exact
+
+one. the srg applied to the case m = 21, n = 16 and g = 0.06 [9,10] yields a gs
+energy with a error of 10%, which in any case is a remarkable result taken into account the
+
+10 orders of magnitude between the infrared and ultraviolet cutos. for the latter choice
+
+of parameters the hamiltonian (1) has one bound state with energy equal to 1 and 37
+scattering states with positive energy.
+
+the rst step in the dmrg method is the partition of the system in two pieces called the
+
+system block and the environment block [5]. the correct choice of these blocks is dictated
+
+by the physics of the problem. in our case we shall choose the system block bl
+
+ to be given
+
+by the low energy levels n which lie between the infrared cuto m and the scale  (i.e.
+
+m  n  ), while the environment block bh
+the ultraviolet cuto n and the scale  (i.e.   n  n). the whole system, with energy
+levels ranging from m to n, is obtained as the superblock bl
++3, where  and  are
+
+ will contain the high energy levels n between
+
+  bh
+
+the n =  + 1 and n =  + 2 energy levels respectively (see g.1).
+
+3
+
+low - energy
+
+high - energy
+
+m
+
+infrared
+
+l
+
+l+3
+
+l+1
+
+l+2
+
+n
+
+ultraviolet
+
+fig. 1. superblock decomposition of the energy scales.
+
+the parameter  varies from m to n  3 and it labels the dmrg ow. let us supose
+we want to nd the gs of the whole system. we shall choose a trial gs wave function (n)
+
+as follows,
+
+(n) =
+
+
+
+
+a1l(n)
+
+a2
+
+a3
+
+m  n  
+n =  + 1
+
+n =  + 2
+
+a4r+3(n)
+
+ + 3  n  n
+
+(3)
+
+where l ( resp. r+3) is a normalized vector which describes the contribution of the low
+
+( resp. high) energy block bl
+
+ ( resp. bh
+
++3) to the gs of the superblock bl
+
+  bh
+
++3. the
+
+ansatz (3) is the momentum space version of the real space dmrg applied by white to
+
+study a free particle in a box [6,7]. our approach is close in spirit to the momentum space
+
+dmrg method proposed by xiang [11]. the energy of the state (3) can be conveniently
+
+written as
+
+h|h|i = ha|hsb()|ai
+
+(4)
+
+where |ai is the vector (a1, a2, a3, a4) and the superblock hamiltonian hsb() is the 4  4
+matrix given by
+
+hsb() =
+
+
+
+
+
+hl hl hl hlh
+
+hl h h hh
+
+hl h h hh
+
+hlh hh hh hh
+
+
+
+
+
+(5)
+
+whose entries read
+
+4
+
+hl = hl|h|li,
+h = h+1,+1,
+hl = p
+hh = pn
+hh = pn
+
+hh = hr+3|h|r+3i
+h = h+2,+2
+hl = p
+
+n=m hn,+2l(n)
+
+(6)
+
+n=m hn,+1l(n),
+
+n=+3 hn,+1r+3(n), hlh = hl|h|r+3i
+n=+3 hn,+2r+3(n) h = h+2,+3
+
+where hn,m are the matrix elements given in eq. (1). notice that eq.(4) takes the form of an
+
+eigenvalue problem in a reduced vector space with only 4 degrees of freedom. the gs of the
+
+superblock can be found by looking for the lowest eigenvalue e1() of the 4 4 matrix hsb.
+the variational nature of the construction gives an upper bound of the exact gs energy. if
+
+the vectors l and r+3 coincide with the low energy and high energy pieces of the exact gs
+
+wave function then the dmrg algorithm presented so far would reproduce the exact result.
+
+of course this is not in general the case but nevertheless, one can actually use the dmrg
+
+algorithm to improve in succesive steps the gs energy. the idea is to apply a continuity
+
+argument. suppose we shift the scale  to the next high energy level, say  + 1. then the
+
+new low energy vector l
+
++1 will be related to the previous one l by the equation
+
+l
+
++1(n) =
+
+a
+1l(n) m  n  
+a
+n =  + 1
+
+
+
+2 is the normalized two component vector obtained by
+
+(7)
+
+2
+
+where (a
+
+1, a
+
+2) = (a1, a2)/qa2
+
+1 + a2
+
+the projection of the lowest eigenvalue of hsb() into the block bl
+
+ . similarly the energy
+
+h
+
+l( + 1) associated to the latter block is given by
+
+h
+l( + 1) = (a
+
+1, a
+2)
+
+
+
+
+hl() hl()
+
+hl() h()
+
+
+
+
+
+
+
+a
+
+1
+
+a
+
+2
+
+
+
+
+(8)
+
+the data l
+
++1 and h
+
+l( + 1) fully characterize the new block bl
+
++1 which can be regarded
+
+as the renormalization of the block bl
+
+ . the next step is to construct the superblock
++4 which by the same techniques leads to the construction of a new block bl
+
++1  bh
+bl
+and so on. this procedure is iterated until the scale  = n  3, where one reverses the
+
++2
+
+5
+
+dmrg steps in order to update the high energy blocks bh
+
+ using the low energy blocks
+
+built in the previous steps. after a few sweeps from low to high energy and viceversa the
+
+lowest eigenvalue of the superblock hamiltonian (5) converges to a x value which gives the
+
+dmrg estimation of the gs energy. to start out the process one has to grow up the system
+
+to its actual size. this can be done by considering superblocks of the form bl
+
+m +p  bh
+
+n p
+
+where p = 0, . . . , (n  m  3)/2. the last value of p yields a system containing all the
+scales from m to n. the low and high energy blocks constructed in the warm up are
+
+the starting point for the sweeping procedure explained above (see [6,7] for details). the
+
+previous algorithm has been generalized in reference [12] to nd out not only the gs but
+
+the low lying excitations as well.
+
+let us now present our dmrg results for the case considered in references [9,10], where
+
+m = 21, n = 16 and g = 0.06060600032108866. the latter value of g is choosen in
+such a way that the exact ground state energy of (1) is given exactly by 1. the dmrg
+algorithm presented above gives the exact ground state energy with an error of 1014 (see
+
+table 1). for simple quantum mechanical problems, like a particle in a box or a potential,
+
+the dmrg gives gs energies with this order of precision [6,12].
+
+in the latter examples
+
+the discrete hamiltonians are tridiagonal matrices whose entries vary smoothly through the
+
+lattice. these feautures are not shared by the hamiltonian (1) which indeed varies quite
+
+abruptly from entry to entry while having all entries non vanishing. using the extension of
+
+the dmrg proposed in [12] we have also computed the gs and the lowest 3 excited states
+
+of the hamiltonian (1). in table 1 we compare our dmrg results with the exact ones in
+
+terms of the relative deviation
+
+en =
+
+en(dmrg)  en(exact)
+
+en(exact)
+
+(9)
+
+n
+
+1
+
+2
+
+3
+
+4
+
+en 7  1015 1.04  107 3.36  106 1.41  106
+
+table 1. relative error en of the four lowest eigenstates of the hamiltonian (1).
+
+6
+
+as shown in table 1 the accuracy of the excited states energies is lower than that of the
+
+gs. this feauture is peculiar to the delta function hamiltonian and it does not arise for the
+
+quantum mechanical models studied in [12]. there are several reasons for the unprecedent
+
+accuracy of the dmrg applied to the hamiltonian (1). recall that the srg method gives
+
+the gs energy with a 10% error [9,10]. first of all the dmrg gives a variational upper bound
+
+to the exact gs energy which is usually improved in every dmrg step. secondly all the
+
+matrix elements of the whole hamiltonian are used many times to feedback the superblock
+
+so that no information is lost. finally, the dmrg method focus on the determination of
+
+the gs and the low lying states, while the srg method considers all the eigenstates.
+
+moreover the dmrg oers the possibility to reconstruct the actual shape of the gs
+
+wave function.
+
+in g.2 we plot the wave function in the warm up, which is rather bad,
+
+together with the one obtained after the rst sweep, which converges to the exact shape.
+
+after the third sweep the dmrg wave function is indistinguishable from the exact one. all
+
+these results show that the dmrg gives in fact the exact bound state of the discrete delta
+
+function potential within the machine precision.
+
+1,0
+
+0,9
+
+0,8
+
+0,7
+
+0,6
+
+0,5
+
+0,4
+
+0,3
+
+0,2
+
+0,1
+
+0,0
+
+-0,1
+
+n
+o
+i
+t
+c
+n
+u
+f
+-
+e
+v
+a
+w
+
+ 
+.
+s
+.
+g
+
+-20
+
+-10
+
+0
+
+10
+
+20
+
+exact 
+warm-up 
+sweep-1 
+
+ 
+
+ 
+ 
+
+1,0
+
+0,9
+
+0,8
+
+0,7
+
+0,6
+
+0,5
+
+0,4
+
+0,3
+
+0,2
+
+0,1
+
+0,0
+
+-20
+
+-10
+
+0
+
+10
+
+-0,1
+
+20
+
+energy scale
+
+fig. 2. dmrg v.s. exact wave function.
+
+it is interesting to investigate the nature of the dmrg ow as compared with the one of
+
+7
+
+the similarity rg method. in the srg the eective hamiltonian h(s) evolves as a function
+
+of s according to the wegner equation [4],
+
+dh(s)
+
+ds
+
+= [[hd(s), h(s)], h(s)]
+
+(10)
+
+where hd(s) is the diagonal part of h(s). the initial condition of eq.(10) is h(0) = h,
+
+where h is the original hamiltonian of the problem. the parameter s ranges from 0 to 
+and it can be identied with the inverse square of the energy width , i.e. s = 1/2. eq.
+
+(10) implies that h(s) is related to h by an unitary transformation and therefore they share
+
+their eigenvalues. when s increases, the o diagonal matrix elements of h(s), located at
+
+distances greater than the width  = 1/s, become very small. when s =  the eective
+hamiltonian h() is diagonal and all its entries coincide with the eigenvalues of h. the
+numerical integration of eq.(10) requires of course to follow the evolution of all the entries
+
+of h. one would like instead to project the eective hamiltonians to smaller matrices in
+
+order to reproduce the bound state eigenvalue. this idea has indeed been pursued in [10]
+
+with results within an accuracy of order 10 to 20%. the dmrg method gives a solution
+
+to this problem yielding the exact bound state energy. hence we may wonder if the dmrg
+
+gives an exact realization of the srg ideas. to this end we have studied the rg ow of the
+
+eigenvalues ei()(i = 1, . . . , 4) of the superblock hamiltonian (5). in g.3 we plot the lowest
+
+eigenvalue e1, together with the remaining ones scaled down by a factor b2. we can clearly
+
+see from g.3 that e1 stays constant through all the dmrg steps while ei(i = 2, 3, 4) vary
+
+with the energy scale b2 with some deviations depending on the energy region. the plateaus
+
+correspond to low energy regions while the oscillations and bumps occur for intermediate
+
+and high energies. to a rst order approximation, which is almost exact for the plateaus,
+
+the superblock hamiltonian (5) can be written as
+
+e1
+
+0
+
+0 e
+
+2b2
+
+0
+
+0
+
+hsb() = o
+
+
+
+
+
+0
+
+0
+
+0
+
+0
+
+0
+
+
+
+
+
+o
+
+
+(11)
+
+0 e
+
+3b2
+
+0
+
+0 e
+
+4b2
+
+8
+
+where o is a unitary matrix. using eq.(11) one can show that the superblock hamiltonians
+
+satisfy the following second order recursion relation,
+
+hsb() =
+
+1
+
+b+b1 (cid:16)b1uhsb( + 1)u 
+
+ + bu 
+
+1hsb(  1)u1(cid:17)
+
+where u = oo
+
++1. the continuum limit of eq.(12) gives the ow equations
+
+h1 
+
+dhsb
+d  [, hsb],
+
+dh1
+d
+
+= [, h1]
+
+(12)
+
+(13)
+
+where  = do
+
+d o
+
+. eq.(13) is a second order diferential equation which is to be compared
+
+with the rst order equation eq.(10). the dmrg ow is a sort of similarity transformation
+
+with some eigenvalues running with the scale. using the standard rg terminology the
+
+lowest eigenvalue e1 can be associated with a marginal operator while the eigenvalues ei for
+
+i = 2, 3, 4 are associated with infrared irrelevant operators which vanish at the xed point
+
+hamiltonian hsb( = m). indeed all the entries of hsb( = m) are very small except for
+
+the entry hh = 0.999 whose value is close to the bound state energy. these results suggest
+that the exactness of the dmrg method is due to a careful treatment of the irrelevants
+
+operators, which in other rg methods are dicult to control in general.
+
+from a conceptual point of view the dmrg oers a new way of thinking about cut-
+
+os and rg ows in high energy physics. traditional cutos remove high energy states
+
+while the lowering of the cuto produces eective operators for lower energies [13]. in the
+
+lagrangian formulation this strategy can be implemented perturbatively without much di-
+
+culty. however in the hamiltonian formulation it gives rise to small denominators problems
+
+involving energy dierences between the states kept and the states truncated in the rg
+
+process [14,9]. this latter problems do not arise in the dmrg truncation for it uses a non
+
+perturbative self-consistent algorithm to nd the best choice of the eective hilbert spaces
+
+and hamiltonians.
+
+the next step in the application of the dmrg to high energy physics is of course to
+
+consider eld theoretical models with asymptotic freedom and bound states. the main ideas
+
+presented in this letter can in principle be generalized to this type of models.
+
+9
+
+l
+2
+b
+ 
+/
+ 
+
+e
+
+i
+
+18
+
+16
+
+14
+
+12
+
+10
+
+8
+
+6
+
+4
+
+2
+
+0
+
+0
+
+50
+
+100
+
+150
+
+200
+
+0
+
+50
+
+100
+
+150
+
+200
+
+l (dmrg-step) 
+
+250
+
+18
+
+16
+
+14
+
+12
+
+10
+
+8
+
+6
+
+4
+
+2
+
+0
+250
+
+i=4
+
+6 |e
+
+|
+
+1
+
+i=3
+
+i=2
+
+fig. 3. plot of the rescaled superblock eigenvalues ei/b2 (i = 2, 3, 4) as a function of the dmrg
+
+step l from sweep 2 to 4. we also plot the gs energy e1 which stays constant. the top of the
+
+bumps for i = 2, 3 occur for  = 13 while the plateaus appear from  = 21 to   5. the deeps
+in i = 4 occur for  = 21.
+
+specically, the breaking of the system into low energy and high energy blocks which are
+
+constantly updated through the dmrg process. on the other hand, the dmrg does not
+
+have the sign problems that emerge in the montecarlo methods used in lattice gauge the-
+
+ories. the remarkable accuracy achieved by the dmrg for the 2d delta function potential
+
+is very encouraging.
+
+acknowledgements this work was supported by the dges spanish grant pb97-1190.
+
+[1] k.g. wilson et al. , phys. rev. d 49, 6720 (1994).
+
+[2] r.j. perry, nucl-th/9901080.
+
+[3] st. d. glazek and k.g. wilson, phys. rev. d 48, 5863 (1993); 49, 4214 (1994).
+
+[4] f. wegner, ann. physik 3, 77 (1994).
+
+[5] s.r. white, phys. rev. lett. 69, 2863 (1992), phys. rev. b 48, 10345 (1993).
+
+[6] s.r. white, phys. rep. 301, 187, (1998).
+
+10
+
+[7] r. noack and s.r. white, lecture notes in physics, i.peschel, x. wand, k. hallberg, eds.
+
+(springer-verlag, 1999).
+
+[8] r. jackiw, in m.a.b. beg memorial volume, a. ali and p. hoddbhoy, eds. (world scientic,
+
+singapore, 1991).
+
+[9] k.g. wilson and st. d. glazek, in the procs. of the ninth physics summer school at the aus-
+
+tralian national university, h.j. gradner and c.m. savage, eds. (world scientic, singapore,
+
+1997).
+
+[10] st. d. glazek and k.g. wilson, hep-th/9707028.
+
+[11] t. xiang, phys. rev. b 56, 5061 (1996).
+
+[12] m.a. martn-delgado, g. sierra and r. noack, preprint cond-mat/9903100.
+
+[13] k. g. wilson, phys. rev. 140, b445 (1965).
+
+[14] c. bloch and j. horowitz, nucl. phys. 8, 91 (1958).
+
+11
+
+

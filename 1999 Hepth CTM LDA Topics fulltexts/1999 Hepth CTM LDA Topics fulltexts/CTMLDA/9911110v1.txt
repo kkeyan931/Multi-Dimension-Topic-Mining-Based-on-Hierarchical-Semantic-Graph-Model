@@ -1,0 +1,1936 @@
+9
+9
+9
+1
+
+ 
+
+v
+o
+n
+5
+1
+
+ 
+
+ 
+ 
+
+1
+v
+0
+1
+1
+1
+1
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+dias-stp-99-14
+esi-783
+lpm-99/46
+
+liouville bootstrap via harmonic analysis on a
+
+noncompact quantum group
+
+b. ponsot, j. teschner
+
+abstract. the purpose of this short note is to announce results that amount to a veri-
+cation of the bootstrap for liouville theory in the generic case under certain assumptions
+concerning existence and properties of fusion transformations. under these assumptions
+one may characterize the fusion and braiding coecients as solutions of a system of
+functional equations that follows from the combination of consistency requirements and
+known results. this system of equations has a unique solution for irrational central
+charge c > 25. the solution is constructed by solving the clebsch-gordan problem for
+a certain continuous series of quantum group representations and constructing the as-
+sociated racah-coecients. this gives an explicit expression for the fusion coecients.
+moreover, the expressions can be continued into the strong coupling region 1 < c < 25,
+providing a solution of the bootstrap also for this region.
+
+1. introduction
+liouville theory or close relatives of it such as the h +
+
+3 or sl(2)/u (1) wznw models play
+a central role in a variety of string-theoretical or gravitational models. these models are
+simple enough to justify the hope for exact results yet rich enough to capture some important
+aspects of the physics of strings on nontrivial (maybe curved) backgrounds. from another
+point of view, these are the natural starting points for beginning to investigate noncompact
+conformal eld theories (cft), i.e. cft with a continuous spectrum of primary elds. this
+has motivated a lot of eort towards the exact solution of these models.
+
+both from the point of view of applications and of the intrinsic structure of the cft one
+may consider the determination of the spectrum virasoro-representations and of the three
+point function to be central objectives. concerning the former, a reasonable conjecture was
+obtained in the early work [1] (stated in (1) below). as far as the three point function is
+concerned, important progress was initiated by the papers [3, 4] where an explicit formula
+was proposed and checked in various ways. a method to derive this formula from conditions
+of consistency of the bootstrap with a spectrum as proposed in [1] was subsequently given
+in [6]. further conrmation from a path-integral point of view was more recently given in
+[7].
+
+given knowledge of conformal symmetry, spectrum and three point functions one has in
+principle an unambigous construction for any genus zero correlation function by summing
+over intermediate states. but the decomposition of a n-point function as sum over three
+point functions can in general be performed in dierent ways. equality of the expressions
+resulting from dierent such decompositions ( locality, crossing symmetry) can be seen as
+being the most dicult sucient condition to verify for showing consistency of the cft as
+characterized by spectrum and three point functions.
+
+1
+
+2
+
+b. ponsot, j. teschner
+
+the present note will outline an approach to verify the consistency of the bootstrap with
+spectrum and three point functions as proposed in [1, 3, 4]. the main assumption underlying
+our approach is the existence of duality transformations for generic conformal blocks that
+are consistent with (at least part of) the spectrum being continuous. it is explained that
+the coecients that describe these transformations will then be severely constrained by
+consistency conditions of moore-seiberg [8][9] type.
+in fact, taking into account known
+results on fusion of degenerate virasoro-representations with generic ones one may derive a
+system of functional equations for the fusion coecients. for irrational central charge c > 25
+it is possible to show that this system of functional equations has at most one solution.
+
+in order to solve these conditions, the ansatz is made that the fusion coecients should be
+essentially given as racah-coecients for an appropriate continuous series of representations
+of uq(sl(2, r)), with deformation parameter q = exp(ib2), related to the central charge
+c > 25 of the virasoro algebra via c = 1 + 6(b + b1)2. this is motivated by the long
+history of research on connections between liouville theory and quantum groups going back
+to [10, 11, 12] and more recently in particular [13, 14, 15]. the set of quantum group
+representations considered here is unusual, however:
+it is neither of lowest nor highest
+weight, but rather similar to the principal continuous series of representations of sl(2, r).
+racah-coecients are constructed from the solution of the clebsch-gordan problem for these
+representations, explicitly calculated and shown to provide a solution of all the conditions
+from liouville theory discussed previously. in particular, the clebsch-gordan calculus yields
+orthogonality relations for the racah-coecients which are just what is needed to establish
+crossing symmetry of general four point functions constructed in terms of the spectrum and
+the three point functions proposed in [1, 3, 4].
+
+it is worth noting that the quantum group we are discussing has no proper classical
+counterpart, which is related to a remarkable self-duality under replacing the deformation
+parameter q = exp(ib2) by q = exp(ib2). this symmetry directly corresponds to the
+symmetry of liouville theory under b  b1 which is natural from the point of view of the
+bootstrap1 and encoded in the three point functions of [3, 4]. 2 moreover, this duality ensures
+that all the relevant properties of the fusion coecients will remain true when continuing to
+|b| = 1, corresponding to the strong coupling region 1 < c < 25. the present work thus also
+veries the conjecture of [4] that the bootstrap remains consistent for 1 < c < 25 when using
+the obvious continuations of the spectrum and the three point functions that were proposed
+in [1, 3, 4].
+
+most of our results are only announced in the present note. more details and rigorous
+proofs of our quantum group results will appear in a series of publications in preparation
+[16, 17, 18].
+
+acknowledgements: b.p. thanks al.b.zamolodchikov for valuable discussions, and
+a.neveu and g.menessier for taking interest in this work. j.t. would like to thank e.
+buenoir, l. faddeev, v.v. fock, p. roche and al.b. zamolodchikov for interesting dis-
+cussions. both authors would like to thank the organizers of the workshop applications of
+integrability for the invitation and the erwin schrodinger institute for hospitality.
+
+this work was supported in part by the eu under contract erbfmrx ct960012.
+
+1the conformal blocks depend on b only via q = b + b1
+2the importance of this self-duality for liouville theory was also observed by l. faddeev quite a while
+
+ago from a rather dierent point of view.
+
+liouville bootstrap via harmonic analysis on a noncompact quantum group 3
+
+2. bootstrap for liouville theory
+
+the possibility to preserve conformal invariance as a symmetry in the quantization of
+liouville theory [1][19] suggests to use the bootstrap formalism [20] as rened in [8][9] in order
+to exploit the information about correlation functions that is provided by this symmetry
+most eciently.
+
+conformal invariance requires that the hilbert-space h decomposes as direct sum (or
+integral) over tensor products v  v  of highest weight representations of the left/right
+virasoro algebras. the label  is related to the highest weight h() of the representation
+v via h() = (q  ) where q = b + b1 is related to the central charge c of the virasoro
+algebra via c = 1+6q2. arguments based on canonical quantization suggest [1] the following
+spectrum for liouville theory:
+
+(1)
+
+h =z 
+
+s
+
+d v  v.
+
+s =
+
+q
+2
+
++ ir+
+
+accordingly the spectrum is expected to be simple, purely continuous and diagonal.
+
+h0|qn
+
+the main object of interest are correlation functions of virasoro primary elds v(z),
+z  c with conformal dimension h(). only the genus zero case will be considered in
+the present paper.
+it should be possible to evaluate any correlation function such as
+i=1 vi (zi)|0i by summing over intermediate states, leading to a representation of that
+correlation function in terms of the matrix elements h3, d3|v2 (z)|1, d1i. the sum over
+intermediate states splits into integrations over the intermediate representations and sum-
+mations over vectors within xed intermediate representations v  v. the contributions
+for xed intermediate representations turn out to be uniquely given by conformal symme-
+try in terms of the matrix elements c(q  3, 2, 1)  h3|v2 (1)|1i between highest
+i=1 vi (zi)|0i
+
+weight states h3| and |1i. in the example of the four point function h0|q4
+
+one thereby arrives at a representation of the form
+
+h0|v4 (z4) . . . v1 (z1)|0i =
+
+(2)
+
+= zs43|21
+
+d21 c(4, 3, 21)c(21, 2, 1)(cid:12)(cid:12)f s
+
+21 [ 3 2
+
+4 1 ](z)(cid:12)(cid:12)
+
+2
+
+,
+
+where   q   so that  =  i   s. the conformal blocks f s
+power series of the form
+
+21 are represented by
+
+f s
+
+21 [ 3 2
+
+4 1 ](z) = zh2+h1h4h3
+
+43
+
+z2h2
+42
+
+zh3+h2h4h1
+41
+
+zh4h1h2h3
+31
+
+
+
+(3)
+
+ zh(21)h2h1
+
+
+
+xn=0
+
+znf s
+
+21,n [ 3 2
+
+4 1 ],
+
+where hi = h(i), zji = zj zi, j, i = 1, . . . , 4 and z = z43z21
+z42z31
+determines the coecients f s
+21,0 which will be chosen as unity.
+
+21,n, n > 0 in terms of f s
+
+. conformal symmetry uniquely
+
+remark 1. one should note that the set s43|21 that appears in (2) will in general not coincide
+with the spectrum [21]. this will only be the case when the states v2 (z2)v1 (z1)|0i and
+h0|v4 (z4)v3 (z3) (suitably smeared over z4, . . . , z1) are normalizable, which one indeed
+
+4
+
+b. ponsot, j. teschner
+
+expects [21]3 to be the case if the parameters 4, . . . , 1 satisfy
+
+(4)
+
+2|re(1 + 2  q)| < q
+2|re(3 + 4  q)| < q
+
+2|re(1  2)| < q
+2|re(3  4)| < q.
+
+otherwise one can have contributions from intermediate representations that do not belong
+to s, but are well-dened and uniquely determined by considering the analytic continuation
+of expression (2) from (4) to generic complex 4, . . . , 1, as was explained in the example of
+the h +
+3 -wznw model in [5]. it will therefore not be a loss of generality to restrict attention
+to the range (4) where one indeed has s43|21 = s.
+
+the second basic property that the operators v(z) are required to satisfy is mutual
+locality [v(z), v(w)] = 0 for z 6= w. it follows that the four point function can alternatively
+be represented e.g. as
+
+h0|v4 (z4) . . . v1 (z1)|0i =
+
+(5)
+
+=zs
+
+d32 c(4, 32, 1)c(32, 3, 2)(cid:12)(cid:12)f t
+
+32 [ 3 2
+
+4 1 ](z)(cid:12)(cid:12)
+
+2
+
+,,
+
+where the t-channel4 conformal blocks are given by power series similar to (3) with z replaced
+by 1  z.
+
+equality of expressions (2) and (5) can be considered as an innite system of equations
+32 given by conformal symmetry.
+
+for the data c(3, 2, 1) and s with coecients f s
+as means for the practical determination of these data it is useless, though.
+
+21 , f t
+
+it turns out, however, that the explicit form of the c(3, 2, 1) can be determined by
+considering certain special cases of these conditions where the conformal blocks are known
+explicitely [6]. under certain assumptions one nds the formula previously proposed in [3, 4]
+as unique solution:
+
+c(3, 2, 1) =(cid:20)
+
+(b2)
+
+(1  b2)
+
+(6)
+
+b22b2(cid:21)b1(q123)
+
+
+
+0b(21)b(22)b(23)
+
+
+
+b(1 + 2 + 3  q)b(1 + 2  3)b(1 + 3  2)b(2 + 3  1)
+
+,
+
+where a denition of the function b(x) can be found in the appendix.
+
+the main problem that needs to be solved in order to put the bootstrap onto rmer ground
+is the verication that locality (or crossing symmetry) is indeed satised when c(3, 2, 1)
+as given in (6) and s as given in (1) are used in the construction of correlation functions.
+at this point we need to introduce our fundamental assumption:
+
+conjecture 1. there exist invertible fusion-transformations between s- and t-channel con-
+formal blocks:
+
+(7)
+
+f s
+
+21 [ 3 2
+
+4 1 ](z) =zs
+
+d32 f2132 [ 3 2
+
+4 1 ] f t
+
+32 [ 3 2
+
+4 1 ](z).
+
+this conjecture is supported by an explicit calculation in a case with a special choice of
+4, . . . , 1, but arbitrary 21 where an explicit expression is available thanks to the work of
+a. neveu (unpublished).
+
+3this can be alternatively found by considering asymptotics of wave-functions in some rened version of
+
+the canonical quantization of [1], as will be explained in more detail elsewhere
+
+4the superscript s and t refer to s- and t-channel respectively
+
+liouville bootstrap via harmonic analysis on a noncompact quantum group 5
+
+remark 2. the construction of conformal blocks in terms of chiral vertex operators [8][9]
+
+identies the fusion-coecients f2132(cid:2)3
+
+4
+
+2
+
+1(cid:3) as analogues of the racah-wigner or 6j-
+
+coecients for fusion-products of representations of the virasoro-algebra.
+
+we will now restrict attention to i  s until the end of this section. this will not be
+a loss of generality since it will turn out that the general case can be obtained by analytic
+continuation. the requirement can then be rewritten as the system of equations
+
+zs
+
+(8)
+
+d21 c(4, 3, 21)c(21, 2, 1)f2132 [ 3 2
+
+4 1 ](cid:1)
+4 1 ](cid:0)f2132 [ 3 2
+
+=
+
+= (32  32)c(4, 32, 1)c(32, 3, 2).
+
+this may be brought into a more suggestive form by absorbing (part of) the factors
+c(3, 2, 1) by a change of normalisation of the conformal blocks (which is in fact a change
+of normalisation of the chiral vertex operators): let
+
+(9)
+
+f s
+
+21 [ 3 2
+
+4 1 ](z) =n (4, 3, 21)n (21, 2, 1)gs
+
+ [ 3 2
+
+4 1 ](z)
+
+f t
+
+ [ 3 2
+
+4 1 ](z) =n (4, 32, 1)n (32, 3, 2)gt
+
+32 [ 3 2
+
+4 1 ](z),
+
+where the following choice of n (3, 2, 1) will turn out to be convenient:
+
+n (3, 2, 1) =
+
+(10)
+
+=
+
+b(2q  1  2  3)b(1 + 2  3)b(1 + 3  2)b(2 + 3  1)
+
+b(21)b(22)b(2q  23)
+
+,
+
+where b(x) is essentially the double gamma function of barnes [22], see the appendix. the
+blocks gs
+ will then be related by an equation of the form (7) with f2132 replaced
+by
+
+ and gt
+
+(11)
+
+g2132 [ 3 2
+
+4 1 ] =
+
+n (4, 32, 1)n (32, 3, 2)
+n (4, 3, 21)n (21, 2, 1)
+
+f21 32 [ 3 2
+
+4 1 ].
+
+the locality condition now takes the form
+
+(12)
+
+zs
+
+d21 |mb(21)|2 g2132 [ 3 2
+
+4 1 ](cid:1)
+4 1 ](cid:0)g2132 [ 3 2
+
+= |mb(32)|2 (32  32),
+
+where mb() = 4 sin(b(2  q)) sin(b1(2  q)). equation (12) expresses unitarity of
+the change of basis (7) when the space of conformal blocks spanned by {f s
+21 ; 21  s} is
+equipped with the hilbert-space structure hf s
+
+21i = |mb(21)|2(21  21).
+
+21 , f s
+
+it is the aim of the present work to verify (12) by (a) showing that the coecients
+
+2
+
+4
+
+g2132(cid:2)3
+
+1(cid:3) are given by racah-wigner coecients for a category of representations of
+
+uq(sl(2, r)) and furthermore (b) deriving the relevant orthogonality relations from complete-
+ness of the clebsch-gordan decomposition for tensor products of these representations.
+
+3. difference equations for the fusion coefficients
+
+it will be assumed that the conformal blocks for any n-point function can be constructed
+in terms of chiral vertex operators. one therefore nds as in [8][9] that the fusion coecients
+
+6
+
+b. ponsot, j. teschner
+
+have to satisfy a system of consistency conditions called hexagon and pentagon equations.
+here we will be particularly interested in the pentagon equation which takes the form
+
+(13)
+
+zs
+
+d1 f11 [ 3 2
+
+2 1 ]f22 [ 4 1
+
+5 1 ]f11 [ 4 3
+
+2 2 ] = f21 [ 4 3
+
+5 1 ]f12 [ 5 1
+2 1 ]
+
+the rst crucial observation to be made at this point is that the fusion coecients should
+have certain analyticity properties in the dependence on its six complex parameters. note
+that the coecients f s
+21,n that appear in the power series representation of conformal blocks
+(3) depend polynomially on the variables 4, . . . , 1 and rationally on , with poles only at
+the values 2 = m,n = mbnb1 and q = m,n. if the series (3) converges5 it follows
+that the dependence of f s
+21 on the variables 4, . . . , 1 must be entire analytic, whereas
+the -dependence will be meromorphic with poles only at the locations given previously.
+the compatibility of the existence of fusion transformations (7), analyticity properties of
+conformal blocks and remark 1 suggests (see [18] for more discussion) the following conjec-
+ture:
+
+conjecture 2. the fusion coecients f2132(cid:2)3
+
+4
+
+0 <re(2 + 3 + 23  q) < q
+0 <re(2 + 3  23) < q
+0 <re(23 + 3  2) < q
+0 <re(23 + 2  3) < q
+
+(14)
+
+2
+
+1(cid:3) are holomorphic in
+
+0 <re(4 + 1 + 23  q) < q
+0 <re(4 + 1  23) < q
+0 <re(23 + 4  1) < q
+0 <re(23 + 1  4) < q
+
+second, one may observe that the fusion transformations (7) simplify if one of 4, . . . , 1
+is taken to be  = m,n = mb  nb1, corresponding to a degenerate representation of
+the virasoro algebra. conformal blocks f s
+ then only exist for a nite number of
+values of 21, 32, so that the fusion coecients form a nite dimensional matrix [20]. it
+will suce to consider cases where one of 4, . . . , 1, say 2, equals b or b1. in that
+case s-channel conformal blocks f s
+21 exist only for  = 1  sb, s = , 0, +, and t-channel
+conformal blocks for  = 3  sb, s = , 0, +. moreover, it is easy to show that the fusion
+coecients that appear in such cases can all be uniquely expressed in terms of the following
+elementary ones: let
+
+21 , f t
+
+(15)
+
+fs,s (4, 3, 1)  f1s b
+
+2 ,3s b
+
+2
+
+[ 3 2
+4 1 ]2= b
+
+2
+
+,
+
+where
+
+s, s = +, 
+
+the matrix fs,s can be calculated explicitely [19][20]. the corresponding matrix gs,s (cf.
+(11)) is then given by
+
+(16)
+
+g++ =
+
+g+ =
+
+[4 + 3  1  b
+2 ]
+
+[23  b]
+
+[3 + 1  4  b
+2 ]
+
+[23  b]
+
+g+ =
+
+[4 + 3 + 1  3b
+2 ]
+
+[23  b]
+
+g = 
+
+[4 + 1  3  b
+2 ]
+
+[23  b]
+
+[x] 
+
+sin(bx)
+sin(b2)
+
+.
+
+if one then considers the pentagon equation (13) in the special cases where one of
+5, . . . , 1 equals b, one nds a set of linear nite dierence equations for the general
+
+5liouville theory would be dead alltogether otherwise
+
+liouville bootstrap via harmonic analysis on a noncompact quantum group 7
+
+4
+
+only, for example
+
+fusion coecients f2132(cid:2)3
+xs=,0,+
+
+(17)
+
+2
+
+1(cid:3). part of these equations involve shifts of one argument
+3 4(cid:12)(cid:12)
+cs(cid:0) 1 2
+
+32(cid:1)f2132 [ 3 2
+
+4 1sb ] = 0.
+
+21
+
+one has one such equations of each of the variables 4, . . . 1. other equations are of the
+form
+(18)
+
+4 1sb ] = f21+rb,32 [ 3 2
+
+4 1sb ] where r = +, ,
+
+xs=,0,+
+
+3 4(cid:12)(cid:12)
+dr,s(cid:0) 1 2
+
+21
+
+32(cid:1)f2132 [ 3 2
+
+and a similar equation with shifts of 32 on the right hand side. furthermore, each of these
+equations has a dual partner obtained by b  b1. finally, one has equations that reect
+
+the fact that all the fusion coecients f1,2(cid:2)3
+
+4
+
+2
+
+1(cid:3) are functions of the conformal dimensions
+
+only, so must be unchanged under i  q  i, i = 1, 2, 3, 4 and j  q  j, j = 1, 2.
+
+in the case of real irrational b it is possible to show (details will appear in [18]) uniqueness
+of a solution to this system of functional equations, taking into account the analytic prop-
+erties of the fusion coecients. in fact, the equations (17) are second order homogeneous
+nite dierence equations. it can be shown that the second order equations of the form
+(17) together with their b  b1 duals can have at most two linearly independent solutions
+with the required analytic properties. taking into account the symmetry i  q  i,
+i = 1, . . . , 4 will determine the dependence w.r.t. i, i = 1, . . . , 4 up to a factor that de-
+pends on 21 and 32. the remaining freedom is then xed by considering equations (18)
+and its counterpart with shifts of 32.
+
+remark 3. loosely speaking the message is the following: if there exist fusion transforma-
+tions of conformal blocks that are compatible with the expectations from other approaches
+(encoded in conjectures 1 and 2; cf. remark 1) then they are unique for real, irrational b.
+
+remark 4. one might also be interested in the possibility of having fusion transformations
+
+of the form (7) but with coecients f21,32(cid:2)3
+
+4, . . . , 1 and 21, 32. but if one then only requires e.g. continuity in some interval such
+as (14) one still has the above result on uniqueness, which together with the results to be
+discussed below put one back precisely into the situation considered here.
+
+1(cid:3) only required to be dened for real
+
+4
+
+2
+
+4. a tensor category of quantum group representations
+
+a set of innite dimensional representations p of the quantized universal enveloping
+algebra uq(sl(2, r)) may be realized on the hilbert space l2(r) in terms of the weyl-algebra
+generated by u = e2bx and v = e b
+
+(19)
+
+2 p, where [x, p] = i:
+e = u +1 eib(q)v  eib(q)v 1
+
+eib2  eib2
+
+f = u 1 eib(q)v  eib(q)v 1
+
+eib2  eib2
+
+these generators satisfy the relations
+
+(20)
+
+ke = qek
+
+kf = q1f k
+
+[e, f ] = 
+
+k = v
+
+k 2  k 2
+
+q  q1
+
+8
+
+b. ponsot, j. teschner
+
+the operators e, f , k are unbounded. they will be dened on domains consisting of func-
+tions which possess an analytic continuation into the strip {x  c; |im(x)| < b
+2 } and which
+have suitable decay properties at innity. it may be shown that the representations p,
+  s are unitarily equivalent to a subset of the integrable (well-behaved) representations
+of uq(sl(2, r)) classied in [23]. it follows in particular that e, f and k become self-adjoint
+on suitable domains.
+
+the q-casimir acts as a scalar in this representation:
+
+(21)
+
+c = f e 
+
+qk 2 + q1k 2  2
+
+(q  q1)2
+
+ [  q
+
+2 ]2,
+
+[x] 
+
+sin(bx)
+sin(b2)
+
+.
+
+remark 5. the representations considered here form a subset of the representations of
+uq(sl(2, r)) that appear in the classication of [23]. this subset is distinguished by the
+fact that it is simultaneously a representation of uq(sl(2, r)), q = exp(ib2) with gener-
+ators e, f , k being realized by replacing b  b1 in the expressions for e, f , k given
+above. restriction to these representations is crucial for obtaining a quantum group struc-
+ture which is self-dual under b  b1, as liouville theory is. the price to pay is that the
+representations p do not have classical (b  0) counterparts.
+
+tensor products p2  p1 of representations can be dened by means of the co-product:
+
+(22)
+
+(k) = k  k
+
+(e) = e  k 1 + k  e
+
+(f ) = f  k 1 + k  f
+
+theorem 1. the uq(sl(2, r))-representation p2  p1 dened on l2(r2) by means of 
+decomposes as follows
+
+(23)
+
+p2  p1 z 
+
+s
+
+d p,
+
+it is remarkable and nontrivial that the subset of self-dual integrable representations
+of uq(sl(2, r)) is actually closed under tensor products. the proof, based on results and
+techniques of [16], will appear in [17].
+
+the clebsch-gordan maps c(3|2, 1) : p2 p1  p3 may be explicitely represented
+
+as an integral transform
+
+(24)
+
+c(3|2, 1) : f (x2, x1)  f [f ](3|x3) zr
+
+dx2dx1 [ 3 2 1
+
+x3 x2 x1 ] f (x2, x1).
+
+the distributional kernel c (the clebsch-gordan coecients) is given by the expression
+
+(25)
+
+[ q3 2 1
+
+x2 x1 ] =sb(1 + 2  3)ei12 e2(x3(21)2x2+1x1) 
+
+x3
+
+ db(x32, 32)db(x31, 31)db(x21, 21)
+
+where the distribution db(x, ) is dened in terms of the double sine function sb(x) (cf.
+appendix) as
+
+(26)
+
+db(x, ) = e i
+
+2 a(aq)eax lim
+0+
+
+sb(ix + )
+sb(ix + )
+
+and the coecients xji, ji, j > i  {1, 2, 3} are given by
+
+(27)
+
+x32 =x3  x2 + i
+x31 =x3  x1 + i
+x21 =x3  x2 + i
+
+2 (3 + 2  q)
+2 (3 + 1  q)
+2 (2 + 1  23)
+
+32 =2 + 3  1
+31 =3 + 1  2
+21 =2 + 3  1.
+
+liouville bootstrap via harmonic analysis on a noncompact quantum group 9
+
+the orthogonality relations for the clebsch-gordan coecients (25) can be determined by
+explicit calculation:
+
+(28)
+
+zr
+
+dx1dx2 [ 3 2 1
+
+x3 x2 x1 ][ 3 2 1
+
+y3 x2 x1 ] = |sb(23)|2(3  3)(x3  y3).
+
+together with theorem 1 one obtains the corresponding completeness relations
+
+(29)
+
+zs
+
+d3 |sb(23)|2zr
+
+dx3 [ 3 2 1
+
+x3 x2 x1 ][ 3 2 1
+
+x3 y2 y1 ] = (x2  y2)(x1  y1).
+
+the braiding-operation b : p2  p1  p2  p1 may then be introduced as 6
+
+(30)
+
+b21 = zs
+
+d3 |sb(23)|2 c(1, 2|3) (cid:0) 3
+
+2 1(cid:1) c(3|2, 1),
+
+where c(1, 2|3) : p3  s
+s21  p2  p1  s
+
+21, and
+
+21 is the adjoint of c(3|2, 1) for any gelfand-triple
+
+(31)
+
+2 1(cid:1) = ei(3(q3)2(q2)1(q1)).
+(cid:0) 3
+
+triple tensor products p3  p2  p1 carry a representation of uq(sl(2, r)) given by
+(id) = (id). the projections aecting the decomposition of this representation
+into irreducibles can be constructed by iterating clebsch-gordan maps. one thereby obtains
+two canonical bases in the sense of generalized eigenfunctions for p3  p2  p1 given by
+the sets of distributions (x = (x4, . . . , x1))
+
+(32)
+
+s
+
+21 [ 3 2
+
+t
+
+32 [ 3 2
+
+4 1 ](x) =zr
+4 1 ](x) =zr
+
+dx21 [ 4 3 21
+
+x4 x3 x21 ] [ 21 2 1
+
+x21 x2 x1 ] 4, 21  s, x4  r
+
+dx32 [ 4 32 1
+
+x4 x32 x1 ] [ 32 3 2
+
+x32 x3 x2 ]. 4, 32  s, x4  r
+
+.
+
+in particular one may observe that p3  p2  p1 can be decomposed into eigenspaces of
+the pair of commuting self-adjoint operators 321(c) and 321(k) as follows:
+
+(33)
+
+pa3  pa2  pa1 
+
+
+
+zs
+
+d
+
+
+
+zr
+
+dk h,k.
+
+it then follows from completeness of the bases bs
+321 and orthogonality of the
+eigenspaces h,k that the bases s and t must be related by a transformation of the form
+
+321 and bt
+
+s
+
+(34)
+
+21 [ 3 2
+
+4 1 ](x) = zs
+
+32(cid:9)b t
+3 4(cid:12)(cid:12)
+d32 (cid:8) 1 2
+ (cid:12)(cid:12)
+thereby dening the b-racah-wigner symbols (cid:8)  
+(cid:9)b.
+the data (cid:0) 3
+
+2 1(cid:1) and (cid:8)1
+
+conditions.
+
+2
+3 |21
+
+21
+
+
+
+3
+
+32(cid:9)b will now satisfy all the moore-seiberg consistency
+
+32 [ 3 2
+
+4 1 ](x)
+
+6l. faddeev has explained to the authors a nice alternative method to introduce an r-operator.
+
+10
+
+b. ponsot, j. teschner
+
+moreover, by again using completeness of the bases bs
+orthogonality relations for the b-racah-wigner symbols
+
+321 and bt
+
+321 one nds the following
+
+(35)
+
+zs
+
+d21 |sb(221)|2 (cid:8) 1 2
+3 4(cid:12)(cid:12)
+
+21
+
+3 4(cid:12)(cid:12)
+32(cid:9)b(cid:0)(cid:8) 1 2
+
+= |sb(232)|2 (32  32).
+
+21
+
+32(cid:9)b(cid:1)
+
+in fact, |sb(2)|2 = |mb()|2, so that (35) is indeed the orthogonality relation required to
+
+prove locality or crossing symmetry in liouville theory once equality of g21,32(cid:2)3
+(cid:8)1
+
+32(cid:9)b will be established.
+
+2
+3 |21
+
+3
+
+4
+
+2
+
+1(cid:3) and
+
+5. space of functions on the quantum group
+
+the following section may be skipped by readers interested mainly in liouville theory.
+it is important, however, for the deeper mathematical understanding why there is such
+a remarkable non-classical category of representations. an explanation can be given by
+constructing the associated dual object (a suitable space of functions on the corresponding
+quantum group) and studying its harmonic analysis. details will be given in [16].
+
+dene operators a, b, c, d on l2(r  r) by the expressions
+
+(36)
+
+a =u 1
+1
+c =v1
+
+b =v1u2
+d =u1(1 + qu2v 2
+
+1 ).
+
+uj =e2bxj
+vj =e b
+
+2 pj
+
+[xi, pj] = ii,j
+
+j = 1, 2
+
+this is known to generate an integrable operator representation of the algebra pol(slq(2, r))
+[23]. in particular, the operators a, b, c, d all have self-adjoint extensions and one has the
+relations
+
+(37)
+
+ab =qba
+
+ac =qca
+
+db =q1bd
+dc =q1cd
+
+adqbc = 1
+adda = (q  q1)bc.
+
+again it is worth noting that restriction to the integrable representations of pol(slq(2, r))
+from [23] in which a, b, c, d have positive spectrum already represents a point of departure
+from classical sl(2, r) 7, but has the desired feature of being simultaneously a representation
+of the (b  b1)-dual algebra pol(slq(2, r)). the algebra generated by positive selfadjoint
+hilbert space operators a, b, c, d with relations (37) will be denoted pol(sl+
+
+q (2, r)).
+
+let a be the norm closure of the set c
+
+c (sl+
+
+q (2, r)) of all operators on l2(r  r) of the
+
+form
+
+(38)
+
+o[f ] =zr
+
+drds a
+
+ir
+
+b c
+
+is
+
+b f (r, s|x) c
+
+is
+
+b a
+
+ir
+
+b ,
+
+x  1
+
+2b log(bc)
+
+where the so-called symbol f (r, s|x) is smooth and of compact support in its dependence of
+the variable x, and of paley-wiener class (entire analytic, rapid decay) w.r.t. the variables
+r and s. a is then a nonunital c-algebra generated by elements a, b, c, d aliated with
+a in the sense of woronowicz [25, 26].
+
+on the hopf-algebra pol(slq(2, r)) one has natural analogues of left- and right regular
+representation dened by means of the duality between pol(slq(2, r)) and uq(sl(2, r)),
+
+7the spectrum does not cover the group manifold.
+
+liouville bootstrap via harmonic analysis on a noncompact quantum group 11
+
+[27]. there is a corresponding action on c
+
+see e.g.
+conveniently in terms of nite dierence operators acting on the symbols f (r, s|x):
+
+q (2, r)) that may be expressed
+
+c (sl+
+
+(39)
+
+el =t +
+fl =t 
+er =t 
+fr =t +
+
+r t +
+r t 
+r t +
+r t 
+
+s e2bx[x]
+s ([x + 2is] + e2bx[x + 2i(s + r)])
+s ([x + 2ir] + e2bx[x])
+s [x + 2is]
+
+kl =e(r+s)
+kr =e(rs),
+
+where the following notation has been used: [x]  sin(bx)
+
+sin(b2) and
+
+(40)
+
+t 
+r f (r, s|x) = f (r  ib
+
+2 , s|x)
+
+t 
+s f (r, s|x) = f (r, s  ib
+
+2 |x)
+
+x = 1
+
+2 x.
+
+a l2-space may be introduced as completion of c
+
+c (slq(2, r)) with respect to the inner
+
+product h., .i dened as
+
+(41)
+
+ho[f1], o[f2]i =zr
+
+drdszr
+
+dx e2qx(cid:0)f1(r, s|x)(cid:1)
+
+f2(r, s|x).
+
+this inner product is such that the operators el, fl, kl and er, fr, kr are symmetric.
+
+theorem 2. one has the following decomposition of l2(sl+
+sentations of uq(sl(2, r))l  uq(sl(2, r))r:
+
+q (2, r)) into irreducible repre-
+
+(42)
+
+l2(sl+
+
+q (2, r)) 
+
+
+d |sb(2)|2 p  p
+
+zs
+
+one of the authors (j.t.) has partial results that strongly support the conjecture that the
+
+co-product exists on the hilbert-space level in the sense of [25].
+
+remark 6. one obtains representations of uq(sl(2, r))l  uq(sl(2, r))r by symmetric opera-
+tors el, fl, kl and er, fr, kr also if one chooses the measure in (41) to be exp(2(b + k
+b )x).
+the choice k = 0 in particular reproduces the haar-measure on classical sl(2, r). for the
+present choice k = 1 one looses the correspondence to any classical object but gains the
+self-duality b  b1.
+
+6. calculation of racah coefficients
+
+the direct calculation of the racah coecients from the clebsch-gordan maps looks
+dicult. a small trick helps. if one xes the values of three of the four variables x4, . . . , x1
+in (34) one obtains an integral transformation for a function of a single variable. in fact,
+the analytic properties of s
+32 even allow to choose complex values. it will be
+convenient to consider
+
+21 and t
+
+(43)
+
+s
+
+21 [ 3 2
+
+4 1 ](x) = lim
+x4
+
+e24x4
+
+lim
+
+x2
+
+3
+
+yj=1
+
+e2j xj s
+
+21 [ 3 2
+
+4 1 ](x)(cid:12)(cid:12)(cid:12)
+
+x1=x
+
+x3= i
+
+2 (q+24)
+
+,
+
+12
+
+b. ponsot, j. teschner
+
+and the same for t
+be done explicitely by using (59). one nds expressions of the form
+
+32 . the integral that denes s
+
+21 and t
+
+32 according to (32),(43) can
+
+s
+
+21 [ 3 2
+
+4 1 ](x) = n s
+
+21 [ 3 2
+
+4 1 ]s
+
+21 [ 3 2
+
+4 1 ](x)
+
+s
+
+21 [ 3 2
+
+4 1 ](x) = e+2x(2121)fb(21 + 1  2, 21 + 3  4; 221; ix)
+
+t
+
+32 [ 3 2
+
+4 1 ](x) = n t
+
+32 [ 3 2
+
+4 1 ]t
+
+32 [ 3 2
+
+4 1 ](x)
+
+(44)
+
+t
+
+32 [ 3 2
+
+4 1 ](x) = e2x(32+14)fb(32 + 3  2, 32 + 1  4; 232; +ix),
+
+where fb is the b-hypergeometric function dened in the appendix, and n s
+certain normalization factors.
+
+21, n t
+
+32 are
+
+the linear transformation following from (34) can now be calculated as follows: one
+32 ) are eigenfunctions of the nite dierence operators c21 and
+
+21 (resp. t
+
+observes that s
+c32 dened respectively by
+
+(45)
+
+2(cid:3)2
+c21 =(cid:2)x + 1 + 2  q
+2(cid:3)2
+c32 =(cid:2)x + 1  4 + q
+
+ e+2bx(cid:2)x + 1 + 2 + 3  4(cid:3)(cid:2)x + 21(cid:3)
+ e2bx(cid:2)x + 1 + 2  3  4(cid:3)(cid:2)x(cid:3),
+
+where x = (2)1x. these operators can be made self-adjoint in l2(r, dxe2qx), and it
+can be shown that
+theorem 3. {s
+the operators c21 and c32 respectively, normalized by
+
+32; 32  s} form complete sets of eigenfunctions of
+
+21; 21  s} and {t
+
+(46)
+
+zr
+
+dx e2qx (cid:0)s
+
+
+
+21
+
+[ 3 2
+
+4 1 ](x)(cid:1)
+
+s
+
+21 [ 3 2
+
+4 1 ](x) = (21  
+
+21).
+
+it follows that the racah-wigner coecients can be evaluated in terms of the overlap
+
+between these two bases:
+
+(47)
+
+3 4(cid:12)(cid:12)
+(cid:8) 1 2
+
+n s
+
+21 [ 3 2
+4 1 ]
+
+4 1 ] zr
+
+n t
+
+32 [ 3 2
+
+21
+
+32(cid:9)b =
+
+dx e2qx (cid:0)t
+
+32 [ 3 2
+
+4 1 ](x)(cid:1)
+
+s
+
+21 [ 3 2
+
+4 1 ](x).
+
+the integral can be done by using the representation (57) for the b-hypergeometric function.
+the result is
+
+3 4(cid:12)(cid:12)
+(cid:8) 1 2
+
+21
+
+32(cid:9)b =
+
+sb(2 + 21  1)sb(2 + 1  21)sb(21 + 3 + 4  q)sb(32 + 1  4)
+sb(2 + 32  3)sb(3 + 2  32)sb(21 + 3  4)sb(32 + 1 + 4  q)
+
+
+
+(48)
+
+ |sb(232)|2
+
+i
+
+zi
+
+ds
+
+b(u1 + s)b(u2 + s)b(u3 + s)b(u4 + s)
+b(v1 + s)b(v2 + s)b(v3 + s)b(v4 + s)
+
+,
+
+where the coecients ui and vi, i = 1, . . . , 4 are given by
+
+(49)
+
+u1 =21 + 1  2
+u2 =q + 21  2  1
+u3 =21 + 3  4
+u4 =q + 21  3  4
+
+v1 =2q + 21  32  2  4
+v2 =q + 21 + 32  4  2
+v3 =221
+v4 =q.
+
+liouville bootstrap via harmonic analysis on a noncompact quantum group 13
+
+the integral representing the racah-wigner coecients is of the type of a barnes integral
+for a 4f3 b-hypergeometric function.
+
+7. funcional equations for racah-wigner coefficients
+
+there is a family of nite-dimensional representations of uq(sl(2, r))uq(sl(2, r)) labelled
+by two positive integers n, m. the generators e, f, k and e, f , k are realized on vector
+spaces pn,m of polynomials in the variables u and u = e2b1x by means of the restriction
+2 b1, n, m = 0, 1, 2, . . . . of particular interest will
+of the expressions (19) to q   =  n
+be the pair of two-dimensional representations p1,0 and p0,1, from which all representations
+pn,m can be generated by repeated tensor products. the decomposition of tensor products of
+representations p1,0 or p0,1 with a generic representation p into irreducible representations
+can be determined purely algebraically:
+
+2 b  m
+
+(50)
+
+p1,0  p  ms=
+
+ps b
+
+2
+
+p0,1  p  ms=
+
+ps 1
+
+2b
+
+21 (resp. t
+
+the distributions s
+
+32 ) develop double poles if one sets e.g. 2 =  b
+2 ,
+2 and b  b1). the relevant coecients
+21 = 1   b
+describing tensoring with the nite dimensional representations p1,0 (resp. p0,1) are found
+as residues of these double poles. these residues will be denoted as s
+) and are
+given by the expressions (let s(x)  2 sin(bx), z = e2bx)
+
+2 ,  = +,  (resp. 32 = 3   b
+
+ (resp. t
+
+s
+
++ [ 3 2
+
+s
+
+ [ 3 2
+
+t
+
++ [ 3 2
+
+4 1 ](x) =r(x) [4 + 3 + 1  3b
+
+4 1 ](x) =r(x)(cid:0)[21  b] + [1 + 4  3  b
+2 ]z(cid:1)
+4 1 ](x) =r(x)(cid:0)[23  b]z + [3 + 4  1  b
+2 ](cid:1)
+
+4 1 ](x) =r(x) [4 + 3 + 1  3b
+
+2  b1]z
+
+2  b1],
+
+s
+
+ [ 3 2
+
+(51)
+
+(52)
+
+3 4(cid:12)(cid:12)
+gs,t(4, 3, 1) (cid:8) 1 2
+
+1s2
+
+3t2(cid:9)b(cid:12)(cid:12)(cid:12)2= b
+
+2
+
+,
+
+where
+
+s, t = +, .
+
+where r(x) abbreviates the common factor that appears.
+matrix gs,t introduced in section 3 coincides with the racah coecients that relate s
+t
+:
+
+it now follows easily that the
+ and
+
+but this already guarantees that the nite dierence equations that follow from the moore-
+seiberg pentagon equation for the racah coecients as sketched in section 3 will be exactly
+
+one can furthermore show that the functional equations that describe the relation between
+racah coecients with argument i and q  i, i = 1, . . . , 4 coincide with those satised
+
+the same as those satised by the fusion coecients g21,32(cid:2)3
+by g21,32(cid:2)3
+
+we conclude that the racah coecients solve the full system of functional equations for
+the fusion coecients. this implies according to section 3 that one has at least for real,
+irrational values of b
+
+1(cid:3).
+
+1(cid:3).
+
+4
+
+2
+
+4
+
+2
+
+(53)
+
+g2132 [ 3 2
+
+3 4(cid:12)(cid:12)
+4 1 ] =(cid:8) 1 2
+
+21
+
+32(cid:9)b.
+
+14
+
+b. ponsot, j. teschner
+
+8. discussion
+
+the results of the present paper amount to a verication of consistency of the bootstrap
+for liouville theory under the assumptions on existence and properties of fusion coecients
+discussed in sections 2 and 3.
+
+it should be emphasized that characterizing the fusion coecients as racah-coecients
+for a quantum group will be important beyond the task of veryifying the consistency of
+previous results on three point function and spectrum of liouville theory. it also allows one
+to complete the bootstrap for the associated boundary problem (liouville theory on the strip
+or half-plane) that was begun in [28] and should have important applications to d-brane
+physics on the associated noncompact backgrounds. specically, it was observed by one of
+us (j.t.) more than two years ago that the three point function for boundary operators can
+be expressed in terms of the fusion coecients, which was one of the main motivations for
+undertaking the present investigation.
+
+in fact, due to the close relationship between liouville theory and the h +
+
+3 or sl(2)/u (1)
+wznw models it should now not be too dicult to generalize our methods to obtain similar
+results for these models. for example, an exact investigation of eective eld theories on
+d-branes in ads3 similar to what was done in [29, 30] is now within reach.
+
+our results may also be interesting from the mathematical point of view. the list of
+examples for non-compact quantum groups where results on the harmonic analysis are known
+is rather short [31, 32, 33]. in fact, the deformation of classical groups to quantum groups
+often meets subtle obstacles [25]. here we have found an example which is not a deformation
+of a classical group but in some respects looks particularly nice (self-duality).
+
+we would nally like to mention that there seem to be rather interesting connections
+of the present work to other approaches to liouville theory, namely the liouville model
+on the lattice [34] and quantization of teichmuller space [35, 36]. in fact, in all cases the
+special function sb(x) (called quantum dilogarithm there) as well as the duality b  b1
+play crucial roles. making contact with the quantization of teichmuller space [35, 36] will
+require diagonalization of nite dierence operators of similar form as have appeared in the
+present work [37].
+
+9. appendix: special functions
+
+the basic building block for the class of special functions to be considered is the the double
+gamma function introduced by barnes [22], see also [38]. the double gamma function is
+dened as
+
+(54)
+
+log 2(s|1, 2) =  
+
+t
+
+
+
+xn1,n2=0
+
+(s + n11 + n22)t!t=0
+
+.
+
+let b(x) = 2(x|b, b1), and dene the double sine function sb(x) and the upsilon function
+b(x) respectively by
+
+(55)
+
+sb(x) =
+
+b(x)
+
+b(q  x)
+
+b(x) = b(x)b(q  x).
+
+it will also be useful to introduce
+
+(56)
+
+gb(x) = e
+
+i
+
+2 x(xq)sb(x).
+
+liouville bootstrap via harmonic analysis on a noncompact quantum group 15
+
+the b-hypergeometric function will be dened by an integral representation that resembles
+
+the barnes integral for the ordinary hypergeometric function:
+
+(57)
+
+fb(, ; ; y) =
+
+1
+i
+
+sb()
+
+sb()sb()z i
+
+i
+
+ds e2isy sb( + s)sb( + s)
+sb( + s)sb(q + s)
+
+,
+
+where the contour is to the right of the poles at s =   nb  mb1 s =   nb  mb1
+and to the left of the poles at s = nb + mb1 s = q   + nb + mb1, n, m = 0, 1, 2, . . . . the
+function fb(, ; ; ix) is a solution of the q-hypergeometric dierence equation
+
+(58)
+
+(cid:0)[x + ][x + ]  e2bx[x][x +   q](cid:1)fb(, ; ; ix) = 0,
+
+this denition of a q-hypergeometric function is closely related to the one rst given in [39].
+there is also a kind of deformed euler-integral for the hypergeometric function [39]:
+
+x = 1
+
+2 x
+
+(59)
+
+b(, ; ; x) =
+
+1
+
+i z i
+
+i
+
+ds e2is gb(s + x)gb(s +   )
+gb(s + x + )gb(s + q)
+
+the precise relation between b and fb is
+
+(60)
+
+b(, ; ; x) =
+
+gb()gb(  )
+
+gb()
+
+fb(, ; ; x),
+
+x = x  1
+
+2 (     + q).
+
+references
+
+[1] t. curtright, c. thorn: conformally invariant quantization of liouville theory, phys. rev.
+
+lett.48(1982)1309
+
+[2] j.-l. gervais and j. schnittger: continous spins in 2d gravity: chiral vertex operators and local
+
+fields, nucl. phys. b431(1994) 273
+
+[3] h. dorn, h.j. otto: two and three point functions in liouville theory, nucl. phys. b429 (1994) 375-388
+[4] a.b. zamolodchikov, al.b. zamolodchikov: structure constants and conformal bootstrap in liouville
+
+eld theory, nucl. phys. b477 (1996) 577-605
+
+[5] j. teschner: operator product expansion and factorization in the h +
+[6] j. teschner: on the liouville three-point function, phys. lett. b363 (1995) 65
+[7] l. oraifeartaigh, j. m. pawlowski, v. v. sreedhar: duality in quantum liouville theory, hep-
+
+3 -wznw model, hep-th/9906215
+
+th/9811090
+
+[8] g. moore, n. seiberg: classical and quantum conformal eld theory, comm. math. phys. 123 (1989)
+
+177-254
+
+[9] g. felder, j. frohlich, g. keller: on the structure of unitary conformal eld theory, i, comm. math.
+
+phys. 124 (1989) 417-463, ii, comm. math. phys. 130 (1990) 1-49
+
+[10] l.d. faddeev, l.a. takhtajan: liouville model on the lattice, lect. notes in physics. 246, springer-
+
+verlag, berlin, 1986, pp. 166-179
+
+[11] o. babelon: extended conformal algebra and yang-baxter equation, phys. lett. b215 (1988) 523-529
+[12] j.-l. gervais: the quantum group structure of 2d gravity and the minimal models i, comm. math.
+
+phys. 130 (1990) 257-280
+
+[13] e. cremmer, j.-l. gervais, j.-f. roussel: the quantum group structure of 2d gravity and the minimal
+
+models ii: the genus-zero chiral bootstrap comm. math. phys. 161 (1994) 597
+
+[14] j.-l. gervais, j. schnittger: the braiding of chiral vertex operators with continuous spins in 2d gravity,
+
+phys. lett. b315(1993) 258
+
+[15] j.-l. gervais, j.-f. roussel: solving the strongly coupled 2d gravity: 2. fractional-spin operators and
+
+topological three point functions, nucl. phys. b426(1994) 140
+
+[16] j. teschner: harmonic analysis for a quantum group related to slq(2, r), in preparation
+[17] b. ponsot, j. teschner: clebsch-gordan and racah-coecients for a continuous series of representations
+
+of uq(sl(2, r)), in preparation
+
+[18] b. ponsot, j. teschner: liouville theory and a noncompact quantum group, in preparation
+
+16
+
+b. ponsot, j. teschner
+
+[19] j.-l. gervais, a. neveu: new quantum treatment of liouville eld theory, nucl. phys. b224 (1982)
+329-348, and: novel triangle relation and absence of tachyons in liouville string eld theory, nucl.
+phys. b238 (1984) 125-141
+
+[20] a.a. belavin, a.m. polyakov, a.b. zamolodchikov: innite conformal symmetry in 2d quantum eld
+
+theory, nucl. phys. b241 (1984) 333
+
+[21] n. seiberg: notes on quantum liouville theory and quantum gravity, progr. theor. phys. suppl. 102
+
+(1990) 319-349
+
+[22] e.w. barnes: theory of the double gamma function, phil. trans. roy. soc. a 196 (1901) 265-388
+[23] k. schmudgen: integrable operator representations of r2
+
+q, xq, and slq(2, r), comm. math. phys.
+
+159(1994)217-237
+
+[24] k. schmudgen: operator representations of uq(sl(2, r)), lett. math. phys. 37 (1996) 211-222
+[25] s. woronowicz: unbounded elements aliated with c -algebras and non-compact quantum groups,
+
+comm. math. phys. 136 (1991) 399-432
+
+[26] s. woronowicz: c -algebras generated by unbounded elements, rev. math. phys. 7(1995)481-521
+[27] t. masuda, k. mimachi, y. nakagami, m. noumi, y. saburi, k. ueno: unitary representations of the
+quantum group suq(1, 1). i: structure of the dual space of uq(sl(2, r)) lett. math. phys. 19 (1990)
+187-194, ii: matrix elements of unitary representations and the basic hypergeometric functions. lett.
+math. phys. 19 (1990) 195-204
+
+[28] j. teschner, al. b. zamolodchikov, unpublished
+[29] a. yu. alekseev, a. recknagel, v. schomerus: non-commutative world-volume geometries: branes on
+
+su(2) and fuzzy spheres, jhep 9909 (1999) 023
+
+[30] g. felder, j. frohlich, j. fuchs, c. schweigert: the geometry of wzw branes, hep-th/9909030
+[31] s. woronowicz: quantum e(2) group and its pontryagin dual, lett. math. phys. 23(1991)251-263
+[32] t. kakehi: eigenfunction expansion associated with the casimir operator on the quantum group
+
+suq(1, 1), duke math. j. 80(1995)535-573
+
+[33] e. buenoir, ph. roche: harmonic analysis on the quantum lorentz group, q-alg/9712037, to appear
+
+in comm. math. phys.
+
+[34] l.d. faddeev, r. m. kashaev, a. yu. volkov: to appear.
+[35] v.v. fock: dual eichmuller spaces, dg-ga/9702018, and:
+
+l. chekhov, v. v. fock: quantum teichmuller space, math/9908165
+
+[36] r. m. kashaev: quantization of teichmuller spaces and the quantum dilogarithm, q-alg/9705021, and:
+
+liouville central charge in quantum teichmuller theory, hep-th/9811203
+
+[37] v. v. fock: private communication
+[38] t. shintani: on a kronecker limit formula for real quadratic elds, j. fac. sci. univ. tokyo sect.1a
+
+24(1977)167-199
+
+[39] m. nishizawa, k. ueno: integral soluitons of q-dierence equations of the hypergeometric type with
+
+|q| = 1, q-alg/9612014
+
+b.p.: laboratoire de physique mathematique, universite montpellier ii, pl. e. bataillon,
+
+34095 montpellier, france
+
+e-mail address: ponsot@lpm.univ-montp2.fr
+
+j.t.: school for theoretical physics, dublin institute for advanced studies, 10 burlington
+
+road, dublin 4, ireland
+
+e-mail address: teschner@stp.dias.ie
+
+

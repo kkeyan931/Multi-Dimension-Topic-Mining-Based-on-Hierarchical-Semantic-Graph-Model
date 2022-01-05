@@ -1,0 +1,3880 @@
+hep-th/9909006
+cern-th-99-145
+ru-99-486
+lpthe-99-66
+nyu-th-99-8-29
+
+9
+9
+9
+1
+
+ 
+
+p
+e
+s
+1
+
+ 
+
+ 
+ 
+
+1
+v
+6
+0
+0
+9
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+qcd4 from a five-dimensional point of view
+
+laurent baulieu and daniel zwanziger
+
+baulieu@lpthe.jussieu.fr, daniel.zwanziger@nyu.edu
+
+lpthe, universites p. & m. curie (paris vi) et d. diderot (paris vii), paris, france,
+
+ th-division, cern, 1211 gen`eve 23, switzerland
+
+department of physics and astrophysics, rutgers university, ny 09955-0849, usa
+
+ physics department, new york university, new-york, ny 10003, usa
+
+we propose a 5-dimensional denition for the physical 4d-yangmills theory. the fth
+
+dimension corresponds to the montecarlo time of numerical simulations of qcd4. the
+5-dimensional theory is a well-dened topological quantum eld theory that can be renor-
+
+malized at any given nite order of perturbation theory. the relation to non-perturbative
+
+physics is obtained by expressing the theory on a lattice, a la wilson. the new elds that
+
+must be introduced in the context of a topological yangmills theory have a simple lattice
+
+expression. we present a 5-dimensional critical limit for physical correlation functions and
+
+for dynamical auto-correlations, which allows new montecarlo algorithm based on the
+time-step in lattice units given by  = g13/11
+ve dimensions is such that no gribov ambiguity occurs. the weight is strictly positive,
+
+in pure gluodynamics. the gauge-xing in
+
+0
+
+because all ghost elds have parabolic propagators and yield trivial determinants. we
+
+indicate how our 5-dimensional description of the yangmills theory may be extended to
+
+fermions.
+
+1. introduction
+
+the 4-dimensional yangmills theory seems to suer from logical contradictions. in
+
+the continuum formulation, one has a gauge-xed brst invariant path integral, but one
+
+has the famous gribov ambiguity for large gauge eld congurations [1][2]. one often
+
+discards this problem, since the idea of dening the theory as a path integral of a gauge eld
+
+can only be seriously advocated in perturbation theory or for semi-classical approximations.
+
+in the lattice formulation, which is by construction valid non-pertubatively, one chooses as
+
+variables the gauge group elements, but one has yet another contradiction. the way the
+
+continuum theory is approached is unclear, and if one tries to do a local gauge-xing, the
+
+partition function vanishes [3]. this question is also often discarded, since for computing
+
+gauge-invariant quantities, one can factorize the volume of the gauge group that is nite
+
+on the lattice.
+
+it is however frustrating not to have continuum and lattice formulations which would
+
+separately dene both gauge-invariant and gauge non-invariant sectors, with a brst sym-
+
+metry controlling the correspondence of the theory to a physical sector, and with a natural
+
+limit from the lattice to the continuum formulation.
+
+in this article, we will show that, in order to reconcile the continuum and lattice
+
+approaches, it is useful to dene the theory in a 5-dimensional space, such that the 4-
+
+dimensional physical theory lives in a slice of this extended space. the theory that we
+
+will consider passes the tests that are obviously needed: in the continuous formulation it
+
+is perturbatively renormalizable by power counting without loosing its physical character,
+
+(due to ward identities), and the gauge-xing is no longer subject to the gribov ambiguity;
+
+in the lattice formulation, all elds that one considers in the continuum formulation take
+
+their place, and one now obtains a formulation with a consistent gauge xing.
+
+the fth-dimension will be the stochastic time that parisi and wu proposed long
+
+time ago for stochastically quantizing the yangmills theory through a langevin equation
+
+[4][5]. for reviews of stochastic quantization, see [6][7]. the 5-dimensional theory will be
+
+a supersymmetric theory of the topological type, that we can express as a path integral
+
+over 5-dimensional gauge elds for the continuum perturbative formulation, or as a lattice
+
+gauge theory which now depends on elds of a topological eld theory. in one of the lattice
+
+formulations that we will present, the stochastic time is discretized. in the 5-dimensional
+
+critical limit controlled by g0  0, both the physical euclidean correlation lengths and the
+dynamical monte carlo auto-correlation times diverge simultaneously. this allows new
+
+algorithms.
+
+1
+
+the link between topological eld theory and stochastic quantization was rst ob-
+
+served in [8]. the general idea is that the d + 1-dimensional supersymmetric formulation
+
+of a d-dimensional quantum eld theory that is obtained by expressing the eld quanti-
+
+zation by a langevin equation, involves the elds of a topological eld theory in d + 1
+
+dimensions. then, supersymmetric cancellations wash away the detail of the theory in the
+
+bulk, while the relevant aspects of the physical theory are retained in some boundary of
+
+the d + 1-dimensional space.
+
+moreover an extra gauge eld component is needed to enforce the 5-dimensional gauge
+
+symmetry in the stochastic framework [9]. the latter can be identied as a potential
+
+for a drift force along the gauge orbits of the original d-dimensional gauge theory, as
+
+independently observed in [10][9][11]. a gauge-xing drift force for stochastic quantization
+
+was actually introduced originally in [12], as a function of the 4-dimensional gauge elds a.
+but the point is that, by promoting the potential for this force to a 5th eld component,
+
+and by functionally integrating over all its possible values, [9], not only does one not alter
+
+the physical physical sector of the theory, but one softens the gauge condition of the d-
+
+dimensional quantum eld theory. this actually gives the desired result that the gribov
+
+ambiguity losses is relevance as an obstacle for the gauge xing of the theory.
+
+by postulating that qcd4 should be considered from a 5-dimensional point of view,
+we will emphasize its relationship to a topological eld theory which establishes a pleasant
+
+geometrical framework, both in the continuum and lattice descriptions.
+
+renormalizability of stochastically quantized scalar 4 theory was demonstrated in
+
+[13] using the brst operator which encodes the supersymmetry of the stochastic process.
+
+renormalizability of the 5-dimensional formulation of gauge theory was demonstrated in
+
+[14] using the brst operator for gauge invariance supplemented by graphical arguments.
+
+in the present article we demonstrate renormalizability using the complete brst operator
+
+that encodes both the supersymmetry of the stochastic process and the gauge symmetry
+
+of the theory, consistent with parabolic propagation of all ghost elds.
+
+the disappearance of the gribov ambiguity comes as an immediate consequence of
+
+being in ve dimensions, in the context of renormalizable gauges (adapted to the power
+
+counting of this dimension). we will check this result by the verication that the ghost
+
+propagators cannot have zero modes. alternatively, the mathematically oriented reader
+
+will notice that the argument of singer [2] for having a gribov copy phenomenon just
+
+disapears because the stochastic processes is dened on an innite interval, even if we have
+
+a compact 4-dimensional physical space.
+
+2
+
+the consistency of our approach is ensured by the topological invariance, dened
+
+modulo ordinary gauge symmetry. we will also indicate that instantons in four dimensions
+
+are replaced by 5-dimensional solitons, but we leave open the question of anomalies, which
+
+is presumably connected to interesting 5-dimensional topological questions.
+
+to make contact to non-perturbative physics, we will formulate the elds and the
+
+symmetry in a 5-dimensional lattice formulation. not only this oers a new point of view
+
+for the topological symmetries, but this allows us to obtain a discrete lattice formulation
+
+with a brst invariant gauge-xing, oering thereby a new understanding of the continuous
+
+limit. it also gives a concrete denition of non-perturbative physics.
+
+in secs. 2-5 we present the continuum 5-dimensional topological formulation. in sec.
+
+6 we describe the lattice stochastic formulation including the lattice fokker-planck and
+
+langevin equations, in which the 5th time t = x5 is identied with the number of monte
+carlo sweeps. we describe a new monte carlo algorithm based on the 5-dimensional
+
+critical limit g0  0 which controls both physical correlation lengths and dynamical auto-
+correlation times, with time-step in lattice units given by   g13/11
+in gluodynamics.
+we conjecture that the physical spectrum may be given by the eigenvalues of the fokker-
+
+0
+
+planck hamiltonian. in sec. 7 we present a 5-dimensional topological lattice formulation.
+
+in sec. 8 we indicate how our approach extends to fermions, and we conclude with some
+
+speculation on future developments. readers who are primarily interested in monte carlo
+
+calculations may read sec. 6 independently.
+
+2. the 5-dimensional continuum action
+
+2.1. the langevin equation
+
+the langevin equation proposed by parisi and wu was [4]:
+
+5a = df + ,
+
+(2.1)
+
+where  is a gaussian white noise. in the stochastic approach, the correlation functions
+are functionals of a(x, x5) that are the solutions of this equation. the 4-dimensional
+green functions are obtained in the limit where all arguments in the stochastic time are
+equal, and x5  . since we consider a stochastic process, we can as well take initial
+conditions at x5  , and dene the green functions at any given xed time, for instance
+x5 = 0. the convergence toward an equilibrium distribution relies on ergodicity theorems
+
+3
+
+that accord with physical intuition for which the relaxation of a gas to the state of maximal
+
+entropy is obvious, whatever of the initial distribution of its constituents.
+
+a diculty with this langevin equation is that it provides no restoring force along
+
+the gauge orbits, because the euclidean action s(a) is gauge-invariant. consequently
+
+the probability escapes to innity along the gauge orbits, and there is no normalizable
+
+equilibrium probability distribution. this may be remedied by modifying (2.1) by the
+
+introduction of a gauge-xing term that is tangent to the gauge orbit [12] ,
+
+5a = df + dv[a] + .
+
+(2.2)
+
+the gauge-xing term dv[a] has the form of an innitesimal gauge transformation, and
+consequently it has no eect on the expectation-value of any gauge-invariant observable.
+
+the innitesimal generator v[a](x, t) may, in principle, be completely arbitrary, and the
+
+issue of a correct gauge xing, without gribov copies does not arise.
+
+the last equation may be written in a way which respects gauge invariance in ve
+
+dimensions. the idea is to identify v[a] with an independent 5th eld component
+
+v = a5(x, t)
+
+(2.3)
+
+which eventually be xed in the functional integral by a gauge-xing term in the action.
+
+then the gauge-xed langevin equation (2.2) may be written as:
+
+f5  df = 
+
+where f5 = 5a  da5. the relation
+
+a5 = a1a .
+
+(2.4)
+
+(2.5)
+
+will be imposed in the context of topological eld theory by a 5-dimensional gauge condi-
+
+tion.
+
+we would like to obtain a functional integral representation for the langevin equa-
+
+tion (2.4). this is a non-trivial problem because there is a gauge invariance, and the
+
+determinant of the map which connects the as and the noise s has longitudinal zero
+
+modes. instead of attempting to solve these questions by manipulations on the langevin
+
+equation, we will pass directly to a 5-dimensional topological quantum eld theory. later
+
+with lattice regularization we shall verify the consistency of the 5-dimensional formulation,
+
+including the absence of gribov copies, and we shall shall show that after elimination of
+
+auxiliary elds present in this theory, one recovers the langevin equation and the equiva-
+
+lent fokker-planck equation.
+
+4
+
+2.2. the 5-dimensional brst symmetry
+
+the expression of the complete symmetry of the theory boils down to the knowledge of
+
+a brst operator which encodes at once the supersymmetry of the stochastic process and
+
+the gauge symmetry of the theory. this operator is that of the topological symmetry of a
+
+gauge eld in ve dimensions, dened modulo gauge transformations. there is not much
+
+choice for exhibiting such a brst operator, and the solution was given in [9]. it involves
+
+a fth dimensional component for the gauge eld, that we denote as a5. unavoidably,
+
+the vector fermion that is needed to express the jacobian of the constraint (2.1) must be
+
+enlarged into a ve dimensional vector (, 5). if we denote by c the ordinary faddeev
+
+popov ghost and  its ghost of ghost, the combined brst operator for the stochastic
+
+supersymmetry and the gauge symmetry follows therefore from the following geometrical
+
+equation [9]:
+
+(s + d)(a + c) +
+
+1
+2
+
+[a + c, a + c] = f + dx + 5dx5 + 
+
+(s + d)(f + dx + 5dx5 + ) = [a + c, f + dx + 5dx5 + ]
+
+(2.6)
+
+the second equation is the bianchi identity of the rst, thus one has s2 = 0 on all elds
+
+which ensures the consistency of this symmetry which mixes the yangmills symmetry
+
+with the supersymmetry of the stochastic process. here c,  and 5 are fermi ghost
+
+elds with ghost number ng = 1 and  is a bose ghost eld with ghost number ng = 2.
+
+this equation gives, after expansion in ghost number:
+
+sa =  + dc
+
+sa5 = 5 + d5c
+
+s = d  [c, ]
+
+s5 = d5  [c, 5]
+
+sc =  
+
+1
+2
+
+[c, c]
+
+s = [c, ] .
+
+(2.7)
+
+it is identical to the topological brst symmetry for a yangmills eld in ve dimensions.
+
+5
+
+we need anti-ghosts and lagrange multipliers, and their s-transformations. they are:
+
+s  = b  [c, ]
+s 5 = b5  [c, 5]
+sb = [c, b] + [, ]
+sb5 = [c, b5] + [, 5]
+s  =   [c, ]
+
+s = [c, ] + [, ] .
+
+(2.8)
+
+all elds in (2.7) and (2.8) are valued in the same lie algebra representation as a. in
+
+the lattice formulation of this symmetry, it will be advantageous to redene the anti-
+
+ghost and lagrange multiplier elds to eliminate the dependance on c in (2.8), that is,
+s  = b, sb = 0, s  = b, sb = 0, s  = , and s = 0.
+
+there are ve degrees of freedom for the choice of a dynamics, one for each component
+
+of a, with lagrange multipliers elds b and b5. one of them will serve to gauge-x the
+
+ordinary 5-dimensional gauge invariance, with the condition (2.5); the other four will
+
+enforce the langevin equation (2.4), following the now standard methods of tqfts. the
+
+gauge xing of the longitudinal modes in  will use  as a lagrange multiplier.
+
+2.3. the action
+
+the complete action must be s-invariant. we will gauge x the 5-dimensional invari-
+
+ant:
+
+z dxdx5 tr(f5d f )
+
+(2.9)
+
+this term is invariant under any local shift in a and a5, since the lagrangian can locally
+be written as tr(f 
+ ). of course this means that we use special boundary
+conditions for the variations, and eventually on the s. the choice of this term may appear
+
+2 5(f 
+
+ f 
+
+5 f 
+
+ )+ 1
+
+as quite intuitive: it enforces the idea that the stochastic time is unobservable, since it is
+
+independent of the metric component g55, and it is compatible with yangmills invariance.
+
+we will use an sexact term for xing all the invariances and introducing all relevant
+
+drift forces of stochastic quantization. remarkably, the topological brst symmetry just
+
+described is precisely what is needed to do so, that is, to represent a gauge theory in
+
+stochastic quantization by a functional integral with a high degree of symmetry [9].
+
+6
+
+to impose all relevant gauge conditions, we take the brst-exact action:
+
+i = z dxdx5 s tr(cid:0) (f5  df 
+
+1
+2
+
++ (a5  d +
++ 5(aa5  a)(cid:1).
+
+b)
+
+
+2
+
+[, ])
+
+(2.10)
+
+the consistency of this choice of this gauge function will be further justied by showing that
+it gives a perturbatively renormalizable theory. here a, a and  are arbitrary parameters.
+
+when  is non-zero, quartic interactions are introduced. of course  = 0 gives simpler
+
+expressions, but nothing forbids  6= 0, ( = 0 might be a stable xed point under
+
+renormalization).
+
+[alternatively one may make a linear gauge choice by setting  = 0
+
+and taking  instead of d.] the rst two terms are invariant under 5-dimensional
+gauge transformations. the rst term concentrates the path integral around the solutions
+
+of (2.4), modulo ordinary gauge transformations, while the second term xes in a gauge-
+
+covariant way the internal gauge invariance of  that one detects in the brst variation
+s = d + .... the third term xes the gauge invariance for a, a5. as we will see
+in section 3, all these terms are essentially determined by symmetry and power counting
+
+requirements.
+
+we may introduce a background yangmills symmetry, which transform all elds, but
+
+a, in the adjoint representation, while a transform as a gauge eld. the shortest way to
+
+represent such a symmetry, is to dene it through a background brst symmetry, with
+
+generator  and background ghost  (which do not appear in the action). since s and 
+must anticommute, and 2 = 0, we easily nd that we obtain both the action of s and 
+
+by extending (2.6) into:
+
+(s +  + d)(a + c + ) +
+
+1
+2
+
+[a + c + , a + c + ] = f + dx + 5dx5 + 
+
+(2.11)
+
+(s +  + d)(f + dx + 5dx5 + ) = [a + c + , f + dx + 5dx5 + ]
+
+when one expands the latter equation one must assign a new ghost number to  and ,
+
+which is independent of that carried by s and the propagating elds. this determines
+all transformations of s and  on all elds, with s2 = 2 = s + s = 0. one then
+
+observes that the rst two terms in (2.10) are not only s-invariant as s-exact terms, but
+
+they are also -invariant, without being -exact. these terms involve gauge-covariant
+
+gauge functions for a and  in ve dimensions. the aim of the renormalization proof,
+
+7
+
+using power counting, will be to show that these terms, up to multiplicative rescalings, are
+
+the only ones which satisfy both s and -invariances. the third term is not -invariant,
+
+and it will be necessary to prove that when the parameter a changes, this does not aect
+
+the sector of the theory dened by s and  invariances.
+
+to investigate the properties of our action, we must expand (2.10), which is a simple
+
+exercise. one gets:
+
+i = z dxdx5 tr(cid:0) 
+
+1
+2
+
+bb + b(f5  df)
+
++ (ad5 + dd  [, ]) 
+
+1
+2
+
+[ , ] +
+
+
+2
+
+[, ][, ]
+
++ (b5  [c, 5])(aa5  a)
+ (d[5]  dd[]  [, f])
+
++ (a5  d +
+ 5(a(5 + d5c)    dc)(cid:1).
+
+[, ])
+
+
+2
+
+(2.12)
+
+in order to see the dynamical content of this action, we identify and eliminate the
+
+auxiliary elds. the equation of motion of b5 gives back the gauge-xing condition that
+we wish to impose:
+
+aa5 = a.
+
+(2.13)
+
+moreover the equation of motion of b has the same form as the langevin equation,
+
+f5  df = b.
+
+we also eliminate 5 and  and we get,
+
+a5 = d 
+
+
+2
+
+[, ]
+
+a  = a 5 + d .
+
+(2.14)
+
+(2.15)
+
+(2.16)
+
+thus a5 can be expressed as a function of a, and 5 can be expressed as a function of
+. this is the key of a gauge-xing that does not suer from the gribov ambiguity, and
+the gauge condition aa5 = a combines the virtues of axial and laudau gauges. by
+integrating over all values of a5, the faddeevpopov zero modes that one encounters in the
+genuine 4-dimensional theory just disappear. it is tempting to compare the integration
+
+8
+
+over a5 to the integration over moduli that also solves the problem of zero modes of
+
+reparametrization ghosts in string theory.
+
+we will give much more details about the elimination of gribov copies in sec. 7,
+although a fourier transformation on the variable x5 could help understanding directly
+
+how the multiple intersections of gauge orbit that occur in four dimensions could be split
+
+on dierent orbits in ve dimensions.
+
+finally, after integrating out b and b5, we get:
+
+i +z dxdx5 tr(f5df ) z dxdx5 tr(cid:0) 
+
+1
+2
+
+f5f 5 
+
+1
+2
+
+d f 
+
+ df 
+
++ (ad5 + dd)
+
++ [, ]) +
+
+1
+2
+
+[ , ] +
+
+
+2
+
+[, ][, ]
+
+ (d5 + dd[] + [ , f])
+
+(2.17)
+
++ a1d (d  
+[ 5, ])
+ 5(ad5c + dc + [a, ]) (cid:1)
+
+
+2
+
+one has a5 = a1a in this action.
+
+to derive feynman rules, we examine the part of the resulting action that is quadratic
+
+in the elds. it is given by
+
+i0 = ia + i + i + ic
+
+(2.18)
+
+1
+2
+
+1
+2
+
+(a2  1)(a)2(cid:1)
+
+1
+2
+
+(5a)2 +
+
+(a)2 +
+
+ia =z dxdx5tr(cid:0)
+i =z dxdx5tr(cid:0) (5 +  + (a1  1))(cid:1)
+i =z dxdx5tr(cid:0) (a5 + )(cid:1)
+ic =z dxdx5tr 5(cid:0)  a5c + c(cid:1)
+
+(2.19)
+
+where we have dropped exact derivatives in ia.
+
+an important observation is that all ghost-antighost pairs, (, ), (, ) and
+(c, 5) have a free action which is parabolic: it is rst order in 5, and the correspond-
+ing matrix of spatial derivatives is a negative operator. consequently all ghost propa-
+
+gators are retarded, d(x, t) = 0 for t = x5 < 0. for example for a = 1, all ghost-
+antighost pairs have the momentum-space propagator (i + k2)1, with fourier transform
+
+9
+
+d(x, t) = (t)(4t)2 exp(x2/4t), where (t) is the step function. moreover ghost num-
+
+ber is conserved, and an arrow which represents the ow of ghost charge may be assigned
+
+to each ghost line: it points from the past to the future. on the other hand, the action of
+
+the a-eld is second order in 5, so a lines freely move forward and backward in time. (its
+
+momentum-space propagator is (cid:16)2 + (k2)2(cid:17)1
+
+= (2k2)1(cid:16)(i + k2)1 + (i + k2)1(cid:17).)
+
+ghost number is also conserved at every vertex. consequently in a diagrammatic expan-
+
+sion, every ghost line may be followed from the point where it enters a diagram from the
+
+past, as it moves monotonically from the past to the future, until it exits into the future.
+
+(the transformation of a  into two s and back is allowed.) it follows that in a diagram
+
+containing only external a-lines, there can be no closed ghost loops apart from tadples.
+
+with dimensional regularization the tadpole diagrams vanish, and in this representation of
+
+gauge theory, ghost diagrams provide accounting checks on the renormalization constants
+
+that are expressed in ward identities, as usual, but they do not appear in the expansion of
+
+correlation functions the a-eld. with lattice regularization, the tadpole diagrams yield
+
+the famous ito term.
+
+another way to see that the ghost determinants have no gribov problems is to note
+
+that the initial-value problem for a parabolic equation has a unique solution.
+
+in the
+
+section devoted to lattice regularization, we will indeed integrate out the ghosts exactly,
+
+and explicitly verify the absence of gribov copies.
+
+we now turn to the question of understanding the renormalization of this action.
+
+3. perturbative renormalization
+
+the action (2.12) is renormalizable by power counting. indeed, the form of the propa-
+
+gators implies that the canonical dimension of all elds with an index 5 is equal to 2, while
+
+other elds have dimensions 1. it follows that we start from an action where the coupling
+
+constant has dimension 0, and we can apply the general result that it can be renormalized
+
+order by order in perturbation theory by a nite number of counter-terms.
+
+the main question is of course to investigate the structure of the counter-terms. we
+
+will only sketch the demonstration that this action is actually stable under renormaliza-
+
+tion, which means that the generating functional of green functions can be dened, order
+
+by order in perturbation theory, while satisfying the same ward identities as the action
+
+(2.10), corresponding to its invariance under s-symmetry, so(4)-symmetry, ghost number
+
+10
+
+conservation, and to the choice of a linear condition aa5 a in the sector which violates
+the -invariance.
+
+the action (2.12) that determines perturbation theory can indeed be be split in two
+
+parts:
+
+i  i(a, a5, , , b, 5, , , )
+
++(cid:16)b5(aa5  a)  5(a5c  dc + a5  )(cid:17).
+
+(3.1)
+
+the rst term, where the elds a5 and 5 must be understood as independent elds,
+(before eliminating b5), is s- and -invariant, while the last part is only s-invariant. in
+order to achieve the algebraic set-up which ensures perturbative renormalizability while
+
+maintaining the form of the action (up to so-called multiplicative renormalization), it is
+
+enough to remark that one can write the second term as:
+
+b5(aa5  a)  5(a5c  dc  a5  )
+=b5(aa5  a)  5(ad5  d)c
+
+(3.2)
+
+where c = c+(a5d)1(a5). the change of variable c  c is perturbatively
+well dened, with a trivial jacobian, because the operator a5  d is parabolic. (this
+will be explained in detail in section 7, devoted to the lattice regularization.)
+
+if we now introduce an ordinary brst symmetry s, with c as a faddeevpopov
+
+ghost, we are almost in the ordinary situation of the renormalization, except that we
+have more elds. we have that s acts on a, a5, , , b, 5, , ,  as ordinary gauge
+transformations with the parameter equal to c, sc = cc, s 5 = b5 and sb5 = 0. the
+action (3.2) can be written as:
+
+i  i(a, a5, , , b, 5, , , )
+
++ s(cid:0) 5(aa5  a)(cid:1)
+
+(3.3)
+
+the rst term is s-invariant as a consequence of its -invariance:
+it corresponds to the
+cohomology with ghost number zero of s, restricted to the terms with the correct power
+counting (6 with our power assignmant), while the second term is s-exact, and will remain
+
+stable order by order in perturbation theory because of the linear gauge condition aa5 
+a. notice that i depends on a, but a-dependent observables are independent of this
+parameter, as will be shown in sec. 7.
+
+the complete proof that the theory can be renormalized multiplicatively is just a slight
+
+amplication of the standard proof of the renormalizability of the 4-dimensional theory in
+
+11
+
+a linear gauge. it involves introducting sources for all s variations, as well as using the
+equation of motion of the antighost 5 as a ward identity. when the ward identity of the
+s-invariance is combined with that of the topological s-invariance, using locality, one can
+
+prove from purely algebraic considerations that the counter-terms can be built order by
+
+order in perturbation theory such that, when they are added to the starting action (2.10),
+
+they provide an identical action, up to mere multiplicative renormalization constants for
+
+the elds and parameters. essential is in this proof is the use of a linear gauge function
+
+aa5  a.
+
+a notable feature of the renormalization is that besides the multiplicative renormal-
+
+ization of the elds and coupling constants there is also a renormalization of the stochastic
+
+time
+
+t = zttr .
+
+(3.4)
+
+4. observables and gauge invariance
+
+it is now clear how observables should be dened: they are the cohomology with ghost
+number zero of s; moreover, they must be computed at a same value of x5. using the
+translation invariance under x5, and provided that the stochastic process starts at x5 =
+
+, the physical theory can be dened in any given slice of the 5-dimensional manifold.
+
+this points out the relevance of the boundary term (2.9), which is independent of the metric
+
+component g55. perturbatively, the equal-time gauge-invariant correlation functions are
+
+guaranteed to agree with those calculated in 4-dimensional theory by the usual faddeev-
+
+popov method. on the other hand, gauge non-invariant correlation functions are not
+
+expected to agree within the framework of local renormalizable 5-dimensional gauges that
+we consider in this paper 1.
+
+there are also green functions that can be computed with elds at dierent values
+of x5, as well as the green functions that involves the topological ghosts. we leave their
+
+interpretation as an interesting open question, although they are not directly relevant to
+
+physics.
+
+once the renormalization has been done properly, one can integrate out all the ghost
+
+elds of the type ,  and c, provided that one considers observables which depend on
+
+1 to recover the local 4-dimensional faddeevpopov distribution, one needs a non-local 5-
+
+dimensional gauge-xing on a5 [15].
+
+12
+
+a only. this follows from the parabolic or retarded behavior of all ghost propagators
+in the 5-dimensional theory. it will be demonstrated by explicit calculation with lattice
+
+regularization in section 7 that, when the ghost elds are integrated out, only the tadpole
+
+diagram survives so the ghost determinent is trivial and contributes only a local term to
+
+the eective action which is in fact the famous ito term. this result, which explains the
+
+disappearance of the problem of gribov copies, has an immediate application: mean values
+of observables are independent of the parameter a. it should be clear however that the
+
+ghosts and ghosts of ghosts are nevertheless necessary to unveil the topological and gauge
+
+properties of the theory and to control its ward identities.
+
+the other question is obviously that of the independence of physical expectation values
+
+of the gauge parameter a which appears in the gauge function aa5  a. to prove this,
+one observes that the observables are s-invariant without being s-exact, while the a-
+dependence is through an s-exact term, so the standard brst method based on ward
+identities applies. one can also prove directly the non-renormalization of the s-exact term
+
+in (3.3).
+
+we mention the possibility of introducing the interpolating gauges used in [16] for
+
+dening the physical coulomb gauge as the limit of a renormalizable gauge.
+
+finally, one must of course verify that no anomaly in the s- and -symmetries can
+
+occur. the absence of s-anomalies is quite obvious if one examines the consistency condi-
+
+tions for a topological symmetry; for the background yangmills symmetry, no anomaly
+
+is expected, since we are in the case of a pure yangmills theory, without 4-dimensional
+
+chiral fermion. the inclusion of spinors is a most interesting question, on which we will
+
+comment in the last section.
+
+5. non-perturbative aspects
+
+in the previous section, we have veried that perturbation theory is as well dened in
+
+the 5-dimensional approach as it is in the 4-dimensional one.
+
+5.1. global properties of gauge-xing
+
+the gauge choice made here has the global property of a restoring force because it is
+
+derivable from a minimizing functional. consider the functional
+
+f [a] = (2a)1(a, a) = (2a)1z d4xa2,
+
+(5.1)
+
+13
+
+which is proportional to the hilbert square norm. here a > 0 is a gauge parameter. (more
+
+generally, one can take f [a] = r d4xaa, where  is a strictly positive symmetric
+
+matrix that characterizes a class of interpolating gauges [16].) the gauge condition used
+
+here, aa5 = a, may be expressed as
+
+where
+
+a5(x) = g(x)f ,
+
+g(x)  d
+
+
+
+a(x)
+
+(5.2)
+
+(5.3)
+
+is the generator of local gauge transformations. it satises the lie algebra commutation
+
+relations
+
+[ga(x), gb(y)] = (x  y)f abcgc(x) .
+
+indeed, one can verify that
+
+g(x)f = a1a(x).
+
+(5.4)
+
+(5.5)
+
+to see that the gauge-xing force is globally restoring, consider the ow dened by
+
+the gauge-xing force alone
+
+5a = dv = dgf ,
+
+(5.6)
+
+in the langevin equation (2.2). under this ow the minimizing functional f decreases
+
+monotonically, since
+
+5f [a] = (
+
+f
+a
+
+, 5a) = (
+
+f
+a
+
+, dgf )
+
+= (gf , gf )  0.
+
+(5.7)
+
+a consequence of our gauge choice is that the langevin equation (2.4) is parabolic.
+indeed, let a5 = a1a be substituted into this equation, and consider the highest
+derivatives on the right-hand side,
+
+a
+t
+
+= a + (a1  1)a + . . . ,
+
+(5.8)
+
+where the dots represent lower order derivatives. one sees that for a > 0, the operator
+
+that appears on the right is negative, which assures convergence at large t.
+
+14
+
+5.2. how the gribov problem is solved
+
+let us now discuss the gribov question in more detail, and explain how our use of the
+
+gauge function aa5  a escapes the ambiguity.
+
+the origin of this ambiguity in the 4-dimensional formulation, as given by singer [2],
+
+was the compactness of the (euclidian) space. it does not apply anymore, since the 5-
+
+dimensional formulation is necessarily non-compact: the system requires an innite amount
+
+of time to relax to equilibrium. in our formulation the stochastic time runs from  to
+, and one evaluates the green function at an arbitrary intermediate time, say x5 = 0.
+
+then, there is the explicit argument, which we already mentioned, of considering all
+
+ghost propagators, whether they are the  and  topological ghosts or the faddeevpopov
+
+ghost: by taking the suitable boundary conditions at x5 = , no zero modes can occur
+since we have parabolic propagation. it is a convincing argument, and we will check it in
+
+great detail in section 7, in the framework of the lattice regularization of our 5-dimensional
+
+formulation. we will prove that the integration on all ghosts does not lead to zero modes
+
+that would make ambiguous their elimination. in our opinion, this a concrete verication
+
+of the assertion that the gribov problem is solved.
+
+to see intuitively where the gauge-xing force concentrates the probability, observe
+
+from (5.7) that the gauge xing force is in equilibrium only where g(x)f = 0. this
+
+equilibrium may be stable or unstable, but the gauge xing force drives the system toward
+
+stable equilibrium only, namely where the second variation of f [a] under innitesimal
+
+gauge transformation is a positive matrix. this is equivalent to the condition that the
+
+faddeev-popov matrix
+
+m ab(x, y) = ga(x) gb(y)f
+
+(5.9)
+
+has positive eigenvalues. with gf = a1a, the matrix m and the condition for
+stable equilibrium are given by
+
+m = a1d  0.
+
+(5.10)
+
+thus the conditions for stable equilibrium are (a) transversality of the vector potential,
+
+a = 0 and (b) positivity of the faddeevpopov operator, d  0. these two
+conditions dene the gribov region, a region which gribov suggested (not quite correctly)
+
+was free of copies. as long as the gauge-parameter a > 0 is nite, the gauge-xing is
+
+soft in the sense that the weight on each gauge orbit has a spread that is centered on the
+
+gribov region. as a approaches 0, the equilibrium probability gets concentrated close to
+
+15
+
+the gribov region. the gauge-xing force drives the system by steepest descent along a
+gauge orbit toward a relative or absolute minimum of the functional i[a][g]  f [ga], so
+gribov copies that are unstable equilibria (saddle points of i[a][g]) are avoided in the limit
+a  0. however the relative minima are in fact gribov copies of the absolute minimum, so
+
+in the limit a  0 this gauge-xing distributes the probability in some way among these
+
+relative minimum, possibly even entirely at the absolute minimum. however the validity
+
+of the present approach in no way depends on taking the limit a  0.
+
+it is interesting to ask how instantons play a role in the 5-dimensional presentation, for
+
+instance in a semi-classical approximation. their interpretation is actually quite simple.
+the bosonic part of our action is a sum of squares, namely |f5|2 + |df|2. it obvi-
+ously gives and an absolute minimum when it vanishes. this occurs for x5-independent
+
+solutions, with a5 = a = 0 and satisfying df = 0. this means that the classical
+4-dimensional instanton solutions also minimize the 5-dimensional path integral: they are
+
+the solitons of the 5-dimensional theory.
+
+we are therefore in a situation where, from various points of view, the path integral
+
+seems well dened. we can now seriously consider its evaluation for large eld cong-
+
+urations, since the question of duplicating orbits does not occur. it is however clear that
+
+the space of connections is not appropriate for dening a meaningful measure, and we will
+
+shortly look at the lattice formulation of this extended version of the yangmill theory,
+
+keeping in mind that the use of the fth time allows a more complete presentation of the
+
+theory.
+
+6. stochastic lattice gauge theory and new monte carlo algorithm
+
+6.1. lattice gauge theory with discrete time
+
+numerical calculations in lattice gauge theory are eected by monte carlo methods
+
+which rely on the simulation of a stochastic process. the stochastic process in question is
+specied by a matrix t (ut+1, ut) > 0 of transition probabilities ut  ut+1, on congura-
+tions of horizontal link variables, ut = {ux,t,} and ut+1 = {ux,t+1,}, where  = 1, ...4.
+consider a transition probability of the form
+
+t (ut+1, ut) = n exp{ xx,
+
+retr(cid:16)i  (u 1
+
+x,t+1,vx,t,) (cid:17) } ,
+
+(6.1)
+
+where  is a positive parameter. here vx,t, = vx,(ut) is a group element that depends
+on the horizontal conguration at time t that will be specied shortly. for appropriately
+
+16
+
+chosen normalization constant n , this expression satises the requirement that the sum
+
+of transition probabilities out of any state is unity
+
+z yx,
+
+dux,t+1,t (ut+1, ut) = 1 .
+
+(6.2)
+
+this follows from invariance of the haar measure under translation on the group,
+dux,t+1, = du 
+
+x,t+1,, where u 
+
+x,t+1, = v 1
+
+x,t,ux,t+1,.
+
+we set
+
+vx,t, = u 1
+
+x,t,5 exp(fx,t,)ux,t,ux+,t,5,
+
+(6.3)
+
+where  is another positive parameter, and fx,t, is a lattice analog of the continuum drift
+force (df)cont that is specied below. this gives
+
+t (ut+1, ut) = n exp{xx,
+
+retr(cid:16)i  exp(fx,t,)ux,t,ux+,t,5u 1
+
+x,t+1,u 1
+
+x,t,5(cid:17) } .
+
+where the product of 4 u s is the transporter around the plaquette in the (-5) plane,
+
+starting and ending at the site (x, t). this expression is manifestly invariant under 5-
+
+dimensional local gauge transformations provided that fx,t, transforms like a site variable
+at x in the adjoint representation,
+
+(6.4)
+
+fx,t,  gfx,t, = (gx,t)1fx,t, gx,t ,
+
+(6.5)
+
+which will be the case.
+
+in the last expression for t , the variables ux,t,5 associated to time-like links serve
+merely to eect a gauge transformation gx,t = ux,t,5 on the variables ux,t+1, associated to
+the space-like links. consequently the ux,t,5 may be assigned arbitrarily without aecting
+expectation values of the observables which are the gauge-invariant functions of the space-
+
+like link variables at a xed time. we shall shortly gauge-x ux,t,5 by a lattice analog of
+continuum gauge xing implemented above, where by ux,t,5 will be expressed in terms of
+the ux,t, so that eq. (6.2) is satised.
+
+recall that the 5-dimensional continuum theory contains no dimensionful constant,
+apart from the cut-o, when engineering dimensions are assigned according to [t] = [x2].
+
+consequently the discretized action should depend on the lattice spacings only through
+
+the ratio
+
+ 
+
+at
+a2
+s
+
+,
+
+17
+
+(6.6)
+
+which denes the parameter . here as and at are the lattice spacings in the space and
+time directions respectively, with at being the time for a single sweep of the lattice in a
+monte carlo updating. we write
+
+ux,t,  exp(g0asacont
+
+x,t,)
+
+ux,t,5  exp(g0atacont
+
+x,t,5) ,
+
+(6.7)
+
+where g0 is the unrenormalized coupling constant, and cont designates continuum per-
+turbative variables.
+
+to verify this point, we estimate the quantities that appear in eqs. (6.1) and (6.3).
+
+the lattice drift force, specied below, is of order
+
+fx,t,  g0a3
+
+s(df)cont .
+
+this gives
+
+and nally
+
+ux,t,ux+,t,5u 1
+
+exp(fx,t,)  exp(cid:16)g0asat (df)cont(cid:17)
+x,t+1,u 1
+
+x,t,5  exp(cid:16)  g0asat (f5,)cont(cid:17) ,
+
+retr(cid:16)1  exp(fx,t,) ux,t,ux+,t,5u 1
+5  df a
+
+ (cid:16) g0asat
+
+2
+
+(cid:17)2(cid:16)(f a
+
+x,t,5(cid:17)
+x,t+1,u 1
+)cont(cid:17)2
+
+,
+
+where a sum on  and a is understood. we have
+
+t (ut+1, ut) = exp(i) ,
+
+yt
+
+where the ve-dimensional discretized action is given by
+
+i  xx,t,
+
+we dene
+
+and we obtain
+
+re tr(cid:16)1  exp(fx,t,)ux,t,ux+,t,5u 1
+
+x,t+1,u 1
+
+x,t,5(cid:17) .
+
+ 
+
+1
+g2
+0
+
+=
+
+a2
+s
+g2
+0at
+
+,
+
+i 
+
+1
+4
+
+ata4
+
+s xx,t,(cid:16)(f a
+
+5  df a
+
+)cont(cid:17)2
+
+,
+
+(6.8)
+
+(6.9)
+
+(6.10)
+
+(6.11)
+
+(6.12)
+
+(6.13)
+
+(6.14)
+
+which is the correct volume element, ata4
+dimensional action.
+
+s, and the correct normalization of the 5-
+
+18
+
+there remains to specify the lattice drift force fx, and the gauge-xing of ux,t,5. for
+this purpose we shall establish a correspondence between lattice and continuum quantities.
+
+let s = s(u ) be the gauge-invariant 4-dimensional euclidean lattice action normalized to
+
+s(u )  g2
+
+0scont =
+
+g2
+0
+
+4 z d4x(f a cont
+
+
+
+)2 ,
+
+(6.15)
+
+which depends only on the horizontal link variables u = {ux,} at a xed time. it may
+be the wilson plaquette action
+
+sw = 2xp
+
+re tr(i  up)
+
+(6.16)
+
+for pure gluodynamics, where the sum extends over all plaquettes p, or the eective action
+
+that results from integrating out the quark degrees of freedom,
+
+s(u ) = sw  g2
+
+0tr ln(d + m) ,
+
+(6.17)
+
+where d + m represents the lattice dirac operator of choice. let the lattice color-
+electric eld operator ex,,a be dened by
+
+ex,,a  (taux,)
+
+
+(ux,)
+
+,
+
+(6.18)
+
+where [ta, tb] = f abctc, and tr(tatb) = (1/2)ab. it has 4 components,  = 1, ...4, because
+our perspective is 5-dimensional. with (ux,)   + (ta) g0asaa cont
+, we have the
+correspondence between lattice and continuum quantities,
+
+x,
+
+ex,,as(u )  g0a3
+s
+
+scont
+aa cont
+
+x,
+
+= g0a3
+
+s(df)cont ,
+
+(6.19)
+
+and we take for the lattice drift force
+
+fx,,a = ex,,as(u ) .
+
+(6.20)
+
+the lattice color-electric eld operator dened by the remarkably simple expression
+
+(6.18) represents the color-electric ux carried by the link (x, ). it satises the lie algebra
+
+commutation relations
+
+[ex,,a, ey,,b] = x,y, f abcex,,c ,
+
+(6.21)
+
+19
+
+as well as
+
+[ex,,a, uy,] = x,y, tauy,
+y, ] = x,y, u 1
+
+[ex,,a, u 1
+
+y, ta .
+
+(6.22)
+
+we may visualize the color-electric eld operator ex,,a acting on s(u ) as inserting ta into
+
+the plaquettes that contain the link (x, ) on the left side of the matrix ux,.
+
+the color-electric eld operator that operates by right multiplication of ta,
+
+e 
+
+x,,a  (ux,ta)
+
+
+(ux,)
+
+(6.23)
+
+satises the lie algebra commutation relations with opposite sign
+
+[e 
+
+x,,a, e 
+
+y,,b] = x,y, f abce 
+
+x,,c .
+
+(6.24)
+
+since left and right multiplication commute, we have
+
+[ex,,a, e 
+
+y,,b] = 0 .
+
+with
+
+ux,ta = (ux,tau 1
+
+x,) ux, = oba(ux,) tbux, ,
+
+(6.25)
+
+(6.26)
+
+where the real orthogonal matrices oba(ux,) = oab(u 1
+of the group, the two are related by
+
+x,) form the adjoint representation
+
+and satisfy
+
+e 
+
+x,,a = oba(ux,)ex,,b ,
+
+xa
+
+e 2
+x,,a = xa
+
+e2
+
+x,,a .
+
+(6.27)
+
+(6.28)
+
+the generator of innitesimal gauge transformations gx,a is easily expressed in terms
+x ux,gx+,
+
+of these operators. a generic innitesimal gauge transformation ux,  g1
+with gx = 1 + x, is given by
+
+ux, = xux, + ux,x+
+
+= (d)xux,m ,
+
+where
+
+(d)x  ux,x+u 1
+
+x,  x = ta(d)x,a .
+
+20
+
+(6.29)
+
+(6.30)
+
+this denes the lattice gauge-covariant dierence d that corresponds to the continuum
+gauge-covariant derivative. it has a simple geometric meaning, being the dierence between
+
+ at x +  transported back to x, and  at x. this innitesimal gauge transformation
+
+induces the following change in a generic function f (u ):
+
+f = f (u + u )  f (u )
+
+= xx,
+= xx
+
+(d)x,a ex,,af
+
+x,a gx,af .
+
+this denes the generator of local gauge transformations gx,a. from
+
+(d)x,a = oab(ux,) x+,b  x,a
+
+we obtain
+
+x  x
+ga
+
+d
+e = x
+
+(e a
+
+x,  ea
+
+x,),
+
+(6.31)
+
+(6.32)
+
+(6.33)
+
+which is the total ux of color-electric eld leaving the site x. as in the continuum theory,
+
+it is the left-hand side of gausss law. one easily veries the commutation relations
+
+[ga
+
+[ga
+x, eb
+x, e b
+x, gb
+[ga
+
+y,] = x,y f abcec
+y,] = x,y f abce c
+y] = x,y f abcgc
+y .
+
+y,
+
+y,
+
+(6.34)
+
+under local gauge transformation, eb
+x, transforms like a site variable at x in the adjoint
+representation, as required for the gauge-invariance of the transition matrix t (ut+1, ut).
+moreover e b
+
+x, transforms like a site variable in the adjoint representation at x + .
+
+we shall implement a lattice gauge xing that corresponds to the continuum gauge
+xing described above. we introduce a minimizing function, f (ut), and we impose the
+gauge condition
+
+ux,t,5 = exp(ax,t,5) = exp(cid:16)  gx,tf (ut)(cid:17) .
+
+(6.35)
+
+with this denition, eq. (6.2) is satised, because both ux,t,5 and the gauge-xing force
+fx,t, are expressed in terms of variables that live only on the hyperplane t. for the
+
+minimizing function we take a lattice analog of a1r d4x(acont)2, for example,
+
+f (u ) = 2a1xx,
+f (u )  g2
+
+retr(1  ux,)
+
+0a1z d4x(acont)2 .
+
+(6.36)
+
+21
+
+where a > 0 is a gauge parameter (not to be confused with the lattice units as and at).
+
+this gives the gauge condition
+
+ax,t,5 = gb
+
+xf (u )
+= a1x
+
+tr(cid:16) tb (ux,  u 1
+
+x,  ux, + u 1
+
+x,)(cid:17) .
+
+(6.37)
+
+6.2. five-dimensional critical limit and new algorithm
+
+the renormalizability of the 5-dimensional continuum theory demonstrated above
+
+controls the critical limit of the 5-dimensional lattice theory just described. in particular
+
+it xes the dependence of the parameter  = (g0) on g0, and thereby provides a new
+
+accelerated langevin algorithm, as we shall see.
+
+the probability for transition from conguration ut
+
+into the volume element
+
+qx, dux,t+1,, where dux,t+1, is haar measure, is given by
+
+dux,t+1,t (ut+1, ut) .
+
+yx,
+
+(6.38)
+
+from eq. (6.4), and invariance of haar measure under translation on the group, it follows
+
+that the probability for transition from the conguration ut to the conguration
+
+ux,t+1, = u 1
+
+x,t,5 exp(fx,t,)ux,t,ux+,t,5wx,t,
+
+(6.39)
+
+depends only on the group element wx,t,,
+
+yx,
+
+dux,t+1,t (ut+1, ut) = n yx,
+
+{dwx,t, exp(cid:16)  re tr(i  wx,t,)(cid:17) }.
+
+(6.40)
+
+thus to generate a new conguration it is sucient to generate the last probability dis-
+
+tribution independently for each group element wx,t,, and also independently of the
+
+conguration ut, and then calculate ux,t+1, from eq. (6.39). (if one is not interested in
+
+gauge-xing, one may set ux,t,5 = 1. however the gauge-xing dened above smooths out
+
+congurations, which may help to accelerate the inversion of the dirac operator.) one
+
+recognizes the familiar langevin algorithm for the su(n) group [17] and [18], with wx,t,
+
+being white noise on the group. the new element is that we shall determine  = (g0) from
+
+the perturbative renormalization group.
+
+22
+
+we noted in our discussion of the continuum theory that the time is renormalized
+
+according to t = zttr. the parameter  = at/a2
+
+s rescales in the same way as the time t,
+
+ = ztr ,
+
+(6.41)
+
+where r is independent of the ultraviolet cut-o  = a1
+renormalization-group equation
+
+s . consequently it satises the
+
+
+
+d ln 
+d
+
+d ln zt
+
+= 
+
+d
+ t(g0)
+
+= bt,0g2
+
+0 + o(g4
+
+0) ,
+
+(6.42)
+
+where t(g0) is a -function for the renormalization of the monte carlo time. the coe-
+cient bt,0 has been calculated for a theory without quarks, [19]and [20], and is independent
+of the gauge parameter a,
+
+bt,0 = 
+
+13n
+
+3
+
+1
+162 .
+
+it is convenient to change dependent variable from  to g0, using
+
+where
+
+is the usual -function,
+
+
+
+d ln 
+d
+
+= (g0)
+
+d ln 
+dg0
+
+(g0)  
+
+dg0
+d
+
+(g0) = b0g3
+
+0  b1g5
+
+0 + o(g7
+
+0) .
+
+(6.43)
+
+(6.44)
+
+(6.45)
+
+(6.46)
+
+(6.47)
+
+(6.48)
+
+(6.49)
+
+it has been veried to one-loop level for the 5-dimensional theory without quarks that
+
+(g0) is the same as in the faddeev-popov theory, [19]and [20]. for the theory without
+quarks we have
+
+b0 =
+
+11n
+
+3
+
+1
+162 ,
+
+which gives
+
+so
+
+d ln 
+dg0
+
+=
+
+=
+
+t(g0)
+(g0)
+bt,0
+b0
+
+g1
+0 + o(g0) ,
+
+ = (b0g2
+
+0)bt0 /(2b0) exp(cid:16)o(g2
+
+0)(cid:17) c ,
+
+23
+
+where c is a constant of integration, and
+
+bt,0
+b0
+
+= 
+
+13
+11
+
+(6.50)
+
+for the theory without quarks. the higher loop corrections are negligible in the critical
+
+limit g0  0. this allows us to take for the purposes of numerical simulation
+
+ = (b0g2
+
+0)bt0 /(2b0) c ,
+
+and
+
+ = (g2
+
+0)1 = (cid:16)(g2
+
+0)1+bt0 /(2b0) b
+
+bt0 /(2b0)
+0
+
+c(cid:17)1
+
+.
+
+in a theory without quarks, this gives
+
+ = (b0g2
+
+ = (g2
+
+0)13/22 c
+0)1 = (cid:16)(g2
+
+0)9/22 b13/22
+
+0
+
+c(cid:17)1
+
+.
+
+(6.51)
+
+(6.52)
+
+(6.53)
+
+we note that  diverges in the critical limit g0  0, but more slowly than 1/g2
+0.
+moreover the time-step in lattice units diverges,  = at/s2
+s   because b0 and b0,t have
+opposite sign in a gauge theory. this provides a highly accelerated algorithm. however
+
+one may doubt whether this algorithm converges because high wave-number components,
+k  a1
+
+s will overshoot and thus may appear to uctuate wildly. however they are not of
+physical interest in the critical limit. on the other hand the modes that are of physical
+
+interest k  qcd will not overshoot. indeed the real problem is likely to be that they
+evolve too slowly as usual, in which case the divergence of the step-size (g0)   as
+g0  0 is a great asset. obviously the algorithm must be studied in practice before
+conclusions can be drawn. in order to apply the algorithm proposed here to a theory with
+
+quarks, the coecient bt,0 must also be calculated with quarks.
+
+if one takes c  , one obtains a dierent, or non-existent, critical theory from the
+
+continuum theory discussed above. if one takes c  0, one obtains the continuous-time
+
+stochastic theory discussed in the next section with a euclidean spatial cut-o.
+
+the 5-dimensional critical limit is approached in the limit g0  0. the value of g0
+determines the physical correlation length as measured in euclidean lattice units as in the
+same way that it does in the faddeev-popov theory,
+
+as = 1
+
+qcd(b0g2
+
+0)b1/(2b2
+
+0) exp(cid:16) 
+
+24
+
+1
+
+0(cid:17) ,
+
+2b0g2
+
+(6.54)
+
+where qcd is the standard qcd mass scale, although this has been veried to one-loop
+
+level in the theory without quarks [19] and [20]. this formula and the above expression
+
+for (g0) x the time, at, for a single monte carlo sweep in terms of qcd,
+
+at = a2
+s
+
+at = 2
+
+qcdc(b0g2
+
+0)(bt,0b02b1)/(2b2
+
+0) exp(cid:16) 
+
+1
+
+0(cid:17).
+b0g2
+
+(6.55)
+
+in the asymptotic scaling region, auto-correlation times of physical observables are nite
+and independent of g0 and c when measured in units of 2
+qcd. the criteria for choosing
+the value of c are similar to those for g0. the auto-correlation time  for a physical
+
+observable should be large compared to one sweep-time,  >> at, but small compared the
+total running time t ,  << t , so that the statistical uncertainty, of order n 1/2, is small,
+
+where n  t / .
+
+if it could be established that monte carlo auto-correlation times  of physical ob-
+
+servables are related to physical euclidean correlation lengths l, by a universal relation
+ = kl2, where k is the same for all physical observables, then physical information such
+
+mass ratios, could be extracted directly from monte-carlo auto-correlation times. in this
+
+case the mass spectrum is given by the eigenvalues of the fokker-planck hamiltonian, as
+
+explained in sec. 6.3.
+
+we briey mention some attractive features of the algorithm proposed here, which
+
+are those of the langevin algorithm with a time-step in lattice units that diverges in the
+
+critical limit g0  . there is no accept/reject criterion. every updating wx,t, is
+
+accepted, even when the (eective) action is non-local as occurs with dynamical quarks.
+
+only the derivative of the euclidean action s appears in
+
+fx,t, = ex,s = ex,sw + g2
+
+0tr(cid:16)(d + m)1ex,(d )(cid:17) ,
+
+(6.56)
+
+so one does not have to calculate the determinent of the lattice dirac operator, but only
+
+its inverse. moreover it is sucient to calculate this inverse only once per sweep, because
+
+a whole sweep of the euclidean lattice, described by eqs. (6.39) and (6.40), corresponds
+
+to a single hyperplane of the 5-dimensional lattice with action (6.12).
+
+of course other algorithms may be invented that are based on other discretizations in
+
+which the 5-dimensional critical limit is also achived in the limit g0  0.
+
+25
+
+6.3. lattice fokkerplanck and langevin equations
+
+one would be tempted to formulate a brst version of the lattice gauge theory de-
+
+scrobed in the previous section, which has discrete stochastic time t and group-valued
+
+link variables ux,t,5 asociated to the vertical (time-like) links. however neuberger [21] has
+
+shown that lattice brst gauge-xing fails if the gauge-xing function is continuous on the
+
+group manifold. moreover testa [22] has provided a counter-example which shows that if
+
+one tries to get around neubergers theorem by choosing a gauge-xing function that is
+
+not continuous on the group manifold, then inconsistencies in the brst procedure appear
+
+in the form of brst-exact quantities sx with non-zero expectation-value < sx >6= 0.
+
+therefore in order to comply with neubergers theorem we shall make t = x5 continuous
+
+while keeping x discrete, so ax,5 is in the lie algebra whereas ux, is in the lie group,
+
+where  = 1, ...4. gauge-xing will be of the form ax,5 = vx(u ), so that a quantity in
+
+the algebra is xed instead of a quantity in the group. an alternative approach to brst
+
+gauge-xing in lattice gauge theory has recently been provided by baulieu and schaden
+
+[23].
+
+before developing the brst formulation of this 5-dimensional lattice theory, we
+
+rst consider the stochastic process described by the lattice fokker-planck and langevin
+
+equations with random variable which is a 4-dimensional euclidean lattice conguration
+
+u = {ux,}, where ux,  su (n ). note that a euclidean lattice conguration u is a
+point on a nite product of lie-group manifolds and that a continuous stochastic process
+
+on lie-group manifolds is the probabilistic analog of quantum mechanics on lie-group
+
+manifolds. both allow a well-dened path-integral formulation.
+
+the continuous-time stochastic process is described by the fokker-planck equation
+
+p
+t
+
+= hfpp ,
+
+(6.57)
+
+where p = p (u, t) is a probability distribution, and the fokker-planck hamiltonian is
+
+given by
+
+where
+
+h
+
+hfp = xx,
+[(cid:16)ea
+fp = xx
+
+
+
+x,(cid:16)ea
+ea
+x,  g2
+
+0 (ea
+
+x,s)(cid:17)ea
+
+x,  g2
+
+0 (da5)a
+
+x + g2
+
+0 ea
+
+x,s(cid:17)
+x,5ga
+
+x] ,
+
+x,  g2
+
+0 aa
+
+ax,5 = gxf (u ) ,
+
+26
+
+(6.58)
+
+(6.59)
+
+and d is the lattice gauge-covariant dierence, eq. (6.30). in appendix a we show that
+
+this equation describes the limit of the discrete-time stochastic process dened previous
+paragraph in which the time-step approaches zero,  = at/a2
+
+s  0.
+
+in the previous paragraph it was conjectured that the auto-correlation times  of phys-
+
+ical observables might be related to euclidean auto-correlation lengths l by the universal
+relation  = kl2, where k is the same for all observables. if this is true, then the mass
+
+spectrum is given by the eigenvalue equation
+
+hfp = m2
+
+
+fp = m2 .
+
+h
+
+(6.60)
+
+but for the gauge-xing force, (da5)x in hfp, the equilibrium solution, satisfying
+hfppeq = 0 would be given by peq = exp(g2
+0 s). we cannot give the exact equilibrium
+solution for non-zero gauge-xing force because it is not conservative. however with lattice
+
+regularization gauge-xing may be dispensed with. then a similarity transformation by
+exp[(g2
+
+0 /2)s] is sucient to make the the fokker-planck hamiltonian hermitian
+
+h 
+
+fp = xx,
+
+[ (cid:16)ea
+
+x,  (g2
+
+0 /2)(ea
+
+x,s)(cid:17) (cid:16)ea
+
+x, + (g2
+
+0 /2)ea
+
+x,s(cid:17) ] ,
+
+(6.61)
+
+fp = h 
+
+and h 
+gx = 0. the eigenvalue equation
+
+fp. moreover the physically relevant eigenfunctions are gauge-invariant,
+
+h 
+
+fp = m2,
+
+(6.62)
+
+is interesting. it is both euclidean- and gauge-invariant. moreover the ground-state or
+vacuum wave-function is known exactly, 
+
+0 /2)s], so variational calculations
+
+0 = exp[(g2
+
+of excited-state eigenvalues are possible.
+
+the corresponding langevin equation is obtained from the   0 limit of the stochastic
+
+process dened in eqs. (6.39) and (6.40). it is given by
+
+ux,u 1
+
+x, = g2
+
+0 (da5)x  g2
+
+0 ex,s + x,,
+
+(6.63)
+
+where x, is gaussian white noise with two-point correlator
+
+< x,(s)y,(t) >= 2x,y, (s  t).
+
+(6.64)
+
+27
+
+the gauge choice ax,5 = gxf (u ) has the global property that for the ow deter-
+
+mined by the gauge-xing force alone,
+
+5ux,u 1
+
+x, = g2
+
+0 (da5)x,
+
+the minimizing function f decreases monotonically
+
+5f  0 ,
+
+for we have
+
+(6.65)
+
+(6.66)
+
+5f = g2
+
+0 xx,
+
+ex,f da5 = g2
+
+0 xx
+
+gxf ax,5 = g2
+
+0 xx
+
+gxf gxf .
+
+(6.67)
+
+for the minimizing function (6.36) , this drives all the ux, toward unity.
+
+7. five-dimensional topological lattice gauge theory
+
+7.1. lattice brst operator
+
+we determine the lattice brst operator s which corresponds to the continuum brst
+
+operator dened previously.
+
+it possesses the symmetries of the hypercubic lattice.
+
+in
+
+order to exhibit these symmetries, we shall, in this subsection only, use a symmetric 5-
+
+dimensional notation, whereby x = {x} for  = 1, ...5 represents lattice sites (previously
+denoted (x, t)), and we shall also denote link variables by uxy  su(n), with uyx =
+(uxy)1, where (xy) is a pair of nearest neighbors.
+
+consider a generic innitesimal transformation uxy,
+
+uxy + uxy = (1 + xy)uxy = uxy(1 + 
+
+xy) ,
+
+(7.1)
+
+where xy and 
+write  = s, xy = xy and 
+and xy and 
+
+xyare lie algebra-valued grassmann variables, with
+
+xy = (uxy)1xyuxy are elements of the lie algebra, xy = taa
+
+xy. we
+xy, where  is an innitesimal grassmann variable,
+
+xy = 
+
+
+
+xy = (uxy)1xyuxy .
+
+this determines the action of s on uxy,
+
+suxy = xyuxy = uxy
+
+xy .
+
+28
+
+(7.2)
+
+(7.3)
+
+from the condition s2 = 0, we obtain
+
+sxy = 2
+xy
+
+s
+
+xy = 2
+
+xy .
+
+(7.4)
+
+we will not write out explicitly further relations for 
+
+xy since they may be obtained for
+
+those of xy.
+
+as in the continuum theory, we wish to distinguish the innitesimal gauge transfor-
+
+mations from among all possible transformations of uxy. we pose x = cx, where  is an
+
+innitesimal grassmann variable, and cx is a lie algebra-valued grassmann variable, so
+
+the innitesimal gauge transformation dened in the previous section reads
+
+guxy = (cxuxy + uxycy)
+
+= (cx + uxycyuyx)uxy ,
+
+(7.5)
+
+where we have written uyx  (uxy)1. we separate this innitesimal gauge transformation
+out of x,, and write
+
+xy  xy  cx + uxycyuyx ,
+
+which denes xy. the action of s on uxy now reads
+
+suxy = (xy  cx)uxy + uxycy .
+
+(7.6)
+
+(7.7)
+
+we identify the lattice site variable cx with the corresponding continuum scalar ghost c(x),
+
+and similarly for x, and assign to them the same transformation law as in the continuum
+
+case namely
+
+scx = x  c2
+x
+
+sx = cxx + xcx .
+
+the action of s on xy is obtained from
+
+sxy = sxy + scx  s(uxycyuyx) .
+
+(7.8)
+
+(7.9)
+
+this determines the action of s on all the lattice elds and ghosts.
+
+we write it in the notation in which it will be used, namely with lattice sites designated
+
+by (x, t), where x, is a 4-vector x = {x} for  = 1, ...4, and t = x5. horizontal links,
+
+29
+
+corresponding to links in 4-dimensional euclidean space-time, are designated by (x, t, ),
+and vertical links by (x, t, 5). in this notation s acts according to
+
+sux,t, = (x,t, + (dc)x,t) ux,t,
+
+sux,t,5 = (x,t,5 + (dc)x,t) ux,t,5
+sx,t, = (d)x,t  [cx,t, x,t,] + (x,t,)2
+sx,t,5 = (d5)x,t  [cx,t, x,t,5] + (x,t,5)2
+
+scx,t = x,t  (cx,t)2
+
+sx,t = [cx,t, x,t] ,
+
+(7.10)
+
+which satises s2 = 0, and where the lattice gauge-covariant dierence operator d is
+dened in (6.30). under gauge transformation x,t, and x,t,5 transform like site variables
+located at (x, t).
+
+we shall shortly take t = x5 to be a continuous variable, while x remains the discrete
+label of a 4-dimensional lattice site. in this case, instead of the link variable ux,t,5 in the
+lie group, we require a variable ax,t,5 in the lie algebra. the brst operator acts on
+ax,t,5 and x,t,5 as in the continuum theory,
+
+sax,t,5 = x,t,5 + d5cx,t
+
+sx,t,5 = d5x,t  [cx,t, x,t,5] ,
+
+(7.11)
+
+where d5 is the continuum covariant derivative and s acts on the remaining variables as
+above.
+
+in terms of the lattice color-electric eld operator ex, and generator of local gauge
+transformations gx obtained above, the explicit form of the lattice brst operator acting
+on functions f = f (u, , c, ) is given by sf = qf , where q is the dierential operator
+
+q  xx (cid:16)x,ex, + cxgx + {(d)x  [cx, x,] + 2
+x(cid:17).
+
++ (x  c2
+x)
+
+ [cx, x]
+
+
+cx
+
+x,}
+
+
+
+x,
+
+(7.12)
+
+
+
+the action of s on the anti-ghosts and lagrange multipliers is dened simply by
+
+s x,t, = b
+s x,t,5 = b
+
+x,t,
+
+x,t,5
+
+sb
+
+x,t, = 0
+
+sb
+x,t,5 = 0
+s x,t = 
+
+x,t
+
+s
+
+x,t = 0 .
+
+30
+
+(7.13)
+
+this is the same as in the continuum theory after the change of variable
+
+x,t,  bx,t,  [cx,t, x,t,]
+b
+x,t,5  bx,t,5  [cx,t, x,t,5]
+b
+x,t  x,t  [cx,t, x,t] .
+
+
+(7.14)
+
+note that x,t, x,t, bx,t, and bx,t,5 are real variables.
+
+it is remarkable that the lattice brst transformation requires only minimal change
+
+from the continuum brst transformation, even though there is no local lattice curvature
+
+and no lattice bianchi identity, whereas our starting point for the continuum transforma-
+
+tion was the curvature equation and the bianchi identity (2.6).
+
+7.2. five-dimensional topological lattice action
+
+the most powerful representation of the continuous stochastic process just dened is
+
+by path integral. we start with the 5-dimensional topological lattice action which we write
+
+by analogy with the 5-dimensional continuum action presented above,
+
+i = g2
+
+0 z dtxx
+
+x, + ex,s(u ) +
+
+str{ x,(cid:16)(d5u )x,u 1
++ x,5(ax,5 + gxf )
++ x(x,5 + y, ey,gxf ) } ,
+
+1
+2
+
+b
+
+x,(cid:17)
+
+(7.15)
+
+where a sum on y and  is understood. here f (u ) is the minimizing function introduced
+above, and f (u ) is the same or another minimizing function.
+
+we expand the above action and obtain
+
+i = i1 + ia5 + i5 + i + ic + i ,
+
+(7.16)
+
+x, + ex,s(u ) +
+
+tr{ b
+
+tr(cid:16) b
+tr(cid:16) 
+
+x, (cid:16)(d5u )x,u 1
+x,5 (ax,5 + gxf )(cid:17)
+x (x,5 + y, ey,gxf )(cid:17)
+
+1
+2
+
+b
+
+x,(cid:17) }
+
+(7.17)
+
+i1 = g2
+
+ia5 = g2
+
+i5 = g2
+
+0 z dtxx
+0 z dtxx
+0 z dtxx
+0 z dtxx
+
+i = g2
+
+tr(cid:16) x, { d5(cid:16)x, + (dc)x(cid:17)  d(cid:16)x,5 + (d5c)x(cid:17)
+
++(cid:16) x, + (dc)x , 5ux,u 1
++(cid:16) y, + (d c)y (cid:17)ey,ex,s(u ) } (cid:17)
+
+x,  (da5)x(cid:17)
+
+(7.18)
+
+31
+
+tr(cid:16) x,5 { (d5c)x + x,5 +(cid:16)(dc)y + y,(cid:17)ey,gxf } (cid:17)
+
+(7.19)
+
+ic = g2
+
+0 z dtxx
+0 z dtxx
+
+i = g2
+
+tr(cid:16) x {  (d5)x  [cx, x,5]
+
+(7.20)
+
++(cid:16)  (d)y  [cy, y,] + 2
+
+y,(cid:17) ey,gxf  } (cid:17) .
+
+the terms ia5 and i5 serve to gauge x a5 and 5. indeed upon integration with respect
+to b
+
+5 and  they impose the constraints,
+
+aa
+
+a
+
+x,5 = ga
+x,5 = b
+
+xf
+y, eb
+
+y,ga
+
+xf  .
+
+(7.21)
+
+7.3. proof of gauge invariance and absence of gribov copies.
+
+we must show that the expectation-values of physical observables, namely the wil-
+son loops, are independent of the gauge-xing functions f and f . for this purpose we
+integrate out  and 5, which results in 5 being assigned its gauge-xed value. we next
+integrate out the bose ghosts  and , which appear only in
+
+z  z dd  exp(i) .
+
+the integral on  yields
+
+z = z yt,x
+
+dt,xyt,x
+
+(cid:16)  5x + (l)x + fx(cid:17) ,
+
+where fx is independent of , and the nite matrix l is dened by
+
+(l)a
+
+x  [ax,5, x]a xy
+
+gb
+
+yga
+
+xf  b
+
+y ,
+
+(7.22)
+
+(7.23)
+
+(7.24)
+
+and we have used p(d
+
+
+e)y, = gy. to evaluate z, we observe that the stochastic
+
+process starts at some initial time t = t0, which may be taken to be t0 = . at the
+
+initial time, x(t0), and the other elds u, , c, are assigned some denite initial value
+
+that is not integrated over, for example x(t0) = 0. with this initial value, the dierential
+
+equation
+
+5x  (l)x = fx
+
+(7.25)
+
+32
+
+is equivalent to the integral equation
+
+b
+
+x(t) = z t
+
+t0
+
+du(cid:16)f b
+
+x(u) + lb,c
+
+x,y(u)c
+
+x(u)(cid:17).
+
+(7.26)
+
+this equation possesses a unique solution x(t). thus unlike gauge-xing on the group, or
+in a 4-dimensional covariant gauge, there are no gribov copies.
+
+we shift  by  which cancels fx in the path integral for z. we also multiply as
+
+usual by the formally innite normalization constant det 5. this gives
+
+z = z yt,x
+
+dx(t)yt,x
+
+(cid:16)x(t)  (l)x(t)(cid:17) ,
+
+where l = 1
+
+5 l is the integral operator
+
+(l)a
+
+x(t) = z 
+
+t0
+
+du lab
+
+x,y(t, u)b
+
+y(u),
+
+with kernel
+
+this gives
+
+la,b
+
+x,y(t, u) = (t  u)la,b
+
+x,y(u) .
+
+z = det1(1  l) = exp(cid:16)  tr ln(1  l)(cid:17) = exp(cid:16)trl + ...(cid:17) ,
+
+because lx,y(t, u) is retarded, l(t, u) = 0 for u > t, only the tadpole term
+
+trl = z 
+
+t0
+
+dt xx,a
+= (0)z 
+
+t0
+
+la,a
+
+x,x(t, t)
+
+dtxx,a
+
+laa
+
+x,x(t)
+
+(7.27)
+
+(7.28)
+
+(7.29)
+
+(7.30)
+
+(7.31)
+
+survives in the last expansion. it is natural to assign the ambiguous expression (0) its
+
+mean value 1/2, which is consistent with other determinations (see appendix b), and we
+
+obtain
+
+and so, by eq. (7.24),
+
+z = exp(cid:16) 1
+
+2 z 
+
+t0
+
+dtxx,a
+
+x,x(t)(cid:17) ,
+la,a
+
+z = exp(cid:16) 
+
+1
+
+2 z 
+
+t0
+
+dtxx,a
+
+33
+
+ga
+
+xga
+
+xf (cid:17) .
+
+(7.32)
+
+(7.33)
+
+we emphasize that we have made an exact evaluation of the ghost determinant, and
+
+obtained a purely local contribution to the eective action.
+
+in the same way we integrate out the fermi ghosts  and , after setting 5 to its
+
+gauge-xed value. they only appear in the factor
+
+z  z dd  exp(i) .
+
+as before only the tadpole term survives and gives
+
+z = exp(cid:16) 1
+
+2 z 
+
+t0
+
+dtxx,a
+
+(x
+
+ea
+
+x,ea
+
+x,s + ga
+
+xga
+
+xf )(cid:17) .
+
+the dependence on f  cancels in the product
+
+zz = exp(i2) ,
+
+where
+
+i2  
+
+1
+
+2 z 
+
+t0
+
+dt xx,,a
+
+ea
+
+x,ea
+
+x,s .
+
+(7.34)
+
+(7.35)
+
+(7.36)
+
+(7.37)
+
+thus physical observables are independent of the gauge-xing function f , as asserted.
+
+we next show that they are also independent of f . the integration on b
+
+ is eected,
+, given below. the variable of integration c may be
+
+which causes i1 to be changed to i1
+
+translated, just as  was translated above, to cancel the inhomogeneous term in ic, which
+
+changes ic to ic
+
+ given below. putting these factors together we obtain
+
+z = z yt,x (cid:16)dux,(t)dax,5(t)dcx(t)d x,5(t)dbx,5(t)(cid:17) exp(i ) ,
+
+(7.38)
+
+where
+
+i  = i1
+
+i1
+
+ = 
+
+
+
+g2
+
+ + i2 + ia5 + ic
+1
+2
+
+0 z dtxx
+0 z dtxx
+
+ic
+
+ = g2
+
+x, + ex,s(u )(cid:17)2
+
+tr (cid:16)(d5u )x,u 1
+tr{ x,5 (cid:16)(d5c)x + (dc)yey,gxf(cid:17) },
+
+(7.39)
+
+and i2 and ia5 are dened above.
+
+we next use standard brst arguments to show that the expectation-value of any
+
+gauge-invariant observable is independent of the gauge-xing function f . observe rst
+
+34
+
+ and i2 are gauge invariant. they are therefore invariant under a little brst
+
+that i1
+operator s that acts according to
+
+sux, = (dc)xux,
+
+sax,5 = (d5c)x
+
+scx = c2
+x
+s x,5 = bx,5
+
+sbx,5 = 0 ,
+
+(7.40)
+
+indeed, s is the usual brst operator with cx  x,5 and
+which satises s2 = 0.
+bx  bx,5, and it acts on ux, and ax,5 like an innitesimal gauge transformation. because
+i1
+
+ and i2 are gauge-invariant they are also invariant under s,
+
+si1
+
+ = 0;
+
+si2 = 0 .
+
+moreover we may express the total action i  as
+
+i  = i1
+
+ + i2 + sj ,
+
+where
+
+j  g2
+
+0 z dtxx
+
+tr(cid:16) x,5 ( ax,5 + gxf )(cid:17).
+
+(7.41)
+
+(7.42)
+
+(7.43)
+
+thus i  is s-invariant, si  = 0, and moreover the gauge-xing function f appears only in
+the term sj that is s-exact. by standard arguments it follows that the expectation-value
+
+of any gauge-invariant observable is independent of f , as asserted, which completes the
+
+proof.
+
+we next integrate out the remaining auxiliary variables b5, a5,  and c to obtain a
+in eq. (7.38) , we
+
+path-integral in terms of the actual random variables ux,(t) only.
+integrate out bx,5(t) and ax,5(t), which xes ax,5 = gxf (u ). the integral on the fermi
+ghosts cx(t) and x,5(t) namely
+
+zc  z yt,x
+
+[dcx(t)d x,5(t)] exp(ic
+
+) ,
+
+(7.44)
+
+may be eected just like the integral on the bose ghosts x(t) and x(t) that was done
+explicitly above. again only the tadpole term survives and gives
+
+zc = exp(i3)
+
+i3 = 
+
+1
+
+2 z 
+
+t0
+
+dtxx,a
+
+35
+
+ga
+
+xga
+
+xf .
+
+(7.45)
+
+this yields the desired partition function of the stochastic process in terms of the random
+
+variables ux,(t) only,
+
+where
+
+is a local action given by
+
+z = z yt,x
+
+dux,(t) exp(i ) ,
+
+i  = i1
+
+ + i2 + i3
+
+i  = 
+
+1
+
+2 z 
+
+t0
+
+{ g2
+
+dtxx
+
+0 tr(cid:16)(d5u )x,u 1
+x,ea
+
+x, + ex,s(u )(cid:17)2
+x,s + ga
+
+xf } .
+
++ea
+
+xga
+
+(7.46)
+
+(7.47)
+
+(7.48)
+
+the last two terms are the famous ito terms that are discussed in appendix b, and we
+
+see that they are produced automatically by the 5-dimensional topological action when all
+
+auxiliary and ghost elds are integrated out. thus the ghost determinant is well-dened,
+
+and moreover its explicit evaluation gives a local ito term to the eective action which
+
+comes from the tadpole diagrams only. the ito terms, which involve the second derivative
+
+of the action s and of the minimizing function f with an over-all minus sign, favor minima
+
+of s and f over maxima and saddle points. this is physically natural and transparent, so
+
+it is somewhat surprising that the tadpole diagrams, which give the ito terms with lattice
+
+regularization, vanish with dimensional regularization [14].
+
+8. conclusion and perspectives
+
+we have seen that the description of the 4-dimensional yangmills theory in the 5-
+
+dimensional framework allows one to obtain a eld theory description that does not suers
+
+from the contradictions of the four dimensional description. from a physical point of
+
+view, we have introduced in a gauge-invariant way the additional time of the monte carlo
+
+description of the quantum theory and unied it with the euclidean space-time coordinates.
+
+it is of course quite remarkable that this approach permits one to get a fully consistent
+
+lattice formulation of the theory with a natural limit toward a continuum formulation,
+
+while the gribov ambiguity is just absent. our work shows that this ambiguity is merely
+
+an artifact of a purely 4-dimensional description. it is only in ve dimensions that one has
+
+a globally correct gauge xing which is purely local. it thus appears that we can consider
+
+the 4-dimensional physical space as a slice in a 5-dimensional manifold, in which one can
+
+36
+
+express the yangmills theory under the form of a particular topological eld theory. a
+
+way to this this schematically is to observe that the 4-dimensional action can always be
+
+rewritten as the integral of a topological term in ve dimensions:
+
+z d4xl() = z d4xdt
+
+l()
+
+
+
+d
+dt
+
+(8.1)
+
+thus, the denition of a quantum eld theory amounts to the brst invariant gauge-xing
+
+of the action, a task that we have explained in detail above and which leads to the solutions
+
+of several problems of the purely 4-dimensional formalism.
+
+we briey indicate how our method extends to fermions. to obtain the 5-dimensionsal
+
+fermionic action of a 4-dimensional dirac spinor q, which automatically extends to a 5-
+
+dimensional spinor, it is now quite natural to introduce a topological brst operator, and
+to enforce the relevant langevin equation by a brst-exact action. call q and q the
+commuting topological ghost and anti-ghost of the anti-commuting spinor q, and bq the
+anti-commuting lagrange multiplier eld. then one has sq = q  cq, sq = cq + q,
+and one may take s q = bq, sbq = 0 or s q = bq c q, sbq = cbq + q. in the euclidean
+formulation the anti-commuting anti-quark spinor eld q is an independent eld, and it
+
+
+q and 
+has corresponding commuting topological ghost and anti-ghost 
+q , and lagrange
+
+
+
+
+q  qc, s
+q , with sq = 
+q c  q. for the anti-ghost one has
+q = 
+multiplier eld b
+
+
+
+
+
+
+
+
+
+q c  
+q + 
+q = 0 or s 
+again s 
+q = b
+q . all these elds are
+q = b
+q , sb
+q = b
+q c, sb
+functions of x and t. we take the topological action,
+
+iq =z d4xdt s(cid:0) 
+=z d4xdt (cid:0)b
+
+q{d5q  k[(d + m)q + abq] }(cid:1)
+q{d5q  k[(d + m)q + abq] }
+q[d5q  k(d + m)q] + . . .(cid:1) ,
+
++ 
+
+(8.2)
+
+which must be added to the 5-dimensional action that we have introduced in the pure yang
+mills case. here (d + m)q = 0 is the dirac equation of motion of the 4-dimensional
+theory and k is a kernel [24]. one can formally prove, by mere gaussian integrations,
+
+that the equilibrium distribution is independent of the choice of the kernel k [5]. since we
+
+are in the context of a renormalizable theory, it is in fact necessary to introduce a kernel
+with canonical dimensional equal to 1, that is k = d + m . this is remarkable, since
+this coincides with the necessity of having a well-dened langevin process for spinors, as
+
+discussed for instance in [5]. quite interestingly, power counting would allows a term of
+
+37
+
+the type  f that is not proportional to the kernel: such term would contradict the
+stochastic interpretation of the 5-dimensional theory and could be the signal of an anomaly.
+
+for vector theories, such term should not be generated perturbatively.
+
+beyond solving the ambiguities which occur in a purely 4-dimensional approach, our
+
+work might oer new perspectives. we have already mentioned in sec. 6 the existence of
+
+a new algorithm and the conjecture that the mass spectrum is given by the eigenvalues of
+
+the fokker-planck hamiltonian.
+
+one speculation is the question of understanding chiral fermions in a lattice formu-
+
+lation. the topological fermionic action (8.2) is interesting from this point of view. one
+
+may consider introducing a t-dependent mass term (t) in (8.2). this might lead to an
+
+action of the type used by kaplan and neuberger to solve the chiral fermion problem for
+
+the lattice [25][26][27].
+
+in their picture, one introduces a tower of additional fermions,
+
+which can be combined by fourier transform into a 5-dimensional fermion. one notices
+
+that the equation of motion of (8.2) reproduces their 5-dimensional dirac equation when
+
+(t) is a step function. moreover, if one gauges the fermion conservation number in the
+
+fth dimension, which gives an additional u (1) gauge eld aabel(x, t), then (t) could be
+
+understood as a special value for the gauge eld component a5abel(x, t), similar to a kink
+
+that cannot be set globally to zero by local gauge-xing. therefore the choice of (t)
+
+could be determined by topological considerations. this issue of seeing whether one can
+
+understand the 4-dimensional space in which the stochastic process stops as a domain wall
+
+in which everything that remains from the elds of the topological multiplet of q is a chiral
+
+fermion seems to us to be great interest.
+
+the second perspective is that of a dual formulation which would now involve 2-form
+
+gauge elds. it is worth indicating the idea here. in the 5-dimensional framework, the
+
+dual of a one-form is a 2-form, since the sum of the degrees of the curvatures of a and its
+
+dual must equal 5.
+
+if one restricts to the abelian part, one has various possibilities for expressing the the-
+
+ory by using arguments as in [28]. the dual action, up to gauge-xing and supersymmetric
+
+terms, should take the form of a very simple 5-dimensional topological term:
+
+z5
+
+b2  db2.
+
+(8.3)
+
+such a chernsimons type action is interesting, since it can be gauge-xed in the frame-
+
+work of the self-duality for 2-form gauge elds [29]. thus, the question also arises whether
+
+38
+
+a reliable link can be established between the tqft generated by (8.3) and the physical
+
+yangmills theory!
+
+let us nally mention the following observation. suppose we start from an action
+
+with two abelian two-forms in six dimensions, r6 db2  d b2. the eld content that one
+
+obtains by dimensional reduction in four dimensions will be made of 2 two-forms, 4 one-
+
+forms and 2 zero-forms. but the 2 two-forms are equivalent by duality to 2 zero-form in
+
+four dimensions. so, we obtain a eld content equivalent to 4 one-forms and 4 zero-forms.
+
+it is striking that this is the bosonic content of the weinberg-salam model, with its four
+
+gauge elds and four scalars, which are the components of a complex su (2) doublet.
+
+acknowledgments
+
+we are grateful to t. banks, m. douglas, h. neuberger, m. schaden, m. testa and
+
+j. zinn-justin for discussions. the research of laurent baulieu was partially supported
+
+by the nsf under grant phy-98-02709, partially by rffi under grant 96-02-18046 and
+
+partially by grant 96-15-96455 for scientic schools. laurent baulieu wishes to thank
+
+rutgers university, where part of this work was done, for its very pleasant hospitality.
+
+the research of daniel zwanziger was partially supported by the nsf under grant phy-
+
+9900769.
+
+appendix a. derivation of lattice fokker-planck equation
+
+we shall demonstrate that the discrete markov process dened in sec. 6 is described
+
+by the fokker-plack equation of sec. 6 in the limit   0. we shall derive the lattice
+
+fokker-planck hamiltonian hf p from the transition matrix t (ut+1, ut), eq. (6.1) , in
+the same way that the kogut-susskind hamiltonian is derived from the transfer matrix of
+
+lattice gauge theory. we follow here the discussion of creutz [30]. we introduce a basis of
+
+states labelled by group elements |u >, where u = {ux,}, with operators
+
+ux,|u >= ux,|u > .
+
+we must nd an operator t with the property
+
+< u |t |u >= t (u , u ).
+
+(a.1)
+
+(a.2)
+
+to order  it will have the form t = 1  hf p , which will allow us to identify hf p .
+
+39
+
+from eqs. (6.1), (6.3), (6.20) and (6.37), we have
+
+t (u , u ) = n exp(cid:16)  (g2
+
+0)1xx,
+
+re tr(i  u 1
+
+x,hx,ux,)(cid:17) ,
+
+(a.3)
+
+here hx,  su (n ) is given by
+
+hx,  exp(vx) exp(fx,) exp( ux,fx+,u 1
+
+x,) ,
+
+(a.4)
+
+and the gauge-xed value of ax,5 appears, namely ax,5 = vx where
+
+we write
+
+vx  gxf .
+
+hx, = exp(kx,) ,
+
+where kx, may be interpreted as the total drift force. to order , it is given by
+
+kx, = fx, + (dv)x ,
+
+(a.5)
+
+(a.6)
+
+(a.7)
+
+where d is the lattice gauger covariant dierence, eq. (6.30). it is the sum of the drift
+force fx, = ex,s and a gauge-xing force (dv).
+
+let t0 be the operator whose matrix elements give the transition probability with
+
+total drift force kx, = 0,
+
+< u |t0|u >= n exp(cid:16)  (g2
+
+0)1xx,
+
+re tr(i  u 1
+
+x,ux,)(cid:17).
+
+we have
+
+< u |t |u >=< u |t0| exp(k)u >,
+
+where exp(k)u  {exp(kx,)ux,}. we insert a complete set of states,
+
+(a.8)
+
+(a.9)
+
+< u |t |u >= z du  < u |t0|u  >< u | exp(k)u > .
+
+(a.10)
+
+to order  we have
+
+< u | exp(k)u > = (u , exp(k)u ) = (exp(k)u , u )
+
+= (cid:16)1  xx,
+
+e 
+
+x,kx,(u )(cid:17)(u , u ),
+
+(a.11)
+
+40
+
+where e 
+x, is the color-electric eld derivative operator dened in sec. 6, that acts on
+the variable u . let ex, be the corresponding quantum mechanical color-electric eld
+operator. in terms of operators we have shown that to order 
+
+t = t0 (cid:16)1  xx,
+
+ea
+
+x,ka
+
+x,( u )(cid:17) .
+
+the evaluation of t0 may be found in [30], with the result
+
+t = 1 + xx,m
+
+{ ea
+
+x,(cid:16)g2
+
+0
+
+ea
+
+x,  ka
+
+x,( u)(cid:17)} .
+
+(a.12)
+
+(a.13)
+
+thus with t = 1  hf p and kx, = fx, + (dv)x, and fx, = ex,s, we obtain the
+fokker-planck hamiltonian
+
+hf p = xx,m
+
+where vx = gxf .
+
+x,(cid:16)g2
+ea
+
+0ea
+
+x,  (dv)x + ex,s(cid:17) ,
+
+(a.14)
+
+appendix b. equivalence of topological lattice action and lattice fokker-planck
+
+equation
+
+we wish to show that the 5-dimensional partition function z, eqs. (7.46) and (7.48),
+
+that was obtained from the topological lattice action by integrating out all the auxiliary
+
+elds, is a path integral representation of the solution to the fokker-plank equation, 5p =
+hf p p , with fokker-planck hamiltonian hf p given in eq. (a.14).
+
+for this purpose consider the integral dened for arbitrary o(u ) by
+
+o(u ) z du o(u )k(u , u )
+
+z du  o(u ) n exp(cid:16)  (4)1xx,
+
+(bx,  kx,)2(cid:17) ,
+
+(b.1)
+
+where kx, = kx,(u ) is dened in eq.
+u 
+
+x,) =
+x,. it will be sucient to show that in the limit   0 this expression corresponds
+on the one hand to a discretization of the lattice action (7.48), and on the other hand
+
+(a.7), and bx, is dened by exp(taba
+
+x,u 1
+
+yields
+
+o(u ) = (1  h
+
+
+fp)o(u ) .
+
+(b.2)
+
+41
+
+we change variable of integration by translation on the group u  = v u , with du  = dv .
+with vx, parametrized by vx, = exp(taba
+
+x,), we have
+
+o(u ) = n z db(b) o(cid:16) exp(b)u(cid:17) exp(cid:16)  (4)1xx,
+
+(bx,  kx,)2(cid:17) ,
+
+where (b) is haar measure. we again change variable of integration by bx, = 
+kx,, and obtain
+
+(b.3)
+
+1
+
+2 cx, +
+
+o(u ) = z dc (
+
+1
+
+2 c + k) o(exp(
+
+1
+
+2 c + k)u ) n exp(cid:16) 
+
+1
+
+4 xx,
+
+x,(cid:17) .
+c2
+
+(b.4)
+
+we now expand to order ,
+
+x,(
+
+1
+
+2 c + k) = 1 + const  c2
+
+x,
+
+o(cid:16) exp(
+
+1
+
+2 c + k)u(cid:17) = (cid:16)1 + (
+
+1
+
+2 ca
+
+x, + ka
+
+x,)ea
+
+x, +
+
+1
+2
+
+ca
+
+x,cb
+
+y, ea
+
+x,eb
+
+y,(cid:17)o(u ),
+
+(b.5)
+
+where a sum over repeated indices is understood. when this is substituted into (b.4), the
+
+contribution from the expansion of  is cancelled by the normalization constant n , and
+
+one obtains eq. (b.2) , with
+
+h
+
+
+
+fp = xx, (cid:16)ex, + kx,(u )(cid:17)ex, ,
+
+(b.6)
+
+as desired.
+
+we next show that the kernel in (b.1) corresponds to a discretization of the path inte-
+
+gral with action (7.48). in the preceding calculation the drift force k = k(u ) depends on u
+but not on u , whereas the path integral (7.46) and (7.48) implicitly uses the symmetrized
+
+drift force
+
+ks 
+
+1
+
+2(cid:16)k(u ) + k(u )(cid:17) .
+
+(b.7)
+
+so to compare with the path integral, we express the integral (b.1) in terms of ks plus a
+correction which will turn out to be the well-known ito term. we have
+
+k(u ) = ks +
+
+1
+
+2(cid:16)k(u )  k(u )(cid:17) ,
+
+so, with u  = exp(b)u , we may write to the order of interest
+
+ba
+
+y,ea
+
+y,k ,
+
+k(u ) = ks 
+
+1
+
+2 xy,
+
+42
+
+(b.8)
+
+(b.9)
+
+because the last term gives a contribution of order  as we shall show. this gives, to the
+
+order of interest,
+
+exp{(4)1xx, (cid:16)bx,  kx,(u )(cid:17)2
+
+} =(cid:16)1 
+
+1
+
+4 xx,,y,
+
+bb
+
+x,ba
+
+y,ea
+
+y,kb
+
+x,(cid:17)
+
+ exp(cid:16)  (4)1xx,
+
+(bx,  ks,x,)2(cid:17) .
+
+(b.10)
+
+upon substituting this expression into (b.1), one obtains a gaussian integral and gaussian
+
+expectation value
+
+< bb
+
+x,ba
+
+y, >= 2x,y, a,b ,
+
+(b.11)
+
+which is indeed of order , as asserted. consequently in the exponent we may replace
+bb
+
+y, by its expectation value, and to the order of interest we have
+
+x,ba
+
+exp{(4)1xx, (cid:16)bx,  kx,(u )(cid:17)2
+
+}  exp{xx, (cid:16)(4)1(bx,  ks,x,)2
+
++
+
+1
+2
+
+ea
+
+x,ka
+
+x,(cid:17)} ,
+
+(b.12)
+
+the last term being the ito term. observe that with u   ut+1 and u  ut, and
+u 
+x,, so the last expression may be written
+
+x, = exp(bx,), we have bx,   ux,u 1
+
+x,u 1
+
+formally as
+
+we have
+
+exp{xx, (cid:16) 1
+
+4
+
+( ux,u 1
+
+x,  ks,x,)2 +
+
+1
+2
+
+ea
+
+x,ka
+
+x,(cid:17)} .
+
+ea
+
+x,ka
+
+x, = ea
+
+x,ea
+
+x,s  ga
+
+xga
+
+xf ,
+
+(b.13)
+
+(b.14)
+
+and the last expression corresponds to the action (7.48), as asserted.
+
+43
+
+references
+
+i.m. singer, comm. of math. phys. 60 (1978) 7.
+
+[1] v.n. gribov, nucl. phys. b 139 (1978) 1.
+[2]
+[3] h. neuberger, non-perturbative gauge invariance, phys. lett. b 175 (1986) 69.
+[4] g. parisi, y.s. wu sci. sinica 24 (1981) 484.
+[5] p.h. daamgard, h. huel, phys. rep. 152 (1987) 227.
+[6] p.h. daamgard, h. huel, eds., stochastic quantization, world scientic (1988).
+[7] m. namiki and k. okano, eds, prog. theor. phys. suppl 111 (1993).
+[8] l. baulieu, b. grossman, a topological interpretation of stochastic quantization
+
+phys. lett. b 212 (1988) 351.
+
+[9] l. baulieu stochastic and topological field theories, phys. lett. b 232 (1989) 479;
+topological field theories and gauge invariance in stochastic quantization, int.
+jour. mod. phys. a 6 (1991) 2793.
+
+[10] h.s. chan, m.b. halpern, phys. rev. d 33 (1986) 540.
+[11] yue-yu, phys. rev. d 33 (1989) 540.
+[12] d. zwanziger, nucl. phys. b 139, (1978) 1.
+[13] j. zinn-justin, nucl. phys. b 275 (1986) 135.
+[14] j. zinn-justin, d. zwanziger, nucl. phys. b 295 (1988) 297.
+[15] l. baulieu, d. zwanziger, equivalence of stochastic quantization and the faddeev-
+
+popov ansatz, nucl. phys. b 193 (1981) 163.
+
+[16] l. baulieu, d. zwanziger, renormalizable non-covariant gauges and coulomb gauge
+
+limit, nucl.phys. b 548 (1999) 527, hep-th/9807024.
+
+[17] a. ukawa and m. fukugita, langevin simulations including dynamical quark loops,
+
+phys. rev. lett. 55 (1985) 1854.
+
+[18] g. g. batrouni, g. r. katz, a. s. kronfeld, g. p. lepage, b. svetitsky, and k. g. wil-
+son, langevin simulations of lattice field theories, phys. rev. d 32 (1985) 2736.
+[19] a. munoz sudupe, r. f. alvarez-estrada, phys. lett. 164b (1985) 102; 166b
+
+(1986) 186.
+
+[20] k. okano, nucl. phys. b289 (1987) 109; prog. theor. phys. suppl. 111 (1993)
+
+203.
+
+[21] h. neuberger, phys. lett. b 295 (1987) 337.
+[22] m. testa, phys. lett. b 429 (1998) 349.
+[23] l. baulieu and m. schaden, gauge group tqft and improved perturbative yang
+
+mills theory, int. jour. mod. phys. a 13 (1998) 985, hep-th/9601039.
+
+[24] p.h. damgaard and k. tsokos, nucl. phys. b 235 (1984) 75.
+[25] d.b. kaplan, a method for simulating chiral fermions on the lattice, phys. lett.
+b 288 (1992) 342; chiral fermions on the lattice, nucl. phys. b, proc. suppl. 30
+(1993) 597.
+
+44
+
+[26] h. neuberger, chirality on the lattice, hep-lat/9808036.
+[27] y. shamir, lattice chiral fermions nucl. phys. proc. suppl. 47 (1996) 212, hep-
+
+lat/9509023; v. furman, y. shamir, nucl.phys. b 439 (1995), hep-lat/9405004.
+
+[28] l. baulieu, s.l. shatashvili, duality from topological symmetry, jhep 9903 (1999)
+
+011, hep-th/9811198.
+
+[29] l. baulieu, p. west, six dimensional tqfts and self-dual two-forms, phys.lett. b
+
+436 (1998) 97, /hep-th/9805200
+
+[30] m. creutz, quarks, gluons and lattices, cambridge university press 1983, pp 101-
+
+107.
+
+45
+
+

@@ -1,0 +1,771 @@
+ohstpy-hep-t-99-031 hep-th/9904027
+
+9
+9
+9
+1
+
+ 
+
+y
+a
+m
+8
+1
+
+ 
+
+ 
+ 
+
+2
+v
+7
+2
+0
+4
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+the perils of soft susy breaking
+
+f.antonuccio, o. lunin, and s.pinsky
+
+department of physics,
+
+the ohio state university,
+columbus, oh 43210, usa
+
+abstract
+
+we consider a two dimensional su(n ) gauge theory coupled to an adjoint ma-
+jorana fermion, which is known to be supersymmetric for a particular value of
+fermion mass. we investigate the soft supersymmetry breaking of the discrete
+light cone quantization (dlcq) of this theory. there are several dlcq formula-
+tions of this theory currently in the literature and they naively appear to behave
+dierently under soft supersymmetry breaking at nite resolution. we show that
+all these formulations nevertheless yield identical bound state masses in the decom-
+pactication limit of the light-like circle. moreover, we are able to show that the
+supersymmetry-inspired version of dlcq (so called sdlcq) provides the best
+rate of convergence of dlcq bound state masses towards the actual continuum
+values, except possibly near or at the critical fermion mass. in this last case, we dis-
+cuss improved extrapolation schemes that must supplement the dlcq algorithm
+in order to obtain correct continuum bound state masses. interestingly, when we
+truncate the fock space to two particles, the sdlcq prescription presented here
+provides a scheme for improving the rate of convergence of the massive thooft
+model. thus the supersymmetry-inspired sdlcq prescription is applicable to
+theories without supersymmetry.
+
+1
+
+1 introduction
+
+over the last several years we have learned a great deal about supersymmetric gauge
+
+theories following the discovery of dualities between string/m-theory and supersymmet-
+
+ric gauge theories [1, 2, 3]. recently this has been extended to conformal eld theories
+
+without supersymmetry [4]. evidently, it would be desirable to have a deeper under-
+
+standing of supersymmetry breaking in order to bridge the gap between the formulation
+
+of physics in a supersymmetric world, and its more realistic counterpart, where no such
+
+symmetry is manifest. one straightforward approach is to start with a supersymmetric
+
+formulation, and then proceed to break supersymmetry softly by adding appropriate
+
+mass terms.
+
+the context within which we will consider this is a theory that has been well studied
+
+before: two dimensional su(n) gauge theory coupled to an adjoint majorana fermion
+
+[5]. interestingly, this theory is known to exhibit supersymmetry at a particular value of
+the fermion mass, m = msu sy [7]. this is believed to be a theory with two parameters
+g and m, both of which have the dimensions of mass. since the only g dependence is an
+overall g2 factor in the hamiltonian the theory depends on one dimensionless parameter
+x = m2
+ , must be determined
+in this work, we provide evidence that, while this
+in terms of the one parameter x.
+
+g2n and therefore all the bound state masses, in units of g2n
+
+viewpoint is still correct, there is still scope for an additional operator (and associated
+
+coupling constant) that may be introduced to improve convergence of the dlcq bound
+
+state masses towards their actual continuum values. of course, these continuum masses
+
+will be unaected by the presence of such an operator, but a judicious choice of coupling
+
+will serve to improve the rate of convergence of our numerical results.
+
+naively, when one adds a soft breaking term to the two dlcq formulations of the
+
+theory, we appear to arrive at dierent spectra. the two formulations we are alluding to
+
+are the principle value (pv) and supersymmetric discrete light cone quantization
+
+(sdlcq), and are discussed in detail below. the question is whether these two spectra
+
+are truly dierent or simply rescalings of the same spectrum which become identical in
+
+the continuum limit. it would be very good news if they were in fact the same because
+
+the pv prescription is generally accepted as correct ([9, 10]), while the sdlcq approach
+
+is known to converge more rapidly in general.
+
+actually, to understand the relation between these two schemes, it is helpful to present
+
+a formulation that interpolates between the pv and sdlcq prescriptions by introducing
+
+2
+
+an additional operator [6] and associated coupling constant that we will call y .
+
+in
+
+particular, y = 0 will correspond to the pv prescription, while y = 1 will imply the
+
+sdlcq prescription.
+
+intermediate values for y will correspond to a mixture of the
+
+two schemes. by diagonalizing the dlcq hamiltonian matrix, and extrapolating to
+
+the continuum limit, we are able to solve for bound state masses and wave functions at
+
+dierent values of the fermion mass parameter x and coupling constant y .
+
+we shall show that the continuum bound state masses are independent of the coupling
+
+y , as expected from a scheme independent prescription, although the rate of convergence
+
+towards the actual continuum mass will be signicantly aected by our choice for y . in
+
+fact, it will turn out that the value for y that arises naturally in the regularization
+
+of supersymmetric theories (i.e. y = 1) provides the best convergence towards actual
+
+continuum masses. thus, the supersymmetric formulation of dlcq (sdlcq), corre-
+
+sponding to y = 1  rst highlighted in the work [11]  yields a method for improving
+
+numerical convergence of dlcq bound state masses even for theories without supersym-
+
+metry.
+
+to show this, we study the dlcq bound state integral equations at high resolution,
+
+which is made possible by truncating the fock space to two particles. in particular, we
+
+show that the sdlcq approach converges more uniformly and rapidly for all values of
+
+x that are suciently far from the critical value x = 0.
+
+we remark that at the supersymmetric point x = 1, the sdlcq prescription pre-
+
+serves supersymmetry even in the discretized theory. the advantages of such an approach
+
+have been exploited in a study of a wide class of supersymmetric gauge theories in two
+
+[12, 13, 14, 15, 6] and three dimensions [16].
+
+2 formulations of the theories
+
+in this section we will consider the formulations of 1 + 1 dimensional qcd coupled to
+
+adjoint majorana fermions having arbitrary mass (see for example [5]) in the light cone
+gauge a+ = 0. after eliminating non-physical degrees of freedom by solving constraint
+equations, the lightcone components of total momentum are found to be:
+
+p + = z dxt r(i),
+p  = z dxt r 
+
+im2
+2
+
+
+
+1
+
+
+ 
+
+g2
+2
+
+j + 1
+2
+
+
+j +!
+
+3
+
+(1)
+
+g2n
+
+m2
+
+g2
+
+dk
+k
+
+b
+ij(k)bij(k) +
+
+2 z 
+2 z 
+(k1 + k2 + k3  k4)b(k)(b
+
+dk
+
+k z k
+
+ z 
+
+dp
+
+(p  k)2 b
+kj(k3)b
+kj(k4)bkl(k1)bli(k2)bij(k4)  b
+
+dk1dk2dk3dk4(cid:16)(k1 + k2  k3  k4)a(k)b
+
+k
+
+0
+
+0
+
+0
+
+0
+
+ij(k)bij(k) +
+
+ji(k4)bkl(k1)bli(k2)+
+
+(2)
+
+kj(k1)b
+
+jl(k2)b
+
+li(k3)bki(k4))(cid:17)
+
+=
+
+with
+
+a(k) =
+
+b(k) =
+
+1
+
+(k4  k2)2 
+(k3 + k2)2 
+
+1
+
+1
+
+(k1 + k2)2 ,
+
+1
+
+(k1 + k2)2 .
+
+(3)
+
+here x = (x+  x)/2 and j +
+
+ij = 2ikkj is the longitudinal component of the fermion
+current. to avoid introducing an additional mass scale in the theory we will write this
+in term of mass operators: m 2 = 2p +p . it is well known that at the special value of
+su sy = g2n/) this system is supersymmetric [7]. we will use
+fermionic mass (namely m2
+a dimensionless mass parameter x = m2
+g2n , and the supersymmetric point is x = 1 and
+the masses of all bound states will be quoted in units of g2n/.the supercharge is given
+by
+
+q = 21/4z dxtr(2
+
+1
+
+
+).
+
+i21/4g
+
+ z 
+ik(k1)b
+
+0
+
+=
+
+ (cid:16)b
+
+dk1dk2dk3(k1 + k2  k3)(cid:18) 1
+
+k1
+
++
+
+1
+k2 
+
+1
+
+k3(cid:19) 
+
+kj(k2)bij(k3) + b
+
+ij(k3)bik(k1)bkj(k2)(cid:17) ,
+
+using the anticommutator at equal x+:
+
+{ij(x), kl(y)} =
+
+1
+2
+
+(x  y)
+
+(4)
+
+(5)
+
+it can be checked that at m = msu sy the susy algebra {q, q} = 22p  is satised.
+in the dlcq approximation the system lives in a x box of length l and one has to
+sums over discrete variables k+ 6= 0 instead of integrations in the above formulas. for
+periodic boundary conditions (bc), k+ = n/l where n = 1, 2, . . . , k and k is called
+the resolution.
+
+one formulation of dlcq which we will denote as the principal value (pv) prescrip-
+
+tion [8], treats the singularities of the hamiltonian using a pv prescription and can be
+
+4
+
+formulated using either anti- periodic or periodic bc. the anti-periodic boundary condi-
+
+tion must break the supersymmetry at nite resolution because the fermions and bosons
+
+are in dierent fock sectors. the pv prescription with periodic bc could in principle
+
+give supersymmetric results at nite resolution, although this is not the case. in the pv
+
+prescription the supersymmetry at x = 1 is restored only in the decompactication limit
+(k  ). this restoration was shown in [5] 1. the hamiltonian for this formulation
+will be referred to as p 
+
+p v .
+
+the prescription that preserves supersymmetry at nite resolution will be called
+
+sdlcq. in sdlcq one simply uses dlcq to calculate the supercharges and then uses
+
+the super charges to calculate the hamiltonian and longitudinal momentum operator
+[11]. here we must use periodic bc because the supercharge q is cubic in the elds,
+while the supercharge q+ is quadratic.
+
+the susy algebra is reproduced at a special value of fermion mass and at every
+
+nite resolution the supercharge matrices give a representation of the super algebra.
+both sdlcq and p 
+p v at x = 1 give the same results as the resolution goes to innity
+[13] 2. we now want to add identical soft susy breaking terms (mass terms) to these
+theories and study the resulting non-supersymmetric theory. since we already have a
+mass term in p 
+p v this only requires varying x, but for sdlcq this means explicitly
+adding a mass term.
+
+it is very instructive to actually do the numerical calculation dierently and introduce
+a third formulation, psu sy which includes both sdlcq and p 
+p v . we have found the
+operator which is the dierence between the sdlcq and the pv formulation [6] 3.
+thus if we add this operator to the pv hamiltonian it is now supersymmetric at every
+
+resolution and produces exactly the same mass and wave functions as sdlcq. in the
+
+large n approximation the operator take the form.
+
+g2nk
+
+ xn
+
+1
+n2 b
+
+ij(n)bij(n).
+
+(6)
+
+numerically, this operator does not alter the actual continuum values observed in
+su sy we included this
+su sy as a single theory
+
+the pv approach when x = 1. in our numerical formulation of p 
+operator with an adjustable coupling y . we can now think of p 
+
+1they nd that convergence is slower for period bc
+2however sdlcq converges much faster
+3to date we have only found this operator for this particularly simple theory but it should be possible
+to nd it for other theories as well. the calculation of this operator involves a careful study of the
+intermediate zero modes that contribute to the square of the supercharge
+
+5
+
+in the coupling constant space (x, y ). the formulation we called pv corresponds to
+
+setting y = 0 and allowing x to be arbitrary, while the prescription we call sdlcq
+
+corresponds to setting y = 1. in the following, we will present results for the lightest
+
+bosonic bound states as a function of x and y . for a few values of x and y we will
+
+truncate the fock space to allow only two particles fock states, which will permit us to
+
+investigate the thooft equation for higher resolutions than would otherwise be possible.
+
+3 soft susy breaking
+
+our investigation of this theory indicates that at x = 1 ( the supersymmetric value of
+
+the fermion mass) the lightest fermionic and bosonic bound states are degenerate with
+continuum masses approximately m 2 = 26 [5, 13]. using p 
+su sy we arrive at the same
+conclusion for any value of y .
+
+boorstein and kutasov [17] have investigated soft supersymmetry breaking for small
+values of this dierence, x  1 and they found that the degeneracy between the fermion
+and boson bound state masses is broken according to
+
+m 2
+
+f (x)  m 2
+
+b(x) = (1  x)mb(1) + o((x  1)3).
+
+(7)
+
+they calculated these masses using the pv prescription (y = 0) with anti-periodic
+
+bc and found very good agreement with the theoretical prediction. we have compared
+
+this theoretical prediction at y = 1 and we nd that eq (7) is very well satised. at
+resolution k = 5, for example, the slope is 4.76 and the predicted slope mb(1) is 4.76.
+the indication is that this result is true for any value of y .
+
+in fig. 1 we show the contour plots of the mass squared m 2 of the two lightest
+bosonic bound states as a function of x and y at resolution k = 10. these contours
+
+are lines of constant mass squared. selecting a particular value of the mass of the rst
+
+bound state then xes a particular contour in fig. 1a as a contour of xed mass, which
+we can write as y = yp(x).
+
+interestingly, constructing the same contour plot for the next to lightest bosonic
+
+bound state  see fig. 1b  yields contours that have approximately the same functional
+
+dependence implied by fig. 1a. in fact, one obtains approximately the same contour plots
+
+for the next twenty bound states (which is as far as we checked). the simple conclusion
+
+is that the coupling y which represents the strength of the additional operator aects all
+
+bound state masses more or less equally. this in turn suggests that at nite resolution,
+
+6
+
+(b)
+
+(a)
+
+1
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+1
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+0
+
+0 0.2 0.4 0.6 0.8 1
+
+0
+
+0 0.2 0.4 0.6 0.8 1
+
+figure 1: (a) the contour plots of y = y (x) for the mass squared of the lowest bound
+state in units of g2n/ as a function of x = m/g2n and y (b)the contour plots of
+y = y (x) for the mass squared of the second lowest bound state in units of g2n/ as a
+function of x = m/g2n and y (b)
+
+we can smoothly interpolate between dierent values of fermion mass x, and dierent
+
+prescriptions specied by the coupling y , without aecting too much the actual numerical
+spectrum. of course, in the decompactication limit k  , such a dependence on y
+disappears, due to scheme independence.
+
+since the lightest bosonic bound state is primarily a two particle state it is reasonable
+
+to truncate the fock basis to two particle states. this will permit very high resolutions,
+
+which will be needed to carefully scrutinize any possible discrepancies between the two
+
+versions of soft symmetry breaking presented here. in fact, we are able to study the
+
+theory for k up to 800. the mass of the lowest state as a function of the resolution for
+
+various values of x and y are shown in fig. 2. each converging pair of lines  which
+
+extrapolate the actual data points  in fig. 2 corresponds to dierent values of fermion
+
+mass x. the top upper curve in each pair runs through data points that were calculated
+
+via sdlcq (i.e. y = 1), while the lower corresponds to the pv (i.e. y = 0) prescription
+
+commonly adopted in the literature. we nd that each pair of curves converge to the
+
+same point at innite resolution, although this may not be completely obvious for the
+
+lowest pair in the gure (corresponding to the critical mass x = 0).
+
+away from x = 0, the sdlcq formulation is tted with a linear function of 1/k,
+while the pv formulation is t with a polynomial of 1/k 2, where  is the solution of
+
+7
+
+1  x/2 = cot() [21]. it now appears that sdlcq not only provides more rapid
+convergence for supersymmetric models, but also for the massive thooft model, which
+
+is not supersymmetric. for the massless case, the situation is reversed; the sdlcq
+
+formulation converges slower. it is t by a polynomial in 1/log(k) and gives the same
+
+mass at innite resolution as the pv formulation. this behavior may be understood
+
+from the observation that the wave function of this state does not vanish at x = 0. we
+
+have looked closely at small masses, such as x = .1, and one nds that both pv and
+sdlcq vary as a polynomial in 1/k 2 at large resolution. thus careful extrapolation
+schemes must be adopted at small masses.
+
+we therefore conclude that the continuum of regularization schemes that interpo-
+
+late smoothly between the sdlcq and pv prescriptions  which we characterized by
+
+the parameter y  yield the same continuum bound state masses, although the rate of
+
+convergence of the dlcq spectrum may be altered signicantly. this implies that the
+
+contour plots observed in fig. 1 eventually approach lines parallel to the y axis, and the
+
+sole dependence on the parameter x is recovered.
+
+mass square
+
+27.5
+
+25
+
+22.5
+
+20
+
+17.5
+
+15
+
+12.5
+
+0.01 0.02 0.03 0.04 0.05 0.06 0.07
+
+1/k
+
+figure 2: mass of the of the lowest bound state in units of g2n/ calculated in the
+thooft model. the top pair is at x = 1, the second is at x = .5, and the bottom pair
+is at x = 0
+
+4 discussion
+
+the two dimensional gauge theory of adjoint majorana fermions has been studied exten-
+sively [5, 7, 13, 17, 18] and is known to be a theory with an overall mass scale g2, and one
+
+8
+
+real coupling  the mass of the fermion  which we write as x in our notation. when one
+
+adds a soft supersymmetry breaking term, the supersymmetric (sdlcq) and principle
+
+value (pv) prescriptions for regulating the coulomb singularity appear to give dierent
+
+bound state masses at nite resolution.
+
+we observed at nite resolution that these dierent bound state masses may be
+
+smoothly connected  in an approximate sense  by introducing a new operator, and
+
+an associated coupling y , and then varying the couplings x and y along an appropri-
+
+ately chosen contour.
+
+by truncating the fock space to two particles, we were able to study the dlcq
+
+bound state equations up to k = 800, which we summarized in fig. 2. we concluded
+
+that after carefully extrapolating the data, the dierent prescriptions yielded identical
+
+continuum bound state masses. moreover, we observed that the sdlcq prescription
+
+improved convergence for suciently large values of fermion mass.
+
+interestingly, since the two-body equation studied here for the adjoint fermion model
+
+is simply the thooft equation with a rescaling of coupling constant, we have arrived at
+
+an alternative prescription for regulating the coulomb singularity in the massive thooft
+
+model that improves the rate of convergence towards the actual continuum mass. thus,
+
+a prescription that arises naturally in the study of supersymmetric theories is also appli-
+
+cable in the study of a theory without supersymmetry. we believe that this idea deserves
+
+to be exploited further in a wider context of theories. in particular, it is an open question
+
+whether this procedure could provide a sensible approach to regularizing softly broken
+
+gauge theories with bosonic degrees of freedom, and in higher dimensions.
+
+in any case, it appears that the special cancellations aorded by supersymmetry 
+
+especially in the context of dlcq bound state calculations  might have scope beyond
+
+the domain of supersymmetric eld theory. this would be a crucial rst step towards a
+
+serious non-perturbative study of theories with broken supersymmetry.
+
+acknowledgments
+
+the work was supported in part by a grant from the us department of energy. the
+
+authors are grateful for useful discussion with brett van de sande.
+
+references
+
+[1] t. banks, w. fischler, s. shenker, l. susskind, phys. rev. d55 (1997) 5112, hep
+
+th/9610043.
+
+9
+
+[2] l.susskind, another conjecture about matrix theory, hep-th/9704080.
+
+[3] juan m. maldacena, adv.theor.math.phys.2:231-252,1998 hep-th/9711200.
+
+[4] i. klebanov and a. tseytlin, a non-supersymmetric large n cft from type 0
+
+string theory hep-th/9901101
+
+[5] g.bhanot, k.demeter, i.r.klebanov, phys. rev. d48 (1993) 4980, hepth/9307111.
+
+[6] f.antonuccio, o.lunin, and s.pinsky, phys.lett.b442:173-179,1998; hep-th/9809165
+
+[7] d.kutasov, phys. rev. d48 (1993) 4980, hepth/9306013.
+
+[8] g. thooft, nuc. phys. b72 (1974), 461
+
+[9] h.-c. pauli and s.j.brodsky, phys.lett. d32 (1985) 1993, 2001.
+
+[10] s.j. brodsky, h.c. pauli, and s.s. pinsky, phys.rept.301:299-486,1998 hep-
+
+ph/9705477
+
+[11] y. matsumura, n. sakai, and t. sakai, phys.rev d52:2446-2461,1995 hep-
+
+th/9504150
+
+[12] f.antonuccio, o.lunin, s.pinsky, phys.lett. b429 (1998) 327-335; hep-th/9803027
+
+[13] f.antonuccio, o.lunin, s.pinsky, phys.rev. d58 (1998) 085009; hep-th/9803170
+
+[14] f.antonuccio, o.lunin, h.c.pauli, s.pinsky,
+
+and s.tsujimaru, phys.rev.
+
+d58(1998) 105024; hep-th/9806133
+
+[15] f.antonuccio, h.c.pauli, s.pinsky, phys.rev.d58:125006,1998 ); hep-th/9808120
+
+[16] f.antonuccio, o.lunin, and s.pinsky, super yang-mills at weak, intermediate and
+
+strong coupling, (to appear in phys.rev. d ); hep-th/98011083
+
+[17] j. boorstein and d. kutasov nucl.phys.b421:263-277,1994 hep-th/9401044
+
+[18] f. antonuccio, and s. pinsky phys.lett.b439:142-149,1998 hep-th/9805188
+
+[19] s. pinsky, the analog of the thooft pion with adjoint fermions invited talk at
+
+new nonperturbative methods and quantization of the light cone, les houches,
+
+france, 24 feb - 7 mar 1997. hep-th/9705242 abstract and postscript from los
+
+alamos (or from france or italy or u.k.)
+
+10
+
+[20] review of matrix theory d. bigatti, l. susskind su-itp-97-51, hep-th/9712072
+
+[21] b. van de sande, phys.rev.d54:6347-6350,1996 hep-ph/9605409
+
+[22] m.j. strassler manifolds of xed points and duality in supersymmetric
+
+gauge theories proceedings of the yukawa international seminar (ykis95),
+
+prog.theor.phys.suppl.123:373-380,1996 hep-th/960202.
+
+11
+
+

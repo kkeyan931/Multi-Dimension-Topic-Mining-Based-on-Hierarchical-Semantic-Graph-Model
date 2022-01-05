@@ -1,0 +1,644 @@
+9
+9
+9
+1
+
+ 
+
+y
+a
+m
+6
+1
+
+ 
+
+ 
+ 
+
+1
+v
+4
+1
+1
+5
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+ufift-hep-99-04
+hep-th/9905114
+
+a generalized shannon sampling theorem,
+
+fields at the planck scale as band-limited signals
+
+achim kempf
+
+institute for fundamental theory, department of physics
+
+university of florida, gainesville, fl 32611, usa
+
+email: kempf@phys.u.edu
+
+abstract
+
+the shannon sampling theorem is generalized for signals with arbitrarily
+varying bandwidth and non-equally spaced sampling. the sampling kernel is
+expressed explicitly in terms of the bandwidth. it is shown that such signals are
+equivalent to elds on certain spaces with an ultraviolet cuto. this includes a
+type of short-distance structure which has been discussed for space-time at the
+planck scale in the context of string theory and quantum gravity.
+
+the shannon sampling theorem describes a useful property of signals whos frequency
+spectrum is bounded. the theorem asserts that in order to record a signal with band-
+width max it is sucient to measure the signal at discrete and equidistant points in
+time, tn, with spacing s = tn+1  tn = 1/2max, where n runs through all integers.
+the shannon sampling formula then allows the reconstruction of the signal (t) at all
+times t from its sampled values (tn):
+
+(t) = xn
+
+sin [2 max (t  tn)]
+
+2 max (t  tn)
+
+(tn)
+
+(1)
+
+the lattice of sampling times {tn} can be chosen arbitrarily from the one-parameter
+family {tn()} of all those sampling lattices which have the required spacing s, namely
+tn() =  + n/2max.
+the ability to recover a continuous curve from its values at discrete sampling points
+has found applications ranging from pure mathematics, where it may e.g. be used to
+derive series expansions of functions, to the experimental sciences and engineering,
+where it is used, e.g., in digital-analog conversion. various generalizations of the sam-
+pling theorem have been worked out and standard references are, e.g., [1]. for recent
+work see, e.g., [2, 3, 4] and references therein.
+
+1
+
+in the present paper, the aim is to improve sampling eciency by using time-varying
+sampling rates to sample classes of signals with a time-varying bandwidth.
+in the
+literature, several methods of non-equally spaced sampling are known, in particular,
+gaussian and lagrangian interpolation, interlaced sampling, or kramers, papoulis
+or paley-wieners sampling theorems, see, e.g., [1, 2]. these, however, are either
+specialized or do not provide a direct handle on the time-varying bandwidth. the
+sampling theorem which we develop here allows the use of arbitrarily varying sampling
+rates to sample signals with a corresponding directly specied time-varying bandwidth.
+the present work arose, unexpectedly, from investigations into the possible short-
+distance structures of space-time at the planck scale, see e.g.
+indeed, one
+of the main ndings of the present paper is that classes of signals with time-varying
+bandwidth are mathematically equivalent to elds on ultraviolet-regular spaces of the
+type fuzzy-a in terms of the classication presented in [6].
+
+[5, 6].
+
+the generalized sampling theorem
+
+we begin by noting that there are consistency conditions which restrict the choice of
+bandwidth curve max(t). intuitively, this is because the bandwidth max(t), by posing
+a limit on how much signals can vary around time t, also poses a limit on how much
+the bandwidth max(t) itself can vary around time t. more precisely, we will nd that
+|d/dt max(t)| < 4 max(t)2.
+indeed, the bandwidth and its derivative at a certain
+discrete set of times, n, already determine the bandwidth curve max(t) for all t:
+
+in order to specify a class of signals we rst choose data {tn} to dene the bandwidth
+curve max(t) at the discrete set of times n = (tn + tn+1)/2, i.e. at the center of each
+lattice interval, as the inverse of the spacing:
+
+max(n) =
+
+1
+
+2 (tn+1  tn)
+
+(2)
+
+secondly, we also specify the bandwidths derivative, dmax/dt(n), at the times n.
+to this end, a natural parametrization will be in terms of variables {t
+
+n}, as:
+
+d
+dt
+
+(3)
+
+max(n) =  4 max(n)2 (t
+
+n+1  t
+n)
+(t
+n+1 + t
+n)
+due to consistency constraints, the choice of data {tn} and {t
+n}, i.e. the choice of
+max(t) and d/dt max(t) at the discrete times n = (tn + tn+1)/2 already determines
+the bandwidth curve max(t) for all t.
+the main result of the present paper is the theorem that signals of the class with
+bandwidth max(t) can be recovered for all t from their values sampled at the times
+{tn} through the sampling formula
+
+(t) = xn
+
+g(t, tn) (tn)
+
+(4)
+
+2
+
+with the sampling kernel g(t, tn):
+
+g(t, tn) = (1)z(t,tn) t
+
+n
+
+t  tn  xm
+
+t
+m
+
+(t  tm)2!1/2
+
+(5)
+
+here, (1)z(t,tn) provides a sign factor such that g(t, tn) is dierentiable in t, namely,
+z(t, tn) is the number of sampling points ti in the interval [t, tn] if t < tn or the number
+of ti in the interval [tn, t] if tn < t, and z = 0 if tn = t.
+the same class of signals can be sampled also on any other lattice, say {tn}, for which
+kr,s = (g( tr, ts))r,s is invertible. the sampling formula then reads:
+
+(t) = xn,m
+
+g(t, tn) k 1
+
+n,m (tm)
+
+(6)
+
+the conditions on the choice of the data {tn} and {t
+all n, and |tn|   for n  + and/or for n  , and
+
+n} are tn+1 > tn, and t
+
+n > 0 for
+
+t
+n
+
+1 + t2
+n
+
+xn
+
+= nite, xn
+
+t
+n = divergent.
+
+(7)
+
+reducing the sampling problem to a problem in functional analysis
+let us reconsider the class of signals with constant bandwidth max, dened as con-
+sisting of all signals (t) whos fourier transform (w) is strictly bandlimited, i.e. for
+which there is a 0() < max so that () = 0 for all || > 0() (and whos derivative
+d/d () is square integrable).
+we observe that, if (t) obeys the bandlimit, so does t(t). this is because the
+fourier transform of the multiplication operator t : t (t) = t(t) is the dierentiation
+operator, whos action changes the support of the spectrum only innitesimally. based
+on this observation it is possible to dene the same class of bandlimited signals without
+referring to the signals fourier transform, namely as the representation of the operator
+t on the space of functions for which the scalar product
+
+h1|2i := xn
+
+1(tn()) 2(tn())
+
+(8)
+
+is independent of . here, {tn()} is the family of sampling lattices with spacing s, as
+dened above. choosing the spacing s of the sampling lattices {tn()} is equivalent to
+choosing the bandwidth max, through max = 1/2s. clearly, multiplying a signal (t)
+with the time variable, (t)  t(t), always aects the bandwidth of the signal only
+innitesimally, independently of the chosen bandwidth. this fact can be used for the
+denition of time-varying bandwidths:
+
+we dene a class of signals with time-varying bandwidth as the representation
+of the multiplication operator t on the space of functions (t) for which the scalar
+product eq.8 is independent of , with respect to a family {tn()} of lattices with
+
+3
+
+time-varying spacings. we will nd that for all admissible {tn()} the lattice spacing
+is a well-dened function of time, s(t), and this will allow us to dene the band-width
+curve as max(t) := 1/2s(t). our denition coincides with the usual characterization
+of the band-width as the width of the fourier spectrum whenever the usual character-
+ization is applicable, i.e. whenever the bandwidth is locally approximately constant.
+technically, the -independence of the scalar product implies the existence of isome-
+tries, g, between the l2-hilbert spaces over each of the lattices of the family {tn()}.
+thus, our denition characterizes a class of signals as the set of (t) which obey the
+equations
+
+(tm()) = xn
+tm() (tm()) = xn
+
+g(tm(), tn()) (tn()),
+
+g(tm(), tn()) tn() (tn())
+
+(9)
+
+(10)
+
+for all , . eqs.9,10 also determine g, which is the sampling kernel: for all t which
+occur in the family of lattices, eq.9 expresses the signal (t) in terms of its values
+(tn()), sampled at (any choice of) sampling lattice {tn()}.
+however, consistency conditions on the possible time-dependence of the bandwidth are
+to be expected and indeed, not for all choices of families of lattices {tn()} do eqs.9,10
+possess solutions g and . we will nd that each admissible family of sampling lattices
+{tn()} will already be determined by giving one sampling lattice, say {tn} = {tn(0)},
+and its derivative {t
+n} are the input data to the
+sampling theorem above.
+to see the underlying mathematical structure, consider the operator t in the closure
+of its complexied domain dt , the hilbert space h = dt .
+
+n} = {d/d tn()|=0}. the {tn},{t
+
+t , on its domain dt is clearly a symmetric operator, i.e.
+
+h|t|i  ir for all
+|i  dt . however, t is not self-adjoint, not even on any invariant subspace, i.e.
+t is simple symmetric. assume, e.g., some signal t0(t)  dt is eigenvector to the
+eigenvalue t0, i.e. that t t0(t) = tt0(t) = t0t0(t). then t0(t) = 0 for all t 6= t0.
+thus, t0(t) vanishes on all but one lattice. the scalar product can be evaluated,
+equivalently, on each lattice, thus t0(t) = 0 for all t. clearly, the adjoint, t , has one
+(up to phase) nondegenerate and normalized eigenvector |ti  h for each t.
+this reduces the sampling problem to the study of simple symmetric operators whos
+self-adjoint extensions have purely discrete, nondegenerate spectra and thus deciency
+indices (1, 1). since t is simple symmetric with equal deciency indices we are indeed
+describing an example of a fuzzy-a geometry in the terminology of [6].
+
+the indices (1, 1) imply that there exists a u(1)- family of self-adjoint extensions
+t () of t , yielding a family of eigenbases {|tn()i}. using that the identity in the
+hilbert space can be resolved in each of these eigenbases, the sampling theorem now
+becomes the insertion of a resolution of the identity into the scalar product (t) = ht|i
+(11)
+
+ht|i = xn
+
+ht|tn()i htn()|i
+
+4
+
+with the sampling kernel being g(t, tn()) = ht|tn()i.
+all admissible families of lattices {tn()} will be found parametrizable such that the
+tn() are dierentiable, strictly monotonically increasing functions of , obeying, say,
+tn( + 2) = tn+1(), and, while each lattice may be semibounded, each family covers
+all of ir. the strict monotonicity of the tn() implies that, for a given family {tn()},
+there is exactly one lattice interval centered around each point t. let us denote the
+length of this interval by s(t). through s(t), we dene the time-varying bandwidth as
+max(t) := 1/2s(t). vice versa, given max(t), the family {tn()} can be reconstructed,
+up to trivial reparametrization of . eq.3 and the bound |d/dt max(t)| < 4 max(t)2
+follow from ds(t)/dt = ds/d (dt/d)1.
+we remark that we here obtain one-parameter resolutions of the identity in terms of
+an overcomplete and continuously parametrized set of normalizable vectors,
+
+1 =
+
+1
+
+2 z 2
+
+0
+
+dxn |tn()ihtn()| =
+
+1
+
+2 z dt
+
+d
+dt |tiht|
+
+while coherent states and wavelets, see e.g. [8], are typically characterized, analogously,
+by two-parameter resolutions of the identity.
+
+proof of the sampling theorem
+our strategy is to dene a self-adjoint operator t (0) with the lattice {tn} as its spec-
+trum, then to use the data {t
+n} to specify a simple symmetric restriction t of t (0),
+and nally to construct its u(1)- family of self-adjoint extensions t (). the scalar
+product of their eigenvectors yields the desired sampling kernel g(t, tn).
+to this end, consider the self-adjoint operator
+
+on its domain dt (0), and its unitary cayley transform
+
+t (0) := xn
+
+tn |tnihtn|
+
+u(0) = xn
+
+tn  i
+tn + i |tn ihtn|
+
+(12)
+
+(13)
+
+which is dened on the entire hilbert space h = dt (0). we restrict u(0) to a simple
+isometric operator s = u(0)|hc|v+i by taking from its domain one dimension spanned
+by a normalized vector |v+i  h. the inverse cayley transform then yields a simple
+symmetric operator t on dt
+
+dt = n|i  dt (0) | hv+| ((t (0) + i)|i) = 0o
+
+(14)
+
+i the so-dened dt is dense and contains no eigenvectors. in the {|tni}-basis, the
+condition hv+| ((t (0) + i)|i) = 0 reads pnhv+|tni(tn + i)htn|i = 0. thus, for dt
+to be dense, |v+i must be chosen such that pn |hv+|tni (tn + i)|2 is divergent, since
+
+5
+
+otherwise all of dt would be orthogonal to a vector in h. the condition that there
+are no eigenvectors in dt implies that |v+i must be chosen such that hv+|tni 6= 0 for
+all n. the second deciency space is of course spanned by |vi = u(0)|v+i. now
+a u(1)-family of self-adjoint extensions t () of t is obtained as the inverse cayley
+transforms of the unitary extensions u() of s:
+
+u() = (cid:16)1  |vihv| + ei|vihv|(cid:17) u(0)
+
+(15)
+
+the choice of a spectrum {tn} = {tn(0)} and a deciency vector |v+i thus determines
+a family of self-adjoints t () and unitaries u() with their eigenbases {|tn()i} (up to
+phases). the tn() are strictly monotonic since each eigenvalue of t  is nondegenerate
+and no eigenvector can be in the domain of two self-adjoint extensions.
+
+the aim is to calculate the sampling kernel, i.e. the scalar products of the eigenvec-
+tors of the unitary and self-adjoint extensions. to this end, let |tr()i be a normalized
+eigenvector of the operators u() and t (). then:
+
+tr()  i
+tr() + i htn|tr()i = htn| (u()|tr()i)
+
+= htn|(cid:16)(cid:16)1 + (ei  1)|vihv|(cid:17) u(0)|tr()i(cid:17)
+tn  i
+tn + i htn|tr()i + (ei  1)htn|vihv+|tr()i
+
+=
+
+htn|tr()i =
+
+fn n(tr())
+tr()  tn
+
+(16)
+
+tr() + i
+
+2i
+
+thus,
+
+where we dened
+
+n(tr()) :=
+
+(ei  1) hv+|tr()i
+and fn := (tn + i) htn|vi. note that also fn = (tn  i)htn|v+i.
+we require the sampling kernel to be real, i.e. ht|tn()i  ir. to this end, we rst use
+the freedom of phase of the eigenvectors |ti so that n(t)  ir for all t, which leaves a
+residual phase freedom of 1. further, we must also require that all fn  ir, which is
+a restriction on the possible choices of deciency vectors |v+i. the remaining freedom
+in the phases of the eigenvectors we can use such that all fn  0.
+the constraints on the choice of |v+i are therefore in one-to-one correspondence to
+the following constraints on the choice of coecients fn: all fn > 0,
+
+(17)
+
+f 2
+n
+
+1 + t2
+n
+
+xn
+
+= 1 and xn
+
+f 2
+n = divergent .
+
+(18)
+
+clearly, such fn only exist if |tn|   for n   and/or for n  , reecting
+the functional analytical fact that only semibounded or fully unbounded symmetric
+
+6
+
+operators can have nonzero deciency indices.
+we calculate n(tr()):
+
+1 = xn htr()|tni htn|tr()i = xn
+
+f 2
+n n 2(tr())
+(tr()  tn)2
+
+thus, for all t in the family {tr()} there holds
+f 2
+n
+
+n(t) =  xn
+
+(t  tn)2!1/2
+
+so that the sampling kernel takes the form:
+
+ht|tni = (1)z(t,tn)
+
+fn
+
+t  tn  xm
+
+f 2
+m
+
+(t  tm)2!1/2
+
+(19)
+
+(20)
+
+(21)
+
+here, the sign factor z is as dened above, xed by the dierentiability of g.
+to complete the proof of the sampling theorem we need to show that t
+n  f 2
+end, we prove dtn()/d|=0 = f 2
+
+n/2, starting from eq.17:
+
+n. to this
+
+n(tr()) =
+
+tr() + i
+
+2i
+
+=
+
+tr() + i
+
+2i
+
+(ei  1)xn hv+|tni htn|tr()i
+(ei  1)xn
+(tn + i)(tr()  tn)
+
+f 2
+n n(tr())
+
+thus:
+
+2i
+
+the real part of eq.22 yields:
+
+ei  1
+
+= xn
+
+f 2
+n (tr() + i)
+
+(tn + i)(tr()  tn)
+
+f 2
+n (tntr() + 1)
+(t2
+n + 1)(tr()  tn)
+since tr()  tr for   0, eq.23 yields dtr()/d|=0 = f 2
+proof.
+
+cot (/2) = xn
+
+(22)
+
+(23)
+
+r /2, thus completing the
+
+conclusions
+as a simple illustration, let us see how the shannon sampling formula arises as a
+special case. the class of signals with constant bandwidth max is characterized by
+the family of lattices {tn()} with tn() =  + n/2max. we choose to sample on the
+lattice {tn} = {tn(0)}, whos derivative {t
+n = 1. thus, eq.5 yields the sampling
+formula:
+
+(t) =   +
+xm=
+
+(1)z(t,tn)
+t  tn
+
+(tn)
+
+n} is t
+(t  tm)2!1/2 +
+xn=
+
+1
+
+7
+
+2
+
+=
+
+1
+
++
+
+xn=
+
+sin2(x)
+
+(x  n)2
+that setting x = 1/2 we obtain the expansion  = qp+
+
+n=(n  1/2)2.
+
+since this equation must coincide with the shannon formula, eq.1, we can conclude
+that
+
+which provides an example of a series expansion deduced with the new method. note
+
+it is clear that the scope for practical applications of the new sampling theorem can
+be widened, within the methods described here, to include the insertion of accumu-
+lation points and pieces of continuous spectra into sampling lattices.
+it remains to
+address, however, important issues such as the generalization of convergence improve-
+ment through over-sampling.
+
+further, we showed that signals with varying bandwidth are equivalent to elds on
+fuzzy-a type spaces with a spatially varying ultraviolet cuto. this implies that the
+present results can provide detailed information on certain candidates for the structure
+of space-time at the planck scale, see [6]. these include, in particular, the stringy
+uncertainty relations which have been widely discussed in the context of string theory
+and quantum gravity, see e.g.[7]. a detailed study on this correspondence is in progress.
+
+acknowledgement: the author is grateful to john klauder for useful criticisms.
+
+references
+
+[1] a. j. jerri, proc. ieee, 65 , (11) 1565 (1977), r. j. marks, introduction to
+
+shannon sampling and interpolation theory, springer (1991)
+
+[2] a. i. zayed, j. math. anal. and appl., 158 , 269 (1991), a. i. zayed, j. math.
+
+anal. and appl., 175 , 222 (1993)
+
+[3] y. i. lyubarskii, k. seip, j. fourier analysis and appl., 3 , (5) 597 (1997)
+
+[4] m. h. annaby, math. meth. appl. sc. 21 , 361 (1998)
+
+[5] a. kempf, j. math. phys. 35,4483 (1994), a. kempf , g. mangano, phys. rev.
+
+d55, 7909 (1997)
+
+[6] a. kempf, preprint ufift-hep-98-30, hep-th/9810215, to appear in proc. 36th
+course: from the planck length to the hubble radius, erice, italy, 29 aug - 7
+sep 1998
+
+[7] e. witten, phys. today, 49, (4), 24 (1996)
+
+[8] j. r. klauder, wavelet applications vi, proc. spie, 3723, 44 (1999)
+
+8
+
+

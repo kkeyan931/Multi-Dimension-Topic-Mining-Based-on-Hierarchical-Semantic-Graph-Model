@@ -1,0 +1,1623 @@
+nsf-itp-99-040
+ohstpy-hep-t-99-012
+hep-th/9906087
+
+9
+9
+9
+1
+
+ 
+
+n
+u
+j
+ 
+
+1
+1
+
+ 
+ 
+
+1
+v
+7
+8
+0
+6
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+can dlcq test the maldacena conjecture?
+
+francesco antonuccioa, akikazu hashimotob, oleg lunina, and stephen pinskya
+
+adepartment of physics
+
+ohio state university, columbus, ohio 43210
+
+binstitute for theoretical physics
+
+university of california, santa barbara, ca 93106
+
+abstract
+
+we consider the maldacena conjecture applied to the near horizon geometry of a d1-
+brane in the supergravity approximation and consider the possibility of testing the
+conjecture against the boundary eld theory calculation using dlcq. we propose the
+two point function of the stress energy tensor as a convenient quantity that may be
+computed on both sides of the correspondence. on the supergravity side, we may invoke
+the methods of gubser, klebanov, polyakov, and witten. on the eld theory side, we
+derive an explicit expression for the two point function in terms of data that may be
+extracted from a dlcq calculation at a given harmonic resolution. this gives rise to a
+well dened numerical algorithm for computing the two point function, which we test in
+the context of free fermions and the t hooft model. for the supersymmetric yang-mills
+theory with 16 supercharges that arises in the maldacena conjecture, the algorithm
+is perfectly well dened, although the size of the numerical computation grows too
+fast to admit any detailed analysis at present, and our results are only preliminary.
+we are, however, able to present more detailed results on the supersymmetric dlcq
+computation of the stress energy tensor correlators for two dimensional yang mills
+theories with (1,1) and (2,2) supersymmetries.
+
+june 1999
+
+1 introduction
+
+there has been a great deal of excitement during this past year following the realization
+that certain eld theories admit concrete realizations as a string theory on a particular
+background [1]. by now many examples of this type of correspondence for eld theories
+in various dimensions with various eld contents have been reported in the literature (for
+a comprehensive review and list of references, see [2]). however, attempts to apply these
+correspondences to study the details of these theories have only met with limited success so
+far. the problem stems from the fact that our understanding of both sides of the correspon-
+dence is limited. on the eld theory side, most of what we know comes from perturbation
+theory where we assume that the coupling is weak. on the string theory side, most of
+what we know comes from the supergravity approximation where the curvature is small.
+there are no known situations where both approximations are simultaneously valid. at the
+present time, comparisons between the dual gauge/string theories have been restricted to
+either qualitative issues or quantities constrained by symmetry. any improvement in our
+understanding of eld theories beyond perturbation theory or string theories beyond the
+supergravity approximation is therefore a welcome development.
+
+in this note we raise the supersymmetric discrete light cone quantization (sdlcq) of
+eld theories [3, 4, 5] to the challenge of providing quantitative data which can be compared
+against the supergravity approximation on the string theory side of the correspondence. we
+will work in two space-time dimensions where the sdlcq approach provides a natural non-
+perturbative solution to the theory. in general, attempts to improve the eld theory side
+beyond perturbation theory seem like a promising approach in two space-time dimensions
+where a great deal is already known about eld theories beyond perturbation theory.
+
+we will study the eld theory/string theory correspondence motivated by considering
+the near-horizon decoupling limit of a d1-brane in type iib string theory [6]. the gauge
+theory corresponding to this theory is the yang-mills theory in two dimensions with 16
+supercharges.
+its sdlcq formulation was recently reported in [7]. this is probably the
+simplest known example of a eld theory/string theory correspondence involving a eld
+theory in two dimensions with a concrete lagrangian formulation.
+
+a convenient quantity that can be computed on both sides of the correspondence is the
+correlation function of gauge invariant operators [8, 9]. we will focus on two point functions
+of the stress-energy tensor. this turns out to be a very convenient quantity to compute for
+many reasons that we will explain along the way. some aspects of this as it pertains to a
+consideration of black hole entropy was recently discussed in [10]. there are other physical
+quantities often reported in the literature. in the dlcq literature, the spectrum of hadrons
+
+1
+
+is often reported. this would be ne for theories in a conning phase. however, we expect
+the sym in two dimension to ow to a non-trivial conformal xed point in the infra-red
+[6, 11]. the spectrum of states will therefore form a continuum and will be cumbersome to
+handle. on the string theory side, entropy density [12] and the quark anti-quark potential
+[12, 13, 14] are frequently reported. the denition of entropy density requires that we
+place the eld theory in a space-like box which seems incommensurate with the discretized
+light cone. similarly, a static quark anti-quark conguration does not t very well inside a
+discretized light-cone geometry. the correlation function of point-like operators do not suer
+from these problems. we should mention that there exists interesting work on computing
+the qcd string tension [15, 16] directly in the eld theory. these authors nd that the qcd
+string tension vanishes in the supersymmetric theories which is consistent with the power
+law quark anti-quark potential found on the supergravity side.
+
+2 correlation functions from supergravity
+
+let us begin by reviewing the computation of the correlation function of stress energy tensors
+on the string theory side using the supergravity approximation. the computation is essen-
+tially a generalization of [8, 9]. the main conclusion on the supergravity side was reported
+recently in [10] but we will elaborate further on the details. the near horizon geometry of a
+d1-brane in string frame takes the form
+
+u 3
+
+ds2 = 
+
+q643g2
+y m  643g2
+
+e = 2g2
+
+u 6
+
+y m n
+
+y m n
+
+1
+2
+
+!
+
+.
+
+dx2
+
+k + q643g2
+
+u 3
+
+y m n
+
+du 2 +q643g2
+
+y m n ud2
+
+8p
+
+
+(1)
+
+in order to compute the two point function, we need to know the action for the diagonal
+uctuations around this background to the quadratic order. what we need is an analogue
+of [17] for this background which unfortunately is not currently available in the literature.
+fortunately, some diagonal uctuating degrees of freedom can be identied by following the
+early work on black hole absorption cross-sections [18, 19]. in particular, we can show that
+the uctuations parameterized according to
+
+ds2 = (cid:16)1 + f (x0, u) + g(x0, u)(cid:17) g00(dx0)2 +(cid:16)1 + 5f (x0, u) + g(x0, u)(cid:17) g11(dx1)2
+g(x0, u)(cid:19) gd2
+
++(cid:16)1 + f (x0, u) + g(x0, u)(cid:17) gu u du 2 +(cid:18)1 + f (x0, u) 
+
+5
+7
+
+7
+
+e = (cid:16)1 + 3f (x0, u)  g(x0, u)(cid:17) e0
+
+(2)
+
+2
+
+will satisfy the equations of motion
+
+f (u) +
+
+7
+u
+
+g(u) 
+
+7
+f (u) 
+u
+72
+u 2 g(u) 
+
+643g2
+y m nk2
+u 6
+643g2
+y m nk2
+u 6
+
+g(u) +
+
+f (u) = 0
+
+g(u) = 0
+
+(3)
+
+by direct substitution into the equations of motion in 10 dimensions. we have assumed
+without loss of generality that these uctuation vary only along the x0 direction of the world
+volume coordinates like a plane wave eikx0. the elds f (u) and g(u) are scalars when the
+d1-brane is viewed as a black hole in 9 dimensions; in fact there are the minimal and the
+xed scalars in this black hole geometry. in 10 dimensions, however, we see that they are
+really part of the gravitational uctuation. we expect therefore that they are associated
+with the stress-energy tensor in the operator eld correspondence of [8, 9]. in the case of
+the correspondence between n = 4 sym and ads5  s5, superconformal invariance allowed
+the identication of operators and elds in short multiplets [20]. for the d1-brane, we do
+not have superconformal invariance and this technique is not applicable. in fact, we expect
+all elds of the theory consistent with the symmetry of a given operator to mix. the large
+distance behavior should then be dominated by the contribution with the longest range. the
+eld f (k0, u) appears to be the one with the longest range since it is the lightest eld.
+
+the equation (3) for f (u) can be solved explicitly in terms of the bessels function
+
+f (u) = u 3k3/2(q163g2
+
+y m n u 2k).
+
+(4)
+
+by thinking of f (u) in direct analogy with the minimally coupled scalar as was done in
+[8, 9], we can compute the ux factor
+
+f = lim
+
+u0
+
+1
+22
+10
+
+ggu u e2()u log(f (u))(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)u =u0
+
+=
+
+nu 2
+2g2
+
+0 k2
+y m 
+
+n 3/2k3
+4gy m
+
++ . . .
+
+(5)
+
+up to a numerical coecient of order one which we have suppressed. we see that the leading
+non-analytic (in k2) contribution is due to the k3 term, whose fourier transform scales
+according to1
+
+ho(x)o(0)i =
+
+3
+2
+
+n
+gy m x5 .
+
+(6)
+
+this result passes the following important consistency test. the sym in 2 dimensions with
+16 supercharges have conformal xed points in both uv and ir with central charges of
+order n 2 and n, respectively. therefore, we expect the two point function of stress energy
+tensors to scale like n 2/x4 and n/x4 in the deep uv and ir, respectively. according to the
+
+1it is not dicult to show that for a generic p-brane, ho(x)o(0)i = n
+
+7p
+5p g
+
+2(3p)
+
+
+
+5p
+
+y m
+
+x
+
+19+2pp
+
+2
+
+5p
+
+.
+
+3
+
+analysis of [6], we expect to deviate from these conformal behavior and cross over to a regime
+where supergravity calculation can be trusted. the cross over occurs at x = 1/gy mn and
+x = n/gy m . at these points, the n scaling of (6) and the conformal result match in the
+sense of the correspondence principle [21].
+
+3 correlation functions from dlcq
+
+the challenge then is to attempt to reproduce the scaling relation (6), x the numerical
+coecient, and determine the detail of the cross-over behavior using sdlcq. ever since
+the original proposal [22], the question of equivalence between quantizing on a light-cone
+and on a space-like slice have been discussed extensively. this question is especially critical
+whenever a massless particle or a zero-mode in the quantization is present. it is generally
+believed that the massless theories can be described on the light-cone as long as we take
+m  0 as a limit. the issue of zero mode have been examined by many authors. some
+recent accounts can be found in [23, 24, 25, 26, 27]. generally speaking, supersymmetry
+seems to save sdlcq from complicated zero-mode issues. we will not contribute much to
+these discussions. instead, we will formulate the computation of the correlation function of
+stress energy tensor in naive dlcq. to check that these results are sensible, we will rst do
+the computation for the free fermions and the t hooft model. extension to sym with 16
+supercharges will be essentially straightforward, except for one caveat. in order to actually
+evaluate the correlation functions, we must resort to numerical analysis at the last stage of
+the computation. for the sym with 16 supercharges, this problem grows too big too fast
+to be practical on desk top computer where the current calculations were performed. we
+can only provide an algorithm, which, when executed on an much more powerful computer,
+should reproduce (6). nonetheless, the fact that we can dene a concrete algorithm seems to
+be a progress in the right direction. one potential pit-fall is the fact that the computation
+may not show any sign of convergence. if this is the case, or if it converges to a result at
+odds with (6), we must go back and re-examine the issue of equivalence of forms and the
+issue of zero modes.
+
+the technique of dlcq is reviewed by many authors [5, 28] so we will be brief here. the
+basic idea of light-cone quantization is to parameterize the space using light cone coordinates
+x+ and x and to quantize the theory making x+ play the role of time. in the discrete light
+cone approach, we require the momentum p = p+ along the x direction to take on discrete
+values in units of p+/k where p+ is the conserved total momentum of the system and k is an
+integer commonly referred to as the harmonic resolution. one can think of this discretization
+as a consequence of compactifying the x coordinate on a circle with a period 2l = 2k/p+.
+
+4
+
+the advantage of discretizing the light cone is the fact that the dimension of the hilbert space
+becomes nite. therefore, the hamiltonian is a nite dimensional matrix and its dynamics
+can be solved explicitly. in sdlcq one makes the dlcq approximation to the supercharges
+and these discrete representations satisfy the supersymmetry algebra. therefore sdlcq
+enjoys the improved renormalization properties of supersymmetric theories. of course, to
+recover the continuum result, we must send k to innity and as luck would have it, we nd
+that sdlcq usually converges faster than the naive dlcq. of course, in the process, the
+size of the matrices will grow, making the computation harder and harder.
+
+let us now return to the problem at hand. we would like to compute a general expression
+
+of the form
+
+f (x, x+) = ho(x, x+)o(0, 0)i .
+
+(7)
+
+in dlcq, where we x the total momentum in the x direction, it is more natural to
+compute its fourier transform
+
+1
+2lho(p, x+)o(p, 0)i .
+this can naturally be expressed in a spectrally decomposed form
+
+f (p, x+) =
+
+f (p, x+) = xi
+
+1
+2lh0|o(p)|iieip i
+
++x+
+
+hi|o(p, 0)|0i .
+
+(8)
+
+(9)
+
+3.1 free dirac fermions
+
+let us rst consider evaluating this expression for the stress-energy tensor in the theory of
+free dirac fermions as a simple example. the lagrangian for this theory is
+
+l = i /   m 
+
+(10)
+
+where for concreteness, we take 0 = 2, 1 = i1 and we take  = 21/4( 
+the spinor components, the lagrangian takes the form
+
+ ). in terms of
+
+l = i+ + i 
+
+im
+2
+
+(  ) .
+
+(11)
+
+since we treat x+ as time and since  does not have any derivatives with respect to x+ in the
+lagrangian, it can be eliminated from the equation of motion, leaving a lagrangian which
+depends only on :
+
+m2
+2
+
+ 1
+
+
+ .
+
+(12)
+
+l = i+ + i
+
+5
+
+we can therefore express the canonical momentum and energy as
+
+p = z dx i
+p+ = z dx 
+
+im2
+2
+
+ 1
+
+
+ .
+
+(13)
+
+in dlcq, we compactify x to have period 2l. we can then expand  and  in modes
+
+1
+
+ =
+
+l x
+
+2l (cid:16)b(n)e in
+2l (cid:16)b(n)e
+
+1
+
+in
+l x
+
++ d(n)e
++ d(n)e in
+
+in
+
+l x(cid:17)
+l x(cid:17) .
+
+ =
+
+(14)
+
+operators b(n) and d(n) with positive and negative n are interpreted as a destruction and
+creation operators, respectively.
+in a theory with only fermions, it is customary to take
+anti-periodic boundary condition in order to avoid zero-mode issues. therefore, n will take
+on half-integer values2. they satisfy the anticommutation relation
+
+{b(n), b(m)} = {d(n), d(m)} = n,m .
+
+(15)
+
+now we are ready to evaluate (9) in dlcq. as a simple and convenient choice, we take
+
+o(k) =
+
+1
+
+2 z dx (i  i()) e ik
+
+l x
+
+.
+
+(16)
+
+which is the fourier transform of the local expression for p with the total derivative con-
+tribution adjusted to make this operator hermitian. therefore, this should be thought of as
+the t ++ component of the stress energy tensor. for reasons that will become clear as we go
+on, this turns out to be one of the simplest things to compute. when acted on the vacuum,
+this operator creates a state
+
+t ++(k)|0i =
+
+
+
+l   k
+
+2  n! b(k + n)d(n)|0i .
+
+since the fermions in this theory are free, the plane wave states
+
+|ni = b(k + n)d(n)|0i
+
+(17)
+
+(18)
+
+constitute an eigenstate. the spectrum can easily be determined by commuting these oper-
+ators:
+
+which is simply the discretized version of the spectrum of a two body continuum. all that
+we have to do now is calculate eigenstates of the actual theory we are interested in and
+
+2in sdlcq one must use periodic boundary condition for all the elds to preserve the supersymmetry.
+
+6
+
+m 2
+
+n|ni = 2pp+|ni = m2  k
+
+n
+
++
+
+k
+
+k  n!|ni
+
+(19)
+
+to assemble these pieces into (9), but we can do a little more to make the result more
+presentable. the point is that since (9) is expressed in mixed momentum/position space
+notation in minkowski space, the answer is inherently a complex quantity that is cumbersome
+to display. for the computation of two point function, however, we can go to position space
+by fourier transforming with respect to the l variable. after fourier transforming, it is
+straight forward to euclideanize and display the two point function as a purely real function
+without loosing any information. to see how this works, let us write (9) in the form
+
+f (p, x+) = (cid:12)(cid:12)(cid:12)(cid:12)
+
+l
+
+h0|t ++(k)|ni(cid:12)(cid:12)(cid:12)(cid:12)
+
+2 1
+2l
+
+2
+l2 e
+
+im 2
+n
+
+2( k
+l
+
+)x+ .
+
+(20)
+
+the quantity inside the absolute value sign is designed to be independent of l. now, to
+recover the position space form of the correlation function, we inverse fourier transform
+with respect to p = k/l.
+
+the integral over l can be done explicitly and gives
+
+l
+
+f (x, x+) = (cid:12)(cid:12)(cid:12)(cid:12)
+f (x, x+) = (cid:12)(cid:12)(cid:12)(cid:12)
+
+ h0|t ++(k)|ni(cid:12)(cid:12)(cid:12)(cid:12)
+ h0|t ++(k)|ni(cid:12)(cid:12)(cid:12)(cid:12)
+
+l
+
+2
+
+z d(cid:16) k
+l (cid:17)2
+
+1
+2l
+
+i
+
+2
+l2 e
+
+m 2
+n
+2( k
+l
+
+)
+
+x+i k
+
+l x
+
+.
+
+x!2 m 4
+2  x+
+
+82k3 k4(cid:16)mn2x+x(cid:17)
+
+n
+
+where k4(x) is the 4-th modied bessels function. we can now continue to euclidean space
+by taking r2 = 2x+x to be real and considering the quantity
+
+x+!2
+ x
+
+f (x, x+) = (cid:12)(cid:12)(cid:12)(cid:12)
+
+l
+
+ h0|t ++(k)|ni(cid:12)(cid:12)(cid:12)(cid:12)
+
+2 m 4
+n
+82k3 k4(mnr) .
+
+this is a fundamental result which we will refer to a number of times in this paper.
+it
+has explicit dependence on the harmonic resolution parameter k, but all dependence on
+unphysical quantities such as the size of the circle in the x direction and the momentum
+along that direction have been canceled. for the free fermion model, (23) evaluates to
+
+(21)
+
+(22)
+
+(23)
+
+(25)
+
+x+!2
+  x
+
+f (x, x+) =
+
+n
+
+k xn
+
+m 4
+n
+322
+
+(k  2n)2
+
+k2
+
+k4(mnr)
+
+(24)
+
+n given by (19). the large k limit can be gotten by replacing n  kx and 1
+
+with m 2
+k pn 
+r 1
+0 dx. we recover the identical result using feynman rules. for r  m1, this behaves like
+
+x+!2
+ x
+
+f (x, x+) =
+
+n
+
+k xn
+
+3(k  2n)2
+22k2r4 
+
+n
+22r4 .
+
+7
+
+3.2
+
+t hooft model
+
+let us now turn to a slightly more interesting problem of computing the correlation function
+of t ++ in t hoofts model of two dimensional qcd [29] in the large n limit. this theory
+has two characteristic scales, one determined by the mass of the quarks and the other by
+the strength of the gauge coupling g2
+y m n. to a large extent, this is a solvable model. the
+spectrum and the wave function of the hadrons are encoded in a one parameter integral
+equation that can be handled in many ways. a thorough analysis of this model including
+the discussion of asymptotic behavior of certain correlation functions can be found in [30].
+this is clearly a very mature subject.
+
+applying dlcq to the t hooft model is tantamount to placing t hoofts integral equa-
+tion for the meson spectrum on a lattice. the lattice is in the light-cone momentum space,
+which is precisely what is expected when the light-cone is compactied on a circle. the
+dlcq of the t hooft model was analyzed in detail by [31, 32].
+
+our goal here is to show that the computation of (9) is straight forward and that it
+generates sensible answers. in fact, nothing could be simpler. the t hooft model is nothing
+more than a gauged version of the free fermion model. the lagrangian for this theory is
+simply
+
+l = 
+
+f 2 + i d/   m  .
+
+(26)
+
+1
+4g2
+
+y m
+
+we choose the light cone gauge a+ = 0 which is customary. one then nds that the a
+component of the gauge eld is non-dynamical and can be eliminated using the equation
+of motion, just like the  component of the spinor in the free fermion model. expressing
+everything in terms of the only dynamical eld in this theory which is , one nds the
+canonical energy and momentum operators to take the form
+
+p = z dx i
+p+ = z dx  
+
+im2
+2
+
+ 1
+
+
+ 
+
+g2
+y m
+2
+
+j
+
+1
+2
+
+
+j!
+
+(27)
+
+where j = . all that changed in comparison to the free fermion model is the addition of
+a current exchange term in the light-cone hamiltonian. therefore, all we have to do here is
+to perform the identical computation specied by (23), but using the modied hamiltonian,
+and letting m 2
+n and |ni be the spectrum and the wavefunction of the n-th meson state in the
+spectrum. since in dlcq we are always working with a nite dimensional representation of
+the hamiltonian dynamics, a small change in the form of the hamiltonian matrix causes no
+particular diculty. let us discuss the result of such a computation. we will consider the
+case when g2
+y m n  m2 so that the eect of the gauge interaction is strong. the spectrum
+
+8
+
+ 2
+m  pi
+-----
+ 2
+g  n
+40
+
+30
+
+20
+
+10
+
+-2
+
+-1
+
+10
+
+5
+
+-5
+
+-10
+
+-15
+
+-20
+
+(b)
+
+1
+
+2
+
+0.05 0.1 0.15 0.2 0.25 0.3
+
+1-
+k
+
+(a)
+
+figure 1: (a) mass spectrum in units of g2
+of the correlation function 1
+
+y m n/ as a function of 1/k and (b) log-log plot
+nht ++(r)t ++(0)i as a function of r for t hooft model computed
+using dlcq with k = 5, k = 10, k = 50, and k = 100 in the units where gy mqn/ = 101
+
+and m = 101. the dotted line is for the free fermions with the same mass.
+
+can be computed reliably for large k and is in agreement with the results reported in [29]
+(see gure 1.a). since the state (17) created by operator (16) is odd under parity n  k  n,
+only parity odd states contribute in the spectral decomposition. for r  1/gy mn, we
+expect the correlation function to behave just like the free fermion. the lightest meson in
+the parity odd sector has a mass of order gy mn . due to the presence of this mass-gap,
+for r  1/gy mn, we expect to see an exponential damping of the correlation function.
+
+this is precisely the behavior we seem to be nding. in gure 1.b, we illustrate the result
+of computing (23) by rst constructing the mass matrix m 2 symbolically, then evaluating
+the spectrum and the eigenfunctions numerically and assembling the pieces. we have chosen
+
+to set gy mqn/ = 101 and m = 101. we have tried harmonic resolutions k = 5, k = 10,
+
+k = 50, and k = 100. remarkably, the computation at a low harmonic resolution k seems
+not to be so far o from the result found using larger values of k. the correlation function
+appears to have more or less converged by the time we reach k = 100. we have also included
+a plot for g2
+
+y m n = 0 with the same mass for comparison.
+
+one of the reasons why the convergence is relatively rapid is the fact that the matrix
+element h0|t ++(k)|ni in (23) is not sensitive to the structure of the t hooft wave function
+at the boundaries. to see this more clearly, recall that in the continuum limit, we expect
+the eigenfunctions |ni to behave as x near x = 0 where  is determined by
+
+0 =
+
+m2
+
+g2
+y m n/
+
++  cot()  1 
+
+m2
+y m n/ 
+g2
+
+22
+
+3
+
+(28)
+
+for small m2/g2
+
+y m n [29]. when we compute matrix elements in dlcq approximation, we
+
+9
+
+are eectively exchanging integral expression like
+
+by a discretized sum
+
+dx axa1 = 1
+
+z 1
+
+0
+
+aka1
+na  1 +
+
+a(1  a)
+
+na
+
++ o(n1)
+
+n
+
+xk=1
+
+(29)
+
+(30)
+
+whose leading correction for a > 1 is dominated by the terms of order 1/n. for a less than
+one, however, the leading correction is controlled by terms of order ( 1
+n)a. in computing the
+form factor for t ++(k), we were fortunate to have only encountered an integral whose end
+point behavior went as x1+. had we instead chosen to compute two point function of a
+scalar operators like  or 5, we would have considered states
+
+z dx (x)e ik
+z dx 5(x)e ik
+
+l x|0i = xn
+l x|0i = xn
+
+ml
+
+ml
+
+2 (cid:18) 1
+n 
+2 (cid:18) 1
+
++
+
+n
+
+1
+
+k  n(cid:19) b(n)d(k + n)|0i
+k  n(cid:19) b(n)d(k + n)|0i
+
+1
+
+(31)
+
+which gives rise to a pole near x = 0 and x = 1 in the continuum limit. therefore, the
+matrix element in the continuum limit behaves near x = 0 as x. to control the error in
+this case, we must take
+
+or equivalently
+
+
+n  
+!1/
+
+n   
+
+(32)
+
+(33)
+
+which grows exponentially with respect to 1. we would have had to work much harder if
+we had sent m/gy mn to zero. luckily, this is not the case for with the t ++ operator.
+
+3.3 supersymmetric yang-mills theory with 16 supercharges
+
+finally, let us turn to the problem of computing the two point function of the t ++ operator
+for the sym with 16 supercharges. just as in the t hooft model, adopting light-cone
+coordinates and choosing the light-cone gauge will eliminate the gauge boson and half of
+the fermion degrees of freedom. the most signicant change comes from the fact that
+the elds in this theory are in the adjoint rather than the fundamental representations
+and the theory is supersymmetric. this does not cause any fundamental problem in the
+dlcq formulation of these theories.
+indeed, the sdlcq formulation of this [7] as well
+as many other related models with adjoint elds have been studied in the literature. the
+main diculty comes from the fact that in supersymmetric theories low mass states such as
+
+10
+
+tr[b(n1)b(n2)b(k + n1 + n2)]|0i with an arbitrary number of excited quanta, or bits,
+appear in the spectrum. this means that for a given harmonic resolution k, the dimension
+of the hilbert space grows like exp(k), which is roughly the number of ways to partition k
+into sums of integers.
+
+the fact that the size of the problem grows very fast is somewhat discouraging from a
+numerical perspective. nevertheless, it is interesting to note that dlcq provides a well
+dened algorithm for computing a physical quantity like the two point function of t ++ that
+can be compared with the prediction from supergravity. in the following, we will show that
+this can be computed for the sym theory by a straight forward application of (23), just as
+we saw in the case of the t hooft model.
+
+the authors of [7] have shown that the momentum operator p + is given by
+
+p + = z dxtrh(xi)2 + iuui .
+
+(34)
+
+the local hermitian form of this operator is given by
+
+t ++(x) = tr(cid:20)(x i)2 +
+
+1
+2
+
+(iuu  i(u)u)(cid:21) ,
+
+i = 1 . . . 8,  = 1 . . . 8
+
+(35)
+
+where x and u are the physical adjoint scalars and fermions respectively, following the
+notation of [7]. when discretized, these operators have the mode expansion
+
+x i
+
+i,j =
+
+u
+i,j =
+
+1
+4
+1
+4l
+
+
+
+1
+
+
+
+xn=1
+xn=1hb
+
+ij(n)einx/l + ai
+
+n hai
+ij(n)einx/l + b
+
+ji(n)einx/li
+
+ji(n)einx/li .
+
+(36)
+
+in terms of these mode operators, we nd
+
+t ++(k)|0i =
+
+
+2l
+
+k1
+
+xn=1"qn(k  n)aij(k + n)aji(n) + k
+
+2  n! bij(k + n)bji(n)# |0i.
+
+(37)
+therefore, (l/)h0|t ++(k)|ni is independent of l and can be substituted directly into (23)
+to give an explicit expression for the two point function.
+
+we see immediately that (37) has the correct small r behavior, for in that limit, (37)
+
+asymptotes to (assuming nb = nf )
+
+x+!2
+  x
+
+f (x, x+) =
+
+n 2
+
+k xn   3(k  2n)2nf
+42k2r4 +
+
+2k2r4 ! =
+3n(k  n)nb
+
+n 2(2nb + nf )
+
+42r4
+
+(cid:18)1 
+
+1
+
+k(cid:19)
+
+(38)
+which is what we expect for the theory of nb free bosons and nf free fermions in the large k
+limit.
+
+11
+
+ 2
+m  pi
+-----
+ 2
+g  n
+40
+
+30
+
+20
+
+10
+
+-2
+
+-1.5
+
+-1
+
+-0.5
+
+0.5
+
+1
+
+-0.1
+
+-0.2
+
+-0.3
+
+-0.4
+
+-0.5
+
+-0.6
+
+0.05 0.1 0.15 0.2 0.25 0.3
+
+1-
+k
+
+(a)
+
+(b)
+
+figure 2: (a) the spectrum as a function of 1/k and (b) the log-log plot of the correlation
+y m n/ = 1 for k = 3
+
+n 2(2nb+nf ) v.s. r in the units where g2
+
+42r4
+
+x+(cid:17)2
+function ht ++(x)t ++(0)i(cid:16) x
+
+and k = 4.
+
+computing this quantity beyond the small r asymptotics, however, represents a formidable
+technical challenge. the authors of [7] were able to construct the mass matrix explicitly and
+compute the spectrum for k = 2, k = 3, and k = 4. even for these modest values of the
+harmonic resolution, the dimension of the hilbert space was as big as 256, 1632, and 29056
+respectively (the symmetries of the theory can be used to reduce the size of the calculation
+somewhat). in gure 2, we display results that parallel those obtained for the t hooft model
+earlier (gure 1) with the currently available values of k, except for the fact that we display
+the correlation function multiplied by a factor of 42r4/n 2(2nb + nf ), so that it now asymp-
+totes to 1 (or 0 in the logarithmic scale) in the k   limit. in this way any deviation from
+the asymptotic behavior 1/r4 is made more transparent. note that with the values of the
+harmonic resolution k obtained at present, the spectrum in gure 2.a is far from resembling
+a dense continuum near m = 0. clearly, we must probe much higher values of k before we
+can sensibly compare our eld theory results with the prediction from supergravity.
+
+3.4 supersymmetric yang-mills theory with less than 16 super-
+
+charges
+
+the computation of the correlator for the stress energy tensor in the (8,8) model is limited by
+our inability to carry out the computation for large enough harmonic resolution. it is the (8,8)
+model which we are ultimately interested in solving in order to compare against the prediction
+of maldacenas conjecture in the supergravity limit. nevertheless, the computation of the
+correlation function can just as well be applied to models with less supersymmetry. we will
+conclude by reporting the results of such a computation.
+
+12
+
+first, let us consider the theory with supercharges (1,1). this theory is argued not to
+exhibit dynamical supersymmetry breaking in [33, 34]. we can also provide a physicists
+proof that supersymmetry is not spontaneously broken for this theory by adopting the argu-
+ment of witten for the 2+1 dimensional sym with chern-simons interaction [35]. in [35],
+the index of 2+1 dimensional sym with gauge group su(n) and 2 supercharges on r  t 2
+was computed and was found to be non-vanishing for chern-simons coupling k3 > n/2. if
+the period l of one of the circles in t 2 is suciently small, this theory is approximately
+the 2-dimensional sym with (1,1) supersymmetry with gauge coupling g2
+3/l and bf
+coupling k2 = k3l [36]. imagine approaching this theory by taking l  0 keeping g2 and
+k3 xed. in this limit, k2  0 in the units of g2 so the limiting theory is that of pure sym
+with (1,1) supersymmetry and a vanishing bf coupling. choosing dierent values of k3 cor-
+responds to a dierent choice in the path of approach to this limit. if we chose k3 > n/2, we
+are guaranteed to have a non-zero index for nite l. this means that there will be a state
+with zero mass in the l  0 limit also, indicating that supersymmetry is not spontaneously
+broken in this limit. on the other hand, the index is not a well dened quantity in the l  0
+limit, as a dierent choice of k3 will lead to a dierent value of the index in the l  0 limit.
+in fact, the index can be made arbitrarily large by taking k3 to be also arbitrarily large.
+this suggests that there are innitely many states forming a continuum near m = 0. the
+index is therefore an ill dened quantity, akin to counting the number of exactly zero energy
+states on a periodic box as one takes the volume to innity.
+
+2 = g2
+
+this theory is also believed not to be conning [15, 16] and is therefore expected to
+
+exhibit non-trivial infra-red dynamics.
+
+the sdlcq of the 1+1 dimensional model with (1,1) supersymmetry was solved in
+[37, 38], and we apply these results directly in order to compute (23). for simplicity, we
+work to leading order in the large n expansion. the spectrum of this theory for various
+values of k, and the subsequent computation of (23) is illustrated in gure 3.a.
+
+the spectrum of this theory at nite k, illustrated in gure 3.a, consists of 2k 2 exactly
+massless states3, accompanied by large numbers of massive states separated by a gap. the
+gap appears to be closing in the limit of large k however. we have tried extrapolating the
+mass of the lightest massive state as a function of 1/k by performing a least square t to a line
+and a parabola, giving the extrapolated value of m 2/g2
+y m n = 0.6,
+suggesting indeed that at large k, the gap is closed. this is consistent with the expectation
+that the spectrum is that of a continuum starting at m = 0 discussed earlier, although one
+must be careful when the order of large n and large k limits are exchanged. at nite n, we
+expect the degeneracy of 2k  2 exactly massless states to be broken, giving rise to precisely
+
+y m n = 1.7 and m 2/g2
+
+3i.e. k  1 massless bosons, and their superpartners.
+
+13
+
+ 2
+m  pi
+-----
+ 2
+g  n
+40
+
+30
+
+20
+
+10
+
+0.05 0.1 0.15 0.2 0.25 0.3
+
+1-
+k
+
+(a)
+
+-1.5
+
+-1
+
+-0.5
+
+0.5
+
+1
+
+-0.05
+
+-0.1
+
+-0.15
+
+-0.2
+
+-0.25
+
+(b)
+
+figure 3: (a) the spectrum as a function of 1/k and (b) the log-log plot of the correlation
+y m n/ = 1 for k =
+
+n 2(2nb+nf ) v.s. r in the units where g2
+
+42r4
+
+x+(cid:17)2
+function ht ++(x)t ++(0)i(cid:16) x
+
+4 . . . 10.
+
+0.12
+
+0.1
+
+0.08
+
+0.06
+
+0.04
+
+0.02
+
+0.05 0.1 0.15 0.2 0.25 0.3
+
+1-
+k
+
+figure 4: 1
+h0|t ++(k)|ni|2 v.s. k from states with m|ni = 0. this quantity determines
+the coecient of the 1/r4 asymptotic tail of the correlation function in the large r limit for
+the (1,1) model.
+
+k3 pn | l
+
+a continuum of states starting at m = 0 as expected.
+
+in the computation of the correlation function illustrated in gure 3.b, we nd a curious
+feature that it asymptotes to the inverse power law c/r4 for large r. this behavior comes
+about due to the coupling h0|t ++|ni with exactly massless states |ni. the contribution to
+(23) from strictly massless states are given by
+
+x+!2
+  x
+
+l
+
+2 m 4
+n
+
+f (x, x+) = (cid:12)(cid:12)(cid:12)(cid:12)
+
+ h0|t ++(k)|ni(cid:12)(cid:12)(cid:12)(cid:12)
+
+k32r4 .
+(39)
+we have computed this quantity as a function of 1/k and extrapolated to 1/k  0 by tting
+a line and a parabola to the computed values for nite 1/k. the result of this extrapolation
+is illustrated in gure 4. the data currently available suggests that the non-zero contribution
+
+82k3 k4(mnr)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)mn=0
+
+h0|t ++(k)|ni(cid:12)(cid:12)(cid:12)(cid:12)
+
+l
+
+= (cid:12)(cid:12)(cid:12)(cid:12)
+
+6
+
+2
+
+mn=0
+
+14
+
+ 2
+m  pi
+-----
+ 2
+g  n
+40
+
+30
+
+20
+
+10
+
+-1.5
+
+-1
+
+-0.5
+
+0.5
+
+1
+
+-0.1
+
+-0.2
+
+-0.3
+
+-0.4
+
+-0.5
+
+-0.6
+
+(b)
+
+0.05 0.1 0.15 0.2 0.25 0.3
+
+1-
+k
+
+(a)
+
+figure 5: (a) the spectrum as a function of 1/k and (b) the log-log plot of the correlation
+y m n/ = 1 for k =
+
+n 2(2nb+nf ) v.s. r in the units where g2
+
+42r4
+
+x+(cid:17)2
+function ht ++(x)t ++(0)i(cid:16) x
+
+3 . . . 6.
+
+from these massless states persists in the large k limit.
+
+let us now turn to the model with (2,2) supersymmetry. the sdlcq version of this
+model was solved in [39]. the result of this computation can be applied to (23). the result
+is summarized in gure 5. this model appears to exhibit the onset of a gapless continuum
+of states more rapidly than the (1,1) model as the harmonic resolution k is increased. just
+as we found in the (1,1) model, this theory contains exactly massless states in the spectrum.
+these massless states appear to couple to t ++|0i only for k even, and the overlap appears
+to be decreasing as k is increased. we believe that this model is likely to exhibit a power
+law behavior c/r for  > 4 for the t ++ correlator for r  gy mn in the large n limit.
+
+unfortunately, the existing numerical data do not permit the reliable computation of the
+exponent .
+
+4 conclusion
+
+in this article, we have provided a prescription for computing the correlation function of the
+stress energy tensor t ++ in the sdlcq formalism, which may be readily compared with
+predictions provided by a supergravity analysis following the conjecture of maldacena. such
+a comparison requires non-perturbative methods on the eld theory side, and the sdlcq
+approach appears at rst sight to be particularly well suited to this task. unfortunately,
+at the present time, high enough resolution calculation have not been made to evaluate ex-
+pression (23) accurately enough in the case of sym with 16 supercharges to reproduce (6).
+signicant progress is expected however when these calculation are moved from desk top
+
+15
+
+computers to a supercomputer. ultimately the main obstacle will be that the number of
+allowed states in the sdlcq wavefunctions grows exponentially with the resolution. never-
+theless, a concrete well dened algorithm is a great starting point for further investigations,
+and additional insight may be gained by studying models with less supersymmetry, as we
+have done here.
+
+thus, the answer to the question posed in the title is a qualied yes. equation (23) may
+be compared against (6) using sdlcq, and unless other computational approaches such as
+the lattice technique catches up, the sdlcq approach remains the most viable option.
+
+acknowledgments
+
+we thank d. gross, s. hellerman, s. hirano, n. itzhaki, n. nekrassov, y. oz, j. polchinski,
+and e. witten for illuminating discussions. the work of ah was supported in part by the
+national science foundation under grant no. phy94-07194. the work of fa, ol, and sp
+was support in part by a grant from the united states department of energy.
+
+references
+
+[1] j. maldacena, the large n limit of superconformal eld theories and supergravity,
+
+adv. theor. math. phys. 2 (1998) 231, hep-th/9711200.
+
+[2] o. aharony, s. s. gubser, j. maldacena, h. ooguri, and y. oz, large n eld
+
+theories, string theory and gravity, hep-th/9905111.
+
+[3] t. maskawa and k. yamawaki, the problem of p+ = 0 mode in the null plane eld
+
+theory and diracs method of quantization, prog. theor. phys. 56 (1976) 270.
+
+[4] h. c. pauli and s. j. brodsky, discretized light cone quantization: solution to a eld
+
+theory in one space one time dimensions, phys. rev. d32 (1985) 2001.
+
+[5] s. j. brodsky, h.-c. pauli, and s. s. pinsky, quantum chromodynamics and other
+
+eld theories on the light cone, phys. rept. 301 (1998) 299, hep-ph/9705477.
+
+[6] n. itzhaki, j. m. maldacena, j. sonnenschein, and s. yankielowicz, supergravity and
+
+the large n limit of theories with sixteen supercharges, phys. rev. d58 (1998)
+046004, hep-th/9802042.
+
+16
+
+[7] f. antonuccio, o. lunin, s. pinsky, h. c. pauli, and s. tsujimaru, the dlcq
+
+spectrum of n=(8,8) superyang-mills, phys. rev. d58 (1998) 105024,
+hep-th/9806133.
+
+[8] s. s. gubser, i. r. klebanov, and a. m. polyakov, gauge theory correlators from
+
+noncritical string theory, phys. lett. b428 (1998) 105, hep-th/9802109.
+
+[9] e. witten, anti-de sitter space and holography, adv. theor. math. phys. 2 (1998)
+
+253, hep-th/9802150.
+
+[10] a. hashimoto and n. itzhaki, a comment on the zamolodchikov c function and the
+
+black string entropy, hep-th/9903067.
+
+[11] r. dijkgraaf, e. verlinde, and h. verlinde, matrix string theory, nucl. phys. b500
+
+(1997) 43, hep-th/9703030.
+
+[12] a. brandhuber, n. itzhaki, j. sonnenschein, and s. yankielowicz, wilson loops,
+connement, and phase transitions in large n gauge theories from supergravity,
+jhep 06 (1998) 001, hep-th/9803263.
+
+[13] s.-j. rey and j. yee, macroscopic strings as heavy quarks in large n gauge theory
+
+and anti-de sitter supergravity, hep-th/9803001.
+
+[14] j. maldacena, wilson loops in large n eld theories, phys. rev. lett. 80 (1998)
+
+4859, hep-th/9803002.
+
+[15] a. armoni, y. frishman, and j. sonnenschein, screening in supersymmetric gauge
+
+theories in two- dimensions, phys. lett. b449 (1999) 76, hep-th/9807022.
+
+[16] a. armoni, y. frishman, and j. sonnenschein, the string tension in two-dimensional
+
+gauge theories, hep-th/9903153.
+
+[17] h. j. kim, l. j. romans, and p. van nieuwenhuizen, mass spectrum of chiral
+
+ten-dimensional n = 2 supergravity on s5, phys. rev. d32 (1985) 389399.
+
+[18] m. krasnitz and i. r. klebanov, testing eective string models of black holes with
+
+xed scalars, phys. rev. d56 (1997) 21732179, hep-th/9703216.
+
+[19] s. s. gubser, a. hashimoto, i. r. klebanov, and m. krasnitz, scalar absorption and
+the breaking of the world volume conformal invariance, nucl. phys. b526 (1998) 393,
+hep-th/9803023.
+
+[20] s. ferrara, c. fronsdal, and a. zaaroni, on n=8 supergravity on ads(5) and n=4
+superconformal yang- mills theory, nucl. phys. b532 (1998) 153, hep-th/9802203.
+
+17
+
+[21] g. t. horowitz and j. polchinski, a correspondence principle for black holes and
+
+strings, phys. rev. d55 (1997) 61896197, hep-th/9612146.
+
+[22] p. a. m. dirac, forms of relativistic dynamics, rev. mod. phys. 21 (1949) 392.
+
+[23] s. hellerman and j. polchinski, compactication in the lightlike limit, phys. rev.
+
+d59 (1999) 125002, hep-th/9711037.
+
+[24] m. burkardt, f. antonuccio, and s. tsujimaru, decoupling of zero modes and
+
+covariance in the light front formulation of supersymmetric theories, phys. rev. d58
+(1998) 125005, hep-th/9807035.
+
+[25] f. antonuccio, s. pinsky, and s. tsujimaru, a comment on the light cone vacuum in
+
+(1+1)-dimensional superyang-mills theory, hep-th/9810158.
+
+[26] f. antonuccio, o. lunin, s. pinsky, and s. tsujimaru, the light cone vacuum in
+
+(1+1)-dimensional superyang-mills theory, hep-th/9811254.
+
+[27] k. yamawaki, zero mode problem on the light front, hep-th/9802037.
+
+[28] k. demeter and i. r. klebanov, matrix models and string theory,. lectures given
+
+at spring school on string theory, gauge theory and quantum gravity, trieste,
+italy, 19-27 apr 1993.
+
+[29] g. t hooft, a two-dimensional model for mesons, nucl. phys. b75 (1974) 461.
+
+[30] c. g. callan, n. coote, and d. j. gross, two-dimensional yang-mills theory: a
+
+model of quark connement, phys. rev. d13 (1976) 1649.
+
+[31] k. hornbostel, s. j. brodsky, and h. c. pauli, light cone quantized qcd in
+
+(1+1)-dimensions, phys. rev. d41 (1990) 3814.
+
+[32] k. hornbostel, the application of light cone quantization to quantum
+
+chromodynamics in (1+1)-dimensions,. phd thesis, slac-0333.
+
+[33] m. li, large n solution of the 2-d supersymmetric yang-mills theory, nucl. phys.
+
+b446 (1995) 1634, hep-th/9503033.
+
+[34] h. oda, n. sakai, and t. sakai, vacuum structures of supersymmetric yang-mills
+theories in (1+1)-dimensions, phys. rev. d55 (1997) 10791090, hep-th/9606157.
+
+[35] e. witten, supersymmetric index of three-dimensional gauge theory,
+
+hep-th/9903005.
+
+18
+
+[36] d. birmingham, m. blau, m. rakowski, and g. thompson, topological eld theory,
+
+phys. rept. 209 (1991) 129340.
+
+[37] y. matsumura, n. sakai, and t. sakai, mass spectra of supersymmetric yang-mills
+theories in (1+1)-dimensions, phys. rev. d52 (1995) 24462461, hep-th/9504150.
+
+[38] f. antonuccio, o. lunin, and s. pinsky, nonperturbative spectrum of
+
+two-dimensional (1,1) superyang-mills at nite and large n, phys. rev. d58 (1998)
+085009, hep-th/9803170.
+
+[39] f. antonuccio, h. c. pauli, s. pinsky, and s. tsujimaru, dlcq bound states of
+n=(2,2) super yang-mills at nite and large n, phys. rev. d58 (1998) 125006,
+hep-th/9808120.
+
+19
+
+

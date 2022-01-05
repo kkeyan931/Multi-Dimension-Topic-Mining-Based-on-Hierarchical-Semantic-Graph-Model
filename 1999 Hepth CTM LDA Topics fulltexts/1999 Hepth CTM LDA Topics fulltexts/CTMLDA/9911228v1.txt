@@ -1,0 +1,5151 @@
+ephou-99-0015
+
+november, 1999
+
+4-dimensional bf gravity on the lattice
+
+noboru kawamoto, noriaki sato and yukiya uchida
+
+department of physics, hokkaido university
+
+sapporo, 060-0810, japan
+
+abstract
+
+we propose the lattice version of bf gravity action whose partition func-
+tion leads to the product of a particular form of 15-j symbol which corre-
+sponds to a 4-simplex. the action is explicitly constructed by lattice b eld
+dened on triangles and link variables dened on dual links and is shown
+to be invariant under lattice local lorentz transformation and kalb-ramond
+gauge transformation. we explicitly show that the partition function is pach-
+ner move invariant and thus topological. the action includes the vanishing
+holonomy constraint which can be interpreted as a gauge xing condition.
+this formulation of lattice bf theory can be generalized into arbitrary di-
+mensions.
+
+9
+9
+9
+1
+
+ 
+
+v
+o
+n
+9
+2
+
+ 
+
+ 
+ 
+
+1
+v
+8
+2
+2
+1
+1
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+pacs code
+keywords
+
+04.60.nc, 11.15.ha
+
+:
+: lattice gravity, bf theory, quantum gravity
+
+kawamoto@particle.sci.hokudai.ac.jp
+noriaki@particle.sci.hokudai.ac.jp
+uyukiya@particle.sci.hokudai.ac.jp
+
+1 introduction
+
+in the mid 70s nobody expected that it was possible to evaluate the hadron masses
+
+by any means in the near future. the later developments of lattice qcd made it
+
+possible and gave us an idea that non-perturbative formulation of gauge theory on
+
+the lattice is crucial for the realistic numerical analyses of the phenomena based on
+
+the eld theory like qcd. as for the lepton and quark masses we dont have any
+
+possible formulation at this moment.
+
+it would, however, be not unreasonable to
+
+expect that gravity theory might play a crucial role in the realistic unied model
+
+leading to the lepton and quark spectrum calculations. on the other hand it is
+
+quite natural to expect that some means to evaluate phenomenological numbers
+
+numerically is obviously needed. we believe that a lattice theory will play again a
+
+crucial role in the formulation. this line of thinking naturally encourages us to nd
+
+a formulation of gravity theory on the lattice.
+
+in 2-dimensional gravity the dynamical triangulation of lattice theory was very
+
+successful analytically[1][2] and numerically[3][4] to evaluate the fractal dimensions[5].
+
+the matrix model for the dynamical triangulation of random surface and the li-
+
+ouville theory are the analytic means on one hand while the recursive sampling
+
+method[3][4][6] and the ip op moves by monte-carlo are the numerical means on
+
+the other in 2-dimensional quantum gravity. in general there is no local action to
+
+describe the 2-dimensional quantum gravity.
+
+in 3 dimensions einstein gravity has been successfully formulated by chern-
+
+simons action as a gauge theory of iso(2, 1) group[7]. after turaev and viro[9]
+
+proposed the possibility based on the analyses of q-deformed version of ponzano-
+
+regge model that the ponzano-regge[8] model formulated by 6-j symbols may be
+
+the lattice version of chern-simons gravity, there are several authors to try to prove
+
+the connection of these two formulations[10][11]. the proofs of the connection has
+
+been, however, indirect. in our recent paper we have shown by explicit calculations
+
+that the partition function of the lattice version of chern-simons action indeed leads
+
+to the ponzano-regge model[12].
+
+in 4 dimensions ooguri pointed out the possibility that the partition function
+
+of bf theory[13] leads to the partition function constructed from 15-j symbols[14].
+
+this is quite parallel to the 3-dimensional case where the chern-simons gravity the-
+
+ory is associated with the ponzano-regge model. this 4-dimensional proposal trig-
+
+1
+
+gered a new way of dening 4-dimensional quantum gravity theory by spin foam[15]
+
+and a new type of 4-dimensional topological invariant by the quantum q-deformed
+
+formulation[16][17].
+
+there are plausible arguments that the partition function of the continuum bf
+
+theory and 15-j symbols are related, but there is no explicit derivation to connect
+
+the two models. here in this paper we rst introduce the lattice version of bf
+
+theory and explicitly show that the partition function of the lattice bf theory leads
+
+to the product of 15-j symbols. we then show explicitly that the particular com-
+
+bination of 15-j product is pachner move invariant and thus the partition function
+
+is independent how the 4-dimensional simplicial manifold is divided by the pachner
+
+moves and is thus topological. then the continuum limit of the lattice bf theory
+
+can be taken analytically and leads to the continuum bf action since the partition
+
+function is division independent of the 4-dimensional simplicial manifold.
+
+in formulating lattice gravity theory, we intend to couple the formulation of the
+
+lattice qcd and regge calculus[18].
+
+it has already been proposed that the link
+
+variable of lattice qcd can be used to generate the curvature on the simplexes
+
+where regge calculus claims as the location of gravitational curvature[19][20].
+
+it is known that the bf theory is not equivalent to the einstein gravity but if
+the 2-form b eld is related to the vierbein as b = (e  e), then the bf action
+it is also known that the metric can be
+leads to the einstein-hilbert action[21].
+
+written by b eld directly if some constraints are fullled. in this case the einstein
+
+gravity will be formulated by 2-form eld b and equations of motion. in this sense
+
+the bf theory is closely related to the gravity theory but in the limited sense. the
+
+lattice version of bf theory is, therefore, a very good starting point to the realistic
+
+4-dimensional lattice gravity theory.
+
+one of the authors (n.k.) and watabiki discovered the formulation to general-
+
+ize the standard chern-simons action into arbitrary dimensions by employing all
+
+degrees of form as gauge elds and parameters[22].
+
+it was shown that the topo-
+
+logical gravity and the topological conformal gravity can be formulated by 2- and
+
+4-dimensional generalized chern-simons action[23]. we show concrete expressions
+
+of the generalized chern-simons actions in 2, 3 and 4 dimensions where we omit
+
+fermionic degrees for simplicity,
+
+s2 = z tr{(d + 2) + 2b},
+
+2
+
+s3 = z str(cid:26)1
+s4 = z tr{b(d + 2) + (d + {, }) + b2 + 2h},
+
+3  (db + [, b]) + 2(cid:27) ,
+
+1
+3
+
+d +
+
+2
+
+which are invariant under the following gauge transformations:
+
+ = [, v],
+
+ = dv + [, v]  {, u},
+b = du + {, u} + [b, v] + [, b],
+ = db + [, b] + [, v]  {b, u} + {, u},
+h = du  {, u} + {, u} + [h, v] + [b, b] + [, v ],
+
+where [ , ] and { , } are, respectively, commutator and anti-commutator, and , ,
+b, , h and v, u, b, u, v are, respectively, 0-, 1-, 2-, 3- and 4-form gauge elds
+
+and parameters. here odd forms of gauge elds and even forms of gauge param-
+
+eters are ordinary even lie algebra valued elds while the rest of gauge elds and
+
+parameters are odd super lie algebra valued elds[22]. since all these generalized
+
+chern-simons actions are formulated by form degrees, the elds of forms are very
+
+naturally accommodated on the simplicial manifold.
+
+it is important for us to recognize that 3-dimensional chern-simons action and
+
+4-dimensional bf action are the leading terms of the above generalized chern-
+
+simons actions of s3 and s4. in the previous paper and present paper we focus on
+
+the formulation of the leading terms of the 3- and 4-dimensional generalized chern-
+
+simons action as the lattice gravity theory on a simplicial manifold. it is very natural
+
+to generalize the lattice formulation of this paper to include all the form degrees of
+
+the generalized chern-simons action on the lattice. we believe that the matter
+
+eld will be accommodated via this generalized gauge theory formulation which
+
+might lead to the unied theory including gravity on the simplicial manifold[24].
+
+in this sense the bf action on the lattice is the good starting formulation for the
+
+generalized gauge theory as well.
+
+in section 2 we rst summarize the continuum formulation of bf theory then
+
+introduce a lattice version of bf theory. since the lattice bf theory is a gauge
+
+theory, we discuss the gauge invariance of the theory on the lattice in section 3. we
+
+then integrate out the b elds and the link variables and then explicitly show that
+
+the partition function of the lattice bf action leads to the product of 15-j symbols
+
+3
+
+in section 4. we then prove the pachner move invariance of our partition function
+
+by graphical method explicitly in section 5. we summarize the result with several
+
+discussions in the nal section.
+
+2 formulation of the lattice bf theory
+
+2.1 continuum bf theory
+
+we rst summarize characteristics of the continuum 4-dimensional bf theory[13].
+
+the action of bf theory is given by
+
+sbf = zmhb, fi,
+
+(2.1)
+
+where m is 4-dimensional manifold. we take our gauge group any lie group g
+whose lie algebra lg is equipped with an invariant nondegenerate bilinear form
+h , i for the pair b and f . here f is curvature 2-form constructed from lie algebra
+lg valued 1-form , and b is dual lie algebra l
+g (= lg in the present case) valued
+generic 2-form.
+
+it has been noticed since quite sometime that the bf action leads to the palatini
+
+type of einstein-hilbert action if we take the lie group g to be local lorentz group
+and identify b = (e  e) with  as hodge dual operation to the local lorentz
+suces. in particular the self dual component of the 2-form b plays a crucial role
+
+in formulating the einstein gravity by the sl(2, c) spinor representation[21].
+
+using the fact that the 4-dimensional euclidean version of local lorentz group
+is a direct product of chiral su(2) groups: so(4)  su(2)l  su(2)r, we can
+factorize the bf action with local lorentz group into the chiral parts,
+
+babf ab
+
+sbf = zm
+0a, f 
+ab  fab  1
+
+= zm
+
+b+
+
+a f +
+
+a +zm
+
+b
+
+a f 
+a ,
+
+(2.2)
+
+where f 
+ab. the
+suces, a, b, .. are local lorentz suces while a is the chiral su(2) sux. in this
+
+2abcdf cd, and similar for b
+
+a  f 
+
+a and b
+
+paper we only consider the one chiral, say left handed, counterpart of the action. we
+
+may consider that the right-handed part is nothing but the copy of the left-handed
+
+part, at least in the continuum limit. on the lattice there would be a possibility
+
+to accommodate the same copy of chiral counterpart which we will discuss later. if
+
+we take the left-chiral part of the action, we can formulate the lattice su(2) bf
+
+4
+
+theory by naive extension from 3-dimensional lattice chern-simons gravity into 4
+
+dimensions.
+
+in formulating left-chiral bf model, we can expand both b and f by the pauli
+
+matrices, a (a = 1, 2, 3) since su(2) has self-dual lie algebra,
+
+b =
+
+1
+2
+
+baa, f =
+
+1
+2
+
+f aa.
+
+(2.3)
+
+hereafter we omit the sux + to denote the left chirality. then the action of su(2)
+
+bf theory leads to
+
+sbf = zm
+
+trbf =
+
+1
+
+2 zm
+
+baf a,
+
+(2.4)
+
+where the trace is taken for the pauli matrices. it is worth to mention that the factor
+
+2 dierence between the chiral part of bf action in (2.2) and the above action (2.4)
+
+is due to the fact that the chiral decomposition of the fundamental representation
+
+for so(4) generator is reducible into the direct sum of two pauli matrices.
+
+there are two independent gauge transformations in this theory. one of them is
+
+the local lorentz transformation,
+
+ a = d a,
+
+ ba = [b,  ]a,
+
+(2.5)
+
+where  is 0-form gauge parameter. there is another independent gauge transfor-
+
+mation
+
+ua = 0, uba = dua,
+
+(2.6)
+
+where ua is 1-form gauge parameter according to the 2-form nature of ba. this
+
+transformation may be called kalb-ramond symmetry transformation[25] and cor-
+
+responds to the dieomorphism transformation of dreibein e in 3 dimensions. this
+
+transformation is on-shell reducible. in fact the following gauge change of the gauge
+
+parameter u itself by 0-form gauge parameter va,
+
+vua = dva,
+
+(2.7)
+
+leads to the vanishing contribution of the gauge change
+
+v(uba) = dvua = ddva = [f, v]a = 0,
+
+(2.8)
+
+where we have used the equation of motion f = 0.
+
+5
+
+2.2 lattice bf gravity action
+
+we intend to formulate a gravity version of lattice gauge theory where the product of
+
+link variables u along the boundary of a square plaquette leads to the exponential
+
+of curvature. thus we may identify the curvature locating at the center of the
+
+plaquette and then the trace leads to the yang-mills action in the leading order of
+
+the lattice constant in the lattice qcd. on the other hand regge calculus tells us
+
+that the curvature is located at sites in 2 dimensions, links in 3 dimensions, triangles
+
+in 4 dimensions and so on. it is thus very natural to formulate the gravity version of
+
+lattice gauge theory in terms of the link variable u and take a product of u variables
+
+surrounding the simplexes suggested by regge calculus[19][20].
+
+in fact in 3 dimensions, we have successfully formulated lattice chern-simons
+
+gravity based on the correspondence between the lattice gauge theory and regge
+calculus[12]. the link variable u(l) = e(l) is dened on the dual link l which is
+located on the boundary of dual plaquette p . since the dual of the dual plaquette
+p is original link l which intersect p in 3 dimensions, the curvature is located
+
+in the center of the dual plaquette or equivalently on the original link and thus
+
+consistent with the regge calculus. we needed to introduce vanishing holonomy
+
+constraint which enforces the parallelism of the dreibein ea and the lattice curvature
+f a  1
+formulated in this way exactly coincides with that of the ponzano-regge model.
+
+2abcf bc to obtain gravity theory.
+
+it turns out that the partition function
+
+then the action leads to the continuum chern-simons gravity since the ponzano-
+
+regge partition function is alexander move invariant and thus invariant under the
+
+division of the simplicial manifold and then the naive continuum limit can be taken.
+
+in this paper we extend the formulation of 3-dimensional lattice gravity into
+
+4 dimensions. we formulate a lattice version of su(2) bf theory. we consider a
+
+piecewise linear 4-dimensional simplicial manifold. according to the regge calculus,
+
+curvature is located at a triangle t. there are in general several 4-simplexes which
+have the triangle t in common. a dual link l is dened as the line connecting
+
+the center of neighbouring 4-simplexes and is located on the boundary of the dual
+plaquette p . we introduce dual link variables u(l) = ei(l) on the dual link l . then
+the product of the dual link variables u(l) along the boundary of the dual plaquette
+
+in [12] we have used anti-hermitian generators of so(3) and thus denoted the link variable
+as u = e while here we use hermitian generators of su (2) and thus denote the link variable as
+u = ei.
+
+6
+
+p leads to a curvature located on the center of the dual plaquette p which coincides
+
+with the center of the triangle t in 4 dimensions. we then locate the 2-form eld b
+
+on the original triangle t. see fig.1.
+
+we dene the curvature f (t) located on the triangle t by the following equa-
+
+tion:
+
+(cid:13) u(l)  eif (t).
+yl p
+
+(2.9)
+
+the leading term in f with respect to the lattice unit is the ordinary curvature
+d + 2 similar in structure to the ordinary lattice gauge theory, but here we dene
+
+the lattice curvature f in such a way that it contains all orders of terms of lattice
+
+unit.
+
+using these variables, we consider the following lattice version of the bf action:
+
+slbf = xt
+
+tr
+ib(t)hln yl p
+
+(cid:13) u(l)i
+ =
+
+ba(t)f a(t).
+
+(2.10)
+
+1
+
+2 xt
+
+in formulating continuum chern-simons gravity in 3 dimensions, we need to
+
+impose a torsion free condition as an equation of motion at the classical level. the
+
+torsion free nature is lost at the quantum level when we integrate out the dreibein
+
+and spin connection. in formulating lattice chern-simons gravity and showing the
+
+equivalence with the ponzano-regge model in 3 dimensions, we needed to introduce
+
+the following vanishing holonomy constraint which relates the dreibein and spin
+
+connection even at the quantum level:
+
+(cid:13) u(l)iab
+h yl p
+
+eb = ea,
+
+(2.11)
+
+where a, b are so(3) suces. this constraint has been interpreted as a gauge xing
+
+condition of lattice gauge dieomorphism transformation. geometrically the con-
+
+b(t)
+
+~
+u(l)
+
+~
+p
+
+t
+
+figure 1: p is the dual plaquette dual to the triangle t associated to the 2-form
+b(t). dual link variable u = ei is located on the dual link which constructs the
+boundary of the dual plaquette p .
+
+7
+
+straint is equivalent to the parallelism of the dreibein and the curvature: ea  f a,
+where f a  1
+
+2abcf bc.
+
+in contrast with the 3-dimensional case we introduce the following constraint in
+
+4 dimensions
+
+
+
+
+
+
+
+
+(cid:13) u(l)
+ b
+(cid:13) u(l)
+ yl p
+ yl p
+
+
+
+= b,
+
+(2.12)
+
+where  are suces of su(2) spinor representation. geometrically the constraint
+
+means that the each of spinor sux of b eld located at the center of a triangle
+
+can be parallel transported in the opposite direction along the boundary of the
+dual plaquette p and comes back to the starting point and should coincide with
+
+the original direction and thus the holonomy of each sux vanishes. we now derive
+
+more concrete expression for the constraint (2.12) which is equivalent to the following
+
+relations:
+
+
+
+this equation can be satised if
+
+in
+n!
+
+[f,   [f, [f, b]]  ] = b.
+
+xn=0
+
+[f, b] = iabcf abb c
+2
+
+= 0,
+
+(2.13)
+
+(2.14)
+
+or equivalently ba  f a.
+
+analogous to the arguments in 3 dimensions, the constraint thus leads to the
+parallelism of the 2-form ba and the curvature: ba  f a. more precisely the
+constraint can be rewritten in a concrete form by taking into account the parallel
+
+and antiparallel nature of ba and f a
+
+b3
+
+|b| " 2
+ya=1
+
+  f a
+|f|
+
++
+
+ba
+
+|b|! +
+
+2
+
+ya=1
+
+  f a
+|f| 
+
+ba
+
+|b|!# ,
+
+(2.15)
+
+where |b|  baba and |f|  f af a are the length of ba and f a, respectively.
+the term b3/|b| is needed to keep the rotational invariance of the expression.
+
+one of the important characteristic of the lattice bf action (2.10) is that the
+discreteness of the length of the 2-form eld |b| comes out as a natural consequence
+of the specic choice of the logarithmic action. we rst note the following identity:
+
+ei|f |i = cos |f|
+
+2 ! + i2isin |f|
+2 ! ,
+
+where i = f a
+|f |
+
+a
+2 with a as pauli matrix, then
+
+ei4ni = 1, n  z.
+
+8
+
+(2.16)
+
+(2.17)
+
+using the above relation and f a  ba by the constraint (2.12), we nd that our
+
+lattice bf action slbf has the following ambiguity:
+
+slbf = xt
+= xt
+
+tr(cid:16)ib(t) ln ef (t)(cid:17)
+tr(cid:16)ib(t) ln ef (t)+i4ni(cid:17)
+
+= slbf +
+
+1
+
+2 xt
+
+4n|b(t)|.
+
+this ambiguity leads to an ambiguity in the partition function
+
+z = z dudb eislbf = z dudb eislbf +ipt 2n|b|.
+
+(2.18)
+
+imposing the single valuedness of eislbf , we obtain the constraint that pt |b(t)|
+should be integer, or equivalently |b(t)| should be integer. we can now write down
+the explicit form of partition function with constraints
+
+z = z dudb (cid:18)(cid:16)y(cid:13) u(l)(cid:17) b(cid:16)y(cid:13) u(l)(cid:17)
+
+ b(cid:19)xn
+
+(|b|  n)eislbf ,
+
+(2.19)
+
+where n  z.
+
+it is important to notice that the length of the 2-form |b(t)| is proportional to the
+area of triangle t on which the 2-form eld ba(t) is dened. it is then interesting to
+
+note that the area of the triangle is discretized due to the logarithmic form of our
+
+lattice bf action. it has already been pointed out by rovelli and smolin that the
+
+area of triangle in 4-dimensional gravity is discretized in the square root of angular
+
+momentum square qj(j + 1) by investigating an area operator[26]. the origin of
+
+the discreteness of the area of triangle in our formulation is quite dierent from that
+
+of rovelli and smolin.
+
+3 gauge invariance on the lattice
+
+the gauge transformations of the continuum bf theory have been given by the local
+
+lorentz transformation (2.5) and the kalb-ramond transformation (2.6). under the
+
+local lorentz transformation both of the b eld and curvature f transform adjointly
+
+in the continuum theory
+
+ ba = [b,  ]a,
+
+ f a = [f,  ]a.
+
+(3.1)
+
+9
+
+we consider that the lattice versions of the local lorentz gauge parameters are
+
+located on the dual sites and the center of the original triangles, the same point
+where the b eld is located. then the dual link variable u(l) = ei(l) transforms
+
+under the lattice local lorentz transformation as
+
+u(l)  v 1u(l)v ,
+
+(3.2)
+
+where v = exp(cid:16) i
+
+the neighboring site. then the following lattice counterpart of the local lorentz
+
+2 aa(cid:17) is the su(2) matrix on the dual site and v  is the one on
+
+transformation:
+
+b(t)  v 1b(t)v,
+f (t)  v 1f (t)v,
+leads to the obvious invariance of the action (2.4).
+
+(3.3)
+
+there are, however, some subtleties on the gauge invariance of the lattice action
+
+due to the fact that the center of the triangle where b eld is located and the
+dual links where dual link variables u(l) are located are not connected by a link
+
+variable u. we can arbitrarily choose a dual site and introduce new link variable to
+
+bridge between the dual site and the center of the original triangle to identify the
+
+lattice local lorentz transformation. the newly dened link variables, however, can
+
+be gauged away. the details of these arguments go parallel to the 3-dimensional
+
+chern-simons gravity case and can be found in [12].
+
+next we will investigate the lattice version of kalb-ramond transformation.
+
+since the invariance nature of the continuum action under this transformation is
+
+due to the bianchi identity,
+
+df = df + [, f ] = 0,
+
+(3.4)
+
+we need to identify bianchi identity on the lattice. we will consider the integrated
+
+version of the bianchi identity,
+
+zm
+
+df = zm
+
+f +zm
+
+[, f ] = 0,
+
+(3.5)
+
+where m is a 3-dimensional manifold corresponding to the 3-form nature of df in
+
+(3.4).
+
+in 3 dimensions the geometrical structure of the manifold m can be visually
+
+well understood since the dual cell of a original site associated to the 0-form gauge
+
+parameter of the gauge dieomorphism transformation is easily recognized. this
+
+10
+
+f
+
+a
+
+acdef
+
+abcef
+
+abcdf
+
+bcdef
+
+b
+
+c
+
+e
+
+d
+
+figure 2: a simple setup to show the integrated lattice bianchi identity. a, b, c,
+d, e and f are sites and acdef , abcef , abcdf , bcdef are the centers
+of 4-simplex. thick lines are the dual links and thin lines are original links.
+
+type of setup was just what we needed to show the 3-dimensional lattice counterpart
+
+of the bianchi identity[12].
+
+correspondingly in 4 dimensions, we have to consider the dual cell of the original
+
+link cf as a 3-dimensional simplicial submanifold m since the gauge parameter of
+
+the kalb-ramond transformation (2.6), which we now identify as the parameter
+
+on the link cf , is 1-form in 4 dimensions. in general the 3-dimensional cell dual
+
+to a given link may have complicated simplicial structure. for simplicity we here
+
+consider the dual cell as a tetrahedron. the tetrahedron as the dual cell has four
+
+dual sites which correspond to the center of original 4-simplexes. we then need
+
+to introduce four original sites a, b, d and e to obtain four 4-simplexes which
+
+share the common link cf as shown in fig.2. with this setup we can discuss the
+
+invariance of the lattice bf action (2.10) under a lattice version of kalb-ramond
+
+transformation.
+
+we introduce the following notations: u1  uacdef abcdf is a dual link
+variable on the dual link which connect the dual sites or equivalently the cen-
+
+ter of original links denoted as acdef and abcdf . the 2-form gauge eld
+bdxdx is located on the center of the triangle bcf . the 1-form
+
+b1  zbcf
+gauge parameter u0  zf c
+udx is located on the original link f c. the 0-form
+gauge parameter v1  v(b) is located on the original site b. here we summarize
+
+11
+
+the notations:
+
+bdxdx,
+
+
+u1  uabcdf acdef , u2  uabcdf bcdef , u3  uabcdf abcef ,
+u4  ubcdef abcef , u5  uabcef acdef , u6  uacdef bcdef ,
+
+
+b1  zbcf
+b3  zcdf
+
+
+u0  zf c
+u5  zcd
+
+(cid:26) v1  v(b), v2  v(a), v3  v(d), v4  v(e), v5  v(f ), v6  v(c).
+
+bdxdx, b2  zacf
+bdxdx, b4  zcef
+udx, u1  zcb
+udx, u6  zdf
+
+udx, u2  zbf
+udx, u7  zce
+
+udx, u3  zca
+udx, u8  zef
+
+bdxdx,
+
+udx,
+
+udx, u4  zaf
+
+udx,
+
+we rst note the following identity,
+
+y u  u2u4u 1
+
+3
+
+ u3u5u 1
+
+1
+
+ u1u6u 1
+
+2
+
+ u2u 1
+
+6 u 1
+
+5 u 1
+
+4 u 1
+
+2 = 1.
+
+(3.6)
+
+using the following denitions of curvature on the triangles,
+
+6 u 1
+
+5 u 1
+
+4 u 1
+2 ,
+
+ef1  u2u4u 1
+
+3 , ef2  u3u5u 1
+
+1 , ef3  u1u6u 1
+
+2 , ef4  u2u 1
+
+and the baker-hausdor formula,
+
+ea  eb = exp(cid:18)a + b +
+
+1
+2
+
+[a, b]  (cid:19) ,
+
+we can rewrite the above identity in the following form:
+
+0 = lny u = ln(cid:16)ef1  ef2  ef3  ef4(cid:17) =
+
+fk +
+
+4
+
+xk=1
+
+4
+
+[k, fk].
+
+xk=1
+
+here we have introduced the following variables k,
+
+1 = 
+3 = 
+
+1
+4
+1
+4
+
+(f2 + f3 + f4) +    ,
+2 = 
+(f1  f2 + f4) +    , 4 = 
+
+1
+4
+1
+4
+
+(f1 + f3 + f4) +    ,
+(f1  f2  f3) +    ,
+
+(3.7)
+
+(3.8)
+
+(3.9)
+
+(3.10)
+
+which can be evaluated order by order of the curvature f by using the baker-
+
+hausdor formula. we identify (3.9) as the lattice version of the bianchi identity
+
+(3.4).
+
+now we consider the lattice version of the gauge transformation for the 2-form
+
+gauge eld bk. we rst note that b1 eld is located on the center of the triangle
+
+12
+
+bcf and thus the gauge transformation of b1 eld is associated with the gauge
+
+parameters u0, u1 and u2 located on the boundary f c, cb and bf , respectively.
+
+then the lattice version of bk transformation will be given as follows:
+
+2k1, u2k1]  [
+
+2k, u2k],
+
+(3.11)
+
+bk = u0 + u2k1 + u2k  [k, u0]  [
+2k1 and 
+
+where k is dened in (3.10) while 
+
+2k are the similar quantities associated
+with the gauge parameters u2k1 and u2k dened on the links just as k is associated
+
+with the gauge parameter u0 on the link f c. then the transformation of the action
+
+leads to
+
+4
+
+slbf =
+
+4
+
+=
+
+xk=1
+xk=1
+= tr u0
+
+= 0,
+
+tr (bk  fk) +   
+tr(cid:16)(cid:16)u0 + u2k1 + u2k  [k, u0]  [
+
+(fk + [k, fk])! +   
+
+4
+
+xk=1
+
+2k1, u2k1]  [
+
+2k, u2k](cid:17) fk(cid:17) +   
+
+where in the last expression we have only picked up the terms associated with u0. we
+
+can identify this transformation as the kalb-ramond transformation on the lattice.
+
+thus the lattice bf action is invariant under the transformation (3.11) due to the
+
+lattice version of bianchi identity (3.9).
+
+in 4 dimensions the kalb-ramond transformation is on-shell reducible. we now
+
+show how the reducibility of the 2-form gauge transformation is realized on the
+
+lattice. due to the equation of motion f = 0, we obtain  = 0 since  is a
+
+polynomial of f as we can see in the denition (3.10). hence the transformation of
+
+b in (3.11) can be reduced as follows:
+
+bk = u2k1 + u2k + u0,
+
+(3.12)
+
+which corresponds to the continuum gauge transformation (2.6). considering the
+
+continuum reducibility relation, we identify the transformation of 1-form gauge pa-
+
+rameter u dened on a link as the dierence of 0-form gauge parameter dened on
+
+a site,
+
+u(ab) = v(b)  v(a),
+
+(3.13)
+
+13
+
+more explicitly,
+
+u2k = v5  vk,
+u2k1 = vk  v6,
+u0 = v6  v5.
+
+(3.14)
+
+then the continuum reducibility relation (2.8) leads to
+
+(bk) = (vk  v6) + (v5  vk) + (v6  v5) = 0,
+
+(3.15)
+
+on the lattice. we can consider that this result is corresponding to the on-shell
+
+reducibility of the kalb-ramond transformation on the lattice.
+
+we now point out that the constraint (2.12) or equivalently (2.15) breaks the
+
+lattice version of kalb-ramond transformation while the lattice bf action itself is
+
+invariant under the transformation as shown in the above. the lattice b eld is
+
+transformed but the lattice curvature is unchanged under the kalb-ramond gauge
+
+transformation. therefore we can use a part of degrees of freedom of the lattice
+
+1-form gauge parameter uk to align the 2-form ba eld and the curvature f a in
+
+of freedom of the 1-form gauge parameter ua
+
+accordance with the constraint. in fact the reducibility allows the total gauge degrees
+ to be 433 = 9, while the parallel or
+ and f a
+ needs 6  3/2 = 9 constraints
+where we have taken into account the chiral nature for the space-time sux as well.
+
+anti-parallel nature of the 2-form chiral ba
+
+there are thus necessary degrees of freedom to fulll the constraint. the 3 degrees
+
+of freedom out of 9 should be exhausted to adjust the discrete nature of the ba
+
+eld. we now claim that the vanishing holonomy constraint can be identied as the
+
+gauge xing condition of the kalb-ramond gauge transformation on the lattice.
+
+4 calculation of the partition function
+
+in our previous paper we have explicitly shown that 3-dimensional version of lattice
+
+chern-simons action with the constraint of vanishing holonomy along dual links
+
+leads to the ponzano-regge model formulated by 6-j symbol[12]. analogously to
+
+the 3-dimensional case we explicitly show that the lattice version of bf action (2.10)
+
+with the vanishing holonomy constraint (2.12) leads to a topological gravity model
+
+formulated by 15-j symbol in 4 dimensions.
+
+the partition function with the constraint (2.12) or equivalently (2.15) and the
+
+14
+
+discreteness of |b| taken into account is given by
+
+b3
+
+zt,
+
+z = z du yt
+|b| " 2
+zt = z d3b
+ya=1
+xj=0
+
+ (|b|  2j) e
+
+  f a
+|f|
+
+
+
++
+
+ba
+
+|b|!#
+
+(4.1)
+
+(4.2)
+
+ba
+
+|b|! +
+
+i
+
+2 baf a
+
+2
+
+  f a
+|f| 
+2(cid:19) ,
+
+ya=1
+(cid:18)j 
+
+z
+
+where zt is the part of partition function associated with a triangle t. we have
+introduced the discrete nature of |b| by using the following relation:
+
+z |bf |
+
+|bi|
+
+d|b| = z |bf |
+
+|bi|
+
+
+
+xj=0
+
+ (|b|  2j) d|b|,
+
+(4.3)
+
+where j  z/2 and thus |bf| and |bi| should be integer.
+
+we can now evaluate the b integral of zt straightforwardly thanks to the delta
+
+functions and obtain
+
+at this stage it is important to recognize that arbitrary change of the normalization
+
+zt = xj
+
+8j 2 cos(j|f|).
+
+(4.4)
+
+constant for the lattice bf action (2.10) gives the same result for (4.4). this can
+
+be understood by the following arguments: suppose we take the action of the form
+slbf = 
+
+2 pt ba(t)f a(t), we need to take |b(t)| = 2j (j  z/2), based on the
+
+similar arguments as in section 2. taking into account the vanishing holonomy
+
+constraint (2.12) or equivalently (2.15), the action essentially leads to the form
+
+slbf = pt j|f (t)| and thus to (4.4).
+
+using the following formula for the character j of the spin-j representation of
+
+su(2),
+
+j (eiaja) = j (||) =
+
+where || is the length of a, we nd
+
+sin(cid:16)(2j + 1) ||
+2 (cid:17)
+sin(cid:16) ||
+2 (cid:17)
+
+,
+
+j (|f|)  j1(|f|) = 2 cos(j|f|).
+
+hence we can naively calculate the triangle partition function,
+
+(4.5)
+
+(4.6)
+
+
+
+zt =
+
+xj=1
+= 4
+
+
+
+4j 2(j  j1)
+xj=0
+
+(2j + 1)j .
+
+15
+
+this calculation is not precise, because the summation is not convergent. we can,
+
+however, justify the above calculation by introducing the heat kernel regularization.
+
+the details of the regularization procedure can be found in our previous paper[12].
+
+integrating out b eld and introducing heat kernel regularization and dividing
+
+the unimportant constant factor, we obtain the total partition function
+
+z = z du yt
+
+
+
+xj=0
+
+(2j + 1) j(cid:16) yl p
+
+(cid:13) u(l)(cid:17) ej(j+1) ,
+
+(4.7)
+
+where a regularization parameter  is introduced. the parameter  will be sent to
+zero (  0) at the end of calculation.
+
+it is interesting to note that the formulation has close similarity with the 3-
+
+dimensional case. in 3 dimensions the angular momentum j is associated to the
+
+original link while it is associated to a triangle in 4 dimensions. this has natural
+
+correspondence with regge calculus in the sense that the discretized angular mo-
+
+mentum j is localized at the simplexes where the gravitational curvature is localized.
+we now carry out du integration of this partition function. thanks to the
+character of the partition function, du integration is straightforward. we rst note
+the following relation specic to the character:
+
+j(cid:16) yl p
+
+(cid:13) u(l)(cid:17) = x{ki}
+
+m
+
+yi=1
+
+dj
+
+kiki+1(ui)
+
+(km+1 = k1),
+
+(4.8)
+
+where dj
+kiki+1(ui) is the d-function, a spin j matrix representation for a su(2)
+group element ui  u(li) located on the dual link li. here we assume that there are
+m dual link variables ui along the boundary of dual plaquette p .
+
+we then clear out the geometrical structure of a 4-simplex. a 4-simplex can
+
+be constructed by ve sites for which we name a, b, c, d and e. we may denote
+
+the 4-simplex itself composed of these sites as abcde, which has ve tetrahedra
+
+bcde, acde, abde, abce and abcd on the boundary. each tetrahedron,
+
+such as bcde, has boundary triangles cde, bde, bce and bcd and so on. in
+
+this way we can specify all the simplexes included in the 4-simplex abcde. we
+
+can graphically denotes the geometrical structure of the 4-simplex abcde. see
+
+fig.3.
+
+we now clarify the locations of the ui and d-functions on the 4-simplexes. the
+
+center of the gure in fig.3 is corresponding to that of the 4-simplex abcde which
+
+has ve neighboring 4-simplexes and is connected to the 4-simplexes by ve dual
+
+16
+
+bcde
+
+u1
+
+u1
+
+abde
+
+u5
+
+u5
+
+4u
+
+u4
+
+abcd
+
+abce
+
+u2
+
+u3
+
+acde
+
+u2
+
+u3
+
+figure 3: graphical presentation of geometrical structure of a 4-simplex abcde
+
+links denoted by the thick lines. the ve points on the ve thick lines correspond
+
+to the center of the ve boundary tetrahedra, bcde, acde, abde, abce and
+
+abcd, respectively. arrows on the dual links indicate the direction of the dual link
+variables ui, u 
+
+i and the thin lines with arrows indicate the direction of the product of
+the d-functions. as we can see in (4.8) the product of the d-functions goes around
+
+a original triangle associated with the representation j. for example the boundary
+
+triangle between the tetrahedra abcd and abce is abc and thus there is a thin
+
+line going from abcd to abce. thus there are 10 thin lines corresponding to
+
+the number of surrounding triangles. it should be noted that there are two dual link
+variables ui and u 
+by the boundary tetrahedron and is located on the same dual link li.
+
+i each of which belongs to the neighboring 4-simplexes separated
+
+before getting into the details we briey gure out how 15-j symbols appear
+
+after the du integration. as we have shown in fig.3, there are ve boundary tetra-
+
+hedra in a 4-simplex. each tetrahedron has four triangles and thus there are four
+
+thin lines carrying d-functions associated to a du integration. since each du inte-
+
+gration for the product of four d-functions reproduces four 3-j symbols, we obtain
+
+twenty 3-j symbols for each 4-simplex. then the ten out of the twenty 3-j sym-
+
+bols lead to a 15-j symbols and the rest of the ten 3-j symbols together with those
+
+from the neighbouring 4-simplex reproduce a trivial factor 2j + 1 attached to each
+
+tetrahedron.
+
+we now explicitly show how the 15-j symbols appear after the du integration.
+
+17
+
+as a concrete example we focus on the du1du 
+1 integration on the boundary tetrahe-
+dron bcde of the 4-simplex abcde. there appear eight d-functions in du1du 
+1
+integration,
+
+ibcde = x{ki}z du1du 
+
+1 dj1
+
+m
+
+1k1(u 
+
+1 )dj1
+
+k1m1(u1)dj2
+
+m2k2(u 
+
+1 )dj2
+
+k2m
+2
+
+(u 
+1)
+
+dj3
+
+m
+
+3k3
+
+(u 
+
+1 )dj3
+
+k3m3(u1)dj4
+
+m4k4(u 
+
+1 )dj4
+
+(u 
+1)
+
+k4m
+4
+
+we note that the integration of four d-functions leads to the product of four 3-j
+
+symbols[27],
+
+z du
+
+4
+
+yi=1
+
+dji
+
+mini(u) = xj,m,n
+
+(2j + 1)  j1 j2 j
+
+m1 m2 m! ()j+m  j3 j4
+n3 n4 n! .
+n1 n2 n! ()j+n  j3 j4 j
+
+m3 m4 m!
+
+  j1 j2 j
+
+j
+
+(4.9)
+
+(4.10)
+
+using the above formula and the following relation:
+
+we can straightforwardly carry out du1du 
+
+dj
+
+mn(u ) = dj
+
+nm(u) = ()nmdj
+1 integration,
+
+nm(u),
+
+3()k4m4(2l + 1)(2i + 1)
+
+ibcde = xi,l,k,l,i
+
+j4
+
+1()k2m2()k3m
+j2
+
+()k1m
+   j1 j3 l
+   j1 j3 l
+   j2 j4 i
+   j2 j4 i
+2 m
+
+m1 m3 l1 ! ()ll1   l
+k1 k3 l2 ! ()ll2   l j2
+k2 k4 i2 ! ()ii2  i
+4 i1 ! ()ii1   i
+
+l1 m2 m4 !
+l2 k2 k4 !
+i2 k1 k3 !
+j1
+j3
+1 m
+i1 m
+
+m
+
+j4
+
+j3
+
+j1
+
+3 ! .
+
+we can evaluate ki summations by using the following formula:
+
+xm1m2  j1 j2 j
+
+m1 m2 m!  j1 j2 j 
+
+m1 m2 m ! =
+
+1
+
+2j + 1
+
+j j  mm,
+
+(4.11)
+
+and then obtain
+
+ibcde = xl,l,i
+
+(2l + 1)   j1 j3 l
+   j2 j4 l
+
+m1 m3 l1 !   l
+4 i1 !   l
+
+2 m
+
+m
+
+j4
+
+j2
+
+l1 m2 m4 ! ()ll1()j2m2()j4m4
+j1
+1()j3m
+3.
+i1 m
+(4.12)
+
+3 ! ()li1()j1m
+
+j3
+1 m
+
+18
+
+the factor 2l + 1 can be understood to be associated with the tetrahedron bcde.
+
+two 3-j symbols carrying sux mi which is assigned to be related to the center
+
+of 4-simplex abcde, will be used to construct the 15-j symbol associated with
+4-simplex abcde, while the other two 3-j symbols carrying the sux m
+
+i, will
+be used to construct the 15-j symbol associated with the neighboring 4-simplex of
+
+abcde which share the common tetrahedron bcde.
+
+hereafter we introduce a graphical method to explain the manipulation of for-
+
+mulae and the derivation leading to the generalized 15-j symbol. the essence of
+
+this method is to represent the 3-j symbol graphically by trivalent vertex (3-vertex)
+
+with a sign factor. the sign is related to the correspondence between the order-
+
+ing of column in the 3-j symbol and right- or left-handed ordering of the angular
+
+momentum ji on the trivalent graph. we choose to dene the following particular
+
+ordering and the sign factor:
+
+  j1 j2 j3
+m1 m2 m3 ! =
+
+1j  m 1
+
++
+
+=
+
+1j  m 1
+
+-
+
+.
+
+(4.13)
+
+we then dene the reversal of the arrows as
+
+j  m
+2
+
+2
+
+3j  m 3
+
+3j  m 3
+
+j  m
+2
+
+2
+
+1j  m 1
+
++
+
+j  m
+2
+
+2
+
+3j  m 3
+
+= xm
+
+1,m
+
+2,m
+3
+
+gj1
+m1,m
+1
+
+gj2
+m2,m
+2
+
+gj3
+m3,m
+
+3  j1 j2 j3
+2 m
+
+1 m
+
+m
+
+3 ! ,
+
+where gj
+
+m,m = m,m(1)jm is the su(2) invariant metric. the following identity
+
+  j1 j2 j3
+m1 m2 m3 ! = xm
+
+1,m
+
+2,m
+3
+
+gj1
+m1,m
+1
+
+gj2
+m2,m
+2
+
+gj3
+m3,m
+
+3   j1 j2 j3
+3 !
+2 m
+
+1 m
+
+m
+
+can be graphically represented by
+1j  m 1
+
+1j  m 1
+
++
+
+=
+
++
+
+.
+
+j  m
+2
+
+2
+
+3j  m 3
+
+j  m
+2
+
+2
+
+3j  m 3
+
+in this way the direction of the arrow is related to the consistent choice of su(2)
+
+invariant metric. for example we can connect two 3-j symbols by a metric
+
+xm,m,m
+
+3,m
+4
+
+  j1 j2 j
+m1 m2 m! gj
+
+m,mgj3
+
+m3,m
+3
+
+gj4
+m4,m
+
+4   j j3 j4
+3 m
+
+m m
+
+4 ! ,
+
+19
+
+which is graphically represented by
+
+1j  m 1
+
+xm
+
+j  m
+2
+
+2
+
+j  m4
+
+4
+
+1j  m 1
+
+j  m4
+
+4
+
+j  m
+
+j  m
+
++
+
++
+
+=
+
++
+
+j
+
++
+
+.
+
+3j  m 3
+
+j  m
+2
+
+2
+
+3j  m 3
+
+in general any 3nj-symbols (n = 2, 3, 4, 5, ..) can be graphically represented by
+
+the closed trivalent graph. for example 6-j symbol can be decomposed into four 3-j
+
+symbols by the formula
+
+( j1 j2 j3
+j4 j5 j6 ) = xall mi
+  j1
+
+(1)pi(jimi)  j1
+m1 m5 m6 !  j4 j2
+
+m1 m2 m3 !
+m4 m2 m6 !  j4
+
+j2
+
+j3
+
+j5
+
+j6
+
+j6
+
+j5 j3
+
+m4 m5 m3 ! ,
+
+where the factor (1)pi(jimi) can be understood as a sign factor coming from the
+
+invariant metric. the graphical presentation of the above 6-j symbol can be given
+
++
+
+j 5
+
+1j
+
+3j
+
++
+
+j 6
+
+2j 
+
+j 4
+
++
+
+=
+
+-
+
++
+
+1j
+
+j 6
+
+j 5
+
++
+
+2j 
+
++
+
+3j
+
+j 4
+
+-
+
+,
+
+where the rules for the signs on the vertices and the arrows on the lines can be un-
+
+derstood. analogously for more complicated 15-j symbols, we need ten 3-j symbols
+
+and can be represented by closed trivalent graph with ten vertices with sign factors.
+
+using the graphical method, we can represent the formula (4.12) as
+
+ibcde = xl
+
+j  m
+1
+
+1
+
+j  m4
+
+4
+
+j  m
+1
+1
+
+(2l + 1)
+
+l
+
++
+
++
+
+l
+
++
+
++
+
+j  m3
+
+3
+
+j  m
+2
+
+2
+
+j  m
+3
+3
+
+j  m
+4
+4
+
+j  m
+2
+2
+
+.
+
+(4.14)
+
+in accordance with (4.12) the factor (2l + 1) and the summation of the magni-
+
+tude of the angular momentum l are explicitly written while the summation of the
+
+third component l1, i1 are not written explicitly and should be understood in the
+
+graphical representation of the internal line. it should, however, be noted that the
+
+above presentation is not the unique expression. there are three other equivalent
+
+20
+
+expressions;
+
+ibcde = xl
+
+(2l + 1)
+
+(2l + 1)
+
+= xl
+
+j  m
+1
+
+1
+
+j  m3
+
+3
+
+j  m
+1
+
+1
+
+j  m3
+
+3
+
+l
+
+l
+
+-
+
++
+
++
+
+-
+
+(2l + 1)
+
+= xl
+
+j  m
+1
+
+1
+
+j  m3
+
+3
+
+l
+
+-
+
+-
+
+j  m4
+
+4
+
+j  m
+1
+1
+
+j  m
+2
+
+2
+
+j  m
+3
+3
+
+j  m4
+
+4
+
+j  m
+1
+1
+
+j  m
+2
+
+2
+
+j  m
+3
+3
+
+j  m4
+
+4
+
+j  m
+1
+1
+
+j  m
+2
+
+2
+
+j  m
+3
+3
+
+l
+
+l
+
+-
+
++
+
++
+
+-
+
+l
+
+-
+
+-
+
+j  m
+4
+4
+
+j  m
+2
+2
+
+j  m
+4
+4
+
+j  m
+2
+2
+
+j  m
+4
+4
+
+.
+
+j  m
+2
+2
+
+(4.15)
+
+it is important to recognize that the corresponding sign factors are the same in
+
+each pair of the four internal line diagrams. in the above particular example we
+have chosen the dual link integration du1du 
+1 via the boundary tetrahedron bcde
+and obtained the integrated result ibcde. we need to carry out four other dual
+link integrations; du2du 
+
+5 to perform the full dual link
+integration of the 4-simplex abcde. they can be carried out in the same way as
+du1du 
+
+4 and du5du 
+
+2, du3du 
+
+3, du4du 
+
+1 integration.
+
+using the formulation explained in the above, we can evaluate the dui integration
+
+graphically,
+
+z
+
+5
+
+yi=1
+
+duidu 
+i
+
+bcde
+
+u1
+
+u1
+
+abde
+
+u5
+
+u5
+
+4u
+
+u4
+
+abcd
+
+(4.16)
+
+abce
+
+u2
+
+u3
+
+acde
+
+u2
+
+u3
+
+21
+
+abde
+
+=
+
+5
+
+yi=1xji
+
+(2ji + 1)
+
+bcde
+
+abcd
+
+, (4.17)
+
+abce
+
+acde
+
+where j1 = jbcde, j2 = jabce, j3 = jacde, j4 = jabcd and j5 = jabde. here
+duidu 
+
+i integration graphically represented by (4.14) has cut down the thin lines
+and newly generated a connected line representing the boundary tetrahedron. the
+
+closed trivalent graph with ten vertices in the center can be rewritten in topologically
+
+equivalent ways,
+
+abde
+
+bcde
+
+abcd
+
+abce
+
+bcd
+
+abd
+
+acde
+
+ade
+
+abd
+
+bcd
+
+ade
+
+bde
+
+abde
+
+abcd
+
+acd
+
+bde
+
+abde
+
+abcd
+
+acd
+
+=
+
+abe
+
+bcde
+
+acde
+
+=
+
+abc
+
+abce
+
+abe
+
+abce
+
+bce
+
+ace
+
+bce
+
+ace
+
+cde
+
+cde
+
+bcde
+
+acde
+
+.
+
+(4.18)
+
+abc
+
+the topological equivalence of the 1st and 2nd graphs are obvious while the 2nd
+
+graph equals to the 3rd graph by the following formula:
+
+xm3   j1 j2 j3
+
+m1 m2 m3 !  j3
+
+j4
+
+m3 m4 m5 ! ()p5
+
+j5
+
+i=3(jimi)
+
+22
+
+= xm3   j1
+
+m1 m2 m3 !  j3 j4 j5
+
+m3 m4 m5 ! ()p3
+
+j2
+
+j3
+
+i=1(jimi),
+
+(4.19)
+
+which can be graphically represented by
+
+j  m1
+
+1
+
+j  m2
+
+2
+
+j  m5
+5
+
+j  m1
+
+1
+
+j3
+
++
+
++
+
+=
+
++
+
+j3
+
+j  m4
+4
+
+j  m2
+
+2
+
+j  m5
+5
+
++
+
+.
+
+j  m4
+4
+
+the decuplet graph (4.18) is the denition of our generalized 15-j symbol. there
+
+are ten peripheral lines and ve internal lines. the internal lines correspond to the
+
+tetrahedra which originally come from the one of the internal lines of the corre-
+
+sponding graph in (4.14). the peripheral lines correspond to the common triangle
+
+between the neighboring tetrahedra of internal lines. for example the peripheral line
+
+bde is connected with two internal lines abde and bcde and thus corresponds
+
+to the common boundary of the two tetrahedra.
+
+we can now obtain the full expression of our partition function in terms of
+
+generalized 15-j symbols after we carry out db integration for all the triangles and
+
+dui integration for all the dual links whose dual are the boundary tetrahedra of each
+
+4-simplex,
+
+zlbf = x{ji} ytriangle
+
+(2j + 1) ytetrahedron
+
+(2j + 1) y4-simplex{15-j},
+
+(4.20)
+
+where we have written the 15-j symbol symbolically. the factor (2j +1) attached to
+
+a triangle is originated from the same factor as in (4.7) appeared after db integration
+
+on a triangle. the second factor (2j + 1) attached to a tetrahedron is originated
+
+from the same factor as in the graph (4.17) appeared after du integration for each
+
+tetrahedron (dual to dual link). here we have not yet given the explicit form of the
+
+generalized 15-j symbol with the following reasons. as we have already pointed out
+
+in the graphical representation (4.14) and (4.15), there are sign ambiguity for the
+
+3-j representation in the du integration, which is reected to the denition of our
+
+generalized 15-j symbol. in the next section we determine this sign ambiguity by
+
+imposing the topological invariance on the partition function zlbf expressed by the
+
+15-j symbols in (4.20). the topological invariance of the partition function on the
+
+4-dimensional simplicial manifold can be assured if the partition function is pachner
+
+move invariant, which we will explain in the next section.
+
+23
+
+we conclude this section with a few comments. in the ooguris symbolic presen-
+
+tation of the partition function there appear 6-j symbols in addition to 15-j symbols
+
+while we dont have this 6-j symbols in the partition function. our denition of the
+
+generalized 15-j symbol is almost the same as that of crane-yetter[16] except for
+
+the denition of sign factors.
+
+5 pachner move invariance of the partition func-
+
+tion
+
+in 3-dimensional lattice gravity formulations, it was shown that the lattice chern-
+
+simons gravity leads to the ponzano-regge model constructed from 6-j symbol[12]
+
+which has close correspondence with 3-simplex, tetrahedron. the crucial point of
+
+the ponzano-regge model is that the particular product of 6-j symbols of the model
+
+is alexander move (2-3 move and 1-4 move or equivalently 3-dimensional pachner
+
+move) invariant[9][10][11]. since the ponzano-regge model is independent how the
+
+3-dimensional simplicial manifold is divided by the moves and thus the model is
+
+topological. then in the 3-dimensional case the continuum limit can be trivially
+
+taken and therefore the lattice chern-simons gravity action leads to the continuum
+
+iso(3) chern-simons gravity action.
+
+in 4 dimensions it is expected that the story proceeds quite parallel as in the
+
+3-dimensional case. our lattice bf gravity action has led to the partition function
+
+constructed from 15-j symbol which has close correspondence with 4-simplex.
+
+as we have already mentioned that any kinds of 15-j symbols can be represented
+
+by the closed trivalent graph which has ten vertices. dierent types of 15-j symbols
+
+are essentially distinguished by the topology of the graph. for example there are
+
+ve kinds of standard 15-j symbols which can be decomposed into the product of
+
+6-j and 9-j symbols[27]. our generalized 15-j symbol graphically given in (4.18) is
+
+dierent from the standard 15-j symbol and thus we have called the 15-j symbol of
+
+(4.18) as generalized 15-j symbol.
+
+in the graphical representation of the generalized 15-j symbol, we have not yet
+
+specied the sign factors on the trivalent vertices. here in this section we show
+
+that those sign factors are determined by imposing the 4-dimensional pachner move
+
+invariance to the product of the partition function (4.20).
+
+it is the known fact that any 4-dimensional simplicial manifold can be con-
+
+24
+
+structed out of 4-dimensional pachner moves which are composed of n-m moves with
+
+n + m = 6 in 4 dimensions. thus they include 1-5 move, 2-4 move, 3-3 move and the
+
+inverse of the 1-5 and 2-4 moves[28]. there are essentially three independent moves;
+
+1-5 move, 2-4 move and 3-3 move to reproduce an arbitrary shape of 4-dimensional
+
+simplicial manifold. those moves are shown in fig.4. in the 1-5 move the center
+
+b
+
+ a
+ 
+
+f
+
+c
+
+d
+
+(1)
+
+e
+
+a
+
+f
+
+c
+
+f
+
+b
+
+e
+
+a
+
+e
+
+d
+
+(2)
+
+b
+
+c
+
+d
+(3)
+
+(abcde) 
+figure 4: pachner moves in 4 dimensions.
+:
+2-4
+(bcdef )(acdef )(abdef )(abcef )(abcdf ),
+(acdef )(bcdef )  (abdef )(abcef )(abcdf )(abcde) , and (3) 3-3
+move : (bcdef )(acdef )(abdef )  (abcde)(abcef )(abcdf ).
+site f in the gure is the common site of nal ve 4-simplexes. in the 2-4 move the
+
+(1) 1-5 move :
+
+(2)
+
+move
+
+dotted link ab is the common link of the nal four 4-simplexes. for example in 2-4
+
+move, the initial conguration of a 4-dimensional simplicial manifold including two
+
+4-simplexes (acdef ) and (bcdef ) will be changed into another simplicial man-
+
+ifold including four 4-simplexes (abdef ), (abcef ), (abcdf ) and (abcde)
+
+after the 2-4 move of pachner type.
+
+in 3-dimensional case the alexander move invariance of the ponzano-regge
+
+model is shown explicitly by several ways[9][10][11]. since in 4 dimensions the ex-
+
+plicit proof of the pachner move invariance of the partition function of 15-j symbol
+
+type has not yet been given, we explicitly show the invariance here by a graphical
+
+method. there is a proposal of proof of pachner move invariance by crane and
+
+yetter who used the similar quantum 15-j symbol as ours but didnt show explicit
+
+proof[16]. furthermore there is some sign factor dierence from ours in the deni-
+
+tion of 15-j symbol. mathematically there are similar treatments of topologically
+
+invariant quantity in 4 dimensions[17].
+
+in order to show the pachner move invariance of the partition function (4.20)
+
+graphically, we need three crucial formulae. the analytic and the corresponding
+
+graphical expressions of the formulae are given in the following. we may call an
+
+25
+
+expression to be closed if all the third components of the angular momentum are
+
+summed up. then if there are two closed expressions each of which has two 3-j
+
+symbols with the common magnitude of angular momentum, they can be connected
+
+into one closed expression as follows:
+
+xj
+
+(2j + 1) xmim m
+
+j2 j
+
+m1 m2 m !hj1m1j2m2|m|j3m
+m3 m4 m  !hj3m3j4m4|n|j1m
+
+j4 j
+
+3j4m
+
+1j2m
+
+j
+
+4i  j3
+m
+2i  j1
+m
+
+j4
+3 m
+j2
+1 m
+
+4 m !
+2 m  !
+
+j
+
+i=1(jim
+
+i)+(jm )+(jm )
+
+im   j1
+  j3
+()p4
+
+= xmi hj1m1j2m2|m|j3m3j4m4ihj3m3j4m4|n|j1m1j2m2i,
+
+(5.1)
+
+which is graphically given by
+
+(2j + 1)
+
+xj
+
+j1
+
+j2
+
+j3
+
+j4
+
++
+
+-
+
+j
+
+j
+
++
+
+-
+
+j1
+
+j2
+
+j3
+
+j4
+
+=
+
+j1
+
+j2
+
+j3
+
+j4
+
+.
+
+the orthogonality of 3-j symbol with a weight factor is
+
+(2j + 1)  j1 j2 j
+
+m1 m2 m !  j1
+m
+
+j2
+1 m
+
+j
+
+2 m ! ()p3
+
+xj m
+
+i=1(jim
+
+i) = m1m
+
+1
+
+which is graphically given by
+
+(2j + 1)
+
+xj
+
+j  m1
+
+1
+
+j  m2
+
+2
+
+1j  m
+1
+
+ m
+
+1
+
++
+
+j 
+
+-
+
+=
+
+j  m
+2
+2
+
+ m
+
+2
+
+m2m
+
+2
+
+,
+
+(5.2)
+
+ m
+1
+
+.
+
+ m
+2
+
+the orthogonality of 3-j symbol with two angular momentum magnitudes summing
+
+up leads
+
+xj2m
+=   m1m
+
+2j3m
+3
+
+1
+
+(2j2 + 1)(2j3 + 1)  j1 j2 j3
+2 m
+
+m1 m
+
+3 !  j1 j2 j3
+2 m
+
+1 m
+
+m
+
+3 ! ()p3
+
+i=1(jim
+i)
+
+,
+
+(5.3)
+
+where  is the innite constant which needs a regularization and is the same factor
+
+appeared in the ponzano-regge model. here we introduce the following cut-o
+
+26
+
+factor of the angular momentum to regularize the innite constant
+
+() =
+
+1
+
+2j1 + 1
+
+xk2, k3  ,
+
+(2k2 + 1)(2k3 + 1)
+
+|k2  k3|  j1  k2 + k3
+
+
+
+=
+
+(2j + 1)2 
+
+xj=0
+
+43
+3
+
+(  ).
+
+then (5.3) can be graphically given by
+
+j 
+3
+
+j  m1
+
+1
+
++
+
+-
+
+1j  m
+1
+
+=  
+
+ m
+
+1
+
+j 
+2
+
+an example of the combined graphical relation of (5.1), (5.2) and (5.3) is
+
+3
+
+i = xj1j2j3
+
+(2ji + 1) xm1m2n1n3
+yi=1
+m1 n3 m4 !  j1
+n1 n5 m2 !  j1
+
+  j1 j3 j4
+  j1 j5 j2
+
+j2
+
+j5
+
+m1 m5 m2 ! ()pi=1,2,5(jimi)
+n1 n3 n4 ! ()pi=1,3,4
+
+(jini),
+
+j3
+
+j4
+
+(5.4)
+
+1.
+ m
+
+(5.5)
+
+which is graphically given by
+
+j4 m4
+
+j4
+
+n4
+
+3
+
+i = xj1j2j3
+
+(2ji + 1)
+
+yi=1
+
++
+
+j1
+
++
+
+j3
+
+j2
+
+-
+
+j1
+
+-
+
+.
+
+(5.6)
+
+using the relations (5.2) and (5.3), we obtain
+
+j5
+
+m5
+
+j5
+
+n5
+
+i = xj1j3
+
+(2j1 + 1)(2j3 + 1)
+
+ xn1n3  j1 j3 j4
+
+n1 n3 m4 !  j1
+
+n1 n3 n4 ! ()pi=1,3,4(jini)  m5n5
+
+j3
+
+j4
+
+= m4,n4m5n5,
+
+(5.7)
+
+27
+
+which is graphically given by
+
+j4 m4
+
++
+
+i = xj1j3
+
+(2j1 + 1)(2j3 + 1)
+
+m4
+
+m5
+
+=  
+
+j4
+
+j5
+
+m5
+
+n4
+
+.
+
+n5
+
+j3
+
+j1
+
+j5
+
+-
+
+j4 n4
+
+n5
+
+(5.8)
+
+we now explicitly show the invariance of the partition function (4.20) under the
+
+4-2 pachner move graphically by using the above formulae. the 4-2 move is simply
+
+the inverse of 2-4 move and includes all the necessary manipulations. the 5-1 and
+
+3-3 pachner move invariance can be proved in the similar way. we will abbreviate
+
+the summation of j and factors (2j + 1) in the following graphical calculation.
+
+we rst display four decuplet diagrams corresponding to the four 4-simplexes in
+
+particular rule. we rst note that the boundary of the initial four 4-simplexes should
+
+coincide with the boundary of the nal two simplexes with correct orientations. with
+
+the help of homological algebraic notations, we obtain the following relation:
+
+(abcde)  (abcdf )  (abdef ) + (abcef )
+
+= (bcdef )  (acdef )
+= bcde  acde  bdef + adef
+
+bcdf + acdf + bcef  acef,
+
+(5.9)
+
+where the boundary operator  is dened by
+
+(abcde) = bcde  acde + abde  abce + abcd.
+
+(5.10)
+
+in the rst row of the decuplet diagrams in the following rst equation, we have
+
+shown the 4-simplex abcde where the internal lines corresponding to tetrahedra
+
+are arranged in the order starting from bcde and then acde with common
+
+triangle cde and so on as in the order of (5.10). in the second row of the rst
+
+decuplet diagrams, we show the 4-simplex abcdf with the opposite arrows with
+
+respect to the diagram abcde reecting the sign dierence in (5.9). for example
+
+the arrow of bcde for the 4-simplex abcde in (1) is the opposite to the arrow
+
+28
+
+of bcdf for the 4-simplex abcdf in (2), which are located on the same position
+
+of each decouplet. we then display the 4-simplexes abdef and abcef with the
+
+same rule in the rst column of the equations.
+
+29
+
+(1)
+
+bcd
+
+abd
+
+ade
+
+(5)
+
+ade
+
+bde
+
+abde
+
+abcd
+
+acd
+
+bde
+
+abde
+
+abe
+
+bcde
+
+acde
+
+abc
+
+abe
+
+bcde
+
+acde
+
+acd
+
+abd
+
+abce
+
+cde
+
+abd
+
+ace
+
+adf
+
+bce
+
+bcd
+
+(2)
+
+abce
+
+cde
+
+bce
+
+bcd
+
+ace
+
+adf
+
+bdf
+
+abdf
+
+abcd
+
+acd
+
+bdf
+
+abdf
+
+abc
+
+bcdf
+
+acdf
+
+bcdf
+
+acdf
+
+abf
+
+(3)
+
+bcf
+
+bde
+
+abcf
+
+cdf
+
+abe
+
+acf
+
+aef
+
+abc
+
+abf
+
+bcf
+
+bde
+
+=
+
+(6)
+
+abe
+
+abcf
+
+cdf
+
+acf
+
+bef
+
+abef
+
+abde
+
+ade
+
+abde
+
+ade
+
+bdef
+
+adef
+
+abd
+
+abdf
+
+def
+
+adf
+
+aef
+
+bef
+
+bdf
+
+bce
+
+abce
+
+ace
+
+abf
+
+bcef
+
+acef
+
+abc
+
+abcf
+
+cef
+
+acf
+
+abf
+
+bdef
+
+adef
+
+abd
+
+bdf
+
+bce
+
+(4)
+
+abdf
+
+def
+
+abe
+
+adf
+
+aef
+
+bef
+
+abf
+
+abef
+
+abce
+
+bcef
+
+acef
+
+ace
+
+abc
+
+bcf
+
+abcf
+
+cef
+
+acf
+
+bcf
+
+30
+
+(7)
+
+bcd
+
+bde
+
+abe
+
+ade
+
+abde
+
+(8)
+
+bcd
+
+bcde
+
+acde
+
+abd
+
+bcde
+
+acde
+
+acd
+
+bde
+
+acd
+
+ade
+
+cde
+
+bce
+
+adf
+
+cde
+
+bce
+
+ace
+
+adf
+
+bdf
+
+abdf
+
+bdf
+
+abdf
+
+bcdf
+
+acdf
+
+ace
+
+abf
+
+=
+
+abcf
+
+cdf
+
+bcf
+
+abe
+
+bde
+
+acf
+
+abc
+
+=
+
+abf
+
+bcf
+
+bcdf
+
+acdf
+
+abcf
+
+cdf
+
+acf
+
+abc
+
+abde
+
+ade
+
+bdef
+
+adef
+
+abd
+
+abdf
+
+def
+
+bef
+
+bdf
+
+bce
+
+adf
+
+aef
+
+bdef
+
+adef
+
+abd
+
+abdf
+
+def
+
+adf
+
+aef
+
+bef
+
+bdf
+
+bce
+
+abf
+
+bcf
+
+bcef
+
+acef
+
+abf
+
+abc
+
+bcef
+
+acef
+
+abc
+
+abcf
+
+cef
+
+acf
+
+bcf
+
+abcf
+
+cef
+
+acf
+
+31
+
+(9)
+
+bcd
+
+(10)
+
+bcd
+
+bcde
+
+acde
+
+bde
+
+acd
+
+ade
+
+cde
+
+bce
+
+ace
+
+adf
+
+bdf
+
+abdf
+
+bcde
+
+acde
+
+bde
+
+acd
+
+ade
+
+cde
+
+bce
+
+bcdf
+
+acdf
+
+bcdf
+
+acdf
+
+abf
+
+cdf
+
+=
+
+bdf
+
+cdf
+
+adf
+
+=  
+
+ace
+
+aef
+
+acf
+
+bdef
+
+adef
+
+bef
+
+def
+
+bce
+
+bcf
+
+bcef
+
+acef
+
+acf
+
+cef
+
+bdef
+
+adef
+
+abd
+
+abdf
+
+def
+
+bdf
+
+bce
+
+adf
+
+aef
+
+bef
+
+bcf
+
+acf
+
+bcef
+
+acef
+
+acf
+
+cef
+
+32
+
+(11)
+
+cde
+
+ace
+
+aef
+
+ace
+
+cde
+
+aef
+
+acef
+
+acde
+
+acf
+
+adef
+
+acdf
+
+ade
+
+acd
+
+=  
+
+bce
+
+adf
+
+bef
+
+def
+
+=  
+
+cef
+
+acef
+
+acde
+
+cdef
+
+adef
+
+acf
+
+acdf
+
+def
+
+bce
+
+cdf
+
+cde
+
+cef
+
+bcf
+
+cdf
+
+bcef
+
+bcde
+
+bde
+
+cef
+
+bdef
+
+bcdf
+
+bcd
+
+bcf
+
+bdf
+
+cdf
+
+bcef
+
+bcde
+
+cdef
+
+bdef
+
+bcdf
+
+def
+
+ade
+
+acd
+
+bde
+
+bcd
+
+adf
+
+bef
+
+bdf
+
+in the rst equality we have used the formula (5.1) for the internal lines of
+
+tetrahedra abcd and abef to combine two diagrams (1) and (2) into (5) and
+
+(3) and (4) into (6), respectively.
+
+in the second equality we have again used the
+
+formula (5.1) for the common internal lines abce to combine the diagrams (5)
+
+and (6) into (7). in the third equality, we have used the formula (5.2) to get rid of
+
+abe and then abde successively in (7) and reached the diagram (8). similarly
+
+in the forth equality abc and abcf are removed from (8) into (9). in the fth
+
+equality we have used the relations (5.6) and (5.8) since there is a closed loop with
+two internal tetrahedra; abdf  abd  abdf  abf  abdf in the
+diagram (9). in the sixth equality we rearranged the diagram (10) in the form of
+
+diagram (11). in the last equality we have used again the formula (5.1) in the inverse
+
+order to reproduce the internal line of tetrahedron cdef .
+
+we have thus shown that the product of initial four decuplet diagrams is equiva-
+
+lent to the product of the nal two decuplet diagrams multiplied by the regularized
+
+constant . thus the product of the 15-j symbols of the partition function (4.20)
+
+can be decomposed into another product by the 4-2 move. the proof of 5-1 and 3-3
+
+move invariance of the partition function proceeds quite parallel to the proof of 4-2
+
+33
+
+move. in the treatment of 5-1 move, we actually obtain the regularization factor 4,
+
+while 3-3 move does not reproduce any regularization factor.
+
+we rst note that in 4-2 move there is a common link for the initial four 4-
+
+simplexes while there is a common site for the initial ve 4-simplexes in 5-1 move.
+
+we then ask how many powers of  we need to be compatible with the pachner
+
+moves. we rst count the change of the number of i-simplexes ni before and after
+
+the pachner moves. we list the result in table 1.
+
+n0 n1 n2 n3 n4
+
+5-1 move
+
+4-2 move
+
+3-3 move
+
+1
+
+0
+
+0
+
+5
+
+1
+
+0
+
+10
+
+10
+
+4
+
+0
+
+5
+
+0
+
+4
+
+2
+
+0
+
+table 1: the dierence of the number of simplexes before and after the pachner
+moves.
+
+since we have obtained 4 in 5-1 move and  in 4-2 move, we need to obtain
+
+the following ai satisfying:
+
+a0 + 5a1 + 10a2 + 10a3 + 4a4 = 4,
+
+a1 + 4a2 + 5a3 + 2a4 = 1.
+
+(5.11)
+
+then the total power of  of the 4-dimensional simplicial manifold in consideration
+
+will be given by
+
+i=0
+
+aini.
+
+(5.12)
+
+p4
+
+there are the following well known relations among the total number of i-simplex
+
+ni in 4-dimensional simplicial manifold[29]:
+
+n0  n1 + n2  n3 + n4 = ,
+2n1  3n2 + 4n3  5n4 = 0,
+
+2n3 = 5n4,
+
+(5.13)
+
+where  is euler number. solving n2, n3 and n4 in terms of n0 and n1 in (5.13),
+
+we obtain the power of  as
+
+4
+
+xi=0
+
+aini = n0(a010a215a36a4)+n1(a1 +4a2 +5a3 +2a4)+(10a2 +15a3 +6a4).
+(5.14)
+
+34
+
+as far as ai satises the relation (5.11), we can arbitrarily take the integer ai. taking
+
+the choice a2 = a3 = a4 = 0, we obtain euler number independent solution of the 
+
+power dependence,
+
+n0+n1.
+
+to summarize we obtain the pachner move invariant partition function,
+
+zlbf = x{ji}ysite
+
+1ylink
+
+ ytriangle
+
+(2j + 1) ytetrahedron
+
+(2j + 1) y4-simplex{15-j}.
+
+(5.15)
+
+(5.16)
+
+finally we give arguments to determine the sign factors of the 15-j symbols. we
+
+rst note that the decuplet graph of our 15-j symbol with any given sign factor
+
+conguration is equal to the one that has reversed all sign factors,
+
+-
+
++
+
++
+
++
+
+-
+
++
+
+-
+
++
+
+-
+
++
+
+= +
+
+-
+
+-
+
+-
+
+-
+
++
+
++
+
+-
+
++
+
+- .
+
+(5.17)
+
+we can thus take the sign factor of one particular vertex + without loss of generality.
+
+we then take the following special choice of one sign factor for the initial four 4-
+
+simplexes of 4-2 move:
+
+abd
+
++
+
+bcd
+
+ade
+
+bde
+
+abe
+
++
+
+aef
+
+bde
+
+abde
+
+abcd
+
+acd
+
+bef
+
+abef
+
+abde
+
+ade
+
+abe
+
+bcde
+
+acde
+
+abce
+
+abc
+
+abf
+
+bdef
+
+adef
+
+abd
+
+abdf
+
+bce
+
+bcd
+
+bcf
+
+bdf
+
+abf
+
+cde
+
+abd
+
++
+
+ace
+
+adf
+
+bdf
+
+bce
+
+def
+
+abe
+
++
+
+adf
+
+aef
+
+abdf
+
+abcd
+
+acd
+
+bef
+
+abef
+
+abce
+
+bcdf
+
+acdf
+
+bcef
+
+acef
+
+abc
+
+abf
+
+abcf
+
+cdf
+
+acf
+
+bcf
+
+abcf
+
+cef
+
+ace
+
+abc
+
+acf
+
+.
+
+35
+
+when we consider an arbitrary 4-dimensional simplicial manifold composed of
+
+4-simplexes, any of two neighboring 4-simplexes have one boundary tetrahedron
+
+in common.
+
+in the corresponding expression of this simplicial manifold by the
+
+generalized 15-j symbols, there are thus always the same pair of internal lines in
+
+the decuplet diagrams. as we have already mentioned in (4.14) and (4.15), the sign
+
+factors of two vertices associated to the same tetrahedron should be the same. using
+
+this fact, we can determine the other sign factors of initial four 4-simplexes of 4-2
+
+move up to the ve unknown sign ambiguities denoted by , , ,  and 
+
+
+
+abd
+
++
+
+ade
+
+
+
+abde
+
+abcd
+
+bcde
+
+acde
+
+abce
+
+bcd
+
+
+
+bde
+
+
+abe
+
+
+bce
+
+
+
+
+cde
+
+abd
+
+
+
++
+
+bcd
+
+
+
+acd
+
+-
+
+abc
+
++
+
+ace
+
+adf
+
+
+
+bdf
+
+
+abf
+
+
+abdf
+
+abcd
+
+acd
+
+-
+
+abc
+
++
+
+acf
+
+bcdf
+
+acdf
+
+abcf
+
+bcf
+
+
+
+cdf
+
+
+
+
+
+abe
+
++
+
+aef
+
+
+
+abef
+
+abde
+
+bdef
+
+adef
+
+abdf
+
+bde
+
+
+
+bef
+
+
+abf
+
+
+bdf
+
+
+
+
+def
+
+abe
+
+
++
+
+bce
+
+
+
+bef
+
+
+
+abf
+
+
+abef
+
+abce
+
+bcef
+
+acef
+
+abcf
+
+bcf
+
+
+
+cef
+
+
+
+ade
+
+-
+
+abd
+
++
+
+adf
+
+aef
+
+
+
+ace
+
+-
+
+abc
+
++
+
+acf
+
+.
+
+the nal possible sign conguration of two 4-simplexes in 4-2 move can be found
+
+by tracing the graphical manipulations and identifying the signs of common vertices,
+
+
+
+ace
+
+
+
+cde
+
+aef
+
+
+
+cde
+
+cef
+
+
+acf
+
+
+cdf
+
+acef
+
+acde
+
+cdef
+
+adef
+
+acdf
+
+
+
+def
+
+ade
+
+
+
+acd
+
+
+
+adf
+
+cef
+
+
+
+bcf
+
+
+cdf
+
+36
+
+
+
+bce
+
+
+
+bcef
+
+bcde
+
+cdef
+
+bdef
+
+bcdf
+
+bef
+
+
+
+bde
+
+
+
+.
+
+bcd
+
+
+
+bdf
+
+
+
+def
+
+(5.18)
+
+the sign conguration of the decuplet graphs before and after the 4-2 move
+
+should coincide since the overall boundary of the nal two 4-simplexes have the
+
+same boundary tetrahedra as that of the initial four 4-simplexes as shown in (5.9).
+
+this requirement leads to the following relations:
+
+ =  = ,
+
+ =  = .
+
+(5.19)
+
+we have thus obtained several constraints from the consistency of 4-2 move.
+
+we can use the similar arguments as 4-2 move for 5-1 and 3-3 moves to get
+
+constraints on the sign ambiguity. it turns out that 4-2 move and 5-1 move eventually
+
+give the same constraint,
+
+
+
+-
+
+
+
+
+
++
+
+
+
+
+
+while 3-3 move give the following constraint:
+
++
+
+
+
+
+
++
+
+-
+
+-
+
++
+
+-
+
+,
+
+
+
+
+.
+
+
+
+(5.20)
+
+(5.21)
+
+there are two consistent solutions satisfying (5.20) and (5.21)
+
++
+
+-
+
+-
+
+-
+
++
+
++
+
++
+
++
+
+-
+
+-
+
++
+
+-
+
+-
+
+,
+
++    
+
+-
+
+-
+
+-
+
++
+
++    
+
+-
+
++
+
+-
+
+,
+
+(5.22)
+
+where the rst solution corresponds to  = + and  =  while the second solution
+is obtained by taking  =  and  = + with totally reversed sign factors. at this
+
+37
+
+stage we point out that our generalized 15-j symbol is dierent in sign factors from
+
+the one given by crane and yetter[16].
+
+we have thus obtained complete expression of the generalized 15-j symbol with
+
+the correct sign factors. then the full analytic expression of the pachner move
+
+invariant partition function is
+
+zlbf = xj ysite
+
+1ylink
+
+ ytriangle
+
+(2j+1) ytetrahedron
+
+(2j+1) y4-simplex
+
+
+
+
+j1 j2 j3 j4 j5
+
+j6 j7 j8 j9 j10
+
+j11 j12 j13 j14 j15
+
+(5.23)
+
+,
+
+
+
+
+where we have used the rst sign convention of (5.22). here the 15-j symbol can be
+
+dened by
+
+j1 j2 j3 j4 j5
+
+j6 j7 j8 j9 j10
+
+j11 j12 j13 j14 j15
+
+
+
+
+
+
+
+()p15
+
+= xall mi
+   j4 j8 j9
+   j4
+   j3 j14 j15
+
+j11
+
+i=1(jimi)  j1 j7 j6
+
+m1 m7 m6 !  j3
+
+j7
+
+j8
+
+m3 m8 m7 !
+m1 m9 m10 !  j2 j11 j10
+m2 m11 m10 !
+m2 m14 m13 !
+
+m5 m13 m14 !  j2
+
+j13
+
+j14
+
+j9
+
+j10
+
+m4 m8 m9 !  j1
+m4 m11 m12 !  j5 j13 j14
+m3 m14 m15 !  j5
+m5 m15 m6 ! ,
+
+j12
+
+j15
+
+j6
+
+(5.24)
+
+which is graphically equivalent to
+
+j6
+
+-
+
++
+
+j9
+
+j7
+
+-
+
+j8
+
+j15
+
++
+
++
+
+j3
+
+j5
+
+j1
+
+j2
+
+j4
+
++
+
+j10
+
+-
+
+j14
+
+-
+
++
+
+j11
+
+j13
+
+.
+
+-
+
+j12
+
+another sign convention in (5.22) can be equally used to express the generalized
+
+15-j symbol.
+
+38
+
+6 conclusion and discussions
+
+we have shown that the partition function of the lattice version of bf action with
+
+vanishing holonomy constraint leads to the product of 15-j symbols with some par-
+
+ticular combinations of angular momentum factors and regularized constants. we
+
+have then explicitly proved by graphical method that the partition function is pach-
+
+ner move invariant if we take particular choice of sign assignments for the trivalent
+
+vertices of decuplet diagrams corresponding to the 4-simplexes. this means that
+
+the partition function is independent of how the simplicial manifold is divided by
+
+4-simplexes. this is to do with the fact that the partition function of the lattice
+
+version of bf action is dieomorphism invariant or even topological invariant in a
+
+stronger sense. since the partition function is invariant how much nely we divide
+
+the 4-dimensional simplicial manifold in consideration, the continuum limit of the
+
+lattice bf action is expected to approach naively to the continuum bf action. the
+
+vanishing holonomy constraint can be then interpreted as a gauge xing condition
+
+to align the ba eld and the curvature f a.
+
+there are some desirable features in this formulation. firstly we have found the
+
+lattice formulation of 4-dimensional gravity which is rst order formalism and is
+
+thus described by local variable b and spin connection u = ei. this is the rst
+
+4-dimensional example of lattice gravity model which species the location of the
+
+local elds b which could possibly be related to the metric and the lattice spin con-
+
+nection u = ei on the 4-dimensional simplicial manifold. this lattice formulation
+
+is a beautiful unication of the idea of lattice qcd and the formulation of regge
+
+calculus in the sense that the curvature generated by the product of link variables
+
+are concentrated on the simplexes where regge calculus claims as the location of
+
+gravitational curvature. secondly the magnitude of the b eld is naturally dis-
+
+cretized due to the logarithmic form of our lattice bf action. thus the discreteness
+
+of the area of triangles on the original lattice is a natural consequence of the action.
+
+it should be compared with the result of rovelli and smolin who claimed to get the
+
+area operator[26].
+
+discreteness of the area of triangles in the form qj(j + 1) from the analysis of an
+as we have already pointed out that the identication of b = (ee) renders the
+bf action into the palatini type of einstein-hilbert action. on the other hand in
+
+our bf action we have taken the gauge algebra as one of the chiral counter part of
+
+39
+
+so(4) algebra in the decomposition of the euclidean local lorentz group, so(4) 
+su(2)l  su(2)r. there are several possibilities how the chiral decomposition of
+the local lorentz group be related to the realistic einstein-hilbert action[21]. here
+
+a with the
+gauge group as one of the chiral partner su(2)l will be formulated on the original
+
+we simply comment an interesting possibility that the action rm b+
+lattice as in this paper while the action rm b
+
+a f +
+
+a with the other chiral partner
+su(2)r gauge group will be formulated on the dual lattice. this situation can be
+
+a f 
+
+symbolically be written
+
+zlbf [so(4)] = zlbf [su(2)l]  zlbf [su(2)r].
+
+(6.1)
+
+in order that this theory be realistic lattice gravity model, we need some natural
+
+constraint to relate the two chiral bf models. as we have mentioned in the end
+
+of section 3, the vanishing holonomy constraint (2.12) includes 9 relations for the
+
+chiral partner of the so(4) algebra, which is just the necessary irreducible degrees
+
+of freedom for the 1-form gauge parameter. in order to count the number of the
+
+constraint, we have assumed the chiral nature even for the spacetime sux in ad-
+
+dition to the local lorentz gauge sux. in fact there are 9 other constraints in the
+
+vanishing holonomy constraint, which may correspond to the number of constraints
+
+of the spacetime sux of the other chiral partner. it is interesting to note that the
+
+vanishing holonomy constraint (2.12) may include both constraint in one relation,
+
+which might give some clue to nd a realistic lattice gravity model.
+
+our proposed lattice bf action (2.10) can be generalized into arbitrary dimen-
+
+sions. in fact iso(3) chern-simons gravity was formulated by the 3-dimensional
+
+version of lattice bf action. we claim that d-dimensional lattice bf action has
+
+the universal structure
+
+slbf = xx
+
+tr
+x(x)hln yl p
+
+(cid:13) u(l)i
+ ,
+
+(6.2)
+
+where x(x) is (d  2)-form located on the center of (d  2)-simplex, x, in the
+d-dimensional simplicial manifold. the lattice curvature term is dened in the
+
+similar way as the 3- and 4-dimensional cases. it should be noted that the center
+of the dual plaquette p coincides with the center of the simplex x. the vanishing
+
+holonomy constraint may have the form either the type of (2.11) or the type (2.12)
+
+depending on the sux structure of gauge group for x. it is worth to recognize at
+
+40
+
+this stage that this lattice bf action is the lattice version of the leading term in
+
+the generalized chern-simons action in d dimensions.
+
+in our lattice gravity formulation in 3 and 4 dimensions, 1- and 2-form elds
+
+are, respectively, introduced on 1- and 2-simplexes in the simplicial manifold: ea
+
+and ba are located on the link (1-simplex) and the triangle (2-simplex) of original
+
+lattice, respectively, while u = ei is located on the dual link (1-simplex). there
+
+is thus natural correspondence between the form degrees and the simplex numbers.
+
+the generalized gauge theory which is formulated to include all form degrees may
+
+thus very naturally be tting to the formulation of gauge theory on the simplicial
+
+manifold.
+
+we know that there is no dynamical graviton in the topological model while we
+
+need the graviton as a dynamical eld in the realistic 4-dimensional einstein gravity.
+
+we believe that matter elds should be introduced to accommodate the dynamical
+
+degrees of freedom and thus would change the topological nature of the model. we
+
+know by now that the ghosts introduced by the quantization will be changed into
+
+fermionic matter elds via twisting mechanism[30]. in fact we found a mechanism
+
+that r symmetry of n = 2 supersymmetry in the twist is essentially related to
+
+the dirac-kahler fermion formulation[31]. the dirac-kahler fermion needs all form
+
+degrees of freedom and can naturally be put on the simplicial manifold.
+
+it will be thus interesting to investigate lattice gravity formulation with matter
+
+elds on the simplicial manifold. we know that weak boson gauge eld and higgs
+
+eld can be very naturally accommodated into the generalized gauge theory formu-
+
+lation and thus this kind of formulation possibly leads to the unied model on the
+
+simplicial manifold[24].
+
+in our formulation we have introduced cut o dependent regularized constant. it
+
+is well known by the work of turaev and viro that the regularization of the ponzano-
+
+regge model can be naturally accommodated if we introduce the q-deformed for-
+
+mulation of 3-j symbol[9]. we didnt mention the q-deformed version of the present
+
+formulation in this paper although it is the main subject among mathematicians to
+
+obtain the 4-dimensional topological invariant by the q-deformed formulation[17].
+
+since our 15-j symbol is explicitly related to the 3-j symbol which has the q-
+
+deformed counterpart, it will be straightforward to generalize our formulation into
+
+q-deformed version, which is expected to correspond with bf gravity with cosmo-
+
+41
+
+logical term[10][15].
+
+acknowledgements
+we thank l. crane and h.b. nielsen for useful discussions. this work is supported
+
+in part by japanese ministry of education, science, sports and culture under the
+
+grant number 09640330.
+
+references
+
+[1] f. david, nucl. phys. b257 (1985) 45; nucl. phys. b257 (1985) 543; v.a.
+
+kazakov, i.k. kostov and a.a. migdal, phys. lett. 157b (1985) 295; d.v.
+
+boulatov, v.a. kazakov, i.k. kostov and a.a. migdal, nucl. phys. b275
+
+(1986) 641; j. ambjrn, b. durhuus and j. frohlich, nucl. phys. b257 (1985)
+
+433.
+
+[2] v.g. knizhnik, a.m. polyakov and a.a. zamolodchickov, mod. phys. lett. a3
+
+(1988) 819; j. distler and h. kawai, nucl. phys. b321 (1989) 509; f. david,
+
+mod. phys. lett. a3 (1988) 651.
+
+[3] n. kawamoto, v.a. kazakov, y. saeki and y. watabiki, phys. rev. lett. 68
+
+(1992) 2113; nucl. phys. b26 (proc. suppl.) (1992) 584.
+
+[4] j. ambjrn, k.n. anagnostopoulos, t. ichihara, l. jensen, n. kawamoto, y.
+
+watabiki and k. yotsuji, phys. lett. b397 (1997) 177; nucl. phys. b511
+
+(1998) 673.
+
+[5] h. kawai, n. kawamoto, t. mogami and y. watabiki, phys. lett. b306 (1993)
+
+19.
+
+[6] m.e. agishtein and a.a. migdal, int. j. mod. phys. c1 (1990) 165; nucl. phys.
+
+b350 (1991) 690.
+
+[7] e. witten, nucl. phys. b311 (1988/89) 46.
+
+[8] g. ponzano and t. regge, in spectroscopic and group theoretical methods in
+
+physics, ed. f.block (north-holland, amesterdam, 1968).
+
+42
+
+[9] v.g. turaev and o.y. viro, topology 31 (1992) 865;
+
+v.g. turaev, c. r. acad. sci. paris 313 (1991) 395; j. di. geom. 36 (1992)
+
+35.
+
+[10] h. ooguri and n. sasakura, mod. phys. lett. a6 (1991) 3591;
+
+h. ooguri, nucl. phys. b382 (1992) 276;
+
+n. sasakura, prog. theor. phys. suppl. 110 (1992) 191.
+
+[11] d. boulatov, mod. phys. lett. a7 (1992) 1629; r. anishetty, s. cheluvaraja,
+
+h.s. sharatchandra and m. mathur, phys. lett. b314 (1993) 387; s. chung,
+
+m. fukuma and a. shapere, int. jour. mod. phys. a9 (1994) 1305; f. archer
+
+and r.m. williams, phys. lett. b273 (1991) 438; s. mizoguchi and t. tada,
+
+phys. rev. lett. 68 (1992) 1795; b. durhuus, h.p. jakobsen and r. nest,
+
+nucl. phys. b25 a (proc. suppl.) (1992) 109; f.j. archer, phys. lett. b295
+
+(1992) 199; j. iwasaki, jour. math. phys. 36 (1995) 6288; l. freidel and k.
+
+krasnov, class. quant. grav. 16 (1999) 351; a. cattaneo, p. cotta-ramusino,
+
+j. frohlich and m. martellini, jour. math phys. 36 (1995) 6137.
+
+[12] n. kawamoto, h.b. nielsen and n. sato, nucl. phys. b555 (1999) 629.
+
+[13] a.s. schwarz, lett. math. phys. 2 (1978) 247; g. horowitz, comm. math. phys.
+
+125 (1989) 417; d. birmingham, m. blau, m. rakowski and g. thompson,
+
+phys. rep. 209 (1991) 129; m. blau and g. thompson, ann. phys. 205 (1991)
+
+130.
+
+[14] h. ooguri, mod. phys. lett. a7 (1992) 2799.
+
+[15] j.c. baez, strings, loops, knots and gauge elds, in knots and quantum grav-
+
+ity, ed. j. baez (oxford u.press, 1994); lett. math. phys. 38 (1996) 129; class.
+
+quant. grav. 15 (1998) 1827; gr-qc/990587;
+
+m. reisenberger and c. rovelli, phys. rev. d56 (1997) 3490;
+
+l. freidel and k. krasnov, adv. theor. phys. 2 (1998) 1221.
+
+[16] l. crane and d. yetter, a categorical construction of 4d tqfts, in quantum
+
+topology, eds. l. kauman and r. baadhio (world scientic, singapore, 1993)
+
+pp.120.
+
+43
+
+[17] l. crane, l. kauman and d. yetter, j. knot theory & ramiations 6 (1997)
+
+177;
+
+j. roberts, topology 34 (1995) 771.
+
+[18] t. regge, nuovo cimento 19 (1961) 558.
+
+[19] n. kawamoto and h.b. nielsen, phys. rev. d43 (1991) 1150.
+
+[20] m. caselle, a. dadda, and l. magnea, phys. lett. b232 (1989) 457.
+
+[21] j.f. plebanski, j. math. phys. 18 (1977) 2511; a. ashtekar, phys. rev. lett.
+
+57 (1986) 2244; phys. rev. d36 (1987) 1587; r. capovilla, j. dell, t. jacobson
+
+and l. mason, phys. rev. lett. 63 (1989) 2325; class. quantum grav.8 (1991)
+
+41.
+
+[22] n. kawamoto and y. watabiki, commun. math. phys. 144 (1992) 641; mod.
+
+phys. lett. a7 (1992) 1137; commun. math. phys. 148 (1992) 169.
+
+[23] n. kawamoto and y. watabiki, phys. rev. d45 (1992) 605; nucl. phys. b396
+
+(1993) 326.
+
+[24] n. kawamoto, prog. theor. phys. suppl. no. 134 (1999) 84.
+
+[25] m. kalb and p. ramond, phys. rev. d9 (1974) 2273;
+
+y. nambu, phys. rep. 23c (1976) 250.
+
+[26] c. rovelli and l. smolin, nucl. phys. b442 (1995) 593; erratum, ibid. b456
+
+(1995) 753.
+
+[27] d.a. varshalovich, a.n. moskalev, and v.k. khersonskii, quantum theory of
+
+angular momentum (world scientic, 1988).
+
+[28] j. ambjrn, m. carfora, a. marzuoli, the geometry of dynamical triangula-
+
+tions (springer-verlag, 1997).
+
+[29] n.h. christ, r. friedberg, t.d. lee, nucl. phys. b202 (1982) 89.
+
+[30] e. witten, commun. math. phys. 117 (1988) 353; int. j. mod. phys. a6 (1991)
+
+2775; nucl. phys. b340 (1990) 281; j.math.phys. 35 (1994) 5101.
+
+[31] n. kawamoto and t. tsukioka, hep-th/9905222.
+
+44
+
+

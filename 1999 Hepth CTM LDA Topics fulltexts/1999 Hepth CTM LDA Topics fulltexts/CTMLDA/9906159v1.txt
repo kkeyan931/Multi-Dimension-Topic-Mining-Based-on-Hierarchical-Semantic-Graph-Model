@@ -1,0 +1,3005 @@
+integrable models and the toda lattice hierarchy
+
+bani mitra sodermark 
+
+dept of engineering sciences, physics and mathematics,
+karlstad university, 65188 karlstad, sweden
+
+20 april 1999
+
+abstract
+
+a pedagogical presentation of integrable models with special reference to the
+toda lattice hierarchy has been attempted. the example of the k dv equation has
+been studied in detail, beginning with the innite conserved quantities and going on
+to the lax formalism for the same. we then go on to symplectic manifolds for which
+we construct the lax operator. this formalism is applied to toda lattice systems.
+the zakharov shabat formalism aimed at encompassing all integrable models is
+also covered after which the zero curvature condition and its fallout are discussed.
+we then take up toda field theories and their connection to w algebras via the
+hamiltonian reduction of the wznw model. finally, we dwell on the connection
+between four dimensional yang mills theories and the k dv equation along with a
+generalization to supersymmetry.
+
+9
+9
+9
+1
+
+ 
+
+n
+u
+j
+ 
+
+1
+2
+
+ 
+ 
+
+1
+v
+9
+5
+1
+6
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+e.mail: bani.sodermark@kau.se
+
+1
+
+1 introduction: non-linear equations
+
+linear partial dierential equations, in particular the schroedinger, klein-gordon and
+dirac equations, have been known in eld theory over a long time, and have been used in
+many dierent problems with great success. non-linear equations, i.e., equations where
+the potential term is non-linear in the eld (s), have been known for some time as well.
+these equations and their solutions are the topic of the present article.
+
+the earliest non-linear wave equations known in physics were the liouville and sine-
+gordon equations. the liouville equation arose in the context of a search for a manifold
+with constant curvature. pictorially, such parametrizations may be likened to covering a
+surface with a shing net. since the knots on the shing net do not move, the arc length is
+constant. the threads in the net correspond to a local coordinate system on the surface.
+the liouville manifolds may be reparametrized locally so as to have a metric of the
+
+form:
+
+a = (cid:18) exp 
+
+0
+
+0
+
+exp (cid:19)
+
+(1.1)
+
+so as to be conformally equivalent to a at space metric. the study of such manifolds
+with constant curvature led j.liouville [1] to the equation known by his name:
+
+2
+xy
+
+= exp 
+
+(1.2)
+
+x and y being local orthogonal coordinates. interest in this equation was renewed in the
+70s and 80s due to its appearance in string theories [2,3,4].
+
+the sine-gordon equation, named after a pun on the klein-gordon equation, is an
+equation for the angle  between two coordinate lines when the total curvature is constant
+and negative. this equation rst appeared in the work of enneper in 1870, and has the
+form:
+
+2
+xy
+
+= sin()
+
+(1.3)
+
+where x and y are coordinates in a system with constant arc length.
+
+the sine-gordon equation has some interesting solutions known as solitons and
+breathers. a soliton satises three conditions. first, a single soliton must have con-
+stant shape and velocity. secondly, it must be localized, and its derivative must vanish
+at innity. thirdly, if two solutions collide, they should survive the collision with their
+shapes unchanged.
+
+principally, there are two types of solitons, one which increases by a xed amount
+(say 2), and is called a kink; the other which decreases by the same amount, and is
+called an anti-kink.
+
+a breather is a localized solution that varies periodically, and could be considered as
+
+a permanently bound system of a kink and anti-kink.
+
+an interesting property of the sine-gordon equation is that its solutions can be
+mapped into others through the baecklund transformation [5], and can thus be used
+to create new solutions from known solutions.
+it is however impossible to generate a
+complete set of solutions from one original solution, via the baecklund transformation [5].
+a third non-linear equation which we shall study in some detail, was discovered in
+1895 by d.j.korteweg and g. de vries [6], while trying to describe the motion of water-
+
+2
+
+waves in a canal. it has the form:
+
+ut  6uux + uxxx = 0
+
+(1.4)
+
+and is also known as the kdv equation. it has been extensively studied, and many of
+the properties of non-linear wave equations that are known today, were discovered in
+connection with its solution. this equation was solved by gardner, greene, kruskal, and
+miura in 1967 [7-13]. along with n.j. zabusky and c. h. su, they also found many
+interesting properties of the same. one of these is that the kdv equation has an innite
+number of conservation laws, and that the conserved quantities of each of these laws can
+be used as a hamiltonian for an integrable system. this collection of hamiltonians is
+called the kdv hierarchy.
+
+there exists a theorem of classical mechanics, which states that if a hamiltonian
+system with 2n degrees of freedom has n functionally independent conserved quantities
+such that the poisson bracket of any two of them vanishes, i.e.,the integrals of motion are
+in involution, the system is completely integrable. it is clear that solutions of systems
+with an innite number of conserved quantities must be innitely restricted. a soliton
+is precisely such a solution:
+it is a localized wave which retains its shape even after
+collisions. intuitively, it is clear that for this to happen,there must be an innite number
+of conservation laws, and therefore an innite number of conserved quantities. the terms
+integrable models and solitons are often used synonymously.
+
+a system of coupled equations of motion describing a 1-dimensional crystal with non-
+linear coupling between nearest neighbour atoms, was introduced by m.toda [14] in 1967.
+the equations of motion are
+
+m
+
+d2rn
+dt2 = a[2ern  ern1  ern+1]
+
+(1.5)
+
+where rn = un+1  un, and un(t) is the longitudinal displacement of the n-th atom with
+mass m from its equilibrium position, a being a constant. these models admit soliton
+solutions which have been studied experimentally on an electrical network by k. hitota
+and k. suzuki [15]. in the continuunm limit, these equations reduce to the kdv equation
+[5].
+
+we see that models with exponential interactions are a source of non-linear equations,
+the liouville and sine-gordon equations being examples. the liouville equation could
+be generalized to include a mass term:
+
+2
+xy
+
++ m2 = e
+
+(1.6)
+
+while the sine-gordon equation could be generalized to the sinh-gordon equation with
+the replacement   i. thus
+
+2
+xy
+
++ m2 = sinh 
+
+we also have the toda field theory equations
+
+2i
+xy
+
+= ekij j
+
+3
+
+(1.7)
+
+(1.8)
+
+here kij is the cartan matrix for some complex lie algebra. the simplest of these eld
+theories is the ar toda eld theory, and it includes the liouville eld theory for the
+special case r = 1. there exist generalizations of the toda equations called ane toda
+equations, and have an extra term on the rhs, taking the form:
+
+2i
+xy
+
+= ekij j + riek0j
+
+(1.9)
+
+here k is an ane cartan matrix, and ri the right null vector for this matrix when r0
+is normalized to unity.
+
+these models include the sinh-gordon equation as a special case. both the toda
+and ane toda eld theories have an innite number of conserved quantities [16]. they
+admit soliton solutions with an imaginary i [17]. both models have been formally solved
+by leznov and saveliev [18].
+
+the toda eld theories can be obtained from the toda lattice by setting
+
+whence
+
+i = (i  i1)  (i+1  i)
+
+2i
+t2 
+
+2i
+x2 = [2ei  ei1  ei+1]
+
+(1.10)
+
+(1.11)
+
+for su(n + 1), showing that the space-independent solutions of (1.11) satisfy (1.5).
+
+since the toda eld theories are the  = 0 limits of the ane toda eld theories,
+they could be used to classify 2-dimensional models with a second order phase transition,
+with the toda eld theory describing the model at the critical point where it has to be
+conformally invariant [19]. hence the great interest in (ane) toda eld theories. how-
+ever the precise connection is still unclear. central charges and critical exponents have
+been calculated and compared. one hopes that the ane toda eld theories are per-
+turbations that correspond to the physical model away from the critical point. however,
+more explicit connections are yet to be found.
+
+the method originally used for solving non-linear equations, and especially the kdv
+equation, was the inverse scattering method originated by gelfand and levitan [20]. this
+involved looking for a linear equation related to the original non-linear equation, and
+studying the evolution of the latter. in 1968, p.lax provided this method within a solid
+theoretical framework [21]. the lax equation is
+
+where l and m are operators satisfying
+
+lt + [l, m] = 0
+
+and
+
+l = ;
+
+t = m
+
+(1.12)
+
+(1.13)
+
+(1.14)
+
+where  is a scalar, and  a solution of a linear equation which is just the schroedinger
+equation for the kdv case ! the lax equation was generalized to the form of a zero
+curvature condition which facilitates greatly the form of the transition matrix from the
+initial to the nal state.
+
+4
+
+in what follows, we attempt to give a pedagogical presentation of integrable systems
+with special emphasis on the kdv and toda systems. after an introduction to the kdv
+equation and its properties, we show how an innite number of conserved quantities arise
+via the muira [8] transformation, while detailed calculations are referred to ref.[22]. we
+then dwell on solutions of the kdv equation via the inverse scattering method and the
+lax formalism [21], after which we obtain the lax operator for symplectic manifolds,
+using the toda lattice as an example. the group structure of the toda equations for
+su(n) is also studied. the lax transformation was later generalized by zakharov and
+shabat [23] to a rst order formalism which was used by ablowitz, kamp, newell and
+segur (akns) [24], for a unied description of other integrable models. the essential
+features of this approach are also discussed. a fall-out of the above is the zero curvature
+condition that facilitates the transition to the quantum case. however, the treatment we
+follow is strictly classical.
+
+next we take up the toda eld theories, and after reporting briey the connection
+with conformal invariance, dwell on the hamiltonian reduction of the wznw model to
+the toda eld theory, which in eect transforms an ane lie algebra to a w-algebra.
+(most calculational details are skipped, but may be found in the literature [25]). finally
+we refer to the interesting connection between the 4d self-dual yang-mills theory and 2d
+integrable models, and the generalization to supersymmetry.
+
+the material is presented as follows. in sect.2, we introduce the kdv equation and
+in sect.3, solutions of non-linear equations are taken up, in
+its conserved quantities.
+particular the inverse scattering method and the lax formalism. in sect.4, we digress
+to symplectic manifolds and construct conserved quantities for these manifolds. sect.5
+applies the above framework to the toda lattice where the group structure of the toda
+equations is also discussed. in sect.6, we take up the unifying rst order formalism of
+zakharov and shabat [23], continuing in sect.7 to the zero curvature formalism and its
+ramications.
+in sect.8, we take up conformal invariance, and introduce toda field
+theories which are constructed independently of the toda lattice. in sect.9, we carry
+out the hamiltonian reduction of the wznw model to toda field theories. finally
+in sect.10, we take up the connection of toda field theories with self-dual yang-mills
+models. sect.11 contains some concluding remarks.
+
+2 the kdv equation
+
+the kdv equation was formulated to explain the solitary water waves observed by j.scott
+russell in the edinburgh glassgow canal. it is a non-linear equation in one space and
+one time dimension and possesses soliton solutions. of this, however, nothing was known
+at the time of its formation.
+
+the kdv equation after an initial scaling takes the form
+
+u
+t
+
+= u
+
+u
+x
+
++
+
+3u
+x3
+
+(2.1)
+
+this equation is galilean invariant, but not lorentz invariant. it can be derived from
+
+the hamiltonian
+
+h(u) = z +
+
+
+
+[
+
+u3
+6 
+
+1
+2
+
+(
+
+u
+x
+
+)2]dx
+
+(2.2)
+
+5
+
+where the u(x) satisfy the poisson bracket relations
+
+however, the lagrangian from which it can be derived, is non local:
+
+[u(x), u(y)] = x(x  y)
+
+lkdv =
+
+where
+
+1
+
+2 z +
+
+
+
+dxdyu(x)(x  y)
+
+u(y)
+
+t  z dx[
+
+u3
+6 
+
+1
+2
+
+(
+
+u
+x
+
+)2]
+
+(x  y) = (x  y) 
+
+1
+2
+
+,
+
+(2.3)
+
+(2.4)
+
+(2.5)
+
+ being the step function. ergo, one cannot write down a local lagrangian whose euler-
+lagrange equations yield the kdv equation.
+
+solutions of the kdv equation can be shown to be soliton solutions which travel
+without any change of shape. it is the non-linear term which is responsible for the above
+property.
+
+what is most interesting about the kdv equation is that it admits of an innite
+number of conserved quantities as was shown by miura [8]. this procedure is explained
+below.
+
+the kdv equation is related to another equation called the modied kdv (mkdv )
+
+equation, viz.,
+
+v
+t
+
+= v2 v
+x
+
++
+
+3v
+x3
+
+where v is related to u in the kdv equation through the riccati transformation
+
+u = v2 + i6
+
+v
+x
+
+(2.6)
+
+(2.7)
+
+the mkdv equation is however not galiliean invariant. under the transformation
+
+t  t;
+
+x  x +
+
+3t
+22 ;
+
+u  u +
+
+3
+22 ;
+
+v 
+
+v
+6
+
++
+
+6
+2
+
+it reduces to
+
+tv = (
+
+2v2
+
+6
+
++ v)xv + 3
+
+xv = x[
+
+2v3
+18
+
++
+
+v2
+2
+
++ 2
+
+xv]
+
+this yields a solution of the kdv equation through the transformation
+
+u = 2v2/6 + v + ixv
+
+(2.8)
+
+(2.9)
+
+(2.10)
+
+the second form of (2.9) is in the nature of a continuity equation, so that we can identify
+
+as the conserved quantities. v can be inverted in terms of u as
+
+k = z +
+
+
+
+dxv(x(t))
+
+v =
+
+
+
+x0
+
+nvn(u(x, t))
+
+(2.11)
+
+(2.12)
+
+and this yields vn(u(x, t)) as the conserved densities, since each power of  must indepen-
+dently satisfy a continuity equation. that these are also in involution can also be checked,
+being explicitly shown by das [22]. some of the conserved quantities are
+
+v1 = ixu1;
+
+v2 = 
+
+u2
+6  2
+xu;
+
+v3 = ix[
+
+u2
+3
+
++ 2
+
+xu]
+
+(2.13)
+
+6
+
+figure 1:
+
+u(x, 0)
+
+q
+
+
+scattering data
+
+@ 
+
+@ 
+
+u(x, t)
+
+
+q
+
+time evolved scattering data
+
+3 the lax framework
+
+linear hamiltonian systems with xed initial value problems can be solved using the
+laplace or fourier transformations. such methods are inapplicable for the nonlinear
+equations and new methods must be found. gardner, green, krushal and miura [9]
+managed to solve the initial value problem for the kdv equation in a very ingenious way.
+in subsequent years, this method has become the standard method for solving non-linear
+systems and goes by the name of inverse scattering theory [20,21]. this method is outlined
+in fig 1.
+
+the initial value for the partial dierential equation is used as the potential in a 1-
+dimensional scattering problem for a linear equation, e.g. the schroedinger equation. one
+then nds the so called scattering data, i.e. discrete spectrum, normalization constants,
+reection constants (as a function of the wave number) for this scattering problem. using
+the partial dierential equation (pde) evaluated for |x| asymptotically large, (and hence
+the pde becomes a linear equation because the potential is assumed to vanish at spatial
+innity), the values of the scattering data can be found for all later times. finally, the
+scattering data allow one to reconstruct the potential, and hence the solution of the pde
+for any later time.
+
+one would intuitively like a better understanding of the origin and relevance of the
+linear schroedinger equation. one way to see this is through a generalized riccati relation
+of the form:
+
+(3.1)
+
+(3.2)
+
+u + 6 = v2 + i6
+
+v
+x
+
+so that the kdv relation (2.1) reduces to
+
+v
+t  (v2  6)
+
+v
+x 
+
+3v
+x3 = 0
+
+as mentioned earlier, a solution of the mkdv equation yields a solution of the kdv
+equation through the riccati relation. the simplest way to attempt an inversion of the
+
+7
+
+riccati relation is to linearize it. to that end we dene
+
+so that (3.1) takes the form
+
+or equivalently,
+
+v = i6x/
+
+u + 6 = 6xx/,
+
+xx + (
+
+u
+6
+
++ ) = 0
+
+(3.3)
+
+(3.4)
+
+(3.5)
+
+which is, in fact, the time-independent schroedinger equation. there exists however a
+more formal theory due to lax [21], which we now elaborate.
+
+given a linear equation described by a time-independent hamiltonian h, and an
+operator a whose expectation values are time independent, a(t) is unitarily equivalent
+to a(0):
+
+where u(t) is the time-evolution operator with the form
+
+u (t)a(t)u(t) = a(0)
+
+dierentiating (3.6) gives
+
+which implies
+
+u(t) = exp[iht]
+
+u (t)(
+
+a
+t  i[a, h])u(t) = 0
+
+a
+t
+
+= i[a, h]
+
+(3.6)
+
+(3.7)
+
+(3.8)
+
+(3.9)
+
+thus for the expectation value of a(t) to be time independent, the standard time evolution
+relation (3.8) must be satised. further, from eq.(3.7) follows the relation
+
+where
+
+is an anti-hermitian operator.
+
+u(t)
+
+t
+
+= ihu(t) = bu(t)
+
+b = ih
+
+this argument is mimicked in the case of a non-linear evolution equation. let
+
+l(u(x, t)) = l(t)
+
+(3.10)
+
+(3.11)
+
+(3.12)
+
+denote the linear operator we seek. we assume it to be hermitian, and to have eigen-values
+independent of t. for this to be true, one must have u(t)l(t)u(t)=l(0). dierentiating
+both sides w.r.t. t, we obtain
+
+u (t)
+
+t
+
+l(t) + u (t)
+
+l(t)
+
+t
+
+u(t) + u (t)l(t)
+
+u(t)
+
+t
+
+(3.13)
+
+unlike the linear case, we do not know the form of u(t). however, u is unitary, so
+
+u u = 1 
+
+u (t)
+
+t
+
+u(t) + u  u(t)
+t
+
+= 0
+
+(3.14)
+
+8
+
+thus we can write
+
+u(t)
+
+t
+
+= b(t)u(t)
+
+(3.15)
+
+where anti-hermiticity must be imposed on b. substitution in (3.12), and a little simpli-
+cation, yields
+
+l(t)
+
+t
+
+= [b(t), l(t)]
+
+(3.16)
+
+which is similar to (3.8), except for the fact that we do not yet know the form of b.
+however, let us assume that l(t) is linear in u(x, t). consequently, the lhs of (3.14)
+is a multiplicative operator, proportional to the time evolution operator of u(x, t). this
+would ensure that the eigen-values  of l(t) would be time-independent, i.e.,
+
+further, (t) must be unitarily related to its value at t = 0, i.e.,
+
+l(t)(t) = (t)
+
+and its evolution w.r.t. time would take the form
+
+(t) = u(t)(0),
+
+(t)
+
+t
+
+=
+
+u(t)
+
+t
+
+(0) = b(t)(t)
+
+(3.17)
+
+(3.18)
+
+(3.19)
+
+the operators l(t) and b(t), when they exist, are known as the lax pair, corresponding
+to a given non-linear evolution equation, and play a fundamental role in determining the
+solution. for the kdv equation, l(t) is obtained from the linear form of the schroedinger
+equation
+
+l(t) = d2 +
+
+.
+
+(3.20)
+
+1
+6
+
+u(x, t); d 
+
+
+x
+
+by trial and error, b(t) can be chosen so that (3.15) is satised, and a possible solution
+is
+
+b(t) = 4d3 +
+
+(du + ud)
+
+1
+2
+
+the solution for  w.r.t. t follows from (3.18) and (3.20) to be
+
+t = 4xxx +
+
+1
+2
+
+ux + ux + const.
+
+which yields, using the schroedinger equation (3.5):
+
+(3.21)
+
+(3.22)
+
+t +
+
+1
+6
+
+ux 
+
+1
+3
+
+ux + 4x = const.
+
+(3.23)
+
+a.lenard [26], in an unpublished report, further displayed the relation between the
+schroedinger equation and the kdv relation by elegantly deriving the latter from the for-
+mer, using only the assumption that the spectral parameter  in (3.4) is time-independent.
+i.e., that of the group
+
+the kdv equation exhibits also a fascinating symmetry,
+
+sl(2, r). consider a group element
+
+g = exp[iata]
+
+(3.24)
+
+9
+
+where ta is a generator of sl(2, r), and dene
+
+a  g1g
+
+then the kdv equation follows from the fact that the maurer-cartan equation
+
+a  a  [a, a] = 0
+is satised for a special for a special choice of gauge, e.g.,
+
+(3.25)
+
+(3.26)
+
+; ( < 0); a3
+
+a1
+1 = 
+
+1 = 6; a2
+
+1 = 
+
+1
+36
+
+u(x, t); a3
+
+0 = a(u(x, t))
+
+(3.27)
+
+4 lax formalism on symplectic manifolds
+
+in this section, we conclude the above study of the kdv equation with a with a short
+discussion on symplectic geometry, which is directly relevant for application to the toda
+lattice.
+
+a symplectic manifold is one with a preferred 2-form f which is non-degenerate and
+closed. the phase space of an integrable model corresponds to a very special symplectic
+manifold, since it possesses a dual poisson bracket structure. we assume that there exist
+two distinct 2-forms which are both non-degenerate and closed. one way of expressing
+the existence of two distinct symplectic structures is to require that the same dynamical
+equation be described by two distinct rst order lagrangians l0 and l, where
+
+where
+
+l0 = (0)
+ (y) y  h0(y);
+l = (y) y  h(y)
+dy
+dt
+
+;
+
+[ = 1, 2, ...2n]
+
+y =
+
+the euler-lagrangian equations following from (4.1-2) are
+
+where
+
+f(y)y = h0(y)
+
+f(y)y = h(y)
+
+f = (0)
+ (y)  (0)
+ (y)
+f = (y)  (y)
+
+it is easy to see that the two forms f and f are closed, where
+
+f =
+
+f =
+
+1
+2
+
+1
+2
+
+fdy  dy
+
+fdy  dy
+
+since f and f satisfy the bianchi identities
+
+(4.1)
+
+(4.2)
+
+(4.3)
+
+(4.4)
+
+(4.5)
+
+(4.6)
+
+(4.7)
+
+(4.8)
+
+(4.9)
+
+f + f + f = 0;
+
+(4.10)
+
+10
+
+and
+
+f + f + f = 0.
+
+(4.11)
+
+besides, they must also be non-degenerate since (4.4) and (4.5) describe the same dynam-
+ical system. let their universes be f  and f , i.e.,
+
+so that (4.4-5) take the forms
+
+ff  = ff  = 
+
+
+y = f h0(y)
+y = f h(y).
+
+we can also construct a nontrivial (1, 1) tensor s
+
+ as
+
+ = f(y)f (y).
+s
+
+consistency of (4.4) and (4.5) further requires that
+
+so that after a little algebra, one can show that
+
+h0(y)  h0(y) = 0
+
+df(y)
+
+dt
+
+= u 
+
+ f + u 
+
+ f
+
+where
+
+u 
+ = y = [f h0(y)] = [f h(y)]
+
+with a corresponding relation for f , i.e.,
+
+df(y)
+
+dt
+
+= u 
+
+ f + u 
+
+ f
+
+(4.12)
+
+(4.13)
+
+(4.14)
+
+(4.15)
+
+(4.16)
+
+(4.17)
+
+(4.18)
+
+(4.19)
+
+involving the same u-tensor. the corresponding equations for the inverses f  and f 
+follow from (4.17) and (4.19), and have the forms
+
+df 
+dt
+
+df 
+dt
+
+ds
+
+dt
+
+we can nally show that
+
+which in matrix notation
+
+= f u 
+
+  f u 
+
+
+
+= f u 
+
+  f u 
+
+
+
+= s
+
+u 
+
+  u 
+
+ s
+
+
+ds
+dt
+
+= [s, u]
+
+(4.20)
+
+(4.21)
+
+(4.22)
+
+(4.23)
+
+can be recognized as a lax equation (3.15), thus providing a lax representation of the
+dynamical equations (4.13) and (4.14). one important consequence of (4.23) is that the
+set of quantities
+
+kn =
+
+t rsn
+
+(4.24)
+
+1
+n
+
+11
+
+and
+
+can be shown to be invariants since
+
+k0 = ln| dets |
+
+dkn
+dt
+
+= t r[p (s)
+
+ds
+dt
+
+] = t r[p (s)[s, u]] = 0
+
+(4.25)
+
+(4.26)
+
+p (s) is a polynomial in s. that these are in involution can easily be checked, as done
+explicitly in ref.[22]. applied to the kdv equation, the two poisson structures of that
+equation are given by the correspondence:
+
+going to the coordinate bases we have
+
+f   d3 +
+
+f   d;
+
+1
+3
+
+(du + ud)
+
+f (x, y) =< y | d | x >= (x  y)
+f (x, y) =
+(xu + ux)(x  y)
+
+3
+x3 +
+
+1
+3
+
+(4.27)
+
+(4.28)
+
+(4.29)
+
+(4.30)
+
+so that
+
+f 1(x, y) = (x  y) = (x  y) 
+
+(4.31)
+however f 1(x  y) cannot be expressed in a closed form. the lax operator s takes the
+form
+(4.32)
+
+(du)d1,
+
+s = d2 +
+
+u +
+
+1
+2
+
+2
+3
+
+1
+3
+
+and with a little algebra, (4.23) can be shown to be reduced to the kdv equation, with
+consequently an innite # of conserved quantities. this is described in detail in ref.[22].
+
+5 the toda lattice
+
+the model of the kdv equation that has been studied so far is a continuum model. a
+nite dimensional system with a nite # of degrees of freedom is simpler to study. the
+toda lattice is such a system to which the symplectic approach of the above section
+is especially applicable. we now study the toda lattice and its integrability from a
+symplectic point of view, following it up with a group theoretical treatment.
+
+the toda lattice describes the motion of n point masses on the line, under the inu-
+ence of an exponential interaction. the hamiltonian equations in terms of the canonical
+coordinates qi and momenta pi are given by
+
+(i = 1, 2, ....n);
+
+qi = pi;
+pj = e(qj qj1)  e(qj+1qj);
+p1 = e(q2q1);
+
+pn = e(qn qn 1).
+
+(j = 2, 3, .n  1);
+
+(5.1)
+
+the equations can be cast into a more symmetrical form by enlarging the system to
+(n + 2) point masses, with end points at spatial innity. in that case, the hamiltonian
+equations take the form :
+qi = pi;
+
+(i = 1, 2, ....n); pi = e(qiqi1)  e(qi1qi.
+
+(5.2)
+
+12
+
+we can choose
+
+yi = qi;
+
+yn +i = pi;
+
+(i = 1, 2, ..n).
+
+(5.3)
+
+applying the geometrical method of the previous section, two choices of the lagrangian
+are as follows:
+
+n
+
+l0 =
+
+[
+
+xi=1
+
+1
+2
+
+(pi qi  qi pi) 
+
+1
+2
+
+p 2
+i + e(qi+1qi)];
+
+where
+
+l =
+
+n
+
+[
+
+xi=1
+
+1
+2
+
+(p 2
+
+i + e(qi+1qi)) qi + i(p ) pi]  h(q, p )
+
+i(p ) =
+
+1
+2
+
+n
+
+xj=1
+
+(i  j) pj;
+
+h(q, p ) =
+
+n
+
+[
+
+xi=1
+
+p 3
+i
+3
+
++ (pi + pi+1)e(qi+1qi)]
+
+f turns out to have the canonical poisson bracket structure
+
+f = (cid:18) 0  i
+0 (cid:19)
+
+i
+
+(5.4)
+
+(5.5)
+
+(5.6)
+
+(5.7)
+
+(5.8)
+
+(5.9)
+
+(5.10)
+
+(5.11)
+
+(5.12)
+
+(5.13)
+
+(5.14)
+
+(5.15)
+
+so that
+
+f can be shown to have the form [22]
+
+f  = (cid:18) 0
+ i
+
+i
+
+0(cid:19)
+
+f = (cid:18) a b
+b e (cid:19)
+
+where
+
+aij = i+1,je(qi+1qi)  i,j+1e(qj+1qj)
+bij = piij;
+
+eij = (j  i)
+
+the (1, 1) tensor s
+
+ thus takes the form
+
+ = (cid:18) b
+s
+
+a
+
+ e b (cid:19)
+
+and the conserved quantities are
+
+t rs = 2t rb = 2
+
+n
+
+xi=1
+
+pi;
+
+1
+2
+
+t rs2 = t r[2b2  (ae + ea)] =
+
+n
+
+[
+
+xi=1
+
+p 2
+i
+2
+
++ e(qi+1qi)]  h0(q, p );
+
+1
+6
+
+t rs3 =
+
+n
+
+[
+
+xi=1
+
+p 3
+i
+3
+
++ (pi + pi+1)e(qi+1qi)]  h(q, p )
+
+13
+
+the lax representation (4.23) for the toda equation takes the form of the following matrix
+equations
+
+(5.16)
+
+(5.17)
+which reduce to the toda equations qi = pi and pi = e(qiqi1)e(qi+1qi) respectively.
+
+= a  de =
+
+[e, d]
+
+db
+dt
+
+da
+dt
+
+= [b, d];
+1
+2
+
+5.1 group structure of toda equations
+
+eq.(5.1) can be dierentiated and put in the form
+
+q1 = e(q2q1)
+qi = pi = e(qiqi1)  e(qi+1qi)
+qn = pn = e(qn qn 1)
+
+it is easily checked that
+
+n
+
+xi=1
+
+qi =
+
+n
+
+xi=1
+
+pi = 0
+
+(5.18)
+
+(5.19)
+
+i.e., the total momentum is conserved, and therefore the centre of mass motion can be
+separated and the dynamics of the system expressed in terms of (n  1) coordinates and
+momenta. dening
+(5.20)
+
+qa = qa+1  qa;
+
+a = 1, 2...n  1,
+
+the second order equations satised by the qas can be written as
+
+q1 = 2eq1  eq2
+qa = eqa1 + 2eqa  eqa+1;
+qn = eqn 1 + 2eqn
+
+a = 1, ..n  1
+
+which can be compactly written as
+
+qa =
+
+n 1
+
+xb=1
+
+kabeqb
+
+(5.21)
+
+(5.22)
+
+kab being the cartan matrix for su(n). eq.(5.22) generalizes for the other lie algebras
+as well.
+
+the lagrangian giving rise to the above euler-lagrangian equations can be written
+
+l =
+
+n
+
+n
+
+xa=1
+
+xb=1
+
+1
+2
+
+qakab
+
+1 qb 
+
+n
+
+xa=1
+
+eqa
+
+(5.23)
+
+1 being the inverse of the cartan matrix. the momenta conjugate to qa are dened
+
+as
+
+kab
+as
+
+and it is easily checked that
+
+pa =
+
+l
+ qa
+
+=
+
+n 1
+
+xb=1
+
+kab
+
+1 qb
+
+{qa, pb} = ab
+
+14
+
+(5.24)
+
+(5.25)
+
+so that {qa, pa} constitute a canonical coordinate system.
+the following lax operators:
+
+that the group structure entering above is not just accidental, can be seen by dening
+
+s =
+
+1
+2
+
+n
+
+xa=1
+
+[paha + (ea + ea)eqa/2];
+
+u = 
+
+1
+2
+
+n 1
+
+xa=1
+
+eqa/2[ea  ea]
+
+(5.26)
+
+(5.27)
+
+where ha and ea are the generators of su(n) in the chevally basis.
+
+the lax equation (4.23) can be seen to be satised, since ds
+
+dt  [s, u] reduces to
+
+1
+2
+
+n 1
+
+xa,b=1
+
+hakab
+
+1[qb 
+
+n 1
+
+xc=1
+
+kbceqc]
+
+which is zero by virtue of the toda equations (5.22). hence the quantities
+
+kn =
+
+1
+n
+
+t rsn
+
+(5.28)
+
+must be conserved under the ow of the toda equations. since s belongs to the su(n)
+algebra, the number of independent conserved quantities can equal (n  1), which is the
+rank of su(n). the total number of conserved quantities is thus n, if we add the total
+momentum. it can be shown that these are also in involution [22]. this treatment is due
+to leznov and saveliev [18].
+
+6 zakharov-shabat formalism
+
+so far we have only studied two integrable models, viz., the continuum kdv and the nite
+dimensional toda lattice. in trying to understand the non-linear schroedinger equation
+which is also integrable, zakharov and shabat [23] obtained a description which was later
+generalized by akns [24] to describe various other integrable models. this approach uses
+a lax operator which is rst order in the derivative x, in contrast to the second order
+formalism in eq.(3.19). besides describing various integrable models in a unied manner,
+this approach has the additional advantage that the inverse scattering method generalizes
+readily to the quantum case. in what follows, we describe the rst order formulation of
+the lax operator, and elucidate the essential features of this approach. it is easily checked
+that if
+
+where
+
+then
+
+l(t)(t) = (t);
+tl(t) = [b(t), l(t)],
+
+(t)
+
+t
+
+= b(t)(t),
+
+(t)
+
+t
+
+= 0.
+
+15
+
+(6.1)
+
+(6.2)
+
+(6.3)
+
+(6.4)
+
+we can invert the argument to identify the lax pair in the following way. namely, if
+
+l(t)(t) = (t);
+
+(t)
+
+t
+
+= b(t)(t), with
+
+(t)
+
+t
+
+= 0
+
+, i.e., if the compatibility condition of (6.1) and (6.3) yield the system under study, then
+l(t) and b(t) can be identied as the lax pair of the system. we would like l(t) to be
+linear in x. using the analogy between the klein-gordon and dirac equations, we dene
+a two-component column matrix
+
+and generalize the two equations (6.1) and (6.3) to rst order matrix equations as
+
+ = (cid:18) 1
+2 (cid:19)
+
+
+x
+
+t
+
+= (q+ + ri3);
+
+= (p +q+r3)
+
+(6.5)
+
+(6.6)
+
+where  and 3 are the pauli spin matrices. the dynamical variables q(x, t) and r(x, t)
+do not depend on the spectral parameter  which is assumed to be independent of x
+and t. the coecient functions p , q and r on the other hand, do depend on , and
+are functionals of q and r. demanding that the partial derivatives of  w.r.t. x and t
+commute, we obtain the compatibility conditions to be
+
+r
+x
+
+= qq  rp ;
+
+r
+t
+q
+t
+
+=
+
+=
+
+q
+x  2rr  2iq;
+p
+x
+
++ 2qr + 2ip
+
+(6.7)
+
+(6.8)
+
+(6.9)
+
+i.e., if (6.7-9) describe the non-linear evolution of a system, then (6.6) describes the lax
+pair appropriate for such a system. explicitly
+
+l =   q+  r
+b = p + + q + r3
+
+(6.10)
+
+(6.11)
+
+so that (6.2) is satised.
+the choice of r = 6 yields the kdv equation, and the choice r  q = iv/6, the
+mkdv equation. the choice q = k and r = k, k being an arbitrary constant
+parameter, yields the non-linear schroedinger equation:
+it = xx + 2k|  |2
+
+(6.12)
+
+and the choice r = q = 1
+
+2x with
+
+yields the sine-gordon equation.
+
+p = q =
+
+i
+4
+
+sin 
+
+16
+
+the operator (l + ) in (6.1) can be rewritten as v(x, t, ) + x, where
+
+if one knows the solution of the associated schroedinger equation at some other point
+(x, t) by multiplying the solution by a hermitian matrix t (x, y, t, ), i.e.,
+
+v = q+  r3 + i3
+
+(6.13)
+
+(x, t, ) = t (x, y, t, )(y, t, )
+
+where t (x, y, t, ) is a solution of
+
+xt (x, y, t, ) = (q+  r + i3)t (x, y, t, )
+
+with the initial condition t (x, x, t, ) = i.
+
+7 the zero curvature condition
+
+the lax condition (6.2) can be written as
+
+using
+
+we obtain the form
+
+[t  b, l] = 0
+
+l = x  a(x)
+
+which is like a zero-curvature condition for
+
+[(t  b), (x  a)] = 0
+
+with the identication
+
+f01 = [(0  a0), (1  a1)]
+
+a0 = b(x, ); a1 = a(x, )
+
+(6.14)
+
+(6.15)
+
+(7.1)
+
+(7.2)
+
+(7.3)
+
+(7.4)
+
+(7.5)
+
+the importance of the zero curvature condition stems from the fact that (6.6) may be
+solved, using
+
+where the transformation
+
+(x) = t (x, y, )(y)
+
+t (x, y, ) = pr exp[z x
+
+y
+
+a1(z)dz]
+
+(7.6)
+
+(7.7)
+
+where pr denotes path ordering.
+
+it is easy to see that t (x, y, ) translates solutions of the problem along the x-axis
+
+for a xed time, i.e.,
+
+setting
+
+t (x, y, )t (y, z, ) = t (x, z, );
+
+t 1(x, y, ) = t (y, x, );
+
+t (x, x, ) = 1
+
+ur(x2, t2; x1, t1) = pr exp[z x2,t2
+
+x1,t1
+
+adx]
+
+17
+
+(7.8)
+
+(7.9)
+
+(7.10)
+
+(7.11)
+
+and taking the product of two such exponents, it is easy to see that
+
+ur1(x2, t2; x1, t1)ur2(x1, t1; x2, t2) = exp[
+
+1
+
+2 ic
+
+df],
+
+(7.12)
+
+using the baker-campbell-hausdor formula and the stokes theorem, the integration
+being done over the area enclosed by the closed path r1 + r2. as the curvature f
+vanishes,
+
+and so
+
+so that
+
+ur1(x2, t2; x1, t1)ur2(x1, t1; x2, t2) = 1
+
+u 1
+
+r (x2, t2; x1, t1) = ur(x1, t1; x2, t2)
+
+ur1(x2, t2; x1, t1) = ur2(x2, t2; x1, t1)
+
+(7.13)
+
+(7.14)
+
+(7.15)
+
+ergo, u is independent of the path taken. for a closed path, u(x, t; x, t) = 1. hence path
+ordering drops out of the transition matrix t (x, y, ).
+
+returning to the time evolution of the transition matrix, it can be shown that
+
+tt (x, y, ) = [b(x, ), t (x, y, )]
+
+which is the form of a lax equation, so that all quantities of the form
+
+kn =
+
+1
+n
+
+t r[t ()]n; k0 = ln[dett ()]
+
+(7.16)
+
+(7.17)
+
+are conserved. we thus have an innite number of conserved quantities when the zero
+curvature conditions are fullled. that this holds also for toda field theories was shown
+by olive and turok [16].
+
+8 from conformal invariance to toda field theory
+
+that the kdv equation has a hidden conformal symmetry can be seen by making a
+fourier expansion with fourier coecients
+
+un = 
+
+1
+
+4 z 2
+
+0
+
+u(x)einx dx
+2
+
+n0
+
+(8.1)
+
+it can be shown that the poisson brackets of the un satisfy the virasoro algebra (up to
+trivial factors), i.e.,
+
+n(n2  1)n+m
+higher order terms in the kdv hierarchy have a hidden  symmetry.
+
+ 2i{un, um} = (n  m)um+n +
+
+1
+2
+
+(8.2)
+
+we now digress to take a look at toda field theories. these are essentially the
+only class of integrable, interacting, conformally invariant eld theories in two space-time
+dimensions. to see this, we start with the generic action
+
+s = z [
+
+1
+2
+
+ii  v (i)]d2z
+
+(8.3)
+
+18
+
+the trace of the naive conserved energy-momentum tensor becomes
+
+t 
+ = 2v.
+
+(8.4)
+
+as the trace of the energy-momentum tensor is required to vanish in a conformally
+invariant theory, it seems that if v 6= 0, the theory is not conformal. however there is
+an ambiguity in the denition of the energy-momentum tensor. if we attempt to improve
+the naive energy-momentum tensor without violating the conservation property, we could
+choose
+
+ = t + [  2]f (i)
+whence the trace of the modied energy-momentum tensor is
+
+ = 2v + +f
+
+(8.5)
+
+(8.6)
+
+ being the light cone directions. if the second term is to cancel the rst, we somehow
+need to get rid of the derivatives. this can be done, using the equations of motion.
+without knowing the explicit equations of motion, the most general expression for f (i) is
+p cii. using the equations of motion resulting from varying the action , the tracelessness
+
+condition becomes
+
+= 0
+
+(8.7)
+
+2v + xi
+
+ci
+
+v
+i
+
+eq.(8,7) is easily solved, with the result that the trace of the energy-momentum tensor
+vanishes if the potential is of the form
+
+satisfying the requirement
+
+v (i) = xj
+
+djexp[x bijji],
+
+xi
+
+cibij = 2
+
+(8.8)
+
+(8.9)
+
+we choose bij to be related to the cartan matrix of a simple lie algebra. the resulting
+eld theories are called toda field theories, and are described by the action
+
+st oda = z [
+
+1
+2
+
+(, ) 
+
+m2
+2 x exp ( < (i),  >)]d2x
+
+(8.10)
+
+where <, > is the scalar product in the root space, and  takes its values in the root space
+of the simple lie algebra on hand.
+
+the equations of motion obtained from (8.10) are
+
+specializing for the su(n) group, and setting m =  = 1, this becomes
+
+i + m2exp (x kijj) = 0
+
+with 0 = 0 and i+1 = 0, this reduces to
+
++i = exp (kijj)
+
++i = exp (2i  i1  i+1)
+
+19
+
+(8.11)
+
+(8.12)
+
+(8.13)
+
+setting
+
+after mikhailov [27], we get the equation
+
+i = (i  i1)  (i+1  i),
+
+t
+
+2i  x
+
+2i = [2ei  ei1  ei+1]
+
+(8.14)
+
+which is easily seen to be related to the toda equations (5.20). one expects that the
+toda field theories are integrable, and it turns out that they are indeed so (see ref.[8]).
+the calculation rests upon the existence of a zero curvature condition for certain group
+theoretical combinations of , which can be chosen as gauge elds.
+
+as mentioned earlier, the toda field theories have been completely solved for simple
+g by leonov and saveliev [18]. they have also been solved for ane g by olive and turok
+[16].
+
+quantization of the toda field theories is more problematic since the potential has
+no local minimum, the latter being attained at innity, using the gauge group a1. a lucid
+discussion of the problems encountered in the theory is given in ref.[29].
+
+the central charge of the toda theories can be constructed using free eld technology,
+
+and is found to be [30]
+
+c =
+
+hr
+2
+
++ 12[
+
+h
+4
+
++
+
+v
+
+
+]2,
+
+(8.15)
+
+r being the rank of the algebra,  being half the sum of the positive roots, and v its
+dual. eq.(8.15) gives an indication that a quantum toda theory with a strong coupling
+constant is equivalent to another toda theory with a weak coupling constant, obtained
+by replacing  by 4/h, and interchanging roots and coroots.
+
+incidentally, strong/weak coupling duality has recently become a subject of immense
+
+study in relation to string theories.
+
+it is possible to obtain the minimal models from the toda field theories. for a
+particular value of , the central charges can be made to agree. however this is not
+enough. a complication arises from the fact that not all primary elds in the minimal
+models are actually present in the toda theory. however, because of the duality in the
+theory, we can add another part of the potential with the coupling constant replaced by
+its dual; see manseld [31]. this modication is sucient to give complete agreement.
+
+9 w-algebras: hamiltonian reduction of wznw
+
+another fact which makes the conformally invariant toda theories interesting is that to
+each such toda theory, there corresponds a w -algebra. the w -algebras are an extension
+of the virasoro algebra by adding primary elds primary elds of spin higher than z,
+and were introduced by zamolodchikov [32] as a pointer to conformal eld theories with
+a larger overall symmetry. zamolodchikov [32] investigated the case in which a primary
+eld w(r) of weight 3 is added to the virasoro algebra. in order for the algebra to be
+close, it had to be made non-linear, and hence lost its linear lie algebra character.
+
+balog et al [33-35] showed that the liouville and toda field theories can be obtained
+as conformally reduced w znw theories. this reduction can be viewed as a gauge
+procedure, and the toda eld theory can be obtained as the gauge invariant content of
+a gauged w znw theory. the liouville theory is obtained for the special case of the
+sl(2, r) gauge group.
+
+20
+
+the most powerful method of constructing w -algebras is through the so-called quan-
+tum drineld-sokolov reduction.
+in this, one starts with an ane lie algebra, and
+reduces it by imposing some constraint on its generators. at the classical level, this
+procedure which leads to the so-called gelfand-dickey algebras [36], was pioneered by
+drineld and sokolov [37].
+
+it is thus clear that under the reduction that takes a w znw eld theory to a
+toda eld theory, the ane lie algebra that characterizes the w znw theory reduces
+to a w -algebra that is associated to a toda eld theory. this approach is also readily
+generalizable to the supersymmetric case where various new w -superlagebras have been
+found as symmetry algebras of supersymmetric toda eld theories. we refer the interested
+reader to ref.[38] for further progress in this area.
+
+in what follows, we review the essential steps of the lagrangian reduction of the
+w znw model. the w znw action for a non-compact group g in 2d minkowski space-
+time is
+
+s(g) = 
+
+k
+
+8 zs 2
+
+d2t r(g1g)(g1g) +
+
+t r(g1dg)3
+
+(9.1)
+
+k
+
+12 zb
+
+where b is the volume occupied by s2. the left and right ane kac-moody [akm]
+symmetries of this theory are generated by the noether currents
+
+j() = t r[(+g)g1];
+
+j () = t r[g1(g)]
+
+(9.2)
+
+where  = k
+motion are known to be equivalent to the current conservation
+
+4 , and  is an element of the lie algebra g. the w znw equations of
+
+j = + j = 0.
+
+(9.3)
+
+we now choose the following gauss decomposition of an arbitrary element g=abc, e.g.,
+
+b = exp[
+
+a = exp[ x+
+(x
+c = exp[ x
+
+1
+2
+
+xe];
+
+h)];
+
+ye];
+
+(9.4)
+
+where cartan-weyl root vectors e, cartan subalgebra generators h = [e, e], and
+a set of positive (negative) roots  have been introduced with the following properties
+
+k = (h) =
+
+2.
+
+|  |2 ; ,   ;
+
+| long |2 = 2;
+
+t r(h h) =
+
+2
+
+|  |2 k  c;
+
+t r(e e) =
+
+2
+
+|  |2 ,; t r[e, h] = 0.
+
+we also introduce the polyakov-wiegmann identity
+
+s(abc) = s(a) + s(b) + s(c) + z d2t r[(a1a)+b)b1
++(b1b)(+c)c 1 + (a1a)(b(+c)c 1b1)]
+
+21
+
+(9.5)
+
+(9.6)
+
+(9.7)
+
+(9.8)
+
+we now see, using eqs.(9.4-9.8), that the generalized constraints
+
+j(e) = c
+1 ;
+
+j(e = c
+
+2 ;   +
+
+(9.9)
+
+with some real numbers c
+1,2 whose values do not vanish only for primitive roots   ,
+are enough to reduce the g- based wznw theory to the toda field theory dened by
+the lagrangian
+
+lt oda = 
+
+k
+8
+
+[
+
+1
+4
+
+c+  x
+
+(u2)e( 1
+
+2 k )]
+
+(9.10)
+
+where
+
+(u2) = |  |2c
+1 c
+2
+
+. due to c
+of the gauss decomposition (9.5-7) as follows:
+
+1,2 6= 0 for the primitive roots, the constraint (9.7) can be re-written in terms
+
+a1a = b[x
+
+1
+2|  |2c
+
+2 e]b1
+
+= x
+
+1
+2|  |2c
+
+2 e exp[
+
+1
+2
+
+k];
+
+(+c)c 1 = b1[x
+
+1
+2|  |2c
+
+1 e]b
+
+= x
+
+1
+2|  |2c
+
+1 e exp[
+
+1
+2
+
+k];
+
+(9.11)
+
+(9.12)
+
+in the wznw equations of motion, a and c occur only in the combinations given in
+(9.11-12), so that they can be eliminated in favour of b or . the remaining equation
+is just the toda equation [25,34,35]:
+
++ +
+
+1
+2|  |2(u)2 exp[
+
+1
+2
+
+k] = 0;
+
+(9.13)
+
+(see also ref.[25] for details).
+
+as mentioned earlier, the toda field theory possesses an extended symmetry rep-
+resented by a classical w -algebra. these w -algebras can be obtained as the quantum
+versions of the so-called gelfand-dickey algebras [36] known in the theory of kdv equa-
+tions. for instance, the poisson bracket associated with the kdv equation in (8.2), results
+in the classical version of the virasoro algebra which is the simplest w -algebra. moreover,
+the lax representation of the kdv equation (3.15), denes the third order dierential op-
+erator b = w(3). the fourier components of b, along with those of the kdv eld, form
+the gelfand-dickey [36] algebra that generalizes to w(3) in the quantum case.
+
+now regarding the toda theory as a constrained w znw theory, the hamiltonian
+structure can be obtained by a classical drineld-sokolov reduction from the constrained
+phase space of the akm algebra. in the hamiltonian formalism, the akm symmetry
+of the w znw theory is represented by rst class constraints. the w -algebra of the
+toda theory arises as the poisson bracket algebra of gauge-invariant polynomials of the
+
+22
+
+constrained akm currents and their derivatives.
+arguments supporting these statements.
+
+in what follows, we summarize the
+
+let g(z, z) be the g-valued w znw elds and j(z) the corresponding akm currents
+
+having the form
+
+g(z, z) = g(z)g(z);
+
+g(z) = j(z)g(z)
+
+(9.14)
+
+let dimg be the dimension of g; l its rank; k the level of the associated akm algebra
+g; g the dual coxeter number of g;  the half sum of the positive roots; and  the dual
+of .
+
+the constrained w znw theory is specied by (9.9). after a suitable choice of
+
+constants ci, the currents j(z) can be decomposed as
+
+j(z) = i + j(z);
+
+i =
+
+l
+
+xi=1
+
+ei;
+
+l
+
+j(z) =
+
+xi=1
+
+ji(z)hi + x+
+
+e
+
+(9.15)
+
+where {ei} are l simple roots of g. the maximal subgroup of g leaving this form of
+currents invariant, is the maximal nil-potent subgroup generated by e, (  +), and
+implemented by the (dimg  l)/2 constrained akm currents j (z). this allows us to
+interpret the constrained w znw theory as the gauge theory in which all but l of the
+(dimg + l)/2 components of j are gauge components [33-35].
+
+the current j(z) and the gauge transformations corresponding to e act on each
+column of the w znw eld g(z) separately, while each column contains only one gauge-
+invariant component e (of the highest weight), satisfying ee = 0. the gauge degrees
+of freedom corresponding to the other elements of each column can be eliminated by a
+gauge xing in favour of e. because of (9.15), this leads to a linear pseudo-dierential
+equation de = 0, where d is a polynomial pseudo-dierential operator whose coecients
+are gauge invariant polynomials in the currents j. this operator d can now be used to
+dene a classical w -algebra by choosing a drineld-sobolov gauge in which one has
+
+jds = x wp (z)fp
+
+(9.16)
+
+where p s are the orders of l independent casimir operators of g, and fp generators with
+h weights (p  1), so that the gauge-xed current (9.16) has only one non-vanishing
+component in each of the l irreducible representations in a decomposition of the adjoint
+of g w.r.t. one of its sub-groups sl(2, r). the poisson brackets between the dierent
+polynomials wp dene a classical w -algebra.
+
+we close this section by noting that toda eld theories also play an important role
+in the discussion of w -gravity, where they arise as eective quantum theories [39,40] for
+the w -gravity degrees of freedom in the conformal gauge. for a quantum version of the
+w znw  t oda conformal reduction, see [34, 41].
+
+10 self-dual y-m theories: 2d integrable models
+
+the self-dual yang-mills (sdym) theory appears to be a master theory for a whole variety
+of 2d integrable systems, as we are now going to explain. though there is no general
+
+23
+
+proof, the statement can be checked on a case by case basis. the main point is that the 4d
+self-duality condition admits of a zero curvature representation underlying a hamiltonian
+description of sdym descendents in lower dimensions. this makes it possible to apply
+the inverse scattering method for integration of the sdym equations. simultaneously, it
+explains the origin of gauge symmetries in integrable systems of the kdv type, since the
+sdym theory in both gauge and conformally invariant in 4d. and last but not least, this
+connection provides us with a systematic way to associate the kdv type hierarchy with
+any simple lie algebra.
+
+sdym solutions invariant by the action of a subgroup with two conformal generators
+satisfy a 2d dierential equation, since eacd 1d subgroup reduced the number of indepen-
+dent variables by one. this allows us to describe the invariant sdym solutions in terms
+of a 2d integrable system. all known 2d integrable systems seem to be derivable this
+way, by appropriate truncations of a 4d self-dual gauge theory. this is true, in particular,
+for the kdv and non-linear schroedinger equations, the liouville and toda equations, as
+well as other integrable in 2 and 3 dimensions. our presentation in this section is only
+illustrative; we give one explicit example of embedding of the kdv equation into the 4d
+sdym theory [42], and a supersummetric generalization.
+
+the invariant metric reads
+
+let xa = (x, y, z, t) be the coordinates of a at 4d space-time of signature (+, +,,).
+(10.1)
+
+ds2 = 2dxdz  2dydt
+
+the sdym equations in 2+2 dimensions (xyzt = 1) read as
+
+fab =
+
+1
+2
+
+abcdf cd
+
+and are equivalently represented by 3 equations of the form
+
+after a dimensional reduction which is equivalent to setting
+
+ftx = fyz = fty + fxz = 0
+
+(10.3) takes the form
+
+y = z  x = 0,
+
+[t  h, x  q] = [p, b] = 0;
+
+[h, b] = [x  q, x  p ]
+
+(10.2)
+
+(10.3)
+
+(10.4)
+
+(10.5)
+
+where
+
+at = h; ax = q; ay = b; az = p
+
+it is clear that the rst equation in (10.5) is a zero curvature equation. we now choose
+the non-compact group and an embedding pattern in the form
+
+0
+
+i
+
+b = (cid:18) 0
+q = (cid:18) 
+
+0(cid:19) ;
+ u  (cid:19)
+
+1
+
+(10.6)
+
+(10.7)
+
+where  is a constant and u = u(t, x + z). we can expand the lie algebra-valued elds
+h and p as
+
+h = h+ + h+ + h33; p = p+ + p+ + p33
+
+(10.8)
+
+24
+
+where  = (1  i2)/2, and 1,2,3 are the pauli spin matrices. it is clear that the second
+equation of (10.5) gives
+(10.9)
+
+p = p3 = 0,
+
+while the third equation of (10.5) gives
+
+h = p+; h3 = 
+
+1
+2
+
+x(u + p
+
+
+
++)  p+
+
+(10.10)
+
+where primes denote derivatives w.r.t. x.
+
+finally, the rst equation of (10.5) yields 3 equations
+
+h+ = up+  xp+ 
+u =
+
+1
+2
+
+xxx(u + p+) + (u  p+)xu + 22p+
+
+1
+2
+
+xx(u + p+);
+
+x(u + 2p+) = 0;
+
+(10.11)
+
+it follows that
+
+p+ = 
+1
+u =
+4
+
+1
+2
+
+u; h+ = 
+uxxx +
+
+3
+2
+
+uux  2ux
+
+1
+2
+
+u2 +
+
+
+2
+
+ux 
+
+1
+4
+
+uxx;
+
+(10.12)
+
+changing the notation as
+
+u  u +
+
+2
+3
+
+2;
+
+t  4t;
+
+x + y  x,
+
+one obtains the kdv equation
+
+ut = uxxx + 6uux.
+
+this example may be relevant towards an ultimate unication of 2d integrable models
+and 2d conformal eld theories, as well as within the 4d sdym theories which are also
+closely related to n + 2 strings.
+
+10.1 self-duality and supersymmetry
+
+extended supersymmetry is compatible with self-duality in 2+2 dimensions. therefore
+the supersymmetric self-dual yang-mills theory (ssdym) is capable of generating super-
+symmetric 2d integrable models. however a supersymmetric generalization of the sdym
+theory is not unique. one could either replace a gauge group by its graded version, or a
+2+2 dimensional space-time by superspace.
+
+supersymmetric generalizations of the kdv equation in 1+1 dimensions were ob-
+tained independently by manin and radul [43], mathieu [44], bilal and gervais [45].
+these equations have two dynamical variables, one bosonic u(x, t), and one fermionic
+(x, t), and read
+
+tu =
+
+t =
+
+1
+2
+1
+2
+
+uxxx + 3uu +
+
+xxx +
+
+3
+2
+
+x(u)
+
+3
+2
+
+(xx)
+
+25
+
+(10.13)
+
+they are invariant under the n = 1 supersymmetry transformations
+
+u = x;
+
+ = u
+
+(10.14)
+
+ being a constant grassmann parameter. eqs.(10.13) are integrable, and can be obtained
+from the zero curvature condition associated with the graded lie algebra osp(2, 1)
+
+tax  xat + [at, ax] = 0
+
+when the following ansatz is used for 2d yang-mills potentials [45]:
+uxx + 2u2 + x ixx  2iu
+
+2at(x, t) = 
+
+
+ux
+2u
+ix
+
+ ux
+
+ixx + 2iu
+
+ix
+0
+
+the 2d super kdv can be embedded into the self-duality equations by choosing the
+osp(2/1)-valued matrices h, q as h = at(x, t), q = ax(x, t), and b, p as 3  3 matrices
+as
+
+
+
+
+(10.15)
+
+(10.16)
+
+(10.17)
+
+(10.18)
+
+(10.19)
+
+ax = 
+
+
+0
+1
+0
+
+u i
+0
+0
+0
+i
+
+
+
+
+b = 
+
+
+p = 
+
+
+0
+0
+0
+
+0
+0
+0
+
+1
+
+0
+2
+0
+0
+
+0
+0
+2  3i
+4 
+0
+0
+3i
+4 
+0
+
+u
+
+
+
+
+it can also be shown that the n = 1 and n = 2 super kdv equations, as well as the
+n = 1 super-liouville and super-toda equations, can all be obtained from the n = 2
+ssdym theory by dimensional reductions and truncations [46]. a detailed analysis is
+however outside the scope of this article.
+
+11 conclusions
+
+it has been our aim to present a birds eye view of the important developments in inte-
+grable systems over the past few decades. what has been achieved is possibly a more
+subjective viewpoint, related to building connections between sundry topics of immediate
+interest. it has certainly not been possible to delve more deeply into the fascinating devel-
+opments in ane toda field theory which seems to be a thrust area of research today. we
+refer to the excellent lecture series by corrigan [48] on this subject. neither is it possible
+to present an account of the interesting link between the kdv theory and matrix models,
+encompassing thus 2d gravity; (see ref.[25] for a readable account).supersymmetric toda
+field theories have also been given the go by. they were rst studied by evans and
+hollowood [49], as well as by leites et al [50]. it seems to be possible to construct toda
+field theories based on lie superalgebras with one proviso, namely, that it is necessary
+that the lie superalgebra admits a purely fermionic root system. this is only possible
+for the following algebras:
+
+a(n, n  1); b(n, n); b(n  1, n); d(n.n  1); d(n, n); andd(2, 1, ).
+
+26
+
+in the generic case, n = 1 supersymmetric theories are obtained, which can be formulated
+in n = 1 superspace. there is one special case, namely, the sl(n, n  1) theories have in
+fact n = 2 supersymmetry; see [49]. recently, brink and vasiliev [51] have proposed a
+model generalizing an toda field theories based on a continuous parameter, such that
+when this parameter takes on certain discrete values, the model reduces to the ordinary
+an toda theories. more recently, wyllard [52] has worked out a w znw reduction of
+these generalized theories, and has also attempted a supersymmetric generalization [53]
+of the same.
+
+one could also picture the ane toda theories as integrable deformations of the
+conformal toda theories. as an example, by adding an extra simple root to the a1
+toda theory, one obtains the ane toda theory, which is also the sinh-gordon theory.
+general integrable deformations have been investigated by zamolodchikov, among others,
+as an interesting eld. toda theories also appear in many other diverse areas of theoretical
+physics, e.g., 1d discrete versions appear in the physics of monopoles [54]. further, certain
+3d continuous toda systems are relevant to the classication of hyper-kahler metrics in
+4d [55]. finally, it also appears that toda field theories are relevant to m-theory, the
+conjectured all-in-all theory encompassing all string theories [56].
+
+i am deeply grateful to prof. s.k. malik, for providing me an opportunity to write
+this topical article on the subject of toda field theories. the literature on this subject
+is quite vast, but apart from my own interest in lie algebras and super-algebras (which
+often draws me into this area because of their obvious relevance to this subject), i have
+benetted greatly from some concentrated literature [22,25,56,57]. i am especially grateful
+to prof. ashok das for his encouragement, and for sparing time to go through the
+manuscript. i would also like to thank jens fjelstad for help with latex.
+
+references
+
+[1] j.liouville, j.math puris et appliquees 18, 71 (1853).
+
+[2] a.m.polyakov, phys. lett.b103, 207 (1981).
+
+[3] j.l.gervais and a.neveu, nucl.phys.b199, 59 (1982).
+
+[4] e.dhoker and r.jackiw, phys.rev.d26, 3517 (1982).
+
+[5] t.l.curtweight and c.b.thorn, phys.rev.lett.48, 1309 (1982).
+
+[6] d.j.korteweg and g.de vries, phil.mag.39, 422 (1895).
+
+[7] c.s.gardner, j.m.greene, j.m.kruskal, r.m.miura, phys.rev.lett.19, 1095 (1967).
+
+[8] r.m.miura, j.math.phys.9, 1202 (1968).
+
+[9] r.m.miura, c.s.gardner, j.m.kruskal, j.math.phys.9, 1204 (1968).
+
+[10] c.h.su, c.s.gardner, j.math.phys.10, 536 (1969).
+
+[11] c.s.gardner, j.math. phys.12, 1548 (1971).
+
+[12] j.m.kruskal et al, j.math.phys.11, 952 (1970).
+
+27
+
+[13] c.s.gardner et al, comm pure and appl maths 27, 97 (1974).
+
+[14] m.toda, j.phys.soc.of japan 22, 431 (1967).
+
+[15] r.hirota, k.suzuki, j.phys.soc.of japan 28, 1336 (1970).
+
+[16] d.olive, m.turok, nucl.phys.b257, 277 (1985).
+
+[17] t.hollowood, nucl.phys.b384, 523 (1992).
+
+[18] a.n.leznov, m.v.saveliev, lett.math.phys.3, 489 (1979).
+
+[19] t.s.hollowood, p.manseld, phys.lett.b226, 73 (1989).
+
+[20] i.m.gelfand, b.m.levitan, trans.amer.math.soc.1, 253 (1951).
+
+[21] p.d.lax, comm pure and appl maths 21, 467 (1968).
+
+[22] ashok das, integrable models, world scientic (1989).
+
+[23] v.e.zakharov, a.b.shabat, soviet phys. jetp 34, 62 (1972).
+
+[24] m.j.ablowitz et al, phys.rev.lett.30, 1262 (1973); 31, 125 (1973).
+
+[25] s.ketov, conformal field theory, world scientic (1995).
+
+[26] a.lenard (unpublished); reported in ref.[1].
+
+[27] a.v.mikhailov, soviet phys. jetp lett.30, 414 (1979).
+
+[28] a.n.leznov, m.saveliev, comm math phys.74, 111 (1980).
+
+[29] y.karama, h.nicolai, int j of mod phys.a9, 667 (1994).
+
+[30] p.manseld, nucl.phys.b222, 419 (1983).
+
+[31] p.manseld, phys.lett.b242, 387 (1990).
+
+[32] a.b.zamolodchikov, theor. math. phys. 65, 1205 (1986).
+
+[33] j.balog et al, phys.lett.b227, 214 (1989).
+
+[34] l. feher et al, phys.rep.222c, 1 (1992).
+
+[35] p.forgacs et al, phys.lett.b237, 214 (1989).
+
+[36] l.gelfand and l.a.dikin,
+
+in gelfand, collected papers, ed by gindinkin et al,
+
+springer verlag, n.y. (1987); p625.
+
+[37] i.drineld, a.sokolov, j sov math.30, 1975 (1984).
+
+[38] p.bouwknegt and k.schoutens, phys.rep.223c, 183 (1993).
+
+[39] e.bergshoe, a.bilal, k.s.stelle, int j mod phys.a6, 4951 (1991).
+
+[40] k.schoutens, a.sevrin, p.van niewenhuizen, nucl.phys.b349, 791 (1991).
+
+28
+
+[41] l.o.raifeartaigh, p.ruelle, i.tsutsui, phys.lett.b258, 359 (1991).
+
+[42] l.j.mason, g.a.j.sparling, phys.lett.a137, 29 1989).
+
+[43] yu.l manin and a.o.radul, comm. math. phys.98, 67 (1985).
+
+[44] p.mathieu, phys.lett.b203, 287 (1988).
+
+[45] a.bilal, j.l.gervais, phys.lett.b211, 85 (1988).
+
+[46] a.das, c.a.p.galvao, mod.phys.lett.a8, 1399 (1993).
+
+[47] s.j.gates, h.nishino, phys.lett.b299, 255 (1993).
+
+[48] e.corrigan lanl hep-th/9412213, december 1994.
+
+[49] j.evans, t.hollowood, nucl.phys.b352, 723 (1991).
+
+[50] d.a.leites, m.v.saveliev and v.v.sergonov, in
+
+group theoretical methods in physics, vol.1,
+eds m.a.markov et al, vnu science press, 1986.
+
+[51] l.brink, m.vasiliev, nucl.phys.b459, 273 (1995).
+
+[52] n.wyllard, mod.phys.lett.a12, 95 (1997).
+
+[53] n.wyllard, nucl.phys.b491, 461 (1997).
+
+[54] h.lu, c.n.pope, k.w.xu, lanl hep-th/9604058, april 1996.
+
+[55] i.bakas, k.sfestos, lanl hep-th/9604003, april 1996.
+
+[56] n.wyllard, ph.d thesis (may 1998), chalmers u; goteborg(1998).
+
+[57] e.g.b.hohler, ph.d thesis, trondheim univ.press (1995)
+
+29
+
+

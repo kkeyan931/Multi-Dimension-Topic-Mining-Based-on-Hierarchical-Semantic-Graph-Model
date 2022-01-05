@@ -1,0 +1,758 @@
+9
+9
+9
+1
+
+ 
+
+g
+u
+a
+5
+2
+
+ 
+
+ 
+ 
+
+2
+v
+8
+3
+1
+8
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+on the arnold conjecture and the
+atiyah-patodi-singer index theorem
+
+mauri miettinen
+
+and antti j. niemi#
+
+#department of theoretical physics, uppsala university, p.o. box 803,
+
+s-75108, uppsala, sweden
+
+#the mittag-leer institute, auravagen 17, s-182 62 djursholm, sweden
+#helsinki institute of physics, p.o. box 9, fin-00014 helsinki university,
+
+finland
+
+the arnold conjecture yields a lower bound to the number of periodic clas-
+sical trajectories in a hamiltonian system. here we count these trajectories
+with the help of a path integral, which we inspect using properties of the
+spectral ow of a dirac operator in the background of a sp(2n ) valued
+gauge eld. we compute the spectral ow from the atiyah-patodi-singer
+index theorem, and apply the results to evaluate the path integral using lo-
+calization methods. in this manner we nd a lower bound to the number of
+periodic classical trajectories which is consistent with the arnold conjecture.
+
+# niemi@teorfys.uu.se
+
+periodic classical trajectories are important in a large number of prob-
+lems. examples range from classical integrable models where the motion
+is a periodic ow on invariant torii, to quantum chaos where the energy
+spectrum is computed by the gutzwiller (selberg) trace formula. for non-
+integrable models exact analytical results are sparse, and in general even a
+classication of trajectories becomes arduous. some 35 years ago arnold
+conjectured [1] that in an arbitrary hamiltonian system the number of pe-
+riodic classical solutions is bounded from below by the number of critical
+points of a function. if the hamiltonian is energy conserving i.e. has no
+explicit time dependence, this follows immediately from conventional morse
+inequalities since every critical point of the hamiltonian is trivially a pe-
+riodic classical solution. but in the general case when the hamiltonian is
+explicitly time dependent so that energy is not conserved, the conjecture
+has only been veried in special cases. the modern approach to the arnold
+conjecture is due to floer [2] who formulated it using innite dimensional
+morse theory. his approach has led to extensive investigations [3] and appli-
+cations in seemingly disparate subjects, most notably topological quantum
+eld theories and strings [4].
+
+here we shall study relations between the arnold conjecture and canon-
+ical path integrals. we suggest an intuitive approach for proving the conjec-
+ture using path integral localization techniques. our arguments are based on
+methods of topological quantum eld theories and properties of spectral ow
+in a 1+1 dimensional dirac operator in the background of an adiabatically
+varying sp(2n ) valued classical gauge eld. for this we consider hamil-
+tons equation of motion on a 2n -dimensional phase space i.e. a symplectic
+manifold  with local coordinates xi,
+
+xi = ijjh(x, t)  x i
+
+h(x, t)
+
+(1)
+
+here h(x, t) is in general an explicitly time dependent hamiltonian and
+xh(x, t) is the corresponding hamiltonian vector eld. the antisymmetric
+ij = {xi, xj} is the matrix inverse of the symplectic two-form  = 1
+2 ijdxi
+dxj on . the solutions of (1) are critical points of the classical action
+
+s = z dthi xi  h(x, t)i
+
+1
+
+(2)
+
+where  is the symplectic potential, ij = ij  ji. for a t -periodic
+hamiltonian h(x, t) = h(x, t + t ) dened on a compact  the arnold
+conjecture states that the number of non-degenerate and contractible t -
+periodic solutions is bounded from below by the sum of the betti numbers
+bp on ,
+
+#{t  periodic solutions}  x bp
+
+(3)
+
+when the t-dependence of h is trivial (3) reduces to the conventional nite
+dimensional morse inequality [5] since every critical point of h is trivially t -
+periodic. but for a generic t-dependent hamiltonian (3) remains unproven.
+
+the number of t -periodic solutions is counted by the path integral
+
+z = xs=0
+
+1 = z dx (cid:20) s
+x(cid:21) (cid:12)(cid:12)(cid:12)(cid:12)
+
+det" 2s
+x2#(cid:12)(cid:12)(cid:12)(cid:12)
+
+(4)
+
+where we have the determinant of the hessian
+
+2s
+
+xi(t1)xj (t2)
+
+= (cid:26)ijt1 +
+
+1
+2
+
+(jik + ijk) xk  ijh(cid:27) (t1  t2) (5)
+
+which is a symmetric rst-order dierential operator. the zero-modes of
+(5) are jacobi elds, but we assume that the t -periodic solutions of (1)
+are isolated and non-degenerate so that the jacobi elds are absent. the
+diculty in establishing (3) is then due to the absolute signs in (4), alter-
+natively due to the rst-order nature of the hessian: the morse index of
+(2) coincides with the number of negative eigenvalues of (5). but since the
+spectrum of (5) is unbounded from below this number is innite and needs
+to be regulated appropriately.
+
+we rst consider (4) without the absolute value. formally, the path
+
+integral then evaluates to the euler characteristic on the loop space l,
+
+z = xs=0
+
+()k = z dx (cid:20) s
+
+x2#
+x(cid:21) det" 2s
+
+(6)
+
+where k = 0 or 1 depending on whether the morse index of the pertinent
+critical point of s is even or odd, i.e. whether the hessian has an even or
+odd number of negative eigenvalues in some proper regularization scheme.
+
+2
+
+we introduce a commuting lagrange multiplier  and anticommuting ghosts
+, , and re-write (6) as
+
+z = z d exp(iz t
+= z d exp(iz t
+
+0
+
+0
+
+dthi( xi  x i
+h) + i(i
+dt hi xi + i i  ix i
+
+jt + jx i
+h  iix j
+
+h)ji)
+ji) (7)
+
+h
+
+where we denote by  collectively the t -periodic variables (x, , , ). this
+has the structure of a canonical path integral in a graded phase space in
+darboux coordinates with poisson brackets
+
+{i, xj} = { i, j} = j
+
+i
+
+(8)
+
+we note that the lagrange multiplier  provides a realization of derivation
+w.r.t. the variable x. similarly we identify   dx, the basis one-forms,
+and  is the corresponding basis of contractions. we dene the exterior
+derivative in the loop space l
+
+d = z t
+
+0
+
+dt ii
+
+(9)
+
+we may view d as a nilpotent brst operator and the action sext in (7) is
+a brst commutator,
+
+hiix j
+
+sext = i xi+ i iix i
+
+j = [d, ] = hd, ( xi  x i) ii = ls
+(10)
+with ls the lie derivative along the loop space vector eld xs = x  xh.
+these relations mean that the path integral (7) determines a topological
+quantum theory [6].
+
+h
+
+the fradkin-vilkovisky theorem [7] states that (7) is invariant under
+an innitesimal variation    +  of the gauge fermion in (10). an
+arbitrary innitesimal coordinate transformation x  x = x + (x) in the
+original phase space  is an example of such a variation, with
+
+   +
+
+i
+xj ( xj  x j
+
+h) i
+
+3
+
+provided we also conjugate the brst operator according to
+
+d  eii
+
+d eii
+
+since this conjugation does not alter the cohomology of d it has no eect on
+the path integral, which is left intact. as a consequence we can inspect the
+local structure of the path integral by selecting (local) darboux coordinates
+on ,
+
+  0 =
+
+n
+
+xk=1
+
+dpk  dqk
+
+in these coordinates
+
+aj
+
+i = ix j
+
+h = jk
+
+0 ikh
+
+(11)
+
+(12)
+
+is a sp(2n )-valued traceless product of the antisymmetric 1
+metric hessian 2h, and the ghost part in (7) simplies into
+
+0 and the sym-
+
+sf = z t
+
+0
+
+dt (t + a)
+
+(13)
+
+this is reminiscent of a (0+1) dimensional dirac lagrangian in the back-
+ground of a gauge eld. indeed, the darboux coordinates are dened only
+modulo canonical transformations corresponding to arbitrary t-dependent
+conjugations of the symplectic two-form (11) by elements of sp(2n ),
+
+0 = u 1(t)0u (t)
+
+under these sp(2n ) conjugations the anticommuting ghosts transform ac-
+cording to
+
+(t)  u (t)(t)
+(t)  (t)u 1(t)
+
+(14)
+
+and (13) remains invariant if aj
+eld
+
+i(t) transforms like a sp(2n )-valued gauge
+
+a(t)  u (t)a(t)u 1(t) + u (t) u 1(t)
+
+(15)
+
+4
+
+following [8] we introduce
+
+(t) = t exp
+
+
+t
+
+z0
+
+a(t)dt 
+
+
+and dene a sp(2n ) gauge transformation with
+
+where a0 is dened by
+
+u (t) = ea0t  (t)
+
+(t ) = exp(a0  t )
+
+(16)
+
+(17)
+
+which is essentially the average of a(t) over the period t . this gauge trans-
+formation maps our sp(2n )-valued gauge eld a(t) into the t-independent
+average a0,
+
+u (t)a(t)u 1(t) + u (t) u 1(t) = a0
+
+(18)
+
+as a consequence the ghost lagrangian (13) depends only on the t-independent
+a0. moreover, if we decompose the t -periodic hamiltonian h(x, t) into its
+fourier modes
+
+h(x, t) = h0(x) + xn6=0
+
+hn(x)  exp(
+
+2int
+
+t
+
+)
+
+(19)
+
+where the hn(x) have no explicit t-dependence and h0(x) is the average
+of h(x, t) over the period t , we conclude that the gauge transformation
+(18) replaces the original hamiltonian h(x, t) by its t-independent average
+h0(x) in the ghost lagrangian (13).
+
+in the following we shall assume that the average h0(x) is a morse
+
+function with only isolated and non-degenerate critical points.
+
+let  denote the original gauge fermion in (10) and let 0 denote the
+corresponding gauge fermion with h(x, t) replaced by the average h0(x).
+we dene the innitesimal change of variables
+
+   +   {d, } 
+
+t
+
+z0
+
+(  0)
+
+(20)
+
+5
+
+with  an innitesimal parameter. we nd that in (7), (10) the only eect
+of (20) is the shift
+
+  (1  ) + 0
+
+and by repeating this change of variables we can replace h(x, t) by h0(x)
+in (7). hence (7) depends only on the t-independent average h0(x) of the
+hamiltonian.
+
+the hessian (5) has an eigenvalue problem
+
+dfn(t) = nfn(t)
+
+,
+
+fn(0) = fn(t )
+
+(21)
+
+where the eigenvalues n are invariant under sp(2n ) gauge transformations
+that are continuously connected to the identity. since we assume that there
+are no jacobi elds, in the background of a classical solution all n 6= 0. if
+we introduce the -invariant of the hessian
+
+d = lim
+
+s0 xn6=0
+
+sign (n) |n|s
+
+we can remove the absolute value of the determinant in (4) by
+
+(22)
+
+(23)
+
+ det[d]  exp(cid:18) i
+
+2
+
+d(cid:19)
+
+(cid:12)(cid:12)(cid:12)(cid:12)
+
+det[d] (cid:12)(cid:12)(cid:12)(cid:12)
+
+this implies that the number of t -periodic classical trajectories can be
+counted by the following generalization of (7),
+
+z = z d exp(iz t
+
+0
+
+dt hk xk + k   kx k
+
+h  kkx l
+
+h
+
+i
+2
+
+d)
+
+li +
+
+(24)
+the path integral (7) depends only on the t-independent average h0(x). in
+particular, in the ghost action (13) the hamiltonian h(x, t) can be converted
+into h0(x) by a sp(2n ) gauge transformation which leaves the -invariant
+of the hessian intact. as a consequence we conclude that the path integral
+(24) should not change if we replace h(x, t)  h0(x) in it.
+
+the atiyah-patodi-singer index theorem [9] relates the -invariant of
+a (0+1) dimensional dirac operator to the index of a (1+1) dimensional
+
+6
+
+0
+
+s + ds
+
+0
+
+s + ds
+
+! = i2  s + 1  ds =   0 q
+
+dirac operator. accordingly we extend our hessian (5) to the following
+two-dimensional dirac operator on a cylinder s1  r
+/q =  
+q 0 ! (25)
+here ds with s  r is a one-parameter family of symmetric hessians on the
+cylinder. we dene them by promoting our t -periodic solution x(t) into
+a one-parameter family of t -periodic trajectories u(s, t), an instanton that
+adiabatically interpolates between x(t) at s  + and another t -periodic
+y(t) at s  ,
+
+lim
+
+s+
+
+lim
+
+s
+
+u(s, t) = x(t)
+
+u(s, t) = y(t)
+
+(26)
+
+the operators ds have an s-dependent eigenvalue problem
+
+dsfn(t, s) = n(s)fn(t, s) ,
+
+fn(0, s) = fn(t, s)
+
+(27)
+
+and in the absence of jacobi elds at s   all n() 6= 0. but
+as a function of the adiabatic parameter s, the operators ds in general
+exhibit a non-trivial spectral ow with some of the eigenvalues n(s) crossing
+zero when the parameter s evolves. this spectral ow can be computed by
+applying the atiyah-patodi-singer index theorem to the dirac operator /q.
+it relates the index of /q on the cylinder to the -invariants of the operator
+ds at the s   ends of the cylinder,
+
+ind /q = dim kerq  dim kerq
+( d[y(t)]  d[x(t)] ) +
+
+1
+2
+
+=
+
+1
+
+2 zs 1r
+
+tr f
+
+(28)
+
+here f = s(0a) is a sp(2n )-valued eld strength: we have a two dimen-
+sional sp(2n ) gauge eld a with components at = 0a and as = 0. in
+general the contribution from f cancels the continuous part in the dierence
+of the -invariants in (28). but since we have veried that in the darboux
+variables (11) the sp(2n ) valued gauge eld 0a is explicitly traceless, the
+relative -invariant in (28)
+
+d = d[y(t)]  d[x(t)]
+
+(29)
+
+7
+
+should be an integer, it coincides with the net spectral ow between the two
+congurations x(t) and y(t),
+
+d  spectral ow of /q
+
+(30)
+
+in particular (29) determines the relative sign between the determinants of
+the hessians for the two trajectories y(t) and x(t). hence d coincides
+with the relative morse index between the two trajectories, which is also the
+dierence between their maslov indices [3].
+
+instead of (24) we proceed with the more general
+
+dt (cid:16)k xk + k   kx k
+
+h  kkx l
+
+h
+
+i
+2
+
+d# .
+
+l(cid:17) +
+
+z = z d exp"iz t
+
+0
+
+(31)
+with d the relative -invariant w.r.t. a xed t -periodic reference trajec-
+tory y(t). it is integer valued, and twice the index of /q in the background of
+the pertinent instanton u(s, t). since (24) remains intact when we replace
+h(x, t) by its average h0(x), we can expect that (31) also remains intact
+when we set h(x, t)  h0(x).
+
+since the relative -invariant in (31) coincides with the integer valued in-
+dex of the dirac operator /q, it should not change under a continuous change
+of variables. this suggests that we can evaluate the integral (31) by local-
+ization. accordingly we decompose the variables  in their t-independent
+and t-dependent components,   0 + t, and set x(t)  x0 + xt,
+(t)  0 + t, and (t)  0 +  t with  a parameter. the corre-
+sponding super-jacobian in (31) is trivial, and we localize by setting   0.
+in this limit the path integral (7) is known to localize to the poincare-hopf
+representation of the euler characteristic of the phase space  [10],
+
+z = xxh0 =0
+
+sign det(xh0) =
+
+2n
+
+2n
+
+(1)kmk =
+
+xk=0
+
+(1)kbk = () (32)
+
+xk=0
+
+where mk denotes the number of critical points with morse index k. in a
+similar manner we expect the path integral (31) to localize into
+
+z = xxh0 =0
+
+sign det(xh0) exp(cid:18)+
+
+i
+2
+
+d(cid:19)
+
+(33)
+
+8
+
+where d is now the relative -invariant for the critical points of h0(x)
+w.r.t. the xed periodic reference trajectory y(t). we select this reference
+trajectory so that it coincides with a critical point of h0(x) with morse index
+0. according to the standard nite dimensional morse inequality mp  bp
+and b0  1 which ensures that such a critical point always exists. with
+this, the pertinent dirac index (28) simplies into
+
+ind /q = dim ker q  dim kerq = dim ker q
+
+(34)
+
+this follows directly from the zero mode equation in the adiabatic limit,
+where we can use the ansatz
+
+with
+
+gn(s, t) = n(s)n(t)
+
+dsn(t) = n(s)n(t)
+
+this reduces the zero mode equations for q and q to
+
+with solutions
+
+(s  n(s))n(s) = 0
+
+n(s) = exp(cid:20)z s
+
+0
+
+dsn(s)(cid:21) n(0)
+
+respectively. hence q = s + ds does not have a normalizable zero mode
+and (34) follows. in particular, the spectral ow is only from positive eigen-
+values of the hessian to its negative eigenvalues, which implies that the con-
+tribution from the relative -invariant d in (33) coincides with the morse
+index mh0(x) = k of the critical point. since sign det(xh0) = (1)k and
+morse inequalities yield mk  bk, we then conclude that modulo an overall,
+irrelevant sign the path integral (31) localizes into
+
+z = xxh0 =0
+
+sign det(xh0) exp(ik) = xxh0 =0
+
+1 =
+
+2n
+
+xk=0
+
+mk 
+
+bk
+
+2n
+
+xk=0
+
+as a consequence we have a lower bound estimate for the number of periodic
+classical trajectories which is consistent with the arnold conjecture.
+
+9
+
+in conclusion, we have studied relations between a path integral and
+the arnold conjecture. we have related the path integral to the properties
+of a two dimensional dirac operator and applied the atiyah-patodi-singer
+index theorem to evaluate it using localization methods.
+in this manner
+we have found a lower bound estimate for the number of periodic classical
+trajectories which is consistent with the arnold conjecture. our approach
+is based on intuitive path integral arguments, and we hope that a rigorous
+derivation of the conjecture could be developed along these lines.
+
+we thank topi karki for discussions. our research has been partially
+supported by nfr grant f-aa/fu 06821-308. this article reports col-
+laboration that was largely completed by march 2nd 1999, when mauri
+miettinen unexpectedly passed away just one month before his scheduled
+thesis defence.
+
+references
+
+[1] v.i. arnold, c.r. acad. paris 261 (1965) 3719; and usp. math. nauk.
+
+18 (1963) 91
+
+[2] a. floer, comm. pure appl. math. 41 (1988) 775, and ibid. 42 (1989)
+
+775
+
+[3] a. hofer and e. zehnder, symplectic invariants and hamiltonian dy-
+
+namics (birkhauser verlag, 1994)
+
+[4] e. witten, comm. math. phys. 118 (1988) 411
+
+[5] j. milnor, morse theory (princeton university press, 1973)
+
+[6] d. birmingham, m. blau, m. rakowski and g. thompson, phys. repts.
+
+209 (1991) 129
+
+10
+
+[7] e.s. fradkin and g.a. vilkovisky, phys. lett. 55 (1975) 224; for a
+
+review, see a.j. niemi, phys. repts. 184 (1989) 147
+
+[8] contribution by r. jackiw in s.b. treiman, e. witten, r. jackiw and
+b. zumino, current algebra and anomalies (world scientic, singa-
+pore 1985); s. elitzur, e. rabinovici, y. frishman and a. schwimmer,
+nucl. phys. b273 (1986) 93
+
+[9] m.f. atiyah, v.k. patodi and i.m. singer, math. proc. camb. phil.
+
+soc. 77 (1975) 43
+
+[10] a.j. niemi, phys. lett. b355 (1995) 501
+
+11
+
+

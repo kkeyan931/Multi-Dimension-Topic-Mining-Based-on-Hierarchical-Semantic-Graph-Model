@@ -1,0 +1,1118 @@
+9
+9
+9
+1
+
+ 
+c
+e
+d
+6
+
+ 
+
+ 
+ 
+
+2
+v
+1
+3
+1
+8
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+the massless thirring model
+
+in spherical eld theory
+
+nathan salwen
+harvard university
+
+dean lee
+
+university of massachusetts
+
+cambridge, ma 02138
+
+amherst, ma 01003
+
+december 27, 2013
+
+abstract
+
+we use the massless thirring model to demonstrate a new approach
+to non-perturbative fermion calculations based on the spherical eld for-
+malism. the methods we present are free from the problems of fermion
+doubling and diculties associated with integrating out massless fermions.
+using a non-perturbative regularization, we compute the two-point corre-
+lator and nd agreement with the known analytic solution.
+
+1 introduction
+
+the massless thirring model [1] is an exactly soluble system of a single self-
+interacting massless fermion in two dimensions. there are a number of solu-
+tions in the literature based on properties of the euler-lagrange equations and
+fermion currents or bosonization techniques [2]-[6]. given its simplicity and
+solubility, the model has become a popular testing ground for new ideas and
+methods in eld theory.
+
+from a computational point of view, however, the massless thirring model
+still presents a signicant challenge. in the lattice eld formalism, the dicul-
+ties are due to the appearance of fermion doubler states and singular inversion
+problems associated with integrating out massless fermions.
+in this work we
+use the model to illustrate new non-perturbative methods in the spherical eld
+formalism [7]-[9]. the techniques we present are quite general and can also be
+applied to other modal expansion methods such as periodic eld theory [10].
+
+as noted in [8], we will not need to worry about fermion doubling. this
+is true for any modal eld theory and follows from the fact that space is not
+discretized but retained as a continuous variable. since our model is not super-
+renormalizable we will use a procedure called angle-smearing, a regularization
+
+email: salwen@physics.harvard.edu
+email: dlee@het.phast.umass.edu
+
+1
+
+method designed for spherical eld theory [9]. with angle-smearing regulariza-
+tion and a small set of local counterterms, we are able to remove all ultraviolet
+divergences in a manner such that the renormalized theory is nite and trans-
+lationally invariant. comparison of our results with the known thirring model
+solution will serve as a consistency check for our regularization and renormal-
+ization procedures.
+
+the organization of this paper is as follows. we begin with a short summary
+of the massless thirring model, following the solution of hagen [4]. using angle-
+smearing regularization we obtain the spherical eld hamiltonian and construct
+a matrix representation of the hamiltonian. we reduce the space of states using
+a two-parameter auxiliary cuto procedure.
+in this reduced space we compute
+the time evolution of quantum states using a fourth-order runge-kutta-fehlberg
+algorithm. we calculate the two point correlator for several values of the
+coupling and nd agreement with the known analytic solution.
+
+2 the model
+
+we start with a list of our notational conventions. our analysis will be in two-
+dimensional euclidean space, and we use both cartesian and polar coordinates,
+
+~t = (t cos , t sin ) = (x, y).
+
+the components of the spinors  and  are written as
+
+ = (cid:20) 
+ (cid:21)
+
+ = (cid:2) 
+
+ (cid:3) .
+
+our representation for the dirac matrices is
+
+and so ~ satises
+
+~ = i~,
+
+(cid:8)i, j(cid:9) = 2ij,
+
+i, j = 1, 2.
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+the massless thirring model is formally dened by the lagrange density
+
+l = i ~  ~  
+2
+
+~j  ~j,
+
+(5)
+
+where ~j is the fermion vector current. johnson [2] emphasized the importance
+of dening the regularized current precisely, and this was further claried by the
+work of sommereld [3] and hagen [4]. we will use a regularization technique,
+introduced in [9], called angle-smearing. we dene the regularized current as
+
+~j = 1
+
+2 (cid:0) s~s  t r[~s s](cid:1) ,
+
+(6)
+
+2
+
+where
+
+s(t, ) = m t
+
+2 z
+
+1
+
+m t
+
+ 1
+
+m t
+
+d(t,  + ).
+
+(7)
+
+we identify the radial variable t as our time parameter, and our denition of
+the current is local with respect to t.
+
+hagen [4] described the solution of the thirring model in the hamiltonian
+formalism with currents dened as products of the canonical operators at equal
+times. though our equal-time surface is curved, the curvature of the integration
+segment in (7) scales as 1
+m while the ultraviolet divergences in this model are
+only logarithmic in m . in the m   limit we therefore recover the standard
+results. as discussed in [4], there exists a one parameter class of solutions to the
+thirring model depending on the preferred denition of the regularized vector
+and axial vector currents. we will use the conventions used in [2] and [3], which
+in hagens notation corresponds with the parameter values  =  = 1
+2 . with
+this choice the hamiltonian density takes the form
+1c (t  ~j)2 + c
+
+h = hf ree + c
+
+1+c (  ~j)2,
+
+(8)
+
+where
+
+c = 
+2 .
+
+(9)
+
+the only counterterms needed in this model are wavefunction renormaliza-
+tion counterterms, a result of our careful denition for the regularized interac-
+tion in (8). as in [4] we calculate correlation functions using an unrenormalized
+hamiltonian. the divergent wavefunction normalizations will appear simply
+as overall factors in the correlators.
+
+3 spherical eld hamiltonian
+
+in this section we derive the form of the spherical eld hamiltonian. we rst
+expand the fermion current in terms of components of the spinors,
+
+t  s~s = i s(cid:20) 0
+
+ei
+
+ei
+
+0
+
+(cid:21) s = iei s s + iei s s
+
+  s~s = s(cid:20)
+
+0
+
+ei
+
+ei
+
+0
+
+(cid:21) s = ei s s  ei s s .
+
+(10)
+
+(11)
+
+the anti-commutators of the regulated elds are1
+
+1our denition of the euclidean fermion elds and anti-commutation relations follows the
+
+ei(+)d = a(t)ei
+
+(12)
+
+ 1
+
+m t
+
+(cid:8) s , s(cid:9) = 1
+
+t (cid:0) m t
+
+2 (cid:1)2r
+
+1
+
+m t
+
+conventions of [11].
+
+3
+
+(cid:8) s , s(cid:9) = 1
+
+t (cid:0) m t
+
+2 (cid:1)2r
+
+1
+
+m t
+
+ 1
+
+m t
+
+ei(+)d = a(t)ei,
+
+where
+
+from the anti-commutation relations, the t component of the current is
+
+a(t) = m 2t
+2
+
+sin( 1
+
+m t ).
+
+t  ~j = 1
+
+2 (cid:2)iei( s s  s
+= iei s s + iei s s  ia(t),
+
+s ) + iei( s s  s
+
+s )(cid:3)
+
+(13)
+
+(14)
+
+(15)
+
+and so
+
+(t  ~j)2 = a(t)(cid:2)ei s s + ei s s(cid:3)  2 s s
+
+similarly we nd
+
+s s  a2(t).
+
+(16)
+
+(  ~j)2 = a(t)(cid:2)ei s s + ei s s(cid:3)  2 s s
+
+the hamiltonian can now be written as
+
+s s .
+
+(17)
+
+h = hf ree +z d tn 2c
+
+1c2 (cid:2)a(t)(cid:2)ei s s + ei s s(cid:3)  2 s s
+
+s s(cid:3)o . (18)
+
+we have omitted the constant term proportional to a2(t).
+
+let us dene the partial wave modes
+
+n(t) = 12 z d ein(~t),
+n(t) = 12 z d ein (~t),
+
+s,n(t) = 12 z d eins(~t),
+s,n(t) = 12 z d ein s(~t).
+
+it is straightforward to show that for n 6= 0,
+
+s,n(t) = sin( n
+m t )
+m t )
+( n
+
+n(t)
+
+s,n(t) = sin( n
+m t )
+m t )
+( n
+
+n(t).
+
+(19)
+
+(20)
+
+(21)
+
+we can extend this result to the case n = 0 using the convenient shorthand
+
+sin( 0
+m t )
+m t )
+( 0
+
+ 1.
+
+at this point it is convenient to rescale ,
+in = t i
+n.
+
+in terms of the partial waves,
+
+h = 1
+
+t xn
+
+( n
+
+m t )
+
+m t )( n+1
+
+(cid:20)(cid:18)n + 1 + bta(t) sin( n
+(cid:20)(cid:18)n  bta(t) sin( n
+t xn
+
+xn1+n2n3+n4=0
+n1n2+1
+
+m t )( n+1
+m t )
+
+(cid:20) b
+
+( n
+
+t
+
+ 1
+
+
+
+(22)
+
+(23)
+
+(24)
+
+m t ) sin( n+1
+m t )
+
+m t ) sin( n+1
+m t )
+
+nn+1(cid:21)
+(cid:19) 
+n1n(cid:21)
+(cid:19) 
+
+n1
+n2+1
+m t ) sin(
+m t ) sin(
+m t )( n3+1
+m t )( n2+1
+( n1
+
+n3+1
+m t ) sin(
+m t )
+
+m t )( n4
+
+n4
+m t )
+
+(cid:21) ,
+
+
+n31n4
+
+sin(
+
+4
+
+where
+
+since b is the parameter appearing in the hamiltonian, it is somewhat more
+convenient to express c in terms of b,
+
+b = 2c
+
+1c2 .
+
+(25)
+
+c =
+
+1+b21
+
+b
+
+.
+
+let us dene the ladder operators2
+
+a
+n, a
+
+n  n, 
+
+n1
+an+1, an+1  n+1, 
+n.
+
+these operators satisfy the anti-commutation relations
+
+(26)
+
+(27)
+
+(28)
+
+(29)
+
+(cid:8)an1 , an2(cid:9) = (cid:8)an1, an2(cid:9) = n1n2 ,
+
+with all other anti-commutators equal to zero. we can now recast the hamil-
+tonian as
+
+(cid:20)n + bta(t) sin( n
+
+( n
+
+m t )( n1
+
+m t )
+
+m t ) sin( n1
+m t )
+
+(cid:21)(cid:0)an an + an an(cid:1)
+
+h = 1
+
+t xn
+xn1+n2+n3n4=0
+
+
+
+(cid:20) b
+t an1
+
+an2
+
+an3
+
+an4
+
+sin(
+
+n11
+m t ) sin(
+( n11
+
+n2
+m t ) sin(
+m t )( n2
+m t )( n31
+
+n31
+m t ) sin(
+m t )
+
+m t )( n4
+
+(30)
+
+n4
+m t )
+
+(cid:21) .
+
+we will implement a high spin cuto by removing terms in the interaction
+containing operators an, an, an , or an for |n| > jmax. this has the eect of
+removing high spin modes, which correspond with large tangential momentum
+states. we should emphasize, however, that jmax is an auxiliary cuto. it does
+not play a role in the regularization scheme since the interactions have already
+been rendered nite using angle-smearing. the contribution of these high spin
+modes is negligible so long as
+
+jmax
+
+t  m,
+
+(31)
+
+where t is the characteristic radius of the process being measured. returning
+back to (12) and (13) and removing the contribution of these partial waves, we
+nd that a(t) is replaced by
+
+ajmax (t) = 1
+2t
+
+jmax
+
+xn=jmax
+
+sin( n
+m t )
+m t )
+( n
+
+sin( n1
+m t )
+m t )
+( n1
+
+.
+
+(32)
+
+2this notation is slightly dierent from that used in [8]. the translation is as follows:
+
+a
+n, a
+
+n = a
+
+n , a+
+
+n ; a
+
+n, a
+
+n = a
+
+n, a+
+n.
+
+5
+
+let |0if ree be the ground state of the free massless fermion hamiltonian.3
+
+for n > 0, we nd
+
+and for n  0,
+
+an |0if ree = an |0if ree = 0,
+
+an |0if ree = an |0if ree = 0.
+
+it is convenient to dene the normal-ordered products
+
+:an an: = (cid:26) an an for n > 0
+anan for n  0
+
+:an an: = (cid:26) an an for n > 0
+anan for n  0.
+
+(33)
+
+(34)
+
+(35)
+
+the ordering for other operators is immaterial since the anti-commutators are
+zero. we can now rewrite h in terms of normal-ordered products,
+
+h = (cid:0) n
+
+
+
+t + o(j2
+xn1+n2+n3n4=0
+
+max)(cid:1)(cid:0)an an + an an(cid:1)
+an3
+
+an2
+
+(cid:20) b
+t :an1
+
+an4 : sin(
+
+n11
+m t ) sin(
+( n11
+
+n2
+m t ) sin(
+m t )( n2
+m t )( n31
+
+n31
+m t ) sin(
+m t )
+
+m t )( n4
+
+(36)
+
+n4
+m t )
+
+(cid:21) .
+
+there is an o(j2
+max) term due to a small asymmetry in our cuto procedure
+with respect to the two boundaries jmax and jmax.4 we will neglect this term
+in the limit jmax  .
+
+4 two-point correlator
+
+we wish to study the properties of the two-point correlator. the massless
+thirring model is invariant under the discrete transformation
+
+(~t), (~t)  (~t),  (~t),
+
+as well as the transformation
+
+(t, ), (t, )  (t, ), (t, ).
+
+from these we deduce
+
+h0| t (cid:2) (~t)(0)(cid:3) |0i = h0| t (cid:2) (~t)(0)(cid:3) |0i = 0
+
+(37)
+
+(38)
+
+(39)
+
+3the ground state of the free massless hamiltonian is actually degenerate due to s-wave
+
+excitations, but this is remedied by taking the m  0 limit of the massive fermion theory.
+
+4if desired we could eliminate this term and the asymmetry by a slight change in the
+
+angle-smearing procedure for .
+
+6
+
+and
+
+h0| t (cid:2) (t, )(0)(cid:3) |0i = h0| t (cid:2) (t, )(0)(cid:3) |0i .
+
+it therefore suces to consider just the correlator on the left side of (40).
+
+in the limit m   the form of the correlator is given by
+
+(40)
+
+(41)
+
+h0| t (cid:2) (t, )(0)(cid:3) |0i = ei
+
+2 (k(c)m )
+
+2c2
+1c2 t
+
+1c2
+1c2 ,
+
+where k(c) is a dimensionless parameter. standard analytic methods do not
+yield a simple closed form expression for k(c). we will therefore extract k(c)
+from the computed value of the correlator at a specic renormalization point
+t = t0.5
+
+we dene
+
+since
+
+f (t) = h0| t h 1(t)0 (0)i |0i .
+
+h0| t (cid:2) (t, )(0)(cid:3) |0i = ei
+
+2 h0| t h 1(t)0 (0)i |0i ,
+
+we conclude that
+
+f (t) = (k(c)m )
+
+2c2
+1c2 t
+
+1c2
+1c2 .
+
+(42)
+
+(43)
+
+(44)
+
+we now compute f (t) using the spherical eld hamiltonian. we rst need a
+matrix representation for the grassmann ladder operators. we will use tensor
+products of the 2  2 identity matrix and pauli matrices:
+
+an =
+ni=jmax,jmax
+an = ni=jmax,n+1
+
+z ni=jmax,n+1
+z (cid:0) 1
+2 x + i
+
+z (cid:0) 1
+2 x + i
+2 y(cid:1) ni=n1,jmax
+
+2 y(cid:1) ni=n1,jmax
+1 ni=jmax,jmax
+
+1.
+
+1,
+
+(45)
+
+the representations for an and an are dened by the conjugate transposes of
+these matrices. we can now calculate the correlator f (t) using the relation [8]
+
+f (t) = lim
+t2
+
+lim
+t10
+
+t rht exp{r t2
+
+t a
+t dt h(t)} 1
+t r[t exp{r t2
+
+t1
+
+0 t expnr t
+dt h(t)}]
+
+t1
+
+dt h(t)o a
+0i
+
+.
+
+(46)
+
+a straightforward calculation of (46), however, is rather inecient. there are
+several techniques which we will rst use to simplify the calculation.
+
+5in some regularization schemes k(c) can be calculated analytically [3][6], and it may be
+worthwhile to use these techniques in future work.
+in this rst analysis, however, we prefer
+to present a more straightforward and typical example of the angle-smearing regularization
+method.
+
+7
+
+the time evolution of the system at large t is dominated by the contribution
+of the ground state or, more precisely, the adiabatic ow of the t-dependent
+ground state. as discussed in [7] a similar phenomenon occurs at small t, due
+it is therefore not necessary to
+to the divergence of energy levels near t = 0.
+compute the full matrix trace in the numerator and denominator of (46).
+it is
+instead sucient to compute the corresponding ratio for a single matrix element.
+after making this reduction, we can then go a step further and eliminate states
+which do not contribute to the matrix element.
+
+the high spin parameter jmax was used to remove high spin modes with
+|n| > jmax. this, however, is not a uniform cuto in the space of states and
+most of the remaining states are still high kinetic energy states. although none
+of the individual modes are energetic, many of the modes can be simultaneously
+excited. let us dene nn and nn to be bit switches, 1 or 0, depending on
+whether or not the corresponding mode is excited. let us also dene a cuto
+parameter kmax. we will remove all high kinetic energy states such that
+
+for consistency kmax should be about the same size as jmax.
+
+pn(cid:2)|n| (nn + nn)(cid:3)  kmax.
+
+(47)
+
+5 results
+
+the cpu time and memory requirement for calculating (46) scales linearly with
+the number of transitions in h (i.e., non-zero elements in our matrix represen-
+tation).
+in table 1 we have shown the number of states and transitions for
+dierent values of jmax.
+
+jmax
+states
+transitions
+
+2
+6
+38
+
+4
+40
+500
+
+table 1
+6
+210
+4200
+
+8
+920
+26000
+
+10
+3600
+1.4e5
+
+12
+13000
+3.9e5
+
+we have calculated f (t) for jmax  12 and several values of the coupling b. the
+total run time was about 100 hours on a 350 mhz pc with 256 mb ram.
+
+the matrix time evolution equations in (46) were computed using a fourth-
+
+order runge-kutta-fehlberg algorithm. we have set
+
+kmax = 2jmax + 2.
+
+(48)
+
+we will use the notation fjmax(t) to identify the corresponding result for a given
+value of jmax. in figure 1 we have plotted fjmax(t) for b = 1 and jmax = 4, 8, 12.
+we have scaled t and f (t) in dimensional units chosen such that m = 3. for
+nite jmax we expect deviations from the jmax   limit to be of size o( m 2 t2
+).
+the curves shown in figure 1 appear consistent with this rate of convergence.
+
+j 2
+
+max
+
+we can extrapolate to the limit jmax   using the asymptotic form
+
+fjmax(t) = f(t) + j2
+
+maxf (2)(t) +    .
+
+(49)
+
+8
+
+for b = 0, 0.5, 1.0, 3.0 and m = 3 we have calculated f (t) using this extrapola-
+tion technique for jmax = 10 and 12.6 the results are shown in figure 2. for
+comparison we have plotted the analytic solution
+
+fa(t) = (k(c)m )
+
+2c2
+1c2 t
+
+1c2
+1c2 .
+
+(50)
+
+the relation between b and c can be found in (25) and (26). the parameter
+k(c) is tted to the value of the correlator at the renormalization point t = 0.6.7
+the agreement appears quite good. some deviations from the analytic solution
+are due to o(
+m 2t2 ) residual terms, which were left out of the derivation of (50).
+these eects are signicant in the small t region, t . m1, especially for larger
+values of b. the values we nd for k(c) are shown in table 2.8
+
+1
+
+table 2
+
+b
+k(c)
+
+0.5
+1.77
+
+1.0
+1.77
+
+3.0
+1.68
+
+we can compare our results at small b with a simple perturbative calculation.
+evaluating the corresponding regulated two-loop diagram we obtain, for small
+b, k(c)  1.75. this appears consistent with the results in table 2.
+
+6 summary
+
+we derived the angle-smeared spherical hamiltonian for the massless thirring
+model and constructed an explicit matrix representation. we discarded negligi-
+ble high energy states using auxiliary cuto parameters jmax and kmax. in this
+reduced space we computed the time evolution of quantum states and calculated
+the two-point correlator for several values of the coupling. the results of our
+computation are in close agreement with the known analytic solution.
+in addi-
+tion to demonstrating new computational methods, our analysis also serves as a
+consistency check of the regularization and renormalization methods introduced
+in [9].
+
+we believe that this work represents a signicant new direction in the non-
+perturbative computation of fermion dynamics. future work will study the
+application of these methods to systems of interacting bosons and fermions.
+
+acknowledgment
+
+we thank c. r. hagen and r. jackiw for useful comments and correspondence
+regarding the massless thirring model and acknowledge nancial support pro-
+vided by the nsf under grant 5-22968 and phy-9802709.
+
+6both our results and the analytic solution are even in b, and so we consider only positive
+
+values.
+
+7the relative error is expected to be small in the vicinity of this point.
+8in some regularization schemes k(c) can be shown to be independent of the coupling. our
+regularization method seems to be rather close to this, with only a slow variation with respect
+to the coupling strength.
+
+9
+
+references
+
+[1] w. thirring, ann. of phys. 3 (1958) 91.
+
+[2] k. johnson, nuovo cimento 20, (1961) 773.
+
+[3] c. sommereld, ann. of phys. 26 (1963) 1.
+
+[4] c. hagen, nuovo cimento 51b, (1967) 169.
+
+[5] w. glaser, nuovo cimento 9 (1958) 990; b. klaiber, helv. phys. acta 37
+(1964) 554; g. dellantonio, y. frishman, d. zwanziger, phys. rev. d6
+(1972) 988; y. taguchi, a. tanaka, k. yamamoto, prog. of theor. phys.
+52, (1974) 1042; l. girardello, e. montaldi, phys. lett. b57 (1975) 155; n.
+nakanishi, prog. of theor. phys. 57 (1977) 580; j. thomassen, mod. phys.
+lett. a14 (1999) 745.
+
+[6] a. mueller, t. trueman, phys. rev. d4 (1971) 1635.
+
+[7] d. lee, phys. lett. b439 (1998) 85; b. borasoy, d. lee, phys. lett. b447
+
+(1999) 98.
+
+[8] d. lee, phys. lett. b444 (1998) 474.
+
+[9] d. lee, n. salwen, phys. lett. b460 (1999) 107.
+
+[10] p. marrero, e. roura, d. lee, hep-th/9906189.
+
+[11] s. fubini, a. hanson, r. jackiw, phys. rev. d7 (1972) 1732.
+
+figures
+
+figure 1. plot of fjmax(t) for b = 1 and jmax = 4, 8, 12.
+figure 2. plot of fa(t) and f (t) for b = 0, .5, 1, 3 and m = 3.
+
+10
+
+figure 1
+
+m = 3
+b = 1(cid:3)
+
+f(t)
+
+1
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+2.5
+
+2
+
+1.5
+
+1
+
+0.5
+
+jmax = 4
+
+jmax = 8
+
+jmax = 12
+
+0.5
+
+1
+
+1.5
+
+2
+
+t
+
+figure 2
+
+m = 3
+
+f(t)
+fa(t)
+
+b = 3.0
+
+b = 1.0
+
+0.5
+
+1
+
+1.5
+
+2
+
+b = 0
+b = 0.5
+
+t
+
+11
+
+

@@ -1,0 +1,1295 @@
+9
+9
+9
+1
+
+ 
+
+n
+a
+j
+ 
+
+4
+
+ 
+ 
+
+1
+v
+0
+1
+0
+1
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+universal procedure for
+
+enforcing quantum constraints
+
+john r. klauder
+
+departments of physics and mathematics
+
+university of florida
+gainesville, fl 32611
+
+abstract
+
+an abstract formulation of quantum dynamics in the presence of a
+general set of quantum constraints is developed. our constructive pro-
+cedure is such that the relevant projection operator onto the physical
+hilbert space is obtained with a single, common integration procedure
+over the original lagrange multiplier variables that is completely in-
+dependent of the general nature of the constraints. in the associated
+lattice-limit formulation it is demonstrated that expansion of the con-
+straint operator contribution to second order in the lattice spacing is
+necessary while, as usual, only a rst-order expansion is needed for the
+dynamical operator contribution. among various possibilities, coher-
+ent state path integrals are used to illustrate a completely functional
+representation of the abstract quantization procedure.
+
+1 introduction
+
+the abstract operator formulation of quantum mechanics is generally recog-
+nized as being the most fundamental, while those formulations that involve
+one or another representation need to contend with representation-dependent
+issues (e.g., lack of global coordinates) that have no place in the essential
+formulation. our goal here is to study quantum dynamics and quantum con-
+straints as much as possible in an abstract, representation-independent way.
+
+1
+
+only then should one feel comfortable about introducing a representation for
+further analysis. let us start with some basics.
+
+the evolution operator, from time t = 0 to time t = t > 0, for a general
+quantum system with an abstract, self-adjoint, time-independent hamilto-
+nian operator h, is given, in units where  = 1 (which are often used), by the
+unitary operator eiht acting on an abstract hilbert space h known hence-
+forth as the original hilbert space. if the hamiltonian is time dependent
+and self adjoint for all t, 0  t  t , the evolution operator is instead given
+by the unitary operator
+
+t eir t
+
+0
+
+h(t) dt ,
+
+where t denotes the time-ordering operator. we may append to h(t) a sum
+of additional, time-independent, self-adjoint operators {}a
+=1 with general,
+real-valued, time-dependent coecients {(t)}a
+=1 leading, by assumption,
+for all t, 0  t  t , to the self-adjoint operator h(t) + (t), with sum-
+mation implied (the generalization to a set of time-dependent, self-adjoint
+operators {(t)}a
+=1 is briey discussed later). taken as the generator of
+time translations, the extended evolution operator reads
+
+t eir t
+
+0
+
+[h(t)+(t)] dt .
+
+if the functions {(t)}a
+=1 are xed from the beginning and held xed, the
+term (t) provides an addition to the hamiltonian and modies the dy-
+namics in the expected way. if we regard the functions {(t)}a
+=1 as variable
+external sources, then functional derivatives with respect to them lead to pro-
+totype expressions from which time-ordered correlation functions may be ob-
+tained. alternatively, if the functions {(t)}a
+=1 denote suitable stochastic
+variables, then an expectation of the given expression may relate to systems
+interacting with random potentials. besides these examples, let us consider
+a rather dierent interpretation and application of the extra term (t),
+which we now describe.
+
+let us accept the hypothesis that the set {}a
+
+=1 consists of constraint
+operators, which, when appropriately satised, direct attention to a subspace
+of h called the physical hilbert space and which is denoted by h phys. as a
+closed subspace, it follows that h phys = e h for some unique projection oper-
+ator e (= e  = e 2). in turn, the projection operator e should be given by
+an acceptable function of the constraint operators {}a
+=1, and it is the role
+
+2
+
+of an integration over the variables {(t)}a
+=1 to build the necessary projec-
+tion operator e . hereafter, we shall refer to the set of functions {(t)}a
+=1
+as the lagrange multiplier variables.
+in simple cases it is easy to determine a suitable projection operator e
+[1]. for example, if a = 1, and so there exists a single constraint, thensee
+appendix awe observe, for any  = () > 0 ((n.b. () is not a dirac
+delta function but a rather general function of )), that
+
+z 
+
+
+
+ei sin()
+
+
+
+d = e (    ) = e (2  2) .
+
+if  = 0 is part of a purely discrete spectrum near zero, then it is possible
+to choose  > 0 such that e (2  2) = e ( = 0). when  = 0 is part
+of the continuum, we choose 0 <   1; one procedure to take the limit
+  0 to arrive at the true physical hilbert space h true phys is discussed
+in appendix b. from this discussion, it follows in the continuum case that
+we may regard h phys as a provisional physical hilbert space, which, despite
+the qualifying adjective, is, for an extremely small , already acceptable for
+calculational purposes. as a second example consider that the constraints are
+the generators of a compact lie group, and let dm() denote the normalized
+
+group invariant measure, r dm() = 1. in that case (e.g., [1, 2, 3])
+
+z ei dm() = e ( = 0, 1    a) = e ( = 0) .
+
+in order to generate the projection operator e , these examples illustrate
+that dierent measures for the lagrange multiplier variables may be involved.
+indeed, in order to construct e , even for a single set of constraints, it is
+generally the case that the measure for the lagrange multiplier variables is
+not unique.
+
+the use of dierent measures for dierent situations is not wrong but
+it does mean that some specic properties about the system, especially the
+constraints, need to be determined before an expression for e can be found.
+this is clearly a nuisance, and it raises the question whether there exists a
+single, common, integration procedure by which we can construct e , and
+which, moreover, is a procedure that is completely independent of the specic
+constraints at hand. the answer to this question is yes!, and the aim of
+the present paper is to develop a universal prescription for determining e
+
+3
+
+from a given set of constraint operators, whatever kind of constraints they
+may be, by means of a prescription that is also independent of the specic
+hamiltonian operator.
+
+there are various kinds of constraints that need to be considered. in the
+usual nomenclature (see, e.g., [4]), the constraints may be: rst class, closed
+or open; anomalous or second class; primary or secondary; irreducible or
+reducible; regular or irregular. in the reducible case, where the constraints
+are linearly dependent, it is possible that there is an innite degeneracy when
+a =  even if the number of degrees of freedom is nite; see below for an
+example. regularity refers to whether the classical constraint is taken (say)
+as q = 0 or as q3 = 0, etc., along with the quantum repercussions of this
+kind of multiple choice test. implicitly, we assume that the hamiltonian and
+the constraints satisfy some minimal consistency condition, in particular,
+that the set of constraints already includes all the necessary constraints for
+a given hamiltonian..
+
+in what follows, all varieties of constraints will be dealt with in a uniform
+
+fashion.
+
+2 construction of the physical space
+
+projection and evolution operators
+
+we rst observe that the extended evolution operator may be written in the
+form of a lattice limit given by
+
+lim
+0
+
+
+
+y1nn hteir n
+
+(n1)
+
+h(t) dtihteir n
+
+(n1)
+
+(t) dti ,
+
+where   t /n and the directed product (symbol ) also respects the
+time ordering. thus, this expression is simply an alternating sequence of
+short-time evolutions, rst by (t), second by h(t), a pattern which
+is then repeated n  1 more times. the validity of this trotter-product
+form follows whenever h(t)2 +  is essentially self adjoint for all t,
+0  t  t . as a slight generalization, we shall assume that h(t)2+m 
+is essentially self adjoint for all t, 0  t  t . here the real, symmetric
+coecients m  (= m ) are the elements of a positive-denite matrix, i.e.,
+{m } > 0. for a nite number of constraints, a < , it is sucient
+
+4
+
+to assume that m  = ; other choices for m  may be relevant when
+a = .
+gration procedure whereby
+
+with all this in mind, we shall explain the construction of a formal inte-
+
+z teir n
+
+(n1)
+
+(t) dt dr() = e ((m   ()2)) ,
+
+and for which the integral represented by r   dr() is independent of the
+set of operators {} and the hamiltonian operator h(t) for all t. we will
+dene the left-hand side of this expression by means of an additional lattice
+limit.
+
+constructing the basic projection operator
+
+for any given n, 1  n  n, let us divide the time interval ((n 1), n] into
+n , n  < , steps of equal duration,   /n  = t /(nn ) > 0. in this way
+we are led to consider the integrated directed product
+
+z
+
+
+
+y1ln 
+
+ei
+
+r(n,l) dr(r(n,l))
+
+for some measure dr(r(n,l)) to be determined. observe that in the indicated
+expression the continuum variable t has been replaced by steps of size 
+consecutively numbered by r(n, l)  (n  1)n  + (l  1) for 1  n  n and
+1  l  n . as far as the previous integral goes, the particular value of n
+is unimportant and we will suppress it for the rest of this discussion. thus
+for the present we replace r(n, l) by l for simplicity. let us proceed in small
+steps.
+
+introduce a measure ds(l) for each l and an integral over  = {l}n 
+
+l=1
+
+given by
+
+j  z
+= z
+
+
+
+y1ln 
+y1ln 
+
+
+
+ei 
+
+l  ds(l)
+
+[[ 11  i 
+
+l   1
+
+2  2 
+
+l 
+
+l  + o( 3) ]] ds(l) .
+
+5
+
+relation functions (moments) given by r 
+
+we choose ds(l) as a normalized probability measure with the rst two cor-
+l ds(l) 
+(2/) m ,  > 0, values that are independent of the time-slice label l.
+with a minimal requirement on higher moments (such as nite fourth-order
+moments), it follows that
+
+l 
+l ds(l)  0 and r 
+
+j =
+
+
+
+[[11   (m )]] + o()
+
+y1ln 
+= en  (m  ) + o() ,
+
+where the last expression follows because the factors in the directed product
+are now identical for every time slice l. at this point we may take the limit
+n   ,   0 with n  =  held xed. stated formally, the net result is
+that
+
+z teir n
+
+(n1)
+
+(t) dt ds() = e(m  ) ,
+
+independently of n, 1  n  n. note that many choices of the basic measure
+ds(l) will lead to the same result. the mechanism which lies behind this
+conclusion is similar to one leading to the central limit theorem in probability.
+the next step in the process is to analytically extend the variable ,
+
+   + i , where  > 0 still and  <  < , namely
+e(m  )  e(+i )(m  ) ,
+
+and after achieving this extension, the following step is to pass to the limit
+  0+. both of these steps are achieved by the single integral operation
+
+z e(m  ) d()
+b pb/2 e
+ lim
+= ei (m  ) .
+
+1
+
+2 b 2 z 
+
+0
+
+eib  1
+
+2 b2
+
+e(m  ) d
+
+the nal step in the constructionsee appendix ainvolves an integration
+over  given by
+
+z ei (m  ) dt( )
+
+6
+
+ei (m  ) sin[(2 + ) ]
+
+d
+
+
+
+l z l
+
+lim
+
+l
+
+0+
+
+ lim
+= e ( m    2)
+= e (m   2) ,
+
+which achieves our goal. we occasionally symbolize the collective set of
+
+operations by r   dr(), leaving the integrals over  and  implicit.
+
+to summarize, let us assemble the several, separate operations together.
+
+in particular, we observe that
+
+e (m   2) = z dr() t eir n
+
+(n1)
+
+(t) dt
+
+ lim
+
+0+
+
+sin[(2 + ) ]
+
+l
+
+
+
+lim
+
+lz l
+bpb/2 e
+ lim
+z ds() t eir n
+
+1
+
+2 b 2 z 
+
+0
+
+d
+
+eib  1
+
+2 b2
+
+d
+
+(n1)
+
+(t) dt ,
+
+where the proper denition of r   ds() has been given above. in accord
+with the discussion in appendix a, we note that if the nal limit is replaced
+by lim0, the result becomes e (m  < 2).
+
+a few comments are in order. it is noteworthy that r dr() = 1. thus,
+in the hypothetical case that all the constraint operators are bogus, i.e.,
+  0 for all  (i.e., not simply weakly zero but strongly zero), it would
+follow that
+
+z 11 dr() = e (0  2)  11 .
+
+if some, but not all, of the constraint operators are bogus, then, even though
+an integration over the associated lagrange multiplier variables takes place,
+the answer will be identical to one in which the lagrange multiplier variables
+for the bogus constraint operators were ignored from the very beginning.
+as another hypothetical case, assume that there is an innite number of
+identical constraint operators, for example,    for all ,  = 1, 2, 3, . . . .
+consequently, the extended evolution operator involves h(t) + (t) =
+=1(t) . we clearly see that there is only one relevant lagrange
+h(t) + 
+multiplier variable, but to act on that knowledge would amount to choosing
+
+7
+
+an irreducible set of constraints from the original set. instead, let us keep
+all the lagrange multiplier variables as independent quantities and proceed
+along the lines developed in this paper. in this case let us choose, for example,
+m   (6/22) . then it follows that the result of the integration with
+respect to dr() yields the projection operator
+
+e (m   2) = e ((
+
+=1 (6/22) 2  2)) = e (2  2) ,
+
+as desired. this is an (extreme) example of how the present procedure deals
+with a reducible set of constraints without needing to extract an irreducible
+subset. for more complicated examples it may be useful to experiment with
+dierent choices of m .
+
+the full-time physical evolution operator
+
+up to this point we have determined how to construct the desired projection
+operator e for any (nonzero) short-time interval  = t /n. let us assume
+that we have carried out the necessary lagrange multiplier variable inte-
+grations for every time slice, i.e., all n, 1  n  n. the result will be
+the evolution operator restricted to the physical hilbert spacelet us call it
+e(t )which is given by
+teir n 
+
+e eir (n 1)
+
+e    e eir 
+
+e(t )  lim
+
+0
+
+h(t) dt e .
+
+0
+
+h(t) dt
+
+(n 1)
+
+h(t) dt
+
+(n 2)
+
+the indicated limit can be taken with the result that
+
+e(t ) = t e eir t
+
+0
+
+(e h(t)e) dt e = e [t eir t
+
+0
+
+(e h(t)e) dt ] e .
+
+this result holds whether or not the eective hamiltonian he (t)  eh(t)e
+at time t is (essentially) self adjoint or merely symmetric (hermitian) on
+h phys. if it is not self adjoint, the resulting evolution will not be unitary. on
+the other hand, there are many cases of interest when eh(t)e will be self
+adjoint for all t, 0  t  t , and the evolution on the physical hilbert space
+will be by unitary operators e(t) acting on h phys, and which, in fact, act
+as the zero operator on the hilbert space h 
+phys = h  h phys, namely, the
+subspace othogonal to h phys, which may be called the unphysical hilbert
+space h unphys = h 
+phys  0. for con-
+venience, we will assume that the eective hamiltonian is self adjoint and
+
+phys. this follows from the fact that e h 
+
+8
+
+therefore that the resultant evolution is unitary. ((note, even when the eec-
+tive hamiltonian is not self adjoint, that fact alone does not imply that the
+resultant evolution takes physical vectors into unphysical vectors; whatever
+the form of evolution, vectors that start in the physical hilbert space will
+remain in the physical hilbert space.))
+
+constructive approach
+
+it is very instructive to see the lattice-limit construction for the evolution
+operator combined with the constraint operators in as direct a form as pos-
+sible. for this purpose we assume that h(t) is a continuous function of t. in
+that case, and modulo domain considerations, we assert that
+
+0
+
+e [t eir t
+0z
+
+= lim
+
+(e h(t)e) dt] e
+
+y1nn
+
+dt(n) d(n) lim
+
+0z
+[[11  ihr(n,l)  i
+
+
+
+y1ln 
+
+ds(r(n,l))
+
+r(n,l)
+
+2  2
+
+r(n,l)   1
+
+r(n,l) +    ]] .
+here the single index n on the variables  and  labels consecutive time steps
+with a spacing . observe that only the rst-order term (i.e., proportional
+to ) is necessary to include for the hamiltonian, but to properly include
+the constraints it is necessary to include rst- and second-order terms (i.e.,
+proportional to  and  2). this dierence between the dynamics and the
+constraints holds because the integration over the lagrange multiplier vari-
+ables is, in reality, an integral over a (regulated) -correlated distribution.
+
+this formula may also be brought to yet another interesting form. by
+carrying out the integrations over all r(n,l) and n we are left with the ex-
+pression
+
+0
+
+e [t eir t
+0z
+
+= lim
+
+
+
+(e h(t)e) dt] e
+y1nn
+
+eihnin(m  ) dt(n) ,
+
+where hn = hr(n,1) and
+
+z (  ) dt(n)  lim
+
+0+
+
+lz l
+
+lim
+
+l
+
+sin[(2 + )n]
+
+n
+
+(  )
+
+dn .
+
+9
+
+this expression may be a good place to start calculations in certain circum-
+stances.
+
+special case
+
+a great deal of simplication takes place whenever h(t)e = eh(t) for all t,
+0  t  t . in this case we have the identity
+
+e [t eir t
+
+0
+
+h(t) dt ] e .
+
+(e h(t)e) dt ] e = [t eir t
+
+0
+
+observe that the evolution is then automatically unitary in the physical
+hilbert space, and that it is only necessary to impose the projection operator
+e once, say, as we have done, at the beginning of the evolution, very much in
+the manner of an initial-value equation used in the case of classical rst-class
+constraints.
+
+remark
+
+we hasten to add that for a given, specic set of constraints it is generally
+possible to construct e by alternative and possibly simpler integral represen-
+tations. by all means, when simpler procedures exist they should be used.
+for example, as noted earlier in the case of a set of constraint operators which
+close to form a lie algebra for a compact group, a group invariant average
+over all unitary transformations continuously connected to the identity and
+generated by the constraint operators leads to the same projection operator
+e given by the general prescription developed in this paper for suciently
+small ,  > 0.
+
+relation with diracs prescription
+
+the machinery developed above is expressed entirely in an abstract operator
+form plus a functional integral over the lagrange multiplier variables which
+has a well-dened formulation as a lattice limit. another abstract approach,
+and one of the more common methods for dealing with constraints in the
+presence of dynamics, is that proposed by dirac [5]. briey summarized,
+diracs procedure denes the physical hilbert space as the subspace spanned
+by vectors |i phys that fulll the requirement
+ |i phys = 0
+
+10
+
+for all , implying an exact fulllment of the quantum constraints. for
+second-class constraints, such as 1 = p and 2 = q, where p and q
+are conventional heisenberg variables, there is no nontrivial solution of the
+equations p|?i = q|?i = 0 for that would require [q, p ]|?i = i|?i = 0.
+moreover, for a constraint  with zero in its continuous spectrum, the equa-
+tion |#i = 0 has no (normalizable) solution in the hilbert space, i.e., there
+is no nontrivial solution for |#i. thus, for second-class constraints, and for
+general, open rst-class constraints, as well as for constraints with zero in the
+continuum, the basic dirac prescription is unsatisfactory. of course, there
+are modications of the dirac scheme, such as the use of a dirac bracket
+[5] in the classical theory followed by the adoption of this bracket in the
+process of canonical quantization. unfortunately, the classical phase space
+associated with the dirac bracket generally has a nontrivial curvature (and
+possibly a nontrivial topology), and so a straightforward application of the
+quantization rules generally leads to an incorrect answer.
+
+nevertheless, there are some elements of the dirac procedure and the
+procedure developed in the present paper that are rather close to each other,
+at least in spirit. for one thing, we note that if |?i = 0 for all , then
+()|?i = 0 and conversely, where summation is implied and we are
+only considering the case m  =  for simplicity. for the second-class
+constraints considered above we would be asking that (p 2 + q2)|?i = 0,
+which, as is well known, implies that |?i  0, an unsatisfactory solution.
+let us relax this condition (cf., [6]) and say that (p 2 + q2)|?i =  |?i, for
+which we do have a nonvanishing solution, namely |?i = |0i, the ground
+state of the harmonic oscillator. there is no violation of the classical limit
+for these constraints by this modication since, as   0, we recover the
+original, classical, second-class constraints, namely, p = 0 and q = 0, in a
+standard notation. however, the generalization of the dirac procedure just
+illustrated suers from one important defect: the extended criterion does
+not satisfactorily specify the physical hilbert space. take the given example
+and instead let (p 2 + q2)|?i = c|?i for some constant c.
+if c = 3 there
+is a solution which is |?i = |1i, the rst excited state, but for c = 2or
+indeed for any c, 1 < c < 3there is no nontrivial solution and so |?i = 0,
+even though for any of these cases the recovery of the classical second-class
+constraints still applies.
+
+rather than relax the original dirac prescription in the manner just dis-
+cused, we have chosen to look for solutions to the equation e (( 
+
+11
+
+2()))|?i = |?i. it is convenient to examine this expression as a function of .
+for suciently large , there is generally a nontrivial subspace of vectors sat-
+isfying this relation. as  decreases, the space in question remains the same
+or its span may decrease. as an example, again take the second-class case
+and consider e (p 2 + q2  c)|?i = |?i. beginning with small c, we observe
+for c < 1 that there is no nontrivial solution, |?i = 0; for 1  c < 3, there is
+a single nontrivial solution, |?i = |0i, which spans a one-dimensional hilbert
+space; while for 3  c < 5, there is a two-dimensional hilbert space spanned
+by the two vectors |0i and |1i, where the latter vector is the rst excited
+state of the harmonic oscillator; etc. this dependence on the parameter c is
+to be preferred to that described above.
+
+suppose the second-class constraints are irregular as well. in particular,
+let 1 = p and 2 = q3. we are then led to consider e (p 2 + q6 
+c3/2). let c = c
+0 denote the value that captures the ground state of
+the hamiltonian p 2 + q6, let c = c
+1 denote the value that captures the
+rst excited state, etc. the argument then proceeds as above. of course,
+e (p 2 + q6  c3/2) 6= e (p 2 + q2  c), for general c and c, but this
+fact merely represents the ever-present o() ambiguity in any quantization
+procedure.
+
+time-dependent constraints
+
+in the time-dependent case   (t), for all  and t, 0  t  t , and
+assuming each constraint operator is continuous in t as well as the needed
+self-adjoint properties, we are quickly led to an expression for the evolution
+operator in the time-dependent physical hilbert space, given by
+
+e (t )
+ lim
+
+0
+
+here
+
+teir n 
+
+(n 1)
+
+h(t) dt
+
+e n 1 eir (n 1)
+
+(n 2)
+
+h(t) dt
+
+e n 2    e 1 eir 
+
+0
+
+h(t) dt e 0 .
+
+e n  e (((n)m (n)  2))
+
+(t)(t) dt dr() .
+
+= z teir (n+1)
+
+n
+
+12
+
+while this expression is correct, there does not seem to be any simpler and
+more elegant operator expression that holds in the general case of time-
+dependent constraints.
+
+we do not pursue time-dependent constraints further, and hereafter we
+
+again assume that all the constraints have no explicit time dependence.
+
+3 functional integral representation
+
+it is convenient to adopt a functional representation for the original hilbert
+space h, and to present the main properties of the foregoing argument in
+that language. for this purpose, let us focus on a canonical system with
+dim(h) =  and j degrees of freedom, j < , described by the basic,
+irreducible, self-adjoint operators p = {p j}and q = {qj}, 1  j  j, which
+satisfy the canonical commutation relations [qj, p k] = ijk11 with all other
+commutation relations vanishing. as an irreducible set of operators, all other
+operators may be constructed from the basic ones. hence, h(t) = h(p, q, t)
+and  = (p, q) for some suitable functions.
+although other bases may be used, we concentrate here on the functional
+representation induced by coherent states. thus, along with the canonical
+operators, we introduce canonical coherent states dened [7] by
+
+|p, qi  eiqp eipq |i ,
+
+where p = {pj}j
+number, qp = j
+moreover, for any choice of |i it follows [8] that
+
+j=1, with each pj and qj an arbitrary real
+j=1 and q = {qj}j
+j=1 qjp j, etc., and |i is a xed, normalized ducial vector.
+
+z |p, qihp, q| d(p, q) = 11 ,
+
+d(p, q) = j
+
+j=1 dpj dqj/2 .
+
+needed domain restrictions on |i will be assumed, without comment, as
+they arise. at this point p and q, although having suggestive names, are
+just mathematical labels of the coherent states. as a rst step in giving
+meaning to p and q, we assume that |i is physically centered, meaning
+that h|p|i = 0 and h|q|i = 0. in this case it follows that hp, q|p|p, qi = p
+and hp, q|q|p, qi = q. as a second step, we assume that |i is physically
+scaled, i.e., that h|p 2|i = o(a) and h|q2|i = o(b), where a > 0,
+b > 0, and a + b = 2.
+
+13
+
+to obtain the desired functional representation for the lattice formulation
+
+we repeatedly insert coherent-state resolutions of unity leading to
+
+hp, q| e [ t eir t
+
+0
+
+n
+
+= lim
+
+0z
+
+n 
+
+(e h(t)e) dt ]e|p, qi
+0z
+dt(n) d(n)n lim
+
+yn=1
+yl=1 hhpr(n,l)+1, qr(n,l)+1| [[11  ihr(n,l)
+
+yl=1+n1
+
+n 
+
+
+
+hd(pr(n,l), qr(n,l)) ds(r(n,l))i
+
+2 2
+
+r(n,l)
+
+i
+
+r(n,l)  1
+
+r(n,l)]]|pr(n,l), qr(n,l)iio .
+in this expression we have again used r(n, l)  (n  1)n  + (l  1) and
+identied (p, q) = (pn n , qn n ) and (p, q) = (p0, q0). we reemphasize that
+it is necessary to expand the constraint operators to second order in the
+lattice spacing in order to correctly obtain the desired projection operator.
+it is customary to interchange the order of integration and the continuum
+limit in order to arrive at a formal expression for the propagator in the
+presence of the constraints.
+in so doing one adopts for the integrand the
+expression it would assume for continuous and dierential paths (even if
+such paths do not contribute in the continuum limit!). in so doing one is
+led to identify the classical action for which such paths are appropriate. if
+we proceed in the same fashion, we arrive at the formal functional integral
+expression
+
+mz eir t
+
+0
+
+[p qh(p,q,t)a(t)(p,q)] dt dp dq dr() .
+
+in this expression we have introduced the symbols
+
+h(p, q, t)  hp, q|h(p, q, t)|p, qi ,
+(p, q)  hp, q|(p, q)|p, qi .
+
+we further note that h(p, q, t) = h(p, q, t) + o(c), c > 0, and (p, q) =
+(p, q) + o(d), d > 0, thus leading to the expected behavior as   0.
+it is clear from this expression that the system we have quantized here is
+determined by the ( augmented) classical action functional
+
+r t
+0 [p q  h(p, q, t)  (t) (p, q)] dt ,
+
+14
+
+which has the expected form of a canonical system in the presence of a
+number of constraints. evoking a stationary action principle for this classical
+action leads to both dynamical and constraint equations as usual. note
+that the second-order terms in the constraint operators needed in the lattice
+formulation to construct the correct quantum projection operator disappear
+in this formal expression since, for paths and lagrange multiplier variables
+that are smooth and dierentiable, i.e., have classical behavior, these second-
+order terms formally disappear.
+
+while the derived classical action essentially reects the original quantum
+theory, it is necessary, as always, to exercise great care in elevating a formal
+path integral involving the classical action to a valid calculational procedure.
+while not every lattice-limit formulation will lead to the correct answer, we
+emphasize that one acceptable construction procedure is the one presented
+in this paper.
+
+commentary
+
+in a classical theory, such as the one above, it is true that the lagrange multi-
+plier variables play a signicant role in the solution of the classical equations
+of motion, either being xed functions chosen to enforce the constraints in the
+case of second-class constraints, or needing some arbitrary specication (se-
+lection of a gauge) when the lagrange multiplier variables are not determined
+by the equations of motion in the case of rst-class constraints. however,
+what holds true in the classical theory has no reason to hold true in the
+completely dierent quantum theory. for example, it should be noted that
+nowhere in our discussion have we used the words gauge or gauge xing
+in achieving the proper quantum results. indeed, in the abstract formulation
+of section 2, the concepts of gauge and gauge xing are completely for-
+eign to the whole procedure. if anything, gauge xing, and its associated
+diculties, is a classical concept inappropriately and unnecessarily carried
+over into the quantum theory. in concrete terms, and with respect to the
+formal phase space path integral we have derived, we note that no discussion
+of gauge invariance of the formal path integral has been given nor is any
+needed.
+
+if the constraints are all rst class and closed, then gauge invariance of
+the resulting theory as expressed in the (true) physical hilbert space may
+be demonstrated [1]. on the one hand, if  > 0 is chosen suciently small
+
+15
+
+so that e (m   2)  e (m  = 0) 6= 0, then invariance of
+the resulting theory in the physical hilbert space follows from the fact that
+ei e = e for arbitrary real-valued {}a
+=1. on the other hand, if
+e (m   2) 6= e (m  = 0) no matter how small  > 0 is,
+then it means that ei e = e + o( e ), and gauge invariance arises
+in the true physical hilbert space h true phys only after a suitable   0
+limit as illustrated in appendix b. of course, for second-class constraints
+the issue of gauge invariance does not arise. the presence of such constraints
+is distinguished by the fact that e  0 for all  <  for some  > 0.
+additionally, we observe that the abstract operator formalism developed
+in section 2 applies to a eld theory just as well as to general systems of
+nitely many degrees of freedom, canonical or otherwise. to discuss any
+systema model eld theory includedone only needs to have candidate
+operators for the hamiltonian and for the various constraints expressed in
+the original hilbert space.
+
+acknowledgements
+
+the comments of b.g. bodmann, j. govaerts, and s.v. shabanov are grate-
+fully acknowledged.
+
+16
+
+appendix a
+
+the construction of the rst projection operator example in section 1 relies
+on a conditionally convergent integral, dened for  < x < , which is
+given by
+
+z 
+
+
+
+eix sin()
+
+
+
+d .
+
+we may assign one meaning to this expression by choosing the formula
+
+lz l
+
+lim
+
+l
+
+eix sin()
+
+
+
+d ,
+
+an expression which denes the function
+
+f 1
+
+2
+
+(x) = 1 if |x| <  ,
+= 1
+2 if |x| =  ,
+= 0 if |x| >  .
+
+it is clear that f 1
+to ensure that e 2 = e .
+
+(x)2 6 f 1
+
+2
+
+2
+
+(x), specically at |x| = , which would be needed
+
+to overcome this diculty, we adopt the prescription
+
+f1(x)  lim
+
+lim
+
+0+
+
+lz l
+= 1 if |x|   ,
+= 0 if |x| >  .
+
+l
+
+eix sin[( + )]
+
+
+
+d
+
+clearly in this case f1(x)2  f1(x) for all x. likewise we can also dene
+
+f0(x) = 1 if |x| <  ,
+= 0 if |x|   ,
+
+which also satises f0(x)2  f0(x) for all x, by replacing lim0+ by lim0
+in the denition of f1(x).
+in application to a single, self-adjoint quantum constraint , we conclude,
+
+for any  > 0, that
+
+e (2  2) = lim
+
+0+
+
+lz l
+
+lim
+
+l
+
+ei sin[( + )]
+
+
+
+d
+
+17
+
+and
+
+e (2 < 2) = lim
+0
+
+lz l
+
+lim
+
+l
+
+ei sin[( + )]
+
+
+
+d .
+
+in many cases the resulting projection operators are identical. an example
+for which they are not identical is given by
+
+|0ih0|  e (p 2 + q2  ) 6= e (p 2 + q2 < )  0 .
+
+here the one-dimensional projection operator |0ih0| projects onto the ground
+state for a harmonic oscillator hamiltonian p 2 + q2.
+
+unless stated otherwise, we shall adopt the convention that
+
+z 
+
+
+
+ei sin()
+
+
+
+d  e (2  2) .
+
+appendix b
+
+the issue of dealing with constraint operators with their zero in the contin-
+uous spectrum has been dealt with by several authors [9]. here we oer a
+brief discussion in keeping with the style of the present paper.
+
+let us focus on the projection operator e (x 2  2) where x = 0 lies in
+the continuous spectrum of the self-adjoint operator x dened in the original
+hilbert space h. we write h = h1  h2 such that, for suciently small ,
+x = x1  112, where x1 is nondegenerate while h2 accounts for possible
+degeneracy. generally, this factorization depends on , but we assume that
+a suitable limit of these spaces exists as   0. in the same decomposition,
+e = e 1  112. for product vectors |i = |1i  |2i  h, it follows that
+
+h|e (x 2  2)|i = h1|e 1(x 2
+
+1  2)|1ih2|2i
+dh1|e1(x)|1i h2|2i ,
+
+= z 
+
+
+
+where e1(x) is the spectral family for x1. for the rst factor we choose a
+functional representation that diagonalizes x1 leading to
+
+z 
+
+
+
+1(x)1(x) dx .
+
+18
+
+for every |1i and |1i, this expression vanishes as   0. however, before
+taking the limit let us rst rescale this integral so that it reads
+
+1
+
+2 z 
+
+
+
+1(x)1(x) dx .
+
+this expression has a well-dened and generally nonvanishing limit for a sub-
+set of elements 1(x) and 1(x), namely, those that are continuous functions
+in an open set about x = 0. for the subset of continuous functions, it follows
+that
+
+1
+
+2 z 
+
+
+
+lim
+0
+
+1(x)1(x) dx = 1(0)1(0) .
+
+to summarize, we determine, for suitable elements |1i and |1i, that
+
+lim
+0
+
+(2)1h|e (x 2  2)|i = 1(0)1(0)h2|2i .
+
+if this expression is regarded as an incomplete inner product, then, after
+completion, we learn that the resultant space is c  h2  h2 since c, the
+space of complex numbers, has only one (complex) dimension. we conclude
+that h true phys = h2.
+
+we can understand this result in more physical terms. let us realize
+h1 as l2([, ]) and introduce an orthonormal basis given by un(x) =
+(1/2) einx/, n  {0,1,2, . . .}. if the hamiltonian contained the term
+p 2
+x = 2/x2, or such a term was added to the hamiltonian, then
+
+p 2
+x un(x) = (n/)2 un(x)
+
+since un is an eigenfunction of p 2
+x . for very small , all energy contributions
+are huge save for the single case n = 0 when this contribution vanishes.
+
+thus, when   1 energetics favor only the ground state u0(x) = 1/2 in
+
+an expansion of 1(x) and 1(x), and consequently
+
+lim
+0
+
+1
+
+2 z 
+
+
+
+1(x)1(x) dx = lim
+0
+
+1
+
+(2)2 z 
+
+1(y) dy z 
+
+
+
+1(z) dz
+
+
+= 1(0)1(0)
+
+for functions which are continuous about x = 0.
+
+19
+
+is it really necessary to take the limit   0? in our view the practical
+answer is no. for example, if energies are restricted to those which are
+much less than 2, a number which can be chosen as large as one likes, then
+only the ground-state contribution arises for h1 and hence h true phys = h phys,
+as desired.
+
+20
+
+references
+
+[1] j.r. klauder, coherent state quantization of constraint systems,
+
+ann. phys. 254, 419-453 (1997).
+
+[2] s.v. shabanov, path integral in holomorphic representation without
+gauge fixation, in path integrals: dubna 96, (publishing depart-
+ment, joint institute for nuclear research, 1996), p. 133-138.
+
+[3] j. govaerts and j.r. klauder, solving gauge invariant systems with-
+out gauge fixing: the physical projector in 0+1 dimensional theo-
+ries, ann. phys. (in press), hep-th/9809119.
+
+[4] see, e.g., m. henneaux and c. teitelboim, quantization of gauge sys-
+
+tems, (princeton university press, princeton, nj, 1992).
+
+[5] p.a.m. dirac, lectures on quantum mechanics, (belfer graduate school
+
+of science, yeshiva university, new york, 1964).
+
+[6] d. mcmullan and i. tsutsui, on the emergence of gauge structures
+and generalized spin when quantizing on a coset space, ann. phys.
+237, 269-321 (1995).
+
+[7] j.r. klauder and b.-s. skagerstam, coherent states: applications to
+physics and mathematical physics, (world scientic, singapore, 1985).
+
+[8] j. mckenna and j.r. klauder, continuous representation theory iv.
+structure of a class of function spaces arising from quantum mechan-
+ics, j. math. phys. 5, 878-896 (1964).
+
+[9] see, e.g., h. grunding and c.a. hurst, algebraic quantization of
+systems with a gauge degeneracy, commun. math. phys. 98, 369-
+390 (1985); a. higuchi, linearized quantum gravity in flat space
+with toroidal topology, class. quantum grav. 8, 2023-2034 (1991);
+n.p. landsman, rieel induction as generalized quantum marsden-
+weinstein reduction, j. geom. phys. 15, 285-319 (1995); j.r. klauder,
+coherent state quantization of constraint systems, ann. phys. 254,
+419-453 (1997).
+
+21
+
+

@@ -1,0 +1,2980 @@
+shep 99-09
+
+0
+0
+0
+2
+
+ 
+
+n
+u
+j
+ 
+
+9
+
+ 
+ 
+
+2
+v
+8
+5
+0
+0
+1
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+a gauge invariant exact renormalization group i
+
+tim r. morris
+
+department of physics, university of southampton,
+
+higheld, southampton so17 1bj, uk
+
+abstract
+
+a manifestly gauge invariant continuous renormalization group ow equation is constructed
+
+for pure su (n ) gauge theory. the formulation makes sense without gauge xing and
+
+manifestly gauge invariant calculations may thus be carried out. the ow equation is
+
+naturally expressed in terms of uctuating wilson loops, with the eective action appearing
+
+as an integral over a gas of wilson loops. at innite n , the eective action collapses to a
+
+path integral over the trajectory of a single particle describing one wilson loop. we show
+
+that further regularization of these ow equations is needed. (this is introduced in part
+
+ii.)
+
+hep-th/9910058
+
+july, 1999.
+
+1. introduction and motivation
+
+our main motivation for the present work is to obtain an elegant gauge invariant wilso-
+
+nian renormalization group [1] framework formulated directly in the continuum, as a rst
+
+step for non-perturbative analytic approximation methods. quite generally such methods
+can prove powerful,1 and of course there is a clear need for a better non-perturbative un-
+
+derstanding of gauge theory. however, several other issues are naturally resolved in the
+
+process of solving this rst step.
+
+in recent years there has been substantial progress in solving supersymmetric gauge
+
+theories [7]. these methods involve computing a low energy gauge invariant wilsonian
+
+eective action, which however, because of the lack of a suitable framework, is never
+
+precisely dened. whilst we concentrate here solely on pure yang-mills theory, we see no
+
+essential diculty in generalising the ow equations to include fermions and scalars and
+
+indeed spacetime supersymmetry. it is clear then that our framework can underpin these
+
+ideas [7][8].
+
+our framework is here formulated for an su (n ) gauge group, and is a concise exposi-
+
+tion of that reported in ref. [3](see also [9]). all of the ideas presented here adapt to other
+gauge groups, with minor alterations.2
+
+whilst it is an interesting academic issue to establish the existence of a gauge invariant
+
+wilsonian eective action and corresponding ow equation, its use would ultimately be
+
+limited without powerful non-perturbative approximation schemes. fortunately, a beau-
+
+tiful approximation scheme lies waiting to be developed: namely the large n limit where
+
+the gauge group is e.g. su (n ) [10][14]. typically, the starting point for these methods
+
+has been dyson-schwinger equations for wilson loops derived at the bare level. progress
+
+has been hampered by the lack of corresponding renormalised equations [13]. one of the
+
+most attractive features of the exact renormalization group (rg) is the fact that solutions
+
+may readily be expressed directly in renormalised terms [4]. thus combining these two
+
+approaches removes one obstacle to solving the large n limit.
+
+we will see that the large n limit of the wilson ow equations however results in an
+
+intriguing picture which is (somehow) dual to the dyson-schwinger approach. for example,
+
+in this picture the gauge elds appear not integrated over but take the role of background
+
+1 see for example the reviews [2][6].
+2 arising from adapting the completeness relation for the generators
+
+1
+
+eld spectators while the wilson loop, which is xed (but selectable) in the dyson-
+
+schwinger approach, is now dynamical and integrated over. the analogue of migdals
+
+observation[11] that the large n limit may be expressed in terms of the expectation value of
+a single wilson loop3 is here reected in the fact that the continuum limit of the wilsonian
+
+eective action, which at nite n may be written in terms of (innite) sums of integrals
+
+of products of wilson loops, at innite n reduces to a single integral over congurations
+
+of just one wilson loop. the ow equations reduce to equations determining the path
+
+integral measure for this wilson loop. operators, which may be viewed as perturbations
+
+of this action, also take the form of averages over wilson loop congurations. these are
+
+nothing but the continuum counterparts of the interpolating operators used in lattice
+
+gauge theory to create propagating glueball states and study their wavefunctions. this
+
+picture is thus ideally suited to describing both the gauge elds and the low energy (e.g.
+
+bound state) degrees of freedom.
+
+let us emphasise that the solution of the large n limit in this way, collapses the
+
+quantum eld theory to a form of single particle quantum mechanics. by far the most
+
+exciting possibility raised by this viewpoint, in our opinion, is that it may nally open the
+
+door to the solution of large n gauge theory. (quite apart from the obvious theoretical
+
+attractions, the large n limit is expected to be accurate in practical situations e.g. 10%
+
+accuracy is expected for many quantities in su (3) yang-mills [15].) in the present paper,
+
+this picture lies just below the surface. we will leave to future work a fuller investigation of
+
+this description, and the simplications at large n that ensue. nevertheless, this picture
+
+was central in guiding us to the construction of a consistent ow equation.
+
+a particular problem that has to be faced in this direction, is that a gauge invariant
+
+eective cuto function, similarly to gauge invariant higher derivative regularisation, is not
+
+sucient to regulate all ultra-violet divergences. one loop divergences slip through [16].
+
+we cure this problem in the sequel by adapting the equations to a novel spontaneously
+
+broken supersymmetric gauge theory, in which the heavy partners play the role of pauli-
+
+villars regulator elds [9]. in this way all the attractive aspects of the present framework
+
+are preserved while curing this one remaining problem.
+
+the most attractive feature is surely the property that gauge invariance is explic-
+
+itly maintained at all stages (no gauge xing or brst ghosts are required), resulting in
+
+elegant and highly constrained relations. one important consequence is that there is no
+
+3 due to correlators of wilson loops decoupling in the planar limit [10]
+
+2
+
+wavefunction renormalization. the only quantity requiring renormalization is the coupling
+
+constant!
+
+actually, honest non-perturbative approaches to non-abelian gauge theory that pro-
+
+ceed by gauge xing, must face up to the challenging problem of gribov copies [17]. here,
+
+these problems are entirely avoided.
+
+in previous exact rg approaches to gauge theory the authors have gauge xed, and also
+
+allowed the eective cuto to break the gauge invariance. they then seek to recover it in
+
+the limit that the cuto is removed [18][19]. as we have indicated, the present development
+
+follows a very dierent route. in sec. 2, we review polchinskis form of wilsons exact rg
+
+molding it into a form suitable for such a generalisation. in sec. 3, we then generalise this to
+
+u (1) gauge elds as a stepping stone to the full non-abelian generalisation. we introduce
+
+here several important properties of these generalisations, namely that gauge invariance
+
+may be exactly preserved, that solutions may be found without gauge xing, and that non-
+
+trivial generalisations exist which leave the partition function invariant and continue to
+
+correspond to integrating out. in sec. 4, we introduce the full non-abelian generalisation,
+
+demonstrate that the gauge eld cannot renormalize, introduce the concept of a wine,
+
+coincident line identities, the denition of the coupling g, and discuss some qualitative
+
+criteria satised by the formulation namely, quasilocality, ultralocality, and integrating
+
+out. in sec. 5, we develop the gauge eld expansion in terms of traces and products of
+
+traces, introducing the eective vertices, and demonstrate that the large n limit of the
+
+eective action has only a single trace. in sec. 6, we introduce and develop the wilson
+
+loop representation which we deliberately leave this late in the paper to emphasise that the
+
+formalism stands separately from this interpretation, although we believe this enables a
+
+powerful intuition. the large n limit of the eective action is then seen to correspond to a
+
+form of quantum mechanics for a single particle and the ow equation is seen to determine
+
+the measure over the uctuating wilson loops. in sec. 7, we use this interpretation to
+
+rapidly develop some of the general properties of the vertices: the trivial ward identities
+
+expressing exact preservation of gauge invariance, charge conjugation invariance, lorentz
+
+invariance, and the coincident line identities. sec. 8 sets out the perturbative expansion,
+
+demonstrating that the wilson loop diagrams are also feynman diagrams. in this section,
+
+we solve for the classical two, three and four point functions, along the way showing
+
+explicitly how manifestly gauge invariant perturbative computations may be performed,
+
+and explaining how the resulting formulae are highly constrained by gauge invariance
+
+considerations, in fact to the underlying wilson loop picture. we then explain how the
+
+3
+
+ function is determined and give the relevant one-loop contribution. we analyse this
+
+and show how this is at least quadratically divergent (in four dimensions) whatever the
+
+choice of cuto function. this causes subtleties with gauge invariance due to momentum
+
+integral surface terms that do not vanish. we also show that the coecients of some of
+
+the divergences are not even polynomial in the momenta. appendix a provides a large
+
+momentum analysis of the vertices, necessary to draw these conclusions. along the way
+
+we demonstrate that this bad ultraviolet behaviour is a necessary consequence of the exact
+
+preservation of gauge invariance (and briey discuss the colinear and small momentum
+
+regimes which are even more highly constrained by gauge invariance). nevertheless we
+
+will see in part ii [9], that these ultraviolet problems can be cured, as already indicated
+
+above.
+
+2. the polchinski equation
+
+we work in d euclidean dimensions. for two functions f (x) and g(y) and a momentum
+
+space kernel w (p2/2), where  is the eective cuto, we introduce the shorthand:
+
+fw g :=zz ddx ddy f (x) wxy g(y)
+wxy z ddp
+(2)d w (p2/2) eip.(xy)
+
+,
+
+.
+
+where
+
+(2.1a)
+
+(2.1b)
+
+polchinskis [20] version of wilsons exact rg [1], for the eective interaction of a scalar
+eld sint[], may then be written
+
+
+
+
+
+
+sint = 
+
+1
+2
+
+s
+
+
+int
+
+c
+
+s
+
+
+int
+
++
+
+1
+2
+
+
+ c
+
+s
+
+
+int
+
+.
+
+(2.2)
+
+here c(p2/2) > 0 is a smooth, i.e. innitely dierentiable, ultra-violet cuto prole,
+and prime denotes dierentiation with respect to its argument. the cuto, which mod-
+ies propagators 1/p2 to c/p2, satises c(0) = 1 so that low energies are unaltered, and
+c(p2/2)  0 as p2/2   suciently fast that all feynman diagrams are ultraviolet
+regulated. we may write the regularised kinetic term (i.e. the gaussian xed point) as
+
+s = 1
+
+2 c1 .
+
+(2.3)
+
+in terms of the total eective action s[] = s + sint, and 1 := s  2 s, the exact rg
+equation reads
+
++
+
+1
+2
+
+
+ c
+
+1
+
+
+(2.4)
+
+
+
+
+
+
+s = 
+
+1
+2
+
+s
+ c
+
+1
+
+
+4
+
+(up to a vacuum energy term that was discarded in (2.2) [20]). the ow in s may be
+
+shown directly to correspond to integrating out higher energy modes [1][4][21][24], while
+
+leaving the partition function z =rd es
+
+invariant. (for our purposes we may absorb
+all source terms into s as spacetime dependent couplings.) indeed the invariance of z
+follows from (2.4) because
+
+
+
+
+
+
+es
+
+1
+2
+
+= 
+
+is a total functional derivative.
+
+
+
+ c(cid:18) 1
+
+
+
+es(cid:19)
+
+(2.5)
+
+3. a ow equation for abelian gauge elds
+
+we motivate the form of our non-abelian exact rg by rst developing an abelian
+version. for u (1) gauge theory, we write the covariant derivative as d =   iga,
+where g is the coupling. clearly if we replace the gaussian xed point solution (2.3) by
+
+the gauge invariant
+
+1
+4
+
+fc1f
+(where f = a   a), then the ow equation
+
+s =
+
+
+
+
+
+
+s = 
+
+1
+2
+
+s
+a c
+
+1
+a
+
++
+
+1
+2
+
+
+a c
+
+1
+a
+
+(3.1)
+
+(3.2)
+
+is also gauge invariant, while still preserving the invariance of the partition function under
+
+the ow (by (2.5), replacing  by a). furthermore, by utilising ref.[25] this may readily
+be shown to correspond directly to integrating out higher energy modes [3].
+
+note that no gauge xing has taken place, nor is it necessary for nding solutions to
+
+(3.2). this exact preservation of gauge invariance will have the important consequence,
+
+when generalised to non-abelian gauge theory, that d cannot renormalise.
+it is thus
+convenient to redene d =   ia, by changing variables a 7 a/g, since a will
+then not suer wavefunction renormalisation and only the coupling g will renormalise. if
+we also redene s 7 s/g2 (i.e. keep denition (3.1) for the new elds), (3.2) becomes
+
+
+
+
+
+
+s +
+
+
+
+g z ddx a(x)
+
+s
+
+a(x)
+
+= 
+
+1
+2
+
+s
+a c
+
+g
+a
+
++
+
+1
+2
+
+
+a c
+
+g
+a
+
+,
+
+(3.3)
+
+ es
+where  := g/, and g := g2s  2 s. of course it is still the case that  
+is a total functional derivative (after addition of a vacuum energy term, the jacobian for
+a 7 a/g).
+
+5
+
+this rg equation is not yet in a convenient form for generalisation to non-abelian
+
+gauge theory, because the new  term on the left of (3.3) is not manifestly gauge invari-
+
+ant.4 we now come to a central observation of the paper. there are many other ow
+
+equations which have the property that  
+
+ es
+
+is a total functional derivative, and thus
+
+leave
+
+z =z da es
+
+(3.4)
+
+invariant. furthermore a subset also correspond to integrating out higher energy modes,
+
+even though direct derivations [1][21][24] may no longer be possible (cf. ref.[3] and the
+
+next section). in particular, here we can simply drop this annoying  term!
+
+pure u (1) gauge theory is not a good testing ground for these assertions because
+the only continuum solution is s = s/g2 with  = 0, i.e. the gaussian xed point of
+
+free photons. it was thus an instructive exercise for us to perform a similar analysis for
+
+(2.4) and 4 theory, and demonstrate explicitly that universal terms, e.g. the one-loop 
+function (d = 4), are unchanged after mapping  7 /1/4 and dropping the  term,
+and indeed to check that this is true even on more baroque alterations. since the non-
+
+abelian gauge theory exact rg corresponds to our most important such example, we will
+
+not report further on these exercises.
+
+to summarise, for u (1) gauge theory we may write the exact rg as
+
+
+
+1
+2
+
+
+s
+a c
+s = 
+
+g = g2s  2 s ,
+
+where
+
+g
+a
+
++
+
+1
+2
+
+
+a c
+
+g
+a
+
+,
+
+and s is given by (3.1). this leaves the partition function (3.4) invariant:
+
+
+
+
+
+
+es
+
+1
+2
+
+= 
+
+
+
+a c(cid:18) g
+
+a
+
+es(cid:19) .
+
+(3.5)
+
+(3.6)
+
+(3.7)
+
+in the next section, we explain why it also corresponds to integrating out higher energy
+
+modes [3].
+
+4 gauge invariance follows only once we assume s is gauge invariant, i.e. here  (s/a) = 0.
+
+in the non-abelian case gauge invariance would not hold separately for each order in h.
+
+6
+
+4. a ow equation for non-abelian gauge elds
+
+we work with the gauge group su (n ). (these ideas may easily be extended to general
+
+gauge groups). we are interested in formulating an exact rg for the gauge eld a(x) =
+aa
+(x) a, the connection for the covariant derivative d =   ia. the generators
+( a)i
+j are taken to be hermitian, in the fundamental representation, and orthonormalised
+as tr( a b) = 1
+
+2 ab.
+
+gauge transformations are of the form a = d   := [d, ] where (x) = a(x) a.
+let us stress that exact preservation of this relationship immediately implies that a
+cannot run (and thus has the nave unit scaling dimension): if the gauge eld were to suer
+multiplicative wavefunction renormalization by z, we would have to write a 7 a/z,
+destroying the gauge invariance since then a = (z1)+d. this argument fails in
+the gauge xed theory only because  is replaced by a ghost eld in the brs transformation
+[26] leading to pointwise products of elds ( a ghost) which are themselves ill dened
+without further renormalization.
+
+the eld strength is f := i[d, d]. it will be useful to dene
+
+
+
+a(x)
+
+:= 2 a 
+aa
+
+
+.
+
+(4.1)
+
+this transforms homogeneously, and its properties can be understood as follows. to avoid
+the momentarily extraneous aspects  the x dependence and  index  let aa be an adjoint
+representation and write analogously, /a = 2 a/aa. if s(a) is a function of a such
+
+that
+
+s(a) = tr a y
+
+,
+
+then by the completeness relation for su (n ), we eectively isolate y :
+
+s
+a
+
+= y 
+
+1
+n
+
+tr y
+
+.
+
+this leads, up to o(1/n ), to sowing
+
+tr x
+
+s
+a
+
+= tr xy 
+
+1
+n
+
+tr xtr y
+
+,
+
+and splitting
+
+(4.2)
+
+(4.3)
+
+(4.4)
+
+x = y a z
+
+=
+
+tr
+
+
+a
+
+7
+
+x = tr y tr z 
+
+1
+n
+
+tr y z .
+
+(4.5)
+
+given a kernel w (p2/2), we construct
+
+jy, the wine [3], a functional of the
+kernel which is its gauge covariantization, incorporating parallel transport of the tensor
+i(x) are two n  n representations of the gauge group
+representation. thus, if vj
+
+k(y) and ul
+
+i
+
+xl{w}k
+
+su (n ), the gauge invariant generalisation of (2.1) is
+
+u{w}v :=z ddx ddy ul
+
+i(x) i
+
+xl{w}k
+
+jy vj
+
+k(y)
+
+,
+
+(4.6)
+
+where without loss of generality we may insist that {w} satises u{w}v  v{w}u. the
+index ow, or parallel transport, is illustrated in g. 1.
+
+k y
+j
+
+l
+x
+
+i
+
+fig.1. index ow in eqn.(4.6).
+
+expanding this in terms of the gauge eld a denes the wine-vertices:
+
+i
+
+xl{w}k
+
+jy =
+
+
+(4.7)
+
+xm,n=0z ddx1    ddxn ddy1    ddym w1n,1m(x1,    , xn; y1,    , ym; x, y)
+j [a1(y1)    am(ym)]k
+
+[a1(x1)    an (xn)]i
+
+.
+
+l
+
+the m = 0 case should be interpreted as follows: it has vertices w1n,(x1,    , xn; ; x, y)
+and the second product of gauge elds is replaced by k
+l. the n = 0 case is dened
+
+similarly. we will write the m = 0 vertices more compactly as
+
+w1n (x1,    , xn; x, y)  w1n,(x1,    , xn; ; x, y)
+
+.
+
+(4.8)
+
+in addition, the m = n = 0 vertex is just the original kernel (2.1b), i.e.
+
+w,(; ; x, y)  wxy
+
+.
+
+8
+
+(4.9)
+
+v(y)
+
+=
+
+u
+
+v
+
++
+
+u
+
+v
+
++
+
+a
+
+)
+(x1
+1
+
+a 1
+
+(y1)
+
+v
+
++
+
+v
+
++
+
+u
+
+u
+
+u
+
+v
++ ...
+
+u(x)
+
+fig.2. expansion of the wine in gauge elds. the thick black lines stand for the full series.
+
+g(y)
+
+g(y)
+
+=
+
+u(x)
+
+tr u(x)
+
+fig.3. coincident line identity. the dotted line is just the w kernel (2.1b).
+
+this expansion is illustrated in g. 2.
+
+up to the requirement that it is still smooth in momentum space (i.e. that all vertices
+
+are taylor expandable to all orders in momenta) [3] and some symmetry constraints (cf.
+below (4.6) and later), the covariantization {w} is of our choosing. however, for simplicity
+we further impose some coincident line identities (described in sec.5) which in particular
+
+result in
+
+vj
+k(y) = j
+
+kg(y) y
+
+=
+
+u{w}v = (tru)w g
+
+,
+
+(4.10)
+
+as represented in g. 3.
+
+for example, we could simply include in (2.1a) two straight wilson lines
+
+u{w}v =zz ddx ddy wxy tr u(x)[cxy]v(y)1[cxy]
+
+,
+
+(4.11)
+
+cxy being the straight line between x and y. (later we will consider more general curves.
+recall that the wilson line is the path ordered exponential:
+
+[cxy] = p expizcxy
+
+dza(z)
+
+,
+
+= 1  iz 1
+
+0
+
+d za(z) z 1
+
+d2z 2
+
+0
+
+d1 za(1) za(2) +   
+
+0
+
+(4.12)
+
+,
+
+where we have parametrized cxy by z( ),   [0, 1], z(0) = x, z(1) = y.) another choice
+can be obtained by utilising the momentum representation, to write
+
+u{w}v = trz ddx u(x) w (d2/2)  v(x)
+
+9
+
+(4.13)
+
+(where, as above (4.1), the covariant derivatives act by commutation). we will not need
+
+to specify the choice in this paper.
+
+we covariantize (3.1) to
+
+s = 1
+
+2 f{c1}f
+
+.
+
+(4.14)
+
+(note that gauge invariance forces us to include not just the gaussian xed point but also
+
+the interactions.) our (insuciently regularised) exact rg is then just the covariantization
+
+of (3.5) [3]:
+
+
+
+
+
+
+s = 
+
+1
+22
+
+s
+a {c}
+
+g
+a
+
++
+
+1
+22
+
+
+a{c}
+
+g
+a
+
+.
+
+(4.15)
+
+just as in (2.4), the rst term on the rhs is the classical term, yielding the tree cor-
+
+rections, while the second, quantum, term, generates the loop corrections. note that we
+have assumed the same functional relationship for the covariantization of c1 and c [e.g.
+
+as in (4.13)]. this is convenient but not necessary. the ow preserves the corresponding
+partition function (3.4), just as before, because (3.7) holds  on replacing c with {c}.
+
+the coupling, g, which appears in (4.15) through (3.6), is dened by s via its unique
+
+derivative-squared term:
+
+s =
+
+1
+
+2g2 trz ddx f 2
+
+ + o(3)
+
+(4.16)
+
+(discarding the vacuum energy). note that s must have a derivative expansion to all orders,
+
+because  must play the role of an infrared cuto in its vertices [23][4], as explained below.
+
+one of the great attractions of gauge theory is that in four dimensions, there are no
+relevant or marginal operators5 we can put in by hand. in this case, g is the only coupling,
+
+and furthermore the self-similarity of the continuum solution [4] ensures that the only
+
+explicit dimensionful parameter is  whose appearance is then determined by dimensions.
+
+thus in d = 4 dimensions we can write for the continuum solution
+
+s =
+
+1
+
+2g2 trz d4x f 2
+
+ + o(3/)
+
+(4.17)
+
+(again discarding the vacuum energy).
+
+in preparation for the large n limit we write g 7 g/n , s 7 n s. this has no eect
+
+on (3.6), (4.16) or (4.17), while (4.15) becomes
+
+
+
+
+
+
+s = 
+
+1
+22
+
+s
+a{c}
+
+g
+a
+
++
+
+1
+n
+
+1
+22
+
+
+a{c}
+
+g
+a
+
+.
+
+(4.18)
+
+5 with respect to the gaussian xed point
+
+10
+
+as we will show explicitly in the next section, the quantum term survives the large n limit
+
+only in those terms in which each loop correction is accompanied by tr1 = n [3].
+
+we nish this section by discussing some important qualitative criteria satised by
+
+(4.15) or (4.18). recall that it is a fundamental requirement of the renormalization group
+
+that the kadano blocking transformation [1] should aect variables only in a localised
+
+patch; long range interactions should appear only after innitely many steps (analogously
+here   0).
+
+on the one hand, obviously, we must therefore require that each rg step is free from
+infrared singularities,6 equivalently here that the ow equation must have an all-orders
+
+taylor expansion in small external momenta. we call this the requirement of quasilocality
+
+[3]. this implies that the same is true of s, as we claimed above, providing only that
+
+we ensure that -integration constants are also chosen quasilocal. as we will conrm
+explicitly, quasilocality then follows from the smoothness of the wine-vertices and s. after
+
+integrating down to some intermediate scale , the long range interactions are hidden in
+
+s in this quasilocality (since the modes that are integrated out are infrared cuto by ).
+
+on the other hand, we want to ensure that unintended fundamental physics or even
+
+non-local non-physics is not also hidden in this quasilocality. we call this the requirement
+of ultralocality. for momenta much larger than the infrared cuto , the typical  1/p2
+behaviour of fundamental propagating modes does show up in the vertices of s. therefore
+
+the requirement of ultralocality corresponds to ensuring that there are no spurious inverse
+
+powers of momenta in this asymptotic expansion [3], in particular that we do not introduce
+
+any propagator-like terms into (4.14).
+
+(actually, despite the intuition, it is not clear to us whether this requirement is really
+
+[3], shows that it is not in fact
+needed. a more careful study than that reported in ref.
+possible to generate an arbitrary quasilocal s0 from a quasilocal s, rather there are some
+restrictions on additions to s0. it may be that the physics is still correct but hidden in
+
+a change of variables. to denitively answer these issues requires generalising the recipe
+
+for extracting correlators and thus scattering matrix elements from the eective action
+
+[23][4].)
+
+finally, we can see indirectly that (4.15) must still correspond to integrating out, once
+
+this ow equation is completely regularised, as follows.
+
+in this case, by denition all
+
+6 actually this statement is strictly true only for a smooth (i.e. innitely dierentiable) cuto.
+more subtle cases, e.g. sharp cuto [27], will not be considered here.
+
+11
+
+momentum integrals are bounded. but since  appears as the ultraviolet cuto scale in
+
+these integrals, this means that contributions from momenta larger than some scale q must
+vanish in the limit q/  . thus we see that as   0, the remaining contribution
+from any xed range of non-vanishing momentum scales, disappears. since the partition
+
+function (3.4) is unchanged under the ow, the contributions from a given xed momentum
+
+scale must still be in there somewhere, and the only other place they can be, is to already
+
+be encoded in the eective action  i.e. the modes have been integrated out. (strictly it is
+
+the partition function (3.4) that we must show is completely regularised, and not just the
+
+ow equation. it is hard to see here however, how this property could separately fail.) a
+
+more intuitive, but incomplete, requirement for integrating out to be taking place (which
+
+is also satised) was discussed in ref. [3].
+
+5. gauge eld expansion and the large n limit
+
+the wilsonian eective action s, being gauge invariant, has an expansion in traces and
+
+products of traces:
+
+s =
+
++
+
+nz ddx1    ddxn s1n (x1,    , xn) tr a1 (x1)    an (xn)
+xn=2
+xm,n=2
+
+nmz ddx1    ddxn ddy1    ddym s1n,1m(x1,    , xn; y1,    , ym)
+
+1
+2!
+
+tr a1 (x1)    an (xn) tr a1 (y1)    am(ym)
+(5.1)
+
+
+
+1
+
+
+
+1
+
++   
+
+.
+
+this is represented graphically in g. 4 (cf. g. 2. note that the combinatorics in the
+
+gures are those of feynman rules: i.e. each diagram stands for the sum over all ways of
+
+assigning the gauge elds to the points, whilst respecting the order in the traces.)
+
+the momentum space vertices are written as
+
+s1n (p1,    , pn) (2)d(
+
+n
+
+xi=1
+
+pi) =z ddx1    ddxn eipi xi.pi
+
+s1n (x1,    , xn)
+
+,
+
+(5.2)
+
+where all momenta are taken pointing into the vertex, and similarly for the vertices in
+(4.7). s has an expansion in only single trace vertices s1n (x1,    , xn), as follows from
+
+12
+
+s =
+
+=
+
++ 1/2!
+
++ ...
+
++
+
++ ...
+
++
+
++ 2
+
++
+
++ ...
+
+fig.4. expansion of the action in traces, and products of traces, of gauge elds.
+
+(4.14). in fact, combining (4.7) and (4.14), we may easily read o expressions for these
+
+vertices [3]:
+
+s(p, q, r) =
+
+s (p)  s (p, p) = 2 (p)/cp
+2
+(p  p) + 2c1
+cp
+1
+
+s(p, q, r, s) =
+
+ (q; p, r)(pr  p.r) + cycles
+
+ (q; p, r+s)(p  p)
+
+cp+q
++ 2c1
+
+(  ) + 2c1
+ (s; p, r+q)(p  p ) + 2c1
+,(q; s; p, r)(pr  p.r) + cycles
+
++ c1
+
+ (q, r; p, s)(ps  p.s)
+
+(5.3)
+etc. , where in the two-point vertex we set p1 = p2 = p, and introduce the shorthand
+cp  c(p2/2) and the transverse combination  (p) := p2  pp , in the three-point
+vertex we add the two cyclic permutations of (p, q , r), and in the four-point vertex the
+three cyclic permutations of (p, q, r, s). note that, since cp and all the wine-vertices
+are smooth, all the s-vertices have the same property.
+
+concentrating on the single trace terms of s (or s) we see from (4.7), (5.1), and (4.4),
+that {c}s/a opens up the trace by removing one a and replacing it with the ends of
+the lines of parallel transport in g. 1. in the classical term of (4.18) the leftmost /a
+does the same with another (copy of the) action, while in the quantum term, the leftmost
+
+/a opens up the same trace again and attaches the other ends of the parallel transport
+lines, splitting the trace in two, as in (4.5). diagrammatically, the single trace terms of s,
+
+under a small change in , thus induce the contributions in g. 5.
+
+strictly speaking we should include in the quantum term of (4.18), the contributions
+
+as in g. 6 where the leftmost functional derivative attacks the parallel transport lines
+
+13
+
+
+
+
+
+
+=
+
+
+
+
++ 2
+
+2
+n
+
+
+
+
+
+
+
+
+g2
+
++
+
+
+
+n 
+
+
+g2
+
+1
+n
+
+1
+n
+
+fig.5. diagrammatic representation of the ow equation. a circumex in the circle stands
+for s, a dotted line for attachment of c
+
+xy only, as in g. 3.
+
+themselves. however, we can avoid them by a limiting procedure keeping the position of
+
+the functional derivative away from the wine [3]. in fact these terms will vanish once the
+
+pauli-villars contributions are included [9].
+
+fig.6. a wine biting its own tail.
+
+as   , s is given by just the rst term in (4.17), and thus is a single trace in this
+limit. we see from g. 5 that those terms with a product of two traces are down by factors
+
+of 1/n . in the large n limit the only quantum terms that survive are the split-open traces
+
+where all the gauge elds lie in only one of the two new traces, as in g. 7. thus in the
+
+large n limit, the single trace property is preserved by the ow and the eective action at
+
+any  contains only single trace terms.
+
+however, whilst it is true that the large n limit of the eective action is a single trace,
+
+the limit of the ow equation itself may be more subtle: two-trace terms with just two gauge
+
+elds in one of the traces are also formally down by a factor of 1/n , but the attachment
+
+of a eld-free wine to these two gauge elds in a higher order quantum correction, will
+
+14
+
+2
+
+fig.7. in the large n limit, the surviving terms have all gauge elds living on one of the
+
+two traces, the no-gauge-elds trace contributing tr1 = n .
+
+then yield a further factor of 1/n (for the quantum correction) and a factor of n 2 for two
+eld-free traces, thus contributing in principle a nite amount in the n   limit. to
+one loop this does not happen because two-trace terms with just two elds in one of the
+
+traces, vanish at tree level for symmetry reasons, as we prove in sec. 8. we leave to the
+
+future, the question of whether or not this more subtle large n limit of the ow equations
+
+takes place at higher loop order.
+
+6. wilson loop representation
+
+the wilson loop representation was central to our exposition in [3], and indeed plays
+
+a powerful role in our own thinking, but we have intentionally avoided introducing it until
+
+this point to emphasise that the ow equations and their properties hold entirely separately
+
+from this representation, even though we nd that these properties show up most clearly
+
+through this representation.
+
+we have already mentioned, cf. (4.11), that we could covariantize the kernel by using
+straight wilson lines. more generally, we could use curves cxy, although to ensure lorentz
+invariance these would have to be averaged over their orientations. the most general
+
+covariantization, preserving the fact that in (4.7) the gauge elds appear in just two strings,
+
+is then given by (path) integrals and/or sums over all the congurations of these two curves,
+
+with a normalised measure of our own choosing [up to the lorentz covariance requirement
+
+above, the smoothness requirement above (4.10), and exchange symmetry below (4.6)].
+
+however, we simplify this by traversing back along a coincident wilson line, i.e. back from
+
+y to x along the same curve:
+
+u{w}v =zz ddx ddyz dcxy tr u(x)[cxy]v(y)1[cxy]
+
+.
+
+(6.1)
+
+the measure (hidden in the denition of dcxy) does not of course depend on the
+parametrization of the path, and is normalised by
+
+z dcxy 1 = wxy
+
+,
+
+15
+
+(6.2)
+
+as follows from (4.9). (as a trivial example, in the case of (4.11), it has support only on
+the straight line cxy where the measure collapses to multiplication by wxy.) clearly (6.1)
+and (6.2) imply the identity (4.10) we introduced earlier.
+
+similarly the most general form for the action is in terms of path integrals over wilson
+loops [c] = tr [cxx] (c being a closed contour, x some arbitrary point on it, and cxx
+being the marked contour starting and nishing at x). the most general single trace term
+
+is obtained from an integral over all congurations of a single wilson loop, the most general
+
+two-trace terms from two wilson loops and so on. thus (5.1) may be represented as
+
+s =z dc [c] +
+
+1
+
+2!z d[c1, c2] [c1] [c2] +   
+
+,
+
+and s may be written
+
+s =z d c [ c]
+
+(6.3)
+
+(6.4)
+
+[by (3.1)]. while the measure d c is of our choosing, the measures dc, d[c1, c2], etc. , are
+determined by the ow equations.
+
+by virtue of the fact that
+
+[cxy] = izcxy
+
+dz [cxz] a(z) [czy]
+
+,
+
+where cxz (czy) is the part of cxy before (after) z, all our previous gures still hold but as
+snapshots of the wilson loops and/or lines. we only have to remember that wherever the
+wine attaches, it is integrated around the curve by ir dz. as a result, our previous
+
+gures, e.g. g. 5, are no longer just hieroglyphics indicating the form of the resulting
+
+traces  but come alive as uctuating wilson loops (or lines) i.e. representatives of the
+appropriate measures (e.g. dc).
+
+from the previous section, in the large n limit, (6.3) collapses from a gas of wilson
+
+loops to just a single path integral over one wilson loop. we can write this explicitly as a
+
+path integral over a single particle circulating in a loop:
+
+s = p z dx es[x]+h dx.a ,
+
+where we have parametrized the closed curve c by x( ), and the (parametrization in-
+dependent) path integral measure dx es is determined by the ow equation. note that
+g. 5 indicates that this measure is rather unusual compared to that e.g. of a free particle,
+
+16
+
+but nevertheless we see that gauge theory in the large n limit, is equivalent to a form of
+
+quantum mechanics for a single particle!
+
+combining (6.3) and (5.2), yields wilson loop expressions for the vertices, e.g. the
+
+single trace vertices are given as [3]
+
+s1n (p1,    , pn) (2)d(
+
+n
+
+xi=1
+
+pi) = (i)nz dci i   i
+(1, 2,    , n)
+
+dx1
+
+1 dx2
+
+2    dxn
+
+n eipi xi.pi
+
+(6.5)
+(similarly s and c) where the notation (1, 2,    , n) stands for integrating round the loop
+while preserving the cyclical order, and similarly (6.1) and (4.7) give
+
+w1n,1m(p1,    , pn; q1,    , qm; r, s) (2)d(
+
+pi +
+
+qj + r + s) =
+
+(6.6)
+
+(i)n+mzz ddu ddvz dcuvz v
+
+dxn
+u
+
+n z xn
+
+dxn1
+u
+
+n
+
+m
+
+xj=1
+1 z u
+
+v
+
+xi=1
+n1   z x2
+expi
+
+v
+
+dym
+
+dym1
+
+dy1
+1
+v
+
+dx1
+u
+
+m z ym
+r.u + s.v +xi
+
+m1   z y2
+qj.yj
+pi.xi +xj
+ ,
+
+where the xi integration is along the curve cuv, and the yj integration along the same
+curve but in the opposite direction cf. g. 2 or g. 8.
+
+
+q
+
+3
+
+3
+
+r
+
+p
+1
+
+
+1
+
+p
+2
+
+
+2
+
+
+2
+q
+
+2
+
+
+1
+q
+
+1
+
+p
+3
+
+
+3
+
+s
+
+fig.8. feynman rule for the wine, with momentum labels.
+
+as we will show now in some small examples, these wilson loop (line) representations
+
+allow one easily to extract many general properties of the solutions.
+
+7. symmetries
+
+the gauge invariance (trivial ward) identities follow by applying a =   i[a, ]
+
+to (5.1) and (4.7), or more simply by direct integration in (6.5) and (6.6):
+
+p1
+1 s1n (p1,    , pn) = s2n (p1+p2, p3,    , pn)s2n (p2,    , pn1, pn+p1). (7.1)
+
+17
+
+note that it is clear from (5.1) or (6.5) that these vertices are cyclically symmetric:
+
+s1n (p1,    , pn) = s2n1 (p2,    , pn, p1)
+
+.
+
+diagrammatically, (7.1) corresponds to a push forward minus a pull back of the point
+
+concerned to the end points of the relevant integration domain in (6.5), as in g. 9.
+
+
+
+r
+
+
+
+q
+
+q
+
+
+
+p
+
+
+
+q+r
+
+
+
+r
+
+
+
+p
+
+
+
+p+q
+
+fig.9. graphical representation of gauge invariance identities.
+
+of course, these same properties hold for s1n (p1,    , pn), and separately for each
+string in s1n,1m(p1,    , pn; q1,    , qm), the two-trace vertices of (5.1). (in addition
+
+s1n,1m (p1,    , pn; q1,    , qm) = s1m,1n (q1,    , qm; p1,    , pn)
+
+without loss of generality, from (5.1) or (6.3).) for the wine vertices we have the analogous
+
+identites except that outer momenta can reach the end of line:
+
+p1
+1 w1n,1m(p1,    , pn; q1,    , qm; r, s) =
+
+(7.2)
+
+w2n,1m(p1 +p2, p3,    , pn; q1,    , qm; r, s)
+w2n,1m(p2,    , pn; q1,    , qm; r+p1, s)
+
+,
+
+with similar identities for contraction with pn
+
+n , q1
+
+1 and qm
+
+m , as is clear from g. 8.
+
+charge conjugation (c) invariance follows from the symmetry a  at
+
+ , equivalently
+
+from reversal of the direction of all wilson loops (lines), thus
+
+s1n (p1,    , pn) = ()nsn1 (pn,    , p1)
+
+,
+
+(similarly s) and combining c invariance with the exchange identity,
+
+w1n,1m(p1,    , pn; q1,    , qm; r, s) = w1m,1n (q1,    , qm; p1,    , pn; s, r)
+
+18
+
+(which one easily sees by rotating g. 8 or from (4.6) under u  v), gives
+
+w1n,1m(p1,    , pn; q1,    , qm; r, s) =
+
+()n+m wn1,m1 (pn,    , p1; qm,    , q1; s, r)
+
+.
+
+lorentz invariance implies that changing the sign of all the momentum arguments in
+the vertices (of s, s or w ) just changes the sign of those with an odd number of momentum
+arguments and leaves alone those with an even number.
+
+finally the coincident line identities readily follow from (6.6) by changing the direction
+
+of the y integration:
+
+w1n,1m(p1,    , pn; q1,    , qm; r, s) = ()m xinterleaves
+
+w1m+n (k1,    , km+n; r, s)
+
+,
+
+(7.3)
+1 ,    , pn
+n
+m+n in which the ps remain ordered
+
+where we have used (4.8), and the sum runs over all interleaves of the sequences p1
+and qm
+with respect to each other, and similarly the q s remain in reverse order.
+
+i.e. combined sequences k1
+
+1 ,    , km+n
+
+m ,    , q1
+
+1
+
+some useful examples are:
+
+s(p, q, r) is antisymmetric under exchange of any pair in (p, q, r)
+
+,
+
+w(p; q, r) = w(p; r, q)
+
+,
+
+pw(p; q, r) = wq  wr
+
+,
+
+s(p, q, r, s) = s(q, p, s, r)
+
+,
+
+w (p, q; r, s) = w(q, p; s, r)
+
+,
+
+w;1m (; q1,    , qm; r, s) = w1m(q1,    , qm; s, r)
+
+,
+
+w, (p; q; r, s) = w (p, q; r, s)  w(q, p; r, s)
+
+.
+
+(7.4)
+
+8. perturbative expansion
+
+although we will be especially interested in four dimensions, we keep d 6= 4 here since
+it will be helpful to access this via the limit d  4 [3]. it will also be helpful to write
+(4.18) as
+
+
+
+
+
+
+s = a0[s, g2s  2 s] + a1[g2s  2 s]
+
+,
+
+(8.1)
+
+where we have used (3.6) and written the classical term as the bilinear functional a0
+and the quantum term as the linear functional a1. at the classical level, we see from
+
+ the subscripts indicate the order of h, i.e. the number of loops involved.
+
+19
+
+(4.16) and (8.1), that s  1/g2. substituting this in the quantum term of (8.1), we see
+that the one loop correction  g0, and so on. thus by iteration, s has the weak coupling
+expansion
+
+s =
+
+1
+g2 s0 + s1 + g2s2 +   
+
+.
+
+(8.2)
+
+this is of course the form expected by the usual graphical considerations [after performing
+a 7 a/g as above (3.3)]. substituting this expansion in (8.1) and recalling that g will
+run at the quantum level, we see that the  function must also take the standard form
+
+ := 
+
+g
+
+
+= 1g3 + 2g5 +   
+
+.
+
+(8.3)
+
+we will see below how the i are determined. from (8.2) and (8.3), we obtain the loopwise
+
+expansion of (8.1):
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+s0 = a0[s0, s0  2 s]
+s1 = 21s0  2a0[s0  s, s1] + a1[s0  2 s]
+s2 = 22s0  2a0[s0  s, s2]  a0[s1, s1] + a1[s1]
+
+,
+
+(8.4)
+
+(8.5)
+
+(8.6)
+
+etc. we mention in passing that by considering linear perturbations s 7 s + o, we easily
+obtain the ow equations for the integrated operator o, and its weak coupling expansion.
+thus from (8.1),
+
+
+
+
+o = 2a0[g2s  s, o] + g2a1[o]
+
+.
+
+(8.7)
+
+from (8.2), we expand o = 1
+(8.1), or directly from (8.4)  (8.6):
+
+g2o0 + o1 + g2o2 +    giving, either from (8.3), (8.2) and
+
+
+
+
+
+
+
+
+o0 = 2a0[s0  s, o0]
+
+o1 = 21o0  2a0[s0  s, o1]  2a0[s1, o0] + a1[o0]
+
+o2 = 22o0  2a0[s0  s, o2]  2a0[s2, o0]  2a0[s1, o1] + a1[o1]
+
+(8.8)
+
+(8.9)
+
+, (8.10)
+
+etc.
+
+20
+
+8.1. feynman diagrammatics and the classical vertices
+
+our diagrams, as in g. 5, play one nal role: expanded as in g. 2, they yield feyn-
+
+man diagrams which may be translated directly into the corresponding equations for the
+
+vertices. the translation rule is just that we must place the points and their associated
+
+momenta in all places on composite wilson loops, whilst preserving the cyclic order. we
+
+then read o the appropriate wine and action vertices (applying momentum conserva-
+
+tion and including momentum integrals if appropriate), contract the lorentz indices of
+points joined by wines and, from (4.18), multiply the whole by 1/22. in the following we
+compute in this way the rst few classical vertices7 s0
+the diagrams for the classical two-point vertex s0
+
+1n
+ (p) follow from (8.4) and the top
+
+.
+
+two lines of g. 5:
+
+
+
+
+
+
+p
+
+p
+
+= 2
+
+fig.10. feynman diagrams for the two-point vertex.
+
+here, the empty circle corresponds to s0, not s as in g. 5, and we have noted that since
+
+actions one-point vertices vanish (by tr a = 0 but see also [3]), we must have at least
+
+one blob per lobe. thus
+
+
+
+
+
+
+s0
+ (p) = 
+
+1
+22 c
+
+phs0
+
+(p)  2 s(p)i s0
+
+ (p) + (p  p )
+
+,
+
+(8.11)
+
+where similarly to (5.3), c
+
+p  c(p2/2). by gauge invariance and dimensions,
+
+s0
+ (p) = 2 (p)/f (p2/2)
+
+.
+
+(8.12)
+
+from (8.2), we require f (0) = 1 so as to be consistent with (4.16) in the g  0 limit.
+substituting (5.3), we readily nd the unique solution to be f = c, and thus
+
+ (p) = s (p)
+s0
+
+.
+
+(8.13)
+
+7 for convenience we move the h counting index to a superscript
+
+21
+
+similarly, from (8.4) and the top two lines of g. 5, we obtain the following diagrams
+
+for the three-point vertex:
+
++2
+
+^
+
+
+
+
+
+
+ 2
+
+fig.11. feynman diagrams for the three-point vertex.
+
+using (8.13), the entire second line vanishes and we are left on the rhs only with terms
+
+that are already determined. we can thus immediately integrate to get
+
+s0
+
+(p, q, r) = z 
+
+
+
+d1
+3
+
+1 nc
+
+r
+
++ 2(r  r)
+
+s(p, q, r) s(r) + c
+
+(q; p, r) s(p) s(r)o
+
++ cycles
+
+.
+
+(8.14)
+
+here it should be understood that in the curly brackets we replace  with 1, and to the
+whole expression we add the two cyclic permutations of (p, q, r). in principle the top
+limit would be 0, the bare cuto scale, but since the integrands have taylor expansions
+in momenta/1, the continuum limit 0   trivially exists (as expected at the classical
+level). the integration constant is a term independent of , which by dimensions and
+
+locality (quasi or ultra, cf. sec. 4) must be linear in the momenta. by gauge invariance
+
+it has to be the unique covariantization of 2 (see below), i.e. the three-point vertex
+in 1
+. in fact, this conclusion follows directly by comparing the    limit of
+
+2rddx f 2
+
+(4.17) with (8.14).
+
+using (7.1) and (7.2), one may readily check the gauge invariance of (8.14): contracting
+
+the rhs of (8.14) with p, we obtain
+
+z 
+
+
+
+d1
+3
+
+1 nc
+
+r
+
+s(r) s(r)  c
+
+q
+
+s(q) s(q)o + 2(r)  2(q)
+
+,
+
+(8.15)
+
+after cancellation of some corner terms containing s(q) s(r) and c
+q. from
+(8.11) and (8.13), the integrand is a total derivative integrating to boundary terms
+
+r or c
+
+22
+
+. the top limit cancels the  terms in (8.15) if and only if the in-
+
+
+
+h s(r)  s(q)i
+(r)  s0
+
+gives s0
+
+tegration constant in (8.14) is a gauge covariantization of 2 (p), while the bottom limit
+
+(q) evaluated at , as required. in fact, this check is clear essentially
+
+diagrammatically, using g. 9, g. 11, and g. 10 as follows. on the rhs of g. 11, we sum
+
+the results of pushing forward and pulling back each point in turn (i.e. summing over the
+
+cyclic orderings of the momentum p). the cancelling terms mentioned above, correspond
+
+to terms that meet at a corner where the wine joins s  push-forwards to the end of a
+
+wine cancelling pull-backs to this point in s, and vice versa  while the remaining terms
+
+represent the integrand in (8.15). these appear as the two-point diagrams of g. 10, with
+
+each point in turn replaced by the pushforward and pullback arrows of g. 9.
+
+the simplication that the ow depends only on already known terms persists to all
+
+higher point classical vertices (and therefore also to all orders in h, a.k.a. g): since we need
+
+at least one blob per lobe, the ow of a classical n-point vertex cannot depend on a higher-
+
+point vertex, and thus these equations are closed. furthermore, when one lobe corresponds
+
+to an n-point s0-vertex, the other corresponds to the two-point vertex (8.13). since for
+
+n > 2, there are two such terms in a0[s0, s0] but only one in a0[s0, s], these contributions
+
+cancel in (8.4). thus the ow of s0
+
+1n
+or s, and may be immediately integrated.
+
+for n > 2, depends only on lower-point vertices
+
+
+
+
+
+
+= 
+
+fig.12. feynman diagrams for the four-point vertex.
+
+in a similar way, we compute the classical gauge invariant continuum four-point vertex.
+
+23
+
+after simplifying by (8.13), the diagrams are those in g. 12, thus
+
+s0
+
+(p,q, r, s) = z 
+
+
+
+d1
+3
+
++ s(s) s(p, q, r+s)c
++ s(p) s(s)c
+
+1 nc
+
+p+q(cid:16) s(p, q, r+s)  1
+
+2 s0
+
+(p, q, r+s)(cid:17) s0
+
+(r; p+q, s) + s(r) s(p, q, r+s)c
+
+(s; r, p+q)
+
+(p+q, r, s)
+
+(q, r; p, s) + 1
+2
+
+s(p) s(r)c
+
+,(q; s; p, r)
+
++ c
+s
+
+s(s) s(p, q, r, s) + cycleso + 2  4 + 2 
+
+,
+
+(8.16)
+
+where cycles stands for the three cyclic permutations of (p, q, r, s). we see that, as
+predicted in sect.5, (8.13), (8.14) and (8.16) are smooth in momenta.
+
+whilst (8.16) may look complicated, the expression is actually completely determined
+
+from the top term by gauge invariance and cyclicity: indeed, the top term is sucient to
+
+identify the two composite wilson loops in (8.4), and from the graphical arguments below
+
+(8.15), gauge invariance then holds only if all the other terms appear with their correct
+
+coecients, since these correspond to all cyclic order preserving positions of the points
+
+on the underlying composite wilson loop, and only then do all the corner cancellations
+
+correctly take place. similarly all the other (e.g. higher-loop and/or higher-point) s-
+
+vertices follow from just one or two of their individual terms. in fact, since (4.14) is also
+a composite wilson loop (6.4) [3], these same comments apply to the s-vertices (5.3).
+
+at nite n , classical vertices with more than one trace do exist. however, simply by
+
+tr a = 0, there can be no such vertices with three or less points. the four-point vertex
+s0
+,(p, q; r, s) actually also vanishes. its ow is shown diagrammatically in g. 13, where
+
+once again we have simplied with (8.13).
+
+
+
+
+
+
+=
+
+2
+n
+
+fig.13. feynman diagrams for the double-trace four-point vertex.
+
+these contributions vanish on adding the cyclic permutations p  q or r  s, by
+the antisymmetry of the three-point vertices [as in (7.4)]. therefore s0
+,(p, q; r, s) is
+independent of . since by dimensions it is dimensionless, by gauge invariance orthogonal
+to p, q, r and s, and by locality polynomial in these momenta, the only solution is
+s0
+,(p, q; r, s) = 0. clearly in this way one may establish that s0
+(p, q; k1,    , kn)
+
+,1n
+
+24
+
+vanishes for any number n of gauge elds inside the second trace.
+
+(this remark is of
+
+importance for the large n limit of the ow equation, as already mentioned in sect. 5.)
+
+the rst non-vanishing double-trace vertex appears at the six-point level, with three gauge
+
+elds inside each trace.
+
+incidentally, we can now use (8.8) to conrm the statement above (4.17), that apart
+
+from trrddx f 2
+ there are no relevant or marginal operators here (as expected). we see
+by expanding (8.8) into n-point vertices and using (8.13), that the term omin in o0[a],
+with the lowest number min of gauge elds, cannot have any  dependence. thus the
+(eigen)dimension of o (which about the gaussian xed point g = 0, is that of o0) is
+simply do = min + mp, where mp is the power of momentum in omin (which must be a
+positive integer by quasilocality). taking into account the requirement of gauge invariance
+
+we have that apart from the min = mp = 0 unit operator (a.k.a. vacuum energy) which
+ which by (4.16) amounts
+
+we here always ignore, and the min = mp = 2 part of trrddx f 2
+to a change of g, there are no operators with do  4.
+
+8.2. the  function
+
+as usual, the  function is determined through a renormalisation condition, which in
+
+our case is (4.16). using this we have
+
+s (p) = 2/g2  (p) + o(p3)
+
+,
+
+(8.17)
+
+and thus by (8.13),
+
+s (p) =
+
+1
+g2 s0
+
+ (p) + o(p3)
+
+.
+
+by (8.2), this implies that the o(p2) component of all the higher loop contributions sn
+ (p),
+must vanish. this greatly simplies the o(p2) part of the two-point vertex ow in (8.5) 
+
+(8.6), in particular reducing them to algebraic equations. thus we see that
+
+a1[s0  2 s] (p) = 41 (p) + o(p3)
+
+,
+
+(8.18)
+
+where a1[s0  2 s] (p) is the two-point vertex in a1[s0  2 s]. this xes 1. similarly, at
+n  2 loops, the n are determined by the requirement that a1[sn1](p) = 4n (p)+
+o(p3). and non-perturbatively from (8.1) and (8.2),
+
+a1[g2s  2 s] (p) = 
+
+4
+g3 (g)(p) + o(p3)
+
+.
+
+25
+
+8.3. one loop
+
+we can use the above classical vertices to compute the one-loop two-point vertex and
+thus 1. the relevant diagrams for the lhs of (8.18)8 are displayed in g. 14, where the
+circle stands for 0 = s0  2 s.
+
+k
+
+2
+n
+
++
+
+2
+n
+
+translating the feynman rules, we get
+
+fig.14. the one-loop two-point diagrams.
+
+a1[0](p) =
+
++0
+
+(k)c
+
+k0
+
+1
+
+(2)d(c
+2 z ddk
+(p, p; k, k) 
+
+(k, p, p, k) + c
+c
+n 2 (cid:20)0
+k
+
+(k, p, p, k) +
+
+(p; k  p, k)0
+
+(k, p, pk)
+(k, p, k, p)(cid:21))
++ (p  p )
+
+0
+
+.
+
+1
+2
+
+(8.19)
+
+clearly by the lorentz symmetry of the integral, the addition of the cyclic permutation
+p  p just multiplies the result by two. untying the large-n change of variables
+g 7 g/n , we see that 1 in principle has n dependence in two terms, one proportional
+
+to n , as expected, and one unexpected contribution proportional to 1/n .9 actually this
+
+1/n term vanishes independently of the choice of covariantization. this follows since
+by using (5.3), lorentz invariance (k  k,    etc. ) and the last (coincident
+line) identity in (7.4), one may show that under the k-integral s (k, p, k, p) 
+2 s(k, p, p, k), while expanding the s0 four-point vertex by (8.16), and again using
+these symmetries, one may show that the same identity holds for s0
+
+ (k, p, k, p).
+
+the problem is that the k integral is divergent. while propagator-like terms have been
+uv improved to  c/p2, the interactions e.g. (5.3), (8.14) and (8.16), are worse by c1, this
+latter behaviour being forced by gauge invariance (7.1), as we show in appendix a [3]. with
+a power-law regulator, i.e. c(x)  1/xr, r > 0, for large x  k2/2, the integrand  1/k2
+for large k. this behaviour may be established by analysing the individual contributions,
+
+8 corresponding to s 1
+9 the coecient of each power of n in (8.19) is separately completely constrained by gauge
+invariance, up to an overall factor, in the sense outlined below (8.16).
+
+ (p)/  21 s(p), by (8.13) and (8.5).
+
+26
+
+using the large k behaviours given in appendix a. it is most readily seen to hold in the
+a1[ s] (p) contributions: the n-point s vertices with two large momenta  k behave as
+c1
+k k4n, while the m-point c vertices with  k entering in at their ends [as in (8.19)]
+behave as c
+
+kkm. for the two-point one-loop vertex, we have m + n = 4.
+
+on taking into account the two powers of external momenta that must fall out by gauge
+
+invariance, as in (8.18), one might expect that the integrands behaviour is improved to
+ 1/k4, however this is false. firstly, this power counting argument relies on dimensional
+reasoning which fails to work so simply here because it does not constrain functions of
+the dimensionless ratios momentum/. secondly there is no separation of tree-level
+and loop contributions. these points are illustrated below. finally, gauge non-invariant
+
+terms may also arise, from contributions that cancel, but only after a shift in k [3]. these
+
+contributions thus integrate to surface terms in (8.19), which are guaranteed to vanish only
+
+if the integral over the original parts converge.
+
+to demonstrate this eect we compute the gauge dependent part of (8.19). the mo-
+
+mentum routing chosen in g. 14 and (8.19) corresponds to taking k to be the momentum
+
+of the left-most functional derivative in the quantum term of (4.18) and is natural if we
+
+wish to further regularise the integral in a way that corresponds to modifying the mea-
+
+sure over a(k) modes whilst preserving the fact that (4.18) leaves the partition function
+(3.4) invariant, and thus preserve the expected universality of 1. however the reader can
+check that k-shifted dierences always arise, but as diering expressions, no matter how
+
+the terms in (8.19) are routed. (this reects the conict between specifying momenta,
+
+and the action of gauge invariance [18][3].) we assume that (8.19) is further regularised so
+that invariance under k  k is preserved, and collect terms using the observation above
+(7.3). then using (7.1), (7.2), and (8.13), we readily obtain
+
+ppa1[0] (p) =
+
+2
+
+2 z ddk
+
+(2)d nc
+
+k
+
+s(k)  c
+
+k+p
+
+s(k+p)o .
+
+(8.20)
+
+using (5.3) and expanding the rhs as a power series in p, one obtains integrals that may
+
+be done exactly and thus, using (8.18),
+
+a1[0] (p) = 4(d  1)dd4(cid:8)2 [g0]
+
+xd/2 (xc/c)
+
+and
+
+g0 =
+
+gl =
+
+where
+
+1
+d
+
+0 + pp [gl]
+
+0 (cid:9)  41 (p) + o(p3)
+
+.
+
+1
+
+d(d + 2)hxd/2+1 (xc/c)i
+
+(8.21)
+here d = 2/[(d/2)(4)d/2] is the solid angle of a (d 1)-sphere divided by (2)d, and
+as before prime is dierentiation with respect to its argument (here x). these expressions
+
+27
+
+give some guide as to the typical divergences expected using the cuto function c(x). in
+
+particular for the power-law c, we have
+
+xc/c  r
+
+as
+
+x   ,
+
+(8.22)
+
+and the leading divergences actually cancel. if in addition the correction to (8.22) is o(1/x)
+
+or better (as will be the case here), the non-invariant terms in (8.21) vanish for all d < 4,
+and thus also for d  4. note that at d = 4, we could still get a nite o(p0) term from
+the subleading correction to (8.22), violating gauge invariance. this illustrates the need to
+
+dene these integrals carefully. as we will see below however, power-law c is not enough
+
+to regularise the gauge-invariant divergences.
+
+consider g. 15. this is one of several  1/k2 contributions to the rst term of (8.19)
+(from expanding the rst term in g. 12, using g. 11) which, since the two blobs appear
+on two-point s vertices, are already orthogonal to p. another example is given in ref.[3].
+
+k
+
+^
+
+^
+
+^
+
+^
+
+fig.15. divergent one-loop contribution (made one-loop by the curved wine).
+
+these outer two-point vertices do not feel the loop-momentum k, nor indeed do the
+
+outer wines, and in this sense are really tree corrections to the one-loop term. indeed,
+
+however many points appear on these outer parts the divergence is still quadratic in d =
+4 (i.e. integrand goes as  1/k2). note that the two outer wines external momentum
+dependence c
+p ensure that the coecient of this divergence is even non-polynomial of the
+
+form
+
+z 
+
+
+
+d1
+3
+
+1   (cid:18)z 
+
+1
+
+d2
+3
+2
+
+pc1
+c
+
+p   (cid:19)2
+
+.
+
+(the non-polynomial part arises from the c
+
+p and it should be understood that the inner
+cs are functions of 2.) it is easy to verify either diagrammatically or directly from (8.14),
+(8.16) and (8.19), that no other contribution has the same non-polynomial dependence,
+
+and thus this divergence remains uncancelled. using appendix a, we isolated exactly the
+
+complete coecients (polynomial and non-polynomial) of the leading (and sub-leading)
+
+divergences, and veried that there are many further uncancelled divergences.
+
+in the
+
+interest of compactness we do not present the details.
+
+28
+
+9. conclusions
+
+we briey recapitulate some of the main points.
+
+we formulate a ow equation for the eective action s of a non-abelian gauge eld
+a, the connection for the covariant derivative d =   ia, which leaves the partition
+function invariant under the ow.
+
+gauge invariance is manifest at all stages; the transverse bilinear term in s need not
+
+be inverted in the equation or its solution (which is here investigated perturbatively).
+
+ghosts and gauge xing are not required. the challenging problem of gribov copies is
+
+thus avoided.
+
+(n.b. contrary to popular folklore, it is not necessary to implement gauge xing or
+
+other explicit reduction of variables merely to factor out the innite volume of the gauge
+
+group, which in any case only amounts to one of many harmless divergent vacuum energy
+
+contributions.)
+
+the placing of the coupling constant g outside the connection, together with the exact
+
+preservation of gauge invariance, means that a is protected from wavefunction renormal-
+ization. only g renormalizes. we show how the corresponding  function is determined
+
+through the appropriate renormalization condition on s.
+
+the global group invariance ensures that everything can be expanded in products of
+
+traces. we show that in the large n limit, s collapses to a single trace. the limit of the
+
+ow equation itself may be more subtle.
+
+the general covariantization entering into the equation can be conveniently expressed
+
+as an integral over congurations of wilson lines. in a similar way the solution s may
+
+be expressed as an integral over a gas of wilson loops. in this way the ow equation
+
+may be reformulated entirely in terms of manipulations on wilson loops. the equations
+
+then determine the measure over these uctuating wilson loops. in the large n limit, s
+
+becomes an integral over the congurations of just one wilson loop, i.e. a path integral
+
+for a single particle circulating in a loop.
+
+this wilson loop picture may also be interpreted as feynman diagrams and thus pro-
+
+vides an intuitive and elegant way to derive the perturbative solution for s. we derive the
+
+ward identities and discuss the interpretation of the various symmetries (charge conju-
+
+gation, lorentz and gauge invariance) in this picture. we derive the two, three and four
+
+point vertices at the classical level, and the one-loop two-point vertex.
+
+we explicitly conrm that these solutions are gauge invariant. however, we show that
+
+subtleties with momentum-integral surface terms appear at one loop (and higher) as a
+
+29
+
+consequence of the divergent nature the momentum integrals in this framework. this
+
+in turn is related to the large momentum behaviour of the vertices, whose lower bound
+
+is xed by the exact preservation of gauge invariance (as we show in appendix a). we
+
+demonstrate that some of the divergences that thus appear at one loop are non-polynomial
+
+in momenta and remain uncancelled in the complete solution in this framework. the
+
+further regularisation that is required is developed in ref.[9].
+
+the ow equation and its solution s enjoy the important property of quasilocality,
+
+namely that they can be expanded in a taylor series in their (external) momentum argu-
+
+ments to all orders. equivalently for s, that it has a derivative expansion to all orders.
+
+the completely regularised ow equation will correspond to integrating out high energy
+
+modes because  will then act properly as an eective ultraviolet cuto. the preservation
+
+of the partition function then ensures that those high energy modes that are eliminated,
+
+get incorporated into s. the solution to the ow equation thus yields for the rst time, a
+
+precise continuum prescription for a gauge invariant wilsonian eective action.
+
+the author acknowledges support of the pparc through an advanced fellowship, and
+
+acknowledgements
+
+grant gr/k55738.
+
+appendix a. large and small momenta
+
+any vertex has a transverse part whose form depends on the choice of covariantization
+{ } (and the choice of ow equation in the case of s), and a universal longitudinal part
+whose form is dictated by gauge invariance. consider the one-point wine w(p; k, k p).
+(recall that we label the one-point vertex by the kernel it covariantizes. since, by trans-
+
+lation invariance, all vertices are accompanied by momentum conserving delta functions,
+
+all relations must be derived for the case where the momentum arguments sum to zero.)
+
+by gauge invariance (7.1), (7.2), we have (7.4):
+
+pw(p; k, k  p) = wk  wk+p
+
+.
+
+(a.1)
+
+30
+
+in the case that p and k are colinear, this may be solved immediately for w(p; k, k  p).
+
+more generally, for small p, using wk  w (k2/2), we have
+
+w(p; k, k  p) = 
+
+w 
+k
+2 (2k + p)  2
+
+w 
+4 k.p k + o(p2)
+k
+
+,
+
+(a.2)
+
+where we have noted that any term perpendicular to p may be added while leaving (a.1)
+unchanged, but by lorentz invariance this has tensor structure  (p)k.
+
+(a.1) also constrains the ultraviolet behaviour of w(p; k, k  p). for example, for
+large k it is constrained to be at least as bad as the rhs. explicitly, consider choices of
+wk where the scale is set by k for large momenta, and thus w (x)/w (x)  1/x for large
+x, i.e. where wk goes as a power or log for large k (say w (x)  xw). (a.2) then typically
+holds also for k >> p, with o(p2) replaced by o(p2k2w3), since for this to be violated
+requires including non-minimal eld strength terms10 in { }.
+
+many similar relations can be derived for colinear, small and large momenta for the
+other vertices, including s and s vertices. in any case we have that the ultraviolet be-
+haviour for large k is at best w(p; k, k  p)  wk/k.
+it is then easy to see that
+w1n,1m(p1,    , pn; q1,    , qm; k, kpi pipj qj) must have ultraviolet behaviour
+at least as bad as wk/km+n: by the gauge relations (7.1), (7.2), each m + n vertex is
+related to a dierence of two (m + n 1) vertices, whose arguments only dier in momenta
+small with respect to k. for choices wk where k sets the scale (as above), this dierence
+falls by just one extra power of k compared to each (m + n 1) vertex, and thus the m + n
+vertex cannot fall faster than an (m + n  1 vertex)/k. the italicized statement above
+then follows immediately, by iteration.
+
+recall that the two-point vertices for the actions are xed as in (8.13) and (5.3), and
+therefore s (k) = s (k)  c1
+k k2. by the same argument as above, using (7.1), we have
+that the n-point vertices s1n (p1,    , pn) where any two momenta pi are large of order
+k, behave at best as c1
+k k4n. the same bound holds for s. these relations are sucient
+for the demonstration that the one-loop contribution is not regularized (in sect. 8), and
+
+show that the lack of complete regularization follows from the gauge invariance.
+
+in fact, while the s vertices achieve the lower bound c1
+
+k k4n (as sketched below), s
+does not, as is already clear from the ow of the classical four-point function shown in
+
+g. 12. we see there that if the two large momenta are next to each other, they can enter
+and leave a three point lobe, thus actually s(k, k  p  q, p, q)  c1
+k k.
+10 balanced by 1/2: these are the terms which are transverse to p
+
+31
+
+this eect would not appear if the gauge invariant ow was for one-particle irreducible
+
+vertices (a legendre formulation) but the lack of separation between tree-level and loop
+
+contributions (see also the end of sect. 8) seems to be a necessary consequence of the exact
+
+preservation of gauge invariance. to see this, recall that all the terms in g. 12 have to
+
+appear as shown, by gauge invariance, given the rst two terms. but attaching a wine to
+
+make a one-loop contribution out of this gauge invariant four-point vertex produces both
+
+diagrams that are one-particle reducible and one-particle irreducible.
+
+the cases where one or both large momenta enter the side of a wine are also more
+
+involved. we rewrite (a.1) as
+
+kw(k; p, k  p) = wp  wk+p
+
+.
+
+(a.3)
+
+now the asymptotic behaviour for large k depends on whether wk grows or falls for large
+k. the growing case corresponds to c1
+k  k2r and does still follow the simple rules above,
+if r is large enough: we have that at best c1
+k /k. arguments as above
+then rapidly establish that an m + n point vertex from {c1} with two large momenta  k
+in any position behaves at best as  c1
+k /km+n providing r  m + n. and once again, this
+bound is saturated if there are no non-minimal terms in { }. in the cases where r < m + n,
+the bound established below for the falling cases may dominate.
+
+ (k; p, k  p)  c1
+
+best c
+
+(k; p, k  p)  c
+
+the falling case corresponds to wk = c
+
+k and in this case we read from (a.3), that at
+p/k. note that the coecient of a divergence arising from this
+need not be polynomial in p. (see similar remarks in sect. 8.) this 1/k behaviour is true
+of any m + n vertex where the k can reach the top end of the line, for example:
+
+kc
+
+, (r, k; q; p, k p q r) = c
+
+, (r; q; p, p q r) c
+
+,(r + k; q; p, k p q r)
+
+.
+
+the rst term on the rhs  k0 sets the bound, since the second term can go as 
+1/k [as may be established by writing out the gauge relation kc
+, (k; q; p, k  p  q)].
+again by iteration, the general rule for the case where one large momentum k enters via
+the side of {c} is that the vertex goes at best as 1/kv+1 where v is the number points
+(gauge elds) separating the two large momenta. once more, this is saturated by minimal
+
+covariantizations.
+
+the case where both large momenta enter {c} via the side can be treated similarly, with
+the conclusion that the vertex again goes at best as 1/kv+1 where v is the number points
+
+separating the two large momenta. however in this case even minimal covariantizations
+
+32
+
+do not necessarily reach this bound. for (4.13), the case where the two momenta are next
+to each other on one side of the wine leads to a o(k0) contribution11   (k)/k2 as will
+be established explicitly in ref. [9]. consequently (4.13) actually behaves as 1/kv, for two
+large momenta  k entering the side and separated by v points.
+
+as indicated above if r < m + n, in particular if m + n r > v + 1 (m + n r > v), then
+the bounds  1/kv+1 ( 1/kv) for one (two) large side momenta are the limiting ones for
+{c1} also. with the above bounds for wine vertices, one can check explicitly from (5.3),
+that the s vertices saturate their own bounds. all the asymptotic formulae given in this
+[9], where we will also derive the
+appendix will be conrmed explicitly for (4.13) in ref.
+
+coecient functions multipying the leading k behaviour.
+
+11 note that it is necessarily transverse, otherwise the k gauge relations would be violated.
+
+33
+
+references
+
+[1] k. wilson and j. kogut, phys. rep. 12c (1974) 75.
+[2] d.u. jungnickel and c. wetterich, in the exact renormalization group, eds krasnitz
+
+et al, world sci (1999) 41, and hep-ph/9902316.
+
+[3] t.r. morris, in the exact renormalization group, eds krasnitz et al, world sci
+
+(1999) 1, and hep-th/9810104 (this is updated to conform to present notation).
+
+[4] t.r. morris, in yukawa international seminar 97, prog. theor. phys. suppl. 131
+
+(1998) 395, hep-th/9802039.
+
+[5] t.r. morris, in new developments in quantum field theory, nato asi series 366,
+
+(plenum press, 1998), hep-th/9709100.
+
+[6] t.r. morris, in rg96, int. j. mod. phys. b12 (1998) 1343, hep-th/9610012.
+[7] see for example the reviews: k. intriligator and n. seiberg, nucl. phys. proc. suppl.
+45bc (1996) 1, hep-th/9509066; c. gomez and r. hernandez, hep-th/9510023; l.
+alvarez-gaume and s.f. hassan, fortsch. phys. 45 (1997) 159, hep-th/9701069.
+
+[8] s. arnone, c. fusi and k. yoshida, j. high energy physics 02 (1999) 022.
+[9] t.r. morris, part ii in preparation
+
+[10] g. t hooft, nucl. phys. b72 (1974) 461.
+[11] a. migdal, ann. phys. 109 (1977) 365; yu.m. makeenko and a.a. migdal, nucl. phys.
+
+b188 (1981) 269.
+
+[12] a.a. migdal, phys. rep. 102 (1983) 199.
+[13] a.m. polyakov, gauge elds and strings (harwood, 1987).
+[14] v.a. kazakov and i.k. kostov, nucl. phys. b176 (1980) 199; v.a. kazakov, nucl.
+
+phys. b179 (1981) 283.
+
+[15] see the review by a.v. manohar, in panic 96, hep-ph/9607484; m.j. teper, hep-
+
+lat/9804008.
+
+[16] a.a. slavnov, theor. math. phys. 13 (1972) 1064; b.w. lee and j. zinn-justin, phys.
+
+rev. d5 (1972) 3121.
+
+[17] v. gribov, nucl. phys. b139 (1978) 1; i. singer, comm. math. phys. 60 (1978) 7;
+see e.g. c. becchi, hep-th/9607181; p. van baal, hep-th/9711070; m. asorey and f.
+falceto, ann. phys. 196 (1989) 209; k. fujikawa, nucl. phys. b468 (1996) 355.
+
+[18] m. dattanasio and t.r. morris, phys. lett. b378 (1996) 213.
+[19] c. becchi, in elementary particles, field theory and statistical mechanics, (parma,
+1993), hep-th/9607188; m. bonini et al, nucl. phys. b409 (1993) 441, b418 (1994)
+81, b421 (1994) 81, b437 (1995) 163; u. ellwanger, phys. lett. 335b (1994) 364; u.
+ellwanger et al, z. phys. c69 (1996) 687; m. reuter and c. wetterich, nucl. phys.
+b417 (1994) 181, b427 (1994) 291; k-i. aoki et al, prog. theor. phys. 97 (1997)
+479, hep-th/9908042, hep-th/9908043; k-i. kubota and h. terao, hep-th/9908062;
+
+34
+
+m. pernici et al, nucl. phys. b520 (1998) 469; d.f. litim and j.m. pawlowski, phys.
+lett. b435 (1998) 181; m. simionato, hep-th/9809004.
+
+[20] j. polchinski, nucl. phys. b231 (1984) 269.
+[21] f.j. wegner and a. houghton, phys. rev. a8 (1973) 401.
+[22] j. zinn-justin, quantum field theory and critical phenomena (1993) clarendon
+
+press, oxford.
+
+[23] t.r. morris, int. j. mod. phys. a9 (1994) 2411.
+[24] m. salmhofer, nucl. phys. b (proc. suppl.) 30 (1993), 81.; c. wetterich, phys. lett.
+
+b301 (1993), 90; m. bonini et al, nucl. phys. b418 (1994), 81.
+
+[25] t.r. morris, phys. lett. b357 (1995) 225.
+[26] c. becchi, a. rouet and r. stora, commun. math. phys. 42 (1975) 127.
+[27] t.r. morris, nucl. phys. b458[fs] (1996) 477.
+
+35
+
+

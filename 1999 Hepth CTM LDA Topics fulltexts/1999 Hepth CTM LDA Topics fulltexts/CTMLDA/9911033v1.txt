@@ -1,0 +1,848 @@
+9
+9
+9
+1
+
+ 
+
+v
+o
+n
+5
+
+ 
+
+ 
+ 
+
+1
+v
+3
+3
+0
+1
+1
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+an approach to approximate calculations of green functions
+
+v.e. rochev
+
+institute for high energy physics
+protvino, moscow region, russia
+
+abstract
+
+a new approach proposed recently by author for the calculation of green functions in quantum
+eld theory and quantum mechanics is briey reviewed. the method is applied to nonperturbative
+calculations for anharmonic oscillator, 4-theory, quantum electrodynamics and other models.
+
+1 toy model
+
+to illustrate the general properties of the calculation scheme, which was proposed recently in works [1]-[3],
+we consider a toy problem of the calculation of n-particle green functions in zero-dimensional theory
+with 4-interaction, i.e., a problem of calculating the following quantities
+
+where
+
+gn = gn/g0,
+
+gn = z 
+
+
+
+d 2n exp{
+
+m2
+2
+
+2  4}.
+
+a generating function for these quantities is
+
+g(x) = z 
+
+
+
+d exp{
+
+m2
+2
+
+2  4 + x2}.
+
+at that gn = dng
+
+dxn |x=0.
+
+the generating function g(x) satises the dierential equation
+
+which is the schwinger-dyson equation (sde) for this toy model.
+
+4
+
+d2g
+dx2 + (m2  2x)
+
+dg
+dx  g = 0,
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+a solution of this equation can be written as a coupling constant perturbation (ccp) series g(x) =
+2 log |m2  2x|} (up to
+pert is a solution of the perturbation iteration
+
+g(0)
+pert + + g(i)
+a multiplier which inessential for calculating of g(i)) and g(i)
+scheme equation
+
+pert + where leading (free eld) approximation is g(0)
+
+pert = exp{ 1
+
+(m2  2x)
+
+dg(i)
+pert
+dx  g(i)
+
+pert = 4
+
+d2g(i1)
+pert
+dx2
+
+.
+
+from the point of view of dierential equation theory the ccp is attributed to the type of so-called
+singular perturbations. this fact denes, to a considerable extent, both the poor convergence properties
+(the ccp series is an asymptotic expansion at best) and the limited nature of the eld of its applicability.
+(in the model under consideration the ccp theory gives good results in the region   0.01m4 and nothing
+more.) a perturbation is named to be singular if it contains a higher derivative term. the perturbation
+theory over  is singular in the above sense, since the leading approximation consists in the neglecting of
+the higher derivative term. (see [4], [2] for more discussion.)
+
+an alternative for the perturbation theory over  can be other iterative scheme that based on an
+approximation of eq. (1) near the point x = 0 by an equation with constant coecients. take as a
+leading approximation the equation
+
+4
+
+d2g(0)
+
+dx2 + m2 dg(0)
+
+dx  g(0) = 0.
+
+(5)
+
+1
+
+the term 2x dg
+
+dx will be considered as a perturbation. the iteration scheme will consist in step-to step
+
+solutions of inhomogeneous equations
+
+4
+
+d2g(i)
+
+dx2 + m2 dg(i)
+
+dx  g(i) = 2x
+
+dg(i1)
+
+dx
+
+.
+
+(6)
+
+leading approximation equation has the solution g(0) = ex, where s are roots of the characteristic
+equation
+
+42 + m2  1.
+
+from a condition of the convergence of integral (3) at   0 we choose the root
+
+ = m2 + m4 + 16
+
+8
+
+= 1/m2 + o().
+
+a solution of nth-step equation is looked for in the form g(i) = p(i)g(0). taking into account the leading
+approximation equation (5), we obtain the equation for p(i)
+
+4(cid:16) d2p(i)
+
+dx2 + 2
+
+dp(i)
+
+dx (cid:17) + m2 dp(i)
+
+dx
+
+= 2x(cid:16) dp(i1)
+
+dx
+
++ p(i1)(cid:17).
+
+(7)
+
+it is evident from this equation that p(i) is a polynomial of degree 2i in x.
+
+the question about a small parameter for the expansion dened by eqs. (5)-(7) arises. there is no
+manifest small parameter for this expansion , but it is clear, that the expansion approximates well the
+exact solution not only for small values of . really, in the strong coupling region    the rst-
+step one-particle function g1 (propagator) approximates the exact result with accuracy of 26%, and
+second-step one with accuracy 7%.
+
+to be more exact, the question about the small parameter should be replaced by the question about a
+convergence of the expansion. but the convergence of this iteration scheme can be easily proved. notice,
+the iteration scheme dened by eqs. (5)-(7) is equivalent to iterations of the second kind volterra equation
+with the continuous kernel. the convergence of the iteration of this equation is fullled by the textbook
+theorem.
+
+so, this regular expansion possesses the good convergency properties in the framework of this simple
+zero-dimensional model and, more importantly, is a nonperturbative method of calculations of green
+functions.
+
+2 4-theory
+
+let us go to the eld theory. consider the theory of a scalar eld (x) in the euclidean space ed with
+the action
+
+a() = z dx{
+
+1
+2
+
+()2 +
+
+m2
+2
+
+2 + 4}
+
+(8)
+
+(9)
+
+and with the generating functional of green functions (vacuum expectation values)
+
+g() = z d exp{a + }.
+
+here (x, y) is a bilocal source,   r dxdy(x)(x, y)(y). a normalization constant is omitted. the
+
+nth derivative of g over  with the source being switched o is the 2n-point (n-particle) green function.
+the schwinger-dyson equation (sde) for the generating functional g() is a corollary of the identity
+
+((y) exp{a + }).
+taking into account the above denitions we get the sde for 4-theory
+
+(x)
+
+0 = z d
+
+
+
+4
+
+2g
+
+(y, x)(x, x)
+
++ (m2   2)
+
+g
+
+(y, x)  2z (x, u)
+
+g
+
+(y, u)
+
+du  (x  y)g = 0.
+
+2
+
+(10)
+
+(11)
+
+at d = 0 (zero-dimensional theory, or single-mode approximation) the functional derivatives transform
+into usual ones, and eq. (11), after obvious redesignations, reduces to the ordinary dierential eq. (4).
+at d = 1 the model corresponds to the quantum-mechanical anharmonic oscillator. at d  2 (eld
+theory) for the cancellation of ultraviolet divergences the appropriate counterterms should be included
+in the action. the sde for the theory with counterterms has the form of eq. (11) with the substitution
+   + , m2  m2 + m2, 2  (1 + z)2, where , m2 and z are correspondingly counterterms
+of coupling, mass and wave function renormalizations.
+let apply to sde (11) the same idea about the approximation by an equation with constant (i.e.,
+
+independent from ) coecients. as the leading approximation equation we will consider the equation
+
+4
+
+2g(0)
+
+
++ (m2   2)
+
+g(0)
+  g(0) = 0,
+
+(12)
+
+and the term 2 g
+ (that contains the source  explicitly) should be treated as a perturbation. since
+green functions are the derivatives of g() in zero and the only behaviour of g near  = 0 is essential
+, such an approximation seems to be acceptable. the iteration procedure for the generating functional
+g = g(0) + g(1) +  + g(i) +  consists in the step-to-step solution of the equations
+
+4
+
+2g(i)
+
+
++ (m2   2)
+
+g(i)
+  g(i) = 2
+
+g(i1)
+
+
+
+.
+
+the solution of the leading approximation equation (10) is the functional
+
+g(0) = exp{z dxdy(y, x) (0) (x  y)},
+
+where (0) is a solution of the characteristic equation
+
+4 (0) (0) (0) (x  y) + (m2   2) (0) (x  y) = (x  y).
+
+(13)
+
+(14)
+
+(15)
+
+at d  2 the quantity (0)(0) must be considered as some regularization.
+equation (15) is similar to the equation for the propagator in the leading approximation of the 1/n -
+expansion. certainly, the similarity is completely supercial, since the principle of the construction of
+the approximation scheme is dierent.
+
+the solution of equation (15) is the free propagator (0) = (2   2)1 with the renormalized mass
+2 = m2+4(0)(0). the quantity (0)(0) is dened from the self-consistency condition. the propagator
+is the rst derivative of g() over the source  : g1   = g
+ | =0. as can be easily seen, it is simply
+(0) for the leading approximation.
+notice, that the generating functional (14) of leading approximation does not possess the complete
+bose-symmetry. really, as follows from the denition of generating functional, the bose-symmetry implies
+on full generating functional the condition
+
+2g
+
+(y, x)(y , x)
+
+=
+
+2g
+
+(y , x)(y, x)
+
+.
+
+(16)
+
+evidently condition (16) does not fullled for g(0) dened by eq.(14). the violation of this condition leads
+particularly to the violation of connected structure of the leading approximation two-particle (four-point)
+green function.
+
+such a situation is rather typical for nonperturbative calculational schemes with bilocal source (for
+example, for 1/n -expansion in the bilocal source formalism), but discrepancy of such type are not an
+obstacle for using these iteration schemes. really, condition (16) should be satised by the full generating
+functional g which is an exact solution of sde. it is clear that an approximate solution may do not
+possess all properties of an exact one.
+in given case we have just the same situation. properties of
+connectivity and bose-symmetry of higher green functions, which are not fullled at rst steps of the
+iteration scheme, improves at subsequent steps. for example, the structure of disconnected part of the
+two-particle function is reconstructed as early as at the rst step of the iteration scheme. at subsequent
+
+3
+
+steps the correct connected structure of many-electron functions and other corollaries of bose-symmetry
+are reconstructed. such stepwise reconstruction of exact solution properties is very natural for the given
+iteration scheme as it is based on an approximation of the generating functional g() in vicinity of
+zero. the green functions are coecients of the generating functional expansion in the vicinity of zero,
+therefore only the lowest functions are well-described at rst steps of the approximation  at the leading
+approximation the propagator only. higher many-particle functions come into the play later, at following
+steps, and relation (16) is fullled more and more exactly when we go toward exact solution.
+
+in the general case, the solution of equation for the i-th step of the iteration scheme is the functional
+g(i) = p (i)g(0), where p (i) is a polynomial in  of a degree 2i. therefore at the i-th step the computation
+of green functions reduces to solving a system of 2i linear integral equations.
+
+a solution of the rst step equation is g(1) = p (1)g(0) where p (1) = 1
+
+2 f 2 +(1). the function f is
+two-particle (four-point) function of the rst step, and (1) is the rst-step correction to the propagator.
+eq.(13) at i = 1 gives us a system of equations for f and (1). equations for f and (1) are simple
+linear integral equations. the exact form of solutions of these equations see in [1]. at   0 the rst
+step propagator reproduces correctly the rst term of the usual ccp theory.
+at d = 1 the model with action (6) describes the quantum-mechanical anharmonic oscillator. ultra-
+violet divergences are absent, quantities of (0)(0) type are nite and the above formulae are applied
+directly for the computation of green functions.
+
+to calculate a ground state energy e one can use the well-known formula
+
+de
+d
+
+= g2(0, 0, 0, 0),
+
+where g2 is the four-point (or two-particle) function. integrating the formula with a boundary condition
+e( = 0) = m/2 taken into account, one can calculate the ground state energy for all values of the
+coupling (see [1]).
+
+0
+
+at   0 the rst step calculation reproduces the perturbation theory up to the second order.
+at    : e = 01/3 + o(1/3), and 0 = 0.756. the coecient 0 diers by 13% from the exact
+= 0.668. at /m3 = 0.1 the result of the calculation diers from the exact numerical
+numerical one exact
+one by 0.8% and at /m3 = 1 diers by 6.3%. therefore, the rst step calculations approximate the
+ground state energy for all values of  with the accuracy that varies smoothly from 0 (at   0) to 13%
+(at   ).
+at d  2 action (6) should be added by counterterms for the elimination of ultraviolet divergences.
+there is no need to add a counterterm of wave function renormalization for the leading approximation,
+and the equation of the leading approximation will be
+
+4( + 0)
+
+2g(0)
+
+
++ (m2
+
+0 + m2   2)
+
+g(0)
+  g(0) = 0.
+
+(17)
+
+at i  1 the counterterms i, m2
+corresponding terms should be added to the r.h.s. of equation (11). so, the rst step equation will be
+
+i and zi should be considered as perturbations. therefore, the
+
+4( + 0)
+
+2g(1)
+
+
++ (m2
+
+= 2
+
+g(0)
+  m2
+
+1
+
+g(0)
+
+
+
+0 + m2   2)
++ z12 g(0)
+
+g(1)
+  g(1) =
+2g(0)
+
+
+  41
+
+.
+
+(18)
+
+for the super-renormalizable theory (d = 2 and d = 3) it is sucient to add counterterms of mass
+renormalization and wave function renormalization, i.e. i = 0 for all n. the normalization condition
+on the physical renormalized mass 2 gives us a counterterm of the mass renormalization in the leading
+approximation. this counterterm diverges logarithmically at d = 2 and linearly at d = 3. the countert-
+erm z1 is nite at d = 2, 3. the counterterm m2
+1 diverges as that of the leading approximation does,
+namely, logarithmically at d = 2 and linearly at d = 3.
+
+at d = 4 besides the renormalizations of the mass and the wave function a coupling renormalization
+is necessary. due to the presence of the counterterm  the normalization condition on the renormalized
+
+4
+
+mass 2 for the leading approximation becomes the connection between counterterms m2
+counterterm 0 (and, consequently, m2
+
+0) will be xed at the following step of the iteration scheme.
+
+0 and 0.
+
+a solution of the equation for the four-point function f at d = 4 diverges logarithmically, and a
+renormalization of the coupling is necessary. the equation for f contains the counterterm 0 only.
+therefore by dening a renormalized coupling r as a value of the amplitude in a normalization point
+we obtain the counterterm of the coupling renormalization 0 and the renormalized amplitude. taking
+the renormalization of the two-particle amplitude in such a manner, one can solve the equation for (1)
+and renormalize the mass operator in correspondence with the general principle of normalization on
+the physical mass. but in four-dimensional case one gets an essential obstacle. at the regularization
+removing, 0  , and the coecient  + 0 in the leading approximation equation (17) vanishes.
+the same is true for all the subsequent iterations. the theory is trivialized. one can object that an
+expression
+
+( + 0) 
+
+(y, x)(x, x)
+
+2g
+
+(19)
+
+is really an indenite quantity of 0   type, and the renormalization is, in the essence, a denition of
+the quantity. but it does not save a situation in this case since the renormalized amplitude possesses
+a nonphysical singularity in a deep-euclidean region (it is a well-known landau pole). the unique
+noncontradictory possibility is a choice r  0 at the regularization removed. this is the triviality of the
+theory again. the triviality appears almost inevitably in an investigation of 4
+4-theory beyond the ccp
+theory and is a practically rigorous result. notice, that contrary to the ccp theory which is absolutely
+nonsensitive to the triviality of the theory, the method proposed leads to the triviality already at the rst
+step.
+
+3 quantum electrodynamics
+
+the lagrangian of quantum electrodynamics (qed) in minkowski space-time with a gauge xing term
+has the form
+
+l = 
+
+f f 
+
+1
+4
+
+1
+2dl
+
+(a)2 + (i   m + e a).
+
+(20)
+
+here f = a   a, a  a,  = 0, m is an electron mass, e is a charge (coupling
+constant), dl is a gauge parameter,  are dirac matrices. for notation simplicity we write all vector
+indices as low ones.
+
+a generating functional of green functions is
+
+g(j, ) = z d(, , a) exp inz dx(cid:16)l + j(x)a(x)(cid:17) z dxdy (y)(y, x)(x)o.
+
+(21)
+
+here j(x) is a source of the gauge eld, and (y, x) is a bilocal source of the spinor eld ( and
+
+ are spinor indices). normalization constant omitted.
+
+functional derivatives of g with respect to sources are vacuum expectation values
+
+g
+
+j(x)
+
+= i < 0 | a(x) | 0 >,
+
+g
+
+(y, x)
+
+= i < 0 | tn(x)  (y)o | 0 > .
+
+sdes for the generating functional of green functions of qed are
+
+(22)
+
+(23)
+
+(g 2   +
+
+1
+dl
+
+)
+
+1
+i
+
+g
+
+j(x)
+
+g
+
+(x, x)o + j(x)g = 0,
+
++ ie trn
+2g
+
+(x  y)g + (i   m)
+
+g
+
+(y, x)
+
++
+
+e
+i
+
+
+
+j(x)(y, x) z dx(x, x)
+
+g
+
+(y, x)
+
+= 0.
+
+(24)
+
+(here and everywhere below  denote a dierentiation with respect to variable x.) let us resolve sde
+(23) with regard to the rst derivative of the generating functional with respect j:
+
+1
+i
+
+g
+
+j(x)
+
+= z dx1dc
+
+(x  x1)nj(x1)g + ie tr 
+
+g
+
+(x1, x1)o,
+
+(25)
+
+5
+
+and substitute it into the second sde (24). as a result we obtain the integrated over a (in the
+functional-integral terminology) equation
+
+(x  y)g + (i   m)
+
+g
+
+(y, x)
+
++
+
+e2
+
+i z dx1dc
+
+ (x  x1)
+
+
+
+(y, x)
+
+tr 
+
+g
+
+(x1, x1)
+
+=
+
+= z dx1n(x, x1)
+
+g
+
+(y, x1)
+
++ edc
+
+(x  x1)j (x1)
+
+g
+
+(y, x)o.
+
+exploiting fermi-symmetry condition
+
+2g
+
+(y, x)  (y , x)
+
+2g
+
+ (y , x) (y, x)
+
+.
+
+= 
+
+let us transform eq.(26) in following manner:
+
+(x  y)g + (i   m)
+
+g
+
+(y, x)
+
++ ie2z dx1dc
+
+= z dx1n(x, x1)
+
+g
+
+(y, x1)
+
+(x  x1)
++ edc
+
+
+
+(x1, x)
+
+
+
+g
+
+(y, x1)
+
+=
+
+(x  x1)j (x1)
+
+g
+
+(y, x)o.
+
+(26)
+
+(27)
+
+(28)
+
+from the point of view of exact solutions equations (26) and (28) are fully equivalent since the transition
+from eq.(26) to eq.(28) is, in essence, an identical transformation. however, it is not the case for the
+used iteration scheme since, as for bose-symmetry condition (16) as, fermi-symmetry condition (27) is
+fullled only approximately at any nite step of the iteration scheme. therefore, eqs. (26) and (28) lead
+to dierent expansions. eq.(26) gives to the calculational scheme, which on the language of feynman
+diagrams of perturbation theory is analog of the summation of chain diagrams with fermion loop. this
+version is named calculations over perturbative vacuum since a unique connected green function of
+the leading (vacuum) approximation is the free electron propagator. this scheme leads, as for 4-theory
+as (see above, section 2), to landau pole and triviality at the rst step of the iteration scheme (see [5]
+for more details).
+
+the second version of the iteration scheme, which is based on eq.(28), gives us a fruitful and insen-
+sitive to triviality scheme of calculation of physical quantities. this version is named calculations over
+nonperturbative vacuum since the electron propagator of the leading vacuum approximation is a solution
+of a non-trivial nonlinear equation. for this scheme a calculation of two rst terms of expansion of the
+vertex function in photon momentum for chiral-symmetric vacuum have been performed in work [5]. this
+calculation has allowed to obtain a simple formula for anomalous magnetic moment: f2 = /(2  ),
+where  is the ne structure constant. also, for a linearized version of the theory (see, for instance, [6])
+the problem of dynamical chiral symmetry breaking have been investigated in work [5]. the calculations
+are performed for renormalized theory in minkowski space. in the strong coupling region   /3 the
+results correspond to earlier investigations performed in euclidean theory with cuto (see [6]): solutions
+arise with breakdown of chiral symmetry. but for the renormalized theory a solution with breakdown of
+chiral symmetry is also possible in the weak coupling region  < /3 with a subsidiary condition on the
+value of  which follows from the gauge invariance (see [5] for more details).
+
+4 other models
+
+some other models have been investigated by proposed method in works [2]-[3] and [7]-[9]. famous
+gross-neveu model with the lagrangian
+
+l = ji j +
+
+
+2n
+
+( j j)2
+
+(29)
+
+have been investigated by this method in work [3] at d = 2, 3, 4 and nite n , where d is space dimension
+and n is a number of avors. the results were following: a spontaneous symmetry breaking is shown
+to exist in d = 2, 3 and the running coupling constant is calculated. the four dimensional theory turns
+
+6
+
+seems be trivial. these results exhibit the eciency of the method and are the nite n generalization of
+the known results obtained in the framework of 1/n expansion.
+
+the greatest interest from the physical point of view presents applications of the method to study
+gauge theories in nonperturbative region. first steps in this direction were made in works [7]-[9]. in
+work [7] a generalization of the higgs mechanism which takes into account the contributions of gauge
+eld vacuum conguration into the formation of the physical vacuum was considered. for the abelian
+higgs model the triviality bound mh  1.15ma was found. in works [8]-[9] a non-abelian su (2) gauge
+theory was considered, and a mechanism for the dynamical mass generation of a non-abelian gauge
+eld which was based on taking into account the contributions of the gauge eld vacuum congurations
+into the formation of the physical vacuum was proposed. these investigations are needed in a following
+elaboration. a most winning eld of application of proposed method seems to be a problem of dynamical
+chiral symmetry breaking in gauge theories.
+
+references
+
+[1] v.e. rochev, j.phys. a: math.gen 30 (1997) 3671; hep-th/9606155.
+[2] v.e. rochev, in h.m. fried and b. muller, editors, quantum chromodynamics: collisions, con-
+
+nement and chaos, page 354. world scientic, singapore, 1997.
+
+[3] v.e. rochev and p.a. saponov, int.j.mod.phys. a13 (1998) 3649; hep-th/9710006.
+[4] v.e. rochev and p.a. saponov, in b.b. levtchenko, editor, proceedings of the ixth workshop on
+high energy physics and quantum field theory (zvenigorod95), page 239. msu publ., moscow,
+1995; hep-th/9510219.
+
+[5] v.e. rochev, hep-ph/9907534.
+[6] v.a. miransky, dynamical symmetry breaking in quantum field theories, world scientic, 1993.
+[7] v.e. rochev, hep-ph/9812315.
+[8] v.e. rochev, j.phys. a: math.gen. 31 (1998) 409; hep-th/9705168.
+[9] v.e. rochev, hep-th/9908079.
+
+7
+
+

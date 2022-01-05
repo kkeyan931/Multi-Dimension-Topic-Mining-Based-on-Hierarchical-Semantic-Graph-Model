@@ -1,0 +1,2006 @@
+using the hopf algebra structure of qft in calculations
+
+department of physics, mainz university, d-55099 mainz, germany
+
+d. kreimer
+
+university of tasmania, gpo box 252-21, hobart, tasmania 7001, australia
+
+(february 1, 2008,hep-th/9903249)
+
+r. delbourgo
+
+abstract
+
+we employ the recently discovered hopf algebra structure underlying per-
+turbative quantum field theory to derive iterated integral representations
+for feynman diagrams. we give two applications: to massless yukawa theory
+and quantum electrodynamics in four dimensions.
+
+11.10.gh, 11.15.bt
+
+9
+9
+9
+1
+
+ 
+l
+u
+j
+ 
+
+8
+
+ 
+ 
+
+3
+v
+9
+4
+2
+3
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+typeset using revtex
+
+1
+
+i. introduction
+
+quantum eld theories (qft) of interest to particle physicists are plagued by uv di-
+vergences. typically, we are confronted with theories which favour local interactions, which
+means that we can remove these divergences order by order in the loop expansion. this iter-
+ative removal of divergences, all the while maintaining the locality of the theory, has to fulll
+certain combinatorial properties, succinctly summarized by zimmermanns forest formula.
+it was a great achievement when the self-consistency of the whole renormalization procedure
+was proven [1]. while there is little doubt that renormalization theory allows one to obtain
+sensible answers from an a priori ill-dened theory, only recently has it become clear that
+its underlying mathematical structure is by no means accidental, for it relates qft to basic
+mathematical notions, well-known in low dimensional topology, number theory [26] and
+even in numerical analysis [7].
+
+in this paper, we want to show to what extent the renormalization of feynman graphs
+can be incorporated in the language of generalized iterated integrals, and how the intricacies
+of full-edged qft, including spin and lorentz structure, still can be described in terms of
+such generalized iterated integrals in the spirit of [6].
+
+we will begin by describing how the hopf algebra structure, associated with renormal-
+ization, can be related to rooted trees, through the nature of the feynman graphs. in that
+opening section we also show how two kinds of renormalization schemes can be connected by
+a convolution product; this convolution is the group product naturally related to the hopf
+algebra, and dutifully delivers the renormalization group. the next section explains how
+rooted trees acquire decorations, according to the topology of the feynman diagram, and
+how their evaluation is completely determined by vertex weights and generalized tree fac-
+torials. the following section concerns the representation of feynman diagrams as iterated
+one-dimensional integrals and how this can be tied to the renormalization group, through
+appropriate choices of end-points. finally we treat the case of massless yukawa theory and
+quantum electrodynamics in four dimensions; the former sets the scene for tackling scalar
+theories, while the latter contains the necessary matrix generalization to spin, where the oc-
+currence of form-factors can complicate the argument. the paper ends with a brief section
+embodying our conclusions and highlighting topics for further development.
+
+ii. formulary for renormalization
+
+in this section we will briey describe the hopf algebra structure of renormalization. we
+start with a basic formulation directly on graphs and then introduce the correspondence to
+rooted trees.
+
+a. basics
+
+let us consider a feynman graph  as a set, consisting of vertices and edges of several
+sorts. the edges correspond to various types of propagators, representing inverse dieren-
+tial operators of free relativistic wave equations with boundary conditions in accord with
+causality. the vertices correspond to local interactions associated with a lagrangian which
+
+2
+
+is a polynomial in elds and derivatives. in this way, at the same time  denotes a graph
+which we can draw on paper as well as a unique analytical expression.
+
+regarding  as a set of edges and vertices, we can formally consider the power set of
+this set, and distinguish those elements of this power set which themselves correspond to
+supercially divergent feynman graphs.
+
+such a feynman graph, together with all its supercially divergent subgraphs, constitutes
+a hopf algebra structure which is isomorphic to a hopf algebra of decorated rooted trees.
+this isomorphism is described in fig. 1 and is detailed in [3,4]. (for the readers convenience,
+we have added an appendix which summarizes the crucial points.) by this isomorphism,
+the standard hopf algebra operations on rooted trees correspond to established notions of
+physicists.
+
+admissible cuts on the sum of rooted trees representing  are in one-to-one correspon-
+dence with divergent subgraphs. those are determined by power-counting, thereby allowing
+detection of all sectors in the analytic expression  which correspond to divergent subinte-
+grations in their own right, while the forests of renormalization theory then correspond to
+arbitrary cuts [24].
+
+this viewpoint leads to a hopf algebra structure [26], which we can succinctly formulate
+
+on overall divergent feynman graphs  as
+
+[1] = 1  1
+
+  /
+
+[] = x 
+
+x 
+
+s[1] = 1
+
+s[] =   x 
+=   xf f
+
+x 
+
+e[1] = 1
+e[] = 0.
+
+  /
+
+(1)nf f  /f
+
+(1)
+(2)
+
+(3)
+(4)
+
+(5)
+
+(6)
+(7)
+
+in this notation, the sum p 
+
+x  is a sum over all supercially divergent subgraphs, including
+the case  =  and  = . / is obtained by the contraction of    to a point in .
+the algebra element corresponding to the empty set is, as usual, the unit 1 of the algebra.
+hence, the coproduct determines all sectors in the graph which are ill-dened and require
+x  is a similar sum, with the two cases  =  and  = 
+
+renormalization. the sum p 
+
+excluded.
+
+f is the set of all forests of a feynman graph, and this set is in one-to-one correspondence
+with all cuts at the rooted tree t representing the graph , while divergent subgraphs are in
+one-to-one correspondence with all admissible cuts, as already mentioned. nf is the number
+of boxes of the forest f , or the number of elementary cuts under the above correspondence [3].
+since formulae (1)-(8) are rather abstract for the uninitiated reader, we give an illuminating
+example in fig. 1; a proper derivation of these correspondences can be found in [24] while
+the appendix summarizes the crucial notions.
+
+hopf algebras, as embodied in (1)-(8) are hopf algebras of rooted trees for an appropri-
+ately chosen set of decorations [4]. with this hopf algebra structure, the naive renormalized
+
+3
+
+function [] associated with  vanishes:
+
+[] := m[(s  id)[]] = e[] = 0.
+
+(8)
+
+spelling the formula out, one indeed nds that each term appears twice with opposite signs.
+this must be so as the above formula employs the graph itself as the counterterm of a
+divergent graph, and hence eliminates all divergent graphs. equation (8) represents a well-
+dened renormalization scheme, but is not of much use in practice. it has a few merits in
+the large nc expansion however [8].
+
+usually we want to subtract in accordance with certain renormalization conditions, and
+hence our counterterms should surely remove divergences of integrals but may not completely
+nullify all supercially divergent bare green functions. we have to choose non-trivial renor-
+malization schemes to obtain non-vanishing but nite results. the essential modication is
+to allow for a map r which modies the bare unrenormalized feynman graph without chang-
+ing its divergence. in [6] it was shown that all renormalization schemes can be described on
+the same footing, allowing for tree-dependent variations of dimensionful parameters in bare
+green functions.
+
+b. schemes and scale transformations
+
+we can use the results of [6] to recast the behaviour under a change of parameters and
+the dependence on renormalization schemes in a nice manner. we rst modify the antipode
+via a renormalization map r, and in consequence get a nite renormalized green function
+r[] [26]. the r dependent antipode, the z-factor sr[] of a bare expression  and the
+renormalized green function r[] explicitly read
+
+sr[]/
+
+
+x 
+
+(1)nf +1fr(f )/f#
+
+  x 
+
+sr[] = r
+
+= r"xf f
+= [id  r] xf f
+
+r[] = m[(sr  id)[]]
+
+(1)nf fr(f )/f! .
+
+(9)
+
+(10)
+
+(11)
+
+(12)
+
+here, f is the subgraph corresponding to the forest f , and fr is the evaluation of this
+subgraph using r to evaluate boxes of forests corresponding to cuts, cf. fig. 2.
+
+introducing the convolution product (  )() = m[(  )()] we nd
+
+r[] = (sr  id)[],
+
+(13)
+
+which makes the renormalized green function transparent as a ratio of a bare green func-
+tion   id() to a counterterm sr(). hence our notation emphasizes the fact that the
+renormalized green function is a function of the bare green function as well as the chosen
+renormalization scheme. a detailed discussion of all its properties can be found in [6]. here
+
+4
+
+we only remark that the group structure embodied in the renormalization group is a direct
+consequence of the structure of a renormalized green function as a convolution product [5,6].
+of course, bare functions  are parametrized by masses, external momenta and regu-
+larization (cut-o, dimensional-regularization scale , etc.). we can vary such parameters.
+essentially, the choice of a renormalization scheme amounts to a choice of conditions for ex-
+ternal parameters. hence, a renormalized feynman graph is determined by the choice of two
+sets of such parameters, one for the bare diagrams, one for the counterterm diagrams. if we
+want to highlight the dependence of the renormalized green function on such parameter sets
+i, k say, we explicitly write ri,k; this assigns to a feynman graph a renormalized expression
+with a specied set of dimensionful parameters k used in the bare green functions and a
+set of parameters i used for counterterms. for example, an on-shell renormalized o-shell
+green function will be calculated by using bare feynman diagrams with o-shell momenta
+and imposing on-shell conditions to x them in the counterterms.
+
+now, from [6], we know that the most general renormalization scheme, including for
+example minimal subtraction (ms), can be captured by suitable modications of these scales.
+there one discovers that the change of schemes and scales can be succinctly summarized by
+the following formula
+
+ri,k() = [ri,j  rj ,k]().
+
+(14)
+
+in ri,j, the rst subscript at the renormalization map r indicates the choice of scales
+for the counterterms, while the second one indicates the set of external scales used in the
+bare diagrams. equation (14) shows how an intermediate set of scales j allows for group-
+like transformation laws. from this, one obtains renormalization group equations, operator
+product expansions and cohomological properties of renormalization [6] with ease. depend-
+ing on the choice of parameters to be varied, one arrives at wilsons viewpoint by varying a
+cut-o [9] or at the callan-symanzik equation from a variation of the renormalization point.
+details will be given in future work.
+
+c. example
+
+the following example, of a three-loop fermion self-energy contribution in qed in four
+dimensions, will make the above ideas more transparent and their implementation more
+concrete. we rst calculate the coproduct for the diagram:
+
+h
+
+i =
+
+ 1 + 1 
+
++
+
+
+
+x
+
++
+
+
+
+x +
+
+
+
+the antipode sr[
+
+] is then found to be
+
+sr[
+
+] = rh
+
++rhrh
+
+i + rhrh
+
+i
+
+i
+
+whenever we see r, this means we have to evaluate the analytic expression corresponding to
+the feynman graph on which r acts according to some chosen rules. for example, in minimal
+
+x
+
+i + rhrh
+i
+
+i  rhrhrh
+
+i
+
+x i
+
+i
+
+i
+
+5
+
+subtraction we would introduce a regularization, say the dimensional method, evaluate the
+bare feynman graph as some laurent series in the corresponding regularization parameter,
+and then read r as the projection onto the pole term. on the other hand, in on-shell bphz
+renormalization, we would introduce no regularization, but let r modify the integrand in a
+way such that it fullls certain constraints when external momenta are on-shell. from the
+results in [6] we know that all such schemes are fully equivalent. in particular the result of
+any scheme can be recast into bphz form with appropriately chosen constraints for external
+parameters.
+
+whatever scheme is chosen, the renormalized green function for the example nally
+
+becomes
+
+r[
+
+] = (id  r)h
+
+i  (id  r)hrh
+i
+(id  r)hrh
++(id  r)hrhrh
+
+i
+
+i
+
+i
+
+i
+
+i
+
+x i  (id  r)hrh
+
+i
+
+x
+
+i
+
+here, id is the identity map which leaves the bare diagram unchanged. the same result is
+obtained when one works with rooted trees.
+
+iii. feynman diagrams as representations of rooted trees
+
+particularly simple classes of feynman graphs are given by graphs which are represented
+by rooted trees which have the same decoration at each vertex, and which give a multiplica-
+tive representation dened below. we will soon see that the general case can be reduced
+to similar representations, possibly allowing for appropriate matrix structures to incorpo-
+rate necessary modications due to spin. hence it is legitimate to start the study of the
+renormalization problem on graphs as simple as the ones shown in fig. 3. these simplest
+graphs are completely governed by the combinatorics of undecorated rooted trees. indeed,
+tree-factorials and vertex weights to be dened below are sucient to determine such graphs
+completely [5,6].
+
+a. undecorated trees
+
+let us rst recapitulate some basic notions of rooted trees, following [6]. for further
+details we refer the reader to the appendix. let t [0] be the set of vertices of the rooted tree
+t with n vertices. for any vertex v of t which is not the root, let tv = p c(t ), where c is
+the single cut which only removes the one edge incoming to v (all edges are oriented away
+from the root). if v is the root r, set tr = t . also, w(v) = #(tv) is the number of vertices
+of the tree tv. then, we dene the tree factorial by
+
+hence, for the root, w(r) = n = #(t ). fig. 3 gives instructive examples.
+
+t ! := yvt [0]
+
+w(v).
+
+(15)
+
+6
+
+in the following, a variable z plays the role of a q2/2 in eld theory, and x plays the
+role of the regularization parameter, and can be identied with (4  d)/2 in dimensional
+regularization.
+
+we now consider representations of h dened as follows. assume that we are given a set
+of functions bk(x) which are laurent series in the regularization parameter x, each having
+a rst-order pole. using vertex weights as dened above we can construct a function
+
+z(t) := yvt [0]
+
+bw(v)(x)znx = bt(x)znx,
+
+(16)
+
+where n is the number of vertices of t and z is to be regarded as the scale parametrizing
+
+the representation. we have also abbreviated qvt [0] bw(v)(x) = bt(x). quite a number of
+
+interesting applications can be brought into this form [5,6]. typically, one nds such repre-
+sentations whenever one iterates a (scalar) feynman diagram in terms of itself, as described
+by a rooted tree [5,6]. even if one only iterates one-loop integrals, such representations oer
+a variety of interesting number-theoretic properties realized in the same manner by dierent
+quantum eld theories, ranging from the absence of transcendentals in counterterms derived
+from ladder graphs [1315] (which represent trees of the form bk
++(e), [6]) to the absence of
+non-rational coecients in quenched qed [16] to similar phenomena when summing up all
+diagrams with connes moscovici weights [5].
+
+thus bare green functions are given by z(t). then we dene the ms renormalization
+
+scheme by setting
+
+rm s[z] =< 1 >,
+
+(17)
+
+where angle brackets denote projection onto the pole part of the laurent series in x inside
+the brackets, and we set z = 1 inside these brackets. next, let the minimal subtracted
+counterterm be dened by
+
+srm s (z)(t) =  < z(t) +x srm s (z(t(1))z(t(2)) >,
+
+which is the direct translation of (9) using the map from feynman graphs to decorated rooted
+trees, and let the renormalized green function be dened by m s(z)(t) = [srm s z z](t),
+in accordance with (11), as expected. the reader should have no diculties conrming that
+for t2, the rooted tree with two vertices,
+
+(18)
+
+srm s (z)(t2) =  < b2b1 > + << b1 > b1 >:= z m s
+
+t2
+
+,
+
+(19)
+
+and
+
+rm s ,z(t2) = b2b1z2x < b1 > b1zx < b2b1 > + << b1 > b1 > .
+
+(20)
+
+therefore the antipode z m s
+
+t
+
+:= srm s (z)(t) in ms reads, for the rst few trees,
+
+t1 =  < b1 >,
+t2 =  < b2b1 > + << b1 > b1 >,
+
+z m s
+z m s
+z m s
+t31
+
+=  < b3b2b1 > + << b1 > b2b1 > + << b2b1 > b1 >
+
+ <<< b1 > b1 > b1 >,
+
+z m s
+t32
+
+=  < b3b2
+
+1 > +2 << b1 > b2b1 >
+
+ <<< b1 > b1 > b1 >,
+
+etc.
+
+7
+
+(21)
+(22)
+
+(23)
+
+(24)
+
+which can be summarized by the formula [6]
+
+z m s
+
+t = xfull cuts c of t
+
+(1)nc < "yi
+
+< bti ># btr > .
+
+(25)
+
+this being the result in the ms scheme, it was shown in [6] how to express it in terms of
+a bphz type scheme, where the use of a regularization scheme can be completely avoided.
+translated to the above representations, what we want to achieve is the following: the above
+functions representing rooted trees depend on a function bt(x), determined by a chosen tree,
+a regularization parameter and the chosen one-loop graph (the decoration) which is iterated
+according to the tree structure. further, there is the scale z, delivered in simple bare
+feynman diagrams typically by a variable, such as the square of a single momentum, q2.
+an on-shell scheme would simply subtract at a chosen point q2/2 =: z = 1, for example.
+an ms scheme would also modify the laurent series bt, by projecting to < bt >. in the
+former case, one typically obtains the dierence of integrands evaluated at scales z versus
+1, and hence one may subtract integrands before having to regularize. in the latter case,
+one modies laurent series after regularization and integration. we want to show how
+appropriate subtraction points t can be dened so that the ms renormalized functions equal
+on-shell renormalized functions subtracted at t.
+
+the idea is to use tree indexed parameters t. the antipode z 
+t
+
+in a subtraction scheme
+
+using tree-indexed parameter sets t reads
+
+z 
+
+t = xfull cuts c of t
+
+(1)nc "yi
+
+btc
+
+i
+
+i )x
+
+#(tc
+tc
+i
+
+# btr#(tr)x
+
+tr
+
+,
+
+(26)
+
+where p c(t) = qi ti, which one immediately obtains by standard formulas [6]. the rst two
+
+trees t1, t2 deliver immediately
+z 
+z 
+
+t1 = bt1x
+t1
+t2 = bt22x
+t2 + bt1bt12x
+
+t1
+
+,
+
+(27)
+(28)
+
+as the reader should conrm using the equation (26). for the denition of full cuts, appearing
+in the summation above, we refer the reader to the appendix.
+
+to z 
+
+t determines t recursively [6]:
+
+equating z m s
+
+t
+
+where
+
+xt!(cid:19) log(b
+
+t/bt)(cid:21) ,
+
+t = exp(cid:20)(cid:18) 1
+(1)nc "yi
+
+b := xfull cuts c of t
+
+srm s (z)(tc
+
+i )# srm s (z)(tr).
+
+(29)
+
+(30)
+
+one also conrms that the ms-renormalized green function can now be expressed
+through the on-shell subtracted one, where the on-shell condition for z(t) signies sub-
+traction at z = t in this case. thus
+
+rm s (z)(t) = r(z)(t)
+
+(31)
+
+holds. also, one immediately derives that b
+t/bt = 1 + o(x), so that we properly arrive
+at well-dened conditions on the external parameters t to express the renormalized green
+function in ms through a bphz subtracted green function with tree-indexed boundaries.
+
+8
+
+b. decorated trees
+
+what is the situation that confronts us in general? in the previous section, we dressed
+every vertex of a rooted tree with a decoration bw(v), and then assigned the function z(t) =
+
+z#(t)xq bw(v) to a rooted tree, the product being taken over all vertices of the tree. (note
+
+that #(t) = n = w(r), where w(r) is the vertex-weight of the root.) clearly, the vertex
+weight w(r) of a root of an undecorated tree is simply the number n of vertices of the tree.
+this equality does not survive in the general case.
+
+but if we only very slightly modify this equation and write
+
+z(t) = zw(r)xyv
+
+bw(v).
+
+(32)
+
+we obtain the form which permits all necessary generalizations. such generalizations include
+the following cases:
+
+ in general, decorations can be provided by analytic expressions of any loop order. we
+will have to attach appropriate weights to the vertices themselves, and hence will have
+to generalize the concept of vertex weights.
+
+the crucial step is to devise some sensible notation. an arbitrary rooted tree has
+vertices decorated by graphs corresponding to analytic expressions without subdiver-
+gences which themselves can have any loop order. we still assume that these analytic
+expressions can be described by scalar functions. loop integrations of decorations
+at vertices below the vertex considered will alter the measure by an amount (k2)w(vi)
+where vi is the generalized vertex weight dened in fig. 4 and k is an appropriate
+external momentum for the decoration at vi. at each vertex we indicate the loop
+number of its decoration. the generalized vertex weight is then the sum of all these
+loop numbers, assigned to the vertex in question and all vertices below it. from this,
+one obtains the generalized tree factorial, which is to be used in (32).
+
+ we might consider graphs which do not come from scalar theories. in order to cope
+with form factors, one needs to devise an appropriate matrix calculus; this will be
+worked out in a detailed example in a section below. essentially, the master equation
+(32) remains valid, but becomes now a matrix equation. this is the most non-trivial
+generalization, and we will discuss it in detail presently.
+
+in the same manner, one can use matrices to keep track of internal structure of a
+graph: at some stage one has to bookkeep the location of subdivergences in a larger
+graph, and this leads to a matrix calculus which is a straightforward generalization
+of the example which we consider below. indeed, one can enumerate all vertices of
+a graph and can construct suitable matrices which store the information about the
+nature of these vertices and the propagators connecting them. in this manner, the
+previously discussed changes of measures due to subdivergences operate on entries of
+such matrices, and it is a straightforward notational exercise to set-up a convenient
+calculus. we will not consider the most general case here, but rather present below an
+example for qed which should make the idea suciently clear.
+
+9
+
+ in general, divergent subgraphs depend on masses and more than one external mo-
+mentum; hence on multiple scales. for example, a vertex subdivergence will depend
+on more than one internal momentum usually and this can spoil the multiplicative
+form of (32). this diculty can be solved by a proper decomposition into sums of
+expressions, each of the form (32). this was described already in [2]. one proceeds
+by decomposing any function of multiple scales into one of a single scale and another
+nite multiple scale function. this is always possible by adding zero in appropriate
+ways.
+
+the nal result is that from a local qft we essentially get analytic expressions which
+can be expressed in the form (32). we now utilize this fact to show that they essentially
+behave as generalized iterated integrals.
+
+iv. feynman diagrams from generalized iterated integrals
+
+now that we have established that (32) is an acceptable prototype expression into which
+feynman diagrams can be resolved, we want to utilize the fact that the simplest represen-
+tation of such form can be obtained from generalized iterated integrals. such generalized
+iterated integrals were prominent in [6] and give a convenient means to investigate renor-
+malization. generalized iterated integrals are distinguished from ordinary iterated integrals
+by the fact that boundaries of the domains of integration are determined as a function of the
+rooted tree which the integral represents. in this respect, ordinary iterated integrals use a
+function which is constant on rooted trees. for such a generalization, the shue symmetry
+of iterated integrals is lost.
+
+the extra freedom gained by using this generalization will allow us to rewrite feynman
+diagrams as such generalized iterated integrals. we will see that the generalization only
+aects non-leading uv divergences, and hence we will obtain later the result that the leading
+uv divergences of feynman integrals still obey a shue identity.
+
+at this point, it might be worth stressing that if we were able to reduce feynman
+diagrams completely to ordinary iterated integrals we would obtain considerable progress in
+understanding the analytical and transcendental structure of green functions, as the theory
+of ordinary iterated integrals is quite rich and highly developped. we hope that a similar
+theory will be emerging in the future for generalized iterated integrals.
+
+a. iterated integrals
+
+essentially, we want to go one step further as in [6] and express contributions to green
+functions in qft as iterated integrals. we will start our considerations by reminding our-
+selves of some basic properties of iterated integrals [10,11], specializing to the case of a
+single function f (x) with associated one-form f (y)dy on the real line. we assume that f (y)
+behaves  1/y for large y.
+
+iterated integrals built with the help of f are parametrized by an integer n and two real
+
+numbers a, b say. they are dened by
+
+10
+
+f [0]
+
+a,b = 1,
+
+a, b  r,
+
+f [n]
+
+a,b = z b
+
+a
+
+f (x)f [n1]
+
+a,x dx,
+
+n > 0.
+
+hence we can write them as an integral over the simplex,
+
+a,b = zax1<...<xnb
+f [n]
+
+f (x1) . . . f (xn)dx1 . . . dxn.
+
+we will also consider
+
+f [t ]
+
+a,b = z b
+
+a
+
+dxf (x)if [ti]
+a,x
+
+(33)
+
+(34)
+
+(35)
+
+where t is a rooted tree with b(t ) = iti.
+
+a generalization which turns out to be quite useful in practice is to let even the boundaries
+a, b be indexed by decorated rooted trees. this is similar to what we did before when we
+expressed the results of an ms calculation by an on-shell scheme with suitably adjusted
+tree-dependent parameters. here, parameters are provided by boundaries in the iterated
+integral. hence, we dene an iterated integral which serves as a bare green function
+
+gbt,(t) = z 
+
+bt
+
+f (x)y gx,(ti)dx.
+
+(36)
+
+the product is again over all branches ti of b(t), and we set gbe,(e) = 1. this is the same
+as before, except that we now label the lower outer boundary by a decorated rooted tree t
+and set the upper boundary to innity. we assume that a renormalization map ra shifts
+the outer lower boundary bt to another value at, and that the coproduct action extends to
+this label. we dene b to be the map which sends t  gbt,(t).
+
+it is worthwile citing here an example taken from [6] which exhibits the intricate nature
+of a change of scales in full generality. for the rooted tree with two vertices, t2, having
+coproduct
+
+(t2) = t2  e + e  t2 + t1  t1
+
+(37)
+
+we formally obtain a counterterm
+
+sra(b)(t2) = ra[b(t2) + m[(sra  b  b)(t2)]]
+
+(where (t ) = (t )  [1  t ]  [t  1]) as
+
+sra(b)(t2) = "z 
+
+at1 z 
+
+at1
+
+z 
+
+at2 z 
+
+x # f (x)f (y)dydx.
+
+and a renormalized iterated integral a,b(t2) = m[(sra  b  b)(t2)] as
+
+a,b(t2) = "z 
+
+bt2 z 
+
+x
+
+z 
+
+bt1 z 
+
+at1
+
++z 
+
+at1 z 
+
+at1
+
+z 
+
+at2 z 
+
+x # f (x)f (y)dydx.
+
+(38)
+
+(39)
+
+in this notation, a, b are to be regarded as representing actually a whole set of constants
+at, bt, parametrizing the relevant scales for the decorated tree under consideration.
+
+11
+
+we now want to change the set of scales and reexpress how a,b can be obtained from
+
+renormalized green functions a,s and s,b. obviously, the convolution
+
+a,b(t) = [a,s  s,b](t)
+
+holds. this form of chens lemma describes what happens if we change the renormalization
+point. it works for the simple case of iterated integrals in the same manner as for full green
+functions of qft. a,b = a,s  s,b now becomes
+
+at1
+
+at1
+
+x
+
+x
+
+"z 
+bt2 z 
+= "z 
+st2 z 
++"z 
+bt2 z 
++"z 
+z 
+
++z 
+at1 z 
+z 
+bt1 z 
+at1 z 
++z 
+st1 z 
+z 
+z 
+bt1 z 
++z 
+st1 z 
+at1# f (y)dy"z 
+z 
+
+x # f (x)f (y)dydx
+z 
+at2 z 
+x # f (x)f (y)dydx
+at2 z 
+z 
+x # f (x)f (y)dydx
+z 
+st2 z 
+st1# f (x)dx.
+
+at1
+
+at1
+
+st1
+
+x
+
+st1
+
+st1
+
+bt1
+
+this is evidently true, as the reader may readily check.
+
+finiteness of a,b now imposes conditions on the tree-indexed parameters, a fact which
+we will utilize in the next section. actually, we will determine these parameters in a way
+which reproduces the results of a renormalized qft.
+
+v. counterterms and renormalized green functions as
+
+iterated integrals
+
+we are now in the fortunate position of being able to transform feynman diagrams to
+generalized iterated integrals. to that end, let us consider the simplest case of an iterated
+integral based on the single one-form f (y)dy = y1xdy, which diverges logarithmically
+when integrated to innity and x  0.
+
+then, we obtain the bare iterated integral,
+
+gb,(t) =
+
+1
+
+t!x#(t) b#(t)x
+
+t
+
+,
+
+and associated counterterms sr(b)(t), which in this case are simply
+
+sr(t) = r[b(t) + m[(sr  id)(b  b))]] = (s(t)),
+
+with r(b) = . thus we arrive at the renormalized integral
+
+,b(t) = (p c(t))b(rc(t)).
+
+explicitly,
+
+sr(t2) = 
+
+1
+2x2 2x
+
+t2 +(cid:20) 1
+
+x
+
+x
+
+t1 (cid:21)2
+
+12
+
+and
+
+1
+2x2 b2x
+which is nonsingular when x  0.
+
+,b(t2) =
+
+t2
+
+
+
+1
+x2 bx
+
+t1 x
+
+t1 +
+
+1
+x2 x
+
+t1 x
+t1
+
+
+
+1
+2x2 2x
+
+t2
+
+,
+
+next determine the set of parameters t by iteratively setting
+
+sr(t) = sr(z(t)),
+
+wherein we identify the parameter x in the iterated integrals with the regularization pa-
+rameter for bare green functions in qft and use the representation (32) for those green
+functions. a similar equation is used to determine the set of parameters bt in the iterated
+integrals such that
+
+if we use a on-shell subtraction at the point z = 1 for example, one simply nds
+
+,b(t) = r(z(t)).
+
+t = exp 
+
+1
+
+[#(t)x]
+
+log[t!x#(t)bt(x)]! .
+
+note that this quantity has no essential singularity at x = 0 due to the fact that t!x#(t)bt
+has the form 1 + o(x) in our adopted normalization. in this simple on-shell scheme, bt turns
+out to be
+
+bt = tz#(t)x
+
+and the resulting generalized iterated integral is a well-dened nite quantity which repro-
+duces the renormalized green function.
+
+changing renormalization conditions or schemes is now evidently a convolution of iter-
+ated integrals. for example, transforming to a ms scheme amounts to a convolution similar
+to the one described before, and we would eventually have
+
+m s ,b(t) = [m s ,  ,b](t).
+
+the second green function on the rhs uses the same t, bt as dened above, the rst on
+on the rhs uses the same t but determines m s
+using minimal subtracted qft green
+functions. such convolutions were already applied in [5] and systematically derived in [6].
+they essentially reduce the calculation of renormalized green functions to a determination
+of appropriate functions bt from which all other results follow via the algebraic structure of
+the hopf algebra. note that the convolution also permits us to describe the change of scales
+in bare green functions; for example z(t)  z(t) is described by
+
+t
+
+z(t) = [z  rz (z)](t),
+
+which immediately translates to iterated integrals as the convolution ,b = ,b b,b where
+t = bt#(t)x.
+b
+
+in the following we determine some of the bt explicitly, to illustrate the methods.
+
+13
+
+a. massless yukawa theory
+
+let us apply the previous ideas to massless yukawa theory, with interaction
+
+g0 0500 = z1g 5.
+
+for illustrative purposes we consider a three-loop contribution to the fermion self-energy
+and an analogous one for the vertex part, as sketched in fig. 5.
+
+in order to describe the results, in the context of dimensional regularization, the param-
+eter x is identied with (4  d)/2   and z with the scale factor 2/p2, where p is the
+external momentum and  is the renormalization mass scale which arises via the dimen-
+sionality of the bare coupling: g2
+0  (4)x2x4/(1  x). the calculations bring in
+supplementary integrals which are readily calculated in any dimension d = 4  2x, namely
+
+where
+
+and
+
+where
+
+0z
+0i(p, nx)  ig2
+g2
+
+ddk/(2)d
+
+k2((k + p)2(1+nx) =
+
+zx
+4
+
+in+1
+(p2)nx ,
+
+in+1 
+
+(1  (n + 1)x)((n + 1)x)
+(1 + nx)(2  (n + 2)x)
+
+,
+
+0j(p, nx)  ig2
+g2
+
+0z [1 + p.k/p2]ddk/(2)d
+
+k2((k + p)2(1+nx)
+
+=
+
+zx
+4
+
+jn+1
+(p2)nx ,
+
+jn+1 
+
+(2  (n + 1)x)((n + 1)x)
+(1 + nx)(3  (n + 2)x)
+
+.
+
+(40a)
+
+(40b)
+
+(41a)
+
+(41b)
+
+those functions in+1, jn+1 play the role of the functions bw(v) of the previous considerations.
+applying the on-shell subtraction which sets z  1, r1, to this graph, yields the following
+result for the self-energy integral:
+
+4(cid:19)3
+(cid:18) 
+
+h(z3x  1)j2
+
+1 j3  2(z2x  1)j2
+
+1i ;
+1j2 + (zx  1)j3
+
+z  2/p2,
+
+which is obtained as m[(sr1  id)(jt(z))] where jt(z) = qv jw(v)[zx]#(t) plays the role
+of z(t);  acts on the tree parametrizing jt such that (jt(z)) = p jt(1)(z)  jt(2) (z) and
+
+r1[jt(z)] = jt(1).
+
+similarly, the following result for the vertex integral at zero meson momentum is ob-
+
+tained:
+
+4(cid:19)3
+(cid:18) 
+
+h(z3x  1)j2
+
+1i3  2(z2x  1)j2
+
+1i2 + (zx  1)j2
+
+z  2/p2,
+
+1i1i ;
+
+in which we evidently see, as before, the (id  r) structure of renormalized green functions.
+the limit x  0 may readily be taken in the renormalized answers, producing
+
+4(cid:19)3"u 3
+(cid:18) 
+
+24
+
++
+
+u 2
+16
+
++
+
+u
+
+16# ;
+
+u  ln(2/p2)
+
+14
+
+for the self-energy and
+
+3(cid:18) 
+
+4(cid:19)3"u 3
+
+12
+
++
+
+u 2
+4
+
++
+
+u
+
+2# ;
+
+u  ln(2/p2)
+
+for the vertex part. the latter carries an extra weight factor 3 because of the way that the
+interior self-energies can be distributed.
+
+b. quantum electrodynamics
+
+in this case the renormalization scale  enters through e2
+
+0  (4)x2x4/(1  x),
+where  now has the signicance of the ne structure constant. because we are dealing with
+the massless version, the self-energy assumes the form, (p) =6 pa(p2), while the vertex at
+zero-momentum transfer contains two terms (form-factors):
+
+(p, p) = f (p2) 6 p 6 pg(p2)/p2,
+
+of which only the rst requires (innite) renormalization. the form factors can be found in
+the usual manner by tracing appropriately:
+
+tr[  ] = 22x[(4  2x)f  xg]
+
+tr[6 pp  ] = p222x[f  g],
+
+and it is helpful to dene the auxiliary integral
+
+e2
+0h(p, nx) =
+
+(1  x)zxhn+1
+
+4(p2)nx
+
+,
+
+where
+
+hn+1  
+
+(1  x)((n + 1)x)(1  (n + 1)x)
+
+2(2 + nx)(3  (n + 2)x)
+
+.
+
+we should also exhibit a combination which features prominently in actual computations,
+viz.
+
+in+1 + dhn+1 = (2  (n + 1)x)(1 + (n + 1)x)/(3  (n + 2)x)(2 + nx); d = 4  2x.
+
+lowest order in  calculations give (z  2/p2)
+
+a = (cid:18) 
+
+2(cid:19) j1zx,
+
+f = (1  x)2(cid:18) 
+g = (cid:18) 
+
+2(cid:19) h1zx,
+2(cid:19) [i1 + dh1]zx,
+
+(42a)
+
+(42b)
+
+leading simply to the on-shell subtracted expressions,
+
+15
+
+aos = (cid:18) 
+2(cid:19) j1[zx  1],
+2(cid:19) j1"(zx  1)  2x
+
+,os = (cid:18) 
+
+p
+6 p
+
+zx# .
+
+(43a)
+
+(43b)
+
+it is very easy to continue this process to higher orders for the self-energy function a(p2)
+in the feynman gauge say; all we need do is to substitute g2 in massless yukawa theory
+by 2e2 in qed, the factor of 2 arising from the gamma-matrix trace. however the vertex
+computations are subtler, because they involve the two form factors f and g. here we
+require knowledge of the generic integral,
+
+ie2
+
+0z
+
+ddk
+(4)dk2 
+
+1
+
+6 p+ 6 k "fn  gn
+
+(6 p+ 6 k)(6 p+ 6 k)
+
+(p + k)2
+
+#  2
+
+(p + k)2!nx
+
+1
+
+6 p+ 6 k
+
+
+
+ (cid:18) 
+
+2(cid:19)"fn+1  gn+1
+
+(6 p+ 6 k)(6 p+ 6 k)
+
+(p + k)2
+
+# 2
+
+p2!(n+1)x
+
+,
+
+(44)
+
+starting with f0 = 1, g0 = 0.
+property,
+
+in this way we straightforwardly arrive at the recurrence
+
+vn+1 = mn+1vn,
+
+where vi is a column vector (fi, gi)t with v0 = (1, 0)t and mn is a 2  2 matrix with entries
+(mn)rs given by
+
+(mn)11 
+
+(mn)21 
+
+(1  x)2(nx)(1 + nx)
+
+(2 + (n  1)x)(3  (n + 1)x)
+
+, (mn)12 
+
+(1  nx)(nx)
+
+(1 + (n  1)x)(2  (n + 1)x)
+
+(2  nx)(1 + nx)
+
+(2 + (n  1)x)(3  (n + 1)x)
+
+, (mn)22 = 0.
+
+(45)
+
+(46)
+
+we now introduce the matrix-function r with entries r11 = r1 and 0 elsewhere, where
+r1 is again the map which sends z = 2/p2  1. further, we use the 2  2 unit matrix
+i such that an insertion of a fermion self-energy amounts to an insertion of matrices of
+the type ak := i 
+2 jk into a string of matrices. then we can express the result for any
+diagram (t), which iterates one-loop vertices at zero-momentum transfer and also has
+various combinations of one-loop fermion self-energies as subdivergences, by the formula
+
+w(v)zw(r)x
+bi(v)
+ ,
+
+ yvt[0]
+
+where t is a decorated rooted tree allowing for one of two possible decorations i(v) at each
+vertex: either i(v) evaluates to a one-loop vertex function or to a one-loop fermion self-
+energy. as both decorations are of one-loop order, w(v) is the usual vertex weight discussed
+before. we then set bi(v)
+:= mj if the vertex v of t is decorated by the one-loop vertex-
+function, and bi(v)
+j = aj if the vertex v is decorated by a one-loop fermion self-energy.
+various examples are drawn in fig. 6.
+
+j
+
+(t) = 
+
+16
+
+renormalization now amounts to inserting the matrix r into the string of matrices at
+places which correspond to cuts at the decorated tree. hence the formulae for the coun-
+terterms and renormalized green functions remain essentially unchanged. for the feynman
+graph with the tree t shown in fig. 6, we nd the bare green function
+
+(t) = a1a1m3v0z3x.
+
+the counterterm being zr = r[(t) + m((zr  id)(  )(t))], we get
+
+r[a1a1m3v0] + 2r[a1]r[a1m2v0]  r[a1]r[a1]r[m1v0].
+
+finally the renormalized green function m[(zr  id)(  )(t)] leads to the on-shell
+subtracted result (aside from a weight factor of 3)
+
+2(cid:19)3
+(cid:18) 
+
+j2
+
+1 h(cid:16)(m3)11(z3x  1)  2(m2)11(z2x  1) + (m1)11(zx  1)
+
+(m3)12 + 2(m2)12  (m1)12)
+
+the renormalized contribution may be found by proceeding to the delicate limit x  0,
+when the above answer collapses into
+
+(cid:16)(m3)12z3x  2(m2)12z2x + (m1)12zx(cid:17) 6 p 6 p/p2i .
+
+(cid:18) 
+
+2(cid:19)3"
+
+2u 3 + 3u 2 + 15u  9
+
+48
+
+
+
+6 p 6 p
+
+2u 2  2u + 3
+
+p2
+
+16
+
+# ; u = ln(2/p2).
+
+other diagrammatic contributions may be extracted in much the same way; we have
+evaluated many more results for the renormalized self-energy aos and the vertex at zero
+momentum transfer ,os. a useful check on the calculations, that we have carried out, is
+to verify the ward identity, (p, p) = (p)/p, since a particular contribution to a will
+produce a combination of vertex graphs with appropriate weights.
+
+c. a relaxed shue product
+
+proper iterated integrals satisfy a shue identity [10,11]. due to this shue identity, one
+can express all tree-iterated integrals representing rooted trees as proper iterated integrals.
+the latter are based on trees without sidebranching and form a closed hopf subalgebra of
+h. the generalized iterated integrals which we used to summarize some restricted results
+of qft do not obey a shue algebra, and hence we get non-trivial representations of the
+full hopf algebra [6].
+
+however one can easily establish that the leading coecient of bare feynman diagrams
+still obeys such an identity, by making use of the expression in terms of generalized iterated
+integrals. for that it suces to realize that if the t become t-independent, we get a proper
+iterated integral. but to leading order, we have
+
+bt =
+
+1
+
+t!x#(t) f (t),
+
+(47)
+
+with f (t) = 1+o(x), by denition; so to leading order, f (t) = 1 t, and then bt = 1/t!x#(t),
+which can be easily obtained as the iterated integral g1,(t) dened previously. this explains
+relations known to practitioners of qft that hold between leading coecients of the overall
+divergence of graphs representing dierent trees.
+
+17
+
+vi. comments and conclusions
+
+in this and previous papers we have developed a number of mathematical tools which
+clarify and simplify the renormalization procedure for any renormalizable quantum eld
+theory. these are encapsulated in formulae such as (11), (13), (15), (26) and (30); we have
+provided two nontrivial examples where these ideas can be fruitfully applied without too
+much eort. therefore, it is our rm belief and hope that all these tools will enable the prac-
+titioner of qft to obtain the amplitudes associated with renormalized feynman diagrams
+by purely combinatorial means. we also anticipate that the connection between these am-
+plitudes and iterated one-dimensional integrals, whose endpoints dene the renormalization
+scheme, will also lead to substantial progress in automating the method, since they provide
+a signicant step along this direction. the mathematical tools emphasize the fundamen-
+tal connection between geometry, topology, number theory and feynman diagrams that is
+emerging [17,18,13,1921].
+
+acknowledgments
+
+thanks are due to david broadhurst and alain connes for interest and discussions.
+d.k. thanks the i.h.e.s. (bures-sur-yvette) for friendly hospitality and marvelous working
+conditions and thanks the university of tasmania for hospitality during a visit march-april
+1998. d.k.also thanks the dfg for support by a heisenberg fellowship.
+
+appendix
+
+a. the hopf algebra
+
+we follow [3,4] closely. a rooted tree t is a connected and simply-connected set of oriented
+edges and vertices such that there is precisely one distinguished vertex which has no incoming
+edge. this vertex is called the root of t. further, every edge connects two vertices and the
+fertility f (v) of a vertex v is the number of edges outgoing from v. the trees being simply-
+connected, each vertex apart from the root has a single incoming edge.
+
+as in [3], we consider the (commutative) algebra of polynomials over q in rooted trees;
+hence the multiplication m(t, t) of two rooted trees means drawing them next to each other
+in arbitrary order. observe that any rooted tree t with root r yields f (r) trees t1, . . ., tf (r)
+which are the trees attached to r. the unit element of this algebra is 1, corresponding, as
+a rooted tree, to the empty set.
+
+let b be the operator which removes the root r from a tree t:
+
+b : t  b(t) = t1t2 . . . tf (r).
+
+(48)
+
+fig. 7 depicts an example. also let b+ be the operation which maps a monomial of n rooted
+trees to a new rooted tree t which has a root r with fertility f (r) = n which connects to the
+n roots of t1, . . . , tn.
+
+b+ : t1 . . . tn  b+(t1 . . . tn) = t.
+
+(49)
+
+18
+
+this is clearly the inverse to the action of b. for any rooted tree t one has
+
+b+(b(t)) = b(b+(t)) = t,
+
+(50)
+
+and fig. 8 provides one such example. we further set b(t1) = 1, b+(1) = t1.
+
+we will introduce a hopf algebra on such rooted trees by taking the opportunity to cut
+such trees in pieces. we start with the most elementary possibility. an elementary cut is a
+cut of a rooted tree at a single chosen edge, as indicated in fig. 9.
+
+before introducing the coproduct we nally introduce the notion of an admissible cut,
+also called a simple cut. it is any assignment of elementary cuts to a rooted tree t such that
+any path from any vertex of the tree to the root has at most one elementary cut. fig. 10
+depicts such a situation. an admissible cut c maps a tree to a monomial in trees. if the
+cut c contains n elementary cuts, it induces a map
+
+c : t  c(t) =
+
+n+1
+
+yi=1
+
+tji.
+
+(51)
+
+note that precisely one of these trees tji will contain the root of t. let us denote this
+distinguished tree by rc(t). the monomial which is delivered by the n  1 other factors is
+denoted by p c(t). the denitions of c, p, r can be extended to monomials of trees in the
+obvious manner, by choosing a cut c i for every tree tji in the monomial:
+
+c(tj1 . . . tjn) := c 1(tj1) . . . c n(tjn),
+p c(tj1 . . . tjn) := p c1
+rc(tj1 . . . tjn) := rc1
+
+(tj1) . . . p c n
+(tj1) . . . rc n
+
+(tjn),
+(tjn).
+
+let us now establish the hopf algebra structure. following [2,3] we rst dene the counit
+
+and the coproduct. the counit e: a  q is simple:
+
+for any x 6= 1,
+
+e(x) = 0
+
+e(1) = 1.
+
+the coproduct  is dened by the equations
+
+(1) = 1  1
+
+(t1 . . . tn) = (t1) . . . (tn)
+
+(t) = t  1 + (id  b+)[(b(t))],
+
+(52)
+(53)
+(54)
+
+which denes the coproduct on trees with n vertices iteratively through the coproduct on
+trees with a lesser number of vertices. see fig. 11 for an example. actually, the coproduct
+can be written as [2,3]
+
+(t) = 1  t + t  1 + xadm. cuts c of t
+
+which denes .
+
+p c(t)  rc(t) =: 1  t + t  1 + (t),
+
+(55)
+
+19
+
+up to this point we have established a bialgebra structure, but it is actually a hopf
+
+algebra. following [2,3] we nd the antipode s as
+
+s(1) = 1
+
+s(t) = t  xadm. cuts c of t
+
+s[p c(t)]rc(t) = t  m[(s  id)(t)].
+
+(56)
+(57)
+
+an alternative formula for the antipode, which one may easily derive by induction on the
+number of vertices [2,3] is
+
+s(t) =  xall cuts c of t
+
+(1)nc p c(t)rc(t),
+
+where nc is the number of single cuts in c. this time, we have a non-recursive expression,
+summing over all cuts c and relaxing the restriction to admissible cuts. the overall minus
+sign can be incorporated in the sum if we attach an incoming edge to the root. all cuts
+which remove this edge are then full cuts, all the other ones are normal cuts. a feynman
+graph corresponding to a tree with n vertices allows then for 2n cuts. the 2n1 full cuts
+deliver the counterterm, the 2n1 normal cuts eliminate the subdivergence to deliver the
+result of the r-bar operation [2,3].
+
+so far we have established a hopf algebra on rooted trees, using the set of rooted trees,
+the commutative multiplication m for elements of this set, the unit 1 and counit e, the
+coproduct  and antipode s. we call this hopf algebra hr. continuing in the manner of
+[24], we may label the vertices of rooted trees by feynman graphs without subdivergences,
+in the sense described in the paper and in detail in [3,4] .
+
+let us also mention that
+
+m[(s  id)(t)] = e(t) = 0 = x s(t(1))t(2),
+
+(58)
+
+hr  hr. we conclude by dening #(t) to be the number of vertices of a rooted tree t.
+
+where we introduced sweedlers notation (t) =: p t(1)  t(2), and id is the identity map
+this extends to a monomial of rooted trees in the obvious manner: #(qi ti) = pi #(ti).
+
+b. the hopf algebra structure of graphs and forest formula
+
+the results of [4] show that for each feynman graph , we obtain a sum of associated
+
+rooted tree t and a coproduct given by
+
+(t) = 1  t + t  1 + xx 
+
+t  t/.
+
+(59)
+
+here, t is a sum of rooted trees with decorations, primitive elements in the hopf algebra
+of rooted trees, which are obtained from feynman graphs without subdivergences. as the
+map t   is one-to-one, we can directly formulate the hopf algebra on graphs , as in
+section ii.
+
+to the coproduct (59) belongs an antipode given by
+
+s(t) = t  x
+
+s[t]t/,
+
+20
+
+(60)
+
+as one straightforwardly checks. because it is an antipode in a hopf algebra of rooted trees,
+
+it can be written as a sum over all cuts. set t = pi ti for some decorated rooted trees ti.
+
+then,
+
+s(t) = xi xall cuts ci of ti
+
+(1)nci p ci(ti)rci(ti).
+
+(61)
+
+each such cut corresponds to a renormalization forest, obtained by boxing the corresponding
+subgraphs in , and vice versa [3].
+
+now, let  be a q-linear map which assigns to t the corresponding feynman integral.
+further, let r = r   be a map which assigns to t the corresponding feynman integral,
+evaluated under some renormalization condition r. hence, from t we obtain via  a
+feynman integral (t) in need of renormalization. r modies this feynman integral,
+in such a way that the result contains the divergent part of this integral. essentially, r
+extracts the divergences of (t) in a meaningful way [12]. hence, as r isolates divergences
+faithfully, dierences (id  r)((t)) eliminate innities in feynman integrals. depending
+on the chosen renormalization scheme r, one can adjust nite parts to fulll renormalization
+conditions. a detailed study of this freedom from the hopf algebra viewpoint can be found
+in [6].
+
+we remind the reader of sweedlers notation: (t) = p t(1)  t(2). let us consider
+
+the antipode e(t) in the same notation:
+
+the above map vanishes identically, and it can also be written as
+
+0 = e(t) = x s(t(1))t(2).
+
+m[(s  id)(t)]  e(t) = 0.
+
+but this map gives rise to a much more interesting map, by composition with ,
+
+t  r := m[(sr  id)(  )(t)],
+
+for it associates the renormalized feynman integral r [2,3] to the feynman graph  repre-
+sented by a unique sum of rooted trees.
+
+its usual denition,
+
+r = (id  r)
+ + x
+
+
+z/
+
+
+,
+
+is recovered if we dene
+
+sr[(t)]  z = r()  r
+x
+
+z/
+
+
+.
+
+this map is derived from the antipode
+
+s[t] = t  x
+
+s[t]t/.
+
+21
+
+(62)
+
+(63)
+
+(64)
+
+using  to lift this to feynman graphs, and using the freedom to alter corresponding analytic
+expressions according to renormalization schemes r one ends up with (63).
+
+note that if one denes
+
+one has sr   = r  s and hence
+
+r = sr    s,
+
+sr[(t)] = r
+(t)  x
+
+
+r(s[t])(t/).
+
+
+(65)
+
+hence, in accordance with [24] we determine the z-factor of a graph  as derived from
+the antipode in the hopf algebra of rooted trees. in (62), we recovered the original forest
+formula in its recursive form. the non-recursive form is recovered with the same ease, using
+(61) instead of (60) [24].
+
+22
+
+references
+
+
+
+
+
+email: dirk.kreimer@uni-mainz.de
+email: bob.delbourgo@utas.edu.au
+
+[1] n.n. bogoliubov, d.v. shirkov, introduction to the theory of quantized elds, 3rd.ed.,
+
+wiley 1980;
+k. hepp, comm. math. phys.2,301 (1966);
+w. zimmermann, comm. math. phys.15, 208 (1969).
+
+[2] d. kreimer, adv. th. math. ph.2.2 (1998) 303, q-alg/9707029.
+[3] a. connes, d.kreimer, comm. math. phys.199 (1998) 203, hep-th/9808042.
+[4] d. kreimer, on overlapping divergences, hep-th/9810022, to appear in comm. math.-
+
+physics.
+
+[5] d.j. broadhurst, d. kreimer, renormalization automated by hopf algebra, to appear in
+
+j. symb. comp., hep-th/9810087.
+
+[6] d. kreimer, chens iterated integral represents the operator product expansion, hep-
+
+th/9901099.
+
+[7] j.c. butcher, the numerical analysis of ordinary dierential equations, j. wiley
+
+1987.
+
+[8] g. thooft, nucl.phys.b538, 389-410 (1999).
+[9] s. weinberg, the quantum theory of fields, vols. i&ii, cambridge univ. press, 1994.
+[10] t.k. chen, bull. amer. math. soc.83, 831 (1977).
+[11] c. kassel, quantum groups, springer 1995;
+
+s. shnider, s. sternberg, quantum groups, int.press 1993.
+
+[12] j.c. collins, renormalization, cambridge up 1984.
+[13] d. kreimer, j.knot th. ram.6 479 (1997).
+[14] r. delbourgo, a.c. kalloniatis, g. thompson, phys. rev.d54 5373 (1996).
+[15] r delbourgo, d. elliott, d.s. mcanally, phys. rev.d55 5230 (1997).
+[16] d.j. broadhurst, r. delbourgo, d. kreimer, phys. lett.b366 421 (1996).
+[17] a. davydychev, r. delbourgo, j. math. phys.39 4299 (1998).
+[18] j.m. borwein, d.j. broadhurst, determination of rational dedekind zeta invariants of
+
+hyperbolic manifolds and feynman knots and links, hep-th/9811173.
+
+[19] d.j. broadhurst, d. kreimer, int.j.mod.phys.c6 519 (1995).
+[20] d.j. broadhurst, j. gracey, d. kreimer, z.phys.c75 559 (1997).
+[21] d.j. broadhurst, d. kreimer, phys.lett.b393 403 (1997).
+
+23
+
+figures
+
+fig. 1. a feynman graph, its divergent subgraphs, its forests, and the corresponding tree with
+appropriate full and normal cuts. from this one calculates the antipode and the renormalized
+green function.
+
+fig. 2. forests and counterterms as cuts and antipodes. each forests (thick grey lines) contains
+
+an analytic expression which has to be evaluated using r.
+
+fig. 3. vertex weights and tree factorials. for the tree t given at the left in the upper row
+we indicate the vertex weights attached to each vertex. we also give the feynman diagram corre-
+sponding to a chosen common one-loop self-energy decoration at each vertex.
+
+fig. 4. generalized vertex weights and tree factorials which can appear if there are decorations
+
+of arbitrary loop order. the factorial of this decorated tree is 2  5 = 10.
+
+fig. 5. a yukawa self-energy at three loops.
+
+fig. 6. examples of feynman graphs, their decorated rooted trees and the corresponding
+matrix calculus. from top to bottom, the bare function (t), evaluates for the indicated decorated
+rooted trees to m1v0zx, a1m2v0z2x, a1m2m3v0z3x.
+
+fig. 7. the action of b on a rooted tree.
+
+fig. 8. the action of b+ on a monomial of trees.
+
+fig. 9. an elementary cut c splits a rooted tree t into two components, the fall-down p c(t)
+
+and the piece which is still connected to the root, rc(t).
+
+fig. 10. an admissible cut c acting on a tree t, leading to a monomial of trees. one of the
+
+factors, rc(t), contains the root of t.
+
+fig. 11. the coproduct, worked out for the trees t1, t2, t31 , t32, from top to bottom. in the last
+
+line we give one full and all normal cuts of the tree.
+
+24
+
+fig. 1.
+
+fig. 2.
+
+4
+
+3
+
+1        1
+
+fig. 3.
+
+25
+
+3,5
+
+2,2
+
+2loop
+
+3loop
+
+fig. 4.
+
+fig. 5.
+
+fig. 6.
+
+26
+
+fig. 7.
+
+fig. 8.
+
+fig. 9.
+
+fig. 10.
+
+27
+
+
+
+
+
+
+
+
+
+1 + 1
+
+1 + 1
+
+1 + 1
+
++
+
++
+
++
+
+1 + 1
+
++ 2
+
++
+
+
+
+fig. 11.
+
+28
+
+

@@ -1,0 +1,1195 @@
+9
+9
+9
+1
+
+ 
+
+v
+o
+n
+9
+
+ 
+
+ 
+ 
+
+1
+v
+6
+5
+0
+1
+1
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+the world of baby skyrmions:
+
+numerical studies of (2+1)d topological skyrme-like solitons
+
+(talk given at school of subnuclear physics, erice 1999)
+
+tom weidig,
+
+theoretical physics,
+
+umist,
+
+manchester m60 1qd
+
+email: tom.weidig@physics.org
+
+july 29, 2013
+
+abstract
+
+this is one of the new talents seminars at erice international school of subnuclear physics
+1999 and looks at numerical studies of (2+1)d topological skyrme-like solitons; the baby skyrmions.
+we explain the concept of integrable and topological solitons. then we introduce the non-linear 
+model in 2d in order to discuss the 3d nuclear skyrme model. we explain that the baby skyrme
+models can be viewed as a (2+1)d version of the skyrme model. we describe the numerical meth-
+ods needed to study the baby skyrmions. finally, we present some results on skyrmion scattering
+and our work on skyrmions with higher topological charge.
+
+1 introduction to solitons
+
+the concept of solitons goes back to j. scott russells discovery of great waves of translations
+on the edinburgh-glasgow canal in 1834. he observed that a boat which suddenly stops creates a
+single, localised water wave; now named a solitary wave. solitons are those solitary waves which
+keep their identity after interactions. later work by boussinesq (1871), by lord rayleigh (1876)
+and by korteweg and de vries (1895) shows that this solitary wave can be described by the kdv
+equation:
+
+ut + ux + uux + uxxx = 0.
+
+(1)
+
+the stability of the kdv solitary wave is due to the ne dynamical balance between the non-linear
+and the dispersive term in the dierential equation. in 1968, muira, gardner and kruskal showed
+that the kdv equation conserves an innite number of quantities of motion. the kdv system is an
+integrable system. techniques like lax pair, inverse scattering and backlund transformations are
+available and they enable us to nd explicit solutions. this makes integrable solitonic systems good
+toy models to probe physical ideas; albeit not very realistic ones. the main weak points are: nding
+integrable systems in other than (1+1)d, imposing lorentz invariance, adding a small perturbative
+term without breaking integrability and ensuring the presence of annihilation processes for solitons.
+(see [3] for an introduction to solitons)
+
+1
+
+the simplest example of a topological soliton is the sine-gordon model whose eld is described
+
+by
+
+l =  + (1  cos ).
+
+(2)
+the lagrangian is invariant under   + 2n, nz.  is an angle in eld space, the circle s 1. let
+us re-emphasise our denition of a soliton: it is a localised nite-energy eld conguration which
+keeps localised after interactions. the eld has to go to the vacuum suciently fast for the soliton
+to be localised and of nite energy. therefore, we can identify the spatial innity in each direction
+with one single point and compactify the one-dimensional space r1 to s 1. the eld theory of the
+sine-gordon model can be described by the map
+
+m(t) : s 1  s 1
+
+(3)
+
+at a given time t. this non-trivial mapping gives us the possibility to partition the space of all
+possible eld congurations into equivalence classes having the same topological charge or winding
+number. we can visualise this concept with a belt. we can trivially close it or we can twist one
+side by 180 degrees and close it or we can anti-twist it by 180 degrees i.e. twist it by -180 degrees
+and close it. we introduce a twist into the belt which cannot be un-done unless you open the belt.
+topological solitons are very much twisted eld congurations xed by boundary conditions. in a
+formal language, we get a non-trivial homotopy group 1(s 1) = z from the map of the sine-gordon
+eld which allows us to add or subtract eld congurations. for example, if we twist the belt twice
+and anti-twist it twice, we get back to an untwisted belt: very much like an annihilation process
+in particle physics. the twist i.e. the topological charge is xed by boundary conditions and
+conserved. further, we can easily impose lorentz invariance by only using covariant lagrangian
+terms and work in any dimension by construction. the weak points of topological solitons are:
+generally they are non-integrable systems, few techniques are available (only ansatze, topological
+bounds, etc.) and a computational approach is required. the sine-gordon model is a very good
+toy model, because it is topological and integrable at the same time: it is close to real physics and
+exactly solvable. further, we can compare our numerical methods with exact results. (see [12,
+section 2.5] for more details)
+
+2 non-linear  model in 2d
+
+the non-linear  model is described by
+
+(4)
+where ~ is a three-dimensional eld vector on the sphere s 2 i.e. ~  ~ = 1. we could also use a
+complex eld w which represents the stereographic projection of the sphere. again, we have a map
+
+l = 
+
+~   ~
+
+m(t) : s 2  s 2
+
+(5)
+
+which leads to the second homotopy group 2(s 2) = z. the existence of the topological charge
+i.e. the twisted eld conguration representing a soliton is ensured by topology. however, we also
+need to make sure that the soliton is dynamically stable i.e. that it has a stable scale. derricks
+theorem provides a necessary but not sucient condition for stability:
+
+de[ (x)]
+
+d
+
+d2e[ (x)]
+
+d2
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)=1
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)=1
+
+2
+
+= 0
+
+ 0.
+
+(6)
+
+the lagrangian is scale invariant and does not satisfy the second condition. a change of scale
+does not change the energy. numerical simulations are unstable, because numerical errors change
+the scale of the soliton without loss of energy. another important feature is the existence of a
+topological bound, the bogomolnyi bound
+
+if we were to extend the model to (3+1)d, the  model term would expand the soliton: another
+term needs to be added to ensure stability. (see [12, section 3.2 and 3.3] for further details)
+
+e  4n.
+
+(7)
+
+3 the nuclear skyrme model in 3d
+
+in the early 60s, skyrme came up with a theory to describe the hadronic spectrum i.e. a theory of
+mesons and baryons [13]. its lagrangian
+
+l = 
+
+~   ~  s h(
+
+~  ~)2  (
+
+~  
+
+~)( ~   ~)i
+
+(8)
+
+is a straightforward extension of the non-linear  model plus the addition of a fourth-order term
+called the skyrme term. we need to include this extra term to ensure stability according to derricks
+theorem. the mapping becomes
+
+m(t) : s 3  s 3.
+
+(9)
+
+in eect, the most commonly used notation is in terms of a coordinate set on the su (2) group
+manifold. skyrme had the ingenious idea to construct an eective eld theory of mesons where
+the baryons are the topological solitons of the theory. baryon conservation is equivalent to the
+conservation of the topological charge. his ideas were put aside by the success of qcd in the
+description of hadrons in terms of quarks. a crucial step forward in the understanding of qcd is
+the emergence of the idea of connement. in qed, the running coupling constant decreases with
+distance of interaction and a perturbation expansion is very eective. in qcd, the inverse is true:
+only at small distance ergo high energy does the coupling become small and the quarks are free
+particles. at low energies, people believe that the quarks form colourless colour-singlet states: the
+hadrons. this must be true as there is no experimental evidence to the contrary. so far, no-one
+has come up with a decent way of showing connement in qcd. the lack of a small parameter
+to do a perturbation expansion is evident. in the mid 70s, thooft [14] generalised qcd to be
+invariant under a su (nc ) gauge group. he realised that the quantum treatment of qcd simplied
+considerably and it is possible to derive some qualitative statements in the large nc and low energy
+limit. this comes from the fact that non-planar diagrams and internal quark loops are suppressed
+by a factor of n 2
+c . for large nc , qcd is a weakly interacting theory of mesons
+with the meson-meson interaction of order n 1
+c . for nc  , qcd is therefore a theory of
+mesons which are free and non-interacting. witten [17] realised that weakly coupled theories may
+exhibit non-perturbative states like solitons or monopoles. he showed that baryons behave as if
+they are solitons in a large-nc meson theory. the derivation of eective actions from the qcd
+lagrangian is an unsolved problem. the skyrme model is the simplest of a candidate theory for
+the low-energy eective lagrangian of qcd. of course, one may add some higher order correction
+terms. see [7, chapter 9] for a simple review on the relation between qcd and the skyrme model.
+there are diculties surrounding the quantization of the (3+1)-dimensional skyrme model.
+first of all, the quantisation is ambiguous, because the theory is not renormalisable. one can do
+a renormalisation to a given order, but it will depend on the scheme. therefore, it is essential to
+compare the scheme-dependent results with experimental data. in 1981, adkins, nappi and witten
+[1] partially overcame these problems by using a spinning-top approximation; the 1-skyrmion i.e.
+
+c respectively n 1
+
+3
+
+skyrmion of charge one is radially symmetric and rotating without deformation. eectively, they
+only include the rotational zero mode of the 1-skyrmion. this procedure allows to quantise the
+1-skyrmion as a proton and gives reasonable agreement with experiments. the numerical work
+by braaten et al. and battye and sutclie [2] on the structure of classical multi-skyrmions, i.e.
+skyrmions of charge two and more, supports further the idea that an appropriate quantization
+around these minimal-energy solutions for a given topological sector could lead to an eective
+description of atomic nuclei. however, the calculation of quantum properties of the multi-skyrmions
+is very dicult, because these minimal-energy solutions are not radially symmetric, for example.
+this is rather frustrating, for the claim that the skyrme model descending from a large n-qcd
+approximation models mesons, baryons and higher nuclei is a very compelling one. there have
+been various attempts to extract quantum properties, notably by walet [15] and leese et al. [6].
+a recent zero mode quantization of multi-skyrmions from charge four to nine has been undertaken
+by irvine [5]. reliable quantitative results were not to be expected, but even the correct quantum
+number for the ground states of some nuclei, skyrmions with odd charge 5, 7 and 9, could not be
+obtained. all these attempts rely on theoretical approximations like moduli-space or rational map
+ansatz and mostly include only zero modes.
+
+4 the baby skyrme models
+
+the nuclear skyrme model has two big problems: quantization is ambiguous and very hard and
+numerical simulations are computationally very intense even on supercomputers. it makes sense to
+look for a (2+1) version. the baby skyrme model is a modied version of the s 2 sigma model and
+the lagrangian is
+
+l = 
+
+~  ~  s h(
+
+~   ~)2  (
+
+~  
+
+~)( ~   ~)i  v v (~)
+
+(10)
+
+the addition of a potential and a skyrme term to the lagrangian ensures stable solitonic solutions.
+the skyrme term has its origin from the nuclear skyrme model and the baby skyrme model can
+therefore be viewed as its (2+1)d analogue. it plays the role of a toy model to explore skyrme-
+like properties. however, in recent years people have also tried to use the baby skyrme model
+to model aspects of the quantum hall eect. further, in (2+1)d, a potential term is necessary
+in the baby skyrme models to ensure stability of skyrmions; this term is optional in the (3+1)d
+nuclear skyrme model. we nd the minimal-energy solution for topological charge one by using
+the hedgehog ansatz;
+
+~ = 
+
+
+sin[f (r)] sin(n  )
+sin[f (r)] cos(n  )
+
+cos[f (r)]
+
+
+ .
+
+(11)
+
+note that n is a non-zero integer (it is the topological charge),  the polar angle,  a phase shift and
+f (r) the prole function satisfying certain boundary conditions. we end up with a one-dimensional
+energy functional
+
+e = (4)
+
+1
+
+2 z 
+
+0
+
+ 2
+
+rdr(cid:18)f
+
++ n2 sin2 f
+r2
+
+(1 + 2sf
+
+ 2
+
+) + v v(f )(cid:19) .
+
+(12)
+
+the corresponding euler-lagrange equation with respect to the invariant eld f (r) leads to a
+second-order ode,
+
+(cid:18)r +
+
+2sn2 sin2 f
+
+r
+
+
+
+(cid:19) f
+
++(cid:18)1 
+
+2sn2 sin2 f
+
+r2
+
++
+
+2sn2 sin f cos f f 
+
+r
+
+v
+2
+
+ r
+
+d v(f )
+
+df
+
+
+
+(cid:19) f
+
+= 0,
+
+(13)
+
+n2 sin f cos f
+
+r
+
+
+
+4
+
+which we re-write in terms of the second derivative of the prole function:
+
+
+
+f
+
+= f (f, f
+
+
+
+, r).
+
+(14)
+
+the prole function f (r) is a static solution of the baby skyrme model. these static solutions are
+certainly critical points, but not necessarily global minima. however, it is reasonable to assume
+that the hedgehog solution for topological charge one is the minimal-energy solution.
+
+taking into account the s 2 constraint, the equation of motion is
+
+a  (~  )a  2s[(
+( ~   ~) a  (  ~   ~)a + (
+~)( ~   ~)a] + 2v
+which we re-write in terms of the acceleration of the eld a:
+
+~   ~)a + ( ~   ~) a
+~   ~)a
+(a3  a3) = 0
+
+~   ~)(
+
+(
+
+~  
+
+dv
+d3
+
+with
+
+tta = k 1
+
+ab fb(cid:16)~, t
+
+~, i
+
+~(cid:17)
+
+kab = (1 + 2si
+
+~  i
+
+~)ab  2siaib.
+
+(15)
+
+(16)
+
+(17)
+
+we nd that the inverse matrix of k exists in an explicit, but rather messy form. the equation of
+motion is a second order pde.
+
+one drawback of the model is that the potential term is free for us to choose. the most common
+choices are: v = (1+3)4 (the holomorphic model chosen so that the 1-skyrmion solution is w = z
+(discussed in [9])), v = (1 + 3) (a 1-vacuum potential (studied in [8])) ,v = (1  3)(1 + 3) (a
+2-vaccua potential (studied in [16])). except for the rst potential, no minimal-energy solutions
+are known explicitly. the baby skyrme model is a non-integrable system and explicit solutions to
+its resulting dierential equations are nearly impossible to nd. numerical methods are the only
+way forward.
+
+5 numerical techniques
+
+we are interested in two kinds of studies: the minimal-energy solution in a given topological sector
+and the time-evolution of congurations. we have used numerical techniques based on solving
+the corresponding euler-lagrange equation. a randomisation technique e.g. simulated annealing
+might be more eective in nding the global minimal energy solution: an initial eld is randomly
+perturbed and changes are selected via the metropolis algorithm which accepts changes to lower
+energy and allows changes to higher energies according to a certain probability. (see paper by hale,
+schwindt and weidig [4])
+
+we need (16) for the time-evolution and relaxation of an initial conguration and use (14) to nd
+static hedgehog solutions. these des are re-written as sets of two rst order des. we discretise
+des by restricting our function to values at lattice points and by reducing the derivatives to nite
+dierences.1(as explained in [10], see also [11]). we take the time step to be half the lattice spacing:
+t = 1
+2 x. we use xed boundary conditions i.e. we set the derivatives to zero at the boundary.
+we check our numerical results via quantities conserved in the continuum limit and by changing
+lattice spacing and number of points. moreover, we compare them with theoretical predictions.
+
+1we use the 9-point laplacian
+
+5
+
+minimal energy solutions of the hedgehog ansatz the static hedgehog solutions
+of (14) are found by the shooting method using the 4th order runge-kutta integration and the
+boundary conditions imposed by the nite energy condition. alternatively, one can use a relaxation
+technique like the gauss-seidel over-relaxation ([11]) applied to an initial conguration with the
+same boundary conditions.
+
+n . using the dipole picture developed by piette et al.
+
+time-evolution and non radially symmetric minimal energy solutions the
+time-evolution of an initial conguration is determined by the equation of motion (16). we are
+using the 4th order runge-kutta method to evolve the initial set-up and correction techniques to
+keep the errors small. we relax i.e. take out kinetic energy by using a damping (or friction) term.
+we construct n-skyrmions by relaxing an initial set-up of n 1-skyrmions with relative phase shift
+of 
+[8], two baby 1-skyrmions attract each
+other for a non-zero value of the relative phase; phase shift of 
+2 for maximal attraction. a circular
+set-up is crucial as they maximally attract each other and 1-skyrmions do not form several states
+that repel each other. we have run simulations for non-circular set-ups, but either the 1-skyrmions
+take longer to fuse together or they fuse into many bound-states and repel each other. we run
+our simulations on grids with 2002 or 3002 lattice points and the lattice was x = 0.1 or 0.05.
+however, for large topological charge, we need larger grids and the relaxation takes a long time.
+the corresponding hedgehog solution as an initial set-up usually works well and is faster, but biased
+due to its large symmetry group.
+
+initial set-up: the initial eld conguration is a linear superposition of static solutions with
+or without initial velocity; typically we use a circular set-up of n 1-skyrmions with a 
+n phase-shift
+between each other (for maximal attraction). the superposition is justied, because the prole
+function decays exponentially. the superposition is done in the complex eld formalism i.e. where
+w is the stereographic projection of the ~ eld of s 2 (see [9]). we use the prole function of a
+static solution (typically of topological charge one) to obtain
+
+w = tan(cid:18) f (r)
+
+2 (cid:19) ein.
+
+(18)
+
+this equation holds in the rest frame of a static skyrmion solution centred around its origin and
+dw
+dt = 0. we may introduce moving solutions by switching to a dierent frame of reference. this
+can be done by performing a lorentz boost on the rest frame of a given w , because w is a lorentz
+scalar. it is important that the dierent skyrmions are not too close to each other. finally, the
+dierent w elds are added together and the complex eld is re-written in terms of the eld ~ and
+its derivative.
+
+correction techniques on s 2: the integration method introduces small errors which even-
+tually add up. in terms of the s 2 constraint, this corresponds to the eld leaving the two-sphere.
+hence, we need to project the eld back onto the sphere. the simplest and sucient projections are
+a  a~~
+a. of course, the space derivatives may also be corrected.
+see [10] for further discussions.
+
+and ta  ta  t ~~
+
+~~
+
+relaxation technique: a damping term in the equation of motion will gradually take the
+kinetic energy out of the system. the equation (16) changes to
+
+tta = k 1
+
+ab fb(cid:16)~, t
+
+~, i
+
+~(cid:17)  ta
+
+(19)
+
+6
+
+figure 1: contour plot of energy density: scattering of 2 skyrmions
+
+10
+
+5
+
+0
+
+-5
+
+-10
+
+10
+
+5
+
+0
+
+-5
+
+-10
+
+10
+
+5
+
+0
+
+-5
+
+-10
+
+10
+
+5
+
+0
+
+-5
+
+-10
+
+-10
+
+0
+
+10
+
+-10
+
+0
+
+10
+
+-10
+
+0
+
+10
+
+-10
+
+0
+
+10
+
+10
+
+5
+
+0
+
+-5
+
+-10
+
+10
+
+5
+
+0
+
+-5
+
+-10
+
+10
+
+5
+
+0
+
+-5
+
+-10
+
+10
+
+5
+
+0
+
+-5
+
+-10
+
+10
+
+5
+
+0
+
+-5
+
+10
+
+5
+
+0
+
+-5
+
+-10
+
+0
+
+10
+
+-10
+
+-10
+
+0
+
+10
+
+-10
+
+-10
+
+0
+
+10
+
+10
+
+5
+
+0
+
+-5
+
+10
+
+5
+
+0
+
+-5
+
+-10
+
+0
+
+10
+
+-10
+
+-10
+
+0
+
+10
+
+-10
+
+-10
+
+0
+
+10
+
+10
+
+5
+
+0
+
+-5
+
+10
+
+5
+
+0
+
+-5
+
+-10
+
+0
+
+10
+
+-10
+
+-10
+
+0
+
+10
+
+-10
+
+-10
+
+0
+
+10
+
+10
+
+5
+
+0
+
+-5
+
+10
+
+5
+
+0
+
+-5
+
+-10
+
+0
+
+10
+
+-10
+
+-10
+
+0
+
+10
+
+-10
+
+-10
+
+0
+
+10
+
+where  is the damping coecient. we set  to 0.1, but most values will do as long as they are
+not too large. another approach would be to absorb the outwards traveling kinetic energy waves
+in the boundary region.
+
+6 numerical studies
+
+we present three numerical studies of the baby skyrme models.
+
+ check for stability
+
+it is important to check whether a solution of the hedgehog ansatz is a global minimum or not.
+we have taken the exact solution of the rst potential and perturbed it by a scale transforma-
+tion. the initial conguration has twice the size of the static solution. the skyrmion shakes
+o its extra energy and radiates out kinetic energy waves. the stable skyrmion remains; the
+stability of the 1-skyrmion is ne and it probably is the minimum energy solution.
+
+ scattering of baby skyrmions
+
+first, the holomorphic baby skyrmions repel each other and only scatter if you collide them
+above a critical speed. skyrmions of the 1-vacuum and 2-vacua potential have attractive
+channel and scatter in the same way. figure 1 shows how the two 1-skyrmions attract each
+other, form a bound-state, scatter away at 90 degrees, get slowed down by their mutual
+attraction, attract each other again and so on. this oscillating but stable bound-state is
+an excited state of the 2-skyrmion solution. taking out the kinetic energy, the bound-state
+relaxes to the 2-skyrmion; a ring.
+
+ multi-skyrmion solutions
+
+the holomorphic model does not have any stable n-skyrmions where n is greater than one.
+the common 1-vacuum potential possesses rather beautiful, non-radially symmetric multi-
+
+7
+
+figure 2: energy density of a 7-skyrmion
+
+y
+
+x
+
+skyrmions. they look like crystal with 2-skyrmions as building blocks. (for example, see a
+7-skyrmion in gure 2.) the 2-vacua potential gives rise to a remarkably dierent structure
+for multi-skyrmions. in fact, we show that the energy density of all n-skyrmions turns out
+to be radially symmetric congurations, namely rings of larger and larger radii. figure 3
+shows the relaxation to a vibrating string conguration (further relaxation leads to a perfect
+ring). clearly, the choice of the potential term has a major impact on the formation of multi-
+skyrmions and their shape. however, it is not clear what controls the structure. (see our
+paper [16])
+
+7 conclusion
+
+we have studied classical aspects of the non-integrable baby skyrme models. no exact solutions
+are known in general and we could only achieve our study by using numerical methods. we have
+shown that the choice of potential term dictates the structure of the multi-skyrmions. however, it
+is not clear to us what properties of the potential controls the structure. our numerical approach
+is symptomatic for the increased use of computers in extracting valuable information from theories
+untrackable by mathematical tools. numerical experiments are becoming a well established area
+between real experiments and pure theory. further, the author is in no doubt that solitons will
+play an increasingly important role in fundamental physics. monopoles, instantons and d-branes
+are other examples of solitonic objects. physicists have two ways of thinking about physical systems;
+in terms of waves or particles. solitons combine both fundamental concepts and are waves with
+particle behaviour. this new concept is exciting and very appealing to theorists in all domains  a
+new tool to use with the help of computers.
+
+first of all, i want to express my gratitude to the directors of the school professors thooft,
+veneziano and zichichi and prof. gourdin for organising an excellent and inspiring summer school.
+i also congratulate prof. thooft on his well deserved award of the nobel price in physics 1999.
+
+8
+
+figure 3: contour plot of energy density: formation of a 5-skyrmion
+
+10
+
+5
+
+0
+
+-5
+
+-10
+
+10
+
+5
+
+0
+
+-5
+
+-10
+
+10
+
+5
+
+0
+
+-5
+
+-10
+
+10
+
+5
+
+0
+
+-5
+
+-10
+
+-10
+
+0
+
+10
+
+-10
+
+0
+
+10
+
+-10
+
+0
+
+10
+
+-10
+
+0
+
+10
+
+10
+
+5
+
+0
+
+-5
+
+-10
+
+10
+
+5
+
+0
+
+-5
+
+-10
+
+10
+
+5
+
+0
+
+-5
+
+-10
+
+10
+
+5
+
+0
+
+-5
+
+-10
+
+10
+
+5
+
+0
+
+-5
+
+10
+
+5
+
+0
+
+-5
+
+-10
+
+0
+
+10
+
+-10
+
+-10
+
+0
+
+10
+
+-10
+
+-10
+
+0
+
+10
+
+10
+
+5
+
+0
+
+-5
+
+10
+
+5
+
+0
+
+-5
+
+-10
+
+0
+
+10
+
+-10
+
+-10
+
+0
+
+10
+
+-10
+
+-10
+
+0
+
+10
+
+10
+
+5
+
+0
+
+-5
+
+10
+
+5
+
+0
+
+-5
+
+-10
+
+0
+
+10
+
+-10
+
+-10
+
+0
+
+10
+
+-10
+
+-10
+
+0
+
+10
+
+10
+
+5
+
+0
+
+-5
+
+10
+
+5
+
+0
+
+-5
+
+-10
+
+0
+
+10
+
+-10
+
+-10
+
+0
+
+10
+
+-10
+
+-10
+
+0
+
+10
+
+further, i would like to thank the ettore majorana foundation and centre for scientic culture for
+the award of the sakurai scholarship which paid the school fees and the department of mathematical
+sciences at the university of durham which paid my travel expenses. i also would like to thank my
+phd supervisor wojtek zakrzewski and bernard piette for useful discussions and james stirling
+who selected me for this summer school.
+
+references
+
+[1] g adkins, c nappi, and e witten. static properties of nucleons in the skyrme model. nuclear
+
+physics b, 228:552566, 1983.
+
+[2] r a battye and p m sutclie. symmetric skyrmions. physical review letters b, 79:363366,
+
+1997.
+
+[3] p g drazin and r s johnson. solitons: an introduction. cambridge university press, 1996.
+
+[4] mark hale, oliver schwindt, and tom weidig. simulated annealing in solitonic systems. to
+
+be published soon.
+
+[5] p irvine. zero mode quantizaton of multi-skyrmions. hep-th/9804142, 1998.
+
+[6] r a leese, n s manton, and b j schoers. attractive channel skyrmions and the deuteron.
+
+nuclear physics, b442:228267, 1995.
+
+[7] v g makhankov, y p rubakov, and v i sanyuk. the skyrme model. springer verlag, 1993.
+
+[8] b m a g piette, b j schoers, and w j zakrzewski. multisolitons in two-dimensional skyrme
+
+model. z. phys. c, 65:165174, 1995.
+
+[9] b m a g piette and w j zakrzewski. skyrmion dynamics in (2+1) dimension. chaos, solitons
+
+and fractals, 5:24952508, 1995.
+
+[10] b m a g piette and w j zakrzewski. numerical integration of (2+1)d pdes for s2 valued
+
+functions. j. comp. phys., 145:359381, 1998.
+
+9
+
+[11] w h press, s a teukolsky, w t vetterling, and b p flannery. numerical recipes in c.
+
+cambridge university press, 1992.
+
+[12] r rajarman. solitons and instantons. north-holland, 1996.
+
+[13] t h r skyrme. a nonlinear eld theory. proc. roy. soc. a, 260:127138, 1961.
+
+[14] g t hooft. a planar diagram theory for strong interaction. nuclear physics b, 72:461473,
+
+1973.
+
+[15] n walet. quantising the b = 2 and b = 3 skyrmion systems. nuclear physics, a606:429458,
+
+1996.
+
+[16] tom weidig. the baby skyrme models and their multiskyrmions. nonlinearity, 1999.
+
+[17] e witten. baryons in the 1/n expansion. nuclear physics b, 160:55115, 1979.
+
+10
+
+

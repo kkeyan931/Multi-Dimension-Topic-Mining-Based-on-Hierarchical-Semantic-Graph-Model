@@ -1,0 +1,2244 @@
+itep-th-54/99
+
+integral representation for the eigenfunctions of quantum
+
+periodic toda chain
+
+s. kharchev, d. lebedev
+
+institute of theoretical & experimental physics
+
+117259 moscow, russia
+
+revised october 28, 2013
+
+abstract
+
+integral representation for the eigenfunctions of quantum periodic toda chain is constructed
+for n -particle case. the multiple integral is calculated using the cauchy residue formula.
+this gives the representation which reproduces the particular results obtained by gutzwiller
+for n = 2, 3 and 4 -particle chain. our method to solve the problem combines the ideas
+of gutzwiller and r -matrix approach of sklyanin with the classical results in the theory
+of the whittaker functions. in particular, we calculate sklyanins invariant scalar product
+from the plancherel formula for the whittaker functions derived by semenov-tian-shansky
+thus obtaining the natural interpretation of the sklyanin measure in terms of the harish-
+chandra function.
+
+9
+9
+9
+1
+
+ 
+
+v
+o
+n
+1
+
+ 
+
+ 
+ 
+
+1
+v
+5
+6
+2
+0
+1
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+e-mail: kharchev@vitep5.itep.ru
+e-mail: dlebedev@vitep5.itep.ru
+
+contents
+
+1 introduction
+
+2 periodic toda chain (description of the model)
+
+3 main results
+
+4 gl(n 1, r) toda chain and whittaker function
+
+5 auxiliary functions
+
+6 periodic toda chain in  -representation
+
+7 solution of baxter equation
+
+8 proof of the main theorems
+
+1 introduction
+
+1
+
+3
+
+4
+
+6
+
+10
+
+13
+
+15
+
+18
+
+this paper is devoted to construction of the integral representation for the eigenfunctions of
+the hamiltonians for the quantum periodic toda chain. our work was initiated by the recent
+results of smirnov [1] concerning the structure of matrix elements in periodic toda chain. the
+key point of this approach is sklyanins invariant scalar product [2] and we tried to interpret
+it as a part of the plancherel formula which relates the scalar product of the eigenfunctions
+in original coordinate representation with those arising in the space of the separated variables.
+such interpretation forces to combine the analytic method of gutzwiller [3] with the algebraic
+approach of sklyanin [2].
+
+to be more precise, gutzwiller [3] discovered an interesting phenomenon which understood
+nowadays as quite universal one. if one tries to nd the eigenfunctions of the periodic toda
+chain in terms of a formal series in (auxiliary) eigenfunctions of the open chain with unknown
+coecients labelled by multiple index, then the multi-dimensional dierence equation on the
+coecients thus obtained can be factorized to the one-dimensional baxter equations. this
+is what is called the quantum separation of variables.
+in this way gutzwiller obtained the
+solution to the eigenvalue problem for the n = 2, 3 and 4-particle cases only due to the lack
+of appropriate explicit solution for an arbitrary open toda chain. the next important step was
+done by sklyanin [2]. he applied the r-matrix formalism to the present problem and simplied
+drastically the derivation of the baxter equation to an arbitrary number of particles. the evident
+advantages of sklyanins method are a wide area of application and eective way to investigate
+dierent structures, for example, the invariant scalar products. but, unfortunately, his purely
+algebraic method had no deal with the analytical properties of auxiliary eigenfunctions of the
+specic model and, therefore, some important information is inevitably lost to compare with the
+original gutzwillers approach. for example, as a price for eciency the measure is dened up
+to an arbitrary ih -periodic function in general and there is no natural way to x this freedom
+uniquely; there is a fundamental question what is the underlying principle to determine the
+asymptotics and analytical properties of the solution to baxter equation and so on. moreover,
+the transition from initial coordinate-dependent wave function to those in separated variables
+
+1
+
+is somewhat obscured. the advantage of gutzwiller approach consists of explicit information
+concerning the analytical properties of auxiliary eigenfunctions. as a consequence, it gives the
+possibility to calculate many ne tuning quantities, for example the numerical coecient in
+baxter equation, the asymptotics of its solutions etc. therefore, there is a natural problem to
+generalize the gutzwiller results to an arbitrary n -particle toda chain and to extend them to
+other models. in particular, the investigation of algebraic origin of the auxiliary functions arising
+in other integrable models, is of higher importance.
+
+we consider the periodic toda chain as a test example to future generalization in these directions.
+this is the main motivation of the present paper.
+
+we start from well-known observation that the whittaker functions [4]-[6] give the solution of
+the eigenvalue problem for the general open toda chain [7, 8]. so it is naturally to use them
+to construct the wave functions for the periodic toda chain in the spirit of gutzwiller. as
+the main result we obtain the integral representation for the eigenfunctions of periodic toda
+chain using intensively the analytical properties of whittaker functions investigated in [4]-[6].
+the second important counterpart of this representation is the explicit solution of the baxter
+equation constructed by pasquier and gaudin [9]. we calculate the multiple integral by taking
+the residues thus obtaining another representation for the wave function which reproduces the
+particular results of gutzwiller by putting n = 2, 3 and n = 4 in our general formula. we
+observe also that the plancherel formula obtained by semenov-tian-shansky [8] for the wavelets
+of whittaker functions produce the natural way to calculate sklyanins scalar product. it turns
+out that the sklyanin measure is deeply connected with the harish-chandra function arising in
+the theory of whittaker functions.
+
+the paper is organized as follows.
+
+in section 2 we briey describe n -particle quantum periodic toda chain in the framework of
+r -matrix approach and formulate the spectral problem to be solved. the material here is quite
+standard.
+
+the solution of this problem is described by two theorems stated in section 3. this are the main
+results of the paper.
+
+the next four sections are devoted to the building blocks which allows to prove the above
+theorems.
+the solution for the open n 1 -particle toda chain in terms of whittaker functions [7, 8] is
+discussed in section 4. we introduce weyl invariant whittaker functions by simple renormal-
+ization of the original ones and describe their properties using the classical results [4]-[6]. we
+calculate also the scalar product of such functions using the plancherel formula derived in [8].
+
+in section 5 we follow the gutzwiller approach [3] to construct the auxiliary functions which
+play the same role for the periodic toda chain as the exponentials for the standard fourier
+transform. we generalize the gutzwiller solutions to an arbitrary (n 1) -particle solution in
+terms of weyl invariant whittaker functions and calculate the action of the diagonal operators of
+the monodromy matrix on the auxiliary functions thus obtaining the functional relations which
+generalize the corresponding relations for the macdonald function.
+
+in section 6 we reformulate the spectral problem using the (generalized) fourier transform to the
+so-called  -representation which is an analytic version of the algebraic approach by sklyanin [2].
+the analytical properties of the auxiliary function play a crucial role here. we show that the wave
+function in  -representation is an entire function with denite asymptotics and it satises to
+
+2
+
+multi-dimensional baxter equation. we derive the plancherel formula thus rigorously obtaining
+the scalar product in  -variables introduced in [2]. as by-product, we obtain the connection of
+the harish-chandra function [4]-[6] with the sklyanin measure.
+
+the solution to the baxter equation is outlined in section 7. we essentially use the approach
+by gutzwiller [3] and especially those by pasquier and gaudin [9].
+
+in section 8 the proofs of the theorems stated in section 3 are presented.
+
+2 periodic toda chain (description of the model)
+
+the quantum n -periodic toda chain is a multi-dimensional eigenvalue problem with n mu-
+tually commuting hamiltonians hk(x0, p0; . . . ; xn1, pn1) , (k = 1, . . . , n) where the simplest
+hamiltonians have the form
+
+pk
+
+h1 =
+
+n 1xk=0
+n 1xk=0
+h2 = xk<m
+pkpm 
+h3 = xk<m<n
+
+pkpmpn + ...
+
+exkxk+1
+
+(2.1)
+
+etc. and the phase variables xk, pk satisfy to commutation relations [xk, pm] = ihkm . this
+system can be nicely described using the r -matrix approach [2]. it is well known that the lax
+operator
+
+(2.2)
+
+(2.3)
+
+(2.4)
+
+(2.5)
+
+(2.6)
+
+(2.7)
+
+ln() = 
+
+  pn exn
+exn
+
+0 
+
+satises the commutation relations
+
+r(  )(ln())  i)(i  ln()) = (i  ln())(ln()  i)r(  )
+
+where
+
+r() = i  i +
+
+ih
+
+
+p
+
+is a rational r -matrix. the monodromy matrix
+
+tn () def= ln 1() . . . l0()  
+
+a() b()
+
+c() d() 
+
+satises the analogous equation
+
+r(  )(t ()  i)(i  t ()) = (i  t ())(t ()  i)r(  )
+
+from (2.6) it can be easily shown that the trace of the monodromy matrix
+
+bt() = a() + d()
+
+3
+
+satises to commutation relations [bt(),bt()] = 0 and is a generating function for the hamilto-
+
+nians of the periodic toda chain:
+
+let us consider the spectral problem
+
+bt() =
+
+nxk=0
+(1)kn khk
+
+hke = eke
+
+k = 1, . . . , n
+
+where e  (e1, . . . , en) . in other words, e is an eigenfunction of the operator bt() :
+
+where
+
+bt()e = t(; e)e
+nxk=0
+(1)kn kek
+
+t(; e) =
+
+(2.8)
+
+(2.9)
+
+(2.10)
+
+(2.11)
+
+(2.13)
+
+for the future convenience we shall denote the coordinate dependence of the solutions as
+e (x0, x) thus selecting x0 from all other coordinates x = (x1, . . . , xn1) . the reason for
+doing this will be clear below. evidently, the wave function has the following structure:
+
+e(x0, x) = ee(x0x1, . . . , xn2xn1) exp( i
+
+h
+
+e1
+
+xk)
+
+n 1xk=0
+
+(2.12)
+
+the main goal is to nd the solution to (2.10) such that ee  l2(rn 1) . in equivalent terms,
+
+we impose the requirement
+
+z f (e1)e(x0, x)de1  l2(rn )
+
+for any smooth function f (y) , (y  r) with nite support.
+
+3 main results
+
+theorem 3.1 the solution to the spectral problem (2.10), (2.13) can be represented as the
+integral over real variables  = (1, . . . , n1) in the following form:
+
+e(x0, x) =
+
+(2h)n
+(n  1)!
+
+zrn1
+
+1()c(; e) ,e1(x0, x)d
+
+(3.1)
+
+where
+
+(i) the function () is dened by the formula
+
+ih (cid:17)(cid:12)(cid:12)(cid:12)(cid:12)
+() = yj<k(cid:12)(cid:12)(cid:12)(cid:12)(cid:16) jk
+
+2
+
+4
+
+(3.2)
+
+(ii) the function c(; e) is the solution of multi-dimensional baxter equation in the pasquier-
+
+gaudin form [9]
+
+c(; e) =
+
+n 1yj=1
+
+c+(j; e)  (e)c(j; e)
+h(cid:16)j  k(e)(cid:17)
+nqk=1
+
+sinh 
+
+(3.3)
+
+where the entire functions c() are two gutzwiller solutions [3] of one-dimensional baxter
+equation
+
+t(; e)c(; e) = in c( + ih; e) + in c(  ih; e)
+
+(3.4)
+
+and the parameters (e),  = (1(e), . . . , n(e) ) satisfy the gutzwiller conditions (the
+energy quantization) [3, 9].
+
+(iii) the wave function ,e1(x0, x) is dened in terms of whittaker function w(x; ) [4]-[6]
+
+for the gl(n1; r) open toda chain [7, 8]
+1/2(cid:16) jk
+,e1(x0, x) = h2i(,)/h yj<k
+
+ih
+
++
+
+1
+
+2(cid:17) w(x; ) expn i
+
+h(cid:16)e1
+
+n 1xk=1
+
+k(cid:17)x0o (3.5)
+
+the function (3.5) is symmetric under the permutation of  -variables 1.
+
+the multiple integral (3.1) can be explicitely evaluated. let y = (y1, . . . , yn) be an arbitrary
+vector in rn . we denote y(s)  (y1, . . . , ys1, ys+1, . . . , yn)  rn 1
+theorem 3.2 assuming that j(e) 6= k(e) , the solution (3.1) can be written (up to unessen-
+tial numerical factor) in equivalent form
+
+e(x0, x) =
+
+where
+
+and () = qj>k
+
+nxs=1
+(1)n s xn(s)zn1
+
+((s)+ihn(s)) c+((s) +ihn(s)) (s)+ihn(s),e1
+
+c+() 
+
+n 1yj=1
+
+c+(j; e)
+
+(j  k) is the vandermonde determinant.
+
+(x0, x)
+
+(3.6)
+
+(3.7)
+
+remark 3.1 for n = 2, 3 and n = 4 particle toda chain the formula (3.6) reproduces the
+results obtained by gutzwiller [3].
+
+1 in (3.5) we use the notation (, )  1
+
+2
+
+n 1pk=1
+
+(n 2k)k .
+
+5
+
+4 gl(n1, r) toda chain and whittaker function
+
+it can be easily shown that the operator
+
+b() = ex0
+
+n 1xk=0
+(1)kn k1hk(x1, p1; . . . ; xn1, pn1)
+
+(4.1)
+
+is the generating function for the hamiltonians hk of gl(n 1) toda chain 2. in particular,
+the simplest hamiltonians have the form
+
+h1 =
+
+h2 =xj<k
+
+pk
+
+n 1xk=1
+n 2xk=1
+pjpk 
+
+exkxk+1
+
+(4.2)
+
+let  = (1, . . . , n1) be the set of real parameters. we consider the spectral problem for
+gl(n1, r) toda chain
+
+hk(x) = k()(x)
+
+k = 1, . . . , n  1
+
+(4.3)
+
+where k() are elementary symmetric functions. in equivalent terms, (x) satises to the
+equation
+
+as a trivial corollary,
+
+b()(x) = ex0
+
+n 1ym=1
+
+(  m) (x)
+
+b(j)(x) = 0
+
+ j  
+
+(4.4)
+
+(4.5)
+
+remark 4.1 the equations (4.5) are an analog of the notion of the operator zeros introduced
+by sklyanin [2].
+
+obviously, in the asymptotic region xk+1  xk, (k = 1, . . . , n2) all potentials vanish and the
+solution to (4.3) is a superposition of plane waves. the main goal is to nd the solution to (4.3)
+satisfying the following properties:
+
+(i) the solution vanishes very rapidly 3 as xk  xk+1   for any given k .
+(ii) the function  is weyl-invariant, i.e. it is symmetric under any permutation
+
+...j...k... = ...k...j...
+
+(4.6)
+
+2the commutativity of the operators hk follows from the commutation relation [b(), b()] = 0 which is
+
+encoded in (2.6).
+
+3 more precisely,  (x)  exp{ 2
+
+h e(xkxk+1)/2} as xk  xk+1   .
+
+6
+
+the property (i) denes the unique solution (up to common  -dependent factor). it is called
+the whittaker function w(x; ) whose analytical and invariant properties were studied in [4]-[6].
+in the context of the open toda chain the whittaker functions have been appeared for the rst
+time in [7, 8]. the requirement of weyl invariance (4.6) is very convenient for our purposes. it
+turns out that symmetric function  is most suitable to construct the solution for the periodic
+toda chain.
+
+for gl(n1, r) toda chain the whittaker function has the following integral representation
+[4]-[6] 4
+
+w(x; ) = e
+
+i
+h (,x)
+
+z
+
+dz
+
+n 2yk=1
+
+i
+
+h (kk+1) 1
+
+k
+
+2
+
+(z) expn2i
+
+h
+
+zk,k+1e(xkxk+1)/2o
+
+(4.7)
+
+where the integration is taken over the upper triangular (n  1) (n  1) matrix z = ||zjk||
+with unit diagonal and k(z) are the principal minors of the matrix zzt . finally, (., .) is the
+standard scalar product in rn 1 .
+in particular, taking n = 3 and using the integral representation for the macdonald function
+k(y) , one obtains the appropriate solution
+
+w(x; ) = 2
+
+ih
+
+h 12
+ih + 1
+
+(cid:16) 12
+
+2(cid:17) e
+
+i
+
+2h (1+2)(x1+x2)k 12
+
+ih (cid:16) 2
+
+h
+
+of the spectral problem
+
+(p1 + p2)w = (1 + 2)w
+
+e(x1x2)/2(cid:17)
+
+(4.8)
+
+(4.9)
+
+np1p2  ex1x2o w = 12 w
+
+indeed, k(y)  y1/2ey as y   and property (i) is fullled.
+all essential theorems for the classical whittaker function [4]-[6] hold in the present case as well.
+we represent four lemmas below without proof 5.
+
+lemma 4.1 for any s  w
+
+w(x; s) = m(s; )w(x; )
+
+where for the permutation sjk : j  k (j < k)
+
+4 the function (4.7) diers from the corresponding solution for the sl(n 1, r) case by the factor
+
+m(sjk; ) =
+
+kym=j+1
+
+h2i(kj )/h
+
+ih + 1
+ih + 1
+
+2(cid:17)
+2(cid:17)
+
+ih + 1
+ih + 1
+
+(cid:16) j m
+(cid:16) mj
+n 1xk=1
+n 1xj=1
+
+j 
+
+2(cid:17)(cid:16) mk
+2(cid:17)(cid:16) km
+xko
+
+expn
+
+i
+
+(n 1)h
+
+(4.10)
+
+(4.11)
+
+5 the notations and results are extracted from the papers [6].
+
+7
+
+the coecients m(s; ) satisfy to relations
+
+m(s1s2; ) = m(s1; s2)m(s2; )
+m(s; )m(s; ) = 1
+im k = 0
+
+(where z always denote the complex conjugation of z ).
+
+(4.12)
+
+(4.13)
+
+lemma 4.2 the whittaker function w(x; ) can be analytically continued to an entire function
+of   cn 1 .
+
+lemma 4.3 there is a unique solution v(x; ) to (4.3) with the asymptotics
+
+v(x; ) = e
+
+(4.14)
+
+i
+
+k=1(cid:17)
+h (,x) + o(cid:16)maxnexkxk+1on2
+
+in the region xk+1  xk, (k = 1, . . . , n  2) . let w be the weyl group (the permutation
+group of the variables  ). the functions v(x; s), (s  w ) form a basis of the solutions to the
+spectral problem (4.3).
+
+lemma 4.4 the whittaker function (4.7) has the following expansion in terms of basis func-
+tions v(x; s) , (s  w ) :
+
+c(s)m1(s; ) v(x; s)
+
+w(x; ) = xsw
+c() = yj<k
+
+b(cid:16) jk
+
+ih
+
+,
+
+1
+
+2(cid:17)
+
+(4.15)
+
+(4.16)
+
+where
+
+is (non-normalized) harish-chandra function 6.
+
+now we are able to dene the weyl symmetric solution and to describe its properties. let  is
+a half-sum of positive roots of sl(n1, r) written in standard basis {ek}  rn 1 :
+
+ =
+
+n 1xk=1
+
+kek ;
+
+k =
+
+1
+2
+
+(n2k)
+
+lemma 4.5 the function
+
+(x) = h2i(,)/h yj<k
+
+1/2(cid:16) jk
+
+ih
+
++
+
+1
+
+2(cid:17) w(x; )
+
+6 in (4.16) b(z, w) 
+
+(z)(w)
+(z + w)
+
+.
+
+8
+
+(4.17)
+
+(4.18)
+
+(i) is weyl invariant.
+(ii) it can be analytically continued to an entire function of   cn 1 .
+(iii) in terms of the basis v(x; s) , (s  w )
+(x) = xsw
+
+n(s)a(s) v(x; s)
+
+where n() = h2i(,)/h and
+
+a() = yj<k
+
+(cid:16) jk
+ih (cid:17)
+
+(iv) for real  variables the function  obeys the asymptotics
+
+(x)  |k|
+
+2n
+
+2 expn 
+
+
+2h
+
+(n2)|k|o
+
+as |k|   .
+
+(4.19)
+
+(4.20)
+
+(4.21)
+
+proof. the weyl invariance is a direct corollary of the formulae (4.10), (4.11).
+to prove (ii), one should note that the poles coming from  functions in the r.h.s. of (4.18) are
+cancelled by the corresponding zeros of the whittaker function w(x; ) . indeed, the function
+m(sjk; ) has the poles at j  k = ih(n + 1
+2) , (n  n) . but the function w(x; sjk) is
+an entire function according to lemma 4.2. hence, from (4.10) it is clear that w(x; ) vanishes
+exactly at the same points.
+to prove (iii), let
+
+b()  yj<k
+
+1/2(cid:16) jk
+
+ih
+
++
+
+1
+
+2(cid:17)
+
+(4.22)
+
+(4.23)
+
+(4.24)
+
+(4.25)
+
+for brevity. then the harish-chandra function (4.16) is written identically as a ratio
+
+while the denition (4.18) reads
+
+c() =
+
+a()
+b()
+
+(x)  n()b()w(x; )
+
+using the weyl invariance s =  , one easily nds from (4.10) and (4.24)
+
+m(s; ) =
+
+n()
+n(s)
+
+b()
+b(s)
+
+hence, the expansion (4.19) is a simple corollary of (4.15) and denition (4.24).
+the proof of (iv) follows from the stirling formula for  -functions and from the calculation of
+the integrals in (4.7) by the stationary phase method 7.
+
+7actually, one can prove the exponential decreasing   expn 
+
+nite strip of the complex plane.
+
+2h
+
+(n 2)|rek|o as |re k|   in any
+
+9
+
+lemma 4.6 let  = (1, . . . , n1) and  = (
+
+1, . . . , 
+
+n1) be the real parameters. then
+
+z
+
+(x)(x)dx = (2h)n 1|a()|2 xsw
+
+(s  )
+
+(4.26)
+
+proof. this is a consequence of the plancherel formula proved in [8] for the sl(n, r) case.
+the scalar product (4.26) results from semenov-tian-shansky formula taking into account the
+relations (4.12), (4.13) and (4.25).
+
+conjecture 4.1 the whittaker functions obey the completeness condition 8
+
+z
+
+|a()|2(x)(y) d = (n1)! (2h)n 1(x  y)
+
+(4.27)
+
+5 auxiliary functions
+
+let us introduce the auxiliary function
+
+,(x0, x) def= e
+
+i
+h
+
+x0( 
+
+n1pm=1
+
+m)
+
+(x)
+
+(5.1)
+
+where  is an arbitrary real parameter. obviously, this function is the solutions of (4.3) or, in
+equivalent terms,
+
+b(),(x0, x) = ex0
+
+n 1ym=1
+
+(  m) ,(x0, x)
+
+in particular,
+
+ j  
+further, by construction the function , satises to the equation
+
+b(j),(x0, x) = 0
+
+the scalar product of the auxiliary functions follows from (4.26):
+
+h1, =  ,
+
+z
+
+ ,(x0, x),(x0, x)dx0dx = (2h)n () () xsw
+
+(s  )
+
+where
+
+(5.2)
+
+(5.3)
+
+(5.4)
+
+(5.5)
+
+(5.6)
+
+ih (cid:17)(cid:12)(cid:12)(cid:12)(cid:12)
+() = yj<k(cid:12)(cid:12)(cid:12)(cid:12)(cid:16) jk
+
+2
+
+moreover, the auxiliary functions satisfy to completeness condition
+
+z
+
+1(),(x0, x),(y0, y) d d = (n1)! (2h)n (x0  y0)(x  y)
+
+(5.7)
+
+8 we conrm this conjecture by explicit calculations for gl(2, r) chain. the general proof will be published
+
+elsewhere.
+
+10
+
+provided the conjecture (4.27) holds.
+
+certainly, the function (5.1) does not satisfy the whole system (2.10). nevertheless, it possesses
+some remarkable properties which allow to construct the eigenfunctions of the periodic toda
+chain.
+
+first of all, the functions , and , can be extended to the entire functions of the complex
+variables   cn 1 . this is an evident consequence of lemma 4.5. we shall denote the
+corresponding analytic continuations by the same letters. further, the following statement will
+be of importance below:
+
+lemma 5.1 the action of the diagonal operators of the monodromy matrix (2.5) on auxiliary
+function , (  cn 1) is dened by the formulae
+
+a(j), = in +ihej,
+
+d(j), = in ihej ,
+
+proof. we consider the following commutation relations encoded in (2.6):
+
+(   + ih)d()b() = (  )b()d() + ihd()b()
+(   + ih)a()b() = (  )b()a() + iha()b()
+
+(5.8a)
+
+(5.8b)
+
+(5.9)
+
+(5.10)
+
+taking  = j
+to the relation
+
+in (5.9) and applying this operator identity to the function (x) , one arrives
+
+b()d(j)(x) = ex0 (  j + ih) ym6=j
+
+(  m) d(j)(x)
+
+(5.11)
+
+since (4.5) holds 9 . hence, d(j)(x) is a solution to the spectral problem (4.4) with the set
+of eigenvalues
+
+i.e. one obtains the expansion
+
+  (1, . . . , j1, j  ih, j+1, . . . , n1)
+d(j)(x) = xsw
+
+dj(s; ) v(x; s(  ihej))
+
+(5.12)
+
+(5.13)
+
+due to completeness of the basis v(x; ) (s  w ) . on the other hand, the function d(j)(x)
+vanishes as xkxk+1   for any given k . hence, the r.h.s. in (5.13) is proportional to ihej
+because of uniqueness of the whittaker function. thus,
+
+d(j)(x) = dj() ihej
+
+(5.14)
+
+to nd the coecients dj() , we consider the asymptotics in the region xk+1  xk , (k =
+1, . . . n  2) where (4.14) holds. note that in this limit
+
+(5.15)
+
+d() = exn1x0(n 2ym=1
+
+k=1(cid:17))
+(  pm) + o(cid:16)maxnexkxk+1on2
+
+9note that d() does not contain the operator p0 and, therefore, commutes with ex0 .
+
+11
+
+let  be the complex variables with im k  0 . then it is easy to nd that asymptotically
+
+d(j)(x)  in ex0+ i
+
+h (j ih)xn1h2i(j ih)n1/h ym6=j
+e1,...,j1j+1,...,n1(x1, . . . , xn2)
+
+(cid:16)m  j + ih
+
+ih
+
+(cid:17)
+
+(5.16)
+
+where e is the asymptotical value of gl(n 2, r) whittaker function. on the other hand,
+
+under above conditions
+
+ihej  e
+
+i
+
+h (j ih)xn1h2i(j ih)n1/h ym6=j
+e1,...,j1j+1,...,n1(x1, . . . , xn2)
+
+(cid:16) m  j + ih
+
+ih
+
+(cid:17)
+
+(5.17)
+
+the comparison of (5.16) and (5.17) gives dj() = in ex0 . hence, in the region im k  0
+
+d(j)(x) = in ex0ihej (x)
+
+(5.18)
+
+and this relation can be obviously continued to the whole complex region. the formula (5.8b)
+follows then from the denition (5.1).
+of course, it is possible to prove (5.8a) according to the same reasoning. actually, the relation
+(5.8a) is a corollary of (5.8b) since the quantum determinant of the monodromy matrix (2.5) is
+equal to 1. applying the operator identity
+
+to the function , and using the relations (5.3) and (5.8b), one arrives to (5.8a).
+
+a(j  ih)d(j)  c(j  ih)b(j) = 1
+
+(5.19)
+
+as a direct consequence of (5.8) and denition (2.7), for any   cn 1
+
+bt(j), = in +ihej , + in ihej ,
+bt (j), = in +ihej, + in ihej,
+
+(5.20)
+
+where bt (; x0, p0; . . . ; xn1, pn1)  bt(; x0,p0; . . . ; xn1,pn1) , (  c) and the analytic
+
+continuation of the functions is understood.
+
+remark 5.1 the formula (5.20) has been derived by gutzwiller [3] using cumbersome explicit
+calculations for n = 2 and n = 3 -particle open toda chain.
+
+to prove theorem 3.1 one needs to determine the action of the operator bt() (  c) on the
+
+function , .
+
+lemma 5.2
+
+=(cid:16)+
+
+j(cid:17) n 1ym=1
+n 1xj=1
+
+(m) ,+
+
+jm(cid:16)in +ihej, + in ihej,(cid:17)
+m
+
+(5.21)
+
+bt(), =
+n 1xj=1 ym6=j
+
+12
+
+proof. the function bt(), is a polynomial in  of order n with the leading terms
+according to (5.4). moreover, this polynomial is dened at the points  = j , (j = 1, . . . , n 1)
+due to (5.20). using the standard interpolation formula, one easily obtains (5.21).
+
+bt(), = (n  n 1), + o(n 2)
+
+(5.22)
+
+remark 5.2 the formula (5.21) is a coordinate version of the operator interpolation formula
+obtained in [2].
+
+6 periodic toda chain in  -representation
+
+let e (x0, x) be the fast decreasing solution of the problem (2.10). we dene the function
+c() by generalized fourier transform:
+
+(e1  ) c(; e) =
+
+z
+
+e(x0, x) ,(x0, x)dx0dx
+
+(6.1)
+
+theorem 6.1 the function c() possesses the following properties:
+
+(i) it is a symmetric function with respect to  -variables.
+(ii) it is an entire function of the variables   cn 1 .
+(iii) the function c() obeys the asymptotics
+
+c()  |k|n/2e
+
+n|k |
+
+2h
+
+(6.2)
+
+as |k|   along the real axes.
+
+(iv) the function c() satises the multi-dimensional baxter equation
+
+t(j; e)c(; e) = in c( + ihej; e) + in c(  ihej; e)
+
+(6.3)
+
+where t(; e) is dened by (2.11).
+
+proof. the symmetricity of the function c() is obvious.
+we present here only the sketch of the proof concerning the statements (ii) and (iii).
+the statement (ii) follows from the assertion that the auxiliary function , is an entire one
+while the solution of the periodic chain vanishes very rapidly as |xkxk+1|   . 10.
+(iii) the asymptotics (6.2) is a combination of two factors. the rst one comes from the asymp-
+totics (4.21) which results from the stirling formula for the  -functions in the denition (4.18).
+
+10 actually, the boundary conditions have the same importance here as the requirement of compact support
+
+in the theory of the analytic continuation for the usual fourier transform.
+
+13
+
+the second factor  |k|1 exp{|k|/h} results from the stationary phase method while cal-
+culating the multiple integral including the whittaker function (4.7). the calculation is based
+heavily on the exact asymptotics of the function e (x0, x) as |xk  xk+1|   .
+the proof of (iv) is simple. using the denition (2.10) and integrating by parts (evidently,
+boundary terms vanish), one obtains
+
+z nbt(j)e(x0, x)o ,(x0, x)dx0dx =
+
+(6.4)
+
+(e1  ) t(j; e)c() 
+
+=
+
+z
+
+e(x0, x)nbt (j),(x0, x)odx0dx
+
+taking into account the relation (5.20), the baxter equation (6.3) follows from denition (6.1).
+
+let us consider the following function 11
+
+e(x0, x) =
+
+(2h)n
+(n1)!
+
+z
+
+1() c(; e) ,e1(x0, x)d
+
+(6.5)
+
+the integral (6.5) integral is correctly dened. indeed, the measure
+
+1() = yj<k(cid:12)(cid:12)(cid:12)(cid:12)(cid:16) jk
+ih (cid:17)(cid:12)(cid:12)(cid:12)(cid:12)
+
+2
+
+=
+
+= (h)(n1)(n2)/2 yj<k
+
+(jk) sinh
+
+
+h
+
+(jk)
+
+is an entire function. therefore, there are no poles in the integrand. moreover,
+
+1()  |k|n 2 expn
+
+h
+
+(n2)|k|o
+
+(6.6)
+
+(6.7)
+
+as |k|   . taking into account the asymptotics (4.21) and (6.2) one concludes that the
+integrand has the behavior  |k|1 exp{|k|/h} as |k|   . therefore, the integral (6.5)
+is convergent.
+
+using the scalar product (5.5), one can write the plancherel formula 12
+
+(2h)n
+
+z
+
+e(x0, x)e(x0, x)dx0dx =
+
+1
+
+(n1)!
+
+(e1e
+1)
+
+z
+
+1() c(; e)c(; e)d (6.8)
+
+the integral in the r.h.s. of (6.8) is absolutely convergent due to asymptotics (6.2) and (6.7).
+hence, the norm ||e || is nite modulo gl(1)  -function (e1e
+1) (see corresponding factor
+in (2.12) which results to this function).
+
+11the expression (6.5) is an inversion formula to (6.1) assuming the completeness condition (5.7). otherwise
+
+one can only conclude that (6.1) is a corollary of (6.5) due to the scalar product (5.5).
+
+12 let us stress again that (6.8) is deeply connected with the plancherel formula for sl(n, r) toda chain
+
+derived in [8].
+
+14
+
+remark 6.1 the scalar product in  -variables appears for the rst time in [2]. we see that
+the sklyanin measure 1() is naturally connected with the harish-chandra function (4.23).
+
+to prove that the function (6.5) satises to the spectral problem (2.10), one needs more details
+information concerning the asymptotics of function c(; e) : it should exponentially decrease
+in any nite strip of the complex plane k  c as |re k|   . then (6.5) is a solution if
+c(; e) satises the baxter equation (6.3) (see the proof of theorem 3.1 below). up to now
+we can prove only the asymptotics (6.2) starting from the denition (6.1) (though the analytic
+continuation seems almost evident). therefore, in the next section we describe the explicit
+solution to equation (6.3) [3, 9] which obviously possesses the required asymptotics.
+
+7 solution of baxter equation
+
+in this section the pasquier-gaudin solution [9] to the baxter equation (6.3) is described which
+leads to rened derivation of gutzwiller quantization condition [3].
+
+we solve the equation (6.3) in the separated form
+
+c(; e) =
+
+n 1yj=1
+
+c(j; e)
+
+(7.1)
+
+obviously, the one particle functions c() satisfy to the one-dimensional baxter equation
+
+t(; e) c(; e) = in c( + ih; e) + in c(  ih; e)
+
+(7.2)
+
+where t(; e) is, by denition, a polynomial
+
+nqk=1
+(  k(e)) . we assume that the roots k(e)
+are real for the solutions with the nite norm 13. we shall oftenly do not write the explicit
+dependence on energies for brevity.
+
+lemma 7.1 [3] the equation (7.2) admits two fundamental solutions
+
+where
+
+n 
+h c()
+
+k()
+
+ec() = e
+nqk=1
+
+
+h
+
+i
+
+h (cid:16)1  i
+
+h(  k)(cid:17)
+
+c() =
+
+and k() be the following n  n determinants:
+
+k+() 
+
+1
+
+1
+
+t( +2ih)
+
+0
+
+. . .
+
+1
+
+t( +ih)
+
+1
+
+1
+
+t( +3ih)
+
+. . .
+
+0
+
+1
+
+t( +2ih)
+
+1
+
+. . .
+
+. . .
+
+. . .
+
+. . .
+
+0
+
+1
+
+t( +3ih)
+
+. . .
+
+. . .
+
+0
+
+. . .
+
+. . .
+
+. . .
+
+. . .
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+13this can be demonstrated directly for n = 2, 3 particle chain.
+
+15
+
+(7.3)
+
+(7.4)
+
+(7.5a)
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+k() 
+
+. . .
+
+. . .
+
+. . .
+
+0
+
+. . .
+
+1
+
+t(3ih)
+
+. . .
+
+. . .
+
+0
+
+. . .
+
+1
+
+1
+
+t(2ih)
+
+. . .
+
+. . .
+
+. . .
+
+0
+
+. . .
+
+1
+
+t(3ih)
+
+1
+
+1
+
+t(ih)
+
+. . .
+
+0
+
+1
+
+t(2ih)
+
+1
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+proof. the determinants k() are correctly dened [10] and satisfy to the equations
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+(7.5b)
+
+(7.6)
+
+k+(  ih) = k+() 
+
+k( + ih) = k() 
+
+1
+
+t()t( +ih)
+
+1
+
+t()t(ih)
+
+k+( + ih)
+
+k(  ih)
+
+this can be easily proved by expansion of these determinant with respect to the rst row. the
+rest is trivial. note that solutions (7.4) are determined up to arbitrary ih -periodic function.
+
+remark 7.1 the function c() are the solutions of the baxter equation
+
+t() c() = in c( + ih) + in c(  ih)
+lemma 7.2 the functions c() possess the following properties:
+
+(i) c() are the entire functions in  .
+
+(ii) let  be real. then
+
+n ||
+
+2h
+
+n ||
+
+2h
+
+||n/2 e
+
+||n/2 e
+
+exp(
+exp(
+
+in
+
+h
+
+log ||
+
+e 
+
+in
+
+h
+
+log ||
+
+e 
+
+c() 
+
+
+
+in
+
+4 )
+4 )
+
+in
+
+  +
+
+  
+
+c+()  expn
+c()  expn
+
+n||
+h
+n||
+h
+
+log ||o
+log ||o
+
+  +i
+
+  i
+
+(iii)
+
+(7.7)
+
+(7.8)
+
+(7.9)
+
+proof. (i) it is easy to see that the poles of k() are cancelled by the corresponding poles
+coming from the product of  -functions in (7.4). hence, c() are an entire functions.
+(ii) it is clear that
+
+k() = 1 for real  . similarly, k()  1 as   i . the
+asymptotics follow from the stirling formula for  -functions. note that the stirling formula gives
+even more detailed asymptotics than (7.8); actually c()  exp{ n
+2h |re |} as |re |   in
+any nite strip |im |  , (  0) .
+
+lim
+||
+
+16
+
+in order to construct the solution with the asymptotics (6.2), one should recall that the solutions
+(7.3) are dened up to any ih -periodic factor. clearly, the factor
+
+
+h
+
+e
+sinh 
+h (k)
+
+nyk=1
+
+(7.10)
+
+(where k are an arbitrary parameters) does not spoil the asymptotics of the functions (7.4) as
+  + along the real axis while giving the correcting factor e
+as    . hence,
+one can consider the following solution of the baxter equation (7.2):
+
+2||
+
+
+
+h
+
+where  is a arbitrary constant. due to (7.8) this solution has prescribed asymptotics
+
+c() =
+
+c+()  c()
+nqk=1
+h (k)
+
+sinh 
+
+c()  ||n/2e
+
+n ||
+
+2h
+
+(7.11)
+
+(7.12)
+
+as    . on the other hand, the denominator in (7.11) has the innite number of poles at
+ = k + ihnk , nk  z, k = 1, . . . , n and the solution (7.11) is not an entire function in general.
+the poles are cancelled only if the following conditions hold:
+
+c+(k + ihnk) = c(k + ihnk)
+
+in turn, this means that the wronskian
+
+vanishes at  = k + ihnk . due to baxter equation (7.7)
+
+w () = c+()c( + ih)  c+( + ih)c()
+
+substitution of (7.4) to (7.14) gives
+
+w ( + ih) = (1)n w ()
+
+where the function
+
+w () = inh()
+
+1h sinh
+
+
+h
+
+(  k)
+
+nyk=1
+
+h()  k+()k( + ih) 
+
+k+( + ih)k()
+
+t()t( + ih)
+
+is called the hill determinant [10].
+
+(7.13)
+
+(7.14)
+
+(7.15)
+
+(7.16)
+
+(7.17)
+
+lemma 7.3 [10],[3] the function h() has the following three-diagonal determinant form:
+
+(7.18)
+
+h() =
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+. . .
+
+. . .
+
+. . .
+
+. . .
+
+1
+
+1
+
+t()
+
+. . .
+
+0
+
+. . .
+
+1
+
+t(ih)
+
+1
+
+1
+
+t( +ih)
+
+. . .
+
+. . .
+
+. . .
+
+. . .
+
+0
+
+1
+
+t()
+
+1
+
+. . .
+
+. . .
+
+. . .
+
+0
+
+1
+
+t( +ih)
+
+. . .
+
+. . .
+
+. . .
+
+. . .
+
+. . .
+
+. . .
+
+0
+
+. . .
+
+. . .
+
+. . .
+
+. . .
+
+17
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+this innite determinant is absolutely convergent; h() is a meromorphic function with the
+poles at the points k + inkh , (nk  z, k = 1, . . . , n) . the hill determinant is ih -periodic
+functions with the asymptotics h() = 1 + o(1) as    . the following representation
+is valid:
+
+h() = 1 +
+
+k(e) coth
+
+nxk=1
+
+
+
+h(cid:16)  k(e)(cid:17)
+
+(7.19)
+
+where k(e) are some denite functions depending on the parameters e only. these functions
+satisfy to the constraint
+
+nxk=1
+
+k(e) = 0
+
+(7.20)
+
+the equation h() = 0 has exactly n real solutions k(e), (k = 1, . . . , n) subjected to the
+constraint
+
+k(e) =
+
+k(e)
+
+(7.21)
+
+nxk=1
+
+nxk=1
+
+due to its periodicity, h() = 0 at any point k(e) + ihnk (nk  z) . hence, the solution (7.11)
+has no poles if one takes k = k(e) provided that the constant  is chosen in such a way that
+
+ =
+
+hence, one arrives to the following
+
+lemma 7.4 [9] the function
+
+c+()
+
+c()(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)=k(e)
+
+k = 1, . . . , n
+
+(7.22)
+
+c(; e) =
+
+n 1yj=1
+
+c+(j; e)  (e)c(j; e)
+h(cid:16)j  k(e)(cid:17)
+nqk=1
+
+sinh 
+
+(7.23)
+
+where k(e) are the zeros of the hill determinant (7.18) and the constant  is chosen according
+to (7.22), satises to conditions of theorem 6.1.
+
+the quantization conditions
+
+c+(1)
+c(1)
+
+= . . . =
+
+c+(n)
+c(n)
+
+(7.24)
+
+determine the energy spectrum of the problem. these have been obtained for the rst time by
+gutzwiller [3] using quite dierent method.
+
+8 proof of the main theorems
+
+proof of theorem 3.1. we have proved already that the function e is integrable in a sense
+of (6.8), (2.13). now we prove that the function (6.5) satises to the spectral problem (2.10) if the
+entire solution c(; e) to the baxter equation (6.3) obeys the asymptotics  exp{ n
+2h |re j|}
+
+18
+
+as |re j|   in the strip ih  im j  ih . note that the pasquier-gaudin solution (7.23)
+satises to this requirement (see proof of lemma 7.2).
+
+due to (5.21) one obtains 14
+
+bt()e =
+(m) ,e1 +
+
+z
+d 1() c()
+n 1xj=1 ym6=j
+
+m
+
+jm(cid:16)in +ihej,e1 + in ihej ,e1(cid:17)
+
+(8.1)
+
+(cid:16)e1+
+
+j(cid:17) n 1ym=1
+n 1xj=1
+
+changing j  j  ih in appropriate parts of the integrand and noting that the measure (6.6)
+satises to the dierence equation
+
+1( + ihj) = (1)n 1() ym6=j
+
+j  m+ih
+
+j  m
+
+(8.2)
+
+one arrives to the expression
+
++in
+
+d1 . . .
+
+bt()e =
+z
+n 1xj=1
+z
+n 1xj=1
+
+n 1xj=1
+j(cid:17) n 1ym=1
+
+z
+d 1() c()(cid:16)e1+
+ihzih
++ihz+ih
+
+(m) ,e1+
+z
+dn1 1()c( +ihej),e1 ym6=j
+z
+dn1 1()c(ihej),e1 ym6=j
+
+dj . . .
+
++in
+
+d1 . . .
+
+dj . . .
+
+m
+jm
+
+m
+jm
+
++
+
+(8.3)
+
+the integration contours [  ih,  ih] can be deformed to the standard one [,] .
+indeed, the corresponding integrands are the entire functions (all possible poles are cancelled by
+appropriate zeros of the measure 1() , see (6.6)). moreover, it is not hard to see that the
+integrand is exponentially decreasing in the strip ih  im j  ih as |re j|   . therefore,
+the contour integral around the strip vanishes and all integrals in (8.3) can be deformed to the
+standard ones. finally, using the baxter equation (6.3), one obtains from (8.3)
+
+=
+
+z
+
+d 1() c(),e1(cid:16)e1+
+
+bt()e =
+n 1xj=1
+j(cid:17) n 1ym=1
+
+(m) +
+
+n 1xj=1
+
+t(j; e) ym6=j
+
+(8.4)
+
+m
+
+jm
+
+the expression in curly brackets is nothing but t(; e) according to interpolation formula and,
+therefore, the function e is a solution to the spectral problem (2.10). note that the explicit
+form of c(; e) is not required here.
+
+14 we discard unessential numerical factor in (6.5).
+
+19
+
+proof of theorem 3.2. the proof is heavily based on conjecture that all the zeros of the hill
+determinant are simple 15. to derive the formula (3.6) from (3.1) let us consider the integral
+over 1 rst selecting the expression
+
+by construction, it is an entire function but the expressions
+
+c+(1)  c(1)
+h(cid:16)1  k(cid:17)
+nqk=1
+
+sinh 
+
+c(1)
+
+sinh 
+
+h(cid:16)1  k(cid:17)
+
+nqk=1
+
+has an innite number of poles. clearly, the original integral can be written as follows while
+selecting the variable 1 and denoting the rest of variables as  :
+
+(8.5)
+
+(8.6)
+
+(8.7)
+
+h(cid:16)1  k(cid:17) 1() c()  =
+
+sinh 
+
+nqk=1
+
+d1d c+(1)  c(1)
+
+z
+h(cid:16)1  k(cid:17) c() + zc
+
+c+(1)1()
+sinh 
+
+d1d
+
+d1d
+
+nqk=1
+
+nqk=1
+
+c(1)1()
+sinh 
+
+h(cid:16)1  k(cid:17) c() 
+
+=zc+
+where the contour c+ encloses the poles k + ihnk, (nk  0 , k = 1, . . . , n) while the contour
+c encloses the poles k + ihnk, (nk < 0 , k = 1, . . . , n) . such deformations of contours are
+possible since the integrands in the r.h.s of (8.7) vanish exponentially on large upper and lower
+semi-circles respectively; this follows from the asymptotics (7.8) and (7.9). now the integrals
+can be calculated using the residue formula. note that c(k + ihnk) = c+(k + ihnk) according
+to (7.13). hence, the nal expression can be written in terms of the function c+ only. the same
+is true for the rest of integration.
+let us consider the contribution coming from the residues 1 + ihn1 while integrating over 1 .
+using the explicit expression for the measure
+
+1()  yj>k
+
+(jk) sinh
+
+
+h
+
+(jk)
+
+(8.8)
+
+one obtains the following contribution:
+
+ xn1z
+
+c+(1+ihn1)z d
+
+n 1yk=2
+(k1ihn1) sinh
+
+where we drop the common factor
+
+
+
+h(cid:16)k  1(cid:17)1()c()1+ihn1,2,...,n1
+
+(8.9)
+
+((n1)!
+
+nyk=2
+
+sinh
+
+
+
+h(cid:16)1k(cid:17))1
+
+(8.10)
+
+for a moment. now we consider the analogous integration over variable 2 . it is easy to see
+that there are no poles at 2 = 1 + ihmk because of the factor sinh 
+h (21) in the integrand
+
+15 up to now we are unable to prove this conjecture though it seems very plausible.
+
+20
+
+in (8.9). quite similarly, while calculating the residues at 2 = 2 + ihn2 , one concludes
+that the integration over 3 does not include the contribution from the points 1 + ihmk and
+2 + ihsk and so on. therefore, the successive evaluation of the residues at well arranged
+points k = k + ihnk, (k = 1, . . . , n1) gives the contribution
+
+ xn1,...,nn1z
+
+n 1yk=1
+
+c+(k +ihnk)((n ) + hn(n ))1+ihn1,...,n1+ihnn 1
+
+(8.11)
+
+where () is the vandermonde determinant and the notation y(s) means the n  1 di-
+mensional vector obtained from the corresponding n dimensional one by cancellation of the
+s -th component, i.e. y(s)  (y1, . . . , ys1, ys+1, . . . , yn) . after a little algebra one nds that the
+common factor to (8.11) is
+
+(1)n (n 1)/2
+
+(n1)!yj>k
+
+sinh
+
+
+h
+
+(jk)
+
+1
+
+(8.12)
+
+by construction the integrand in (3.1) is symmetric under the permutation of  -variables.
+therefore, one obtains the same answer (8.11) while calculating all other possible residues from
+the set (n ) + ihn(n ) . this gives the additional factor (n1)! .
+the last step is to take into account the poles at n + ihnn . one can easy to show that
+the calculation of the corresponding residues while integrating over s gives the additional
+factor (1)n s to compare with (8.12). hence, one obtains the nal answer (up to unessential
+numerical constant)
+
+nxs=1
+(1)n s xn(s)zn1
+
+
+
+where
+
+e(x0, x) =
+
+1
+sinh 
+
+h (jk)
+
+qj>k
+
+((s)+ihn(s)) c+((s)+ihn(s)) (s)+ihn(s),e1
+
+c+() 
+
+n 1yk=1
+
+c+(k)
+
+(x0, x)
+
+(8.13)
+
+(8.14)
+
+and theorem 3.2 is proved.
+
+acknowledgments
+
+we are deeply indebted to e. frenkel, s. khoroshkin, m. semenov-tian-shansky and f. smirnov
+for stimulating discussions. d.lebedev would like to thank mathematical department of berke-
+ley university and l.p.t.h.e., universite pierre et marie curie for hospitality, where the work
+was partially done. the research was partly supported by grants intas 97-1312; rffi 98-01-
+00344 (s. kharchev); sloan foundation, c.n.r.s. grant pics no.608 and rffi 98-01-22033
+(d.lebedev) and by grant 96-15-96455 for support of scientic schools.
+
+21
+
+references
+
+[1] f.smirnov, structure of matrix elements in quantum toda chain, j.phys.a: math.gen.
+
+(1998), 31, 89538971.
+
+[2] e.sklyanin, the quantum toda chain, lect.notes in phys., (1985), 226, 196-233.
+
+[3] m.gutzwiller, the quantum mechanical toda lattice ii, ann. of phys., (1981), 133, 304-331.
+
+[4] h.jacquet, fonctions de whittaker associees aux groupes de chevalley, bull.soc.math.
+
+france, (1967), 95, 243-309.
+
+[5] g.schimann, integrales dentrelacement et fonctions de whittaker, bull.soc.math. france,
+
+(1971), 99, 3-72.
+
+[6] m.hashizume whittaker models for real reductive groups, j.math.soc. japan, (1979), 5,
+
+394-401.
+whittaker functions on semisimple lie groups, hiroshima math.j., (1982), 12, 259-293.
+
+[7] d.kostant, the solution to a generalized toda lattice and representation theory, adv.mat.,
+
+(1979), 34, 195-338.
+
+[8] m.semenov-tian-shansky, the quantization of the open toda chains, viniti, (1987), 16,
+
+194-226.
+
+[9] v.pasquier, m.gaudin, the periodic toda chain and a matrix generalization of the bessel
+
+function recursion relations, j.phys., (1992), a25, 5243-5252.
+
+[10] e.whittaker, g.watson, a course of modern analysis, cambridge univ. press, (1927).
+
+22
+
+

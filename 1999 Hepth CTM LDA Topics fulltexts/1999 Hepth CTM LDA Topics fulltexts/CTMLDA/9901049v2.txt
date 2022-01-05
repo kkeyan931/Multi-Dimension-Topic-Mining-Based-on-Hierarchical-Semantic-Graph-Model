@@ -1,0 +1,2222 @@
+9
+9
+9
+1
+
+ 
+r
+p
+a
+0
+2
+
+ 
+
+ 
+ 
+
+2
+v
+9
+4
+0
+1
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+dynamical mass generation of a two-component
+
+fermion in maxwell-chern-simons qed3:
+
+the lowest ladder approximation
+
+toyoki matsuyama1
+
+department of physics, nara university of education
+
+takabatake-cho, nara 630-8528, japan
+
+and
+
+hideko nagahiro and satoko uchida
+
+department of physics, nara womens university
+
+nara 630-8506, japan
+
+october 16, 2012
+
+abstract
+
+dynamical mass generation of a two-component fermion in qed3 with a chern-
+simons term is investigated by solving the schwinger-dyson equation formulated
+in the lowest ladder approximation. dependence of the dynamical fermion mass
+on a gauge-xing parameter, a gauge coupling constant, and a topological mass is
+examined by approximated analytical and also numerical methods. the inclusion of
+the chern-simons term makes impossible to choose a peculiar gauge in which a wave
+function renormalization is absent. the numerical evaluation shows that the wave
+function renormalization is fairly close to 1 in the landau gauge.
+it means that
+this gauge is still a specic gauge where the ward-takahashi identity is satised
+approximately. we also nd that the dynamical mass is almost constant if the
+topological mass is larger than the coupling constant, while it decreases when the
+topological mass is comparable to or smaller than the coupling constant and tends
+to the value in qed3 without the chern-simons term.
+
+1e-mail address: matsuyat@nara-edu.ac.jp
+
+0
+
+i. introduction
+
+in (2+1)-dimensions, generally in odd-dimensional space-time, a peculiar type of quantum
+
+eld theory exists. that is a theory with a chern-simons term in its action. [1, 2] the
+
+chern-simons term may be added to the action by hand or induced in an eective action
+
+by a vacuum polarization eect of a fermion as the anomaly [3]. our understanding on
+
+the theory has been progressed especially through studies of the topological structure due
+
+to the chern-simons term. [4]
+
+on the other hand, two important phenomena were discovered in condensed matter
+
+systems. one is the quantum hall eect [5] and the other is the high-tc superconduc-
+
+tivity [6]. both phenomena may be thought of as realization of macroscopic quantum
+
+eects in planar systems in which electrons have a strong correlation. it is challenging to
+
+ask whether and how the chern-simons term is related to these phenomena discovered in
+
+the two-dimensional electron systems. these situations have activated the study of the
+
+(2+1)-dimensional quantum eld theories.
+
+in (2+1)-dimensional gauge theories, the behaviour in the infrared region seems to be
+
+unstable at least in the perturbative treatment. the chern-simons term gives the gauge
+
+eld a topological mass without breaking gauge symmetry so that the term may rescue
+
+the theory from the infrared catastrophe. this is original motivation of including the
+
+chern-simons term in the action. [7] reminding those studies, we think that one of the
+
+most important problems which is still not clear is what is a role of the chern-simons
+
+term in a nonperturbative region. it is our purpose to clarify how the chern-simons term
+
+aects nonperturbative dynamics.
+
+the dynamical mass generation of the fermion is an important phenomenon induced
+
+by the nonperturbative eects. in even-dimensional space-time, chiral symmetry forbids
+
+the mass of the fermion. the nonperturbative eects can break this symmetry giving the
+
+mass to the fermion. as is well known, we cannot dene the chiral symmetry for the
+
+two-component fermion which belongs to the irreducible spinor representation in (2+1)-
+
+1
+
+dimensions.
+
+instead parity symmetry (p2) forbids the two-component fermion having
+
+the mass. on the other hand, for the f our-component fermion which is composed of
+
+two two-component fermions, we can dene a kind of chiral symmetry. the chiral
+
+transformation is dened by a combination of the parity and z2 avour transformations.
+(p4 = p  z2)
+
+many studies on the dynamical mass generation in qed3 have been done already
+
+by using the schwinger-dyson technique [8] or the lattice monte-carlo method [9]. in
+
+almost of previous works, these authors have studied the dynamical mass generation of
+
+the four-component fermions in the theory without the chern-simons term, which is a
+
+spontaneous symmetry breaking of p4 but not p2. these studies have been extended
+
+to the case with the chern-simons term but the fermion considered there has been the
+
+four-component one. [10]
+
+the theory with n four-component fermions is equivalent to the theory with 2n
+
+two-component fermions.
+
+in this sense, the theory with the four-component fermions
+
+can describe only the case with even number of avours (counting the two-component
+
+fermions). it is interesting to ask what happens in the theory with odd number of avours.
+
+this also is another motivation of the present work. the simplest version of the theory
+
+with odd number of avours is the case with a single avour. the rst work concerned with
+
+the dynamical mass generation of the single two-component fermion in qed3 without the
+
+chern-simons term was done in ref.
+
+[11]. the symmetry which was studied in the work
+
+is p2 but not p4. in this paper, we extend the work to the case with the chern-simons
+
+term.
+
+thus we consider the dynamical mass generation of the single two-component fermion
+
+in qed3 with the chern-simons term. the schwinger-dyson equations are formulated
+
+in the lowest ladder approximation, which are two coupled integral equations. due to the
+
+chern-simons term, a drastic change happens in the structure of the schwinger-dyson
+
+equations. while the wave function renormalization is absent in the landau gauge in
+
+qed3 without the chern-simons term [12], the inclusion of the chern-simons term makes
+
+2
+
+impossible to choose a peculiar gauge in which the wave function is not renormalized.
+
+because there are no ad hoc reasons that the landau gauge is specic in qed3 with the
+
+chern-simons term, we should study the coupled integral equations for various values of
+
+the gauge parameter.
+
+our strategy in this work are as follows: first we solve the coupled integral equations in
+
+an approximated analytical method which is very crude but may be available for reference
+
+in a more complete numerical calculation. after that, the coupled integral equations are
+
+solved numerically. in these analyses, we study dependence of the dynamical mass on the
+
+gauge-xing parameter, the coupling constant, and the topological mass.
+
+this paper is organized as follows: in sec. ii, we explain the model which we use.
+
+the schwinger-dyson equations in the lowest ladder approximation are derived in sec.
+
+iii. in sec. iv, the equations are analyzed by the approximated analytical method. the
+
+numerical analysis of the equations are presented in sec. v. we conclude our results with
+
+discussions in sec. vi. in appendices a and b, some useful formulae are summarized.
+
+ii. maxwell-chern-simons qed3
+
+the model which we consider is an extended version of the usual three-dimensional quan-
+
+tum electrodynamics (qed3). it has both of the maxwell and chern-simons terms as the
+
+action of the u(1) gauge eld . we call this theory the maxwell-chern-simons qed3. [7]
+
+the gauge eld is coupled to the two-component dirac fermion. the lagrangian density
+
+of the theory is given by
+
+l = 
+
+1
+4
+
+ff  +
+
+
+2
+
+aa 
+
+1
+2
+
+(a)2 + (i 6   e 6a) .
+
+(1)
+
+the second term in the right-hand side of eq.(1) is the so-called chern-simons term. it
+
+is well-known that the term gives the gauge eld the mass  without breaking the gauge
+
+symmetry.  is called the topological mass because the chern-simons term has topological
+
+meaning as a secondary characteristic class [4, 13].  is the gauge-xing parameter and
+
+e is the gauge coupling constant.  is the two-component fermion eld which belongs to
+
+3
+
+the irreducible spinor representation in (2+1)-dimensions. the dirac matrices are dened
+by  0 = 3,  1 = i1,  2 = i2 with diag(g) = (1,1,1) where is (i=1, 2, 3) are the
+pauli matrices. the s satisfy relations as {, } = 2g,  = i + g and
+tr[] = 2g. in this representation, there does not exist a matrix which anti-commutes
+
+with all of s so that we cannot dene the chiral transformation. this is a specic aspect
+
+of the odd-dimensional space-time.
+
+in even-dimensions, the chiral symmetry requires
+
+that a fermion is massless. in odd-dimensions, the chiral symmetry itself does not exist.
+
+instead, the mass term of the fermion is forbidden by parity symmetry. the parity
+
+transformation is dened as
+
+x = (t, x, y)  x = (t,x, y) ,
+
+(x)   1(x) ,
+a0(x)  a0(x) ,
+a1(x)  a1(x) ,
+a2(x)  a2(x) .
+
+(2)
+
+under the parity transformation, the mass term of the fermion and the chern-simons
+
+term change their signs. thus the mass terms of both the fermion and the gauge eld are
+
+forbidden by the parity symmetry. we study how the breaking of parity by the topological
+
+mass aects the mass generation of the fermion.
+
+iii. schwinger-dyson equations
+
+as a non-perturbative method to evaluate the dynamical mass of the fermion, we use
+
+here the schwinger-dyson technique. the schwinger-dyson equation for the fermion
+
+self-energy (p) is written as
+
+(p) = (ie)2z
+
+d3k
+(2)3  is 
+
+f (k) (k, p  k) id
+
+(p  k) .
+
+(3)
+
+4
+
+(k, p k) is a full vertex function and d
+f is the full propagator of the fermion eld which is written as
+s 
+
+(p k) is a full propagator of the gauge eld.
+
+is 
+
+f (p) =
+
+i
+
+,
+
+(4)
+
+i
+
+=
+
+a(p) 6p  b(p)
+
+6p  i(p)
+
+where a(p) and b(p) are functions of pp in taking into account the relativistic nature,
+while (p) depends on ps. a(p)1 is the wave function renormalization and b(p)/a(p)
+
+is a mass induced by dynamical eects at the momentum scale p. the so-called dynamical
+
+mass mphys is dened by mphys = b(0)/a(0) as usual. it is useful to notice the relations
+
+as
+
+tr[(p)] = 2ib(p) ,
+
+tr[6p(p)] = 2i(a(p)  1)p2 .
+
+(5)
+
+to proceed our analysis of eq.(3) further, we need to introduce any suitable approxi-
+
+mation. in this paper, we limit ourselves to use the lowest ladder approximation where the
+
+full propagator of the gauge eld and the full vertex are replaced by the free propagator
+
+and the tree vertex respectively as
+
+id
+
+(p  k)  id(p  k) , (k, p  k)  
+
+.
+
+(6)
+
+the analysis beyond the ladder approximation will appear elsewhere. the free propagator
+
+of the gauge eld is derived from the lagrangian density (1) as
+
+id(p) = i
+
+1
+
+p2  2  g 
+
+pp
+
+p2 ! + 
+
+1
+
+p2  2
+
+1
+p2 p  i
+
+pp
+p4
+
+.
+
+thus the schwinger-dyson equation in the lowest ladder approximation becomes
+
+(p) = (ie)2z
+
+d3k
+(2)3  is 
+
+f (k) id(p  k) .
+
+(7)
+
+(8)
+
+we substitute eqs.(4) and (7) into eq.(8) and use eq.(5) in producing two coupled
+
+equations. after taking the traces, we obtain the coupled integral equations as
+
+b(p) = 
+
+ie2
+
+2 z
+
+d3k
+(2)3
+
+1
+
+a(k)2k2  b(k)2 "2a(k)
+
+p2  k2  (p  k)2
+
+{(p  k)2  2}(p  k)2
+
+5
+
++ 4b(k)
+
+1
+
+(p  k)2  2 + 2b(k)
+2p2 z
+
+d3k
+(2)3
+
+ie2
+
+1
+
+(p  k)2# ,
+
+a(p) = 1 
+
+1
+
+a(k)
+
+(p  k)2  2 ( (p2  k2)2
+
+a(k)2k2  b(k)2 "
+(p  k)2 + 1)  a(k)((p2  k2)2
+(p  k)4 
+
+(p  k)2  (p  k)2)
+(p  k)2)# .
+
+p2 + k2
+
+(10)
+
+
+
+2b(k)
+
+(p  k)2  2 ( p2  k2
+
+(9)
+
+now we change the metric to the euclidean one by the wick rotation as (k0, ~k) 
+(ik0, ~k) and (p0, ~p)  (ip0, ~p). then k2 and p2 are replaced by k2 = (k0)2  (k1)2 and
+p2 = (p0)2  (p1)2. after that, we transform the integral variables ks to the polar
+coordinates (k, , ). the angular integration on  and  can be done explicitly. (the
+
+useful integral formulae are listed in appendix a.) finally we obtain the coupled integral
+
+equations which contain only the integration on the radial variable k,
+
+b(p) =
+
++ ( 1
+
+
+
+a(p) = 1 +
+
+k
+
+0
+
+e2
+
+e2
+
+dk
+
+1
+
+
+(p + k)2 + 2
+
+82p z 
+
+(p2  k2)a(k)) ln
+(p  k)2 + 2# ,
+a(k)2k2 + b(k)2 "2pk( + 1)a(k) +( 1
+
+a(k)2k2 + b(k)2 "(b(k) 
+(p2  k2)a(k) + a(k) + 2b(k)) ln
+82p3 z 
+(p2  k2)b(k) +
+1
+22 (p2  k2)2a(k) + b(k) 
+
+(p  k)2 +(cid:26)1
+(p2  k2)b(k)) ln
+
+(p2 + k2)a(k)) ln
+
+(p + k)2
+
+1
+
+
+1
+
+
+2a(k)
+
+1
+2
+
+dk
+
+0
+
+k
+
++
+
+
+
+2
+
+(p + k)2 + 2
+
+(p  k)2 + 2# .
+
+(12)
+
+(p + k)2
+(p  k)2
+
+(11)
+
+22 (p2  k2)2a(k)
+
+in the successive secs. iv and v, we solve these equations by an approximated analytical
+
+method and also numerically by using an iteration method.
+
+notice that the parameters e2 and  have the dimensions of mass. we may rewrite eqs.
+(11) and (12) to dimensionless forms by dening b(x)  b(e2x)/e2 and a(x)  a(e2x)
+where x is a dimensionless variable dened by p = e2x. the equations so obtained have a
+dimensionless parameter g dened as g  /e2. thus the theory is controlled by only one
+parameter. after solving the dimensionless equations for a(x) and b(x), we can convert
+
+them to a(p) and b(p).
+
+if the analytic forms of a(x) and b(x) are known, it is easy
+
+task. however, since our nal results are numerical, the conversion may be tedious for
+
+6
+
+the readers who are informed of the data only by gures. therefore we present our results
+
+in the form with the dimensions in spite of existing redundancy in the presentation.
+
+iv. approximated analytical studies
+
+iv-a.   0 limit
+
+we can check easily that eqs. (11) and (12) reduce to the schwinger-dyson equations in
+
+qed3 without the chern-simons term if we put the topological mass  equal to zero. in
+fact, taking the limit as   0 in eqs. (11) and (12), we obtain
+(p + k)2
+(p  k)2
+
+b(p) = ( + 2)
+
+kb(k)
+
+(13)
+
+dk
+
+e2
+
+,
+
+0
+
+82p z 
+42p3 z 
+
+e2
+
+0
+
+dk
+
+a(k)2k2 + b(k)2 ln
+a(k)2k2 + b(k)2 "pk 
+
+ka(k)
+
+p2 + k2
+
+4
+
+ln
+
+(p + k)2
+
+(p  k)2# ,
+
+(14)
+
+a(p) = 1  
+
+which are the schwinger-dyson equations in the lowest ladder approximation derived in
+
+qed3 without the chern-simons term.2 we can see that there exists the specic gauge
+
+where the wave function renormalization is absent. thus in the landau gauge ( = 0),
+
+eq. (14) gives us the simple solution as a(p) = 1 and the problem reduces to solve eq.
+
+(13) with a(p) = 1.
+
+in the case with the chern-simons term, as is seen in eqs. (11) and (12), there does
+
+not exist such a specic gauge where the wave function is not renormalized. as far as
+
+we cannot nd a self-evident reason that the landau is still specic in qed3 with the
+
+chern-simons term, it must be fair to study eqs. (11) and (12) for various values of the
+
+gauge-xing parameter .
+
+iv-b. small p expansion and perturbative results
+
+at rst sight, eqs. (11) and (12) seem to be dangerous in the limit p  0. but we can
+check that this limit is well-dened. in the region p  0, eqs.(11) and (12) are written as
+
+b(p) =
+
+e2
+
+2 z 
+
+0
+
+dk
+
+k
+
+a(k)2k2 + b(k)2 "
+
+k
+
+k2 + 2 a(k) +  
+
+2k
+
++
+
+k
+
+k2 + 2! b(k)
+
+2in [11], there were some typing mistakes. we give the correct equations in eqs. (13) and (14).
+
+7
+
++ o(p2)i
+
+e2
+
+a(p) = 1 +
+
+,
+
+0
+
+k
+
+dk
+
+a(k)2k2 + b(k)2 " 1
+2 z 
+(k2 + 2)2 b(k) + o(p2)# .
+k2  2
+
+3 ( 
+k 
+
+
+3k
+
+
+
+2k2
+
+(k2 + 2)2) a(k)
+
+(15)
+
+(16)
+
+(see appendix b.) from eqs. (15) and (16), we can derive the result which is obtained
+
+in the lowest-order of perturbation. by setting a(k) = 1 and b(k) = 0 and performing
+
+the integration on k, we have
+
+b(0) =
+
+e2
+2
+
+||
+
+
+, a(0) = 1 
+
+e2
+6
+
+||
+2 +
+
+e2
+32
+
+
+
+
+,
+
+(17)
+
+where  is the infrared cuto in the integration on k.
+
+it should be noticed that b(0)
+
+depends on only the sign of . this also may be a specic aspect in the (2+1)-dimensions.
+
+the dependence of a(0) on  shows that only the landau gauge is free from the infrared
+
+divergence. on the other hand, a(0) is singular at  = 0 so that the theory with the
+
+chern-simons term may not be smoothly connected to the theory without the chern-
+
+simons term in the lowest-order perturbation.
+
+iv-c. constant approximation
+
+before proceeding to a numerical analysis, it is very useful if we can estimate a(0) and
+
+b(0) analytically even under a fairly crude approximation. the kernels of these integral
+
+equations are dumped rapidly as the integral variable k increases so that the contribution
+from k  0 is the most dominant one in the integrals. we approximate a(k) and b(k) by
+a(0) and b(0) in the integrals. we call this approximation the constant approximation.
+
+of course this approximation might be too crude for our purpose and we only use the
+
+result as reference in the numerical analysis. under this approximation, we can perform
+
+the remaining radial integration and have the simple algebraic equations as
+
++ 1)
+
+,
+
+(
+
+
+2
+
+
+b(0) =
+
+e2
+2
+
+1
+
+a(0)
+
+a(0) = 1 +
+
+e2
+6
+
+8
+
+,
+
+b(0)
+
+(18)
+
+(19)
+
+where we have considered the case of  > 0. (see appendix b for the details.) solving
+
+the coupled algebraic equations (18) and (19), we obtain
+
+b(0) =
+
+e2
+2
+
++
+
+a(0) = 1 +
+
+e2
+12
+2
+
+ + 6
+
+ ,
+
+.
+
+(20)
+
+(21)
+
+from eqs.(20) and (21), we can see that the dependence of b(0) and a(0) on the
+
+gauge-xing parameter, the coupling constant and the topological mass has the following
+
+peculiar features:
+
+1) dependence on the gauge-xing parameter
+
+b(0) depends linearly on . it is suggestive that a(0) is singular at  = 6 where
+b(0) vanishes. in the landau gauge ( = 0), a(0) = 1 and b(0) = e2/2. a(0) = 1
+
+is favourable for us because a(p) = 1 means that the ward-takahashi identity is
+
+satised.
+
+2) dependence on the coupling constant
+
+a(0) does not depend on e2. it means that the deviation of a(0) from 1 is inde-
+
+pendent of the coupling constant. this is crucially dierent from the perturbative
+
+result given by eq.(17) where the deviation is proportional to e2. on the other
+
+hand, b(0) is proportional to e2.
+
+3) dependence on the topological mass
+
+we recognize that eqs.(20) and (21) are independent of the topological mass . in
+
+fact, if we apply the constant approximation to the case without the chern-simons
+
+term, we obtain the same results as eqs. (20) and (21). it means that the amount
+
+of the explicit parity breaking in the gauge sector by the topological mass does not
+
+aect the dynamical mass in the fermion sector.
+
+now we proceed to a more precise numerical evaluation in the next section.
+
+9
+
+v. numerical analysis
+
+v-a. non-trivial solutions
+
+we solve the two coupled integral equations (11) and (12) numerically by using a method
+
+of iteration. first we substitute trial functions into a(k) and b(k) in the right-hand
+
+sides of eqs. (11) and (12) and then calculate the integrals numerically. the outputs so
+
+obtained, a(p) and b(p), are substituted back to the right-hand sides until the outputs
+
+coincide with the inputs. finally we obtain convergent functions a(p) and b(p), which
+
+satises the integral equations, if there exist any solutions in eqs. (11) and (12).
+
+we obtain the non-trivial solutions for the various values of the gauge parameter .
+
+for e = 1.0 and  = 1.0, a(p)s in the cases of  = 0, 1, 2, 3 are shown in fig. 1. the
+
+corresponding b(p)s are presented in fig. 2. we nd a very interesting feature that a(p)
+
+is fairly close to 1 in the landau gauge ( = 0).
+
+in the case of qed3 without the chern-simons term, a(p) is exactly equal to 1 in
+
+the landau gauge under the lowest ladder approximation. [11] however, in the case of
+
+qed3 with the chern-simons, there may be no apparent reason that a(p) = 1 in the
+
+landau gauge. our numerical calculation shows that the landau gauge is still a good
+gauge giving a(p)  1. in a sense, it is surprising that the numerical calculation of so
+complicated integral equations results a(p)  1 in the landau gauge. there might be a
+simple reason of explaining a peculiarity of the landau gauge.
+
+v-b. dependence on the gauge parameter
+
+the dependence of a(0) and b(0) on the gauge-xing parameter  is shown in figs. 3
+
+and 4. in the region  > 0, the numerical result is consistent with the one obtained in
+
+the constant approximation.
+
+on the other hand, in the region  < 0, there appears a very strange behaviour in the
+
+numerical evaluation. in fig. 3 and 4, we can see that some dierent points are plotted
+
+for a xed (< 0). it means that a(0) and b(0) oscillate in the iterations taking these
+
+10
+
+values in order. these points do not correspond to solutions. as an example, a(p) and
+b(p) at  = 10 are shown in fig. 5 and 6. it is very resemble to the quasi-periodic
+signal which appears in a chaotic non-linear system. it might be interesting to proceed a
+
+study in this direction from a mathematical point of view.
+
+in figs. 7 and 8, we have shown the -dependence of the dynamical mass mphys =
+
+b(0)/a(0) in dierent regions of . mphys is the physical quantity so that it should be
+
+gauge invariant. these gures show that the -dependence may weaken fairly, compared
+
+with the result in the constant approximation. in addition, we can nd another interesting
+aspect. in figs. 3 and 4, each of a(0) and b(0) at  = 1 oscillates in taking 6 values
+in order. it is surprising that the corresponding values of b(0)/a(0) reduce to two values
+
+of mphys as seen in figs. 7 and 8. as a whole, there is one solution in the region of  > 0
+
+and the 2-periodic signal in the region of  < 0 in seeing mphys.
+
+the results obtained in secs.v-a and v-b suggest that the landau gauge is still the
+
+best gauge. hereafter we present mainly the results obtained in the landau gauge.
+
+v-c. dependence on the coupling constant
+
+in fig. 9 we show the dependence of a(0) on the coupling constant e. the series of figs.
+
+10, 11 and 12 show the e2-dependence of b(0) in the dierent scales of e2. we can see that
+
+the deviation of a(0) from 1 is less than 1 %. we may say that a(0) is almost equal to 1
+
+in all region of the coupling constant. on the other hand, b(0) increases as the coupling
+
+constant becomes larger. the e2-dependence of b(0) is almost linear when e2 is smaller
+
+than . this is consistent with the constant approximation. but the slope is smaller than
+
+the one obtained in the constant approximation and the line curves downward slightly as
+
+the coupling constant becomes larger, which may be a non-perturbative eect.
+
+v-d. dependence on the topological mass
+
+what we are most interested in is the dependence of the dynamical mass of the fermion
+
+on the topological mass of the gauge eld. in the constant approximation, it has been
+
+11
+
+shown that both a(0) and b(0) do not depend on the topological mass. is this true in
+
+the more precise numerical evaluation?
+
+in fig. 13, it can be seen that the -dependence of a(0) is extremely weak. the
+
+deviation from a(0) = 1 is very small. on the other hand, the -dependence of b(0) (or
+
+b(0)/a(0)) is shown in fig.14. though b(0) (or b(0)/a(0)) is almost constant in the
+
+region of  > e2, it decreases as  does if  is comparable to or smaller than e2.
+
+it should be noticed that for very small or large values of the topological mass com-
+
+pared with the coupling constant, there appears a technical diculty in the numerical
+
+calculation as follows: in principle, we do not need to cut o the region of the energy-
+
+momentum integrals in eqs.
+
+(11) and (12). but in the practical prescription of the
+
+numerical integration, the innite range of the integration must be replaced by a nite
+
+one so that it is not avoidable to introduce cut-o parameters. the cut-o dependence of
+
+the results must be checked carefully. when the topological mass  takes very small or
+
+large values compared with e2, it has been found that the integration region must be taken
+
+wider enough to get reliable results. it needs much machine power. in getting our results,
+
+we have checked the absence of the cut-o dependence in detail in the parameter region
+adopted here (/e2 = 102  104). therefore we conclude that the behaviour of a(0)
+and b(0) mentioned above, especially the decreasing of b(0) in the region of /e2 < 1, is
+
+not due to the cut-o.
+
+vi. conclusion and discussion
+
+we have investigated the dynamical mass generation of the single two-component fermion
+
+and b(p), where the full fermion propagator is dened by s 
+
+in qed3 with the chern-simons term. the coupled schwinger-dyson equations for a(p)
+f (p)1 = a(p) 6p b(p), have
+been formulated in the lowest ladder approximation. when the chern-simons term is
+
+included, there does not exist the specic gauge where a(p) is automatically equal to 1 as
+
+the case without the chern-simons term. we examine the dependence of the dynamical
+
+mass on the gauge-xing parameter , the coupling constant e and the topological mass
+
+12
+
+ by using the approximated analytical and also the numerical methods. @
+
+the coupled integral equations have been solved rst analytically in the constant
+
+approximation where a(p) and b(p) have been replaced by a(0) and b(0) respectively.
+
+we have found that b(0) is proportional to  and also to e2. on the other hand, a(0) is
+independent of e and singular at  = 6 where b(0) vanishes. we also have found that
+a(0) and b(0) do not depend on the topological mass.
+
+keeping these facts in mind we have proceeded to solve the set of the integral equations
+
+by using the numerical method. the dependence of a(0) and b(0) on  and e are almost
+
+consistent with the results derived in the constant approximation. b(0) depends on 
+
+linearly. the e2-dependence of b(0) also is almost linear but the value of the slope becomes
+
+smaller than the one in the constant approximation as e2 increases. the e-dependence of
+
+a(0) is almost absent.
+
+further we have discovered some novel features in the numerical analysis. first we
+have found a(p)  1 at  = 0 so that the landau gauge is still a good gauge where
+it is not entirely obvious why
+the ward-takahashi identity is satised approximately.
+
+the numerical evaluation of so complicated integral equations results that a(0) is almost
+
+equal to 1 at  = 0. we may expect that there is any simple reason.
+
+secondly we have found the strange behaviour of a(0) and b(0) in the region  < 0.
+
+there has appeared the quasi-periodic signal in the iterations. the signal is a popular
+
+phenomena in a non-linear system. we wonder that the signal appeared here would have
+
+any physical or mathematical meaning or not.
+
+as the third, it seems that the dynamical mass of the fermion is almost constant if  is
+
+larger than e2, while it decreases when  is comparable to or smaller than e2. why it is?
+in the case of  6= 0, we have found just one solution in our numerical analysis. on the
+other hand, we know that there exist two solutions in the case of  = 0 [11]; one is trivial
+(b = 0) and the other one nontrivial (b 6= 0). we have extrapolated our numerical data
+b(0)/a(0) to  = 0 by using the method of least squares [14] and obtained fig. 15. the
+
+numerical evaluations in qed3 without the chern-simons term results b(0) = 0.104755
+
+13
+
+( = 0 and a(0) = 1). the value obtained by the extrapolation is b(0)/a(0) = 0.105255
+
+so that both results may be consistent with each other. thus, the solution in the case
+of  6= 0 seems to approach the non-trivial one as   0. of course, we should be
+careful before accepting this result. as mentioned in v-d, the numerical evaluation in
+
+the region of /e2 << 1 is very dicult technically and the behaviour of the solution in
+taking the limit   0 is still not clear. there might appear any critical behaviour such
+as a bifurcation of the solution. the best way to conrm the result is to give a proof
+
+by analytical method but it is very dicult because the integral equations are highly
+
+non-linear. we are now extending the parameter region to search any more non-trivial
+
+structure especially in the region of /e2 << 1. the result will be reported separately.
+
+14
+
+appendix a: angular integration
+
+we present here the formulae for the angular integration, which are used to derive eqs.(11)
+
+and (12) in sec. iii. after the wick rotation, eqs. (9) and (10) can be rewritten in the
+
+polar coordinates as
+
+b(p) =
+
+e2
+
+82 z 
+
+0
+
+k2
+
+dk
+
+a(k)2k2 + b(k)2 h2(p2  k2)a(k)i0
+
++ 2a(k)i1 + 4b(k)i1 + 2b(k)i2]
+
+,
+
+a(p) = 1 +
+
+e2
+
+82p2 z 
+
+0
+
+k2
+
+dk
+
+a(k)2k2 + b(k)2 ha(k)n(p2  k2)2i0  i3o
+
++ 2b(k)n(p2  k2)i0 + i1o  a(k)n(p2  k2)2i4  (p2 + k2)i2oi
+
+each integrals ins (n=0, 1, 2, 3, 4) are calculated as
+
+1
+
+22pk
+
+ln
+
+(p + k)2{(p  k)2 + 2}
+(p  k)2{(p + k)2 + 2}
+
+0
+
+0
+
+i0 = z 
+i1 = z 
+i2 = z 
+i3 = z 
+i4 = z 
+
+0
+
+0
+
+0
+
+sin d
+
+sin d
+
+sin d
+
+sin d
+
+sin d
+
+1
+
+1
+
+1
+
+ln
+
+1
+2pk
+
+{(p  k)2 + 2}(p  k)2 =
+(p  k)2 + 2 =
+(p  k)2 =
+(p  k)2
+(p  k)2 + 2 =
+(p  k)4 = 
+
+2pk (
+
+1
+2pk
+
+ln
+
+1
+
+1
+
+(p + k)2 + 2
+(p  k)2 + 2
+
+,
+
+,
+
+(p + k)2
+(p  k)2
+2pk ((p + k)2  (p  k)2  2 ln
+1
+(p + k)2 
+
+(p  k)2) .
+
+1
+
+1
+
+.
+
+,
+
+(p + k)2 + 2
+
+(p  k)2 + 2) ,
+
+appendix b: p  0 limit and constant approximation
+the formulae which are used in sec. iv are summarized here. the (p  0) limit is taken
+by the expansion formulae as
+
+ln
+
+(p + k)2
+
+(p  k)2 = 4
+
+ln
+
+(p + k)2 + 2
+
+(p  k)2 + 2 =
+
+(
+
++
+
+4
+3
+
+p
+k
+
+p
+k
+4kp
+k2 + 2 +
+
+)3 + o(p5)
+
+,
+
+4
+3
+
+(k2  32)k
+(k2 + 2)3 p3 + o(p5)
+
+.
+
+in the constant approximation of eqs. (11) and (12), we replace the unknown functions
+
+15
+
+a(k) and b(k) to a(0) and b(0). setting p = 0, we obtain
+
+b(0) =
+
+e2
+
+2 (cid:20)(cid:26)a(0) + (
+
+
+2
+
++ 1)b(0)(cid:27) j0  2(a(0) + b(0))j1(cid:21)
+
+,
+
+a(0) = 1 +
+
+(2a(0) + b(0))j1 +
+
+e2
+
+2 "
+
+3
+
+a(0)j0 
+
+
+3
+
+3
+3
+
+(2a(0) + 2b(0))j2# ,
+
+where jis (i = 0, 1, 2) are given by
+
+0
+
+j0 = z 
+j1 = z 
+j2 = z 
+
+0
+
+0
+
+dk
+
+a(0)2k2 + b(0)2 =
+
+
+
+dk
+
+a(0)2k2 + b(0)2
+
+dk
+
+a(0)2k2 + b(0)2
+
+,
+
+1
+||
+
+2a(0)b(0)
+
+1
+
+k2 + 2 =
+
+2b(0)
+
+
+1
+
+(k2 + 2)2 =
+
+4b(0)
+
+1
+
+,
+
+||a(0) + b(0)
+1
+||3
+
+2||a(0) + b(0)
+(||a(0) + b(0))2
+
+.
+
+acknowledgment
+
+one of the authors (t. m.) would like to thank prof. m. kenmoku for his hospitality at
+
+the department of physics, nara womens university.
+
+references
+
+[1] w. siegel, nucl. phys. b156, 135(1979); j. schonfeld, ibid. b185, 157(1981).
+
+[2] s. deser, r. jackiw, and s. templeton, ann. phys. (n.y.) 140, 372(1982).
+
+[3] a. n. redlich, phys. rev. d29, 2366(1984); phys. rev. lett. 52, 18(1984); a. j.
+
+niemi and g. w. semeno, phys. rev. lett. 51, 2077(1983); k. ishikawa, ibid. 53,
+
+1615(1984).
+
+[4] see for example: s. b. treiman, r. jackiw, b. zumino and e. witten, current
+
+algebra and anomalies, (world scientic, singapore, 1995).
+
+[5] k. von klitzing, g. dorda, and m. pepper. phys. rev. lett. 45, 494(1980); d. c.
+
+tsui, h. l. stormer, and a. c. gossard, phys. rev. lett. 48, 1559(1982).
+
+16
+
+[6] g. bednorz and k. a. muller, z. phys. 64, 188(1986).
+
+[7] r. jackiw and s. templeton, phys. rev. d23, 2291(1981); t. appelquist and r. d.
+
+pisarski, ibid. d23, 2305(1981); s. templeton, ibid. d24, 3134(1981); m. de roo
+
+and k. stam, nucl. phys. b246, 335(1984).
+
+[8] r. d. pisarski, phys. rev. d29, 2423(1984); t. appelquist, m. j. bowick, e. cohler,
+
+and l. c. r. wijewardhana, phys. rev. lett. 55, 1715(1985); t. appelquist, m. j.
+
+bowick, d. karabali and l. c. r. wijewardhana, phys. rev. d33, 3704(1986).
+
+[9] e. dagotto, j.b. kogut and a. kocic, phys. rev. lett. 62, 1083(1989).
+
+[10] d.k. hong and s.h. park, phys. rev. d47, 3651(1993); w.-h. kye and j. k.
+
+kim, ibid. d50, 5398(1994); k.-i. kondo and p. maris, phys. rev. lett. 74,
+
+18(1995); ibid. phys. rev. d52, 1212(1995); k.-i. kondo, t. ebihara, t. iizuka
+
+and e. tanaka, nucl. phys. b434, 85(1995).
+
+[11] y. hoshino and t. matsuyama, phys. lett. b222, 493(1989); see also y. hoshino,
+
+t. matsuyama and c. yoshida-habe, in proceedings of the 1989 workshop on dy-
+
+namical symmetry breaking, nagoya, japan, edited by t. muta and k. yamawaki
+
+(nagoya university, nagoya, 1990).
+
+[12] in this context, we are concerned with the renormalization of the ultraviolet diver-
+
+gence (qed3 is super-renormalizable. ). it also should be noticed that there exists
+
+a specic renormalization of a infrared divergence in a normal phase (no mass gen-
+
+eration) of qed3. see i.j.r. aitchison, n.e. mavromatos, and d. mc neill, phys.
+
+lett. b402, 154(1997); k.-i. kondo and t. murakami, ibid. b410, 257(1997).
+
+[13] s.s. chern and j. simons, ann. math. 99, 48(1974).
+
+[14] we have tted the values of b(0)/a(0) in  = 0.01  0.1 by using the method
+of least squares. the tting curve in fig. 15 is given by the 5th-order polyno-
+mial as b(0)/a(0) = 0.10525482 + 0.76602688  12.3161382 + 144.3774063 
+964.292144 + 2680.590645 .
+
+17
+
+e=1.0 and mu=1.0
+
+alpha=0
+alpha=1
+alpha=2
+alpha=3
+
+1.7
+
+1.6
+
+1.5
+
+1.4
+
+1.3
+
+1.2
+
+1.1
+
+1
+
+)
+p
+(
+a
+
+0.9
+
+0.001
+
+0.01
+
+0.1
+
+1
+momentum p
+
+10
+
+100
+
+1000
+
+10000
+
+figure 1: the nontrivial solutions of a(p) at e = 1.0 and  = 1.0
+
+e=1.0 and mu=1.0
+
+alpha=0
+alpha=1
+alpha=2
+alpha=3
+
+0.3
+
+0.25
+
+0.2
+
+)
+p
+(
+b
+
+0.15
+
+0.1
+
+0.05
+
+0
+0.001
+
+0.01
+
+0.1
+
+1
+momentum p
+
+10
+
+100
+
+1000
+
+10000
+
+figure 2: the nontrivial solutions of b(p) at e = 1.0 and  = 1.0
+
+18
+
+)
+0
+(
+a
+
+4
+
+3
+
+2
+
+1
+
+0
+
+-1
+
+-2
+
+-3
+
+-4
+
+-10
+
+e=1.0 and mu=1.0
+
+numerical result
+constant approximation
+
+-5
+
+0
+
+gauge parameter alpha
+
+5
+
+10
+
+figure 3: the -dependence of a(0) at e = 1.0 and  = 1.0
+
+)
+0
+(
+b
+
+1.2
+
+1
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+0
+
+-0.2
+
+-0.4
+
+-0.6
+
+-0.8
+
+-10
+
+e=1.0 and mu=1.0
+
+numerical result
+constant approximation
+
+-5
+
+0
+
+gauge parameter alpha
+
+5
+
+10
+
+figure 4: the -dependence of b(0) at e = 1.0 and  = 1.0
+
+19
+
+)
+p
+(
+a
+
+)
+p
+(
+b
+
+e=1.0, mu=1.0 and alpha=-10
+
+signal 1
+signal 2
+
+1
+
+0.9
+
+0.8
+
+0.7
+
+0.6
+
+0.5
+
+0.4
+
+0.3
+
+0.2
+
+0.001
+
+0.01
+
+0.1
+
+1
+momentum p
+
+10
+
+100
+
+1000
+
+10000
+
+figure 5: a(p) at e = 1.0,  = 1.0, and  = 10
+
+e=1.0, mu=1.0 and alpha=-10
+
+signal 1
+signal 2
+
+1.2
+
+1
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+0
+
+-0.2
+
+-0.4
+
+-0.6
+
+-0.8
+
+0.001
+
+0.01
+
+0.1
+
+1
+momentum p
+
+10
+
+100
+
+1000
+
+10000
+
+figure 6: b(p) at e = 1.0,  = 1.0, and  = 10
+
+20
+
+)
+0
+(
+a
+
+/
+)
+0
+(
+b
+
+25
+
+20
+
+15
+
+10
+
+5
+
+0
+
+-5
+
+-10
+
+e=1.0 and mu=1.0
+
+numerical result
+constant approximation
+
+-5
+
+0
+
+gauge parameter alpha
+
+5
+
+10
+
+figure 7: the -dependence of b(0)/a(0) at e = 1.0 and  = 1.0 (10    10)
+
+e=1.0 and mu=1.0
+
+numerical result
+constant approximation
+
+0.19
+
+0.185
+
+0.18
+
+0.175
+
+0.17
+
+0.165
+
+0.16
+
+0.155
+
+0.15
+
+0.145
+
+)
+0
+(
+a
+
+/
+)
+0
+(
+b
+
+0.14
+
+0
+
+2
+
+4
+
+6
+
+gauge parameter alpha
+
+8
+
+10
+
+figure 8: the -dependence of b(0)/a(0) at e = 1.0 and  = 1.0 (0    10)
+
+21
+
+1.02
+
+1.015
+
+1.01
+
+1.005
+
+)
+0
+(
+a
+
+1
+
+0.995
+
+0.99
+
+0.985
+
+0.98
+
+0.01
+
+alpha=0 and mu=1.0
+
+numerical result
+constant approximation
+
+0.1
+
+coupling constant e
+
+1
+
+10
+
+figure 9: the e-dependence of a(0) at  = 0 and  = 1.0
+
+alpha=0 and mu=1.0
+
+numerical result
+constant approximation
+
+0.0016
+
+0.0014
+
+0.0012
+
+0.001
+
+)
+0
+(
+b
+
+0.0008
+
+0.0006
+
+0.0004
+
+0.0002
+
+0
+
+0
+
+0.001
+
+0.002
+
+0.003
+
+0.004
+
+coupling constant e^2
+
+0.005
+
+0.006
+
+0.007
+
+0.008
+
+0.009
+
+0.01
+
+figure 10: the e2-dependence of b(0) at  = 0 and  = 1.0 (1.0  104 < e2 < 0.01)
+
+22
+
+0.16
+
+0.14
+
+0.12
+
+0.1
+
+)
+0
+(
+b
+
+0.08
+
+0.06
+
+0.04
+
+0.02
+
+0
+
+0
+
+alpha=0 and mu=1.0
+
+numerical result
+constant approximation
+
+0.2
+
+0.4
+0.6
+coupling constant e^2
+
+0.8
+
+1
+
+figure 11: the e2-dependence of b(0) at  = 0 and  = 1.0 (1.0  104 < e2 < 1)
+
+)
+0
+(
+b
+
+16
+
+14
+
+12
+
+10
+
+8
+
+6
+
+4
+
+2
+
+0
+
+alpha=0 and mu=1.0
+
+numerical result
+constant approximation
+
+0
+
+20
+
+40
+60
+coupling constant e^2
+
+80
+
+100
+
+figure 12: the e2-dependence of b(0) at  = 0 and  = 1.0 (1.0  104 < e2 < 100)
+
+23
+
+alpha=0 and e=1.0
+
+numerical result
+constant approximation
+
+1.02
+
+1.015
+
+1.01
+
+1.005
+
+)
+0
+(
+a
+
+1
+
+0.995
+
+0.99
+
+0.985
+
+0.98
+
+0.01
+
+0.1
+
+1
+10
+topological mass mu
+
+100
+
+1000
+
+figure 13: the -dependence of a(0) at  = 0 and e = 1.0
+
+)
+0
+(
+a
+
+/
+)
+0
+(
+b
+
+ 
+r
+o
+
+ 
+)
+0
+(
+b
+
+0.16
+
+0.155
+
+0.15
+
+0.145
+
+0.14
+
+0.135
+
+0.13
+
+0.125
+
+0.12
+
+0.115
+
+0.11
+
+0.01
+
+alpha=0 and e=1.0
+
+numerical b(0)
+numerical b(0)/a(0)
+constant approximation
+
+0.1
+
+1
+
+10
+
+topological mass mu
+
+100
+
+1000
+
+10000
+
+figure 14: the -dependence of b(0) at  = 0 and e = 1.0
+
+24
+
+0.2
+
+0.15
+
+0.1
+
+0.05
+
+)
+0
+(
+a
+
+/
+)
+0
+(
+b
+
+0
+
+0
+
+0.01
+
+0.02
+
+0.03
+
+alpha=0 and e=1.0
+
+numerical b(0)/a(0)
+constant approximation
+numerical result without c-s term (b(0)/a(0)=0.104755)
+fitting curve (b(0)/a(0)=0.105255)
+
+0.04
+
+topological mass mu
+
+0.05
+
+0.06
+
+0.07
+
+0.08
+
+0.09
+
+0.1
+
+figure 15: the extrapolation of b(0)/a(0) in the region of  = 0.01  0.1 to  = 0
+( = 0 and e = 1.0).
+
+25
+
+

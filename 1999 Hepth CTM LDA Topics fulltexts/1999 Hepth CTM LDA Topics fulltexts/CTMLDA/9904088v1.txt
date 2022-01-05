@@ -1,0 +1,7254 @@
+9
+9
+9
+1
+
+ 
+r
+p
+a
+3
+1
+
+ 
+
+ 
+ 
+
+1
+v
+8
+8
+0
+4
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+universality and conformal invariance
+
+for the ising model in domains with boundary
+
+robert p. langlands
+
+school of mathematics, institute for advanced study,
+
+princeton, nj 08540, usa
+
+marc-andre lewis
+
+centre de recherches mathematiques, montreal, canada, and
+laboratoire de physique theorique et des hautes energies,
+
+universites pierre et marie curie (paris vi) et denis diderot (paris vii),
+
+paris, france
+
+yvan saint-aubin
+
+centre de recherches mathematiques and
+dept. de mathematiques et de statistique,
+
+universite de montreal, c.p. 6128, succ. centre-ville,
+
+montreal, quebec, canada h3c 3j7
+
+february 16, 2014
+
+abstract
+
+the partition function with boundary conditions for various two-dimensional ising
+models is examined and previously unobserved properties of conformal invariance and
+universality are established numerically.
+
+keywords:
+conformal invariance, critical phenomena.
+
+ising model, boundary conditions, renormalization group, free boson,
+
+supported in part by grants from the natural sciences and engineering research council of canada
+
+and the fonds fcar pour la formation de chercheurs et laide `a la recherche (quebec).
+
+1
+
+1 introduction.
+
+although the experiments of this paper, statistical and numerical, were undertaken in pursuit
+of a goal not widely shared, they may be of general interest since they reveal a number of
+curious properties of the two-dimensional ising model that had not been previously observed.
+the goal is not dicult to state. although planar lattice models of statistical mechanics
+are in many respects well understood physically, their mathematical investigation lags far
+behind. since these models are purely mathematical, this is regrettable. it seems to us that
+the problem is not simply to introduce mathematical standards into arguments otherwise well
+understood; rather the statistical-mechanical consequences of the notion of renormalization
+remain obscure.
+
+our experiments were undertaken to support the view that the xed point (or points) of
+the renormalization procedure can be realized as concrete mathematical objects and that a
+rst step in any attempt to come to terms with renormalization is to understand what they
+are. we have resorted to numerical studies because a frontal mathematical attack without
+any clear notion of the possible conclusions has little chance of success. we are dealing with
+a domain in which the techniques remain to be developed.
+
+a xed point is a point in a space of presumably an innite number of dimensions; so
+this point and all other points of the space are dened by an innite number of coordinates.
+some will presumably be superuous, so that the total space is realized as a submanifold
+of some larger coordinate space. the total space will be the carrier, in some sense, of
+the renormalization transformation, but the transformation will not appear explicitly in
+this paper. the point does! the implicit condition on each quantity serving as a possible
+coordinate of the xed point is that, at the xed point itself, it remains invariant under
+renormalization and that, at a critical point of any model within the class considered, its
+value approaches a limit under repeated renormalization because renormalization drives the
+critical point to the xed point. since repeated renormalization is in coarsest terms nothing
+more than passage to larger and larger blocks or to smaller and smaller mesh, the condition
+is that the quantity has a meaning as the mesh length goes to zero, the dimensions otherwise
+remaining the same. for percolation this is a property of crossing probabilities. our point
+of view is that any such quantity is a candidate as a possible coordinate in the space of
+the xed point. rather than a single numerical quantity we can consider several at once,
+which amounts in the customary mathematical way to considering objects lying in some
+given space, nite-dimensional or innite-dimensional, for example, a space of probability
+distributions, and if these objects satisfy this criterion, thus if, for each model at the critical
+point, they tend to a limit as the mesh goes to zero, then this limit or rather its coordinates
+in the given space can also serve as coordinates of the xed point. such objects are described
+in the paper.
+
+there are at least two possibilities: one modeled on the considerations for the free boson
+of [l]; the other on the crossing probabilities for percolation [lpps, lps]. the second
+possibility was suggested to us by haru pinson to whom we are grateful. thus to each form
+m of the ising model (taken at the critical temperature) we will attach two points pd(m)
+and pc(m), each dened by an innite number of coordinates. both are, in so far as this
+can be conrmed by experiments, universal and conformally invariant in the sense of [lps].
+
+2
+
+it is unlikely that these two points are independent. one set of coordinates may well be
+deducible from another, but we have not examined this possibility.
+
+crossing probabilities may or may not be peculiar to a few models. the evidence for
+their conformal invariance and universality is not dicult to present and appears in section
+4. there is, however, one point to underline. the ising model is considered in regions that
+may be bounded or unbounded. crossing probabilities are dened for crossings within a
+region that may or may not coincide with the region in which the model is considered. it
+may be smaller. in contrast to crossing probabilities for percolation, in which there is no
+interaction, those for the ising model depend on both the region in which the crossings are
+allowed to occur and the region of thermalization on which the ising model is considered.
+conformal invariance refers to the simultaneous action of a conformal mapping on the pair
+of regions.
+
+the coordinates modeled on the free boson should, on the other hand, be available for a
+large class of models. their denition is, in principle, quite general, but we have conned
+ourselves to the ising model. the states  of the ising model take values in the set {1}
+which is contained in the set of all complex numbers z with |z| = 1. this set in turn is covered
+by the line z = exp(2ix). we simply develop the circle on the line. we rst assign to one
+site p0 in the lattice the value h(p0) = 0 and then choose for all other p the value h(p) = m,
+m  z, so that exp(ih(p)  ih(p0)) = (p)/(p0). of course, there has to be more method
+than that. for example, for the square lattice we introduce clusters: maximal collections
+of lattice sites of the same spin that are connected through bonds joining nearest-neighbor
+sites. each cluster is surrounded by a curve constructed from edges of the dual lattice and
+this curve separates it from all other clusters. to each of these curves an orientation is
+assigned randomly and, for nearest neighbors p and q, we set h(p)  h(q) = , the sign
+being determined by the relative orientation of the bond from p to q and the curve it crosses.
+if it crosses no curve, then (p) = (q) and we take h(p) = h(q). thus to every state  are
+attached several functions h, but h determines  up to sign. for a nite lattice the measure
+on h, the set of all possible h is taken to be such that the measure, mi , on h assigns the
+same mass to all points lying above a given . their sum is one-half the mass of .
+
+fix now a bounded planar region d and consider the ising model in this region with
+respect to a square lattice whose mesh a approaches 0. since the model is to be critical, the
+contribution to the boltzmann weight of a pair of neighboring spins is
+
+ej12,
+
+sinh(2j) = 1,
+
+j = .440687.
+
+each h is in eect a function on the whole region if we take the value in the open square of
+side a about the site p to be h(p). (the ambiguity at the boundary is disregarded here; it has
+to be confronted in various ways from experiment to experiment.) if c is a (smooth) curve
+in r, which can lie entirely in the interior or run entirely or partially along the boundary,
+then we can restrict each function in h to c. this yields a set of points, each carrying a
+mass, in the set dc of schwartz distributions on c, and thus a probability measure on dc.
+experiments to be described in sections 2 and 3 suggest strongly that this measure has a
+limit as the mesh tends to 0 and that the limit is universal and conformally invariant. this
+is perhaps the most important conclusion of the paper.
+
+3
+
+there is no reason to restrict ourselves to planar regions and we begin our study with
+the cylinder, because the ambiguities at the boundary are then absent. a long cylinder
+(eectively semi-innite) is, provided we stay close to the end, to be regarded as equivalent
+to a disk. the simplest conformally invariant distribution on the set of distributions on the
+boundary of a disk is the gaussian distribution with respect to the quadratic form dened
+by the dirichlet form. for a function  this form is obtained by extending  to a harmonic
+function  in the interior and then taking
+
+g
+
+4z  (cid:18)  
+x(cid:19)2
+
+y(cid:19)2! dxdy.
++(cid:18)  
+
+(1)
+
+the experiments described in section 2 strongly suggest that the measure given by our
+construction is at least very close to this gaussian and perhaps equal to it, with a constant
+g = gb that appears to be universal. if c is interior, the measure on dc is not gaussian.
+this is somewhat astonishing in view of the relation of the ising model to coulomb gases.
+for the ising model on a triangular lattice our construction is equivalent to the usual one
+for the o(1)-model. in particular, it is expected that in the plane
+
+h(h(x)  h(0))2i 
+
+2
+g
+
+ln|x  0|.
+
+the constant g = gi is expected to be 4/3, at least for the triangular lattice, but the two
+constants gi and gb are not equal.
+
+gi = 4/3,
+
+gb = 1.4710.
+
+we suppose that gi is expected to be universal, but we have not examined this carefully.
+the pertinent experiments are briey discussed in 6. the conclusion is that the comparison
+with the free boson suggested by the distributions of this paper is quite dierent than the
+one usually undertaken.
+
+there is no reason that the two constants gi and gb should be equal. one refers to
+interior behavior in the bulk, the other to behavior on the boundary. although a departure
+from the conventional views, it could be argued (we do not attempt to do so here) that for
+questions of renormalization the constant gb may be every bit as important as gi, or, better,
+that the distributions on curves of section 2 are at least as important for renormalization
+as asymptotic behavior because renormalization, at least as it is often presented, entails the
+fusion of bounded regions (whose boundary may or may not partially coincide with that of
+the region of thermalization). the distributions on dc were originally examined only for
+curves on or close to the boundary. they appear, however, to be of interest even in the
+absence of a boundary. see the last lines of paragraph 3.2.
+
+our point of view would not be at all persuasive if there were no sign in our xed point
+pd, thus in the measures on dc, of the critical indices 0, 1/2 and 1/16. thus section 5, in
+which we describe what appear to us to be manifestations of, above all, the index 1/16, is
+an essential part of the paper.
+
+the nal section is less important.
+
+it contains a few observations that provide some
+perspective on the denitions of the paper. first of all, the construction of h is by no means
+
+4
+
+canonical. there are alternative constructions decribed in section 7. we can allow jumps
+other than , in particular several jumps n, n odd, with equal or dierent probabilities.
+they lead to dierent values of gi and to a measure on dc that is certainly not gaussian.
+the possibility of not using clusters in our sense but the clusters of fortuin and kasteleyn
+that appear in the high-temperature expansion of the ising (or more generally the potts)
+model also suggests itself. such clusters can also be used to dene the crossing probabilities.
+they lead to dierent measures and to dierent crossing probabilities, whose universality
+and conformal invariance we have not tested.
+
+finally we point out that the results for the distributions appear to remain valid at
+innite temperature with, of course, a dierent value for the parameter appearing in the
+gaussian.
+
+we are grateful to michael aizenman, christian mercat, haru pinson and thomas
+spencer for observations and suggestions that have been useful to us during the course of
+these investigations.1 our most important debt is to the statistician christian leger whose
+counsel and advice were of enormous help in the preparation of section 2.
+
+1rpl is grateful to alois scharf for making the bank of computers of the mathematisches institut der
+
+universitat bonn available to him at an important moment in the experimentation.
+
+5
+
+2 distribution of h at the boundary.
+
+2.1 the free boson on domains with boundary conditions.
+the partition functions of a free boson , with compactication radius r, are familiar objects
+when the domain is a torus, or a rectangle with the eld satisfying dirichlet boundary
+conditions, thus equal to 0 on the boundary. for a general riemann surface with boundary
+and for an arbitrary specication of the eld at the boundary, it may still be possible to
+describe the partition functions explicitly (see [cg]). for a cylinder we use the formula of
+[l]. as it suggested some of the statistical quantities for the ising model studied in this
+paper, we review this formula.
+
+the cylinder is described as the quotient of the region 0  w   ln q, 1  q > 0, in the
+complex plane by the transformations generated by z  z + ,  = 2i. if the fundamental
+domain is chosen to be 0  w <  ln q and 0  w < 2i, the map w  ew identies
+the cylinder with the annulus of outer radius 1 and inner radius q. we shall use freely the
+terminologies associated with the cylinder and with the annulus. observe that q is close to
+zero for long cylinders. the angle  is used as the parameter on both the inner and the outer
+boundary.
+
+the extremal elds  on the domain are real harmonic functions
+
+the boundary conditions x the restriction  of  to the boundary. on the inner circle
+where z = qei and z = qei, this restriction is
+
+(z, z) = 0 + a ln z + b ln z +xn6=0
+
+(nzn + nzn).
+
+in() = 0 + (a + b) ln q + i(a  b) +xk6=0
+
+ab
+k eik
+
+k = ab
+
+k and on the outer circle
+
+out() = 0 + i(a  b) +xk6=0
+
+bb
+k eik
+
+with the reality condition ab
+
+k = bb
+
+with bb
+k . (the superscript stands for boson.) the compactication condition does not
+require  to be periodic but imposes a milder condition: (e2iz, e2i z) = (z, z)2nr, n 
+z, thus (a  b) = inr, n  z. since the lagrangian function (1) does not depend on the
+term 0, this constant can be set to zero. therefore only the dierence of the constant terms
+in in and out is of signicance and we choose to parametrize it with a variable x  [0, 2r)
+and an integer m  z:
+
+the partition function on the cylinder with the boundary values of  specied by in,
+
+(a + b) ln q = x + 2mr.
+
+out, or equivalently by x,{ab
+
+k } and {bb
+
+k }, is a product of three terms [l]
+
+z(in, out) = z(x,{ab
+
+=  1
+
+k },{bb
+
+k })
+2 z1(x)z2({ab
+6
+
+k },{bb
+
+k })
+
+(2)
+
+(3)
+
+(4)
+
+where  is the -regularization of the determinant of the laplacian for the annulus. it is
+
+given by  = i 2( ) where q = ei and ( ) = ei /12qm=1(1  e2im ) is the dedekind
+
+ function. since this factor is independent of the boundary data, it will be disregarded.
+the crucial terms here are the two other factors z1(x)
+
+eiux/rq
+
+xu,vz
+
+2
+
+u
+
+4r2 +v2r2
+
+and z2({ab
+
+k },{bb
+
+k })
+
+exp(cid:20)2k(cid:18)(ab
+
+yk=1
+
+k ab
+
+k + bb
+
+k bb
+
+k)
+
+1 + q2k
+
+k bb
+1  q2k  (ab
+
+k + bb
+
+k ab
+
+k)
+
+(5)
+
+(6)
+
+2qk
+
+1  q2k(cid:19)(cid:21) .
+
+if measurements are made disregarding the variable x, only
+
+z 2r
+
+0
+
+z(x,{ab
+
+k },{bb
+
+k })dx
+
+is of importance and this gives, after proper normalization, a probabilistic measure on the
+space of boundary data parametrized by ({ab
+k }). the mixing of the boundary data at
+both extremities becomes more and more intricate when q approaches 1 or, in other words,
+when the cylinder becomes a narrow ring. when q is taken to zero, the measure simplies
+as it becomes the product of two terms, each one depending on {ab
+k }. moreover, in
+the limit q = 0, the probabilistic interpretation of z is simply that of the gaussian measure
+in the variables ab
+
+k } or {bb
+
+k },{bb
+
+k and bb
+k .
+
+even though the coulomb gas provides a description of the minimal models, we do not
+know of any similar explicit formula for the partition functions of these models for general
+boundary conditions, although cardys paper [c1] treats explicitly the case of conformally
+invariant boundary conditions. there are indeed only a nite number of these, and one of
+the diculties addressed in this paper is how to introduce continuously varying conditions.
+nonetheless we proceed boldly using the partition function (4) as a guide for the ising model.
+in contrast to the free-boson model, the ising model dened on a graph g does not have a
+eld taking its values in the whole real line that we could easily identify with   the spin
+eld  takes its values in {+1,1}. starting from the spin eld , dened on the sites of a
+(nite) graph g, one can construct the function h as described in the introduction. it is such
+that, if p and q are joined, then h(p)  h(q) =  if (p) 6= (q) and h(p) = h(q) otherwise.
+if the graph g is embedded in a surface d, for example, a cylinder or r2, this function h can
+be extended to a function locally constant on d except on the edges of the dual graph where
+it has jumps. the ising measure mi on the space of congurations on the graph g of mesh
+a endows the (nite) set ha
+d of possible functions h with a (discrete) probability measure.
+(as observed above, this measure is such that ma
+d(h) = 2mi()/n where n is the number
+of distinct hs that lead to  and .)
+take the graph to be the subset of the lattice az2 of mesh a = 1/lv formed by the
+points (am, an), 0  m < lh, 0  n  lv . we identify upper and lower edges and
+regard the graph as a subset of the cylinder: z = m + in  exp(2z/lv ). how can we
+
+7
+
+compare ha
+d to the eld-theoretic measure of the free boson? using the same letters ak and
+bk (but without the superscript b) for the fourier coecients of the restriction of h to the
+extremities of a cylinder:
+
+hin() =xkz
+
+akeik
+
+and hout() =xkz
+
+bkeik,
+
+we study the dependence upon ak and bk, k  {n,n + 1, . . . , n  1, n} of the measure
+d on ha
+ma
+d, disregarding all other coecients. the object obtained this way is a measure
+ma,n
+d on r2(2n +1) concentrated on a nite set. keeping n xed, we then take the mesh
+a on to zero. if the limit of the measures on r2(2n +1) exists, presumably as a continuous
+distribution, the limit as the number 2n + 1 of fourier coecients is taken to innity can
+be considered. we name the limiting object
+
+md = lim
+n
+
+lim
+a0
+
+ma,n
+d .
+
+(7)
+
+this measure, if it exists, is therefore dened on a space hi with coordinates ({ak},{bk}) and
+we shall denote the elements of this space by i. this measure is to be compared with the
+probability measure induced by (4) on the space of /r. (the radius of compactication
+r appears here because we normalized the jumps of the function h to be , forcing h
+to change by an integral multiple of 2 as  winds around one extremity.) the rst, and
+principal, question is:
+
+(i) does the measure md exist?
+
+the parallel just suggested can be pushed further. we introduce rst the derivative h =
+dh/d of the restriction of h to either extremity.
+it is clearly a sum of delta functions
+concentrated half way between those sites p and q at the boundary such that (p) 6= (q).
+the mass of each jump is . we shall use the letter ak for its fourier coecients,
+
+h() =xkz
+
+akeik.
+
+clearly ak = ikak. at the other end we use bk = ikbk. we will use ak equally for the coor-
+dinates parametrizing i, the derivative di
+d . for the boson, the probabilistic interpretation
+of the partition function z implies that the k-th fourier coecient of the restriction in is
+distributed (up to a normalizing factor) as exp(2k|ab
+k |2) in the limit q = 0. consequently,
+if we use the fourier coecients of
+
+1
+r
+
+d
+d
+
+=xkz
+
+ckeik
+
+k = rck, the probability density is e2r2|ck|2/k, again up to normalization. for a
+with ikab
+long cylinder the parallel drawn here raises the following questions on md granted, of course,
+that the answer to (i) is positive:
+
+(ii) are the fourier coecients ak of i distributed normally as ek|ak|2
+
+?
+
+8
+
+-2
+
+-1
+
+0.7
+0.6
+0.5
+0.4
+0.3
+0.2
+0.1
+
+0.4
+
+0.3
+
+0.2
+
+0.1
+
+0.5
+0.4
+0.3
+0.2
+0.1
+
+1
+
+2
+
+-3 -2 -1
+
+1
+
+2
+
+3
+
+0.3
+0.25
+0.2
+0.15
+0.1
+0.05
+
+-4
+
+-2
+
+2
+
+4
+
+-4
+
+-2
+
+2
+
+4
+
+figure 1: the distribution of ak, k = 1, 2, 4, 8, with respect to the measure ma
+d. the mesh
+size a corresponds to the lattices 59  401, 79  157, 157  1067, 199  397, 397  793 and
+793  1585. the curve 59  401 is at the top when ak = 0. (see text.)
+
+(iii) is there a constant r = rb such that the constants k are simply related by
+
+k =
+
+2r2
+b
+k
+
+?
+
+(8)
+
+(iv) is the joint distribution a product of independent single-variable distributions?
+the rest of this section will describe the response to these questions provided by numerical
+simulations. the next will provide evidence that this limit measure is both universal and
+conformally invariant.
+
+2.2 the distribution of h at the boundary of a long cylinder.
+
+the diagrams of figure 1 are some evidence for the existence of the distribution md on the
+space hi. they represent the probability distribution densities of h restricted to one of the
+extremities of various cylinders, in terms of a single variable (either a1,a2,a4 or a8),
+all others being disregarded or, thinking in terms of the limit, integrated out. by rotational
+symmetry these densities are (almost) identical to those with respect to the imaginary part
+of the same coecients. (a small discrepancy could arise from the fact that the numbers of
+sites along the circumference were not divisible by 4.) the square lattices contained 59401,
+79  157, 157  1067, 199  397, 397  793 and 793  1585 sites. the rst number (lv )
+is the number of sites around the circumference and is half the number of sites along the
+length (lh) minus one, or less. the appendix gives some further technical details on the
+simulations. we note at this point that the partition function (4) is obtained by summing
+over the integer n parametrizing the linear term (a  b) = inr in both out and out. the
+analogue of this term for ising congurations is straightforward: a conguration with exactly
+
+9
+
+2.6
+
+2.4
+
+2.2
+
+1.8
+
+1.6
+
+1.4
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+figure 2: the numbers k, k = 1, . . . , 10 for the cylinders, the squares and the disk.
+
+two clusters (of opposite signs) extending from one end to the other of the cylinder will have
+two longitudinal jump lines. depending on the choice of the jump across these lines, h will
+increase by 0, 2 and 2 as  wraps around the boundary. other (even) integral multiples
+of  appear for congurations with more clusters crossing from one end to the other and the
+numbers 2n can be used to partition the set of congurations. we have not dierentiated
+the measure md for these various classes. we should add that, for the cylinders studied
+in the present section, the congurations h whose linear term is zero are by far the most
+probable. the multiples 2 occurred with a probability about .0005; higher multiples we
+did not see at all.
+even though the raw data clearly dierentiate the curves attached to smaller cylin-
+ders, smoothing helped to separate the curves between the two largest one (397  793 and
+793  1585). this smoothing was done using the kernel method with a gaussian kernel; the
+smoothing parameter was chosen according to eq. (3.28) of [si], in which  was taken to be
+the sample standard deviation.
+
+the narrowing of the gaps between the curves as the number of sites is increased is a good
+qualitative argument for the existence of the limit md = limn lima0 ma,n
+d . the peaks
+of the curves go down systematically as lv and lh increase, except for the dependence
+on a1.
+in this case the center of the curve for 793  1585 lies slightly above the center
+for 397  793 on the small interval (0.05, 0.05). around a1 = 0.05 the two curves
+cross and the curve for 793  1585 remains below that for 397  793 until approximately
+a1 = +0.5. from then on (|a1| > 0.5) the two curves are so close that they cross each
+other several times, probably due to the limitation of our samples. this puzzled us and was
+checked independently by two of us. we have no explanation for it. as will be seen below
+however, the variance of the samples, a more global indicator, increases systematically over
+the spectrum of all the cylinders considered; in particular that of 793  1585 is larger than
+that of 397  793.
+
+10
+
+6
+
+5
+
+4
+
+3
+
+1-
+4
+
+1-
+2
+
+3-
+4
+
+1
+
+figure 3: the numbers k for 59  401 and 397  793 with the horizontal axis scaled
+proportionately to 1/lv .
+
+these distribution densities are so similar to normal curves that their variances are a
+natural tool for a more qualitative assessment of the nite size eects. in order to answer
+questions (ii) and (iii), we plot in figure 2 the numbers
+
+lv lh
+
+k
+
+=
+
+k
+
+2( lv lh
+
+k
+
+)2
+
+k
+
+k for k = limlv,lh lv lh
+
+where lv lh
+is the square root of the variance with respect to the variable ak for the
+cylinder with lv  lh sites. (if both questions were to be answered positively, then the
+numbers kk = k/22
+would be a constant. note that we
+follow the usual statistical convention of distinguishing between the theoretical value  of
+a quantity and its measured value .) we plotted these numbers for k = 1, . . . , 10 (or,
+sometimes, k = 1, 2, 4, 8), together with a linear t of these ten points for every cylinder size
+on the square lattice considered, the largest triangular and hexagonal lattices, the anisotropic
+lattice, and the 254  254 square and disk geometries. the latter will be discussed in in
+section 3. the data, read from the top, appear in the order: cylinders of size 59  401,
+79 157, 157 1067, 199 397 for the square lattice g(cid:3); of size 464 1069 for the hexagonal
+lattice ghex; then of size 397  793 for g(cid:3); of size 312  963 for the anisotropic lattice; of
+size 416  721 for the triangular lattice g; the cylinder of size 793  1585 for g(cid:3) and the
+square of size 254  254 are superimposed; and nally the disk of radius r = 300.2 for g(cid:3).
+the numerical data are also recorded in table i for k = 1, 2, 4, 8 together with those for
+triangular and hexagonal lattices on a cylinder. the digit after the vertical bar gives the
+statistical error on the digit just before; for example, the rst element in the table (1.609|3)
+means that 1/2( 59401
+)2 is 1.609 with the 95%-condence interval being [1.606, 1.612]. the
+(statistical) error bars were not drawn on fig. 2 as their length is approximately the size
+of the symbols used, or less. all the linear ts meet in a very small neighborhood on the
+
+k
+
+11
+
+1
+
+vertical axis. for the two cylinders with the greatest number of sites, the disk and the two
+squares, the ordinates at the origin are all in the interval [1.47071, 1.47262], while the largest
+cylinder and the disk meet at essentially equal values (1.47071 and 1.47095 respectively). it
+is likely that, for the two smallest cylinders, a positive quadratic term would have improved
+the t and narrowed the gap with the intersection of the others.
+
+figure 3 reinforces this impression. the numbers lv lh
+
+k
+
+were drawn for all the linearly
+independent fourier modes (but the constant one) for the cylinders 59  401 and 397 
+793. since each function h 59401 is the sum of multiples of the same 59 -functions on the
+circumference, it can be identied with a point in r59 that we choose to parametrize with
+a0,a1,a1, . . . ,a29,a29. again the distributions with respect to ak and ak are
+identical and the corresponding samples can be united. the 29 crosses on the plot are the
+data for 59  401 and the 198 dots are those for 397  793. the horizontal axis was scaled
+dierently for the two cylinders: the data were spread evenly on the interval [0, 1], starting
+at 1
+198 for 397 793. the crosses and the dots follow almost the same
+curve when scaled that way. hence, the change in the slopes for the various cylinders (fig.
+2) can be seen to be the eect of calculating the slope of a curve at the origin taking 10
+values lying in an interval of length proportional to 1/lv . this is conrmed by a log-log
+plot of these slopes (fig. 4). the six dots can be tted linearly and the slope is found to be
+1.031 or, if the two smallest cylinders are discarded, 1.008. these results are indeed very
+close to 1. (it is this second t that is drawn of the gure.) consequently the numbers
+k/22
+b whose four rst digits are
+1.471.
+
+k are likely to be all equal to one and the same constant 2r2
+
+29 for 59 401 and at 1
+
+12
+
+geometry (lattice)
+
+size
+
+1
+
+2
+
+4
+
+8
+
+cylinder (g(cid:3))
+
+59  401
+79  157
+157  1067
+199  397
+397  793
+793  1585
+
+1.609|3
+1.573|2
+1.520|3
+1.506|6
+1.494|3
+1.482|3
+
+1.742|3
+1.675|2
+1.574|3
+1.550|6
+1.511|3
+1.491|3
+
+2.020|4
+1.880|2
+1.676|3
+1.629|7
+1.553|3
+1.512|3
+
+2.627|5
+2.314|3
+1.883|4
+1.793|8
+1.631|3
+1.553|3
+
+cylinder (g(cid:3), jh = 2jv)
+
+312  963
+
+1.487
+
+1.507
+
+1.540
+
+1.614
+
+cylinder (g)
+
+416  721
+
+1.491
+
+1.496
+
+1.536
+
+1.593
+
+cylinder
+(ghex)
+
+116  267
+235  535
+464  1069
+
+1.599
+1.535
+1.502
+
+1.719
+1.601
+1.530
+
+1.946
+1.717
+1.560
+
+2.418
+1.952
+1.716
+
+disk (g(cid:3))
+
+r = 300.2
+
+1.474|3
+
+1.482|3
+
+1.487|3
+
+1.506|4
+
+square (g(cid:3))
+
+80  80
+254  254
+
+1.502|4
+1.480|5
+
+1.535|4
+1.494|5
+
+1.600|4
+1.510|5
+
+1.728|5
+1.552|5
+
+table i: the numbers k, k = 1, 2, 4, 8 as measured on the cylinder, the disk and the square.
+only the square lattice on cylinders is discussed in this section. see section 3 for the others.
+
+this observation together with the previous data indicates that the distribution md
+k with respect to the variables ak = ak/k are
+
+quite probably exists and that the variances 2
+inversely proportional to k:
+
+k =
+
+(9)
+
+1
+k2 2
+with cst = 0.3399 close to, but unlikely to be, 1
+3. we have not discussed yet whether the
+distributions are gaussian but the form (9) is in fact in agreement with the form (8), at least
+for the variances of the distributions. the constant r2
+
+b is therefore 0.7355.
+
+cst
+k
+
+2
+k =
+
+for long cylinders, the factor z2({ab
+
+k are
+independent random variables. we now address the question of whether this is also the
+
+k },{bb
+k }) (eq. (6)) shows that all the ab
+13
+
+k and bb
+
+-2
+
+-2.5
+
+-3
+
+-3.5
+
+-4.5
+
+4.5
+
+5
+
+5.5
+
+6
+
+6.5
+
+figure 4: log-log plot of the slopes of the linear t of k as function of lv .
+
+case for the distribution md. to be consistent with the denition of md as the limit (7) of
+ma,n
+d , we restrict rst our discussion to correlation coecients between pairs (x, y), x 6= y
+(the choice n = 32
+in {a0}  {aj,aj, j = 1, . . . , 32} on the cylinder 397  793.
+is somewhat arbitrary but it does not change much the result as it will be seen below.)
+
+there are (cid:0)65
+
+2(cid:1) = 2080 such pairs. these 2080 estimates r(i, j)  [1, 1] turn out too be
+
+so small (the largest in absolute value being 0.0064) that the real question is whether they
+are distributed like correlation coecients of independent variables. according to ch. 5 of
+[w] the correlation coecient of a pair of independent gaussian variables is distributed with
+mean 0 on [1, 1] as
+
+( n1
+2 )
+( n2
+2 )
+
+(1  r2)
+
+n 4
+
+2 dr.
+
+(10)
+
+here n is the size of the sample used to measure the correlation coecient (n = 281000 for
+the present calculation) and no longer the cuto n used to measure the distribution ma,n
+d .
+if we set r = s/n and apply stirlings formula, (10) becomes approximately
+
+1
+2
+
+(1 
+
+s2
+n
+
+)n/2ds 
+
+1
+2
+
+es2/2ds.
+
+because the correlation coecients did not display any specic pattern, we compared all
+the numbers r(i, j)n as if they were estimates of the same pair of random variables. the
+mean and standard deviation of these quantities are 0.00006 and 1.013, very close to the
+expected 0 and 1 and a plot of the empirical cumulative distribution of the rn is visually
+indistinguishable from a plot of the cumulative distribution of the normal with mean 0 and
+variance 1.
+
+the independence of the variables {a0}  {aj,aj, j = 1, . . . , 32} for the cylinder
+397  793 is quite remarkable. one might have thought that this independence would be
+
+14
+
+spoiled, at least partially, by nite-size eects. as a matter of curiosity we repeated the
+above calculation for the whole set of linearly independent fourier coecients {a0} 
+{aj,aj, j = 1, . . . , 198}. there are now (cid:0)397
+2(cid:1) = 78606 values r(i, j). their mean is
+0.003 and their variance, scaled by the factor n, is 1.002, again in good agreement with
+the theoretical distribution of the rs. nevertheless a closer look at the data invalidate the
+hypothesis that the variables are independent! let h0 be the null hypothesis that all the
+variables in the set {a0}  {aj,aj, j = 1, . . . , 198} are independent. to check this
+hypothesis we use a test of level 0.05, that is a test that will reject h0 only in 5% of the
+cases when h0 is actually true. we shall reject h0 if any of the 78606 correlation coecients
+falls outside a certain interval [r0, r0], where r0 is yet to be determined. if p (|ri| > r0) for
+i = 1, . . . , 78606 denotes the probability that a given correlation ri be out of range, then the
+probability of rejecting h0 is smaller than 78606  p (|ri| > r0). we shall therefore choose
+r0 by requiring that p (|ri| > r0) = 0.05
+78606 and the test will reject a true h0 in at most 5% of
+the cases. under h0 the ri are distributed as (10). the number r0 is found to be 0.0094,
+just below the largest value |r| measured (0.0097) and h0 needs to be rejected. if, as is more
+to the point, the pairs considered are the 2080 for the set of ai and ai with i  32, the
+extremity r0 of the interval is  0.008 and accomodates easily the maximum 0.0064 that we
+measured. for this smaller set h0 need not be rejected. the very weak coupling between
+the dierent frequencies  even those not pertinent to our investigations  of the fourier
+expansion of the function h at the boundary of a long cylinder is striking.
+
+the statistical independence of the fourier coecients, ak, at one extremity and those,
+bk, at the other one can be studied similarly. the results are similar whether we restrict
+the analysis to the ai,ai,bi and bi up to i = 32 or to the whole set. we describe
+here the latter analysis. the zeroth (real) coecient a0 is equal to b0. we calculated the
+correlation coecients for the other 3972  1 pairs and found that they are also extremely
+small. the largest in absolute value was found to be 0.0083, small enough to accept the null
+hypothesis that the random variables {ak} are independent of the variables {bk}.
+there remains the question (ii): are the fourier coecients ak of i distributed normally
+as ek|ak|2
+? to address this question we used three complementary methods that we shall
+refer to as the graphical method, the method of moments, and the method of goodness-of-t.
+graphical methods seem a coarse way to assess whether an empirical distribution is a
+given theoretical one. still they are a natural rst choice among the arsenal of statistical
+techniques designed for this purpose. figure 5 plots the empirical histograms for md as mea-
+sured on the cylinder 793 1585 as functions of a single variable (a1,a2,a4 and a8),
+all other dependence being integrated out. for these plots we have joined the (essentially
+independent) data for a1,a1,b1 and b1 which brings the sample to 1424000 cong-
+urations. besides these four empirical distributions, four normal curves have been plotted
+whose variances are those of the data. (these variances can be deduced from table i.) we
+have left these empirical distributions as they are, in contrast to those seen on the figures
+1, to distinguish them from the (smooth) normal curves and to give to the reader an idea
+of the dierence between raw and smoothed data. for the dependence on a2,a4 and
+a8, the ragged and smooth curves are essentially identical and, based on this evidence,
+one is tempted to claim that md is distributed normally with respect to these variables.
+
+15
+
+0.7
+
+0.6
+
+0.5
+
+0.4
+
+0.3
+
+0.2
+
+0.1
+
+-4
+
+-2
+
+2
+
+4
+
+figure 5: comparison of the empirical distribution m7931585
+as a function of ak, k =
+1, 2, 4, 8 with gaussian densities whose variance is the sample variance. the case k = 1 is at
+the top.
+
+d
+
+the agreement between the two curves for a1 is clearly not so good. the empirical curve
+lies above the normal curve at the center, crosses it before |a1| = 0.5 and remains under
+it at least till |a1| = 1.0. the departure from normality is statistically signicant for the
+dependence upon a1. after having observed this fact, one also sees, looking more closely, a
+gap at the center of the curves for a2, though on a signicantly smaller scale. (it might not
+even be visible if figure 5 has been too compressed.) since this departure from normality
+surprised us and, especially, as it is easily observable only for a1, we tried to explain it as a
+nite-size eect. the curves for the smaller cylinders are however similar and the gaps seem
+similar to the eye. (the curves for a1 become wider as the number of sites is increased, as
+is seen on fig. 1, but the variance of each sample also becomes larger.) if one is convinced
+of conformal invariance, discussed in section 3, one can also use the data from an analogous
+simulation performed on a disk whose boundary contained 2400 sites. for this geometry, the
+two curves for a1, empirical and gaussian, show a similar gap. thus, on graphical evidence
+only, we cannot conclude that the gap seen between md(a1) and the normal curve is a nite
+size eect and that it is likely to disappear as lv, lh  . the other distributions (for
+a2, a4 and a8) are, however, extremely close to gaussian.
+our rst attempt at a more quantitative statement is through calculation of the moments
+of the samples. we shall quickly see, however, the limitations of this approach. we denote
+by l
+
+k,i the i-th moment of the distribution ml
+
+d with respect to the variable ak
+
+l
+
+k,i =z (ak)iml
+
+d(a0, a1, . . . )da0
+
+yl=1
+
+dal dal.
+
+the even moments of the normal distribution are known to be the mean (the 0-th mo-
+ment, in our case 0 by denition), the variance 2 (the second moment, in our case an
+
+16
+
+4.5
+
+5
+
+5.5
+
+6
+
+6.5
+
+3.13
+
+3.12
+
+3.11
+
+3.09
+
+3.08
+
+16.5
+
+16.4
+
+16.3
+
+16.2
+
+16.1
+
+3.05
+
+3.04
+
+3.03
+
+3.02
+
+3.01
+
+15.7
+15.6
+15.5
+15.4
+15.3
+15.2
+15.1
+
+4.5
+
+5
+
+5.5
+
+6
+
+6.5
+
+4.5
+
+5
+
+5.5
+
+6
+
+6.5
+
+4.5
+
+5
+
+5.5
+
+6
+
+6.5
+
+figure 6: the quotients l
+
+1,i/i
+
+1 and l
+
+8,i/i
+
+8 for i = 4 and 6 as functions of log lv .
+
+(cid:0)(2i  1)!!  ((i  1)!!)2(cid:1)2i
+
+unknown) and 2s = (2s  1)!!2s. the rst ve non-vanishing moments are therefore
+2, 34, 156, 1058, 94510. none of the statisticians among our colleagues suggested the
+moments as a quantitative tool, probably because of the enormous errors that these mea-
+surements carry. indeed the variance on a measurement of l
+k if i is odd and
+k,i rapidly grows out of
+hand as i increases. nonetheless the rst ten moments were calculated for the samples for
+the cylinders 59  401, 79  157, 157  1067, 397  793 and 793  1585.
+d is, by denition, an even function in all its variables, all the
+i-th moments, with i odd, are zero. the data only support this weakly, as more than 10% of
+the odd moments lie outside what would be the 95% condence interval if the distributions
+were gaussian.
+
+k if i is even. consequently the error on l
+
+k,i is (2i 1)!!2i
+
+since the distribution ml
+
+1,i/i
+
+8,i/i
+
+1 and l
+
+even though the errors on the moments l
+
+k,i are large, it is instructive to plot some
+of the moments as functions of log lv , for lv = 59, 79, 157, 397, 793. figure 6 shows the
+quotients l
+8, for i = 4, 6, that should tend to 3 and 15 respectively if the limit
+distributions are gaussian. (the case i = 2 is the variance and was discussed previously.) for
+the 8-th fourier coecient, these quotients are monotone decreasing for both i = 4 and 6 and
+fig. 6 repeats in another way the visual observation made from fig. 5 that the distribution
+md as a function of a8 is very close to a gaussian. the plots for the rst fourier coecient
+are less conclusive: the overall behavior is decreasing, but not systematically, and the sixth
+moment is still rather far from 15, perhaps an indication that 15 is not the limit.
+
+the goodness-of-t technique is our last attempt to quantify the departure from nor-
+mality of the dependence on the fourier coecients, particularly of a1. an overview of
+this technique (or more precisely this set of techniques) is given in [das]. we are going to
+concentrate on the random variable
+
+w2
+
+n = nz 
+
+
+
+(fn(x)  f (x))2 df (x)
+
+17
+
+(11)
+
+6
+
+5
+
+4
+
+3
+
+2
+
+1
+
+0.2
+
+0.4
+
+0.6
+
+0.8
+
+figure 7: the asymptotic distribution a(w2) together with the histograms for a1 (dots) and
+a8 (crosses) for the cylinder 59  401 and n = 1000.
+
+known as the cramer-von mises statistic ([das], chap.4). in this expression n is the size of the
+sample and f (x) the cumulative distribution function to which the data are to be compared,
+in our case the gaussian whose variance is that of the sample. if the data x1, x2, . . . , xn are
+ordered (xi  xi+1), then the empirical distribution function fn(x) = fn(x; x1, x2, . . . , xn) is
+a step function dened by
+
+fn(x) =
+
+x < x1
+
+0,
+i
+n, xi  x  xi+1,
+1,
+
+xn  x.
+
+i = 1, . . . , n  1
+
+the measure of integration df (x) in w2
+n is equal to f (x)dx, where f (x) is the probability
+distribution corresponding to f (x). the integral therefore gives more weight to intervals
+in which the random variable x is more likely to fall. this is particularly well-suited for
+our purpose as the gap between empirical and proposed distributions is precisely where the
+distribution peaks. note that, if the data xi, i = 1, . . . , n, are not distributed according to
+the distribution f proposed, the variable w2
+
+n will grow with the sample size n.
+
+the null hypothesis h0 is, henceforth, that fn(x) is a measurement of a variable whose
+distribution is f . under the null hypothesis h0, anderson and darling [ad] gave an analytic
+expression a(w2) for the asymptotic probability distribution of w2
+n, that is, the distribution
+of the variable w2
+n when the sample size n is taken to innity. we used their formula (4.35)
+to plot the curve of figure 7. in chapter 4 of [das], stephens indicates corrections to be
+applied to w2
+n that allows nite samples to be compared to the asymptotic distribution. for
+the ns that will be used below these corrections are negligible. the two rst moments of
+the distribution for w2
+
+6 (independent of n) and 4n3
+
+180n [ps].
+
+n are 1
+
+we concentrate on two fourier coecients, a1 and a8, as our goal here is to see whether
+the departure from normality for a1 can be quantied and whether it decreases with the
+
+18
+
+increase in the number of sites of the lattice. again we consider ai,ai,bi and bi
+as independent and following the same statistics. we can either split the whole available
+samples into smaller sets of n elements or measure the variable w2
+n for a very large n. with
+the rst method, a good average w2
+n can be calculated if the number n/n of smaller sets is
+large enough. the second method will provide a single number that will, with luck, clearly
+reject h0 if it has to be rejected. we apply both.
+
+in splitting the large samples into smaller sets, we have to make a careful choice for n. one
+restriction comes from the actual values of the l2-integral that we want to measure. using the
+data for the cylinder 397793 in the rst format described in the appendix (that is, grouped
+(fn(x)  f (x))2df (x)
+in 401 bins), we can estimate an order of magnitude of w2
+for the whole sample. (this was done using not the technique suggested by statisticians
+[das, ad] but using rather the naive riemann integral over these 401 bins, f (x) being
+estimated at the center of these bins. we did not attempt to evaluate the error in these
+calculations.) for a1 this integral is 0.000046 and approximately 10 times smaller for a8.
+even though there is an important statistical error on these numbers they give us an idea of
+the order of magnitude. we are therefore measuring a very small departure from normality
+
+n/n =r 
+
+
+
+if any. on the one hand, the strategy of splitting the sample requires to get an average cw2
+
+n
+good enough that, if it is dierent from 1
+6, the dierence is unlikely to be of statistical origin
+and should instead indicate that h0 needs to be rejected. in other words, one should break
+the sample into several smaller samples to get a good average. on the other hand, if h0
+is false, the quantity w2
+n increases with n. since the second moment of the distribution for
+n is rather large ( 1
+w2
+45 ), we need to choose n large enough that the statistical error on
+w2
+n be reasonably smaller that the number itself. a rough estimate of this error is given by
+q 1
+45(n/n) where n/n is the number of sets obtained by splitting the sample of size n into
+subsets of n elements. there is an obvious compromise to be struck and we chose n = 1000.
+n for the three cylinders 59  401, 157  1067 and 397  793 using the
+methods described in [das, ad]. these cylinders are the three runs whose data were kept
+in the second format described in the appendix, so that the exact values of all the xi were
+available. this format allowed us to compute again the coecients ai (and bi for 397793).
+the two histograms for a1 (dots) and a8 (crosses) for the cylinder 59  401 are plotted on
+figure 7 together with the asymptotic distribution a(w2). the range [0, 0.8] accounts for
+more than 99% of the observations. even though the crosses seem to follow more closely the
+
+we measured w2
+
+curve than the dots, a quantitative assessment is not inappropriate. the number n/n of cw2
+n listed in table ii is 2p1/(45  2064)  0.0066. note that, for a8, the intervals
+
+n
+is at least 2064 for each of the three cylinders and, consequently, the statistical error on the
+resulting w2
+of condence around the average w2
+6, the predicted mean. any departure
+from normality for a8, if any, cannot be observed from this test. for a1, the predicted 1
+6
+always falls outside of the 95%-condence interval, though barely so for 397  793. this
+conrms the graphical observation made earlier and forces us to reject h0.
+
+n always contain 1
+
+19
+
+n = 1000
+a8
+a1
+
+n = 250000
+a8
+a1
+
+59  401
+157  1067
+397  793
+
+0.1818
+0.1802
+0.1745
+
+0.1673
+0.1638
+0.1656
+
+5.578
+3.490
+2.587
+
+0.1877
+0.0682
+0.0947
+
+table ii: the means w2
+
+n for n = 1000 and the number cw2
+
+n for n = 250000.
+
+as described earlier the other strategy is to compute the numbers w2
+
+n for a large n. we
+chose n = 250000. the disadvantage of doing so is clearly that one has a single measurement
+of w2
+n for the dependence
+on a8 is small for all three cylinders and the hypothesis that as the size of the cylinder (as well
+n approaches a(w2) is totally acceptable. however,
+as n) goes to innity the distribution of w2
+n of a1 indicate that, almost surely, they do not follow these statistics. the
+
+n, not an average. the results appear also in table ii. the (single)cw2
+the values of cw2
+
+null hypothesis h0 must be rejected for a1.
+
+the null hypothesis refers, however, to a lattice of a given size and it is not these with
+which we are ultimately concerned; it is rather the limit of the distributions as the lattice
+size tends to innity that is relevant. one obvious observation from table ii is that the
+gap between the empirical data and a gaussian curve is narrowing as the number of sites
+increases. even though h0 has been rejected, we used the variable w2
+n, n = 250000, to
+examine the relationship between the gap and lv . we did further runs, calculating only
+the value of w2
+n for the dependence on a1. for each of the lattices 59  157, 77  155, 101 
+203, 125 251, 157 313, 199 399, 251 501 and 397 793, we obtained between 20 and 53
+measurements of the variable w2
+n. since h0 does not hold, we do not know the distribution
+of this random variable. on the log-log plot 8, we drew the average for each lattice ()
+together with the whole sample (dots). the spread in the sample for each lattice shows
+that the variance is very large and thus underlines the diculty of obtaining a reliable
+mean for w2
+n(lv ) is monotone decreasing and the linear t
+of the data (with the rst two excluded) plotted on figure 8 indicates that a power law,
+(w2
+6)  lv  (  2.48,   .278), is a reasonable hypothesis. we point out however
+that, with our measurements of w2
+n, we could hardly choose between the above power law
+or any of the form (w2
+n  x)  lv  with x in the interval [0, 1]. for this we would need
+lv   1/6 or lv  10000.
+so, are the fourier coecients ak distributed normally? for k large enough (say k  4),
+it is impossible with our samples to see or calculate any dierence between the empirical
+and the normal distributions. for small k, particularly for a1, the gap is obvious but the
+goodness-of-t technique provides clear evidence that it decreases as the size is increased.
+that the gap vanishes as lv, lh   is not a claim on which we care to insist given only
+the present data.
+
+n. none the less the function w2
+
+n  1
+
+20
+
+1.8
+
+1.6
+
+1.4
+
+1.2
+
+0.8
+
+0.6
+
+0.4
+
+4.5
+
+5
+
+5.5
+
+6
+
+figure 8: log-log plot of w2
+
+n, n = 250000, as a function of lv .
+
+21
+
+3 universality and conformal invariance
+
+of the distributions of h on closed loops.
+
+3.1 two hypotheses.
+
+various crossing probabilities were measured in [lps] for several percolation models at their
+critical points. their fundamental character was stressed by two general hypotheses, one
+of universality, the other of conformal invariance, that were convincingly demonstrated by
+the simulations. the same two hypotheses will be demonstrated for the ising model at
+criticality in section 4. in this section, we propose similar hypotheses for the distribution of
+the function h introduced above and confront them with simulations.
+
+we have considered in the previous section the ising model on the square lattice. other
+lattices could be used. the strength of the coupling could vary from one site to another.
+aperiodic lattices could be considered or even random ones.
+it is, however, easier to be
+specic and to consider two-dimensional planar periodic graphs g. we adopt, as in [lps],
+the denition used by kesten [k] in his book on percolation: (i) g should not have any loops
+(in the graph-theoretical sense), (ii) g is periodic with respect to translations by elements of
+a lattice l in r2 of rank two, (iii) the number of bonds attached to a site in g is bounded.
+(iv) all bonds of g have bounded length and every compact set of r2 intersects nitely
+many bonds in g and (v) g is connected. an ising model is a pair (g, j) where j is a
+positive function dened on bonds, periodic under l. the function j is to be interpreted
+as the coupling between the various sites. only some of the models (g, j) will be critical,
+or, as often expressed, each model is critical only for certain values of the couplings j. the
+following discussion is restricted to models at criticality.
+
+let d be a connected domain of r2 whose boundary is a regular curve and let c be a
+parametrized regular curve (without self-intersection) in the closure of d. if (g, j) is an
+ising model, one can measure the distribution md,c({ak};g, j) as we did in the previous
+section for md on the square lattice. (although the coordinates ak will ultimately become
+our preferred coordinates, we continue for the moment with the ak.) the limit on the mesh
+can be taken either by dilating c and d with the dilation parameter going to innity while
+g xed or by shrinking the planar lattice g uniformly while keeping c and d xed. as
+before we shall assume that this limit measure exists for every regular c. the previous
+section gave strong support for that statement when c is the boundary of d and (g, j) the
+isotropic ising model on the square lattice. we examine the following hypothesis.
+hypothesis of universality: for any pair of ising models (g, j) and (g, j), there
+exists an element g of gl(2, r) such that for all d and c
+
+md,c({ak};g, j) = mgd,gc({ak};g, j).
+
+(12)
+
+the notation gd and gc stands for the images of d and c by g. the transformation g does
+not aect the underlying lattice g. for example, if g is the regular square lattice, it remains
+the regular square lattice. the domains d and gd are simply superimposed on g and on
+g. for the usual ising models, those dened on other symmetric graphs (the triangular and
+the hexagonal) with constant coupling or the model with anisotropic coupling on a square
+
+22
+
+lattice, the matrix g is diagonal. it is easy to introduce models for which g would not be
+diagonal. we have not done so for the ising models, but an example for percolation is to be
+found in [lps].
+
+to introduce the hypothesis of conformal invariance of the distributions md,c({ak};g, j),
+it is easier to restrict at rst the discussion to the ising model on the square lattice g(cid:3)
+with the constant coupling function j(cid:3). a shorter notation will be used for this model:
+md,c({ak}) = md,c({ak};g(cid:3), j(cid:3)). we endow r2 with the usual complex structure, in other
+words we identify it with the space of complex numbers in the usual way. for this complex
+structure any holomorphic or antiholomorphic map  denes a conformal map, at least
+locally. given two domains d and d1 we consider maps  that are bijective from the closure
+of d to the closure of d1 and holomorphic (or antiholomorphic) on d itself. thus d1 = d.
+let c be the image of c.
+
+hypothesis of conformal invariance: if  satises the above conditions, then
+
+where the fourier coecients a
+to the arc-length parameter on c in the induced metric, or equivalently as:
+
+md,c({ak}) = md,c({a
+k})
+k appearing as arguments of md,c are measured with respect
+
+(13)
+
+a
+k =
+
+1
+
+2z 2
+
+0
+
+hd  c()eikd
+
+(14)
+
+where c is the restriction of  to c, hd is the function h on the domain d and  is the
+(usual) arc-length parameter of the original loop c.
+
+even though we have formulated this hypothesis for the ising model on the square lattice
+with constant coupling, it is clear that it can be extended to any model (g, j) using the
+hypothesis of universality.
+
+3.2 simulations.
+
+since the curve c is no longer necessarily an extremity of a cylinder, our rst step is to
+acquire some intuition about the measure md,c for curves c inside the domain d. to do
+so, we continue our investigation of the cylinder for (g(cid:3), j0). thus d remains the cylinder,
+but we select several curves inside it. on the cylinder 397  793 the curves ci are sections
+coinciding with the leftmost column (c0), the 9-th column (c1), the 17-th (c2), the 33-
+rd (c3), the 65-th (c4) and the middle column (c5). these curves are at a distance of
+0, 0.0201, 0.0403, 0.0806, 0.161 and 0.997 from the boundary measured as a fraction of the
+circumference. to the distributions on these curves, we have joined those on the curves
+symmetric with respect to the middle of the cylinder, doubling the numbers of congurations
+studied for all of them but the middle one. we have not checked that the measurements on
+one curve and one its mirror image are statistically independent. however the closest pair
+(the curves on columns 65 and 729) are at a distance of 665 mesh units, that is, more than
+5
+6 of the full length of the cylinder. since the fourier coecients at the two extremities were
+shown in the previous section to be independent, we must not be very far from statistical
+
+23
+
+figure 9: two typical congurations on a disk of radius 200 with free boundary.
+
+independence in the present case either. figure 10 presents the measure md,ci as functions
+of the real part of the fourier coecients ak, k = 1, 2, 4, 8, 16, 32. each graph shows the
+dependence on a xed ak for the six curves. on each graph the lowest curve at the origin
+corresponds to c0 = boundary, the case studied in section 2. as the curve c is taken closer
+to the center of the cylinder, the distribution becomes sharper at the center. this is perhaps
+to be expected as the sites at the boundary are freer to create clusters of intermediate size
+than are the sites in the bulk, increasing thereby the values of the various fourier coecients.
+(see figures 9 and 15.) another natural feature is the gathering of the distributions for all
+the interior curves on the plot for a16 and a32. indeed the higher fourier coecients
+ak probe small scale structure, at the approximate scale of 1
+k in circumference units. for
+example, the fourier coecient a32 will be sensitive mostly to clusters having a diameter
+of  12 mesh units or less and these clusters intersecting the curves c at a distance of 32 or of
+64 mesh units from the extremity should be distributed more or less the same way. in other
+words the bulk behavior is reached closer to the boundary for higher fourier coecients. one
+last observation about these plots is that the bulk distribution is denitely not a gaussian in
+a1! it is sharply peaked at the center but still has a wide tail. (the distribution in a1
+measured along the mid-curve of the cylinder can be better seen on figure 11 below.)
+to examine the hypotheses of universality and conformal invariance, we ran simulations
+on other pairs (g, j) and on other geometries. we discuss both at the same time. three
+other pairs (g, j) were considered: the regular triangular and hexagonal lattices g and ghex
+with the constant function j and the regular square lattice g(cid:3) with a function j that takes
+a constant value jh on the horizontal bonds and another constant value jv on the vertical
+ones with jh = 2jv. we shall call this model the anisotropic ising model. this choice of
+j makes the horizontal bonds stronger than the vertical ones and clusters of identical spins
+will have a shape elongated in the horizontal direction if compared to those of the isotropic
+model (g(cid:3), j(cid:3)).
+the critical couplings are determined by sinh 2jh sinh 2jv = 1 (see [b] or [mw]). if the
+hypothesis of universality is accepted then it follows from formula (5.9) of xi.5 of [mw] that
+the matrix g that appears in (12) (when (g, j) is the critical model on the square lattice
+
+24
+
+1.75
+1.5
+1.25
+1
+0.75
+0.5
+0.25
+
+1
+0.8
+0.6
+0.4
+0.2
+
+-1.5-1-0.50.511.5
+
+-2 -1
+
+1 2
+
+0.4
+0.3
+0.2
+0.1
+
+0.3
+0.25
+0.2
+0.15
+0.1
+0.05
+
+0.6
+0.5
+0.4
+0.3
+0.2
+0.1
+-3-2-1
+
+0.2
+0.15
+0.1
+0.05
+
+1 2 3
+
+-4 -2
+
+2 4
+
+-6-4-2 2 4 6
+
+-10 -5
+
+5 10
+
+figure 10: distributions md,ci as functions of the real part of ak in the natural order: k = 1,
+k = 2, k = 4, k = 8, k = 16, k = 32.
+
+and (g, j) the anisotropic model) is2
+
+0 sinh 2jh (cid:19) .
+(cid:18) 1
+
+0
+
+(the critical value of jh for which jh = 2jv is 0.609378 . . . .) the lattice used for the
+anisotropic model has lv = 312 and lh = 963. these dimensions correspond to a cylinder
+on the square lattice with a horizontal/vertical ratio of 1.999, very close to the one used
+for the square lattice 397  793 that has a ratio 1.997. the lattice used for the triangular
+lattice was oriented in such a way that every triangle had one side along the horizontal axis
+and the dimensions used were lv = 416, that is, the number of horizontal lines containing
+sites, and lh = 712, the number of sites on these lines. the aspect ratio for a square
+lattice corresponding to these numbers is 2.001. the largest hexagonal lattice used was of
+size 464 1069. again 464 is the number of horizontal lines containing sites and lh = 1069
+is the length of the cylinder in mesh units. the corresponding aspect ratio for the square
+lattice is 1.995. we also measured the smaller hexagonal lattices of sizes 116  267 and
+235  535. the dierence between these four ratios is smaller than the limitation due to
+niteness discussed in [lpps]. the distances of the curves ci from the boundary were chosen
+as close as possible to those used for the cylinder on (g(cid:3), j(cid:3)) and given above. (the manner
+in which the fourier coecients of the restriction of h to these curves were calculated is
+described in the appendix.)
+
+as evidence for the hypothesis of conformal invariance, we compared three dierent
+geometries, namely the cylinder used in paragraph 2.2, a disk, and a square. we identify
+the cylinder with the rectangle in the complex plane of height v (its circumference) and of
+length h. the analytic function z  e2z/v maps this cylinder onto an annulus. with our
+choice of dimensions for the cylinder (v = 397, h = 793), the ratio of the inner and outer
+radii is less than 105 and unless the outer diameter of the annulus is larger than 105, the
+
+2we are grateful to christian mercat for this reference. see also his thesis ([me]) in which the conformal
+
+properties of the ising model are discussed from quite a dierent standpoint.
+
+25
+
+inner circle contains a single site. we took the freedom to add this site to the domain and
+to identify it with a disk. in other words, although the geometries of the cylinder and of the
+disk are not conformally equivalent in the sense of the hypothesis, the nite size realization
+used here for the disk diers by a single site from the annulus conformally equivalent to the
+cylinder. the radius of the disk was taken to be 300.2. the disk can be mapped onto the
+square by the schwarz-christoel formula
+
+dw
+
+(15)
+
+(z) =z z
+
+0
+
+1
+
+p(w2  ei/2)(w2  ei/2)
+
+which denes a map, with the unit disk as domain, holomorphic except in the four points
+ei/4. both maps satisfy our requirements. for the square and the disk, the distributions
+were measured at the boundary. for the disk, they were also measured on the four circles
+corresponding to the inner circles on the cylinder that are not at its center. this latter
+circle on the cylinder is mapped, inside the disk of radius r = 300.2, onto a circle of radius
+ 0.57, less than one mesh unit. the distribution md,c on this circle is clearly impossible
+to measure for this lattice size.
+table i of the previous section has been completed with the data k = k/2( k)2 for
+the ve new experiments: the three new ising pairs (g, j) (triangular lattice, hexagonal
+lattice and anisotropic function j) on the original cylindrical geometry and the two new
+geometries (disk and square) covered by the square lattice. for the square, two runs were
+made on a lattice of 80  80 and 254  254 sites. the data for the disk and both squares
+were also drawn on figure 2. as discussed previously, it can be seen there that their ks
+follow exactly the same pattern as those of the cylinders and that the ordinate at the origin
+of their ts falls in the same very small window [1.47071, 1.47262]. it is interesting to notice
+that the small lattice 80 80 on the square geometry leads to ks that are between those of
+the lattices 199  397 and 397  793 for the cylinder. considering that the number of sites
+in the lattice 199  397 is more than twelve-fold that in the small square, this might seem
+surprising. the explanation is likely to be that the number of sites on the boundary where
+the distribution is measured is the leading cause of the nite size eect. the ks for the
+triangular lattice and for the anisotropic model were obtained from the 401-bin histograms of
+the empirical distributions. (see the appendix.) no attempt was made to provide condence
+intervals. the linear ts of the k, k = 1, 2, 4, 8, are 1.4723 + 0.0152k (triangular lattice)
+and 1.4695 + 0.0180k (anisotropic model). for the largest of the square lattices it was
+1.4712 + .0102k. the ordinates at the origin (1.4723, 1.4695 and 1.4712) are extremely close
+to the narrow window above for the larger cylinders, the disk and squares, especially striking
+as the samples for these experiments (200k) were the smallest of all in this section and the
+previous one. the linear t for the largest of the hexagonal lattices is 1.4793 + .0294k and
+the ordinate at the origin is not quite so good but the slope remains large compared with
+the other ts. indeed the product of the slope and the circumference lv is in the four cases:
+ 8.1 (square);  6.3 (anisotropic);  6.4 (triangular);  14. (hexagonal). this suggests
+that the circumference of the hexagonal lattice must be twice that of the triangular lattice in
+order to obtain comparable results, perhaps because it contains only half as many bonds per
+site as the triangular lattice. the ordinate at the origin (1.4770) is nevertheless close and
+this is important because it conrms the suitability of the construction of the function h that
+
+26
+
+0.7
+0.6
+0.5
+0.4
+0.3
+0.2
+0.1
+
+0.8
+0.6
+0.4
+0.2
+
+1.75
+1.5
+1.25
+1
+0.75
+0.5
+0.25
+
+-1.5-1-0.50.511.5
+
+-1.5-1-0.50.511.5
+
+-1.5-1-0.50.511.5
+
+0.25
+0.2
+0.15
+0.1
+0.05
+
+0.3
+0.2
+0.1
+
+0.4
+0.3
+0.2
+0.1
+
+-4 -2
+
+2 4
+
+-4 -2
+
+2 4
+
+-4 -2
+
+2 4
+
+figure 11: distributions md,ci as functions of the real part of ak (k = 1 on the rst line,
+k = 8 on the second) on three dierent curves c: the boundary (rst column), the curve
+at a distance of 16 mesh units on the cylinder 397  793 and its conformal images (second
+column) and the curve at the middle of the cylinder (last column).
+
+is described in the appendix, a construction less obvious and more dicult to implement for
+the hexagonal lattice than for the others.
+
+the plots of figure 11 show the measure as a function of a1 and a8 when h is
+restricted to three dierent curves on the cylinder or to their conformal images on other
+geometries: the boundary, the second inner circle (at a distance 0.0403 from the boundary
+measured as a fraction of the circumference) and the circle in the middle of the cylinder. for
+the boundary (rst column of figure 11) ve models have been drawn: the cylinder covered
+with the square, the triangular and the anisotropic lattices, the disk and the square both
+covered with the square lattice. (the numbers of sites on the various lattices are those given
+earlier in this paragraph; only the data for the square of side 254 were drawn here.) for the
+second column of the gure, the same models were used but no measurements were made
+for the square. for the curve in the middle (third column), only the three lattices on the
+cylinder were measured, because the corresponding circle on the disk is too small to allow
+for reliable measurements. (see below.) to these three lattices a fourth square lattice, with
+199  2399 sites, was added on the a1 plot. the agreement is convincing, as it is for the
+distributions along the other curves ci that we measured.
+at rst glance no cogent comparison can be made between the central circle on the
+cylinder and a circle in the disk. a circle in the middle of a short cylinder is equivalent to a
+circle in an annulus, but when the cylinder becomes extremely long, it is more like a circle
+in the plane. for example, if the cylinders of size 397  793 and 199  2399 are mapped to
+an annulus of outer radius 1, the inner radii will be 4  106 and 1  1033 and the images
+of the central circles will have radii 2  103 and 4  1017 respectively (too small to make
+a measurement). all circles in the plane are, however, conformally equivalent. so we can
+still compare the distributions on the central circle of a cylinder with the distribution on a
+circle in the plane. this is easier said than done, because the larger the circle the larger the
+domain needed to make useful measurements. there is none the less a method, so that the
+
+27
+
+6
+
+5
+
+4
+
+3
+
+2
+
+2
+
+4
+
+6
+
+8
+
+figure 12: the k, k = 1, . . . , 8 on the boundary and on three inner circles of the disks of
+radius 100.2 (+), 200.2 () and 300.2 (). the continuous lines represent the corresponding
+data for the cylinder 397  793.
+
+distributions measured on the central circle on both cylinders 397  793 and 199 2399 can
+be considered as distributions in the bulk.
+we rst calculate the ks for progressively smaller circles inside disks and observe that
+they do tend toward a limiting distribution. the main diculty is again the nite-size
+eect revealed in figure 2. we compare corresponding inner circles on disks of radius
+100.2, 200.2, 300.2. on each of these, the distributions were measured on inner circles of
+radius 1., 0.5, 0.4, 0.3, 0.2, 0.1319, 0.1 and 0.04790 times the outer radius. the smallest inner
+circle on the disk of radius 100.2 has a radius 4.8 in mesh units. finite-size eects will be
+indeed important! though we measured the ks for k up to 32, the overall behavior is clear
+for k = 1, . . . , 8, as presented on figure 12. only the circles of relative radius 1., 0.4, 0.2
+and 0.0479 were retained for ease of reading. the + are for the disk of radius 100.2, the
+ for 200.2, the  for 300.2 and the corresponding data for the cylinder 397  793 are
+joined by straight lines. for the boundary, the three disks give a better approximation of
+the limiting distributions than the cylinder but for the inner circles the roles are exchanged.
+the spread between the three disks, and between them and the cylinder, is particularly
+important for the smallest inner circles but the way it decreases with the increase of the disk
+
+28
+
+5
+
+4
+
+3
+
+2
+
+5
+
+10
+
+15
+
+20
+
+25
+
+30
+
+figure 13: the k, k  {1, 2, . . . , 32} on a disk (+) and on a cylinder ( and (cid:4)) for various
+inner circles.
+
+radius supports the hypothesis that a common distribution for these two geometries exist
+on each of these circles.
+
+a comparison of the distributions on inner circles for the disk and the cylinder is therefore
+possible. figure 13 shows the ks, k  {1, 2, . . . , 32}, for the cylinder 397  793 () and
+the disk of radius 300.2 (+). curves were added to help the eye. seven circles were used.
+their distance from the boundary of the cylinder, in mesh units, and their relative radius for
+the disk (in parenthesis) are 0(1.), 8(0.881), 16(0.776), 32(0.602), 64(0.363), 128(0.132) and
+192(0.0479). the measurements on the central circle of the cylinder were added ((cid:4)). only
+for the two smallest circles of radius 0.132 and 0.0479 is the agreement less convincing but,
+again, the previous gure showed how the gap diminishes as the outer radius increases. we
+shall therefore refer to the limiting distribution, approached by that on central circles of
+cylinders and on very small inner circles of disks, as the bulk behavior irrespective of the
+global geometry.
+
+although the random variable a1 is not normal, figure 11 and, less clearly, figure 10
+show that higher fourier coecients are close to normal. in fact, starting around k = 8,
+the histograms of the ak are graphically undistinguishable from the normal curves whose
+variances are those of the samples. one may ask quite naturally if the distribution of these
+variables is given, at least asymptotically, by the law (8) with, maybe, another constant rbulk.
+the linear t for the bulk
+is 4.380 + 0.0065k and the slope is slightly smaller than that of
+the boundary, an indication that nite-size eects are smaller in the bulk.
+it therefore
+seems likely that the variables ak are asymptotically normally distributed as in (8) with
+
+k
+
+29
+
+(rbulk)2 = 2.190. the ratio (rbulk)2/r2
+
+b is 2.98, very close to 3.
+
+the existence of a bulk behavior on nite geometries is by no means initially evident.
+one supposes that the distribution of spins in a xed, bounded region for the ising model
+on the complete planar lattice at criticality on a lattice whose mesh is going to 0 is such
+that they are overwhelmingly of one sign with substantially smaller islands of opposite signs
+and that these islands in their turn are dotted with lakes and so on. this is conrmed by
+the two typical states of figure 9 in which the large islands of opposite spin appear only in
+regions inuenced by the boundary. typical states for the cylinder are similar (figure 15)
+but the conformal geometry is such that the bulk state is reached closer to the boundary.
+the conclusion is not, apparently, that in an enormous disk, thus in the plane, the integral
+of h against any xed smooth function on a xed smooth curve is generally very close to
+0, so that the distribution of each of the fourier coecients ak and ak approaches a
+-function. rather, they are approaching a distribution which is not trivial but is, at least
+for k small, clearly not a gaussian. what we may be seeing is the eect of the shifting
+boundaries of the large regions of constant spin. once a circle in the plane is xed, the
+boundary between even two very large regions of dierent spin can, as the conguration is
+varied, cut it into intervals of quite dierent size.
+
+3.3 clarication.
+
+in order not to encumber the initial discussion with unnecessary abstraction, we worked
+with the distributions md,c({ak},g, j). a better theoretical formulation would be in terms
+of a measure md,c on the set of real-valued distributions in the sense of schwartz on the
+oriented smooth curve c, or if c were merely regular (thus suciently dierentiable) on
+some sobolev space. to be more precise, the measure is on the set of distributions that
+annihilate the constant functions. (to be even more precise, this is so only if the curve is
+contractible. for other curves, such as the circumference of a cylinder, the set of distributions
+whose value on the constant function 1 lies in {2m | m  z, m 6= 0}, may have a nonzero
+measure. under many circumstances, it is small enough that it can for numerical purposes be
+supposed 0.) to introduce the measure md,c concretely, we need a basis for the dual space,
+thus in principle just a basis for the smooth (or regular) functions on c modulo constants.
+if this basis is {k|k = 1,} then   {(k)} denes a map of the distributions into a
+sequence space and a measure is just a measure on the collection of real innite sequences,
+{1, 2, . . .}. it would have to be dened by some sort of limiting process from measures on
+rn . the simplest such measures are product measures. given such a measure on the space
+of real sequences, it denes, at least intuitively, a measure on distributions if for almost all
+sequences {k}, the assignment k  k extends to a distribution, thus in particular if it
+lies in some sobolev space. for example, if a parametrization x(), 0    2 of the curve
+has been xed then one possible choice of the basis is the collection
+
+{x()  eik, x()  eik|k > 0}
+
+then it is better to put the k together in pairs and to use sequences {ak} (or ak = ak/ik)
+of complex numbers. this has been the point of view of this paragraph. starting with a
+
+30
+
+given parametrization, we examined the joint distributions of the complex random variables
+ak.
+
+the parametrization also allows us to introduce the measure d/2 and thus to identify
+functions with distributions. in particular, in order for a measure on sequences to yield a
+measure on distributions it is necessary, and presumably usually sucient, that the sum
+
+akeik
+
+xk=
+
+converges as a distribution for almost all sequences ak. for example, if the measure is a
+gaussian dened by
+
+exp(
+
+k|ak|2)
+
+(16)
+
+xk=1
+
+then the expectation e(|ak|2) is 1/(2k), so that p|ak|2/k converges almost everywhere.
+
+as a result, the sum (16) converges almost everywhere as a distribution.
+
+our method is numerical, so that we approximate the measure on sequences from a large,
+nite scattering of functions h, or rather of their derivatives, because the derivative h is well
+dened as a distribution, although h itself is not. the distribution h is a sum of -functions,
+with mass  at each point where the curve crosses a contour line of the function h. since
+its value on the constant function 1 is the sum of those jumps, this value is 0, as noted,
+whenever that sum necessarily vanishes, either because the curve is contractible or because
+the cylinder is extremely long.
+
+although our construction required a specic parametrization, the resulting measure on
+distributions may be independent of the parametrization and, more generally, even of the
+choice of basis. we did not attempt to verify this. it may be useful, however, to describe an
+example.
+
+when d is a disk of radius 1 with the boundary c parametrized in the usual way by
+arc length , the function h can be recovered by integration with respect to d from the
+distribution h. the measure on distributions on c is very close to if not equal to the
+gaussian measure associated to a constant, 2r2
+b, times the dirichlet form q(h). we recall
+that to calculate q(h), or q(h, h) if we want to stress that it is a quadratic form, we
+extend the function h as a harmonic function to the interior and then
+
+q(h) = d(h) = d(h, h) =
+
+or, extending it to an hermitian form,
+
+q(h) = d(h) = d(h, h) =
+
+1
+
+4z {(
+4z ((cid:12)(cid:12)(cid:12)(cid:12)
+
+1
+
+h
+x
+
+)2 + (
+
+2
+
+h
+
+x(cid:12)(cid:12)(cid:12)(cid:12)
+
++(cid:12)(cid:12)(cid:12)(cid:12)
+
+h
+y
+
+)2}dxdy.
+2) dxdy
+y(cid:12)(cid:12)(cid:12)(cid:12)
+
+h
+
+(17)
+
+if we use again the symbol h for the harmonic function inside d. if we identify formally
+distributions with functions by means of the bilinear form
+
+1
+
+2z 2
+
+0
+
+h1()h2()d = hh1, h2i,
+
+31
+
+or if h is real,
+
+d(h) =
+
+|kak|2,
+
+1
+
+2xk6=0
+xk>0
+k|ak|2.
+
+or, in complex terms,
+
+1
+
+2z 2
+
+0
+
+h1()h2()d = hh1, h2i,
+
+(18)
+
+and regard therefore q and d as operators, so that q(h) = hqh, hi and d(h) = hdh, hi,
+then, as a simple calculation with the functions eik shows, d has 0 as an eigenvalue of multi-
+plicity one, eigenvalues 1
+6 , . . . ,
+each with multiplicity two and on the domain of q, the orthogonal complement of the con-
+stant functions, 4d = q1. more precisely, and this is the best form for our purposes, if the
+
+2, . . . , each with multiplicity two, q has eigenvalues 1
+
+2 , 3
+
+2 , 2
+
+2, 1
+
+4, 1
+
+fourier expansion of h ispk akeik then
+
+suppose now that d is any domain, c its boundary, and  any smooth function on c.
+
+the function  denes a linear form
+
+  ()
+
+(19)
+
+on distributions. by conformal invariance, the measure on distributions on c is obtained by
+transport of the measure on distributions on c using any conformal transformation  from
+d to d. if the measure on the distributions is in fact well-dened, independently of any
+choice of basis, then the characteristic function of (19) is formally calculated as
+
+z exp(cid:0)2r2
+
+b(q, ) + i()(cid:1) /z exp(cid:0)2r2
+
+b(q, )(cid:1)
+
+which is
+
+exp(2q()/8r2
+b)
+
+if  =    and  is the distribution such that () = q(, ). consequently, the
+probability distribution of the random variable dened by (19) will be gaussian with variance
+2 given by
+
+but  = q1 so that
+
+1/22 = 2r2
+
+b/q().
+
+1/22 = r2
+
+b/2d().
+
+(20)
+
+suppose for example that d is a square of side 
+
+2 and that we parametrize its boundary
+by arc length: s = s(t), s(0) being one of the vertices. we write t = t(s) for the inverse
+function. the schwarz-christoel map  of the disk onto the square is depicted in figure 14
+where the curves intersecting at the center of the square are the image of the rays on the disk.
+
+32
+
+figure 14: the schwarz-christoel map from the disk to the square. the images of the rays
+of the disk are the curves intersecting at the center of the square.
+
+although arcs of equal length on the circular boundary are mapped to intervals of dierent
+lengths on the edge of the square, this eect is important only close to the vertices. thus
+if k is the function s(t)  cos(kt) and k = k   then the distribution of the random
+variable dened by k should be gaussian with variance d(k)/r2
+b. moreover d(k) is
+obtained from the fourier coecients of k and they are calculated by observing that, apart
+from a constant factor, which is unimportant, the schwarz-christoel transformation (15)
+restricted to the boundary w = ei of the unit disk can be expressed in terms of the elliptic
+integral of the rst kind,
+
+f (t|2) =z t
+
+0
+
+d
+
+.
+
+p1  2 sin2 
+with our choice of s(0), the function s(t), for t  [0, 
+f (t  
+
+4|2) +
+
+
+4
+f ( 
+
+2 ], is
+
+s(t) =
+
+
+4
+the graph of (t, s(t)) on [, ] is obtained from that on [0, 
+2 ). the
+function s = s(t) is odd and composition of odd or even functions with s preserves their
+parity. if the basis {s(t)  cos lt, s(t)  sin lt, l > 0} is chosen and l(t) = cos(ls(t)) (or
+sin(ls(t))) written as
+
+2 ] by translation by ( 
+
+4|2)
+
+2 , 
+
+.
+
+cl0
+2
+
++xk1
+
+(clk cos kt + slk sin kt),
+
+then the dirichlet form is
+
+d(l) =
+
+k(c 2
+
+lk + s2
+
+lk).
+
+1
+
+4xk1
+
+33
+
+(21)
+
+(22)
+
+for a given l the random variables al and al are identically distributed on the disk, at
+least when the number of sites at the boundary is a multiple of 4. on the square they were
+shown to be also identically distributed, at least in the limit of the simulations, when these
+variables are measured with respect to the induced parameter. however, if the arc-length
+parameter s is used on the square, the two variables as
+l are identically distributed
+only when l is odd. the graphs of two functions cos(l(t)) and sin(l(t)) are translations of
+each other when l is odd but not when l is even. the variances of the random variables as
+and as
+
+l must then be distinguished and they are given by
+
+l and as
+
+l
+
+(s
+
+al)2 =
+
+1
+4r2
+
+bxk1
+
+kc 2
+lk
+
+and (s
+
+al)2 =
+
+1
+4r2
+
+bxk1
+
+ks2
+lk.
+
+(23)
+
+using these formulas we shall compute the numbers
+
+s
+al =
+
+l
+2(s
+
+al
+
+)2
+
+and s
+
+al =
+
+l
+2(s
+
+al
+
+)2
+
+introduced in section 2.
+
+the coecients
+
+clk =
+
+1
+
+z 
+
+
+
+cos ls(t) cos kt dt and slk =
+
+sin ls(t) sin kt dt
+
+1
+
+z 
+0 (1  2 sin2 ) 1
+
+
+
+are therefore needed. they can be calculated numerically. the convergence rate of (21) is
+however slow. the elliptic integral f (t|2) =r 2
+2 d behaves like (t  
+4 )
+2 as
+4 . consequently, the function s has a similar behavior at integer multiples of 
+t  
+2 and
+the absolute values |clk| and |slk| decrease approximately as m/k
+2 . even with the 250
+rst fourier coecients clk, k = 1, . . . , 250, the parseval identity for the function cos l(t)
+is satised to only ve decimal digits. we decided nonetheless to restrict the sums (23) to
+these 250 rst coecients. since all the terms in d(l) are positive, the truncated sums will
+lead to larger estimates of the s than the true sums.
+
+1
+
+3
+
+since we wish to compare s
+
+with those measured with the simulations done
+on the square of side 254, it is appropriate to modify slightly the dirichlet form (22) to
+take into account nite-size eects. paragraph 2.2 showed that the quantity k/(22
+k) is not
+strictly constant on a nite lattice but grows slowly. we found that
+
+and s
+
+al
+
+al
+
+k
+22
+k
+
+= 2r2
+
+b(1 + k)
+
+was a good approximation. (see figure 3.) since the ratio k/4r2
+the variance, we decided to replace it by
+
+b in (23) plays the role of
+
+k
+
+4r2
+
+b(1 + k)
+
+.
+
+the slope  is that of the linear t appearing in figure 2 for the square with 254 254 sites.
+
+34
+
+l , that is s
+and s
+
+table iii lists the values of s
+
+, l = 1, 2, 3, 4, 5, as measured by the
+al
+simulations and the values s
+obtained using the (truncated) sums (23) with
+nite-size eects introduced as discussed. the original values l have been added to give an
+idea of the discrepancy that the use of the arc-length parameter introduces. the values s
+l
+and s
+l are close to one another and the latter are always greater than the former, probably
+because of the truncation.
+
+al
+
+and s
+
+al
+
+al
+
+l
+
+1
+
+2
+
+3
+
+4
+
+5
+
+l
+
+s
+l
+
+s
+l
+
+1.480
+
+1.494
+
+1.505
+
+1.510
+
+1.520
+
+1.380
+2.241
+0.963
+1.365
+1.921
+1.146
+1.451
+
+1.388
+2.251
+0.974
+1.386
+1.958
+1.181
+1.499
+
+table iii: the numbers l, s
+they dier, the  for al is placed above the  for al.
+
+l and s
+
+l for l = 1, 2, 3, 4, 5 for the square of side 254. when
+
+3.4 conditional probabilities.
+
+suppose that the curve c of the previous section is the disjoint union of two curves c1
+and c2. then the space of distributions on c is the product of the space on c1 and the
+space on c2. we x the model to be the ising model at criticality on the square lattice and
+denote a distribution by  and the measure whose meaning was claried in the previous
+paragraph by md,c(). then, in principle, the conditional probability md,c(1|2) on the
+set of distributions on c1 is dened for each distribution 2 on c2. whether this is so is not
+so easy to test experimentally. to approximate the conditional probability numerically with
+our methods we have to choose a neighborhood u of 2 and proceed as before, eliminating
+from the sample all distributions  = (1, 2) for which 2 does not fall in u. we recall
+that i is a distribution given by a sum of -functions on ci. first of all, the neighborhood
+u is a neighborhood in an innite-dimensional space, so that it is going to be, in any case,
+very large. secondly, we cannot eliminate too many distributions for then the samples would
+be far too small. thus u is going to have to be enormous. the notion seems nevertheless
+to be workable even at a coarse experimental level.
+
+there are two properties that one might expect. we can introduce and study experimen-
+tally the measure on the distributions on c1 obtained when the spins on c2, or in a small
+neighborhood of it, are all taken to be +1. this of course presupposes some kind of compat-
+ibility of c2 with the lattice structure, as in the examples studied where c2 passes through a
+row of sites, or some way, either theoretical or practical, of specifying the neighborhood, but
+granted this, we consider the measure md,c1(1|c2, +) obtained from this familiar condition.
+it is dened quite dierently than the conditional probability md,c(1|0) for 2  0. (see
+
+35
+
+figure 15: congurations on cylinders.
+
+paragraph 5.2.) none the less, one could hope that they were equal. the experiments to
+be described are too coarse to establish this with any degree of certainty, but do render the
+expectation plausible.
+
+the second property is the markovian property. suppose that c1 is the disjoint union of
+c3 and c4, so that 1 is a pair (3, 4). suppose moreover  this is the essential condition 
+that c2 separates c3 from c4. then one can hope that conditioning the measure md,c(1|2)
+on 4 leads to a measure md,c(3|4|2) that is equal to md,c(3|2), thus the measure on
+the distributions on c3 when the distributions on c2 and c4 are given is independent of the
+distribution on c4. the inuence of the distribution 4 is not propagated across c2 when
+the distribution on c2 is xed.
+
+we begin by examining figure 15 in which three typical states are shown, from left
+to right: free boundary conditions on a cylinder of circumference 199 and length 31; free
+boundary conditions on a cylinder of circumference 199 and length 399; and free boundary
+conditions on the left but + boundary conditions on the right on a cylinder of circumference
+199 and length 31. the picture in the center is the familiar one: towards the middle there is
+a tendency to form very large clusters of constant sign, indeed there is only one very large
+(white) cluster but at the boundary the clusters are smaller. recall as well that for a cylinder
+there is conformal distortion. in figure 9 the phenomenon is illustrated without distortion:
+there is one large (white) cluster on the left and one large (black) one on the right. in the
+picture on the left of figure 15, the freedom to form smaller clusters is reinforced by the
+proximity of the two boundaries. there is almost no bulk behavior at all. on the other
+hand, in the picture on the right, the boundary condition is forcing a single large cluster on
+the right and this cluster is attempting to envelop the left boundary as well.
+
+this qualitative description is conrmed by a calculation, for the measures on the distri-
+butions on the left boundaries, of the numbers k introduced in paragraph 2.2. the results
+are plotted in the diagrams of figure 16 for the measure associated to the left boundary in
+the three cases. in clockwise order from the upper left, they are: free boundary conditions
+on a cylinder of size 199  31; free boundary conditions on a cylinder of size 199  399;
+in
+boundary conditions on the left free, those on the right constant, and size 199  31.
+
+36
+
+3
+2.75
+2.5
+2.25
+2
+1.75
+1.5
+1.25
+
+3
+2.75
+2.5
+2.25
+2
+1.75
+1.5
+1.25
+
+5 10 15 20 25 30
+
+3
+2.75
+2.5
+2.25
+2
+1.75
+1.5
+1.25
+
+3
+2.75
+2.5
+2.25
+2
+1.75
+1.5
+1.25
+
+5 10 15 20 25 30
+
+5 10 15 20 25 30
+
+5 10 15 20 25 30
+
+figure 16: the numbers k associated with the conditional distributions. (see text.)
+
+the diagram on the lower left, they are superposed. the graph in the upper right is like
+those of figure 2, except that we have used new statistics with a smaller sample, so that
+the graph is somewhat irregular. all graphs are pretty much the same except for the rst
+four or ve values of k. as far as the higher values of k are concerned the two boundaries
+are eectively at an innite distance from each other. for k = 1, there is a pronounced
+dierence between the graphs so that the distribution of a1 on the short cylinder is atter
+than on the long cylinder. on the other hand, when the boundary condition is imposed the
+value of k increases and the distribution of a1 is peaked. the superposition of the three
+curves is shown in figure 17.
+we now take c1 to be the left boundary of a cylinder of aspect ratio 199/31 and c2 to be
+the right boundary. to test the assertion that md,c1(1|c2, +) is the conditional probability
+md,c(1|0), we thermalize for free boundary conditions at both ends of a cylinder of size
+199  31 but only keep those samples for which
+
+|a2| < .22,
+|a2| < .22,
+
+|a3| < .353,
+|a3| < .353.
+
+|a1| < .125,
+|a1| < .125,
+
+(24)
+
+(25)
+
+about 3 out of every 10,000 states satisfy this condition. so our crude experiments will
+not permit a substantially smaller neighborhood of 0. in figure 18, we plot the resulting
+collection of k together with those obtained from the previous experiment with + boundary
+conditions on the right side. we see that in spite of the large size of the neighborhood, the
+two graphs are quite close.
+it is the values of 1 and 2 that tell. the graphs of the
+distributions of a1 are compared in figure 19 to ensure that not only are the variances
+close but also the probability measures themselves. without being at all conclusive, the
+experiment encourages the belief that
+
+md,c(1|0) = md,c1(1|c2, +).
+
+37
+
+1
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+-3
+
+-2
+
+-1
+
+1
+
+2
+
+3
+
+figure 17: the distribution of a1 for the three pairs (domain, boundary conditions) de-
+scribed in the text. at the center the curves are in the order, from top to bottom: short
+cylinder with constant spins on the right, long cylinder, short cylinder with both sides free.
+
+in order to test whether the probabilities are markovian we considered on the one hand
+a cylinder of size 199  31 on which we thermalized, keeping only the distributions that on
+the right boundary satised the conditions
+
+|a1| <.125,
+.3  a1  1,
+
+|a2| < .22,
+|a2| < .22,
+
+|a3| < .353,
+|a3| < .353.
+
+(26)
+
+on the other hand we considered a cylinder of size 199  61 on which we thermalized with
+spin + as the boundary condition on the right and then selected only those states satisfying
+the conditions (26) on the distributions for the central meridian. we then examined the
+resulting measure on the distributions on the left boundary, in particular the distribution of
+a1 and a1. the markovian hypothesis asserts that, when we x the distribution on the
+center, the measure on the distributions on the left boundary is completely shielded from the
+boundary conditions on the right, although once again we are prevented by the necessity of
+allowing the rather large open neighborhood (26) from actually xing the distribution on the
+center. we can only impose very crude constraints on the rst few fourier coecients. for
+the experiments on the smaller cylinder about 3 samples in 10,000 are kept; on the larger,
+curiously enough, about 1 in 1,000.
+
+in figure 20 the k are plotted and compared once again, on the left those for ak, on
+the right those for ak. for a1 the value of 1 is slightly larger for the broader cylinder;
+the other values are very close. for a1 the value is smaller for the narrower cylinder,
+and the other values are again very close. in figure 21 a similar comparison is made of the
+distributions of a1 on the left and of a1 on the right. as is to be expected from conditions
+26, the distribution of a1 is shifted to the right. it is more shifted for the narrow cylinder
+
+38
+
+3
+
+2.75
+
+2.5
+
+2.25
+
+2
+
+1.75
+
+1.5
+
+1.25
+
+5
+
+10
+
+15
+
+20
+
+25
+
+30
+
+figure 18: the numbers k for md,c1(1|c2, +) and md,c(1|0).
+
+1
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+-3
+
+-2
+
+-1
+
+1
+
+2
+
+3
+
+figure 19: the distribution of a1 for md,c1(1|c2, +) and md,c(1|0).
+
+3
+2.75
+2.5
+2.25
+2
+1.75
+1.5
+1.25
+
+3
+2.75
+2.5
+2.25
+2
+1.75
+1.5
+1.25
+
+5 10 15 20 25 30
+
+5 10 15 20 25 30
+
+figure 20: test of the markovian hypothesis. the numbers k for the two cylinders with
+ak on the left and ak on the right.
+
+39
+
+1
+0.8
+0.6
+0.4
+0.2
+
+1
+0.8
+0.6
+0.4
+0.2
+
+-2
+
+-1
+
+1
+
+2
+
+-2
+
+-1
+
+1
+
+2
+
+figure 21: the distributions on the left boundary as a function of a1 (on the left) and of
+a1 (on the right).
+
+than for the broad. the results encourage the belief in the markovian hypothesis, even
+though it is hard to imagine that experiments as coarse as these could ever successfully
+refute the hypothesis because some shielding is inevitable. the question is rather how much.
+
+40
+
+4 crossings.
+
+4.1 events and the two hypotheses.
+
+crossings are one of the main order parameters for percolation models. consider, for exam-
+ple, a rectangle covered by a regular lattice. a conguration is xed when each vertex has
+been declared open or closed and this conguration has a crossing if it is possible to move
+on open sites joined by lattice bonds from the left side of the rectangle to the right one. a
+probability is usually dened on the set of all congurations by xing the probability p that
+a site is open, so that a site is then, of course, closed with probability 1p. the probabilities
+for each site are independent but equal. in the limit of mesh length zero, the probability of
+such horizontal crossing is known (rigorously) to have a singular behavior as a function of
+p, being 0 for p < pc and 1 for p > pc, for a certain constant pc  (0, 1) that depends on
+the lattice. this denition can be extended readily to the ising model by replacing crossings
+on open sites by crossings on spins of a given sign, say, for example, of positive sign. the
+probability of crossings on clusters of + spins is not a familiar order parameter for the ising
+model, and it is not even clear that it is not trivial, thus identically 1 or identically 0. we
+examined it, at rst, only out of idle curiosity, following a suggestion of haru pinson and
+were somewhat astonished to discover that it is far from trivial. with hindsight, it does
+have some immediately appealing features and has been studied before although not with
+the same goals [ksc]. it is related to spontaneous magnetization and to the geometry of
+the main cluster. it even turns out to share striking properties of the percolation crossings:
+universality and conformal invariance [lps]. whether a formula for it analogous to that of
+cardy [c2] for percolation remains an open question. we recall the denitions.
+
+let d be a domain and d a closed subset of d. let  = {(1, 2), . . . , (2n1, 2n)} and
+ = {(1, 2), . . . , (2m1, 2m)} be sets of n and m pairs of intervals in the boundary of d
+such that the 2(m + n) intervals are pairwise disjoint. (in fact, the intervals need not be in
+the boundary of d but these are the only cases we treated.) let a lattice g be superimposed
+upon the domain d. let  be a conguration for the ising model (g, j) on d and  its
+restriction to d. we shall say that the event e specied by the data (d, d, , ) occurs
+for the conguration 
+(i)
+
+if for every pair (2i1, 2i), i = 1, . . . , n, there is a connected cluster of + spins for 
+that intersects both 2i1 and 2i
+ that intersects both 2j1 and 2j.
+
+(ii) and if for no pair (2j1, 2j), j = 1, . . . , m, is there a connected cluster of + spins for
+
+(for percolation the denition of an event is simpler as the introduction of the larger domain
+d is superuous, so that the measure on the congurations on d is independent of the choice
+of d. thus one takes d = d.) let ga be the lattice g shrunk by the factor a and let (g,j),a
+be the probability of the event e = (d, d, , ) for the ising model (ga, j) at its critical
+point, then (g,j)
+
+will be dened as
+
+e
+
+e
+
+(g,j)
+e = lim
+a0
+
+(g,j),a
+e
+
+if the limit exists. the two hypotheses of universality and conformal invariance are then
+identical to those proposed in [lps] for percolation.
+
+41
+
+hypothesis of universality: for any pair of ising models (g, j) and (g, j), there
+exists an element g of gl(2, r) such that
+
+e = (g ,j )
+(g,j)
+
+ge
+
+,
+
+for all events e.
+
+(27)
+
+hypothesis of conformal invariance: let (g(cid:3), j(cid:3)) be the ising model on the square
+lattice with critical coupling j(cid:3). let  be a map satisfying the same requirements as in the
+hypothesis of conformal invariance of section 3. then
+
+(g(cid:3) ,j(cid:3))
+e
+
+= (g(cid:3) ,j(cid:3))
+
+e
+
+,
+
+for all events e.
+
+(28)
+
+it is best to observe explicitly that the map  acts on both d and d, so that if d is
+the whole plane there are very few admissible . the following two paragraphs describe
+simulations done to examine these hypotheses when d = d (paragraph 4.2) or d   d
+(paragraph 4.3).
+
+4.2 d = d.
+for the rst events to be considered we take d = d. their description is simple when the
+geometry of d is that of a rectangle. we introduce the notation h(r) and v(r), instead
+of e, for events e occuring on d, a rectangle with aspect ratio r = width/height, with
+a single pair (1, 2) and an empty . for the probability of horizontal crossings h the
+two intervals 1 and 2 are the left and right sides and for the probability v of vertical
+crossings, the top and bottom. the probability hv(r) will give an example of an event with
+two pairs  = {(1, 2), (3, 4)}. it is the probability of having simultaneously horizontal
+and vertical crossings in a rectangle d of aspect ratio r. note that the number h(r)hv(r)
+is the probability to have a horizontal crossing without having a vertical one. it thus provides
+an example of event e with one pair  and one pair . finally we introduce a
+v (r)
+whose corresponding events have a single pair (1, 2). for a
+h , 1 is the vertical segment
+splitting the rectangle in two parts of equal areas and 2 the right side. for a
+v , 1 is
+the horizontal segment in the middle of the rectangle and 2 the top side. for these two
+probabilities, we could also have taken d to be the half-rectangle bounded by {1, 2}
+because a path joining 2 to 1 reaches 1 before it leaves this half-rectangle, so that the
+sites outside the half-rectangle are superuous.
+
+h (r) and a
+
+two diculties limit the precision of the numerical measurements. the rst one is the
+limitation due to a choice of convention and was discussed at length in [lpps]. since (g,j)
+are approximated by measurements on nite lattices, the exact position of the domain d
+with respect to the lattice must be specied by convention; or, equivalently, a prescription
+must be given for calculating r for a rectangle with lh sites in the horizontal direction and
+lv in the vertical one. to examine the sensitivity to convention consider an extreme case.
+suppose that in convention i the width is that of the narrowest rectangle containing the lh
+horizontal sites and that in convention ii, the width is that of the widest. for the square
+lattice oriented so that its bonds are parallel to the sides of the rectangles, the dierence
+between the two widths is 2 mesh units. if both conventions measure the height in the same
+
+e
+
+42
+
+way, the discrepancy for h between the two conventions is
+
+2
+lv |h(r)|,
+
+the prime denoting a derivative. these numbers can be estimated from the data of table vi.
+table iv gives an order of magnitude for this limitation on precision for the two probabilities
+h and a
+h at the center (r = 1) and at the extremities (r = 0.1361 and 7.353) of the range
+of the aspect ratio we measured. our conventions are given in the appendix; whatever they
+are, the above limitation is unavoidable.
+
+r
+
+h
+
+2
+
+lv |h|
+
+statistical error
+
+a
+h
+
+2
+
+lv |ah |
+
+statistical error
+
+7.3
+1.0
+0.14
+
+0.02
+0.50
+0.98
+
+3  104
+3  103
+2  103
+
+6  104
+2  103
+6  104
+
+0.12
+0.66
+0.99
+
+1  104
+3  103
+5  103
+
+1  103
+2  103
+3  104
+
+table iv: sensitivity to convention and statistical errors for a sample of 200000 for 3 values
+of r on a lattice containing  40000 sites.
+
+2 ], on the unit circle. notice that r = 0 corresponds to  = 
+
+to conrm the conformal invariance we also measure all these probabilities for comparable
+geometries on the disk and the cylinder. the schwarz-christoel map can be chosen so that
+the four vertices of the rectangle of aspect ratio r correspond to the four points ei for
+some   [0, 
+2 , r = 1 to
+ = 
+4 and r =  to  = 0. the slope of the function (r) at r = 0 is zero. this means
+that the sensitivity to convention is magnied for values of  close to /2. for example
+we measured the probabilities  in the rectangular geometry for ve dierent values of r in
+the range [0.1361, 0.1647] . the corresponding range of  is [1.57051, 1.57076] and, on the
+disk of radius r = 300.2 mesh units that we used, at most one site can be contained along
+the boundary in this interval. this is even worse for the corresponding geometry on the
+cylinder of size 397  793 where the s have also been measured. such measurements are
+too imprecise to be useful and we measured the probabilities, on the disk and the cylinder,
+only for the s corresponding to the forty-one values in the middle of the eighty-one we used
+for the rectangular geometry. the arc between the two smallest as well as the two largest s
+among these 41 values is about 3.7 mesh units. since we have taken the sites in the angles
+(  ,  + ), (, ) to dene the pair of intervals (1, 2), it is clear that a rather large
+systematic error is to be expected.
+finite-size eects are the origin of the second diculty. fortunately the relation h(r) +
+v(r) = 1 is veried for the triangular lattice, even for nite ones. this is a well-known
+identity for percolation and the argument for its validity here is the same. for the other
+pairs (g, j), this relation is not veried for nite lattices, that is (g,j),a
+6= 1.
+nevertheless, if universality holds, it should be satised for the other pairs (g, j) in the limit
+
+h
+
++ (g,j),a
+
+v
+
+43
+
+-4
+
+-4.2
+
+-4.4
+
+-4.6
+
+-4.8
+
+3.5
+
+4.5
+
+5
+
+5.5
+
+6
+
+-5.2
+
+figure 22: log-log plot of 1  h  v measured on a square as a function of the linear
+number of sites.
+
+h
+
+h
+
+ (lh,lv )
+
+v
+
+| for r = lh
+
+of zero mesh. departure from zero of the quantity |1  (lh,lv )
+lv is
+therefore a measure of nite-size eects. interpreted dierently, this quantity is a measure
+of the error made on h(r) when the number (lh,lv )
+is used in its stead. a verication for
+a square domain covered by the square lattice indicates that (g(cid:3) ,j(cid:3))
+(r) = 1
+is likely to hold when the number of sites goes to innity. the log-log plot of figure 22
+shows that (1 h  v) and lh are related by a power law. (the ve points correspond to
+squares with 25, 50, 100, 200 and 400 sites along their edges.) the slope is 0.437 and unlikely
+to be universal. the crossing probabilities h and v on the square lattice for the square
+(r = 1) of size 200  200 were measured to be 0.4963 and 0.4964. the gap is of order of
+3.5  103, comparable to the value of 2h(r)/lv at this point. note nally that, even
+though h(r) + v(r) = 1 holds for nite rectangular subsets of the triangular lattice, it does
+not follow that h(r) is equal to (lh,lv )
+and
+(lh,lv )
+v
+
+as nite-size eects could alter both (lh,lv )
+
+while keeping their sum equal to 1.
+
+(r) + (g(cid:3) ,j(cid:3))
+
+v
+
+h
+
+h
+
+h
+
+the ve plots in figures 23 to 25 show all the data available: the probabilities for 81
+values of the aspect ratio for the rectangles and 41 for the disk and the cylinder. for the
+rectangles, 4 dierent ising models were studied: the three regular lattices with isotropic
+coupling and the square lattice with the anisotropic coupling used in section 3. each gure
+contains therefore six sets of measurements, four for the rectangles, one for the disk and one
+for the cylinder. the cylinder is treated as though it were innitely long and the crossings are
+from an interval on one end to another disjoint interval of the same length on the same end,
+the intervals being chosen so that their position on the cylinder is conformally equivalent
+to that of two opposite sides on a rectangle. because of the large amount of information
+
+44
+
+-2
+
+-1
+
+4
+
+2
+
+-2
+
+-4
+
+1
+
+2
+
+-2
+
+-1
+
+4
+
+2
+
+-2
+
+-4
+
+1
+
+2
+
+figure 23: log h/(1  h) and log v/(1  v) as a function of log r.
+
+on these gures, the error bars were not drawn. some of the 95% condence intervals for
+the measurements of h were listed on table iv and the dierence of the extreme values of
+these intervals is equal to 0.07 at r = 0.136, 0.02 at r = 1.000 and 0.07 at r = 7.351 for the
+variable log h/(1  h) that appears in figure 23. (for the square lattice, the condence
+intervals on the probabilities are a factor 15
+smaller since the sample was 5 times larger.)
+the vertical dimension of the dots on this gure is approximately 0.065 and thus comparable
+to the statistical errors or larger than them.
+
+in all the gures, one sees clearly some spreading of the data at the two extremities of the
+range of r. the data for the disk and for the cylinder also fall slightly beside those for the
+rectangles around the extreme values of their range (log r  1). these small discrepancies
+can all be explained by the above two limitations. first, for all the pairs (g, j) but the
+isotropic triangular lattice, the quantity 1  h  v is less than one. it is thus likely that
+nite-size eects tend to decrease both h and v. since for log r  2, one of the linear
+dimensions of the rectangle is half what it is around log r  0, the values of h and v
+should be spread more at the extremities than at the center of the range of r; and ()
+should be the largest of all measurements. this is what is observed though the spread is
+noticeable only when the small linear dimension is in the direction of the crossing. second,
+by keeping the sites inside the sector ((r), (r)) or ( (r),  + (r)), the number of sites
+(necessarily integral) is underestimated, leading to probabilities lower than what universality
+would predict. this is again what is observed. but these discrepancies are rather small. as
+can be seen from the gures the agreement is remarkable.
+
+h
+
+only for the isotropic ising model on the square lattice is (lh,lv )
+. it is then sucient to measure the ve probabilities h, v, hv, a
+
+strictly equal to
+(lv,lh)
+v for 41 values
+v
+of r to cover the same range. we proted from this coincidence and substantially increased
+the sample in order to measure the probabilities with very high accuracy. in this case each
+sample contained at least one million congurations. for the other models we used samples
+of at least 200000 congurations. as can be seen from table iv, even the smaller sample
+size yields statistical errors at worst of the same order of magnitude as the sensitivity to
+conventions. table vi lists the crossing probabilities h, v, hv, a
+for the isotropic
+
+h , a
+
+h
+
+45
+
+h , a
+v
+
+-1
+
+-1.5
+
+-2
+
+-2.5
+
+-3
+
+-3.5
+
+-2
+
+-1
+
+1
+
+2
+
+figure 24: log hv as a function of log r.
+
+4
+
+2
+
+-2
+
+-2
+
+-1
+
+1
+
+2
+
+-2
+
+-1
+
+4
+
+2
+
+-2
+
+1
+
+2
+
+figure 25: log a
+
+h /(1  a
+
+h ) and log a
+
+v /(1  a
+
+v ) as functions of log r.
+
+46
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+-1
+
+-2
+
+-3
+
+-4
+
+-1
+
+-2
+
+-3
+
+-4
+
+figure 26: fits of the asymptotic behavior of h: (a) log h(r) and (b) log(1  h(r)).
+
+ising model on the square lattice; table vii lists them for the triangular lattice. this table
+gives an idea of both the dierence between the various probabilities as measured for two
+dierent ising models and the isotropy of the probabilities: the pairs (h, v) and (a
+h , a
+v )
+are approximately symmetric under the exchange of r  r1 even though the lattice is not
+invariant under a rotation of 
+2 .
+
+for percolation, cardys formula predicts the following asymptotic behavior
+
+or equivalently
+
+log perco
+
+h
+
+(r) r 
+
+
+3
+
+r + constant,
+
+log(1  perco
+
+h
+
+(r)) r0 
+
+
+3r
+
++ constant.
+
+the data for the ising model behave similarly. we used those for the triangular lattice since
+they respect closely the relation h(r) + v(r) = 1. we rejected the ten points at both
+extremities of the spectrum of r because they carry the largest nite-size eect. the 30
+remaining points with largest r were tted to log h(r)  a + br and the 30 with smallest r
+were tted to log(1  h(r))  c + d/r. the ts appear in figure 26. the constants b and d
+turned out to be 0.1672 and 0.1664. a natural guess for both constants is /6.
+
+4.3 d   d.
+
+we measured the crossing probabilities from one curve ci to another one cj on the cylinder,
+0  i < j  4, and for the corresponding congurations on the disk. (the curves ci have
+been introduced in section 3.) the simulations were done on the cylinder with 397  793
+sites and on the disk of radius 300.2 mesh units. the results are tabulated in table v. in
+each cell the number on top is the probability for the disk, the one on the bottom that for the
+cylinder and, again, the vertical bar | is used as in section 2 to give the statistical errors.
+the agreement is convincing even though the probabilities for the disk are systematically
+larger than those for the cylinders. again the geometries of the disk and the cylinder are
+not quite conformally equivalent. only if the cylinder is innitely long can one hope to have
+
+47
+
+perfect agreement. since the relative gap increases as the two curves ci and cj move closer
+to the middle of the cylinder, the shortness of the cylinder is a likely explanation for the
+discrepancy.
+
+since the numbers of table v are all close to 1., one more example of crossing probability
+was measured. the event e for the cylinder (= d) is given by the following data: the domain
+d is delimited by the curve c2 and the right-hand side of the cylinder and 1 and 2 are
+the two intervals on c2 that correspond to the forty-seventh value of the aspect ratio r
+considered in the previous paragraph (r = 1.35). the data for the disk are the conformal
+images of those of the cylinder. for the disk and the cylinders the numbers e are 0.412|1
+and 0.4096|6 respectively.
+
+c1
+
+c2
+
+c3
+
+c4
+
+0.99998|1
+0.999979|5
+
+0.9976|1
+0.99741|6
+
+0.9634|4
+0.9631|2
+
+0.8465|9
+0.8456|4
+
+0.99958|5
+0.99932|3
+
+0.9727|4
+0.9699|2
+
+0.8541|8
+0.8510|4
+
+0.9848|3
+0.9827|2
+
+0.8643|8
+0.8614|4
+
+0.8995|7
+0.8973|4
+
+c0
+
+c1
+
+c2
+
+c3
+
+table v: crossing probabilities from one curve ci to another cj for the disk and the cylinder.
+
+another interesting choice is d   d = r2. that means measuring crossings on domains
+d in the bulk. we have seen that the bulk
+are larger than those at the boundary by
+approximately a factor of 3. the corresponding variances 2
+k are consequently smaller and
+the number of large clusters intersecting the central meridians of the cylinder is also smaller.
+are there enough of them to break crossings? or is bulk
+(r) a trivial function, namely equal
+to 1
+
+2 for all r?
+such a measurement would amount, in an ideal situation, to thermalizing an innite
+lattice z2 and then measuring crossings on nite d inside this lattice. only the usual
+limitations (convention and nite size of d) would then have to be dealt with. to do the
+actual simulations, the rst idea is to truncate d to a nite though large lattice and to
+choose d as the largest domain possible inside a region in which the behavior of the spins
+
+h
+
+k
+
+48
+
+is as close as possible to the bulk behavior. with our present computers, a lattice size of
+practical use contains about 106 sites. if r2 is approximated by a square lattice, then it
+would be of size 1000  1000. the domains d used in paragraph 4.2 contained around
+40000 sites and the domain d with r = 1 was therefore 200  200. if we compare these
+sizes with disks, as we are interested only in orders of magnitude, the boundary of d would
+correspond to a circle of radius one fth that of d. the distribution md,d on the boundary
+of d is approximately equivalent to that of a circle at a distance of 100 mesh units from
+the boundary of the cylinder 397  793. figure 13 (paragraph 3.2) shows that the rst four
+fourier coecients are still far from their bulk distribution. these coecients are precisely
+those measuring the large clusters responsible for creating crossings or for breaking them.
+
+r ), can be used to quantify this symmetry breaking.
+
+but as we have seen (paragraph 3.2), the middle of a long cylinder provides a better
+approximation to bulk behavior. so we conne our experiments to cylinders. if a square d
+of size 200  200 is located in the middle of a cylinder of size about 397  793 as before, its
+distance from the boundary is about 300 mesh units and its spins behave essentially as in
+the bulk as can be seen in figure 13. this choice has one possible drawback. it spoils the
+symmetry between horizontal and vertical directions. the mean width of the largest cluster
+is surely not equal to its mean height on a long cylinder. fortunately a simple quantity,
+h(r)  v( 1
+to enforce the relation h(r)+v(r) = 1, we took the measurements on triangular lattices
+with 426737 and 8521475 sites, the 737 and 1475 sites being in the longitudinal direction.
+on these lattices, the crossings h, v and hv were measured on rectangles with the 81 aspect
+ratios r used before. to keep the rectangles safely in the bulk, we used domains d with
+approximately 10000 sites. (we used the same domains on both cylinders. see below.) the
+longest rectangle (r  7.3) has 40  253 sites and its distance from the boundary, for the
+cylinder of size 426737, is similar to that of the square of size 200200 square in a cylinder
+of size 397 793 discussed above. the highest rectangle (r  0.13) has 293 34 sites and its
+height takes up more than 2
+3 of the circumference of the smaller lattice, possibly too large
+a fraction if the symmetry breaking is important. the larger lattice helps to address this
+question. we also measure the crossings h, v and hv inside a disk of radius 100.2 whose
+center is within one mesh unit from the central meridian of the cylinders. note that the
+hypothesis of conformal invariance stated above does not relate the crossings in the bulk on
+the rectangles and on the disk. as emphasized, the map  must act on both d and d and
+there is no conformal map from the plane (d) to the plane taking a rectangle (d) to a disk.
+figures 27 and 28 present the results. squares ((cid:3)) were used for the crossings on rect-
+angles and circles () for those on the disk. white symbols are for the 426 737 lattice and
+black for the 852  1475. the two samples were 895000 for the 426  737 cylinder and and
+227000 for the 852  1475. even though these data look almost identical to those presented
+in paragraph 4.2 (figures 23 and 24), the vertical scale is dierent. when d = d, h ranges
+from 0.02 to 0.98 as r decreases from 7.3 to 0.14. here, in the bulk, h goes from 0.23 to
+0.76 for the same interval of r.
+
+there is a denite breaking of the horizontal-vertical symmetry. the graph of hv for
+the cylinder with 426  737 sites is clearly asymmetrical. for the rectangles the quantities
+h(r) and v( 1
+r ) that should be equal if the symmetry was present dier by about 6% for r
+large or small and by 1% for r  1. for the measurements on the disk their departure from
+
+49
+
+-2
+
+-1
+
+1
+
+0.5
+
+-0.5
+
+-1
+
+1
+
+2
+
+-2
+
+-1
+
+1
+
+0.5
+
+-0.5
+
+-1
+
+1
+
+2
+
+figure 27: log h/(1  h) and log v/(1  v) as a function of log r.
+
+-2
+
+-1
+
+-0.8
+
+-0.9
+
+-1.1
+
+-1.2
+
+-1.3
+
+-1.4
+
+1
+
+2
+
+figure 28: log hv as a function of log r.
+
+50
+
+8
+
+4
+
+5
+
+1
+
+3
+
+7
+
+2
+
+6
+
+4
+
+8
+
+1
+
+3
+
+7
+
+5
+
+2
+
+6
+
+6
+
+2
+
+5
+
+7
+
+3
+
+1
+
+8
+
+4
+
+figure 29: the riemann surfaces r1 and r2 and their corresponding neighborhoods. only
+one sheet of r1 is presented.
+
+symmetry varies from 3% to 7%. for both cases, rectangles and disk, the vertical crossings
+are always larger than the corresponding horizontal ones. large clusters wrapping around
+the circumference are more likely than clusters having about the same number of sites but
+that fail to surround the cylinder simply because the former have fewer peripheral sites than
+the latter. this dierence seems to play a role here. if this is so, a better measurement of
+the s would therefore be obtained by, say, doubling the linear dimensions of the cylinder
+while keeping the number of sites in the domains d unchanged. this is why we studied
+the larger 852  1475 cylinder. for this new experiment, the asymmetry is essentially gone.
+for example most of the quantities h(r) and v( 1
+r ) dier now by less than 0.5%. still the
+data for the two lattices remain very close and experiments with smaller cylinders show that
+the curves in figures 27 and 28 do not change much with lattice size, so that we can assert
+with some condence that the crossing probabilities in the bulk are well dened as the mesh
+goes to zero, in other words, the crossing probabilities are dened even when d is the whole
+plane. the data, especially those for the 852  1475 cylinder, must represent a very good
+approximation to the crossing probabilities in the bulk for the rectangles and the disk.
+in particular, the curves for the crossings on the rectangles and on the disk are now
+distinct and their dierence does not seem to be due to the limitation of the experiments.
+there was in fact no reason at all to compare them or to use the parameter r to describe
+the arcs on the disk, for it pertains to a conformal transformation r from the disk to the
+rectangle of aspect ratio r that is no longer pertinent. nevertheless, it does appear that
+rectangle
+(r) for r < 1, inequalities
+v
+for which we have no very persuasive explanation. for each r, the map r extends to a
+conformal equivalence r of a double covering r1(r) of the plane, or rather of the riemann
+sphere, ramied at four points with a torus r2(r). figure 29 represents r1 and r2 and their
+corresponding neighborhoods. only one sheet of r1 is depicted here; the other is identical,
+
+(r) for r > 1 and that rectangle
+
+(r) < disk
+
+v
+
+v
+
+(r) > disk
+
+v
+
+51
+
+all data being primed (2  2, etc.). r1 is a double covering of c with cuts tying the four
+singular points on the unit circle , , and . the cuts were drawn along the unit
+circle. consequently the neighborhood to the left of the domain 2 on the rst sheet is the
+domain 6 on the second. the thicker lines on r2 are not cuts but circumscribe the images
+of the disks on r1. the top and bottom sides of the whole rectangle are identied as are the
+left and the right. both r1 and r2 are tori. the conformal class of r1 and r2 depends on
+r. the hypothesis of conformal invariance does apply to diskr1(r)
+. they
+are expected to be equal. we do not know what relations might subsist between rectangle
+(r)
+and rectangler2(r)
+
+or between diskr1(r)
+
+and disk
+
+and rectangler2(r)
+
+v
+
+v
+
+v
+
+v
+
+v
+
+(r).
+
+v
+
+52
+
+lh lv
+200
+200
+205
+195
+190
+210
+186
+216
+181
+221
+227
+176
+172
+232
+168
+238
+164
+264
+160
+250
+257
+156
+152
+263
+148
+270
+145
+277
+284
+141
+137
+291
+134
+298
+131
+306
+314
+128
+124
+322
+121
+330
+118
+338
+347
+115
+113
+355
+110
+364
+107
+374
+383
+104
+102
+393
+99
+403
+97
+413
+423
+94
+92
+434
+90
+445
+88
+456
+85
+468
+480
+83
+81
+492
+79
+504
+77
+517
+530
+75
+74
+544
+
+r
+
+1.000
+1.051
+1.105
+1.161
+1.221
+1.290
+1.349
+1.417
+1.488
+1.562
+1.647
+1.730
+1.824
+1.910
+2.014
+2.124
+2.224
+2.336
+2.453
+2.597
+2.727
+2.864
+3.017
+3.142
+3.309
+3.495
+3.683
+3.853
+4.071
+4.258
+4.500
+4.717
+4.944
+5.182
+5.506
+5.783
+6.074
+6.380
+6.714
+7.067
+7.351
+
+r1
+1.000
+0.951
+0.905
+0.861
+0.819
+0.775
+0.741
+0.706
+0.672
+0.640
+0.607
+0.578
+0.548
+0.524
+0.497
+0.471
+0.450
+0.428
+0.408
+0.385
+0.367
+0.349
+0.331
+0.318
+0.302
+0.286
+0.272
+0.260
+0.246
+0.235
+0.222
+0.212
+0.202
+0.193
+0.182
+0.173
+0.165
+0.157
+0.149
+0.142
+0.136
+
+hv
+
+0.4022
+0.4005
+0.3989
+0.3956
+0.3910
+0.3839
+0.3764
+0.3665
+0.3582
+0.3484
+0.3359
+0.3228
+0.3097
+0.2974
+0.2836
+0.2688
+0.2550
+0.2408
+0.2265
+0.2108
+0.1966
+0.1833
+0.1695
+0.1579
+0.1446
+0.1318
+0.1192
+0.1089
+0.09757
+0.08836
+0.07719
+0.06971
+0.06150
+0.05432
+0.04596
+0.03933
+0.03407
+0.02899
+0.02450
+0.02015
+0.01738
+
+a
+h
+
+0.6553
+0.6403
+0.6286
+0.6153
+0.6023
+0.5870
+0.5766
+0.5627
+0.5521
+0.5398
+0.5242
+0.5111
+0.4982
+0.4847
+0.4727
+0.4573
+0.4456
+0.4324
+0.4183
+0.4033
+0.3893
+0.3748
+0.3597
+0.3475
+0.3330
+0.3178
+0.3013
+0.2880
+0.2723
+0.2589
+0.2428
+0.2313
+0.2160
+0.2035
+0.1874
+0.1735
+0.1612
+0.1488
+0.1355
+0.1246
+0.1153
+
+a
+v
+
+0.6554
+0.6667
+0.6811
+0.6937
+0.7058
+0.7212
+0.7324
+0.7428
+0.7582
+0.7714
+0.7854
+0.7972
+0.8102
+0.8195
+0.8334
+0.8447
+0.8569
+0.8666
+0.8786
+0.8903
+0.8987
+0.9094
+0.9173
+0.9237
+0.9338
+0.9409
+0.9490
+0.9553
+0.9606
+0.9656
+0.9714
+0.9755
+0.9792
+0.9825
+0.9854
+0.9881
+0.9902
+0.9922
+0.9938
+0.9951
+0.9963
+
+h
+
+0.4963
+0.4811
+0.4671
+0.4527
+0.4389
+0.4220
+0.4083
+0.3922
+0.3791
+0.3649
+0.3482
+0.3324
+0.3169
+0.3028
+0.2875
+0.2717
+0.2571
+0.2424
+0.2275
+0.2115
+0.1971
+0.1836
+0.1697
+0.1581
+0.1447
+0.1318
+0.1192
+0.1089
+0.09758
+0.08836
+0.07719
+0.06971
+0.06150
+0.05432
+0.04596
+0.03933
+0.03407
+0.02899
+0.02450
+0.02015
+0.01738
+
+v
+
+0.4964
+0.5107
+0.5250
+0.5396
+0.5553
+0.5711
+0.5837
+0.5963
+0.6133
+0.6288
+0.6449
+0.6592
+0.6753
+0.6888
+0.7062
+0.7208
+0.7354
+0.7503
+0.7651
+0.7823
+0.7963
+0.8101
+0.8242
+0.8340
+0.8486
+0.8626
+0.8749
+0.8858
+0.8976
+0.9069
+0.9178
+0.9265
+0.9343
+0.9425
+0.9509
+0.9573
+0.9631
+0.9687
+0.9738
+0.9778
+0.9813
+
+table vi.
+
+53
+
+r
+
+1.000
+1.050
+1.105
+1.160
+1.222
+1.290
+1.349
+1.416
+1.487
+1.563
+1.647
+1.728
+1.824
+1.909
+2.013
+2.124
+2.224
+2.337
+2.454
+2.596
+2.727
+2.863
+3.018
+3.142
+3.308
+3.496
+3.683
+3.853
+4.071
+4.258
+4.500
+4.717
+4.944
+5.181
+5.506
+5.784
+6.074
+6.381
+6.715
+7.067
+7.352
+
+r1
+1.000
+0.9516
+0.9049
+0.8614
+0.8190
+0.7752
+0.7412
+0.7056
+0.6720
+0.6401
+0.6071
+0.5774
+0.5483
+0.5235
+0.4964
+0.4708
+0.4497
+0.4280
+0.4077
+0.3839
+0.3666
+0.3492
+0.3315
+0.3182
+0.3023
+0.2861
+0.2715
+0.2596
+0.2456
+0.2349
+0.2222
+0.2119
+0.2023
+0.1931
+0.1816
+0.1730
+0.1647
+0.1567
+0.1489
+0.1414
+0.1360
+
+h(r)
+0.4997
+0.4868
+0.4707
+0.4574
+0.4411
+0.4258
+0.4120
+0.3979
+0.3827
+0.3679
+0.3516
+0.3375
+0.3202
+0.3060
+0.2908
+0.2745
+0.2599
+0.2446
+0.2310
+0.2141
+0.2004
+0.1864
+0.1712
+0.1613
+0.1477
+0.1337
+0.1216
+0.1120
+0.09977
+0.08975
+0.07988
+0.07010
+0.06240
+0.05558
+0.04739
+0.04084
+0.03488
+0.02971
+0.02517
+0.02097
+0.01793
+
+h(r1)
+0.4997
+0.5142
+0.5305
+0.5426
+0.5579
+0.5747
+0.5883
+0.6033
+0.6174
+0.6323
+0.6482
+0.6642
+0.6788
+0.6946
+0.7103
+0.7267
+0.7412
+0.7555
+0.7693
+0.7864
+0.8003
+0.8144
+0.8288
+0.8395
+0.8522
+0.8667
+0.8790
+0.8899
+0.9012
+0.9093
+0.9218
+0.9297
+0.9378
+0.9453
+0.9533
+0.9598
+0.9655
+0.9705
+0.9756
+0.9795
+0.9824
+
+v(r)
+0.4996
+0.5146
+0.5282
+0.5434
+0.5587
+0.5747
+0.5871
+0.6020
+0.6164
+0.6320
+0.6468
+0.6624
+0.6782
+0.6923
+0.7088
+0.7264
+0.7403
+0.7553
+0.7702
+0.7855
+0.8001
+0.8135
+0.8287
+0.8383
+0.8517
+0.8666
+0.8781
+0.8888
+0.9010
+0.9100
+0.9210
+0.9287
+0.9371
+0.9444
+0.9533
+0.9597
+0.9648
+0.9704
+0.9746
+0.9793
+0.9818
+
+v(r1)
+0.4996
+0.4852
+0.4710
+0.4544
+0.4406
+0.4246
+0.4119
+0.3969
+0.3818
+0.3685
+0.3511
+0.3365
+0.3219
+0.3055
+0.2906
+0.2739
+0.2612
+0.2448
+0.2301
+0.2108
+0.1986
+0.1854
+0.1712
+0.1611
+0.1476
+0.1331
+0.1212
+0.1099
+0.09799
+0.08995
+0.07853
+0.07042
+0.06288
+0.05514
+0.04602
+0.04010
+0.03486
+0.02902
+0.02494
+0.02057
+0.01750
+
+hv(r)
+0.4056
+0.4061
+0.4027
+0.3998
+0.3935
+0.3874
+0.3803
+0.3720
+0.3622
+0.3514
+0.3390
+0.3277
+0.3128
+0.3006
+0.2868
+0.2716
+0.2578
+0.2432
+0.2300
+0.2134
+0.1999
+0.1861
+0.1710
+0.1612
+0.1477
+0.1336
+0.1215
+0.1119
+0.09976
+0.08975
+0.07988
+0.07010
+0.06240
+0.05558
+0.04739
+0.04084
+0.03488
+0.02971
+0.02517
+0.02097
+0.01793
+
+hv(r1)
+0.4056
+0.4048
+0.4037
+0.3974
+0.3931
+0.3868
+0.3799
+0.3718
+0.3616
+0.3519
+0.3387
+0.3272
+0.3144
+0.3002
+0.2867
+0.2712
+0.2592
+0.2434
+0.2291
+0.2102
+0.1982
+0.1852
+0.1711
+0.1610
+0.1475
+0.1330
+0.1212
+0.1099
+0.09798
+0.08994
+0.07853
+0.07042
+0.06288
+0.05514
+0.04602
+0.04010
+0.03486
+0.02902
+0.02494
+0.02057
+0.01750
+
+a
+h (r)
+0.6586
+0.6456
+0.6316
+0.6190
+0.6060
+0.5919
+0.5800
+0.5678
+0.5545
+0.5431
+0.5295
+0.5152
+0.5009
+0.4876
+0.4758
+0.4603
+0.4488
+0.4348
+0.4229
+0.4067
+0.3940
+0.3770
+0.3637
+0.3530
+0.3370
+0.3209
+0.3060
+0.2930
+0.2774
+0.2625
+0.2468
+0.2328
+0.2196
+0.2058
+0.1908
+0.1762
+0.1649
+0.1511
+0.1384
+0.1264
+0.1172
+
+h (r1)
+a
+0.6586
+0.6706
+0.6849
+0.6968
+0.7087
+0.7255
+0.7365
+0.7498
+0.7612
+0.7758
+0.7875
+0.8009
+0.8137
+0.8269
+0.8370
+0.8499
+0.8616
+0.8719
+0.8813
+0.8938
+0.9020
+0.9123
+0.9204
+0.9285
+0.9353
+0.9441
+0.9507
+0.9573
+0.963
+0.9675
+0.9733
+0.9765
+0.9802
+0.9833
+0.9865
+0.9893
+0.9913
+0.9930
+0.9945
+0.9957
+0.9965
+
+a
+v (r)
+0.6586
+0.6717
+0.6840
+0.6980
+0.7109
+0.7250
+0.7354
+0.7489
+0.7619
+0.7750
+0.7876
+0.8003
+0.8133
+0.8250
+0.8372
+0.8500
+0.8608
+0.8716
+0.8821
+0.8935
+0.9024
+0.9118
+0.9222
+0.9274
+0.9361
+0.9446
+0.9514
+0.9569
+0.9634
+0.9678
+0.9730
+0.9766
+0.9806
+0.9834
+0.9871
+0.9894
+0.9912
+0.9932
+0.9945
+0.9957
+0.9966
+
+v (r1)
+a
+0.6586
+0.6445
+0.6330
+0.6191
+0.6059
+0.5915
+0.5814
+0.5671
+0.5547
+0.5427
+0.5279
+0.5165
+0.5034
+0.4908
+0.4760
+0.4606
+0.4505
+0.4356
+0.4218
+0.4033
+0.3916
+0.3781
+0.3626
+0.3523
+0.3368
+0.3204
+0.3050
+0.2911
+0.2743
+0.2611
+0.2458
+0.2334
+0.2196
+0.2066
+0.1874
+0.1760
+0.1638
+0.1497
+0.1378
+0.1266
+0.1162
+
+table vii.
+
+54
+
+5 cylinders of variable length and the phase.
+
+the key to the introduction of critical exponents appears to be the analogue for the eld
+h of the variable x dened in paragraph 2.1 for the free boson . we refer to this variable
+as the phase. though supercial our examination indicates clearly that the measures md,
+generalized to take into account the phase x, reproduce some of the exponents of the classical
+ising model.
+
+the variable x for the boson eld measures the dierence between the constant terms
+in 1 and 2, the restrictions of  to the two boundaries of the cylinder. it takes its values
+in the interval [0, 2r) where r is the radius of compactication. (see paragraph 2.1.) an
+analogue for the ising model on the cylindrical lv  lh square lattice g(cid:3) is dened using
+
+x =
+
+1
+
+lv xp
+
+(h(p + )  h(p))
+
+where  is the unit vector in the horizontal direction and the sum runs over all sites p in the
+lattice that have a right neighbor. because the jumps of h are chosen at random between
+, it is natural to study the distribution of
+
+x = x mod 2
+
+instead of x. the normalization of x is such that a closed curve of discontinuity in h that
+wraps around the cylinder, in other words that is noncontractible, gives a contribution of 
+to x. clusters intersecting the boundary contribute /lv to x where  is the numbers
+of boundary sites inside the cluster. however contractible curves surrounding clusters of
+constant spins not intersecting the boundary do not contribute.
+in section 2 we introduced, for the cylinder d, the measure
+
+md({ak},{bk}) = lim
+n
+
+lim
+a0
+
+ma,n
+d ({ak},{bk})
+
+dened on the space hi with coordinates ({ak},{bk}), k  z \ {0}. as we observed in
+paragraph 3.3, this can also be regarded as a measure md(1, 2) on a space of distributions,
+one 1 on the circle at one end of the cylinder and one 2 on the circle at the other end. we
+could as well have dened
+
+md(1, 2, x) = md({ak},{bk}, x) = lim
+n
+
+lim
+a0
+
+ma,n
+d ({ak},{bk}, x)
+
+taking the variable x into account. the probability md(1, 2) is a conditional probability,
+thus  speaking imprecisely  we have integrated over the variable x. writing all measures
+informally as measures absolutely continuous with respect to a lebesgue measure on the
+underlying spaces, we express this as
+
+dmd({ak},{bk}) = dmd(1, 2) = zd(1, 2) d1 d2
+
+with
+
+this is a convenient notation that avoids technical explanations about conditional probabil-
+ities and also reminds us of the connection between the measures and partition functions.
+
+zd(1, 2) =z 2
+
+0
+
+zd(1, 2, x) dx.
+
+55
+
+5.1 the measure mq(x).
+
+we rst consider dmq(x) = dmd(x) = zq(x)dx, d = d(q), with
+
+zq(x) =z zd({ak},{bk}, x)yk
+
+dak dbk =z zd(1, 2, x) d1 d2,
+
+the choice between the three notations ({ak},{bk}), ({ak = ikak},{bk = ikbk}) and (1, 2)
+being a matter of convenience. we shall parametrize by the variable q the cylinder d in the
+plane of length la, l = ln(1/q), and circumference 2a, with a arbitrary. it is mapped to
+an annulus the ratio of whose inner and outer radii is q by z  exp(z/a). the measure is
+normalized
+
+z 2
+
+0
+
+zq(x) dx = 1
+
+and its fourier expansion is
+
+zq(x) =
+
+1
+2
+
++xk6=0
+
+k(q)eikx.
+
+we can try to expand each coecient in a series of powers of q
+
+k(q) =
+
+xj=0
+
+ck(j)qj .
+
+we expect from the original calculations on the ising model or from arguments of conformal
+eld theory that 0 = 0, although we admit ck(0) = 0, and that 1 = 1
+8. the remaining
+j should be at least 5
+8. (the usual argument of conformal eld theory would select the
+exponents 0, 1
+8 and 1, and all those diering from these by two positive units, but it requires
+unitarity. it is not yet clear to us to what extent unitarity is pertinent in the present context.
+the whole kac spectrum could intervene  at least our experiments are not ne enough to
+rule out  = 5
+
+8 which is smaller than  = 1.)
+
+we have run two sets of experiments to measure the smallest exponent in 1(q), one for
+lv = 59, the other for lv = 117. as q  0, that is for long cylinders, the graph of zq
+0.
+is practically of period , instead of 2, and the odd fourier coecients c2k+1(q) q0
+the physical reason for this behavior is that, for very long cylinders, several noncontractible
+curves of jumps in h are likely to occur and congurations with an even or an odd number
+of these curves will arise in approximately the same numbers. figure 30 shows, for the long
+cylinder of size 117801, the distribution of the variable x (before the identication x  x+
+2) and of the variable x. the peaks for x are centered on the integer multiples of , clearly
+underlining the role of noncontractible curves of jumps. the gure shows congurations
+with n curves, |n| = 0, 1, 2, 3, 4, and the data also indicate that |n| = 5 and 6 were obtained
+in the sample of 1.6  106 congurations. even for |n| = 4 the probability is fairly large.
+it should be remembered that only 1
+16 of the congurations with 4 noncontractible curves
+will contribute to the peak around 4. the distribution mq(x) is, for this cylinder, almost
+perfectly periodic of period .
+
+56
+
+0.12
+0.1
+0.08
+0.06
+0.04
+0.02
+
+-5 pi-4 pi-3 pi-2 pi- pi pi2 pi3 pi4 pi5 pi
+
+pi/2 pi 3 pi/22 pi
+
+0.18
+
+0.16
+
+0.14
+
+figure 30: the distributions of the variables x and x for the cylinder 117  801.
+
+figure 31 is a log-log plot of 1 as a function of q. the data for the cylinders with
+lv = 59 are marked by  and those with lv = 117 by +. the shortest cylinders were
+59 27 and 117 53. we measured several other longer cylinders for both lv s. we decided
+to discard for both the gure and the ts the measurements of 1 whose 95% condence
+interval was more than 5% of the measurement itself.3 the linear ts of the log-log pairs
+give a slope of 0.12506 for lv = 59 and of 0.12478 for lv = 117. the line on the gure is
+the latter t. the value 1 = 1
+8 appears clearly. we did not check its universality but there
+is no reason to doubt it.
+
+5.2 the ratio z+(q)/z++(q).
+let z++(q) and z+(q) be the relative probabilities that with constant boundary conditions
+on a cylinder of parameter q the spins are equal at opposite ends or unequal. there is a
+well-known formula due to cardy [c1],
+
+z+(q)
+z++(q)
+
+=
+
+1(q)  22(q)
+1(q) + 22(q)
+
+(29)
+
+with
+
+1(q) = ym>0, m odd
+2(q) = q1/8 ym>0, m even
+
+(1 + qm),
+
+(1 + qm).
+
+57
+
+3the fourier coecients are given by k =p2lv
+
+2 )2k/2lv ) and pi are the
+frequencies for the 2lv bins in which the data are distributed. we use ni for the number of data in the
+i-th bin and n for the sample size. hence pi = ni/n . since the distribution of the ni is a multinomial
+mult(n ; n1, n2, . . . , n2lv 1), the rst moments are hnii = n pi and hninji = n (n  1)pipj + n piij .
+therefore var(k) = 1
+measured 1 with the 95% condence interval is 0.00468  0.00110 even though the sample was larger than
+1.6  106. it was not used for the t.
+
+2npi6=j pipj(ci  cj)2. for the cylinder 117  801 discussed above (q  43.0), the
+
+i=1 cipi where ci = cos((i  1
+
+-30
+
+-25
+
+-20
+
+-15
+
+-10
+
+-5
+
+-0.5
+
+-1
+
+-1.5
+
+-2
+
+-2.5
+
+-3
+
+-3.5
+
+figure 31: log-log plot of the fourier coecient 1 as a function of q.
+
+we could, in experiments, x the spins along one or both of the two ends of the cylinder
+to be constant. this leads to alternative measures mq({bk}, x), in which the spins at the left
+end are taken to be +1, and (z+(q), z++(q)). the question arises whether
+
+mq({bk}, x) = mq({ak = 0},{bk}, x)
+
+(30)
+
+and whether
+
+z++(q)0 + z+(q) = mq({ak = 0},{bk = 0}, x).
+
+(31)
+these two equations require some explanation. the measure mq({ak = 0},{bk = 0}, x)
+is understood, in so far as it can be assumed to exist, to be the conditional probability
+dened by the probability measure mq({ak},{bk}, x), the conditions being ak = bk = 0, or
+equivalently ak = bk = 0, k  z \ {0}. experimentally this means that it is a distribution
+that we approximate just as we approximate mq({ak},{bk}, x) itself except that we discard
+all samples for which the restrictions h1 and h2 at the ends of the cylinder do not lie in
+a suitably chosen neighborhood of 0. the neighborhood is thus to be as small as possible
+but large enough that we do not reject so many samples that the number of useful samples
+becomes impossibly small. we dene mq({ak = 0},{bk}, x) in the same manner, but the
+condition is now that ak = 0, k  z \ {0}.
+if (31) is valid the distribution dened by
+
+z|ak|<ckz|bk|<ck
+
+zq({ak},{bk}, x)yk
+
+dakdbk
+
+(32)
+
+with suciently small cks should be approximately a(q)0 + b(q), thus a sum of two -
+functions with coecients whose ratio b/a is given by (29). similarly the distribution
+
+z|ak|<ck
+
+zq({ak}, x)yk
+
+58
+
+dak
+
+(33)
+
+provides another ratio b/a to be compared with (29).
+
+measuring these two ratios b/a is dicult. the ratio z+/z++ decreases from 1 at q = 0
+to 0 at q = 1. large ratios z+/z++, those easier to measure, correspond therefore to long
+cylinders. for these the variables ak and bk are independent and their distributions are
+known from previous sections. the eect of the constraints can therefore be estimated by
+using rk = probq=0(|ak| < ck). even by imposing restrictions |ak| < ck and |bk| < ck only
+for k = 1, 2, 3, leaving the other variables free, a choice of r1 = r2 = r3  0.1 cuts the
+number of admissible congurations by a factor of one million for the measurement of (32)
+and the measurement is impracticable. for shorter cylinders (q  1), the ratio z+/z++
+drops quickly. for a circumference four times the length, the ratio is less than 2
+1000 , again
+dicult to measure. we limited ourselves to a small window of r = l/2, choosing six values
+corresponding to values of q increasing by a factor of approximately 4 at each step. table
+viii gives the values of r, q, the (rather small) lattices we used and cardys prediction. the
+ratios b/a were measured for the constraints:
+
+c1  0.377
+
+c2  0.653
+
+c3  0.929,
+
+(34)
+
+the others being innite. these numbers correspond to the following probabilities
+
+prob(|a1| < c1) = 0.2
+
+prob(|a2| < c2) = 0.3
+
+prob(|a3| < c3) = 0.4
+
+if the cylinder were of size 79  157 like the one used in section 2. for this long cylinder
+and these constraints applied at both extremities, only a fraction (0.2 0.3 0.4)2  0.0006
+of the congurations would be used. we observed that for the shorter cylinders of table
+viii more congurations passed the test. the diculty of getting proper samples for the
+measurment of (33) is of course less acute.
+
+lv  lh
+r = lh/lv
+q
+z+/z++
+const/const
+const/xed
+xed/xed
+
+79  122
+1.544
+0.0000611
+
+79  104
+1.316
+0.000256
+
+0.408
+0.419
+0.411
+0.4071
+
+0.331
+0.341
+0.338
+0.3289
+
+79  86
+1.089
+0.00107
+0.249
+0.276
+0.259
+0.2494
+
+79  68
+0.861
+0.00448
+0.165
+0.193
+0.179
+0.1640
+
+79  52
+0.658
+0.0160
+0.0927
+0.117
+0.101
+0.0916
+
+79  34
+0.430
+0.669
+0.0260
+0.0419
+0.0301
+0.02539
+
+b/a
+
+table viii. ratios b/a measured for several cylinders.
+
+three sets of measurements were taken. for the rst set the constraints given by (34)
+were applied at both extremities of the cylinders and is thus of the form (32). in table viii
+it is refered to as const/const for constrained. for the second they were applied at one
+extremity while the spins at the other were forced to be the same though they were allowed
+to ip simultaneously during the swendsen-wang upgrades. this corresponds to (33) and
+is refered to as const/xed. the last set is the measurement of the ratio z+/z++, that is
+the case xed/xed. for each lattice enough congurations (> 20 million in each case) were
+
+59
+
+1
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+figure 32: the distribution of x for four dierent sets of constraints {ck}.
+
+generated so that at least 30000 contributed to the integral (32). far larger samples were
+obtained for the two other sets.
+
+because of the small sample, especially in the case (32), large statistical variations are
+expected between neighboring bins and smoothing provides an ecient tool to identify the
+two local maxima around x =  and x = 0 whose ratio was used as a measurement of
+b/a. these measurements appear in the last lines of table viii. (smoothing was done as
+in paragraph 2.2. the smoothing parameter was chosen as if the distribution of x were
+approximately the sum of two gaussians centered at  = 0 and  = . the ratios b/a did
+not seem to be very sensitive to the exact choice of the smoothing parameter. of course the
+case xed/xed does not require any smoothing since the distribution is actually of the form
+a(q)0 + b(q).) the measurements for constrained/constrained and constrained/xed are
+systematically larger than the predicted values though they are very close, in fact closer for
+longer cylinders than for shorter ones.
+
+it is useful to see how the choice of constraints changes the measured ratios b/a and
+whether the distribution of the variable x is at all similar to the proposed sum a0 + b.
+for the cylinder 79  52 we compared four sets of constraints for the measurement of (32).
+the rst set consisted of no constraint at all, that is all the cks were innite. the second
+was the one used before and the nite cks for the third and fourth sets were
+
+and
+
+c1  0.259
+
+c2  0.653
+
+c3  0.929
+
+c1  0.259
+
+c4  0.782.
+
+c2  0.441
+
+c3  0.614
+
+these cks correspond to r1 = 0.1, r2 = 0.3, r3 = 0.4 and r1 = 0.1, r2 = 0.15, r3 = 0.2, r4 =
+0.25. for the fourth set only 3152 congurations were admissible out of the 200 millions
+generated and they were distributed in the 2lv = 632 bins. errors are large in this case.
+instead of smoothing as before we compared the four sets by expanding their histograms in
+
+60
+
+0.6
+
+0.5
+
+0.4
+
+0.3
+
+0.2
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+figure 33: the distribution of x for the constraints (34) on the three lattices 7952, 158104
+and 316  208.
+
+fourier series keeping only the rst ten terms. the ratios b/a are sensitive to the number of
+terms kept. only the rst two digits of the ratios given below, at the end of this paragraph,
+are reliable. the smoothed distributions are shown on figure 32. if the distribution goes
+to a0 + b as the constraints become more stringent then the peaks at 0 and  should be
+narrower and the distribution around 
+2 should go to zero as one goes to the rst to
+the fourth set. this is what happens with the four curves. at 
+2 the top curve is that with
+no constraint and the one closer to zero corresponds to the fourth set of constraints. even
+though the values of a and b for the three last sets are quite dierent, as they should be,
+their ratios are strikingly close: 0.120, 0.109 and 0.114.
+
+2 and 3
+
+finally we compared the ratios b/a for the three lattices 79 52, 158 104 and 316 208
+using always the constraints (34). the numbers of admissible congurations were 40409,
+9931 and 8816 and the ratios b/a, obtained again after truncation of their fourier series, are
+0.120, 0.129 and 0.130. these numbers are the same within the statistical errors though the
+values of a and b are again dierent. figure 33 shows the three distributions, the sharper
+peaks being for the smaller lattices. it seems that smaller cks are necessary for ner lattices
+if the peaks are to be as sharp as for the coarse lattice.
+
+it is not clear whether the above measurement technique can reproduce accurately the
+ratios z+/z++ with a proper choice of the cks and the size of the lattice. the very
+supercial analysis we have done does not indicate any decrease in the small gap appearing
+in table viii for the short cylinders. still the measurements and the predictions are very
+close.
+
+61
+
+5.3 the measure mq({ak}, {bk}, x) for long cylinders.
+
+some identities are suggested by the previous experiments. for innitely long cylinders the
+following hypothesis seems natural
+
+as evidence, integrate with respect to the ak and bk. on the left we obtain
+
+zq=0({ak}, y  x)zq=0({bk}, y) dy.
+
+(35)
+
+0
+
+zq=0({ak},{bk}, x) =z 2
+xk
+2xk
+
+k exp(ikx)
+
+|k|2 exp(ikx),
+
+z z0({bk}, x)y dbk =xk
+
+k exp(ikx).
+
+and on the right
+
+if
+
+we have, by denition, 0 = 0 = 1
+with 59  401 sites yield
+
+2 and k = k = 0 if k is odd. experiments on a cylinder
+
+2  .00273
+4  .0000267
+
+2  .0208
+4  .00279
+
+22
+22
+
+2  .00271,
+4  .0000488.
+
+(36)
+(37)
+
+unfortunately only the rst line carries any conviction. it may not be possible to measure
+4 with any accuracy.
+
+the measure dm0({ak}, x) = z0({ak}, x)dx may be of some interest, but we cannot oer
+
+any precise hypotheses. it can be expanded in a fourier series.
+
+z0({ak}, x) =xj
+
+j({ak}) exp(ijx),
+
+in which 0({ak})  1 and j({ak})  0 for j odd. then, for example, 2({ak}) is a function
+of {ak}, or equivalently, of {ak}, but, in spite of considerable eort, we have no idea what
+this function might be.
+
+a simpler function is
+
+the experiments indicate that
+
+z 2({ak})yk2
+
+dak = f (|a1|).
+
+f (x)  a
+
+sin(bx)
+
+(bx)
+
+62
+
+(38)
+
+(39)
+
+0.6
+
+0.4
+
+0.2
+
+-0.2
+
+-0.4
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+figure 34: the second fourier coecient 2 as a function of |a1|.
+
+with a  0.415 and b  0.603, but this can be no more than an approximation, as figure 34
+indicates. (it was obtained for the cylinder 157 1067 with a sample of more than a million
+congurations. the error bars are indicated.)
+the functions j({ak}) possess little symmetry. they are invariant under a rotation,
+thus under a simultaneous transformation of all variables ak  eikak,  arbitrary, but not
+obviously under anything else, so that for example,
+
+z 2({ak})yk3
+
+dak
+
+is a function of three variables, |a1|, |a2| and arg(a2
+intriguing, and we would have very much liked to discover more about them.
+
+1/a2). the functions j({ak}) are
+
+63
+
+6 comparison with free elds.
+
+if we take  = r the interaction for the free eld on a square lattice is
+
+g
+
+g = 2r2,
+
+the sum running over all pairs of nearest neighbors. in the continuum limit this becomes
+formally
+
+8x ((p)  (q))2 ,
+4z ((cid:18) 
+y(cid:19)2) dxdy.
+x(cid:19)2
++(cid:18)
+
+g
+
+we observe that there is an inconsistency in [l] between the discrete and continuous hamil-
+tonians. for consistency the denominator in (4.3) of that paper has to be replaced by 4.
+we have used the formulas based on the continuous hamiltonian.
+
+there are at least two properties of free elds that appear again in other models. either
+might be chosen as a basis of comparison and a means of studying these models. the property
+commonly chosen is the asymptotic behavior of correlation functions. in particular, in the
+plane,
+
+h((p)  (0))2i 
+
+2
+g
+
+ln|p|,
+
+where |p| is the distance between x and 0; and on a cylinder of circumference 2
+
+h((p)  (0))2i  a +
+
+1
+g|p|,
+
+(40)
+
+(41)
+
+if p and the origin 0 lie on the same generator and |p| is the distance between p and the
+origin with respect to the metric that yields a circumference of 2. we shall briey recall
+below the pertinent calculations. in the formula a is a constant that depends on the mesh.
+it could approach innity as the mesh approaches zero.
+
+another property is described in [l]. consider the partition function z() with boundary
+conditions, either on a disk so that  is a function on the circle, dened however only modulo
+constants, thus for simplicity with constant term 0, or on a cylinder, taken to be innitely
+long, so that  is really a pair of functions 1, 2, and a constant x, taken modulo 2. in
+the notation of paragraph 2.1
+
+for the disk,
+
+and for the cylinder,
+
+1 =xk6=0
+
+ab
+k eik,
+
+2 =xk6=0
+
+bb
+k eik.
+
+z() = exp(gxk>0
+
+|ck|2/k)
+
+z(1, 2, x) = z(1)z(2).
+
+64
+
+(42)
+
+(43)
+
+5
+4
+3
+2
+1
+
+-1
+
+5
+4
+3
+2
+1
+
+-1
+
+20
+
+40
+
+60
+
+80 100
+
+50 100 150 200 250 300
+
+figure 35: the quantity h(h(p)  h(0))2i  1.5 ln|p| measured on disks of radii 100 and 300
+covered by a square lattice.
+
+thus, as far as the variable x is concerned, the measure is homogeneous, a behavior that
+constrasts with that of the ising model discussed in the previous section.
+
+for the ising model on a triangular lattice the sos-model constructed in section 2 is the
+same as the sos-model attached, as in [n] for example, to the o(1)-model on a hexagonal
+lattice,4 and for this model there are familiar arguments that suggest the behavior (40)
+with g = gi = 4/3. we have not tested carefully the universality of the behavior or of
+the constants. crude experiments for the square and the triangular lattice suggest that the
+behavior is universal but we are not certain that the constants do not vary slightly.
+
+the function  of the free-eld theory plays the same role as the function h of our
+construction so that to test (40) we examine h(h(p)  h(0))2i. for what they are worth, the
+results for the plane appear in figures 35 and 36 in which the value of
+
+h(h(p)  h(0))2i  1.5 ln|p|
+
+(44)
+
+is plotted against |p|. for the square lattice in figures 35 the experiments are performed
+in disks of radii 100 and 300, an edge of the lattice being taken in each case as unit. the
+experiments are perhaps not to be taken too seriously because the nite size leads to an
+ambiguity. not only are the states in a disk qualitatively dierent at the boundary from
+those in the true bulk limit but also the jump lines that in a disk terminate at the boundary
+could, in some sense, in the bulk turn and pass once again through the disk, so that working
+in the disk increases the statistical independence. the graphs, in which vertical distances
+are drawn at a much larger scale, suggest that the function is approximately constant except
+close to the origin and near the edge of the disk, where the eect of the boundary manifests
+itself. the constant to which one imagines the dierence (44) tending has not yet stabilized
+in the diagrams. there is a dierence of about .4 in the minimum of the two curves. for
+
+4in [n] the partition function for the o(1)-model is expressed as a sum over weighted closed curves in
+the hexagonal lattice which is dual to the triangular lattice. every state of the ising model leads also to a
+collection of closed curves, formed from the dual edges separating sites of dierent spin. the weight of the
+collection can be taken as the mass of the set of ising states that lead to it.
+
+65
+
+2.5
+
+2
+
+1.5
+
+0.5
+
+20
+
+40
+
+60
+
+80
+
+figure 36: the quantity h(h(p) h(0))2i  1.5 ln|p| measured on a disk of radius 90 covered
+by a triangular lattice.
+
+comparison, a similar curve for the triangular lattice, obtained once again in a small disk of
+radius 90, an edge of the lattice again being taken as unit, is shown in figure 36.
+
+for the cylinder and the same two lattices, square and triangular, the graphs of h(h(p) 
+h(0))2i appear in figures 37 and 38. we have not used the parameter |p| in the gures but
+rather the parameter k because it is then easier to explain which part of the curve we used to
+calculate the slope (for the square lattice |p| = 4k/lv , for the triangular |p| = 8k/3lv ).
+none the less the data have been so normalized that if the behavior is, as in equation (41),
+asymptotically a + b|p| then the slope of the curves in the gures on their middle, linear
+parts and as functions of k is also b. for the square lattice the cylinder is of circumference
+120 and length 2401 in lattice units; for the triangular of circumference 160 and length 1601.
+the slope for the square lattice is about .460; for the triangular it is about .452, which is
+not a number that we can deduce easily from 4/3. these numbers are close; so universality
+of the slope is strongly suggested.
+
+to obtain figures 37 and 38 we construct h as in sections 2 and 3 and use the dierence
+between the values of h at points on generators of the cylinder symmetrically placed with
+respect to the central meridian and at a distance of k sites from it. thus k is necessarily less
+than one-half the length of the cylinder. since we use all generators there is considerable
+statistical dependence. none the less this yields for a cylinder of size 1202401 a very regular
+graph and if we use that part of it between 100 and 1100 we obtain a t 37.6275 + .4597k
+from which the statistically generated values dier by no more than two units at any point
+on this interval, so that the slope should be correct to about two parts in a thousand. (the
+curve is in fact slightly concave and the departure from linearity regular. with a quadratic t
+and a slightly shorter interval we would do much better with the t but not with the slope.)
+the experiment repeated on the interval [200, 1000] leads to a slope of .4599 but the same
+conclusions. a similar experiment for a cylinder of size 120 1201 yields to a slightly better
+
+66
+
+600
+
+500
+
+400
+
+300
+
+200
+
+100
+
+200
+
+400
+
+600
+
+800
+
+1000
+
+1200
+
+figure 37: the correlation function h(h(p)  h(0))2i on a cylinder for the square lattice
+120  2401.
+
+400
+
+300
+
+200
+
+100
+
+200
+
+400
+
+600
+
+800
+
+figure 38: the correlation function h(h(p)  h(0))2i on a cylinder for the triangular lattice
+160  1601.
+
+67
+
+t and similar conclusions with a slope of .4593. an anisotropic lattice of size 78  2401 is
+roughly conformally equivalent to a square lattice of size 120 2401. using the points on the
+interval [200, 1200] we obtain a t of 39.8942 + .4519k from which the statistically generated
+values dier by no more than 1.5 units. the dierence is again not random but not convex.
+we can again conclude that the slope is correct to about two parts in a thousand. the
+dierence between the slopes in the symmetric and the anisotropic cases is .0078. in other
+words, it appears that we obtain the same constant. a triangular lattice of length 1601
+and circumference 160 is conformally equivalent to a square lattice of circumference 120 and
+length a little shorter than 1401. thus it is long enough. on using that part of figure 38
+in the interval [100, 700] we obtain a t 20.6918 + .4515k that is as good as those for the
+square and anisotropic lattice and suggests, for the same reasons, an error of two parts in a
+thousand.
+
+we observe nally that the experiments described in section 2, in which the analogue of
+
+z() is studied, yield the behavior (42) and (43) with gb = 2r2
+
+b = 1.4710 6= gi.
+
+for the convenience of the reader, we recall briey the calculations that lead to (40)
+and (41). the average h((p)  (0))2i is taken with respect to the measure dened by the
+weights
+
+exp 
+
+g
+
+8xp,
+
+((p + )  (p))2! = exp((q, )),
+
+the operator q is obtained from the relation
+
+  {(1, 0), (0,1)}.
+
+(45)
+
+((p + )  (p))2 =xp  8(p)  2x
+
+xp,
+
+(p + )! (p).
+
+we are calculating the second derivative of
+
+z (exp(i()) exp ((q, )) d(cid:14)z exp ((q, )) d =  exp(cid:0)2(q1, )/4(cid:1)
+
+with respect to the parameter , where  is the linear form   (p)  (0) or the function
+p  0. the second derivative is
+
+(q1, )/2.
+
+this expression is easier to treat when we pass to fourier transforms. the two delta
+functions of  can be written as integrals of eigenfunctions of q. since the operator q acts
+on  so that (q)(p) is g/8 times
+
+8(p)  2(p + (1, 0))  2(p  (1, 0))  2(p + (0, 1))  2(p  (0, 1)),
+
+its eigenfunction e2i(p1x+p2y) corresponds to the eigenvalue g(sin2 x + sin2 y)/. therefore
+1
+2(q1, ) becomes at p = (p1, p2)
+
+
+
+2gz 1/2
+1/2z 1/2
+
+1/2
+
+|e2i(p1x+p2y)  1|2
+sin2 x + sin2 y
+
+dxdy,
+
+68
+
+or
+
+2
+
+g z 1/2
+1/2z 1/2
+
+1/2
+
+sin2((p1x + p2y))
+sin2 x + sin2 y
+
+dxdy.
+
+(46)
+
+the integral outside a circle of small positive radius  about 0 remains bounded as |p|  
+and inside this circle the denominator can be replaced by 2(x2 + y2). the result is
+
+2
+
+gz 
+
+0
+
+dr
+
+r z 2
+
+0
+
+sin2(ru cos )d,
+
+u = |p|.
+
+the integral of (47) is the sum of
+
+z 1/u
+
+0
+
+and
+
+dr
+
+r z 2
+
+0
+
+rdr) = o(1)
+
+sin2(ru cos )d = o(u2z 1/u
+z 
+
+r z 2
+
+sin2(ru cos ) d.
+
+dr
+
+1/u
+
+0
+
+0
+
+(47)
+
+(48)
+
+since sin2  = 1
+
+2  1
+
+2 cos 2,
+
+z 2
+
+0
+
+cos(z cos )d = 2j0(z),
+
+and j0(z) = o(|z|1/2), (47) can be replaced by
+
+z 
+
+1/u
+
+dr
+r   ln u.
+
+multiplying by 2/g we obtain (40).
+
+for a cylinder we treat a lattice that is periodic in the vertical direction (the p1 direction)
+with period a, which for simplicity we take to be even. if p = (0, an), n > 0, the analogue
+of (46) is
+
+2
+g
+
+a/21xx=a/2
+
+1
+
+az 1/2
+
+1/2
+
+sin2(any)
+
+sin2(x/a) + sin2(y)
+
+dy.
+
+once again we drop terms that remain bounded as a approaches innity. this yields
+
+2
+
+g 1
+az 1/2
+
+1/2
+
+sin2(any)
+
+y2
+
+dy +
+
+2
+a
+
+a/21xx=1 z 1/2
+
+1/2
+
+we examine the second term of (49) using the identity
+
+sin2(any)
+
+x2/a2 + y2 dy .
+
+(49)
+
+sin2(any) =
+
+1
+2
+
+1
+2 
+69
+
+cos(2any).
+
+the expression obtained from the term 1/2 on the right is independent of n and on close
+examination is seen to behave like ln a, but that is not pertinent here. since
+
+which upon integration by parts becomes
+
+1
+a
+
+a/21xx=1 z 1/2
+
+1/2
+
+1
+
+2nxx
+
+sin(2ny)
+
+a/2
+
+x2 + y2
+
+cos(2ny)
+x2 + y2 dy,
+
+a/2
+
+2y sin(2ny)
+(x2 + y2)2 dy,
+
+a/2
+
+cos(2any)
+
+x2/a2 + y2 dy =xx z a/2
+2nxx z a/2
+dy! .
+
+anz 1/2
+
+sin2(any)
+
+y=a/2
+
+1
+
++
+
+1/2
+
+y2
+
+2
+
+g  1
+
+the second term behaves  independently of a  as o(1/n). this leaves the rst term of
+(49) which is n times
+
+for large an this expression is approximately 2/g. if, however, we measure the distance
+between p and 0 not in terms of the circumference but in terms of the radius of the cylinder,
+the constant 2/g is replaced by 1/g as in (41).
+
+70
+
+7 alternate constructions.
+
+in this section, we examine briey other conventions and constructions that we could have
+chosen in our experiments.
+
+7.1 sos-model jumps.
+
+if, as indicated in the introduction, the aim is simply to develop the circle onto the line,
+thereby turning the ising model into an sos-model, the particular construction chosen is
+somewhat arbitrary. we could, apparently with equally good reason, replace the jumps of
+ by jumps from a set, {(2k + 1),(2k  1), . . . , (2k + 1)}, k  n, each choice being
+assigned a probability on which the only conditions are that the sum of the probabilities is
+one and that the probabilities of jumps by equal amounts in opposite directions are equal.
+it is not, at rst, clear what eect this has.
+
+thomas spencer pointed out to one of us that the behavior, for jumps of ,
+
+h(h(p)  h(0))2i  3/2 ln|p|
+
+is a consequence of a more geometric hypothesis. to construct the function h attached to a
+particular state of the ising model, we construct curves separating the regions in which the
+spins take dierent values. let, in the plane, n = n(p) be the number of curves separating
+p from the origin. the hypothesis is that
+
+since h(p) is then obtained by assigning independent values to the jumps of , it is clear
+that cn must be 2/g2. for a cylinder the analogue of (50) is
+
+hn(p)i  cn ln|p|.
+
+(50)
+
+hn(p)i  c|p|.
+
+(51)
+
+once again, out of curiosity, we tested this hypothesis numerically for the square lattice.
+the results are presented in figure 39 in which hn(p)i/ ln|p| is plotted for the square lattice
+it appears that except at the center and near the
+and two disks of radii 200 and 300.
+boundary the quotient is approximately constant but that it is only very approximately
+equal to 3/22  .15199. there are several possible causes. as we saw in paragraph 3.2 the
+bulk state is approached only slowly in a disk. moreover the nite-size eects that appear
+in the examination of (44) appear here too. the rst consequence is that there will be a
+tendency to overestimate the number n(p) when |p| is not small in comparison with the
+radius because the curves in a disk that reach the boundary are not allowed to close. in
+principle, this eect should, for a given |p|, be mitigated as the radius grows. on the other
+hand, rather than increasing toward .15 as we pass from a radius of 200 to one of 300, the
+minimum of the curve, decreases from about .14 to about .13. since the smallest pertinent
+value of |p| is about 75 and ln(75)  4.3 and the dierence in (44) does not, as we saw in the
+previous chapter, approach a limiting value rapidly, if it approaches one at all, a decrease in
+the minimum of .4/4.32  .01 is not completely unreasonable. no conclusions are possible
+
+71
+
+0.2
+0.18
+0.16
+0.14
+0.12
+
+0.2
+0.18
+0.16
+0.14
+0.12
+
+50
+
+100 150 200
+
+50 100150200250300
+
+figure 39: the quantity hn(p)i/ ln|p| for the square lattice on disks of radii 200 and 300.
+
+without further study. our purpose here is not, however, to examine (50) but rather to
+acquire a rough understanding of what we might have discovered if we had chosen the jumps
+in a dierent way.
+
+the advantage of (50) and (51) is that they make clear that the behavior (40) and (41)
+does not change when the denition of h is modied. if there are jumps of (2k + 1) with
+probability k, k  z, then (40) persists with a new constant
+
+cn
+
+xk=
+
+k(2k + 1)2.
+
+(52)
+
+there is a similar change in (41).
+
+the behavior of the functions z() appears to be quite dierent. we have performed
+a few rough experiments, replacing the jumps of  by jumps of 3,, , 3, each with
+probability 1/4 and by jumps of 5,3,, , 3, 5, each with probability 1/6. if the
+measures continue to exist, but with gb modied as suggested by (52) then the fourier
+coecients would continue to be distributed as gaussians but with g = gb of (42) multiplied
+by 1
+b/  .68 of the distribution
+
+35 respectively, so that the ideal value of p2r2
+
+5 and by 3
+
+at 0 would be multiplied byp1/5 orp3/35 yielding  .31 and  .20. in the rst row of
+
+figure 40 (four and six jumps) the distribution of the fourier coecients ra1 for a cylinder
+of size 299  599 is compared in each of these cases with a gaussian with the same value
+at 0. there is some similarity but considerable dierence. moreover the value at 0 is close
+to but dierent from the suggested value. for the higher coecients the distribution looks
+more and more like a gaussian. in the second row of figure 40 the distributions of ra5,
+normalized so that the factor k with which we are familiar from section 2 are compared
+with gaussians. not only are they closer to gaussians, but the values at 0 are closer to those
+predicted by (52).
+
+on the other hand, the rst row of figure 41, in which the distributions of ra1 for the
+three sizes 99 199, 199 399, and 299 599 are compared in each of the two cases, suggests
+that the limiting measures may none the less exist. so does the second row of figure 41
+
+72
+
+0.4
+0.35
+0.3
+0.25
+0.2
+0.15
+0.1
+0.05
+
+0.4
+0.35
+0.3
+0.25
+0.2
+0.15
+0.1
+0.05
+
+-7.5 -5 -2.5
+
+2.5
+
+5
+
+7.5
+
+-7.5 -5 -2.5
+
+2.5
+
+5
+
+7.5
+
+0.4
+0.35
+0.3
+0.25
+0.2
+0.15
+0.1
+0.05
+
+0.4
+0.35
+0.3
+0.25
+0.2
+0.15
+0.1
+0.05
+
+-7.5 -5 -2.5
+
+2.5
+
+5
+
+7.5
+
+-7.5 -5 -2.5
+
+2.5
+
+5
+
+7.5
+
+figure 40: the distribution as a function of a1 (rst line) and a5 (second line) with four
+jumps (rst column) and six jumps (second column).
+
+0.4
+0.35
+0.3
+0.25
+0.2
+0.15
+0.1
+0.05
+
+0.4
+0.35
+0.3
+0.25
+0.2
+0.15
+0.1
+0.05
+
+-7.5 -5 -2.5
+
+2.5
+
+5
+
+7.5
+
+-7.5 -5 -2.5
+
+2.5
+
+5
+
+7.5
+
+0.4
+0.35
+0.3
+0.25
+0.2
+0.15
+0.1
+0.05
+
+0.4
+0.35
+0.3
+0.25
+0.2
+0.15
+0.1
+0.05
+
+-7.5 -5 -2.5
+
+2.5
+
+5
+
+7.5
+
+-7.5 -5 -2.5
+
+2.5
+
+5
+
+7.5
+
+figure 41: the distribution as a function of a1 (rst line) and a5 (second line) with four
+jumps (rst column) and six jumps (second column) on the cylinders 99  199, 199  399,
+and 299  599.
+
+73
+
+0.18
+
+0.16
+
+0.14
+
+0.12
+
+0.18
+
+0.16
+
+0.14
+
+0.12
+
+50
+
+100 150 200
+
+50 100150200250300
+
+figure 42: the quantity h(n(p)  hn(p)i)2i/ ln|p| on disks of radii 200 and 300.
+
+for ra5. we have, however, as yet made no serious eort to decide whether this is so, nor
+whether these measures could be conformally invariant and universal.
+
+another possible natural choice for the relative weights of the jumps n, n odd is given
+by the dirichlet form. its discretized form (45) used in section 6 suggests that the weights
+2k+1 and 1 of having a jumps (2k + 1) or  satisfy 2k+1 = 2k+1
+. if 1 is xed by
+requiring thatpiz 2i+1 = 1, then 1 = 21. then the constant gb would be multiplied
+by the inverse ofpiz 2i+1(2i + 1)2 = 3, that is 1
+
+in addition to (50) we also examined, following a suggestion of thomas spencer, the
+
+1
+
+3 .
+
+behavior of
+
+h(n(p)  hn(p)i)2i/ ln|p|,
+
+whose behavior is pertinent when attempting to establish (44) rigorously, in disks of radii
+200 and 300. although the results are not relevant to this paper, they are presented, for the
+curious reader, in figure 42. once again, the curves are extremely at, but there is a drop
+for the larger radius that has to be explained.
+
+7.2 the fortuin-kasteleyn construction.
+
+the fortuin-kasteleyn formulation of the ising model can be used to map the partition
+function of the high-temperature phase of the model to a percolation-like sum over bond
+congurations. to construct the f-k version of an ising model on a planar graph g with
+vertices s  s and bonds b  b we shall form the rst barycentric subdivision g of g. thus
+associated to g are the vertices s, the bonds b, each joining two sites, and the faces f , each
+face f being bounded by sites and vertices. the sites s of g are the sites in s and points
+obtained by choosing arbitrarily from each bond b and each face f a point in its interior.
+thus, set-theoretically, s = s  b  f . the bonds b are pairs consisting of a bond in b
+and one of its ends or a face in f and a bond or vertex on its boundary. in fact, the bonds
+in b joining a face to a vertex in its boundary are for our purposes superuous and are not
+included in our constructions.
+
+74
+
+the partition function of the original model is taken in the form
+
+z =x yb
+
+exp(j(s),(t)).
+
+(53)
+
+here s and t are the two sites joined by b. thus sinh(j) = 1, j = .881374. for a given
+conguration , the clusters, in the sense of this paper, are maximal connected subsets of s
+on which  is of constant sign. to obtain a fortuin-kasteleyn cluster we remove the bonds
+of these connected clusters one by one with probability 1/ = .414214,  = exp j. this
+replaces the sum (53) by a sum over decompositions of g into subgraphs, each component
+being provided with a sign. a decomposition is the subgraph obtained by keeping all vertices
+and removing some bonds.
+
+(54)
+
+(1 + (exp(j(s),(t))  1))
+
+z =x yb
+=xy(exp j  1)
+=xy(  1)
+=x(1 + (  1))r{(  1)q/(1 + (  1))r}
+=x r(1 
+
+)rq
+
+1
+
+
+)q(
+
+1
+
+
+the sum in the second line runs over all decompositions into subgraphs, each component
+being signed, so that a constant spin is assigned to each of its vertices, and so do the sums
+in the remaining lines. from a signed decomposition we can of course reconstruct, from the
+signs alone, the original state of the ising model. this state has r bonds that join sites with
+the same spin, so that its probability is r. the number of bonds in the subgraph is q and
+the factor (1  1
+ )rq is the probability that we arrive at it on removing bonds. if we
+now ignore the spins, the nal sum in (54) becomes
+
+ )q( 1
+
+if c is the number of connected graphs in the decomposition.
+
+x(  1)q2c,
+
+to construct the function h we associate to a decomposition a state  on s. the value of
+ is 1 at the vertices of g, at the bonds of g that belong to the subgraph, but is 1 at all other
+vertices of g. now h can be constructed as before, except that the jumps are to be /2
+and not . it turns out to be instructive, at least for the crossing probabilities, to replace
+the probability 1/ by a variable probability 1   between 0 and 1. thus f k = .585786.
+we have considered only graphs formed by square lattices on either a cylinder (for dis-
+tributions and correlations) or a rectangle (for crossing probabilities). our aim was not
+to establish conformal invariance and universality for the f-k construction, but rather to
+acquire a provisional understanding of the way the various objects introduced in this paper
+behave under an alternative description of the model.
+
+there are two ways to dene crossings in the f-k construction. if cluster signs are taken
+into account, a crossing is a cluster of sites with positive spins that joins one side of the
+
+75
+
+-2
+
+-1
+
+4
+
+2
+
+-2
+
+-4
+
+-6
+
+-8
+
+-10
+
+1
+
+2
+
+figure 43: log h(f k)/(1  h(f k)) as a function of log r.
+
+rectangle to the opposite one. the crossing probabilities considered earlier are recovered if
+ = 1 but the crossing probabilities are zero if  = 0.
+
+if clusters are unsigned, crossings are dened as in bond percolation. this is more in
+the spirit of the f-k formalism and we shall use this denition. note that both conventions
+are linked: if + and  are the crossing probabilities over a positively or negatively signed
+cluster, and + the probability that there are spanning clusters of both positive and negative
+sign, then the probability  that an unsigned cluster crosses is given by the following obvious
+relation,
+
+ = + +   +.
+
+our crossing probabilities now depend on two variables: the aspect ratio of the rectangle
+r and the probability  of not removing a link. we studied each of these variables separately,
+varying one and keeping the other xed. we rst took 1   = 1  f k  1/ and studied
+the dependence on the aspect ratio. results for h(r, f k), the probability of a horizontal
+crossings in g on either + or  clusters, are shown in figure 43. the numbers of sites in g
+inside the rectangles were around 40000 and the samples 250000. the absence of symmetry
+implies that duality fails,
+
+the asymptotic behaviour of log h(r, f k), shown on figure 44, is found to be
+
+h(r, f k) + h(1/r, f k) 6= 1.
+
+log h(r, f k) r 0.502r + constant,
+a number reasonably close to /2, despite the rather low statistics.
+
+in the second experiment we measured the dependence on  of h(1, ). the results
+presented in figure 45 raise the question whether  = f k might be a critical value of the
+function h(r, f k) or at least of h(1, f k), that is h(1, ) would be zero for 0 <  < f k
+
+76
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+2.5
+
+-2.5
+
+-5
+
+-7.5
+
+-10
+
+figure 44: fits of the asymptotic behavior of log h(r, f k) as a function of r.
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+0.5
+
+0.6
+
+0.7
+
+0.8
+
+0.9
+
+figure 45: h(1, ) as a function of  for 100  100 and 200  200 square lattices g. (the
+curve of the larger lattice is the top one for large .)
+
+77
+
+14
+12
+10
+8
+6
+4
+
+14
+12
+10
+8
+6
+4
+
+20 40 60 80 100 120
+
+50 100150200250300350
+
+figure 46: the correlation h(h(p)  h(0))i2
+
+f k  2
+
+3 ln|p| on disks of radii 60 and 180.
+
+and nonzero for  > f k.
+the function h(1, f k),  > f k, is when the mesh goes to zero.
+
+it is not obvious from the numbers obtained what the limit of
+
+we measured the -dependence of the correlation functions
+
+h(h(p)  h(q))2i,
+
+both on a cylinder and on the plane. according to [n] one should expect that for correlations
+in the plane
+
+h(h(p)  h(0))2if k 
+
+2
+3
+
+ln|p|.
+
+this is conrmed by the graphs of figure 46. in the rst the radius of the disk considered
+is relatively small, about 60 bond units; for the second it is 180 bond units. the presence of
+three distinct curves, corresponding to the cases that p is a new site on an old site, an old
+bond, or an old face, while 0 is taken to be a new site on an old, is curious. it appears that
+they remain distinct in the limit of an innite radius, but their separation remains bounded.
+once again the scale in the vertical direction is very large; the curves of these diagrams are,
+in fact, extremely at except near the ends.
+
+on the cylinder, the correlation functions behave as
+
+h(h(p)  h(q))2i  a() + b()|p  q|,
+
+at least if p and q lie on a common generator. as observed in section 6, the quantity a()
+is a constant that depends on the mesh and on the nature of the pair {p, q}, on whether p
+or q is a site, bond or face of the graph g. if the conventions of the equation (41) are used,
+the value of b(f k), estimated on a cylinder of size 99  699, is close to .26.
+we studied the distribution of the function h for two sizes of cylinder, 149  339 and
+299 679, but only on the boundaries, not on inner circles. these cylinders are a little short,
+so that about 8/1000 of the samples are such that the sum of the jumps on a circumference
+are not 0, but passing to longer cylinders of size 149 449 and 299 899, although it reduces
+this fraction to 2/1000 does not change the conclusions. the measures on the boundary
+
+78
+
+4.4
+
+4.2
+
+3.8
+
+3.6
+
+3.4
+
+5
+
+10
+
+15
+
+20
+
+25
+
+30
+
+figure 47: the numbers k for 1  k  30 for the cylinders 149  339 and 299  679.
+
+appear to be gaussian once again, but with a new value of gb that is a little greater than
+3. (given the behavior of k of figure 47 it is not so clear what gb is to be. further study
+might suggest dening it by the asymptotic behavior of k.) we plot the values of k for
+1  k  30 on figure 47. the results, coarse as they are, are similar to those described in
+section 2, although there are curious features that advise against hasty conclusions. the
+collection of values for the two cylinders cross at k = 7. graphs of the distributions of ra1
+and ra5 appear in figure 48. on the left the results for the cylinders of dierent sizes
+are compared with each other; on the right the results for the largest of the two cylinders
+are compared with gaussians. figures 47 and 48 together suggest that the behavior of the
+function h constructed according to the fk-denition might have similarities with that of
+the function constructed by the methods of this paper, but we have not examined the matter
+carefully. in particular, we tested neither conformal invariance nor universality.
+
+7.3
+
+innite temperature.
+
+for the ising model at innite temperature, thus for site percolation in which each site is open
+with probability .5, the crossing probabilities cease to be of interest. they are all 0 or, in
+exceptional and trivial cases, 1. on the other hand, the partition functions z(1, 2, x, q)
+seem to behave much like those at the critical temperature. in figure 49 we present results
+for the square lattice on cylinders of size 99  399 and size 299  1199. on the top, the
+results for ra1 and ra10 for these cylinders are compared with each other. on the bottom
+the results for the largest of the two cylinders are compared with a gaussian. as in figure
+1, there has been no renormalization of these distributions, so that if the distributions were
+
+similar to those of section 2 the ratio of the heights of the two curves would be 1/10  .32.
+
+it is about .34, but the cylinders are still fairly small. although this has no perceptible
+
+79
+
+1.2
+1
+0.8
+0.6
+0.4
+0.2
+
+1.2
+1
+0.8
+0.6
+0.4
+0.2
+
+-1.5-1-0.5
+
+0.5 1 1.5
+
+-1.5-1-0.5
+
+0.5 1 1.5
+
+1.2
+1
+0.8
+0.6
+0.4
+0.2
+
+1.2
+1
+0.8
+0.6
+0.4
+0.2
+
+-1.5-1-0.5
+
+0.5 1 1.5
+
+-1.5-1-0.5
+
+0.5 1 1.5
+
+figure 48: the distribution constructed according to the fk-denition as a function of a1
+or a5.
+
+consequences, these cylinders are short enough that about 15/10000 of the sample states
+yield jumps whose sum along a circumference is not 0, so that the states at the two ends are
+certainly not independent. in figure 50 the results for the smallest cylinder are compared
+with those for a cylinder on a triangular lattice of size 116  401. this is a very stubby
+cylinder, but, curiously enough, once again only about 15/100000 of the states are such that
+the sum of the jumps along a circumference is not 0. figure 51 is analogous to figure 2: the
+two sequences of points on the left are for the square lattice, the upper for the smaller of
+the two cylinders, the lower for the larger; the two sequences of points on the right are for
+the smaller of the cylinders with a square lattice (lower set) and for the cylinder with the
+triangular lattice (upper set). if figure 51 is to be believed the constant 2rb changes and
+becomes approximately one-half its previous value, but, as with the other examples of this
+section, our aim was more qualitative than quantitative.
+
+we can also introduce, as in section 5, the partition functions z++ and z+
+
+or the
+measures z(, x). a little reection shows that the two numbers do not depend on q and
+are now both equal to 1
+
+2. the analogue
+
+z++0 + z+ = mq ({bk = 0}, x)
+
+of an equation deduced from equations (30) and (31) is not valid, rather the simulations
+suggest that, if z(0, x, q) exists, then it peaks at /2 and 3/2. on the other hand,
+z(0, 0, x, q) has quite a dierent behavior and a relation between zq=0({ak},{bk}, x) and
+zq=0({ak}, x) like that of equation (35) is dicult to ascertain because the functions h do
+not very often have level lines that encircle the cylinder, even when the cylinder is very long.
+
+more pertinent to the study of the measures at criticality is that the behavior of
+
+z z(1, 2, x)d2/z z(1, 2, x)d2dx =x k () exp(ikx)
+
+80
+
+0.5
+0.4
+0.3
+0.2
+0.1
+
+0.2
+
+0.15
+
+0.1
+
+0.05
+
+-4
+
+-2
+
+2
+
+4
+
+-7.5-5-2.5
+
+2.5 5 7.5
+
+0.5
+0.4
+0.3
+0.2
+0.1
+
+0.2
+
+0.15
+
+0.1
+
+0.05
+
+-4
+
+-2
+
+2
+
+4
+
+-7.5-5-2.5
+
+2.5 5 7.5
+
+figure 49: the distributions a1 and a10 at innite temperature.
+
+0.5
+0.4
+0.3
+0.2
+0.1
+
+0.2
+
+0.15
+
+0.1
+
+0.05
+
+-4
+
+-2
+
+2
+
+4
+
+-7.5-5-2.5
+
+2.5 5 7.5
+
+figure 50: the distributions a1 and a10 at innite temperature compared for square and
+triangular lattices.
+
+81
+
+2
+1.8
+1.6
+1.4
+1.2
+
+0.8
+
+2.2
+2
+1.8
+1.6
+1.4
+1.2
+
+0.8
+
+5 10 15 20 25 30
+
+5 10 15 20 25 30
+
+figure 51: the numbers k at innite temperature.
+
+is similar to that of z0(, x). this may be of some advantage for numerical studies since at
+innite temperature no thermalizations are necessary. consider for example the analogue
+f of the function dened by equation (38). there is, once again, a simple, rough, but
+inexact  as is clear from figure 52  approximation to this function,
+
+but, as before, we were unable to improve upon it in a useful fashion.
+
+f(x)  a
+
+sin(bx)
+
+bx
+
+,
+
+82
+
+1
+
+2
+
+3
+
+4
+
+5
+
+0.025
+
+-0.025
+
+-0.05
+
+-0.075
+
+-0.1
+
+-0.125
+
+figure 52: an unsatisfactory but curious approximation.
+
+83
+
+8 afterword.
+
+most of the phenomena we have examined in the paper are manifestations of the inuence
+of the boundary, so that to some extent the thrust of the paper runs counter to the notion
+that statistical mechanics, especially as it refers to critical phenomena, is the study of bulk
+properties. since critical behavior appears when the appropriate equilibrium between the
+strength of the interactions and the number of paths by which the interaction is transmitted
+over long distances is achieved it is not, from a mathematical standpoint, such a bad idea to
+study criticality by examining the consequences of systematically blocking large numbers of
+these paths. on the other hand, renormalization is usually conceived in bulk terms. so it is
+a relief that the distributions investigated here, whose ultimate purpose is the introduction
+of a concrete notion of xed point, do not become trivial when the boundary moves o to
+innity.
+
+for the ising model, however, in contrast to percolation or to the free boson, there are
+formal diculties in the introduction of a closed renormalization transformation that we are
+still unable to overcome, even with measures that continue to have a meaning in the bulk.
+one connection that we would like to make, and that is suggested by some of the ex-
+perimental results of the paper, is with the notion of conformally invariant eld theory in
+the strongly geometric form envisaged by graeme segal ([s1, s2]). it may be that the basic
+objects of that theory are constructible from the measures examined in this paper. recall
+that in that theory one of the rst objects to construct is a hilbert space
+
+h =x
+
+h  h 
+
+associated to a circle with parametrization. in addition, suppose that we are given a rie-
+mann surface  with boundary c consisting of disjoint parametrized circles c1, . . . , cm and
+c1, . . . , cn, the parametrizations being given by real analytic functions. then (equation
+(1.4) of [s1]) the theory is provided with an operator
+
+u : hm  hn.
+
+we might suppose that h is the l2-space of a measure  on the space of distributions on
+the parametrized circle. one such measure whose existence is suggested by the experiments
+of this paper is the measure  on distributions on a circle in the plane or on the central circle
+of an innite cylinder described at the end of paragraph 3.2, thus the measure dened in
+the bulk. it is possible that l2() is, if not h, then the vacuum sector h0  h 0 or some
+other subspace of h.
+consider the annulus q of inner radius q and outer radius 1 and the operator uq associ-
+ated to this surface. take c2 to be the outer circumference with the natural parametrization
+and c1 the inner and c to be their union. we consider the annulus as imbedded in the plane,
+or if we treat it as a cylinder of nite length as being imbedded in a cylinder extending to
+innity in both directions. the construction of bulk measures suggested in section 3 yields
+experimentally a measure mq = mq,c on the product of the spaces of distributions on c1
+and c2. if, as we might suppose, mq is absolutely continuous with respect to    then it
+
+84
+
+is given by a kernel
+
+dmq(2, 1) = kq(2, 1)d(2)d(1).
+
+it is not impossible that the operator uq, or rather its restriction to the sector represented
+by l2(), is given by
+
+uqf (2) =z kq(2, 1)f (1)d(1).
+z kq2(2, )kq2(, 1)d().
+
+an essential feature of these operators would be the relation uq = uq1uq2 when q = q1q2
+
+which would follow from a relation
+
+(55)
+
+let c be the circle that separates the annulus of parameter q into annuli of parameters q1
+and q2. we apply the notions of conditional probability and the markovian property, as well
+as the obvious symmetry of kq, to the bulk measures. thus
+
+kq(2, 1)d(2)d(1) = dmq(2, 1)
+
+=z dmq(2, 1|)d()
+=z dmq1(1|2|)dq2(2|)d()
+=z dmq1(1|)dq2(2|)d()
+= {z kq1(, 1)kq2(2, )d()}d(1)d(2),
+
+from which the equation (55) would follow.
+
+these are tentative suggestions, and we only make them to confess that we have not yet
+had an opportunity to test them experimentally. that may not be an easy matter. nor
+do we know whether they are conrmed by the conventional wisdom. to construct some
+analogue of segals operators on the whole h it will probably be necessary to utilise the
+phase of section 5, but here again more reection is necessary.
+another set of experiments waiting to be performed, although here the outcome is more
+certain and the experiments therefore less tempting, is an examination of the behavior of
+the measures in a neighborhood of the critical point as we vary j (or the temperature)
+and introduce a small magnetic eld. the limits as the mesh goes to 0 are expected to
+exist no longer, but the behavior of the measures, of their moments for example, should
+yield the usual critical exponents  and  and should correspond to the usual intuition.
+we are nevertheless curious to see how the geometry of the xed point is reected in the
+coordinates introduced in this paper and to see, in particular, which linear combinations
+become irrelevant.
+
+we have also not pursued the study of other models, the potts model, the n-vector model
+and so on. the examples of section 7 indicate a surprising sensitivity to the denitions that
+it would be useful to examine further. for the ising model we made, more by good luck than
+good management, a particularly happy choice which it is not utterly clear how to generalize
+to other models.
+
+85
+
+appendix.
+
+the present work contains simulations of both qualitative and quantitative nature. we
+aimed in most of sections 2 to 6 to provide numerical results reproducible to the precision
+of statistical errors.
+it is therefore important that we be precise about our conventions.
+though many details are given in the text we complete here with some technical details. in
+paragraphs 3.4 and 5.3 and in section 7 the work is mostly qualitative and the reader who
+wants to examine these matters further will need to devise his own experiments.
+
+distribution md.
+
+according to the principles of the introduction, each possible function h lying above a given 
+is to be assigned the same measure. this principle has to be incorporated into the programs
+locally. for example, there are two possibilities for the conguration of jump lines (or level
+curves) passing through the center of the conguration appearing in the rst row of figure
+53. they are chosen with equal probability. since the curves are constructed one at a time
+by adjoining edges, when we rst adjoin an edge passing through the center we then turn
+to the left or right with equal probability 1/2. the next time we pass through the center
+there is no choice; there is only one unused successor remaining. for a triangular lattice,
+there are no ambiguous congurations. for the hexagonal lattice, all combinations of + and
+ around vertices of the dual lattice lead to at most two possible choices of jump lines (and
+they are then treated as in the square lattice) except for the congurations in the two last
+rows of figure 53 for which there are ve possible local congurations of jump lines. each
+will then have the probability 1
+5. as a consequence, when a curve rst passes through the
+center of this conguration it continues on a straight line with probability 1
+5 (which then
+leads necessarily to one of the congurations in the bottom row) or makes a sharp reverse
+turn to the left or the right with equal probabilities 2
+5. if the rst curve through the center is
+straight, the following curves are determined. otherwise the next curve, which may very well
+be a continuation of the rst, returning after perhaps extensive wandering, has two options,
+each chosen with probability 1
+2 .
+
+for the square lattice, two examples of the random determination of h occur in figure 54
+where a conguration was drawn together with the jump lines of h. if the site at the bottom-
+left corner has coordinate (1, 1), then four clusters meet at (9 1
+2). in the
+rst occurence, the two minus-clusters are joined and, in the second, they are separated. by
+denition the jump lines occur on edges dual to lattice bonds. their vertices were rounded
+in this gure to show clearly the dierence between joining and separating. the jump lines
+that wrap around the cylinder are indicated by dashed lines.
+
+2) and at (13 1
+
+2, 2 1
+
+2, 5 1
+
+the restrictions of h (on both the cylinders and the squares) was taken along several
+curves c. for the square lattices the curves were taken along lines of sites so that the
+intersection with dual bonds is unambiguous. the triangular lattices were oriented such
+that longitudinal lines with sites had one site per mesh unit. the longitudinal lines with
+sites of the hexagonal lattices had the pattern site-site-vacant repeated over every three-mesh
+cycles. for the triangular and hexagonal lattices the conformal images of the curves ci on
+the cylinder never contained dual bonds parallel to them. they were however moved slightly
+
+86
+
+figure 53: congurations of jump lines on the square and the hexagonal lattices.
+
+figure 54: a conguration on a 11  21 cylinder with the jump lines of h.
+
+87
+
+to the closest position where their intersections with dual bonds were equally spaced. for
+the curves c = c0 at the boundary they were chosen as the curve closest from the boundary
+satisfying the previous requirement.
+
+we also measured the distributions on a disk of radius r = 300.2. the center of the disk
+was a site. all the sites inside the disk of radius r, and only these, were thermalized. some
+of the boundary sites had three neighbors, others only two. we then determined an eective
+radius re as the radius of the largest circle that intersects only dual bonds associated to
+sites in the disk. it turned out to be re = 299.50. the restriction of h at the boundary was
+obtained along the circle of radius re   with  = 0.001. the jumps in h are of the form
+(  0) where 0 is the position of the intersection on the circle of the dual bond with
+the curve c. the exact positions of all the intersections with dual bonds were determined
+and used to compute fourier coecients. the radius of inner circles were determined as
+fractions of (re  ). for example c0 and c1 are at 8 mesh units from one another on the
+397  793 cylinder and the radii of the corresponding curves on the disk should be (re  )
+and 0.8811(re  ) since e28/397  0.8811.
+initial thermalization was provided by a few thousand swendsen-wang sweeps starting
+from a random conguration for the smaller cylinders, by 5000 sweeps for 397  793 and by
+10000 or more for 793  1585. after the initial thermalizations, measurements were taken
+every third swendsen-wang sweep for all the cylinders, except for the 793  1585 for which
+we used a 5-sweep cycle. a quick time-series analysis indicated that these cycle lengths
+insured proper statistical independence of consecutive measurements. the pseudo-random
+number generator was the one proposed by tezuka and lecuyer in [tl].
+
+programs for the square lattice on the cylinders and on the disks were written indepen-
+dently by at least two of the authors and errors were chased down until measurements agreed
+within the statistical errors reported in the text.
+
+it might not be clear, on reading the main text, why certain data are given for some of the
+geometries studied and not for others. it is because the results for the various runs were kept
+in two dierent formats. for the rst format, the observed values of each random variable
+ak or ak were grouped into 401 bins of equal size. thus for each random variable, 401
+nonnegative integers were stored. the width of the bins used during the rst months was
+a little too narrow and some of the values fell outside the range covered. later, in the nal
+months, the bin width was adjusted to avoid this diculty. when we used the rst format,
+we also kept, most of the time, the sum, the sum of the squares and the sum of mixed
+products of the random variables. these allowed us to calculate accurately the two rst
+moments of the distribution and the correlation coecients. the second format was more
+thorough. for each conguration of spins , we constructed one possible h and recorded
+its restriction to the various curves c, not simply to the extremities of the cylinder or its
+median. when we realized that the conformal invariance might hold in the sense of section
+3, we kept the restriction of h on more curves. these data bases, with only the boundary as
+c or with several curves c for each conguration, are sizeable even when compressed (a few
+gigabytes in all). we generated one for the cylinder 397  793 with eleven curves c. for
+59 401 and 157 1067 we only kept the restriction of h to one extremity. with the second
+format it was possible to test various assertions that we could not have anticipated without
+the experience gained from the experiments, but the rst required far less memory, so that
+
+88
+
+more sizes were examined.
+
+crossings.
+
+to determine the aspect ratio of the rectangles where the crossings are measured we have
+used the width and the height of the smallest rectangle that contains the sites of the lattice
+considered. for example, for the rectangles of lv  lh sites of the square lattice, the ratio
+is lh/lv . we used here the orientations of the lattices used for the measurement of md
+(see above).
+
+for h, v and hv on rectangles, crossings started on + spins from one boundary and
+ended on + spins on the other. for a
+v , the crossings were required to reach the
+central meridian if it contained sites or, if it did not, to reach the line of sites just before.
+the dimensions of the rectangles for the square lattice were the same as those used for
+percolation crossings in [lpps]. the results for the triangular lattices are given in table
+vii. the dimensions {lv, lh} that were used are
+
+h and a
+
+{540, 77},
+{504, 97},
+
+{582, 79},
+{474, 87},
+
+{566, 73},
+{508, 89},
+
+{554, 83},
+{596, 73},
+{586, 69},
+{526, 107},
+{616, 103},
+{566, 89},
+{456, 97},
+{476, 107}, {438, 103}, {440, 109}, {424, 111}, {410, 113},
+{512, 147}, {420, 127}, {400, 127}, {400, 133}, {354, 125}, {348, 129},
+{398, 155}, {336, 137}, {314, 135}, {386, 175}, {318, 151}, {302, 151},
+{310, 163}, {276, 153}, {366, 213}, {270, 165}, {310, 199}, {356, 239},
+{258, 183}, {248, 185}, {282, 221}, {324, 267}, {232, 201}, {232, 211},
+{210, 201}, {200, 201}, {224, 237}, {196, 219}, {196, 229}, {190, 233},
+{184, 237}, {184, 249}, {176, 251}, {288, 431}, {164, 259}, {176, 291},
+{152, 265}, {156, 287}, {148, 285}, {210, 425}, {152, 323}, {278, 625},
+{152, 359}, {148, 367}, {132, 345}, {140, 381}, {126, 361}, {182, 551},
+{132, 421}, {110, 367}, {116, 409}, {112, 413}, {126, 491}, {106, 433},
+{110, 471}, {154, 691}, {108, 515}, {112, 561},
+{116, 641},
+{92, 535},
+
+{108, 661},
+
+{90, 573}.
+
+{96, 505},
+
+the ratio r is given by r = 2lh/3lv as lh and lv count the number of lines and
+columns of sites.
+
+for h, v and hv on the disk, crossings started from and ended on sites in the annulus
+v had to reach the central
+
+between r = 300.2 and r  2. the crossings for a
+
+h and a
+
+diameter.
+
+on cylinders the crossings between the curves ci started from and ended on the curves.
+on the disk the ve curves were chosen at radii r, 0.8811r, 0.7763r, 0.6026r, 0.3632r with
+
+r = 300.2  2. the crossings from ci to cj (ri > rj) started outside the outer curve ci
+
+and ended inside the inner cj.
+
+the programs for all lattices and geometries were written by two of us and checked until
+they agreed within the statistical errors for a sample larger than 106 even though most
+crossings were measured with samples of  200k. (see section 4 for the samples used for
+the various lattices and geometries.)
+
+89
+
+the phase x.
+
+the phase x measured by the experiments is described in section 5. for figure 31, results
+from cylinders of the following sizes were plotted
+
+{59, 27},
+{59, 93},
+{59, 119}, {59, 147}, {59, 179}, {59, 211}, {59, 249}, {59, 283},
+
+{59, 37},
+
+{59, 47},
+
+{59, 61},
+
+{59, 73},
+
+all with at least 400k congurations each, and
+
+{117, 53},
+{117, 123}, {117, 145}, {117, 187},
+{117, 239}, {117, 293}, {117, 357}, {117, 421}, {117, 499}, {117, 565},
+
+{117, 73},
+
+{117, 95},
+
+with at least 600k congurations.
+
+the distribution of the random variable x is also used to obtain the ratios b/a through
+the constrained integrals (32) and (33). the errors on the ratios b/a appearing in table
+viii are dicult to evaluate as the numbers a and b are the local maxima of a smoothed
+distribution. for the integral (32), the most dicult to measure, the samples varied between
+31k and 50k. after experimentation with various smoothing parameters we think that the
+two rst digits of the ratios b/a for the case constrained/constrained are exact. the accuracy
+for the other cases is far better, the samples being at least 85k for the constrained/xed and
+300k for the xed/xed.
+
+the correlation h(h(p)  h(0))2i.
+
+these correlations can be measured in a straightforward way using the above denition of h
+and the details in the text.
+
+90
+
+references
+
+[ad] t.w. anderson, d.a. darling, asymptotic theory of certain goodness of t criteria
+
+based on stochastic processes, ann. math. statist., 23 (1952) 193-212.
+
+[b] r.j. baxter, exactly solved models in statistical mechanics, academic press (1982).
+
+[c1] john l. cardy, eect of boundary conditions on the operator content of two-dimensional
+
+conformally invariant theories, nucl. phys. b275 (1986), 200218.
+
+[c2] john l. cardy, critical percolation in nite geometries, j. phys. a, 25 (1992) l201.
+
+[cg] e. charpentier et k. gawedzki, wess-zumino-witten conformal eld theory for simply
+
+laced groups at level one, annals of physics 213 (1992), pp. 233-294.
+
+[das] r.b. dagostino, m.a. stephens, goodness-of-t techniques, marcel dekker (1986).
+
+[ksc] j. kertesz, d. stauer, a. coniglio clusters for random and intersecting percolation
+in percolation structures and processes, ann. of the israel physical society, 5, adam
+hilger (1983) 122-146.
+
+[k] harry kesten, percolation theory for mathematicians, birkauser (1982).
+
+[l] robert p. langlands, an essay on the dynamics and statistics of critical eld theo-
+ries, in societe mathematique du canada 1945-1995, tome 3: articles sollicites, societe
+mathematique du canada (1996).
+
+[lps] r.p. langlands, ph. pouliot, y. saint-aubin, conformal
+
+invariance in two-
+
+dimensional percolation, bull. ams 30 (1994) 161.
+
+[lpps] r.p. langlands, c. pichet, ph. pouliot, y. saint-aubin, on the universality of
+crossing probabilities in two-dimensional percolation, j. stat. phys. 67 (1992) 553574.
+
+[mw] barry m. mccoy and tai tsun wu, the two-dimensional ising model, harvard uni-
+
+versity press (1973).
+
+[me] christian mercat, holomorphie discr`ete et mod`ele dising, th`ese, universite strasbourg
+
+i  louis pasteur (1998).
+
+[n] bernard nienhuis, coulomb gas formulation of two-dimensional phase transitions, in
+phase transitions and critical phenomena, vol. 11, cyril domb (ed.), pp. 153, academic
+press (1987).
+
+[ps] e.s. pearson, m.a. stephens, the goodness-of-t
+
+tests based on w 2
+
+n and u 2
+n ,
+
+biometrika, 49 (1962) 397-402.
+
+[s1] graeme segal, two-dimensional conformal eld theories and modular functions, in ixth
+international congress on mathematical physics, ed. barry simon et al, adam hilger
+(1989).
+
+91
+
+[s2] graeme segal, geometric aspects of quantum eld theory, in proceedings of the inter-
+
+national congress of mathematicians, kyoto 1990, springer verlag (1991).
+
+[si] b.w. silverman, density estimation for statistics and data analysis, chapman & hall
+
+(1986).
+
+[tl] s. tezuka, p. lecuyer, ecient and portable combined tausworthe random number
+
+generators, acm trans. model. comput. simul. 1 (1991) 99-112.
+
+[w] s. s. wilks, mathematical sstatistics, princeton university press (1943).
+
+92
+
+

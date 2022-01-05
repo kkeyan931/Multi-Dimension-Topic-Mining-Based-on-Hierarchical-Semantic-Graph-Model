@@ -1,0 +1,3598 @@
+9
+9
+9
+1
+
+ 
+
+g
+u
+a
+1
+3
+
+ 
+
+ 
+ 
+
+1
+v
+7
+0
+2
+8
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+functorial qft, gauge anomalies and the dirac
+
+determinant bundle
+
+jouko mickelsson and simon scott
+
+abstract. using properties of the determinant line bundle for a family of elliptic
+
+boundary value problems, we explain how the fock space functor denes an axiomatic
+
+quantum eld theory which formally models the fermionic path integral. the sewing
+
+axiom of the theory arises as an algebraic pasting law for the determinant of the
+
+dirac operator. we show how representations of the boundary gauge group t into
+
+this description and that this leads to a fock functor description of certain gauge
+
+anomalies.
+
+1. introduction
+
+advances in the construction of topological invariants for low-dimensional manifolds
+
+using methods from gauge theory have led to a great deal of interest in the construction
+
+of quantum eld theories as modied cohomology theories [1, 22, 23, 25, 26]; that is, as
+
+generalized functors from manifolds to vector spaces. the purpose of this paper is to ex-
+
+plain a construction of a functorial quantum eld theory (fqft) using the fock functor,
+
+generalizing a construction suggested by segal [22] in (1+1)-dimensions. this may be of
+
+particular interest in view of recent developments in the theory of branes in superstring
+
+theory. in doing so, we realize the higher-dimensional gauge group representations of
+
+[14] in terms of a d+1-dimensional fqft, while the gluing law of the fqft arises as an
+
+algebraic pasting law for the determinant of a dirac operator with respect to a partition
+
+of the underlying manifold.
+
+the aim of fqft is to abstract the algebraic structure that the path integral would
+
+create if it existed as a rigorous mathematical object. with respect to a partition of
+
+the underlying manifold the functoriality formally encodes intriguing formal gluing laws
+
+for spectral or topological invariants realized as expectation values. the prototypical
+
+situation we consider is for a family of chiral dirac operators over an even-dimensional
+
+manifold with closed odd-dimensional boundary. the parameter space a in this case is
+
+an ane space of gauge potentials cross riemannian metrics, acting on which one has a
+
+group g of gauge transformations. to a spin manifold x with boundary y endowed with
+an admissible decomposition hy = w  w  of the space of boundary spinor elds, the
+fock functor associates a fock space fw of holomorphic sections of a relative determinant
+line bundle over the restricted grassmannian dened by the polarization w . globally
+
+the functor associates a bundle f of fock spaces to the parameter space a and the
+
+sewing properties of the determinant line bundle for a family of elliptic boundary value
+
+problems explained in [20] translate into the required functorial properties of the fqft.
+
+1
+
+2
+
+jouko mickelsson and simon scott
+
+the constructions of [14] arise in this situation in terms of two orthogonal g-anomalies.
+
+first, there is the bulk even-dimensional chiral anomaly measuring the obstruction to
+
+a g-equivariant determinant regularization. second, associated to the gauge group on
+
+the boundary one has the odd-dimensional mickelsson-faddeev commutator anomaly.
+
+in the fqft context the g-action is lifted from a to a projective bundle map on the
+
+fock bundle, rather than an automorphism of the whole (xed) space of sections of the
+
+determinant line bundle [14]. fqft formally encodes the relation between the path
+
+integral and hamiltonian approaches to second quantization, the fock functor fqft
+
+we consider provides a coherent framework in which to describe simultaneously the path
+
+integral (determinant line) description of gauge anomalies and their hamiltonian (fock
+
+space) realization. we hope this may serve to clarify some of the underlying mathematical
+
+structures of the qft.
+
+in the remainder of the introduction we recall from [1, 23, 26] the axiomatic char-
+
+acterization of a qft and the heuristic path integral formulae this aims to encode. in
+
+section 2 we explain some facts about determinant bundles and fock spaces associated
+
+to families of elliptic boundary value problems. in section 3 we dene the fock space
+
+functor in general and outline its fundamental properties. in section 4 we apply this
+
+to the interactive yang-mills gauge theory associated to a and discuss the boundary
+
+gauge group action and the chiral anomaly and commutator anomalies. in section 5 we
+
+outline the path integral formulae for an elliptic boundary value problem which the fock
+
+functor aims to model, and present a concrete 0 + 1-dimensional example which relates
+
+our constructions to the nite-dimensional fermionic (berezin) integral.
+
+1.1. axiomatic qft. a (d+1)-dimensional fqft means a functor from the category
+
+cd of d-dimensional closed manifolds and cobordisms to the category of vector spaces and
+linear maps, which satises certain natural axioms suggested by path integral formulae. a
+
+morphism in cd between d-dimensional manifolds y0, y1 is a (d+1)-dimensional manifold
+x with boundary x = y0  y1. the orientation on the incoming boundary y0 is
+assumed to be induced by the orientation of x and the inward directed normal vector
+
+eld on the boundary, whereas for the outgoing boundary y1 the orientation is xed by
+the outward directed normal vector eld. let cvect denote the category whose objects
+are topological vector spaces and whose morphisms are homomorphisms.
+
+a d + 1-dimensional fqft means a functor z : cd  cvect assigning to each d-
+dimensional manifold y a vector space z(y ) and to each cobordism x a vector zx 
+z(x). by at z() = c, so that if x is closed then zx is a complex number. z is
+required to satisfy the following axioms.
+
+for (d + 1)-dimensional manifolds x, x0, x1 and d-dimensional manifolds y, y0, y1:
+
+a1. multiplicativity: zx0x1 = zx0  zx1 , z(y0  y1) = z(y0)  z(y1).
+a2. duality: if y denotes y with reversed orientation then z(y ) = z(y ).
+
+determinant bundles and fqft
+
+3
+
+a3. associativity: if m = x0 y x1 with x0 = y0  y and x1 = y  y1, then
+
+a4. hermitian: zx = zx.
+
+zm = zx1  zx0.
+
+the associativity property refers to the fact that axioms a1 and a2 mean that a cobor-
+dism x  cd induces a linear transformation zx  cvect through the identications
+
+zx  z(y0  y1) = z(y0)  z(y1) = z(y0)  z(y1) = hom(z(y0), z(y1)).
+
+thus morphisms in cd are taken to morphisms in cvect. in particular, we have then a
+canonical pairing z(y0)  z(y )  z(y )  z(y1)  z(y0)  z(y1). in the case when
+y0 = y1 = , so m is a closed manifold , this becomes a pairing
+
+(1)
+
+( , ) : z(y )  z(y )  c,
+
+and a3 implies the sewing property
+
+(2)
+
+zm = (zx0 , zx1 ).
+
+this is perhaps the most striking feature of a fqft, it states that by partitioning the
+
+manifold m into simpler codimension 0 submanifolds, the number zm can be computed
+by evaluating over the submanifolds and then sewing together the results via the bilinear
+
+pairing. the bilinear pairing further implies that if x = y  y and f : y  y is an
+
+orientation reversing dieomorphism, then
+
+(3)
+
+tr (zx (f )) = zxf .
+
+here xf is the closed manifold obtained by identifying the boundary components via f ,
+and zx(f )  end(z(y )) is induced by functoriality (and in (3) is implicitly assumed to
+be trace class).
+
+the hermitian axiom a4 applies to the case of a unitary fqft. this means there is
+
+a non-degenerate hermitian structure < , >: z(y )  z(y )  c, and hence a canonical
+isomorphism z(y )  z(y ). a4 is the corresponding expected behaviour of zx .
+
+these axioms are idealized, and in practice some modications are needed. this is
+
+illustrated in the fqft we consider in section 3.
+
+1.2. heuristic path integral formulae. the above framework aims to algebraicize
+
+the relation between the feynman path integral formulation of qft and its hilbert space
+
+formulation. the following heuristic interpretation is useful to bear in mind. if x has
+
+connected boundary, the vector zx represents the partition function, which is given by
+a formal path integral
+
+(4)
+
+zx : e(y )  c, zx (f ) =zef (x)
+
+es()d,
+
+where d is a formal measure. here s : ef (x)  c is an action functional on a space
+of elds on x, which for deniteness we shall take to be the space of c0 functions on x,
+
+4
+
+jouko mickelsson and simon scott
+
+with boundary value f  e(y ). the vector space z(y ) is a space of functions on e(y )
+
+and forms the hilbert space of the theory, and zx is the vacuum state.
+
+to a cobordism x  cd with x = y0  y0 one has f = (f0, f1), and then
+
+zx(f0, f1) :ze(f0 ,f1 )(x)
+
+es()d,
+
+is the kernel of the linear operator zx  hom(z(y0), z(y1)) dened by
+
+zx(0)(f1) =ze(y0)
+
+zx (f0, f1)0(f0)df0.
+
+if y0 = y1 = y we hence obtain the bilinear form on z(y )  z(y ) corresponding to
+
+(1):
+
+< 0, 1 >=ze(y )
+
+1(f )zx (0)(f ) df.
+
+in the case of a closed manifold m = x0 y x1 we can express the space of c0 functions
+on m as a bre product e(m ) = e(x0) e(y ) e(x1) and so formally one expects an
+equality
+
+ze(m)
+
+es()d = ze(y )
+= ze(y )
+
+(5)
+
+dfzef (x0)
+
+es(0)d0zef (x1)
+
+es(1)d1
+
+zx0 (f )zx1 (f )df.
+
+which is the path integral version of the algebraic sewing formula (2). the hamiltonian
+of the theory is dened by the euclidean time evolution operator eth = zy [0,t] 
+end(z(y )), and to compute the trace one has the integral formulae
+
+and corresponding to (4)
+
+(6)
+
+tr (eth ) =ze(y )
+
+tr zx (f, f ) df,
+
+tr (eth(f )) =ze(xf )
+
+es() d.
+
+the sewing formula (105) says that the partition function on m is the vacuum-vacuum
+
+expectation value calculated from the partition functions on the two halves. equivalently:
+
+the invariant zm is obtained from zx0(f ) and zx1 (f ) by integrating (averaging) away
+the choice of boundary data f . in the case of determinants of dirac operators this formal-
+
+ism provides some insightful to sewing formulae relative to a partition of the underlying
+
+manifold (see section 5). first, we need to review some facts about determinant and
+
+fock bundles for families of dirac operators.
+
+determinant bundles and fqft
+
+5
+
+2. determinant line bundles and fock spaces
+
+the determinant of a family of rst-order elliptic operators arises canonically not
+
+as a function, but as a section of a complex line bundle called the determinant line
+
+bundle. the anomalies we shall discuss may be realized as obstructions to constructing
+
+appropriate trivializations of that bundle. equivalently, we can view the determinant
+
+line of an operator as a ray in the associated fock space (via the plucker embedding),
+
+and globally the determinant bundle as rank 1 subbundle of an innite-dimensional fock
+
+bundle to which the gauge group lifts as a projective bundle map.
+
+first, recall the construction of the determinant line bundle for a family of dirac-
+
+type operators over a closed compact manifold m . such a family can be specied by
+
+a smooth bration of manifolds  : m  b with bre dieomorphic to m , endowed
+
+with a riemannian metric gm/b along the bres and a vertical bundle of cliord modules
+s(m/b) which we may identify with the vertical spinor bundle tensored with an external
+
+vertical gauge bundle . we assume that  is endowed with a hermitian structure with
+
+compatible connection. the manifold b is not required to be compact. we refer to this
+
+data as a geometric bration.
+
+associated to a geometric bration one has a smooth elliptic family of dirac operators
+d = {db : b  b} : h  h, where h = (s(m/b)) is the innite-dimensional
+hermitian vector bundle on b whose bre at b is the frechet space of smooth sections
+hb = c(mb, sb), where sb is the appropriate cliord bundle. if m is even-dimensional
+there is a z2 bundle grading h = f +  f  into positive and negative chirality elds and
+we then have a family of chiral dirac operators d : f +  f . the quillen determinant
+line bundle det (d) is a complex line bundle over b with bre at b canonically isomorphic
+to the complex line det (kerdb)  det coker(db) [5, 18], where for a nite-dimensional
+vector space v , det v is the complex line maxv . the bundle structure is dened relative
+to the covering of b by open subsets u, with   r+, parameterising those operators
+db for which  is not in the spectrum of the laplacian d
+b db. over each u are smooth
+nite-rank vector bundles h +
+b db (resp. of
+dbd
+
+ equal to the sum of eigenspaces of d
+
+b ) for eigenvalues less than , and one denes
+
+ , h 
+
+(7)
+
+det (d)|u = det (h +
+
+ )  det h 
+ .
+
+the locally dened line bundles patch together over the overlaps u  u in a natural
+way. this spectral construction of the determinant line bundle is designed to allow one
+to dene the quillen -function metric and a compatible connection whose curvature r
+is identied with the 2-form component of the bismut familys index density:
+
+(8)
+
+r = (2i)n/2"zm/b ba(m/b)ch()#2
+
+,
+
+where ba(m/b) is the vertical a-hat form and ch the chern character, see [18, 5, 4].
+
+there is, however, a natural alternative construction of the determinant line bundle,
+
+due to segal [24, 17], and applied to dirac families in [20], which allows us to consider
+
+6
+
+jouko mickelsson and simon scott
+
+more general smooth families of fredholm operators, which need not be elliptic operators.
+let  : h 0  h 1 be a fredholm operator of index zero. then a point of the complex
+line over  is an equivalence class [a, ] of pairs (a, ), where the operator a : h 0  h 1
+is such that a    end(h 0) is trace-class,   c, and the equivalence relation is
+dened by (aq, )  (a, detf (q)) for q  end(h 0) an operator of the form identity
+plus trace-class, and detf denotes the fredholm determinant.
+if ind  = d we dene
+det () := det (  0) with   0 acting h 0  h 1  cd if d > 0, or h 0  cd  h 1 if
+d < 0. note that, by denition, a fredholm operator of index zero has an approximation
+
+by an invertible operator a such that a has nite rank. we work with the larger ideal
+
+of trace-class operators in order to be able to use the (complete) topology determined by
+
+the trace norm.
+
+the abstract determinant of  is dened to be the canonical element det  := [, 1] 
+det (). for an admissible smooth family of fredholm operators a = {b : b  b} :
+h0  h1 acting between (weak) vector bundles hi [20, 24], the union det (a) of the
+determinant lines is naturally a complex line bundle. the bundle structure is dened rel-
+ative to a denumerable open covering of open sets u , where  : h0  h1 is nite-rank
+and u parameterizes those b for which b + b is invertible, via the local trivializa-
+tion b 7 det(b + b) over u . on the intersection u 1  u 2 the transition function is
+b  detf ((b +  1
+b )). for a family of elliptic operators, such as d, there is
+a canonical isomorphism between the two constructions of the determinant bundle de-
+scribed above which preserves the determinant section b 7 det db, and we may therefore
+use them interchangeably [20].
+
+b )1(b +  2
+
+this is important when we consider the determinant line bundle for a family of elliptic
+
+boundary value problems (ebvps). to dene such a family we proceed initially as for the
+
+case of a closed manifold with a geometric bration  : m  b of connected manifolds,
+
+but with bre dieomorphic to a compact connected manifold x with boundary x = y .
+
+note that the boundary manifolds m and x may possibly be disconnected. globally
+we obtain as before a family of dirac operators d = {db : b  b} : h  h. we
+assume that the geometry in a neighbourhood u  m  [0, 1] of the boundary is a pull-
+
+back of the geometry induced on the boundary geometric bration of closed boundary
+
+manifolds  : m  b. this means that all metrics and connections on t (m/b) and
+
+s(m/b) restricted to u are geometric products composed of the trivial geometry in the
+
+normal u-coordinate direction, and the boundary geometry in tangential directions, so
+gm/b = du2 + gm/b and so forth. in ub := u  xb  [0, 1] the dirac operator db then
+has the form
+
+(9)
+
+db|u = gb(cid:18) 
+
+u
+
++ dy,b(cid:19) ,
+
+where dy,b is a boundary dirac operator and gb is a unitary bundle automorphism,
+the cliord multiplication related to the outward directed vector eld 
+u . the family
+of boundary dirac operators dy = {dy,b : b  b} : hy  hy , where hy is the
+
+determinant bundles and fqft
+
+7
+
+bundle with bre c(yb, syb) at b  b, is identied with family dened by the bration
+ : m  b.
+
+in contrast to the closed manifold case, the operators db are not fredholm. the crucial
+analytical property underlying the following determinant line and fock bundle identica-
+
+tions is the existence of a canonical identication between the innite-dimensional space
+
+ker(db) of solutions to the dirac operator and the boundary traces k(db) = ker(db),
+where  : c(xb, sb)  c(yb, syb ) is the operator restricting sections to the boundary.
+more precisely, the poisson operator kb : c(yb, syb )  c(xb, sb) restricts to dene
+the above isomorphism. it extends to a continuous operator kb : h s1/2(yb; s|yb) 
+h s(xb; s) on the sobolev completions with range
+
+ker(db, s) = {f  h s(xb; s) : dbf = 0 in xb \ yb} ,
+
+b : k(db, s))  ker(db, s) is an isomorphism (see [6, 11]). the poisson operator
+
+and ks
+of db denes the calderon projection:
+
+(10)
+
+p (db) = k1
+b .
+
+p (db) is a pseudodierential projection on l2(yb, syb) which we can take to be orthogo-
+nal with range equal to ker(d, s). the construction depends smoothly on the parameter
+b  b and so globally we obtain a smooth map p (d) : b  end(hy ) dening, equiv-
+alently, a smooth frechet subbundle k(d) of hy with bre k(db) = range(p (db)).
+because of the tubular boundary geometry, p (db) in fact diers from the aps spectral
+projection b by only a smoothing operator, see [19, 11]. recall that there is a polar-
+ization hyb = h +
+into the non-negative and negative energy modes of the elliptic
+self-adjoint boundary dirac operator dy,b and b is dened to be the orthogonal projec-
+tion onto h +
+b . hence p (db) is certainly an element of the hilbert-schmidt grassmannian
+grb parameterizing projections on hy,b which dier from b by a hilbert-schmidt oper-
+ator, where by projection we mean self-adjoint indempotent. associated to p  grb we
+have the elliptic boundary value problem (ebvp) for db
+
+b  h +
+
+b
+
+(11)
+
+dp,b = db : dom(dp,b)  l2(xb; s1)
+
+with domain dom dp,b = {s  h 1(xb; s0
+: p (s|yb) = 0}. the operator dp,b is
+b )
+fredholm with kernel and cokernel consisting of smooth sections, see [6] for a general
+account of ebvps in index theory. the smooth family of ebvps dgrb := {dp,b :
+p  grb} denes an admissible family of fredholm operators and hence an associated
+determinant line bundle det (dgrb )  grb. on the other hand, for each choice of a
+basepoint p0  grb we have the smooth family of fredholm operators
+
+{pw0,w := p  p0 : w0  w : p  grb},
+
+where ran(p0) = w0, ran(p ) = w ,and hence a relative (segal) determinant line bundle
+det w0  grb based at w0. the bundles so dened for dierent choices of basepoint are
+all isomorphic, but not quite canonically. more precisely, from [22, 20], given p0, p1  grb
+
+8
+
+jouko mickelsson and simon scott
+
+there is a canonical line bundle isomorphism
+
+(12)
+
+det w0
+
+= det w1  det (w0, w1),
+
+where det (w0, w1) means the trivial line bundle with bre the relative determinant
+line det (w0, w1) := det (pw0,w1 ). in view of the identication dened by the poisson
+operator it is perhaps not surprising that the determinant line bundle det (dgrb) is
+classied by the basepoint kb: there is a canonical line bundle isomorphism
+
+(13)
+
+det (dgrb) = det kb,
+
+preserving the determinant sections
+
+det(dgrb )  det(sb(p )),
+
+where sb(p ) := p p (db) : k(db)  ran(p ). (see [20]). to translate these facts into
+global statements for operators parameterized by b we require the notion of a spectral
+
+section, or grassmann section [20] (we may use both names, the latter is sometimes more
+
+appropriate in more general situations). for each b  b we have the restricted grassman-
+nian grb and globally these hilbert manifolds t together to dene a bration gry  b.
+a spectral section p = {pb : b  b} for the family d is dened to be a smooth section
+of that bration, and we denote the space of sections by gr(m/b). by cobordism, such
+
+sections always exist. in particular, the family of dirac operators d denes canonically
+
+the calderon section p (d)  gr(m/b). in this sense one may think of the parameter
+
+space b as a generalized grassmannian (i.e. parameterizing the subspaces k(db)), and
+the usual grassmannian as a universal moduli space. notice, however, that the map
+b  b is generically not a smooth spectral section because of the ow of eigenvalues
+of the boundary family. indeed, it is this elementary fact that is the source of gauge
+
+anomalies, see [15] and section 4. a spectral section has a number of consequences for
+
+determinants:
+
+first: we obtain a smooth family of ebvps (d, p) = {dp,b := (db)pb : b  b} which
+has an associated determinant line bundle det (d, p)  b with determinant section
+b 7 dp,b.
+
+second: a spectral section p denes a smooth innite-dimensional vector bundle w
+
+with bre wb = range(pb), and associated to p we have the smooth family of fred-
+holm operators d(p) : k(d)  w, parameterizing the operators s(pb) := pk(db),wb :
+k(db)  wb. this also has a determinant line bundle det (d(p)), and corresponding
+to (13), there is a canonical line bundle isomorphism
+
+(14)
+
+det (d, p) = det (d(p)),
+
+det(dp,b)  det(s(pb)),
+
+preserving the determinant sections. given a pair of sections p1, p2  gr(m/b) there
+is the smooth family of admissible fredholm operators (p1, p2) : w 1  w 2, and corre-
+sponding to (12) and (14) one nds a canonical isomorphism
+
+(15)
+
+det (d, p1) = det (d, p2)  det (p1, p2),
+
+determinant bundles and fqft
+
+9
+
+(which does not preserve the determinant sections). we refer to [20] for details.
+
+third: we obtain a bundle of fock spaces fp over b. to see this, return for a moment
+
+to the case of a single operator and its grassmannian grb. by choosing a basepoint
+p0  grb, we obtain the determinant line bundle det w0  grb. this is a holomorphic
+line bundle, but has no global holomorphic sections. the dual bundle det 
+w0 , on
+the other hand, has an innite-dimensional space of holomorphic sections, and this,
+
+by denition, is the fock space based at w0:
+
+(16)
+
+fw0,b := hol(grb; det 
+
+w0 ).
+
+actually, a fock space comes together with a vacuum vector and a representation of the
+
+canonical anticommutation relations; we shall return to this at the end of the section.
+taking the union fb := w grbfw,b we obtain the fock bundle over grb. this bundle
+is topologically completely determined by the determinant bundle det w0 , in fact this
+is the most direct way to dene the bundle structure on fb. to be precise, if we change
+the basepoint we nd, dropping the b subscript, a canonical isomorphism
+
+fw1 = hol(gr; det 
+= hol(grb; det 
+= hol(grb; det 
+= fw0  det (w0, w1),
+
+w1 )
+w0  det (w1, w0))
+w0 )  det (w1, w0)
+
+where we use (12). hence relative to a basepoint w0  grb we have a canonical isomor-
+phism
+
+(17)
+
+fb = fw0  det w0 ,
+
+where the rst factor on the right-side is the trivial bundle with bre fw0 . hence
+the topological type of the fock bundle fb is determined by that of the determinant line
+bundle det w0 for any basepoint w0. one moves between the isomorphisms for dierent
+basepoints via (12).
+
+as an abstract vector bundle, a fock bundle is always trivial (but not necessarily
+
+canonically); this is because of the fact that (according to kuipers theorem) the uni-
+
+tary group in an innite-dimensional hilbert space is contractible. however, as already
+
+mentioned, the fock spaces are equipped with additional structure, the vacuum vectors
+
+related to a choice of a family of (dirac) hamiltonians, which will modify this statement.
+
+in the case of (17) we have a preferred line bundle (the vacuum bundle) inside of the
+
+hilbert bundle and the structure group is reduced giving a nontrivial fock bundle; this
+
+will be discussed in more detail in section 4.
+
+now as we let b vary we obtain a vertical fock bundle f (m/b) over the total space
+gry of the grassmann bration, which restricted to the bre grb of gry coincides with
+fb. the bundle structure is a obvious from the local triviality of the bration gry  b.
+a spectral section p is a smooth cross section of that bration, and hence by pull-back
+
+10
+
+jouko mickelsson and simon scott
+
+we get a fock bundle over b associated to p:
+
+(18)
+
+fp := p(f (m/b))  b,
+
+with bre fpb = hol(grb; det 
+wb ), wb = ran(pb) at b  b. in the following we may
+at times also write fp = fw, where w  b is the bundle associated to p. moreover,
+from the equivalences above we get that the various fock bundles are related in the
+
+following way.
+
+proposition 2.1. for spectral sections p1, p2  gr(m/b), there is a canonical isomor-
+phism of fock bundles
+
+(19)
+
+fp1 = fp2  det (p1, p2).
+
+notice, in a similar way to fp, we can also identify the determinant line bundle
+det (p1, p2) as a pull-back bundle. for associated to the section p1 we have a vertical
+determinant line bundle det p1  gry , which restricts to det w 1
+over grb, where
+b ). then det (p1, p2) = (p2)(det p1). in particular, associated to the
+w 1
+family d of dirac operators parameterized by b, we have the canonical spectral section
+p (d), and by (14) we have a canonical isomorphism det (d, p) = p(det p (d)). at
+the fock space level we have a fock bundle fd canonically associated to the family
+
+b = ran(p 1
+
+b
+
+d, independently of an extrinsic choice of spectral section, whose bre at b  b is
+fdb := hol(grb; det (dgrb)). from (13) and (19) we obtain the fock space version
+of (14) and (15):
+
+proposition 2.2. there is a canonical isomorphism of fock bundles
+
+(20)
+
+for p  gr(m/b):
+
+(21)
+
+fd = fp (d).
+
+fd = fp  det (d, p).
+
+thus the topology of fock bundle and the determinant line bundle are intimately related.
+
+this is the topological reason relating the schwinger terms in the hamiltonian anomaly
+
+to the index density.
+
+the fock space fw0 based at w0  grb can be thought of more concretely in terms
+of equivariant functions on the stiefel frame bundle over grb. to describe this we x
+an orthonormal basis of eigenvectors of dy,b in hyb such that ei  h 
+for i  0 and
+b
+ei  h +
+for i > 0. a point in the bre over w  grb of the stiefel bundle stb based at
+b
+h +
+b has a fredholm
+b
+determinant.  is also referred to as an admissible basis for w (relative to h +
+b ), in so
+
+far as it transforms ei, i > 0 to a basis for w .  can be thought of as a matrix  +
+ !
+
+b  w such that b   : h +
+
+is a linear isomorphism  : h +
+
+b  h +
+
+with columns labeling the elements of the basis and rows the coordinates in the standard
+
+
+
+
+
+basis ei. if , 
+restricted general linear group gl1 consisting of invertible linear maps g : hb
+
+= .g where g is an element of the
++
+
+are two admissible bases for w then 
+
++  hb
+
+determinant bundles and fqft
+
+11
+
+such that g  i is trace-class. gl1 acts freely on stb  c by (, ).g = (.g, detf (g)1)
+and we obtain the alternative construction of
+
+(22)
+
+det h+
+
+b
+
+= stb gl1 c.
+
+similarly, for w  grb we have det w = stw gl1 c, where stw is the corresponding
+frame bundle based at w . in particular, notice that an an isomorphism stw0  stw1 is
+specied by an invertible operator a : w0  w1 such that p1p0  a is trace-class, from
+which we once again have the identication (12).
+
+in this description, an element of the fock space fwb is a holomorphic function  :
+stwb  c transforming equivariantly under the gl1 action as (.g) = ()detf (g).
+the distinguished element
+
+(23)
+
+wb () = detf (pwb )
+
+is the vacuum vector. equivalently, an element of fwb is a holomorphic function f :
+det wb  c which is linear on each bre, and from this view point the vacuum vector
+is the function
+
+(24)
+
+wb ([, ]) = detf (pwb ),
+
+for any representative (, ) of the equivalence class [, ]  det (wb, w ).
+
+a generalization of this leads to the plucker embedding. first, for w  grb, x an
+orthonormal basis {ei}iz of hb such that ei  w  for i  0 and ei  w for i > 0;. let
+s be the set of all increasing sequences of integers s = (i1, i2, . . . ) with s  n and n  s
+nite. for each sequence s we have an admissible basis (s) = {ei1, ei2 , . . . }  stw ,
+and the fredholm index of the operator pspw : w  hs, where hs is the closed
+subspace spanned by (s) and ps the corresponding orthogonal projection, denes a
+bijection 0(grb)  z. the plucker coordinates of the basis   stw are the collection
+of complex numbers s() = detf (ps) = detf (s), where s is the matrix formed
+
+from the rows of  =  +
+
+ ! labeled by s. in particular n() is the coordinate dened
+
+by the vacuum vector. if  is a basis for w
+
+ grb, then the plucker coordinates of a
+second admissible basis 1 dier from those of  by the fredholm determinant of the
+matrix relating the two bases. the plucker coordinates therefore dene a projective
+embedding grb  fw . this is prescribed equivalently by the map
+
+
+
+(25)
+
+ : stwb  stwb  c,
+
+(, ) = detf ( ) = detf ( 
+
+++ +  
+
+),
+
+with respect to which the plucker coordinates are s() = ((s), ).  is the same
+thing as the map on the determinant bundle
+
+(26)
+
+g : det wb  det wb  c,
+
+g([, ], [, ]) = detf (pw ),
+
+where  : wb  w , (resp.  : wb  w
+antilinear (resp.
+
+linear) in the rst (resp. second) variable. we then have the plucker
+
+
+
+, is antiholomorphic (resp. holomorphic) and
+
+12
+
+jouko mickelsson and simon scott
+
+embedding map
+
+(27)
+
+det wb  {0}  fwb
+
+which maps [, ] 7 (, . ), or, using the segal denition of the determinant line
+
+(28)
+
+[, ] 77 [,]
+
+dened for [, ] = [pw , ]  det (wb, w ) and  : wb  w
+
+
+
+by
+
+(29)
+
+notice that
+
+(30)
+
+[,]() = detf (  ) = detf (  pw  ).
+
+det(idwb ) 7 wb ,
+
+where idwb := pwb,wb . the map (27) thus denes a projective embedding grb  fw
+
+the map (26) restricted to a linear map det wb  det wb  c, denes a canonical
+metric on det wb by k[, ]k2 = ||2detf (), and globally, via (14), we get the
+canonical metric of [20] on det (d, p)
+
+(31)
+
+kdet dpbk2 := g(s(pb), s(pb)) = detf (s(pb)s(pb)).
+
+on the other hand, we can use the map  (or g) to put a unitary structure on fw
+with respect to which (27) is an isometry. to do that we use the fact that any section in
+fw can be written as a linear combination of the [,], and set
+
+(32)
+
+< [,], [,] >w = g([, ], [, ]).
+
+in particular, the nite linear combinations of the sections s, s  s are dense in fw
+with respect to the topology of uniform convergence on compact subsets, and one has
+
+< s, s >= ((s), (s
+
+
+
+)) = ss .
+
+notice further the identities
+
+(33)
+
+< w , w >w = 1
+
+and
+
+< [,], [,] >w = k[, ]k2,
+
+the latter being the statement that (27) is an isometry. for further details see [17] and
+
+[14].
+
+there is a dierent way of thinking about fock spaces which is perhaps more familiar
+
+to physicists, as an innite-dimensional exterior algebra (fermionic fock space). recall
+
+[14] that a polarization w of the hilbert space hb xes a representation of the canon-
+ical anticommutation relations (car) in a fock space f (hb, w ), whose only non-zero
+anticommutators are
+
+(34)
+
+a(v)a(u) + a(u)a(v) =< u, v > .
+
+the dening property of this irreducible representation is that there is a vacuum vector
+
+|w > with the property
+
+(35)
+
+a(u)|w >= 0 = a(v)|w > for all u  w, v  w .
+
+determinant bundles and fqft
+
+13
+
+one has
+
+(36)
+
+f (hb, w ) = (w )  ((w )) = xd=qpz
+
+p(w )  q((w )).
+
+the vacuum |w > is represented as the unit element in the exterior algebra. for u  w,
+a(u) corresponds to interior multiplication by u, the creation operator a(u) is given by
+exterior multiplication. for u  w  the operator a(u) (resp., a(u)) is given by exterior
+(resp., interior) multiplication by ju; here j : h  h  is the canonical antilinear
+isomorphism from a complex hilbert space to its dual. the vacuum |w > has then the
+characteristic property a(u)|w >= 0, u  w, and a(v)|w >= 0, v  w ..
+
+if we choose a dierent w   grb then there is a complex vacuum line in f (hb, w )
+corresponding to the new polarization w . the dierent vacuum lines parameterized by
+the planes w  form another realization for the determinant bundle det w over grb as a
+subbundle of the trivial fock bundle with bre fw . the plucker embedding det w 
+
+f (hb, w ) is dened by mapping (, )  stw  c to pss dets s, where s is as
+
+before. a hermitian metric on f (hb, w ) is again dened by < s, s >= ss . on
+the other hand, the nite-dimensional matrix identity for  : cm  cn,  : cn  cm
+with n  m:
+
+(37)
+
+det() =x(i)
+
+det((i))det((i)),
+
+the sum being over all sequences (i) = {1  i1 < i2 . . . in  m}, with (i) (resp. (i))
+the matrix obtained from a (resp. b) by selecting the columns of a (resp. rows of b)
+
+labeled by s, implies the pairing of fock space vectors
+
+(38)
+
+< [,], [,] >=xss
+
+,((s))[,]((s)).
+
+the metrics so dened on the car construction f (hb, w ) and the geometric construc-
+tion fw of the fock space, then correspond under the algebraic isomorphism dened by
+associating to each section s  fw the vector
+
+a(ei1 ) . . . a(eip)a(ej1 ) . . . a(ejq )|w > f(hb, w ),
+
+where i1 < i2 < . . . ip  0 is the set of negative indices in the sequence s and 0 < j1 <
+j2 < . . . jq is the set of missing positive indices, giving a dense inclusion f (hb, w ) 
+fw .
+
+returning to the case of a family d of dirac-type operators parameterized by a man-
+
+ifold b, if we are given a spectral section p  gr(m/b) then we have the global version
+of the above properties. associated to p we have a fock bundle fw  b and this is
+endowed with a unitary structure < , >p, given on the bre fwb by (32). the bundle
+fw has a distinguished section, the vacuum section p = w , assigning to b  b the vac-
+uum vector wb , with unit norm in the bres. associated to the canonical calderon
+
+14
+
+jouko mickelsson and simon scott
+
+section p (d) dening the fock bundle fk we then have a determinant line bundle
+det (d, p) = det (d(p)) and a generalized plucker embedding
+
+(39)
+
+det (d, p) = det (d(p))  fk,
+
+corresponding to the view point on the parameter space b as a generalized grassmannian.
+
+more generally, for any pair of spectral sections p1, p2, there is a generalized plucker
+embedding
+
+(40)
+
+det (p1, p2)  fp1,
+
+dened brewise by the embeddings det (w1,b, w2,b)  det w1,b  fw1,b , which ac-
+cording to (27) is the map [, ] 7 [,]  fp1. so, a section of the determinant bundle
+det (p1, p2) denes a section of the fock bundle fp1. in particular, the vacuum section
+is the image of the determinant section in the trivial case
+
+(41)
+
+det (p1, p1)  fp1,
+
+associated to the family of dirac operators d, we have a canonical vacuum section
+k  fk with < kb, kb >kb= 1, and if we choose an external spectral section p, then
+via (39) we have a canonical section k,p of fk corresponding to the determinant section
+b 7 det(dpb )  det(s(pb)) of det (d, p), with
+
+(42)
+
+< k,p, k,p >kb= kdet(s(pb))k2
+c.
+
+that is, the generalized plucker embedding (39) is an isometry with respect to the
+
+canonical metric on det (d, p). this follows by construction from (33).
+
+as we already mentioned, as an abstract vector bundle the fock bundle is trivial. how-
+
+ever, the non-triviality of the construction lies in the (locally dened) physical vacuum
+
+subbundle dened by the family of hamiltonians. as an example, assume that we have
+
+a family of dirac hamiltonians parameterized by the set a of smooth vector potentials.
+
+given a real number  we can dene w0(a) as the subspace of the boundary hilbert
+space corresponding to the spectral restriction dy,a >  for the boundary hamiltonian;
+a 7 w0(a) is a smooth grassmann section over the set u  a of hamiltonians with
+ / spec(dy,a). let a 7 w1(a) be a globally dened grassmann section. for each
+a  u we have a well-dened vacuum line |a > fw1(a). this line is just the image of
+the determinant line det (w1(a), w0(a)) with respect to the map (29). if dim y = 1
+the grassmannian gra does not depend on the parameter a and we may take w1(a) as
+a constant section. anyway, the bundle of vacua over u can be identied as the relative
+determinant bundle det (w1, w0) and the twisting of this bundle depends solely on the
+twisting of the local section a 7 w0(a).
+
+determinant bundles and fqft
+
+15
+
+3. construction of the fqft
+
+in this section we utilize the facts presented in the previous section to piece together a
+
+fqft, generalized from the two dimensional case proposed by segal [22]. as in section
+
+1.1, the constructions are mathematical and do not refer to any particular physical sys-
+
+tem. in the next section we explain how the chiral anomaly and commutator anomaly
+
+arise in this context.
+
+3.1. strategy. we dene a projective functor from a subcategory cd of the category of
+spin manifolds to the category cvect of z-graded vector spaces and linear maps, which
+factors through the category cgr of linear relations:
+
+cd  cgr
+
+ 
+
+cvect
+
+the combination of these functors is the fock functor dening the fqft.
+
+3.2. projective representations of categories. by a category c we mean a set ob(c)
+of elements called the objects of c, and for any two elements a, b  ob(c) a set morc(a, b)
+of morphisms a 7 b, such that for a, b, c  ob(c) there is a multiplication dened
+
+morc(a, b)  morc(b, c)  morc(a, c),
+
+(fa,b, fb,c) 7 fb,c  fa,b.
+
+the product is required to be associative, so that if fc,d  morc(c, d), then fc,d(fb,cfa,b) =
+(fc,dfb,c)fa,b. one usually also asserts the existence of an identity morphism idb 
+morc(b, b) which satises idb  fa,b = fa,b and fb,c  idb = fb,c.
+
+
+
+a (covariant) functor  from a category c to a category c
+
+means a map  : ob(c) 
+) and for each pair a, b  ob(c) a map a,b : morc(a, b)  morc ((a), (b)) such
+
+
+
+ob(c
+
+that
+
+(43)
+
+
+
+if c
+
+a,c(fb,cfa,b) = b,c(fb,c)a,b(fa,b).
+
+is the category of vector spaces and linear maps, then  is a representation of the
+
+category c.
+
+a classical result of wigner tells us that in quantum systems we must content ourselves
+
+with projective representations of symmetry groups. similarly, with the fock functor we
+
+have to consider projective category representations. this means that there is essentially
+
+a scalar ambiguity in the map a,b, so that (43) is replaced by
+
+(44)
+
+a,c(fb,cfa,b) = c(fb,c, fa,b)b,c(fb,c)a,b(fa,b),
+
+where the cocycle c(fb,c, fa,b) takes values in c  {0}. to explain the meaning here of
+essentially, recall that a projective representation of a group g is a true representation
+of a extension group g of g by c. the group g forms a c bundle over g whose
+lie algebra cocycle is the rst chern class of the associated line bundle. equivalently,
+g is dened by assigning to each g  g a complex line lg such that lg1g2 = lg1 
+
+16
+
+jouko mickelsson and simon scott
+
+lg2. (a well-known instance of this occurs for loop groups, see example 4.1 below, and
+more generally we shall in section 4 give the gauge group representations for a yang-
+
+mills action functional a similar description.) likewise, a projective representation of a
+category is a true representation of an extension category c constructed by assigning to
+each fa,b  morc(a, b) a complex line lfa,b, and given fb,c  morc(b, c), an identication
+
+(45)
+
+lfa,b  lfb,c  lfa,bfb,c ,
+
+which is associative in the natural sense. one then has
+
+(46)
+
+ob( c) = ob(c), mor c(a, b) = {(f, ) | f  morc(a, b),   lf }.
+
+3.3. the category cd. an element of ob(cd) is a pair (y, w ), where y = (y, gy , sy 
+y ), with y is a closed, smooth and oriented d-dimensional spin manifold, gy a rie-
+mannian metric on y , sy a spinor bundle over y , y a hermitian bundle over y with
+compatible gauge connection, and w is an admissible polarization of the one-particle
+hilbert space hy = w  w  to a pair of closed innite-dimensional subspaces. here
+hy = l2(y, sy y ) and admissible means that pw  gry , where pw is the orthogonal
+projection onto w and gry is the hilbert-schmidt grassmannian dened with respect
+to the energy polarization hy = h +  h  into positive, resp. negative, energies of the
+dirac operator dy .
+
+let (yi, wi)  ob(cd), i = 1, 2, where yi = (yi, gyi, syi  yi ). an element of
+morcd((y1, w1), (y2, w2)) is a triple x = (x, gx , sx x ), where x smooth and oriented
+(d+1)-dimensional spin manifold with boundary x = y1  y2, gx a riemannian metric
+on x with (gx )|yi = gyi, sx a spinor bundle and x a hermitian bundle over x with
+= sy  yi and the connections
+compatible gauge connection, such that (sx  x )|yi
+metrics correspond under the isomorphism. we refer to x as a geometric bordism from
+y1 to y2. we assume that:
+
+ in a collar neighbourhood of the boundary u = u1  u2, where ui = ([0, 1]  yi)
+the geometry of all metrics, connections is a product. recall this means that
+
+near the boundary the metric becomes the product of the standard metric on
+
+the real axis and the boundary metric. similarly, the gauge connection approaches
+
+smoothly the connection on the boundary such that at the boundary all the normal
+derivatives vanish. thus x|ui is a pull-back of the boundary bundle (yi ), and
+similarly all metrics, connections, etc are pull-backs of their boundary counterparts,
+so gx|ui = du2 + gyi etc.
+
+ the orientation on the ingoing boundary y1 is assumed to be induced by the
+orientation of x and the inward directed normal vector eld on the boundary,
+
+whereas for the outgoing boundary y2 the orientation is xed by the outward
+directed normal vector eld.
+
+for notational brevity we may write si := syi  yi, gi := gyi etc, and s1,2 :=
+
+sx  x , g1,2 := gx etc, in the following.
+
+determinant bundles and fqft
+
+17
+
+we augment cd by including the empty set   ob(cd), and for each (y, w ) 
+
+ob(cd) we also allow  := idb as an element of morcd((y, w ), (y, w )). in particular,
+a geometric bordism x  morcd(, (y, w )) means d + 1-dimensional manifold x with
+boundary y (plus bundles, connections etc). thus a morphism in cd may have discon-
+nected, connected, or empty (i.e. x is closed) boundary, according as y is disconnected,
+
+connected or empty.
+
+for (yi, wi)  ob(cd), i = 1, 2, 3, there is an associative product map
+
+(47)
+
+morc((y1, w1), (y2, w2))  morc((y2, w2), (y3, w3))  morc((y1, w1), (y3, w3))
+
+taking a pair (x1,2, x2,3) to the geometric bordism
+
+(48)
+
+x1,2 y2 x2,3 = (x1,2 y2 x2,3, g1,2  g2,3, s1,2  s2,3).
+
+this sewing together of bundles is dened in the usual way. briey, the collar neighbour-
+hood ur = [0, 1)  y2 of the boundary of y2 in x2,3 is a copy of the collar neighbourhood
+ul = (1, 0]  y2 of the boundary of y2 in x1,2 but with orientation reversed. hence we
+may glue together the manifolds x1,2 and x2,3 along y2 to get the doubled manifold
+x1,2 y2 x2,3 with a tubular neighbourhood of the partition y2 which we may parameter-
+ize as u = (1, 1)  y2. associated to the geometric data we have dirac operators d1,2
+and d2,3 acting respectively on sections of the cliord bundles s1,2 and s2,3. over ul the
+operator d1,2 takes the product form (/u+dy2), because of the change of orientation
+(d2,3)|ur = (/v + dy2 )1. over y2 we construct s1,2  s2,3 by gluing s1,2 to s2,3
+via the unitary isomorphism , identifying s  (s1,2)|y with s  (s2,3)|y . (thus for the
+case of chiral spinors the isomorphism  takes positive to negative spinors.) a section of
+s1,2  s2,3 is a pair (, ) with  (resp. ) is a smooth section of s1,2 (resp. of s2,3) such
+that the normal derivatives of all orders match-up:
+uk (0, y).
+we then have the doubled dirac-type operator (d1,2  d2,3)(, ) = (d1,2, d2,3)
+acting on c(x1,2 y2 x2,3, s1,2  s2,3), which is well-dened since from the product
+form (9) it can be easily checked that d1,2 and d2,3 match up at the boundary.
+
+k
+uk (0, y) = (1)k(y) k
+
+3.4. the category cgr. an element of ob(cgr) is a pair (h, w ) with h a hilbert
+space, and w a polarization of h into a pair of closed orthogonal innite-dimensional
+subspaces h = w  w . a morphism (e, )  morcgr ((h1, w 
+1 ), (h2, w2)) is a closed
+subspace e  h1  h2 such that pe  pw 
+1 w2 is a hilbert-schmidt operator, where
+1  w2 respectively, along
+pe, pw 
+with an element  of the relative determinant line det (w 
+1 w2, e). (it is convenient here
+to use the reverse polarization w 
+1 of h1 in order to account for boundary orientations
+later on, see below). thus there is an identication
+
+1 w2 are the orthogonal projections with range e, w 
+
+(49)
+
+morcgr ((h1, w 
+
+1 ), (h2, w2)) = det w 
+
+1 w2 ,
+
+where the right-side is the determinant line bundle based at w 
+1 w2 over the trace-class
+grassmannian gr(h 1  h2), where h 1 serves to remind us that we are considering the
+
+18
+
+jouko mickelsson and simon scott
+
+reverse polarization w 
+1 w2 = det w 
+det w 
+also allow   ob(cgr) as an object, and dene
+
+1 ; we may write gr(h 1  h2) = gr(h 1  h2, w 
+1  w2) and
+1 w2 (h 1  h2) if we wish to emphasize the polarization. we
+
+(50)
+
+morcgr (, (h, w )) = det w (h), morcgr ((h, w ), ) = det w  (h)
+
+morcgr (, ) = c.
+
+to dene the product of morphisms in cgr, rst recall when h0 6=  6= h2, from the
+
+category of linear relations, the join product rule
+
+(51)
+
+gr(h 0  h1, w 
+
+0  w1)  gr(h 1  h2,fw 
+
+(e01, e12) 7 e01  e12,
+
+1  w2)  gr(h 0  h2, w 
+
+0  w2),
+
+wherefw1  gr(h1, w1), dened by
+
+e01  e12 = {(u, v)  h0  h2 |  w  h1 such that (u, w)  e12, (w, v)  e23}.
+
+the join is a generalized composition law of graphs of linear operators, but here the
+
+morphisms e are not in general everywhere dened, but dom(e) = range(ph1 pe :
+e  h1), and may also be multi-valued. the composition may therefore be dis-
+(i) the map
+continous. from [22] we recall that for continuity one requires that:
+e01  e12  h1, ((u, w), (w
+is surjective, and (ii) e01  e12  h0  h1 
+h2, ((u, w), (w
+
+, v) is injective. the crucial fact is the following:
+
+, v) 7 (u, w  w
+
+, v) 7 w  w
+
+
+
+
+
+
+
+
+
+proposition 3.1. with the above notation, when (h0, w 
+0 ) =  = (h2, w2) there is a
+canonical pairing, linear and holomorphic on the bres in the rst and second variables,
+
+(52)
+
+if w1 =fw1, then
+
+(53)
+
+more generally, if (i) and (ii) hold, then one has such a pairing
+
+(54)
+
+ : det w 
+
+(h 1  h2) 
+
+1 w2
+
+ : det w1  detfw 
+
+1
+
+ det (w1,fw1).
+
+ c.
+
+1
+
+ : det w1  detfw 
+0 w1 (h0  h1)  detfw 
+
+det w 
+
+0 w2(h 0  h2)  det (w1,fw1),
+0  w1, e01)  det (fw 
+0  w2, e01  e12)  det (w1,fw1).
+
+1  w2, e12) 
+
+det (w 
+
+which respects the join multiplication: on each bre
+
+(55)
+
+ : det (w 
+
+(here the second factor on the right-side of (54) denotes the trivial bundle with bre
+
+det (w1,fw1).) if w1 =fw1, then
+
+(56)
+
+ : det w 
+
+0 w1 (h0  h1)  det w 
+
+1 w2 (h 1  h2)  det w 
+
+0 w2 (h 0  h2).
+
+determinant bundles and fqft
+
+19
+
+proof. as before, we denote by pw,w  the orthogonal projection onto w restricted to
+the subspace w . given e  gr(h1, w1), e
+1 ), we can
+) as the determinant elements
+
+ gr(h 1,fw 
+represent elements   det (w1, e) and   det (fw 
+of linear operators a : w1  e and b :fw 
+trace-class; consequently, the operators pw1 a  idw1 and pfw 
+
+with a  pe,w1 and b  pe ,fw 
+
+1 ) = gr(h 1, w 
+
+too. we dene
+
+are trace-class,
+
+1  e
+
+1 , e
+
+of
+
+1
+
+
+
+
+
+
+
+ : det (w1, e)  det (fw 
+
+
+
+1
+
+1
+
+1 , e
+
+b  idfw 
+)  det (w1,fw1),
+1 , h1) = det (w1,fw1),
+1  h1. that this operator diers from p1a + ep 
+
+1 b)  det (w1 fw 
+
+(, ) = det(p1a + ep 
+1 : w1 fw 
+
+1 , h1) is the determinant
+1 b by an
+operator of trace-class (in order that (57) be well-dened) follows immediately from that
+
+where p1,ep1 are the projections on w1,fw1, and det (w1 fw 
+line of p1 + ep 
+fact that the operators pw1 a  idw1 and pfw 
+
+the canonical isomorphism on the right-side of (58) is expressed via the diagram of
+
+b  idfw 
+
+are trace-class.
+
+1
+
+1
+
+(57)
+
+by
+
+(58)
+
+commutative maps with exact rows and fredholm columns
+
+0  w1  w1 fw 
+1  fw 
+yep1p1
+yep1p1+ep 
+yid
+ fw 
+0  fw1 
+
+h1
+
+1
+
+1  0
+
+1  0
+
+where the horizontal maps are the obvious ones. we know from [22, 20] that such a
+
+diagram denes an isomorphism between the determinant line of the centre map with
+
+the tensor product of the lines dened by the outer columns, mapping the determinant
+
+elements to each other. hence since det (id) = c canonically, the isomorphism follows,
+
+and in particular with e = w1 and e
+
+1 we have
+
+where idw = pw,w , which will be a relevant fact later in this section.
+
+for the general case (54), suppose initially that w1 =fw1 and choose   det (w 
+
+0 
+1 w2, e12) identied with the determinant elements of linear
+
+w1, e01) and   det (w 
+operators a : w 
+
+0  w1  e01 and b : w 
+
+1  w2  e12. dene
+
+(60)
+
+1 : det (w 
+
+0  w1, e01)  det (w 
+
+1  w2, e12) 
+
+det (w 
+
+0  h1  w2, e01  e12),
+
+1(, ) = det(a  b).
+
+on the other hand, from [22], conditions (i) and (ii) mean that there is an exact sequence
+
+(61)
+
+0  e01  e12  e01  e12  h1  0,
+
+(59)
+
+
+
+=fw 
+(det(idw1 ), det(idfw 
+
+1
+
+)) = det(pfw1,w1
+
+),
+
+20
+
+jouko mickelsson and simon scott
+
+and this ts into the commutative diagram with fredholm columns
+
+0  e01  e12  e01  e12
+
+ h1  0
+
+pe01 e12
+
+w2
+
+0
+
+ypw 
+
+yg
+
+yid
+
+0  w 
+
+0  w2  w 
+
+0  h1  w2  h1  0
+
+where we modify (61) by composing the injection e01 e12  e01 e12 with the involu-
+, v) 7
+tion ((u, w), (w
+
+, v), and the following surjection to ((u, w), (w
+
+, v)  ((u, w), (w
+
+
+
+
+
+
+
+(u, w + w
+
+
+
+, v), while the lower maps are again the obvious ones. the central column is
+
+g(, ) = (pw 
+
+0
+
+ph0 , ph1  + ph1 , pw2 ph1 ).
+
+because ph1 pe01 pw1 ph1 pe01 = ph1 (pe01 pw 
+
+0 w1 )pe01 and ph1 pe12 pw 
+
+1
+
+ph1 pe12 =
+
+ph1 (pe12  pw 
+
+1 w2)pe12 are by trace-class, the operators g and gw1 , where
+
+gw1 (, ) = (p 
+
+w0 ph0 , pw1 ph1  + p 
+
+w1 ph1 , pw2 ph1 ),
+
+dier by only trace-class operators and so det (g) = det (gw ) = det (e01  e12, w 
+0 
+h1  w2), while from the diagram we have det (g) = det (e01  e12, w 
+0  w2). thus
+by duality (i.e. take adjoints in the above diagrams, reversing the order of the columns
+and rows and the direction of the arrows) we have a canonical isomorphism det (w 
+0 
+w2, e01  e12) = det (w 
+0  h1  w2, e01  e12), and so composition with 1 completes
+
+the proof of (54) in the case w1 =fw1. in the general case, replace h1 in (60) and the
+lower row of the commutative diagram by w1 fw 
+
+1 and repeat the argument used
+in the proof of (52). finally, we note for later reference that in the vacuum case
+e01 = w 
+
+1  w2 one has e01  e12 = w 
+
+0  w1 and e12 = w 
+
+0  w2 and
+
+(62)
+
+(det(ide01), det(ide12 ) = det(ide01e12 ).
+
+from (56) and the identication (49) we now have a canonical multiplication
+
+(63)
+
+morcgr ((h0, w 
+
+0 ), (h1, w1))  morcgr ((h1, w 
+
+1 ), (h2, w2))
+
+ morcgr ((h0, w 
+
+0 ), (h2, w2)),
+
+(e0,1, ), (e1,2, )) 7 (e0,1  e1,2,   ),
+
+where    := (, ) if (i) and (ii) hold, and    := 0 otherwise. in particular,
+
+(64)
+
+morcgr (, (h1, w1))  morcgr ((h1, w 
+
+1 ), )  morcgr (, ),
+
+is precisely equation (52).
+
+determinant bundles and fqft
+
+21
+
+3.5. the projective functor cd  cgr. we dene a projective functor  : cd  cgr
+as follows. we have
+
+(65)
+
+ : ob(cd)  ob(cgr),
+
+(y, w ) 7 (hy , w ),
+
+where as before hy = l2(y, sy  y ) and w is an admissible polarization. while for
+(y1, w1), (y2, w2)  ob(cd)
+
+(66)
+
+ : mor cd
+
+((y1, w1), (y2, w2))  mor cgr
+
+((h y1, w 
+
+1 ), (hy2 , w2))
+
+x 7 (k12, ),
+
+where k12  hy1  hy2 is the calderon subspace of boundary traces of solutions to
+the dirac operator d1,2 over x dened by the geometric data in x , and   det (w 
+1 
+w2, k12) = det (d1,2
+). taking into account that y1 is an incoming boundary, we
+have k12  gr(h y1 hy2; w 
+
+1 w2) (in fact, an element of the smooth grassmannian).
+
+pw 
+1
+
+,w2
+
+the choice needed of the element  means that  is a true functor bcd  cgr, where bcd
+
+is the extension category of cd whose objects are the same as cd, and
+
+(y1, y2) = {(x , z) | x  morcd(y1y2),   det (w 
+
+1  w2, k12)}.
+
+for a closed geometric bordism x  morcd(, ) we set
+
+morccd
+
+(67)
+
+(68)
+
+(, ) = det (dx ),
+
+morccd
+
+the projectivity of the functor in this case corresponds to a choice of generator det (dx ) =
+c = morcgr (, ).
+
+to see the functor respects the product rules in each category, it is enough to show
+that k01 k12 is the calderon subspace of the operator d0,1 d1,2, i.e. k(d0,1 d1,2) =
+k(d0,1)k(d1,2) dened by morphisms x0,1, x1,2. this, however, is immediate from the
+denition of d0,1  d1,2, and the fact that given   ker d0,1,   ker d1,2 it is enough
+for their boundary values to match up in order to get an element of ker (d0,1  d1,2).
+that in turn follows because the product geometry in the collar neighbourhood u of the
+
+outgoing boundary y1 of x0,1 implies that  has the form (u, y) =pk ekuk(0)ek(y),
+
+where {k, ek} is a spectral resolution of hy1 dened by the boundary dirac operator. (to
+be quite correct, we should also include the identication by the boundary isomorphism
+(y) in the denition of the join k01  k12, but this introduces no new phenomena.)
+thus the requirement (45) for the rule x 7 det (w 
+1  w2, k12) to dene a projective
+extension of cgr, is precisely (56) of proposition 3.1.
+
+3.6. the functor cgr  cvect. the functor  from the category cgr to the category
+cvect of (z-graded) vector spaces and linear maps, is dened on objects of cgr by
+
+(69)
+
+(h, w )  fw = fw (h)
+
+(h, w )  fw  = fw (h)
+
+  c,
+
+thus  takes a polarized vector space to the fock space dened by the polarization, and
+f = c is by at. here fw  = fw (h) := hol(gr(h), det w  ) is the fock space
+associated with the reverse polarization.
+
+22
+
+jouko mickelsson and simon scott
+
+ is dened on morphisms as follows. from (49), an element of morcgr ((h1, w 
+
+1 ), (h2, w2))
+
+is the same thing as an element   det w 
+(e, ) where   det (w 
+canonical vector
+
+1 w2 , which we may think of as the pair
+1  w2, e). by the plucker embedding (27) this gives us a
+
+(70)
+
+  fw 
+
+1 w2 (h 1  h2) = fw 
+
+1
+
+(h 1)  fw2(h2).
+
+the isomorphism is immediate from (36) and fw(h) = f (h, w ), the completion of
+f (h, w ).
+
+to proceed we need the following facts, generalizing eqn.(8.10) of [22]:
+
+proposition 3.2. the determinant bundle pairing  of proposition 3.1 denes a canon-
+
+ical fock space pairing
+
+(71)
+
+with
+
+(72)
+
+1
+
+( ) : fw1  ffw 
+(w1 , fw 
+( ) : fw1  ffw 
+
+1
+
+1
+
+if w1 =fw1, this becomes
+
+(73)
+
+more generally,  denes a pairing
+
+ det (w1,fw1),
+) = det(pfw1,w1
+
+).
+
+ c,
+
+(w1 , w 
+
+1
+
+) = 1.
+
+(74)
+
+fw 
+
+0 w1(h 0  h1)  ffw 
+
+1 w2
+
+with
+
+(75)
+
+(h 1  h2)  fw 
+
+0 w2 (h 0  h2)  det (w1,fw1),
+
+(, ) = (,).
+
+in particular,
+
+(76)
+
+(w 
+
+0 w1 , fw 
+
+1 w2
+
+) = w 
+
+0 w2  det(pw2,w0 ).
+
+proof. first notice that in the nite-dimensional case there is a natural isomorphism
+between the fock space (the exterior algebra) and its dual dened by the pairing kh 
+nkh  det (h), (1, 2) 7 1  2, while in the innite-dimensional case the
+pairing using the car construction follows directly from the denition f (h, w ) =
+(w )  ((w )). for the geometric fock space fw , the construction of the pairing
+from the determinant bundle pairing  on det w  det w  is entirely analogous to the
+construction of the inner-product < , >w on fw from the determinant bundle pairing
+g on det w  det w in equation (26). indeed, in the case of the vacuum elements the
+two pairings are canonically identied (see (78) below and section 5).
+
+let us deal rst with the case (71). we give rst the invariant denition, and then
+
+the constructive denition along the lines of < , >w in section 2.
+
+invariantly, in
+
+the case w1 = fw1, the pairing  : det w1  det w 
+
+ : det w1  0  fw 
+by (a)( . ) = f (a,
+(f )( . ) = f (( . )). this gives us a pairing f 
+
+ c denes an embedding
+w   fw ,
+w   c with (f, g) = f ((g)), and
+
+. ), and hence a map  : f 
+w  f 
+
+1
+
+1
+
+determinant bundles and fqft
+
+23
+
+= fw in the topology of uniform convergence
+by duality the asserted pairing, since f 
+w
+on compact subsets of gr(h) (s  evaluation at (s) cf. [17] sect. 10.2, [12] sect.
+
+6.2). the general case follows in the same way with c replaced by det (fw1, w1).
+of the [,], with [, ]  det w . hence for [, ]  det w1 , [, ]  detfw 
+
+constructively, recall that any section in fw can be written as a linear combination
+we can
+
+dene the fock pairing by setting
+
+1
+
+(77)
+
+([,], [,]) = ([,], [,])  det (fw1, w1),
+
+and then extending by linearity. in particular, from (30) we have w1 = [idw1 ,1] and
+
+1
+
+fw 
+
+= [idfw 
+
+1
+
+,1], and so
+
+(w1 , fw 
+
+1
+
+) = (det(idw1 ), det(idfw 
+
+1
+
+)) = det(pfw1,w1
+
+),
+
+where the nal equality is equation (59). notice further that if we extend g in (26)
+
+ det (fw1, w1) by g([, ], [, ]) = det(pw ),
+to a map g : det w1  detfw1
+then the fock space inner-product becomes a hermitian pairing < , , >w1 : fw1 ffw1
+det (fw1, w1) and with respect to the identication gr(h, w1)  gr(h 1, w 
+w  we have fw 
+
+
+1 ), w 
+
+ fw1
+
+and
+
+1
+
+(78)
+
+(w1 , fw 
+
+1
+
+) =< w1 , fw1
+
+>w1= det(pfw1,w1
+
+).
+
+the pairing (74) now follows from (71) and (70). alternatively we can dene it directly
+
+as ([,], [,]) = ([,],[,]), where  is the pairing (54). note that if conditions (i)
+and (ii) do not hold then ([, ], [, ]) = 0. equation (75) is now just by construction,
+
+and equation (76) follows easily from (62).
+
+1
+
+the fock space pairing (73) denes an isomorphism fw 
+(h 1)  fw2 (h2) dened by   morcgr ((h1, w 
+
+w1 and hence the vector
+  fw 
+1 ), (h2, w2)) is canonically an
+element of hom(fw1 (h1), fw2 (h2)) which is a morphism of cvect, as required. in the
+case (h 0, w 
+0 ) =  the map morcgr (, (h1, w1))  hom(c, fw1) is dened by 1 7 w ,
+and similarly when (h2, w2) = . the functoriality of the composition of linear maps
+with respect to the multiplication in cgr is precisely (75). we may state this as:
+
+1
+
+= f 
+
+theorem 3.3. the category multiplication in cgr induces through the fock space func-
+tor a canonical multiplication in the category cvect.
+
+this can be conveniently summarized in the statement that the following diagram
+
+commutes:
+
+24
+
+jouko mickelsson and simon scott
+
+gr(h 0  h1, w 
+
+0  w1)  gr(h 1  h2, w 
+
+1  w2) 
+
+gr(h 0  h2, w 
+
+0  w2)
+
+y(,)
+yplucker
+
+1
+
+
+
+
+
+
+
+0 w2
+
+y
+yplucker
+
+ fw2
+
+det w 
+
+0 w1  det w 
+
+1 w2
+
+det w 
+
+,
+
+fw 
+
+0
+
+ fw1  fw 
+
+ fw2
+
+
+
+( , )
+
+fw 
+
+0
+
+where ,  are, respectively, a choice of section of the bundles det w 
+
+0 w1 and det w 
+
+1 w2 .
+
+3.7. the fock functor. the fock functor z : cd  cvect is the projective functor
+dened by the composition of the functors  and , thus z is the functor
+
+(79)
+
+z acts on objects of ecd by
+
+(80)
+
+z =    : ecd  cvect.
+z : ob(ecd)  ob(cvect),
+
+z((y, w )) = fw (hy ),
+
+z() = c,
+
+and on morphisms by
+
+(81)
+
+z : morecd
+
+((y1, w1), (y2, w2))  morecd
+
+z((x , )) = ,
+
+  det (w 
+
+1  w2, k(dx)),
+
+(fw1 (hy1 ), fw2 (hy2 )),
+
+where (y1, w1),(y2, w2) are not both empty, and  is dened as in section 3.6 by the
+fock space pairing. if (y1, w1) =  = (y2, w2), so x is a closed manifold, then
+
+z(x ) = det(dx )  det (dx ) = c,
+
+where the trivialization requires a choice.
+
+1 w2  fw 
+
+the sewing property of the fqft is precisely the functorial fock space pairing of
+proposition 3.2. note that if both wi 6=  it is not possible to choose  to be the vacuum
+1 w2 , since k(dx), depending on global data, is always transverse
+vector w 
+to the pure boundary data w 
+1  w2. consider though the case w1 = . let x be a
+closed connected manifold partitioned by an embedded codimension 1 submanifold y ,
+so that x = x 0 y x 1. here x 0, x 1 are manifolds with boundary y , where x 0 = y
+has outgoing orientation and x 1 = y has incoming orientation. x 0 is assumed to be
+associated to a morphism x 0 in morcd(, (y, w )) for a choice of admissible polarization
+w  gr(hy ). in this case we can choose in particular w = k(d0) and  = k(d0).
+similarly, we have x 1  morcd((y, w ), ), and we may choose w  = k(d1). as a
+corollary of the properties of z we then have the following algebraic sewing law for the
+
+determinant with respect to a partitioned closed manifold.
+
+determinant bundles and fqft
+
+25
+
+theorem 3.4. there are functorial bilinear pairings
+
+(82)
+
+( , ) : fk(d0)(hy )  fw (h y )  det (d0
+
+pw ),
+
+where the right-side is the determinant line of the ebvp dp with
+
+(83)
+
+and
+
+(84)
+
+(k(d0), w ) = det(d0
+
+p ),
+
+( , ) : fk(d0)(hy )  fk(d1)(h y )  det (dx ),
+
+where the right-side is the determinant line of the dirac operator dx over the closed
+manifold x, with
+
+(85)
+
+(k(d0), k(d1)) = det(dx ).
+
+proof. we just need to recall a couple of facts. from equations (71) and (72) we
+have a pairing fk(d0)(hy )  fw (h y )  det (k(d0), w ) with (k(d0), w  ) =
+det(s(pw )), where s(pw ) : k(d0)  w is the operator of section 2. but from
+(14) there is a canonical isomorphism det (s(pw )) = det (dpw ), with det(s(pw )) 7
+det(dp,b). this proves the rst statement. the second statement follows similarly upon
+recalling from [20] (theorem 3.2) that there is a canonical isomorphism det ((ip (d1)
+p (d0)) = det (dx ), again preserving the determinant elements.
+
+thus one may think of the determinant det(dp ) classically as an object in the com-
+plex line det (k(d), p ) depending on a choice of boundary condition p , or absolutely as
+a quantum determinant as a ray in the fock space fk(d) dened by the vacuum vector
+that does not depend on a choice of p . the two view points being related by (83).
+
+finally, we point out that, in particular, the fock functor naturally denes a map
+
+from geometric brations to vector bundles. to a geometric bration n of closed d-
+
+dimensional manifolds endowed with a spectral section p it assigns the corresponding
+fock bundle fp. a projective morphism between objects (n1, p1) and (n2, p2) is a
+geometric bration of m of d + 1-dimensional manifolds with boundary n1  n2 along
+with a section of the determinant bundle det (p
+1  p2, k(d)), where d is the family
+of dirac operators dened by m. this denes a bundle map fp1  fp2 using the
+generalized plucker embedding (39) and the fock space pairing. for a partition of a
+closed geometric bration m = m 0 n m 1 over a parameter manifold b by an embedded
+bration of codimension 1 manifolds, the analogue of theorem 3.4 then states that there
+
+are functorial fock bundle pairings:
+
+(86)
+
+( , ) : fp (d0)  fp  det (d0, p),
+
+(p (d0), p) = det(d0
+
+p),
+
+where the right-side is the determinant line bundle of the family of ebvp (d0, p), p
+is the vacuum section of the fock bundle fp and det(d0
+p) the determinant section of
+det (d0, p); and
+
+(87)
+
+( , ) : fp (d0)  fp (d1)  det (dm),
+
+(k(d0), k(d1)) = det(dm).
+
+26
+
+jouko mickelsson and simon scott
+
+the proof again requires only the properties of the fock bundle pairing and the deter-
+
+minant bundle identications of section 2 and [20]. notice that there is no regularization
+
+here of the determinant, but only a pairing between bundle sections.
+
+4. gauge anomalies and the fock functor
+
+in this section we give a physical application of these ideas with a fock functor
+
+description of the chiral and commutator anomalies for an even-dimensional manifold
+
+with (odd-dimensional) boundary.
+
+the fock functor assigns vector spaces to all odd-dimensional compact oriented spin
+
+manifolds y and polarizations. there is no further restriction on the topology of y.
+
+however, in this section we shall restrict to a xed topological type for y. for our purposes
+
+this is no real restriction since our principal aim is to understand the action of continuous
+
+symmetries, dieomorphisms and gauge transformations, on the family of fock spaces
+
+and on the morphisms between the fock spaces; the action of the symmetry group cannot
+
+change the topological type of y. in order to be even more concrete, to begin with, we
+
+shall consider the case of the parameter space b = a of smooth vector potentials labeling
+
+the geometries over y.
+
+thus we are lead to consider the action of the group of gauge transformations on the
+
+bundle f of fock spaces over the base a. the gauge transformations act naturally on the
+
+base a and thus we have a lifting problem: construct a (projective) action of the gauge
+
+group in the total space of f intertwining with the family of quantized dirac hamiltonians
+
+in the bers. we want to stress that we are not going to construct a representation of the
+
+gauge group in a single fock space but we have have a linear isometric action between
+
+dierent bers of the fock bundle.
+
+first, we recall some known facts about gauge anomalies in even dimensions. let m
+
+be a closed even-dimensional riemannian spin manifold and let a be the space of vector
+
+potentials on a trivial complex g-bundle over m . for each a  a we have a coupled
+dirac operator da : c(m ; s  e)  c(m ; s  e) given locally by
+
+da =
+
+nxi=1
+
+i (i + i + ai) ,
+
+where i and ai are respectively the components of the local spin connection and and
+g-connection a, and i the cliord matrices. since m is even-dimensional, then da
+splits into positive and negative chirality components, and the object of interest is the
+
+chiral dirac operator
+
+d+
+
+a = da(
+
+1 + n+1
+
+2
+
+) : c(m ; s+  e)  c(m ; s  e).
+
+acting on a we have the group of based gauge transformations g, which acts covari-
+a). we are
+
+antly on the dirac operators d+
+
+g.a = g1d+
+
+ag, so that kerd
+
+g.a = g(kerd
+
+determinant bundles and fqft
+
+27
+
+interested in the fermionic path integral:
+
+(88)
+
+z(a) =zc(m;s+e)
+
+erm d+
+
+a  dmdd,
+
+and a formal extension of nite-dimensional functional calculus gives
+
+z(a) := det(d+
+
+a).
+
+to obtain an unambiguous regularization of (88) we therefore require a gauge covari-
+
+ant regularized determinant varying smoothly with a in order that z(a) pushes down
+
+smoothly to the moduli space m = a/g.
+
+in the case of dirac fermions (both chi-
+
+rality sectors) this can be done and there is a gauge invariant regularized determinant
+
+detreg(da). for chiral fermions on the other hand, there is an obstruction due to the
+presence of zero modes of the dirac operator. the covariance of the kernels means that
+
+the determinant line bundle descends to m and the obstruction to the existence of a
+
+covariant z(a) varying smoothly with a  a is the rst chern class of the determinant
+
+bundle on m, which is the topological chiral anomaly. a 2-form representative for the
+chern class det d+ can be constructed as the transgression of the 1-form 1  (g)
+
+1(g) =
+
+1
+2i
+
+d(detr(d+
+ga)
+(detr(d+
+ga)
+
+,
+
+measuring the obstruction to gauge covariance of a choice of regularized determinant
+detr(d+
+
+a). for details see [2, 14].
+
+in the case of a manifold x with boundary y new complications arise. fixing an
+
+elliptic boundary condition (spectral section) p for the family of chiral dirac operators
+d+ = {d+
+a : a  a}, we obtain a fock bundle fp over a to which we aim to lift the g
+action. it is natural to look rst at gauge transformations (or dieomorphisms) which
+
+are trivial on the boundary.
+
+in fact, the calculation of the chern class in [2] can be
+
+extended to this case using a version of the families index theory for a manifold with
+
+boundary, [5, 16]. the gauge variation of the chiral determinant can be written as
+
+(89)
+
+detr(d+
+
+g.a) = detr(d+
+
+a)(g; a)
+
+where log  is an integral over x of a local dierential polynomial in g, a and the metric
+
+on x;  is the integrated version of the innitesimal anomaly form 1. the important
+point is that the formula applies both to the case of a manifold with/without boundary.
+
+in fact, in the latter case this gives a direct way to dene the determinant bundle over
+
+a/g, [13].
+
+the locality of the anomaly (89) is compatible with the formal sewing formula (105).
+
+applying a gauge transformation which is trivial on y to the right-hand-side of the
+
+equation gives a gauge variation which is a product of gauge variations on the two halves
+
+x0, x1 of m. this product is equal, by locality of the logarithm, to the gauge variation
+on m of the path integral on the left-hand-side. since the cutting surface y is arbitrary,
+
+one can drop the requirement that g is trivial on y.
+
+28
+
+jouko mickelsson and simon scott
+
+the gauge transformations (and dieomorphisms) which are not trivial on the bound-
+
+ary need a dierent treatment. this is because they act non-trivially on the boundary
+fock spaces fy . we shall concentrate on the case when y is odd dimensional. the rst
+question to ask is how the action of the gauge group on the parameter space b of bound-
+
+ary geometries on y is lifted to the total space of the bundle of fock spaces f  b.
+
+this problem has already been analyzed (leading to schwinger terms in the lie algebra
+
+of the group g) in the literature, but in the present article we want to clarify how the
+
+boundary action intertwines with the fock functor construction.
+
+4.1. commutator anomaly on the boundary. let b  b and w  grb. in the rest
+of this section b denotes the space of metrics and vector potentials on a xed manifold
+
+y and yb is the manifold y equipped with the geometric data b. the pair (b, w ) is
+mapped to (g.b, g.w ) by a gauge transformation (or a dieomorphism) g, acting on
+
+both potentials, metrics and spinor elds. this induces an unitary map from the fock
+space f (hb, w ) to f (hg.b, g.w ), by a(u) 7 a(g  u) and similarly for the annihilation
+operators.
+
+however, sometimes (b, w ) do not appear independently, but w is given as a function
+of the boundary geometry; b  pw =wb is a grassmann section; this leads to the con-
+struction of the bundle of fock spaces fb parameterized by b  b, as already mentioned
+above. an example of this situation is the following. suppose the dirac operators on the
+
+boundary do not have zero eigenvalue (this happens when massive fermions are coupled
+to vector potentials). then it is natural to take wb = h +
+b as the space of positive energy
+states. still this case does not lead to any complications because of the equivariance
+
+property wg.b = g.wb. however, there are cases when no equivariant choices for wb
+exist. this happens when we have massless chiral fermions coupled to gauge potentials.
+
+for some potentials there are always zero modes and one cannot take wb as the positive
+energy subspace without introducing discontinuities into the construction.
+
+let us assume that a grassmann section wb is given. for each boundary geome-
+try b we have a fermionic fock space fb = f (hb, wb) determined by the polarization
+hyb = wb  w 
+b . in order to determine the obstruction to lifting the gauge group action
+on y to the bundle of fock spaces such that g1dyb g = dyg.b we compare the action
+on f to the natural action in the case of polarizations w 
+b dened by the positive energy
+subspaces of dirac operators dyb  . we have xed a real parameter  and we consider
+only those boundary geometries b  b for which  is not an eigenvalue. since the choice
+of polarizations w  is equivariant, the gauge action lifts to the (local) fock bundle f .
+relative to w the f  vacua form a complex line bundle det (w , w ); again, this is
+dened only locally in the parameter space.
+
+example 4.1 let y be a unit circle with standard metric but varying gauge potentials.
+we can choose hy = w  w  as the xed polarization dened by the decomposition to
+positive and negative fourier modes. if the gauge group is su (n) and fermions are in
+
+determinant bundles and fqft
+
+29
+
+the fundamental representation of su (n) then the mapping g 7 g  w denes an embed-
+
+ding of the loop group lsu (n) to the hilbert-schmidt grassmannian gr1(hy , w ). the
+pull-back of the quillen determinant bundle over the grassmannian to lsu (n) denes
+
+the central extension of the loop group with level k = 1, [17].
+
+there is a general method to describe the relative determinant bundle in terms of index
+
+theory on x for x = y. we assume that the spin and gauge vector bundle on y can
+be smoothly continued to bundles on x. this is the case for example when x = s2n1
+and y is chosen such that it has the topology of a solid ball, with a product metric near
+
+the boundary. any vector potential can be smoothly continued to a potential on x for
+
+example as a(x, r) = f (r)a(x) with f increasing smoothly from zero to the value one
+
+at r = 1; all derivatives of f vanishing at r = 0, 1. we can now dene a spectral section
+b 7 wb as the calderon subspace associated to the continued metric and vector potential
+in the bulk; we denote the dirac operator dened by this geometric data in x by dx,b.
+the determinant line for a dirac operator dx,b subject to the boundary condition w is
+canonically the tensor product of the line det (w , w ) and the determinant line of the
+same operator dx,b but subject to another choice of boundary conditions w , (12)
+
+since the spectral section wb and the dirac operator dx,b is parameterized by the
+ane space of geometric data (metrics and potentials) on the boundary, the correspond-
+ing dirac determinant bundle is topologically trivial. let u be the set of b  b such
+that the real number  is not in the spectrum of the corresponding dirac operator dyb .
+on u we can dene the boundary conditions w 
+z, as the spectral subspace dyb >  of
+the boundary dirac operator. the set u is in general non-contractible and the dirac
+determinant line bundle dened by the boundary conditions w  can be nontrivial. the
+curvature of this bundle is given by the families index theorem [5, 16]. it can be written
+
+in terms of characteristic classes in the bulk and the so-called -form on the boundary;
+
+the latter depends on spectral information about the family of dirac operators. the
+
+curvature  when evaluated along gauge and dieomorphism directions on the boundary
+
+data has a simplied expression; in particular, the -form drops out since it is a spectral
+
+invariant and the contribution from the characteristic classes in the bulk reduces to a
+
+boundary integral involving the (gauge and metric) chern-simons forms, [7, 8]:
+
+(90)
+
+with
+
+1
+2
+
+ =zy
+
+cs[2](a + v,  + w)
+
+dcs(a, ) = a(r)ch(f )
+
+where [2] denotes the part that is a 2-form along parameter directions. the symbol a + v
+
+means a connection form on y  b such that in the y directions it is given by a vector
+potential a and in the gauge directions lu on b it is equal to the lie algebra valued
+function u. in a similar way,  + w is the sum of the levi-civita connection (on y ) and a
+metric connection w such that the value of w along a vector eld lu on b, generated by
+
+30
+
+jouko mickelsson and simon scott
+
+a vector eld u on y , is equal to the matrix valued function on y given by the jacobian
+
+of the vector eld u.
+
+the characteristic classes are
+
+a(x) = det1/2(cid:18) ir/4
+
+sinh(ir/4)(cid:19)
+
+ch(x) = tr (exp(if/2))
+
+where r is the riemann curvature tensor associated to a metric g in the bulk, f is the
+
+curvature of a gauge connection a.
+
+from the previous discussion it follows that the topological information (de rham
+cohomology class of the curvature) in the relative determinant bundle det (w , w ) is
+given by the curvature formula for the dirac determinant bundle for boundary polar-
+ization w . this leads to the explicit formula for lifting the gauge and dieomorphism
+group action from the base b = am to the fock bundle f , [7], [8]. innitesimally, the
+
+lifting leads to an extension of the lie algebras lie(g) and v ect(y ) by an abelian ideal
+
+j consisting of complex valued functions on a  m. the commutator of two pairs of
+
+elements (u, f ) and (v, g) (where f, g are in the extension part j and u, v are innitesimal
+
+gauge transformations or vector elds) is given as
+
+(91)
+
+[(u, f ), (v, g)] = ([u, v], lu  g  lv  f + c(u, v))
+
+where c(u, v) is an anti-symmetric bilinear function of the arguments u, v taking values
+
+in the ideal j. it satises the cocycle condition
+
+(92)
+
+c(u1, [u2, u3]) + lu1  c(u2, u3) + cyclic permutations = 0.
+
+the cocycle c is just the curvature form evaluated along gauge (or dieomorphism group)
+
+directions,
+
+c(u, v) = (lu, lv)
+
+where lu is the vector eld on a (resp. m) generated by the gauge (dieomorphism)
+group action. when y is one-dimensional, the cocycle reduces to the central term in an
+
+ane lie algebra or in the virasoro algebra; in this case the cocycle does not depend on
+
+the vector potential or the metric on y. in dimension 3 the cocycle (schwinger term) is
+
+given as [12, 9]
+
+(93)
+
+c(u, v) =
+
+i
+
+242zy
+
+tr a[du, dv]
+
+when the fermions are in the fundamental representation of the gauge group; here u, v :
+
+y  g are smooth innitesimal gauge transformations. in dimension 3 the cocycle is
+
+trivial in case of vector elds and metrics. also in higher dimensions explicit expressions
+
+can be worked out starting from (90), [8].
+
+the curvature of the relative determinant bundle, in the case of grassmann sections
+
+w, w  discussed above, can be written as
+
+(94)
+
+(u, v) = tr (f 
+
+bluf 
+
+blvf 
+
+b  fblufblvfb),
+
+determinant bundles and fqft
+
+31
+
+b , pb is the orthogonal projection onto wb and p 
+b
+
+where fb = pb  p 
+on to the orthogonal complement. note that neither of the two terms on the right have a
+nite trace but the dierence is trace class by the relative trace-class property of pb, p 
+b.
+note also that in the case when all the projections p  are in a single restricted grass-
+mannian, the rst term is the standard formula for the curvature of the grassmannian.
+
+is the projection
+
+the second term can be viewed as a renormalization; it is in fact a background eld
+
+dependent vacuum energy subtraction.
+
+the proof of the curvature formula (94) is as follows. first, one notices that this gives
+the curvature of the relative determinant bundle when both variables wb, w 
+b lie in the
+same restricted grassmannian relative to a xed base point p0. then one has to show
+that the dierence actually makes sense when dropping the existence of common base
+
+point. for that purpose one writes
+
+(u, v) = tr [(f 
+
+b  fb)luf 
+
+blvf 
+
+b + fb(luf 
+
+b  lufb)lvf 
+
+b + fblufb(lvf 
+
+b  lvfb)] ,
+
+which is manifestly a trace of a sum of trace-class operators.
+
+4.2. chiral anomaly in the bulk. in the construction of the fock functor we took as
+independent parameter a choice of an element   det (k(d+
+b ), wyb ) in the boundary
+determinant bundle; recall that k(d+
+b ) is the range of the calderon projection. a choice
+of this element, as a function of the geometric data in the bulk, is a section of the
+
+determinant bundle. in quantum eld theory such a choice is provided by a choice of
+the regularized determinant of the chiral dirac operator d+
+b . the determinant vanishes
+if and only if the orthogonal projection  : k(d+
+b )  wyb is singular and therefore
+it makes sense to choose  = b  det (k(d+
+b ), wyb ) (represented as an admissible
+linear map b : wyb  k(d+
+b ), dened subject to the boundary
+conditions wb, is equal to detf (  b).
+
+b )) such that detr(d+
+
+in the case of chiral fermions the determinant detr(d+
+
+b ) is anomalous with respect to
+dieomorphisms and gauge transformations on x and the variation of the determinant
+
+is given by the factor (g; b) in (89). this implies the transformation rule
+
+(95)
+
+g.b = b  (g; b)
+
+where g is either a gauge transformation or a dieomorphism and b stands for both the
+
+metric and gauge potential on x.  is a non-vanishing complex function, satisfying the
+
+cocycle condition
+
+(96)
+
+(g1g2; b) = (g1; g2  b)(g2; b).
+
+here the boundary conditions should be invariant under g, meaning that the gauge
+
+transformations (and dieomorphism) approach smoothly the identity at the boundary.
+
+if the cocycle  is nontrivial (and this is the generic case for chiral fermions) in coho-
+
+mology, then the relation (89) above tells us that the fock functor is determined by the
+family of calderon subspaces k(d+
+b ) and a choice of a section (the regularized determi-
+nant) of a nontrivial line bundle over the quotient space b of b modulo dieomorphisms
+
+32
+
+jouko mickelsson and simon scott
+
+and gauge transformations.
+
+example 4.2 let a(d) be the space of smooth potentials in a unit disk d. let
+
+g(d, d) be the group of gauge transformations which are trivial on the boundary
+d = s1. for each a  a(d) there is a unique g = ga : d  g such that a =
+g1ag + g1dg is in the radial gauge, ar = 0, and g(p) = 1, where p  s1 is a
+it follows that b = a(d)/g(d, d) can be identied
+xed point on the boundary.
+as arad(d)  g(d)/g(d, d) = arad  g, where arad(d) is the set of potentials in
+the radial gauge and g is the group of based loops, i.e., those loops in g which take
+the value 1 at the point p. the rst factor arad(d) is topologically trivial as a vector
+space. thus in this case the topology of the dirac determinant bundle over the moduli
+
+space b is given by the pull-back of the canonical line bundle over g, [17], with respect
+to the map a 7 ga|d. the sections of det  b are by denition complex functions
+ : a(d)  c which obey the anomaly condition (89), [13].
+
+4.3. relation of the chiral anomaly to the commutator anomaly. the bulk
+
+anomaly and the extension (schwinger terms) of the gauge group on the boundary are
+
+closely related, [13]. as we saw above, the fock functor is determined by a choice of a
+section b  b of the relative line bundle det (k(d+
+b ), wyb ). the section transforms
+according to the chiral transformation law for regularized determinants,
+
+gb = (g; b)b,
+
+for transformations g which are equal to the identity on the boundary. if now h is a
+
+transformation which is not equal to the identity on the boundary, we can dene an
+
+operator t (h) acting on sections by
+
+(97)
+
+(t (h))(b) = (h; b)(h1  b),
+
+where  is a complex function of modulus one and must be chosen in such a way that
+(b) = (t (h))(b) satises the condition (89). explicit expressions for  have been
+worked out in several cases, [14]. for example, if dimx = 2 and g is a gauge transfor-
+
+mation then
+
+(98)
+
+(h; a) = exp(
+
+i
+
+2zx
+
+tr a dhh1),
+
+where tr is the trace in the representation of the gauge group determined by the action
+
+on fermions. in general,  must satisfy the consistency condition,
+
+(99)
+
+(h; g  b)(hgh1; h1  b) = (h; b)(g; b).
+
+in the two-dimensional gauge theory example,
+
+(100)
+
+(g; a) = exp(
+
+i
+
+2zx
+
+tr adgg1 +
+
+i
+
+24z tr (dgg1)3).
+
+determinant bundles and fqft
+
+33
+
+the latter integral is evaluated over a 3-manifold m such that its boundary is the closed
+
+2-manifold obtained from x by shrinking all its boundary components to a point.
+
+the introduction of the factor  in (97) has the consequence that the composition law
+
+for the group elements is modied,
+
+(101)
+
+t (g1)t (g2) = (g1, g2; z)t (g1g2),
+
+where  is a s1 valued function, dened by
+
+(102)
+
+(g1, g2; b) = (g1g2; b)(g1; b)1(g2; g1
+
+1  b).
+
+thus we have extended the original group of gauge transformations (dieomorphisms)
+
+by the abelian group of circle valued functions on the parameter space b.
+
+at the lie algebra level, the relation (101) leads to a modied commutator (by
+
+schwinger terms discussed above) of the naive commutation relations of the algebra
+
+of innitesimal gauge transformations or the algebra of vector elds on the manifold x.
+
+actually, the modication is sitting on the boundary; the action of t (g) was dened in
+
+such a way that the (normal) subgroup of gauge transformations which are equal to the
+
+identity on the boundary acts trivially on the sections (b). there is an additional slight
+
+twist to this statement. actually, the normal subgroup is embedded in the extended
+
+group as the set of pairs (g, c(g)), where c(g) is the circle valued function dened by
+
+(103)
+
+c(g) = (g; b)1(g; b).
+
+the consistency condition (99) guarantees that the multiplication rule
+
+(g1, c(g1))(g2, c(g2)) = (g1g2, c(g1g2)),
+
+holds in the extended group with the multiplication law
+
+(g1, 1)(g2, 2) = (g1g2, (g1, g2)12
+
+g1 ),
+
+where (g(b) = (g1b).
+
+4.4. summary. let us summarize the above discussion on fock functors and group
+
+extensions. on the boundary manifold y = x a choice of boundary conditions wb
+(labeled by a parameter space by of boundary geometries) denes a fermionic fock space
+fyb. the group of gauge transformations (or dieomorphisms) on y acts in the bundle
+of fock spaces (parameterized by geometric data on the boundary) through an abelian
+
+extension; the lie algebra of the extension is determined by a 2-cocycle (schwinger terms)
+
+b, wb) where w 
+
+which are computed via index theory from the curvature of the relative determinant
+bundles det (w 
+b is the positive energy subspace dened by the boundary
+dirac operator. if the boundary is written as a union y = yin  yout of the ingoing
+and outgoing components then the fock functor assigns to the geometric data on x a
+linear operator zx : fin  fout. a gauge transformation in the bulk x sends zx to
+(g; x)zg1x . this action denes an abelian extension of the gauge group. there is a
+normal subgroup isomorphic to the group of gauge transformations which are equal to
+
+the identity on the boundary. this subgroup acts trivially, therefore giving an action
+
+34
+
+jouko mickelsson and simon scott
+
+of (the abelian extension of) the quotient group on the boundary. the latter group is
+
+isomorphic to the group acting in the fock bundle over boundary geometries.
+
+5. path integral formulae and a 0+1-dimensional example
+
+in this section we outline the fermionic path integral formalism for an ebvp and
+
+explain how the fock functor models this algebraically.
+
+5.1. path integral formulae. the analogue of (88) for an ebvp is
+
+(104)
+
+zx (p ) := det(dp ) =zep
+
+erx d dmdd,
+
+where ep = dom(dp ). this is equation (4) for the case s() =rx d dx and where
+
+the local boundary condition f has been replaced by the global boundary condition p . if
+we consider a partition of the closed manifold m = x0y x1. the dirac operator over m
+restricts to dirac operators d0 over x 0 and d1 over x 1. we assume that the geometry
+is tubular in a neighbourhood of the splitting manifold y , then we have grassmannians
+gry i of boundary conditions associated to di, where y 1 = y = y 0. the reversal of
+orientation means that there is a dieomorphism gry 0  gry 1 given by p  i  p , so
+that each p  gry 0 denes the boundary value problems d0
+ip . according to
+(88) and (104), the analogue of the sewing formula (105) is
+
+p and d1
+
+ze(m)
+
+(105)
+
+that is,
+
+(106)
+
+or
+
+(107)
+
+erm d+
+
+a  dmdd = zgry
+
+dp(zep (x 0)
+erx1 
+
+ zeip (x 1)
+
+erx0 
+
+0 d00 dx0d0d
+
+0
+
+1 d11 dx1d1d
+
+1) .
+
+zm =zgry
+
+zx 0(p )zx 1 (i  p ) dp
+
+det(d) =zgry
+
+detd0
+
+p .detd1
+
+ip dp.
+
+of course, the above formulas are only heuristic extensions to innite-dimensions of
+
+a well-dened nite-rank linear functional. according to the properties of the fock
+
+functor (see section 3), the fermionic integral may be rigourously understood as a linear
+functional (hy  h y )  det (d0
+p ), while (107) is replaced by the evaluation of the
+fock space bilinear pairing on vacuum elements (84):
+
+(108)
+
+det(d) = (k(d0), k(d1)).
+
+determinant bundles and fqft
+
+35
+
+however, adopting a slightly dierent point of view gives a more precise meaning to the
+
+integral formulae above. with a given boundary condition p the determinants of the
+
+(chiral) dirac operators on the manifolds x0 and x1 should be interpreted as elements
+of the determinant line bundle det over the grassmannian gry , with base point h +.
+the actual numerical value of the dirac determinant depends on the choice of a (local)
+
+trivialization. for example, one could dene det(d) as the zeta function regularized
+determinant det((db)da), where db is a background dirac operator chosen in such
+a way that (db)da has a spectral cut, i.e., there is a cone in the complex plane with
+vertex at the origin and no eigenvalues of the operator lie inside of the cone. the value
+
+of the zeta determinant will depend on the choice of the background eld b.
+
+a choice of an element in the line in det over p 0  gry is given by a choice of
+a pair (, ), where  : h+  p 0 is a unitary map and   c. it can be viewed as a
+holomorphic section of the dual determinant bundle det  according to (29),
+
+[,]() = detf (    ),
+
+where  : (h+)  p 0 is the orthogonal projection. we can think of the variable  as the
+parameter for dierent elements w = (h+)  gry . we want to replace the (ill-dened)
+
+integralrgry
+
+(109)
+
+det(d0
+
+p )det(d1
+
+p )dp by a (so far ill-dened) integral of the form
+
+z
+
+[,]()[,]()d.
+
+but this integral looks like the functional integral dening the inner product between a
+
+pair of fermionic wave functions (vectors in the fock space) dened in equation (38):
+
+(110)
+
+detf () =< [,], [,] >=xss
+
+,((s))[,]((s)).
+
+the relation with (108) is given by the identity (78) which tells us that
+
+(111)
+
+(k(d0), k(d1)) =< k(d0), k(d1) >,
+
+k 1 p 
+
+so here [, ] = det(pk 0 pk 0 ), [, ] = det(p 
+k 1 ). to illustrate this consider the
+case of the dirac operator over an odd-dimensional spin manifold m partitioned by
+y . in this case we know from [19] that k(d0) = graph(h0 : f +  f ) and k(d1) =
+graph(h1 : f   f +), where f  denotes the spaces of positive and negative spinor elds
+over the even-dimensional boundary y , and h0 is a unitary isomorphism diering from
+g+ = (d
+y are the boundary chiral dirac
+operators which we assume to be invertible. in particular, h + = graph(g+ : f +  f ).
+similarly for h1 ,with g+ = (d+
+y . the graph description gives us a canonical
+trivialization of the determinant lines, so that
+
+y by a smoothing operator. here d
+
+y )1/2d
+
+y d+
+
+y )1/2d+
+
+y d
+
+p (d0) =
+
+1
+
+2 idf +
+
+h0
+
+h1
+0
+
+idf +! .
+
+36
+
+jouko mickelsson and simon scott
+
+then by the denition (58) of the fock pairing we have in this case, with respect to the
+
+trivialization,
+
+(112)
+
+(k(d0), k(d1)) = detf (
+
+1
+2
+
+(p (d0)  (i  p (d1) : k(d0)  k(d1)  hy )
+
+where the 1/2 arises (as can be shown canonically) because f + is not quite an element
+of the grassmannian. this is the operator
+
+(p (d0)  (i  p (d1))((s+, h0s+), (h1s, s)) = ((s+  h1s, h0s + s))
+
+h0
+
+=  idf +
+idf ! = detf (
+
+1
+2
+
+h1
+
+h1
+
+idf ! s+
+s! .
+
+(i  h1h2)),
+
+so in the graph trivialization
+
+(k(d0), k(d1)) = detf
+
+1
+
+2 idf +
+
+h0
+
+using the formula detf a b
+
+d! = det(d)det(a  bd1c), valid for matrices of the form
+
+c
+
+id + trace  class provided d : f   f  is invertible.
+
+on the other hand, using (110), in the trivialization given:
+
+1
+2
+
+(
+
+h1
+
+1
+
+1
+2
+
+< k(d0), k(d1) >= detf
+
+h0) = detf (
+
+(i  h1h2)),
+
+where t =  +
+
+t +! where the column index labels the dierent vectors of the canonical
+
+basis for the the graph of t : f +  f , and the row labels of + label the dierent
+coordinates of a suitable basis for f +. the complex number detf ( 1
+2 (i  h1h2)) is the so
+called canonical regularization of dm relative to the partition y (see [19]). there is a
+corresponding trivialization for self-adjoint ebvp and its relation with the -determinant
+
+regularization is explained in [21].
+
+5.2. a (0+1)-dimensional example. the motivation for replacing the integration
+formula (109) by the sum in (38) comes from nite dimensions. if h = h  h+ is a
+decomposition of a 2n dimensional vector space into a pair of orthogonal n dimensional
+subspaces then the maps , ,  above become (with respect to the basis {ei} with i =
+1, 2,     n ) 2n  n matrices and we have the matrix identity
+
+det() =x(i)
+
+det((i))det((i)),
+
+the sum being over all sequences n  i1 < i2 . . . in  n (with i 6= 0). on the other
+hand, it follows from eq. (3.48) in [10], that the following integration formula holds in
+
+this situation:
+
+(113)
+
+det() = anz dddet()det()  det()2n 1,
+
+where an is a numerical factor and the last factor under the integral sign can be incor-
+porated to the denition of the integration measure. if we consider the basis elements
+, h0 for linear maps hi : h +  h  and integrate over the dense subspace ugraph
+h1
+
+1
+
+determinant bundles and fqft
+
+37
+
+parameterizing the elements t = (+, t ) with t  hom(h +, h ), the integral (113)
+becomes
+
+(114)
+
+det(1  h2h1) = anz dt dt deth+ (1  h2t )deth (1 + t h2)  det(1 + t t )2n 1,
+
+this has consequences for determinants in dimension one, where the we work with
+
+the compact grassmannian. let x = [a0, a1] and let e be a complex hermitian bundle
+over x with unitary connection . then the associated generalized dirac operator is
+simply d = id/dx : c(x; e)  c(x; e). choosing a trivialization of e, so that
+ea0  ea1 = cn  cn, a global boundary condition d is specied by an element p 
+gr(cncn), dening the elliptic boundary value problem: dp = id/dx : dom(dp ) 
+l2([a0, a1]; e).
+
+the fock functor is here is a topological 0+1-dimensional fqft from the category
+c1, whose objects are points endowed with a complex nite-dimensional hermitian vec-
+tor space v (we do not need to give a polarization in this nite-dimensional situation),
+
+and whose morphisms are compact 1-dimensional manifolds with boundary with her-
+mitian bundle with unitary connection. the fock functor z takes an object (p, v )  c1
+to the fock space z(p, v ) := hol(gr(v ); (det (e))) = v , where e is the usual
+canonical vector bundle over the grassmannian. consider two compatible morphisms
+01 = ([a0, a1], e01, 01) and 12 = ([a1, a2], e12, 12) in c1, so that
+
+02 = 1201 = ([a0, a2], e02, 02),
+
+with e02|[a0,a1] = e01 etc. let vi be the bre over ai, and in [ai, aj] we assign ai to be
+incoming and aj to be outgoing. for incoming boundary components ai the associated
+object in c1 is (ai, vi). then we dene z(ij) = kij , where kij  gr(v0  vj) is the
+calderon subspace of boundary values of solutions to the dirac operator d = iij
+d/dx.
+we have
+
+z(ij)  z((pi, v i)(pj, vj )) = z(pi, v i)z(pj, vj ) = (v i)(vj ) = hom(vi, vj ) := fkij .
+
+because kij = graph(hij : vi  vj ) with hij the parallel-transport of the connection
+on eij between ai and aj, a simple computation gives under the above identication
+z(ij)  hij  hom(vi, vj ). next we have a canonical pairing
+
+(115)
+
+z(a0, v0)  z(a1, v1)  z(a1, v1)  z(a2, v2)  z(a0, v0)  z(a2, v2),
+
+induced by subtraction v1  v1  v1, with h01  h12  h01h12. if we take the
+case where a2 = a0, so that 02 = 1201 = (s1 = [a0, a2], e02, 02), corresponding to
+morphisms in gr(v0v1) and gr(v1v0) respectively, then z(01)  fk01 and z(10) 
+ c, under the above identications is just
+fk
+the supertrace
+
+, and the induced pairing fk01  fk
+
+10
+
+10
+
+( , ) : hom(v0, v1)  hom(v1, v0)  c,
+
+(a, b) 7 tr s(ab) :=xk
+
+(1)ktr (ab|k ).
+
+38
+
+jouko mickelsson and simon scott
+
+applied to the vacuum elements wt01
+hom(v1, v0) we have
+
+ t01  hom(v0, v1) and w 
+t10
+
+ (t 
+
+10) 
+
+(116)
+
+(wt01
+
+, w 
+t10
+
+) = tr s(  t 
+
+tr (k(t 
+
+10t01) = det(i + t 
+
+10t01).
+
+10  t01) =xk
+
+hence we have (z(01), z(10)) = det(ih10h01), (since hij is unitary), and (z(01), w 
+det(i + t h01). on the other hand it well-known that det(i + t h01) = det(dpt ). so
+from eq. (114) we have
+
+t
+
+) =
+
+(117)
+
+(z(01), z(10)) = anz dt dt det(d10
+
+pt )det (d01
+
+pt  )  det(1 + t t )2n 1,
+
+where pt  = i  pt , expressing the relation of the algebraic fock space pairing to the
+path integral sewing formula eq. (107).
+
+notice that the gauge group of a boundary component of [a0, a1] is just a copy of the
+unitary group u (n) and under the embedding g  graph(g) := wg, the fock functor
+maps g to g on v . thus in the case of 0+1-dimensions the fqft representation of the
+
+boundary gauge group is the fundamental u (n)-representation, which is a restatement of
+
+the borel-weil theorem for u (n). this means that the invariant output by the fqft,
+
+which in fact here is a tqft, is the character of the fundamental representation  of
+
+u (n). this is what we would expect. we are dealing with a single particle evolving
+
+through time, and so its only invariants are the representations of its internal symmetry
+
+group, which is the symmetry group of the bundle e over [a, b]. in this sense we are
+
+dealing with quantum mechanics, rather than qft, and because it is a topological eld
+
+theory the hilbert space is nite-dimensional.
+
+5.3. relation to the berezin integral. the above pairing can also be described by
+
+a fermionic integral. let v denote the exterior algebra of the complex vector space
+
+v with odd generators 1, . . . , n. it has basis the monomials i = i1 . . . ip ,
+{i1, . . . , ip},
+the fermionic (or berezin) integral is the linear functional
+
+i =
+i1 < . . . < ip, where i runs over subsets of {1, . . . , n}, and we set |i| := p.
+
+z : v  c,
+
+f () 7z f () d
+
+which picks out the the top degree coecient of f () (a polynomial in the generators)
+relative to the generator  = 1 . . . n of det v = nv . this extends to a functional
+
+z : v  v  c,
+
+f (, ) 7z f (, ) dd,
+
+dened relative to the generator  := 11 . . . nn. of det v  det v . given an element
+
+t  end(v ) we associate to the quadratic element t  := pi,j tij ij. we then have
+
+n! (t )n = det(t ), and more generally the gaussian expression
+
+1
+
+where ti denotes the submatrix (tij) with i, j  i, so that we can write
+
+(118)
+
+det(ti )i i ,
+
+et  =xi
+z et  dd = det(t ),
+
+determinant bundles and fqft
+
+39
+
+so determinants are expressible as complex fermion gaussian integrals.
+
+next, we have a bilinear form on v  v dened by
+
+(119)
+
+< f, g >=z g(, )f (, ) d[(, ), (, )],
+
+where f () is f () with the order of the generators reversed, and
+
+z f (, ) d[(, ), (, )] :=z f (, )e2 d(, )d(, ),
+
+is the fermionic integral with respect to a gaussian measure. the 2 arises in the exponent
+
+because we are dealing with v  v rather than v . applied to quadratic elements
+et  and es dened for t, s  end(v ) we then have
+
+
+
+
+
+i t
+
+s i
+
+( )
+
+ dd
+
+< et , es > = z es+t +2 dd
+
+
+= z e
+= detv v  i t
+s i!
+s i! : v  v  v  v and the general formula
+
+= detv (i  st ).
+
+here we use (118) applied to  i t
+det a b
+
+c
+
+d! = det(d)det(a  bd1c), valid provided d : v  v is invertible.
+
+we can repeat the process for a pair of complex vector spaces v0 6= v1 of the same
+dimension and t  hom(v0, v1) and s  hom(v1, v0). now dene the fermionic integral
+
+just to be the projection onto the form of top degree r : v0  v1  det (v0, v1).
+0 , and thenr et = det(t )  det (v0, v1).
+
+associated to t we have et  v0 v1 = hom(v0, v1) we may regard as an element of
+v0 v1 via the hermitian isomorphism v0 = v 
+here det(t ) is the element det(t )(1 . . . n) = t 1 . . . t n, for a basis i of v0, which is
+canonically identied with det(t )  c when v0 = v1, and the gaussian element is then
+et = et . the bilinear pairing goes through as before, with < et , es >= detv0 (i  st ),
+which gives an alternative formulation of the fock pairing < , >: fwt0
+
+ c.
+
+ fw 
+t1
+
+references
+
+[1] atiyah, m.f.: topological quantum eld theories. inst. hautes etudes sci. publ. math. 68, 175
+
+(1989).
+
+[2] atiyah, m.f. and singer, i.m.: dirac operators coupled to vector potentials. proc. nat. acad. sci.
+
+usa 81, 2597 (1984).
+
+[3] atiyah, m.f., patodi, v.k., and singer, i.m.: spectral asymmetry and riemannian geometry. i.
+
+math. proc. cambridge phil. soc. 77, 43 (1975).
+
+[4] berline, n., e. getzler, and m. vergne: heat kernels and dirac operators. grundlehren der math-
+
+ematischen wissenschaften 298, springer-verlag, berlin, 1992.
+
+40
+
+jouko mickelsson and simon scott
+
+[5] bismut, j-m and freed, d.s.: the analysis of elliptic families.ii. dirac operators, eta invariants,
+
+and the holonomy theorem. comm. math. phys. 107, 103 (1986).
+
+[6] boobavnbek, b., and wojciechowski, k.p.: elliptic boundary problems for dirac operators.
+
+boston: birkhauser, 1993.
+
+[7] carey, a., mickelsson, j., and murray, m.: index theory, gerbes and hamiltonian quantization.
+
+comm. math. phys. 183, 707 (1997).
+
+[8] ekstrand, c., and mickelsson, j.: gravitational anomalies, gerbes, and hamiltonian quantization.
+
+hepth/9904189
+
+[9] faddeev, l., shatasvili, s.: algebraic and hamiltonian methods in the theory of nonabelian anom-
+
+alies. theoret. math. phys. 60, 770 (1985).
+
+[10] fujii, k., kashiwa,t., and sakoda,s.: coherent states over grassmann manifolds and the wkb
+
+exactness in path integral. j. math. phys. 37, 567 (1996).
+
+[11] grubb, g.,: trace expansions for psuedodierential boundary problems for dirac-type operators
+
+and more general systems. ark. mat. 37, 45 (1999).
+
+[12] mickelsson, j.: chiral anomalies in even and odd dimensions. comm. math. phys. 97, 361 (1985).
+
+[13] mickelsson, j.: kac-moody groups, topology of the dirac determinant bundle, and fermionization.
+
+comm. math. phys. 110, 173 (1987).
+
+[14] mickelsson, j.: current algebras and groups. london and new york: plenum press, 1989.
+
+[15] mickelsson, j.: on the hamiltonian approach to commutator anomalies in 3+1 dimensions. phys.
+
+lett. b 241, 70 (1990).
+
+[16] piazza, p.: determinant bundles, manifolds with boundary and surgery. comm. math. phys. 178,
+
+597 (1996).
+
+[17] pressley, a. and segal, g.b.: loop groups. oxford: clarendon press, 1986.
+
+[18] quillen, d. g.: determinants of cauchy-riemann operators over a riemann surface. funkcionalnyi
+
+analiz i ego prilozhenya 19, 37 (1985).
+
+[19] scott, s.g.: determinants of dirac boundary value problems over odddimensional manifolds.
+
+comm. math. phys. 173, 43 (1995).
+
+[20] scott, s.g.: splitting the curvature of the determinant line bundle. proc. am. math. soc., to appear.
+
+[21] scott, s.g., and wojciechowski, k.p.: -determinant and the quillen determinant on the grass-
+
+mannian of elliptic self-adjoint boundary conditions. c. r. acad. sci., serie i, 328, 139 (1999).
+
+[22] segal, g.b.: the denition of conformal eld theory. oxford preprint (1990).
+
+[23] segal, g.b.: geometric aspects of quantum eld theory. proc. int. cong. math., tokyo, (1990).
+
+[24] segal, g.b, and wilson, g.: loop groups and equations of the kdv type. inst. hautes etudes sci.
+
+publ. math. 61, 5 (1985).
+
+[25] witten, e: topological quantum eld theory, comm. math. phys. 117, 353 (1988).
+
+[26] witten, e: geometry and physics. proc. int. cong. math., tokyo (1990).
+
+department of theoretical physics, royal institute of technology, s-10044 stockholm,
+
+sweden.
+
+e-mail address: jouko@theophys.kth.se
+
+department of mathematics, kings college, london wc2r 2ls, u.k.
+
+e-mail address: sscott@mth.kcl.ac.uk
+
+

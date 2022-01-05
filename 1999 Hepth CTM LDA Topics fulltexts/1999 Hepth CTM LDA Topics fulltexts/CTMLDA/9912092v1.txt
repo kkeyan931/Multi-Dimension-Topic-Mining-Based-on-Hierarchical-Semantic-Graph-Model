@@ -1,0 +1,2082 @@
+9
+9
+9
+1
+
+ 
+c
+e
+d
+3
+1
+
+ 
+
+ 
+ 
+
+1
+v
+2
+9
+0
+2
+1
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+renormalization in quantum eld theory
+and the riemann-hilbert problem i: the
+hopf algebra structure of graphs and the
+
+main theorem
+
+alain connes and dirk kreimer
+
+institut des hautes etudes scientiques
+
+connes@ihes.fr, kreimer@ihes.fr
+
+december 1999
+
+abstract this paper gives a complete selfcontained proof of our result announced
+in [6] showing that renormalization in quantum eld theory is a special instance of a
+general mathematical procedure of extraction of nite values based on the riemann-
+hilbert problem.
+we shall rst show that for any quantum eld theory, the combinatorics of feynman
+graphs gives rise to a hopf algebra h which is commutative as an algebra. it is the
+dual hopf algebra of the envelopping algebra of a lie algebra g whose basis is
+labelled by the one particle irreducible feynman graphs. the lie bracket of two
+such graphs is computed from insertions of one graph in the other and vice versa.
+the corresponding lie group g is the group of characters of h.
+we shall then show that, using dimensional regularization, the bare (unrenormal-
+ized) theory gives rise to a loop
+
+(z)  g ,
+
+z  c
+
+where c is a small circle of complex dimensions around the integer dimension d of
+space-time. our main result is that the renormalized theory is just the evaluation
+at z = d of the holomorphic part + of the birkho decomposition of .
+
+we begin to analyse the group g and show that it is a semi-direct product of an easily
+understood abelian group by a highly non-trivial group closely tied up with groups
+of dieomorphisms. the analysis of this latter group as well as the interpretation
+of the renormalization group and of anomalous dimensions are the content of our
+second paper with the same overall title.
+
+1
+
+1
+
+introduction
+
+this paper gives a complete selfcontained proof of our result announced in
+[6] showing that renormalization in quantum eld theory is a special instance
+of a general mathematical procedure of extraction of nite values based on
+the riemann-hilbert problem. in order that the paper be readable by non-
+specialists we shall begin by giving a short introduction to both topics of
+renormalization and of the riemann-hilbert problem, with our apologies to
+specialists in both camps for recalling well-known material.
+
+perturbative renormalization is by far the most successful technique for
+it is well known
+computing physical quantities in quantum eld theory.
+for instance that it accurately predicts the rst ten decimal places of the
+anomalous magnetic moment of the electron.
+
+the physical motivation behind the renormalization technique is quite clear
+and goes back to the concept of eective mass in nineteen century hydrody-
+namics. thus for instance when applying newtons law,
+
+(1)
+
+f = m a
+
+to the motion of a spherical rigid balloon b, the inertial mass m is not the
+mass m0 of b but is modied to
+
+(2)
+
+m = m0 + 1
+
+2 m
+
+where m is the mass of the volume of air occupied by b.
+
+it follows for instance that the initial acceleration a of b is given, using the
+archimedean law, by
+
+m g =(cid:16)m0 + 1
+
+2 m(cid:17) a
+
+(3)
+
+and is always of magnitude less than 2g.
+the additional inertial mass  m = m  m0 is due to the interaction of b
+with the surounding eld of air and if this interaction could not be turned
+o there would be no way to measure the mass m0.
+the analogy between hydrodynamics and electromagnetism led (through
+the work of thomson, lorentz, kramers. . . [10]) to the crucial distinction
+between the bare parameters, such as m0, which enter the eld theoretic
+equations, and the observed parameters, such as the inertial mass m.
+
+2
+
+a quantum eld theory in d = 4 dimensions, is given by a classical action
+functional,
+
+(4)
+
+s (a) =z l (a) d4x
+
+where a is a classical eld and the lagrangian is of the form,
+
+(5)
+
+l (a) = (a)2/2 
+
+m2
+2
+
+a2 + lint(a)
+
+where lint(a) is usually a polynomial in a and possibly its derivatives.
+one way to describe the quantum elds (x), is by means of the time ordered
+greens functions,
+
+(6)
+
+gn (x1, . . . , xn ) = h 0|t (x1) . . . (xn )| 0i
+
+where the time ordering symbol t means that the (xj)s are written in
+order of increasing time from right to left.
+the probability amplitude of a classical eld conguration a is given by,
+
+(7)
+
+ei s(a)
+
+h
+
+and if one could ignore the renormalization problem, the greens functions
+would be computed as,
+
+(8)
+
+gn (x1, . . . , xn ) = nz ei s(a)
+
+h a(x1) . . . a(xn ) [da]
+
+where n is a normalization factor required to ensure the normalization of
+the vacuum state,
+
+(9)
+
+h 0 | 0i = 1 .
+
+it is customary to denote by the same symbol the quantum eld (x) appear-
+ing in (6) and the classical eld a(x) appearing in the functional integral.
+no confusion arises from this abuse of notation.
+
+if one could ignore renormalization, the functional integral (8) would be easy
+to compute in perturbation theory, i.e. by treating the term lint in (5) as a
+perturbation of
+
+(10)
+
+l0() = ()2/2 
+
+m2
+2
+
+2 .
+
+3
+
+with obvious notations the action functional splits as
+
+(11)
+
+s() = s0() + sint()
+
+where the free action s0 generates a gaussian measure exp (i s0()) [d] =
+d.
+
+the series expansion of the greens functions is then given in terms of gaus-
+sian integrals of polynomials as,
+
+gn (x1, . . . , xn ) =  xn=0
+  xn=0
+
+in/n!z (x1) . . . (xn ) (sint())n d!
+in/n!z sint()n d!1
+
+.
+
+(12)
+
+the various terms of this expansion are computed using integration by parts
+under the gaussian measure . this generates a large number of terms
+u (), each being labelled by a feynman graph , and having a numerical
+value u () obtained as a multiple integral in a nite number of space-time
+variables. we shall come back later in much detail to the precise deni-
+tion of feynman graphs and of the corresponding integrals. but we now
+know enough to formulate the problem of renormalization. as a rule the
+unrenormalized values u () are given by nonsensical divergent integrals.
+the conceptually really nasty divergences are called ultraviolet1 and are
+associated to the presence of arbitrarily large frequencies or equivalently
+to the unboundedness of momentum space on which integration has to be
+carried out. equivalently, when one attempts to integrate in coordinate
+space, one confronts divergences along diagonals, reecting the fact that
+products of eld operators are dened only on the conguration space of
+distinct spacetime points.
+the physics resolution of this problem is obtained by rst introducing a
+cut-o in momentum space (or any suitable regularization procedure) and
+then by cleverly making use of the unobservability of the bare parameters,
+such as the bare mass m0. by adjusting, term by term of the perturbative
+expansion, the dependence of the bare parameters on the cut-o parameter,
+
+1the challenge posed by the infrared problem is formidable though. asymptotic expan-
+sions in its presence quite generally involve decompositions of singular expression similar
+to the methods underlying renormalization theory. one can reasonably hope that in the
+future singular asymptotic expansions will be approachable by the methods advocated
+here.
+
+4
+
+it is possible for a large class of theories, called renormalizable, to eliminate
+the unwanted ultraviolet divergences. this resolution of divergences can
+actually be carried out at the level of integrands, with suitable derivatives
+with respect to external momenta, which is the celebrated bphz approach
+to the problem.
+the soundness of this physics resolution of the problem makes it doubtful
+at rst sight that it could be tied up to central parts of mathematics.
+it was recognized quite long ago [11] that distribution theory together with
+locality were providing a satisfactory formal approach to the problem when
+formulated in conguration space, in terms of the singularities of (6) at coin-
+ciding points, formulating the bphz recursion in conguration space. the
+mathematical program of constructive quantum eld theory [13] was rst
+completed for superrenormalizable models, making contact with the deep-
+est parts of hard classical analysis through the phase space localization and
+renormalization group methods. this led to the actual rigorous mathemat-
+ical construction of renormalizable models such as the gross-neveu model
+in 2-dimensions [12]. the discovery of asymptotic freedom, which allows
+to guess the asymptotic expansion of the bare parameters in terms of the
+cut-o leads to the partially fullled hope that the rigorous contruction can
+be completed for physically important theories such as qcd.
+however neither of these important progresses does shed light on the ac-
+tual complicated combinatorics which has been successfully used by particle
+physicists for many decades to extract nite results from divergent feynman
+graphs, and which is the essence of the experimentally conrmed predictive
+power of quantum eld theory.
+we shall ll this gap in the present paper by unveiling the true nature of
+this seemingly complicated combinatorics and by showing that it is a special
+case of a general extraction of nite values based on the riemann-hilbert
+problem.
+our result was announced in [6] and relies on several previous papers [7, 16,
+17, 18, 4] but we shall give below a complete account of its proof.
+the riemann-hilbert problem comes from hilberts 21st problem which he
+formulated as follows:
+
+prove that there always exists a fuchsian linear dierential equation
+with given singularities and given monodromy.
+
+in this form it admits a positive answer due to plemelj and birkho (cf. [1]
+for a careful exposition). when formulated in terms of linear systems of the
+
+5
+
+form,
+
+(13)
+
+y(z) = a(z) y(z) , a(z) = xs
+
+a 
+z  
+
+,
+
+where s is the given nite set of singularities,  6 s, the a are complex
+matrices such that
+
+(14)
+
+x a = 0
+
+to avoid singularities at , the answer is not always positive [2], but the
+solution exists when the monodromy matrices m (g.1) are suciently
+close to 1. it can then be explicitly written as a series of polylogarithms
+[19].
+
+figure 1
+
+another formulation of the riemann-hilbert problem, intimately tied up
+to the classication of holomorphic vector bundles on the riemann sphere
+p1(c), is in terms of the birkho decomposition
+
+(15)
+
+ (z) = (z)1 +(z)
+
+z  c
+
+where we let c  p1(c) be a smooth simple curve, c the component of
+the complement of c containing  6 c and c+ the other component. both
+ and  are loops with values in gln(c),
+
+(16)
+
+ (z)  g = gln(c)
+
+ z  c
+
+and  are boundary values of holomorphic maps (still denoted by the same
+symbol)
+
+(17)
+
+ : c  gln(c) .
+
+the normalization condition () = 1 ensures that, if it exists, the de-
+composition (15) is unique (under suitable regularity conditions).
+
+6
+
+a
+b
+g
+the existence of the birkho decomposition (15) is equivalent to the van-
+ishing,
+
+(18)
+
+c1 (lj) = 0
+
+of the chern numbers nj = c1 (lj) of the holomorphic line bundles of the
+birkho-grothendieck decomposition,
+
+(19)
+
+e =  lj
+
+where e is the holomorphic vector bundle on p1(c) associated to , i.e. with
+total space:
+
+(20)
+
+(c+  cn)  (c  cn) .
+
+the above discussion for g = gln(c) extends to arbitrary complex lie
+groups.
+
+when g is a simply connected nilpotent complex lie group the existence
+(and uniqueness) of the birkho decomposition (15) is valid for any . when
+the loop  : c  g extends to a holomorphic loop: c+  g, the birkho
+in general, for z  c+ the
+decomposition is given by + = ,  = 1.
+evaluation,
+
+(21)
+
+  +(z)  g
+
+is a natural principle to extract a nite value from the singular expression
+(z). this extraction of nite values coincides with the removal of the pole
+part when g is the additive group c of complex numbers and the loop  is
+meromorphic inside c+ with z as its only singularity.
+we shall rst show that for any quantum eld theory, the combinatorics of
+feynman graphs gives rise to a hopf algebra h which is commutative as
+an algebra. it is the dual hopf algebra of the envelopping algebra of a lie
+algebra g whose basis is labelled by the one particle irreducible feynman
+graphs. the lie bracket of two such graphs is computed from insertions of
+one graph in the other and vice versa. the corresponding lie group g is
+the group of characters of h.
+we shall then show that, using dimensional regularization, the bare (un-
+renormalized) theory gives rise to a loop
+
+(22)
+
+(z)  g ,
+
+z  c
+
+7
+
+where c is a small circle of complex dimensions around the integer dimension
+d of space-time
+
+c
+
+d
+
+our main result is that the renormalized theory is just the evaluation at
+z = d of the holomorphic part + of the birkho decomposition of .
+we begin to analyse the group g and show that it is a semi-direct product
+of an easily understood abelian group by a highly non-trivial group closely
+tied up with groups of dieomorphisms. the analysis of this latter group
+as well as the interpretation of the renormalization group and of anomalous
+dimensions are the content of our second paper with the same overall title
+[8].
+
+2 the hopf algebra of feynman graphs
+
+the hopf algebra structure of perturbative quantum eld theory is by now
+well established [7, 16, 17, 18, 4]. to the practitioner its most exciting aspect
+is arguably that it is represented as a hopf algebra of decorated rooted trees
+[7, 18, 4] or, equivalently, as a hopf algebra of parenthesized words on an
+alphabet provided by the skeleton expansion of the theory [16]. the relation
+to rooted trees exhibits most clearly the combinatorics imposed on feynman
+graphs so that overlapping subdivergences can be resolved to deliver local
+counterterms [17]. the hopf algebra structure can be directly formulated on
+graphs though [17, 4]. it is this latter representation to which we will turn
+here, to make the contact with the notation of collins textbook as close as
+possible.
+
+feynman graphs  are combinatorial labels for the terms of the expansion
+(12) of greens functions in a given quantum eld theory. they are graphs
+consisting of vertices joined by lines. the vertices are of dierent kinds
+corresponding to terms in the lagrangian of the theory.
+
+we shall require that the theory we start with is renormalizable and include
+all corresponding vertices in the diagrams.
+
+8
+
+thus, and if we start, for notational simplicity,2 with 3 in d = 6 dimen-
+sions, we shall have three kinds of vertices:3
+
+the three line vertex
+
+corresponding to the 3 term of the lagrangian;
+
+the two line vertex
+
+the two line vertex
+grangian.
+
+0
+
+1
+
+corresponding to the 2 term of the lagrangian;
+
+corresponding to the ( )2 term of the la-
+
+in general the number of lines attached to a vertex is the degree of the
+corresponding monomial in the lagrangian of the theory. a line joining two
+vertices is called internal. the others are attached to only one vertex and are
+called external. to specify a feynman graph one needs to specify the values
+of parameters which label the external lines. when working in conguration
+space these would just be the space-time points xj of (12) associated to
+the corresponding external vertices (i.e. those vertices attached to external
+lines). it will be more practical to work in momentum space and to specify
+the external parameters of a diagram in terms of external momenta.
+it
+is customary to orient the momenta carried by external lines so that they
+all go inward. the law of conservation of momentum means that for each
+connected graph ,
+
+(1)
+
+where the pi are the external momenta,
+
+x pi = 0
+
+p1
+
+p4
+
+p2
+
+p3
+
+we shall use the following notation to indicate specic external structures of
+a graph . we let (0) be the graph with all its external momenta nullied,
+i.e.
+
+2our results extend in a straightforward manner to any theory renormalizable by local
+
+counterterms.
+
+3in the case of a massless theory, there will be only two kinds, as the two-line vertex
+
+corresponding to the 2 term is missing.
+
+9
+
+g
+0
+
+ = 
+
+(0)
+
+0
+
+0
+
+0
+
+for self energy graphs, i.e. graphs  with just two external lines, we let 4
+
+(2)
+
+(1) =(cid:18) 
+
+ p2 (p)(cid:19)p=0
+
+where p is the momentum owing through the diagram. note that the sign
+of p is irrelevant in (2). this notation might seem confusing at rst sight
+but becomes clear if one thinks of the external structure of graphs in terms
+of distributions. this is necessary to have space-time parameters xj on the
+same footing as the momentum parameters pj using fourier transform. we
+shall return to this point in greater detail after the proof of theorem 1.
+
+a feynman graph  is called one particle irreducible (1pi) if it is connected
+and cannot be disconnected by removing a single line. the following graph
+is one particle reducible:
+
+the diagram
+let us now dene the hopf algebra h.6 as a linear space h has a basis
+labelled by all feynman graphs  which are disjoint unions of 1pi graphs.
+
+is considered as not 1pi.5
+
+(3)
+
+ =
+
+j .
+
+n[j=1
+
+the case  =  is allowed.
+the product in h is bilinear and given on the basis by the operation of
+disjoint union:
+
+(4)
+
+   =    .
+4in the case of a massless theory, we take (1) =(cid:16) 
+
+5this is a conveniently chosen but immaterial convention.
+6we work with any eld of coecients such as q or c.
+
+ p2 (p)(cid:17)p2=2
+
+10
+
+g
+it is obviously commutative and associative and it is convenient to use the
+multiplicative notation instead of .
+in particular one lets 1 denote the
+graph  = , it is the unit of the algebra h. to dene the coproduct,
+(5)
+
+ : h  h  h
+
+it is enough, since it is a homomorphism of algebras, to give it on the gen-
+erators of h, i.e. the 1pi graphs. we let,
+ =   1 + 1   + x 
+(6)
+
+(i)  /(i)
+
+
+
+6=
+
+where the notations are as follows.
+first  is a non trivial7 subset   (1) of the set of internal lines of  whose
+connected components  are 1pi and fulll the following condition:
+
+(7)
+
+the set () of lines8 of  which meet 
+
+without belonging to , has two or three elements.
+
+we let 
+(i) be the feynman graph with  as set of internal lines,  () as
+external lines, and external structure given by nullied external momenta
+for i = 0 and by (2) if i = 1.
+in the sum (6) the multi index i has one value for each connected component
+of . this value is 0 or 1 for a self energy component and 0 for a vertex. one
+lets (i) be the product of the graphs 
+(i) corresponding to the connected
+components of . the graph /(i) is obtained by replacing each of the
+connected components  of  by the corresponding vertex, with the same
+(i).9 the sum (6) is over all values of the multi index i. it is
+label (i) as 
+important to note that though the components  of  are pairwise disjoint
+by construction, the 1pi graphs 
+(i) are not necessarily disjoint since they
+can have common external legs  ()   () 6= .
+this happens for instance in the following example,
+
+g = g
+
+ '  g
+
+ ''
+
+(8)
+
+g  '
+
+g  ''
+
+7i.e. non empty and with non empty complement.
+8internal or external lines.
+9one checks that /(i) is still a 1pi graph.
+
+11
+
+g
+note also that the external structure of /(i) is identical to that of .
+to get familiar with (6) we shall now give a few examples of coproducts.
+
+(9)
+
+(10)
+
+d  (        ) =               1 + 1 
+
+d  (        ) =              1 + 1               + 
+
+2
+
+ (            ) =                  1 + 1  
+
++ 2                          + 2 
+
+(11)
+
++ 
+
+ (            ) =                   1 + 1
+
+(12)
+
++
+
+(i)
+
+i
+
+where one sums over i = 0, 1.
+example (9) shows what happens in general for graphs with no subgraph
+fullling (7), i.e. graphs without subdivergences. example (10) shows an
+example of overlapping subdivergences. example (11) also, but it illustrates
+an important general feature of the coproduct () for  a 1pi graph,
+namely that ()  hh(1) where h(1) is the subspace of h generated by
+1 and the 1pi graphs. similar examples were given in [7, 17].
+the coproduct  dened by (6) on 1pi graphs extends uniquely to a homo-
+morphism from h to h  h. the main result of this section is ([16, 17]):
+theorem 1. the pair (h, ) is a hopf algebra.
+proof. our rst task will be to prove that  is coassociative, i.e. that,
+
+(13)
+
+(  id)  = (id  )  .
+
+12
+
+d
+d
+since both sides of (13) are algebra homomorphisms from h to h  h  h,
+it will be enough to check that they give the same result on 1pi graphs .
+thus we x the 1pi graph  and let h be the linear subspace of h spanned
+by 1pi graphs with the same external structure as . also we let hc be the
+subalgebra of h generated by the 1pi graphs  with two or three external
+legs and with external structure of type (i), i = 0, 1. one has by (6) that
+
+(14)
+
+while
+
+(15)
+
+thus we get,
+
+(16)
+
+     1  hc  h
+
+hc  hc  hc .
+
+(  id)       1  hc  hc  h .
+
+to be more specic we have the formula,
+
+(17)
+
+(  id)       1 = x 
+
+
+
+6=
+
+ (i)  /(i)
+
+where  =  is allowed now in the summation of the right hand side.
+we need a nice formula for  (i) which is dened as
+
+(18)
+
+  j
+
+(ij )
+
+where the j are the components of .
+for each of the graphs  = j
+to give
+
+(ij ) the formula (6) for the coproduct simplies
+
+(19)
+
+  = x
+
+
+(k)  /
+
+(k)
+
+where the subset  of the set (1) of internal lines of  is now allowed to
+be empty (which gives 1  ) or full (which gives   1). of course the
+sum (19) is restricted to  such that each component is 1pi and satises
+(7) relative to  = j
+(ij ). but this is equivalent to fullling (7) relative to 
+since one has,
+
+(20)
+
+() = () .
+
+13
+
+indeed since  is a subgraph of  one has ()  () but every line
+  () is a line of  which meets (1) and hence belongs to  which
+gives equality.
+the equality (20) also shows that the symbol 
+(k) in (19) can be taken
+relative to the full graph . we can now combine (17) (18) and (19) to
+write the following formula:
+
+(21)
+
+(  id)       1 = x 
+
+6=
+
+
+
+
+(k)  (i)/
+
+(k)  /(i) ,
+
+where both  and  are subsets of the set of internal lines (1) of  and
+ is a subset of . both  and  satisfy (7). since  is not necessarily
+connected we need to dene the symbol (i)/
+(k) as the replacement in the
+not necessarily connected graph (i) of each of the component of  by the
+corresponding vertex. the only point to remember is that if a component
+of  is equal to a component of  the corresponding index kj is equal to ij
+(following (19)) and the corresponding term in / is equal to 1.
+
+g 1
+'
+
+g 1
+
+g 2
+'
+
+g 3
+
+g 2
+
+g 3
+'
+
+g 4
+
+let us now compute (id  )       1 starting from the equality,
+(22)
+
+
+(k)  /
+
+(k)
+
+  =   1 + x
+
+
+
+
+6=
+
+where, unlike in (6), we allow  =  in the sum. let us dene  : h 
+h  h by
+(23)
+one has (id )  x = (id )  x since  1 = 0, and (id )  x =
+(id  )  x  (id  id  1)  x = (id  )  x   x  1. thus,
+(24)
+
+ x =  x  x  1
+
+(id  )       1 = (id  )   .
+
+ x  h .
+
+14
+
+g
+moreover (22) gives the formula for  on h(1) which is thus enough to get,
+(25)
+
+(k))/
+
+(j) .
+
+(id  )       1 = x,
+
+
+(k)  
+
+(j)  (/
+
+in this sum  varies through the (possibly empty) admissible subsets of (1),
+ 6= (1), while  varies through the (possibly empty) admissible subsets
+of the set of lines (1) of the graph
+
+(26)
+
+ = /
+
+(k) .
+
+to prove that the sums (21) and (25) are equal it is enough to prove that
+for any admissible subset  6= (1) the corresponding sums are equal. we
+also x the multi index k. the sum (25) then only depends upon the graph
+ = /
+
+(k). we thus need to show the equality
+
+(27)
+
+(i)/
+
+x 
+
+(k)  /(i) =x
+let  :    be the continuous projection,
+(28)
+
+
+
+6=
+
+
+(j)  /
+
+(j) .
+
+ :   /
+
+(k) =  .
+
+let us show that the map  which associates to every admissible subset  of
+ containing  its image /
+(k) in  gives a bijection with the admissible
+subsets  of .
+since each connected component of  is contained in a connected component
+of , we see that  () is admissible in . note that when a connected
+component 0 of  is equal to a connected component of  its image in 
+is dened to be empty. for the components of  which are not components
+of  their image is just the contraction /
+(k) by those components of 
+which it contains. this does not alter the external leg structure, so that
+
+(29)
+
+0
+(i)/
+
+(k) = (0/
+
+(k))(i) .
+
+the inverse of the map  is obtained as follows. given  an admissible
+subset of , one associates to each component of  its inverse image by 
+which gives a component of . moreover to each vertex v of  which does
+not belong to  but which came from the contraction of a component of
+, one associates this component as a new component of . it is clear then
+that    6=  and that  is admissible in  with  () = .
+
+15
+
+to prove (27) we can thus x  and  =  (). for those components of
+ equal to components of  the index i0 is necessarily equal to k0 so they
+contribute in the same way to both sides of (27). for the other components
+there is freedom in the choice of i0 or j0 but using (29) the two contribu-
+tions to (27) are also equal. this ends the proof of the coassociativity of
+the coproduct  and it remains to show that the bialgebra h admits an
+antipode.
+
+this can be easily proved by induction but it is worthwile to discuss various
+gradings of the hopf algebra h associated to natural combinatorial features
+of the graphs. any such grading will associate an integer n ()  z to each
+1pi graph, the corresponding grading of the algebra h is then given by
+(30)
+
+deg (1) = 0
+
+deg (1 . . . e) =x n (j) ,
+
+and the only interesting property is the compatibility with the coproduct
+which means, using (6), that
+
+(31)
+
+deg () + deg (/) = deg ()
+
+for any admissible .
+
+the rst two natural gradings are given by
+
+(32)
+
+and
+
+(33)
+
+i () = number of internal lines in 
+
+v () = v ()  1 = number of vertices of   1 .
+
+an important combination of these two gradings is
+
+(34)
+
+l = i  v = i  v + 1
+
+which is the loop number of the graph or equivalently the rank of its rst
+homology group. it governs the power of h which appears in the evaluation
+of the graph.
+
+note that the number of external lines of a graph is not a good grading
+since it fails to fulll (31). for any of the three gradings i, v, l one has the
+following further compatibility with the hopf algebra structure of h,
+lemma. a) the scalars are the only homogeneous elements of degree 0.
+
+16
+
+b) for any non scalar homogeneous x  h one has
+
+ x = x  1 + 1  x +x x   x 
+
+where x , x  are homogeneous of degree strictly less than the degree of x.
+
+is excluded we see that i () = 0 or
+proof. a) since the diagram
+v () = 0 is excluded. also if l () = 0 the  is a tree but a tree diagram
+cannot be 1pi unless it is equal to
+
+which is excluded.
+
+b) since x is a linear combination of homogeneous monomials it is enough
+to prove b) for  i and in fact for 1pi graphs . using (6) it is enough
+to check that the degree of a non empty  is strictly positive, which follows
+from a).
+
+we can now end the proof of theorem 1 and give an inductive formula for
+the antipode s.
+the counit e is given as a character of h by
+(35)
+
+e (1) = 1 , e () = 0
+
+  6=  .
+
+the dening equation for the antipode is,
+
+(36)
+
+m (s  id)  (a) = e (a) 1
+
+ a  h
+
+and its existence is obtained by induction using the formula,
+
+(37)
+
+s (x) = x x s (x ) x 
+
+for any non scalar homogeneous x  h using the notations of lemma 2.
+this antipode also fullls the other required identity [7, 16],
+
+m (id  s)  (a) =  (a) 1
+
+ a  h.
+
+this completes the proof of theorem 1.
+
+let us now be more specic about the external structure of diagrams. given
+a 1pi graph, with n external legs labelled by i  {1, . . . , n} we specify its
+external structure by giving a distribution  dened on a suitable test space
+s of smooth functions on
+(38)
+
+n(pi)i=1,...,n ; x pi = 0o = en .
+
+17
+
+thus  is a continuous linear map,
+
+(39)
+
+ : s (e)  c .
+
+to a graph  with external structure  we have associated above an element
+of the hopf algebra h and we require the linearity of this map, i.e.
+(40)
+
+(,11+22) = 1 (,1) + 2 (,2) .
+
+one can easily check that this relation is compatible with the coproduct.
+there is considerable freedom in the choice of the external structure of
+the 1pi graphs which occur in the left hand side of the last term of the
+coproduct formula (6). we wrote the proof of theorem 1 in such a way that
+this freedom is apparent. the only thing which matters is that, say for self
+energy graphs, the distributions 0 and 1 satisfy,
+
+(41)
+
+0 (a m2 + b p2) = a , 1 (a m2 + b p2) = b ,
+
+where p = p1 is the natural coordinate on e2 and m is a mass parameter.
+this freedom in the denition of the hopf algebra h is the same as the
+freedom in the choice of parametrization of the corresponding qft and it is
+important to make full use of it, for instance for massless theories in which
+the above choice of nullied external momenta is not appropriate and one
+would rely only on 1(bp2) = b.
+for simplicity of exposition we shall keep the above choice, the generalization
+being obvious.
+we shall now apply the milnor-moore theorem to the bigraded hopf algebra
+h. the two natural gradings are v and l, the grading i is just their sum.
+this theorem rst gives a lie algebra structure on the linear space,
+
+(42)
+
+m s (e) = l
+
+where for each 1pi graph , we let s (e) be the test space associated to
+the external lines of  as in (38). given x  l we consider the linear form
+zx on h given, on the monomials , by
+(43)
+
+h, zxi = 0
+unless  is a (connected) 1pi, in which case,
+
+(44)
+
+h, zxi = h, xi
+
+18
+
+where  is the distribution giving the external structure of  and where x
+is the corresponding component of x. by construction zx is an innitesimal
+character of h and the same property holds for the commutator,
+(45)
+
+[zx1 , zx2] = zx1 zx2  zx2 zx1
+
+where the product in the right hand side is given by the coproduct of h, i.e.
+by
+
+(46)
+
+hz1 z2, i = hz1  z2,  i .
+
+the computation of the lie bracket is straightforward as in [9] p. 207 or [7]
+and is given as follows. one lets j, j = 1, 2 be 1pi graphs and j  s (ej )
+corresponding test functions.
+for i  {0, 1}, we let ni (1, 2; ) be the number of subgraphs of  which
+are isomorphic to 1 while
+
+(47)
+
+/1(i)  2 .
+
+we let (, ) be the element of l associated to   s (e), the lie bracket
+of (1, 1) and (2, 2) is then,
+(48) x,i
+
+i (1) ni (1, 2; ) (, 2)  i (2) ni (2, 1; ) (, 1) .
+
+what is obvious in this formula is that it vanishes if i (j ) = 0 and hence
+we let l0 be the subspace of l given by,
+
+(49)
+
+l0 =  s (e)0 , s (e)0 = {; i () = 0 , i = 0, 1} .
+
+it is by construction a subspace of nite codimension in each of the s (e).
+we need a natural supplement and in view of (41) we should choose the
+obvious test functions,
+
+(50)
+
+0 (p) = m2, 1 (p) = p2 .
+
+we shall thus, for any 1pi self energy graph, let
+
+(51)
+
+((i)) = (, i) .
+
+similarly for a vertex graph with the constant function 1. one checks using
+(48) that the (i) for 1pi graphs with two or three external legs, do generate
+a lie subalgebra
+
+(52)
+
+lc =nx  ((i))o .
+
+19
+
+we can now state the following simple fact,
+
+[, ] =xv
+
+ v 
+
+theorem 2. the lie algebra l is the semi-direct product of l0 by lc. the
+lie algebra l0 is abelian, while lc has a canonical basis labelled by the (i)
+and such that
+
+ v  xv
+where  v  is obtained by grafting  on  at v.
+proof. using (48) it is clear that l0 is an abelian lie subalgebra of l. the
+lie bracket of ((i))  lc with (, )  l0 is given by
+(53)
+
+x ni ((i), ; ) (, )
+
+which belongs to l0 so that [lc, l0]  l0.
+to simplify the lie bracket of the ((i)) in lc we introduce the new basis,
+
+(54)
+
+(i) = s () ()
+
+where s () is the symmetry factor of a feynman graph, i.e. the cardinality
+of its group of automorphisms. in other words if another graph  is isomor-
+phic to  there are exactly s () such isomorphisms. from the denition
+(47) of ni (1, 2; ) we see that s (1) s (2) ni (1, 2; ) is the number of
+pairs j1, j2 of an embedding
+
+(55)
+
+and of an isomorphism
+
+j1 : 1  
+
+(56)
+
+j2 : 2  /1 (i) .
+
+giving such a pair is the same as giving a vertex v of type (i) of 2 and an
+isomorphism,
+
+(57)
+
+j : 2 v 1   .
+
+since there are s () such isomorphisms when   2 v 1 we get the
+formula of theorem 2 using (48).
+
+it is clear from theorem 2 that the lie algebra lc is independent of the
+choice of the distributions j fullling (41). the same remark applies to l
+using (53).
+
+20
+
+by the milnor-moore theorem the hopf algebra h is the dual of the en-
+velopping algebra u (l). the linear subspace h(1) of h spanned by 1 and
+the 1pi graphs give a natural system of ane coordinates on the group g
+of characters of h, i.e. of homomorphisms,
+(58)
+
+ : h  c ,  (xy ) =  (x)  (y )
+
+ x, y  h
+
+from the algebra h to complex numbers.
+we shall only consider homomorphisms which are continuous with respect
+to the distributions labelling the external stucture of graphs.
+the group operation in g is given by the convolution,
+
+(59)
+
+(1  2) (x) = h1  2,  xi
+
+ x  h .
+
+the hopf subalgebra hc of h generated by the 1pi with two or three external
+legs and external structure given by the i, is the dual of the envelopping
+algebra u (lc) and we let gc be the group of characters of hc.
+the map   /hc denes a group homomorphism,
+(60)
+
+ : g  gc
+
+and as in theorem 2 one has,
+
+proposition 3. the kernel g0 of  is abelian and g is the semi-direct
+product g = g0 > gc of g0 by the action of gc.
+proof. a character  of h belongs to g0 i its restriction to hc is the
+augmentation map. this just means that for any 1pi graph  one has
+ ((i)) = 0. thus the convolution of two characters j  g0 is just given
+by,
+
+(61)
+
+(1  2) () = 1 () + 2 ()
+
+for any 1pi graph . this determines the character 1 2 uniquely, so that
+1  2 = 2  1.
+let us now construct a section  : gc  g which is a homomorphism. we
+just need to construct a homomorphism,
+
+(62)
+
+from characters of hc to characters of h, such that
+(63)
+
+  e =   
+e/hc =  .
+
+21
+
+it is enough to extend  to all 1pi graphs (, ) where  is the external
+
+structure, this then determines e uniquely as a character and one just has
+
+to check that,
+
+(64)
+
+(1  2)e = e1  e2 .
+
+we let e (, ) = 0 for any 1pi graph with n 6= 2, 3 external legs or any 1pi
+
+graph with 2 or 3 external legs such that,
+
+(65)
+
+ ((p2)i) = 0
+
+i = 0, 1
+
+if n = 2 ,
+
+i = 0 if n = 3 .
+
+(66)
+
+uniquely.
+
+to check (64) it is enough to test both sides on 1pi graphs (, ). one uses
+(6) to get,
+
+by (41) this gives a natural supplement of hc(1) in h(1) and determines e
+(e1  e2) (, ) = e1 (, ) + e2 (, ) +x 1 ((i)) e2 (/(i), ) .
+for any (, ) in the above supplement of hc(1) the right hand side clearly
+vanishes. the same holds for (1  2)e (, ) by construction. for any
+(, i)  hc(1) one simply gets the formula for (1  2) (, i) = (1 
+2)e (, i). this gives (64). we have thus proved that  is a surjective ho-
+momorphism from g to gc and that  : gc  g is a group homomorphism
+such that
+
+(67)
+
+   = idgc .
+
+let us now compute explicitly the action of gc on g0 given by inner
+
+automorphisms,
+
+(68)
+
+one has
+
+(69)
+
+.
+
+1
+
+ (1)  = e1    e1
+(  e1
+
+1 ) (, ) =  (, )
+
+for any (, ) in the supplement of hc(1) in h(1). thus,
+(70)
+
+ (1) () (, ) =  (, ) +x 1 ((i))  (/(i), ) .
+
+22
+
+this formula shows that the action of gc on g0 is just a linear representation
+of gc on the vector group g0.
+
+a few remarks are in order. first of all, the hopf algebra of feynman graphs
+as presented in [17] is the same as hc. as we have seen in theorem 2 and
+proposition 3, the only nontrivial part in the hopf algebra h is hc. for
+instance, the birkho decomposition of a loop (z)  g, is readily obtained
+from the birkho decomposition of its homomorphic image, c(z)  gc
+since the latter allows to move back to a loop 0(z)  g0 with g0 abelian.
+dealing with the hopf algebra h allows however to treat oversubtractions
+and operator product expansions in an eective manner.
+
+second, one should point out that there is a deep relation between the hopf
+algebra hc and the hopf algebra of rooted trees [7, 16, 17]. this is es-
+sential for the practitioner of qft [4]. the relation was rst established
+using the particular structures imposed on the perturbation series by the
+schwinger-dyson equation [16]. alternative reformulations of this hopf al-
+gebra conrmed this relation [15] in full agreement with the general analysis
+of [17].
+a full description of the relation between the hopf algebras of graphs and
+of rooted trees in the language established here will be given in the second
+part of this paper [8].
+
+3 renormalization and the birkho decomposi-
+
+tion
+
+we shall show that given a renormalizable quantum eld theory in d space-
+time dimensions, the bare theory gives rise, using dimensional regularization,
+to a loop  of elements in the group g associated to the theory in section
+2. the parameter z of the loop  (z) is a complex variable and  (z) makes
+sense for z 6= d in a neighborhood of d, and in particular on a small circle
+c centered at z = d. our main result is that the renormalized theory is
+just the evaluation at z = d of the holomorphic piece + in the birkho
+decomposition,
+
+(1)
+
+ (z) =  (z)1 + (z)
+
+of the loop  as a product of two holomorphic maps  from the respective
+components c of the complement of the circle c in the riemann sphere
+c p 1. as in section 2 we shall, for simplicity, deal with 3 theory in d = 6
+
+23
+
+dimensions since it exhibits all the important general diculties of renor-
+malizable theories which are relevant here.
+
+the loop  (z) is obtained by applying dimensional regularization (dim.
+reg.) in the evaluation of the bare values of feynman graphs , and our
+rst task is to recall the feynman rules which associate an integral
+
+(2)
+
+u (p1, . . . , pn ) =z dd k1 . . . dd kl i (p1, . . . , pn , k1, . . . , kl)
+
+to every graph .
+
+for convenience we shall formulate the feynman rules in euclidean space-
+time to eliminate irrelevant singularities on the mass shell and powers of
+
+i = 1. in order to write these rules directly in d space-time dimensions
+
+it is important ([14]) to introduce a unit of mass  and to replace the coupling
+constant g which appears in the lagrangian as the coecient of 3/3! by
+3d/2 g. the eect then is that g is dimensionless for any value of d since
+the dimension of the eld  is d
+the integrand i (p1, . . . , pn , k1, . . . , kl) contains l internal momenta kj,
+where l is the loop number of the graph , and results from the following
+rules,
+
+2  1 in a d-dimensional space-time.
+
+(3)
+
+(4)
+
+(5)
+
+(6)
+
+(7)
+
+assign a factor
+
+1
+
+k2+m2 to each internal line.
+
+assign a momentum conservation rule to each vertex.
+
+assign a factor 3d/2 g to each 3-point vertex.
+
+assign a factor m2 to each 2-point vertex(0).
+
+assign a factor p2 to each 2-point vertex(1).
+
+again, the 2-point vertex(0) does not appear in the case of a massless theory.
+there is moreover an overall normalization factor which depends upon the
+conventions for the choice of the haar measure in d-dimensional space. we
+shall normalize the haar measure so that,
+
+(8)
+
+z dd p exp (p2) = d/2 .
+
+24
+
+this introduces an overall factor of (2)dl where l is the loop number of
+the graph, i.e. the number of internal momenta.
+the integral (2) makes sense using the rules of dimensional regularization
+(cf. [5] chap. 4) provided the complex number d is in a neighborhood of
+d = 6 and d 6= d.
+if we let  be the external momenta structure of the graph  we would like
+to dene the bare value u () simply by evaluating  on the test function
+(2) but we have to take care of two requirements. first we want u () to
+be a pure number, i.e. to be a dimensionless quantity. in order to achieve
+this we simply multiply h, ui by the appropriate power of  to make it
+dimensionless.
+the second requirement is that, for a graph with n external legs we should
+divide by gn 2 where g is the coupling constant.
+we shall thus let:
+
+(9)
+
+u () = g(2n ) b h, ui
+
+where b = b (d) is the dimension of h, ui.
+using (3)-(7) this dimension is easy to compute. one can remove all 2-
+point vertices from the graph  without changing the dimension of u since
+removing such a vertex removes an internal line and a factor (6), (7) which
+by (3) does not alter the dimension. thus let us assume that all vertices of 
+are 3-point vertices. each of them contributes by (3 d/2) to the dimension
+and each internal line by 2, and each loop by d (because of the integration
+on the corresponding momenta). this gives
+
+(10)
+
+dim (u) =(cid:18)3 
+
+d
+
+2(cid:19) v  2 i + d l .
+
+one has l = i  v + 1, so the coecient of d in (10) is i  3
+2 v + 1 = 1 n
+2 .
+(the equality n = 3 v  2 i follows by considering the set of pairs (x, y)
+where x  (0) is a vertex, y  (1) is an internal line and x  y.) the
+constant term is 3 v  2 i = n thus,
+dim (u) =(cid:18)1 
+(11)
+b =(cid:18)1 
+
+2(cid:19) d + n .
+2(cid:19) d + n + dim  .
+
+we thus get,
+
+(12)
+
+n
+
+n
+
+25
+
+thus (11) and (12) are valid for arbitrary 1pi graphs (connected) since both
+sides are unchanged by the removal of all two point vertices.
+to understand the factor g2n in (9) let us show that the integer valued
+function,
+
+(13)
+
+order  = v3  (n  2)
+
+where v3 is the number of 3-point vertices of the 1pi connected graph ,
+and n the number of its external lines, does dene a grading in the sense
+of (31) section 2. we need to check that,
+
+(14)
+
+order () + order (/) = order 
+
+using the notations of section 2, with  connected. if  is a self energy graph
+one has order  = v3 which is the number of 3-point vertices removed from
+ in passing to /, thus (14) follows. if  is a vertex graph, then order
+ = v3  1 which is again the number of 3-point vertices removed from 
+in passing to / since  is replaced by a 3-point vertex in this operation.
+thus (14) holds in all cases.
+
+thus we see that the reason for the convention for powers of g in (9) is to
+ensure that u () is a monomial of degree order () in g.
+we extend the denition (9) to disjoint unions of 1pi graphs j by,
+
+(15)
+
+u ( =  j) =  u (j) .
+
+one can of course write simple formulas involving the number of external
+legs and the number of connected components of  to compare u () with
+h, ui as in (9).
+before we state the main result of this paper in the form of theorem 4
+below let us rst recall that if it were not for the divergences occuring at
+d = d, one could give perturbative formulas for all the important physical
+observables of the qft in terms of sums over feynman graphs.
+it is of
+course a trivial matter to rewrite the result in terms of the u () dened
+above and we shall just give a few illustrative examples.
+
+the simplest example is the eective potential which is an ordinary function,
+
+(16)
+
+c  v (c)
+
+of one variable traditionally noted c.
+
+26
+
+the nth derivative v (n) (0) is just given as the sum, with s () the symmetry
+factor of ,
+
+(17)
+
+v (n) (0) =x
+
+1/s ()h0, ui
+
+where 0 is evaluation at 0 external momenta, and where  varies through all
+1pi graphs with n external momenta and only 3-point interaction vertices.10
+we thus get
+
+(18)
+
+v (n) (0) = gn2 nd ( n
+
+2 1)x
+
+1
+
+s ()
+
+u ()
+
+but this expression is meaningless at d = d which is the case of interest.
+if instead of evaluating at 0 external momenta one keeps the dependence on
+p1, . . . , pn one obtains the expression for the eective action,
+
+(19)
+
+ =xn
+
+1
+
+n! z dd x1 . . . dd xn (n)(x1, . . . , xn) c(x1) . . . c(xn)
+
+where (n) (p1, . . . , pn) is given by (18) evaluated at external momenta given
+by the pjs.
+for expressions which involve connected diagrams which are not 1pi, such
+as the connected greens functions one just needs to express the bare value
+of a graph u (p1, . . . , pn ) in terms of the bare values of the 1pi compo-
+nents which drop out when removing internal lines which carry a xed value
+(depending only on p1, . . . , pn ) for their momenta.
+
+k
+
+q
+
+p
+
+p
+
+p
+
+p + k 
+
+p + q
+
+in this example we get u (p,p) = u1(p,p) u2(p,p) where j is the
+one loop self energy graph.
+similarly for expressions such as the greens functions which involve dia-
+grams which are not connected one simply uses the equality
+
+(20)
+
+u1  2 = u1 u2
+
+10the reader should not forget that we committed ourselves to an euclidean metric,
+so that appropriate wick rotations are necessary to compare with results obtained in
+minkowski space.
+
+27
+
+where 1  2 is the disjoint union of 1 and 2. in all cases the graphs
+involved are only those with 3-point interaction vertices and the obtained
+expressions only contain nitely many terms of a given order in terms of the
+grading (13). if it were not for the divergences at d = d they would be the
+physical meaningful candidates for an asymptotic expansion in terms of g
+for the value of the observable.
+let us now state our main result:
+theorem 4. a) there exists a unique loop (z)  g, z  c, |z  d| < 1,
+z 6= d whose -coordinates are given by u ()d=z.
+b) the renormalized value of a physical observable o is obtained by replacing
+ (d) in the perturbative expansion of o by + (d) where
+
+ (z) =  (z)1 + (z)
+
+is the birkho decomposition of the loop  (z) on any circle with center d
+and radius < 1.
+
+proof. to specify the renormalization we use the graph by graph method [3]
+using dimensional regularization and the minimal substraction scheme. we
+just need to concentrate on the renormalization of 1pi graphs . we shall
+use the notations of [5] to make the proof more readable. our rst task will
+be to express the bogoliubov, parasiuk and hepp recursive construction of
+the counterterms   c () and of the renormalized values of the graphs
+  r (), in terms of the hopf algebra h.
+we x a circle c in c with center at d = 6 and radius r < 1 and let t be
+the projection
+
+(21)
+
+t : a  a
+
+where a is the algebra of smooth functions on c which are meromorphic
+inside c with poles only at d = 6, while a is the subalgebra of a given
+by polynomials in 1
+z6 with no constant term. the projection t is uniquely
+specied by its kernel,
+
+(22)
+
+ker t = a+
+
+which is the algebra of smooth functions on c which are holomorphic inside
+c.
+thus t is the operation which projects on the pole part of a laurent series
+according to the ms scheme. it is quite important (cf. [5] p. 103 and 6.3.1
+
+28
+
+p. 147) that t is only applied to dimensionless quantities which will be
+ensured by our conventions in the denition (9) of u ().
+being the projection on a subalgebra, a, parallel to a subalgebra, a+, the
+operation t satises an equation of compatibility with the algebra structure
+of a, the multiplicativity constraint ([18]),
+(23)
+
+t (x y) + t (x) t (y) = t (t (x) y + x t (y))
+
+ x, y  a .
+
+(by bilinearity it is enough to check it for x  a, y  a.)
+we let u be the homomorphism,
+
+(24)
+
+u : h  a
+
+given by the unrenormalized values of the graphs as dened in (9) and (15).
+it is by construction a homomorphism from h to a, both viewed as algebras.
+let us start the inductive construction of c and r. for 1pi graphs  without
+subdivergences one denes c () simply by,
+
+(25)
+
+c () = t (u ()) .
+the renormalized value of such a graph is then,
+
+(26)
+
+r () = u () + c () .
+
+for 1pi graphs  with subdivergences one has,
+
+(27)
+
+(28)
+
+c () = t (r ())
+
+r () = r ()  t (r ())
+
+where the r operation of bogoliubov, parasiuk and hepp prepares the graph
+ by taking into account the counterterms c () attached to its subdiver-
+gences. it is at this point that we make contact with the coproduct (ii.6) of
+the hopf algebra h and claim that the following holds,
+c() u (/) .
+(29)
+
+r () = u () + x 
+
+
+
+6=
+
+the notations are the same as in ii.6. this formula is identical to 5.3.8 b)
+in [5] p. 104 provided we carefully translate our notations from one case to
+
+29
+
+the other. the rst point is that the recursive denition (27) holds for 1pi
+graphs and  =  j is a union of such graphs so in (29) we let,
+(30)
+
+c () =  c(j) .
+
+this agrees with (5.5.3) p. 110 in [5].
+the second point is that our c () is an element of a, i.e. a laurent series,
+while the counterterms used in [5] are in general functions of the momenta
+which ow through the subdivergence. however since the theory is renor-
+malizable we know that this dependence corresponds exactly to one of the
+three terms in the original lagrangian. this means that with the notations
+of ii.6 we have,
+
+(31)
+
+c() =x(i)
+
+c((i)) u (/(i))
+
+where c() is the graph with counterterms associated to the subdivergence
+ as in collins 5.3.8 b).
+
+to check (31) we have to check that our convention (9) is correct. as we
+already stressed the power of the unit of mass  is chosen uniquely so that
+we only deal for u , c and r with dimensionless quantities so this is in
+agreement with [5] (2)p. 136. for the power of the coupling constant g it
+follows from (14) that it denes a grading of the hopf algebra so that all
+terms in (31) have the same overall homogeneity. there is still the question
+of the symmetry factors since it would seem at rst sight that there is a
+discrepancy between the convention (4) p. 24 of [5] and our convention in
+(9). however a close look at the conventions of [5] (cf. p. 114) for the
+symmetry factors of c() shows that (31) holds with our conventions. we
+have thus checked that (29) holds and we can now write the bph recursive
+denition of c and r as follows, replacing r by its value (29) for a 1pi
+graph  in (27), (28),
+
+(32)
+
+(33)
+
+c () = tu () + x 
+r () = u () + c() + x 
+
+
+
+6=
+
+
+
+6=
+
+c() u (/)
+
+c() u (/) .
+
+30
+
+we now rewrite both formulas (32), (33) in terms of the hopf algebra h
+without using the generators . let us rst consider (32) which together
+with (30) uniquely determines the homomorphism c : h  a. we claim
+that for any x  h belonging to the augmentation ideal
+(34)
+
+one has the equality,
+
+eh = ker e
+
+(35)
+
+(36)
+
+where we use the following slight variant of the sweedler notation for the
+coproduct  x,
+
+c(x) = t (u (x) +x c(x ) u (x ))
+ x = x  1 + 1  x +x x   x  , x  eh
+
+and where the components x , x  are of degree strictly less than the degree
+
+of x. to show that (35) holds for any x  eh using (30) and (32) one
+denes a map c  : h  a using (35) and one just needs to show that c  is
+multiplicative. this is done in [6] [18] but we repeat the argument here for
+the sake of completeness. one has, for x, y  eh
+
+(xy ) = xy  1 + 1  xy + x  y + y  x + xy   y  +
+
+(37)
+
+y   xy  + x y  x  + x   x y + x y   x y  .
+
+thus using (35) we get
+
+(38)
+
+c (xy ) = t (u (xy ))  t (c (x) u (y ) + c (y ) u (x) +
+
+c (xy ) u (y ) + c (y ) u (xy ) + c (x y ) u (x )
+
++ c (x ) u (x y ) + c (x y ) u (x y )) .
+
+now u is a homomorphism and we can assume that we have shown c  to be
+multiplicative, c (ab) = c (a) c (b) for deg a + deg b < deg x + deg y .
+this allows to rewrite (38) as,
+
+(39)
+
+c (xy ) = t (u (x) u (y ) + c (x) u (y ) + c (y ) u (x)
+
++ c (x) c (y ) u (y ) + c (y ) u (x) u (y ) + c (x ) c (y ) u (x )
+
++ c (x ) u (x ) u (y ) + c (x ) c (y ) u (x ) u (y ) .
+
+let us now compute c (x) c (y ) using the multiplicativity constraint (23)
+fullled by t in the form,
+
+(40)
+
+t (x) t (y) = t (xy) + t (t (x) y) + t (x t (y)) .
+
+31
+
+we thus get,
+
+(41)
+
+c (x) c (y ) = t ((u (x) + c (x ) u (x )) (u (y ) +
+c (y ) u (y )) + t (t (u (x) + c (x ) u (x )) (u (y ) +
+
+c (y ) u (y )) + t ((u (x) + c (x ) u (x )) t (u (y ) + c (y ) u (y )))
+
+by applying (40) to x = u (x) + c(x ) u (x ), y = u (y ) + c(y ) u (y ).
+since t (x) = c (x), t (y) = c (y ) we can rewrite (41) as,
+(42)
+
+c (x) c (y ) = t (u (x) u (y ) + c (x ) u (x ) u (y )
++ u (x) c (y ) u (y ) + c (x ) u (x ) c (y ) u (y ))
+
+t (c (x)(u (y ) + c (y ) u (y ))  t ((u (x) + c (x ) u (x )) c (y )) .
+we now compare (39) with (42), both of them contain 8 terms of the form
+t (a) and one checks that they correspond pairwise which yields the mul-
+tiplicativity of c  and hence the validity of (35) for c = c . we now have
+a characterization of c independently of any choice of generators of h and
+we can rewrite (33) in intrinsic form too,
+
+(43)
+
+r(x) = hc  u, (x)i
+
+ x  h
+
+which can be checked using (33) and the multiplicativity of both sides of
+(43).
+it is convenient to use the notation c  u for the homomorphism
+h  a given by,
+(44)
+
+(c  u )(x) = hc  u, (x)i
+
+ x  h .
+
+we are now ready to check that (43) gives the birkho decomposition of the
+loop  (z), z  c of elements of the group g of section 2, associated to the
+homomorphism,
+
+(45)
+
+u : h  a .
+
+the precise denition of  is as follows. each complex number z  c denes
+a character of the algebra a given by,
+z(f ) = f (z)
+(46)
+
+f  a
+
+which makes sense since f is smooth on the curve c. thus z  u is a
+character of h and hence (cf. section 2) an element of g,
+(47)
+
+(z) = z  u
+
+ z  c .
+
+32
+
+next we can similarly dene two other loops with values in g, namely,
+
+(48)
+
+(z) = z  c , +(z) = z  r
+
+ z  c .
+
+the multiplicativity of both c and r, h  a ensures that we are dealing
+with g-valued loops. the equality (43) just means,
+
+(49)
+
++(z) = (z) (z)
+
+ z  c
+
+since (44) is the same as the operation of pointwise product in g for g-valued
+loops. it remains to check that  extends to a g-valued map holomorphic
+
+in c+. by (35) one has c(eh)  a and every z  c denes using (46) a
+character on a with  = 0 the trivial character. it thus follows that 
+extends to a g-valued map holomorphic on c and such that,
+
+(50)
+
+() = 1 .
+
+similarly, by (35) one has t ((c  u )(x)) = 0 so that r(eh)  a+ = ker t .
+since every z  c+ denes using (46) a character of a+ we see that +
+extends to a g-valued map holomorphic in c+. this shows that (49) gives
+the birkho decomposition of  and that the renormalized value r() of any
+1pi graph is simply obtained by replacing the ill dened evaluation (d) by
++(d).
+
+again, a few remarks are in order. first, the above decomposition singles
+out the use of minimal subtraction together with dim.reg. as a favoured
+approach. from here, one can nd the relation to other schemes using the
+methods of [18]. in [8] we will discuss the global nature of the group gc, its
+relation with dieomorphism groups and with the renormalization group.
+we shall also discuss the relation between the quantized calculus and the
+reduction to rst order poles implicitly allowed by the above combinatorial
+structure.
+
+finally, the reader might expect that the relation to the riemann-hilbert
+problem indicates the presence of a dierential equation in z which relates
+the z dependence of counterterms and renormalized greens functions to
+derivations on the hopf algebra. such a dierential equation can be given
+and the relation of monodromy to anomalous dimensions will be discussed
+in [8] as well.
+
+33
+
+acknowledgements
+
+d.k. thanks the clay mathematics institute for support during a stay at
+lyman laboratories, harvard university, and is grateful to the dfg for a
+heisenberg fellowship.
+
+references
+
+[1] a. beauville, monodromie des syst`emes dierentiels lineaires `a poles
+simples sur la sph`ere de riemann, seminaire bourbaki 45`eme annee,
+1992-1993, n.765.
+
+[2] a. bolibruch, fuchsian systems with reducible monodromy and
+the riemann-hilbert problem, lecture notes in math.1520, 139-
+155(1992).
+
+[3] n. n. bogoliubov, o. parasiuk acta math. 97, 227 (1957);
+
+k. hepp, commun.math.phys. 2, 301 (1966).
+
+[4] d.j. broadhurst, d. kreimer, j. symb. comput.27, 581 (1999); hep-
+
+th/9810087;
+d. kreimer, r. delbourgo, phys. rev. d60, 105025 (1999); hep-
+th/9903249.
+
+[5] j. collins, renormalization, cambridge monographs in math. physics,
+
+cambridge university press (1984).
+
+[6] a. connes, d. kreimer, j.high energy phys.09, 024 (1999); hep-
+
+th/9909126.
+
+[7] a. connes, d. kreimer, commun. math. phys. 199, 203 (1998); hep-
+
+th/9808042.
+
+[8] a. connes, d. kreimer, renormalization in quantum eld theory and
+the riemannhilbert problem ii: the renormalization and dieomor-
+phism groups and anomalous dimensions, in preparation.
+
+34
+
+[9] a. connes and h. moscovici, hopf algebras, cyclic cohomology and
+the transverse index theorem, commun. math. phys. 198 (1998),
+199-246.
+
+[10] m. dresden, renormalization in historical perspective - the rst stage,
+in renormalization, ed. l. brown, springer-verlag, new york, berlin,
+heidelberg (1994).
+
+[11] h. epstein, v. glaser, the role of locality in perturbation theory, ann.
+
+inst. h. poincare a 19 (1973) 211-295.
+
+[12] k. gawedzki, a. kupiainen, exact renormalization of the gross-neveu
+
+model of quantum elds, phys. rev. lett.54(1985);
+j. feldman, j. magnen, v. rivasseau, r. seneor, massive gross-
+a rigorous perturbative construction, phys. rev.
+neveu model:
+lett.54(1985).
+
+[13] j. glimm, a. jae, quantum physics, springer verlag, new york,
+
+berlin, heidelberg (1987).
+
+[14] g. t hooft, nuclear physics b 61 455 (1973).
+
+[15] t. krajewski, r. wulkenhaar, eur.phys.j. c7, 697-708 (1999); hep-
+
+th/9805098.
+
+[16] d. kreimer, adv. theor. math. phys. 2.2, 303 (1998); q-alg/9707029;
+a. connes, d. kreimer, lett. math. phys. 48, 85 (1999); hep-
+th/9904044.
+
+[17] d. kreimer, commun. math. phys.204, 669 (1999); hep-th/9810022.
+
+[18] d. kreimer, adv. theor. math. phys. 3.3 (1999); hep-th/9901099.
+
+[19] i. lappo-danilevskii, memoires sur la theorie des syst`emes des
+
+equations dierentielles lineaires, chelsea, new york (1953).
+
+35
+
+

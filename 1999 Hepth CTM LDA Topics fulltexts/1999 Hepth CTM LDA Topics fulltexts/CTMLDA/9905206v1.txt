@@ -1,0 +1,2580 @@
+optimization of renormalization group flow
+
+sen-ben liao1,2, janos polonyi1,3 and michael strickland 4
+
+9
+9
+9
+1
+
+ 
+
+y
+a
+m
+7
+2
+
+ 
+
+ 
+ 
+
+1
+v
+6
+0
+2
+5
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+laboratory of theoretical physics 1
+
+louis pasteur university
+
+strasbourg, france
+
+department of physics 2
+
+national chung-cheng university
+
+chia-yi, taiwan r. o. c.
+
+department of atomic physics 3
+
+lorand eotvos university
+
+budapest, hungary
+
+and
+
+department of physics 4
+ohio state university
+
+columbus, ohio 43210 u.s.a.
+
+submitted to nucl. phys. b
+
+abstract
+
+renormalization group ow equations for scalar 4 are generated using three classes
+of smooth smearing functions. numerical results for the critical exponent  in three di-
+mensions are calculated by means of a truncated series expansion of the blocked potential.
+we demonstrate how the convergence of  as a function of the order of truncation can be
+improved through a ne tuning of the smoothness of the smearing functions.
+
+ccu-th-99-01
+
+may, 1999
+
+ electronic address: senben@phy.ccu.edu.tw
+ electronic address: polonyi@fresnel.u-strasbg.fr
+ electronic address: strickland.41@osu.edu
+
+1
+
+i. introduction
+
+renormalization group (rg) methods provide a powerful tool for investigating non-
+perturbative physical phenomena [1].
+issues such as qcd under extreme conditions,
+formation of a quark-gluon plasma in relativistic heavy-ion collisions [2], or critical phe-
+nomena in condensed matter systems all cannot be treated using standard perturbation
+theory due to the presence of infrared (ir) singularities. through the continuous elimina-
+tion of degrees of freedom, rg techniques systematically resum the perturbative series and
+therefore can provide information about nonperturbative eects in these systems. however,
+the power of rg relies on the existence of ecient analytic and computational methods
+since the full rg ow equations cannot be solved exactly. the goal of this paper is to
+show how to optimize the way the degrees of freedom are eliminated in order to improve
+results obtained using approximate rg ow equations.
+
+for a eld theoretical system a continuous rg transformation can be realized by
+introducing a smearing function k(x) which governs the coarse-graining procedure [3]
+[4]. the scale k acts as an eective ir cuto that separates the low- and high-momentum
+modes. using this smearing function an averaged blocked eld can be dened as
+
+from which one obtains the eective legendre blocked action:
+
+k(x  y)(y),
+
+k(x) =zy
+eesk[(x)] =z d[]yx
+
+(k(x)  (x))es[] .
+
+(1.1)
+
+(1.2)
+
+(1.4)
+
+in this manner we achieve a smooth interpolation between the bare action s[] dened
+
+at the ultraviolet (uv) cuto, , and the quantum eective action esk[], which generates
+
+those one-particle-irreducible graphs whose internal momenta extend between k and  [5].
+the introduction of a smearing function leads to a modication of the bare propagator:
+
+(p) =
+
+1
+p2  k(p) =
+
+1  k(p)
+
+p2
+
+=
+
+k(p)
+
+p2
+
+,
+
+(1.3)
+
+with k(p) + k(p) = 1. one can then derive a rg equation for the blocked action which
+
+remains valid in all orders of the loop expansion by varying esk innitesimally with k:
+
+k
+
+k
+
+esk
+
+k
+
+1
+2
+
+= 
+
+1
+2
+
+= 
+
+tr" 1
+k(cid:16)k
+tr"1
+k (cid:16)k
+
+k (cid:17)(cid:18)1 + k
+k (cid:17)(cid:16)1 +
+
+k
+p2
+
+ k
+
+2(cid:19)1#
+2esk
+2(cid:17)1#.
+2esk
+
+since the pioneering work of wilson [1], similar rg equations have been derived and
+analyzed. a sharp momentum cuto was rst used by wegner and houghton [6], and
+
+2
+
+[7],
+
+further discussed in refs.
+[8] and [9]. polchinski [10], on the other hand, employed a
+smooth cuto. there exists a vast amount of literature devoted to this subject [11]. such
+functional rg equations, as stated before, have proven too dicult to be solved exactly,
+and further approximations are needed. any viable scheme must not only retain the
+nonperturbative characteristics of the rg, but also converge suciently rapidly without
+inducing further spurious eects. as demonstrated by morris in his seminal papers [5] [12],
+the most reliable method so far for probing the low-energy eective theory is the derivative
+expansion:
+
+(1.5)
+
+esk[] =zx(cid:26) zk()
+
+2
+
+()2 + uk() + o(4)(cid:27),
+
+where zk() and uk() are, respectively, the wavefunction renormalization and the blocked
+potential. at leading order in the derivative expansion zk() is taken to be unity and the
+low-energy eective action is described solely in terms of uk() [13]. this local potential
+approximation (lpa) results in the following ow equation:
+
+k
+
+uk()
+
+k
+
+=
+
+1
+
+2zp(cid:16)k
+
+ k(p)
+
+k (cid:17)
+
+u 
+
+k ()
+
+p2 + k(p)u 
+
+k ()
+
+.
+
+(1.6)
+
+although the above expression can be derived exactly [14], it may also be obtained by a
+dierentiation of the perturbative one-loop result
+
+u (1)
+
+k () =
+
+1
+
+2zp
+
+ln(cid:26)1 + k(p)
+
+v ()
+
+p2 (cid:27)
+
+(1.7)
+
+k () on the right-hand-side.
+
+with respect to ln(k) followed by a substitution v ()  u 
+clearly, the functional form of the rg equation for uk() depends on the choice of
+the smearing function. a sharp cuto, k(p) = (k  p), provides a well-dened boundary
+between the high- and low-momentum modes and yields a nonlinear partial dierential
+equation. on the other hand, for a general smooth cuto, no clear separation exists
+and the rg ow remains an integro-dierential equation. according to the universality
+principle the shape of the smearing function, k(p), does not inuence the physics of nite
+length scales. so long as the eective action contains all marginal or relevant operators
+the resulting rg ow must be scheme independent. at leading order in the derivative
+expansion, with no further approximation involved, physical results are indeed independent
+of the shape of k(p), as demonstrated in [5] [15]. however, at next-to-leading order in the
+derivative expansion where the eect of zk() is included, the critical properties of the
+system will depend on whether k(p) is sharp or smooth. in fact, ambiguities arise in the
+former, although self-consistency arguments can be used to circumvent this diculty [16].
+the dependence of , the anomalous dimension, on the shape of the smearing function
+beyond leading order, has been calculated in [15] [17].
+
+the critical exponents and other universal properties of the system may vary when
+they are determined in the vicinity of the xed point of the truncated equation given in
+eq. (1.6), or when the theory moves far away from the critical manifold. in fact, even
+if the solution includes all the relevant operators, the neglected irrelevant parameters are
+still evolving at the xed point of the truncated equation. since the modication of the
+
+3
+
+irrelevant operators amounts to a change of an overall scale factor of the theory this scale
+factor remains cuto dependent at the approximate xed point. in order to minimize its
+variation one has to retain in the approximation the irrelevant operators with the critical
+exponent.
+
+a frequently used technique is to expand uk() in power series of  followed by a trun-
+cation at some order, thereby turning the problem into solving a set of coupled nonlinear
+ordinary dierential equations. although the numerical algorithms are simplied by this
+expansion, the convergence of critical exponents calculated in this way is not guaranteed.
+in fact, when employing a sharp smearing function while uk() is expanded in  about the
+origin, the critical exponent  has been shown to oscillate about its expected value as m ,
+the number of terms in the series, is increased [12]. the convergence improves, however,
+if the expansion is made around the k-dependent minimum of uk() [9]. unfortunately,
+this approach fails when applied to an o(n ) eld theory in the symmetry-broken phase
+due to the presence of the massless goldstone modes which cause ir divergences to persist
+[14] [18]. it is therefore desirable to identify a computational method which does not suf-
+fer from these drawbacks. in addition, for gauge theories, the numerical complication of
+solving the non-truncated ow equations is even more overwhelming because of the prolif-
+eration of degrees of freedom and the complexity of their interactions. for these theories
+a polynomial truncation of the blocked potential seems inevitable. thus, it is crucial to
+understand how to improve results obtained from truncation schemes.
+
+in the present work, we examine what happens, in the truncated polynomial expan-
+sion of uk(), when a smooth smearing function k,(p) with  being the smoothness
+parameter, is utilized instead of (k  p). in particular, we explore how  changes with
+m as the smooth smearing functions approach the sharp limit, and how its convergence is
+inuenced by . our goal is to obtain a prescription which eliminates or diminishes the
+oscillations mentioned above and ensures a rapid convergence as m is increased.
+
+in sec.
+
+the organization of the paper is as follows.
+
+ii we give three examples of
+smooth smearing functions and derive the corresponding rg equations. we show how
+the expected sharp cuto limit can be recovered by recognizing that k(p) is a continuous
+in
+function in the vicinity p  k. finite-temperature rg equations are also derived.
+sec. iii we present the numerical solutions for  associated with the three-dimensional
+wilson-fisher xed point at various levels of polynomial truncation of uk().
+in sec.
+iv the source of scheme dependence on m and  is discussed. we propose an optimized
+smooth smearing function which leads to a maximal cancellation of the eects of irrelevant
+operators and provides the fastest convergence of  to a value which is in good agreement
+with the worlds best estimate. sec. v is reserved for summary and discussions.
+
+ii. smooth cutoff functions
+
+we begin by considering a general smooth representation of the smearing function
+k,(p) = (k, p) which approaches (k  p) as   0. due to the singular nature of
+the step function ambiguities can arise when taking the limit   0. more precisely, one
+will encounter terms involving (0)  0. since this value is not uniquely specied for
+
+4
+
+the smooth parameterizations of the step function, it would seem that the approach to the
+sharp limit is not unique. the naive, or mean, approach in the limit   0 is:
+
+z 
+
+0
+
+dp
+
+(k, p)
+
+k
+
+g((k, p), p) z 
+
+0
+
+dp (k  p)g(0, p) = g(0, k),
+
+(2.1)
+
+where k(k, p)  (k  p). this prescription, however, is oversimplied because the
+integrand of
+
+dp g((k, p), p)),
+
+(2.2)
+
+z 
+
+0
+
+is not uniformly convergent as   0. the proper treatment requires that (k, p) be
+used as an integration variable. thus by setting (k, p) = (1  p/k) = t and making a
+change of variables from p to t, we have
+
+z 
+
+0
+
+dp
+
+(k, p)
+
+k
+
+g((k, p), p) z 
+
+0
+
+p
+k
+
+dp(cid:0)
+
+dt
+
+dp(cid:1)g(t, p) = z t(p=)
+
+t(p=0)
+
+dt
+
+p(t)
+
+k
+
+g(t, p(t)).
+
+(2.3)
+the sharp cuto limit is obtained when t(p = 0) = 1, t(p = ) = 0, p(t) = k and eq.
+(2.3) simplies to
+
+z 
+
+0
+
+dp
+
+(k, p)
+
+k
+
+g((k, p), p) =z 1
+
+0
+
+dt g(t, k).
+
+(2.4)
+
+in terms of t, the rg ow equation in eq. (1.6) reduces to
+
+k
+
+uk()
+
+k
+
+=
+
+=
+
+dt
+
+sd
+
+t(p=0)
+
+2 z t(p=)
+2 z t(z=)
+
+t(z=0)
+
+sdkd
+
+k ()
+
+pd(t) u 
+
+k ()
+p2(t) + (1  t)u 
+zd(t) u 
+k ()
+dt
+z2(t) + (1  t) u 
+k () = u 
+
+k ()
+
+(2.5)
+
+,
+
+where sd = 2/(4)d/2(d/2), z(t) = p(t)/k and u 
+k ()/k2. thus, with a given
+k,(p)  t, we rst invert the expression to obtain z(t) and then make a substitution into
+eq. (2.5) to deduce the corresponding smooth rg equation for uk().
+as stated in the introduction, when a truncated polynomial expansion is used, physical
+quantities such as the critical exponents may depend on m as well as on . for a sharp
+cuto, the critical exponent  has been shown to exhibit oscillatory behavior about its
+expected value when uk() is expanded about the origin or the k-dependent minimum
+[7][12], although the result improves signicantly in the latter [9]. in order to determine
+whether these oscillations can be removed or reduced by using a smooth smearing function
+we consider below three parameterizations of k,(p), all of which approach (kp), when
+the appropriate limit of the smoothness parameter  is taken.
+
+5
+
+a. hyperbolic tangent
+
+we rst examine
+
+k,(p) =
+
+the above smearing function satises:
+
+1
+
+2h1 + tanh(cid:16) k2  p2
+pk (cid:17)i.
+
+(i)
+
+lim
+0
+
+k,(p) = (k  p),
+k,(p) =
+
+1
+
+(ii)
+
+(iii)
+
+lim
+k0
+lim
+k
+
+2(cid:2)1 + tanh()(cid:3) = 0,
+
+k,(p) = 1.
+
+in this case the propagator is modied as:
+
+k,(p) =
+
+substituting
+
+k
+
+k,
+k
+
+=
+
+into eq. (1.6) then yields:
+
+k
+
+uk()
+
+k
+
+= 
+
+sd
+
+4z 
+
+0
+
+dp pd1(cid:16) k
+
+p
+
++
+
+1
+p2 
+
+1
+
+k2 + p2
+2kp
+
+2h1 + tanh(cid:16) p2  k2
+pk (cid:17)i.
+kp (cid:17),
+sech2(cid:16) k2  p2
+k(cid:17) sech2(cid:16) k2  p2
+kp (cid:17)
+
+p
+
+with the help of eq. (2.4) we can rewrite the above expression as
+
+u 
+
+k ()
+
+p2 +(cid:2)1  k,(p)(cid:3)u 
+
+k ()
+
+(2.6)
+
+(2.7)
+
+(2.8)
+
+(2.9)
+
+. (2.10)
+
+k
+
+uk()
+
+k
+
+where
+
+=
+
+dt
+
+t(z=0)
+
+sdkd
+
+2 z t(z=)
+z(t) =r 2a2(t)
++ 1 
+a(t) = tanh1(2t  1).
+
+4
+
+zd(t) u 
+
+k ()
+z2(t) + (1  t) u 
+
+k ()
+
+,
+
+(2.11)
+
+a(t)
+
+2
+
+(2.12)
+
+one of our main goals here is to examine how the ow of the theory is inuenced by tuning
+. as   0, the expected sharp-cuto wegner-houghton equation [6]
+
+k
+
+uk()
+
+k
+
+= 
+
+sdkd
+
+2 z 1
+
+0
+
+dt
+
+u 
+
+k ()
+1 + (1  t) u 
+
+k ()
+
+sdkd
+
+2
+
+= 
+
+ln(cid:20) k2 + u 
+
+k2
+
+k ()
+
+(cid:21)
+
+(2.13)
+
+is recovered. as  is increased the cuto becomes smoother, i.e., the peak in k,(p)/p at
+p = k spreads. at about   2 this tendency is reversed and the peak becomes taller again.
+the location of the peak stays roughly the same until   1 and is shifted towards smaller
+
+6
+
+values as  is further increased. it nally moves to p = k/ for large . the decrease of
+the cuto when    eliminates the interactions and the theory ows into the trivial
+gaussian xed point. we shall comment more on this point later.
+
+notice that the mean approach described in eq. (2.1) gives
+
+k
+
+uk()
+
+k
+
+= lim
+
+0 
+sd
+
+ 
+
+0
+
+sd
+
+4z 
+2 z 
+
+0
+
++
+
+dp pd1(cid:16) k
+dp pd1 k(k  p)
+
+p
+
+p
+
+k(cid:17) sech2(cid:16) k2  p2
+kp (cid:17)
+
+u 
+
+k ()
+p2 + 0u 
+
+k ()
+
+= 
+
+u 
+
+k ()
+
+p2 +(cid:2)1  k,(p)(cid:3)u 
+2 (cid:18)
+
+k ()
+k2 + 0u 
+
+sdkd
+
+u 
+
+k ()(cid:19),
+
+k ()
+
+(2.14)
+which diers from the wegner-houghton equation in its absence of the characteristic log-
+arithmic functonal structure. in fact, the rg equation is highly sensitive to the k depen-
+dence in k,(p). nevertheless, we shall see that the dierence between the two equations
+does not aect the critical properties signicantly in the next section.
+
+next, we turn the nonlinear ow of uk() into a set of coupled ordinary dierential
+
+equations by making an expansion in power series of :
+
+uk() =
+
+g(2)
+k
+(2)!
+
+x=1
+
+2,
+
+k = u (2)
+g(2)
+
+k
+
+(0) =
+
+,
+
+(2.15)
+
+2uk
+
+2 (cid:12)(cid:12)(cid:12)=0
+
+followed by a truncation at some order  = m . the resulting running equations for the
+rst two terms read:
+
+where  = 4  d,
+
+jn(2
+
+k) = 
+
+sd
+
+2 z 1
+
+0
+
+dt
+
+and z(t) is given by eq. (2.12). in the sharp cuto limit where z(t)  1 and
+
+k + j0k,
+
+k
+
+k
+
+ 2
+k
+k
+ k
+k
+
+= 22
+= k 
+
+2
+6
+k
+2
+
+k (cid:0)j0  j1(cid:1) + j0g(6)
+
+k ,
+
+k(cid:3)2+n ,
+
+z(t)d+2(n+1)
+
+(cid:2)z2(t) + (1  t)2
+1  (1 + 2
+2
+k(1 + 2
+
+k)1+n
+k)1+n ,
+
+jn(2
+
+k) =
+
+sd
+
+2(1 + n)
+
+we recover
+
+k
+
+k
+
+ 2
+k
+k
+ k
+k
+
+= 22
+
+k 
+
+sd
+2
+
+k
+
+,
+
+1 + 2
+k
+
+= k +
+
+sd
+
+k
+
+2 (cid:26) 32
+(cid:0)1 + 2
+
+k(cid:1)2 
+
+7
+
+g(6)
+k
+1 + 2
+
+k(cid:27).
+
+(2.16)
+
+(2.17)
+
+(2.18)
+
+(2.19)
+
+this can be compared with the result obtained using the mean approach:
+
+k
+
+ 2
+k
+k
+
+ k
+k
+
+k
+
+= 22
+
+k 
+
+= k +
+
+k
+
+sd
+2
+
+sd
+
+k(cid:1)2 ,
+(cid:0)1 + 0 2
+2 (cid:26) 602
+k(cid:1)3 
+(cid:0)1 + 0 2
+
+k
+
+g(6)
+k
+
+k(cid:1)2(cid:27).
+(cid:0)1 + 0 2
+
+(2.20)
+
+a comparison of the two ow equations shows that in order to recover the standard per-
+turbative rg coecient functions in the uv limit 2
+k  1, the usual convention 0 = 1/2
+must be imposed. however, this choice also implies a deviation of scaling for a massive
+theory in the ir regime where 2
+
+it is easy to understand that the two ows agree in the uv scaling regime only. in
+fact, the non-uniform convergence in eq. (2.2) leads to an incorrect use of the integrand
+of the evolution equation eq. (1.6) at p  k when the limit   0 is taken before the
+integration. since the integrand is independent of the eld  for k2  u 
+k () the mistake
+is unimportant. but the naive evolution equation displays wrong u 
+k () dependence when
+k2  u 
+
+k ().
+
+k  1.
+
+an alternative class of smearing functions is the exponential function
+
+b. exponential function
+
+k,b(p) = ea(p/k)b
+
+,
+
+(2.21)
+
+where a and b are constants. this smearing function satises the following conditions:
+
+(i)
+
+(ii)
+
+(iii)
+
+lim
+b
+lim
+k0
+lim
+k
+
+k,b(p) = (k  p),
+k,b(p) = 0,
+
+k,b(p) = 1.
+
+(2.22)
+
+in order to facilitate comparison with the other smearing functions used here, we also
+require k,b(p = k) = 1/2, which in turn implies a = ln 2, or k,b(p) = 2(p/k)b
+
+.
+
+the corresponding rg equation reads
+
+k
+
+uk()
+
+k
+
+sdkd
+
+2
+
+= 
+
+abz 
+
+0
+
+dy yd+b1
+
+eayb u
+
+
+
+k ()
+
+y2 +(cid:0)1  eayb(cid:1) u 
+
+k ()
+
+.
+
+(2.23)
+
+alternatively, one can also cast eq. (2.23) into the same form as eq. (2.11), but with z(t)
+given by
+
+.
+
+(2.24)
+
+z(t) =(cid:16)
+
+ln t
+
+a (cid:17)1/b
+
+8
+
+in the asymptotic limit where u 
+
+k ()  1, the rg ow can be approximated as
+sdkd
+
+2
+
+u 
+k
+k2 + c2
+
+u 
+k
+k4 + o(
+
+3
+u
+k
+
+k6 )(cid:21),
+
+2 (cid:20)c1
+
+k
+
+uk
+k  
+
+where
+
+c1 = a(d2)/b (cid:0) b + d  2
+c2 = (cid:2)1  2(d+b4)/b(cid:3)a(d4)/b (cid:0) b + d  4
+
+(cid:1),
+
+b
+
+b
+
+(cid:1).
+
+the sharp limit, on the other hand, gives c1 = 1 and c2 = 1/2 independent of dimen-
+sionality d. thus, c1 and c2 provide a measure of the deviation from the sharp-cuto uv
+scaling. we also note that in order to avoid uv singularities in the integrations, b must
+be chosen as to avoid singularities in the gamma functions above. as b is decreased the
+cuto becomes smoother. the location of the peak in k,b(p)/p is stable for large b and
+starts to shift at b  3. for b <
+ 3, the shape of k,b(p) spreads in such a manner that one
+can no longer associate a well-dened cuto value.
+
+lastly, we consider a power-law smearing function:
+
+c. power-law function
+
+k,m(p) =
+
+1
+
+1 + (p/k)m ,
+
+which satises
+
+(i)
+
+(ii)
+
+(iii)
+
+lim
+m
+lim
+k0
+lim
+k
+
+k,m(p) = (k  p),
+k,m(p) = 0,
+
+k,m(p) = 1.
+
+the rg equation in this case reads
+
+[ 0 = 1/2 when p = k ],
+
+k
+
+uk()
+
+k
+
+= 
+
+= 
+
+where y = p/k and
+
+sdkd
+
+2
+
+mz 
+2 z 1
+
+dt
+
+0
+
+0
+
+sdkd
+
+dy yd+m1
+
+u 
+
+k ()
+
+(cid:0)1 + ym(cid:1)(cid:2)y2(1 + ym) + ym u 
+
+k ()(cid:3)
+
+,
+
+zd(t) u 
+
+k ()
+
+k ()
+z2(t) + (1  t) u 
+z(t) =(cid:16) 1
+
+t  1(cid:17)1/m
+1 + ym , p(cid:1)  (1  y)z 1
+
+1
+
+0
+
+.
+
+9
+
+mym1
+
+(cid:0)1 + ym(cid:1)2 g(cid:0)
+
+(2.25)
+
+(2.26)
+
+(2.27)
+
+(2.28)
+
+(2.29)
+
+(2.30)
+
+the sharp limit, i.e., z  1, may also be obtained by the substitution:
+
+dt g(t, p), m  ,
+
+(2.31)
+
+which results from
+
+lim
+m
+
+mym1
+(1 + ym)2 = (1  y).
+
+(2.32)
+
+the corresponding ow equations for 2
+in eq. (2.20) but with
+
+k and k have the same functional forms as those
+
+jn(2
+
+k) = 
+
+sd
+2
+
+mz 
+
+0
+
+dz
+
+(1 + zm)nzd+2n+m+1
+
+(cid:2)z2(1 + zm) + zm 2
+
+k(cid:3)2+n .
+
+(2.33)
+
+on the other hand, if one adopts the mean approach and takes the limit m  , the rg
+equation then becomes
+
+k
+
+uk()
+
+k  
+
+sdkd
+
+2 z 
+
+0
+
+dy (1 y)
+
+ydu 
+
+k ()
+
+y2 + (y  1)u 
+
+k ()
+
+sdkd
+
+2
+
+= 
+
+u 
+
+k ()
+k2 + 0u 
+
+k ()
+
+, (2.34)
+
+which again coincides with eq. (2.14). the peak in k,m(p)/p is stable at p = k for
+m > 5 but shifts towards lower momenta for m < 5, and the shape of the smearing function
+makes it dicult to identify a clear cuto value.
+
+unlike the previous two parameterizations where the integro-dierential ow equations
+must be solved numerically, for certain values of d and m analytic evaluation of the integral
+on the right-hand-side of eq. (2.29) is possible. for example, taking d = m = 4 we have
+
+2(cid:26)  2 tan1(cid:16)
+
+u 
+
+kq4k4  u 
+
+k
+
+and for d = 3, we have
+
+k
+
+uk()
+
+k
+
+=
+
+k
+
+uk
+k
+
+
+
+
+
+
+
+= 
+
+u 
+
+k4
+162
+
+k
+
+k3
+
+kq4k4  u 
+4h1 +q1 + u 
+p2 + u 
+
+k3
+4
+
+1
+
+k ()/k2 i,
+
+2(cid:17)(cid:27).
+
+(2.35)
+
+(m = 2),
+
+(m = 4).
+
+k ()/k2h2 +q4 + 2u 
+
+k ()/k2 i,
+
+(2.36)
+in this dierential form it is possible to apply the standard techniques of dierential equa-
+tions to solve for the rg ow of the theory.
+
+in the asymptotic limit where u 
+
+k ()  1, eq. (2.29) becomes
+
+where
+
+c1 =
+
+m
+
+k
+
+uk
+k  
+
+sdkd
+
+2 (cid:20)c1
+(cid:0) m  d + 2
+
+m
+
+d + m  2
+m
+2(d + 2m  4)
+
+c2 = 
+
+u 
+k
+k2 + c2
+
+2
+
+u 3
+k
+
+u 
+k
+k4 + o(
+
+k6 )(cid:21),
+(cid:1) m
+(cid:1)(cid:0) 3m  d + 4
+
+ 1,
+
+m
+
+(cid:1)(cid:0) 2m + d  2
+
+m
+
+(cid:1) m
+
+ 
+
+(cid:0) m  d + 4
+
+m
+
+10
+
+(2.37)
+
+(2.38)
+
+1
+2
+
+.
+
+before closing this section, we remark that the rg techniques discussed so far can
+be readily extended to nite-temperature systems. for the scalar 4 theory dened on
+s1  rd in the imaginary-time formalism, with the radius of s1 being given by , the
+inverse temperature, one obtains
+
+k
+
+u ,k()
+
+k
+
+= 
+
+= 
+
+,k() + 2 lnh1  ek2+u 
+
+,k()i)
+
+sdkd
+
+2 (qk2 + u 
+ln sinh(cid:18) qk2 + u 
+
+
+
+2
+
+sdkd
+
+,k()
+
+(cid:19)
+
+(2.39)
+
+using a sharp cuto [16]. a smooth smearing function, on the other hand, yields an
+integro-dierential equation:
+
+k
+
+u ,k()
+
+k
+
+= 
+
+
+
+1
+
+k,
+
+4zp(cid:16)k
+k (cid:17)
+4 z t(z=)
+
+sdkd
+
+t(z=0)
+
+u 
+
+,k
+
+,k
+
+qp2 +(cid:0)1  k,(cid:1)u 
+qz2(t) + (1  t) u 
+
+zd(t) u 
+,k
+
+dt
+
+,k
+
+2
+
+,k
+
+coth(cid:16) qp2 + (1  k,)u 
+(cid:17)
+coth(cid:16) qz2(t) + (1  t) u 
+
+2
+
+,k
+
+(cid:17),
+
+(2.40)
+in the high-
+
+where  = k. the two equations coincide in the sharp cuto limit.
+temperature regime where   0, we have
+dt zd(t)"
+
+2 z t(z=)
+
+u ,k()
+
+,k()
+
+
+12
+
+sdkd
+
+t(z=0)
+
+u 
+
+u 
+
+
+
+k
+
+k
+
+(cid:2)z2(t) + (1  t) u 
+
+k ()(cid:3) +
+
+(2.41)
+apart from the factor of 1, the rst term in the bracket corresponds to the zero-
+temperature d-dimensional case, in accord with the expectation of dimensional reduc-
+tion. in this limit,  can be scaled away with a redenition of u,k()  1uk() and
+  1/2 [16] [19].
+
+,k() + o( 3)#.
+
+iii. fixed-point solutions and numerical results
+
+as seen in the last section, when the smearing function is smooth the ow of the
+theory is generally characterized by an integro-dierential equation, as opposed to the
+dierential equation obtained with the sharp cuto or special cases of a smooth cuto. in
+dimensionless form, the ow equation reads:
+
+"k
+
+
+k 
+
+1
+
+2(cid:0)d  2) 
+
+
+ 
+
++ d# uk( ) = z 1
+
+0
+
+dt
+
+11
+
+zd(t) u 
+
+k ( )
+z2(t) + (1  t) u 
+
+k ( )
+
+,
+
+(3.1)
+
+where uk( ) =  2kduk(),  = k(d2)/2,  = p2/sd = p(4)d/2(d/2), and the
+
+momentum scale z(t) is given by eqs. (2.12), (2.24) or (2.30) for the three cases considered.
+that sd can be absorbed by a redenition of  is an indication of universality, i.e., critical
+exponents are independent of sd, though the matrix elements in the linearized rg matrix
+are.
+in the above, the anomalous dimension  has been set to zero since we are only
+considering the ow of the potential.
+
+to characterize the critical behavior of the theory, our rst task is to identify all the
+xed points and then linearize rg about a particular xed point. it is well known that
+for the one-component scalar theory in d = 3, there are only two xed points: one trivial
+gaussian and one wilson-fisher, and the critical behavior is dominated by the latter. no
+other continuum limit is known to exist. this applies to both the sharp and the smooth
+cutos. however, for a general smooth function k,(p), the location of the wilson-fisher
+xed point which will now depend on ; at  = 0, however, it coincides with the gaussian
+one.
+
+at the xed point(s), the theory exhibits scale invariance, i.e. k u 
+
+equation for the xed point potential becomes (dropping the subscript k):
+
+k = 0, and the rg
+
+
+
+1
+
+2(cid:0)d  2(cid:1)  u 
+
+( ) + d u ( ) = z 1
+
+0
+
+dt
+
+zd(t) u 
+
+( )
+
+z2(t) + (1  t) u  ( )
+
+(3.2)
+
+s.
+
+  lnh1 + u 
+
+( )i,
+
+where the notation s. stands for the sharp cuto limit. analytically, the sharp limit has
+the following approximate non-trivial solution in the large  limit for d = 3:
+
+u ( ) = a 6 
+
+150a 4 + o( 6),
+where a is an arbitrary positive constant [12]. the rg ow about eq.
+linearized by writing uk( ) = u ( ) + v( )elnk, where v( ) obeys
+
+ln(30a) 
+
+ln  
+
+2
+9 
+
+1
+3
+
+4
+3
+
+1
+
+(3.3)
+
+(3.3) can be
+
+1
+2
+
+
+
+(d  2) v( ) (cid:0)  d)v( ) = z 1
+ 
+
+s.
+
+0
+
+zd(t)v( )
+
+dt
+
+(cid:2)z2(t) + (1  t) u ( )(cid:3)2
+
+v( )
+
+1 + u ( )
+
+.
+
+(3.4)
+
+we comment that the location of the xed point as well as u ( ), being non-universal,
+naturally all depend on the choice of the smearing function k(p). in the one extreme where
+k,(p) = (k  p), linearlizing rg and retaining only the relevant operators yields
+
+(2, ) = (0, 0), (cid:16)
+
+
+
+6 + 
+
+,
+
+12
+
+b(6 + )2(cid:17),
+
+(3.5)
+
+where b = 1/162. however, in the other extreme where the smearing function is taken to
+be a k-independent constant, k,(p) = c, the right-hand-side of eq. (3.1) then vanishes,
+and the rg ow simplies to
+
+duk()
+
+dk
+
+= 0 = 
+
+1
+
+2(cid:0)d  2(cid:1)  u 
+
+12
+
+( ) + d u ( ) = 0.
+
+(3.6)
+
+the equation can be exactly solved to give u ( ) = a 2d/(d2). for  = 1 or d = 3,
+u   6. thus, with vanishing contributions from quantum uctuations, the only xed
+point is gaussian (2, ) = (0, 0). however, this does not mean that the theory is free,
+because we still have u ( ) 6= 0.
+for the general case of a smooth cuto function, however, it is rather dicult to obtain
+a non-truncated solution for eq. (3.2), and we circumvent the problem with polynomial
+truncation at order 2m . the remaining task is to solve a system of m integro-dierential
+equations for the coupling constants g(2),  = 1,    , m . we rst determine the xed-
+point solution analytically in the sharp cuto limit, so that we can then use this as an
+initial guess in our numerical root-nding subroutine for the smooth case. the system of
+integro-dierential equations is solved by rst choosing a large value for the smoothness
+parameter  (1/, b, or m), thereby making the smearing function rather sharp. the
+smoothness of the cuto function is increased in small steps by decreasing the parameters,
+and the solution of the previous step is used as the guess for nding the solution at the
+current step. in this manner we are able to track the solution associated with a physical
+xed point from the sharp cuto limit to an arbitrary smoothness.
+
+with the strategies outlined above, we now present the results for all three smearing
+
+functions considered in sec. ii.
+
+m=2
+
+m=4
+
+0.540
+
+0.535
+
+0.530
+
+
+
+0.670
+
+0.660
+
+
+
+0.650
+
+0.525
+
+0.0
+
+10.0
+
+20.0
+
+30.0
+
+1/
+
+m=8
+
+0.690
+
+0.680
+
+0.640
+
+0.630
+
+0.0
+
+0.690
+
+0.680
+
+10.0
+
+1/
+
+20.0
+
+30.0
+
+m=12
+
+
+
+0.670
+
+
+
+0.670
+
+0.660
+
+0.650
+
+0.0
+
+0.660
+
+0.650
+
+0.0
+
+10.0
+
+1/
+
+20.0
+
+30.0
+
+10.0
+
+1/
+
+20.0
+
+30.0
+
+figure 1. critical exponent  as a function of 1/ using the hyperbolic tangent smearing function.
+
+results for four dierent levels of polynomial truncation are shown.
+
+13
+
+in fig. 1 we plot the dependence of  in d = 3 as a function of the (inverse) smoothness
+
+parameter 1 at four dierent levels of truncation of u (). from the gure, we see that
+
+ varies by 2-5% over the range shown. the variation would become even larger had we
+taken 1  0, where the smearing function becomes very at and there is practically no
+blocking. the exponents in this limit are those obtained in the mean-eld approximation,
+
+e.g.,  = 0.5.
+
+it is also interesting to note that at each order in m there is a dip, or
+
+an extremum whose position changes only slightly with m . the non-monotonic behavior
+
+shows that when going to the sharp limit by gradually increasing 1,  rst deviates from
+
+the sharp result and then begins to converge when k,(p) becomes suciently sharp.
+
+when an exponential smearing function is employed instead, we observe a similar
+
+behavior for , as depicted in figure 2. once more, the value varies by 2-5% and an
+
+extremum is found for each m . the qualitative feature remains the same for a power-law
+
+smearing function, as demonstrated in figure 3. however, in this case the variation of 
+
+is only about 2-3%.
+
+0.545
+
+0.540
+
+
+
+0.535
+
+0.530
+
+m=2
+
+m=4
+
+0.670
+
+0.660
+
+
+
+0.650
+
+0.640
+
+0.525
+
+0.630
+
+0.0 10.0 20.0 30.0 40.0 50.0
+
+0.0 10.0 20.0 30.0 40.0 50.0
+
+b
+
+b
+
+m=8
+
+m=12
+
+0.680
+
+0.670
+
+0.660
+
+
+
+0.690
+
+0.680
+
+
+
+0.670
+
+0.660
+
+0.650
+
+0.650
+
+0.0 10.0 20.0 30.0 40.0 50.0
+
+0.0 10.0 20.0 30.0 40.0 50.0
+
+b
+
+b
+
+figure 2. critical exponent  as a function of b for the exponential smearing function. results for
+
+four dierent levels of polynomial truncation are shown.
+
+14
+
+0.540
+
+0.538
+
+0.536
+
+0.534
+
+0.532
+
+m=2
+
+m=4
+
+0.660
+
+0.650
+
+0.640
+
+
+
+0.530
+
+0.630
+
+0.0 10.0 20.0 30.0 40.0 50.0
+
+0.0 10.0 20.0 30.0 40.0 50.0
+
+m=8
+
+m=12
+
+0.680
+
+0.675
+
+0.670
+
+0.665
+
+0.660
+
+0.655
+
+0.680
+
+0.675
+
+0.670
+
+0.665
+
+0.660
+
+0.655
+
+
+
+0.650
+
+0.650
+
+0.0 10.0 20.0 30.0 40.0 50.0
+
+0.0 10.0 20.0 30.0 40.0 50.0
+
+m
+
+m
+
+
+
+
+
+m
+
+m
+
+figure 3. critical exponent  as a function of m for the power law smearing function. results for
+
+four dierent levels of polynomial truncation are shown.
+
+iv. scheme dependence
+
+even though non-truncated solutions for the xed-point potential u ( ) can be ob-
+tained in special cases [12], this is not possible in general. any approximation inevitably
+brings in scheme-dependent eects. our results are seen to depend both on the order of
+truncation m as well as the smoothness parameter . we discuss below the implications
+of such dependence.
+
+a. truncation dependence
+
+at order m we obtain m xed-point solutions parameterized by the critical coupling
+constants (g(2)    g(2m )), each having its own eigenvectors and eigenvalues which in
+turn can be used for calculating the critical exponents. however, only one of the solu-
+tions corresponds to the wilson-fisher xed point which is characterized by one relevant
+operator, with the rest being irrelevant. the trivial gaussian solution with all g(2) = 0
+is also obtained but is of no interest to us. computational artifacts are induced with a
+polynomial truncation of the blocked potential uk( ) [9][12][16]. for example, as m is
+increased, numerous unphysical xed points are also generated.
+
+thus, to isolate the physically meaningful solution from the unphysical ones in the
+smooth parameterization, what we have done numerically was to rst analyze the sharp
+cuto limit of eq. (3.2) and identify the solution associated with the wilson-fisher xed
+point. the salient feature of this solution is that it is stable against an increase in m . in
+other words, the value of g(2) is not sensitive to whether higher order coupling constants,
+
+15
+
+e.g., g(2+2), are included or not. on the other hand, unphysical solutions are sensitive to
+the higher order equations and their eigenvalues will uctuate in an unpredictable manner
+[8].
+
+another prominent artifact of the polynomial truncation is the oscillation of the
+critical exponents with m when a sharp cuto is used. the values of the critical cou-
+pling constants also alternate in sign. the oscillations are due to the nonanalyticity
+of the critical blocked potential u ( ) and can be understood from the fact that an
+expansion of the right-hand-side of the sharp cuto ow equation ln(1 + u 
+( )) =
+( ))/ also yields a power series of  with alternating sign. even
+though the convergence has been shown to improve signicantly by expanding uk( )
+around its moving minimum, there still remains residual scheme dependence [9]. in addi-
+tion, an expansion about the minimum fails in the broken phase of o(n ) as stated in the
+introduction. therefore, it is desirable to have a numerical technique which allows for an
+ecient determination of the critical properties, and remove or reduce the aforementioned
+spurious eects.
+
+p
+=1(1)(+1)( u 
+
+another subtle issue remains in this approximation is: why can we not reproduce the
+exact critical exponent(s) by keeping only the renormalizable coupling constants in our
+computation and in the identication of the xed point? the main reason lies in that fact
+the xed point of the truncated solution is applicable only up to the operators which have
+been neglected. at the point which we call a xed point, the would-be ignored set of
+irrelevant operators does not vanish but continues to evolve. on the other hand, in the
+exact rg approach, the xed-point condition implies a complicated cancellation between
+dierent operators. when all the operators are present, the cancellation is complete and
+we should be able to eliminate the k,(p)-dependence in the scaling laws around the xed
+point as well as in the expression for the critical exponents.
+
+b. smoothness dependence
+
+in the alternative wilson or polchinski rg approach, one can show that when the
+eective action is expanded in terms of derivatives to order n, only 2n parameters are
+required to absorb the scheme dependence [15]. therefore, at the leading order of uk()
+with n = 0, the critical exponents must be scheme-independent, i.e., the same results are
+obtained regardless of whether the smearing function is sharp, exponential or power-like.
+in fact, k,(p) can be conveniently absorbed by a suitable redenition of the eld variable
+[20]. scheme depedence appears, however, when the wavefunction renormalization zk()
+is taken into consideration at the next order.
+
+on the other hand, eq. (3.1) derived with lpa does not possess this scaling property,
+and the functional form of the ow equation is explicitly dependent of k,(p). the depen-
+dence, nevertheless, is expected to be negligible in the calculation of physical quantities
+such as the critical exponents. this universality hypothesis, however, must be substan-
+tiated by solving the integro-dierential equation eq. (3.1) exactly without polynomial
+expansion.
+
+from figures 1, 2 and 3, the critical exponent  clearly depends on the smoothness
+parameter  (1, b and m). this comes as a consequence of polynomial truncation. that
+is, because of the polynomial truncation scheme employed, physical results now depend
+both on the level of truncation m as well as on .
+
+16
+
+how can such dependence be reconciled with universality? the key to the problem
+here again lies in the role played by the irrelevant operators in the approximate solution.
+if we solve the rg equation for the full theory and come down to the ir regime, the
+dependence on the initial condition for the irrelevant operators must die out according
+to the universality hypothesis. the explicit verication of this scenario by reaching the
+ir xed point in principle requires an innite number of iterations. this is not what
+was followed in this work. instead we move close to the uv xed point and a linearized
+rg prescription is utilized to deduce the critical exponents and the corresponding scaling
+laws. using the derivative expansion and the polynomial truncation schemes gives the
+advantage of a readily accessible (approximate) xed-point solution; however, we are no
+longer certain what the omitted irrelevant operators do. if they are not scale invariant at
+the xed point - the likely result of the truncation, then their variation amounts to the
+change of the overall scale factor of the exact solution of the theory. this is because the
+irrelevant coupling constant set of the theory inuences an overall scale factor. in order to
+minimize this scale dependence the truncation scheme must be improved.
+
+the comparison with the exact rg oers a direction of improvement in our approx-
+imation: to minimize the number and the strength of the neglected irrelevant operators.
+as far as the k,(p)-dependence is concerned, the momentum dependent, i.e. higher order
+derivative terms come into consideration which are quadratic in the eld . therefore, we
+aim to minimize the number of such terms generated in the rg ow. the cuto-function
+k,(p) is strongly momentum dependent in an interval p = k. according to the un-
+certanity principle this yields non-local interactions on the length scale x = 1/k. in
+order to eliminate such a higher order derivative eect from the theory we must look for a
+cuto which is as smooth as possible in the momentum space. this would yield a better
+convergence when the irrelevant derivative operators are truncated, in accord with the
+spirit of lpa.
+
+however, there are also higer-order eld operators and we should keep m as low as
+possible. we emphasize that the purpose of employing a truncated polynomial expansion
+of uk() is to devise a simple algorithm which allows us to reproduce the nonperturbative
+features, particularly the xed-point structure embedded in lpa, or even the blocked
+
+action esk[], without having to solve the full ow equation for uk(). thus, to go to a
+
+large m not only is computationally laborious but also in conict with the original goal.
+in fig. 4 the truncation dependence of  obtained using the exponential smearing
+function given in eq. (2.21) is depicted. the sharp cuto results are also included for
+comparative purpose. we notice the general trend of a more pronounced oscillatory be-
+havior as b is increased toward the sharp limit. this again show that the sharp cuto is
+not the best candidate if we look for the smallest set of operators which yields the most
+rapid convergence for the physical observables. below we demonstrate how this can be
+achieved with an optimization scheme.
+
+17
+
+0.75
+
+0.7
+
+0.65
+
+
+
+0.6
+
+0.55
+
+0.5
+
+2
+
+b=3
+b=5
+b=10
+b=20
+b=40
+sharp cutoff
+
+4
+
+6
+
+m
+
+8
+
+10
+
+12
+
+figure 4. critical exponent  as a function of m using the exponential smearing function. results
+
+for several values of b are shown for comparison.
+
+c. optimization
+
+for a sharp cuto, with a clear boundary between the high and the low modes, the
+ir cuto is determined unambiguously as k. however, we wish to choose the cuto to be
+as smooth as possible in order to minimize the generation of non-local, higher-derivative
+irrelevant interactions, as well as the order of truncation m . a general smooth smearing
+function k,(p) results in a shift in the actual value of the ir cuto, or the location of
+the peak of k,(p)/p. when k,(p) is too smooth, we no longer have a well-dened
+cuto, i.e., the relation between the parameter k and the momenta of the modes appearing
+in the evolution equation.
+
+as we have shown before, with the truncation scheme employed, the xed-point solu-
+tions will vary with m and the would-be irrelevant operators will continue to contribute
+and evolve around the these approximate solutions. thus, we would not expect a priori
+an accurate result for the critical exponents in this case. nevertheless, we notice that for
+each of the three smearing functions discussed in sec. ii, there is an optimal value of
+ for which  converges most rapidly. for example, the optimal value for the exponential
+function is found to be b = 3, which incidentally coincides with the value of the extremum
+shown in figure 2. when all three smearing functions are superimposed, it can be seen
+that they have approximately the same shape or smoothness, as illustrated in fig. 5. that
+is, the most optimal smoothness does not depend on the detailed form of the smearing,
+i.e., hyperbolic tangent, exponential or power-law.
+
+18
+
+)
+p
+(
+ 
+*
+k
+~
+r
+
+1
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+tanh(cid:13)
+exponential(cid:13)
+power law
+
+0.5
+
+1
+
+p/k
+
+1.5
+
+2
+
+figure 5. comparison of the three optimized smearing functions.
+
+the truncation dependence of  for the three optimized smearing functions is ilus-
+trated in fig. 6. although there remains small oscillations, we see a dramatic improvement
+in the convergence. in fact, the variation beyond m = 7 is only 1-2%. our optimized value
+gives  = 0.65(5) which is closer to the worlds best value 0.631(2) [21] than 0.68(9) ob-
+tained by aoki et. al. using an expansion around the moving minimum. we also remark
+that m , the number of operators involved in our calculation, is considerably smaller for a
+reasonably accurate estimate of  [9]. however, by truncating the potential at m = 12,
+we have not been able to observe the oscillation of  with m at a four-fold periodicity; an
+unambiguous observation of such behavior generally would require m  20 [9][12].
+
+0.75
+
+0.7
+
+0.65
+
+
+
+0.6
+
+0.55
+
+0.5
+
+2
+
+sharp cutoff
+power law (m = 5.5)
+gaussian (b=3)
+tanh ( = 0.82)
+
+4
+
+6
+
+m
+
+8
+
+10
+
+12
+
+figure 6. critical exponent  as a function of the level of polynomial truncation for all three opti-
+
+mized smearing functions and the sharp cuto.
+
+why is  related to the convergence of the series expansion? physically, the param-
+eter dictates the manner in which the quantum uctuations modes are integrated over.
+
+19
+
+when  is very small and the corresponding smearing function is too smooth, certain fast-
+uctuating modes are only damped but not integrated over due to the lack of a well-dened
+boundary. in addition, some slowly-varying degrees of freedom which should be kept are
+integrated. as a result of the mistreatment of both the fast and the slow modes, the rg
+trajectory is greatly distorted, and the would-be irrelevant higher-order operators continue
+to evolve near the critical point obtained at order m .
+
+the complicated interplay between the irrelevant operators can also be seen from the
+non-monotonic dependence of  on  observed in figures 1 to 3. an extremum is found
+at c for all orders of m . while for c is a local maximum for m = 2, it becomes a local
+minimum for m  3. the ip is clearly due to the inclusion of the irrelevant (marginal by
+power counting) 6 operator.
+in general, as  increases and more fast modes are being included in the loop inte-
+grations, more cancellations between the eects of the irrelevant operators take place and
+the theory moves closer to the true wilson-fisher xed point found in the exact approach.
+nevertheless, when  becomes too large and the resulting smearing function is too sharp,
+non-local eects begins to set in and the theory drifts away from the true rg trajectory.
+at  =  where the smearing function becomes a step function (k  p), non-local eects
+become maximal and lpa is no longer adequate. one must then include derivative oper-
+
+result.
+
+ators to all orders in the blocked action esk[] in order to arrive at a scheme-independent
+
+thus, we see that  monitors the manner in which the irrelevant operators contribute
+to the ow of the theory. when the most optimal smoothness is reached, the maximum
+cancellation between these operators takes place, leading to the fastest convergence in the
+polynomial truncation.
+
+in sec. ii we have also discussed an alternative mean approach, which is based on
+taking the sharp cuto limit followed by a substitution of 0 = 1/2 to avoid ambiguity,
+and yields eq. (2.14) as the rg ow. we solve the equation and depict the result for  in
+figure 7.
+
+contrary to the sharp approach which results in an oscillatory behavior,  is seen to
+converge rapidly. such a change in the convergence is intimately related to the structure
+of the untruncated xed-point potential u ( ) [5] which now obeys
+
+
+
+1
+
+2(cid:0)d  2(cid:1)  u 
+
+( ) + d u ( ) = 
+
+2 u 
+( )
+2 + u  ( )
+
+.
+
+(4.1)
+
+0.75
+
+0.7
+
+0.65
+
+
+
+0.6
+
+0.55
+
+0.5
+
+2
+
+sharp cutoff limit
+mean approach
+
+4
+
+6
+
+m
+
+8
+
+10
+
+12
+
+20
+
+figure 7. critical exponent  as a function of the level of polynomial truncation obtained with the
+
+mean approach and the sharp cuto.
+
+even though eq. (4.1) still cannot be solved analytically, its improvement in con-
+vergence can be shown by examining the right-hand-side of the equation representing
+the quantum corrections. by making a taylor expansion of the expression with respect to
+u 
+k ( )]
+k ( ), we see that it has a radius of convergence 2/ u 
+in eq. (3.2). since a general smooth cuto always has a greater convergence radius, the
+resulting critical exponents will converge more rapidly compared with the sharp in the
+polynomial truncation scheme. to describe the amplitude and the periodicity of the oscil-
+lation more quantitatively, however, would require a detailed knowledge of the singularities
+of the untruncated potential u ( ).
+
+k which is twice that of ln[1 + u 
+
+v. summary and discussions
+
+in the present work we have demonstrated how one can improve the convergence of
+critical exponents calculated using polynomial truncations of the rg ow equation for the
+blocked potential uk(). since in the sharp limit,  oscillates with m , the order of trunca-
+tion, we examined three parameterizations of a smooth cuto function, hyperbolic tangent,
+exponential, and power-law, and made an attempt to eliminate as much as possible such
+unphysical artifacts. we nd that there exists an optimal smoothness value which gives
+the most rapid convergence as a function of m . this is due to the maximal cancellation
+of the eects generated by the irrelevant operators in the blocked action. our optimal
+smearing functions yield  = 0.65(5) for m  7 with a variation of 1-2% between the three
+cases. had  been too large, we would have to incorporate the higher-order derivative
+operators to account for the non-local eects generated in the course of rg evolution.
+
+we have also learned from comparing the results for the sharp limit and the mean
+approach (depicted in figure 7) that the convergence behavior of the polynomial truncation
+scheme is intimately related to the non-truncated solution of uk( ). the mean approach
+results in a larger radius of convergence, and hence a more rapid convergence. it remains
+to see if the same trick can be utilized for more complicated systems as well.
+
+in light of the success of our optimized rg prescription, we can readily extend the
+formalism to address other issues such as the o(n ) models, the spinodal instability [22],
+gauge theories or chiral symmetry breaking. it would also be interesting to compare our
+usual momentum-cuto approch with an alternative internal-space rg, which is a func-
+tional generalization of the callan-symanzyk equation, based on an innitesimal variation
+of an internal-space parameter such as the mass scale [23].
+
+21
+
+acknowledgments
+
+s.-b. l. is grateful to y.-c. tsai for valuable discussions. m.s. would like to thank
+j.o. andersen and e. braaten. this work is supported in part by funds provided by the
+national science council of taiwan under contract #nsc-88-2112-m-194-006, and by the
+national science foundation under grant no. phy-9800964.
+
+references
+
+[1] k. wilson, phys. rev. b4 (1971) 3174; k. wilson and j. kogut, phys. rep. 12c
+
+(1975) 75.
+
+[2] see, for example, j. polonyi, physics of the quark-gluon plasma, hep-ph/9509334.
+
+[3] s.-b. liao, j. polonyi and d. p. xu, phys. rev. d51 (1995) 748.
+
+[4] s.-b. liao and j. polonyi, ann. phys. 222 (1993) 122 and phys. rev. d51 (1995)
+
+4474.
+
+[5] t. r. morris, int. j. mod. phys. a9 (1994) 2411; nucl. phys. b509 (1998) 637,
+
+and references therein.
+
+[6] f.j. wegner and a. houghton, phys. rev a8 (1972) 401.
+
+[7] a. hasenfratz and p. hasenfratz, nucl. b270 (1986) 687.
+
+[8] a. margaritis, g. odor and a. patkos, z. phys. c39 (1988) 109.
+
+[9] k. aoki, k. morikawa, w. souma, j. sumi and h. terao, prog. theor. phys. 95
+
+(1996) 409 and 99 (1998) 451.
+
+[10] j. polchinski, nucl. phys. b231 (1984) 269.
+
+[11] b. bergerho, phys. lett. b437 (1998) 381;
+
+a. bonanno, v. branchina, h. mohrbach and d. zappala, hep-th/9903173;
+
+j. shafer and j. shepard, phys. rev. d55 (1997) 4990;
+
+d. dalvit and f. mazzitelli, phys. rev. d54 (1996) 6338;
+
+j. rudnick, w. lay and d. jasnow, phys. rev. e58 (1998) 2902;
+
+n. tetradis and c. wetterich, nucl. phys. b383 (1992) 197 and b422 (1994) 541;
+
+k. ogure and j. sato, phys. rev. d57 (1998) 7460;
+
+m. dattanasio and m. pietroni, nucl. phys. b472 (1996) 711;
+
+m. bonini, m. dattanasio and g. marchesini, nucl. phys. b437 (1995) 163;
+
+[12] t. r. morris, phys. lett. b334 (1994) 355 and b329 (1994) 241;
+
+[13] j. f. nicoll, t. s. chang and h. e. stanley, phys. rev. lett. 32 (1974) 1446, 33
+
+(1974) 540; phys. rev. a13 (1976) 1251.
+
+22
+
+[14] jens o. andersen and m. strickland, cond-mat/9811096.
+
+[15] r. d. ball, p. e. haagensen, j. i. latorre and e. moreno, phys. lett. b347 (1995)
+
+80.
+
+[16] s.-b. liao and m. strickland, nucl. phys. b497 (1997) 611 and phys. rev. d52
+
+(1995) 3653.
+
+[17] s.-b. liao, phys. rev. d53 (1996) 2020, and ibid. d56 (1997) 5008.
+
+[18] b. bergerho and j. reingruber, hep-th/9809251.
+
+[19] s.-b. liao and m. strickland, nucl. phys. b532 (1998) 753.
+
+[20] j. comellas and a. travesset, nucl. phys. b498 (1997) 539; j. commellas, ibid.
+
+b509 (1998) 662.
+
+[21] j. zinn-justin, quantum field theory and critical phenomena, 3rd ed. (clarendon,
+
+oxford, 1996).
+
+[22] j. alexandre, v. branchina and j. polonyi, phys. rev. d58 (1998) 016002.
+
+[23] j. alexandre and j. polonyi, renormalization group for the internal space, submitted
+
+to phys. rev., hep-th/9902144.
+
+23
+
+

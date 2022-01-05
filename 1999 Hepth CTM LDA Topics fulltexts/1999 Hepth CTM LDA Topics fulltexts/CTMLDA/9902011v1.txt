@@ -1,0 +1,3466 @@
+9
+9
+9
+1
+
+ 
+
+b
+e
+f
+1
+
+ 
+
+ 
+ 
+
+1
+v
+1
+1
+0
+2
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+berlin sfb288 preprint
+hep-th/9902011
+
+the ultraviolet behaviour of integrable quantum
+
+field theories, ane toda field theory
+
+a. fring, c. kor and b.j. schulz
+
+institut fur theoretische physik, freie universitat berlin
+
+arnimallee 14, d-14195 berlin, germany
+
+abstract
+
+we investigate the thermodynamic bethe ansatz (tba) equations for a
+system of particles which dynamically interacts via the scattering matrix
+of ane toda eld theory and whose statistical interaction is of a general
+haldane type. up to the rst leading order, we provide general approximated
+analytical expressions for the solutions of these equations from which we
+derive general formulae for the ultraviolet scaling functions for theories in
+which the underlying lie algebra is simply laced. for several explicit models
+we compare the quality of the approximated analytical solutions against the
+numerical solutions. we address the question of existence and uniqueness
+of the solutions of the tba-equations, derive precise error estimates and
+determine the rate of convergence for the applied numerical procedure. a
+general expression for the fourier transformed kernels of the tba-equations
+allows to derive the related y-systems and a reformulation of the equations
+into a universal form.
+
+pacs numbers: 11.10kk, 11.55.ds, 05.70.jk, 05.30.-d, 64.60.fr
+
+february 1999
+
+fring@physik.fu-berlin.de
+kor@physik.fu-berlin.de
+schulzb@physik.fu-berlin.de
+
+1 introduction
+
+more than twenty years ago yang and yang [1] introduced in a series of seminal
+papers a technique which allows to compute thermodynamic quantities for a system
+of bosons interacting dynamically via factorizable scattering. this method was
+generalized less than ten years ago by al.b. zamolodchikov [2] to a system of
+particles which interact dynamically in a relativistic manner through a scattering
+matrix which belongs to an integrable quantum eld theory. this latter approach,
+usually referred to as thermodynamic bethe ansatz (tba), has triggered numerous
+further investigations [3-13]. the reason for this activity is twofold, on one hand
+the tba serves as an interface between conformally invariant theories and massive
+integrable deformations of them and on the other hand it serves as a complementary
+approach to other methods.
+
+the tba-approach allows to extract various types of informations from a mas-
+sive integrable quantum eld theory once its scattering matrix is known. most
+easily one obtains the central charge c of the virasoro algebra of the underlying
+ultraviolet conformal eld theory, the conformal dimension  and the factor of
+proportionality of the perturbing operator, the vacuum expectation values of the
+energy-momentum tensor ht 
+i and other interesting quantities. thus, the tba
+provides a test laboratory in which certain conjectured scattering matrices may be
+probed for consistency.
+
+in addition, the tba is useful since it provides quantities which may be em-
+ployed in other contexts, like the computation of correlation functions. for instance
+the constant of proportionality, the dimension of the perturbing eld and ht 
+i may
+be used in a perturbative approach around the operator product expansion of a two
+point function within a conformal eld theory [14]. ht 
+i may also be used as an
+initial value for the recursive system between dierent n-particle form factors [14].
+in order to obtain data beyond c one has to investigate the behaviour of the
+scaling function c(r) (r is the inverse temperature times a mass scale), which may
+be viewed as the deformed central charge of the virasoro algebra. it will be the
+central aim of this manuscript to determine this function. certain statements in
+this context can be made in complete generality, but of course ultimately one has
+to specify some concrete models in order to be more explicit. an attractive choice
+for these models are ane toda eld theories [15], since they cover a huge class
+of theories due to their lie algebraic formulation and permit therefore to extract
+many universal features. ultimately they also allow a comparison against standard
+perturbation theory in the spirit of [16].
+
+the rst computation of such a scaling function was carried out in [3] for the
+scaling lee-yang model and scaling 3-state potts model (minimal a(1)
+2 -ane toda
+eld theory). meanwhile there exist several computations of this kind [5, 6, 7, 11].
+
+1
+
+the general behaviour one nds is
+
+c(r) = ce + f (r) +
+
+cnr2n(1)
+
+xn=1
+
+(1)
+
+where ce = c24h is the eective central charge, with c being the usual conformal
+anomaly, i.e. the central charge of the virasoro algebra, and h the lowest conformal
+dimension of the underlying conformal eld theory. the cn are some constants
+and typically f (r)  r2 or f (r)  r2 ln(r). however, in [12, 13] a quite dierent
+behaviour was observed, namely that f (r)  (constln(r))2, which was attributed
+therein to zero mode uctuations. it is this kind of behaviour which we nd for all
+ane toda eld theories (see equn. (81)). we like to stress that the constant const
+should be dierent from zero.
+
+in our investigation we slightly modify and generalize an approach which was
+introduced originally in [12]. we also include in our analysis the possibility that
+the statistical interaction is of general haldane type [17] and investigate the tba-
+equations adapted to this situation [18]. we investigate in detail the expressions
+for the tba-kernels and their fourier transformed versions, from which we obtain
+a universal form for the relevant tba-equations. we derive the related y-systems.
+furthermore, we address the question of the existence and uniqueness of the solu-
+tions of the tba equations, derive error estimates and the rate of convergence for
+the numerical procedure applied. our analytical considerations culminate with the
+derivation of a general expression for the scaling function valid for all ane toda
+eld theories in which the underlying lie algebra is simply laced (81) and which
+depends in a universal manner only on the rank of the algebra, its coxeter number
+and the eective coupling constant. we compare the general formulae against the
+numerical solutions for several explicit models, i.e. for the a(1)
+3 and
+(g(1)
+
+2 , d(3)
+our manuscript is organized as follows: in section 2 we recall the tba-equation
+for general haldane statistics and explain how it can be used to compute explicitly
+expressions for scaling functions. in section 3 we derive general expression for the
+approximated analytical expression for the solutions of the tba-equations and for
+the scaling functions c(r).
+in section 4 we concretely test our statements for a
+system involving the scattering matrix of ane toda eld theories. we compare
+the general approximated analytical expression with the numerical solution for some
+explicit models. in section 5 we address the question of the existence and uniqueness
+of the solutions of the tba equations and derive error estimates and the rate of
+convergence. we state our conclusion in section 6.
+
+4 )-ane toda eld theories.
+
+1 , a(1)
+
+2 , a(2)
+
+2 , a(1)
+
+2
+
+2 the tba-equations
+
+we consider a multi-particle system involving l dierent types of particles and
+assume that the two-particle scattering matrix sij() (as a function of the rapidity
+) together with the corresponding mass spectrum (mi is the mass of particle type
+i) have been determined. the l coupled tba-equations which describe such a
+system, based on the assumption that the dynamical interaction is characterized
+by the scattering matrices sij() and whose statistical interaction is governed by
+general haldane statistics [17] gij
+
+, read [18]
+
+rmi cosh  + ln(cid:16)1  eli(,r)(cid:17) =
+
+lxj=1
+
+(ij  lj) (, r)
+
+.
+
+(2)
+
+the scaling parameter r is the inverse temperature times a mass scale and we denote
+
+as usual the convolution of two functions f and g by (f  g)() := 1/(2)r df (
+
+)g() and the kernel by
+
+ij() := i
+
+d
+d
+
+ln sij()  2gij () = ij()  2gij ()
+
+.
+
+(3)
+
+rof particles inside the system over the densities of i
+
+we recall the important fact that the functions li(, r) are related to the ratio of
+densities i
+h of available states
+as li(, r) = ln(1 + i
+h). this implies that li(, r)  0, a property we will
+frequently appeal to. in addition we will make use of the fact that li(, r) is an
+even function in . once the system of coupled non-linear integral equations (2) is
+solved (usually this may only be achieved numerically) for the l unknown functions
+li(, r), one is in a position to determine the scaling function
+
+r/i
+
+c(r) =
+
+6r
+2
+
+lxi=1
+
+mi
+
+z0
+
+dli(, r) cosh 
+
+,
+
+(4)
+
+which may be viewed as the o-critical central charge of the virasoro algebra. we
+shall now adopt the method of [12] and instead of regarding the tba-equation as
+an integral equation, we transform it into an innite order dierential equation.
+this is possible with the sole assumption that the fourier transform of the function
+ij() can be expanded as a power series
+
+z
+
+dij()eik = 2
+
+xn=0
+(i)n(n)
+
+ij kn
+
+.
+
+(5)
+
+eij(k) =
+
+the bosonic and fermionic statistics correspond to gij = 0 and gij = ij, respectively.
+
+3
+
+then it is a simple consequence of the convolution theorem that the integral equa-
+tion (2) may also be written as an innite order dierential equation
+
+rmi cosh  + ln(cid:16)1  eli(,r)(cid:17) =
+
+lxj=1
+
+xn=0
+
+(n)
+ij l(n)
+
+j (, r)
+
+.
+
+(6)
+
+we introduced here the abbreviation l(n)
+(, r) = (d/d)nli(, r). the two alter-
+native formulations of the tba-equations serve dierent purposes. its variant in
+form of an integral equation (2) is most convenient for numerical studies, whereas
+the dierential equations (6) turn out to be useful for analytical considerations.
+
+i
+
+from a numerical point of view it is advantageous to make a change of variables
+and instead of the functions li(, r) use the so-called pseudo-energies i(, r) dened
+via the equations
+
+i(, r) := xj
+
+gijlj(, r)  ln(cid:16)1  eli(,r)(cid:17) .
+
+(7)
+
+for fermionic and bosonic type of statistics the formulation of the tba-equations
+in terms of pseudo-energies is most common. however, since (7) may obviously not
+be solved in general, it is more convenient to keep the tba-equations in terms of
+the li(, r) for general haldane type of statistics. alternatively we may relate all
+types of statistics to the fermionic one in the following way. considering a system
+which interacts statistically via gij, we can dene the quantity g
+ij = ij  gij and
+parameterize all lfunctions by li(, r) =: li(, r) = ln(cid:16)1 + ei(,r)(cid:17). then the
+
+tba-equations (2) may be rewritten as
+
+i(, r) = rmi cosh  
+
+lxj=1h(cid:16)(ij + 2g
+
+ij)  lj(cid:17) (, r)i .
+
+(8)
+
+it should be kept in mind that i(, r) (6= i(, r)!) is now a formal parameter
+and, except in the fermionic case, it is not related to the ratio of particle densities
+i
+r/i
+h in the characteristic way as a distribution function associated to the relevant
+statistics, i.e. i(, r) obtained as a solution of the equations (7).
+
+3 the ultraviolet limit
+
+we shall now analytically investigate the behaviour of the scaling function in the
+ultraviolet limit, i.e. r is going to zero. for this purpose we generalize the procedure
+of zamolodchikov [12], which leads to approximated analytical expressions. we
+attempt to keep the discussion model independent and free of a particular choice
+
+(f  g)() = 1/(2)2r dkef (k)eg(k)eik
+
+4
+
+of the statistical interaction as long as possible. introducing the quantity li() :=
+li(  ln(r/2), r) and performing the shift     ln(r/2), the tba-equations (6)
+acquire the form
+
+mie + ln(cid:16)1  e li()(cid:17) =
+
+lxj=1
+
+xn=0
+
+(n)
+ij
+
+l(n)
+
+j () .
+
+(9)
+
+here we have neglected the terms proportional to e2 ln(r/2), under the assumption
+that 2 ln(r/2)  . obviously the r-dependence has vanished, such that the li()
+are r-independent. the equation for the scaling function (4) becomes, under similar
+manipulations and the neglect of similar terms as in the derivation of (9),
+
+c(r) =
+
+6
+2
+
+lxi=1
+
+mi
+
+zln(r/2)
+
+d li()e
+
+.
+
+(10)
+
+in analogy to the procedure of [12], we consider now the so-called truncated
+
+scaling function
+
+c(r, r) =
+
+6
+2
+
+lxi=1
+
+mi
+
+zr
+
+d li()e
+
+,
+
+(11)
+
+which obviously coincides with c(r) for r = ln(r/2). at this point we make several
+assumptions:
+
+i) the functions li() obey the equations (9).
+
+ii) in the power series expansion (5) the coecients are symmetric in the particle
+
+type indices, i.e. (n)
+
+ij = (n)
+ji .
+
+iii) all odd coecients vanish in (5), i.e. (2n+1)
+
+ij
+
+= 0.
+
+iv) the asymptotic behaviour of the function li() and its derivatives read
+
+l(n)
+
+i
+
+() = 0
+
+e li() = 0
+
+lim
+
+lim
+
+
+for n  1 , 1  i  l
+for 1  i  l
+
+.
+
+,
+
+(12)
+
+(13)
+
+assumption ii) is guaranteed when the two-particle scattering matrix is parity
+invariant and the statistical interaction is symmetric in particle type, gij = gji.
+the requirement iii) puts of course constraints on the scattering matrices for given
+statistics, or vice versa.
+it will turn out in the next section, that for fermionic
+statistics it is satised by all scattering matrices of interest to us. the asymptotic
+behaviour iv) will be veried in retrospective, that is all known numerical solutions
+exhibit this kind of asymptotic behaviour.
+
+5
+
+under these assumptions the truncated scaling function may also be written as
+
+3
+2
+
+(2n)
+ij
+
+2
+
+c(r, r) =
+
+i (r) l(2nk)
+
+lxi,j=1  xn=1
+2n1xk=1
+lxi=1 l(1  e li(r)) +
+
+li(r) lj(r)!
+ln(1  e li(r)) + mier li(r)! . (14)
+6
+2
+n=1 xn/n2 +1/2 ln(x) ln(1x) denotes rogers dilogarithm (e.g. [19]).
+the equality (14) is most easily derived when considering the dierential equation
+which results from (11)
+
+
+here l(x) =p
+
+(1)k+1 l(k)
+li(r)
+
+j
+
+(r) + (0)
+ij
+
+c(r, r)
+
+r = 
+
+6
+2 er
+
+lxi=1
+
+mi li(r)
+
+.
+
+(15)
+
+one may now verify by direct substitution that (15) is solved by (14) when i)-iii)
+hold. the constant of integration is xed by the property c(r,) = 0, such that
+(14) is exact if iv) holds.
+
+3.1 the extreme limit
+
+one of the best known outcomes of the tba-analysis is the fact that in the extreme
+ultraviolet limit the scaling function becomes the eective central charge of the
+underlying ultraviolet conformal eld theory, i.e.
+in order to
+carry out this limit, we note that the assumptions (12) and (13) also imply
+
+limr0 c(r) = ce.
+
+lim
+r,0
+
+l(n)
+
+i
+
+(, r) = 0
+
+for n  1 , 1  i  l
+
+,
+
+(16)
+
+such that equations (6) become a set of coupled non-linear equations for the l
+constants li(0, 0)
+
+ln(cid:16)1  eli(0,0)(cid:17) =
+due to the fact that li(, r) is positive, we deduce that these equations admit
+physical solutions when (0)
+ij  0. for a given s-matrix this condition will restrict
+possible statistical interactions. with the help of the solutions of (17) we recover
+from (14) the well known formula for the extreme ultraviolet limit
+
+(0)
+ij lj(0, 0)
+
+lxj=1
+
+(17)
+
+.
+
+lim
+r0
+
+c(r) = ce =
+
+6
+2
+
+lxi=1
+
+l(1  eli(0,0))
+
+.
+
+(18)
+
+these equations have been analyzed extensively in the literature for various models
+[3, 5, 20, 10] and as we demonstrated, also hold for general (haldane) type of
+statistics.
+
+the identity
+
+xr0
+
+dt ln(1  et) = l(1  ex) + x/2 ln(1  ex) is useful in this context.
+
+6
+
+3.2 next leading order
+
+in order to keep the next leading order in the ultraviolet limit we proceed as follows:
+under the assumption that the symmetry property of li() still holds at this point of
+the derivation, we may neglect in (9) also the term e. assuming that li() is large
+and (12) holds, the tba-equation in the ultraviolet limit may be approximated by
+
+((2)
+ij
+
+lxj=1
+
+l(2)
+j () + (0)
+
+ij
+
+lj()) + e li() = 0 .
+
+(19)
+
+unfortunately this equation may not be solved analytically in its full generality.
+however, choosing now the statistics in such a way that the (0)
+ij = 0 we
+may solve (19). in most cases we shall be considering in the following, this condition
+implies that we have fermionic type of statistics. for this case the solution of (19)
+reads
+
+j=1 (0)
+
+li() = ln  sin2 (i (  i))
+
+i (2)
+
+! + ln
+
+i
+
+22
+
+2e2
+with i, i,ei,ei being the constants of integration and (2)
+
+ij . note that
+the assumption (2)
+6= 0 is not always guaranteed below. we will discard the second
+term in the following w.l.g. under the same assumptions the expression for the
+truncated scaling function (14) becomes
+
+i
+
+i =pl
+cos2(cid:16)ei(cid:16) ei(cid:17)(cid:17)
+ ,
+i =pl
+
+j=1 (2)
+
+i (2)
+
+i
+
+(20)
+
+c(r, r) = l +
+
+3
+2
+
+lxi=1(cid:18)(2)
+
+i (cid:16) l(1)
+
+i (r)(cid:17)2
+
+ 2e li(r)(cid:19) .
+
+substitution of the solution (20) into (21) yields
+
+c(r, r) = l 
+
+12
+2
+
+lxi=1
+
+(2)
+i 2
+i
+
+.
+
+(21)
+
+(22)
+
+notice that this expression for the truncated eective central charge is independent
+of the constants i and r. we use the latter property to argue that in fact the r.h.s.
+of (22) corresponds to the scaling function c(r). invoking now also the property
+li() = li(2 ln(r/2)  ) we obtain the additional relations
+
+i =
+
+n
+
+2(i  ln(r/2))
+
+,
+
+(23)
+
+with n being an odd integer, which we choose to be one. at the moment we do not
+have any further argument at hand in order to x the remaining constant. therefore
+we have
+
+li(, r) = ln  cos2 (i)
+
+22
+
+i (2)
+
+i
+
+!
+
+(24)
+
+7
+
+l(1)
+i (, r) = 2i tan(i)
+l(2)
+i / cos2(i)
+i (, r) = 22
+l(3)
+i tan(i)/ cos2(i)
+i (, r) = 43
+l(n)
+.
+
+(, r)  n
+
+i
+
+i
+
+(25)
+
+(26)
+
+(27)
+
+(28)
+
+using the fact that i tends to zero for small r, the equations (25)-(28) demonstrate
+the consistency with the assumption that the derivatives of li(, r) with respect to
+ are negligible, i.e. equation (16). closer inspection shows that for given r the
+series build from the l(n)
+(, r) starts to diverge at a certain value of n. since (24)
+is not exact this does not pose any problem, but one should be aware of it. the
+scaling function becomes in this approximation
+
+i
+
+c(r) = l  3
+
+lxi=1
+
+(2)
+i
+
+(i  ln(r/2))2
+
+.
+
+(29)
+
+as already pointed out there does not seem to be any argument in this approach
+which allows to x the constant i. however, we will present below a natural guess
+and also resort to numerical data to x it.
+
+in order to perform more concrete computations one has to specify a particular
+
+model at this point.
+
+4 ane toda field theory
+
+ane toda eld theories [15] constitute a huge, important and well studied class
+of relativistically invariant integrable models in 1+1 dimensions. the exact two-
+particle scattering matrices of all ane toda eld theories with real coupling con-
+stant were constructed on the base of the bootstrap principle [21] and its generalized
+version [25]. various cases have been checked perturbatively. the theories exhibit
+an entirely dierent behaviour depending on whether they are self-dual or not. here
+duality has a double meaning, on one hand it refers to the invariance of the algebra
+under the interchange of roots and co-roots (i.e. a(1)
+8 ) and
+on the other hand it refers to the strong-weak duality in the coupling constant.
+
+n , e(1)
+
+n , a(2)
+
+6 , e(1)
+
+7 , e(1)
+
+2n , d(1)
+
+4.1 the s-matrix
+
+4.1.1 simply laced lie algebras
+
+we recall now some well known facts about the two particle scattering matrix and
+present some new features which will be important for our analysis below. for
+theories related to simply laced lie algebras the two particle s-matrices [21, 22, 23]
+
+8
+
+involving the r dierent types of particles may be furnished into the universal form
+
+sij () =
+
+hyq=1(2q 
+
+c(i) + c(j)
+
+2
+
+2 iqj
+
+) 1
+
+
+
+,
+
+1  i, j  r = rankg .
+
+(30)
+
+the building blocks {x} may be expressed in terms of hyperbolic functions, albeit
+it will be most convenient for our purposes to use their integral representation
+
+{x} = exp
+
+z0
+
+dt
+
+t sinh t
+
+i!
+fx,b(t) sinh  t
+
+with
+
+fx,b(t) = 8 sinh(cid:18)tb
+
+2h(cid:19) sinh(cid:18) t
+
+2h
+
+(2  b)(cid:19) sinh(cid:18) t
+
+h
+
+(h  x)(cid:19) .
+
+(31)
+
+(32)
+
+we adopt here the notations of [23] and denote the coxeter number by h, funda-
+mental weights by i, the colour values related to the bicolouration of the dynkin
+diagram by c(i) and a simple root i times c(i) by i. the coxeter element is chosen
+
+to be  = +, where the elements  = qi i are introduced, with i being
+a weyl reections and  the set of simple roots with colour values c(i) = 1,
+respectively. the eective coupling constant b() = (2/2)/(1 + 2/4) depends
+monotonically on the coupling constant  and takes values between 0 and 2.
+
+many of the properties of (30) are very well documented in the literature [21,
+22, 23] and we will therefore only concentrate on those which are relevant for our
+investigations. one of the remarkable features is the strong-weak duality in the
+coupling constant , which is a particular example for one of the dualities which are
+currently ubiquitous in string theoretical investigations. whilst in the latter context
+duality serves as a powerful principle, we will frequently employ it as a simple
+consistency check on various expressions which arise during our computations. the
+strong-weak duality manifests itself by the fact that each individual building block,
+and consequently the whole s-matrix, possesses the symmetry b  2  b. a
+further check, which we wish to pursue from time to time for consistency reasons,
+is taking the coupling constant to zero, i.e. b(0) = 0 or equivalently b() = 2,
+such that we obtain a free theory with sij() = 1. also we want to compare with
+some known results for the so-called minimal part of the scattering matrix (30),
+which is formally obtained by taking the limit b  i.
+it will be important below to recall that the block {1} only occurs (with power
+one) in the scattering matrix between two particles of the same type, i.e. in sii(),
+
+ this part satises by itself the bootstrap equations and the additional factor is of a cdd-
+
+nature, meaning that is does not produce any relevant poles inside the physical sheet.
+
+ for the blocks {x} in form of hyperbolic functions this limit is trivial. for the integral
+representation (31 ) it requires a bit more eort, but is easily veried with the help of the riemann-
+lebesgue theorem (if g(x)  l1(,) then limtr 
+
+ g(x)eitxdx = 0).
+
+9
+
+which implies for the s-matrices (30) sij(0) = (1)ij . a further relation which
+exhibits the occurrence of particular blocks is
+
+sij () = {2}iij
+
+
+
+h2yq=2(2q 
+
+c(i) + c(j)
+
+2
+
+2 iqj
+
+) 1
+
+
+
+,
+
+c(i) 6= c(j) .
+
+(33)
+
+here iij is the incidence matrix of the lie algebraic dynkin diagram, i.e. twice the
+unit matrix minus the cartan matrix k. since relation (33) will be important for
+our analysis and does not seem to appear in the literature, we will briey prove it
+here. we make use of the interrelation between the incidence matrix and particular
+elements of the weyl group and the action of these elements on simple roots [24, 23]
+
+rxj=1
+
+iijj = ( + +)i
+
+and
+
+c(i)j = (c(j)c(i))/2j .
+
+(34)
+
+taking the inner product of the rst equation in (34) with j and the subsequent
+application of the second relation on the r.h.s. yields
+
+iij = i  c(j)j + i  c(j)j = i  j  i  c(j)j .
+
+(35)
+
+therefore, by the orthogonality of fundamental weights and simple roots and the
+symmetry in i and j, it follows directly that
+
+i  1j = iij ,
+noting further that {x} = {2h  x}1
+iij from the product in (30) and obtain (33).
+
+c(i) 6= c(j)
+
+.
+
+(36)
+
+ , we may extract the block {2} with power
+
+in the course of our argumentation we will also employ the identity
+
+sij(cid:18) 
+
+i
+
+h(cid:19) sij(cid:18) +
+
+i
+
+h(cid:19) =
+
+ryl=1
+
+sil ()ilj
+
+ 6= 0 ,
+
+(37)
+
+which was derived rst in [9].
+
+4.1.2 non-simply laced lie algebras
+
+once one turns to the consideration of ane toda eld theories related to non-
+simply laced lie algebras many of the universal features which one observes for
+simply laced lie algebras cease to be valid. for instance for the simply laced lie
+algebras it is known that the singularities of (30) inside the physical sheet do not
+depend on the coupling constant and remarkably all masses renormalise with an
+overall factor. these latter behaviours dramatically change once the related lie
+algebras are taken to be non-simply laced (except a(2)
+2n which is also self-dual).
+in fact in these cases one can not associate anymore a unique lie algebra to the
+
+10
+
+quantum eld theory, but a dual pair related to each other by the interchange of
+roots and co-roots. general formulae similar to (30), which are valid for all non-
+simply lie laced algebras have not been constructed yet. however, one can still
+construct s-matrices [25]
+
+[x, y]
+
+sij () =yx,y
+z0
+
+t sinh t
+
+dt
+
+(38)
+
+(39)
+
+out of some universal building blocks which generalize (31)
+
+[x, y] = exp
+
+gx,y,b(t) sinh  t
+
+i! .
+
+in distinction to the simply laced case, the variable x may now become non-integer,
+y is 0, 1/2, 1 or 1/4 and
+gx,y,b(t) = 8 sinh(cid:18) tb
+
+(1  2y)(cid:19) sinh(cid:18) t
+
+(2  b)(cid:19) sinh(cid:18) t
+
+(h  x)(cid:19) .
+
+(40)
+
+2h
+
+2h
+
+h
+
+in contrast to the simply laced case there is now not such universal control over the
+set in which x and y take their values. the coxeter number h has been replaced
+by a oating coxeter number  h, in the sense that it equals the coxeter number
+of one of the two dual algebras in the weak limit and the other in the strong limit.
+the singularities of (38) now depend on the coupling constant which leads to a
+modication of the bootstrap as explained in [25]. the shift of the masses resulting
+from the renormalization procedure can not be compensated anymore by an overall
+factor.
+
+4.2 the tba-kernels
+
+given the s-matrices we are now in a position to compute the relevant quantities for
+our analysis, i.e. the kernels appearing in the tba-equations (2) and the fourier
+coecients in equation (5).
+
+4.2.1 simply laced lie algebras
+
+taking the logarithmic derivative of the phase of the scattering matrix (30) the
+tba-kernels (without the statistics factor) are easily computed to
+
+ij() = 
+
+1
+2
+
+hxq=1
+(i  qj)2q(c(i)+c(j))/2()
+
+,
+
+where
+
+x() = i
+
+d
+d
+
+! ,
+fx,b(t) cos  t
+= x1() + x+1()  x+b1()  xb+1() .
+
+ln{x} =
+
+z0
+
+sinh t
+
+1
+
+
+dt
+
+11
+
+(41)
+
+(42)
+
+(43)
+
+we introduced the function x() = sin(x/h)/(cos(x/h)cosh ) and set 0() =
+0. depending on the context either the variant (42) or (43) turn out to be more
+convenient. the fourier transform is most easily evaluated when we use the integral
+representation (42) for each block
+
+ fx,b(k)
+
+sinh k
+
+ex(k) = 
+
+= ex1(k) +ex+1(k) ex+b1(k) exb+1(k),
+
+where ex(k) = 2 sinh[(x/h  1)k]/ sinh(k). therefore we have
+hxq=1
+(i  q+(c(j)1)/2j)e2q+(c(j)c(i))/21(k) .
+
+eij(k) = 
+
+1
+2
+
+(44)
+
+(45)
+
+(46)
+
+this means, that just like the s-matrix itself, we may express the tba-kernels
+and their fourier transformed versions in terms of general blocks. the dierence
+is that now instead of the powers of the blocks their pre-factors are determined
+by orbits of the coxeter element. notice also that the property {x} = {2h + x}
+guaranteed that in (30) the products qh
+q=0 are equivalent. since now
+ex(k) 6= e2h+x(k), we have to take the sum over the appropriate range. this is the
+
+reason why q is shifted in (46). remarkably for the fourier transformed kernels it
+is possible to evaluate the whole sum over q in (46) in an indirect way. we obtain
+the universal form
+
+q=1 and qh1
+
+rxl=1(cid:18)i  2 cosh
+
+
+h
+
+il (cid:18)i  2 cosh
+k(cid:19)1
+
+
+h
+
+k(1  b)(cid:19)lj
+
+.
+
+(47)
+
+eij(k) = 2
+
+a similar matrix identity has turned out to be extremely useful in the investigation
+[4] of the tba-kernel for the minimal part of the scattering matrix (30). equation
+(47) coincides with an identity quoted in [13] once the roaming parameter therein
+is chosen in such the way that the resonance scattering matrices take on the form
+of (30). since the identity (47) is by no means obvious, in particular with regard
+to (46), we will now provide a rigourous proof of it. essentially we have to use
+the fourier transformed version of the relation (37) for this purpose. shifting the
+fourier integral into the complex plane yields
+
+lim
+
+ic
+
+
+
+dij()eik = eij(k)  pz dij(cid:18)  i
+
+
+
+h(cid:19) eik(i/h)
+
+= 2ijebk/h  iijek/h .
+
+(48)
+
+(49)
+
+here the contours c
+ are depicted in gure 1. p denotes the cauchy principal value.
+the poles inside the contours are collected by considering (41) and (43). obviously
+coupling constant dependent poles may only result from 1() and 2h1(), whilst
+
+12
+
+poles directly on the contours at  = i/h may only originate from 2() and
+2h2(). from the statements made in subsection 4.1.1., it follows that the former
+blocks may only occur when i = j and from equation (33) we infer that the pre-factor
+of 2() is iij. the relevant residues are computed easily and by noting further that
+the singularities directly on the contour count half, we have established (49).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+im()
+
+/h
+
+
+
+b
+h
+
+
+
+ b
+
+h
+
+
+/h
+
+
+
+
+
+c+
+
+
+
+
+
+
+
+
+
+
+c
+
+
+
+
+
+re()
+
+figure 1: the contours c
+from 2() and the open circles  to poles of 1().
+
+ in the complex -plane. the bullets  belong to poles resulting
+
+acting now with i times the logarithmic derivative on the identity (37), mul-
+
+tiplying with exp(ik) and integrating thereafter with respect to  we obtain
+
+pz d(cid:16)ij ( + i/h) + ij (  i/h)(cid:17) eik =
+
+rxl=1
+
+iilelj(k) .
+
+(50)
+
+on the other hand the l.h.s. of (50) may be computed alternatively from the right
+hand sides of (48) and (49), such that we obtain
+
+rxl=1
+
+iilelj(k) = 2eij(k) cosh
+
+and therefore (47).
+
+
+h
+
+k + 2iij  4ij cosh
+
+
+h
+
+k(1  b) ,
+
+(51)
+
+when we take the limit b  i, the coupling constant dependent poles move
+outside the contours c
+ , such that the term involving b will be absent in (51) and
+we recover the result of [4]. the weak limit b  0 turns equ. (51) into a trivial
+identity by noting that with (47) limb0eij(k) = 2ij.
+
+13
+
+as the last quantity which will be important for our considerations we have to
+
+compute the power series expansion of eij(k). for this purpose we make use of the
+
+identity
+
+sinh(xt)
+
+22n+1
+
+(52)
+
+sinh t
+
+(2n + 1)!
+
+=
+
+xn=0
+
+b2n+1(cid:18)1 + x
+
+2 (cid:19) t2n ,
+
+which follows directly from the generating function for the bernoulli polynomials
+bn(x) of degree n (e.g.
+[26]). we may then expand each building block of the
+fourier transformed tba-kernel (44) as
+
+ex(k) = 2
+
+= 2
+
+(2n)
+x k2n
+
+xn=0
+xn=0(cid:16) (2n)
+
+x+1 + (2n)
+
+x1   (2n)
+
+x+1b  (2n)
+
+x1+b(cid:17) k2n
+
+(53)
+
+(54)
+
+where the coecients are  (2n)
+obtain for the fourier coecients in equation (5)
+
+x = 2(2)2n/(2n + 1)!b2n+1(x/(2h)). therefore we
+
+(0)
+ij = ijgij
+
+and (2n)
+
+ij =
+
+(1)n+1
+
+2
+
+hxq=1
+(iq+(c(j)1)/2j)(2n)
+
+2q+(c(j)c(i))/21
+
+(55)
+
+for n = 1, 2, . . . the second order coecient is particularly important with regard to
+our approximated analytical solution presented in section 3.2 and we will therefore
+analyze it a bit further. from (54) we obtain (2)
+x = 2b(b  2)(h  x)/h3, such
+that
+
+(2)
+ij =
+
+1
+2h3
+
+hxq=1
+(i  q+(c(j)1)/2j)2b(b  2)(h  2q  (c(j)  c(i))/2 + 1) . (56)
+
+we may evaluate the sum over q by noting further that
+
+i =
+
+1
+h
+
+hxq=1
+
+qq+(c(i)1)/2i
+
+and
+
+hxq=1
+
+i  qj = 0 .
+
+(57)
+
+the rst identity follows by inverting the relation i = (1  1)(1c(i))/2i [23]
+and the second by computing the geometric series. therefore (56) becomes
+
+(2)
+ij =
+
+2b(2  b)
+
+h2
+
+i  j =
+
+2b(2  b)
+
+h2
+
+k 1
+ij
+
+.
+
+(58)
+
+the latter formula follows immediately by recalling that i = pr
+
+ij j. it has
+the virtue that it is directly applicable since it involves only quantities which may
+be eortlessly extracted from lie algebraic tables. at last we may compute the
+
+j=1 k 1
+
+14
+
+quantity (2)
+(20). obviously we obtain from (58)
+
+j=1 (2)
+
+i = pr
+
+ij which occurs in our approximated analytical approach
+
+(2)
+i =
+
+2b(2  b)
+
+h2
+
+i   ,
+
+where  = pr
+
+i=1 i = 1/2p>0  is the weyl vector. the inner product of i 
+
+ may be related to a universal quantity, namely the index of the fundamental
+representation i
+
+xi =
+
+such that we nally obtain
+
+dimi
+2dimg
+
+(2 + i)  i ,
+  2xidimg
+ii ! .
+dimi  k 1
+
+(2)
+i =
+
+2b(2  b)
+
+2h2
+
+(59)
+
+(60)
+
+(61)
+
+(63)
+
+(64)
+
+(65)
+
+(66)
+
+hence we are also able to evaluate (2)
+further and also compute
+2b(2  b)
+
+2 =
+
+(2)
+i =
+
+i
+
+h2
+
+rxi=1
+
+in a universal manner. we may proceed
+
+2b(2  b)qdimg
+
+24h2
+
+=
+
+2b(2  b)r(h + 1)
+
+12h
+
+.
+
+(62)
+
+here we used the freudenthal-devries strange formula 2 = qdimg/24 (see e.g.
+[27]), the fact that for simply laced algebras the eigenvalue of the quadratic casimir
+operator is q = 2h and that we have dimg= r(h + 1) for the dimension of the lie
+algebra g.
+
+4.2.2 non-simply laced lie algebras
+
+for the non-simply laced cases we may proceed similarly, just now we are lacking the
+universality of the previous subsection. using the generalized blocks (39) instead
+of (31) we derive
+
+x,y() = i
+
+d
+d
+
+ln [x, y] = 
+
+1
+
+
+z0
+
+dt
+
+sinh t
+
+! ,
+gx,y,b(t) cos t
+
+= xyb1() + x+yb+1()  x+yb+b1()  xybb+1() .
+
+the fourier transformed of x,y() reads
+
+ex,y(k) = 
+
+= 2
+
+ gx,y,b(k)
+
+sinh(k)
+
+(2n)
+x,y k2n
+
+xn=0
+xn=0(cid:16) (2n)
+
+= 2
+
+x+1+yb + (2n)
+
+x1yb  (2n)
+
+x+1byb   (2n)
+
+x1+b+yb(cid:17) k2n . (67)
+
+15
+
+in particular
+
+(2)
+
+x,y =
+
+b2(b  2)(h  x)(1  2y)
+
+h 3
+
+(68)
+
+is important for our purposes.
+
+4.3 the tba-equations
+
+having computed the tba-kernels, it appears at rst sight that, apart from a
+simple substitution, there is not much more to be said about the form of the tba-
+equations. however, zamolodchikov observed in [4] that once the fourier trans-
+formed tba-kernels admit a certain representation (in our situation this is (47)),
+the tba-equations may be cast into a very universal form.
+
+we will exploit now the universal features derived in the preceding section.
+in order to keep the notation simple, we commence by choosing the statistical
+interaction to be fermionic at rst. the generalization to generic haldane statistics
+is straightforward thereafter. first of all, we fourier transform the tba-equations
+in the variant (8)
+
+2ei(k, r) =
+
+rxj=1eij(k)elj(k, r) .
+
+for the reason that the fourier transforms of rmi cosh  and i(, r) do not exist
+separately, we introduced here the quantity i(, r) = rmi cosh  i(, r). this
+should be kept in mind before transforming back to the original variables. substi-
+tuting now the general form of eij(k) from (47) into equation (69) and taking the
+
+inverse fourier transformation thereafter yields
+
+i(, r) =
+
+rxj=1(cid:16)iij(j  lj)  h(cid:17) (, r) + (li  h,b)(, r) .
+
+(69)
+
+(70)
+
+(71)
+
+here we introduced the universal kernels
+
+h() =
+
+h
+
+2 cosh h
+2 
+
+and h,b() =
+
+2h sin 
+2 b cosh h
+2 
+cosh h  cos b
+
+.
+
+neglecting the coupling constant dependent term involving h,b(), i.e.
+taking
+the limit b  i, the identities (70) coincide precisely with the equations (7) in
+[4]. this is to be expected since the latter equations describes the system which
+dynamically interacts via the minimal part of (30). note further that the strong-
+weak duality is still preserved, i.e. h,b() = h,2b().
+
+we may now easily derive the generalized form of (70) for generic types of
+haldane statistics. recalling that for the derivation of (8) all the lfunctions
+were parameterized by li(, r) = ln(cid:16)1 + ei(,r)(cid:17) and the statistical interaction by
+
+16
+
+gij = ij  g
+
+ij, the fourier transformation reads
+
+in the same manner as for the fermionic case we derive
+
+ei(k, r) =
+rxj=1"iij(j 
+rxl=1
+
+i(, r) =
+
+rxj=1hg
+
+ij elj(k, r) +eij(k)elj(k, r)/2i .
+
+(72)
+
+(jl + g
+
+jl)ll)  h + g
+
+ijlj# (, r) + (li h,b)(, r) . (73)
+
+of course we recover (70) from (73) for g
+
+ij = 0.
+
+as a nal consistency check we carry out the limit to the free theory, that is
+
+b  0. we have
+
+lim
+b0
+
+b0
+
+(li  h,b)(, r) = lim
+z
+= li(, r) .
+
+dt lim
+b0
+
+=
+
+1
+2
+
+z
+
+d
+
+hb cosh h
+
+2 
+
+cosh h  1 + 2b2/2li(  , r) (74)
+t2 + b2li(cid:18) 
+
+, r(cid:19)
+
+arsinh
+
+t
+2
+
+(75)
+
+2
+h
+
+b
+
+1
+
+
+(76)
+
+in the last equality we employed the well known representation for the delta function
+(x) = lim0 /(2 + x2). this means that in the extreme weak limit the tba-
+equations (73) is solved by
+
+i(, r) = rmi cosh  
+
+(ij + g
+
+ij)lj(, r) .
+
+rxj=1
+
+(77)
+
+that (77) are indeed the tba-equations may also be seen by taking this limes
+directly in (8) and noting that limb0 ij() = ij(). in this way we have switched
+o the dynamical interaction and obtained a system which interacts purely by
+statistics. in particular for fermionic type of statistics (g
+ij = ij
+these equations describe r free bosons or r free fermions, respectively. taking
+g
+ij to be diagonal, the equations (77) are equivalent to a system whose s-matrix
+corresponds to the one of the calogero-sutherland model and whose statistical
+interaction is taken to be of fermionic type [18].
+
+ij = 0) or for g
+
+we nish this subsection by noting that pj iijmj = 2mi cos(/h) [28], from
+
+which follows
+
+rmi cosh  = r
+
+iijmj (coshh) (, r) ,
+
+(78)
+
+rxj=1
+
+such that the entire r-dependence and the mass spectrum in (70) and (73) may be
+eliminated. we obtain
+
+i(, r) =
+
+rxj=1"iij(j +
+
+rxl=1
+
+(jl + g
+
+jl)ll)  h  g
+
+ijlj# (, r)  (li  h,b)(, r)
+
+(79)
+
+17
+
+instead. one may solve these equations and re-introduce the r-dependence there-
+after by means of the asymptotic behaviour. this is similar to the situation in
+the next subsection, in which the equations are even further simplied to a set of
+functional equations.
+
+4.4 y-systems
+
+h(cid:17) yi(cid:16) i
+
+h(cid:17) =h1 + yi(cid:16) + i
+()(cid:17)iji(cid:18)h1 + yj(cid:16)+ i
+
+j
+
+an alternative analytical approach is provided by exploiting properties of what is
+often referred to as y-systems [4]. in order to derive these equations, we invoke
+once more the convolution theorem on the convolution in equation (8) and compute
+
+thereafter the sum of (8) at  + i/h and  i/h minuspj iij times (8).using once
+more the fact that pj iijmj = 2mi cos(/h), the terms involving mi cancel. em-
+ploying thereafter the identity (51) and transforming back into the original space
+we obtain, upon the introduction of the new variable yi () = exp(i()),
+h (1  b)(cid:17)i
+yi(cid:16)+ i
+[1 + yl ()]ijl(cid:19)g
+rqj=1(cid:16)1 + y 1
+
+for fermionic statistics, i.e. g
+ij = 0 we recover the systems stated in [12] (h = 2) and
+[13], when we chose the roaming parameter therein such that s() equals (30).
+the strong-weak duality is evidently still preserved. the y-systems corresponding
+to the minimal theories are obtained by taking the limit b  i, by noting
+that lim yi () = 0. the latter limes follows from the tba-equations together
+with the explicit form of the tba-kernel, such that for large  we have i() 
+rmi cosh . for fermionic type of statistics the functional equations obtained in this
+limit coincide with those found in [4]. as is to be expected from (77), we obtain for
+g
+ij = 0 (for h = 0 this holds in general) in the extremely weak coupling limit
+
+h (1  b)(cid:17)ih1 + yi(cid:16)  i
+h(cid:17)ih1 + yj(cid:16) i
+
+h(cid:17)i rql=1
+
+ij
+
+.
+
+yi (+2i) = yi () ,
+
+b  0, 2 .
+
+(80)
+
+to derive these periodicities directly from the functional equations is rather cum-
+bersome once the algebras are more complicated and we do not have a general case
+independent proof. this is similar to the situation in which the system involved
+is the minimal part of (30) [4]. we leave it for future investigations to exploit the
+functional equations further.
+
+4.5 scaling functions
+
+as already stated, solving the tba-equations and the subsequent evaluation of
+(4) leads to expressions of the scaling function c(r) with the inverse temperature r
+times a mass scale as the scaling parameter. we may carry out this task numerically.
+
+18
+
+alternatively, assembling our results from section 3 and the analysis of the tba-
+kernel, we can write down a universal formula for the scaling function of the system
+in which the statistical interaction is of fermionic type and in which the dynamical
+interaction is governed by the scattering matrix of ane toda eld theories related
+to simply laced lie algebras, up to the rst leading order in the ultraviolet regime.
+from (29) and (62) it follows under the assumption that the constants i are the
+same for all particle types
+
+cg(r) = rankg 1 
+
+2b(2  b)(h + 1)
+
+4h(  ln(r/2))2 ! .
+
+(81)
+
+we will now compute step by step several scaling functions for ane toda eld
+theories in which we specify some concrete algebras. we gradually increase the
+complexity of the models and focus on dierent aspects.
+
+4.5.1 a(1)
+
+1 -atft (sinh-gordon)
+
+the sinh-gordon theory is one of the simplest quantum eld theories in 1+1 di-
+mensions and therefore the ideal starting point to concretely test general statements
+made in this context. semi-classical investigations of a tba-type nature concern-
+ing this model may already be found in [29]. the model contains only one stable
+particle which does not fuse and its scattering matrix simply reads
+
+ssg () = {1} =
+
+tanh 1
+
+tanh 1
+
+2(cid:16)  i
+2 b(cid:17)
+2(cid:16) + i
+2 b(cid:17)
+
+.
+
+(82)
+
+for a system whose dynamics is described by this s-matrix and whose statistical
+interaction is of general haldane type, the tba-equation (2) reads
+
+rm cosh  + ln(1  el(,r)) =
+
+1
+2
+
+z
+
+dsg () l(  , r)  gl(, r)
+
+(83)
+
+with
+
+sg () = 2,b() =
+
+4 sin(b/2) cosh 
+cosh 2  cos b
+
+.
+
+(84)
+
+we may convince ourselves that (83) can be obtained from (2) and the direct com-
+putation of the kernel as well as from (73) by noting that the incidence matrix of
+course vanishes for the a(1)
+1
+
+related dynkin diagram.
+
+the weak coupling limit b  0 is read o from (77)
+
+rm cosh  + ln(1  el(,r)) + gl(, r) = l(, r)
+
+.
+
+(85)
+
+19
+
+the other limes which may be computed in the standard way is the limes r  0,
+
+leading to the constant tba-equation
+
+ln(cid:16)1  el(0,0)(cid:17) = (1  g)l(0, 0)
+
+.
+
+(86)
+
+this is obviously compatible with equation (85) and indicates that the extreme
+ultraviolet behaviour is independent of the dynamics and is purely governed by the
+statistics. in particular we obtain for fermionic type of statistics l(0, 0)   as
+a solution of (86), such that with (18) the eective central charge turns out to be
+one. in general (86) yields 0  ce  1 for g  1. we also observe that due to the
+fact that l(0, 0)  0, equation (86) does not possess any physical solutions at all
+for g < 1, which means in particular that there are no solutions for the statistical
+interaction of bosonic type.
+
+  g=1
+  g=1.01
+  g=1.05
+  g=1.2
+  g=1.5
+  g=2
+  g=3.5 
+
+4
+
+3
+
+l(g)
+
+2
+
+1
+
+0
+
+-10
+
+0
+
+g
+
+10
+
+20
+
+figure 2: numerical solution for the sinh-gordon related tba-equations for dierent
+statistical interactions g and xed values of the eective coupling b = 0.4 and r = 105.
+we shall now turn to the full solution of the tba-equation (83). first of all
+we solve this equation numerically. for g  1 we observe in gure 2 the typical
+behaviour, known from the analysis of the minimal part of the s-matrices [3], that
+the l-function is essentially constant between 2 ln(r/2). as expected from the
+previous discussion, also the numerical analysis does not yield any solution for g < 1.
+for a more detailed discussion concerning the nature of the numerical procedure
+and in particular the question of convergence and uniqueness of the solutions we
+refer to section 5.
+
+20
+
+we shall now compare our numerical results with our analytic approximations
+of section 3. the general formulae (44) or (47) yields for the fourier transform of
+the tba-kernel
+
+esg(k) =
+
+(a)
+
+5
+
+4
+
+3
+
+l(g)
+
+2
+
+2 (cid:17)
+2 cosh(cid:16) k
+2  bk
+cosh(cid:16) k
+2 (cid:17)
+
+ 2g
+
+.
+
+(87)
+
+  r=10-6
+  r=10-5
+  r=10-4
+  r=10-3
+  r=10-2
+  r=10-1
+
+1
+
+0
+
+5
+
+4
+
+-15
+
+-10
+
+-5
+
+(b)
+
+3
+
+l(g)
+
+2
+
+1
+
+0
+
+-15
+
+-10
+
+-5
+
+5
+
+10
+
+15
+
+  r=10-6
+  r=10-5
+  r=10-4
+  r=10-3
+  r=10-2
+  r=10-1
+
+5
+
+10
+
+15
+
+0
+
+g
+
+0
+
+g
+
+figure 3: numerical solution (a) versus approximated analytical solution (b) for the sinh-
+gordon related tba-equation for various values of r and xed eective coupling b = 0.4.
+
+for the reasons mentioned in section 3.2, we will now restrict ourselves to
+
+fermionic type of statistics, such that
+
+(0) = 0
+
+and
+
+(2) =
+
+2b(2  b)
+
+8
+
+.
+
+(88)
+
+we obtain a fairly good agreement between the numerical solution of (2) for the
+function l(, r) and the approximated analytical solution (24), if we choose the
+
+21
+
+constants in (20) to be
+
+such that
+
+ = ln(b(2  b)21+b(2b))
+
+and
+
+ =
+
+
+
+2(  ln(r/2))
+
+,
+
+(89)
+
+l(, r) = ln(cid:16)cos2 ()(cid:17)  ln[b(2  b)(/2)2] .
+
+(90)
+
+figure 3 shows that the r dependence of l(, r) is captured very well by the
+approximated analytical solution (90). as expected from the nature of the assump-
+tions made in the derivation, (24) becomes relatively poor when l(, r) is small.
+with regard to the aim of these computations, that is the evaluation of the scaling
+function c(r), precisely in this region the error is negligible as is seen from (4). no-
+tice also that the assumptions (16) are justied in retrospective by the numerical
+solutions. the quality of the approximation may also be seen by comparing tables
+1-3 for large values of l(, r).
+
+3.0
+
+2.5
+
+2.0
+
+c(r)
+
+1.5
+
+1.0
+
+0.5
+
+0.0
+
+  a
+ numerical
+1
+  a
+ analytical
+1
+  a
+ numerical
+2
+  a
+ analytical 
+2
+  a
+ numerical
+3
+  a
+ analytical 
+3
+
+1e-5
+
+1e-4
+
+1e-3
+
+0.01
+
+r
+
+0.1
+
+1
+
+figure 4: numerical solution versus approximated analytical solution for the scaling
+function of the a(1)
+3 -ane toda eld theory related tba-systems with
+xed eective coupling b = 0.4.
+
+and a(1)
+
+1 , a(1)
+
+2
+
+finally we compute the scaling function, which acquires in this approximation
+
+the form
+
+csg(r) = 1 
+
+3 2b(2  b)
+8(  ln(r/2))2
+
+.
+
+(91)
+
+also this function is well approximated in the ultraviolet regime (r < 1) as is seen
+from gure 4 and the tables 1-3.
+
+22
+
+r
+101
+102
+103
+104
+105
+106
+
+l(0, r)/n. l(0, r)/a.
+
+1.845
+2.957
+3.722
+4.286
+4.740
+5.153
+
+2.135
+3.238
+3.945
+4.467
+4.880
+5.222
+
+c(r)/ n.
+0.8767
+0.9648
+0.9845
+0.9914
+0.9949
+0.9975
+
+c(r)/a.
+0.9281
+0.9762
+0.9882
+0.9930
+0.9954
+0.9967
+
+table 1: numerical solution (n.) versus approximated analytical solution (a.) for the
+sinh-gordon related tba-system with xed eective coupling b = 0.1.
+
+r
+101
+102
+103
+104
+105
+106
+
+l(0)/n. l(0)/a.
+1.249
+1.478
+2.220
+2.307
+2.915
+2.870
+3.361
+3.387
+3.754
+3.771
+4.094
+4.082
+
+c(r)/ n.
+0.8311
+0.9339
+0.9654
+0.9789
+0.9857
+0.9897
+
+c(r)/a.
+0.8257
+0.9340
+0.9655
+0.9789
+0.9858
+0.9897
+
+table 2: numerical solution (n.) versus approximated analytical solution (a.) for the
+sinh-gordon related tba-system with xed eective coupling b = 0.4.
+
+r
+101
+102
+103
+104
+105
+106
+
+l(0, r)/n. l(0, r)/a.
+
+1.335
+2.074
+2.631
+3.072
+3.435
+3.743
+
+0.811
+1.782
+2.433
+2.923
+3.317
+3.646
+
+c(r)/ n.
+0.8070
+0.9165
+0.9540
+0.9709
+0.9800
+0.9853
+
+c(r)/a.
+0.7297
+0.8977
+0.9466
+0.9673
+0.9780
+0.9841
+
+table 3: numerical solution (n.) versus approximated analytical solution (a.) for the
+sinh-gordon related tba-system with xed eective coupling b = 0.9.
+
+4.5.2 a(1)
+
+2 -atft/a(2)
+
+2 -atft (bullough-dodd)
+
+in comparison to the sinh-gordon model the next complication arises when we
+allow the particle in the system to fuse. this case will arise when we consider the
+a(1)
+2 -atft, which are known to be closely related. the former contains
+two particles which are conjugate to each other, whereas the latter contains only
+one particle which is the bound state of itself. with regard to the tba-analysis
+
+2 - and a(2)
+
+23
+
+these models may be treated on the same footing. the corresponding two particle
+scattering matrices read
+
+sa(1)
+
+() = sa(1)
+
+sa(1)
+
+sa(2)
+
+2
+12
+
+2
+11
+
+2
+22
+
+() = {1}
+
+() = {2}
+() sa(1)
+due to the fact that sa(2)
+(), the tba-equation of the a(2)
+2 -
+theory equals the two tba-equations of the a(1)
+2 -theory under the natural assump-
+tions that l1() = l2() and gij = gji. the common tba-kernel without the
+statistics factor is computed to
+
+2 () = {1} {2} .
+
+2 () = sa(1)
+
+(92)
+
+2
+11
+
+2
+12
+
+bd() = 43 cosh 
+
+2 cosh(2) + 1
+
++
+
+4 cosh  sin((1 + b)/3)
+
+cosh(2)  cos((1 + b)2/3)
+
++
+
+4 cosh  sin(b/3)
+
+cosh(2)  cos(2b/3)
+(93)
+
+.
+
+we may then write the tba-equation either in its variant (2) as
+
+rm cosh  + ln(1  el(,r)) =
+
+1
+2
+
+z
+
+dbd () l(  , r)  gl(, r)
+
+(94)
+
+or in its universal form (73) as
+
+(, r) = [(  (1 + g)l)  3] (, r) + gl(, r) + (li  h,b)(, r) .
+
+(95)
+
+we used the abbreviations g = g11 + g12 and g = g
+tba-kernel is computed from (44) or (47)
+
+11 + g
+
+12. the fourier transformed
+
+2
+
+2
+
+2 (k) = ea(1)
+ea(2)
+
+11 (k) + ea(1)
+4(cid:16)sinh(cid:16) k
+
+12 (k) = ea(1)
+3 (cid:17) + sinh(cid:16) 2k
+
+21 (k) + ea(1)
+3 (cid:17)(cid:17)(cid:16)cosh(cid:16) k
+
+22 (k)
+3  bk
+
+ 2g . (97)
+we restrict now to fermionic type of statistics and chose the constants in our analytic
+solution (20) in the same way as for the sinh-gordon model, i.e.
+
+sinh(k)
+
+3 (cid:17)  1
+2(cid:17)
+
+(96)
+
+=
+
+2
+
+2
+
+ = 1 = 2 = ln(b(2  b)21+b(2b)) and  = 1 = 2 =
+
+(98)
+such that the approximated function for l(, r) equals (90). the scaling function
+up to the rst leading order (29) becomes now
+
+
+
+2(  ln(r/2))
+
+,
+
+ca(1)
+
+2 (r) = 2ca(2)
+
+2 (r) = 2 
+
+2 2b(2  b)
+3(  ln(r/2))2
+
+.
+
+(99)
+
+solving (94) numerically we obtain qualitatively the same kind of agreement with
+the approximated analytical solution as for the sinh-gordon model, see gure 4.
+
+24
+
+4.5.3 a(1)
+
+3 -atft
+
+the simplest model which involves two inequivalent tba-equations coupled to each
+other is the a(1)
+3 -ane toda eld theory. in our conventions the two-particle scat-
+tering matrices for this theory read
+
+3
+11
+
+sa(1)
+sa(1)
+
+3
+12
+
+3
+33
+
+() = sa(1)
+() = sa(1)
+
+3
+23
+
+() = {1} ,
+() = {2} ,
+
+3
+13
+
+sa(1)
+sa(1)
+
+3
+22
+
+() = {3} ,
+() = {1} {3} .
+
+(100)
+
+(101)
+
+particle 1 is the anti-particle of 3 and particle 2 is self-conjugate. the masses are
+
+m1 = m3 = m/2 and m2 = m. in the direct channel the fusings 11  2 and
+33  2 are possible. under the assumption that 1(, r) = 3(, r), the tba-
+equations in the variant (8) now read
+
+3
+
+1(, r) = rm/2 cosh  (cid:18)a(2)
+13)l1(, r)  g
+2(, r) = rm cosh  (cid:18)a(2)
+
+11 + g
+
+12  l2(cid:19) (, r)
+12  l1(cid:19) (, r)
+
+22  l1 + a(2)
+12l2(, r),
+22  l2 + 2a(2)
+22l2(, r) ,
+
+23)l1(, r)  g
+
+12 + g
+
+(g
+
+(g
+
+3
+
+3
+
+3
+
+where the kernels are
+
+(102)
+
+(103)
+
+(104)
+
+(105)
+
+2
+
+cosh 
+
+3
+
++
+
+sin(b/4)
+
+cos(b/4)
+
+cosh2   cos2(b/4)
+
+a(2)
+22 () =
+12 () = 2 cosh   2 sin((b + 1)/4)
+a(2)
+22 () = a(2)
+
+cosh2  + sin2(b/4) 
+2
+cosh(2)! .
+11 () + a(2)
+
+cosh(2) + sin(b/2) 
+
+3
+
+3
+
+3
+
+12 () = a(2)
+
+note that a(2)
+13 (). alternatively
+we may write down the universal form of the tba-equations (70), which becomes
+particularly simple for the fermionic statistics
+
+23 () and a(2)
+
+3
+
+3
+
+3
+
+1(, r) = (2  l2)  4(, r) + (l1  4,b)(, r)
+2(, r) = 2(1  l1)  4(, r) + (l2  4,b)(, r) .
+we compute from (44) or (47) the fourier transformed tba-kernels
+
+22 (k) = 2
+
+3
+
+12 (k) = 2
+
+3
+
+ea(2)
+ea(2)
+
+(1 + 2 cosh(k/4))(cosh((b  1)k/4)  cosh k/4)
+
+cosh(k/4) + cosh(3k/4)
+
+cosh(k/4) cosh((b  1)k/4)  1
+
+cosh(k/2)
+
+.
+
+25
+
+(106)
+(107)
+
+(108)
+
+(109)
+
+from (58) or from the explicit expression for (2)
+x
+(100) and (101), we obtain for fermionic statistics
+
+corresponding to each block in
+
+(0)
+ij = 0
+
+and
+
+(2)
+ij =
+
+2b(2  b)
+
+43
+
+3 2 1
+2 4 2
+1 2 3
+
+
+
+ij
+
+.
+
+therefore we have
+
+(2)
+1 = (2)
+
+3 =
+
+32b(2  b)
+
+32
+
+and (2)
+
+2 =
+
+2b(2  b)
+
+8
+
+.
+
+(110)
+
+(111)
+
+computing the sum (2)
+obtain for the approximated scaling function
+
+1 + (2)
+
+2 + (2)
+
+3
+
+conrms our general formula (62). finally we
+
+c(r) = 3 
+
+152b(2  b)
+16(  ln(r/2))2 .
+
+(112)
+
+once more we compare this analytical expression with the numerical solution of
+the two coupled tba-equations (102) and (103). choosing the constants in the
+same way as for the sinh-gordon model, gure 4 demonstrates the same kind of
+qualitative agreement as we observed for the previous models. for all models we
+observe that at about r = 0.1 the analytical expressions for c(r) start to decrease
+more rapidly than the numerical solution.
+
+4.5.4
+
+(g(1)
+
+2  d(3)
+
+4 )-atft
+
+this theory is the simplest example for a model in which the masses as a function
+of the coupling constant ow from the classical mass spectrum of one lagrangian to
+its dual in the lie algebraic sense. the theory contains two self-conjugate particles
+whose masses were conjectured [30, 31] (supported by numerical investigations [32])
+to m1 = m sin(/h) and m2 = m sin(2/h). the oating coxeter number is
+taken to be h = 6 + 3b with 0  b  2. the fusing processes 1 1  1 + 2,
+in our conventions the related
+2 2  1 + 2 + 2 and 1 2  1 + 2 are possible.
+scattering matrices [30, 25] read
+
+sg/d
+11
+sg/d
+22
+
+() = [1, 0][h  1, 0][h/2, 1/2], sg/d
+() = [h/3  1, 1][h/3 + 1, 1][2h/3  1, 1][2h/3 + 1, 1]
+
+12
+
+() = [h/3, 1][2h/3, 1],
+
+.
+
+(113)
+
+(114)
+
+besides the loss of duality these scattering matrices exhibit a further dierence in
+comparison with the simply laced case, which has a bearing on the tba-analysis.
+in the standard prescription the symmetry of the bethe wave function is derived by
+exploiting the behaviour of the scattering matrices at  = 0. as already mentioned
+for the simply laced case we always have sij(0) = (1)ij , whereas now we observe
+
+26
+
+11
+
+(0) = sg/d
+
+sg/d
+(0) = 1. assuming that the particles described are bosons,
+22
+we should choose, according to the arguments of [2], g11 = 1 and g22 = 0.
+in
+this case, however, the tba-analysis does not produce any physical solution. the
+tba-equations in the variant (8) become
+
+1(, r) = rm sin(/h) cosh  (cid:16)g/d
+12l2(, r) ,
+2(, r) = rm sin(2/h) cosh  (cid:16)g/d
+22l2(, r) .
+
+21l1(, r)  g
+
+11l1(, r)  g
+
+g
+
+g
+
+11
+
+21
+
+12
+
+ l1(cid:17) (, r) (cid:16)g/d
+ l1(cid:17) (, r) (cid:16)g/d
+
+ l2(cid:17) (, r)
+ l2(cid:17) (, r)
+
+22
+
+(115)
+
+(116)
+
+the kernels and their fourier transformed versions read
+
+11
+
+g/d
+g/d
+g/d
+
+12
+
+22
+
+() = 1() + h1() + h/2,1/2()
+
+() = 21() = h/3,1() + 2h/3,1()
+() = h/31,1() + h/3+1,1() + 2h/31,1() + 2h/3+1,1()
+
+and
+
+(k) = 4
+
+cosh((1 + b)k/h)  cosh((1  2b)k/h)
+
+1  2 cosh(k/3)
+(k) + 4 cosh((1  b)k/h)
+
+2 cosh(k/h)
+
+(k) + 2 .
+
+11
+
+12
+
+eg/d
+eg/d
+eg/d
+2b(2  b)
+
+22
+
+12
+
+(k) = eg/d
+(k) = 2 cosh(k/h)eg/d
+
+12
+
+from this or our general formulae of section 4.2. we obtain
+
+(117)
+
+(118)
+
+(119)
+
+(120)
+
+(121)
+
+(122)
+
+,
+
+h 2
+
+(2)
+11 =
+
+(2)
+1 = 0,
+
+the facts that (2)
+
+(2)
+12 = (2)
+11 ,
+
+(2)
+22 = 2(2)
+11 ,
+
+1 vanishes and (2)
+
+(2)
+2 = 3(2)
+11 .
+(123)
+2 becomes negative make it impossible to
+use our approximated analytical solution (20). from a numerical point of view not
+much has changed in comparison with the previous models and we can still solve
+the related tba-equations in the standard way. the related l-functions look qual-
+itatively the same as in the previous cases and the scaling functions for some values
+of the eective coupling are depicted in gure 5 together with the same function for
+the a(1)
+2 -ane toda eld theory. we observe that for xed value of r, the scaling
+function for the (g(1)
+4 )-ane toda eld theory is a monotonically increasing
+function of b. under the same circumstances the scaling functions related to theo-
+ries in which the underlying algebras are simply laced are monotonically decreasing
+at rst up to the self-dual point b = 1 and monotonically increase thereafter.
+
+2 , d(3)
+
+27
+
+2.0
+
+1.9
+
+c(r)
+1.8
+
+1.7
+
+1.6
+
+  g
+: b=0.4
+2
+  g
+: b=1.0
+2
+  g
+: b=1.6
+2
+  a
+: b=0.2
+2
+  a
+: b=0.4
+2
+  a
+: b=1.0
+2
+
+0.02
+
+0.04
+
+r
+
+0.06
+
+0.08
+
+0.10
+
+figure 5: scaling functions for the a(1)
+2 , d(3)
+2
+tba-systems for various values of the eective coupling.
+
+and (g(1)
+
+4 )-ane toda eld theory related
+
+5 existence and uniqueness properties
+
+in this section we are going to investigate the existence and uniqueness properties
+of the solutions of the tba equations. our main physical motivation for this con-
+siderations is to clarify whether it is possible to obtain dierent eective central
+charges for a xed dynamical and statistical interaction due to the existence of sev-
+eral dierent solutions of the tba equation. as a side product we obtain useful
+estimates on the error and the rate of convergence of the applied numerical proce-
+dure. precise estimates of this kind were not obtained previously in this context
+and convergence is simply presumed. the method we employ is the contraction
+principle (or banach xed point theorem), see e.g. [33]. for the yangyang equa-
+tion in the case of the nonrelativistic onedimensional bose gas for fermionic type
+of statistics the uniqueness question was already addressed by yang and yang [1],
+albeit with a dierent method.
+
+in order to keep the notation simple we commence our discussion for a system
+with one particle only and a statistics of fermionic type. thereafter we discuss the
+
+28
+
+straightforward generalization. the standard way to solve integral equations of the
+type (8) consists in discretising the original function and a subsequent iteration,
+usually numerically. normalizing the mass to one, this means we consider (8) as
+
+n+1(, r) := r cosh     ln(1 + en(,r))
+
+(124)
+
+and perform the iteration starting with 0(, r) = r cosh . the exact solution is
+then thought to be the limes limn n. however, a priori it is not clear whether
+this limes exists at all and how it depends on the initial value 0. in particular,
+dierent initial values might lead to dierent solutions.
+
+the natural mathematical setup for this type of problem is to re-write the tba-
+
+equation as
+
+(a)(, r) :=   ln(1 + e(,r)r cosh ) = (, r),
+
+and treat it as a xed point problem for the operator a.
+
+(125)
+
+in order to give meaning to the limes limn n we have to specify a norm. of
+course it is natural to assume that  as function of  is measurable, continuous and
+essentially bounded on the whole real line. the latter assumption is supported by
+all known numerical results. furthermore it follows from (125), together with the
+explicit form of , that possible solutions  vanish at innity. this means possible
+solutions of (125) constitute a banach space with respect to the norm
+
+kfk = ess sup|f ()| ,
+
+(126)
+
+i.e. l(ir). in principle we are now in a position to apply the banach xed point
+theoremk, which states the following:
+
+let d  l be a nonempty set in a banach space and let a be an operator
+for all f, g  d and some xed q,
+(127)
+
+which maps d q-contractively into itself, i.e.
+0  q < 1
+
+ka(f )  a(g)k  qkf  gk.
+
+then the following statements holds:
+
+i) there exists a unique xed point  in d, i.e. equation (125) has exactly one
+
+solution.
+
+ii) the sequence constructed in (124) by iteration converges to the solution of
+
+(125).
+
+iii) the error of the iterative procedure may be estimated by
+
+k  nk 
+
+qn
+
+1  qk1  0k and
+
+(cid:13)(cid:13)(cid:13)  n+1(cid:13)(cid:13)(cid:13) 
+
+q
+
+1  q(cid:13)(cid:13)(cid:13)n+1  n(cid:13)(cid:13)(cid:13)
+
+.
+
+kone may of course apply dierent types of xed point theorems exploiting dierent properties
+of the operator a. for instance if a is shown to be compact one can employ the leray-schauder
+xed point theorem. in the second refence of [5] it is claimed that the problem at hand was treated
+in this manner, albeit a proof was not provided.
+
+29
+
+iv) the rate of convergence is determined by
+
+(cid:13)(cid:13)(cid:13)  n+1(cid:13)(cid:13)(cid:13)  q k  nk .
+in order to be able to apply the theorem we rst have to choose a suitable
+set in the banach space. we choose some q  [0, 1) such that er  q and take
+1q + ro. we may now apply
+d to be the convex set dq,r := nf : kfk  ln q
+the following estimate for the convolution operator  (which is a special case of
+youngs inequality)
+(128)
+k  fk  kk1kfk.
+
+for the concrete one particle models at hand, the sinh-gordon- and the bullough-
+2|()| = 1. for the operator l we have the
+
+dodd-model, we have kk1 := r d
+
+estimate
+
+l(f )  ln [1 + exp (kfk  r)]  ln
+
+1
+
+1  q  ln
+
+q
+1  q
+
++ r.
+
+the last inequality follows from our special choice of q. thus, a maps dq,r into
+itself.
+
+in the nal step we show that the contraction property (127) is fullled on dq,r .
+it suces to prove this for the map l, because of (128) and the fact that kk1 = 1.
+we have
+
+dt
+
+dt
+
+d
+dt
+
+l(g + t(f  g))(cid:13)(cid:13)(cid:13)(cid:13)(cid:13)
+kl(f )  l(g)k = (cid:13)(cid:13)(cid:13)(cid:13)(cid:13)
+1r0
+= (cid:13)(cid:13)(cid:13)(cid:13)(cid:13)
+1 + exp(g  t(f  g) + r cosh )(cid:13)(cid:13)(cid:13)(cid:13)(cid:13)
+1r0
+0t1(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+1 + exp(g  t(f  g) + r)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)kf  gk
+ max
+1 + exp (kg  t(f  g)k + r)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12) kf  gk
+0t1(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+ max
+ q kf  gk .
+
+(f  g)
+
+1
+
+1
+
+in the last inequality we used the fact that dq,r is a convex set.
+
+we may now safely apply the xed point theorem. first of all we conclude from
+i) and ii) that a solution of (125) not only exists, but it is also unique. in addition
+we can use iii)and iv) as a criterium for error estimates. from our special choice
+of the closed set dq,r one sees that the rate of convergence depends crucially on
+the parameter r, the smaller r the greater q is, whence the sequence (n) converges
+slower.
+
+for f, g  dq,r also tf + (1  t)g  dq,r, with 0  t  1.
+
+30
+
+one could be mathematically more pedantic at this point and think about dif-
+ferent requirements on the function . for instance one might allow functions which
+are not bounded (we do not know of any example except when r  0) and then
+pursue similar arguments as before on lp rather than l.
+the generalization of the presented arguments to a situation involving l dif-
+ferent types of particles and general haldane statistics may be carried out in a
+straightforward manner.
+
+6 conclusions
+
+clearly an unsatisfactory feature of our approximated analytical expression for the
+scaling function (81) is that, at the moment, we do not have any additional con-
+straint at hand which allows to determine the constant . admittedly the choice
+(89) enters our analysis in a rather ad hoc way. at the moment the rational behind
+our choice is that we may compare it with the semi-classical results in the spirit of
+[12] and thereafter restore the strong-weak duality. in addition it is supported by
+our numerical results. surely this is by no means unique and it is highly desirable
+to eliminate this ambiguity.
+
+k=1 (k)
+
+1/((1)
+
+nonetheless, dierent choices of the constant will not change the overall be-
+haviour and our expression is clearly in conict with the results of cassi and destri
+[16], who found f (r) = 3r2m2
+11 ) for the function in equation (1). the con-
+vention therein are that 1 labels the particle type with smallest mass and (1)
+11 results
+from the power series 11() = p
+11 exp(k ||). on the side of the tba-
+analysis the origin of this discrepancy may be tracked down easily. a behaviour of
+the type quoted in [16] was derived before in [12, 5] for ane toda eld theories
+related to the minimal part of the scattering matrix (30). this result was then
+extrapolated by cassi and destri in the way that (1)
+11 was taken to be the coe-
+cient of the power series related to the full coupling constant dependent scattering
+matrix. however, the derivations in [12, 5] rely heavily on the assumption that the
+function l() is constant in the region  ln(2/r)    ln(2/r). it is essentially
+this property which is lost for the full theory (as our numerical results demonstrate),
+such that the arguments of cassi and destri become faulty. it would be interesting
+to settle the question also on the perturbative side and bring our results into agree-
+ment with perturbation theory. our ndings will surely have consequences for the
+subtraction scheme used in such considerations.
+
+there exist of course other methods which allow to extract the ultraviolet central
+charge from a massive integrable model. the c-theorem [34] has turned out to be
+very ecient in this context and a direct comparison is very suggestive. as the
+main input, the c-theorem requires the n-particle form factors (the 2-particle form
+factor is usually sucient) related to the trace of the energy-momentum tensor.
+unlike in the situation of conformal invariance, in which the trace vanishes, this
+
+31
+
+tensor is not unique and acquires some scaling behaviour for massive theories. as
+observed in [36], the consequence of this fact is that the c-theorem produces a whole
+ray of central charges greater than the rank of the underlying lie algebra g. the
+natural question which arises is to identify the origin of this ambiguity inside the
+tba-approach. one might assume that it results from several possible solutions
+of the tba-equation. however, this possibility is denitely ruled out as follows
+from our investigations in section 5. since the statistical interaction g enters the
+analysis as a further parameter, this could provide a further possible mechanism
+which produces the observed values. as our investigations demonstrate, however,
+also this possibility can be excluded for certain, since dierent choices for g only
+produce central charges smaller than the rank of g. in the light of this results we
+conjecture that the responsible mechanism is to include a non-vanishing chemical
+potential in the way as was already indicated by yang and yang [1]. to settle this
+question precisely requires more detailed investigations [35].
+
+there are several further questions which should be addressed in order to com-
+plete the picture. it will certainly be interesting to obtain also the higher terms
+beyond the rst leading order in (1) and to exploit further the y-systems of section
+4.4. as an alternative analytical approach. there exist interesting links between
+these systems and spectral functions [37], such that one can expect more exact and
+universal results to follow.
+acknowledgments: we would like to thank m. schmidt for useful discussions
+and comments and c. figueira de morisson faria for help with the gures. a.f.
+and c.k. are grateful to the deutsche forschungsgemeinschaft (sfb288) for partial
+nancial support.
+
+references
+
+[1] c.n. yang and c.p. yang, phys. rev. 147 (1966) 303; j. math. phys. 10 (1969)
+
+1115.
+
+[2] al.b. zamolodchikov, nucl. phys. b342 (1990) 695.
+
+[3] al.b. zamolodchikov, nucl. phys. b358 (1991) 497; nucl. phys. b358 (1991) 524;
+
+nucl. phys. b366 (1991) 122.
+
+[4] al.b. zamolodchikov, phys. lett. b253 (1991) 391.
+
+[5] t.r. klassen and e. melzer, nucl. phys. b338 (1990) 485; b350 (1991) 635.
+
+[6] m.j. martins, phys. lett. b257 (1991) 317; phys. rev. lett. 67 (1991) 419; j.
+
+phys. a25 (1992) l81; phys. lett. b277 (1992) 301.
+
+32
+
+[7] g. fererati, f. ravanini and g takacs, phys. lett. b444 (1998) 442.
+
+[8] r. koberle, proceedings of the jorge andre swieca summer school (1990) (hep-
+
+th/9110012).
+
+[9] f. ravanini, a. valleriani and r. tateo, int. j. mod. phys. a8 (1993) 1707.
+
+[10] c. ahn and s. nam, phys. lett. b271 (1991) 329;
+
+f. ravanini, phys. lett. b282 (1992) 73;
+
+c. destri and h.j. devega, phys. rev. lett. 69 (1992) 2313; nucl. phys. b438
+(1995) 413;
+
+t.j. hollowood, phys. lett. b320 (1994) 43;
+
+m. moriconi and k. schoutens, nucl. phys. b464 (1996) 472;
+
+p. dorey, r. tateo and k.e. thompson, nucl. phys. b470 (1996) 317;
+
+p. dorey and r. tateo, nucl. phys. b482 (1996) 639; nucl. phys. b515 (1998)
+575;
+
+f. gliozzi and r. tateo, int. j. mod. phys. a11 (1996) 4051;
+
+c.t. tracy and h. widom, commun. math. phys. 179 (1996) 667;
+
+a. chodos and h. minakata, nucl. phys. b490 (1997) 687;
+
+p.a. pearse and b. nienhuis, nucl. phys. b519 (1998) 579.
+
+[11] p. fendley and h. saleur, nucl. phys. b388 (1992) 609.
+
+[12] al.b. zamolodchikov, resonance factorized scattering and roaming trajectories,
+
+preprint ens-lps-335 (1991).
+
+[13] m.j. martins, nucl. phys. b394 (1993) 339.
+
+[14] al.b. zamolodchikov, nucl. phys. b348 (1991) 619.
+
+[15] a.v. mikhailov, m.a. olshanetsky and a.m. perelomov, commun. math. phys. 79
+
+(1981) 473;
+
+g. wilson, ergod. th. dyn. syst. 1 (1981) 361;
+
+d.i. olive and n. turok, nucl. phys. b257 [fs14] (1985) 277.
+
+[16] d. cassi and c. destri, phys. lett. b268 (1991) 365.
+
+[17] f.d.m. haldane, phys. rev. lett. 67 (1991) 937.
+
+[18] a. bytsko and a. fring, nucl. phys. b532 (1998) 588.
+
+33
+
+[19] l. lewin, dilogarithms and associated functions (macdonald, london, 1958); poly-
+
+logarithms and associated functions (north-holland, 1981);
+
+a.n. kirillov, prog. theor. phys. suppl. 118 (1995) 61.
+
+[20] p.e. dorey and f. ravanini, int. j. mod. phys. a8 (1993) 873.
+
+[21] a.e. arinshtein, v.a. fateev and a.b. zamolodchikov, phys. lett. 87b (1979) 389;
+
+h.w. braden, e. corrigan, p.e. dorey and r. sasaki, nucl. phys. b338 (1990)
+689;
+
+c. destri and h.j. de vega, phys. lett. b233 (1989) 336, nucl. phys. b358 (1991)
+251;
+
+p.g.o. freund, t.r. klassen and e. melzer, phys. lett. b229 (1989) 243;
+
+p. christe and g. mussardo, nucl. phys. b330 (1990) 465, int. j. mod. phys. a5
+(1990) 4581.
+
+[22] p.e. dorey, nucl. phys. b358 (1991) 654; nucl. phys. b374 (1992) 741.
+
+[23] a. fring and d.i. olive, nucl. phys. b379 (1992) 429.
+
+[24] s. berman, y.s. lee and r.v. moody, j . algebra 121 (1989) 339.
+
+[25] e. corrigan, p.e. dorey and r. sasaki, nucl. phys. b408 (1993) 579.
+
+[26] l.i.s. gradshteyn and i.m. ryzhik,table of integrals, series and products, (aca-
+
+demic press, london, 1980).
+
+[27] p. goddard and d.i. olive, int. j. mod. phys. a1 (1986) 303.
+
+[28] a. fring, h.c. liao and d.i. olive, phys. lett. b266 (1991) 82.
+
+[29] r.k. bullough, d.j. pilling and j. timonen, j. phys. a19 (1986) l955.
+
+[30] g.w. delius, m.t. grisaru and d. zanon, nucl. phys. b382 (1992) 365.
+
+[31] h.g. kausch and g.m.t. watts, nucl. phys. b386 (1992) 166.
+
+[32] g.m.t. watts and r.a. weston, phys. lett. b289 (1992) 61.
+
+[33] e. zeidler, applied functional analysis, (springer, berlin, 1995).
+
+[34] a.b. zamolodchikov, jetp lett. 43 (1986) 730.
+
+[35] a. fring, c. kor and b.j. schulz in preparation.
+
+[36] g. mussardo and p. simonetti, int. j. mod. phys. a8 (1994) 3307.
+
+34
+
+[37] p. dorey and r. tateo, anharmonic oscillators, the thermodynamic bethe ansatz
+
+and nonlinear integral equations, hep-th/9812211.
+
+v.v. bazhanov, s.l. lukyanov and al.b. zamolodchikov, spectral determinants for
+schrodinger equation and q-operators of conformal field theory, hep-th/9812247.
+
+35
+
+

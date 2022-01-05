@@ -1,0 +1,1833 @@
+9
+9
+9
+1
+
+ 
+
+p
+e
+s
+2
+2
+
+ 
+
+ 
+ 
+
+1
+v
+1
+6
+1
+9
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+eichler integrals and string theory
+
+leonidas sandoval junior
+kings college london
+
+february 1, 2008
+
+abstract
+
+in this article, it is shown how to obtain objects called eichler integrals in the mathematical
+literature that can be used for calculating scattering amplitudes in string theory. these eichler
+integrals are also new examples of eichler integrals with poles.
+
+1
+
+introduction
+
+the concept of an eichler integral is closely related to the concept of automorphic forms. although
+automorphic forms have a large range of applications in physics and, in particular in string theory,
+eichler integrals remain relatively unknown objects to both mathematicians and physicists. one
+can picture an eichler integral as a generalization of the concept of automorphic forms, and they
+are related to the better known beltrami dierentials that are used in string theory, in particular
+in the calculation of multiloop scattering amplitudes of strings.
+
+this article begins with a description of the main properties of automorphic forms with some
+examples that will be useful when we describe the new eichler integrals. the denition of eichler
+integrals is given next, with some examples that can be used in string theory.
+
+2 automorphic forms
+
+an automorphic form of weight q is a function [1] (z) that transforms in the following way under
+a projective transformation pa:
+
+ (pa(z)) = (cid:20) pa(z)
+
+z
+
+(cid:21)q
+
+(z) .
+
+automorphic forms with just one pole will be more of our interest, since the order of the pole is
+limited in a simple way by the riemann-roch theorem [2]. we now give some examples of these
+functions.
+
+article published in the journal of mathematical physics 37 (1996).
+current address: department of mathematics, universidade do estado de santa catarina (udesc), e-mail:
+
+dma2lsj@dcc.fej.udesc.br
+
+1
+
+2.1 example 1
+
+a simple case of an automorphic form of weight q can be given for the case where there is just one
+projective transformation p (z) given by
+
+p (z) = w(z  ) +  ,
+
+where  is the nite xed point of the transformation (the other xed point is at innity) and w is
+the multiplier. an automorphic form (z) of weight q can then be given by
+
+in the case where p (z) has two nite xed points, when it can be expressed by
+
+(z) = (z  )q .
+
+p (z) =
+
+(x  )  w(z  )
+
+(z  )  w(z  )
+
+,
+
+an automorphic form of weight q is given by
+
+(z) = [(z  )(z  )]q .
+
+2.2 example 2
+
+in the case of a single projective transformation p (z) with just one xed point, we may have
+automorphic forms with poles, given by
+
+n(z) = (z  )q(cid:18) 
+
+t(cid:19)n1
+
+p(t) ,
+
+t = ln(z  )  ln() ,
+
+where n is the order of the pole and p(t) is the wierstrass p function [3] with periods ln w and
+2i.
+
+in the case of p (z) having two nite xed ponits, we have
+
+(z) = [(z  )(z  )]q(cid:18) 
+
+t(cid:19)n1
+
+p(t) ,
+
+instead.
+
+2.3 example 3
+
+t = ln(cid:18) z  
+
+z  (cid:19)  ln(cid:18) 
+
+(cid:19) ,
+
+still another way of obtaining an automorphic form on a genus g riemann surface is considering
+the following function [1] (called a poincare series):
+
+(z, ) = xa (cid:20) dta(z)
+
+dz
+
+(cid:21)q
+
+  k
+
+ta(z)  
+
+,
+
+where k is an arbitrary constant and the sum pa is over all elements of the schottky group, which
+
+is the group of all possible combinations of the projective transformations pb(z), b = 1, . . . , g.
+
+under a transformation z  tb(z), one gets
+
+ (tb(z), ) = xa (cid:20) dtatb(z)
+
+dz
+
+(cid:21)q
+
+  k
+
+tatb(z)  
+
+.
+
+2
+
+we now perform a change of variables tatb(z) = tc(z). using the chain rule we have
+
+d
+dz
+
+so that we have
+
+tc(z) = (cid:20) d
+
+dz
+
+tatb(z)(cid:21) 
+b(z)(cid:3)qxa (cid:20) dtc(z)
+
+dz
+
+d
+dz
+
+tb(z) ,
+
+(cid:21)q
+
+  k
+
+tc(z)  
+
+.
+
+ (tb(z), ) = (cid:2)t 
+
+since we are summing over all the elements of the schottky group, the series above is equivalent
+to the original one, so that we have
+
+i.e. it is an automorphic form of weight q.
+
+ (tb(z), ) = (cid:2)t 
+
+b(z)(cid:3)q (z, ) ,
+
+2.4 example 4
+
+in the multiloop case, let us consider only projective transformations pa with nite xed points a
+and a. we then consider the following series:
+
+pw(z) = xb
+
+(z  b)(z  b)
+
+wb(b  b)
+
+wb
+
+
+,
+
+(1)
+
+where the sum is over all the elements of the schottky group formed by these transformations and
+wb and  are innitesimals. we then have that
+
+[ta(z)  b] [ta(z)  b]
+
+1
+
+wb(b  b)
+
+(a  waa  b + wab)(a  waa  b + wab)
+
+=
+
+t 
+a(z)
+
+pw (ta(z)) = xb
+wa(a  a)2 xb
+(cid:20)z 
+
+(aa  waaa  ba + waba)
+
+(a  waa  b + wab)
+
+(cid:21)(cid:20)z 
+
+(aa  waaa  ba + waba)
+
+(a  waa  b + wab)
+
+(cid:21) wb
+
+
+
+.
+
+making then the following change of variables:
+
+c =
+
+c =
+
+(1  wa)aa  (a  waa)b
+
+a  waa  (1  wa)b
+
+(1  wa)aa  (a  waa)b
+
+a  waa  (1  wa)b
+
+,
+
+,
+
+wc = wb ,
+
+pw (ta(z)) = t 
+
+a(z)xc
+
+(z  c)(z  c)
+
+wc(c  c)
+
+wc
+
+
+,
+
+wc =
+
+wc
+wb
+
+wb .
+
+we may write
+
+where we have used
+
+(2)
+
+(3)
+
+(4)
+
+since we are summing over all elements of the schottky group (with the condition that the xed
+points are nite), we then see that the expression on the right hand side is equivalent to the series
+we started with, so that
+
+pw (ta(z)) = t 
+
+a(z)pw(z) .
+
+3
+
+we may also consider the following two series:
+
+p(z) = xb
+p(z) = xb
+
+(1  wb)
+
+wb(b  b)2 (z  b)2 b
+wb(b  b)2 (z  b)2 b
+
+(1  wb)
+
+
+
+
+
+,
+
+.
+
+(5)
+
+(6)
+
+using the same change of variables (2)-(4) and the fact that
+
+we then obtain
+
+c =
+
+c =
+
+c
+b
+c
+b
+
+b =
+
+b =
+
+wa(a  a)2
+
+[a  waa  (1  wa)b]2 b ,
+
+wa(a  a)2
+
+[a  waa  (1  wa)b]2 b ,
+
+p (ta(z)) = t 
+p (ta(z)) = t 
+
+a(z)p(z) ,
+a(z)p(z) .
+
+we have then obtained three examples of automorphic forms with weight 1.
+
+3 eichler integrals
+
+an eichler integral of order q is dened in the following way [4] [5]:
+transforms like
+
+it is a function f (z) that
+
+f (ta(z)) = (cid:20) ta(z)
+
+z
+
+(cid:21)q
+
+hf (z) + p q+1(z)i ,
+
+where p q+1(z) is a polynomial at most of order q + 1. it can be pictured as a generalization of the
+concept of automorphic form. eichler integrals are related with automorphic forms in the following
+way [4]: given an eichler integral f (z) of order q, we then have
+
+(z) = (cid:18) 
+
+z(cid:19)2q+1
+
+f (z) ,
+
+(7)
+
+where (z) is an automorphic form of weight q + 1, i.e.
+
+ (ta(z)) = (cid:20) ta(z)
+
+z
+
+(cid:21)q+1
+
+(z) .
+
+here are some examples of eichler integrals.
+
+3.1 example 1
+
+a trivial example of an eichler integral is given by any polynomial of order 2, i.e. any function of
+the form
+
+f (z) = a + bz + cz2 ,
+
+where a, b, and c are constants. such a function transforms like
+
+f (ta(z)) = t 
+
+a(z)(cid:20)f (z) +
+
+1
+
+w(  )2 (d + ez + f z2)(cid:21) ,
+
+4
+
+where
+
+d = (1  w)2a + (1  w)(  w)b hw2(1  w)  2w(  1) + w2i c ,
+
+e = 2(w  )(1  w)a  2(1  w)2b + [2w( + )  2(w + )] c ,
+f = (2  w2)(1  w)a + (1  w)(  w)b  w2(2  w)c .
+
+dierentiating it three times, we obtain
+
+d3
+dz3 f (z) = 0 ,
+
+which is a sort of automorphic form (a trivial one) so equation (7) holds.
+
+3.2 example 2
+
+there are not many examples of eichler integrals with poles in the literature. the rst one was
+given by ahlfors [4]. in our notation, his eichler integral is given by
+
+f (z, ) = xb
+
+[z  tb()]1(cid:2)t 
+
+b()(cid:3)q ,
+
+where the sum is over all elements of the schottky group.
+
+this function transforms in the following way:
+
+f (ta(z), ) = (cid:2)t 
+
+a(z)(cid:3)q1(f (z, ) +xb " t 
+
+(t 
+
+atb()
+a(z))q1/2
+
+ 1# [z  tb()]1(cid:2)t 
+
+b()(cid:3)q) .
+
+(8)
+
+(9)
+
+the second term in the right hand side can be shown to be a polynomial of degree q. this eichler
+integral has just one simple pole at  = z.
+
+in order to obtain eichler integrals with poles of higher order, one just has to form derivatives
+
+with respect to :
+
+fk+1(z, ) =
+
+k
+ k f (z, )
+
+where fk+1(z, ) is an eichler integral with a pole of order k + 1 at  = z.
+
+3.3 example 3
+
+as it will be shown now, not all eichler integrals must transform in such a complicated way. it is
+not hard to nd examples of eichler integrals with simple and useful transformations.
+
+as explained before, an eichler integral can be obtained by simply integrating an automorphic
+form a certain number of times. it is possible to show that every automorphic form of weight q can
+be expressed in terms of the following poincare series:
+
+g(z, ) = xb (cid:2)t 
+
+b(z)(cid:3)q
+
+  k
+
+tb(z)  
+
+,
+
+(10)
+
+where k is an arbitrary constant.
+
+if we now take the case q = 1 we have simply
+
+g(z, ) = xb (cid:2)t 
+
+b(z)(cid:3)1
+
+  k
+
+tb(z)  
+
+(  k)(cid:20)
+
+= xb
+
+1
+
+z + (bb  dd)/(ab  cb)
+
+
+
+1
+
+z + db/cb(cid:21) ,
+
+5
+
+and, by (7), we may obtain an eichler integral of weight zero simply by integrating this expression
+once. doing this we obtain the following:
+
+f (z, ) = xb
+
+(  k) ln(cid:18)
+
+cb
+
+[(ab  cb)z + (bb  db)]
+
+(ab  cb)
+
+(cbz + db)
+
+(cid:19) + c ,
+
+where c is a constant of integration that can be set to zero.
+we may then make the following change of coecients:
+
+am = ab  cb
+bm = bb  db
+
+,
+
+,
+
+cm = cb ,
+dm = db ,
+
+and the function f (z, ) becomes simply
+
+f (z, ) = xm
+
+(  k) ln(cid:18) cm(amz + bm)
+
+am(cm + dm) (cid:19) .
+
+performing the conformal transformation
+
+ta(z) =
+
+aaz + ba
+caz + da
+
+with ca 6= 0 in the expression above, we obtain
+
+f (ta(z), ) =xm
+
+(  k) ln(cid:18) cm [am(aaz + ba) + bm(caz + da)]
+am [cm(aaz + ba) + dm(caz + da)](cid:19) .
+
+if we now make another change of variables,
+
+ab = amaa + bmca
+bb = amba + bmda
+
+,
+
+,
+
+cb = cmaa + dmca ,
+db = cmba + dmda ,
+
+we then have
+
+f (ta(z), ) = xb
+= xb
+
+(abda  cabb)
+
+(  k) ln(cid:18) (cbda  cadb)
+(  k)(cid:20)ln(cid:18) cb(abz + bb)
+
+(abz + bb)
+
+(cbz + db)(cid:19)
+
+ab(cbz + db)(cid:19) + ln(cid:18) ab(cbda  cabb)
+
+cb(abda  cabb)(cid:19)(cid:21) .
+
+(11)
+
+(12)
+
+(13)
+
+(14)
+
+(15)
+
+(16)
+
+since we are summing over all transformations tb(z) with cb 6= 0, the rst term of expression
+
+(16) is just f (z, ) and we then have
+
+f (ta(z), ) = f (z, ) +xb
+
+(  k) ln(cid:18) ab(dbaa  cbba)
+
+cb(bbaa  abba)(cid:19) .
+
+(17)
+
+the second term of expression (17) can be readily identied as a constant, i.e. a polynomial in z
+of degree 0, so that it is proved that the function f (z, ) is an eichler integral with weight 0.
+
+we now consider automorphic form (10) with weight 2:
+
+g(z, ) =xb (cid:2)t 
+
+b(z)(cid:3)2
+
+  k
+
+tb(z)  
+
+,
+
+6
+
+(18)
+
+where k is a constant and the sum is over all elements of the schottky group. according to the
+theory of eichler integrals, if we integrate an automorphic form of weight 2 three times we shall
+obtain an eichler integral of weight 1.
+if we take tb(z) to be of the form
+
+we may then write this function in the following form:
+
+tb(z) =
+
+abz + bb
+cbz + db
+
+g(z, ) = xb
+
+  k
+ab  cb
+
+1
+
+(cbz + db)3 [z + (bb  db)/(ab  cb)]
+
+.
+
+this can be easily integrated. considering the case where cb 6= 0 and performing integration three
+times on this automorphic form we obtain the following function:
+
+(  k) [(ab  cb)z + (bb  db)]2
+
+1
+2
+
+f (z, ) = xb
+ ln(cid:18)
+
+cb
+
+[(ab  cb)z + (bb  db)]
+
+(cid:19)
+
+(ab  cb)
+
+1
+
+2(ab  cb)db + 1
+
+(cb + db)
+b (ab  cb)2 + c1z2 + c2z + c2
+4c2
+
++
+
+2cb(ab  cb)
+
+z 
+
+where c1, c2 and c3 are constants resulting from the integrations. choosing these integration
+constants in such a way as to cancel with the polynomial part of expression (19) we then obtain
+
+(19)
+
+(20)
+
+(21)
+
+1
+2
+
+f (z, ) = xb
+ ln(cid:18)
+
+(  k) [(ab  cb)z + (bb  db)]2
+
+cb
+
+[(ab  cb)z + (bb  db)]
+
+(ab  cb)
+
+(cb + db)
+
+(cid:19) .
+
+we can now make the change of coecients (12) and the function f (z, ) becomes
+
+f (z, ) = xm
+
+1
+2
+
+(  k)(amz + bm)2 ln(cid:18) cm(amz + bm)
+am(cm + dm) (cid:19) .
+
+this expression should be an eichler integral and we are going to show it indeed is.
+
+if we
+
+perform the conformal transformation
+
+with ca 6= 0 in the expression above, we obtain
+
+ta(z) =
+
+aaz + ba
+caz + da
+
+f (ta(z), ) = xm
+
+1
+2
+
+(cid:21)2
+(  k)(cid:20) am(aaz + ba) + bm(caz + da)
+ ln(cid:18) cm [am(aaz + ba) + bb(c  iz + da)]
+am [cm(aaz + ba) + dm(caz + da)] (cid:19) .
+
+caz + da
+
+7
+
+(22)
+
+(23)
+
+if we now make another change of variables, given by (15), we then have
+
+f (ta(z), ) = t 
+
+a(z)xb
+a(z)xb
+
+= t 
+
+1
+2
+
+1
+2
+
+(  k)(abz + bb)2 ln(cid:18) (dbaa  cbba)(abz + bb)
+(bbaa  abba)(cbz + db)(cid:19)
+(  k)(abz + bb)2(cid:20)ln(cid:18) cb(abz + bb)
+ab(cbz + db)(cid:19) + ln(cid:18) ab(dbaa  cbba)
+
+cb(bbaa  abba)(cid:19)(cid:21) .(24)
+
+since we are summing over all transformations tb(z) with cb 6= 0, the rst term of expression (24)
+is just f (z, ), and we then have
+
+f (ta(z), ) = t 
+
+a(z)"f (z, ) +xb
+
+1
+2
+
+(  k)(abz + bb)2 ln(cid:18) ab(dbaa  cbba)
+
+cb(bbaa  abba)(cid:19)# .
+
+(25)
+
+the second term of expression (25) can be readly identied with a polynomial in z of degree 2
+
+so that it is proved that the function f (z, ) is an eichler integral.
+
+4 example 4
+
+we consider now the case
+
+t (z) =
+
+az + d
+cz + d
+
+,
+
+that can be written in terms of the nite xed point  and the multiplier w as
+
+t (z) = w(z  ) +  .
+
+(26)
+
+(27)
+
+in string theory, and in particular in the group theoretic approach [6], we will be interested
+in functions that are associated with conformal transformations that cause innitesimal changes in
+the moduli of a riemann surface with genus g. in one loop, i.e. a riemann surface with genus 1,
+we have one nite xed point , one xed point at innity, and the multiplier w. in order to x the
+modular invariance of the theory, we must x three variables. besides the one xed point that has
+been already xed at innity, we can choose to x the nite xed point and one of the variables
+associated with the incoming strings so that the multiplier w will be the only variable associated
+with the loop left.
+
+we then want a function that has the eect of changing the multiplier w innitesimally, i.e. we
+
+want a function that transforms like
+
+i.e.
+
+and
+
+f (t (z)) = t (z)f (z) 
+
+t (z)
+
+w
+
+w
+
+
+,
+
+f (t (z)) = t (z)(cid:20)f (z) 
+
+w
+w
+
+(z  )(cid:21)
+
+f (s(z)) = f (z) ,
+
+(28)
+
+(29)
+
+(30)
+
+where s(z) = e2iz and where  and w are innitesimals.
+
+a function that transforms in this way was found in references [6] and [7] in the context of
+
+string theory. it is given by
+
+f (z) =
+
+w
+w
+
+(z  ) (ln(z  )) ,
+
+(31)
+
+8
+
+where the function (t) is given by
+
+the function (t) is weierstrass  function,
+
+(t) = (t) 
+
+(i)
+
+i
+
+t .
+
+(t) =
+
+1
+t
+
++xp6=0(cid:18) 1
+
+t  p
+
++
+
+1
+p
+
++
+
+1
+
+p2(cid:19) ,
+
+where p is the semi-period of the function and is given by p = nw1 + mw2, (n, m  z), where
+
+the weierstrass  function transforms in the following way:
+
+w1 = ln w , w2 = 2i .
+
+(t + w1) = (t) + 2(w1/2) ,
+(t + w2) = (t) + 2(w2/2) ,
+
+and the term ln(z  ) transforms like
+
+ln (t (z)  ) = ln w + ln(z  ) ,
+
+so that we have
+
+ln(cid:16)e2iz  e2i(cid:17) = ln(2i) + ln(z  ) ,
+f (t (z)) = t (z)(cid:20)f (z) 
+
+(z  )(cid:21) .
+
+w
+w
+
+(32)
+
+the function (t) can be related to the theta function [3] in the following way:
+
+(t) =
+
+d
+dt
+
+ln (t,  ) ,
+
+where (t,  ) has periods w1 = ln w and w2 = 2i.
+
+if we take the third derivative of the function f (z), we obtain
+
+g(z) = f (z) =
+
+w
+w
+
+1
+
+(z  )2 (cid:20)p(t) +
+
+(i)
+
+i
+
+ p (t)(cid:21) ,
+
+where t = ln(z  ) and p(t) is weierstrass p function with periods w1 = ln w and w2 = 2i,
+given by
+
+p(t) = 
+
+(t)
+
+d
+dt
+
+which transforms like
+
+i.e. it is an elliptic function.
+
+p(t + w1) = p(t + w2) = p(t) ,
+
+since p(t) and its derivatives do not change under a transformation of t + ln w or t + 2i, we
+
+then have
+
+g (t (z)) =
+
+1
+
+w2 g(z) = (cid:2)t (z)(cid:3)2 g(z) ,
+
+i.e. g(z) is an automorphic form with weight 2, as expected from the relation (7). so we have
+veried that f (z) is an eichler integral.
+
+9
+
+4.1 example 5
+
+we shall now search for a function with transformation properties similar to those of (28), but now
+for the case of many projective transformations. we want a function that transforms like
+
+fw (ta(z)) = t 
+
+a(z)fw(z) 
+
+ta(z)
+
+wa
+
+wa
+
+
+
+,
+
+(33)
+
+where
+
+ta(z) =
+
+a(z  a)  waa(z  a)
+
+(z  a)  wa(z  a)
+
+,
+
+for every a = 1, . . . , g, i.e. the action of ta(z) on this function causes innitesimal changes in the
+multipliers wa. so this function must transform like
+
+fw (ta(z)) = t 
+
+a(z)(cid:20)fw(z) +
+
+(z  a)(z  a)
+
+wa(a  a)
+
+wa
+
+ (cid:21) .
+
+in addition to this, we also demand that
+
+fa (sa(z)) = fa(z) ,
+
+(34)
+
+(35)
+
+where z  sa(z) is the transformation that takes z once around the aa loop for a = 1, . . . , g.
+
+in order to nd the eichler integral that transforms like this, we shall make analogies between
+the function in one loop and the function that we must have for the multiloop case. first we notice
+that the series pw(z) dened in (1),
+
+transforms like
+
+pw(z) = xb
+
+(z  b)(z  b)
+
+wb(b  b)
+
+wb
+
+
+,
+
+pw (ta(z)) = t 
+
+a(z)pw(z) ,
+
+so that it is the generalization for the multiloop case of the polynomial (z  ) for the one loop
+case.
+
+now we must try to nd an analog of the weierstrass  function suitable to the multiloop case.
+this can be obtained by rst generalizing the concept of a  function and of the weierstrass 
+function. this function is given by the hyperelliptic  function [8] [9] or best, by the  function
+dened in the appendix. in our rst attempt we attach a b(v) function to every element of the
+series pw(z), so that we have
+
+f1w(z) = xb
+
+wb
+
+
+(z  b)(z  b)
+
+wb(b  b)
+
+b(v) .
+
+this function will not transform the way we want, since the term (z  b)(z  b)/(b  b) and the
+rst abelian integrals vb(z) do not transform in the same way. we then go to the next step, which
+is making  a function not of the rst abelian integrals vb(z), but of the variables ub(z) (such a
+change of variables is justied in baker [8], section 192), such that
+
+ub(z) = ln(cid:18) z  b
+
+z  b(cid:19)  ln(cid:18) a
+
+a(cid:19) .
+
+10
+
+under a change z  ta(z), these variables will change like
+
+ub (ta(z)) =
+
+ta(z)  b
+ta(z)  b
+
+=
+
+(a  waa  b + wab)
+
+(a  waa  b + wab) hz  (aawaaaba+bwaa)
+hz  (aawaaaba+bwaa)
+
+(awaab+wab)
+
+(awaab+wab)
+
+.
+
+i
+i
+
+performing the same change of variables as in (2)-(4), we then obtain
+
+where the coecient wca is given by
+
+ta(z)  b
+ta(z)  b
+
+= wca
+
+z  c
+z  c
+
+,
+
+so that
+
+wca =
+
+(1  wa)c  (a  waa)
+(1  wa)c  (a  waa)
+
+,
+
+ub (ta(z)) = ln wca + uc(z) .
+
+we then redene the generalized  function (v) in the following way:
+
+(u) =
+
+
+
+xn=
+
+g
+
+exp 
+xc,d=1
+
+
+this function transforms like
+
+(nc + c)
+
+1
+2
+
+ln wcd(nd + d) +
+
+g
+
+xc=1
+
+2ic(nc + c) +
+
+g
+
+xc=1
+
+uc(nc + c)
+
+
+.
+
+(u + ) = exp (
+
+g
+
+xc=1
+
+pc(cid:18)uc +
+
+1
+2
+
+c(cid:19) 
+
+g
+
+xc=1
+
+[ipcqc  2i(qcc  pcc)]) (u) ,
+
+where b is now given by
+
+b =
+
+g
+
+xc=1
+
+(2ibcpc + ln wbcqc) = 2ipb +
+
+g
+
+xc=1
+
+ln wbcqc .
+
+dening now
+
+we have
+
+and
+
+b(u) =
+
+
+ub
+
+ln (u) ,
+
+b (u (ta(z))) = b(u)  ab
+
+b (u (sa(z))) = b(u) .
+
+we then dene the following function:
+
+f (z) = xb
+
+wb
+
+
+(z  b)(z  b)
+
+wb(b  b)
+
+b (u(z)) .
+
+this function transforms like
+
+(36)
+
+(37)
+
+fw (ta(z)) = t 
+
+wc
+
+
+(z  c)(z  c)
+
+wc(c  c)
+
+a(z)xc
+a(z)"xc
+
+wc
+
+
+= t 
+
+(cid:2)c (u(z))  ac(cid:3)
+
+c (u(z)) 
+
+wa
+
+
+
+(z  a)(z  a)
+
+wa(a  a) #
+
+(z  c)(z  c)
+
+wc(c  c)
+
+11
+
+and
+
+fw (sa(z)) = fw(z) .
+
+since we are summing over all the elements of the schottky group, we then have
+
+fw (ta(z)) = t 
+
+fw (sa(z)) = fw(z) ,
+
+a(z)(cid:20)fw(z) 
+
+wa
+
+(z  a)(z  a)
+
+
+
+wa(a  a)
+
+(cid:21) ,
+
+which are the transformation properties we wanted. so we have obtained the eichler integral that
+has the eect of changing innitesimally the variables wa of a riemann surface of genus g.
+
+one way to verify this is a true eichler integral is to take its third derivative. the result must
+
+be an automorphic form of weight 2. taking the third derivative of (37), we have
+
+gw(z) 
+
+d3
+
+dz3 fw(z) = xb
+
+wb
+
+wb (cid:20)
+
+(b  b)
+
+(z  b)(z  b)(cid:21)2
+
+(cid:2) pbc (u(z))  p  (u(z))(cid:3) ,
+
+(38)
+
+where
+
+is the hyperelliptic p function and
+
+pbc(u) = 
+
+
+uc
+
+b(u)
+
+p 
+
+bc(u) =
+
+2
+u2
+c
+
+pbc(ub) .
+
+it can be easily veried that pbc(u) and its derivatives are invariant under changes z  ta(z)
+
+and z  sa(z), so that the function g(z) transforms like
+
+i.e. it is an automorphic form of weight 2. this conrms fw(z) as an eichler integral.
+
+gw (ta(z)) = (cid:0)t 
+
+a(z)(cid:1)2 gw(z) ,
+
+(39)
+
+4.2 example 6
+
+in the same way we found a function (eichler integral) that changes the variables wa of a rie-
+mann surface innitesimally we now want to nd a function that will change the variables a
+innitesimally. this means this function must transform like
+
+f (ta(z)) = t 
+
+a(z)f(z) 
+
+ta(z)
+
+a
+
+a
+
+
+,
+
+for every a = 1, . . . , g, what implies that we want this function to transform like
+
+f (ta(z)) = t 
+
+a(z)(cid:20)f(z) +
+
+(1  wa)
+
+wa(a  a)2 (z  a)2 a
+
+ (cid:21) .
+
+(40)
+
+we also demand that
+
+f (sa(z)) = f(z) .
+
+the method to obtain this function is analogous to the one used in the example 5, but now we use,
+instead of the poincare series pw(z), the series given in (5):
+
+p(z) = xb
+
+b
+
+
+(1  wb)
+wb(b  b)2 (z  b)2 .
+
+12
+
+the function (eichler integral) with the properties we need is then given by
+
+f(z) = xb
+
+b
+
+
+(1  wb)
+wb(b  b)2 (z  b)2 b(u) .
+
+(41)
+
+4.3 example 7
+
+similarly, if want a function that changes the variables a innitesimally, we then need it to
+transform like
+
+f (ta(z)) = t 
+
+a(z)f(z) 
+
+for every a = 1, . . . , g, i.e.
+
+a
+
+
+,
+
+ta(z)
+
+a
+
+f (ta(z)) = t 
+
+a(z)(cid:20)f(z) +
+
+(1  wa)
+
+wa(a  a)2 (z  a)2 a
+
+ (cid:21) .
+
+we also demand that
+
+we then use the poincare series (6),
+
+f (sa(z)) = f(z) .
+
+p(z) = xb
+
+b
+
+
+(1  wb)
+wb(b  b)2 (z  b)2 ,
+
+and build the eichler integral
+
+f(z) = xb
+
+b
+
+
+(1  wb)
+wb(b  b)2 (z  b)2 b(u) ,
+
+which has the correct transformation properties.
+
+acknowledgements
+
+(42)
+
+(43)
+
+(44)
+
+the author would like to thank professor p. c. west, under whose supervision this work was
+completed, and dr. j. harvey for directing me to eichler integrals as possible solutions to my
+measure problem with strings.
+
+i also would like to thank capes (brazilian government) for nancing this work. g.e.d.!
+
+a some geometrical objects dened on a genus g riemann surface
+
+a.1 generalized  functions
+
+the generalized  function is dened in the following way [8]:
+
+(v; , ) =
+
+
+
+xn=
+xa=1
+
++
+
+g
+
+va(2)abvb + i(na + a)ab(nb + b)(cid:21)
+
+g
+
+xa,b=1(cid:20) 1
+
+exp
+
+[va(na + a) + 2ia(na + a)]) ,
+
+2i
+
+13
+
+where the sum p
+
+n= means the sum over all na, a = 1, . . . , g. here, va and vb are the g rst
+abelian integrals, (2)ab is a symmetric g  g matrix, na and nb are integers and a and a are
+vectors with g components that are the characteristics of the function.
+
+if all the lements in the rows p and q are integers, this function transforms like [8]
+
+(v + ; , ) = exp( g
+
+xa=1(cid:20)ha(cid:18)va +
+
+1
+2
+
+a(cid:19)  ipaqa + 2i(qaa  paa)(cid:21)) (v; , )
+
+where v +  stands for the sums va + a (a = 1, . . . , g) where
+
+and
+
+a = 2i
+
+g
+
+xb=1h2(1)abpb + 2(2)abqbi
+
+ha =
+
+g
+
+xb=1h2(1)abpb + 2(2)abqb)i
+
+where (1) and (2) are g  g matrices and p, q are g-vectors.
+
+we can x (2)ab = 0. thsi implies
+
+we then have the following function:
+
+(1)ab = 
+
+1
+2
+
+ab .
+
+(v; , ) =
+
+
+
+xn=
+
+which transforms like
+
+g
+
+xa,b=1
+
+exp
+
+
+i(na + a)ab(nb + b) +
+
+g
+
+xa=1
+
+[va(na + a) + 2ia(na + a)]
+
+a(cid:19)  ipaqa + 2i(qaa  paa)(cid:21)) (v; , ) .
+
+,
+
+(v + ; , ) = exp( g
+
+xa=1(cid:20)ha(cid:18)va +
+
+1
+2
+
+this is the function that is generally reered to as the generalized  function in the literature.
+
+we may dene the well-known object called the prime form in terms of the generalized 
+
+function, which is its most general denition. it is given by
+
+where
+
+e(z, ) =  (v(z)  v())" g
+xa=1
+(v)(cid:12)(cid:12)(cid:12)(cid:12)v=0
+
+b(0)wb(z)#1/2
+a(0)wa(z)#1/2" g
+xb=1
+(v)(cid:12)(cid:12)(cid:12)(cid:12)v=0
+
+, b(0) 
+
+a(0) 
+
+
+va
+
+
+vb
+
+,
+
+,
+
+and wa(v), wb(v) are rst abelian dierentials.
+
+14
+
+a.2 hyperelliptic  function
+
+we now dene the hyperelliptic -function [8] [9]:
+
+this function transforms in the following way:
+
+a(v) =
+
+
+va
+
+ln (v; , ) .
+
+a(v + ) = ha + a(v) =
+
+g
+
+xb=1h2(1)abpb + 2(2)abqbi + a(v) .
+
+the analogy with the one loop -functions is complete when we associate the matrices (1) and (2)
+with the numbers (w1/2) and (w2/2), respectively. we then have the identity
+
+g
+
+xc=1
+
+2iac(2)cb  2i(1)ab = ab .
+
+a function that will be more useful to us is one that is invariant under a change  = 2iqa so
+
+that we must x (2)ab = 0. such a function, say a, is dened by
+
+and transforms like
+
+a(v) =
+
+
+va
+
+ln (v; , )
+
+a(v + ) = pa + a(v) .
+
+more particularly, this formula shows that the function  is invariant under a change a = 2iabpb
+for b 6= a.
+it only changes, and then only by a constant term, under the transformation a =
+2iaapa for any pa.
+
+a.3 hyperelliptic p function
+
+we now dene the hyperelliptic p function in the following way [8] [9]:
+
+pab =
+
+
+vb
+
+a(v) =
+
+
+vb
+
+
+va
+
+ln (v) .
+
+this function is invariant under changes a = 2ipg
+
+pab(v + ) = pab .
+
+b=1 ab + 2iqa, i.e.
+
+references
+
+[1] l. r. ford, automorphic functions (chelsea, new york, 1951).
+
+[2] m. schlichenmeier, an introduction to riemann surfaces, algebraic curves and moduli spaces
+
+(springer-verlag, new york, 1989).
+
+15
+
+[3] bateman project (various authors), higher transcedental functions, vol. 2 (1953).
+
+[4] l. v. ahlfors, finitely generated kleinian groups, amer. j. math. 86 (1964) 413; amer. j.
+
+math. 87 (1965) 759.
+
+[5] l. v. ahlfors, the structure of a nitely generated kleinian group, acta math. 122 (1969)
+1; i. kra, on the cohomology of kleinian groups: ii, ann. math. 90 (1969) 576; l. bers,
+eichler integrals with singularities, acta math. 127 (1971) 11; i. kra, on cohomology of
+kleinian groups iii. singular eichler integrals, acta math. 127 (1971) 23; on the vanishing
+of and spanning sets for poincare series for cusp forms, acta math. 153 (1984) 47; eichler
+cohomology and the structure of nitely generated kleinian groups, in the proceedings of the
+1969 stony brook conference, edited by l. v. ahlfors, l. bers, h. m. farkas, r. gunning, i.
+kra, and h. e. rauch (princeton university press, princeton, nj, 1971).
+
+[6] p. c. west, a brief review of the group theoretic approach to string theory, in conformal
+field theories and related topics, proceedings of the 3rd annecy meeting on theoretical
+physics, lapp, annecy le vieux, france, nucl phys. b proc. suppl., edited by p. binetruy,
+p. sorba, and r. stora (north holland, new york, 1988, vol. 5b, p.217); in the 9th workshop
+on grand unication, edited by r. bartoutaud (world scientic, singapore, 1988); and in the
+1988 electroweak interactions and unied theories, proceedings of the xxiiird rencontre de
+moriond, edited by j. tran thanh van (edition frontieres, city, 1988).
+
+[7] a. neveu and p. c. west, group theoretic approach to the perturbative string s-matrix,
+
+phys. lett. b 193 (1987) 187.
+
+[8] h. f. baker, abels theorem and allied theory, including the theory of theta functions
+
+(cambridge university press, cambridge, 1897).
+
+[9] d. mumford, tata lectures on theta, vol. ii, in progress in mathematics 28 (birkhauser,
+
+boston, 1984).
+
+16
+
+

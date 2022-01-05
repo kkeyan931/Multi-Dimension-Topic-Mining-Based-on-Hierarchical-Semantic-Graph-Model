@@ -1,0 +1,7598 @@
+high energy limits
+of various actions
+
+harald g svendsen
+
+9
+9
+9
+1
+
+ 
+
+v
+o
+n
+5
+
+ 
+
+ 
+ 
+
+1
+v
+8
+3
+0
+1
+1
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+thesis submitted for the degree of candidatus scientiarum
+
+department of physics
+
+university of oslo
+
+june 1999
+
+ii
+
+preface
+
+when people ask me what i do, or what kind of subjects i study, i have sometimes
+ironically answered that i do abstract art. this thesis does not have practical appli-
+cations, in the sense that it can tell you how to wash your clothes, make coee, or
+help you to calculate numbers that can in turn be measured with some apparatus.
+the applications are theoretical  the thesis casts some light on mathematical rela-
+tions within a theoretical framework. and the results that are obtained are purely
+analytical.
+
+some people demand from physics that it shall be concerned with observable
+things. with such a narrow view of the eld this thesis can hardly be called a work
+of physics. but at the same time, i would guess that mathematicians would be
+horried by the lack of stringency, so calling it a piece of mathematics is no less
+dangerous.
+
+it is on this basis that i like to call it abstract art. its value lies in the aesthetics.
+one kind of art has an immediate value because of its beauty to the eye or ear, or
+because of its direct associations. another kind of art is more indirect.
+its value
+may require some background information, and lies more in the meaning than in the
+sensation. for me the beauty in the abstract art of physics is of this kind, and lies
+in the understanding of certain mathematical relations  that in turn are somehow
+related to the world we live in.
+
+this aesthetics is my prior motivation for the interest in theoretical physics. i
+cannot claim to do what i do because i think it will make the world a better place.
+it is beauty more than importance that attracts me.
+
+for people not so fascinated by art and aesthetical values, i want to emphasize that
+this concerns only my subjectice motivation. what is actually done, the derivations
+and interpretations, shall of course satisfy the standards of reliable science.
+
+acknowledgments
+
+i would like to express my sincere thanks to ulf lindstrom, who gave me this project,
+and has been a pleasant collaborator. i also thank my other helpful teachers and fel-
+low students both in oslo and during my stay in stockholm.
+
+harald g svendsen
+june 1999
+
+iii
+
+iv
+
+contents
+
+1 introduction
+
+1.1 motivations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1.2 lagrange and hamilton formalism . . . . . . . . . . . . . . . . . . . .
+1.2.1 lagrange formalism . . . . . . . . . . . . . . . . . . . . . . . .
+1.2.2 hamilton formalism . . . . . . . . . . . . . . . . . . . . . . . .
+1.2.3 constrained systems . . . . . . . . . . . . . . . . . . . . . . . .
+1.3 symmetries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1.3.1 dieomorphism symmetry . . . . . . . . . . . . . . . . . . . . .
+1.3.2 weyl symmetry . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1.3.3 poincare symmetry . . . . . . . . . . . . . . . . . . . . . . . . .
+1.3.4 conformal symmetry . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+1.4.1 energy-momentum tensor . . . . . . . . . . . . . . . . . . . . .
+1.4.2 naive hamiltonian for di invariant theories
+. . . . . . . . . .
+1.5 methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1.5.1 method i: auxiliary eld . . . . . . . . . . . . . . . . . . . . .
+1.5.2 method ii: phase space . . . . . . . . . . . . . . . . . . . . . .
+
+1.4 more on coordinate transformations
+
+2 bosonic strings
+
+introduction to strings and branes
+
+2.1
+2.2 the point particle
+
+. . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.2.1 the action . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.2.2 method i
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.2.3 method ii . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.3 the nambu-goto string . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.3.1 the action . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.3.2 method i
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.3.3 method ii . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+p-branes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.4.1 the action . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.4.2 method i
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.4.3 method ii . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.5 the string in the polyakov form . . . . . . . . . . . . . . . . . . . . . .
+
+2.4
+
+1
+1
+2
+2
+4
+6
+8
+8
+9
+10
+11
+13
+14
+18
+19
+20
+21
+
+23
+23
+25
+25
+27
+28
+29
+29
+30
+31
+35
+35
+35
+36
+38
+
+v
+
+vi
+
+contents
+
+2.5.1 the action . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.5.2 method i
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.5.3 method ii . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3 d-branes
+
+3.1 actions
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3.2 the born-infeld action . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3.2.1 method i
+3.2.2 method ii . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3.3 weyl-invariant form . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3.3.1 method ii . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+4 rigid strings
+
+4.1 the action . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.2 method i
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.3 method ii . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+5 general relativity
+
+5.1 the action . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5.2 method i
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5.3 method ii . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5.4 adm approach (method ii) . . . . . . . . . . . . . . . . . . . . . . . .
+
+6 other models
+
+6.1 yang-mills theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6.1.1 the action . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6.1.2 method ii . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6.2 chern-simons theory . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6.2.1 the action . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6.2.2 method ii . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+7 conclusion
+
+appendix
+
+a.1 tensor densities . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+a.2 derivatives of determinants . . . . . . . . . . . . . . . . . . . . . . . .
+a.3 on the vielbein formalism . . . . . . . . . . . . . . . . . . . . . . . . .
+a.4 on lie derivatives
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+a.5 the gauss-codazzi equation . . . . . . . . . . . . . . . . . . . . . . .
+
+38
+40
+41
+
+45
+45
+46
+47
+47
+49
+49
+
+53
+53
+54
+55
+
+61
+61
+63
+64
+65
+
+69
+69
+69
+70
+71
+71
+71
+
+73
+
+75
+75
+75
+76
+77
+78
+
+chapter 1
+
+introduction
+
+the goal of this thesis is twofold. first, it is meant to give a thorough presentation
+of two methods for deriving tensionless limits of strings, and the analogue in other
+models. second, the applicability of these methods are investigated by explicitly
+going through the calculations for a variety of models.
+
+we start by going through some background theory in this introductory chapter
+about constrained hamiltonian systems, and dierent symmetry considerations. a
+general result concerning the hamiltonian of di invariant theories is derived in
+section 1.4.2. then the methods are presented within the general picture, before
+the simplest examples are given in chapter 2. in the subsequent chapters we study
+d-branes, rigid strings, general relativity and take a brief look on yang-mills and
+chern-simons theory. a summary and concluding remarks are nally given in chapter
+7.
+
+throughout this thesis we use the standard summation notation aibi pi aibi, and
+
+natural units where c = 1.
+
+1.1 motivations
+
+the question naturally arises of why we should bother with the kind of limits that
+we are going to study in this thesis. do not particles have mass, and strings tension?
+the question is of course crucial, and worthy of an answer. if we were not able to
+give one, the present undertaking would seem like a meaningless activity beyond any
+interest apart from the purely academical one.
+
+but those who are anxious can safely relax: there is a motivation. actually,
+
+there are several dierent aspects of these limits that are of interest.
+
+if we start from the action of a mas-
+the limits represent physical situations
+sive particle and derive the massless limit, we will end up with a theory for massless
+particles describing e.g. photons (if we disregard spin and charge). and their exis-
+tence at least is without doubt. whether tensionless strings also have direct physical
+
+1
+
+2
+
+1. introduction
+
+applications is not as easy to tell since strings themselves are not yet suciently well
+understood.
+
+but if we want to test the existence of tensionless strings (or analogous limits of
+other theories) we need to have a theory for them. and the methods we will use are
+ways to arrive at such theories.
+
+high energy limit for high energies the mass of a particle becomes unimportant
+compared to its kinetic energy. therefore the massless limit gives an approximation
+of the behaviour at high energies. the same is supposed to be true for strings: the
+tensionless limit may be viewed as a high energy limit. and high energy physics
+is important for several reasons. when we study systems at a very small scale we
+unavoidably (by the heisenberg principle) have systems at high energy. also, at the
+earliest stages of the evolution of the universe, the energy density was very high. an
+understanding of the childhood of the universe thus requires an understanding of
+high energy physics.
+
+conformal invariance another characteristic of these limits is that they lead us to
+conformally invariant theories. those are theories with a higher degree of symmetry
+and interesting in their own right.
+
+and then of course we still have the purely academical reason to investigate just for
+the investigation in itself. for, who knows, we may nd something interesting and
+important. or we may at least get new insight into known theories.
+
+1.2 lagrange and hamilton formalism
+
+when it comes to solving simple problems in classical mechanics, the formulation
+by newton is usually the most natural machinery to use. however, for analytical
+discussions the formalism developed by 18th century physicists like lagrange and
+hamilton has shown much more fruitful. since this formalism will be used exten-
+sively throughout this thesis, we begin by giving a short review. a more thorough
+introduction is found in textbooks on eld theory, e.g. [14].
+
+1.2.1 lagrange formalism
+
+the starting point in this formalism is the lagrangian density (in the following just
+called the lagrangian or lagrange function), which is a function of some elds i(xa)
+and their derivatives ai = i
+xa ,
+
+l = l(i, ai).
+
+(1.1)
+
+the index i is used, when necessary, to distinguish the dierent elds in the la-
+grangian. a is an index running over all coordinates. a = 0 denotes the time coor-
+dinate, and we write time derivatives as 0 = . for spatial (a > 0) derivatives
+
+1.2 lagrange and hamilton formalism
+
+3
+
+we write . this convention will be convenient when we work in the hamilton
+formalism, since time has a special role there.
+the above lagrangian is written as a function of rst order derivatives only, and
+hence we call it a rst order lagrangian. it is also possible to allow for higher order
+derivatives in the lagrangian, but such lagrangians can usually be reduced to rst
+order ones by introduction of extra elds, as discussed in [5].
+
+from the lagrange function we construct the action as the integral over the
+
+conguration space,
+
+s[i] =z dxl(i(x), ai(x)),
+
+(1.2)
+
+where x = {xa} is usually a set of coordinates, and the integral is then many-
+dimensional. the action integral is a functional of the elds i(x), which means
+that it takes functions to numbers (in contrast to functions, which take numbers to
+numbers.) suppose we make small variations in the arguments of the lagrangian. in
+other words, consider the transformation i  i + i, with i = 0 on the bound-
+aries. the values of i that represent the dynamical behaviour of the classical system
+are the ones that leave the action unchanged under such innitesimal variations. this
+is the principle of extremal action, also called hamiltons principle.
+
+if we consider a variation i in the elds, and demand the action to be extremal
+(i.e. zero under the transformation), we arrive at some equations which we call the
+eld equations, equations of motion or euler-lagrange equations. for lagrangians
+that have only rst order derivatives, they can be deduced quite simply as follows.
+
+i  s =z dx(cid:18) l
+
+i i +
+
+l
+
+(ai)
+
+(ai)(cid:19) .
+
+(1.3)
+
+we can change the order of variation and derivation and write (ai) = a(i).
+together with a partial integration this gives
+
+s = z dx(cid:18) l
+= z dx(cid:18) l
+
+i i + a(
+
+i  a(
+
+(ai)
+
+l
+
+(ai)
+l
+
+i)  a(
+)(cid:19) i,
+
+l
+
+(ai)
+
+)i(cid:19)
+
+(1.4)
+
+where we have disregarded the total derivative. this is allowed since it will only give
+rise to a boundary (surface) term that vanishes since i are then zero. demanding
+s = 0 for arbitrary innitesimal variations i we nd the eld equations,
+
+i  a(
+
+l
+
+(ai)
+
+l
+i = 0.
+
+) 
+
+(1.5)
+
+the elds that satisfy the equations of motion are said to span the classical path.
+
+as long as we are in the classical domain of physics, the action integral is just a
+convenient and compact notation that contains the eld equations and the symmetries
+of the theory. the introduction of this formalism is, however, crucial when we want to
+do quantum mechanics. classically, two actions that gives rise to the same equations
+
+4
+
+1. introduction
+
+of motion are equivalent, but this is not true quantum mechanically. classically
+equivalent actions normally lead to dierent quantum physics. this fact may serve
+as a justication of our eagerness to nd classically equivalent actions.
+
+one of the major advantages of this formalism is that many symmetries are
+manifest in the lagrangian. and this is also of great help when we want to write
+down the lagrange function in the rst place: it must have a form that satises the
+symmetries of the theory under consideration.
+
+there is generally no way to deduce the lagrangian. but that is no weakness of
+the formalism. any theory needs a starting point, and in this formalism we start with
+the lagrangian, and take the extremum of the action as a rst principle. the right
+attitude is not to try to derive a lagrangian, but to argue from general principles
+(e.g. symmetry) and analogies with other theories that it should take some specic
+form.
+
+variational derivatives
+
+consider a function f constructed from some elds i(x) and their rst order deriva-
+tives, f = f (, ). (the typical example is the lagrangian.) variations in i(x)
+will then give a variation in f (x) that we can write
+
+(x)  f (x) = z dx(cid:20) f (x)
+
+i(x)  a
+f (x)
+i(x).
+i(x)
+
+ z dx
+
+f (x)
+
+(ai(x))(cid:21) i(x)
+
+(1.6)
+
+(1.7)
+
+the variational derivative f (x)
+i(x) of f gives the contribution to the variation of f (x)
+from a variation of i(x). to get the total variation of f (x) we have to sum over the
+discrete index i, and integrate over the continuous parameter x.
+
+by comparison with (1.4) we see that the euler-lagrange equations can be written
+
+by means of the variational derivative as
+
+l
+i = 0.
+
+(1.8)
+
+1.2.2 hamilton formalism
+
+if we already have the lagrangian, we dene the canonical conjugate momentum
+(density) associated with i as
+
+i =
+
+l
+ i
+
+,
+
+(1.9)
+
+where, again, dot denotes dierentiation with respect to the time parameter.
+
+with the denition (1.9) we can perform a legendre transformation from cong-
+
+uration space to phase space. first, dene the quantity h by
+
+h(, , ) = i i  l(, ).
+
+(1.10)
+
+1.2 lagrange and hamilton formalism
+
+5
+
+a variation in h can then be written
+
+h = i i + ii 
+
+l
+i i 
+
+l
+ i
+
+ i 
+
+l
+
+i i.
+
+substitute for the denition of  and arrive at
+
+h = ii 
+
+l
+i i 
+
+l
+
+i i.
+
+the variation h can be written by means of variations in ,  and . this means
+that we can express h =    l as a function of these variables, omitting . this is
+true even though (1.9) may not always be possible to solve explicitly for i. written
+this way we call h the hamiltonian, but now denoted with a capital h,
+
+h = h(, ,) = i i  l(, )
+
+(1.11)
+
+the transformation from l to h is a legendre transformation. we will call the
+hamiltonian obtained in this way the naive hamiltonian, hnaive, to distinguish it
+from the total hamiltonian which we introduce in the next section.
+
+hamiltons modied principle states that the phase space action,
+
+sp s =z dx(i i  h(, ,)),
+
+(1.12)
+
+is unchanged under variations of  and , which are now considered independent of
+each other. we nd1
+
+sp s = z dx(cid:20)z dx(x  x)(cid:16) i(x)i(x)  i(x)(x)(cid:17)
+i(x)(cid:17)(cid:21)
+
+h(x)
+i(x)
+
+i(x) +
+
+i(x)
+
+z dx(cid:16) h(x)
+= z dx(cid:20)(cid:16) i(x) z dx
++(cid:16)  i(x) z dx
+
+h(x)
+
+i(x)(cid:17)i(x)
+i(x)(cid:17)i(x)(cid:21).
+
+h(x)
+
+(1.13)
+
+using hamiltons modied principle sp s = 0, this leads to hamiltons equations:
+
+i(x) = z dx h(x)
+ i(x) = z dx h(x)
+
+i(x)
+
+i(x)
+
+,
+
+.
+
+(1.14)
+
+(1.15)
+
+these equations are equivalent to the euler-lagrange equations. this is not trivial
+to prove, and it is a remarkable result that it is true.
+
+1 we use a trick and write i(x)i(x) =r dx(x  x) i(x)i(x) (and the same for i(x)i(x)).
+
+6
+
+1. introduction
+
+1.2.3 constrained systems
+
+references for the theory discussed in this section are [68].
+
+suppose that we for a given lagrangian have found the momenta i = l
+
+ i . the
+way to the hamiltonian picture is easy if we can invert this procedure to nd i as
+i = i(, ,). then we can just sub-
+functions of the elds and momenta, i.e.
+stitute for i in h and immediately arrive at the naive hamiltonian hnaive(, ,)
+this is often possible, but not if there exists some gauge freedom in the theory. there
+are also non-gauge theories which fail to be invertible in this way [7].
+
+it is therefore of interest to study this class of systems, which are called con-
+strained systems. the non-invertibility means that the derived momenta will not be
+independent, and there exist some relations between them. these relations can be
+expressed as functions i
+m(, ,) = 0, m = 1, . . . , m , where m is the number of
+such functions. we call these the primary constraints since they follow directly from
+the denition of the momenta.
+
+suppose that i can take n dierent values (i.e. there are n eld variables). then
+ i j . if r is the rank of this matrix, then the number
+
+dene the n n matrix cij  2l
+of independent primary constraints is n  r.
+for constrained systems the naive hamiltonian is not unique, since we may add
+to it any linear combination of the constraint functions i. this fact leads to a
+modication of hamiltons equations. the modied versions are
+
+i(x) = z dx h1(x)
+ i(x) = z dx h1(x)
+
+i(x)
+
+i(x)
+
+,
+
+(1.16)
+
+(1.17)
+
+i i
+where h1  hnaive + m
+m and m
+they are called lagrange multipliers.
+
+i are coecients that do not depend on  and .
+
+poisson brackets the notation of poisson brackets is very convenient in this for-
+malism. consider two functions f and g that are constructed from  and . if we
+write f (x) as short for f ((x), (x)), their poisson bracket is dened as
+
+(cid:8)f (x), g(x)(cid:9) z dx(cid:18) f (x)
+
+i(x)
+
+g(x)
+i(x) 
+
+f (x)
+i(x)
+
+g(x)
+
+i(x)(cid:19) .
+
+(1.18)
+
+the brackets can easily be shown to satisfy the following relations:
+
+1. antisymmetry {f, g} = {g, f}
+2. linearity {f + g, h} = {f, h} + {g, h}
+3. product law {f g, h} = f{g, h} + {f, h}g
+4. the jacobi identity {f,{g, h}} + {g,{h, f}} + {h,{f, g}} = 0
+
+1.2 lagrange and hamilton formalism
+
+7
+
+it is also easy to show that the fundamental poisson brackets are
+
+{i(x), j (x)} = i
+{i(x), j (x)} = {i(x), j (x)} = 0.
+
+j(x  x),
+
+(1.19)
+
+(1.20)
+
+when we work with poisson brackets in the present circumstance the following is
+important: poisson brackets must be evaluated before we make use of the constraint
+equations. in other words, we should perform the calculations in phase space, and
+restrict to the constraint surface ( = 0) at the end. to emphasize this point we use
+diracs notation [6] and say that the constraint equations are weakly zero, and write
+them with a new weak equality sign  as:
+
+i
+m(, )  0.
+
+(1.21)
+
+this makes a dierence, for even though (, ) is dynamically zero (i.e. zero when
+ and  satisfy hamiltons equations) it is not zero throughout phase space.
+
+now, let us consider the time evolution of the function f (, ). by the chain rule we
+have
+
+f (x) =z dx(cid:18) f (x)
+
+i(x)
+
+i(x) +
+
+f (x)
+i(x)
+
+i(x)(cid:19) .
+
+(1.22)
+
+using the (modied) hamiltons equations (1.16) and (1.17) we can insert for  and
+ and get
+
+f (x) = z dxz dx(cid:18) f (x)
+= z dx(cid:8)f (x), h1(x)(cid:9) .
+
+i(x)
+
+h1(x)
+i(x) 
+
+f (x)
+i(x)
+
+h1(x)
+
+i(x) (cid:19)
+
+(1.23)
+
+the constraints must hold (i.e. be weakly equal to zero) for all times. this means
+that their time derivatives should vanish (weakly):
+
+i
+m(, )  0.
+
+(1.24)
+
+by putting f = i
+conditions:
+
+m in the equation above, we thus get the following consistency
+
+z dx{i
+
+m(x), h1(x)}  0,
+
+or more explicitly
+
+z dxh{i
+
+m(x), hnaive(x)} + n
+
+i {i
+
+m(x), i
+
+n(x)}i  0.
+
+these equations may lead to three dierent situations. the rst is that they do not
+give anything new at all, we merely end up with 0 = 0. in this case we have already
+found the full constraint structure.
+
+(1.25)
+
+(1.26)
+
+8
+
+1. introduction
+
+another possibility is that we arrive at equations not involving the i s. then
+
+we get new constraints on  and  on the form
+
+ii
+p (, )  0.
+
+(1.27)
+
+these are called secondary constraints.
+
+on them,
+should be continued until we get no more new conditions.
+
+the third kind of equations we may end up with also depend on the lagrange
+multipliers i . the consistency conditions will then impose a condition on the i s.
+if we get secondary constraints we must go on and check the consistency conditions
+ii  0 in just the same way as for the primary constraints. this loop
+the distinction between primary and secondary (and tertiary etc.) constraints is
+just a matter of how they appear, and is not physically important. in fact, dierent
+lagrangians that describe the same physical system will in general give rise to the
+constraints in a dierent order and dierent combinations.
+
+when we have found all constraints and conditions on the s (if any) we are
+
+ready to write down the total hamiltonian:
+
+ht = h + aa.
+
+(1.28)
+
+if we had no conditions imposed on the s, h will be identical to the naive hamil-
+tonian, and a = {m
+ii , . . .}. if, on the other hand, such conditions were present,
+h will be shifted by some factor, and the lagrange multipliers can be redened so
+that all the as are independent. this will not be important for our considerations,
+and is explained in more detail in [6, 7].
+
+i , p
+
+several examples of calculations of the kind explained in this section are given
+
+later on in the thesis.
+
+1.3 symmetries
+
+let s be some symmetry, and let ts be the transformation associated with this
+symmetry. we say that a theory has the symmetry s if the action s = r ldx
+describing the theory is left unchanged under transformations ts . we then say that
+in this section we will see a brief description of some
+the action is s-invariant.
+symmetries that we will frequently encounter. most of the examples presented are
+studied in more detail later on.
+
+1.3.1 dieomorphism symmetry
+
+suppose we have an action integral parameterized by x (x may be one parameter or
+a whole set), then we write the action as
+
+s =z dxl(),
+
+(1.29)
+
+1.3 symmetries
+
+9
+
+where  symbolizes the eld variables. ( may be one or a whole set of elds.) a
+dieomorphism is a general coordinate transformation of the form
+
+x  x = x(x).
+
+(1.30)
+
+the name comes from the fact that x is a dierentiable function of x (usually  c).
+in the context of particles, strings etc. where the parameters in the action are not the
+spacetime coordinates we usually refer to the transformation as a reparameterization.
+now, for a dieomorphism symmetry to be present in the model, the action has to
+be invariant under this transformation. whether that is the case of course depends
+on how the elds transform, (x)  (x), and of the form of the lagrangian. for
+short, dieomorphism is often written di (e.g. di invariance).
+
+example: the relativistic point particle. here the action is (c.f. section 2.2)
+
+s = mz ds
+
+dx 
+d
+
+dx 
+d
+
+(1.31)
+
+consider the reparameterization    ( ). the elds are scalars under this transfor-
+mation, in the sense that x ( ) = x ( ). (the position of the particle is obviously
+independent of the parameterization.) the transformed action (i.e. the action de-
+scribed by the transformed quantities) is then
+
+d x ( )
+
+d x  ( )
+
+d
+
+d
+
+dx ( )
+
+dx  ( )
+
+d
+
+d
+
+(
+
+d
+d
+
+)2
+
+s = z ds
+ds
+= z d
+= z ds
+
+d
+
+dx ( )
+
+dx  ( )
+
+d
+
+d
+
+= s.
+
+(1.32)
+
+the symbolic form of the action is unchanged, which is precicely the symmetry
+criterion.
+
+1.3.2 weyl symmetry
+
+when we talk about weyl symmetry we study theories which involve some metric
+gab. a weyl transformation is then a position-dependent rescaling of this metric.
+(we could also imagine rescalings of other elds, but they are not so interesting.)
+the transformation can be written as
+
+gab(x)  gab(x) = e(x)gab(x),
+
+(1.33)
+
+where (x) is any function. an action that is unchanged by this transformation is
+consequently called weyl invariant.
+
+10
+
+1. introduction
+
+example: the weyl-invariant string action [9, 10]:
+
+s =z d2ggabab.
+
+(1.34)
+
+here ab  g ax bx  , where g is the background (xed) spacetime metric,
+and a  
+a . the eld variables in the theory are the intrinsic worldsheet metric
+components gab() and the position eld x (). consider then the weyl transforma-
+tion gab()  e()gab(). under this rescaling of the metric we will have
+
+g  det gab  e2g
+
+gab  egab.
+
+and the action will transform as
+
+s z d2qe2gegabab = s.
+
+(1.35)
+
+so the action is worldsheet weyl invariant (as its name correctly announces). note
+also that the dimensionality d = 2 enters crucially in this derivation.
+
+1.3.3 poincare symmetry
+
+a poincare transformation is a coordinate transformation that consists of the familiar
+lorentz transformation plus translation. it is also called an inhomogeneous lorentz
+transformation, a name which is obvious from the form:
+
+x   x = 
+
+ x  + a.
+
+(1.36)
+
+ are the lorentz transformation coecients and a are constants describing the
+
+
+translational part.
+
+lorentz transformations can further be split into into boosts and rotations in
+
+addition to the discrete transformations of time and space inversion.
+
+a general result worth noting is that lorentz invariance is automatically achieved
+
+if the lagrangian is written in covariant form as a lorentz scalar.
+
+one very interesting feature of the poincare transformation is that gauge theory
+based on local poincare invariance (i.e. the coecients in the above transformation
+are position dependent), gives rise to a theory for gravitation.
+
+example: the relativistic point particle.
+
+we start again from the action (1.31). the coecients 
+
+ and a are constants,
+
+so the derivatives of x  are transformed as
+
+x  
+
+dx 
+d  
+
+
+
+x  .
+
+1.3 symmetries
+
+11
+
+this is the only quantity that is changed under the poincare transformation, so the
+action will transform as
+
+s  z dq
+
+= z dq x  x  = s,
+
+ 
+
+
+x  x 
+
+where we have used the general result  =  
+tivistic point particle action has poincare symmetry.
+
+ 
+
+. thus, we see that the rela-
+
+1.3.4 conformal symmetry
+
+a conformal transformation is a mapping from at space (minkowski or euclidian)
+onto itself, such that the at metric ab is left invariant up to a rescaling. in other
+words, it has the same eect as the substitution ab  (x)ab for some positive
+denite function (x). because of this, the line element will transform as ds2 
+ds2, showing that the causal structure is conserved. in particular, light cones will
+transform into light cones.
+
+alternatively, the conformal transformation may be viewed as a composite di
+and weyl transformation that leaves the at metric invariant. (the conformal sym-
+metry group is a subgroup of the diweyl symmetry group.)
+named conformal transformation. but they are not to be considered as the same.
+
+in general relativity terminology, what is here called weyl transformation is often
+
+it is also important not to confuse conformal symmetry with the di invariance
+of general relativity. conformal symmetry is a symmetry in at space theory, with
+no independent metric elds to vary. hence, conformal transformations in general
+actually change the distances between points. from this it follows that conformally
+symmetric theories have no length scale.
+
+a full conformal transformation involves a poincare transformation (lorentz +
+translation), a dilatation and a special conformal transformation.
+it acts on the
+spacetime coordinates, and the innitesimal transformation can be written x 
+x = x + x, with
+
+lorentz:
+
+translation:
+
+dilatation:
+
+special conformal:
+
+ x,
+
+x = 
+ax = a,
+cx = cx,
+bx = b xx 
+
+1
+2
+
+xxb.
+
+(1.37)
+
+(1.38)
+
+(1.39)
+
+(1.40)
+
+in 4 dimensions there are 15 independent parameters of this symmetry group: 6
+lorentz ( = ); 4 translations (a); 1 dilatation (c); 4 special (b).
+example: the massless scalar eld.
+
+consider the action
+
+s =z dx .
+
+(1.41)
+
+12
+
+1. introduction
+
+since  is a scalar we have
+
+(x) = (x);
+
+ (x) =
+
+x
+ x (x) = (
+
+   x)(x),
+
+(1.42)
+
+where   
+
+ x . the transformed action can then be written as
+
+s = z dx    
+ x
+x )(
+
+= z dx det(
+
+  x)(
+
+   x) .
+
+(1.43)
+
+(1.44)
+
+the jacobi determinant is to rst order det(  x
+
+x ) = 1 + x. this gives
+
+s = s + s;
+
+s =z dxx  ,
+x   x +  x + x .
+
+let us now consider the conformal transformations one by one.
+
+lorentz consider rst the lorentz transformation x = 
+
+x. we nd then
+x = 
+, which together with the antisymmetry of  gives x  = 0. so the
+action is lorentz invariant. as mentioned earlier, this could be concluded solely from
+the fact that the lagrangian is written covariantly as a lorentz scalar.
+
+translation for translations we have x = a, which gives  x = 0 and
+
+immediately x  = 0. thus the action is always poincare invariant.
+
+x  =  c(
+
+dilatation turn then to the dilatation, x = cx. we nd x = c
+
+, and
+  2) which is zero in two dimensions (d = 2). for general spacetime
+dimensions d, we get s = r dx , with  = 1 + c(d  2)  1 > 0. thus
+
+we nd that the eect of a dilatation is the same as a rescaling of the metric.
+
+1
+
+ xb. this gives x  =  b x(
+
+special conformal special conformal transformations have x = bxx 
+  2),
+in general we nd s = r dx  , with
+
+2 xxb, which gives x = bx + b x
+which is again zero for d = 2.
+ = 1 + b  x(d  2)  1 > 0.
+we have now seen explicitly that a conformal transformation on the massless scalar
+eld has the eect of a rescaling of the at metric (   ( + ), with  and
+ as dened above). furthermore, we found that it is conformal invariant in two
+dimensions.
+
+1.4 more on coordinate transformations
+
+13
+
+1.4 more on coordinate transformations
+
+in this section we will use symmetry principles to derive some important general
+results in eld theory.
+
+consider a general action integral,
+
+s =z dxl(i, i),
+
+(1.45)
+
+where i are some general elds; scalars, vectors or whatever. we have assumed that
+there is no explicit coordinate dependence. in the following we will see what happens
+if we make the coordinate transformation,
+
+xa  xa = xa + aa,
+
+(1.46)
+
+where aa = aa(x) is innitesimal. we now dene the jacobi matrix j a
+determinant j as
+
+b and the jacobi
+
+xa
+ xb = a
+
+j a
+b 
+j  det(j a
+
+b  baa,
+b ) = det(a
+
+b  baa) = 1  cac.
+
+whit this denition the integral measure transforms as dx  dx = dxj1.
+
+under the transformation (1.46) the action will transform to
+
+s  s =z dxl( (x),  (x)).
+
+let the transformation of the elds be written
+
+i(x)  i(x) = i(x) + i(x)
+
+(1.47)
+
+(1.48)
+
+(1.49)
+
+(1.50)
+
+this denes i. note that the elds are taken at dierent points on the left and
+right hand side. this is not the usual way to compare elds, but convenient for the
+moment. the notation, and the subsequent calculation, is inspired by fryland [1].
+for scalars we have  = 0.
+
+the derivatives of the elds will transform as
+
+b
+
+i(x) =
+
+xc
+ xb c(i(x) + i)
+
+= bi(x) + bi(x)  bacc(x).
+
+(1.51)
+
+the transformed action integral may now be taylor expanded and rewritten in the
+following way:
+
+s = z dxj1l(i + i, ai + ai  aabbi)
+
+= z dx(1 + cac)(cid:18)l(, i) +
+
+l
+i i +
+
+l
+
+(ai)
+
+(ai  aabbi)(cid:19)
+
+l
+i i +
+
+l
+
+(ai)
+
+ai
+
+
+
+l
+
+(ai)
+
+a(
+l
+
+|
+i(cid:21)
+}
+
+l
+
+)i
+
+(ai)
+
+}
+
+{z
+i + aab(cid:20)a
+|
+
+b l 
+
+1. introduction
+
+biaab(cid:19)
+
+l
+
+(ai)
+t a
+
+b
+
+{z
+
+(cid:19)
+
+bi(cid:21)
+}
+
+(1.52)
+
+14
+
+= z dx(cid:18)l + cacl +
+
+l
+
+= z dx(cid:18)l (cid:20)a(
+|
+= s +z dx(cid:16)aabt a
+
+(ai)
+
+) 
+
+=i
+
+{z
+b  ii(cid:17) ,
+
+where we have performed a partial integration and assumed the elds to vanish at
+innity. for elds that satisfy the euler-lagrange equations, i = 0, we nd
+
+another partial integration gives
+
+s =z dxaabt a
+
+b.
+
+s = z dx(at a
+
+b)ab.
+
+(1.53)
+
+(1.54)
+
+in the calculations above we have assumed that aa is position dependent. but consider
+now the global transformation (i.e. aa = const), which is an innitesimal translation.
+this is usually a symmetry of the action, in which case we have s = 0. equation
+(1.54) then gives the condition
+
+at a
+
+b = 0.
+
+(1.55)
+
+in other words, the (global) symmetry leads to a conserved translation current t a
+b.
+this is a special case of noethers theorem which states that any symmetry implies
+a conserved current.
+
+1.4.1 energy-momentum tensor
+
+l
+
+the translation current is often called the canonical energy-momentum tensor, and
+we dened it as
+
+b = a
+
+t a
+however, the tensor t ab = bdt a
+d is not symmetric and therefore cannot be used on
+the right hand side of einsteins eld equations for general relativity. neither is it
+always possible to generalize to curved spacetime.
+
+b l 
+
+(ai)
+
+bi.
+
+(1.56)
+
+we will now present another way of dening the energy-momentum tensor, which
+avoids these problems. consider the action for general relativity coupled to matter,
+which can be written (c.f. chapter 5 and [11])
+
+s =z d4xg(
+
+1
+
+
+r + lm ),
+
+(1.57)
+
+where  is a constant, g = det(gab) is the determinant of the metric, r is the ricci
+curvature scalar and lm is the term describing the matter eld. it is the same as the
+
+1.4 more on coordinate transformations
+
+15
+
+lagrangian expressed in at spacetime with the at metric exchanged by the general
+
+metric gab. (this is not valid for spinors.) if we dene lm  glm , a variation
+
+gab leads to the eld equations
+
+1
+
+
+g(rab 
+
+1
+2
+
+
+
+gabr) +
+
+lm
+gab
+
+= 0.
+
+2 gabr = 
+
+2 t ab, if we use
+
+we recover the einstein eld equations, rab  1
+lm
+gab
+
+t ab =
+
+2
+
+.
+
+g
+
+(1.58)
+
+(1.59)
+
+this tensor is manifestly symmetric, and gives a convenient denition of the energy-
+momentum tensor. in the following we will go through the necessary calculations to
+prove that the two denitions of the energy-momentum tensor are equivalent in at
+spacetime, provided that i couples to gravity via gab.
+
+equivalence of (1.56) and (1.59)
+consider again the innitesimal transformation xa  xa + aa(x). the metric gab
+transforms as a second rank tensor, i.e.
+
+ad
+gab  gab(x) = c
+xc
+ xa = j c
+
+c
+a 
+
+b gab(x),
+
+a = c
+
+a  aab.
+
+(1.60)
+
+(1.61)
+
+this gives
+
+gab(x) = gab(x) + gab;
+
+gab = (accgab + gacbac + gcbaac).
+
+(1.62)
+
+we recognize gab as a lie derivative. using the results from appendix a.4 we nd
+
+gab = ~agab = aab  baa = (aab).
+
+now, consider the at space action s =r dxl(). coupling to gravity gives
+
+sg =z dxlg(, g); lg = gl(, g).
+
+(1.63)
+
+(1.64)
+
+the innitesimal dieomorphism xa  xa + aa gives a variation in the action, which
+we write
+(1.65)
+
+sg = sg + gsg.
+
+sg  sg + sg;
+
+the rst term in sg is proportional to  and the second is proportional to gab
+since any gravity-coupled action is generally coordinate invariant, i.e. di invariant,
+we must have
+
+and as a special result
+
+s = sg + gsg = 0,
+
+(sg + gsg)|g= = 0.
+
+(1.66)
+
+(1.67)
+
+16
+
+1. introduction
+
+if we use equation (1.53) we get
+
+sg|g= = s =z dxaabt a
+
+b =z dxaabt ab
+
+(1.68)
+
+where t ab is the canonical energy-momentum tensor. furthermore, by use of (1.63)
+we nd
+
+gsg|g= = z dx
+= 2z dx
+
+lg
+gab
+
+gab|g= = z dx
+lg
+gab |g=aab
+
+lg
+gab (aab)|g=
+
+equation (1.67) gives then the following relation in at space:
+
+t ab = 2
+
+lg
+gab |g= = t ab|g=,
+
+(1.69)
+
+(1.70)
+
+which is exactly what we wanted to show. it says that the two denitions (1.56) and
+(1.59) are the same in at spacetime for models that couple to gravity according to
+(1.64). since the two denitions are the same, we immediately nd that even the
+canonical energy-momentum tensor t ab is symmetric. as noted earlier, this is not a
+general result, but comes here as a consequence of the assumpsion (1.64) that i is a
+kind of eld that couples to gravity via gab.
+
+energy-momentum tensor for spinors
+
+a description of gravity models with spinors is most easily done in the vielbein
+formalism (see appendix a.3). denote the vielbeins e a
+a (x) and their determintants
+det(e a
+lg = el(i, e a
+but also tensors.
+
+a )  e. we then have g = e, and a gravity-coupled model can be written
+a ), where l(i) is the non-coupled theory. i may now be spinors,
+
+we dene again the energy-momentum tensor t a
+
+a = lg
+e a
+
+a
+
+current:
+
+xa 
+
+sg =z dx(cid:20) lg
+
+e a
+a
+
+e a
+
+a +
+
+lg
+
+i i(cid:21) .
+
+for lorentz transformations  a
+
+b we have
+
+e a
+
+a = e b
+
+a  a
+b ;
+
+ab = ba,
+
+which gives
+
+sg = z dx(cid:20)e b
+
+a  a
+
+b t c
+
+ae a
+
+c +
+
+lg
+
+i i(cid:21)
+
+= z dx(cid:20)batba +
+
+lg
+
+i i(cid:21) .
+
+as the translation
+
+(1.71)
+
+(1.72)
+
+1.4 more on coordinate transformations
+
+17
+
+the lorentz transformation is a symmetry of the theory, so s = 0. furthermore,
+if the elds i satisfy the equations of motion lg
+which means that the antisymmetic part of the energy-momentum tensor is zero, i.e.
+t[ab] = 0. in other words, the energy-momentum tensor is symmetric for elds that
+satisfy the equations of motion, but not generally.
+
+i = 0, we get r dxabtab = 0
+
+energy-momentum tensor for conformally invariant theories
+
+as noted in section 1.3.4, a conformal transformation has the same eect as a rescaling
+of the metric. thus we may consider the variation of the action s as a result of a
+variation in gab with gab = gab. this means that we can write
+
+s =z dx
+
+l
+gab
+
+gab =z dx2t abgab = 2z dxt abgab.
+
+(1.73)
+
+invariance means s = 0 so we have for conformally invariant theories that the
+energy-momentum tensor is traceless, i.e.
+
+t a
+
+a = t abgab = 0.
+
+(1.74)
+
+this is indeed a simple way to determine conformal invariance.
+
+example: we now return to the massless scalar eld we considered in section 1.3.4,
+with the lagrangian
+
+l =  .
+
+(1.75)
+
+the canonical energy-momentum tensor is found to be
+
+t 
+
+  
+
+ l 
+
+l
+
+= (
+
+ 
+
+   2
+
+ ),
+
+t  = (   2).
+
+to use the other denition of the energy-momentum tensor, we couple the model to
+gravity, and get
+
+lg = gg .
+
+then we nd
+
+t  
+
+2
+
+g
+
+lg
+g
+
+=
+
+2
+
+g
+
+lg
+g
+
+= (g g  2gg).
+
+we see immediately that t  = t |g=. furthermore, the trace is
+
+t 
+ = g t  = (d  2)g ,
+
+which says that the energy-momentum tensor is traceless in two dimension, d = 2.
+this is in complete agreement with the fact that the massless scalar eld is conformal
+invariant in two dimensions.
+
+(1.76)
+
+(1.77)
+
+(1.78)
+
+(1.79)
+
+18
+
+1. introduction
+
+1.4.2 naive hamiltonian for di invariant theories
+
+if we let a be position dependent, and arbitrary, the transformation (1.46) is identical
+to an innitesimal dieomorphism. if we demand the action to be di invariant, but
+do not restrict to elds that satisfy the equations of motion, we get from (1.52) the
+condition
+
+z dxht a
+
+baab  iii = 0.
+
+(1.80)
+
+we want to show how this can give us an expression for the hamiltonian. to do so
+we need to know the form of . let us consider scalar, vector and second rank tensor
+elds, i = {, aa, aab}, and dene b
+scalars for scalar elds we have simply
+
+a  aab.
+
+a  xb
+
+ xa = b
+
+vectors for vector elds we have
+
+ = 0.
+
+aa(x) = b
+
+aab(x) = (b
+
+a  aab)ab(x),
+
+which gives
+
+a
+b = baaaa.
+
+second rank tensors
+
+in this case we have
+
+fab(x) = c
+
+ad
+
+b fcd(x),
+
+which gives
+
+ab = cad(c
+f
+
+afdb + c
+
+bfad)
+
+(1.81)
+
+(1.82)
+
+(1.83)
+
+(1.84)
+
+(1.85)
+
+if the action depends on both scalars, vectors and second rank tensors, their contri-
+butions will just add up. the di symmetry criterion is then
+
+z dxaabht a
+
+b + aab + acfbc + dafdci = 0,
+
+(1.86)
+
+where a are the euler-lagrange equations associated with aa and ab are the euler-
+lagrange equations associated with fab. for the equation to be true for arbitrary aa
+we must have
+
+t a
+b = aab  acfbc  dafdc.
+furthermore, we recognize t 0
+0 as the naive hamiltonian with opposite sign. in other
+words we have
+
+(1.87)
+
+h = t 0
+
+0 = 0a0 + 0cf0c + d0fd0
+
+(1.88)
+
+we get the hamiltonian hnaive by elimination of time derivatives in favour of mo-
+menta in the expression for h. immediately, we see that if the action depends only
+on scalar elds, the hamiltonian will be zero. this is an important result that we
+can state as a theorem:
+
+1.5 methods
+
+19
+
+theorem 1 dieomorphism invariant theories with lagrangians that depend on
+scalar-transforming elds and their rst derivatives have vanishing (naive) hamil-
+tonian.
+
+the same result has been proved by von unge in [12].
+
+the signicance of the more general result (1.88) is perhaps not obvious. for the case
+of scalar elds it is of course simple and easily applicable. if we also have vectors or
+higher rank tensors, (1.88) gives certainly not any simpler route for a calculation of
+the hamiltonian than its denition itself. on the other hand, it allows us to make an
+interesting interpretation. observe that the hamiltonian is proportional to the s,
+which by the equations of motions (euler-lagrange equations) are zero. this means
+that at any point on the classical path the hamiltonian will be zero, since the s
+are then zero. in this sense the we say that the hamiltonian is dynamically zero.
+
+theorem 2 dieomorphism invariant theories with a lagrangian that depends only
+on tensor elds (of any rank) and their derivatives have a hamiltonian that is dy-
+namically zero.
+
+this result is not completely general, since we have still considered only tensor elds.
+it is not necessarily true if the lagrangian depends on e.g. spinors. in this thesis,
+however, we will consider only elds of the rst kind.
+
+an example that validates the result (1.88) is given in section 2.5.3. there we
+will derive the hamiltonian for the polyakov string both directly from its denition,
+and using the result in this section.
+
+1.5 methods
+
+the main purpose of this thesis is to describe and apply two methods for deriving
+high energy limits of various actions. this section is devoted to a general description
+of these methods. the rst is the simplest. it can be applied to any model, although
+it does not always lead o any interesting eld equations. the second requires more
+calculations, but makes it at the same time possible to derive several limits. the
+limit found by the rst method is usually one of these.
+
+the starting point is an action of the form
+
+s = t z dxl(, ),
+
+(1.89)
+
+where t is some dimensionful constant, like mass or string tension.
+it is a basic
+assumption that we can write the lagrangian as l = tl. the quantity l can be
+called the reduced lagrangian, since we have taken out the constant t . this action
+is clearly not very suitable for studying the t  0 limit. the philosophy now is to
+search for an action that is classically equivalent to (1.89) as long as t 6= 0, but also
+well dened for t = 0. we will then treat this new action (with t = 0 inserted) as
+a t  0 limit of the original model. the methods described below are systematic
+ways for nding such actions.
+
+20
+
+1. introduction
+
+1.5.1 method i: auxiliary eld
+
+this is the simplest approach, and involves the introduction of an auxiliary eld .
+a reference for the this method is karlhede and lindstrom [13]. we use the l from
+the original action and write
+
+s =
+
+1
+
+2z dx(l2 +
+
+t 2
+
+
+).
+
+(1.90)
+
+this action is equivalent to (1.90). to show this explicitly, we solve the equations of
+motion for :
+
+  s =
+
+=
+
+1
+
+2z dx(l2 
+2z dx(l2 
+
+1
+
+t 2
+2 )
+
+t 2
+2 ).
+
+using hamiltons principle and demanding s = 0 for arbitrary variations  gives
+
+l2 
+
+t 2
+2 = 0
+t
+l
+
+ =
+
+;
+
+if we put this back into (1.90) we get
+
+s =
+
+1
+
+2z dx(
+
+t
+
+ll2 + l
+
+t
+
+when t 6= 0.
+
+(1.91)
+
+t 2) = t z dxl = s.
+
+thus the two actions s and s are equivalent for t 6= 0. in addition s allows us to
+take the t  0 limit simply by setting t = 0 in the action. this gives
+
+st =0
+
+ =
+
+1
+
+2z dxl2.
+
+(1.92)
+
+you may ask what this new eld  really is. from the current point of view we
+cannot say anything more than we already have  that it helps us in our calculations.
+hence the name auxiliary eld.
+
+note however, that in the simplest case of a massless particle in section 2.2.2 we
+
+are lead to interpret  as the einbein.
+
+a general remark on symmetry properties can already be made. consider dieo-
+morphism invariance. we know that the integral measure transforms as dx  dxj1,
+where j is the jacobi determinant as dened by equation (1.48). if the original action
+is to be di invariant, the lagrangian must transform as a density, i.e. l  jl. we
+see then that s is also di invariant if we demand  to be an inverse density (i.e.
+scalar density of weight 1, c.f. appendix a.1). and since  was introduced as an
+auxiliary eld with no a priori physical interpretation, this transformation property
+is something we can impose on .
+
+1.5 methods
+
+dynamics
+
+21
+
+a variation of  gives one equation of motion,
+
+ 
+
+l2 = 0  l = 0.
+
+(1.93)
+
+the eect of a variation in i, on the other hand, depends on the form of l:
+
+i 
+
+s =
+
+1
+
+2z dx2ll
+= z dxl(cid:20) l
+ai(cid:21)
+l
+i i +
+(ai)
+i  a(cid:18)l
+(ai)(cid:19)(cid:21) i.
+= z dx(cid:20)l
+l
+l
+
+the eld equation is found from demanding s = 0 for arbitrary i. the result is
+
+ 
+
+l
+
+i  a(cid:18)l
+l
+
+(ai)(cid:19) = 0.
+l
+
+(1.94)
+
+often, this equation will reduce to an identity by use of equation (1.93), l = 0. but
+it does give non-trivial equations in cases where li  1
+. (then
+l
+the factors l are eliminated from equation (1.94).) however, this is not the general
+situation, so method i has limited applicability.
+
+l(ai)  1
+l
+
+or
+
+1.5.2 method ii: phase space
+
+this method of arriving at an action that admits taking the t  0 limit is designed
+for constrained systems. demonstrations of the method can be found in [8, 1318],
+but also later in this thesis. again we start from the action (1.89). we derive the
+canonical conjugate momenta
+
+i =
+
+and nd the total hamiltonian as in section 1.2.2,
+
+h = h + mm.
+
+l
+ i
+
+,
+
+(1.95)
+
+(1.96)
+
+the derivations of the total hamiltonian h involves working out the constraint struc-
+ture, which can be a cumbersome task. but since we are interested only in the limit
+t = 0, these can be simplied by putting t = 0 as early as possible.
+
+now, having found the total hamiltonian, we write down the phase space action
+
+sp s =z dx(cid:16)i
+
+i  h(, ,)(cid:17) .
+
+(1.97)
+
+the momenta i can then be eliminated by solving their equations of motion. (this
+is often called integrating out the momenta, a notation which is natural in the
+
+22
+
+1. introduction
+
+lcs
+
+0
+
+cs
+l1
+
+cs
+
+ps
+l
+
+ps
+
+figure 1.1: we start o with a lagrangian lc s
+in conguration space (cs), and perform a
+legendre transform to the phase space (ps) lagrangian lp s. when we go back to congu-
+ration space we may, for constrained systems, end up with a new (but equivalent) lagrangian
+lc s
+
+is not dened in the limit t = 0, lc s
+
+1 may be.
+
+0 . and although lc s
+
+0
+
+0
+
+1
+
+6= lc s
+
+context of path integrals. in that case we go from phase space to conguration space
+by literary integrating out the momenta from the functional integral.) substituting
+for the solutions of i, we arrive at the conguration space action
+
+scs =z dxh(, )   h(, (, ),)i .
+
+(1.98)
+
+unless the system under study is non-constrained (giving h = hnaive) this action
+will contain something new compared to the one we started with. in other words,
+it is dierent from the original conguration space action, but still equivalent (see
+gure 1.1) to it. hopefully the new aspects make it possible to take the t  0 limit.
+what is new are the lagrange multipliers, which are now independent elds. as
+discussed later, these may often be reinterpreted as components of some metric, or
+as (degenerated) vielbeins.
+
+in cases where there are no constraints imposed from the denition of the mo-
+mentum, the calculations above will give only a circle where we end up at the point
+we started. however, it will show possible (c.f. 2.5) via some redenitions in phase
+space to allow for the t  0 limit in a sensible way. this situation is better discussed
+when it appears.
+
+chapter 2
+
+bosonic strings
+
+2.1
+
+introduction to strings and branes
+
+short history of strings
+
+strings originated in the late sixties as a model describing strong interactions [19].
+quarks are known always to exist in bound states, and the string approach was a
+proposal for explaining this quark connement. very simplied, the picture was that
+of quarks attached to strings.
+
+this theory was pushed aside by the successful qcd (quantum chromo-dynamics)
+theory. but in 1974, scherk and schwarz [20] made the remarkable suggestion that
+string theory was a correct mathematical theory of a dierent problem, the unication
+of elementary particle interactions with gravity.
+
+after this the theory attained much attention, but had no real breakthrough.
+many properties made it attractive, but the problems were too serious. however,
+with the introduction of supersymmetry (a symmetry between bosons and fermions)
+into the superstring theory [2123] (in contrast to the old bosonic string theory), a
+lot of the problems disappeared. and this is the theory that has attracted enormous
+attention over the last fteen years. in these years there have appeared dierent types
+of superstring theories, but they are now thought to be limits of one fundamental
+theory, which is called m-theory (or matrix theory), and is for the moment under
+constant investigation.
+
+string theory
+
+strings are one-dimensional objects with a length of the order of the planck length,
+1034m. they are free to vibrate, much like ordinary guitar strings. the possible
+modes of vibration are determined by the string tension, which is the only funda-
+mental parameter in string theory.
+
+we know that at larger scales the strings must behave as particles with certain
+masses. the model is that the dierent vibration modes of the one fundamental
+string, give rise to the whole zoo of particles we know from elementary particle
+
+23
+
+24
+
+2. bosonic strings
+
+physics. dierent vibration modes mean dierent frequencies or energies, and hence,
+dierent masses of the particles. thus, in principle, string theory could be used to
+derive the mass spectrum of all particles. this is one of the ultimate goals, but is in
+practice very dicult.
+
+as was mentioned above, this theory is a promising candidate for a unication
+of quantum eld theory (elementary particle physics) and general relativity (gravita-
+tion). actually, string theory is not consistent without gravity. this aspect of string
+theory is probably the most important, but there are also other sides that make such
+a large number of theoretical physicists talk warmly about it.
+
+another of its advantages is that it avoids altogether the divergences that un-
+avoidably appear in quantum eld theories. this is due to the fact that strings are
+not pointlike, but have extension in space. also in contrast to quantum eld theo-
+ries, string theory involves no arbitrary choice of gauge symmetry group and choice
+of representation: string theory is essentially unique.
+
+the last comment is an example of a general attractive feature of string theory,
+namely that there is very little freedom. once the basic theory is formulated, im-
+portant results follow directly or by consistency. the spacetime dimension is also
+xed in this way. superstring theory is consistent only with 10 (1 + 9) spacetime
+dimensions. (for bosonic strings there must be 26 dimensions.) at rst this may
+sound like a catastrophe, since we know by everyday experience that the world is
+4-dimensional (1 + 3). the way to handle this diculty, is to say that the extra 6
+dimensions are compactied, or curled up so that they play no role at large scales.
+this is very much an ad hoc assumption, but at least string theory gives a way to
+understand the spacetime dimensionality.
+
+in this thesis we will not consider the supersymmetric string theory (superstrings),
+but only dierent models for bosonic strings. bosonic string theory does not have
+fermions, and is not a realistic theory. however, it is a good starting point, and gives
+insight in crucial aspects of the more realistic models as well.
+
+what is real?
+
+to be or not to be, that is the question. hamlet certainly had other things than
+elementary particle physics in mind, but his question is indeed fundamental for our
+discussion as well: do strings really exist, or do they not? and are strings the
+fundamental building blocks of the universe?
+
+the traditional view is that the world is built up of pointlike particles. these are
+things with certain properties like mass and spin, but without extension in space.
+in other words, they are thought to be zero-dimensional. string theory changes this
+view only insofar as the strings are not points, but have extension in one dimension,
+i.e. are one-dimensional.
+
+with such views we are immediately faced with the question of model versus
+reality.
+is our model only a mathematical construction that by coincidence hap-
+pens to resemble the physical reality, or does the success of the model give a deeper
+understanding of reality itself?
+
+2.2 the point particle
+
+25
+
+to meet this question, we must know what we mean by reality. what does it
+actually mean that something is real? one answer to this is to say that the real
+world is the observable world. this description works quite well in everyday life.
+however, when it comes to elementary particles, the task of observing becomes very
+dicult. for instance, our understanding of shape is useless at such small scales. the
+quantum theory of physics, with its schrodinger equation and heisenberg relation,
+leads us to view the elementary particles as rather diuse objects that are somehow
+smeared out in spacetime.
+
+returning then to the question of the being of the fundamental building blocks,
+one possible answer is to say that they are neither particles nor strings. but they
+behave at very small scales as strings, and at larger scales as points. and someone
+has also said that you are what you do.
+
+branes
+
+as we have accepted the leap from points to strings, it is natural to go further
+and consider even higher-dimensional objects. perhaps the fundamental objects are
+membranes, two-dimensional surfaces. or why not p-dimensional p-branes?
+
+p-brane1 theory is the obvious generalization from string theory. however, strings
+seem to be special among the branes with their success as a fundamental model.
+for instance, increasing the world surface dimensionality increases the probability of
+nding divergences (from integrations on the world surface) similar to those found in
+quantum eld theories.
+
+a non-technical introduction to string theory is found in [2426]. thorough textbooks
+on string theory are [23, 27].
+
+2.2 the point particle
+
+it is now time to do some real calculations to demonstrate how everything we have
+said so far applies. and we naturally start with the simplest possible case, the
+relativistic point particle.
+
+2.2.1 the action
+
+the action of a relativistic point particle can be written as its mass times the length
+of its world line:
+
+s = mz ds.
+
+(2.1)
+
+this length is a distance in spacetime. we let  parameterize the world line, and let
+x ( ) be the particles position at some moment. then we can write
+
+ds2 = g dx dx  = dx dx = 
+
+dx 
+d
+
+dx
+d
+
+d 2.
+
+(2.2)
+
+1 the notation is such that a point particle is called a 0-brane, and a string is called a 1-brane.
+
+26
+
+2. bosonic strings
+
+g denotes the spacetime metric. with the metric signature (, +, . . . , +), a time-
+like vector v has negative norm, v2 < 0. and since dx 
+is timelike, the overall
+d
+minus sign above is a conventional choice to make ds2 a positive quantity. we take
+the square root of (2.2) and plug back in (2.1) to get the more familiar expression
+for the relativistic point particle action:
+
+s = mz dq x  x = mz dq x 2,
+
+(2.3)
+
+where x   x 
+d . this action is reparameterization (di ) invariant by
+construction. since it is covariantly written as a scalar, and only contains derivatives
+of x , it easy to see that it is also poincare invariant.
+
+ = dx 
+
+to show that (2.3) is indeed an appropriate action for the point particle, and
+to give an example of how hamiltons principle can be applied, we will now deduce
+the equations of motion from this action (in minkowski space). consider a small
+variation x  in x . this will give a small variation s in the action, which we nd
+as follows.
+
+x   s = mz dq x 2 = mz d q x 2
+
+= mz d
+
+1
+2
+
+( x  x  ) 1
+
+2 2 x x 
+
+(2.4)
+
+the order of variation and dierentiation can be interchanged, so we have  x  =
+d
+d (x ). this, together with a partial integration gives
+
+(2.5)
+
+(x )
+
+d
+d
+
+s = mz d  x
+p x 2
+d " x
+= mz d(cid:18) d
+p x 2
+{z
+|
+
+0
+
+x #
+}
+
+d
+
+d "
+
+
+
+x
+
+p x 2# x (cid:19)
+
+the rst part leads to a boundary term, which gives zero contribution since the elds
+are held xed at the boundaries. hamiltons principle states that the action must be
+extremal for the dynamically allowed elds. in other words, we must have s = 0
+for arbitrary x . thus we end up with the equation
+
+d
+
+p x 2# = 0.
+d " m x
+
+(2.6)
+
+we recognize the quantity within the brackets as the relativistic momentum for a
+point particle. (we will soon recover it by direct calculation.) the equation then says
+that the momentum is conserved, which is a well known consequence of translational
+invariance.
+
+2.2 the point particle
+
+27
+
+the equations of motion read
+
+furthermore, if we let  be proper time, we have  x  x  = 1. in this case
+(2.7)
+
+x  = 0,
+
+i.e. the acceleration is zero. this is the familiar result for a free point particle.
+
+we would deduce the same equation of motion if we started from the alternative
+
+action s = mr d x 2. but this action has the disadvantage that the parameter  has
+
+to be the proper time, i.e. it is not reparameterization invariant. for this reason we
+will in the following consider the action (2.3).
+
+massless limit from now on we will focus on the massless limit (m  0) of the
+action (2.3) above. we read o the lagrangian and nd
+
+l = ml(x,
+
+x) = mq x  x.
+
+(2.8)
+
+this will now be our starting point for a discussion on the massless limit. we know
+that a particles energy can be split into the rest energy, which is a constant (e0 = m)
+and a kinetic energy. if the total energy becomes very high, it is a good approximation
+to neglect the rest energy. thus the massless limit represents a high energy limit of
+the point particle.
+
+the derivations presented here for the point particle are also found in [15].
+
+2.2.2 method i
+
+as explained before, the easiest way to nd a massless limit is by introduction of an
+auxiliary eld . we write, according to the general theory,
+
+s =
+
+=
+
+1
+
+1
+
+)
+
+m2
+
+
+2z d (l2 +
+2z d ( x  x +
+
+m2
+
+
+).
+
+the massless limit is obtained directly by putting m = 0.
+
+sm=0
+
+
+
+= 
+
+1
+
+2z d  x  x.
+
+(2.9)
+
+(2.10)
+
+it was mentioned as part of the motivation for studying the massless (or ten-
+sionless) limits that they lead to conformal invariant theories. we will now see an
+example of this. first, we note that the action (2.10) is obviously poincare invariant.
+under the dilatation x   (1 + c)x , we get x 2  (1 + c)2 x 2 = (1 + 2c) x 2 to
+rst order in c. the action will then be invariant under dilatations if  transforms as
+
+cx  :
+
+  (1  2c)
+
+(2.11)
+
+to rst order.
+
+28
+
+2. bosonic strings
+
+order in b:
+
+the special conformal transformations x   x  + b  xx   1
+
+2 x 2b give to rst
+x 2  (1 + 2b x) x 2. thus the action will be invariant if  transforms as
+(2.12)
+
+bx  :
+
+  (1  2b  x).
+
+the eld  is an auxiliary eld, so the transformation properties (2.11) and (2.12) are
+something we can impose on . and given these properties, we see that the action is
+conformally invariant. thus, in the massless limit, we have that the original poincare
+symmetry is enlarged to full conformal symmetry.
+
+the equations of motion derived from (2.10) are
+
+ 
+x 
+
+x 2 = 0,
+d
+d
+
+( x ) = 0.
+
+(2.13)
+
+(2.14)
+
+x  is a tangent to the world line, so the rst equation says that the particle follows
+a lightlike (or null-) curve. with the conformal symmetry in mind, this is a natural
+result, since conformal transformations are transformations that preserve the light
+cone (c.f. section 1.3.4).
+
+an interesting observation is that the action (2.9) leads us to identify  as an
+inverse einbein eld (c.f. appendix a.3). in [28] it is shown that the action for a
+point-particle coupled to one-dimensional gravity through the einbein eld e = e1
+1
+can be written
+
+s =
+
+1
+
+2z d(cid:18) 1
+
+e
+
+x 2  em2(cid:19) ,
+
+(2.15)
+
+e . let us now see how this compares to the results of method ii.
+
+if we disregard the spin. and by comparison with (2.9) we have the identication
+ =  1
+2.2.3 method ii
+
+from the lagrangian l(x,
+
+x) = mp x 2 we nd the canonical momenta
+
+p =
+
+l
+ x 
+
+= 
+
+m x
+
+p x 2
+
+.
+
+(2.16)
+
+this is the familiar relativistic expression for the momentum of a free particle. notice
+also that this form sesults independently of which metric is used. this is true because
+a metric is a function of positions only, not of their derivatives; g = g (x).
+
+the hamiltonian is dened as
+
+hnaive = p x   l(x,
+
+x).
+
+(2.17)
+
+the elds x  are scalars under dieomorphisms, so the naive hamiltonian vanishes,
+as discussed in section 1.4.2. this can also easily be seen explicitly by noting that
+
+p x  = m xm
+p x 2
+
+x  = mq x 2 = l.
+
+(2.18)
+
+2.3 the nambu-goto string
+
+29
+
+the expression for p is not invertible so in accordance with what we said in
+
+section 1.2.3 there must exist some constraints. and indeed we nd
+
+p 2  p p =
+
+= m2
+
+m x 
+
+m x
+
+p x 2
+
+p x 2
+ p 2 + m2 = 0.
+
+x 2
+ x 2
+
+= m2
+
+(2.19)
+
+since the naive hamiltonian vanishes, the total hamiltonian is made from the
+
+constraint as follows
+
+h = (p 2 + m2),
+
+(2.20)
+
+where the coecient  is a lagrange multiplier. we write the phase space action as
+described earlier,
+
+sp s =z d(cid:16)p x   (p p + m2)(cid:17) .
+
+(2.21)
+
+now it is time to start simplifying and return to conguration space. to do so we
+need to eliminate the momenta. a variations in p gives
+
+p  sp s =z d ( x   2p )p.
+
+(2.22)
+
+for sp s to be zero for arbitrary (though innitesimal) variations p, we need to
+have
+
+x   2p  = 0
+x 
+2
+
+p  =
+
+.
+
+plugging this back into (2.21) we end up with a conguration space action,
+
+scs = z d  x
+2z d(cid:18) 1
+
+2
+
+=
+
+1
+
+x  x
+
+42 + m2)!
+
+x   (
+x  x  2m2(cid:19) .
+
+2
+
+(2.23)
+
+(2.24)
+
+comparison with the action (2.9) we found by using method i, reveals that the two
+methods give exactly the same result. we just have to identify the auxiliary eld 
+with the lagrange multiplier as  = (2)1.
+
+a discussion of the massless limit m = 0 was given in the previous section.
+
+2.3 the nambu-goto string
+
+2.3.1 the action
+
+the action for the point particle is proportional to the length of its world line. this
+suggests that we can generalize to a string which sweeps out a world surface and say
+
+30
+
+2. bosonic strings
+
+s = t z da.
+
+(2.25)
+
+that its action is proportional to the area of this surface. in mathematical terms, we
+have
+
+t will have have the dimension of energy/length, or (length)2 in natural units. we
+thus call it the string tension. it plays a role analogous to the particle mass.
+
+let us denote the spacetime metric by g . if a; a = 0, 1 are world sheet coordi-
+nates that parameterize the world surface, we can write the spacetime points of the
+surface as x  = x (). the induced metric ab is then given by (see appendix a.5)
+
+ab = g
+
+x 
+a
+
+x 
+b = g ax bx  .
+
+(2.26)
+
+we write the inverse of this matrix as ab, i.e. abbc = a
+simply as   det(ab).
+2-dimensional surface embedded in spacetime can be written as (see e.g. [29])
+
+with the introduction of the induced metric, an innitesimal area element of a
+
+c , and its determinant
+
+then we can write the string action as
+
+da =q det(ab)d0d1.
+
+s = t z d2.
+
+(2.27)
+
+(2.28)
+
+this is the famous nambu-goto form [30, 31] of the action for a (bosonic) string.
+
+tensionless limit the high-energy limit of the strings has been studied with dif-
+ferent approaches. for a short review, and a list of references, the reader may con-
+sult [14].
+
+in analogy with the point particle, we expect the tensionless limit t  0 of strings
+to give insight into the high-energy behaviour, just as the massless limit of particles
+does. schild [32] was the rst to study this limit. later, the tensionless limit of strings
+(not just the nambu-goto string) has been studied by several authors [1317,3336].
+we will in the following go through the derivation of dierent tensionless limits,
+
+starting from the nambu-goto string (2.28).
+
+2.3.2 method i
+
+the (reduced) lagrangian is l(x, x) = , and following the general recipe, we
+
+write
+
+s =
+
+1
+
+2z d2(l2 +
+2z d2( 
+
+1
+
+= 
+
+)
+
+t 2
+
+t 2
+
+
+),
+
+(2.29)
+
+2.3 the nambu-goto string
+
+31
+
+where  is the auxiliary eld. this action is equivalent to (2.28), and allows us to
+take the t = 0 limit. we nd simply
+
+variations in  and x  give the equations of motion:
+
+st =0
+ = 
+
+1
+
+2z d2 
+
+(2.30)
+
+(2.31)
+
+(2.32)
+
+ 
+x 
+
+  det(ab) = 0,
+bhacbdcdax i = 0.
+
+the induced metric is degenerate, which means that the surface is a null surface.
+it means that the world surface has tangent vectors va that are null (lightlike), i.e.
+v2 = 0. tensionless strings are for this reason often referred to as null-strings.
+
+a dierence from the point particle is that we cannot give  a geometric inter-
+
+pretation.
+
+conformal invariance as was the case for the point particle, this action is confor-
+mally invariant given that  transforms in a special way. if we now for a moment gen-
+eralize to d-dimensional surfaces, the induced metric (which is then d-dimensional)
+transforms under poincare, dilatation and special conformal transformations as
+
+,ax  :
+cx  :
+bx  :
+
+ab  ab,
+ab  (1 + 2c)ab,
+ab  (1 + 2bx )ab.
+
+(2.33)
+
+thus, the combination  in (2.30) is conformally invariant provided that  trans-
+forms as
+
+,ax  :
+cx  :
+bx  :
+
+  ,
+  (1  2dc),
+  (1  2dbx ).
+
+(2.34)
+
+putting d = 2 gives the string result, which we are interested in here.
+
+2.3.3 method ii
+as for a point particle we start by deriving the momenta. dening x   0x  = x 
+and x   1x  = x 
+
+1 , we get
+
+0
+
+p 
+
+=
+
+=
+
+t
+
+
+
+= t
+
+()
+ x 
+
+ x 
+
+2
+
+ =
+
+l
+ x 
+t
+2
+ (cid:16)( x  x) x  ( x  x) x(cid:17) .
+
+t
+
+
+
+ x  (cid:16)(g x  x )2  (g x  x )(g x  x )(cid:17)
+
+(2.35)
+
+32
+
+2. bosonic strings
+
+as was the case for the point particle, we cannot use this expression for p to solve
+for x , i.e.
+it is not invertible. therefore we look for constraints. the constraints
+should not be functions of time derivatives ( x ), and this limits the number of
+possible candidates. anyway, we nd
+
+p 2 =
+
+=
+
+p x  =
+
+t 2
+(( x  x) x   ( x )2 x )(( x  x) x  x 2
+
+t 2
+ (cid:16) x 2 x 2  ( x  x)2(cid:17)
+}
+|
+
+
+(( x  x)2 x 2  x 2 x  x) = 0.
+
+= t 2 x 2
+
+{z
+
+t
+
+
+
+
+
+thus, we have these primary constraints
+0  p 2 + t 2 x 2  0;
+
+also, we notice that
+
+1  p  x   0.
+
+p x  =
+
+t
+
+ (cid:16)( x  x)2  x 2 x 2(cid:17) = t = l.
+
+x)
+
+(2.36)
+
+(2.37)
+
+(2.38)
+
+so the naive hamiltonian vanishes, in accordance with the general discussion in
+section 1.4.2. the primary constraints do not give rise to secondary constraints.
+thus, the total hamiltonian can be written as a sum of 0 and 1,
+
+h = (p 2 + t 2 x 2) + p x ,
+
+where  and  are lagrange multipliers. this gives the phase space action
+
+sp s =z d2hp x   (pp  + t 2 x  x)  p x i .
+
+the equations of motion for p gives
+
+(2.39)
+
+(2.40)
+
+x   2p    x  = 0
+
+p  =
+
+x    x 
+
+2
+
+.
+
+(2.41)
+
+substituted back into (2.40) we nd after a few rearrangements
+
+scs =z d2
+
+1
+
+4h x 2  2 x  x + (2  4t 22) x 2i .
+
+(2.42)
+
+a weyl-invariant action we can now identify  and  as components of a metric
+eld in this way:
+
+gab =   1
+
+ 2  4t 22 ! ,
+
+
+
+(2.43)
+
+2.3 the nambu-goto string
+
+33
+
+where  is any scaling function. we have then g = det(gab) =
+write (2.42) as
+
+1
+
+4t 222 , and we can
+
+(2.44)
+
+s =
+
+t
+
+2 z d2ggabab.
+
+this is the weyl-invariant string action, which is further discussed in section 2.5.
+
+however, by this rewriting we are in no better position to study the limit t  0.
+to do so, we go back to (2.42), and make another interpretation of the lagrange
+multipliers.
+
+limit one
+following [15] we introduce an auxiliary vector density (of weight  1
+a.1 for an explanation of what is meant by density),
+
+2  see appendix
+
+noting that we can write
+
+v a =
+
+1
+2
+
+(1,).
+
+2 x 2 =
+
+11
+4v 0v 0 =
+
+00
+4v 0v 0
+
+we see that we can write the action (2.42) in the simpler form:
+
+scs =z d2 v av bab 
+
+t 200
+
+v 0v 0 ! .
+
+the tensionless limit is then easily found if we set t = 0. we end up with
+
+st =0 =z d2 v av bab.
+
+the equations of motion follow from variations in v a and x ,
+
+v a  v bab = 0,
+x   b(v av bax ) = 0.
+
+(2.45)
+
+(2.46)
+
+(2.47)
+
+(2.48)
+
+(2.49)
+
+the rst equation means that ab has eigenvectors with zero eigenvalue, which again
+means that the determinant of the induced metric is zero, i.e. det(ab) = 0. we have
+thus the same situation as we found using method i. we may say that the two limits
+represent the same physical situation, but are dierently formulated. and accepting
+that there must be a formal dierence between the two results is not dicult, as we
+have in the present case one extra variable. (v a are two variables, while  is one.)
+
+owing to the di invariance, we can choose a gauge (the transverse gauge) where
+v a = (v, 0), where v is a constant. the equations of motion then reduce to
+
+x  = 0;
+
+x 2 = x  x = 0.
+
+(2.50)
+
+34
+
+2. bosonic strings
+
+we conclude that the tensionless string behaves as a collection of massless particles
+moving transversally to the direction of the string.
+we said above that v a are densities, which is necessary to preserve worldsheet di
+invariance. we can interpret the v a elds further by comparing with the weyl-
+invariant form (2.44), which by introduction of inverse zweibeins ea
+a (c.f. appendix
+a.3) can be written
+
+t
+
+s =
+
+2 z d2 eabe a
+where e a
+a are densities, and a, b, a, b = 0, 1. clearly the limit t  0
+(2.47) corresponds to the case when the zweibeins has become parallel, and we can
+make the substitution e a
+
+2z d2ab e a
+
+a  t ee a
+
+b ab =
+
+a e b
+
+a e b
+
+b ab,
+
+(2.51)
+
+1
+
+a  v a.
+
+from the transformation properties (2.33) of ab, it is easy to check that (2.47) is
+conformally invariant provided v a transform under dilatations and special conformal
+transformations as
+
+cx  :
+bx  :
+
+v a  (1  c)v a,
+v a  (1  b x)v a.
+
+(2.52)
+
+(2.53)
+
+another important symmetry observation is that, with this interpretation of the
+lagrange multipliers, the manifest covariance is broken in (2.46), but recovered in
+the t = 0 limit, (2.47).
+
+limit two
+
+to nd a limit that resembles the result of method i, it is clear that we must at least
+eliminate one degree of freedom. this will now be done, and we start from (2.42)
+and eliminate  by solving its equation of motion. the result is immediate:
+
+substituted back into the action, this gives
+
+ =
+
+x  x
+x 2
+
+.
+
+s = z d 1
+= z d2
+
+4  x 2 x 2  ( x  x)2
+00  4t 2200(cid:19) ,
+4(cid:18) 1
+
+x 2
+
+1
+
+ 4t 22 x 2!
+
+(2.54)
+
+(2.55)
+
+where we use that x 2 = 11 = 00. if we dene v  200, the action can be
+written in the form
+(2.56)
+this is identical to what we obtained using method i, by the identication  = v 1,
+and was discussed in the previous section. it is interesting to note that we can arrive
+at the same formulation of the limit with both methods. we also note that method
+ii gives an additional possible limit, and is thus more general.
+
+
+v  t 2v ).
+
+2z d2(
+
+scs =
+
+1
+
+2.4 p-branes
+
+2.4 p-branes
+
+35
+
+the discussion in the previous section, can quite straight forwardly be generalized to
+p-branes. this is what we will do in this section. most of what is here written is also
+found in [18] and [14].
+
+2.4.1 the action
+
+the p-brane action is a direct generalization of the nambu-goto string action (2.28).
+the action is now taken to be proportional to the area of the (p + 1)-dimensional
+world surface. (we use the words area, surface or volume even though they may
+refer to higher dimensional objects.) we get
+
+s = t z dp+1,
+
+(2.57)
+
+where ab = ax bx is the induced metric as in the previous section. the indices
+a, b now take values 0, . . . , p. the action is invariant under the reparametrization
+a  a(), which must be true from the geometrical interpretation of the action. it
+is also easy to demonstrate, by noting the transformation properties of the integral
+measure and the induced metric. the jacobi determinant (1.48) is j = det( a
+b ), and
+we get
+
+ab 
+
+x 
+a
+
+dp+1  j1dp+1,
+b
+a
+x
+b  (
+d )cd
+c )(
+  j.
+
+thus the action transforms as
+
+s  t z dp+1j1j = s,
+
+(2.58)
+
+(2.59)
+
+(2.60)
+
+(2.61)
+
+which proves the invariance.
+in the p-brane action, the constant t has natural dimensions of (length)(p+1), which
+means mass for p = 0 (points) and tension for p = 1 (strings). although the
+dimensionality varies with p, we generally refer to t as the p-brane tension. and we
+will now turn to the problem of nding models where this constant is allowed to be
+zero.
+
+2.4.2 method i
+
+formally this rst method will give exactly the same as it did for strings, since the
+action (2.57) looks the same. the only dierence is that ab = ax bx is no longer
+a 2  2 matrix, but a (p + 1)  (p + 1) matrix. the result is
+
+s = 
+
+1
+
+2z dp+1( 
+
+t 2
+
+
+),
+
+(2.62)
+
+36
+
+2. bosonic strings
+
+and the tensionless limit:
+
+st =0
+ = 
+
+1
+
+2z dp+1 .
+
+(2.63)
+
+it is found to be conformally invariant in the same way as the string, but now with
+d = p + 1 in the  transformations (2.34). as before, the  equation of motion,
+det(ab) = 0, says that the world surface is degenerate.
+
+2.4.3 method ii
+
+as the attentive reader may already have guessed, we start by deriving the momenta.
+
+the lagrangian is read o from (2.57) to give l = t. then we nd
+
+p 
+
+l
+
+(0x )
+
+1
+2
+
+tab
+
+= 
+
+ab
+
+(0x )
+
+,
+
+where we have used the result in appendix a.2. furthermore we have
+
+ab = gax bx 
+
+
+
+ab = 0
+
+abx + 0
+
+b ax
+
+(0x )
+ab
+
+ab
+
+(0x )
+
+= 2a0ax.
+
+so the momenta can nally be written
+
+p = ta0ax,
+
+and are not invertible. following the usual route, we go on by searching for con-
+straints, and nd
+
+(2.64)
+
+(2.65)
+
+(2.66)
+
+(2.67)
+
+(2.68)
+
+p 2 = t 2a0axb0bx  = t 200,
+
+pkx  = ta0axkx 
+
+= t0
+
+k = 0 when k > 0.
+
+we know that  and 00 contain time derivatives, so the rst of these equations does
+not look like a proper constraint at rst sight. but the time derivatives cancel in this
+special combination, as we easily see:
+
+00 = 
+
+det ik
+det ab
+
+= det ik,
+
+(2.69)
+
+where det ik is the determinant of the spatial part of the -matrix. it contains no
+time derivatives. so we have found these constraints:
+
+0  p 2 + t 200  0;
+
+k  pkx   0 for k > 0.
+
+(2.70)
+
+2.4 p-branes
+
+37
+
+since the action is di invariant, and the theory contains only the scalar (under world
+volume dieomorphisms) eld x , the naive hamiltonian vanishes (c.f. theorem 1 in
+section 1.4.2). the total hamiltonian is thus a sum of the constraints:
+
+h = (p 2 + t 200) + kpkx .
+
+now we are ready to write the phase space action:
+
+sp s =z dp+1hp0x   (p 2 + t 200)  kpkx i .
+
+the equations of motion for p reads
+
+p  =
+
+1
+2
+
+(0x   kkx ).
+
+(2.71)
+
+(2.72)
+
+(2.73)
+
+inserted into the phase space action this gives a new conguration space action
+
+scs =z dp+1
+
+1
+
+4h00  2kk0 + ikik  42t 200i .
+
+limit one
+
+in analogy to the string case we introduce the vector density
+
+v a 
+
+1
+2
+
+(1,k),
+
+(2.74)
+
+(2.75)
+
+which is now (p + 1)-dimensional. using this variable we can write the action as
+
+s1 =z dp+1"v av bab  t 2 00
+v 0v 0# .
+the t  0 limit may now be taken and we end up with
+1 =z dp+1v av bab.
+
+st =0
+
+(2.76)
+
+(2.77)
+
+we see that, in this sense, the tensionless p-brane is a simple generalization from the
+string.
+
+limit two
+
+another way to a tensionless limit is to eliminate k in the action (2.74). the
+equations of motion for k gives
+
+iik = k0.
+
+(2.78)
+
+if we dene gij to be the spatial part of ab, i.e. gij = ij, i, j = 1, 2 . . . , p, and gij
+as its inverse, we can write
+
+i = gik0k.
+
+(2.79)
+
+38
+
+2. bosonic strings
+
+inserted back into the action, this gives
+
+s2 =z dp+1
+
+1
+
+4h00  gkj0j0k  42t 200i .
+
+(2.80)
+
+furthermore, we nd 00(00  gkj0j0k) = 1, which means that the action can be
+written
+
+s2 =z dp+1
+
+1
+
+4(cid:18) 1
+
+00  42t 200(cid:19) .
+
+dening the scalar v  200 we end up with
+2z dp+1(cid:18) 
+
+s2 =
+
+1
+
+v  t 2v(cid:19) .
+
+(2.81)
+
+(2.82)
+
+again, this is exactly the same action as we found by using method i (2.62), if we let
+ = v 1.
+it should be noted that as long as we are interested only in the tensionless limit,
+we could set t = 0 already in the hamiltonian (2.71). the subsequent calculations
+would then be a little simpler while giving the same result.
+
+2.5 the string in the polyakov form
+
+2.5.1 the action
+
+a weyl-invariant form of the p-brane action can be written [5]
+
+s = d d
+
+2 tz ddg(g  )
+
+d
+2 ,
+
+(2.83)
+
+where d = p + 1 is the dimension of the world volume of the membrane. the elds
+to be taken as the independent variables are x  and gab.
+
+the action is also world volume di invariant, which is easy to check. consider
+
+the reparametrization   (). then the elds will transform as
+
+a
+c
+
+b
+d gcd(),
+
+gab()  gab() =
+x ()  x () = x ().
+b = a
+
+(2.84)
+
+(2.85)
+
+the jacobi matrix is j a
+
+b , and if we let its determinant be written j, we have
+
+1
+j
+
+dd,
+
+dd  dd =
+g  pg = jg,
+g    g   = g  .
+
+(2.86)
+
+(2.87)
+
+(2.88)
+
+2.5 the string in the polyakov form
+
+39
+
+the action will transform as
+
+s  s = z ddpgg  
+
+= z ddgg   = s,
+
+(2.89)
+
+(2.90)
+
+which proves the statement of dieomorphism invariance.
+
+the classical equivalence between the weyl-invariant and nambu-goto type ac-
+tions is shown by elimination of the metric elds gab. start from the weyl-invariant
+action (2.83), and demand it to extremal with respect to gab,
+
+gab  
+
+1
+2
+
+ggab(g  )
+
+d
+2 +
+
+d
+2
+
+g(g  )
+
+d
+
+21ab = 0
+
+which gives
+
+det 
+
+d1gab(g  ) = ab
+ddg(g  )d = 
+2 = .
+2g(g  )
+
+d
+
+d d
+
+substituted into the action, this gives
+
+s = t z dd,
+
+(2.91)
+
+(2.92)
+
+which is exactly the nambu-goto action for a p-brane.
+
+in the string case when d = 2, the weyl-invariant action is particularly neat.
+since we have in mind to derive momenta, we are interested in the x -dependence
+of this action. the only place we nd this dependence is in ab; 00 is quadratic and
+0i are linear in x. this means that the derivative of   g will depend linearly on
+x. thus, for d = 2 we will nd a linear relationship between the momenta and x,
+whereas d 6= 2 gives something more complicated because of the exponent d
+2 . these
+complications will make the calculations considerably more dicult. for this reason
+we will in the following consider only the string case (d = 2):
+
+s =
+
+t
+
+2 z d2gg  .
+
+(2.93)
+
+this action was rst described by brinkdi vecchiahowe and by deserzumino
+[9, 10], but is often named after polyakov, who has given important contributions to
+its investigation. a generalization of this action to p-branes (which is, in contrast to
+(2.83), not weyl-invariant) is the howe-tucker action [37]
+
+t
+
+2 z dp+1g (g    (p  1)) .
+
+(2.94)
+
+in the following we will consider the two-dimensional case, the polyakov action (2.93),
+and try to derive tensionless limits of it. since it is classically equivalent to the
+nambu-goto action, we expect the results here also to be equivalent to those we
+found in section 2.3.
+
+40
+
+2. bosonic strings
+
+2.5.2 method i
+
+following the usual logic we get an equivalent action,
+
+s =
+
+1
+
+2z d2 g(g  )2 +
+
+t 2
+
+4! ,
+
+where again  is an auxiliary eld. in the tensionless limit we have:
+
+st =0
+ = 
+
+1
+
+2z d2 g(g  )2.
+
+variations of the elds give the equations of motion
+
+  g(gabab)2 = 0,
+gab  hggab(g  )2 + 2g(g  )abi = 0,
+x  bhg(g  )gabax i = 0.
+
+(2.95)
+
+(2.96)
+
+(2.97)
+
+(2.98)
+
+(2.99)
+
+(2.100)
+
+(2.101)
+
+(2.102)
+
+to see exactly what this means, we use the totally antisymmetric symbol2 ab to
+write the inverse of gab as gab = g1acbdgcd, which gives
+
+g1(acbdgcdab)2 = 0,
+
+hg1gab(ecf dgcdef )2 + 2(ecf dgcdef )abi = 0,
+bhg1(egf hgef gh)acbdgcdax i = 0.
+
+if g1 = 0 we get from (2.101) the solution ((ecf dgcdef )ab = 0, i.e. ecf dgcdef =
+0 or  = 0. however, g1 = 0  det(gab) = g  , which is a situation we are not
+interested in. so we assume that g1 6= 0, in which case we nd
+
+acbdgcdab = 0,
+
+(2.103)
+
+which satises all the equations above. the fact that the other equations of motion
+reduce to identities by use of (2.103) stems from the form of the action (2.93), which
+is not as it should be for method i to work well (c.f. section 1.5.1).
+
+by two-dimensional di invariance we can choose a parameterization that xes
+gab to gab = ab, with  as a positive denite function. then, by weyl-invariance,
+we may rescale the metric to get gab = ab. (this represents a gauge choice.) then
+(2.103) gives det(ab) = 0. and since the induced metric is degenerate in one gauge,
+it is degenerate in all systems. so the tensionless polyakov action has generally the
+solution
+
+det(ab) = 0.
+
+in the above gauge the x  equation (2.102) becomes
+
+2 in two dimensions we have 00 = 11 = 0, 01 = 1, 10 = 1.
+
+bhacbdcdax i = 0.
+
+(2.104)
+
+(2.105)
+
+2.5 the string in the polyakov form
+
+41
+
+which is what we found for the t  0 limit of the nambu-goto string. hence we
+conclude that method i gives exactly the same tensionless limits for the nambu-goto
+and polyakov strings. in the next section we will see that this is true also for the
+second method.
+
+2.5.3 method ii
+
+we start again by deriving the momenta:
+
+p 
+=
+
+l
+ x 
+tggab ab
+1
+ x 
+2
+
+= tg(g00 x + g10 x),
+
+ 
+
+l
+ g
+
+= 0.
+
+(2.106)
+
+(2.107)
+
+since  vanishes everywhere, we know that g are not really dynamical variables.
+we will later see explicitly that they play (with a suitable identication) the role of
+lagrange multipliers.
+
+from the equation for p we see easily that the transformation from conguration
+space to phase space is invertible. this means that we can obtain x  from p . simple
+rearrangement indeed gives
+
+x =
+
+1
+
+g00 (cid:18) p
+
+tg  g10 x(cid:19) .
+
+(2.108)
+
+the fact that this is possible further means that the momenta are independent func-
+x . thus we will have no functions connecting them by m(p, x, x) = 0,
+tions of
+and hence there will be no constraints in the theory. for higher dimensional weyl-
+invariant p-branes we would not nd the momenta to be invertible. in this sense the
+string case is special.
+
+now, as we do not have to think about constraints, we go on by explicitly deriving
+the hamiltonian. the total hamiltonian will in this case equal the naive hamiltonian.
+the way to do this is rst to dene the quantity
+
+h = h(x, x, p )  p x   l(x, x).
+
+(2.109)
+x ), we arrive at the hamilto-
+if we manage to eliminate time derivatives of x (i.e.
+nian h which is a function of x, p and spatial derivatives of x (i.e. x ). thus, if
+we start from h and substitute for x  we nd:
+
+h = p x   l
+1
+= p x  
+2
+1
+2t g00g
+=
+ h(p, x, x).
+
+tg(g00 x  x + 2g10 x  x + g11 x  x)
+(g10)2
+g00  g11) x 2
+p 2 
+
+g01
+g00 p  x +
+
+tg(
+
+1
+2
+
+42
+
+2. bosonic strings
+
+rearranging the terms we can write this as
+
+h =
+
+1
+
+2t g00g
+
+(p 2 + t 2 x 2) 
+
+g01
+g00 p  x.
+
+(2.110)
+
+here we have t in the denominator of the rst term. if we let t  0 that term will
+blow up, and the limit will not be well dened. to overcome this problem we can
+make the redenitions
+
+ 
+
+  
+
+1
+
+2t g00g
+g10
+g00 .
+
+,
+
+(2.111)
+
+(2.112)
+
+this is the same identication as we did in (2.43). interpreting  and  as lagrange
+multipliers, this gives exactly the hamiltonian for the nambu-goto string (2.39).
+
+alternative calculation of the hamiltonian in section 1.4.2 (theorem 2) we
+saw that dieomorphism invariant models made from tensor elds gab will have a
+naive hamiltonian
+
+h = 0ag0a + a0ga0,
+
+(2.113)
+
+where ab = 0 are the euler-lagrange equations associated with gab. to show that
+this gives indeed the same result, we will now present an explicit calculation. we
+rst have to nd the s.
+
+ab  c
+
+= 
+
+this gives
+
+l
+
+(cgab) 
+l
+1
+2
+gab
+
+= 
+
+l
+gab
+
+g(gabgcdcd  gcagdbcd).
+
+(2.114)
+
+h = 20bg0b
+= tg(
+= tg(
+
+1
+2
+
+gcdcd  gc0c0)
+1
+g0000 +
+2
+
+1
+2
+
+g1111).
+
+(2.115)
+
+remember that 00 = x 2 and 11 = x 2, and use equation (2.108) to eliminate x in
+favour of the momenta. then we end up with
+
+h =
+
+1
+
+2gg00t
+
+(p 2 + t 2 x 2) 
+
+g10
+g00 ,
+
+(2.116)
+
+which is just what was found above.
+
+we nd the same hamiltonian as in the nambu-goto case, and hence the two models
+lead to the same phase space action, and of course the same limits. this result should
+
+2.5 the string in the polyakov form
+
+43
+
+not come as a chock, as the two actions are classically equivalent. we also remember
+that in the phase space formulation we were able to deduce the weyl-invariant action
+from the nambu-goto action (c.f. section 2.3.3).
+
+one interesting observation concerns the degrees of freedoms. naively, gab has
+three degrees of freedom, while  and  are only two degrees of freedom. but owing
+to the symmetries, there is no real freedom in gab (remember that it is an auxiliary
+eld). the 2d di invariance kills two degrees of freedom, and weyl-invariance
+kills the last. similarly, in the nambu-goto case  and  represent no real degrees
+of freedom, due to the two-parametric di invariance. the supercial dierence in
+degrees of freedom is then understood from the fact that the nambu-goto action has
+no weyl-symmetry.
+
+44
+
+2. bosonic strings
+
+chapter 3
+
+d-branes
+
+d-branes1 [38] are soliton-like, extended objects (so-called topological defects) that
+appear naturally in string theory. they are dened by the property that strings can
+end on them, but have their own dynamics.
+
+3.1 actions
+
+in [27] the action for a dp-brane is given as
+
+s = tpz dp+1 eq det(ab + bab + fab),
+
+(3.1)
+
+where tp is a constant,  is the dilation eld, and2 fab = 2[aab], aa being a
+gauge eld and 2 the inverse of the fundamental string tension. furthermore,
+
+ab()  ax bx  g (x);
+
+bab()  ax bx b(x)
+
+(3.2)
+
+are the induced metric and antisymmetric tensor on the brane. g is the background
+(symmetric) metric, and b is the background (antisymmetric) kalb-ramond eld.
+the indices take values  = 0, . . . , d  1; a = 0, . . . , p.
+
+the born-infeld action the original born-infeld action [39] was (unsuccessfully)
+invented to describe nonlinear electrodynamics, and has the form
+
+s =z d4xq det( + f ),
+
+(3.3)
+
+where  is the minkowski metric, and f = [a] is the electromagnetic eld
+strength.
+
+if we exchange  for a general metric g we will have a gravity-coupled model.
+furthermore, if we consider the two-dimensional case and use the induced metric ab
+
+1 the d is an abbreviation for dirichlet.
+2 remember that a = 
+
+a and [aab] = aab  baa.
+
+45
+
+46
+
+3. d-branes
+
+we will get a kind of string. for higher dimensions we may interpret the action as
+describing some kind of p-brane:
+
+s = t z dp+1q det(ab + fab),
+
+(3.4)
+
+where t is some constant. this resembles very much the d-brane action (3.1). thus,
+we will call (3.1) the born-infeld action for d-branes.
+
+the dilation e makes no dierence to what concerns the dynamics, and can for
+our purposes be disregarded (or taken together with the constant tp). this will be
+done in the following. the independent eld variables are the embedding x () and
+the gauge elds aa().
+
+a weyl-invariant action it is shown in [40] that the born-infeld action can be
+written in the two classically equivalent forms
+
+s = tpz dp+1s(sab(ab + bab + fab))
+
+p+1
+2 ,
+
+s =
+
+t
+
+2 z dp+1shsab(ab + bab + fab)  (p  1)i ,
+
+(3.5)
+
+(3.6)
+
+where sab is an auxiliary tensor eld with no symmetry assumed. in the usual way
+we have dened s as the determinant, s  det(sab) and sab as the inverse, sabsbc = a
+c .
+elimination of sab gives back the original form (3.1). the rst of these (3.5) is weyl-
+invariant (under rescalings of sab), while the second (3.6) is simpler when it comes to
+calculations.
+
+in two dimensions (p = 1) the two actions are the same. for the same reason as
+we investigated only the weyl-invariant string in section 2.5, we will for the moment
+consider only the two-dimensional case of the weyl-invariant d-brane action.
+
+a reference where the second of the alternative formulations of the d-brane action
+
+has been used is [41].
+
+g(2)p p+1 , where g is the
+tp  0 limit the dp-brane tension is given by tp =
+string coupling. the tp  0 limit can thus be viewed as a strong coupling limit
+where g   and  held xed. we will focus on this limit in what follows.
+
+1
+
+3.2 the born-infeld action
+
+dening mab  ab +bab +fab and m  det(mab) we write the born-infeld dp-brane
+action as
+
+s = tz dp+1m,
+
+(3.7)
+
+what is new compared to the usual p-brane action is the addition of the antisym-
+metric terms bab and fab. we will get the old p-brane in the limit aa = 0 and
+b = 0.
+
+3.2 the born-infeld action
+
+47
+
+3.2.1 method i
+
+introduction of an auxiliary eld , and taking the t = 0 limit gives, in the usual
+way,
+
+the equation of motion for  is found from a variation :
+
+1
+
+2z dp+1  det(mab).
+
+st =0
+ = 
+
+  det(mab) = 0.
+
+(3.8)
+
+(3.9)
+
+this is similar to what we found for the strings and p-branes. but in the present case
+the degeneracy does not imply that the world volume is a null surface (c.f. section
+2.3.2). it only gives a relation between the x  and aa elds.
+
+3.2.2 method ii
+
+the calculations presented here are given in more detail by lindstrom and von unge
+in [40].
+in the following we have for simplicity set b = 0, which means mab =
+ab + fab. calculations with the antisymmetric b eld included are given in [42].
+the lagrangian is given from (3.7) as l = tm .
+the eld variables are x () and aa(), and the canonical conjugate momenta
+
+associated with them are
+
+ 
+p a 
+
+l
+ x 
+l
+ aa
+
+=
+
+=
+
+t
+2
+t
+2
+
+m m (a0)ax,
+
+mm [a0]2,
+
+(3.10)
+
+(3.11)
+
+where m ab is the inverse of mab. round parenthesis and brackets around the indices
+denote symmetrization and antisymmetrization respectively, i.e. m (ab) = m ab +m ba;
+m [ab] = m ab  m ba.
+constraints:
+
+the equations (3.10, 3.11) are not invertible, and give rise to the following primary
+
+fij  0,
+
+p j
+2
+p iijp j
+(2)2 + t 2 det(mij)  0,
+
+i  ix  +
+a   +
+b  p 0  0,
+
+where i takes spatial values i = 1, . . . , p.
+
+the naive hamiltonian can be calculated straight forwardly, and reads
+
+hnaive = p aaa0.
+
+(3.12)
+
+(3.13)
+
+(3.14)
+
+(3.15)
+
+(equivalently, we could use theorem 2 of section 1.4.2 and write h = 0
+0
+
+aa0, where
+a is the euler-lagrange equation associated with a0. this would, up to a total
+
+48
+
+3. d-branes
+
+derivative, ax a, yield the same result.) consistency conditions on the primary
+constraints give us one secondary constraint
+
+but there are no tertiary constraints. the total hamiltonian will then be
+
+c  cp c  0,
+
+(3.16)
+
+h = p aaa0 + a + ii + b +  c.
+
+(3.17)
+
+the phase space action is
+
+lp s = 0x  + p a0aa  p aaa0  a  ii  p 0   ap a
+
+= 0x  + p i0ai  p ii(a0   )  a  ii.  (  0 )p 0(3.18)
+
+we can redene3 a0    a0 and   0  . thus, we get
+p ifij
+2  a  ii  p 0.
+
+lp s = 0x  +
+
+(3.19)
+
+elimination of  is trivial, and elimination of the momenta gives a conguration space
+action
+
+scs = z dp+1
+
+1
+
+4(cid:20)00  2i0i + ijij
+
++ij(f0i  kfki)(f0j  lflj)  42t 2 det(mij)(cid:21),
+
+(3.20)
+
+where ij is the inverse of the spatial part of ab, i.e. ijjk = i
+k. the t  0 limit
+is now easily taken by dropping the last term. and as shown in [40] this gives rise to
+two dierent tensionless limits of the d-brane:
+
+st =0
+
+1
+
+st =0
+
+2
+
+=
+
+=
+
+1
+
+4z dp+1v det m,
+4z dp+1v aw bmab,
+
+1
+
+(3.21)
+
+(3.22)
+
+v , v a and w a are scalar and vector elds that are dened by means of the lagrange
+multipliers, but may be treated as independent elds. the result would be the same
+if we included the background eld b (with the proper modication of mab). the
+rst action (3.21) is identical to what we found using method i.
+1 , equation (3.22) can be rewritten
+
+if we dene v a = e a
+
+0 + e a
+
+0 + e a
+
+as4
+
+1 and w a = e a
+4z dp+1(cid:16)abe a
+1
+a e b
+
+st =0
+
+3 =
+
+b  abe a
+
+a e b
+
+b(cid:17) mab,
+
+(3.23)
+
+3 note that in the path integral picture, a shift in the elds does not make any dierence, as
+
+r da0f [a0   ] =r da0f [a0], in analogy with the simple resultr dxf (x  a) =r dxf (x).
+
+4 in conventions where ab = diag(1, +1) and 10 = +1.
+
+3.3 weyl-invariant form
+
+49
+
+where a, b = 0, 1. we may identify e a
+a as zweibeins, and the form above then shows
+that the dynamics of the tensionless d-brane is governed by an action that involves
+a degenerate metric, gab = abe a
+
+a e b
+
+b , of rank 2.
+
+the equations of motion derived from this action can be shown [40] to imply that
+the world volume of the brane generally splits into a collection of tensile strings or,
+in special cases, massless particles. thus, it leads to a parton picture of d-branes in
+this limit.
+
+3.3 weyl-invariant form
+
+in the two-dimensional case we found the weyl-invariant d-brane to be
+
+s =
+
+t
+
+2 z d2ssabmab.
+
+(3.24)
+
+throughout this section we will set b = 0, giving mab = ab + 2[aab]. the
+subsequent calculations of tensionless limits resembles much those in the previous
+section and those for the polyakov string.
+
+method i as discussed in the introduction (section 1.5.1) the action (3.24) is not
+on the form that we need for method i to give dynamical equations for the tensionless
+limit. this was also true for the polyakov string action in section 2.5, but in that case
+we could nonetheless use method i to make interesting interpretations concerning the
+tensionless limit. an important property that made that possible was the symmetries
+that allowed us to choose a gauge where the auxiliary metric was equal to the induced
+metric, gab = ab (proportionality would be enough). in the present case, however,
+the auxiliary tensor sab is not symmetric and hence is 4-parametric. and since
+the weyl+di symmetry is still only 3-parametric we cannot by a gauge choice set
+sab = mab similar to what we did for the polyakov string.
+
+3.3.1 method ii
+
+the elds to be considered as independent variables in the action (3.24) are x , aa
+and sab. let us rst derive the canonical conjugate momenta associated with these
+elds.
+
+sscd dc
+sscd fdc
+
+ x 
+
+= ts(cid:18)s00 x +
+= ts
+
+1
+2
+
+(0aa)
+
+(s0a  sa0)2
+
+1
+2
+
+(s01 + s10)1x(cid:19) (3.25)
+
+ 
+p a 
+ab 
+
+=
+
+=
+
+t
+2
+t
+2
+
+= 0
+
+l
+ x 
+l
+ aa
+l
+ sab
+
+the rst equation (3.25) is invertible which means that we can nd an explicit ex-
+pression for x :
+
+x =
+
+1
+
+s00 (cid:18) 
+
+ts 
+
+1
+2
+
+(s01 + s10)1x(cid:19)
+
+(3.26)
+
+(3.27)
+
+(3.28)
+
+50
+
+3. d-branes
+
+the second equation (3.26) is obviously not invertible. we have actually found a
+momentum p that is completely independent of the elds a. its denition gives then
+immediately rise to the constraints
+
+0  p 0  0,
+t
+1  p 1 +
+2
+
+s(s01  s10)2  0.
+
+(3.29)
+
+(3.30)
+
+the last equation (3.27) says that the conjugate momenta to sab are identically zero.
+this follows the pattern of previous results, and sab are non-dynamical variables to
+be treated on the same footing as lagrange multipliers.
+
+we are now ready to derive the naive hamiltonian. disregarding ab, we have:
+
+hnaive =  x  + p a aa 
+
+t
+2
+
+ssab(ab + 2(aab  baa))
+
+= f (,
+
+x, 1x) + g(p, a, 1a)
+
+to arrive at a proper hamiltonian we have to eliminate all time derivatives. consider
+rst g:
+
+g = p a0aa  ts
+= p a0aa  ts
+= p aaa0.
+
+1
+2
+1
+2
+
+sab(aab  baa)2
+[s01(0a1  1a0) + s10(1a0  0a1)]2
+
+now remains only to rewrite f . if we insert the expression for x  and simplify we
+nd:
+
+1
+
+=
+
+f =  x   ts
+1
+2
+2 
+(s01 + s10)(s01 + s10)  s00s11(cid:19) 11
+
+2t s00s
+ts
+2s00 (cid:18) 1
+
+sabab
+s01  s10
+
+ix 
+
+2s00
+
++
+
+4
+
+if we calculate p 1p 1 we see that we can still simplify the expression within the large
+brackets of the last term:
+
+1
+4
+
+(s01 + s10)(s01 + s10)  s00s11 =
+
+p 1p 1
+
+t 2s(2)2 
+
+1
+s
+
+.
+
+(3.31)
+
+if we put together terms with the same coecients we can now write the naive
+hamiltonian in its simplest form:
+
+hnaive =
+
+1
+
+p 111p 1
+
+2t s00s  +
+2s00 1x  + p aaa0.
+
+s01 + s10
+
+
+
+(2)2 + t 211!
+
+(3.32)
+
+3.3 weyl-invariant form
+
+51
+
+the consistency condition on the primary constraint 0 gives a secondary gauss
+law constraint
+
+2  ap a  0,
+
+(3.33)
+
+while 1 gives nothing new. there are no tertiary constraints. the four component
+elds of sab are lagrange multipliers which can be redened as
+
+1
+
+2t s00s
+
+s01 + s10
+
+,
+
+,
+
+ 
+
+  
+t
+ 
+2
+
+2s00
+
+s(s01  s10).
+
+(3.34)
+
+(3.35)
+
+(3.36)
+
+including the constraints, we can then write the total hamiltonian as
+
+h = (2 +
+
+p 111p 1
+(2)2 + t 211) + 1x  + p aaa0
+
++0p 0 + 1(p 1 + ) +  ap a
+
+(3.37)
+
+the phase space lagrangian is lp s = 0x  + p a0aa  h, and a variation of 
+gives 1 = 0, which means that the constraint 1 = p 1+ in fact makes no dierence.
+then we see that we have exactly the same hamiltonian and phase space lagrangian
+as we derived from the born-infeld action for the two-dimensional d-brane (d-string)
+(3.17). hence, we get the same tensionless limits (3.21) and (3.22)/(3.23).
+
+we have thus the same situation as we found for the polyakov string versus the
+nambu-goto string. this should not really come as a surprise, since the string action
+can be seen as a special case of the d-string action when we let aa = b = 0, and
+sab be symmetric.
+
+52
+
+3. d-branes
+
+chapter 4
+
+rigid strings
+
+rigid strings are strings with an extra curvature term that depends on the spacetime
+embedding. they are also referred to as smooth strings, because this extra term
+(provided that it has the right sign) makes it energetically favourable for them to be
+less creased.
+
+the rigid string was introduced in 1986 as an attempt to nd a string that corre-
+sponds to qcd (quantum chromo-dynamics) [43], and, independently, to study the
+string near a phase transition [44]. dierent aspects of rigid strings have later been
+investigated in [4556].
+
+4.1 the action
+
+the intrinsic curvature of a surface  embedded in a at background space s can be
+written by means of the extrinsic curvatures k ib
+a generally (up to a total derivative)
+as (c.f. appendix a.5)
+
+a k b
+
+a k a
+ib ,
+
+r = k ia
+
+ib  k ib
+
+(4.1)
+where a, b = 0, 1 are worldsheet indices and i = 2, 3, . . . , d  1 refer to directions
+normal to the surface. d is the spacetime dimension. indices are raised and lowered
+by the induced metric ab and its inverse ab. the intrinsic curvature is a total
+derivative in two dimensions, but the separate terms in (4.1) are not. a generalization
+of the nambu-goto action to include curvature can therefore be written [43]
+
+s = tz d2 +
+
+1
+
+2z d2k ia
+
+a k b
+ib ,
+
+(4.2)
+
+where, again,  = det(ab) and t is the string tension. the coupling constant  is
+referred to as the rigidity parameter.
+
+the term describing the extrinsic curvature contains double derivatives. to get
+an action with only rst derivatives, we introduce an extra eld b, and write the
+action as in [56],
+
+s = t z d2(cid:18)1 
+
+t
+2
+
+bb  abax bb(cid:19) .
+
+(4.3)
+
+53
+
+54
+
+4. rigid strings
+
+this action is seen to be equivalent to the original one by elimination of b:
+
+(4.4)
+
+b  s = t z d2(cid:16)t bb  abax b(b)(cid:17)
+= t z d2(cid:16)t b + b(abax )(cid:17) b.
+
+the covariant dalembertian operator is   abab = 1 aabb, where 
+
+is the covariant derivative with respect to the metric ab. demanding the action to
+be extremal, we nd immediately
+
+inserting this solution for b in the action (4.3) we get
+
+b =
+
+1
+t
+
+x 
+
+(4.5)
+
+1
+
+(4.6)
+
+s = tz d2 +
+
+2z d2x x.
+ab}cx  + k i
+furthermore, we have the identity abx  = {c
+ab} is the
+ab is the extrinsic curvature and n
+christoel symbol associated with ab, whereas k i
+i
+are normal vectors to the worldsheet. using this together with the denition of x 
+we nd x  = abk i
+ib . hence we recover the
+second order action (4.2).
+
+i , which gives x x = k ia
+
+a k b
+
+abn
+
+i , where {c
+
+abn
+
+the form (4.3) of the action may further be derived from a membrane action [57].
+
+in the following we will focus on the tensionless limit of the rigid string.
+
+4.2 method i
+
+the action (4.3) is not appropriate for method i (see section 1.5.1). for this reason
+we will here instead consider the action [53]
+
+s = t z d2q det(ab + hab);
+
+hab  1(acx bdx)cd,
+which is equivalent to (4.2) to rst order in 1. the tensionless limit is
+
+st =0
+ = 
+
+1
+
+2z d2  det(ab + hab),
+
+and a variation in  gives
+
+ 
+
+det(ab + hab) = 0.
+
+(4.7)
+
+(4.8)
+
+(4.9)
+
+this equation together with the equation we nd from a variation in x  are the eld
+equations for this model.
+
+4.3 method ii
+
+4.3 method ii
+
+55
+
+more interesting than method i is the calculations and results we obtain from the
+phase space method. it is a more general method, and usually makes it easier to see
+what is going on as we take the limit t  0.
+our starting point is the lagrangian
+
+2 and allow for the possibility of n to remain nite as t  0.
+l = t(1  n b2  abax bb).
+
+we dene n  t
+
+(4.10)
+
+as usual, we start by deriving the canonical conjugate momenta (  = 
+
+0 ,= 
+
+1 ),
+
+ 
+p 
+
+l
+ b
+l
+ x 
+
+= ta0ax,
+= thd0(cid:16)(1  n b2)dx  db(cid:17)
++(a0bd + b0ad  abd0)(ax  bb)dxi.
+
+(4.11)
+
+(4.12)
+
+neither of these equations are invertible, and we nd the following primary con-
+straints:
+
+1  2 + t 2 x 2  0,
+2   x   0,
+3  p x  +  b  0,
+4  p + t 2 x b + (1  n b2)2  0.
+
+(4.13)
+
+(4.14)
+
+(4.15)
+
+(4.16)
+
+the dieomorphism invariance ensures that the naive hamiltonian is zero, which is
+also easy to check by direct calculation. this means that the consistency conditions
+(1.26) on the primary constraints take the form
+
+z d2 n{m(), n()}  0,
+
+(4.17)
+
+where n is the lagrange multiplier associated with the constraint n. working out
+these conditions will give us the secondary constraints.
+
+secondary constraints since we have so far never really done any thorough cal-
+culations to nd secondary constraints, we will now do this in great detail. refer
+back to section 1.2.3 for the general theory. we rst have to nd the variational
+derivatives of the elds. this is easily done, with the results:
+
+1()
+x ()
+1()
+p()
+
+= 2t 2 x1(  ),
+
+= 0,
+
+1()
+b()
+1()
+()
+
+= 0,
+
+= 2()(  );
+
+56
+
+4. rigid strings
+
+2()
+x ()
+2()
+p()
+
+3()
+x ()
+3()
+p()
+
+4()
+x ()
+
+4()
+p()
+
+= ()1(  ),
+
+= 0,
+
+= p()1(  ),
+= x ()(  ),
+
+= t 2 b()1(  ),
+
+= ()(  ),
+
+2()
+b()
+2()
+()
+
+3()
+b()
+3()
+()
+
+4()
+b()
+
+4()
+()
+
+= 0,
+
+= x ()(  );
+
+= ()1(  ),
+= b()(  );
+
+= t 2 x()1(  )
+
+2n 2()b()(  ),
+= [ p () + 2(1  n b2())
+
+() ] (  ).
+
+next, we must calculate the poisson brackets between the constraints, which are in
+general given by
+
+{m(), n()} = z d2 (cid:20) m()
+
+x ()
+m()
+p()
+
+
+
++
+
+n()
+p()
+n()
+x () 
+
+m()
+b()
+m()
+()
+
+n()
+()
+n()
+
+b()(cid:21).
+
+performing the required calculations, we nd1
+
+{1(), 2()} = 0,
+{1(), 3()} = 2h()() + t 2 x () x()i 1(  ),
+{1(), 4()} = 2t 2h() x () + () x ()i 1(  )
+{2(), 3()} = h() x () + () x ()i 1(  ),
+{2(), 4()} = h()() + t 2 x () x()i 1(  )
+{3(), 4()} = 2(1  n b2())()()1(  )
+
++2n 2 x b(  ),
+
++4n 2b(  ),
+
++2n 2 bb(  ).
+
+(4.18)
+
+(4.19)
+
+(4.20)
+
+(4.21)
+
+(4.22)
+
+(4.23)
+
+(4.24)
+
+when put inside an integration, we can integrate by parts to get rid of the deriva-
+tives of the delta function. this will give rise to a vanishing surface term, and a
+
+1 we use the notation  = (0, 1) and 1 = 
+
+1 .
+
+4.3 method ii
+
+57
+
+term that vanishes (weakly) by use of the primary constraints. let us show this for
+{2(), 3()}. the expression has meaning only within an integral, and we nd
+
+z d2(){2(), 3()}
+
+= z d2()h() x () + () x ()i1(  )
+= z d21(cid:16)()h() x () + () x ()i (  )(cid:17)
+z d21(cid:16)()h() x () + () x ()i(cid:17) (  )
+= 1z d2()h() x () + () x ()i (  )
+z d2()h () x () + ()11x ()i (  )
+= 1(cid:16)()2 x(cid:17)  ()1( x)
+2 0.
+
+(4.25)
+
+the same can be shown to hold for all the other terms including the factor 1().
+thus, the consistency conditions (4.17) yield in general three secondary con-
+straints2,
+
+4n 2b  0,
+2n 2 x b  0,
+2n 2 bb  0.
+
+(4.26)
+
+(4.27)
+
+(4.28)
+
+the elds are here to be evaluated at the same world-sheet points .
+
+the limit b = 0 from the original action integral (4.3) we see that in this limit
+we recover the nambu-goto action for a string. it is instructive to check that this
+will be true also in the phase space picture. if we let b = 0 in the expressions for
+
+the momenta we nd that p  =  = ta0ax , which is of course the same
+as for the nambu-goto string. furthermore, 4  0 will be reduced to an identity,
+and 3 will be identical to 2. the remaining two constraints will be the same as
+in the nambu-goto case,
+
+1 = p 2 + t x 2,
+2 = p  x.
+
+(4.29)
+
+(4.30)
+
+since the naive hamiltonian is zero, this immediately tells us that the phase space
+action will also be the same.
+
+2 this is dierent from what is found in [56]. in this article the authors use, instead of (4.16),
+4 = p  + t 2 x b + (1  n b2)(2  t 2 x 2) and nd {3, 4} = 0. this is obviously not equivalent
+with our results.
+
+58
+
+4. rigid strings
+
+the limit t = 0 this is the tensionless case that we are really interested in. the
+primary constraints are now reduced to
+
+1 = 2,
+2 =  x,
+3 = p  x +  b,
+4 = p .
+
+(4.31)
+
+(4.32)
+
+(4.33)
+
+(4.34)
+
+since 2  0 the consistency conditions (4.264.28) reduce to identities, so we have
+no secondary constraints in the tensionless limit.
+
+the hamiltonian is then just the sum of primary constraints,
+h = a2 + b  x + c[p  x +   b] + dp  ,
+
+(4.35)
+
+where a, b, c and d are lagrange multipliers. note that the parameter n did also
+vanish as we put t = 0. what we now want to do is to write the phase space action,
+and eliminate the momenta to arrive at a new conguration space action. the phase
+space action is
+
+this action is only linear in p , and a variation p gives
+
+s =z d2hp x +  b  hi .
+
+p  x   c x   d = 0,
+1
+d
+
+  =
+inserted back into the action, and dening  = a
+action
+
+( x   c x ).
+
+d , this gives the conguration space
+
+(4.36)
+
+(4.37)
+
+(4.38)
+
+(4.39)
+
+(4.40)
+
+b  b, we
+
+(4.41)
+
+(4.42)
+
+s = z d2
+
+1
+
+dh  00 + (2c  b)01  (c2  cb)11
++00  c10  c01 + c211 i.
+
+(remember that ab = ax bx = ba and ab = ax bb 6= ba.) let us dene
+the vector density
+
+v a 
+d , v 0v 1 =  1
+which means v 0v 0 = 1
+can write the lagrangian in (4.39) as
+
+1
+
+d  1
+
+c ! ,
+
+d c and v 1v 1 = 1
+
+d c2. redening 1d
+
+if we also dene
+
+l = v av bab  bv aa1 + v av bab.
+
+w a   v 0
+
+v 1 + b ! ,
+
+4.3 method ii
+
+59
+
+we can write the action for the tensionless rigid string in a manifestly covariant form,
+
+s =z d2hv aax (v bbb  w bbx)i .
+
+(4.43)
+
+the four degrees of freedom of the lagrange multipliers are now replaced by the four
+degrees of freedom in the two vector densities.
+
+variations in the elds give the equations of motion,
+
+b 
+w b 
+v b 
+x 
+
+a(v av bbx ) = 0,
+v aab = 0,
+v a(axb)b = w aab,
+
+ahv (aw b)bx   v av bbbi = 0.
+
+(4.44)
+
+(4.45)
+
+(4.46)
+
+(4.47)
+
+the rst two equations are the same as we found for the tensionless nabu-goto
+string. what is special for the rigid string must then be found in the remaining two
+equations.
+
+equation (4.47) gives
+
+v (aw b)bx   v av bbb = abbc ,
+
+(4.48)
+
+where c  is some spacetime vector. contracting this equation with ax gives
+
+2v aw bab  v av bab = abbc ax
+0 = abbc ax,
+
+(4.49)
+
+which says that bc ax, is symmetric, i.e. ac  = cax , where c is some
+constant. put into equation (4.47) this gives
+
+ca 
+v c 
+
+v (aw b)bx   v av bbb = cabbx 
+ca(cid:16)v (aw b)bx   v av bbb(cid:17) = ccx 
+
+cav cv bw abx  = ccx v c
+c = abv aw b.
+
+
+
+(4.50)
+
+thus we have determined the constant c. using the relation abcd = a
+can now write equuation (4.48)
+
+c b
+d b
+c  a
+
+d we
+
+v aw bbx  + v bw abx   v av bbb = cx v cw a  dx v aw d,
+
+which gives
+
+v bbb = 2w bbx .
+
+this equation put into (4.46) yields
+
+v bbx ab = w bab.
+
+(4.51)
+
+(4.52)
+
+60
+
+4. rigid strings
+
+a contraction of equation (4.51) with ax, and using (4.52) gives us
+
+v bbbax = 2v bbx ab,
+
+which says that det(ab + 2ba) = 0. this relation can (in 2d) be written
+
+det(3(ab)) =  2;
+
+[ab] = ab,
+
+(4.53)
+
+(4.54)
+
+where  = 01  10.
+we have seen that method ii does indeed lead to a sensible theory for the tensionless
+limit of the rigid string, represented by the eld equations (4.44; 4.45; 4.51; 4.52).
+the rst two equations describe a tensionless nambu-goto string, which we derived
+in section 2.3. one special solution of the last two equations is the case where w a is
+parallel to v a, and ab is parallel to ax , in which case we end up with exactly
+the same equations of motion as for the tensionless nambu-goto string.
+
+an interesting question that we do not go into in any more detail, is what role
+
+the b eld actually plays in these equations.
+
+note also that the action (4.43) can be made conformally invariant in the same way
+as the tensionless nambu-goto string, if we in addition demand that b transforms
+like x .
+
+chapter 5
+
+general relativity
+
+consider a given manifold s with metric g . suppose furthermore that there exist a
+coordinate basis {x} on the manifold, and let comma denote partial derivative with
+respect to the coordinates, i.e. f,  f
+x . then we may dene the the christoel
+symbol {
+, the ricci tensor r and the
+ricci scalar r as follows:
+
+}, the riemann curvature tensor r
+
+1
+g(g, + g,  g,),
+{
+} 
+2
+r
+  {
+},  {
+r  r
+ ,
+r  g r .
+
+}, + {
+
+}{
+
+}  {
+
+}{
+
+},
+
+(5.1)
+
+(5.2)
+
+(5.3)
+
+(5.4)
+
+the christoel symbol is very often written 
+ , and is an example of a connection.
+however, it is not a tensor, so this notation can be very confusing. we write it in
+the form above to emphasize this fact, but also because we will later use the symbol
+
+
+ with a dierent meaning.
+
+although {
+
+} is not a tensor, it can be shown that r
+
+the right to its name.
+
+ is, and thus has earned
+
+5.1 the action
+
+einsteins eld equations (in vacuum) describing the dynamics of spacetime are
+
+r 
+
+1
+2
+
+rg + g = 0,
+
+(5.5)
+
+and may be found as the equations of motion derived from the hilbert action (see
+standard textbooks on gravitation, e.g. [58, 59])
+
+s[g] =
+
+1
+
+z d4xg(r(g)  2).
+
+61
+
+(5.6)
+
+62
+
+5. general relativity
+
+einsteins constant  is dened as   8
+c3 gn , where gn is newtons gravitational
+constant.  is the cosmological constant, which may be thought of as being related
+to the energy of vacuum.
+
+this action contains metric elds g , their derivatives g , and also their second
+derivatives 2g , and was used by hilbert to derive einsteins eld equations only
+days after einstein had published his results.
+
+it has later become clear that we may treat the connections 
+
+ as independent
+ instead of {
+}.
+
+eld variables, and dene the riemann tensor by means of 
+equation (5.2) is then replaced by
+  
+
+,  
+
+  
+
+ 
+
+r
+
+, + 
+
+
+
+.
+
+this gives the so-called palatini action [60]
+
+s[g, ] =
+
+1
+
+z d4xg(g r ()  2).
+
+variation of  and g respectively give us
+
+  
+
+ = {
+
+g  r () 
+
+},
+1
+2
+
+g gr() + g = 0.
+
+(5.7)
+
+(5.8)
+
+(5.9)
+
+(5.10)
+
+we see that the relation between the connection and the metric, 
+}, comes
+out as a solution of the eld equations. with the substitution   {}, equation
+(5.10) is exactly the einstein eld equations for vacuum, with a cosmological constant
+included. details on these calculations are found e.g. in [59].
+
+ = {
+
+if we eliminate  in s[g, ] by solving its equation of motion and substituting back,
+we just have to replace  by {}, thus recover the hilbert action s[g]. in this sense
+we call s[g, ] a parent action for s[g].
+alternatively, we may eliminate the metric elds g . contraction with g in
+
+(5.10) gives
+
+g r (g) = 4.
+
+(if we worked with another spacetime dimension than 4 we would get 2d
+right hand side.) inserted back into equation (5.10) we nd
+
+(5.11)
+d2  on the
+
+g = r ().
+
+(5.12)
+
+as long as  6= 0 we can eliminate g in s[g, ] and arrive at the eddington-
+schrodinger action [61, 62]
+
+s[] =
+
+2
+
+z d4xq det(r ()).
+
+(5.13)
+
+the actions s[g] and s[] are dual, i.e. they are both derivable from the same parent
+action s[g, ]. all three actions will of course give us equivalent equations of motion,
+so they are classically equivalent.
+
+5.2 method i
+
+63
+
+if we compare with the p-brane actions, we see that s[] resembles the nambu-goto
+form (2.28), while s[g, ] is very similar to the howe-tucker action (2.94), and partly
+the polyakov action (c.f. section 2.5). but there are important dierences as well.
+
+first, the strings were supposed to live in a background space, i.e. a spacetime
+with some xed metric. in the gravitational case, on the other hand, this spacetime
+is precisely what is under study. this aspect is in fact a major obstacle in the search
+for a quantum eld theory of gravitation.
+
+second, the 
+
+ elds in gravitation have a more complicated nature than the
+position elds x  in the string models. for instance, x  are scalars under dieo-
+morphisms, while the s are not even tensors.
+
+the limit    from the denition of  we see that the limit may be viewed as
+a c  0 limit, or a gn   limit. this is the opposite of the newtonian limit, which
+can be thought of as c  . as the speed of light approaches zero, lightcones will
+collapse into spacetime lines, and points in space will be disconnected. so this limit
+leads to an ultralocal eld theory. these limits have been investigated e.g.
+in [63]
+and [64] in the search for a quantum description of gravity.
+
+it is possible to make yet another interpretation of the    limit by observing
+(which is possible in the hamiltonian formulation) that it is equal to the so-called
+zero signature limit. this limit represents some intermediate stage between euclidian
+space (signature +1) and minkowski space (signature 1). this viewpoint is taken
+by teitelboim [65]. his paper also includes an instructive discussion on what physical
+signicance this limit has.
+
+in the following we will see if we can use our well-developed methods as a successful
+approach to this limit. general relativity as a theory is quite dierent from the string
+models we have investigated so far, and it is dicult to say on beforehand whether
+any of the two methods will give anything of physical interest. but it is certainly
+worth a try.
+
+5.2 method i
+
+of the actions s[g, ], s[g] and s[] only the latter has the form that makes method
+i applicable. we will henceforth consider this action. introducing the auxiliary eld
+ we can write a classically equivalent action as
+
+s[, ] = z d4x(cid:20)
+
+4
+2 det(r ()) +
+
+1
+
+2(cid:21) .
+
+(5.14)
+
+elimination of  will as usual give back the original action, i.e.   s[].
+
+however, we are interested in the    limit, and the action above then gives
+
+s0[, ] = 
+
+4
+
+2 z d4x det(r ()).
+
+(5.15)
+
+64
+
+5. general relativity
+
+we could redene the auxiliary eld to get rid of the factor 4
+2 . but the form above
+makes it manifestly clear that the exression is valid only for  6= 0, so we keep it as
+it is.
+
+the equations of motion are found by variations  and 
+
+ :
+
+ 
+ 
+
+
+
+1
+2 det(r ()) = 0,
+1
+2 h(rr ) + (rr )
+
+i = 0,
+
+(5.16)
+
+3!
+
+1
+r
+
+where r  det(r()), r = 1
+rrr is the inverse of r, and
+ is the covariant derivative with  as the connection. the determinant r cancels in
+the combination rr , so the second equation is non-trivial even when det(r) = 0,
+which is imposed by the rst equation.
+the relation (5.12) connecting  to the metric, r () = g , cannot be used
+as the equivalence between s[g, ] and s[, ] breaks when we take the limit   .
+so even though we could solve the above equations for 
+ , the interpretations of
+what physics this limit represents would not be immediate.
+
+we do not elaborate more on this here, but turn instead to method ii. this
+method employes a much more general and powerful formalism, and we have seen
+earlier that it may give rise to several dierent limits. our hope is that within this
+possible class of limits we will nd a physically signicant one.
+
+5.3 method ii
+
+in the string case, the most straight forward way to arrive at tensionless limits was
+found by starting from the nambu-goto action. and because of its similarities to
+the nambu-goto action, we might therefore expect the action s[] to be the best
+starting point for deriving    limits in the gravity case. however, we will see
+that the similarities are only formal.
+q det(r ()). with the denition of the
+riemann tensor in terms of  instead of {} we nd the canonical conjugate momenta
+straight forwardly to be
+
+the lagrangian in s[] is l = 2
+
+
+ 
+
+=
+
+=
+
+l
+
+
+1
+
+2
+
+q det(r)r r
+r()  r0()
+ ),
+
+
+
+,0
+
+q det(r)(0
+
+where again r is the inverse of r.
+the naive hamiltonian is found from
+
+2
+
+q det(r)
+
+h = 
+
+,0 
+
+ 
+2
+
+=
+
+q det(r)(r 0
+
+,0  r0
+
+,0  1).
+
+(5.17)
+
+(5.18)
+
+5.4 adm approach (method ii)
+
+65
+
+this expression is not zero, and contains time derivatives both in det(r) and r.
+still, the hamiltonian is known to be a function independent of time derivatives, so
+it is always possible to eliminate time derivatives in favour of momenta. however,
+the relation (5.18) for h is clearly unwieldly and makes the subsequent analysis very
+hard. it is thus gratifying that there is another set of variables, the adm variables,
+in which the analysis becomes tractable.
+
+5.4 adm approach (method ii)
+
+we will now follow the fruitful approach originally made by arnowitt, deser and
+misner (adm) [66].
+
+the starting point is the hilbert action with zero cosmological constant (for con-
+
+venience),
+
+s =
+
+1
+
+z d4xgr(g).
+
+(5.19)
+
+the crucial point is the introduction of a new set of variables to replace the ten
+metric components of g . in a hamilton description we perform a space and time
+split. and because of the rather intricate role of time in general relativity, this is
+not as straight forwardly done as before. the way it is done, is by slicing the (4-
+dimensional) spacetime s into spacelike (3-dimensional) hypersurfaces . spacetime
+may then be parameterized by means of a continuous parameter, such that each value
+of this parameter corresponds to one of these hypersurfaces. this parameter is what
+we will call time, although it is not necessarily directly related to time as measured
+by clocks.
+
+let hab be the 3-dimensional induced metric on , and let hab be its inverse.
+indices referring to  (i.e. latin indices, a, b) are raised and lowered with this metric.
+now, introduce the lapse function n and shift functions na dened through
+
+g =  nan a  n 2 nb
+
+hab ! ;
+
+n t
+a
+
+,  = 0, 1, 2, 3;
+a, b = 1, 2, 3.
+
+(5.20)
+
+the metric components {g} are now replaced by the set of variables {hab, n, na}. if
+we let ~n be a unit vector normal to the hypersurface , we nd the extrinsic curvature
+kab of  as a lie derivative (c.f. appendix a.4) of the metric in the direction of ~n.
+this can again be shown to depend on the 3-metric hab and the shift functions in the
+following manner [58]:
+
+kab =
+
+1
+2
+
+nhab =
+
+1
+2n
+
+( hab  danb  dbna),
+
+(5.21)
+
+where da denotes the covariant derivative associated with hab, and the dot means
+dierentiation with respect to the time parameter.
+
+the gauss-codazzi equation (c.f. appendix a.5) gives the relation between in-
+
+trinsic curvatures (the ricci scalars) rs on s and r on :
+
+rs = r + kabk ab  k 2,
+
+(5.22)
+
+66
+
+5. general relativity
+
+where k  habkab and k ab = hachbdkcd. from equation (5.20) we nd
+
+g = nh.
+
+put together this means that we can rewrite the action (5.19) to
+
+s =
+
+1
+
+z dx0d3xnh(r + kabk ab  k 2),
+
+(5.23)
+
+(5.24)
+
+where r from now on refers to the intrinsic curvature on the hypersurface, i.e. r =
+r.
+
+we may now derive the canonical conjugate momenta:
+
+= 0,
+
+p 
+p a 
+ab 
+
+l
+ n
+l
+ na
+l
+ hab
+
+= 0,
+
+=
+
+1
+
+
+h(k ab  habk).
+
+(5.25)
+
+(5.26)
+
+(5.27)
+
+p and p a are identically zero, which means that n and na are non-dynamical vari-
+ables. they play the role of lagrange multipliers, as we will see explicitly later.
+
+equation (5.27) can be inverted to give an expression for kab and hab (by use of
+
+(5.21)),
+
+(ab 
+
+1
+2
+
+hab),
+
+kab =
+
+hab =
+
+
+h
+2n 
+h
+
+(ab 
+
+1
+2
+
+hab) + danb + dbda;
+
+  habab,
+
+(5.28)
+
+(5.29)
+
+which is easy to verify. the fact that we can obtain hab from ab means that we do
+not have to search for constraints. this situation is very similar to what was found
+for the polyakov form of the string in section 2.5.
+
+the hamiltonian is now straight forward to calculate:
+
+h  ab hab  l
+
+= n(cid:20) 1
+h
+
+(abab 
+
+1
+2
+
+2) 
+
+1
+2
+
+hr(cid:21) + 2abdanb,
+
+(5.30)
+
+where we have redened n  n . this is done to allow for the    limit. a
+similar argument was made in section 2.5 for the string case.
+
+the last term in the hamiltonian can be rewritten;
+
+2abdanb = 2 da(abnb)
+
+|
+
+0
+
+{z
+
+}
+
+2nbdaab.
+
+(5.31)
+
+5.4 adm approach (method ii)
+
+67
+
+again, the rst term on the right hand side can be disregarded since it is only a total
+derivative. if we consider n and na as lagrange multipliers we see that h is just a
+sum of these constraints:
+
+ =
+
+1
+h
+
+(abab 
+
+1
+2
+
+2) 
+
+1
+2
+
+hr,
+
+b = 2daab.
+
+thus, we can write the hamiltonian in this simple form
+
+h = n  + nbb.
+
+(5.32)
+
+(5.33)
+
+(5.34)
+
+the limit   
+we see at once that we may take this limit simply by dropping the last term in . and
+as mentioned in the beginning, this has the same eect as taking the zero signature
+limit   0. the signature  = ~n  ~n of the spacetime metric only inuences on this
+term, and enters in such a way that taking   0 removes the term proportional to
+hr [65].
+this limit has in turn been shown by henneaux [67] to correspond to the four-
+
+dimensional action
+
+s =z d4x(x)(kk  k2); ,  = 0, 1, 2, 3.
+
+(5.35)
+
+he does so by shoving that this action gives the same hamilton formulation (5.34)
+as the   0 limit of the general relativity action.
+the independent elds in the action (5.35) are the positive scalar density (x)
+and the components of a symmetric covariant tensor g(x). this metric g is
+degenerate, i.e. det(g) = 0, which means that it has only 9 independent compo-
+nents. together with  this gives 10 independent elds, which is the same number
+as in the original action.
+
+k is the second fundamental tensor, dened as the lie derivative in a unique
+
+direction ~e,
+
+k =
+
+1
+2
+
+eg =
+
+1
+2
+
+(eg, + e
+
+,g + e
+
+,g).
+
+(5.36)
+
+and the vector eld ~e is dened through
+
+g = 2ee ;
+
+g 
+
+1
+3!
+
+  ggg ,
+
+(5.37)
+
+where g is called the minor of g . the vector ~e is completely determined from
+g and . it satises ge = 0 and is thus orthogonal to any other vector v, i.e.
+gev = 0.
+
+since the metric is degenerate (i.e. the determinant vanishes), there is no inverse
+ . however, the class of symmetric tensors g dened by
+
+g satisfying gg = 
+
+gg = 
+
+  e,
+
+(5.38)
+
+68
+
+5. general relativity
+
+where  is an arbitrary vector satisfying e = 1, can instead serve as an index
+raiser which makes k = gk and kk well dened.
+
+for an elaboration of the ideas presented here, the reader should consult [67].
+
+the conclusion of this section is that we are able to nd an interesting limit by use
+of the phase space method. this is not as straight forward as in the string cases, but
+by introduction of the more suitable adm coordinates, it can be done.
+
+the most troublesome part has turned out to be the way back from phase space
+to conguration space. this could not be done easily by elimination of momenta
+and lagrange multipliers as before. instead, we adopted the idea of rst proposing
+a conguration space action, and then showing that it gives the right hamiltonian.
+similar to the string models, we found the limit to correspond to a degenerate
+geometry. in the present case, this means a non-riemannian space halfway between
+euclidean and minkowski space, which corresponds to a theory of gravity based on
+local caroll invariance. (normal gravitation is based on local poincare invariance.)
+the 10-parametric caroll group was introduced by levy-lebond [68].
+
+chapter 6
+
+other models
+
+we will now, very briey, take a look on two models which are quite dierent from
+those we have studied thus far. the results we nd here will tell us something about
+the generality of the methods.
+
+6.1 yang-mills theory
+
+in this section we will consider the simplest of all yang-mills theories, namely abelian
+u (1) theory, which is the familiar maxwell theory of electrodynamics.
+
+6.1.1 the action
+
+the gauge eld of electrodynamics is the electromagnetic potential, denoted a. the
+electromagnetic eld strength f can then dened as f = a  a. and the
+action for free electrodynamics (i.e. without sources) is
+
+s =
+
+1
+
+g2 z d4xf f =
+
+1
+
+g2 z d4xff ,
+
+(6.1)
+
+where g is the coupling constant, equal to the electric charge in our case. note that
+this action is not di invariant. (it is not coupled to gravity.) the denition of f
+and a variation a together give the maxwell equations.
+
+from now on we will focus on the limit g  , which is a strong coupling limit
+relevant at high energies. we want to nd out whether our methods can give any
+insight to this limit.
+
+method i we can immediatly say that this method will not lead to anything
+interesting, as the lagrangian l = f 2 in the action (6.1) does not have the proper
+form.
+
+69
+
+70
+
+6. other models
+
+6.1.2 method ii
+
+to see the time dependence of the lagrangian more explicitly, we rewrite it (keep in
+mind that we use the minkowski metric  = (, +, +, +)),
+
+l =
+
+=
+
+1
+g2 ff
+1
+g2 (2f0if0i + fijfij) ;
+
+i, j = 1, 2, 3,
+
+(6.2)
+
+where repeated indices are to be summed over. the momenta are now found to be
+
+p 0 
+p i 
+
+l
+
+(0a0)
+
+l
+
+(0ai)
+
+= 0,
+
+4
+g2 f0i.
+
+= 
+
+(6.3)
+
+(6.4)
+
+the rst equation says that a0 is a non-dynamical variable to be treated as a la-
+grange multiplier (which enforces gauss law). the dynamical variables are ai, and
+equation (6.4) can be inverted to give an expression for 0ai:
+
+0ai = 
+
+g2
+4
+
+p i + ia0.
+
+the naive hamiltonian is
+
+h  p i0ai 
+= p iia0 
+
+1
+g2 f  f
+g2
+pip i 
+8
+
+1
+g2 fijfij.
+
+this gives the phase space action
+
+sp s =z d4x"p if0i +
+
+g2
+8
+
+p ip i +
+
+1
+
+g2 fijfij# .
+
+(6.5)
+
+(6.6)
+
+(6.7)
+
+elimination of the momenta p i will of course give us the original action, since we
+have no constraints.
+
+the coupling constant g appears both in the numerator and in the denominator,
+which means that the g   limit is not well dened unless we can use a trick like
+in section 2.5 for eliminating g in the numerator. however, in the present case there
+is no lagrange multiplier that can swallow the constant. the conclusion is that
+we cannot use the same method to dene a g   limit as we have applied earlier.
+the assumption that the ym theory is abelian is not essential. for non-abelian
+ym theories things will be more complicated, but the problem of dening a g  
+limit will certainly remain.
+
+6.2 chern-simons theory
+
+71
+
+6.2 chern-simons theory
+
+the calculations in this section are mainly based on [69]
+
+6.2.1 the action
+
+the action for free abelian chern-simons theory is
+
+s =
+
+
+
+4 z d3xaf  =
+
+
+
+2 z d3xaa; , ,  = 0, 1, 2.
+
+(6.8)
+
+under dieomorphisms x  x(x) we have the transformations
+
+d3x  d3j1;
+a a  
+
+
+
+
+
+j  det(a
+
+b 
+aa = jaa,
+
+b ); a
+
+xa
+ xb ,
+
+(6.9)
+
+(6.10)
+
+which means that the action is di invariant. we may view the chern-simons action
+as representing some kind of 3d gravitation. the equations of motion found from a
+variation a are
+
+a   a = 0.
+
+(6.11)
+
+we now turn to the problem of nding a reasonable action describing the   0
+limit of this model. as for the yang-mills theory, method i will fail to give anything
+interesting due to the form of the action.
+
+6.2.2 method ii
+
+the canonical conjugate momenta to the elds a are
+
+ 
+
+l
+
+(0a)
+
+=
+
+
+2
+
+0a,
+
+(6.12)
+
+which gives 0 = 0 and i = 
+2 ijaj, where i, j are spatial indices. this legendre
+transformation from time derivatives to momenta is not invertible, and we get the
+primary constraints:
+
+0  0  0,
+
+i  i 
+2
+
+ijaj  0;
+
+i, j = 1, 2.
+
+the naive hamiltonian is found to be
+
+hnaive  0a 
+
+
+2
+= a0ijiaj,
+
+aa = 
+
+
+2
+
+iaia
+
+(6.13)
+
+(6.14)
+
+(6.15)
+
+72
+
+6. other models
+
+where we have disregarded a total derivative.
+(again, this expression is in com-
+plete agreement with what we would get by using theorem 2 of section 1.4.2.) the
+consistency conditions on the primary constraints are
+
+and lead to
+
+{, hnaive} + {, }  0,
+
+ijiaj  0,
+1jja0  212  0,
+2jja0 + 112  0.
+
+we thus get one secondary constraint,
+
+3 = ijiaj,
+
+(6.16)
+
+(6.17)
+
+(6.18)
+
+(6.19)
+
+(6.20)
+
+and the conditions on two of the lagrange multipliers, i = ia0. the consistency
+condition on the secondary constraint 3 does not give any new constraints.
+
+the total hamiltonian can now be written
+
+h = a0ijiaj + 00 + ia0(i 
+
+
+2
+
+ijaj) + 3ijiaj,
+
+(6.21)
+
+and the phase space action is found to be
+
+sp s =z d3x(cid:20)if 0i +
+
+
+2
+
+ija0iaj + 00a0  00  3ijiaj(cid:21) .
+
+(6.22)
+
+taking the   0 limit of this action gives
+
+s=0 =z d3xhif 0i + 00a0  00i .
+
+(6.23)
+
+this action is linear in the momenta . hence we cannot eliminate the momenta
+and arrive at a sensible conguration space action. we must therefore conclude that
+this approach for studying the   0 limit does not work.
+
+chapter 7
+
+conclusion
+
+one aim of this thesis was to present two methods for deriving tensionless limits of
+strings and the analogue in other models. this has been done thoroughly by rst
+presenting the most important background theory in chapter 1, and by going through
+a series of examples in the subsequent chapters. the reader will hopefully understand
+and be able to apply the ideas on basis of this presentation.
+
+one main result of the introductory chapter was the derivation of the naive hamil-
+tonian for di invariant theories with only tensor elds. it was demonstrated that
+for such models the hamiltonian is constrained to be zero when the elds satisfy the
+eld equations.
+
+a second important goal of the thesis was to investigate how widely applicable
+the methods are.
+it was known from before that they work well for a number of
+string models. the derivations in section 2.5 and 3.3 revealed that the methods
+work perfectly also if we start from the weyl-invariant form of the bosonic string
+and d-string actions. these are models that already at the very beginning contain
+lagrange multipliers (an auxiliary metric). and it is a noteworthy result that the
+methods apply in such cases as well, which emphasizes their generality.
+
+the calculations for the rigid string also lead us to reasonable actions for the
+tensionless limit. but in contrast the other string models, we could not in this case
+use the two methods to derive the same form of the action.
+
+applying the methods to general relativity turned out to be a much more cum-
+bersome task. method i applied to the eddington-schrodinger action, while we had
+to change to adm coordinates for method ii to give expressions that we could handle
+in a reasonable way.
+
+finally the examples of chapter 6 demonstrated some of the limitations of the
+models. it was noted already in the introduction that method i requires a specic
+form of the lagrangian. and when it comes to method ii, it is of course not a
+priori given that it should work: we start with an action that is not dened for the
+specic limit, and hope that through some mathematical manipulations we can write
+an equivalent action that is also dened in the limit. the most surprising is rather
+the fact that it does indeed work so well for many theories.
+
+73
+
+74
+
+7. conclusion
+
+as general remarks we note that in the tensionless limit, the string models natu-
+rally provide conformally invariant theories, and that the geometries turn out to be
+degenerate.
+
+it would be interesting to know if there exist some crucial aspect that determine
+whether method ii works, and if so, what this is. it would also be of interest to know
+if it is possible to say something general concerning the equality of method i and
+method ii. these are proposals for further investigation.
+
+another natural extension of this work, would be to look at supersymmetric
+
+models. this has been done in some extent [15], but still not very thoroughly.
+
+appendix
+
+a.1 tensor densities
+
+in this thesis we have not been very precise when talking about tensors. we have
+often referred to quantities as being e.g. scalars when they were really scalar densities.
+the lagrangian is one example of this. the distinction has not been an important
+feature in our calculations, but we will now give a brief description of the dierence
+between tensors and tensor densities.
+
+for coordinate transformations xa  xa = xa(x) we dene the jacobi matrix
+b ). the jacobi matrix is the same
+
+b  xa
+j a
+as what we often call the transformation matrix, denoted a
+
+ xb and the jacobi determinant j  det(j a
+
+b = j a
+b .
+
+scalars, vectors and second rank tensors are quantities that transform as
+
+scalar
+
+vector
+
+2nd rank tensor
+
+(x)  (x) = (x),
+aa(x)  aa(x) = b
+fab(x)  fab(x) = c
+
+aab(x),
+ad
+
+b fcd(x).
+
+(a.1)
+
+(a.2)
+
+(a.3)
+
+on basis of this, we dene tensor densities to be quantities that transform as tensors,
+but with an extra factor of the jacobi determinant. thus, a tensor density of weight
+n transforms as
+
+scalar density
+
+vector density
+
+2nd rank tensor density
+
+(x)  (x) = j n(x),
+aa(x)  aa(x) = j nb
+fab(x)  fab(x) = j nc
+
+aab(x),
+ad
+
+bfcd(x).
+
+(a.4)
+
+(a.5)
+
+(a.6)
+
+suppose we have the action s =r dxl(i). with a transformation of the parameter
+x the integral measure transforms as dx  dxj1. for the action to be invariant,
+the lagrangian l must then be a scalar density of weight 1 (i.e. l  jl).
+other examples of scalar densities (of weight 1) are the square root of the space-
+time metric g in general relativity, and the square root of the induced metric
+, ab = ax bx (under world sheet reparameterizations, c.f. section 2.4).
+a.2 derivatives of determinants
+
+consider an nn matrix aab. write its inverse with upper indices, i.e. (a1)ab  aab
+c . introduce the set of matrices ( aab), which are (n  1)  (n  1)
+and aababc = a
+
+75
+
+76
+
+a. appendix
+
+matrices identical to a except that row a and column b are eliminated. (there are n2
+such matrices.) the cofactor matrix cab is an n n matrix which has as its elements
+the determinant of the ( aab) matrices, i.e. cab = det( aab). let us write, for short,
+det(aab) = a. then we can write
+
+,
+
+aab = (1)a+b cba
+a = x(1)y aab = (1)a+c
+
+a
+
+(a.7)
+
+aaccac
+
+independent of a.
+
+(a.8)
+
+n
+
+xc=1
+
+then we easily see that
+results
+
+a
+aab
+
+= (1)a+bcab = aaba, which gives the very useful
+
+d
+dx
+
+a = aaab daba
+dx
+
+= aaab
+
+aaab daba
+a.3 on the vielbein formalism
+
+a =
+
+d
+dx
+
+1
+2
+
+= 
+
+dx
+
+,
+
+daba
+dx
+1
+2
+
+aaab
+
+(a.9)
+
+(a.10)
+
+daba
+dx
+
+.
+
+consider a d-dimensional manifold s, and suppose that there exist a coordinate
+system {xa}. then we can introduce the coordinate basis forms { dxa}. any one-
+form on s can then be described by means of these basis forms, as v = va dxa. we
+xa , which then satisfy dxa(~ub) = a
+may also dene coordinate basis vectors, ~ua  
+b .
+
+the metric tensor can then be written
+
+and we nd
+
+g = gab dxa  dxb;
+
+a, b = 0, . . . , d  1.
+
+~ua  ~ub = g(~ua, ~ub) = gcd dxc(~ua) dxd(~ub) = gab.
+
+(a.11)
+
+(a.12)
+
+we know that, locally, a spacetime manifold behaves as at space. so it must be
+
+possible to introduce a new (position dependent) at basis {ea}, such that
+
+g = ab ea  eb;
+
+a, b = 0, . . . , d  1,
+
+(a.13)
+
+where ab = diag(, +, . . . , +) is the minkowski metric. such a basis is often calleda
+tetrad or an orthonormal basis. the new basis forms can be written as a linear
+combinations of the coordinate basis forms,
+
+ea(x) = e a
+
+a (x) dxa,
+
+(a.14)
+
+which denes the vielbein e a
+a (x). we see that the vielbein can be viewed as a trans-
+formation matrix between the curved and at bases. it can, however, not generally
+be expressed as a jacobi matrix. together with the equations (a.11) and (a.13), this
+gives
+
+gab = abe a
+
+a e b
+b
+
+.
+
+(a.15)
+
+a.4 on lie derivatives
+
+77
+
+writing det(gab)  g, det(e a
+immediately
+
+a )  e and remembering that det(ab) = 1 this gives
+(a.16)
+a = b
+a,
+we can write dxa = e a
+a ea. a one-form (or covariant tensors in general) can now
+be written either in the coordinate or at basis as v = va dxa = vaea, and the
+components are related through the vielbeins:
+
+if we introduce the inverse vielbein e a
+
+a satisfying e a
+
+a e b
+
+g = e.
+
+a = b
+
+a and e a
+
+a e b
+
+va = e b
+
+a vb;
+
+va = e b
+
+a vb.
+
+(a.17)
+
+indices referring to the coordinate basis are often called einstein indices (denoted
+here with small letters), while indices referring to the at basis are called lorentz
+indices (denoted with capital letters).
+
+vielbeins are often called vierbeins, also in cases where they are not 4-dimensional.
+this formalism is particularly useful when one wants to consider particles with spin
+in curved spaces.
+
+a.4 on lie derivatives
+
+the lie derivative is in this thesis denoted ~n, and represents a kind of generalized
+directional derivative. for a more thorough presentation, the reader may consult [58].
+
+the lie derivative of a scalar f is dened as
+
+and gives the change in f along ~n. the lie derivative of a vector ~v is
+
+~nf  ~n[f ] = f,n,
+
+~n~v  [~n, ~v] = ~n~v  ~v~n,
+
+(a.18)
+
+(a.19)
+
+and says something about how ~v is changed under a parallel transport along ~n. here
+ may be any derivative operator.
+and a second rank tensor t as
+
+in a coordinate basis {x} we may write the lie derivative of a 1-form eld 
+
+~n  = (,n + n
+~nt = (t,n + tn
+
+,) dx,
+
+, + tn
+
+,) dx  dx.
+
+(a.20)
+
+(a.21)
+
+it can be shown that this holds also if we exchange the partial derivative , with
+some covariant derivative . thus, we can write in coordinate form
+~nt = (t)n + t(n) + t(n).
+
+(a.22)
+
+if we let  be the covariant derivative associated with some metric g (i.e. n =
+n
+, + {
+
+}n), then the following result is not very dicult to prove:
+
+~ng = n + n.
+
+(a.23)
+
+78
+
+a. appendix
+
+a.5 the gauss-codazzi equation
+
+the discussion here is mainly due to wald [58]. consider a d-dimensional manifold
+s with a vector basis {~e;  = 0, . . . , d  1} and a corresponding form basis {},
+such that (~e ) = 
+
+ . the metric tensor g on s can then be written
+g = g   ;
+
+g = g(~e, ~e )  ~e  ~e .
+
+(a.24)
+
+induced metric
+
+let  be a d-dimensional hypersurface embedded in this space. the basis vectors on
+this hypersurface are denoted {~ua; a = 0, . . . , d1}, and there are d such vectors. the
+corresponding basis forms are denoted { wa}, and satisfy wa(~ub) = a
+b . the induced
+metric  on  is then
+
+ = ab wa  wb;
+
+ab = (~ua, ~ub)  ~ua  ~ub.
+
+(a.25)
+
+dene {~ni; i = d, . . . , d  1} to be as set of d  d orthonormal vectors perpen-
+dicular to . this means ~ni  ~ua = 0 and ~ni  ~nj = ij, where ij is a diagonal matrix
+with elements 1, depending on whether the the normal vectors are timelike (1) or
+spacelike (+1).
+it is now evident that we can write any vector in s as a linear combination of ~ua
+
+and ~ni. especially, we have ~e =  a
+
+ ~ua +  i
+
+ ~ni, which gives
+
+g = ~e  ~e =  a
+
+  b
+
+ ab +  i
+
+  j
+
+ ij
+
+and
+
+~ni  ~e =  j
+~ua  ~e =  b
+
+ ji
+ ab.
+
+(a.26)
+
+(a.27)
+
+but we can also decompose by means of ~e, and write ~ua = u 
+this decomposition we nd directly
+
+a ~e, ~ni = n 
+
+i ~e. with
+
+~ni  ~e = n 
+~ua  ~e = u 
+
+i g = ni
+a g = ua.
+
+(a.28)
+
+equations (a.27) and (a.28) together give ni =  j
+ij and ab as the inverse of ij and ab respectively, we nd
+
+ ji, ua =  b
+
+ ba. if we introduce
+
+ i
+ = ijnj  ni
+;
+
+ a
+ = abub.
+
+put into the expression (a.26) for g, this gives
+
+g = h + ijni
+
+nj
+;
+
+h  abuaub.
+
+we will soon demonstrate that h is the induced metric.
+
+(a.29)
+
+(a.30)
+
+a.5 the gauss-codazzi equation
+
+79
+
+we raise and lower greek and latin (middle alphabet) indices with g and
+ni,
+
+ij, and their inverses g and ij respectively. thus we have h = g  ni
+i ni. note that h is not the inverse of h .
+h
+ = 
+
+i ni
+  n
+
+, and h = g  n
+
+we nd immediately
+
+i = ni  nj
+which states that h is a tensor tangent to .
+
+h n
+
+njn
+
+i = 0,
+
+(a.31)
+
+consider now an arbitrary tensor t , which lies in . this means that it can be
+
+decomposed in two ways:
+
+t = t    = tab wa  wb.
+
+(a.32)
+
+the relations between the components are
+
+tab = t (~ua, ~ub) = t (~ua)(~ub) = t u 
+
+a u 
+b .
+
+(a.33)
+
+the tensor h is of this kind (i.e. tangent to ), so by use of (a.33) and (a.30) we
+can write
+
+hab = h u 
+
+a u 
+
+b = cducud u 
+
+a u 
+
+b = cdacbd = ab.
+
+(a.34)
+
+ v~e, or in component
+
+(a.35)
+
+ as
+
+this shows that h is indeed the induced metric, i.e. h = .
+consider an arbitrary vector ~v = v~e in s. dene ~u  h
+form u = h
+
+ v = v  n
+i ni
+~u  ~ni = (v  nj
+
+v. then we have
+v n
+
+j )~e  ~en
+
+i = 0.
+
+in words, this means that the vector ~u is tangent to . thus we may consider h
+a projection operator from s to .
+x} on s and {~ua = 
+if we have coordinate bases {~e = 
+x
+x
+a ~e  u 
+a
+
+a} on , we can write
+
+
+x =
+
+
+a =
+
+a ~e,
+
+~ua =
+
+(a.36)
+
+which gives
+
+ab = ~ua  ~ub = u 
+
+a u 
+
+b g =
+
+x
+a
+
+x
+b g .
+
+(a.37)
+
+this is the expression we use for the induced metric on the string worldsheet.
+
+extrinsic curvature
+
+we may dene the extrinsic curvature of the hypersurface  as the lie derivative of
+the metric in directions normal to , i.e. along ~ni. in mathematical terms,
+
+k i
+ 
+=
+
+~nih
+
+1
+2
+
+~nig =
+
+1
+2
+1
+(ni
+ + ni
+)
+2
+= h
+ni
+,
+
+(a.38)
+
+80
+
+a. appendix
+
+where  is the covariant derivative associated with g . from the above, we see that
+the extrinsic curvature is symmetric, i.e. k i
+, and, owing to the projection
+factor h
+
+, tangent to , i.e. k i
+
+ = k i
+
+n
+
+j = 0.
+
+riemann curvature
+
+we now restrict to cases where d = d  1, i.e. there is only one normal direction to
+the hypersurface . the minkowski metric ij is then replaced by , which is still
++1 if the normal vector is spacelike, and 1 if it is timelike.
+
+the riemann curvature tensor of (s, g) is by denition given by
+
+r
+
+ =   ,
+
+where  is any 1-form eld on s. the corresponding result for vectors t is
+
+r
+
+t = t  t.
+
+(a.39)
+
+(a.40)
+
+similarly, if we let  be the covariant derivative associated with h , we can write
+the riemann tensor of (, h) as
+
+r
+
+  =       ,
+
+(a.41)
+
+ now being a 1-form eld on . (quantities with a bar are all referring to .) the
+operator  can be shown to be related to  in the following simple way:
+
+ t ...
+
+... = h
+
+  h
+
+  h
+
+ t ...
+
+...,
+
+(a.42)
+
+where t is some tensor on . we dene the ricci tensor r and the ricci scalar r
+as
+
+r  r
+r  r
+
+ ;
+ ;
+
+r  g r ,
+r  g r .
+
+let us now derive four useful relations.
+
+h
+h
+
+h
+
+ = h
+
+h
+= h
+
+= nh
+
+n  = h
+h
+
+=k 
+
+n
+
+ h
+
+n
+
+(
+n h
+|
+|{z}=0
+k = nk,
+(n 
+|{z}=0
+
+  nn)
+h
+n
+{z
+}
+ n = g h
+)  h
+|
+
+= gk  = k 
+
+ ,
+
+n
+}
+{z
+
+k
+
+hhr = (g  nn)(g  nn)r
+
+(a.43)
+
+(a.44)
+
+(a.45)
+
+(a.46)
+
+a.5 the gauss-codazzi equation
+
+81
+
+= r  2r nn,
+
+rnn = r
+
+nn
+
+(a.47)
+
+= n(  )n
+= nn  nn
+= (nn)  (n)(n)
+(nn) + (n)(n)
+{z
+
+= (k 
+
+|
+
+ )2  kk  (nn) + (nn)
+}
+using the relation (a.42) between  and  and equation (a.45), we nd
+
+where t.d. is an abbreviation for total divergence. it will vanish under integration.
+
+=t.d.
+
+, (a.48)
+
+   = h
+
+h
+
+h
+
+   h
+
+kn   h
+
+kn .
+
+together with (a.46) this gives
+
+r
+
+ = h
+
+ h
+
+h
+
+h
+
+ r
+
+   kk 
+
+ + kk 
+ .
+
+(a.49)
+
+(a.50)
+
+this equation is known as the gauss-codazzi equation. using the equations (a.47)
+and (a.48) we end up with
+
+r = r  (k 
+
+ )2 + kk  + t.d.,
+
+(a.51)
+
+which gives the general relationship between the intrinsic curvature r on  and the
+extrinsic curvature k.
+
+we said that the extrinsic curvatures are tensors tangent to the space , which means
+that they can be expressed by means of basis forms wa on  instead of basis forms
+ on s. in mathematical terms,
+
+k = k    = kab wa  wb;
+
+,  = 0, . . . , d  1;
+a, b = 0, . . . , d  1 = d  2.
+
+(a.52)
+
+on  we use the induced metric ab = hab and its inverse ab to raise and lower
+indices. thus we have
+
+t r(k) = k 
+t r(k2) = k k  = ggk k = acbdkabkcd.
+
+ = g k = abkab,
+
+this means altogether that equation (a.51) takes the form
+
+r = r + (k a
+
+a )2  kabk ab + t.d.,
+
+(a.53)
+
+connecting quantities that refer to s on the left hand side, and quantities that refer
+to  on the right hand side.
+
+82
+
+a. appendix
+
+in general relativity, a natural split is to let  be a spacelike 3-dimensional hyper-
+surface. then the normal direction ~n is timelike, i.e.  = 1, which gives
+
+r = r  k 2 + kabk ab + t.d.
+
+(a.54)
+
+this result is used in chapter 5 while doing the space-time split necessary for a
+hamilton description of general relativity.
+
+the results above can be generalized to situations where the dimension dierence
+between s and  is more than one, so that there are several normal directions ~ni. in
+those cases equation (a.53) takes the more general form
+
+r = r + ijk i a
+
+a k j b
+
+b  ijk i
+
+abk jab + t.d.,
+
+(a.55)
+
+which is a result that we apply in chapter 4 when investigating the rigid string.
+
+bibliography
+
+[1] j fryland. forelesninger i klassisk teoretisk fysikk ii. unipub akademika as,
+
+1996.
+
+[2] f e low. classical field theory, electromagnetism and gravitation. john
+
+wiley & sons, 1997.
+
+[3] d e soper. classical field theory. john wiley & sons, 1976.
+
+[4] s weinberg. the quantum theory of fields, volume i. cambridge university
+
+press, 1995.
+
+[5] u lindstrom. first order actions for gravitational systems, strings and
+
+membranes. int.j.mod.phys., a3:24012416, 1988.
+
+[6] p a m dirac. lecture notes on quantum mechanics. in belfer graduate school
+
+of science, monograph series. yeshiva university, 1964.
+
+[7] m henneaux and c teitelboim. quantization of gauge systems. princeton
+
+university press, 1992.
+
+[8] r marnelius. introduction to the quantization of general gauge theories. acta
+
+phys.pol., b13:669690, 1982.
+
+[9] l brink, p di vecchia, and p howe. a locally supersymmetric and
+
+reparametrization invariant action for the spinning string. phys.lett.,
+65b:471474, 1976.
+
+[10] s deser and b zumino. a complete action for the spinning string. phys.lett.,
+
+65b:369373, 1976.
+
+[11] s m carroll. lecture notes on general relativity. e-print:
+
+http://itp.ucsb.edu/carroll/notes, 1997.
+
+[12] r von unge. classes of classical p-branes and quantization of the conformal
+
+string. lic-thesis at fysikum, university of stockholm, e-print:
+http://vanosf.physto.se/licavh/licavh.html, 1994.
+
+[13] a karlhede and u lindstrom. the classical bosonic string in the zero tension
+
+limit. class.quant.grav., 3:l7375, 1986.
+
+83
+
+84
+
+bibliography
+
+[14] j isberg, u lindstrom, b sundborg, and g theodoridis. classical and
+
+quantized tensionless strings. nucl.phys., b411:122156, 1994.
+
+[15] u lindstrom, b sundborg, and g theodoridis. the zero tension limit of the
+
+superstring. phys.lett., b253:319323, 1991.
+
+[16] u lindstrom, b sundborg, and g theodoridis. phys.lett., b258:331, 1991.
+
+[17] u lindstrom and m rocek. phys.lett., b271:79, 1991.
+
+[18] s hassani, u lindstrom, and r von unge. classically equivalent actions for
+
+tensionless p-branes. class.quant.grav., 11:l7985, 1994.
+
+[19] g veneziano. nuovo cimento, 57a:190, 1968.
+
+[20] j scherk and j h schwarz. nucl.phys., b81:118, 1974.
+
+[21] m b green and j h schwarz. phys.lett., b149:117, 1984.
+
+[22] m b green and j h schwarz. innity cancellations in so(32) superstring
+
+theory. phys.lett., b151:21, 1985.
+
+[23] m b green, j h schwarz, and e witten. superstring theory. cambridge
+
+university press, 1987.
+
+[24] m b green. superstrings. sci.am., 255(3):4456, 1986.
+
+[25] m waldrop. strings as a theory of everything. science, 229:12511253, 1985.
+
+[26] f d peat. superstrings and the search for the theory of everything.
+
+contemporary books, 1988.
+
+[27] j polchinski. string theory. cambridge university press, 1998.
+
+[28] l brink, p di vecchia, p howe, p deser, and b zumino. local supersymmetry
+
+for spinning particles. phys.lett., 64b:435438, 1976.
+
+[29] b f hateld. quantum eld theory of point particles and strings.
+
+addisonwesley, 1992.
+
+[30] y nambu. duality and hydrodynamics. lectures at the copenhagen
+
+symposium, 1970.
+
+[31] t goto. prog.theor.phys., 46:1560, 1971.
+
+[32] a schild. classical null strings. phys.rev., d16:17221726, 1977.
+
+[33] a a zheltukhin. sov.j.phys., 48:375, 1988.
+
+[34] a barcelos-neto and m ruiz-altaba. phys.lett., b228:193, 1989.
+
+bibliography
+
+85
+
+[35] f lizzi, b rai, g sparano, and a srivastava. phys.lett., b182:326, 1986.
+
+[36] j gamboa, c ramirez, and m ruiz-altaba. nucl.phys., b338:143, 1990.
+
+[37] p s howe and r w tucker. a locally supersymetric and reparametrisation
+
+invariant action for a spinning membrane. j.phys., a10:l155158, 1977.
+
+[38] j polchinski. dirichlet branes and tamond-ramond charges. phys.rev.lett.,
+
+75:47244727, 1995.
+
+[39] m born and l infeld. proc.roy.soc., a144:425, 1934.
+
+[40] u lindstrom and r von unge. a picture of d-branes at strong coupling.
+
+phys.lett., b403:233, 1997.
+
+[41] m abou zeid and c m hull. intrinsic geometry of d-branes. phys.lett.,
+
+b404:264270, 1997. eprint: hep-th/9704021.
+
+[42] h gustafsson and u lindstrom. a picture of d-branes at strong coupling. 2.
+
+spinning partons. phys.lett., b440:4349, 1998. e-print: hep-th/9807064.
+
+[43] a polyakov. fine structure of strings. nucl.phys., b268:406412, 1986.
+
+[44] h kleinert. the membrane properties of condensing strings. phys.lett.,
+
+b174:335338, 1986.
+
+[45] t l curtright, g i ghandour, c b thorn, and c k zachos. trajectories of
+
+strings with rigidity. phys.rev.lett., 57:799802, 1986.
+
+[46] d forster. phys.lett., a114:115, 1986.
+
+[47] p olesen and s-k yang. nucl.phys., b283:73, 1987.
+
+[48] r d pisarski. phys.rev.lett, 58:1300, 1987.
+
+[49] h kleinert. phys.rev.lett, 58:1915, 1987.
+
+[50] j ambjrn, b durhuus, and t johnsson. phys.rev.lett, 58:2619, 1987.
+
+[51] t l curtright, g i ghandour, and c k zachos. classical dynamics of strings
+
+with rigidity. phys.rev., d34:38113823, 1986.
+
+[52] t l curtright and p van nieuwenhuizen. nucl.phys., b294:125, 1987.
+
+[53] u lindstrom, m rocek, and p van nieuwenhuizen. a weyl-invariant rigid
+
+string. phys.lett., b199:219223, 1987.
+
+[54] u lindstrom and m rocek. bosonic and spinning weyl-invariant rigid string.
+
+phys.lett., b201:6366, 1988.
+
+[55] r d pisarski. smooth strings at large dimensions. phys.rev., d38:578, 1988.
+
+86
+
+bibliography
+
+[56] c itoi and h kubota. gauge invariance based on the extrinsic geometry in the
+
+rigid string. z.phys., c44:337342, 1989. e-print: tit/hep-127.
+
+[57] u lindstrom. deriving polyakovs rigid string from a membrane. phys.lett.,
+
+b218:315320, 1989.
+
+[58] r m wald. general relativity. the university of chicago press, 1984.
+
+[59] c w misner, k s thorne, and j a wheeler. gravitation. freeman and
+
+chapman, 1973.
+
+[60] a palatini. rend.circ.mat.palermo, 43:203, 1919.
+
+[61] a s eddington. the mathematical theory of relativity. cambridge university
+
+press, 1924.
+
+[62] e schrodinger. proc.roy. irish academy, l1 sec. a:163, 1947.
+
+[63] m pilati. strong-coupling quantum gravity. phys.rev., d26:2645, 1982.
+
+[64] v husain. the gn   limit of quantum gravity. class.quant.grav., 5:575,
+
+1988.
+
+[65] c teitelboim. proper time approach to the quantization of the gravitational
+
+eld. phys.lett., 96b:77, 1980.
+
+[66] r arnowitt, s deser, and c w misner. the dynamics of general relativity. in
+l witten, editor, gravitation: an introduction to current research. john wiley
+& sons, 1982.
+
+[67] m henneaux. zero hamiltonian signature spacetimes. bull.soc.math.belg.,
+
+31:47, 1979.
+
+[68] j m levy-lebond. ann.inst.h.poincare, a3:1, 1965.
+
+[69] w t kim, y-w kim, and y-j park. symplectic structure of free
+
+chern-simons theory. e-print: hep-th/9807180, 1998.
+
+

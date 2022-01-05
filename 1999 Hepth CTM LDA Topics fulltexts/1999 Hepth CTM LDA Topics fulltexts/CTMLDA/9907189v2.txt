@@ -1,0 +1,2687 @@
+0
+0
+0
+2
+
+ 
+r
+a
+
+m
+6
+
+ 
+
+ 
+ 
+
+2
+v
+9
+8
+1
+7
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+anomalies in string theory with d-branes
+
+daniel s. freed
+
+edward witten
+
+department of mathematics, university of texas at austin
+
+school of natural sciences, institute for advanced study
+
+july 15, 1999
+
+for sir michael atiyah
+
+introduction
+
+this paper is devoted to studying global anomalies in the worldsheet path integral of type ii
+superstring theory in the presence of d-branes. we will not consider orientifolds (or type i super-
+
+strings) and so our string worldsheets will be oriented riemann surfaces, mapped to a spacetime
+manifold y , which is endowed with a spin structure since the model contains fermions. the rst
+case to consider is that of closed worldsheets, without boundary. in this case, global anomalies can-
+
+cel, and the worldsheet measure is globally well-dened, given that y is spin. this is the content of
+corollary 4.7 of the present paper; for y = r10 one has (theorem 4.8) the further result, related to
+conformal invariance, that the global anomaly vanishes separately for left- and right-moving degrees
+of freedom. by contrast, for heterotic strings, global anomaly cancellation gives a restriction that
+is not evident from the point of view of the low energy eective eld theory [w2,f2].
+
+but we will nd that type ii global worldsheet anomalies give some novel results when d-branes
+are present. thus, we assume the existence of an oriented submanifold q of spacetime on which
+strings can end. we then consider a string worldsheet consisting of an oriented surface  that is
+
+mapped to y with  mapped to q. on q, there is a eld a that is conventionally regarded
+as a u (1) gauge eld, though as we will explain this is not the correct interpretation globally.
+another important part of the story is the neveu-schwarz b-eld, which propagates in the bulk of
+
+spacetime. assume for simplicity that b = 0. in this case, the worldsheet measure contains two
+interesting factors which we write as follows:
+
+(1)
+
+pfa(d)  exp(cid:18)ii
+
+a(cid:19) .
+
+the rst author is supported by nsf grant dms-9626698, the second by nsf grant phy-95-13835.
+
+1
+
+here pfa(d) is the pfaan (or square root of the determinant) of the worldsheet dirac operator d.
+the second factor is, in the conventional interpretation, the holonomy of a around the boundary
+
+of .
+
+our main result, theorem 5.6, computes the anomaly in pfa(d). namely, pfa(d) is naturally
+not a function, but rather a section of a line bundle over the space of parametersthe space of
+maps of the worldsheet into spacetime and worldsheet metrics. this bundle carries a natural metric
+
+and connection, and the anomaly is the obstruction to the existence of a global at section of unit
+norm. we will show that this connection is at, but there is holonomy 1 determined by the second
+stiefel-whitney class w2() of the normal bundle  to the d-brane q in spacetime.1
+
+this means that for (1) to be well-dened (for b = 0) there must be a compensating anomaly in
+the a-eld. if w3() = 0, then this is achieved by interpreting a as a spinc connection rather than
+an ordinary u (1) gauge eld. when w3() 6= 0 (and b is topologically trivial) the anomaly rules
+out q as a possible d-brane in the theory. this result from string perturbation theory matches the
+nonperturbative description of d-brane charge as an element of k-theory [mm,w4]: the normal
+bundle  must have w3() = 0 in order to dene the charge. if b 6= 0 there is another term in (1)
+and a correspondingly more complicated interpretation of the a-eld, leading to a generalization of
+the condition w3() = 0 which is stated in equations (1.12) and (6.9). also, when b 6= 0, d-brane
+charge takes values in a twisted form of k-theory, as explained in section 5.3 of [w4]. the net
+
+eect is always that the qs that make sense in perturbative string theory are the ones that have
+thom classes in the appropriate k-group.
+
+therefore, our major tasks are to prove the anomaly formula and to properly interpret the a-
+
+and b-elds. since the results here are of direct interest in string theory, we begin in section 1 by
+explaining the physical implications of the anomaly. here we analyze the b 6= 0 case as well as the
+simpler case when b vanishes. we give examples to show that the anomaly can occur, and we also
+
+show how it relates to d-brane charge. section 2 contains a heuristic argument for the anomaly
+in terms perhaps more palatable to physicists than the proofs which follow. from a mathematical
+point of view the proof, which is contained in section 5, combines ideas from topological index
+
+theory (1960s) and geometric index theory (1980s). the pertinent background material is quickly
+summarized in section 3. the analysis of anomalies for closed strings is contained in section 4;
+some of those results are needed in section 5 as well. section 6 is a commentary, in mathematical
+
+language, on some of the issues raised in the main part of the paper. first, we give a more precise
+description of the a- and b-elds in terms of cech theory. (a general mathematical framework
+which would apply to all occurrences of p-form elds in quantum eld theory, string theory, and
+m -theory is still lacking, so we settle for the cech description.) second, we remark on some general
+features of dirac operators on manifolds with boundary where the boundary conditions are local.
+
+1this problem exemplies the dierence between the topological anomaly and the geometric anomaly: the topo-
+logical isomorphism class of this line bundle is determined by the third stiefel-whitney class w3(), and this may
+vanish even if the holonomy is nontrivial.
+
+2
+
+with great pleasure we dedicate this paper to michael atiyah. his inuence is evident in every
+section. not only did he (and his collaborators) develop topological k-theory and topological index
+
+theory, which are used here to compute a subtle sign whose denition is analytic, but he was also
+a pioneer in the application of these ideas to anomalies and to other problems in quantum eld
+theory. thus we hope that the mix of mathematics and theoretical physics in this paper is an
+
+appropriate tribute to him.
+
+1 role of the anomaly in string theory
+
+we consider the type ii superstring theory on a spacetime y , beginning with the case that b = 0.
+recall that y is an oriented spin manifold. the d-brane is an oriented submanifold q  y . (q is
+oriented because in type ii superstring theory, d-brane worldvolumes, being sources of ramond-
+ramond ux, must be oriented.) the string worldsheet  is endowed with spin structures  and
+ for the left and right-movers. we consider maps of  into y which send the boundary  to q.
+
+our goal is to assess the well-denedness of the worldsheet path integral. the relevant factors are
+
+(1.1)
+
+pfa(d)  exp(cid:18)ii
+
+a(cid:19)
+
+(where pfa(d) is the pfaan of the world-sheet dirac operator d and a is the u (1) gauge
+eld on q). type ii global anomaly cancellation for closed surfaces (applied to the double of ,
+which is closed) shows that the result does not depend on the spin structures (see theorem 4.6).
+
+so we may as well assume that  = . once this is done, the dirac operator becomes real. so
+pfa(d) is real. its absolute value is well-dened, for example by zeta function or pauli-villars
+regularization. however, there is in general no natural way to dene the sign of pfa(d) as a
+
+number. we pick a particular sign, and proceed to see if we will run into a contradiction. for this,
+we consider a one-parameter family of s, parametrized by a circle c. thus, altogether we have
+a map  :   c  y , with (  c)  q. the question is now whether, when one goes around
+the loop c, pfa(d) comes back to itself or changes sign. our main result (theorem 5.6) is that
+under going around c,
+
+(1.2)
+
+with
+
+pfa(d)  (1) pfa(d).
+ =(cid:0)  c, (w2(q))(cid:1).
+
+here w2(q) is the second stiefel-whitney class of q. if  :   c  q is an embedding, we can
+just write
+
+ =zc
+
+w2(q) = (  c, w2(q)).
+
+3
+
+in particular, if w2(q) is non-zero,2 pfa(d) is not well-dened by as a number.
+
+let  be the normal bundle to q in y . because y is spin (w1(y ) = w2(y ) = 0) and q is
+
+oriented (w1(q) = 0), the whitney sum formula
+
+(1 + w1(y ) + w2(y ) + . . . ) = (1 + w1(q) + w2(q) + . . . )(1 + w1() + w2() + . . . )
+
+gives w1() = 0 and w2() = w2(q). hence we can restate the above anomaly formulas, for example
+
+ = (  c, (w2())).
+
+this formulation turns out to be more natural in k-theory.
+
+when pfa(d) is not well-dened, the string theory is well-dened only if the second factor in
+(1.1) has precisely the same ambiguity. in other words, a must not be globally a conventional u (1)
+
+gauge eld, for which the holonomy around a loop is well-dened as an element of u (1). rather,
+the holonomy around 
+
+exp(cid:18)ii
+
+a(cid:19)
+
+must be well-dened only up to multiplication by 1, and must change sign whenever pfa(d)
+does.
+
+there is another important dierential-geometric object that has the same sign ambiguity. let
+
+ be the levi-civita connection of the manifold q.
+its structure group is so(n), n being the
+dimension of q. consider the trace of the holonomy of this connection in the spin representation
+s of the double cover spin(n). this is customarily denoted
+
+(1.3)
+
+tr p exp(cid:18)i
+
+(cid:19) .
+
+this holonomy is well-dened only up to sign (because there are two ways to lift an element of
+so(n) to spin(n)). in going around a one-parameter family of loops, parametrized by a circle c,
+
+the holonomy (1.3) is multiplied by exactly the same sign factor that appears in (1.2). the upshot,
+then, is that if a is the right kind of geometrical object to make the worldsheet string measure
+well-dened, then the product
+
+(1.4)
+
+tr p exp(cid:18)i
+
+(cid:19)  exp(cid:18)ii
+
+a(cid:19)
+
+2and can be detected by a map from   c, which is a two-torus. by analogy with many other problems
+involving global anomalies, we expect, though we will not try to prove here, that if w2(q) is nonzero but can only
+be detected by a map from a surface of higher genus, then the same consequences will follow upon analyzing the
+factorization of the string measure when  breaks into pieces, or in other words by analyzing unitarity of string
+scattering amplitudes.
+
+4
+
+is likewise well-dened.
+
+what appears in (1.4) is the trace of the holonomy in going around the loop , not for ordinary
+
+spinors on q, but for spinors of charge 1 with respect to a. such charged spinors are sections not
+of s(q), the spin bundle of q, but of s(q)  l, where l is the line bundle on which a is a
+connection. the meaning of the global anomaly (for topologically trivial b-eld) is thus that the
+globally dened object is not in general s(q) or l, but the tensor product s(q)  l.
+
+such a tensor product denes a so-called spinc structure of q. the global anomaly thus
+implies that (again, for trivial b-eld) q must be spinc, and more specically a spinc structure
+can be constructed from the physical data, namely from the levi-civita connection  and the
+eld a.
+
+since, as we have seen above, w2(q) = w2(), it is equivalent to endow q with a spinc structure
+or to endow its normal bundle with such a structure. in other words, being given a bundle s(q)l
+determines a bundle s()  l, where s() are the spinors of the normal bundle.
+physical interpretation
+
+the phenomenon just indicated was rst encountered by hand in a very special case [w3], but
+
+it has a theoretical interpretation that we will now recall.
+
+naively speaking, the conserved charges associated with wrapping of d-branes in a spacetime
+manifold y take values in h (y ; z), the cohomology of y . a closer look shows, however [mm,w4],
+that, when the b-eld is topologically trivial, d-brane charge takes values in k-theory, in fact in
+k(y ) or k 1(y ) for type iib or type iia string theory.
+
+however, for a d-brane wrapped on q to dene a class in k(y ) (or k 1(y )), its normal bundle
+ must be endowed with a spinc structure. this results from a standard construction of atiyah,
+bott, and shapiro; see [w4], section 4.3 for an explanation in the context of the application to
+string theory. hence, if the k-theory interpretation of d-branes is correct, type ii d-branes (at
+b = 0) must be naturally endowed with a spinc structure on the normal bundle. equivalently,
+since w2(q) = w2(), the type ii d-brane world-volume q must carry a spinc structure. as we
+have just explained, the global anomaly formula (1.2) has exactly this consequence; because of this
+anomaly, a d-brane is endowed not with a u (1) gauge eld, as it naively appears, but with a spinc
+structure.
+
+let us now analyze the conditions under which q admits a spinc structure. consider the exact
+
+sequence of abelian groups
+
+(1.5)
+
+0  z 2z rz2  0,
+
+with the rst map being multiplication by 2 and the second reduction modulo 2. this short exact
+sequence leads to a long exact cohomology sequence:
+
+(1.6)
+
+. . . h 2(q; z) rh 2(q; z2)
+
+
+h 3(q; z)  . . .
+
+5
+
+the object (cid:0)w2(q)(cid:1)  h 3(q; z) is the third stiefel-whitney class w3(q).
+vanishing of w3(q) is equivalent to q admitting spinc structure. indeed, exactness of (1.6) says
+that w2(q) = r(x) for some x  h 2(q; z) if and only if w3(q) = 0. when there is no two-torsion
+in h 2(q; z), there is precisely one spinc structure on q for every such x. in fact, given a spinc
+connection  + a, if l is the line bundle on which a is a connection, then m = l2 is an honest
+line bundle, and x = c1(m) obeys r(x) = w2(q). conversely, given x with r(x) = w2(q), we let
+m be a complex line bundle with c1(m) = x, and we let a be a connection on the line bundle
+l = m1/2. (when there is two-torsion in h 2(q; z), there are dierent square roots of m and
+hence more than one spinc structure for given x.)
+
+inclusion of b-field
+
+now let us discuss what to do when w3(q) 6= 0, so that the anomaly cannot be cancelled by
+picking a spinc structure on q. so far we have assumed that the b-eld is topologically trivial, in
+which case it can simply be ignored in analyzing the anomalies. but now we must include it. the
+b-eld couples to the world-sheet  in bulk, and in its presence an additional term must be added
+to (1.4), which now becomes
+
+(1.7)
+
+pfa(d) exp(cid:18)ii
+
+a + iz
+
+b(cid:19) .
+
+this expression has the gauge invariance
+
+(1.8)
+
+a  a  , b  b + d,
+
+where  is any connection on an arbitrary complex line bundle m.
+
+let us discuss, in stages, the meaning of (1.7). first we consider the b-eld in the theory of
+
+closed oriented bosonic strings. in this theory, for a closed surface , the b-eld gives a phase
+
+(1.9)
+
+w (; b) = exp(cid:18)iz
+
+b(cid:19) .
+
+this is a complex number of modulus one, an element of u (1); we can think of it as the holonomy
+of b over . on the other hand, if  has a boundary, then w (; b) is not gauge-invariant. it must
+be regarded as an element of a complex line lb associated to  by b. the line lb depends on
+, but we do not show this in the notation. for example, if  is a single circle, then lb varies
+as  varies to give a complex line bundle over the loop space of y (or over a component of this
+
+loop space determined by the homotopy class of ). we write ly for the loop space of y .
+
+the interpretation of w (; b) as taking values in a complex line lb may seem slightly abstract,
+but it actually reects an idea that is familiar to physicists. the two-form eld b in spacetime
+
+6
+
+determines (by integration over the loop) a one-form eld or abelian gauge eld on loop space; this
+abelian gauge eld is a connection on a complex line bundle lb over ly .
+
+now we introduce in the bosonic string a d-brane with world-volume q. we require   q.
+
+in this situation, there is a completely gauge-invariant extension of (1.9), namely
+
+(1.10)
+
+w (; b, a) = exp(cid:18)ii
+
+a + iz
+
+b(cid:19) .
+
+we interpret this expression to mean that a gives a trivialization of the restriction of lb to loops
+that lie in q. in other words, a trivializes the restriction of lb to lq, the loop space of q; when
+  q, w (; b, a) is a gauge-invariant version of w (; b).
+
+now, let us consider the superstring and the problem of dening the product
+
+(1.11)
+
+pfa(d)  exp(cid:18)iz
+
+b(cid:19)  exp(cid:18)ii
+
+a(cid:19) .
+
+for simplicity of exposition in what follows, we suppose that the boundary of  is a single circle;
+
+the generalization is evident.
+in the mathematical theory, pfa(d), though not well-dened as
+a number, is dened as a section of a pfaan line bundle pfa over lq. as we have already
+discussed, the second factor in (1.11) must likewise be interpreted as a section of a line bundle
+lb. we also have just explained that, in the bosonic string theory, the last factor in (1.11) should
+be interpreted as trivializing the restriction of lb to lq. for the superstring, since there is an
+extra factor in (1.11), the interpretation is dierent. the last factor in (1.11) must in this case be
+understood as giving a trivialization of pfa  lb, restricted to lq.
+
+this means in particular that for the bosonic string, the restriction of b to q must be topolog-
+
+ically trivial. for the superstring, the restriction of b to q is in general topologically nontrivial,
+but its topological type is uniquely determined, by the fact that pfa  lb (restricted to loops in
+q) must be topologically trivial.
+
+topological classication of b-fields
+
+to make this somewhat more explicit, we recall the topological classication of b-elds. topolog-
+ically, b-elds on y are classied by a characteristic class   h 3(y ; z). at the level of dierential
+forms,  is represented by h/2, where h = db is the curvature of b. by integrating  over
+a loop, we get a two-dimensional characteristic class on ly , which in fact equals c1(lb). flat
+b-elds, that is, b-elds whose eld strength h vanishes, are classied by the holonomy around
+closed surfaces, which gives a cohomology class in h 2(y ; r/z). a at b-eld has a torsion char-
+acteristic class  computed by the bockstein map  : h 2(y ; r/z)  h 3(y ; z). (a similar 
+appears in (1.6).) notice by comparison the analogous classication of abelian gauge elds, where
+the degree is shifted down by one.
+
+7
+
+pfa lb is trivial if 3
+
+(1.12)
+
+|q = w3(q),
+
+and we claim that this is the right topological condition on the b-eld. the integral of the left hand
+side over  is the rst chern class of lb. the holonomy of pfa was stated in (1.2), and this may
+be reinterpreted to say that the class of pfa as a at line bundle in h 1(lq; r/z) is the integral
+of w2(q) over . using the remark following (1.6) and the fact that the bockstein commutes with
+integration, we see that the rst chern class of pfa is the integral of w3(q) over .
+
+in particular, b restricted to q is topologically trivial if and only if w3(q) = 0, or in other
+
+words (given what we have seen above) if and only if q is spinc.
+
+to be explicit, we will give an example of a b-eld on q (or on any spacetime y over which
+w2(q) extends) with  = w3(q). just as an abelian gauge eld is completely determined up
+to isomorphism by its holonomy around closed loops, a b-eld is completely determined up to
+isomorphism by its holonomy over closed surfaces. since w3(q) = (w2(q)) is a torsion class,
+there exists a at b-eld, whose holonomy over a closed surface  depends only on the homology
+class of , with  = w3(q). such a at b-eld is indeed described by the elegant formula
+
+(1.13)
+
+w (; b) = (1)(,w2(q)).
+
+in other words, the isomorphism class of this at b-eld is the image of w2(q) under h 2(q; z2) 
+h 2(q; r/z). its characteristic class  is then computed by the bockstein map to be w3(q).
+
+examples
+
+we will give a few concrete examples to which the discussion applies.
+every oriented manifold of dimension  3 is spin. a simple example of a four-manifold that
+is not spin is q = cp 2. then h 2(q; z) = z, and h 2(q; z2) = z2. the second stiefel-whitney
+class w2(q) is the nonzero element of h 2(q; z2). since h 3(q; z) = 0, we have w3(q) = 0 and
+q is spinc. in fact, the map r : h 2(q; z)  h 2(q; z2) is just reduction modulo 2; the elements
+x  h 2(q; z) with r(x) = w2(q) correspond to the odd integers in h 2(q; z) = z.
+
+if a d-brane has world-volume q = cp 2, then (assuming that the b-eld vanishes) the global
+anomaly means that the u (1) gauge eld a does not obey standard dirac quantization. rather,
+a is a connection on a line bundle whose square has an odd rst chern class x (congruent to
+w2(q) mod 2). if l  q is a generator of h2(q; z), then we have (l, w2(q)) 6= 0 and hence
+
+zl
+
+fa
+2
+
+=
+
+x
+2
+
+,
+
+3in fact, (1.12) is only a sucient condition, but is the only cohomological condition that implies triviality of
+pfa lb . as in footnote 2 at the beginning of section 1, we expect that factorization and unitarity will lead to the
+full requirement of (1.12).
+
+8
+
+with x an odd integer. in particular, x cannot be zero.
+
+every oriented manifold of dimension  4 is spinc. to give a simple example of a ve-manifold
+that is not spinc, let q = q s1 be a cp 2 bundle over s1 in which, as one goes around the
+s1, the ber cp 2 undergoes complex conjugation. complex conjugation acts on h 2(q; z) by
+multiplication by 1. q is not a spinc manifold, for the following reason. an x  h 2(q; z)
+obeying r(x) = w2(q) would have to reduce on each ber of the projection q  s1 to an odd
+element x  h 2(q; z) = z. because of the monodromy, x would have to change sign in going
+around the s1, which is impossible. so q is not spinc.
+
+to illustrate the ideas of the present paper requires considering topologically non-trivial d-brane
+world-volumes such as q or q. but spacetime itself can be very simple, for example y = r10.
+since y is contractible, the b-eld is automatically topologically trivial and can be ignored. we
+will give examples of d-brane states in r10 which are or are not allowed.
+
+on general grounds, any manifold of dimension  5 can be embedded in r10. for completeness,
+we will describe a simple embedding of q and q. identify q = cp 2 with the space of vectors  of
+unit norm in c3, modulo phase rotations. let a be a suitably normalized basis of the lie algebra
+of su (3), and
+
+a = h|a|i.
+
+a=1 2
+
+then p8
+a = 1, so using the a as coordinates, we get an embedding of cp 2 in s7, which
+obviously embeds in r10. to embed q in r10, rst note that s8  s1 can be embedded in r10
+(for instance as the set of points a distance  from a circle s1  r10, for suitably small ). hence
+it suces to embed q in s8  s1. for this, we rst add one more coordinate y to the a, to get
+a copy of s8 dened by pa 2
+a + y2 = 1, and embed q in s8 as the subset with y = 0 and a as
+before. now, complex conjugation of cp 2 acts on the set of eight a with determinant 1 (three
+eigenvalues +1 and ve 1), so if we take it to act on y as multiplication by 1, we get an element
+t  so(9). so(9) is a connected group of symmetries of s8. let r(), 0    2 be a path
+in so(9) with r(0) = 1 and r(2) = t . finally, embed q in s8  s1 by mapping (p, ) (with
+p  cp 2  s8 and   s1) to (r()p, )  s8  s1.
+
+now, given a d-brane in r10 with world-volume q or q, we will explain how to construct a
+family of string worldsheets that detects the global anomaly. we take  to be a disc; its boundary
+is a circle . letting c be another circle, the boundary of   c is w =   c, a two-torus.
+for a generator of h2(q; z) or h2(q; z) we can take a two-sphere l. we pick a degree one map
+0 : w  l; then, since r10 is contractible, one can extend 0 to a map  :   c  r10. this
+gives a relatively simple example of a family of worldsheets for which there is a global anomaly.
+hence, the d-brane q  r10 is not allowed, and the d-brane q  r10 is allowed but must support
+a u (1) gauge eld with half-integral ux.
+
+9
+
+conservation laws and the anomaly
+
+by further discussion of d-branes in r10, we can show the relation of the anomaly to d-brane
+
+charges.
+
+we work in lorentz signature, and split r10 as r  r9, where r parametrizes time and r9 is
+space. we consider a d-brane whose world-volume near time zero is approximately q = r q0,
+with q0  r9. we will focus on type iia superstrings, so q0 is of even dimension. to detect the
+anomaly, the dimension is at least four.
+
+the world-volume of the d-brane will not look like r  q0 for all time. the d-brane will
+oscillate, emit radiation, and contract. in the far future, it will decay to a nal state consisting
+of outgoing stable particles. the only known stable particles in type iia superstring theory in
+r10 are massless particles (the graviton and its superpartners) and d0-branes, together with the
+familiar multi-d0-brane bound states. (there are no conserved charges for higher branes because
+r10 is contractible.) if there are no additional stable particles, then our initial state will decay to
+an assortment of the known ones.
+
+if so, we can predict how many net d0-branes will be produced  that is the dierence between
+the number of d0-branes and anti-d0-branes in the nal state. it must equal the d0-brane charge
+
+of the initial state, which [ghm,cy,mm] is
+
+n0 =zq0q a(q)
+
+1
+
+q a()
+
+exp (c1(l)) ,
+
+where a is the total a-roof class, and c1(l) is the rst chern class of the complex line bundle
+l on which the u (1) gauge eld a of the d-brane is a connection. now, using the fact that the
+tangent bundle of r10 is trivial, and splits as t q   (with t q the tangent bundle to q), we have
+a() = a(q)1. so we rewrite the formula for the total d0-brane charge as
+
+(1.14)
+
+n0 =zq0
+
+a(q0) exp (c1(l)) .
+
+(we have written here a(q0) rather that a(q); the two are equal as t q = t q0  , where  is a
+trivial real line bundle that incorporates the time direction.)
+
+now, if l were a complex line bundle, then in general n0 would not be an integer. for example,
+for q0 = cp 2 and l trivial, we would have n0 = 1/8 (depending on orientation). when n0 is
+not integral, the initial d-brane state cannot decay to known stable particles.
+
+we either must postulate the existence of new conservation laws for type iia strings in r10
+or achieve integrality of n0 by some other modication of the rules. as we have seen, the global
+anomaly means that a is not a u (1) connection, but rather determines a spinc structure s(q)l
+on q or equivalently a spinc structure s(q0)  l on q0. with this interpretation of a and l,
+
+10
+
+the atiyah-singer index theorem states that the right hand side of (1.14) is the index of the dirac
+operator (for spinors on q0 valued in s(q0)  l), so that n0 is always integral.
+
+thus, the anomaly enables us to avoid having to postulate new conservation laws for d-branes
+
+in r10.
+
+2 qualitative explanation of anomaly
+
+to give a qualitative explanation of the anomaly, we consider a dp-brane with oriented world-
+volume q in a spacetime y . if the given d-brane is the only one in spacetime, then a consideration
+of the string spectrum will not lead in an obvious way to a result involving w2(q). in fact, if there
+is only one d-brane, the only open strings are the p-p open strings with both ends on q. the
+ground state of the p-p open strings in the ramond sector consists of sections of s(q) s() where
+s(q) is the bundle of spinors on q, and s() is the bundle of spinors on the normal bundle  to q
+in y . this tensor product exists whether q is spin or not (given only that y is spin), so merely by
+quantizing the p-p open strings, we get no condition involving w2(q). to obtain such a condition,
+we will study global worldsheet anomalies, as explained in the introduction.
+
+suppose, however, that an additional pair of d-branes, consisting of a space-lling 9-9 pair, is
+present.4 we suppose that the gauge elds on the 9-brane and 9-brane are trivial. in the presence
+of the additional branes, there are additional open strings such as the 9-p open strings. the ground
+state ramond sector 9-p strings are sections of s(q)  l, where again s(q) are the spinors on q
+and l is the line bundle on which the u (1) gauge eld a on q is a connection.
+
+so the tensor product s(q)l must exist, and we learn what was promised in the introduction:
+
+q must be spinc, and the gauge eld on q really denes a spinc structure.
+
+in our actual problem, such additional branes are absent. we do not want to assume continuous
+creation and annihilation of brane-antibrane pairs along the lines of [s], for this involves somewhat
+
+speculative physics. if one is willing to make such assumptions, the relation of branes to k-theory
+and the spinc character of q can indeed be deduced, as in [w4]. our intent here is to show that the
+requirement for q to carry a spinc structure can be deduced with only conservative assumptions
+about physics, by computing the global worldsheet anomaly.
+
+nevertheless, the fact that in the presence of a 9-brane, the quantization of the 9-p open strings
+would make our result obvious is a starting point for a precise mathematical computation of the
+
+global anomaly. in essence, whether or not 9-branes can be continuously created in the physics, we
+can create them in the math, at least for the purposes of computing a global anomaly. this may
+
+be done as follows.
+
+consider any family of open string worldsheets  with specied boundary conditions on the
+
+4for type iib, these can be ordinary supersymmetric branes. for type iia, we could in this argument use
+
+instead the nonsupersymmetric 9-brane considered in [h].
+
+11
+
+boundary components of . the change in the global anomaly under a change in the boundary
+conditions is local, that is it only depends on the properties near the boundary of . such locality
+
+is perhaps more familiar for perturbative anomalies, which are expressed as integrals of dierential
+forms. global anomalies, however, also obey a suitable form of locality. they are computed
+topologically as integrals in k-theory, which obey the following excision property: if two k-
+
+theory classes agree outside an open set u , then the dierence of their integrals can be computed
+on u . geometrically, global anomalies are adiabatic limits of -invariants, which also obey a
+factorization relation, though a more delicate one [df]. these relations give the locality we want
+
+for the global anomaly.
+
+using this locality, we can reduce to a convenient set of boundary conditions. in fact, if one places
+9-brane boundary conditions on all components of , there is no global anomaly. this statement
+
+is proved in proposition 5.10, again using factorization. the statement is closely related to type ii
+global anomaly cancellation for closed surfaces without d-branes, because with 9-brane boundary
+conditions on all boundaries, the dirac equation on the surface-with-boundary  is equivalent to a
+
+chiral dirac equation (acting on spinors of one chirality only) on the double of .
+
+hence, the anomaly for the family  c of open string world-sheets, with a map  :  c  y ,
+depends only on the restriction of  to   c and the boundary conditions on   c. once this
+is known, the anomaly can be evaluated by the following sleight of hand. we let  be an annulus.
+we select one distinguished component  of the boundary of , and we select an isomorphism
+of  to  (assuming  connected, in which case both of them are circles; the generalization to
+arbitrary  is clear). then we pick a map  : c  y which coincides with  in a neighborhood
+of   c.
+
+now, we will compare the global anomalies for two dierent sets of dirac operators that dier
+
+only by changes of boundary conditions:
+
+(1) in the rst case, we consider a dirac operator on  with p-brane boundary conditions, plus
+
+a dirac operator on  with 9-brane boundary conditions at each boundary.
+
+(2) in the second case, we consider a dirac operator on  with 9-brane boundary conditions, and
+a dirac operator on  with p-brane boundary conditions on  and 9-brane boundary conditions
+on the other boundary component.
+
+the total global anomaly in going around the loop c, summed over the two dirac operators
+that are considered in each case, is the same in case (1) and case (2), because the union of all the
+boundaries and boundary maps are the same in the two cases. all we have done in going from
+case (1) to case (2) is to cut out neighborhoods of boundary components of   c and   c and
+exchange them.
+
+we also observe the following:
+
+(i) in case (1), the global anomaly comes entirely from the dirac operator on , since the dirac
+operator on  has 9-brane boundary conditions on each component. hence, in case (1), the global
+anomaly is equal to what we want to calculate.
+
+12
+
+(ii) in case (2), the global anomaly comes entirely from the dirac operator on , since the dirac
+
+operator on  has 9-brane boundary conditions on each component.
+
+in case (2), because  is an annulus with 9-brane boundary conditions at one end and p-brane
+
+boundary conditions at the other, it describes the propagation of 9-p strings. as we remarked before,
+the ground states of such strings are sections of s(q)  l in the ramond sector (or of s()  l in
+the neveu-schwarz sector). absence of global anomalies in their propagation is equivalent (as in
+the analysis of global anomalies in quantum mechanics in [w2]) to the existence of s(q)  l (or
+of s()  l).
+
+thus, absence of the global anomaly for the dirac operator on  with p-brane boundary con-
+ditions is equivalent to existence of s(q)  l, as we wished to show. a rigorous argument can be
+found in section 5.
+
+3 anomalies and index theory
+
+the path integral over a fermionic eld f is the regularized pfaan, or5 determinant, of a
+dirac operator d. it depends on the bosonic elds b which couple to f , but rather than being
+
+a complex-valued function on the space b of these bosons it is a section pfa d of a complex
+line bundle pfa d  b. this section is part of the eective action we must integrate over b,
+and to do so we must nd a global nonzero section 1 : b  pfa d and integrate instead the
+function pfa d/1. the anomaly is the obstruction to nding the trivializing section 1. (more
+precisely, we must trivialize the product of the pfaan line bundle and line bundles from other terms
+in the eective action, such as the additional contributions to (1.11).) this may be interpreted
+
+topologically, in which case the atiyah-singer index theorem is used to determine the topology
+of the pfaan line bundle. more relevant to the physics is a geometric interpretation, in which
+we seek a at section 1 of unit norm relative to the natural metric and connection on pfa d.
+
+(this distinction is important in our problemcompare theorem 5.5 and theorem 5.6.) for
+that we use dierential geometric index theorems involving curvature forms and -invariants. if
+
+the anomaly vanishes then 1, and so the eective action, is determined up to a phase on each
+connected component of b. see [f1], [f2] for more details. in this section we briey summarize
+results from index theoryboth topological and geometricin the form we need.
+
+suppose  : x  z is a ber bundle whose bers6 x/z are closed manifolds endowed with a spin
+structure. recall that ko(x) is the group of virtual real vector bundles on x up to equivalence,
+
+5in minkowski space all elds are real and we can write the fermionic kinetic term as 1
+
+2 d/, so that the
+path integral over  gives a real pfaan. often a pfaan may be written as a determinant of a smaller dirac
+operator. since under wick rotation the fermions are usually complexied, in euclidean eld theory the pfaans
+and determinants are usually complex.
+
+6here x/z denotes the ber of x  z. as usual, a spin structure on a manifold means a spin structure on its
+
+tangent bundle, here the tangent bundle t (x/z) along the bers.
+
+13
+
+and kon(x)  ko(sn  x) is the subspace of isomorphism classes of virtual bundles trivial
+on sn  x. the spin structure on the bers determines a pushforward map
+
+x/z
+!
+
+: ko(x)  kon(z),
+
+where n = dim x/z. given a real vector bundle e  x, the family of dirac operators on x/z
+coupled to e has an index in kon(z). the atiyah-singer index theorem [as2] asserts that
+(cid:0)[e](cid:1), where [e]  ko(x) is the isomorphism class of e. for
+this analytic index equals x/z
+dirac operators coupled to complex bundles we have a similar picture with complex k-theory
+replacing real ko-theory. in general there is no cohomological formula for the integral or mod 2
+
+!
+
+characteristic classes of the index; over the rationals we can express the chern character of the
+index (in k-theory) in terms of the chern character of e:
+
+ch x/z
+
+!
+
+(cid:0)[e](cid:1) = x/z
+
+
+
+(cid:0) a(x/z) ch(e)(cid:1),
+
+where  is the pushforward map in rational cohomology. until further notice we restrict to complex
+
+bundles and k-theory.
+
+the simplest invariant of an element of k(z) after the rank, which is a continuous function
+z  z, is the determinant line bundle, which is a smooth complex line bundle over z. in this
+topological context it is only dened up to equivalence.
+
+a geometric family of dirac operators parametrized by z is specied by a ber bundle  : x  z,
+a spin structure on x/z, a riemannian metric on x/z, and a distribution of horizontal planes on x
+(transverse to the bers x/z). if we couple to a vector bundle e  x, we require that e have
+a metric and compatible connection. then if the bers x/z are closed, the determinant line
+bundle det dx/z (e) is well-dened as a smooth line bundle, and it carries a canonical metric and
+connection [bf]. if the bers x/z are odd dimensional, so that the (complex) dirac operator is self-
+adjoint, then there is a geometric invariant x/z (e) : z  r/z dened by atiyah-patodi-singer.
+(it is half the sum of the -invariant and the dimension of the kernel.) multiplying by 21 and
+exponentiating we obtain x/z (e) : z  t, where t  c is the unit circle.
+
+the curvature of the determinant line bundle is the 2-form
+
+(3.1)
+
+det dx/z (e) =h21 zx/z
+
+a(x/z) ch(e)i(2)  2(z),
+
+where x/z , e are the indicated curvature forms. as for the holonomy, consider a loop  : x  s1
+of manifolds in this geometric setup. endow s1 with a metric and the bounding spin structure;
+then we induce a metric and spin structure on x. the holonomy of the determinant line bundle
+around this loop is
+
+(3.2)
+
+hol det dx/s 1
+
+(e) = a-lim  1
+
+x (e),
+
+14
+
+where the adiabatic limit a-lim is the limit as the metric on s1 blows up (gs 1  gs 1/2 and   0).
+if the determinant line bundle is at, then no adiabatic limit is required. equation (3.2) is the
+
+global anomaly formula [w1]; cf. [bf].
+
+if x is a spin manifold of odd dimension n, and f  x a at unitary bundle of rank r, then
+for any complex hermitian bundle e  x with connection the ratio x(cid:0)e  (f  r)(cid:1)/x (e) is a
+
+topological invariant independent of the geometrical quantities. the at index theorem of atiyah-
+patodi-singer [aps2] gives a k-theory formula for this ratio. namely, the bundle f determines a
+class [f  r]  k 1(z; r/z) and the dierence of -invariants is x
+
+! (cid:0)[e]  [f  r](cid:1), where now
+
+(3.3)
+
+x
+!
+
+: k 1(z; r/z)  k n1(pt; r/z) = r/z.
+
+if x is an odd dimensional spin manifold with boundary, one can still dene x (e), but now
+it is an element of the inverse determinant line of the boundary, viewed as a z/2z-graded one
+dimensional vector space [df]. here we use the global boundary conditions of atiyah-patodi-
+singer [aps1]. the invariant x (e) satises a gluing law. we need the formula for x , where
+x is the manifold x with the opposite orientation.7 let k be the number of components of x
+on which the boundary dirac operator has odd index. then
+
+(3.4)
+
+x(e) = (1)(k
+
+2)x (e).
+
+let x d be the (spin) double of x, obtained by gluing x and x along x. then the gluing
+theorem and (3.4) imply
+
+(3.5)
+
+x d = (1)(k
+2).
+
+turning now to real bundles and ko-theory, there is a square root which one can canonically
+extract in certain dimensions (see [f1,3]). namely, if a geometric family  : x  z has dim x/z 
+2 (mod 8), and if e  x is a real vector bundle, then the determinant line bundle has a natural
+square root, the pfaan line bundle pfa dx/z(e). also, if x is a closed spin manifold with
+dim x  3 (mod 8), and if e  x is a real vector bundle, then x (e)  t has a natural square
+root  1/2
+x (e)  t. the curvature of the pfaan line bundle is given by one-half times (3.1), and the
+holonomy by (3.2) with the  1/2-invariant replacing the  1-invariant. formulas (3.4) and (3.5)
+hold for the  1/2-invariant, but now k denotes the number of components of x with nonzero
+mod 2 index. (note that the  1/2-invariant of a manifold with boundary lives in the inverse pfaan
+line of the boundary. that pfaan line is z/2z-graded by the mod 2 index.) there is a version of
+
+the at index theorem (3.3) which applies to this square root; it uses ko in place of k.
+
+7unfortunately, the sign in (3.4) is missing from [df]; it will be corrected in a forthcoming erratum.
+
+15
+
+there is a special low dimensional situation in which the topological isomorphism class of the
+pfaan line bundle (over the integers) is computed by a cohomological formula. suppose  : x  z
+is a family of closed spin 2-manifolds, and e  x a virtual real vector bundle of rank 0 which is
+endowed with a spin structure. then [f1,5]
+
+(3.6)
+
+c1 pfa dx/z(e) = x/z
+
+
+
+(e),
+
+where  is the degree four characteristic class of spin bundles with 2 = p1. as a corollary, even if
+e is not spin we have a cohomological formula for the determinant line bundle, which is the square
+
+of the pfaan bundle:
+
+(3.7)
+
+c1 det dx/z (e) = x/z
+
+
+
+p1(e).
+
+in (5.22) we compute an analogous formula for the pfaan line bundle of a family of dirac operators
+on the circle.
+
+4 closed superstrings
+
+statement of results
+
+in this section we study a closed superstring propagating in a curved background riemannian
+
+manifold y . assume that y is an oriented manifold. let  be an oriented closed surface. we need
+not assume that either y or  is connected. the space of bosons is the product
+
+b = met()  map(, y )
+
+of riemannian metrics g on  and maps  :   y . a metric g on  induces a complex structure,
+since  is assumed oriented, and so a  operator g : 0,0  0,1
+g . let kg denote the canonical
+bundle, which is the cotangent bundle t  viewed as a complex line bundle. a spin structure 
+on , which we can describe on the oriented surface independent of any metric, gives rise to a
+complex line bundle h,g which satises h 2
+,g . spinor
+elds are sections of k 1/2
+,g  k 1/2
+the  operator and its conjugate:
+
+,g = kg. it is natural to denote h,g as k 1/2
+
+,g . the chiral dirac operators on  may be expressed in terms of
+
+(4.1)
+
+,g = g : 0,0(k 1/2
+d+
+,g = g : 0,0(k 1/2
+d
+
+,g )  0,1
+,g )  0,1
+
+g (k 1/2
+,g )
+g (k 1/2
+,g )
+
+16
+
+note that d = d+. also, d+ = (d+) is a complex skew-adjoint operator. for this we
+identify 0,1(k 1/2) as the dual space to 0,0(k 1/2): the duality pairing is pointwise multiplication
+followed by integration. the determinant of a skew-adjoint operator has a canonical square root,
+the pfaan, as explained in 3. for any vector bundle with connection e   we can form the
+coupled dirac operators d(e). the coupled operator is skew-adjoint if e is real.
+
+for a line bundle l we denote the dual by l1 and the nth tensor power ln by ln. thus k 1
+
+g
+
+is the holomorphic tangent bundle of  and k 3/2
+
+,g
+
+is the 3rd power of the dual to k 1/2
+,g .
+
+fix a spin structure . then for a pair (g, )  b dene the complex line
+
+(4.2)
+
+l+
+
+ (g, ) = pfa d+
+
+,g(t y ) (cid:2)det d+
+
+,g(k 1
+
+g )(cid:3)(1)
+
+ det g(k 1
+g )
+
+and its complex conjugate
+
+(4.3)
+
+l
+
+ (g, ) = pfa d
+
+as (g, ) vary these dene smooth complex line bundles l
+remark that the last operator in (4.2) may be rewritten in terms of spinors:
+
+,g(t y ) (cid:2)det d
+
+,g(k 1
+
+ det g(k 1
+g ).
+
+g )(cid:3)(1)
+  b with metric and connection. we
+
+g(k 1
+
+g ) = d+
+
+,g(k 3/2
+
+,g
+
+)
+
+for any spin structure .
+
+in superstring theory, the spin structures on right- and left-movers are chosen independently and
+
+ , and the path integral over the left-moving fermions is a section of l
+
+are summed over with appropriate weighting. the path integral over the right-moving fermions
+is a section of l+
+ , for two
+independently chosen spin structures  and . the rst factor in the denition of l
+ corresponds
+to the physical spinor eld, the last factor to the ghosts from gauge xing the dieomorphism group,
+and the middle factor to the ghosts from gauge xing the remainder of the superdieomorphism
+group. the path integral in the eective theory is carried out over the quotient of the space of
+
+bosons by the subgroup of superdieomorphisms of  which preserve the chosen spin structure.
+thus to detect possible anomalies we consider smooth ber bundles  : x  z with typical ber 
+together with a map to y :
+
+(4.4)
+
+
+
+ y
+
+x
+
+y
+
+z
+
+furthermore, we assume that the relative tangent bundle carries a riemannian metric and spin
+structure, and that there is a distribution of horizontal planes on x. this is enough to dene the
+
+17
+
+line bundles (4.2) and (4.3) with metric and connection. in the application to physics z maps into
+the quotient of b by the subgroup of dieomorphisms xing the given spin structure. such families
+of surfaces are probes which determine the structure of the line bundles l
+ . it suces to take
+z nite dimensional and compact. the path integral over both right- and left-moving fermions is
+a section of l+
+ , and it is the triviality of this line bundle over arbitrary families (4.4) which
+we investigate.
+
+  l
+
+we now state the basic results for closed oriented surfaces; the proofs follow below. in these
+theorems isomorphism means an invertible linear map which preserves the metric and connection.
+
+a trivializable bundle is isomorphic to the trivial bundle with product metric and connection.
+
+theorem 4.5. suppose y is spin and dim y = 10. then for any two spin structures ,  there
+
+exists an isomorphism
+
+ = l+
+l+
+ .
+
+ is the complex conjugate of l+
+
+ , it follows that l
+
+ is also independent of the spin
+
+since l
+structure .
+
+corollary 4.6. suppose y is spin and dim y = 10. then l+
+structures , .
+
+  l
+
+ is trivializable for any spin
+
+for  =  the hermitian metric provides the desired trivialization. the result for  6=  follows
+immediately from theorem 4.5. the triviality of l+
+
+ is the vanishing of the anomaly.
+
+the next result is relevant to the conformal anomaly, but does not enter into the considerations
+
+  l
+
+of 5. we include it for completeness.
+theorem 4.7. suppose y = r10. then l+
+the factor of (det g)(5) comes from integrating the boson . (see [f2,2] for a discussion of
+the conformal anomaly in the context of the bosonic string.)
+
+  (det g)(5) is trivializable.
+
+proofs
+
+the proof 8 of theorem 4.5 is modelled on [fm], which treats a similar proposition for complex
+vector bundles. the real case treated here is simpler. first, the curvature formula (3.1) does not
+depend on the spin structure, so the ratio l+
+ is at. thus we must show that the holonomy
+of this ratio vanishes. now the holonomy of a pfaan line bundle is given by the adiabatic limit
+of the exponentiated /2-invariant of the dirac operator on a 3-manifold which bers over the
+circle (see (3.2)). theorem 4.5 follows from a more general statement.9
+
+ /l+
+
+8for an alternative proof, see [w2].
+9it seems that there is no cohomological formula for this ratio of holonomies (i.e., the left hand side of (4.9))
+if we relax the hypotheses w1(v ) = w2(v ) = 0, as we learned in a conversation with john morgan. our proof of
+lemma 4.8 is based on the ko-theory formula (4.11).
+
+18
+
+lemma 4.8. suppose p is any compact oriented 3-manifold with two spin structures  and ,
+and v  p is a real vector bundle with rank divisible by 8 and with w1(v ) = w2(v ) = 0. then
+
+(4.9)
+
+ 
+2 
+
+ 
+2  0
+
+(mod 1).
+
+to prove theorem 4.5 from this lemma, note rst that the last factor in (4.2) does not depend on
+for any
+
+the spin structure. next, use the fact that d+ = d and det d(e) = (cid:0)det d+(e)(cid:1)1
+
+complex vector bundle e to rewrite the second factor in (4.2) as a pfaan:
+
+(4.10)
+
+det d+
+
+,g(k 1
+
+g ) = pfa d+
+
+,g(k 1
+
+g  kg
+
+1).
+
+in this expression k 1
+to [v ] = [t y ]  [k 1
+vanishing w1 and w2.
+
+g  kg
+g  kg
+
+1 refers to a rank two real vector bundle. now apply the lemma
+1]. assuming y 10 to be oriented and spin, this has rank 8 and
+
+proof of lemma 4.8. a ko-theory version of the index theorem for at bundles [aps2] gives a
+topological formula for this dierence of /2-invariants (see (3.3)). let [v ]  ko(p ) denote the
+ko-class of v . the dierence of spin structures is a at real bundle, and gives rise to a class
+[  ]  ko1(p ; q/z.). let ! : ko1(p ; q/z)  q/z be the direct image map dened by the
+spin structure . then the at index theorem asserts
+
+(4.11)
+
+in fact, we will show that
+
+ 
+2 
+
+ 
+
+2  !(cid:0)[v ]  [  ](cid:1)
+
+(mod 1).
+
+(4.12)
+
+[v ]  [  ] = 0
+
+in ko1(p ; q/z).
+
+first, an element [v ]  ko(p ) is determined by rank([v ]), w1([v ]), and w2([v ]). (an element
+of ko(p ) is a homotopy class of maps p  z bo, and if the rank and rst two stiefel-whitney
+classes are trivial the map lands in bspin, which has trivial 3-skeleton.) so with our hypotheses
+[v ] = 8k for some k  z. next, the dierence of spin structures is given by a homotopy class of maps
+p  rp, and since p is 3-dimensional by a map p  rp4. the rational (reduced) ko groups
+of rp4 vanish, and the reduced group gko(rp4) = z/8z, as was computed by adams [a]. hence
+ko1(rp4; q/z) = gko(rp4) = z/8z. it follows that 8[  ] = 0, whence (4.12).
+proof of theorem 4.7. we must show that for any family  : x  z of spin surfaces with the usual
+geometric data, the line bundle
+
+l = (det d+)5  (det )5  det (k 1) (cid:0)det d+(k 1)(cid:1)1
+
+19
+
+over z is trivial. (for readability, we omit the metric g and spin structure  from the notation
+in this proof.) that l is topologically trivial follows from a cohomological computation, thanks
+to (3.7). namely, we can write l as the determinant line bundle of the dirac operator d+ coupled
+to the virtual complex vector bundle
+
+[w ] = [5  5k 1/2 + k 3/2  k 1]  k(x).
+
+let x = c1(k 1/2)  h 2(x). then
+
+(4.13)
+
+p1(cid:0)[w ](cid:1) = 5x2 + 9x2  4x2 = 0,
+
+and so c1(l) = p1(w ) = 0. the curvature of the natural connection on l also vanishes, since
+the curvature (3.1) is computed by a combination of dierential forms with the same coecients
+as in (4.13).
+
+it remains to show that the holonomy is trivial. for this we rewrite l (canonically) as a product
+of pfaan line bundles of dirac operators coupled to real vector bundles. (for the last factor,
+
+see (4.10)):
+
+(4.14) l =(cid:0)pfa d+(cid:1)10
+
+(cid:0)pfa d+(k 1/2  k 1/2)(cid:1)5
+
+(cid:0)pfa d+(k 3/2  k 3/2)(cid:1) (cid:0)pfa d+(k 1  k 1)(cid:1)1
+consider a family of surfaces p  s1 bered over the circle. the holonomy of l around s1 is
+the adiabatic limit of the product of  1/2-invariants of the dirac operator dp on p coupled to
+the real vector bundles indicated in (4.14). these bundles are associated to the relative tangent
+bundle of the bering p  s1. we rewrite these coupled dirac operators as operators which
+make sense on any spin 3-manifold. (below we write p = w for a spin 4-manifold w and we
+want to extend the operators over w , which may not ber over the circle.) for example, since
+t p  c = k 1  k 1  1c, the operators which appear in the rst and last factors in (4.14) may
+be combined as
+
+.
+
+(4.15)
+
+dp (11  t p ),
+
+where 11 is the trivial real bundle of rank 11. (what we really compute is the 11th power of the
+ 1/2-invariant of dp divided by the  1/2-invariant of dp (t p ), but it is convenient to use virtual
+bundles as a shorthand for this.) for the second factor in (4.14) we rewrite dp (k 1/2  k 1/2)
+on the bered manifold p  s1 as the operator10
+
+10the notation bev is taken from [aps1].
+
+20
+
+bev = (1)p(d  d)
+
+acting on 0(p )2(p ), where p = 0 on 0 and p = 1 on 2. this operator is half the boundary
+of the four dimensional signature operator, as explained in [aps1]. an important point for us is
+that its -invariant is well-dened as a real number, since the kernel of bev has a cohomological
+interpretation so has constant dimension in families. hence /2 (mod 1) is well-dened. for the
+third term of (4.14) we rewrite dp (k 3/2  k 3/2) on the bered manifold as
+
+bev(t p )  2bev.
+
+thus the operators which appear in the second and third factors in (4.14) may be combined as
+
+(4.16)
+
+bev(t p  7).
+
+now we use the fact that any spin 3-manifold p bounds a spin 4-manifold w . then by the
+atiyah-patodi-singer index theorem for manifolds with boundary [aps1], the  1/2-invariant is
+the exponential of a curvature integral over w . the particular curvature polynomial is determined
+from (4.15) and (4.16) to be the degree four part of a form we denote schematically by
+
+(4.17)
+
+1
+2
+
+
+
+a(w )(cid:0)12  ch(t w )(cid:1) 
+
+1
+4
+
+l(w )(cid:0)ch(t w )  8(cid:1).
+
+note that t w(cid:12)(cid:12)p= t p  1, which explains the 12 and 8 in (4.17). also, l(w ) is the unstable
+
+characteristic class based on the formal expression
+tanh x/2 , as explained in [as1,p. 577]. expressed
+in terms of the rst pontrjagin polynomial p1 in the curvature, the degree four part of (4.17) is the
+coecient of p1 in
+
+x
+
+)(8  p1) 
+which vanishes. thus the holonomy of l is trivial.
+
+(1 
+
+
+
+1
+2
+
+p1
+24
+
+1
+4
+
+(4 +
+
+p1
+3
+
+)(p1  4),
+
+5 open superstrings and d-branes
+
+statement of results
+
+fix a riemannian manifold y , which we assume to be oriented, spin, and of dimension 10. as
+before, this is the background in which the string propagates; now we want to add a d-brane. thus
+let q  y be an oriented submanifold, which we need not assume to be connected. the oriented (not
+necessarily connected) surface  is now permitted to have a (not necessarily connected) boundary,
+
+and we require the boundary of  to map to q. in other words, the space of bosons is
+
+b = met()  map(cid:0)(, ), (y, q)(cid:1).
+
+21
+
+asking that  map to q imposes a mixture of dirichlet and neumann boundary conditions.
+to dene the determinant lines (4.2) and (4.3), we need to impose boundary conditions on the
+
+fermions; the desired boundary conditions are local boundary conditions that are determined by
+supersymmetry. these boundary conditions mix right- and left-handed spinor elds, so it is only
+the tensor product of the lines l+ and l which makes sense if the boundary is nonempty.
+
+to describe precisely the desired dirac operators on , we rst recall that a spin structure  on 
+induces a spin structure on . to see this, x a metric g on  and consider the principal so2-
+bundle of oriented orthonormal frames so()  . its restriction to  is canonically trivialized
+by the oriented orthonormal frame whose rst element is the outward pointing unit normal. a spin
+structure  induces a double cover spin()  so(), and the inverse image of the trivialization
+at the boundary is a spin structure on the boundary. that inverse image is a double cover of .
+
+there are two possibilities on each component of . if the double cover is connected, then we
+say that the spin structure on that component is trivial, since it bounds a spin structure on a
+disk. if the double cover is not connected, then we say that the spin structure on that component
+
+is nontrivial. the spin structure on the entire boundary  is constrained by the fact that it is
+the boundary of a spin structure on . as for the complex line bundle k 1/2
+,g , it follows from this
+discussion that its restriction to  has a canonical real structure, i.e.,
+
+(5.1)
+
+,g = k 1/2
+k 1/2
+
+,g
+
+on .
+
+the underlying real bundle determines the spin structure on .
+
+as for closed strings we allow dierent spin structures on the right- and left-movers. thus we
+
+consider pairs of spin structures ,  such that the induced spin structures on  are isomorphic.
+now an isomorphism of spin structures on  is only determined up to a sign on each component
+of , and we need to x that sign. (the overall sign is irrelevant.) thus part of the data we need
+
+is an isomorphism
+
+(5.2)
+
+ : k 1/2
+
+ (cid:12)(cid:12) k 1/2
+
+
+
+(cid:12)(cid:12) .
+
+once the isomorphism is chosen for some metric it is determined for all metrics, so (5.2) is a discrete
+topological choice. thus the topological data is a triple (, , ).
+
+let d denote the total dirac operator, which is the sum of the two chiral operators (4.1).
+for a map  :   y with ()  q and a metric g on , consider the total dirac operator
+d,,,g(t y ), where we use the spin structure  on right-handed spinors and the spin structure 
+on left-handed spinor elds. the isomorphism  does not enter into the denition of the dirac
+operator, but is included in the notation since it does enter into the boundary condition (5.3)
+below. a spinor eld  with values in t y decomposes as  = + +  according to the chiral
+
+22
+
+decomposition of spinors on . the restriction  of  to  takes values in (t y(cid:12)(cid:12)q). now
+
+t y(cid:12)(cid:12)q= t q  ,
+
+where  is the normal bundle to q in y . thus at the boundary we can write
+
+ = 
+
+q + 
+ .
+
+the boundary condition for the operator d,,,g(t y ) is then
+
+(5.3)
+
+d,,,g(t y ) :
+
+(+
+
+(+
+
+q) = 
+q
+ ) = 
+
+
+
+the operator d,,,g(t y ) with these boundary conditions is complex skew-adjoint.
+
+there are two other operatorsacting on the ghost eldswhich enter. they appear in the
+
+determinant line of interest:
+
+l,,(g, ) = pfa d,,,g(t y ) (cid:2)det d,,,g(k 1
+
+g  kg
+
+1)(cid:3)1
+ det(cid:0) g(k 1
+
+g )  g(kg
+
+1)(cid:1).
+
+for each of the last two factors we ask that the two elds which appear be equal on . this bound-
+
+ary condition makes sense, since on  there is a natural real structure on the inverse canonical
+bundle k 1
+g . note that in the second factor the boundary condition involves the isomorphism ,
+as in (5.3). the eld in the third factor is a complexied tangent vector to the surface, and the
+
+boundary condition is the complexication of the condition that a real tangent vector be tangent
+to the boundary. thus the domain of the operator is the complexication of the group of in-
+
+nitesimal dieomorphisms. the boundary condition in the second factor is the odd analog for
+superdieomorphisms.
+
+we study l,, as a line bundle over z for families (4.4), where now x has a boundary which
+
+bers over z with typical ber  and (x)  q:
+
+(5.4)
+
+
+
+ q
+
+x
+
+y
+
+z
+
+our rst result computes the topologythat is, the rst chern classof the line bundle l,,.
+
+23
+
+theorem 5.5. the isomorphism class of the complex line bundle l,, equals ()()w3()
+in h 2(z; z), where w3 is the third stiefel-whitney class. in fact, this line bundle is the complexi-
+cation of a real line bundle, and the isomorphism class in h 1(z; z/2z) of the underlying real line
+bundle equals ()()w2().
+
+here () denotes integration along the bers of . the rst statement follows from the second
+
+by applying the bockstein homomorphism, which commutes with pushforward and pullback.
+
+as explained at the beginning of 3, for the application to anomalies the topological isomor-
+phism class is not ne enough. one needs also to compute the isomorphism class of the canonical
+
+connectionits curvature and holonomy. the theory of the quillen metric and canonical connection
+on the determinant line bundle only exists in the literature for families of closed manifolds [bf],
+or families of manifolds with boundary and global boundary conditions of atiyah-patodi-singer
+
+type [p]. in our problem we have a family of manifolds with boundary and local boundary condi-
+tions. as we will see below, by gluing we identify the index problem on surfaces with boundary
+with an index problem on the double manifold, and then we can apply the usual geometric theory of
+determinant line bundles on closed manifolds. in 6 we describe a general class of dirac operators
+with local boundary conditions and the associated doubling.
+
+ of (4.2). of course, the topology of l+
+
+let x d  z be the family of doubled surfaces, and  = (, , ) the spin structure on the
+double obtained by gluing ,  using . as part of the proof of theorem 5.5 we identify l,,
+with a twisted version l+
+ is determined by w3(), as in
+theorem 5.5, but our main result asserts that the holonomy of its natural connection is given by
+the second stiefel-whitney class w2().
+theorem 5.6. the canonical connection on l+
+ is at. consider a family of surfaces with bound-
+ary  : x  s1 and the associated family of doubles d : x d  s1. then the holonomy of the
+canonical connection around this loop is 1 with the sign given by ()w2()[x]. (see (5.4) for
+the notation.)
+
+proofs
+
+the proof of theorem 5.5 proceeds in two main steps. dene an operator d
+
+,,,g(t y ) which
+
+diers from d,,,g(t y ) only by a sign in the boundary condition:
+
+(5.7)
+
+d
+
+,,,g(t y ) :
+
+(+
+
+(+
+
+q) = 
+q
+ ) = 
+
+
+the operator d
+
+,,,g(t y ) is also complex skew adjoint. then set
+
+l
+
+,,(g, ) = pfa d
+
+,,,g(t y ) (cid:2)det d,,,g(k 1
+
+g  kg
+
+1)(cid:3)1
+ det(cid:0) g(k 1
+
+g )  g(kg
+
+1)(cid:1).
+
+we rst show the following.
+
+24
+
+proposition 5.8. the ratio l,,  (l
+isomorphism class in h 1(z; z/2z) is ()()w2().
+
+,,)1 is the complexication of a real line bundle whose
+
+in the process of proving proposition 5.8 we identify l
+ (see (4.2))
+on the double x d, where as above  = (, , ) is the spin structure on the double obtained by
+gluing ,  using . we also identify l,, with a twisted version l+
+ . the rst step towards
+proving theorem 5.6 is a geometric version of proposition 5.8.
+
+,, with the line bundle l+
+
+proposition 5.9. the canonical connection on the ratio l+
+for any family of closed surfaces  : x d  s1 is 1 with the sign given by ()w2()[x ].
+
+ )1 is at, and the holonomy
+
+  (l+
+
+the second step in the proofs of theorem 5.5 and theorem 5.6 is the following.
+
+proposition 5.10. l+
+doubled surfaces.
+
+ is trivializable (as a bundle with metric and connection) over a family of
+
+we prove proposition 5.10 directly only for the symmetric case  = ; the result for arbitrary , 
+then follows from theorem 4.5.
+
+we give three proofs of proposition 5.8. notice that the line bundle in question is
+
+(5.11)
+
+l,, := (pfa d,,)  (pfa d
+
+,,)1.
+
+first proof of proposition 5.8. a general result [bw, theorem 21.2] for elliptic boundary-value
+
+problems (the agranovic-dynin formula) describes the dependence of the index on local boundary
+conditions. the version we need is for families of complex skew-adjoint dirac operators, and it
+follows from [n,theorem 6.2]. it computes the dierence of the ko-indices of d,, and d
+as the index of a family of operators on the boundary family (5.4):
+
+,,
+
+(5.12)
+
+indx/z(d,,)  indx/z(d
+
+,,) = indx/z(rp r)  ko2(z).
+
+we must explain the operators p, r, r on the right hand side.
+
+first, p is a zeroth order pseudodierential operator, the calderon projector . we only need its
+
+principal symbol. for that, recall that the spinor elds on the boundary are sections of
+
+(5.13)
+
+(cid:0)k 1/2
+  k 1/2
+
+ (cid:1)  ()(t q  ).
+
+also, using (5.1) and (5.2) we identify the two spinor bundles as a single real line bundle s. for
+simplicity introduce the notation
+
+(5.14)
+
+f := ()t q
+
+f  := ().
+
+25
+
+then we rewrite (5.13) as the real bundle
+
+(5.15)
+
+(s  s)  (f  f ) =(cid:0)s  (f  f )(cid:1)  (cid:0)s  (f  f )(cid:1).
+
+let d/ be the standard dirac operator on the boundary circle. then the operator which acts
+
+on (5.14)the boundary operator associated to d,, (see [bw,theorem 12.4])is (cid:16) d/
+
+d/(cid:17)
+
+relative to the decomposition (5.15). the principal symbol of this operator is invertible and self-
+
+adjoint. the calderon projector p has a principal symbol (p ) which is the projection onto the
+sum of the eigenspaces with positive eigenvalues. thus for a nonzero cotangent vector  on the
+
+boundary,
+
+(5.16)
+
+(p )() =
+
+
+(cid:16) 1
+(cid:16) 0
+
+0(cid:17) ,
+1(cid:17) ,
+
+ > 0;
+
+ < 0,
+
+where we use the orientation of the boundary to give meaning to the sign of .
+
+the operators r, r in (5.12) are vector bundle maps
+
+(5.17)
+
+r, r : (cid:0)s  (f  f )(cid:1)  (cid:0)s  (f  f )(cid:1)  s  (f  f )
+
+whose kernel consists of spinor elds which satisfy the local boundary conditions (5.3), (5.7). rel-
+ative to the decompositions shown in (5.17), we write these operators as the matrices
+
+(5.18)
+
+r = ( 1  1 1  1 ) ,
+r = ( 1 1 ) .
+
+since r, r are vector bundle maps, they are equal to their principal symbols.
+
+now the principal symbol of the operator rp r which appears in (5.12) is easily computed
+
+from (5.16) and (5.18):
+
+(5.19)
+
+(rp r)() =
+
+
+( 11 11 )(cid:16) 1
+( 11 11 )(cid:16) 0
+
+0(cid:17)(cid:16) 1
+1(cid:17)(cid:16) 1
+
+1(cid:17) = ( 1 ) ,
+1(cid:17) = ( 11 ) ,
+
+ > 0;
+
+ < 0.
+
+these matrices act on s(f f ). observe that (5.19) is also the symbol of the family of operators
+
+idsf  d/(f )
+
+26
+
+on x  z. since the index only depends on the symbol, and since the index of the identity
+operator is trivial, we see that (5.12) reduces to
+
+indx/z (d,,)  indx/z (d
+
+,,) = indx/z(cid:0)d/(f )(cid:1).
+
+the index we are computing lies in ko2(z); it is the index of a family of complex skew-adjoint op-
+erators. but d/(f ) is a family of real skew-adjoint operators, so its index lies naturally in ko1(z).
+the index we seek in ko2(z) is thus the image of indx/z d/(f ) under the natural map
+
+(5.20)
+
+ko1(z)
+
+[1]
+
+ ko1(pt)  ko1(z) = ko2(z),
+
+where   ko(s1) is the mobius bundle. we are interested in the complex pfaan line bundle,
+which in this situation is the complexication of the real pfaan line bundle:
+
+(5.21)
+
+ko1(z)
+
+ypfa r
+
+h 1(z; z/2z)
+
+(5.20)
+ ko2(z)
+
+ypfa c
+
+
+
+ h 2(z; z)
+
+here  is the bockstein map. so we are reduced to demonstrating a well-known result: for any
+bering  : w  z of spin 1-manifolds and any oriented real vector bundle f   w ,
+
+(5.22)
+
+pfa r d/w/z (f ) = w2(f ).
+
+to check (5.22) it suces to take z = s1, so w = s1  s1. endow z with the bounding spin
+structure; then the left hand side of (5.22), evaluated on the fundamental class of z, is the image
+of indw/z d/(f ) under
+
+(5.23)
+
+z
+!
+
+: ko1(s1)  ko2(pt) = z/2z.
+
+by the multiplicative property of the direct imageessentially the thom isomorphism in ko-
+theorythis is w
+
+! (cid:0)[f ](cid:1) for
+
+w
+!
+
+: ko(w )  ko2(pt) = z/2z
+
+the direct image map. (by the index theorem [as2] this is the mod 2 index of the dirac operator
+on w coupled to the real vector bundle f .) since w bounds a spin manifold, we have w
+and so
+
+! (cid:0)[1](cid:1) = 0,
+
+w
+
+! (cid:0)[f ](cid:1) = w
+
+! (cid:0)[f   dim f ](cid:1).
+
+27
+
+now x = [f dim f ]  gko(w ) satises w1(x) = w1(f ) = 0, so is determined by w2(x) = w2(f ).
+
+we can arrange the support of x to be contained in a disk in w , and by excision it follows that
+! (x) = s 2
+w
+
+! (y) for y  gko(s2) with w2(y)[s2] = w2(x)[w ]. finally, the direct image map
+
+(5.24)
+
+s 2
+!
+
+: gko(s2)  ko2(pt) = z/2z
+
+is an isomorphism, and the generator of gko(s2) is a bundle with w2 6= 0.
+for the other proofs of proposition 5.8 we introduce the bered double x d  z, which is a
+family of closed oriented surfaces obtained by gluing x  x along the boundary x. also, the
+spin structure  on x/z and  on x/z glue to a spin structure  on x d/z via the isomorphism 
+in (5.2). a right-handed spinor eld on x d
+ /z can be identied with a pair (+, ): + is a
+right-handed spinor eld on x,  is a left-handed spinor eld on x, and + =  on x
+,,,g(t y ) (see (5.7)) may be identied11 with the chiral dirac
+using . so the operator d
+,g(t y ) on the double. note that x d/z has an orientation-reversing involution, but
+operator d+
+it does not lift to the spin bundle unless  =  and  is the identity.
+
+next, we rewrite the twisted boundary conditions (5.3) on the double, for simplicity on a single
+surface . then in the double d there is a collar neighborhood i    d of , where
+i  (1, 1). over that neighborhood we have a splitting t y = f  f , using the notation
+of (5.14). let  be the real line bundle on d obtained by identifying the trivial real line bundle
+on  with the trivial real line bundle on  via the isomorphism 1 on the collar region. then
+ is canonically trivial away from the collar, and there is a real vector bundle e  d which is
+canonically t y away from the collar and f  (  f ) on the collar. we identify d,,,g(t y )
+,g(e) on d; the line bundle  incorporates the sign in (5.3). therefore, the ratio (5.11)
+on  with d+
+for a family x  z of surfaces with boundary is
+
+(5.25)
+
+pfa c d+
+
+(cid:0)(  1)  f (cid:1)
+
+for the family of chiral dirac operators on the relative double x d  z. note that 1 is supported
+in the collar region i  x and is pulled back from the rst factor. we identify
+
+[  1]  ko(i, i)
+
+as the (hopf bundle) generator. also, up to isomorphism f  is pulled back from the second
+factor x:
+
+11the identication of the indices under gluing is discussed in a similar situation in [f3,2]. the gluing indicated
+here only gives continuous spinor elds on the double; it is nicer to glue along an open cylinder near the boundary,
+as in [df,iv]. we generalize and give more details in the second part of section 6.
+
+[f ] =(cid:2)()(cid:3)  ko(x).
+
+28
+
+second proof of proposition 5.8. by the excision property of the index, (5.25) is
+
+where
+
+pfa c (i,i)x/z
+
+!
+
+(cid:0)(  1)  [f ](cid:1),
+
+(i,i)x/z
+!
+
+: ko(cid:0)(i, i)  x(cid:1)  ko2(z)
+
+is the direct image map. this factors as
+
+!
+
+(cid:0)[  1](cid:1)  x/z
+
+!
+
+(5.26)
+
+(i,i)x/z
+!
+
+(cid:0)(  1)  [f ](cid:1) = (i,i)
+
+multiplication by [  1] is (5.20), and the computation of x/z
+
+(cid:0)[f ](cid:1)  ko1(pt)  ko1(z).
+(cid:0)[f ](cid:1) proceeds as in the rst
+third proof of proposition 5.8. assume rst that rank f  is even. write x = (  1)  f . then
+from the whitney sum formula we compute the stiefel-whitney classes of the virtual bundle x:
+
+proof. (see (5.22) and the argument which follows.)
+
+!
+
+w1(x) = w2(x) = w3(x) = 0,
+w4(x) = w1()  w3(f ).
+
+thus x is orientable and spinable, so by (3.6) the isomorphism class of the pfaan line bundle is a
+pushforward in cohomology:
+
+where
+
+x d/z
+
+
+
+c1 pfa d+
+
+
+
+ (x) = x d/z
+
+(cid:0)(x)(cid:1),
+: h 4(x d)  h 2(z)
+
+and  is the characteristic class of a spin bundle with 2 = p1. by excision, we compute on the
+tubular neighborhood (i, i)  x and extend to x d. we claim
+
+(5.27)
+
+(x) = (cid:0)w1()  w2(f )(cid:1)  h 4(cid:0)(i, i)  x(cid:1);
+
+then proposition 5.8 follows from (5.21) and the fact that the bockstein  commutes with push-
+forward. to prove the claim, we work in the universal situation where the bundle x = (  1)  f 
+lives over s1  bso. first, since    is trivial, it follows that (x) is torsion of order two.
+since all of the torsion in h (bso) has order two (see [bh,30]) it follows that (x) is deter-
+mined by its image in real cohomology, which vanishes, and its image in z/2z cohomology, which
+is w4(x) = w1()  w3(f ). the integral class in (5.27) is also torsion of order two and reduces
+mod 2 to w1()  w3(f ).
+
+29
+
+if rank f  is odd, we replace f  with f  plus a trivial line bundle and apply the previous. so
+ (  1) is trivial. this follows from excision and the
+
+we are reduced to proving that pfa d+
+factorization (5.26).
+
+we now prove proposition 5.9. notice that the ratio of bundles which appears in this proposition
+
+is (5.25).
+
+proof of proposition 5.9. the curvature (3.1) vanishes since virtual bundle (  1)  f  has rank
+zero and is at. to compute the holonomy (3.2) around a family of closed manifolds  : x  s1,
+we endow the base s1 with the bounding spin structure and induce a spin structure on x ; then
+the holonomy is the ratio of the  1/2-invariant of   f   x to the  1/2-invariant of f   x .
+(there is no adiabatic limit necessary since the connection is at.) by a real version of the at
+index theorem [aps2], the dierence of these bundles determines a class x  ko1(x ; z/2z),
+! (x)  ko4(pt; z/2z) = z/2z (see (3.3)). as in previous
+and the ratio of the holonomies is x
+arguments we use excision to localize the computation to (i, i)  x , where we write x as the
+product of [  1]  ko1(cid:0)(i, i); z/2z(cid:1) and [f ]  ko(x ). thus
+(cid:0)[f ](cid:1)  z/2z.
+
+(cid:0)[  1](cid:1)  x
+
+!
+
+! (x) = (i,i)
+x
+
+!
+
+the rst factor is 1 and the second is computed in (5.23)(5.24) to be ()w2()[x ], as desired.
+we proceed to the second step of the proof of theorem 5.5, which is the proof of proposi-
+ is trivializable geometrically, that is, as a bundle with metric
+
+tion 5.10. we demonstrate that l+
+and connection.
+
+proof of proposition 5.10. consider rst the case when  =  and  is the identity map. then
+
+the orientation-reversing involution of the double manifold lifts to the spin bundle. in this case
+we claim that each of the three factors in (4.2) is trivializable. first, consider a family of surfaces
+with boundary  : x  z and the associated family of doubles d : x d  z. the determinant and
+pfaan bundles are at since the curvature (3.1) is the integral over the bers of d of a dierential
+form which is invariant under the orientation-reversing involution on the double, so vanishes. next,
+we investigate the holonomy. consider a family of surfaces with boundary  : x  s1 and the
+associated double d : x d  s1. we endow s1 with the bounding spin structure and lift to a spin
+structure on x d. the holonomy of the rst factor of (4.2) is computed by a certain  1/2-invariant
+and that of each of the last two factors by a  -invariant. since x d is the spin double of x, we
+compute these invariants using (3.5). thus in each case the invariant is (1)(k
+2), where k is the
+number of components of x with a nontrivial index (or mod 2 index) of the appropriate boundary
+
+dirac operator. for the last factor the operator on any component of the boundary is the boundary
+of a family of operators on the disk, so the index vanishes. for the rst factor we note that the
+bundle ()(t y )  x is trivializable, since it is oriented and spin, and now since the base s1
+
+30
+
+bounds a disk the mod 2 index vanishes. a similar argument applies to the second factor: rewrite
+the determinant line bundle as a pfaan line bundle, as in (4.10).
+
+for general , ,  the result now follows from theorem 4.5.
+
+this completes the proofs of theorem 5.5 and theorem 5.6.
+
+the a- and b-fields
+
+6 additional remarks
+
+fields which are locally dierential forms often have a nontrivial global structure. this was
+explained a bit in 1; here we add a few details. mathematical foundations for the low degree case
+needed here are developed in [b], though we do not use that language.12 for a related exposition,
+see [def,6].
+
+we distinguish four types of p-form elds, two types with nontrivial global structure together
+
+with their eld strengths. for p small we can say what they are in familiar geometric language:
+
+(6.1)
+
+notation
+
+1
+2
+
+z
+
+0
+1
+
+p
+
+1
+
+2
+
+0
+
+1
+
+global description
+
+global p-form?
+
+connection on principal t-bundle
+
+curvature of connection
+
+section of principal t-bundle with connection
+
+covariant derivative of section
+
+no
+
+yes
+
+no
+
+yes
+
+a principal circle (t) bundle over a manifold m is a manifold p on which t acts freely with
+quotient m . the bundle p  m is classied topologically by its rst chern class in integral
+degree two cohomology. equivalently, we can view p as the set of unit vectors in a hermitian line
+bundle over m . a connection is an imaginary 1-form on p which satises some ane equationsit
+
+is not a dierential form on the base m . the notion that a 1-form in eld theory is often such
+a connection is quite familiar. the curvature is a closed 2-form on the base m whose periods
+are integer multiples of 2i. a section, or trivialization, of p is a map m  p which splits the
+projection p  m . equivalently, it is a unit norm section of the associated hermitian line bundle.
+in general such sections exist locally; the chern class of p is an obstruction to global existence.
+the covariant derivative of a section is the pullback of the connection form to m , a global 1-form
+
+which is not necessarily closed.
+
+12as remarked in the introduction, a non- cech mathematical theory adequate for all examples in string theory
+
+and m -theory is lacking.
+
+31
+
+the analog of the rst two lines in lower degree may also be stated in familiar terms:
+
+(6.2)
+
+notation
+
+0
+1
+
+z
+
+p
+
+0
+
+1
+
+global description
+
+global p-form?
+
+map to t
+
+log derivative of map
+
+no
+
+yes
+
+an object in the rst line is a map g : m  t. the corresponding eld strength d log g is a global
+closed 1-form on m whose periods are integer multiples of 2i. note that (6.2) is the special case
+of the last two lines of (6.1) when the circle bundle with connection is trivial and trivialized.
+
+the b-eld on spacetime y is an element of 2(y ). in other words, it is the p = 2 analog of the
+rst line of (6.1) and (6.2). topologically, it is classied by a characteristic class b  h 3(y ; z),
+analogous to the chern class of a circle bundle in integral h 2. geometrically, we describe b in
+terms of an open cover {ui} of y . on each open set ui there is a 2-form bi  2(yi), but on
+overlaps uij = ui  uj they do not necessarily agree. rather, there is a 1-form ij  1(uij) such
+that
+
+(6.3)
+
+bi  bj = dij
+
+on uij.
+
+similarly, on the triple intersection uijk = ui  uj  uk there is given a circle-valued function
+gijk : uijk  t such that
+
+(6.4)
+
+d log gijk = exp(cid:2)1(jk  ik + ij)(cid:3)
+
+on uijk.
+
+the gijk satisfy the cocycle relation
+
+(6.5)
+
+gjk g1
+
+ik gij g1
+
+ijk = 1
+
+on uijk.
+
+the b-eld is the triple b = {bi, ij, gijk}, which may be conveniently placed in a double complex:
+
+(6.6)
+
+2
+
+1
+
+0
+
+bi  0
+
+ij  0
+
+gijk  0
+uijk
+uijk
+
+uij
+
+ui
+
+32
+
+note dbi = dbj = h is a global 3-form which is closed with 2iz periods; it is the eld strength
+of the b-eld. the boxes around the three zeros in (6.6) are shorthand for equations (6.3)(6.5).
+the horizontal arrows denote the cech dierential and the vertical arrows denote plus or minus
+the de rham dierential d.
+
+in the bosonic string with a d-brane, the a-eld on the brane  : q  y is an element of 1(q),
+that is, a generalization of the third line of (6.1) to p = 1. however, it is related to the restriction of
+the b-eld to the brane in a specic way. namely, in terms of the restriction of the covering {ui}
+to q, we write a = {ai, hij} in the diagram:
+
+(6.7)
+
+2
+
+1
+
+0
+
+bi
+
+ai  ij
+
+hij  gijk
+uijk
+uij
+
+ui
+
+we impose equations at the two boxes. specically,
+
+(6.8)
+
+aj  ai  d log hij = ij
+ik hij = gijk
+
+hjk h1
+
+on uij,
+on uijk.
+
+we make two remarks about these equations. first, if b = 0 so that the right hand sides of (6.8)
+vanish, then {hij} are the transition functions of a circle bundle and {ai} patch to a connection
+on it. in other words, if b = 0 then the a-eld is a connection on a circle bundlean element
+of 1(q) as in the rst line of (6.1). this is the usual interpretation of the gauge eld on the
+brane. second, for general b-elds we can say that a is a trivialization of the restriction b,
+where the precise meaning of trivialization is (6.8). by analogy consider the case one degree
+
+lower, where b is a circle bundle with connection and a a trivialization. there are two possible
+meanings to trivialization in this context: topological and geometric. a topological trivialization
+corresponds to the second equation of (6.8) only. a geometric trivialization corresponds to imposing
+three equationsthe equations of (6.8) plus the equation dai = bi. the intermediate case of
+two equations which we use has no analog one degree lower. note that in our case the dierence
+dai  bi is a global 2-form which is not necessarily closed.
+it is the analog of the covariant
+derivative in the fourth line of (6.1). for b = 0 it is the curvature of the abelian gauge eld a.
+
+now we make contact with the discussion in 1. for the bosonic string the term (1.10) in
+the action is a well-dened number for each eld conguration. one degree down, where b is a
+connection on a circle bundle and a a trivialization of b, this term corresponds to the parallel
+transport along a path viewed as a number using the trivialization on the boundary. hence this part
+
+33
+
+of the action is well-dened as a functionnot a section of a line bundleso does not contribute
+to the anomaly.
+
+in the superstring what was explained in 1 is that since the rst factor in (1.11) is a section of
+a nontrivial line bundle (over the space of metrics on  and maps   y ), we must modify the
+global interpretation of the a-eld in order that the product of the last two factors be a section
+
+of the inverse line bundle with connection. in our present context we describe the modication as
+follows. first, the second stiefel-whitney class w2() of the normal bundle  to q in y determines
+a at bw2()  2(q), dened in (1.13). in terms of the open covering {ui} it can be written as
+
+3
+
+2
+
+1
+
+0
+
+0
+
+0  0
+
+0 
+
+ui
+
+uij
+
+0
+
+wijk 
+uijk
+
+0
+
+uijk
+
+where {wijk = 1} is a cech cocycle for w2(). then the a-eld is an isomorphism
+
+a : bw2()  b,
+
+where isomorphism is understood in the sense of equations (6.8), as explained above. in other
+words, a = {ai, hij} ts into a slight modication of (6.7):
+
+2
+
+1
+
+0
+
+bi
+
+ai  ij
+
+hij  gijk/wijk
+uij
+
+uijk
+
+ui
+
+with this a-eld (1.10) is no longer a function, but rather a section of a at line bundle with
+
+connection over the space of parameters. the holonomy of that bundle is computed by integrating
+w2() = w2() over the boundary of the surface mapping in, and this precisely cancels the line
+bundle with connection from the fermionic determinants (as computed in theorem 5.6). thus the
+product of terms in (1.11) is a section of a trivializable line bundle with connection: there is no
+anomaly.
+
+34
+
+the existence of an isomorphism in the sense of equations (6.8) is equivalent to the existence of
+
+a topological isomorphism, which only exists if
+
+(6.9)
+
+b = w3(),
+
+where b  h 3(y ; z) is the topological characteristic class of the b-eld and w3() is the third
+stiefel-whitney class of the normal bundle. equation (6.9), which is the same as (1.12), is a
+
+topological restriction on branes which may occur in a spacetime y with given b-eld.
+it was
+rst discovered in a nonperturbative setting in [w3]; the present paper derives (6.9) from the
+
+perturbative string.
+
+note in particular that if b = 0, then (6.9) asserts that  admits a spinc structure. in that case
+the a-eld, which trivializes bw2() in the sense we described here, is a spinc connection. (the
+reader should relate our cech description with other denitions of spinc connections.)
+
+dirac operators with local boundary conditions 13
+
+immediately following the rst proof of the index theorem on closed manifolds, atiyah, bott, and
+
+singer [ab] proved a topological index theorem for general elliptic operators with local boundary
+conditions. they observed that there is a topological obstruction to the existence of local boundary
+
+conditions, and that local boundary conditions, when they exist, lift the symbol class of the operator
+in k-theory to a relative class. it is in terms of this lifted class that one obtains a topological index
+formula. later, atiyah, patodi, and singer [aps1] introduced global boundary conditions for rst-
+
+order dirac operators, and these always exist. perhaps for that reason it is global, rather than
+local, boundary conditions which appear in most of the index theory literature. in this subsection
+we generalize the local boundary conditions discussed in 5 to dirac operators in arbitrary even
+dimensions, and then we indicate how geometric aspects of index theory may be treated by doubling.
+(doubling is a common technique in the theory of elliptic boundary-value problems in at space
+as well, and it is also the main technique in the atiyah-bott paper.) we only indicate a rough
+
+outline of the arguments; we have not carried through the details. for simplicity we deal only with
+complex dirac operators, though the discussion applies to real dirac operators as well.
+
+as an aside, we remark that generally in physics boundary conditions play at least two dierent
+roles. an object (such as a d-brane or the earths ocean) may have a boundary, at which one
+imposes local boundary conditions. the normal vector to such a boundary is ordinarily spacelike.
+
+on the other hand, an important physical and mathematical technique is to cut on a spacelike
+surface to reveal a quantum state. the normal vector to such a boundary is generally timelike if
+we work with lorentz signature, and otherwise spacelike. on such a cut, one uses global boundary
+
+conditions, similar to those used in index theory in factorization theorems, such as the one leading
+to (3.5).
+
+13we are indebted to xianzhe dai for discussions about the issues treated here.
+
+35
+
+consider an even-dimensional spinc manifold x with boundary. let s denote the spinor
+bundles on x. let  be the unit outward normal vector eld at the boundary. the cliord
+
+multiplication
+
+(6.10)
+
+c() : s+(cid:12)(cid:12)x s(cid:12)(cid:12)x
+
+is an isomorphism. suppose e  x are complex vector bundles (with connection) and we are
+given an isomorphism
+
+at the boundary. then the dirac operator
+
+ : e+(cid:12)(cid:12)x e(cid:12)(cid:12)x
+
+(6.11)
+
+dx : s+  e+  s  e  s  e+  s+  e
+
+admits the local boundary condition
+
+(6.12)
+
+(cid:0)c()  (cid:1)(cid:0)+(cid:12)(cid:12)x(cid:1) = (cid:12)(cid:12)x
+
+on a pair (+, ) of sections of (s+  e+, s  e). the boundary-value problems considered
+in section 5 are special cases. note that dierent spin (or spinc) structures on s+, s may be
+accommodated by tensoring e with a real (or complex) line bundle. we propose that this class of
+dirac operators has a good geometric index theory, analogous to that of dirac operators on closed
+
+manifolds.
+
+it is not hard to check that (6.12) denes elliptic boundary conditions (as described in [ab], for
+
+example). therefore, the dirac operator enjoys the same basic analytic properties as those of a
+dirac operator on a closed manifold: the spectrum is discrete, there is a meromorphic -function,
+etc. there is no problem carrying out geometric constructions, such as the determinant line bundle
+
+with metric and connection, in families of such operators. from such constructions one will obtain
+formulas for geometric invariants, such as curvature and holonomy of the determinant line bundle,
+
+directly on x. in the remainder of this section we indicate how to reduce these constructions to
+the closed case by doubling.
+
+we restrict to manifolds x whose riemannian metric is a product near the boundary. let
+x d denote the smooth closed riemannian manifold obtained by gluing x to x along x. we
+glue s+  x and s  x using (6.10) to obtain the plus spinor bundle s+
+x d  x d, and similarly
+glue e+  x to e  x to form a complex vector bundle e  x d (with connection). our goal
+is to precisely relate the boundary-value problem (6.11), (6.12) with the dirac operator d+
+x d(e) on
+the double. we adapt the gluing argument of [df,iv], which we summarize in figures 1 and 2.
+
+36
+
+c1
+
+ ,
++
+
+x
+
++
+
+
+c
+2
+
+
+
+d
+x
+
+
+
+c3
+
+
+
+figure 1: gluing spinor fields
+
+fl
+
+1
+
+0.5
+
+fr
+
+-1
+
+0
+
+1
+
+figure 2: cutoff functions
+
+let  denote the space of smooth sections, regarded as an inner product space using the l2 metric.
+the gures summarize a gluing map
+
+u : x(s+  e+  s  e)  x d(s+  e)  c3(s+  e),
+
+which for appropriate cuto functions is an isometry. the spinor elds (+, ) in the domain
+satisfy the boundary condition (6.12), and the spinor eld  on c3 satises
+
+where t is the axial coordinate on the cylinder. more explicitly, the gluing map on cylinders is
+
+(t = 1) = (t = 1),
+
+(t)(cid:19) =(cid:18) fl(t)
+(cid:18) (t)
+fr(t)
+
+fr(t)
+
+(t)(cid:19) ,
+fl(t)(cid:19)(cid:18) +(t)
+
+37
+
++,  on c1,  on c2,  on c3.
+
+the cuto functions fl, fr : [1, 1]  [0, 1] satisfy
+
+fl(cid:0)[1,1/2](cid:1) = fr(cid:0)[1/2, 1](cid:1) = 1
+
+f 2
+l + f 2
+
+r = 1
+
+fl(cid:0)[1/2, 1](cid:1) = fr(cid:0)[1,1/2](cid:1) = 0
+
+fl(x) = fr(x).
+
+the same gluing works in a family of operators; the result is an isometry of innite dimensional
+vector bundles of spinor elds.
+
+the claim is that the determinant line bundle for the dirac operator on c3 is canonically trivial,
+and so, after some more argument, in such a family the determinant line bundle (with its metric
+and connection) for the boundary-value problem on x is canonically isomorphic to the determinant
+line bundle for the closed manifold x d.
+
+so as not to rely on the details of this argument, which we may present elsewhere, in this paper
+we adapted the practical point of view of dening the metric and connection directly from the
+dirac operator on the double.
+
+references
+
+[a]
+[ab]
+
+j. f. adams, vector-elds on spheres, bull. amer. math. soc 68 (1962), 3941.
+m. f. atiyah, r. bott, the index problem for manifolds with boundary, dierential
+
+[aps1]
+
+[aps2]
+
+[as1]
+
+[as2]
+
+[b]
+
+[bf]
+
+[bw]
+
+[bh]
+
+analysis, bombay colloq., 1964, oxford univ. press, london, 1964, pp. 175186.
+m. f. atiyah, v. k. patodi, i. m. singer, spectral asymmetry and riemannian geometry.
+i, math. proc. cambridge philos. soc. 77 (1975), 4369.
+
+m. f. atiyah, v. k. patodi, i. m. singer, spectral asymmetry and riemannian geometry.
+iii, math. proc. cambridge philos. soc. 79 (1976), 7199.
+
+m. f. atiyah, i. m. singer, the index of elliptic operators iii, ann. of math. 87 (1968),
+546604.
+m. f. atiyah, i. m. singer, the index of elliptic operators v, ann. of math. 93 (1971),
+
+139149.
+j.-l. brylinski, loop spaces, characteristic classes and geometric quantization, progr.
+math., 107, birkhauser, boston, ma, 1993.
+
+j. m. bismut, d. s. freed, the analysis of elliptic families i: metrics and connections on
+determinant bundles, commun. math. phys. 106 (1986), 159176; ii: dirac operators,
+eta invariants, and the holonomy theorem of witten, commun. math. phys. 107 (1986),
+
+103163.
+b. booss-bavnbek, k. p. wojciechowski, elliptic boundary problems for dirac opera-
+
+tors, birkhauser, boston, 1993.
+a. borel, f. hirzebruch, characteristic classes and homogeneous spaces. ii, amer. j.
+math. 81 (1959), 315382.
+
+38
+
+[cy]
+
+[df]
+
+[dz]
+
+[def]
+
+[f1]
+
+[f2]
+
+[f3]
+
+[fm]
+
+[ghm]
+
+[h]
+
+[mm]
+
+[n]
+
+[p]
+
+[s]
+
+[w1]
+
+[w2]
+
+[w3]
+
+[w4]
+
+y.-k. e. cheung and z. yin,, anomalies, branes, and currents, nucl. phys. b517
+(1998), 185-196, hep-th/9803931.
+
+x. dai, d. s. freed, -invariants and determinant lines, j. math. phys. 35 (1994),
+51555194.
+x. dai, w. zhang, splitting of the family index, commun. math. phys. 182 (1996),
+
+303317.
+p. deligne, d. s. freed, classical eld theory, quantum fields and strings: a course
+for mathematicians (p. deligne, p. etingof, d. s. freed, l. c. jerey, d. kazhdan,
+
+j. w. morgan, d. r. morrison, e. witten, eds.), volume 1, american mathematical
+society, providence, ri, 1999, pp. 137225.
+
+d. s. freed, on determinant line bundles, mathematical aspects of string theory, ed.
+s. t. yau, world scientic publishing, 1987.
+d. s. freed, determinants, torsion, and strings, commun. math. phys 107 (1986),
+
+483513.
+d. s. freed, two index theorems in odd dimensions, commun. anal. geom. 6 (1998),
+317329, dg-ga/9601005.
+
+d. s. freed, j. w. morgan, appendix to [f2], commun. math. phys 107 (1986), 510
+513.
+m. green, j. a. harvey, and g. moore, i-brane inow and anomalous couplings on
+
+d-branes, class. quant. grav. 14 (1997), 47-52, hep-th/9605033.
+p. horava, type iia d-branes, k theory, and matrix theory, adv. theor. math.
+
+phys. 2 (1999), 13731404, hep-th/9812135.
+g. moore and r. minasian, k theory and ramond-ramond charge, jhep 9711:002,
+1997, hep-th/9710230.
+
+nicolaescu, l. i., generalized symplectic geometries and the index of families of elliptic
+problems, mem. amer. math. soc. 128 (1997), no. 609.
+p. piazza, determinant bundles, manifolds with boundary and surgery, commun. math.
+
+phys. 178 (1996), 597626; ii. spectral sections and surgery rules for anomalies, com-
+mun. math. phys. 193 (1998), 105124.
+a. sen, tachyon condensation on the brane antibrane system, jhep 9808:012, 1998,
+
+hep-th/9805170.
+e. witten, global gravitational anomalies, commun. math. phys. 100 (1985), 197229.
+
+e. witten, global anomalies in string theory, anomalies, geometry, and topology,
+edited by a. white, world scientic, 1985, pp. 6199.
+e. witten, baryons and branes in anti-de sitter space, jhep 9807:006, 1998, hep-
+
+th/9805112.
+e. witten, d-branes and k-theory, jhep 9812:025, 1998, hep-th/9810188.
+
+department of mathematics, university of texas, austin, tx 78712
+
+39
+
+e-mail address: dafr@math.utexas.edu
+
+institute for advanced study, olden lane, princeton nj, 08540
+
+e-mail address: witten@sns.ias.edu
+
+40
+
+

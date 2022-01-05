@@ -1,0 +1,1012 @@
+9
+9
+9
+1
+
+ 
+l
+u
+j
+ 
+
+8
+2
+
+ 
+ 
+
+1
+v
+8
+0
+2
+7
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+derivative expansion and soliton masses
+
+department of physics, university of connecticut, storrs ct 06269, usa
+
+gerald v. dunne
+
+we present a simple algorithm to implement the generalized derivative expansion introduced
+previously by l-h. chan, and apply it to the calculation of the one-loop mass correction to the
+classical soliton mass in the 1+1 dimensional jacobi model. we then show how this derivative
+expansion approach implies that the total (bosonic plus fermionic) mass correction in an n=1
+supersymmetric soliton model is determined solely by the asymptotic values (and derivatives) of
+the fermionic background potential. for a static soliton the total mass correction is m/(2), in
+agreement with recent analyses using phase-shift methods.
+
+the calculation of quantum corrections to classical soliton masses is a key ingredient in the semiclassical approach
+to quantum eld theory [1,2]. this question has been re-addressed recently [3,4] for 1 + 1 dimensions using topological
+boundary conditions and phase-shift methods. in this letter i compute the quantum mass correction for solitons
+in the recently introduced jacobi model [5], using a simple algorithm based on the derivative expansion [6,7]; and i
+apply this derivative expansion approach to the total mass correction in an n = 1 susy model in 1 + 1 dimensions.
+
+consider the following lagrangian for a real scalar eld  in 1+1 dimensions:
+
+we shall consider the examples:
+
+v () =
+
+l =
+
+1
+2
+
+()()  v ()
+
+m4
+
+m4
+
+ 1(cid:21)2
+8 (cid:20)(cid:16) 
+m (cid:17)2
+ h1  cos(cid:16)
+m (cid:17)i
+ sn2(cid:16)
+2m |(cid:17)
+
+2m4
+
+
+
+
+; 4model
+
+; sinegordon model
+
+; jacobi model
+
+the 4 and sine-gordon models are text-book cases [1], while the jacobi potential has recently been studied in the
+context of an exactly solvable model of quantum mechanical instantons [5]. since quantum mechanical instantons
+have the same functional form as solitons in 1+1 dimensions, some of the results of [5] carry over here. the function
+sn(z|) is one of the jacobi elliptic functions [8], and 0    1 is the (real) elliptic parameter. this parameter 
+controls the shape and period of the jacobi potential, as illustrated in figure 1. the jacobi model is a deformation
+of the sine-gordon model, reducing smoothly to sine-gordon as   0 [note that sn( 
+expansion in powers of h
+
+2| = 0) = sin( 
+m2 . with this understood, we can set m =  = 1 in our one-loop calculations.
+
+as is well known [1], the mass m and coupling  may be scaled out, so that the semiclassical loop expansion is an
+
+2 )].
+
+these models have classical static soliton/antisoliton solutions c(x) satisfying
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+for the potentials in (2) the classical solitons are
+
+c(x) = p2v (c(x))
+
+; 4model
+
+tanh( x
+2 )
+4 arctan(ex)
+2k() + 2 sn1(tanh(x))
+
+; sinegordon model
+
+; jacobi model
+
+c(x) =
+
+
+here k() =r /2
+as   1.
+
+0
+
+d/p1   sin2 , is the elliptic quarter period [8]. note that k(0) = /2, and k()  1
+
+2 log( 16
+1 )
+
+1
+
+v
+
+2
+
+-20
+
+-10
+
+10
+
+phi
+
+20
+
+fig. 1. the jacobi potential v () = 2 sn2( 
+
+2 |). the solid curve is for  = 0.99, while the dashed curve is for  = 0, which
+
+is just the sine-gordon case.
+
+the classical mass of the soliton is given, in units of m3
+
+ , by
+
+mclassical =zmin
+
+; 4model
+; sinegordon model
+
+2
+3
+8
+
+dp2v () =
+
+
+4 log(cid:16) 1+
+1(cid:17)
+
+; jacobi model
+
+(5)
+
+where the integration is between the two neighboring minima of v () between which the soliton interpolates.
+
+-10
+
+-5
+
+1
+
+-1
+
+5
+
+x
+
+10
+
+fig. 2. the bosonic uctuation potential v (c(x)) for the jacobi model. the solid curve is for  = 0, which is the same
+as the sine-gordon case. the dashed curve is for  = 0.6, and the dotted curve is for  = 0.99. when  6= 0, this uctuation
+potential is not of the solvable poschl-teller form.
+
+in units of m, the one-loop quantum correction to this classical soliton mass is
+
+m =
+
+1
+
+2z d
+
+2
+
+tr log(cid:20)2 
+
+d2
+
+dx2 + v (c(x))(cid:21)
+
+(6)
+
+this expression must be suitably renormalized, but once this is done m is a pure number. here v (c(x)) means
+d2
+d2 v (c(x)). for the cases listed above, the bosonic uctuation potential v (c(x)) is
+
+v (c(x)) =
+
+
+; 4model
+; sinegordon model
+
+2 sech2( x
+1  3
+2 )
+1  2 sech2(x)
+(1  )(cid:16) 1+2(1)tanh2(x)+ tanh4(x)
+
+(1 tanh2(x))2
+
+(cid:17)
+
+; jacobi model
+
+(7)
+
+for the 4 and sine-gordon cases, the uctuation potentials in (7) are of the exactly solvable poschl-teller form,
+which means that the quantum mass correction in (6) can be computed exactly. the uctuation potential for the
+
+2
+
+jacobi model is shown in figure 2; its spectral properties are not known exactly, and so we need an approximate
+method to compute the mass correction (6). here we use the derivative expansion [6,7].
+
+to implement the derivative expansion we rst note that v (c(x))  1 as x  , for the uctuation potentials
+appearing in (6). moreover, this background value of 1 (equal to m2 with mass scales reinstated) is approached
+exponentially fast. so it is more natural to expand in terms of the dierence
+
+and its x derivatives. this leads to a generalized derivative expansion [7] in which (6) is rewritten and expanded as
+
+w (x) = v (c(x))  1
+
+(8)
+
+d
+2
+
+2 tr 
+
+1
+2 + 1  d2
+
+dx2 + w (x)!
+
+m [w ] = z 
+=z 
+
+
+d
+2
+
+
+
+2 z
+
+3
+
+2 a(z, w ]
+
+(9)
+
+where z  1/(2 + 1). in the derivative expansion approach [6,7], the expression (9) is renormalized by dropping a
+divergent term that is independent of w (this cancels in taking the dierence with the w = 0 case), and a divergent
+term linear in w (this corresponds to making the bosonic tadpole graph vanish, as in [3,4]). then a(z, w ] is dened
+by the expansion
+
+where the expansion coecients an[w ] are functionals of w (x), the rst few of which are [7]:
+
+a(z, w ] = 
+
+1
+2
+
+z
+
+
+
+xn=0
+
+zn an[w ]
+
+(10)
+
+(11)
+
+a0[w ] =
+
+a1[w ] = 
+7
+
+a2[w ] =
+
+a3[w ] = 
+
+3
+
+w 2 dx
+
+
+5
+
+8z 
+32z 
+(cid:8)2w 3 + (w )2(cid:9) dx
+128z 
+(cid:8)5w 4 + 10w (w )2 + (w )2(cid:9) dx
+512z 
+(cid:8)14w 5 + 70w 2(w )2 + 14w (w )2 + (w )2(cid:9) dx
+
+9
+
+given the expansion (10) for a(z, w ], the  integrals in (9) can be performed to yield a simple formula for the soliton
+mass correction:
+
+m [w ] = 
+
+1
+8
+
+
+
+xn=0
+
+(n + 1)
+(n + 5/2)
+
+an[w ]
+
+(12)
+
+thus, the derivative expansion computation of the soliton mass correction reduces to the calculation of the an[w ] in
+(11) for the given w (x) in (8). we stress again that each of these an[w ] is a pure number [12].
+
+the functionals an[w ] can be obtained by a direct expansion of the resolvent in (9), as in [7]. however, it is
+easier computationally to note that these functionals have simple recurrence relations (these functionals also arise in
+asymptotic and wkb expansions of discriminants [9,10], and in zeta function analysis [11]). in fact,
+
+an[w ] = (1)n+1(2n + 3) z 
+
+
+
+r2n+4(x) dx
+
+(13)
+
+where the functions rn(x) are dened by the following recurrence relation:
+
+3
+
+r0(x) = 1 ,
+
+r1(x) = 0 ,
+
+r2(x) = 
+
+1
+2
+
+w (x)
+
+,
+
+rn(x) =
+
+i
+2
+
+rn1(x) 
+
+1
+2
+
+n1
+
+xj=1
+
+rj (x) rnj (x)
+
+, n  3
+
+(14)
+
+this algorithm for generating the r2n+4(x) functions is simple to implement using, for example, mathematica or
+maple. furthermore, all the integrals in (13) can be performed analytically for each of the three soliton models listed
+in (2).
+
+so far, this algorithm could be applied to any suitable potential w (x) in (9), with w (x)  0 suciently quickly
+as x  . if the background is that of a soliton c(x) satisfying (3), so that w (x) is given by (8), it is more
+convenient to change variables in the integration in (13) from x to c, using (3). for example:
+
+a0[w ] =
+
+d
+
+w 2
+
+3
+
+5
+
+8zmin
+32zmin
+128zmin
+512zmin
+
+9
+
+a1[w ] = 
+7
+
+a2[w ] =
+
+a3[w ] = 
+
+d
+
+d
+
+p2v ()
+p2v () n2w 3 + 2v (v (3))2o
+p2v () n5w 4 + 20w v (v (3))2 + (v v (3) + 2v v (4))2o
+p2v () n14w 5 + 140w 2v (v (3))2 + 14w (v v (3) + 2v v (4))2
+
++2v (v v (3) + 3v v (4) + 2v v (5))2o
+
+d
+
+(15)
+
+these modied expressions for an[w ] are straightforward to generate, either by converting the expressions in (11), or
+by a new recurrence relation based on (14). in (15), both v and w = v   1 are treated as functions of , and the
+integration is between the neighboring minima of v () between which the soliton interpolates, just as in the standard
+calculation (5) of the classical mass. the advantages of this form (15) are : (i) the only input is the original potential
+v (); (ii) the integrals are easier than those in (11); (iii) it organizes the expansion (12) as a derivative expansion, as
+each an in (15) involves only terms with (2n + 4) derivatives of v with respect to .
+
+the derivative expansion calculation of the soliton mass correction (12) can now be programmed as a simple
+algorithm: generate the expressions in (11) or (15) using recursion relations, do the integrals, and then insert the an
+into (12). we rst test this algorithm on the well-known solvable cases. for the sine-gordon model one nds asg
+n = 2
+for all n, conrming a result in [7]. then, using our formula (12), we immediately obtain the standard result [1,2]
+
+m sg = 
+
+1
+4
+
+
+
+xn=0
+
+(n + 1)
+(n + 5/2)
+
+1
+
+
+= 
+
+(16)
+
+for the 4 model, one nds a4
+standard result [1,2]
+
+n = 2 + (1/4)n+1 for all n, again conrming a result in [7]. then, from (12) we nd the
+
+m 4
+
+1
+ 
+
+1
+
+32
+
+= 
+
+
+
+xn=0
+
+(n + 1)
+
+4n(n + 5/2)
+
+=
+
+1
+43 
+
+3
+2
+
+(17)
+
+one can speed up the convergence of the derivative expansion by separating out the contribution from the zero mode
+of the uctuation potential [7]. this is achieved by writing a(z, w ] = (a(z, w ] + 1
+2 in (9) and (10), which
+separates out a  1
+
+ term, so that the mass correction (12) becomes
+
+2 )  1
+
+m [w ] = 
+
+1
+ 
+
+1
+8
+
+
+
+xn=0
+
+(n + 1)
+
+(n + 5/2)
+
+(an[w ]  2)
+
+(18)
+
+in this form (18), already the leading (n = 0) derivative expansion term gives the exact answer for the sine-gordon
+case. for the 4 model, the leading term gives 10% accuracy, the rst correction gives better than 2% accuracy, two
+
+4
+
+corrections give 0.3% accuracy, and three corrections give 0.05% accuracy. this is impressive accuracy, especially
+considering a0, . . . , a3 can easily be calculated analytically.
+
+for the jacobi model there does not appear to be a simple closed formula for the an. this is presumably a reection
+of the fact that in this case, unlike in the 4 and sine-gordon cases, v (c(x)) is not an exactly solvable potential.
+nevertheless, we can compute various orders an of the derivative expansion expression with ease:
+
+alame
+0
+
+= 
+
+alame
+1
+
+=
+
+alame
+2
+
+=
+
+alame
+3
+
+= 
+
+1
+
+1
+
+3
+
+1283/2 (cid:20)2(5  38 + 52)  (5 + 3 + 32 + 53) log(cid:18) 1 + 
+1  (cid:19)(cid:21)
+122885/2 (cid:2)2(1785 + 520  117462 + 5203 + 17854)
++15(119  5 + 142 + 143  54 + 1195) log(cid:18) 1 + 
+1  (cid:19)(cid:21)
+39321607/2 (cid:2)2(1323945  683970 + 1468392  38005723 + 1468394  6839705 + 13239456)
++105(12609  10717 + 24492 + 7793 + 7794 + 24495  107176 + 126097) log(cid:18) 1 + 
+1  (cid:19)(cid:21)
+5872025609/2(cid:2)2(258321525  355550860 + 1433279402  6813323
+1945575544  6813325 + 1433279406  3555508607 + 2583215258)
+105(2460205 4206267 + 22750762  2750523  245864  245865
+2750526 + 22750767  42062678 + 24602059) log(cid:18) 1 + 
+1  (cid:19)(cid:21)
+
+3
+
+(19)
+
+notice the appearance of the classical soliton mass
+correction.
+
+4 log(cid:16) 1+
+
+1(cid:17) in these expressions for the one-loop quantum
+
+figure 3 shows the successive derivative expansion approximations to the quantum mass correction, as a function
+of the elliptic parameter . the expansion appears to be convergent for each . furthermore, a nontrivial test of the
+results in (19) is that they must reduce to the sine-gordon results as   0. indeed, from (19) we verify that for
+each n
+
+alame
+n  2 as
+
+  0
+
+(20)
+
+on the other hand, as   1 the quantum mass correction diverges, just as does the classical jacobi soliton mass in
+(5). this singular behavior is due to the fact that as   1 the period of the jacobi potential diverges logarithmically,
+so neighboring vacua become innitely separated, and the asymptotic limits of the classical soliton c(x) in (4) diverge.
+
+we now consider the n = 1 supersymmetric extension of the bosonic soliton model (1). consider
+
+lsusy =
+where  is a majorana fermion and
+
+1
+2
+
+()() 
+
+1
+2
+
+u 2() +
+
+i
+2
+
+/ 
+
+1
+2
+
+u() 
+
+(21)
+
+(22)
+
+the bosonic potential is v () = 1
+
+2 u 2(), solitons are given by d
+vf () = u()
+
+dx c = u (c(x)), and the boson-fermion coupling is
+(23)
+
+u () =
+
+
+1
+
+2(cid:0)2  1(cid:1)
+2 sin( 
+2 )
+2|(cid:17)
+2 sn(cid:16) 
+
+; 4model
+; sinegordon model
+
+; jacobi model
+
+5
+
+m
+
+-0.35
+
+-0.4
+
+-0.45
+
+0.2
+
+0.4
+
+0.6
+
+0.8
+
+nu
+
+1
+
+fig. 3. the successive derivative expansion approximations for the quantum mass correction in (18) for the jacobi model,
+using the coecients an in (19), plotted as a function of the elliptic modular parameter . the dashed curve is the leading
+(n = 0) contribution, the dotted curve includes the rst two terms, while the solid curve includes the rst three terms, and is
+indistinguishable on this scale from that with the rst four terms. the solid horizontal line is the sine-gordon mass correction
+m sg =  1
+
+ , to which the jacobi model reduces when  = 0.
+
+the fermionic contribution to the one-loop soliton mass correction is
+
+mf = i tr log [i/  vf (c(x))]
+1
+2 {m [w+] + m [w]}
+
+= 
+
+where m [w ] is the bosonic mass correction in (9) and
+
+w(x)  [vf (c(x))]2 
+
+d
+dx
+
+vf (c(x))  1
+
+but with the susy coupling (23), w(x) is equal to the bosonic potential w (x):
+
+w(x) = w (x) 
+
+d2
+d2 v (c(x))  1
+
+thus the total one-loop mass correction, including both bosonic and fermionic contributions, is
+
+mtotal =
+
+1
+2 {m [w]  m [w+]}
+
+(24)
+
+(25)
+
+(26)
+
+(27)
+
+that is, the net mass correction is (half) the dierence of two bosonic mass corrections, for w(x) respectively.
+now notice the remarkable fact that if we compute this dierence using the derivative expansion (12), then term
+by term each of the functionals an[w] an[w+] obtained from (11) is an integral of a total derivative. for example,
+
+a0[w]  a0[w+] =
+
+a1[w]  a1[w+] = 
+7
+
+a2[w]  a2[w+] =
+
+a3[w]  a3[w+] = 
+
+3
+
+d
+
+d
+
+d
+
+4
+3
+
+
+
+10
+3
+
+
+5
+
+12
+5
+40
+7
+
+8z 
+32z 
+128z 
+512z 
+
+(1  v 2
+
+dx(cid:8)3vf  v 3
+f(cid:9) dx
+dx(cid:26)5vf +
+dx(cid:26)7vf  7v 3
+dx(cid:26)9vf + 12v 3
+f 
+vf (1  v 2
+
+f  v 5
+v 3
+21
+5
+
+f )(v f )2v f +
+
+36
+5
+
+18
+5
+
+f +
+
+140
+
+d
+
++
+
+
+
+9
+
+9
+
+f 
+
+5
+3
+
+vf (v f )2(cid:27) dx
+f + 7(vf  v 3
+
+f  v 7
+v 5
+54
+5
+
+v 5
+f +
+
+36
+7
+
+f )(v f )2 +
+
+f )(v f )2 
+
+v f (v f )2 
+
+7
+5
+
+f  v 9
+v 7
+18
+(v f )3 
+35
+
+f  18vf (1  v 2
+
+54
+35
+
+v f v f v f 
+
+7
+10
+
+vf (v f )2(cid:27) dx
+f )2(v f )2  9vf (v f )4
+vf (v f )2(cid:27) dx
+
+9
+35
+
+(28)
+
+6
+
+in (28), v f means d
+matica or maple.
+
+dx vf (c(x)). it is straightforward to generate these expressions to a desired order using mathe-
+
+due to this dramatic simplication, the dierences an[w] an[w+] are determined solely by the asymptotic values
+(at x = ) of vf (x) and its x derivatives. but for a solitonic background, vf (c(x)) approaches 1 exponentially
+fast, so
+
+for example, these conditions are clearly satised for the 4, sine-gordon and jacobi models,
+
+vf (c(x)) = 1 at x = 
+v (n)
+f (c(x)) = 0 at x =  , n  1
+
+(29)
+
+(30)
+
+vf (c(x)) =
+
+
+tanh( x
+2 )
+tanh(x)
+(1) tanh(x)
+1 tanh2(x)
+
+; 4model
+; sinegordon model
+
+; jacobi model
+
+inserting the asymptotic conditions (29) into (28), the derivatives of vf do not contribute, and we discover that the
+dierences are independent of n:
+
+thus, combining the derivative expansion formula (12) with the expression (27) for the total mass correction, we nd
+(in units of m)
+
+an[w]  an[w+] = 2
+
+,
+
+for all n
+
+(31)
+
+mtotal = 
+
+1
+8
+
+
+
+xn=0
+
+(n + 1)
+(n + 5/2)
+
+1
+2
+
+= 
+
+(32)
+
+this is in agreement with recent analyses [3,4] using topological boundary conditions and phase shift methods. we
+note that in the derivative expansion approach, this result is quite general, relying only on the asymptotic values of
+vf (c(x)) and its x derivatives.
+
+this work has been supported in part by the u.s. department of energy grant de-fg02-92er40716.00.
+
+[1] r. rajaraman, solitons and instantons (north holland, amsterdam, 1987).
+[2] c. rebbi and g. soliani, solitons and particles, (world scientic, singapore, 1984).
+[3] h. nastase, m. stephanov, p. van nieuwenhuizen and a. rebhan, topological boundary conditions, the bps bound, and
+
+elimination of ambiguities in the quantum mass of solitons, nucl. phys. b 542, 471 (1999).
+
+[4] n. graham and r. l. jae, unambiguous one loop quantum energies of (1+1)-dimensional bosonic eld congurations,
+phys. lett. b 435, 145 (1998), energy, central charge, and the bps bound for 1+1 dimensional supersymmetric solitons,
+nucl. phys. b 544, 432 (1999), fermionic one-loop corrections to soliton energies in 1+1 dimensions, nucl. phys. b 549,
+516 (1999).
+
+[5] g. dunne and k. rao, lame instantons, hep-th/9906113.
+[6] i. j. r. aitchison and c. m. fraser, derivative expansions of fermion determinants: anomaly-induced vertices, goldstone-
+
+wilczek currents, and skyrme terms, phys. rev. d 31, 2605 (1985).
+
+[7] l-h. chan, eective action expansion in perturbation theory, phys. rev. lett. 54, 1222 (1985), (erratum) 56, 404
+(1986), generalized derivative expansion and one-loop corrections to the vacuum energy of static background elds,
+phys. rev. d 55, 6223 (1997).
+
+[8] e. whittaker and g. watson, a course of modern analysis (cambridge, 1927).
+[9] h. w. braden, mass corrections to periodic solitons, j. math. phys. 24, 929 (1987).
+
+7
+
+[10] c. m. bender, g. dunne and p. meisinger, complex periodic potentials with real band spectra, phys. lett. a 252, 272
+
+(1999).
+
+[11] r. v. konoplich, calculation of quantum corrections to nontrivial classical solutions by means of the zeta function,
+
+theor. math. phys. 73, 1286 (1987).
+
+[12] this is in contrast to the case of the derivative expansion for the qed eective action in an inhomogeneous background
+eld, which yields a (typically divergent) series in powers of the inhomogeneity scale; see for example: g. dunne and
+t. hall, borel summation of the derivative expansion and eective actions, hep-th/9902064, phys. rev. d in press.
+here, the uctuation potentials (7) contain no scale, so the determinant gives a number, not a series.
+
+8
+
+

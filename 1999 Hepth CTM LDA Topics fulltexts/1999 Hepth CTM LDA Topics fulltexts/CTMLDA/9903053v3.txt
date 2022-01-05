@@ -1,0 +1,5222 @@
+hep-th/9903053
+
+iassns-hep99/26
+
+9
+9
+9
+1
+
+ 
+r
+a
+
+m
+9
+
+ 
+
+ 
+ 
+
+3
+v
+3
+5
+0
+3
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+local mirror symmetry:
+
+calculations and interpretations
+
+t.-m. chiang, a. klemm, s.-t. yau, and e. zaslow
+
+department of mathematics, harvard university, cambridge, ma 02138, usa
+
+school of natural sciences, ias, olden lane, princeton, nj 08540, usa
+
+department of mathematics, northwestern university, evanston, il 60208, usa
+
+abstract
+
+we describe local mirror symmetry from a mathematical point of view and make sev-
+
+eral a-model calculations using the mirror principle (localization). our results agree with
+
+b-model computations from solutions of picard-fuchs dierential equations constructed
+
+form the local geometry near a fano surface within a calabi-yau manifold. we interpret
+
+the gromov-witten-type numbers from an enumerative point of view. we also describe
+
+the geometry of singular surfaces and show how the local invariants of singular surfaces
+
+agree with the smooth cases when they occur as complete intersections.
+
+ email: chi@math.harvard.edu, yau@math.harvard.edu
+ email: klemm@ias.edu
+ email: zaslow@math.nwu.edu
+
+table of contents
+
+1. introduction
+
+2. overview of the a-model
+
+2.1 o(5)  p4
+
+2.2 o(3)  p2
+
+3. the mirror principle for general toric manifolds
+
+3.1 fixed points and a gluing identity
+
+3.2 the spaces m ~d and n ~d
+
+3.3 euler data
+
+3.4 linked euler data
+
+4. explicit verication through fixed-point methods
+
+4.1 some examples
+
+4.2 general procedure for xed-point computations
+
+5. virtual class and the excess intersection formula
+
+5.1 rational curves on the quintic threefold
+
+5.2 calabi-yau threefolds containing an algebraic surface
+
+5.3 singular geometries
+
+6. local mirror symmetry: the b-model
+
+6.1 periods and dierential equations for global mirror symmetry
+
+6.2 the limit of the large elliptic ber
+
+6.3 local mirror symmetry for the canonical line bundle of a torically described surface
+
+6.4 fibered an cases and more general toric grid diagrams
+
+6.5 cases with constraints
+
+7. discussion
+
+8. appendix: a-model examples
+
+8.1 o(4)  p3
+
+8.2 o(3)  p2
+
+8.3 kfn
+
+1
+
+1. introduction
+
+local mirror symmetry refers to a specialization of mirror symmetry techniques
+
+to address the geometry of fano surfaces within calabi-yau manifolds. the procedure
+
+produces certain invariants associated to the surfaces. this paper is concerned with
+
+the proper denition and interpretation of these invariants. the techniques we develop
+
+are a synthesis of results of previous works (see [1], [2], [3], [4], [5]), with several new
+
+constructions. we have not found a cohesive explanation of local mirror symmetry in the
+
+literature. we oer this description in the hope that it will add to our understanding
+
+of the subject and perhaps help to advance local mirror symmetry towards higher genus
+
+computations.
+
+mirror symmetry, or the calculation of gromov-witten invariants in calabi-yau three-
+folds,1 can now be approached in the traditional (b-model) way or by using localization
+
+techniques. the traditional approach involves solving the picard-fuchs equations gov-
+
+erning the behavior of period integrals of a calabi-yau manifold under deformations of
+
+complex structure, and converting the coecients of the solutions near a point of maximal
+
+monodromy into gromov-witten invariants of the mirror manifold. localization tech-
+
+niques, rst developed by kontsevich [6] and then improved by others [7][8], oer a proof
+
+ without reference to a mirror manifold  that the numbers one obtains in this way are
+
+indeed the gromov-witten invariants as dened via the moduli space of maps.
+
+likewise, local mirror symmetry has these two approaches. one nds that the mirror
+
+geometry is a riemann surface with a meromorphic dierential. from this one is able
+
+to derive dierential equations which yield the appropriate numerical invariants. recall
+
+the geometry. we wish to study a neighborhood of a surface s in a calabi-yau threefold
+
+x, then take a limit where this surface shrinks to zero size. in the rst papers on the
+
+subject, these equations were derived by rst nding a calabi-yau manifold containing the
+
+surface, then nding its mirror and specializing the picard-fuchs equations by taking
+
+an appropriate limit corresponding to the local geometry. learning from this work, one is
+
+now able to write down the dierential equations directly from the geometry of the surface
+
+(if it is toric). we use this method to perform our b-model calculations.
+
+we employ a localization approach developed in [8] for computing the gromov-witten-
+
+type invariants directly (the a-model). since the adjunction formula and the calabi-yau
+
+1 we restrict the term mirror symmetry to mean an equivalence of quantum rings, rather
+
+than the more physical interpretation as an isomorphism of conformal eld theories.
+
+2
+
+condition of x tell us that the normal bundle of the surface is equal to the canonical bundle
+
+(in the smooth case), the local geometry is intrinsic to the surface. we dene the gromov-
+
+witten-type invariants directly from ks, following [7] [8]. we require s to be fano (this
+should be related to the condition that s be able to vanish in x), which makes the bundle
+
+ks concave, thus allowing us to construct cohomology classes on moduli space of maps.
+we consider the numbers constructed in this way to be of gromov-witten type.
+
+in section two, we review the mirror principle and apply it to the calculation of
+
+invariants for several surfaces. in section three, we give the general procedure for toric
+
+varieties. we then calculate the invariants by hand for a few cases, as a way of checking
+
+and illucidating the procedure. in section ve, we describe the excess intersection formula
+
+and show that the local invariants simply account for the eective contribution to the
+
+number of curves in a calabi-yau manifold due to the presence of a holomorphic surface.
+
+in section six, we develop all the machinery for performing b-model calculations with-
+
+out resorting to a specialization of period equations from a compact calabi-yau threefold
+
+containing the relevant local geometry. actually, a natural weierstrass compactication
+
+exists for toric fano geometries, and its decompactication (the limit of large elliptic ber)
+
+produces expressions intrinsic to the surface. in this sense, the end result makes no use of
+
+compact data. the procedure closely resembles the compact b-model technique of solving
+
+dierential equations and taking combinations of solutions with dierent singular behav-
+
+iors to produce a prepotential containing enumerative invariants as coecients. many
+
+examples are included.
+
+in order to accommodate readers with either mathematical or physical backgrounds,
+
+we have tried to be reasonably self-contained and have included several examples written
+
+out in considerable detail. algebraic geometers may nd these sections tedious, and may
+
+content themselves with the more general sections (e.g., 3, 4.2, 6.3). physicists wishing
+
+to get a feel for the mathematics of a-model computations may choose to focus on the
+
+examples of section 4.1.
+
+2. overview of the a-model
+
+in this section, we review the techniques for calculating invariants using localization.
+
+we will derive the numbers and speak loosely about their interpretation, leaving more
+
+rigorous explanations and interpretations for later sections.
+
+3
+
+for smooth hypersurfaces in toric varieties, we dene the gromov-witten invariants
+
+to be chern classes of certain bundles over the moduli space of maps, dened as follows.
+let m0,0( ~d; p) be kontsevichs moduli space of stable maps of genus zero with no marked
+points. a point in this space will be denoted (c, f ), where f : c  p, p is some toric
+variety, and [f (c)] = ~d  h2(p). let m0,1( ~d; p) be the same but with one marked point.
+consider the diagram
+
+m0,0( ~d; p)  m0,1( ~d; p)  p,
+
+where p is the toric variety in question,
+
+ev : m0,1( ~d; p)  p
+
+is the evaluation map sending (c, f, ) 7 f (), and
+
+ : m0,1( ~d; p)  m0,0( ~d; p)
+
+is the forgetting map sending (c, f, ) 7 (c, f ). let q be a calabi-yau dened as the zero
+locus of sections of a convex2 bundle v over p. then u ~d is the bundle over m0,0( ~d; p)
+dened by
+
+u ~d = evv.
+
+the bers of u ~d over (c, f ) are h 0(c, f v ). we dene the kontsevich numbers kd by
+
+kd zm0,0( ~d;p)
+
+c(u ~d).
+
+it is most desirable when dim m0,0( ~d; p) = ranku ~d, so that kd is the top chern class.
+
+the mirror principle is a procedure for evaluating the numbers kd by a fancy version
+of localization. the idea, pursued in the next section, is as follows. when all spaces and
+
+bundles are torically described, the moduli spaces and the bundles we construct over them
+
+inherit torus actions (e.g., by moving the image curve). thus, the integrals we dene can
+
+be localized to the xed point loci. as we shall see in the next section, the multiplicativity
+
+of the characteristic classes we compute implies relations among their restrictions to the
+
+xed loci. the reason for this is that the xed loci of degree  maps includes stable
+
+curves constructed by gluing degree  and  maps, with  +  = . one then constructs
+
+2 convex means that h 1(c, f v ) = 0 for (c, f )  m0,0( ~d; p). for the simplest example,
+
+p = p4 and v = o(5), as in the next subsection.
+
+4
+
+an equivariant map to a linear sigma model, which is an easily described toric space.
+
+indeed, the linear sigma model is another compactication of the smooth stable maps,
+
+which can be modeled as polynomial maps. we then push/pull our problem to this linear
+
+sigma model, where the same gluing relations are found to hold. the notion of euler
+
+data is any set of characteristic classes on the linear sigma model obeying these relations.
+
+they are not strong enough to uniquely determine the classes, but as the equivariant
+
+cohomology can be modeled as polynomials, two sets of euler data which agree upon
+
+restriction to enough points may be thought of as equivalent (linked euler data). it is
+
+not dicult to construct euler data linked to the euler data of the characteristic classes in
+
+which we are interested. relating the linked euler data, and therefore solving the problem
+
+in terms of simply-constructed polynomial classes, is done via a mirror transform, which
+
+involves hypergeometric series familiar to b-model computations. however, no b-model
+
+constructions are used. these polynomial classes can easily be integrated, the answers
+
+then related to the numbers in which we are interested by the mirror transform. this
+
+procedure is used to evaluate the examples in this section which follow, as well as all other
+
+a-model calculations.
+
+using the techniques of the mirror principle, we are able to build euler data from many
+
+linked euler data for the bundle u ~d whose bers over a point (f, c) in m0,0(d; pn) is a
+
+bundles over toric varieties. typically, we have a direct sum of li o(li) and lj o(kj)
+over pn, with li, kj > 0. in such a case, if pi li +pj kj = n + 1 then we can obtain
+direct sum of li h 0(c, f o(li)) and lj h 1(c, f o(kj)). in this situation, the rank of
+the bundle (which is pi(dli + 1) +pj(dkj  1)) may be greater than the dimension d
+
+of m0,0(d; pn) (which is d  (n + 1)(d + 1)  4). in that case, we compute the integral
+over moduli space of the chern class cd(u ~d). the interpretations will be discussed in the
+examples.
+
+we begin with a convex bundle.
+
+2.1. o(5)  p4
+
+recall that this is the classic mirror symmetry calculation. we compute this by using
+j=1(5h  m) as the rank of ud equals the dimension of moduli
+space, we take the top chern class of the bundle and call this kd. this has the standard
+interpretation: given a generic section with isolated zeros, the chern class counts the
+
+the euler data pd = q5d
+
+number of zeros. if we take as a section the pull back of a quintic polynomial (which is a
+
+global section of o(5)), then its zeros will be curves (c, f ) on which the section vanishes
+
+5
+
+identically. as the section vanishes along a calabi-yau quintic threefold, the curve must
+
+be mapped (with degree d) into the quintic  thus we have the interpretation as number
+
+of rational curves. however, the contribution of curves of degree d/k, when k divides d, is
+
+also non-zero. in this case, we can compose any kfold cover of the curve c with a map f
+
+of degree d/k into the quintic. this contribution is often called the excess intersection.
+
+to calculate the contribution to the chern class, we must look at how this space of kfold
+covers of c (which, as c = p1 in the smooth case, is equal to m0,0(k, p1)) sits in the
+moduli space (i.e. look at its normal bundle). this calculation yields 1/k3, and so if nd is
+
+the number of rational curves of degree d in the quintic, we actually count
+
+nd/k
+k3 .
+
+kd =xk|d
+
+(2.1)
+
+this double cover formula will be discussed in detail in section 5.1.
+
+in the appendix, several examples of other bundles over projective spaces are worked
+
+out. in the cases where the rank of ud is greater (by n) than the dimension of moduli
+
+space, we take the highest chern class that we can integate. the resulting numbers count
+
+the number of zeros of s0  ...  sn, i.e. the places where n + 1 generic sections gain linear
+
+dependencies. a zero of s0  ...  sn represents a point (c, f ) in moduli space where f (c)
+
+vanishes somewhere in the n-dimensional linear system of s0, ..., sn. see the appendix for
+
+details. we turn now to the study of some concave bundles.
+
+2.2. o(3)  p2
+
+we think of o(3) as kp2 , the canonical bundle. this case is relevant to calabi-
+
+yau manifolds containing projective surfaces. a tubular neighborhood of the surface is
+
+equivalent to the total space of the canonical bundle (by the adjunction formula and the
+
+calabi-yau condition c1 = 0).
+
+in this case, the rank of ud (which is the bundle whose ber over (c, f ) is
+
+h 1(c, f kp2)) is equal to the dimension of moduli space, so we are computing the top
+
+chern class kd =rm0,0(d,p2) c3d1(ud). from the kds we arrive at the following nds.
+
+6
+
+d
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+nd
+
+3
+
+6
+
+27
+
+192
+
+1695
+
+17064
+
+188454
+
+2228160
+
+27748899
+
+10
+
+360012150
+
+table 1: local invariants for kp2
+
+the interpretation for the nds is not as evident as for positive bundles, since no
+
+sections of ud can be pulled back from sections of the canonical bundle (which has no
+
+sections). instead, we have the following interpretation.
+
+suppose the p2 exists within a calabi-yau manifold, and we are trying to count the
+
+number of curves in the same homology class as d times the hyperplane in p2. the analysis
+
+for the calabi-yau would go along the lines of the quintic above. however, there would
+
+necessarily be new families of zeros of your section corresponding to the families of degree
+
+d curves in the p2 within the calabi-yau. these new families would be isomorphic to
+
+m0,0(d, p2). on this space, we have to compute the contribution to the total chern class.
+
+to do this, we would need to use the excess intersection formula. the result (see section
+
+5.2) is precisely given by the kd. let us call once again nd the integers derived from the kd.
+
+suppose now that we have two calabi-yaus, x0 and x1, in the same family of complex
+structures, one of which (say x1 contains) a p2. then the dierence between nd(x0) and
+
+nd(x1) should be given by the nd.
+
+there are calabi-yaus, however, which generically contain a p2. the simplest exam-
+
+ples are the following elliptic brations over a p2, a.) the degree 18 hypersurface in de-
+noted by p6,9,1,1,1[18], with  = 540, h21 = 272, h11 = 2(0) b.) p3,6,1,1,1[12],  = 324,
+h21 = 165, h11 = 3(1) c.) p3,3,1,1,1[9],  = 216, h21 = 112, h11 = 4(2). h11 contributions
+
+in brackets are non-toric divisors, in these cases they correspond to additional components
+
+of the section, see below.
+
+7
+
+df
+
+0
+
+a
+
+1
+
+2
+
+0
+
+b
+
+1
+
+2
+
+0
+
+c
+
+1
+
+540
+
+540
+
+216
+
+324
+
+162
+
+3 1080
+
+143370
+
+6 432
+
+10260
+
+9 324
+
+2
+
+162
+
+3645
+
+6
+
+2700
+
+574560
+
+12
+
+1080 41688
+
+18
+
+810 14904
+
+27 17280
+
+5051970
+
+54 6912
+
+378756
+
+81 5184
+
+137781
+
+192 154440 57879900
+
+384 61776 4411260
+
+576 46332 1617570
+
+db
+
+0
+
+1
+
+2
+
+3
+
+4
+
+table 2: invariants of the three elliptic brations over p2 (b and f denote the class of a section
+
+and the elliptic ber, respectively.)
+
+for such calabi-yaus the gromov-witten invariants of the homology class of the base
+
+would be a multiple of the invariants for kbase. in the above examples, we see from the
+
+rst column the dierent multiples which arise as we are counting curves in the homology
+class of a curve which is dual to the hyperplane class of the base p2. this homology class
+
+sits inside a section of the elliptic bration, and the multiplicities come from the fact that
+
+the a, b, c brations admit 1, 2, 3 sections. for example, if we write the ambient toric
+
+variety for case c as p(op2  op2  op2 (3)), a section is given by one of the three
+
+components of the vanishing locus of the coordinate on the ber that transforms as o(3)
+over p2.
+
+another interpretation of this number is as follows. the space h 1(c, f k) represents
+
+obstructions to deformations of the curve c. therefore, the top chern class of the bundle
+whose bers are h 1(c, f k) represents the number of innitesimal deformations in the
+
+family which represent nite deformations. note this interpretation is equivalent to the one
+
+above. the numbers represent the eective number of curves of degree d in the calabi-yau
+coming from the p2.
+
+this procedure can be performed for any fano surface. the hirzebruch (rational,
+
+ruled) surfaces are described in the appendix a. next we discuss the general toric case.
+
+3. the mirror principle for general toric manifolds
+
+in this section, we review the mirror principle for computations of gromov-witten
+
+invariants of a toric variety. for a summary of what follows, we refer the reader to the
+
+8
+
+start of section 2. our treatment is somewhat more general than that of [8], as we consider
+
+general toric varieties, though we omit some proofs which will be included in [9] .
+
+throughout this section, we take our target manifold to be a smooth, toric and pro-
+
+jective manifold p. that is, we are interested in rational curves that map into p.
+
+let us write p as a quotient of an open ane variety:
+
+where g = (c)nc m . we can write the ith action of g as
+
+p =
+
+cnc  
+
+g
+
+,
+
+(x1, ..., xnc )  (qi,1 x1, ..., qi,nc xnc ),
+
+where  is an arbitrary element of c. there is a t  (s1)nc action on p induced from its
+usual action on cnc . this action has nc xed points which we denote by p1, ..., pnc . for
+example, for p = p4, t is (s1)5 and the xed points are the points with one coordinate
+
+nonvanishing.
+
+the t-equivariant cohomology ring can be obtained from the ordinary ring as follows.
+
+write the ordinary ring as a quotient
+
+q[b1, ..., bnc ]
+
+i
+
+,
+
+where bi is the divisor class of xi = 0 and i is an ideal generated by elements homogeneous
+in the bis. for example, for p4 we have the ring
+
+(b1  b2, b1  b3, b1  b4, b1  b5, b1b2b3b4b5)
+
+q[b1, ..., b5]
+
+.
+
+let ji, i = 1, ..., m be the basis of nef divisors in h 2(p, z). we can write the bls in terms
+of the jks:
+
+the equivariant ring is then
+
+bi =x bijjj.
+
+ht(p) =
+
+q[1, ..., m , 1, ..., nc ]
+
+it
+
+,
+
+where it is generated by p qi,jj for i = 1, ..., nc and the nonlinear relations in i with
+bi replaced by p bijj  i. in the case of p4 this is
+
+9
+
+q[, 1, ..., 5]
+
+(q5
+i=1(  i),p i)
+
+.
+
+clearly, setting i to zero in ht(p) gives us the ordinary ring in which j can be identied
+with jj.
+
+having described the base and the torus action, we also need a bundle v to dene the
+
+appropriate gromov-witten problem. for instance, if we are interested in rational curves
+
+in a complete intersection of divisors in p, then v is a direct sum of the associated line
+
+bundles. for local mirror symmetry, we can also take a concave line bundle as a component
+of v . more generally, we take v = v +  v , with v + convex and v  concave.
+
+before proceeding to the next section, we introduce some notation for later use. let
+
+fj be the associated divisors of the line bundle summands of v , by associating each line
+bundle to a divisor in the usual way. we write fj as greater or less than zero, depending
+on whether it is convex or concave. homology classes of curves in p will be written in
+the basis hj poincare dual to jj . for instance, m0,0( ~d; p) is the moduli space of stable
+
+maps with image homology classp dihi. finally, x denotes a formal variable for the total
+
+chern class.
+
+3.1. fixed points and a gluing identity
+
+the pull-back of v to m0,1( ~d; p) by the evaluation map gives a bundle of the form
+ev(v +)  ev(v ). then, in terms of the forgetful map from m0,1( ~d; p) to m0,0( ~d; p),
+we obtain a bundle on m0,0( ~d; p) ev(v +)r1ev(v ). the latter is the obstruction
+bundle u ~d.
+
+on m0,0( ~d; p), there is a torus action induced by the action on p, i.e. by moving the
+image curve under the torus action. a typical xed point of this action is (f, p1)3, where
+f (p1) is a p1 joining two t-xed points in p.
+
+another type of xed point we consider is obtained by gluing. let (f1, c1, x1) 
+m0,1(~r; p) and (f2, c2, x2)  m0,1( ~d  ~r; p) be two xed points. then f1(x1) is a xed
+point of p, i.e. one of the pis, say pk. if f2(x2) is also pk, let us glue them at the marked
+points to obtain (f, c1  c2)  m0,0( ~d; p), where f |c1 = f1, f |c2 = f2 and f (x1 x2) = pk.
+clearly, (f, c1  c2) is a xed point as (f1, c1, x1) and (f2, c2, x2) are xed points. let
+us denote the loci of xed points obtained by gluing as above f l(pk, ~r, ~d  ~r).
+
+3 we apologize for reversing notation from the previous section, and writing (f, c) instead of
+
+(c, f ). this is to agree with [8] which we closely follow in this section.
+
+10
+
+over c1  c2, there is an exact sequence for v :
+
+0  f v  f 
+
+1 v  f 
+
+2 v  v |f1(x1)=f2(x2)  0.
+
+the long exact cohomology sequence then gives us a gluing identity
+
+v
+
+tct(u ~d) = ct(u~r)ct(u ~d~r),
+
+(3.1)
+
+(3.2)
+
+where v
+
+t = ct(v +)/ct(v ) is the t-equivariant chern class of v .
+
+this relation will generate one on the linear sigma model to which we now turn.
+
+3.2. the spaces m ~d and n ~d
+
+because m0,0( ~d; p) is a rather unwieldy space, the gluing identity we found in the
+last section seems not to be useful. however, we will nd, using the gluing identity, a
+similar identity on a toric manifold n ~d. we devote this section mainly to describing n ~d
+and its relation to m0,0( ~d; p).
+
+first we consider m ~d  m0,0((1, ~d); p1 p). we will call 1 and 2 the projections to
+the rst and second factors of p1  p respectively. since 2 maps to p, one might consider
+a map from m ~d to m0,0( ~d; p) sending (f, c) to (2  f, c). however, this is not necessarily
+a stable map. if it is unstable, 2  f maps some components of c to points, so if we let c
+be the curve obtained by deleting these components, there is a map  : m ~d  m0,0( ~d; p)
+which sends (f, c) to (2  f, c).
+
+let us now recall some facts about maps from p1. a regular map to p is equivalently
+a choice of generic sections of op1 (f bi hp1 ), i = 1, ..., nc. for example, a map of degree
+d from p1 to p4 gives ve generic sections of op1 (d), i.e., ve degree d polynomials. if one
+
+takes ve arbitrary sections, constrained only by being not all identically zero, one gets
+a rational map instead. generalizing this, arbitrary sections of op1 (f bi  hp1 ) which
+are not in  give rational maps to p. the space n ~d is the space of all such maps with
+f (ji) = dijp1 , where jp1  hp1 = 1. explicitly, we can write it as a quotient space.
+
+dening d =p djhj, we have
+
+n ~d =
+
+ih 0(p1, o(bi  d))  
+
+g
+
+.
+
+(3.3)
+
+there is a map  : m ~d  n ~d, which we now describe. take (f, c)  m ~d and
+decompose c as a union c0  c1  ...  cn of not neccesarily irreducible curves, so that cj
+
+11
+
+for j > 0 meets c0 at a point, and c0 is isomorphic to p1 under 1  f . since c0 = p1,
+2  f |c0 can be regarded as a point in n[2f (c0)], where [] denotes the homology class
+of . we can also represent 2  f |cj for j > 0 by elements in n[2f (cj )], except that
+since the maps are to have domain c0, in this case we take the rational map from c0 that
+
+vanishes only at xj = cj  c0 and belongs to n[2f (cj )].
+
+having now n + 1 representatives, compose them via the map
+
+n~r1  n~r2  n~r1+~r2
+
+given by multiplying sections of o(bi). the result, since pn
+
+in n ~d. thus we have obtained a map from m ~d to n ~d.
+
+i=0[2  f (ci)] = d, is a point
+
+to illustrate, let us take the case of p4 again. here (f, c) is a degree (1, d) map.
+
+let us decompose c as before into c0  ...  cn , with xi = ci  c0 and 1  f |c0 an
+
+isomorphism. the image of  is a rational morphism given as a map by 2  f |c0 except
+at the points xi. at xi, a generic hyperplane of p4 pulled back vanishes to the order given
+
+by the multiplicity of [2  f (ci)] in terms of a generator.
+
+so far we have discussed the spaces and the maps between them. we now briey
+describe the torus actions they admit. clearly, m ~d has an s1  t action induced from an
+action on p1  p. in suitable coordinates, the s1 action is [w0, w1]  [ew0, w1].
+
+since sections of op1 (1) is also a one-dimensional projective space, there is an s1
+action on h 0(p1, op1 (1)). this induces an action on sections of op1 (d). n ~d is dened
+by the latter, so it admits an s1 action. in addition, it has a t-action induced from the
+
+action on o(bi).
+
+the map  is obviously t-equivariant, since the t-actions are induced from p. it is
+
+shown in [9] that  is (s1  t)-equivariant. summarizing, we have the following maps:
+
+
+ m ~d
+
+n ~d
+
+
+ m0,0( ~d; p)
+
+
+ m0,1( ~d; p)
+
+ev
+ p.
+
+pushing and pulling our problem to n ~d, we dene
+
+q ~d = !ct(u ~d).
+
+12
+
+3.3. euler data
+
+in this section we will derive from the gluing identity a simpler identity on n ~d. recall
+that the gluing identity holds over xed loci f l(pi, ~r, ~d  ~r)  m0,0( ~d; p). therefore, an
+identity holds over 1(f l(pi, ~r, ~d  ~r)) in m ~d under pull-back by . we next turn to
+describing a sublocus of 1(f l(pi, ~r, ~d  ~r)) which, as we will see later is mapped by 
+to a xed point in n ~d.
+
+let fpi,~r denote the xed point loci in m0,1(~r; p) with the marked point mapped to
+pi. let (f1, c1, x1)  fpi,~r and (f2, c2, x2)  fpi, ~d~r be two points. we dene a point
+(f, c) in m ~d as follows. for c we take (c0  p1)  c1  c2, with c0  c1 = x1 and
+c0  c2 = x2. for the map f , we dene it by giving the projections 1  f and 2  f . we
+require 1  f (c1) = 0, 1  f (c2) =  and 1  f |c0 be an isomorphism. this xes
+1 f , since any other choice is related by an automorphism of the domain curve preserving
+x1 and x2, which is irrelevant in m ~d. we require 2  f to map c1 as f1, c2 as f2 and c0
+to f1(x1). clearly,  maps (f, c) to a point in f l(pi, ~r, ~d  ~r). let us denote the loci of
+such (f, c)s by m f l(pi, ~r, ~d  ~r). by construction, it is isomorphic to fpi,~r  fpi, ~d~r.
+
+we verify (f, c) is a xed point. fi(ci) and pi are xed in p, so f is t-xed. the
+s1-action xes only 0 and  on the rst factor of p1  p. nevertheless, the point (f, c0 
+c1  c2) remains xed under the s1 action, as we need to divide out by automorphisms
+of c0 preserving x1 and x2.
+
+we now compare the maps just constructed with the xed points of n ~d. it will be
+most convenient to do so by describing the latter in terms of rational morphisms. so take
+a point in n ~d, viewed as a rational morphism from c0  p1. let x1, ..., xn be the points
+where it is undened. at xi, the chosen sections of o(bj  d) vanish to certain orders,
+
+including possibly zero. a generic section of o(jj  d) = o(dj) vanishes to order, say rj
+
+at x1. any section of a line bundle o(l) pulled back by the map then vanishes at x1 at
+
+least to order l p rjhj.
+
+therefore the rational morphism is equivalent to the data of a regular map from c0
+
+and a curve class for each bad point. the classes for the bad points indicate the multiplicity
+
+of vanishing of a generic section of a pulled-back line bundle. altogether, the class of the
+
+image of the regular map and the curve classes we associate to the bad points sum to d,
+
+since a generic section of o(l) must have exactly l  d zeroes.
+
+now we can deduce the xed points of n ~d. the t-action moves the image of a rational
+morphism, whereas the s1 action rotates the domain p1 about an axis joining 0 and .
+
+13
+
+so a xed point is a rational map, undened at 0 and , whose image is a xed point of
+
+p. let us denote them by pi,~r, where pi denotes a xed point of p, andp rihi determines
+
+orders of vanishing of pulled-back line bundles at the point 0  p1. clearly,  maps the
+xed points in m ~d discussed earlier to the xed point pi,~r.
+
+we now use the atiyah-bott formula for localization to relate restrictions of q ~d to
+
+pi,~r (which we denote by q ~d(pi,~r)) to ct(u ~d). explicitly,
+
+q ~d(pi,~r) =zn ~d
+
+pi,~r q ~d =zm ~d
+
+(pi,~r )ct((u ~d)).
+
+where pi,~r is the equivariant thom class of the normal bundle of pi,~r in n ~d. to evaluate the
+last integral, we need the equivariant euler class of the normal bundle of m f l(pi, ~r, ~d  ~r)
+in m ~d.
+
+since m f l(pi, ~r, ~d  ~r) = fpi,~r  fpi, ~d~r, we have contributions from the normal
+bundles of fpi,~r  m0,1(~r; p) and fpi, ~d~r  m0,1( ~d  ~r; p). they are respectively
+e(n (fpi,~r/m0,1(~r; p))) and e(n (fpi, ~d~r/m0,1( ~d~r; p))). points in m f l(pi, ~r, ~d~r) have
+domain of the form c0 c1 c2, where c1 c0 = x1, and c2 c0 = x2. now let l~r denote
+the line bundle on m0,1(~r; p) whose ber at (f1, c1, x1) is the tangent line at x1. then we
+can write the contributions from deforming x1 and x2 as e(l~r  tx1 c0) =  + c1(l~r) and
+ + c1(l ~d~r), respectively. in addition, automorphisms of c0 which do not x x1 and x2
+need to be included. they can be shown to give weights of tx1 c0 and tx2 c0, so there is an
+extra factor of ()(). finally, normal directions which move the image of the marked
+
+point from pi have to be excluded, so we divide by the weights of tpip.
+
+this yields, after using (3.2),
+
+v (pi)q ~d(pi,~r) =
+
+1
+
+2 e(tpi p)e(pi,~r/n ~d) xfpi,~rzfpi,~r
+xfpi, ~d~rzfpi, ~d~r
+
+ct(u ~d~r)
+
+e(n (fpi, ~d~r))( + c1(l ~d~r))
+
+ct(u~r)
+
+e(n (f~r))( + c1(l~r))
+
+.
+
+we introduce some more notation. let j, ~d be the member of the s1  t equivariant
+cohomology ring of n ~d whose weight at the xed point pi,~r is j(pi) + rj. clearly,
+j,~0  j . the identity e(tpi p)e(pi,~r/n ~d) = e(pi,~r/n~r)e(pi,~0/n ~d~r) then implies
+
+v (pi)q ~d(pi,~r) = q~r(pi,~0)q ~d~r(pi,~0).
+
+(3.4)
+
+14
+
+is an automorphism of the s1  t equivariant cohomology ring with
+here the overbar
+ =  and j, ~d = j, ~d. a sequence of equivariant cohomology classes satisfying (3.4) is
+called in [8] a set of v -euler data.
+
+3.4. linked euler data
+
+if we knew the values of q ~d at all xed points, we would also know q ~d as a class.
+since we do not know this, we will use equivariance to compute q ~d at certain points, for
+example, those that correspond to the t-invariant p1s in p. it turns out that this is also
+sucient, as we will nd euler data which agree with q ~d at those points, and a suitable
+comparison between the two gives us the rest.
+
+before we begin the computation, we rst describe a t-equivariant map from n~0 = p
+to n ~d. sections of o(bi  d) over p1 are polynomials in w0 and w1, where w0 and w1 are
+as before coordinates so that the s1 action takes the form [w0, w1]  [ew0, w1]. each
+polynomial contains a unique monomial invariant under the s1 action. by sending the
+
+coordinates of a point to the coecients of the invariant monomials, we hence obtain a
+map i ~d from n~0 to n ~d.
+
+we begin with the case of a convex line bundle o(l), where l denotes the associated
+divisor. let (f, p1) be a point in m0,0( ~d; p) with f (p1) being a multiple of the t-invariant
+p1 joining pi and pj in p. the ber of the obstruction bundle at (f, p1) is h 0(o(l  d)),
+which is spanned in appropriate coordinates for the p1 by uk
+
+, k = 0, ..., l  d.
+
+0uldk
+
+1
+
+choose a basis so that u1 = 0 is mapped to pi, and u0 = 0 mapped to pj. since the
+
+does not vanish at u1 = 0, its weight is equal to the weight of l at pi, which
+
+0
+
+section uld
+we denote by l(pi). similarly, uld
+is (l(pj)  l(pi))/(l  d), giving us the weights of all sections.
+
+1
+
+has weight l(pj). hence the induced weight on u1/u0
+
+since (f, p1) is xed by t, the corresponding loci (1((f, p1))) in n ~d is, by equiv-
+ariance, xed by a dimt subgroup of s1  t. the points in (1((f, p1))) represent a
+regular map from a p1 to the t-invariant p1 joining pi and pj . therefore any two points
+in (1((f, p1))) dier by an automorphism of the domain. explicitly, we can consider
+
+coordinates [w0, w1] as before. let  denote the point which sends [w0 = 1, w1 = 0] to
+
+pi and [w0 = 0, w1 = 1] to pj . any other point, thought of as a map, factors via  by
+
+an automorphism [w0, w1]  [aw0 + bw1, cw0 + dw1]. we can therefore nd the relevant
+subgroup of s1  t by choosing the element of s1 to cancel the induced weight of t on
+
+w1/w0. explicitly, we have  = (l(pi)  l(pj))/(l  d), so that the value of q ~d is
+
+15
+
+(x + l(pj) + k).
+
+yk
+
+the weight of i, ~d under (s1  t)/(  (l(pi)  l(pj))/(l  d)) at any point in
+(1((f, p1))) is the same as its weight under t at the corresponding point obtained
+
+by setting w0 to zero. for , setting w0 to zero gives a point in n ~d which can be thought
+of as a rational map to pj. since i ~d is equivariant, the weight of i, ~d at this point is the
+
+same as the weight of i at pj. thus, as p lii(pj) = l(pj), the value of q ~d is the same
+
+as the value of p ~d, where p ~d is given by
+
+yk
+
+(x +x lii, ~d + k).
+
+to simplify our computations, we take a partial nonequivariant limit by replacing i
+
+with ji. then p ~d reduces to (x, l, l  d + 1, 0), where  is dened as follows:
+
+k=j(y + k + (k  1))
+
+qi1
+
+1
+
+1
+
+k=i (y + k + k)
+
+if i > j
+
+if i = j
+
+.
+
+if i < j
+
+(3.5)
+
+
+
+
+qj1
+
+(y, k, i, j) =
+
+similarly, the case of a concave line bundle gives (x, l, l  c, 1). for a direct sum, since
+
+the chern class is multiplicative and the product of the cases just considered is a valid
+
+euler data, the product gives us the appropriate value of p ~d.
+
+let us form a series:
+
+hga[q]( ~t ) = ep tiji/( xdne(p)~0
+
+i 
+
+d(q ~d)yi
+
+(0, bi, bi  d, 0)ep tijid + v
+
+t),
+
+(3.6)
+
+where by q ~d we mean its partially nonequivariant limit, as described above, and n e(p) is
+the set of curve classes in p which have nonnegative intersection with the eective divisors
+
+of p.
+
+a similar series can be constructed from the partial nonequivariant limit of p ~d as
+
+follows:
+
+16
+
+hgb[~t] =ep tiji/( xdne(p)~0yi
+
+(0, bi, bi  d, 0) yi:fi<0
+
+(x, fi, fi  d + 1, 0)ejd + v
+t)
+
+yi:fi>0
+
+(x, fi, fi  d, 1)  .
+
+if we take the example of the quintic in p4, dimh2(p, z) = 1, so we have
+
+.
+
+(3.7)
+
+(3.8)
+
+(3.9)
+
+m=1(x + 5h  m)
+m=1(x + h  m)
+for local mirror symmetry, we can take v = kp2 , giving
+
+5 + 5h).
+
+hgb[t] = ej/(xd>0q5d
+qd
+hgb[t] = ej/(xd>0q3d1
+qd
+
+m=1 (x  3h + m)
+m=1(x + h  m)
+
+3 
+
+1
+3h
+
+).
+
+to compare hgb[~t] and hga[ ~t ], let us expand hgb[~t] at large , keeping terms
+
+to order 1/. it is shown in [9] that hga[ ~t ] has the form v
+the two expressions gives us ~t in terms of ~t. then setting hga[ ~t (~t)] = hgb[~t] gives us
+qd as a function of ji and , from which we may obtain kd [9]:
+
+t(1  (p tiji)/). equating
+
+(2 p diti)kd
+
+3
+
+=zp
+
+ep tiji/q ~dyj
+
+(0, bj, bj  d, 0).
+
+(3.10)
+
+4. explicit verication through fixed-point methods
+
+4.1. some examples
+
+though the techniques of section one are extremely powerful, it is often satisfying 
+
+and a good check of ones methods  to do some computations by hand. in this section,
+
+we outline xed point techniques for doing so, and walk through several examples. in this
+
+way, we have veried many of the results in the appendices for low degrees (d = 1, 2, 3).
+
+readers familiar with such exercises may wish to skip to the next subsection.
+
+all the bundles described in section two are equivariant with respect to the torus
+
+t -action which acts naturally on the toric manifold p. let t  t be a group element
+acting on p. then if (c, f, )  m0,1( ~d; p) and (c, f )  m0,0( ~d; p) the induced torus
+action sends theses points to (c, t  f, ) and (c, t  f ), respectively. the bundle actions
+
+are induced by the natural t -action on the canonical bundle, k.
+
+17
+
+now that we understand the torus action, what are the xed point theorems? first of
+
+all, we work in the realm of equivariant characteristic classes, which live in the equivariant
+cohomology ring h 
+t (m ) be an equivariant cohomology
+class. the integration formula of atiyah and bott is
+
+t (m ) of a manifold, m. let   h 
+
+zm
+
+ =xp zp (cid:18) i
+
+e(p )(cid:19) ,
+
+p 
+
+where the sum is over xed point sets p, ip is the imbedding in m, and e(p ) is the euler
+class of the normal bundle p along p. for p consisting of isolated points and  the chern
+class (determinant), we get the ratio of the product of the weights of the t -action on the
+
+bers at p (numerator) over the product of the weights of the t -action on the tangent
+
+bundle to m at p (denominator). one needs only to determine the ber and tangent
+
+bundle at p and gure out the weights.
+
+lets start with degree one (k1) for the quintic (o(5)  p4). let xi 7 i
+
+i xi,
+i = 1, ..., 5, be the (c)5 action on c5 (p4 = p(c5)), where ~  (c)5 and the i are the
+weights. the xed curves are pij, where i, j run from 1 to 5 : pij = {xk = 0, k 6= i, j}.
+since f is a degree one map, we may equate c = f (c) and the pull-back of o(5) is
+therefore equal to o(5) on ce. recall the bundle o(5) on p1. its global sections are
+degree ve polynomials in the homogeneous coordinates [x, y ], so a convenient basis is
+{x ay 5a, a = 0, ..., 5} (or ua in a local coordinate u = x/y ). the weights of these
+sections are a + (5  a), if  and  are the weights of the torus (c)2 action on c2. the
+map f : ce  p4 looks like [x, y ] 7 [..., x, ..., y, ...] with non-zero entries only in the ith
+and jth positions. therefore, the weights of u1 at the xed point (c, f ) are ai +(5a)j ,
+a = 0...5. to take the top chern class we take the product of these six weights.
+
+we have to divide this product by the product of the weights of the normal bundle,
+which in this case (the image f (c) is smooth) are the weights of h 0(c, f n ), where n
+is the normal bundle to f (c). more generally, we take sections of the pull-back of t p4
+and remove sections of tc. the normal bundle of pij is equal to o(1)  o(1)  o(1),
+each corresponding to a direction normal to f (c) and each of which has two sections. let
+w = xj/xi be a coordinate along c = pij on the patch xi 6= 0. if zk = xk/xi is a local
+coordinate of p4, then delk  
+is a normal vector eld on c with weight k  i. wk
+zk
+is the other normal vector eld corresponding to the direction k, and has weight k  j.
+
+summing over the (cid:18) 5
+
+2(cid:19) = 20 choices of image curve pij gives us
+k1 =x(ij) q5
+
+qk6=i,j(k  i)(k  j)
+
+a=0[ai + (5  a)j]
+
+= 2875,
+
+18
+
+the familiar result.
+
+lets try degree two (k2) for kp2 . the dimension of m0,0(d; p2) is 3d  1 = 5 for
+d = 2. what are the xed points? well, the image of (c, f ) must an invariant curve, so
+there are two choices for degree two. either the image is a smooth p1 or the union of two
+
+p1s. there are three xed points on p2 and therefore (cid:18) 3
+
+2(cid:19) = 3 invariant pijs. if the
+
+image is a smooth p1, the domain curve may either be a smooth p1, in which case the
+map is a double cover (lets call this case 1a), or it may have two component p1s joined
+
+at a node (lets call this case 1b). if the image has two components, the domain must as
+
+well. lets call this case 2.
+
+for case 1a, the situation is similar to the quintic case above. the tangent space to
+
+moduli space consists of sections of h 0(c, f n ),
+
+where n is the normal bundle to the image curve. that is, we take h 0(c, f t p2)
+= o(2)  o(1) and f is a degree 2
+and delete those sections from h 0(t c). since t p2|f (c)
+map, we have f t p2 = o(4)  o(2), which has 5 + 3 = 8 sections. t c = o(2) has three
+sections, leaving us with ve total. if f (c) = pij, then the o(2) sections are k, wk, w2k,
+where k 6= i, j, w is the coordinate on c, and zm = xm/xi are inhomogeneous coordinates
+on p2. the degree two map is, in these coordinates, w 7 (zj = w2, zk = 0). note that
+k is the only non-vanishing section at w = 0, and the others are obtained by successive
+
+multiplications by w. notice that w inherits the weight (j  i)/2 by requiring equivari-
+
+ance. the weights are, so far, i  k, (i + j)/2  k, j  k. for the o(4) sections, the
+
+procedure is similar, only we must remove the weights 0, (i = j)/2, as these correspond
+to the tangent vectors w, ww, w2w. we are left with (j  i) giving a total of ve.
+
+the weights of h 1(c, f kp2 ) are easily calculated for the curve c by using serre
+
+duality. that is, if one thinks (naively) of sections of a vector bundle e as elements of
+
+ cohomology, and recalling that the canonical bundle k is the bundle of holomorphic
+top forms, then h k(e) pairs with h nk(e  k) by wedging and contracting e with
+its dual e, then integrating. thus, h k(e) = h nk(e  k). for a curve, c, we
+have h 1(f kp2 ) = h 0(f k 1
+= o(3) as a bundle, and
+kc = op1 (2), so f k 1
+
+p2  kc = o(2  (+3)  2) = o(4), and the ve sections
+
+p2  kc). lets compute. k 1
+
+p2
+
+can be obtained in the usual way once we have a non-vanishing one at w = 0. such
+
+
+zj
+
+ 
+a section is
+zk
+weights of h 0(f k 1
+p2  kc) are 2i  j  k + m(j  i)/2, m = 1, ..., 5. for the dual
+space h 1(f kp2 ) we must take the negatives of these weights. so much for case 1a.
+
+ dw, and has weight 2i  j  k + (j  i)/2. in all, then the
+
+19
+
+cases 1b and 2 the domain curves have two components (say, c1 and c2), so we
+must understand what is meant, for example, by f t p2 and t c in order to calculate
+the normal bundle. t c is locally free (like a vector bundle) everywhere except at the
+
+singularity. there, we require tangent vectors to vanish. the canonical bundle, kc, is
+dened as a line bundle of holomorphic dierentials, with the following construction at the
+
+singularity. let f (w)dw be a dierential along c1, and let g(z)dz be a dierential along c2
+where the singularity is taken to be (z = 0)  (w = 0). to dene a dierential along the
+
+total space, we allow f and g to have up to simple poles at the origin, with the requirement
+
+that the total residue vanish: reswf +reszg = 0. what this does is serve as an identication,
+at the singularity, of the bers of the canonical bundles of the two components. in this
+
+way, we arrive at a line bundle. this canonical bundle, when restricted to a component
+
+ci, looks like kci(p), where the (p) indicates twisting by the point, i.e. allowing poles.
+at this point, we can proceed with the calculation. consider case 2, for which the
+map f is a bijection. the sections of h 1(f kp2 ) = h 0(f (kp2) can be looked at on each
+component, where kc|ci is as above. hence on ci we have
+
+1
+w
+
+
+z1
+
+
+
+
+z2
+
+ dw,
+
+1
+
+
+z1
+
+
+
+
+z2
+
+ dw,
+
+w
+
+
+z1
+
+
+
+
+z2
+
+ dw.
+
+on the the other component, we have three analogous sections, but two with poles need
+
+to be identied, since they are related by the requirement of no total residue. indeed, this
+identication is compatible with equivariance, since 1
+w dw has zero weight. all in all, we
+have weights (recalling duality) j + k  2i, k  i, k  j, j  i, j  k.
+
+the normal bundle to moduli space consists of sections of the pull-back of tangent
+vectors on p2, less global tangent vectors on c. in addition, we include tpc1 tpc2, which
+is a factor corresponding to a normal direction in which the node is resolved [6] . since the
+
+maps from components are degree one for these cases, we can take as sections of the normal
+
+bundles (two each) w, zw and z, wz. here we have identied the coordinate of the other
+component with the coordinate of p2 normal to the component. the tpc1  tpc2 piece
+gives w  z. in total, the weights are i  j, k  j, i  k, j  k, 2i  j  k.
+
+one checks that the product of the numerator weights divided by the denominator
+
+weights is equal to 1. since there are three graphs of this type, the total contribution to
+k2 is 3. graphs whose image is a single xed p1 contribute 21/8,4 giving k2 = 45/8.
+
+4 because we are considering integrals in the sense of orbifolds, we must divide out the con-
+tribution of each graph by the order of the automorphism group of the map. automorphisms are
+
+maps  : c  c such that f   = f. cases 1a and 1b have z2 automorphism groups.
+
+20
+
+in physics, local mirror symmetry is all that is needed to describe the eective quantum
+
+eld theory from compactication on a calabi-yau manifold which contains a holomor-
+
+phic surface, if we take an appropriate limit.
+
+in this limit, the global structure of the
+
+calabi-yau manifold becomes irrelevant (hence the term local), and we can learn about
+
+the eld theory by studying the local geometry of the surface  its canonical bundle. we
+
+can therefore construct appropriate surfaces to study aspects of four-dimensional gauge
+
+theories of our choosing [3] . the growth of the gromov-witten invariants (or their local
+construction) in a specied degree over the base p1 is related to the seiberg-witten co-
+
+ecient at that degree in the instanton expansion of the holomorphic prepotential of the
+
+gauge theory. for example, the holomorphic vanishing cycles of an an singularity bered
+over a p1 give su (n + 1) gauge theory (the mckay correspondence, essentially), and one
+
+can construct a calabi-yau manifold containing this geometry to check this [3] [2]. in this
+case, the local surface is singular, as it is several intersecting p1s bered over a p1 (for
+
+a1 we can take two hirzebruch surfaces intersecting in a common section. for this reason,
+
+it is important to understand the case where the surface is singular, as well. we will have
+
+more to say about this in section six.
+
+4.2. general procedure for xed-point computations
+
+following [6] and [10], we can compute the weights of our bundles explicitly. each
+
+connected component of the xed point set is described by a graph, , which is a collection
+
+of vertices, edges, and ags. the graph contains the data of the xed map, which includes
+the image p1s, the degrees of the maps to the xed curves, and the way they are glued
+
+together.
+
+let us x some notation. to each connected component of f 1(p), where p is a xed
+point of p, we have a vertex, v. we call cv = f 1(p) the pre-image of p, and if p = pj, we
+say that i(v) = j (so i is a map from {vertices} to {1...n + 1}). let val(v) be the number
+
+of special (marked or nodal) points on cv (for us equal to the number of edges with v as
+
+their vertex). the connected components of the pre-image of a xed line pij are denoted
+
+ce. an edge consists of ce together with the data i(e), j(e)  {1, ..., n + 1} encoding the
+
+image f (c) = pi(e),j(e), and de the degree of the map f |ce. if there is no confusion, we
+
+will write i and j for i(e) and j(e). note that in the case of higher genus maps, the genus
+
+g > 0 components of the domain curve must map to xed points
+
+21
+
+cv as there are no invariant curves of higher genus. in particular, the ce are all of
+genus zero. we call a pair (v, e) where cv and ce intersect non-trivially a ag, f. for
+f = (v, e), we dene i(f ) = i(v).
+
+the xed point set corresponding to a graph  is then equal to a product over vertices
+
+of the moduli space of genus g(v) curves with val(v) marked points: m =qv m g(v),val(v).
+
+the calculation of the weights along the xed point sets follows from a simple, general
+
+observation. given two varieties, y1 and y2, x = y1  y2 may be singular, but we can
+construct the maps y1  y2
+holomorphic functions:
+
+ y1` y2  x, from which we construct maps of sheaves of
+
+
+
+ox  oy1  oy2  oy1y2.
+
+all maps are obtained from inclusions except the last map, which sends (f1, f2) to f1  f2,
+so this sequence is exact.
+
+for a graph with domain curve c which is equal to the union of all its components,
+
+things are simple because there are at most pairwise non-trivial intersections, those being
+
+points. thus we have the sequence
+
+0  oc mv
+
+ocv me
+
+oce mf
+
+oxf  0,
+
+(4.1)
+
+where xf = cv  ce if f = (v, e), and the second map sends (g|cv , h|ce) to g  h on the
+point of intersection (if it exists).
+
+we will use the long exact sequence associated to this short exact sequence in two
+
+ways. the xed point formula tells us we need to compute the weights of our bundle ud
+(whose bers are h 1(c, f kp2 )). when c is singular, we need to use the above sequence
+twisted by (or tensored by) f kp2. then using concavity of the canonical bundle, which
+states that f kp2 has no global sections on ce, the long exact sequence reads
+
+0  h 0(c, f kp2 ) mv
+ h 1(c, f kp2 ) mv
+
+h 0(cv, f kp2 ) me
+h 1(cv, f kp2 ) me
+
+h 0(ce, f kp2 ) mf
+
+h 1(ce, f kp2 )  0.
+
+kp2 |f (xf ) 
+
+(4.2)
+
+the last term in the rst line follows since xf is a point, which is why the last term in the
+second line is zero. note that f kp2
+
+is trivial as a bundle on cv, since cv is mapped to a point. however, this trivial line
+bundle has non-trivial weight equal to i  3i + i + j + k, where i = i(f ). this
+
+22
+
+will aect equivariant chern classes nontrivially. for example, h 0(cv, f kp2 ) is one-
+dimensional (constant section) with the same weight  lets call it ci. h 1(cv, f kp2 ) is
+thus equal to h 1(cv, o)  ci. also, since h 1(cv, o) are global holomorphic dierentials,
+which may be integrated against cycles, we see that h 1(cv, o), as a bundle over the xed
+point component m g(v),val(v) in moduli space, is equal to the dual e of the rank g(v)
+hodge bundle, e. we are interested in cg(e  ci). the chern character (not class) is
+well-behaved under tensor product, from which we can conclude [10]
+
+cg(e  ci) = pg(i, e) 
+
+r
+
+i cgr(e),
+
+g
+
+xr=0
+
+where we have dened the polynomial pg(i, e)
+
+we know more about (4.2). h 1(ce, f kp2 ) can be computed exactly as in case 1a
+from the previous section, giving weights i + m(i  )j), m = 1, ..., 3de  1. also,
+h 0(ce, f kp2 ) = 0 by convexity, which tells us as well that h 0(c, f kp2 ) = 0 (obvious
+if you think of the map). therefore the map to ags on the rst line of (4.2)is 1  1,
+
+which is also obvious as it is restriction of constant sections (zero at a point i the section
+is identically zero). thus the weights from the top line which map into h 1(c, f kp2)
+
+are qf i(f )/qv i(v). noting that there are val(v) ags with v as their vertex, and
+
+combining with the weights from the middle term on the second line of (4.2), we have
+
+val(v)1
+
+i(v)
+
+yv
+
+pg(v)(i(v), e)ye "3de1
+ym=1
+
+i + m(i  j)# .
+
+(4.3)
+
+for the genus zero case, the polynomials involving the hodge bundle disappear.
+
+if we twist the sequence (4.1) by f t p2 we can deduce the information we need to
+compute h 0(c, f t p2)  h 1(c, f t p2), which is most of what is needed to compute the
+virtual normal bundle to the xed point locus.5 however, a complete exposition for higher
+
+genus, where concavity or convexity is not enough to guarantee a smooth moduli space, is
+
+beyond the scope of this paper, and we refer the reader to the discussion in section four of
+
+5 when g 6= 0, the moduli space of maps is not smooth (convexity/concavity is no longer
+valid), and one has to take care to dene integration of forms in the expected (top) dimension,
+
+as the moduli space will contain components other dimensions. to do so, one must dene a cycle
+
+of the expected dimension  the virtual fundamental class ([11] , [12] ).
+
+[10] proved that with
+
+these denitions, the atiyah-bott localization formulas continue to hold, with the normal bundle
+
+replaced by an appropriately dened virtual normal bundle.
+
+23
+
+[10] , with whose notation this paper is largely compatible. the genus zero case has been
+
+worked out in full by [6] (see the formula at the end of section 3.3.4).
+
+the upshot is that we can determine all the weights and classes of the bundles re-
+
+stricted to the xed point loci systematically. after dividing numerator (chern class) by
+
+denominator (euler class of normal bundle), one has polynomial class of degree equal to
+
+the dimension of the xed locus. whats left is to integrate these classes over the moduli
+
+spaces of curves (not maps) m g(v),val(v) at each vertex. these integrals obey famous re-
+cursion relations [13], which entirely determine them. a program for doing just this has
+
+been written by [14] . with this, and an algorithm for summing over graphs (with ap-
+
+propriate symmetry factors), one can completely automate the calculation of higher genus
+
+gromov-witten invariants. subtleties remain, however, regarding multicovers [15], [16],
+
+[17] .
+
+5. virtual classes and the excess intersection formula
+
+one of the foundations of the theory of the moduli space of maps has been the con-
+
+struction of the virtual class [12] [11] . a given space of maps m(, x) may be of the
+
+wrong dimension, and the virtual class provides a way to correct for this. we consider
+
+the correct dimension to be one imposed either by physical theory, or by the require-
+
+ment that the essential behavior of the moduli space be invariant under deformations of
+
+x (this may include topological deformations of x, or just deformations of symplectic or
+
+almost complex structures). the virtual class is a class in the cohomology (or chow) ring
+
+of m(, x); its principal properties are that it is a class in the cohomology ring of the
+
+expected dimension, and that numbers calculated by integrating over the virtual class are
+
+invariant under deformations of x. see [12] [11] for more exact and accurate statements.
+
+one main theme of this paper is to use the invariance under deformation to either calculate
+
+these numbers, or to explain the signicance of a calculation.
+
+the idea of a cohomology class (or cohomology calculation) which corrects for im-
+
+proper behavior has been around for a long time in intersection theory. one example is
+
+the excess intersection formula. if we attempt to intersect various classes in a cohomology
+
+ring, and if we choose representatives of those classes which fail to intersect transversely,
+
+the resulting dimension of the intersection may be too large. the excess intersection for-
+
+mula allows us to perform a further calculation on this locus to determine the actual class
+
+24
+
+of the intersection. the purpose of this section is to describe the excess intersection for-
+
+mula for degeneracy loci of vector bundles, and to use this formula to evaluate or explain
+
+some mirror symmetry computations. in the cases we examine, the moduli space of maps
+
+to our space x can be given as the degeneracy locus of a vector bundle on a larger space
+
+of maps. in each case that these degeneracy loci are of dimension larger than expected,
+
+the virtual class will turn out to be the same as the construction given by the excess in-
+
+tersection formula. the virtual class and the excess intersection formula are both aspects
+
+of the single idea mentioned above, and have as common element in their construction the
+
+notion of the rened intersection class [18].
+
+to a vector bundle e of rank r on a smooth algebraic variety x of dimension n, we
+
+associate the chern classes, cj (e), j = 0, . . . , r, and also the total chern class c(e) =
+
+1 + c1(e) + c2(e) +    + cr(e). these classes are elements of the cohomology ring of x.
+
+the class cj(e) represents a class of codimension j in x, and in particular the class cn(e)
+
+is a class in codimension n, and can be associated with a number. for any class  in the
+
+ring, the symbol rx  means to throw away all parts of  except those parts in degree n,
+
+and evaluate the number associated to those parts.
+
+for a vector bundle e whose rank is greater or equal to the dimension n of x, we are
+
+often interested in calculating the number associated to cn(e), or in the previous notation,
+
+rx c(e). one way to compute chern classes is to realize them as degeneracy loci of linear
+
+combinations of sections. if e is of rank r  n, and we take r n+1 generic global sections
+
+1, . . . , rn+1, the locus of points where 1, . . . , rn+1 fail to be linearly independent
+
+represents the class cn(e). often this way of interpreting the chern classes is the one
+
+which has the most geometric meaning. the statement generic above means that if we
+
+carry out this procedure and nd out that the degeneracy locus is of the correct dimension
+
+(that is: points), then the sections were generic enough.
+
+sometimes the sections we can get our hands on to try and calculate rx c(e) with
+
+are not generic in this sense, and the degeneracy locus consists of some components which
+
+are positive dimensional.
+
+in this situation, the excess intersection formula tells us how
+
+to associate to each positive dimensional connected component of the degeneracy locus a
+
+number, called the excess intersection contribution. this number is the number of points
+
+which the component morally accounts for. part of the excess intersection theorem is
+
+the assertion that the sum of the excess intersection contributions over all the connected
+
+components of the degeneracy locus, and the sum of the remaining isolated points add
+
+25
+
+up to rx c(e). this corresponds to the invariance of numbers computed using the virtual
+
+class under deformations of the target manifold.
+
+let y be one of the connected components described above. lets assume for simplicity
+
+that y is actually a submanifold of m . in this situation the excess intersection formula
+
+says that the excess intersection contribution of y is
+
+c(e)
+
+c(ny /m )
+
+.
+
+zy
+
+(5.1)
+
+here ny /m is the normal bundle of y in m , and the expression after the integral sign
+makes sense, since c(ny /m ) is an element of a graded ring whose degree zero part is 1, and
+so c(ny /m ) may be inverted in that ring.
+
+5.1. rational curves on the quintic threefold
+
+as an example of an application of the excess intersection formula to explain the
+
+signicance of a calculation, let us review the count of the rational curves on a quintic
+threefold as explained by kontsevich [6] . let md = m00(d, p4) be the moduli space of
+maps of genus zero curves of degree d to p4. md is of dimension 5d+1. let ud be the vector
+bundle on md whose bre at any stable map (c, f ) is h 0(c, f op4 (5)); this is a bundle of
+c(ud) have been computed by mirror symmetry, and
+the rst few are k1 = 2875, k2 = 4876875/8, and k3 = 8564575000/27. to try and nd
+c(ud) by nding a global
+section of ud and examining its degeneracy locus. let f be a generic section of op4 (5)
+on p4 which cuts out a smooth quintic threefold x. we pull f back to give us a global
+
+rank 5d + 1. the numbers kd =rmd
+a geometric interpretation of these numbers, we compute rmd
+
+section of ud, which we call d. the degeneracy locus of d in md consists of those maps
+(c, f ) with f (c) contained in this quintic threefold. this observation allows us to use the
+
+kd to compute the number of rational curves of degree d on the quintic threefold x.
+
+in degree 1 the degeneracy locus consists of one point for every line mapping into x,
+
+and so we see that k1 = 2875 is the number of lines in a quintic threefold. in degree two,
+the degeneracy locus of 2 consists of an isolated point for every degree two rational curve
+in x, and 2875 positive dimensional loci, each one consisting of maps which map two to
+
+one onto a line in x. to calculate the actual number of degree two rational curves in
+
+x, we compute the excess intersection contribution of each of these positive dimensional
+
+components, and subtract from the previously computed total of 4876875/8. we now
+
+compute this excess intersection contribution.
+
+26
+
+for each line l in x, let yl be the submanifold of m2 parameterizing two to one covers
+of l. the normal bundle of l in p4 is nl/p4 = ol(1)  ol(1)  ol(1). a calculation on the
+tangent space of m2 shows that the normal bundle nyl/m2 is (at a map (c, f )) equal to
+h 0(c, f nl/p4 ).
+
+since the line l is sitting in the quintic threefold x, its normal bundle maps naturally
+to the normal bundle of x in p4, with kernel the normal bundle of l in x. this gives us
+
+an exact sequence:
+
+0  ol(1)  ol(1)  nl/p4  ol(5)  0.
+
+let v2 be the bundle on yl whose bre at a map (c, f ) is h 1(c, f ol(1)). the
+
+above short exact sequence on l gives us the sequence
+
+0  nyl/m2  e2  v2  v2  0
+
+of bundles on m2. the multiplicative properties of chern classes in short exact sequences
+shows us that the excess contribution of yl is:
+
+zyl
+
+c(e2)
+
+c(nyl/m2)
+
+=zyl
+
+c(v2)c(v2).
+
+this last number is the aspinwall-morrison computation of 1/d3, or in this case,
+
+1/8. this gives the number of actual degree two rational curves on a quintic threefold as
+
+4876875/8  2875/8 = 609250.
+
+under the assumption that each rational curve in x is isolated and smooth, then
+
+similar computations give the famous formula [19]
+
+nd/k
+k3 ,
+
+kd =xk|d
+
+(5.2)
+
+where nd is the number of rational curves in degree d. a caveat: it has been shown
+that this assumption is false in at least one instance  in degree ve, some of the rational
+
+curves are plane curves with six nodes [20]. this doesnt aect the computation until you
+try to calculate multiple cover contributions from these curves. for example,6 in degree
+
+ten we have double covers of these nodal curves. the moduli space of double covers of
+
+a (once) nodal rational curve has two components: one being degree two maps to the
+
+6 we thank n. c. leung for describing this example to us.
+
+27
+
+normalization of the nodal curve, which contributes 1/8 as for the smooth case; the other
+
+being a single point representing two disconnected copies of the normalization mapping
+
+down to the singular curve. if p, q represent the points on the normalization which are
+
+to be identied for the nodal curve, there is a uniqe map from a domain curve with two
+
+components and one node, where the node is mapped to p on one copy and q on the other
+
+(these points are identied). this double cover does not factor through the normalization.
+
+if we have n such curves, their double covers contribute n/8 + n. the integers nd obtained
+
+from the formula (5.2) need to be shifted to have the proper enumerative interpretation
+
+(experimentally, this shift is integral, though this has not been proven [21] ).
+
+5.2. calabi-yau threefolds containing an algebraic surface
+
+let us consider the situation where we have a calabi-yau threefold, x, in a toric
+
+variety, p, and a smooth algebraic surface, b, contained within x :
+
+b  x  p.
+
+(5.3)
+
+we assume as well that b is a fano surface so that x may be deformed so that b shrinks
+
+[22]. this is the scenario of interest to us in this paper. now since there are holomorphic
+
+maps of many degrees into b, which therefore all lie within x, we will have an enormous
+
+degeneracy locus.
+if x is cut from some section s, then at degree  the whole space
+m0,0(; b) will be a zero set of the pull-back section s.7 therefore, we will need to use
+
+the excess intersection formula to calculate the contribution of the surface to the gromov-
+
+witten invariants for x. from this, we will extract integers which account for the eective
+
+number of curves due to b.
+
+mapping tangent vectors, we have from (5.3) the following exact sequence: 0 
+nb/x  nb/p  nx/p  0. note that nb/x = kb, by triviality of 3t x and the
+exact sequence t b  t x  nb/x . therefore, we have
+
+0  kb  nb/p  nx/p  0.
+
+7 actually,  labels a class in x which may be the image of a number of classes in b. in such a
+case, our invariants are only sensitive to the image class, and represent a sum of invariants indexed
+
+by classes in b.
+
+28
+
+given (c, f )  m0,0(; b), we can pull back these bundles and form the long exact
+sequence of cohomology:
+
+0  h 0(c, f kb)  h 0(c, f nb/p)  h 0(c, f nx/p) 
+
+ h 1(c, f kb)  h 1(c, f nb/p)  ....
+
+(5.4)
+
+now h 0(c, f kb) = 0 since b is fano (its canonical bundle is negative), and
+h 1(c, f nb/p) = 0 when b is a complete intersection of (of nef divisors), which
+we assume. as a result, (5.4) becomes a short exact sequence of the bundles over
+
+m0,0(; b)  m0,0(; p) whose bers are the corresponding cohomology groups. the
+bundle (call it u) with ber h 1(c, f kb) is the one we use to dene the local invariants.
+the bundle with ber h 0(c, f nb/p) is nm(b)/m(p) (abbreviating the notation a bit).
+that with ber h 0(c, f nx/p) is the one used to dene the (global) gromov-witten
+invariants for x  call it e. therefore, we have
+
+0  u  nm(b)/m(p)  e  0.
+
+now using (5.1) with e = e; m = m0,0(; p); and y = m0,0(; b); the multi-
+plicativity of the chern class gives the contribution to the gromov-witten invariant of the
+
+threefold x from a surface b  x is
+
+k =zm0,0(;b)
+
+c(u),
+
+(5.5)
+
+which is what we have been computing.
+
+typically, the presence of a surface b  x may not be generic, so that x can
+be deformed to a threefold x  not containing such a holomorphic surface. let k x
+ be
+the gromov-witten invariant of x, and let k x
+ be the gromow-witten of x . these
+are equal, as the gromov-witten invariant is an intersection independent of deformation:
+k x
+, the
+numbers of rational curves on x . let n be the numbers of rational curves on x, and let
+k be the integral in (5.5). for simplicity, let us assume that dimh2(x ) = 1, so that
+degree is labeled by an integer:  = d. then combining the enumerative interpretation
+
+ . for x  we have an enumerative interpretation8 of k x
+
+ = k x
+
+in terms of n
+
+
+
+with the interpretation of the excess intersection above, we nd
+
+k x
+
+d =xk|d
+
+n
+
+d/k/k3 =xk|d
+
+nd/k/k3 + kd.
+
+8 singular rational curves notwithstanding.
+
+29
+
+subtracting, we nd
+
+nd/k/k3.
+
+kd =xk|d
+
+here n = n  n represents the eective number of curves coming from b. in the text, we
+
+typically write n for n.
+
+we therefore have an enumerative interpretation of the local invariants. after per-
+forming the 1/d3 reduction we get an integer representing an eective number of curves
+
+(modulo multiple covers of singular curves, which should shift these integers). we should
+
+note that one might ask about rational curves in the calabi-yau manifold which intersect
+
+our fano surface. such a situation would make for a more complicated degeneracy locus,
+but it turns out this situation does not arise. indeed, if c  x is a holomorphic curve in
+x meeting b transversely, then c  b > 0 (strictly greater). however, for c  b, we have
+
+c  b =zd
+
+c1(nb/x ) =zd
+
+c1(kb) < 0,
+
+by the fano condition. therefore, c cannot lie in the image of h2(b) in h2(x)  the
+only classes in which we are interested  and so our understanding of the numbers nd is
+therefore complete.
+
+5.3. singular geometries
+
+for physical applications, we will often want the surface b to be singular. for ex-
+
+ample, in order to geometrically engineer su (n + 1) supersymmetric gauge theories in
+four dimensions, we consider the local geometry of an an singularity bered over a p1.
+in fact, we take a resolution along each an ber, so that the exceptional divisor over a
+point is a set of p1s intersecting according to the dynkin diagram of su (n + 1). the
+total geometry of these exceptional divisors forms a singular surface, which is a set of p1
+bundles over p1 (hirzebruch surfaces) intersecting along sections. in [3] it is shown how
+
+the local invariants we calculate can be used to derive the instanton contributions to the
+gauge couplings. roughly speaking, the number of wrappings of the p1 base determines
+
+the instanton number, while the growth with ber degree of the number of curves with a
+
+xed wrapping along the base determines the corresponding invariant.
+
+it is clearly of interest, then, to be able to handle singular geometries. actually, we
+
+will be able to do so without too much eort. let us consider an illustrative example.
+dene the singular surface b to be two p2s intersecting in a p1. this can be thought of
+
+30
+
+as a singular quadric surface, since it can be represented as the zero locus of the reducible
+
+degree two polynomial
+
+xy = 0
+
+in p3 with homogeneous coordinates [x, y, z]. the generic smooth quadric is a surface b =
+p1p1. if we express b as a hypersurface in p3, we can dene the local invariants (indexed
+only by the generator of h2(p3)) of b as an intersection calculation in m0,0(d; p3) as
+follows. dene the bundle
+
+e  op3 (2)  op3 (2).
+
+then let se = (s, 0) be a global section of e, where s is a quadric and 0 is the only
+global section of op3 (2). note that, by design, e restricted to the zero set of se is
+equal to kb. we now dene a bundle over m0,0(d; p3) whose bers over a point (c, f )
+are h 0(c, f op3 (2))  h 1(c, f op3 (2)). we then compute the top chern class of the
+
+bundle, which can be calculated as in the previous subsections in terms of the zero locus of
+se, which picks out maps into b = p1  p1. the calculation gives the usual local invariant
+for p1  p1, counting curves by their total degree d = d1 + d2, where di is the degree in
+p1
+i , i = 1, 2. the reason is that o(2)|b = nb/p3 , so the contribution from this part to the
+total chern class cancels with the normal bundle to the map. (the local invariants are
+
+listed in the rst column of table 7.)
+
+now note that this intersection calculation is independent of the section we use to
+compute it. in fact, if we use a reducible quadric whose zero locus is b, the calculation
+will reduce to one on the singular space m0,0(d; b). the excess intersection formula tells
+us exactly which class to integrate over this (singular) space. in fact, integration over the
+
+singular space is only dened via the virtual fundamental class  which is constructed to
+
+yield the same answer. in degree one, this can all be checked explicitly in this example [23].
+
+the upshot is that as our calculations are independent of deformations, we can deform
+
+our singular geometries to do local calulations in a simpler setting. in fact, this makes
+
+intuitive physical sense: the a-model should be independent of deformations.
+
+another phenomenon that we note in examples is that the calculation of the mirror
+
+principle can be performed without reference to a specic bundle.
+
+in other words, the
+
+toric data dening any non-compact calabi-yau threefold works as input data. as a
+
+result, we can consider calabi-yau threefolds containing singular divisors and perform the
+
+calculation. for the example of a2 bered over a sphere, we get the numbers in table
+4. though this technique has not yet been proven to work, it is tantalizing to guess that
+
+31
+
+the whole machinery makes sense for any non-compact threefold, with intersections taking
+
+place in the chow ring and with an appropriately dened prepotential.
+
+in the next section, we will use the b-model to dene dierential equations whose
+
+solutions determine the local contributions we have been discussing.
+
+6. local mirror symmetry: the b-model
+
+in this section we describe the mirror symmetry calculation of the gromov-witten
+
+invariants for a (n  1)-dimensional manifold b with c1(b) > 0. we rst approach this
+by using mirror symmetry for a compact, elliptically bered calabi-yau n-fold9 x which
+contains b as a section, and taking then the volume of the ber to innity. if b is a fano
+
+manifold or comes from a (n  1)-dimensional reexive polyhedron a smooth weierstrass
+calabi-yau manifold x with b as a section exists. moreover the geometry of x depends
+only on b and therefore the limit can be described intrinsically from the geometry of b.
+
+this is an intermediate step. later, we will dene the objects relevant for the b-model
+
+calculation for b intrinsically, without referring to any embedding. such an embedding,
+
+in fact, is in general not possible.
+
+6.1. periods and dierential equations for global mirror symmetry
+
+we briey review the global case in the framework of toric geometry, following the
+ideas and notations of [24][25]. according to [24], a mirror pair (x, x) with the property
+hp,q(x) = hnp,q( x) can be represented as the zero locus of the newton polynomials10
+(p = 0, p = 0) associated to a dual pair of reexive (n + 1)-dimensional polyhedra (, ).
+x is dened as hypersurface by the zero locus of
+
+ai
+
+p =x (i)
+
+n+1
+
+yj=1
+
+ (i)
+j
+j
+
+x
+
+(6.1)
+
+in the toric ambient space p( ), constructed by the complete fan ( ) associated to .
+the sum (6.1) runs over r relevant points {(i)}  , which do not lie on codimension
+one faces and with (0) we denote the unique interior point in . the ai parametrize the
+complex structure deformations of x redundantly because of the induced (c)n+2 actions
+
+9 we will state formulas for n-folds, when possible.
+10 the generalization to complete intersections in toric ambient spaces is worked out in [25][26].
+
+32
+
+on the ai, which compensate xi  ixi, p  0p, such that p = 0 is invariant. invariant
+complex structure coordinates are combinations
+
+zi = (1)l(j)
+
+0
+
+l(i)
+j
+j
+
+,
+
+a
+
+r1
+
+yj=0
+
+(6.2)
+
+where the l(j), j = 1, . . . , k = r  (n + 1) are an integral basis of linear relations among
+the extended relevant points (i) = (1, (i)) with (i)  rel(), i.e.
+
+l(j)
+i (i) = ~0.
+
+r1
+
+xi=0
+
+(6.3)
+
+the l(j) have in the gauged linear sigma model [27] the role of charge vectors of the
+elds with respect to u (1)k. moreover, if the l(j) span a cone in the secondary fan of ,
+which correspond to a complete regular triangulation of  [28], then l(j) span the dual
+cone (mori cone) to the kahler cone of p( ), which is always contained in a kahler cone
+of x and zi = 0 corresponds to a point of maximal unipotent monodromy, which by the
+mirror map [19][25] corresponds to the large kahler structure limit of x.
+
+the period integrals of x contain the information about the gromov-witten invariants
+of x (and vice versa). they are dened as integrals of the unique holomorphic (n, 0)-form
+over the bn (= 2(h2,1(x) + 1) when n = 3) cycles i in the middle cohomology of x. the
+(n, 0)-form is given by a generalization of griths residue expressions [29]
+
+ =
+
+1
+
+(2i)n+1 z0
+
+a0
+p
+
+,
+
+with  =
+
+dx1
+x1
+
+ . . . 
+
+dxn+1
+xn+1
+
+,
+
+(6.4)
+
+and 0 is a contour around p = 0. general periods are then i(zi) = ri
+
+particular cycle11 this leads to the following simple integral
+
+, and for a
+
+0(zi) =
+
+1
+
+(2i)n+1 z|xi|=1
+
+a0
+p
+
+.
+
+(6.5)
+
+because of the linear relations among the points (6.3), the expression (ai) = 1
+a0
+
+(zi)
+
+fullls the dierential identities
+
+i
+
+i >0(cid:18) 
+yl(k)
+
+ai(cid:19)l(k)
+
+ = yl(k)
+
+i <0(cid:18) 
+
+i
+
+ai(cid:19)l(k)
+
+.
+
+(6.6)
+
+11 which, when n = 3 is dual to the s3 which shrinks to zero at the generic point in the
+
+discriminant.
+
+33
+
+the fact that the (i) lie on a hyperplane, together with (6.3) imply the same numbers of
+derivatives on both sides of (6.6), assuring equality. unlike the (zi) the (ai) are however
+not well dened under the c action p  0p dened above. to obtain dierential
+operators lk(i, zi) annihilating i(zi) one uses (6.6), [ai, ar
+i , and the fact that i
+depends on the ai only through the invariant combinations zi. here we dened logarithmic
+
+i ] = rar
+
+derivatives ai = ai
+
+
+ai
+
+, i = zi
+
+
+zi
+
+.
+
+example: x is the degree 18 hypersurface in p(1, 1, 1, 6, 9), with euler number 540
+
+and h1,1( x) = 2 and h2,1( x) = 272. the toric data are
+
+a.)
+
+ = conv{[6, 6, 1, 1], [6, 12, 1, 1], [0, 0, 2, 1], [0, 0, 1, 1], [12, 6, 1, 1]}
+
+b.)
+
+rel() = {[0, 0, 0, 0]; [1, 0, 2, 3], [0, 1, 2, 3], [1, 1, 2, 3], [0, 0, 2, 3], [0, 0, 1, 0], [0, 0, 0, 1]}
+
+c.) triang = {[0, 1, 2, 4, 5], [0, 1, 3, 4, 5], [0, 1, 3, 4, 6], [0, 2, 3, 4, 5], [0, 1, 2, 4, 6], [0, 2, 3, 5, 6],
+
+[0, 1, 2, 5, 6], [0, 1, 3, 5, 6], [0, 2, 3, 4, 6]}
+
+d.) sri = {x1 = x2 = x3 = 0, x4 = x5 = x6 = 0}
+
+e.)
+
+f.)
+
+l(1) = (6; 0, 0, 0, 1, 2, 3),
+
+l(2) = (0; 1, 1, 1, 3, 0, 0)
+
+j 3
+1 = 9 j 2
+
+1 j2 = 3 j1j 2
+
+2 = 1,
+
+c2j1 = 102,
+
+c2j2 = 36.
+
+(6.7)
+
+here triang is a regular star triangulation of , where the 4d simplices are specied by
+
+the indices of the points in rel(). sri denotes the stanley reisner ideal. jijkjl and
+
+c2ji are the triple intersection numbers and the evaluation of the second chern class on
+
+the forms ji, i.e. r c2ji. then by (6.1) x is given by
+
+p = a0 + x 2
+
+3 x 3
+
+4 (a1x1 + a2x2 +
+
+a3
+
+x1x2
+
++ a4) +
+
+a5
+x3
+
++
+
+a6
+x4
+
+= a0 + 
+
+5a3
+and the period (6.5) is easily integrated in the variables(6.2) z1 = a4a2
+a6
+0
+
+6
+
+, z2 = a1a2a3
+
+a3
+4
+
+4 )1   (cid:18) a6
+
+x4(cid:19)6#term constant in xi
+
+0 =
+
+1
+
+(2i)4 z
+=" 
+xn=0
+xr1=0,r2=0
+
+=
+
+
+
+
+
+
+
+1
+1 + 1
+a0
+
+ =" 
+(a0)n x1+...+6=n(cid:18)
+
+a0(cid:19)n#term constant in xi
+
+xn=0(cid:18)
+1! . . . 6!(cid:19) (a1x1x 2
+
+3 x 3
+
+n!
+
+(6r1 + 1)
+
+(r2 + 1)3(r1  3r2 + 1)(3r1 + 1)(2r1 + 1)
+
+1 zr2
+zr1
+2 .
+
+34
+
+likewise, it is easy to see that (6.6) leads to
+
+l1 = 1(1  32)  12(61  5)(61  1)z1
+
+l2 = 2
+
+3  (1 + 1  32)(2 + 1  32)(3 + 1  32)z2 ,
+
+(6.8)
+
+where we factored from the rst operator a degree four dierential operator. this is
+
+equivalent to discarding four solutions which have incompatible behavior at the boundary
+of the moduli space to be periods, while the remaining (2h2,1(x) + 2) solutions can be
+identied with period integrals for x.
+
+note that in general at the point of maximal unipotent monodromy [19][30][25][31]
+zi = 0, 0 = 1 + o(z) is the only holomorphic solution to the picard-fuchs system. let
+us now12 set n = 3. in general, there will be h2,1(x) logarithmic solutions of the form
+i = 1
+
+2i log(zi)0 + holom., and
+
+ti =
+
+i(z)
+0(z)
+
+(6.9)
+
+denes ane complex structure parameters of x, which at zi = 0 can be identied with the
+complexied kahler parameters ti = iv ol(ci) + b(ci) of x, following [19]. the relation
+(6.9) is called the mirror map and in particular, in the limit v ol(ci)   one has
+
+log(zi)  v ol(ci).
+
+(6.10)
+
+h2,1 further solutions are quadratic, and one is cubic in the logarithm. these solutions
+are related to each other and to the quantum corrected triple intersection ci,j,k by spe-
+
+a consequence, these quantities derive from a prepotential, which has the general form
+
+cial geometry, basically grith transversality13 r (i)   = r (ij)   = 0. as
+[19][25](li3(q) =p
+
+ji  jk  jl
+
+(3)
+
+k=1
+
+n~nli3(qd1    qdh1,1 (x) ) (6.11)
+
+f =
+
+titjtk +
+
+c2  jiti + i
+
+6
+
+xk
+k3 )
+1
+24
+
+(2)3 c3 + xd1,...,dh1,1 ( x)
+
+the relations are
+
+titif ),
+
+~ = 0(1, ti, tif , 2f xi
+ci,j,k = titj tk f = ji  jj  jk +x{di}
+
+didjdkn ~d
+
+~q ~d
+
+1  ~q ~d
+
+,
+
+(6.12)
+
+i and the n~n are then the gromov-witten invariants of the mirror x.
+
+12 some aspects for the case of arbitrary n are discusses in [32][33][34].
+13 if n is even we get in general algebraic relations between the solutions and dierential rela-
+tions. the algebraic relations in the k3 case are well known, in the 3-fold case we have special
+geometry, for 4-folds the algebraic and dierential relations can be found in [32][34][33].
+
+where ~q ~d qi qdi
+
+35
+
+6.2. the limit of large elliptic ber
+
+we now identify the classes of the curves ci and dene the limit of large ber volume.
+then we will use (6.9) to translate that into a limit in the complex structure deforma-
+tions parameters zi of x. note that in batyrevs construction the points (i)  rel()
+correspond to monomials in p as well as to divisors di
+in p() (in the example,
+p() = p(1, 1, 1, 6, 9)) which intersect x. each l(i) denes a wall in the kahler cone
+of x at which curves in the class [ci] vanish. moreover, the entries l(j)
+, i = 1, . . . , r are
+the intersection of these curves cj with the restriction di of the divisors di, i = 1, . . . , r
+to x. from this information one can identify the classes [ci] in x. it is convenient to use
+the cox coordinate ring representation [35] p() = {c[x1, . . . xr] \ sri}/(c)k, where
+the c-actions are given by xi  xi((j))l(j)
+and sri denotes the stanley reisner ideal.
+in these coordinates di is simply given by xi = 0 and the polynomial reads
+
+i
+
+i
+
+p =
+
+ai
+
+r1
+
+xi=0
+
+r1
+
+yj=0
+
+xh (j), (i)i+1
+
+j
+
+.
+
+in the example,
+
+p = x0(x6
+
+4g18(x1, x2, x3) + x4
+
+4x5f12(x1, x2, x3) + x3
+
+5 + x2
+6)
+
+(6.13)
+
+(6.14)
+
+has a smooth weierstrass form. we notice, taking into account (6.7)parts d and e, that
+d4 meets x in a p2, the section of the weierstrass form. as [c2]  d4 = 3, c2 must be
+contained in this p2, and from c2  di = 1, i = 1, 2, 3, it follows that c2 lies in that p2
+with degree14 1. [c1]  d4 = 1, hence c1 meets the section once and must be a curve in the
+bre direction, whose volume goes to innity in the large bre limit. by this association
+l(1) = l(f ) and as log(zf )  v ol(cf ), zf = a4a2
+6a3
+a6
+0
+limit. next we pick the periods which stay nite in this limit  that is, whose cycle has
+
+ 0 is the correct complex structure
+
+6
+
+still compact support. from (6.11),(6.12), and (6.7), part f, we see that the nite solutions
+
+are 0, 0t2 and 0(1  32)f . moreover, as they do not contain log(z1) terms they
+satisfy in this limit (and are in fact determined by) the specialization of (6.8) as z1  0 :
+
+l = 3 + 3z(3 + 2)(3 + 1),
+
+(6.15)
+
+14 as a consistency check, note that j2 which is the dual divisor to c2 must then have a
+component in the base p 2 and one in the bre direction, hence on dimensional grounds it can at
+most intersect quadratically comp (6.7), part f.
+
+36
+
+where we have put z  z2 and   2.
+
+this dierential equation comes from the relation of the points in the two dimensional
+face b = conv{1, . . . , 4} in . we call the newton polynomial for this set of points pb.
+we want to dene a special limit of the nite i(z). the limit is a5, a6  0 in p , which
+4 and v = (x3x4)2. then jac  x3,
+is compatible with zf = 0. we dene w = x 2
+ = dw  dv
+. as 1/w is the non-compact
+direction, perpendicular to the compact plane, we remove the compactication point in
+
+3 x 3
+, and  = dw  dx1
+x1
+
+v  dx1
+x1
+
+ dx2
+x2
+
+ dx2
+x2
+
+the 1/w -loop, which becomes open. hence
+
+0(z) =
+
+|v |=1 z 1
+
+
+
+c
+
+(2)4 z |xi |=1
+(2i)3 z|xi|=1z 1
+
+c
+
+
+
+
+
+= log()
+
+c
+
+(2i)3 z|xi|=1
+
+log(1 +
+
+pb
+a0
+
+)
+
+dx1
+x1
+
+
+
+dx2
+x2
+
+= c 
+
+where p 
+
+b is pb with rescaled ai.
+
+a0
+
+w (a0 + w pb)
+
+ + o(a5, a6)
+
+1
+
+w (1 + w pb
+a0
+
+ =
+
+)
+
+c
+
+(2i)3 z|xi|=1z 1
+
+
+
+a0 (cid:19)i
+()i(cid:18) w pb
+
+
+
+log(p 
+
+b)
+
+dx1
+x1
+
+
+
+dx2
+x2
+
+,
+
+
+
+w 1
+
+xi=0
+(2i)3 z|xi|=1
+
+c
+
+6.3. local mirror symmetry for the canonical line bundle of a torically described surface
+
+we will generalize the example of the previous section to the situation where one
+
+has as smooth weierstrass form for the threefold over some base b. the known list
+
+of bases which lead to smooth weierstrass forms are fano varieties and torically de-
+scribed bases whose fans are constructed from the polyhedra b, which we display in
+gure 1. for these bases, we can demonstrate the property of admitting a smooth
+weierstrass form by explicitly showing that total space constructed from f ibration =
+conv{(b
+runs over the 2-tuple of the
+coordinates of points in b and for ek one has the choice (2, 3), (1, 2), and (1, 1) for the
+e8, e7, e6 respective ber types described below.
+
+i , e), (0, 0, 1, 0), (0, 0, 0, 1)} is smooth. here b
+i
+
+for the smooth brations, all topological data of x are expressible from the base
+topology and we have a surjective map i : h 1,1(x)  h 1,1(b). using the adjunction
+formula15 one nds (here we understand that on the left side we integrate over x and on
+the right side over b)
+
+c3( x) = 2hc1(b)2
+
+c2( x)je = kc2(b) + k(
+
+12
+k
+
+ 1)c1(b)2,
+
+c2( x)ji = 12kc1(b)ji
+
+(6.16)
+
+j 3
+e =kc2
+
+1(b),
+
+j 2
+eji = kc1(b)ji,
+
+jejijk = kjijk,
+
+15 this calculation arises in the f-theory context [36].
+
+37
+
+here je is a cohomology element supported on the elliptic bre; its dual homology element
+
+is the base. the ji are cohomology elements supported on curves in b, with homology
+
+dual curves in b together with their bers. k is the number of sections for the various
+
+weierstrass forms, i.e. 1 for the e8 form x6(1, 2, 3), 2 for the e7 form x4(1, 1, 2), 3 for the
+
+e6 form x3(1, 1, 1) and 4 for the d5 form x2,2(1, 1, 1, 1); h is the dual coxeter number
+
+associated with the groups: h = 30, 18, 12, 8, respectively.
+
+from (6.11) and (6.12) we get that (were c1 = c1(b))
+
+te f = t2
+
+ti f = t2
+
+ec2
+
+1 + texi
+e(c1ji) + texj
+
+ti(c1ji) + titj(jjji) + o(q)
+
+tj(jjji) + o(q)
+
+and hence the unique nite combination in the te  i limit is given by
+
+f in = (te xi
+
+xiti)f , with xi
+
+xi(jijj) = c1jj
+
+(6.17)
+
+we dene new variables in the mori cone te = s and ti = ti  xis such that f in =
+
+sf |tei, and by (6.12) we get a general form of the instanton expansion for the curves
+
+which live in the base
+
+gi,k := cs,i,k|qe=0 = jijk +
+
+1
+2
+
+h1,1(b)
+
+(c1ji + c1jk) +x{dl}
+
+(
+
+xi=1
+
+xidi)djdkn ~d
+
+~q ~d
+
+1  ~q ~d
+
+,
+
+(6.18)
+
+where the dl run only over degrees of classes in the base. note that flocal = sf is a
+
+potential for the metric gi,j,. for the polyhedra 2  14 im(gi,j) becomes in a suitable limit
+
+the exact gauge coupling for an n = 2 theory in 4 dimensions (seiberg-witten theory)
+
+[3]. furthermore, all intersections in (6.18) are intersections in the two-dimensional base
+
+manifold and in this sense we have achieved the goal of formulating the mirror symmetry
+
+conjecture intrinsically from the geometric data of the base. it remains to construct a local
+
+picard-fuchs system which has flocal =ph1,1(b)
+
+unique solution quadratic in the logarithms.
+
+i,j=1
+
+(jijj) log zi log zj + si log zi + s0 as the
+
+as a generalization of the situation discussed in the last section, we propose the
+
+following data for local mirror symmetry: a convex n  1 dimensional polyhedron b, pb
+
+38
+
+its newton polynomial,
+
+,
+
+i(zi) =zi
+ =z0
+yj=1
+
+l(i)
+j
+j
+
+zi =
+
+#
+
+a
+
+:
+
+log(pb) : 0 : contour around pb = 0,  =
+
+dx1
+x1
+
+. . .
+
+dxn1
+xn1
+
+(6.19)
+
+(c)n+2  invariant complex structure variables,
+
+{l(i)} a basis of linear relations among the (i)  b = (1, b), i.e. p#
+
+spanning the mori cone of pb .
+
+i=1 l(j)
+
+i (i) = ~0
+
+the non-compact local geometry t(b ) is the canonical bundle over pb .
+
+it is
+
+described by the incomplete fan (b), which is spanned in three dimensions (n = 3) by
+extended vectors (i) = (1, (i)), with (i)  b generate the lattice.
+
+the local mirror geometry is in these cases given by an elliptic curve which is dened
+in coordinates as (6.13), w.r.t. to (b, b) and a meromorphic two-form  with non-
+vanishing residue. the number of independent cycles increases for the polyhedra 1  15
+
+with the number of nonvanishing residue, which in physics play the role of scale or mass
+
+parameters. this is in contrast to the situation in the next section, where the genus of the
+
+riemann surface will increase and with it the number of double logarithmic solutions.
+
+in particular, for the example discussed before we get from (6.13) that the mirror
+
+geometry is the elliptic curve given by the standard cubic in p2
+
+pb = a1x3
+
+1 + a1x3
+
+2 + a3x3
+
+3 + a0x1x2x3.
+
+an important intermediate step in the derivation of this form [24], which be useful later,
+
+is that the polynomial can also be represented by coordinates yi,
+
+pb = a1y1 + a1y2 + a3y3 + a0y0 ,
+
+(6.20)
+
+with r relations q#1
+
+l(k)
+= y
+0
+1, y2 = x3
+suitable etale map, here y1 = x3
+identically the relation(s).
+
+i=1 y
+
+l(k)
+i
+i
+
+0
+
+, k = 1, . . . , r. the xi are then introduced by an
+3 and y0 = x1x2x3, which satisfy
+
+2, y3 = x3
+
+the i(z) are now well-dened under c-actions, up to a shift, and they satisfy
+
+directly
+
+i >0(cid:18) 
+yl(k)
+
+i
+
+ai(cid:19)l(k)
+
+ = yl(k)
+
+i <0(cid:18) 
+
+i
+
+ai(cid:19)l(k)
+
+39
+
+.
+
+(6.21)
+
+in particular 0 = 1 is always a solution. by the same procedure as indicated below
+
+(6.6), we now directly get the dierential equation (6.15). one can easily show that
+
+this dierential equation has besides the constant solution a logarithmic and a double-
+
+logarithmic solution. the explicit form of the solutions can be given in general using the
+
+l(i), i = 1, . . . m in specialized versions of the formulas which appeared in [25]:
+
+c(~n, ~)z~n
+
+~n|~=0,
+
+c(~n, ~) =
+
+0(z) =x~n
+
+i(z) = i 0|~=0,
+
+m+1 = sf =xi,j
+
+1
+
+(n + ) + 1)
+
+,
+
+(6.22)
+
+qi (p l()
+
+i
+
+(jijk)i j 0|~=0.
+
+the predictions for the local mirror symmetry are then obtained using (6.9) and (6.18).
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+fig. 1: reexive polyhedra (b) in two dimensions. p = 16p for p = 1, . . . , 6. 7,8,9
+are self-dual [37][24]. case one is the polyhedron representing the p2; two, three and four
+are the hirzebruch surfaces f0 = p1  p1, f1 and f2 and the others are various blow-ups
+of these cases. note that c2 = #2 simpl. and c2
+1 = 12  #2 simpl. the labeling starts with
+0 for the inner point. the point to its right is point 1 and the labels of the others increase
+counterclockwise.
+
+below we give further data for local mirror symmetry calculation for some16 from of
+
+the polyhedra in fig. 1:
+
+16 in the cases we do not treat explicitly, the mori cone is non-simplicial. this means that
+
+there are several coordinate choices for the large complex structure variables, which correspond
+
+to the simplical cones in a simplicial decomposition of the mori cone. this is merely a technical
+
+complication. we checked that for the simplicial subcones we get consistent instanton expansions
+
+from (6.18).
+
+40
+
+1.
+
+2.
+
+3.
+
+4.
+
+l(1) = (3, 1, 1, 1),
+
+c1 = 3j1, r = j 2
+1
+
+l(1) = (2, 1, 0, 1, 0),
+
+l(2) = (2, 0, 1, 0, 1),
+
+c1 = 2j1 + 2j2, r = j1j2
+
+l(1) = (2, 1, 0, 1, 0),
+
+l(2) = (1, 0, 1, 1, 1),
+
+l(1) = (2, 1, 0, 1, 0),
+
+l(2) = (0, 0, 1, 2, 1),
+
+c1 = 3j1 + 2j2 r = j1j2 + j 2
+1
+c1 = 4j1 + 2j2 r = j1j2 + 2j 2
+1
+
+5.
+
+l(1) = (1, 1, 1, 1, 0, 0),
+
+l(2) = (1, 1, 1, 0, 0, 1),
+
+l(3) = (1, 0, 1, 1, 1, 0)
+
+c1 = 3j1 + 2j2 + 2j3 r = j 2
+
+1 + j2j1 + j1j3 + j2j3
+
+6.
+
+l(1) = (1, 1, 1, 1, 0, 0),
+
+l(2) = (0, 0, 0, 1, 2, 1),
+
+l(3) = (1, 0, 1, 1, 1, 0)
+
+c1 = 4j3 + 2j2 + 3j1 r = j2j3 + 2j 2
+
+3 + j2j1 + 2j3j1 + j 2
+1
+
+10.
+
+l(1) = (1, 0, 1, 0, 0, 1, 1),
+
+l(2) = (0, 0, 1, 0, 1, 2, 0),
+
+l(3) = (0, 1, 0, 0, 2, 1, 0),
+
+l(4) = (0, 0, 1, 1, 0, 0, 2),
+
+c1 = 6j1 + 4j2 + 2j3 + 3j4
+
+r = 6j 2
+
+1 + 4j1j2 + 2j 2
+
+2 + 2j1j3 + j2j3 + 3j1j4 + 2j2j4 + j3j4j 2
+4
+
+here we use the short-hand notation r =p jijkrb jijk and c1 =pi jir c1(b)ji. below
+
+are further picard-fuchs systems derived using (6.21).
+
+lf0
+
+1 = 1
+
+lf0
+
+2 = 2
+
+2  2z1(1 + 2)(1 + 21 + 22)
+2  2z2(1 + 2)(1 + 21 + 22)
+
+lf1
+
+1 = 2
+
+2  z1(2  1)(21 + 2)
+
+lf1
+
+2 = 1(1  2)  z2(21 + 2)(1 + 21 + 2)
+
+lf2
+
+1 = 1(1 + 2)  z121(21 + 1)
+
+lf2
+
+2 = 1(1 + 2)  z222(22 + 1)
+
+in general, linear combinations of the l(i) may lead to to independent dierential operators.
+for example, a complete system for the blown up f2 (polyhedron 6) is obtained using in
+addition to the l(i), i = 1, 2, 3, the linear relations l(2) + l(3) and l(1) + l(3) :
+
+l1 = 2(2  3 + 1)  (2 + 22  3)(1 + 22  3)z1,
+
+l2 = (22  3)(3  1)  (1 + 2  3 + 1)(1 + 3 + 1)z2,
+
+l3 = (2 + 3  1)1  (1 + 3  1)(1 + 3 + 1)z3,
+
+l4 = 2(3  1)  (1 + 22  3)(1 + 3 + 1)z1z2,
+
+l5 = ((22  3)1)  (2 + 3 + 1)(1 + 3 + 1)z2z3.
+
+41
+
+using similar arguments as in section four of the second reference in [25] and the
+
+calculation of toric intersections as described in [38],[39],[40], one can show that (6.21) and
+
+(6.22) implies the appearance of the intersection numbers in (6.18).
+
+concrete instanton numbers for p2 appear in table 1; for kf0, kf1 and kf2 in the
+
+appendix; and for the canonical bundles over the geometry dened by the polyhedra p5
+
+and p6 in table 3 below.
+
+d1 = 0
+
+d3
+
+0 1
+
+d1 = 1
+
+d3
+
+0
+
+1
+
+d1 = 2
+
+d3
+
+0
+
+1
+
+2
+
+d2
+
+0
+
+1
+
+2
+
+4
+
+5
+
+5 6
+
+1 2
+
+2
+
+3
+
+d2
+
+0
+
+1
+
+1
+
+1 0
+
+d1 = 3
+
+d3
+
+0
+
+1
+
+2
+
+d2
+
+0
+
+1
+
+2
+
+3
+
+6
+
+6
+
+35 32
+
+7 32
+
+27
+
+d2
+
+0
+
+1
+
+3
+
+7
+
+d1 = 4
+
+d3
+
+0
+
+1
+
+2
+
+3
+
+d2
+
+0
+
+1
+
+2
+
+3
+
+4
+
+4
+
+9
+
+8
+
+32
+
+135 110
+
+8
+
+135 400
+
+286
+
+9 110
+
+286 192
+
+d1 = 5
+
+d3
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+d2
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+10
+
+11
+
+110
+
+385 288
+
+110
+
+1100 2592
+
+1651
+
+10
+
+385 2592
+
+5187 3038
+
+11 288
+
+1651 3038
+
+1695
+
+table 3: invariants of dp2(polyhedron 5). the invariants for d1 = 0 sum to 2 and for all other
+
+degrees d1 to zero. note also that the invariants for the blow up of f2 (polyhedon 6) are related
+to the above by n(6)
+
+k,i,i+j = n(5)
+
+k,i,j.
+
+42
+
+the kf0 and kf1 geometry17 describes in the double scaling limit n = 2 su (2)
+super-yang-mills theory [3]. similarly in that limit the geometry of the canonical bundle
+
+over p5 and p6 describes n = 2 su (2) super-yang-mills theory with one matter
+multiplet in the fundamental representation of su (2) [3].
+
+6.4. fibered an cases and more general toric grid diagrams
+
+the bered an geometry is motivated from physics [3]. it arises when inside a calabi-
+yau space an an sphere tree is bred over a p1. again we consider the limit that all other
+kahler parameters of the threefold which do not control the sizes of the mentioned p1s
+
+become large. in this case (6.18) becomes the exact gauge coupling of su (n + 1) n = 2
+
+seiberg witten theory when one takes a double-scaling limit in which the size of the ber
+p1 and the one of base p1 are taken small in a ratio described in [3]. we have already
+
+discussed the simplest cases the hirzebruch surfaces f2, f0 and f1, which give rise to a1
+theory. next we consider the an generalization of the f2 case. we can describe it by
+t(b ) as before (below (6.19)), but it clearly does not have the structure of a canonical
+bundle over a space.
+
+a
+
+1
+
+a
+
+2
+
+a
+
+3
+
+. . . . . . . 
+
+fig. 2: toric diagrams (b) for the an singularity bred over p1. note that this diagrams
+have a unique triangulation
+
+to obtain the local situation as a limit of a compact case, we can consider a polyhe-
+dron  dened analogous to f ibration described at the beginning of subsection 6.3. it
+
+turns out that for a2 (a3)  becomes reexive only after adding the point(s) [1, 0, 1, 1]
+([1, 0, 0, 1], [2, 0, 1, 2]), giving us 2 (3) line bundles normal to the to the compact part of
+
+the local geometry. this is true more generally, i.e. one has n line bundles for an, but
+for large n it is not possible to embed the an singularity in a compact calabi-yau space.
+the n normal directions in the kahler moduli space mean that the limit (6.17) leads to an
+
+n-dimensional linear space of nite double-logarithmic solutions whose coecients reect
+
+the directions in the normal kahler moduli space in which the limit can be taken and for
+
+17 this is true also for kf2 , which can be seen as specialization in the complex structure moduli
+
+space of the kf0 case.
+
+43
+
+combinatorial reasons their number corresponds to the number of inner points in the toric
+
+diagram. we denote a basis for these directions si, i = 1, . . . , n. the n double-logarithmic
+
+solutions come as we will see, given the meromorphic dierential (6.19), from a genus n
+
+riemann surface for the local mirror. the gromov-witten invariants, on the other hand,
+
+should not depend on the direction of the limit we take to obtain f in before matching
+it to the n ~d in (6.18). they therefore become rather non-trivial invariants of the dier-
+ential system (6.21). in the following, we explicitly describe for all n the solutions of this
+
+system corresponding to a preferred period basis, up to a choice of the double-logarithmic
+
+solutions.
+
+the generators of linear relations are
+
+l(b) = (1, 1, 2, 0, 0, 0, 0, . . . , 0, 0, 0, 0),
+
+l(1) = (0, 0, 1, 2, 1, 0, 0, . . . , 0, 0, 0, 0),
+
+l(2) = (0, 0, 0, 1, 2, 1, 0, . . . , 0, 0, 0, 0),
+
+...
+
+...
+
+l(n1) = (0, 0, 0, 0, 0, 0, 0, . . . , 1, 2, 1, 0),
+
+l(n) = (0, 0, 0, 0, 0, 0, 0, . . . , 0, 1, 2, 1).
+
+(6.23)
+
+using the etale map y0 = zs, y1 = s
+y0y1 = y 2
+
+2 , yiyi+2 = y 2
+
+z , y2 = s and yk = stk2, k = 3, . . . , n + 3, solving
+i=0 aiyi one gets [3]
+
+i+1, i = 2, . . . , n + 1 on the polynomial p =pn+3
+
+p = sz +
+
++ an+1s + anst + . . . + b0stn+1 .
+
+(6.24)
+
+s
+z
+
+this can be indentied, upon going to an ane patch s = 1 after trivial redenitions and
+
+the [3] limit, with the genus n su (n + 1) curves for n = 2 super-yang-mills theory [41].
+
+to obtain the complete solutions of the period system to the local mirror geometry
+
+(6.24), we have to specify the classical intersection terms in the n double-logarithmic
+
+solutions si f . using (6.23),(6.21), the relation between the ideal of the principal part
+of the dierential operator at the maximal unipotent point zi = 0 and the logarithmic
+
+solutions of gkz-systems as in section 4 of [25], as well as some algebra, we arrive at the
+
+following structure of the general double-logarithmic solution for arbitrary n (ji  log(zi)):
+
+r =
+
+n
+
+xi=1
+
+yiji(jb +
+
+2kjk).
+
+i
+
+xk=1
+
+44
+
+(6.25)
+
+here the coecients of the yi can be viewed as logarithmic terms of sif . this leads by
+(6.22) to an explicit basis of solutions.
+
+it remains to x the xi by requiring invariance of the n ~d in (6.18) given the general
+
+solution (6.25), which yields
+
+xi = mi,jyj, i, j = 1, . . . , n ,
+
+(6.26)
+
+where m is the cartan matrix of an. using this description, we can calculate the instantons
+for all an.
+
+in the following we give some explicit numbers for a2. we arrive at these same numbers
+
+from a-model techniques, even though this is a non-bundle case.
+
+db = 0
+d1
+0
+1
+
+d2
+
+0
+
+1
+
+2
+2 2
+
+d2
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+2 2
+4 6 6 2d3  2
+6 10 12
+8 14 18
+10 18 24
+
+..
+12 4d3  6
+20
+28
+
+..
+20 6d3  12
+30
+
+..
+30 8d3  20
+
+d2
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+6 10 12 12 10 4(d3  1)  6
+32 70 96 110 112
+110 270 416 518 576
+
+..
+126 192
+630
+..
+
+db = 1
+d1
+1
+2
+3
+4
+5
+
+db = 2
+d1
+3
+4
+5
+
+db = 3 d2
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+d1
+4
+5
+
+8 14 18 20 20 20 18
+..
+
+110 270 416 518 576 630
+
+table 4: gromov-witten invariants for local a2. for d3 > d2 we have n1,d2,d3 = 2(d2 
+1)d3  d2(d2  1).
+
+for a3:
+
+45
+
+db = 0
+d1
+0
+1
+
+db = 1
+d1
+1
+2
+3
+
+db = 2
+d1
+3
+4
+5
+
+[d2, d3]
+
+[0, 0]
+
+[1, 0]
+
+[0, 1]
+
+[1, 1]
+
+2
+2 2
+
+2
+
+2
+2
+
+[d2, d4]
+
+[0, 0]
+
+[1, 0]
+
+[1, 1]
+
+[2, 0]
+
+[2, 1]
+
+[2, 2]
+
+[3, 0]
+
+[3, 1]
+
+[3, 2]
+
+2 2
+4 6
+6 10 10 12 16 12 12 18
+
+2
+6 6
+
+4 6 6
+
+
+8 6
+
+[d2, d3]
+
+[0, 0]
+
+[1, 0]
+
+[1, 1]
+
+[2, 0]
+
+[2, 1]
+
+6 10 10 12 16
+
+32 70 70 96
+
+
+
+270 110
+
+
+
+table 5: gromov-witten invariants for local a3.
+
+note that, as expected, at db = 0 the only gromov-witten invariants occur at the
+
+degrees + with n+ = 2 where + are the vector of positive roots in the cartan-weyl
+
+basis.
+
+a 
+
+1
+
+4
+
+6
+
+5
+
+2
+
+3
+
+b
+
+3
+
+4
+
+6
+
+5
+
+2
+
+1
+
+fig. 3: two phases of a local calabi-yau manifold. phase b is obtained by a op transi-
+tion.
+
+as a nal example, we consider a toric grid diagram which admits a op transition,
+
+describing in phase a two p2 connected by a p1. the local geometry is dened by the c
+
+46
+
+operations generated by
+
+l(1)
+a =( 0, 1, 0, 1, 1, 1),
+l(2)
+a =( 1, 1, 0, 1, 0, 3),
+l(3)
+a =( 0, 1, 1, 1, 3, 0),
+
+l(1)
+b = ( 0, 1, 0, 1, 1, 1)
+l(2)
+b = ( 1, 0, 0, 0, 1, 2)
+l(3)
+b = ( 0, 0, 1, 0, 2, 1)
+
+sri a ={x1 = x2 = x4 = 0, x5 = x6 = 0,
+
+sri b = {x2 = x4 = 0, x1 = x3 = 0,
+
+x2 = x3 = x4 = 0, x1 = x3 = 0,
+
+x1 = x5 = 0, x3 = x6 = 0}
+
+x1 = x5 = 0, x3 = x6 = 0}
+
+and the indicated stanley-reisner ideal. as in the a2 case the mirror geometry is given by
+
+a genus two riemann surface. the space of double-logarithmic solutions is two dimensional
+
+and can be determined from (6.21). local invariants follow then for the a and b phase
+
+via (6.18) from the following data
+
+ra = y1j 2
+
+2 + y2(j 2
+
+3  j 2
+
+2 ),
+
+2 = 3(y1  y2), xa
+
+3 = 3y2
+
+rb = y1(2j1j2 + j1j3 + 2j 2
+
+2 + j 2
+2 = 3y1  2y2, xb
+
+xb
+1 = y2, xb
+
+1 = y1, xa
+xa
+3 ) + y2(j 2
+
+2 + j1j2)
+
+3 = 3y1  y2 .
+
+below we list the gromov-witten invariants for the b phase of the (p2, p2) diagram
+
+fig. 3. the instantons of the a phase are related to the one in the b phase by na
+
+k,j,i =
+
+i+jk,i,j. the only degree for which this formula does not apply is na
+nb
+
+1,0,0 = 1, which
+
+counts just the opped p1.
+
+db = 0
+d1
+0
+1
+
+d2
+
+0
+
+1
+
+2
+2 2
+
+db = 1
+d1
+0
+1
+2
+3
+4
+5
+
+d2
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+3
+4
+8
+
+7
+5
+1
+8 13
+3
+9 15
+5
+12 15 16
+7
+9
+16 21 24
+11 20 27 32
+
+9 11 13
+16 20 24
+21 27 33
+24 32 40
+25 35 45
+35 36 48
+
+47
+
+db = 2
+d1
+0
+1
+2
+3
+4
+5
+
+d2
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+32 110 288 644
+6
+10
+70 270 770 1820
+6 10
+32 126 456 1330 3264
+32 70 126 300 784 2052 4928
+110 270 456 784 1584 3360 7260
+288 770 1330 2052 3360 6076
+
+
+db = 3
+d1
+0
+1
+2
+3
+4
+
+d2
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+0
+0
+0
+27
+
+0
+0
+0
+64
+
+286
+800
+
+0
+0
+25
+
+1651
+5184
+1998 11473
+6260 26880
+286 800 1998 6260 21070 70362
+
+27
+64
+266
+266 1332
+
+table 6: gromov-witten invariants for the phase b in fig. 3
+
+from the examples treated so far it should be clear how to proceed for a general toric
+
+grid diagram with n inner points and m boundary points. after choosing a triangulation
+and a corresponding basis of the m + n  3 linear relations l(i) one analyses the principal
+
+part of the dierential system (6.21) to obtain a basis of the double-logarithmic solutions.
+
+this is the only additional information needed to specify the full set of the 2n + m  2
+
+solutions from (6.22). the general structure of the solutions will be as follows. besides
+
+the constant solution, we get for each of the n inner points of the toric diagram, whose
+
+total number equals the genus of the riemann surface, one-single logarithmic solution and
+
+one double-logarithmic solution coming from the period integrals around a- and b-type
+
+cycles of the riemann surface. from additional boundary points in the toric grid diagram
+
+beyond 3 we get additional single-logarithmic solutions which correpond to residues of the
+
+meromorphic form (6.19). together with (6.9) the solutions determine (6.18) and hence
+
+the gromov-witten invariants, up to a choice of xi and yi, which represents a choice of the
+bases for the double-logarithmic solutions. requiring the gromov-witten invariants to be
+
+independent of this choice gives a linear relation xi(yj). this produces the exact vacuum
+solutions and the bps counting functions for those ve dimensional theories, as discussed
+
+in [42], which come from arbitrary grid diagrams [43].
+
+48
+
+6.5. cases with constraints
+
+the del pezzo surfaces bn can be constructed by blowing p2 up n times, 0  n  8, in
+addition to p1  p1. as is well known, the case n = 6 can be represented as a cubic in p3
+
+denoted by x3(1, 1, 1, 1), and n = 7, 8 are representable as degree four and six hypersurfaces
+
+in weighted projective spaces: x4(1, 1, 1, 2) and x6(1, 1, 2, 3), respectively. the n = 5 case
+can be represented as the degree (2,2) complete intersection in p4 x2,2(1, 1, 1, 1, 1). in
+addition, the quadric in p3, x2(1, 1, 1, 1) is another representation of p1  p1.
+
+in the
+
+representation given for the non-local calabi-yau geometry as the canonical bundle over
+
+this del pezzo surfaces below, the map i : h 1,1(x)  h 1,1(b) is not onto, as in the
+
+previous cases. as a consequence the gromow-witten invariants are a sum over curves
+
+with degree di in classes in h 1,1(b) up to degree d = pi di. these cases have been
+
+considered before [2][44][45][5].
+
+as all the weights in these representations are co-prime, the kahler class associated
+
+to the hyperplane class of the ambient space is the only one which restricts to the surface
+
+(no exceptional divisors from the ambient space). we can recast the chern classes of the
+
+surface and the of the canonical bundle over it in terms of this class j. this can be stated
+
+more generally for smooth complete intersections by the denition of the following formal
+weight or charge vectors l(k) = (d1(k), . . . , dr(k)|w1(k), . . . , ws(k)), where di(k) are the degree
+of the ith polynomial, i = 1, . . . , p, in the variables of the kth weighted projective space,
+
+k = 1, . . . , s. in terms of these we can express the total chern class, by the adjunction
+
+formula, to obtain the following formal expansion
+
+i=1 (1 + wi,(k)j(k))
+
+k=1qr(k)
+c = qs
+qp
+i=1(1 +ps
+
+k=1 di,(k)j(k)) qp
+i=1ps
+k=1qr(k)
+qs
+k=1qr
+with the volume form of the normal bundle v = qt
+coecient ofqt
+
+integrals over the top class for the non-compact case are formally dened by multiplying
+j=1 dj,(k)j (k) and picking the
+k=1 j (s(k)1). similarly wedge products of c2 with j and triple intersections
+are obtained.18 we start by summarizing the weight or charge vectors for the non-compact
+
+k=1 dj,(k)j (k)
+
+i=1 wi,(k)
+
+.
+
+(6.27)
+
+18 there are minor disagreements with the classical integrals equation (4.18) in [44] as well as
+
+with the normalization of the instanton numbers for the case referred to as conifold in [44].
+
+these data should all follow from (6.27).
+
+49
+
+case (the compact cases are obtained by deleting the last entry):
+
+x2(1, 1, 1, 1) :
+
+l = (2|1, 1, 1, 1, 1)
+
+x2,2(1, 1, 1, 1, 1) :
+
+l = (2, 2|1, 1, 1, 1, 1, 1)
+
+x3(1, 1, 1, 1) :
+
+l = (3|1, 1, 1, 1, 1)
+
+x4(1, 1, 1, 2) :
+
+l = (4|1, 1, 1, 2, 1)
+
+x6(1, 1, 2, 3) :
+
+l = (6|1, 1, 2, 3, 1)
+
+using (6.27) we calculate for the cases in turn
+
+z j 3 = 1, 4, 3, 2, 1
+
+z jc2 = 2, 4, 6, 8, 10
+
+z c3 = 4, 16, 24, 36, 60 .
+
+the dierential operators follow directly from (6.21) for the ve cases they are
+
+l(1) =3  4z(2 + 1)2 , l(2) = 3 + 4z(2 + 1)2 ,
+
+l(3) =3 + 3z(3 + 1)(3 + 2) , l(4) = 3 + 4z(4 + 1)(4 + 3) ,
+
+l(5) =3 + 12z(6 + 1)(6 + 6) .
+
+the principal discriminant appears in front of the highest derivative l =  d
+dz
+ = (1 + az) with a = 16, 16, 27, 64, 432, respectively. the following properties con-
+
++ . . ., i.e.
+
+3
+
+cerning the exponents at the critical loci of the discriminants are common: the discriminat
+appears with r r =  1
+for these cases, the charge vectors and the topological data listed above give (using in-
+
+6 , as for the conifold, and the zs appears with s = (12+r jc2)/12.
+
+stanton) the following invariants.
+
+x2(1, 1, 1, 1)
+
+x2,2(1, 1, 1, 1, 1)
+
+x3(1, 1, 1, 1)
+
+d
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+rational
+4
+4
+12
+48
+240
+1356
+8428
+56000
+392040
+
+elliptic
+0
+0
+0
+9
+136
+1616
+17560
+183452
+1878664
+
+elliptic
+rational
+0
+16
+0
+20
+0
+48
+5
+192
+96
+960
+1280
+5436
+14816
+33712
+160784
+224000
+1588160 1688800
+
+elliptic
+rational
+0
+27
+0
+54
+4
+243
+135
+1728
+3132
+15255
+62976
+153576
+1187892
+169086
+21731112
+20053440
+249740091 391298442
+6985791864
+
+10 2859120 19027840 11436720 17416488 3240109350
+
+50
+
+x4(1, 1, 1, 2)
+
+x6(1, 1, 2, 3)
+
+d
+1
+2
+3
+4
+5
+6
+7
+8 27855628544
+
+elliptic
+rational
+0
+56
+3
+272
+224
+3240
+12042
+58432
+574896
+1303840
+26127574
+33255216
+930431208 1163157616
+
+elliptic
+rational
+2
+252
+762
+9252
+246788
+848628
+76413073
+114265008
+23436186174
+18958064400
+7209650619780
+3589587111852
+744530011302420 2232321201926988
+51336812456 165076694998001856 696061505044554012
+
+table 7: gromov-witten invariants for local cases with constraints.
+
+as expected from the segre embedding of p1 p1 into p3 by the conic constraint, this
+
+case should correspond to the diagonal part of the local p1p1 case, i.e. pi+j=r np 1p 1
+
+nx2(1,1,1,1)
+r
+calculated using the holomorphic anomaly of the topological b-model [46] . (in [16] some
+
+, which is indeed true. the gromov-witten invariants for the elliptic curves are
+
+i,j
+
+=
+
+of them are checked using localisation.)
+
+7. discussion
+
+we have established that mirror symmetry makes good sense in the local setting,
+
+with the enumerative invariants counting the eective contribution of the surface to the
+
+gromov-witten invariants of a would-be calabi-yau threefold which contains it. these
+
+invariants, dened and computed mathematically, are obtained through analyzing solutions
+
+to dierential equations, as in the global case. as in previous works, we see the seiberg-
+
+witten curve arising from the b-model approach, if an n=2 gauge theory is geometrically
+
+engineered.
+
+several interesting observations were made along the way. we found, analyzing a
+
+reducible quadric, that singular surfaces pose no obstacle to dening the local invariants.
+
+indeed the a-model should be independent of deformations; equivalently, calculations of
+
+chern classes by sections are independent of the choice of section. further, rather as the
+
+canonical bundle description breaks down for singular surfaces, we nd in the bered an
+examples (in which the bered sphere-trees represent the singular surface) that the bundle
+
+structure does not appear to be necessary to proceed with the calculation. heuristically,
+
+51
+
+one can model not just the moduli space of maps as a projective variety, but in fact the
+
+whole vector bundle ud. with intersections in the chow ring and integration well-dened
+
+by virtue of a thom class, the procedure seems to yield the correct results. this technique
+
+needs to be developed and made rigorous, but the numbers still agree with the b-model
+
+results in table 4-5.
+
+the recent work of vafa and gopakumar [17] introduces a new interpretation of these
+
+numbers and their analogues at higher genus.
+
+in particular, those authors count the
+
+contributions of bps states (d-branes) in a xed homology class (but not xed genus)
+
+to the full string partition function, which is a sum over topological partition functions
+
+at all genera. their calculations tell us how to organize the partition functions in order
+
+to extract integers, which represent bps states corresponding to cohomology classes on
+the full moduli space of bps states19 and transforming under a certain su (2) action in a
+
+particular way. in genus zero, the contribution is equivalent to the euler characteristic. at
+degree three in p2, for example, a smooth degree three polynomial is an elliptic curve, and
+
+the d-brane moduli space includes the choice of a u (1) bundle over the curve, equivalently
+
+a point on the curve (if it is smooth). the choice of curves with points is shown in [17] to
+be a p8 bundle over p2, a space with euler characteristic 27 (which is indeed n3 for p2).
+the singular curves, however, should be accompanied by their compactied jacobians as
+
+in [47], but these can in general no longer be equated with the curves themselves. further,
+the compactied jacobians of reducible curves (e.g., the cubic xy z = 0 in p2) are
+
+particularly troublesome. perhaps the non-compact direction in kp2 leads to a resolution
+
+of these diculties. it would be very interesting to mesh the gromov-witten and d-brane
+
+explanations of these local invariants.
+
+having extended traditional mirror symmetry to the non-compact case, one naturally
+
+asks whether other viewpoints of mirror symmetry make sense in the non-compact setting.
+
+is there any kind of special-lagrangian bration? it is likely that, if so, the bers would
+be decompactied tori, e.g. s1  s1  r. 20 this would be an interesting venue to the
+
+conjectures of [49]. in particular, once the kahler-einstein metric of the surface is known,
+
+calabi [50] has given a method to nd a ricci-at metric on the total space of the canonical
+
+bundle. in [49] it is argued that not only should the total d-brane moduli space of the
+
+special-lagrangian torus be the mirror manifold, but also that the metric of the mirror
+
+19 this is the standard reduction to a supersymmetric sigma model on a moduli space.
+20 recently, [48] has found such a bration for canonical bundles of projective spaces.
+
+52
+
+should be computable by an instanton expansion involving holomorphic discs bounding
+
+the torus. the local setting of a degenerate ber, such as has been studied and given an
+
+explicit metric in [51], may prove an illustrative starting point (though several of us have
+
+been unable to crack this example).
+
+what about the categorical mirror symmetry conjecture of kontsevich? unfortu-
+
+nately, few explicit descriptions are known of the derived categories of coherent sheaves
+
+over non-compact spaces (or any spaces, for that matter). in two dimensions, however, the
+
+recent work of [52] gives a description of the derived category over resolutions of a-d-e sin-
+
+gularities in two dimensions. the bered versions of these spaces are just what we consider
+
+in this paper. it would be extremely interesting to calculate fukayas category in these
+
+examples, especially as we currently have a real dearth testing grounds for kontsevichs
+
+ideas.
+
+we feel that the local setting may be the best place for gleaning whats really at work
+
+in mirror symmetry and tying together our still fragmented understanding of this subject.
+
+acknowledgements
+
+we are indebted to b. lian, for his explanations of the mirror principle, and for helping
+
+us at various stages of this project; and to m. roth, for explaining many algebro-geometric
+
+constructions and for his involvement at the early stages of our work. we thank them, as
+
+well as t. graber, r. pandharipande, and c. vafa for many helpful discussions. the work
+
+of t.-m. chiang and s.-t. yau is supported in part by the nsf grant dms-9709694; that
+
+of a. klemm in part by a dfg heisenberg fellowship and nsf math/phys dms-9627351
+
+and that of e. zaslow in part by de-f602-88er-25065.
+
+8. appendix: examples (a-model)
+
+8.1. o(4)  p3
+
+this case is very similar, only we note that the rank of ud is 4d + 1 and the dimension
+of moduli space is 4d. thus we must take the chern class c4d integrated over the moduli
+space. taking the next-to-top chern class has the following interpretation. instead of just
+
+counting the zeros of a section, s0, we take two sections s0 and s1 and look at the zeros of
+s0  s1, i.e. we look for points where the two sections are not linearly independent. the
+number of such points also has the following interpretation. look at the p1 linear system
+
+generated by s0 and s1. if s0  s1 has a zero at a point (c, f ) in moduli space, then some
+
+53
+
+section as0 +bs1 vanishes identically on f (c), i.e. f (c) maps to the zero locus of as0 +bs1.
+therefore, the interpretation of the next-to-top chern class is as the number of rational
+
+curves in any member of the linear system generated by two linearly independent sections.
+
+of course, in this problem, we must account for multiple covers as above. after doing
+
+so, the numbers nd which we get are as follows:
+
+d
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+nd
+320
+5016
+144192
+5489992
+247634752
+12472771416
+678995926336
+39156591980232
+2360737982593344
+147445147672907352
+
+table 8: gromov-witten invariants for a k3 surface inside a calabi-yau threefold.
+
+practically speaking, sections are simply quartic polynomials, and the zero loci are
+
+quartic k3 surfaces. therefore, we are counting the number of rational curves in a pencil
+
+of quartic k3 surfaces. we may wish to compare our results with a calabi-yau manifold
+
+admitting a k3 bration. of course, the number of curves will depend on the nature of the
+
+bration. our count pertains to a trivial total family, i.e. the zero locus of a polynomial of
+bi-degree (1, 4) in p1  p3. the degree 8 hypersurface calabi-yau manifold in p2,2,2,1,1 is
+a pencil of quartic surfaces bered over p1 in a dierent way, though the counting diers
+only by a factor of two. specically, if we look at the gromov-witten invariants in the
+homology class of d times the ber (for this example h11 = 2, one class coming from the p1
+
+base, one from the projective class of the k3 ber), we get twice the numbers computed
+
+above.
+
+8.2. o(3)  p2
+
+in this example, the rank of ud is now 3d + 1 which is two greater than the dimension
+of m00(d, p2), so we must take c(top2)(ud). the interpretation is similar to the case of
+o(4)  p3. we count the number of rational curves in a two-dimensional family of cubic
+curves generated by three linearly independent sections of o(3) (cubics).
+
+54
+
+the numbers nd are: n1 = 21, n2 = 21, n3 = 18, n4 = 21, n5 = 21, n6 = 18, and so on,
+
+repeating these three values (as far as we have computed them explicitly). some of the
+numbers can be easily veried. for example, the space of cubics on p2 (three variables)
+forms (modulo scale) a p9, while conics form a p5 and lines form a p2. in order for a
+
+cubic curve to admit a line, the polynomial must factor into a linear polynomial times a
+conic. to count the number of cubics in a p2 family which do so, we must look at the
+intersection of p2  p2 with the image v of m : p2  p5  p9, which is just the map
+of multiplication of polynomials. the poincare dual of the p2 family is just h 7, where h
+
+is the hyperplane class. therefore, we wish to compute rv h = rp2p5 m(h). now the
+
+map m is linear in each of the coecients (of the line and the polynomial of the conic),
+so we have m(h) = h1 + h2, where the hi are the hyperplane classes in p2 and p5,
+2 in (h1 + h2)7, which is 21.
+respectively. the integral just picks up the coecient of h 2
+note that the same analysis applies to n2, since we have already computed the number of
+
+1 h 5
+
+cubics factoring into a conic (times a line).
+
+to compute n3 one needs more information about the discriminant locus of the p2
+family. similar calculations have been done in [53], where the authors consider a calabi-
+
+yau manifold which is a bered by elliptic curves over a two-dimensional base. the
+
+numbers dier from the ones we have computed, since the bration structure is dierent.
+
+nevertheless, the repeating pattern of three numbers survives.
+
+8.3. kfn
+
+local mirror symmetry of canonical bundle of hirzebruch surfaces can also be com-
+
+puted. the results are as follows:
+
+df
+
+0
+
+1
+
+2
+
+0
+
+3
+
+0
+
+4
+
+0
+
+5
+
+0
+
+6
+
+0
+
+2
+
+2 4
+
+4 6
+
+6
+
+32
+
+6 32 110
+
+8
+
+110
+
+756
+
+10
+
+288
+
+12
+
+644
+
+14
+
+1280
+
+3556
+
+13072
+
+40338
+
+8 10 288 3556 27264 153324
+
+690400
+
+10 12 644 13072 153324 1252040 7877210
+
+12 14 1280 40338 690400 7877210 67008672
+
+db
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+table 9: invariants of kf0 (b and f denote the p1s)
+
+55
+
+2
+
+0
+
+5
+
+3
+
+0
+
+7
+
+4
+
+0
+
+9
+
+5
+
+0
+
+11
+
+2
+
+3
+
+0 6 32 110 288
+
+27
+
+286
+
+1651
+
+6
+
+0
+
+13
+
+644
+
+6885
+
+df
+
+0
+
+1
+
+db
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0 192 3038 25216
+
+0
+
+0
+
+0
+
+0
+
+1695
+
+35870
+
+0 17064
+
+table 10: invariants of kf1 (b and f denote the base and ber class respectively)
+
+the numbers for db = df in the above table are the same as that for kp2 . as f1 is
+the blowup of p2 at a point and the homology class of a line in p2 pulled back to f1 is
+b + f , this is what we expect.
+
+df
+
+0
+
+1
+
+2
+
+2
+
+0
+
+3
+
+0
+
+4
+
+0
+
+5
+
+0
+
+6
+
+0
+
+1/2 2 4 6 8 10 12
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0 6 32 110 288
+
+0
+
+0
+
+0
+
+0
+
+0 8 110 756
+
+0
+
+0
+
+0
+
+0 10 288
+
+0
+
+0
+
+0 12
+
+0
+
+0
+
+db
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+table 11: invariants of kf2 (b and f denote the base and ber class respectively)
+
+we do not understand the result of 1/2 above, but it reects the fact that the moduli
+
+space of stable maps into the base, which is a curve of negative self-intersection, is not
+
+convex. therefore the a-model calculation is suspect and we consider the b-model result
+
+of 0 for this invariant to be the right answer. (for higher degree maps into the base, the
+
+a- and b-model results agree again.)
+
+56
+
+references
+
+[1] s. kachru, a. klemm, w. lerche, p. mayr, c. vafa, nonperturbative results on the
+
+point particle limit of n=2 heterotic string, nucl. phys. b459 (1996) 537.
+
+[2] a. klemm, p. mayr, and c. vafa, bps states of exceptional non-critical strings,
+
+nucl. phys. b (proc. suppl.) 58 (1997) 177-194; hep-th/9607139.
+
+[3] s. katz, a. klemm, and c. vafa, geometric engineering of quantum field theories,
+
+nucl. phys. b497 (1997) 173-195.
+
+[4] s. katz, p. mayr and c. vafa, mirror symmetry and exact solution of 4d n=2
+
+gauge theories - i, adv. theor. math. phys. 1 (1997) 53-114.
+
+[5] j. a. minahan, d. nemechansky, c. vafa and n. p. warner, e-strings and n = 4
+
+topological yang-mills theories, nucl. phys. b527 (1998) 581-623.
+
+[6] m. kontsevich, enumeration of rational curves via torus actions, in the mod-
+uli space of curves, dijkgraaf et al eds., progress in mathematics 129, birkhauser
+(boston) 1995.
+
+[7] a. givental, a mirror theorem for toric complete intersections, topological field
+theory, primitive forms and related topics (kyoto, 1996), prog. math. 160, 141-
+175; math.ag/9701016.
+
+[8] b. lian, k. liu, and s.-t. yau, mirror principle i, asian j. of math. vol. 1 no. 4
+
+(1997) 729-763; math.ag/9712011.
+
+[9] b. lian, k. liu, and s.-t. yau, mirror principle ii, in preparation.
+
+[10] t. graber and r. pandharipande, localization of virtual classes, math.ag/9708001.
+[11] k. behrend and b. fantechi, the intrinsic normal cone, math.ag/9601010.
+[12] j. li and g. tian, virtual moduli cycles and gromov-witten invariants of algebraic
+
+varieties, j. amer. math. soc. 11 (1998), no. 1, 119-174.
+
+[13] e.witten, two-dimensional gravity and intersection theory on moduli space, sur-
+
+veys in dierential geometry 1 (1991) 243-310.
+
+[14] c. faber, algorithm for computing intersection numbers on moduli spaces
+of curves, with an application to the class of the locus of the jacobians,
+math.ag/9706006.
+
+[15] r. pandharipande, hodge integrals and degenerate contributions, math.ag/9811140.
+[16] a. klemm, mirror symmetry at higher loops: a precision test for m-theory/iia
+
+duality, to appear.
+
+[17] c. vafa and r. gopakumar, m-theory and topological strings-i & ii, hep-
+
+th/9809187, hep-th/9812127.
+
+[18] w. fulton, intersection theory, second edition, springer-verlag (berlin) 1998.
+[19] p. candelas, x. c. de la ossa, p. s. green, l. parkes, a pair of calabi-yau manifolds
+
+as an exactly soluble superconformal theory, nucl.phys. b359 (1991) 21-74.
+
+57
+
+[20]
+
+i. vainsencher, enumeration of n-fold tangent hyperplanes to a surface, j. alge-
+braic geom. 4, 1995, 503-526, math.ag/9312012.
+
+[21] d. a. cox, and s. katz, mirror symmetry and algebraic geometry, ams, provi-
+
+dence, ri usa, 1999, to appear.
+
+[22] d. r. morrison and c. vafa, compactications of f-theory on calabi-yau threefolds
+
+ ii, nucl. phys. b476 (1996) 437-469; hep-th/9603161.
+
+[23] t. graber, private communication.
+[24] v. batyrev, dual polyhedra and mirror symmetry for calabi-yau hypersurfaces in
+
+toric varieties, j. algebraic geom. 3 (1994) 493-535.
+
+[25] s. hosono, a. klemm, s. theisen and s.t. yau, mirror symmetry, mirror map
+and applications to calabi-yau hypersurfaces, commun. math. phys. 167 (1995)
+301-350, hep-th/9308122; and mirror symmetry, mirror map and applications to
+calabi-yau hypersurfaces, nucl. phys. b433 (1995) 501-554, hep-th/9406055.
+
+[26] v. batyrev and l. borisov, on calabi-yau complete intersections in toric varieties,
+in higher-dimensional complex varieties, (trento, 1994), 39-65, de gruyter (berlin)
+1996.
+
+[27] e. witten, phases of n = 2 theories in two dimensions, nucl. phys. b403 (1993)
+
+[28]
+
+159.
+i. m. gelfand, m. kapranov, a. zelevinsky, multidimensional determinants, dis-
+criminants and resultants, birkhauser (boston) 1994; l. billera, j. filiman and b.
+sturmfels,  constructions and complexity of secondary polytopes, adv. math. 83
+(1990), 155-17.
+
+[29] p. griths, on the periods of certain rational integrals, ann. math. 90 (1969)
+
+460.
+
+[30] d. morrison, where is the large radius limit? int. conf. on strings 93, berkeley;
+
+hep-th/9311049
+
+[31] v. batyrev, variations of the mixed hodge structure of ane hypersurfaces in
+
+algebraic tori, duke math. jour. 69, 2 (1993) 349.
+
+[32] b. r. greene, d. r. morrison, m. r. plesser, mirror manifolds in higher dimension,
+
+commun. math. phys. 173 (1995) 559-598.
+
+[33] a. klemm, b. lian, s.-s. roan, s.-t. yau.  calabi-yau fourfolds for m- and f-theory
+
+compactications,  nucl.phys. b518 (1998) 515-574.
+
+[34] p. mayr, n=1 superpotentials and tensionless strings on calabi-yau four-folds,
+
+nucl.phys. b494 (1997) 489-545.
+
+[35] d. cox, the homogeneous coordinate ring of a toric variety, j. alg. geom 4
+
+(1995) 17; math.ag/9206011
+
+[36] r. friedman, j. morgan, e. witten, vector bundles and f theory, commun. math.
+
+phys. 187 (1997) 679-743, section 7; hep-th 9701162.
+
+58
+
+[37] r. j. koelman, a criterion for the ideal of a projectively embedded toric surface to
+
+be generated by quadrics, beitrage algebra geom. 34 (1993), no. 1, 57-62.
+
+[38] t. oda, convex bodies and algebraic geometry, an introduction to the theory of
+toric varieties, ergennisse der mathematik und ihrer grenzgebiete, 3. folge, bd. 15,
+springer-verlag (berlin) 1988.
+
+[39] w. fulton, introduction to toric varieties, princeton univ. press 131 (princeton)
+
+1993.
+
+[40] v. i. danilov, the geometry of toric varieties, russian math. surveys,33 (1978) 97.
+[41] a. klemm, w. lerche, s. theisen and s. yankielowicz, simple singularities and
+n=2 supersymmetric yang-mills theory, phys. lett. b344 (1995) 169; a. klemm,
+w. lerche, s. theisen, nonperturbative eective actions of n=2 supersymmetric
+gauge theories, j.mod.phys. a11 (1996) 1929-1974.
+
+[42] a. lawrence and n. nekrasov, instanton sums and ve-dimensional theories, nucl.
+
+phys. b513 (1998) 93.
+
+[43] n. c. leung and c. vafa, branes and toric geometry, adv. theor.math. phys. 2
+
+(1998) 91-118, hep-th/9711013.
+
+[44] w. lerche, p. mayr, and n. p. warner, non-critical strings, del pezzo singularities
+
+and seiberg-witten curves, hep-th/9612085.
+
+[45] j. a. minahan, d. nemechansky and n. p. warner, partition function for the bps
+states of the non-critical e8 string, adv. theor. math.phys. 1 (1998) 167-183; hep-
+th/9707149 and investigating the bps spectrum of the non-critical en strings,
+nucl.phys. b508 (1997) 64-106; hep-th/9705237.
+
+[46] m. bershadsky, s. cecotti, h. ooguri, c. vafa (with an appendix by s. katz), holo-
+morphic anomalies in topological field theories, nucl. phys. b405 (1993) 279-304.
+[47] s.-t. yau and e. zaslow, bps states, string duality, and nodal curves on k3,
+
+nucl. phys. b471 (1996) 503-512; hep-th/9512121.
+
+[48] p. lu, special lagrangian tori on a borcea-voisin threefold, math.dg/9902063.
+[49] a. strominger, s.-t. yau, and e. zaslow, mirror symmetry is t-duality, nuclear
+
+physics b479 (1996) 243-259; hep-th/9606040.
+
+[50] e. calabi, metriques kahl`eriennes et fibres holomorphiques, ann. scient. ec.
+
+norm. sup. 12 (1979) 269-294.
+
+[51] h. ooguri and c. vafa, summing up dirichlet instantons, phys. rev. lett. 77
+
+(1996) 3296-3298.
+
+[52] m. kapranov and e. vasserot, kleinian singularities, derived categories, and hall
+
+algebras, math.ag/9812016.
+
+[53] p. candelas, x. de la ossa, a. font, s. katz, and d. r. morrison mirror symmetry
+
+for two parameter models  i, nucl.phys. b416 (1994) 481-538.
+
+59
+
+

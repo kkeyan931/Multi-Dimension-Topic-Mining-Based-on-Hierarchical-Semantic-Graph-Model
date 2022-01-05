@@ -1,0 +1,8327 @@
+glueballs in a hamiltonian light-front approach
+
+to pure-glue qcd
+
+brent h. allen1 and robert j. perry2
+
+department of physics, ohio state university, columbus, ohio 43210
+
+(august 1999)
+
+abstract
+
+we calculate a renormalized hamiltonian for pure-glue qcd and diagonalize it. the renor-
+
+malization procedure is designed to produce a hamiltonian that will yield physical states that
+
+rapidly converge in an expansion in free-particle fock-space sectors. to make this possible,
+
+we use light-front eld theory to isolate vacuum eects, and we place a smooth cuto on the
+
+hamiltonian to force its free-state matrix elements to quickly decrease as the dierence of
+
+the free masses of the states increases. the cuto violates a number of physical principles of
+
+light-front pure-glue qcd, including lorentz covariance and gauge covariance. this means
+
+that the operators in the hamiltonian are not required to respect these physical principles.
+
+however, by requiring the hamiltonian to produce cuto-independent physical quantities and
+
+by requiring it to respect the unviolated physical principles of pure-glue qcd, we are able to
+
+derive recursion relations that dene the hamiltonian to all orders in perturbation theory in
+
+terms of the running coupling. we approximate all physical states as two-gluon states (thus
+
+they are relatively simple single-glueball states), and use our recursion relations to calculate
+
+to second order the part of the hamiltonian that is required to compute the spectrum. we
+
+diagonalize the hamiltonian using basis-function expansions for the gluons color, spin, and
+
+momentum degrees of freedom. we examine the sensitivity of our results to the cuto and
+
+use them to analyze the nonperturbative scale dependence of the coupling. we investigate
+
+the eect of the dynamical rotational symmetry of light-front eld theory on the rotational
+
+degeneracies of the spectrum and compare the spectrum to recent lattice results. finally, we
+
+examine our wave functions and analyze the various sources of error in our calculation.
+
+9
+9
+9
+1
+
+ 
+
+g
+u
+a
+9
+1
+
+ 
+
+ 
+ 
+
+1
+v
+4
+2
+1
+8
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+1e-mail: allen@mps.ohio-state.edu
+2e-mail: perry@mps.ohio-state.edu
+
+1
+
+introduction
+
+a solution to a quantum eld theory that is close to our physical intuition is possible if we can develop
+
+a formalism in which the physical states of the theory rapidly converge in an expansion in free-particle
+
+fock-space sectors (free sectors). such an expansion is unlikely to be possible in an equal-time approach
+
+to many of the more interesting theories, such as qcd. this is because in equal-time approaches to these
+
+theories, the physical states must be built on top of a complicated vacuum unless the volume of space
+
+is severely limited. for this reason, we work in light-front eld theory (lfft). in lfft, it is possible
+
+to force the vacuum to be empty by removing from the theory all particles that have zero longitudinal
+momentum1. any physical eects of these particles must be incorporated into the operators of the theory
+in order to obtain correct physical quantities.
+
+in lfft, the hamiltonian is trivially related to the invariant-mass operator2 (imo), and it is more
+natural to work with the imo because it is manifestly boost-invariant. if the imo satises three conditions
+
+in the basis of free-particle fock-space states (free states), then its eigenstates will rapidly converge in
+
+an expansion in free sectors. first, the diagonal matrix elements of the imo must be dominated by the
+
+free part of the imo. second, the o-diagonal matrix elements of the imo must quickly decrease as the
+
+dierence of the free masses of the states increases. if the imo satises these rst two conditions, then
+
+each of its eigenstates will be dominated by free-state components with free masses that are close to
+
+the mass of the eigenstate. the third condition on the imo is that the free mass of a free state must
+
+quickly increase as the number of particles in the state increases. if the imo satises all three conditions,
+
+then the number of particles in a free-state component that dominates an eigenstate will be limited from
+above. this means that the imos eigenstates will rapidly converge in an expansion in free sectors3.
+
+to satisfy the rst condition on the imo, we assume that we can derive the imo in perturbation
+
+theory. if this is true, then the couplings are small and the diagonal matrix elements of the imo are
+
+dominated by the free part of the imo. to satisfy the second condition, we place a smooth cuto on the
+
+imo to force its matrix elements to quickly decrease as the dierence of the free masses of the states
+
+increases. once we have removed the particles with zero longitudinal momentum from the theory, it is
+
+1this is because there are no negative longitudinal momenta and momentum conservation requires the three-momenta
+
+of the constituents of the vacuum to sum to zero.
+
+2the invariant-mass operator is given by the square of the momentum operator: p p = m2. see appendix a for
+
+more details.
+
+3there are three subtleties here. the rst subtlety is that the rst and third conditions on the imo will not be satised
+for those free states in which many of the particles have negligible center-of-mass transverse momentum and little or
+
+no mass. however, the contributions of these free states to the physical states in which we are interested are typically
+
+suppressed. for example, in qcd these free states have very large widths in transverse position space and are thus highly
+
+suppressed by connement. in qed, the particles with negligible center-of-mass transverse momentum and no mass are
+
+long-transverse-wavelength photons. these photons decouple from the physical states in which we are typically interested,
+
+e.g. charge-singlet states like hydrogen and positronium. thus the contributions to these physical states from the free states
+
+containing these photons are suppressed.
+
+the second subtlety is that exactly how quickly the imos o-diagonal matrix elements must decrease and the free mass
+
+of a free state must increase are not known. we assume that the rates that we are able to achieve are sucient. this can
+
+be veried by diagonalizing the imo and examining the rate of convergence of the free-sector expansion of its eigenstates.
+
+the third subtlety is that the coecients of the expansion for highly excited eigenstates may grow for a number of free
+
+sectors and then peak before diminishing and becoming rapidly convergent.
+
+2
+
+reasonable to expect that the third and nal condition on the imo will be satised automatically. this is
+
+because the free-particle dispersion relation of lfft should force the free mass of a free state to quickly
+
+increase as the number of particles in the state increases (see appendix a of ref. [1]).
+
+by suppressing the matrix elements of the imo that have large changes in free mass, the cuto
+
+regulates the ultraviolet divergences of the theory. unfortunately, it also violates a number of physical
+
+principles of lfft, including lorentz covariance and gauge covariance. this means that the operators
+
+in the imo are not required to respect these physical principles, and renormalization is not simply a
+
+matter of adjusting a few canonical parameters. the simplest way to systematically determine the imo
+
+in this case is in perturbation theory. in order for a perturbative computation of the imo to be strictly
+valid, the theory must be asymptotically free4. if this is the case, then by requiring the imo to produce
+cuto-independent physical quantities and by requiring it to respect the unviolated physical principles of
+the theory5, we can derive recursion relations that dene the imo to all orders in perturbation theory in
+terms of the fundamental parameters of the eld theory. if our cuto is large enough, then the couplings
+
+will be small and the perturbative approximation to the imo may work well.
+
+the physical principles that we use to determine the imo form a subset of the full set of physical
+
+principles of light-front eld theory. this raises the question of how the remaining principles, which are
+
+violated by our cuto, are restored in physical quantities. since the imo is uniquely determined by the
+
+principles that we use, the remaining principles must be automatically respected by physical quantities
+
+derived from our imo, at least perturbatively. if they are not, then they contradict the principles that
+
+we use and no consistent theory can be built upon the complete set of principles. the reason that this
+
+process is possible is that there are redundancies among the various physical principles.
+
+it is possible to compute operators other than the imo in our approach. although we compute op-
+
+erators perturbatively, we can use these operators to compute nonperturbative quantities. for example,
+
+the spectrum can be computed by diagonalizing the imo (see section 6). however, there are drawbacks
+
+to computing operators perturbatively. it is possible that there are intrinsically nonperturbative eects
+
+in the theory that require nonperturbative renormalization. any such eects are neglected in this ap-
+
+proach. another problem is that perturbative renormalization makes nonperturbative physical quantities
+
+somewhat cuto-dependent.
+
+in general, eld theories have an innite number of degrees of freedom. however, since our imo
+
+will cause the physical states of the theory to rapidly converge in an expansion in free sectors, we can
+
+truncate this expansion. this means that approximate computations of physical quantities will require
+
+only a nite number of nite-body matrix elements of operators. in addition, since we assume that we can
+
+compute these matrix elements perturbatively, we do not implement particle creation and annihilation
+
+nonperturbatively in these calculations. this allows us to always work with a nite number of degrees of
+
+freedom.
+
+when we perturbatively calculate matrix elements of operators, we do not truncate the space of
+
+4our method may work even if the theory is not asymptotically free. for example, it works in qed because the scale
+
+at which the electron charge is large is astronomical.
+
+5some of the physical principles, such as cluster decomposition, are violated in a very specic manner and can still be
+used to restrict the form of the imo. however, the restriction in this situation is always weaker than it would have been
+
+had there been no violation of the principle.
+
+3
+
+intermediate states that can appear; so our approach does not use a tamm-danco truncation6 [2, 3, 4].
+we also do not completely eliminate any interactions, such as those that change particle number. these
+
+strengths of our approach allow us to better describe physical theories. however, the truncation of the free-
+
+sector expansion of physical states has drawbacks that are similar to those of perturbative renormalization.
+
+it neglects any physical eects that require an innite number of particles and contributes to the cuto
+
+dependence of nonperturbative physical quantities.
+
+the accuracy of our results and the strength of the cuto dependence of our nonperturbative physical
+
+quantities are determined by the order in perturbation theory to which we calculate the operators of the
+
+theory and the number of free sectors that we keep in the expansion of physical states. if we use a cuto
+
+that is too small, then the couplings of the theory will be large, and it will be necessary for us to keep
+
+many terms in the expansion of the operators. if we use a cuto that is too large, then the free-sector
+
+expansion of the physical states will converge slowly, and it will be necessary for us to keep many sectors
+
+in the states. we assume that if the order of perturbation theory and the number of free sectors are
+
+manageable, then there is a range of cuto values for which the approximations work well and physical
+
+quantities are relatively accurate and cuto-independent.
+
+as we mentioned, we remove from the theory all particles with zero longitudinal momentum. we
+
+should replace their physical eects with interactions. however, due to the limitations of our method, we
+
+can reproduce only those eects of these particles that can be derived with perturbative renormalization
+
+and require only a small number of particles.
+
+there are a number of approaches that are similar to ours [5, 6, 7, 8, 9, 10, 11, 12], and some of these
+
+methods have been used to calculate the physical states of qcd [12, 13]. these calculations are based
+
+on nonrelativistic approximations and use sharp step-function cutos. nonrelativistic approximations
+
+drastically simplify the diagonalization of the imo, but are insucient for states containing light quarks
+
+or gluons. sharp cutos prevent the complete cancellation of the infrared divergences that appear in
+light-front gauge theories7.
+
+our approach is completely relativistic and uses smooth cutos to ensure the complete cancellation
+
+of the light-front infrared divergences. it is largely based on the renormalization methods of perry [14],
+
+methods of wegner [17]. in ref.
+
+perry and wilson [15], wilson [16], and g lazek and wilson [5], as well as the hamiltonian-diagonalization
+[1], we developed and tested our method in massless 3 theory in six
+dimensions. in ref. [18], kylin, allen, and perry extended this method to include particle masses. in this
+
+paper, we extend our method to pure-glue qcd. this theory is simpler than full qcd due to the reduced
+
+number of vertices and the absence of quark masses. for this application, we derive the recursion relations
+
+that determine the imo to all orders in perturbation theory in the running coupling. we approximate all
+
+physical states as two-gluon states and use the recursion relations to compute to second order the part of
+
+the imo that is required to compute the spectrum. we diagonalize the imo in a basis-state expansion
+
+and analyze the results.
+
+6the only degrees of freedom that we remove from the full theory are the particles with zero longitudinal momentum.
+we should be able to replace the physical eects of these particles with interactions without compromising the validity of
+
+the theory. this is because these particles are vacuum eects or have innite kinetic energies (or both), and thus are not
+
+observable in the laboratory as particles.
+
+7these appear due to the exchange of massless gauge particles with arbitrarily small longitudinal momentum.
+
+4
+
+in the remainder of the introduction, we outline the rest of the paper. appendix a contains our
+
+conventions for light-front pure-glue qcd; so the reader may wish to examine it rst. in section 2 we
+
+present our method for computing the free-state matrix elements of the imo. after dening the action
+
+of our cuto, we place a number of restrictions on the imo. first we force the imo at a given cuto
+
+to be unitarily equivalent to itself at a higher cuto. this implies that the imo is unitarily equivalent
+
+to itself at an innite cuto, and will therefore yield cuto-independent physical quantities. from the
+
+statement of unitary equivalence, we develop a perturbative series that relates the interactions at two
+
+dierent cutos. we then proceed to use physical principles to restrict the form of the imo. we require
+
+it to conserve momentum and to be invariant under boosts and rotations about the 3-axis. although
+
+our cuto violates exact transverse locality, we are able to require the imo to respect an approximate
+
+transverse locality.
+
+in practice this means that the imos matrix elements are analytic functions of
+
+transverse momenta. the cuto also violates cluster decomposition, but we show that the implications
+
+of this violation are simple enough that we can still use this principle to restrict the form of the imo.
+
+in order to represent pure-glue qcd, the imo must become the free imo in the noninteracting limit,
+
+and it must be a function only of the cuto and the coupling. the nal physical restriction on the imo is
+
+that it must reproduce the perturbative scattering amplitudes of pure-glue qcd. this restriction species
+
+the form of the rst-order interaction and part of the second-order interaction.
+
+we use the restrictions from physical principles and the perturbative series that relates the interactions
+
+at two dierent cutos to derive the recursion relations that determine the imo. a crucial step in this
+
+process is the removal of the coupling from the perturbative series. this allows us to separate the cuto
+
+dependences of the operators in the interaction from the cuto dependences of their couplings. most of
+
+the details of this derivation are relegated to appendix b.
+
+in section 3 we dene a basis for the expansion of physical states. we construct the physical states
+
+to be simultaneous eigenstates of the imo, the three-momentum operator, and the part of the generator
+
+of rotations about the 3-axis that generates rotations of the internal degrees of freedom of states (as
+
+opposed to their centers of mass). we approximate all physical states as two-gluon states, which means
+
+that they are relatively simple single-glueball states. we analytically calculate the color parts of the
+
+states by requiring the states to be color singlets, and then we expand the states spin and momentum
+
+degrees of freedom in a complete set of orthonormal basis functions. we conclude section 3 by deriving
+
+the eigenvalue equation for the imo in our basis.
+
+in section 4 we use the recursion relations for the imo to compute its two-gluon to two-gluon matrix
+
+element to second order in the running coupling. this is the only free-state matrix element that we need
+
+to solve the eigenvalue equation.
+
+in section 5 we compute the matrix elements of the imo in the basis that we have dened, in terms
+
+of integrals that must be evaluated numerically. to avoid roundo error, we evaluate the integrals for the
+
+kinetic energy and the two-point interaction (the self-energy) by writing them as sums of gamma functions.
+
+the remaining integrals are ve-dimensional, and we compute them with monte carlo methods. however,
+
+before we can do this, it is necessary for us to make manifest the cancellation of the infrared divergences
+
+from exchanged gluons with innitesimal longitudinal momentum. this is nontrivial, and even after
+
+the divergences are gone, we must manipulate the integrals quite a bit to get them into a form that is
+
+5
+
+amenable to monte carlo integration. we present some of these details and other technical issues in
+
+appendix c.
+
+in section 6 we derive our results and analyze the sources of error in the calculation. we begin by
+
+discussing how we assign quantum numbers to our numerical results for glueball states and proceed with
+
+a discussion of the procedure that we use to compute these results. we derive the nonperturbative cuto
+
+dependence of the coupling and discuss the cuto dependence of our glueball masses. we use this analysis
+
+to choose the value of the cuto that minimizes our errors. we then present the spectrum that we nd
+
+with this optimal cuto and compare it to recent lattice results. the last results that we present are the
+
+probability densities for our ve lightest glueballs. we conclude section 6 by discussing the sources of
+
+error in our calculation and estimating the sizes of these errors.
+
+finally, in section 7 we conclude with a summary and a discussion of the direction of future work.
+
+2 the method for computing free-state matrix elements of
+
+the invariant-mass operator
+
+this section summarizes the extension of the results of sections 2-4 and appendix d of ref. [1] to the
+
+case of pure-glue qcd.
+
+2.1 the cuto
+
+our goal is to derive recursion relations that uniquely determine the imo to all orders in perturbation
+
+theory in the running coupling. the imo is a function of the cuto, and can be split into the canonical
+
+free imo and an interaction (see appendix a for our light-front pure-glue qcd conventions):
+
+the cuto is implemented on the matrix elements of the imo:
+
+m2() = m2
+
+free + m2
+
+int().
+
+(1)
+
+(2)
+
+hf|m2()|ii = hf|m2
+
+free |ii + hf|m2
+
+= m 2
+
+f hf|i i + e
+
+2
+
+f i
+
+int()|ii
+4 hf| v ()|ii ,
+f and m 2
+
+where |fi and |ii are eigenstates of the free imo with eigenvalues m 2
+of these eigenvalues:
+
+i , and f i is the dierence
+
+f i = m 2
+
+f  m 2
+i .
+
+(3)
+
+v () is the interaction with the gaussian cuto factor removed, and we refer to it as the reduced
+
+interaction. to determine the imo, we must determine the reduced interaction.
+
+we will see that hf| v ()|ii does not grow exponentially as 2
+
+(2) forces the o-diagonal matrix elements of the imo to rapidly diminish as 2
+the second of our three conditions on the imo and regulates it.
+
+f i gets large; so the exponential in eq.
+f i grows. this satises
+
+6
+
+2.2 the restriction to produce cuto-independent physical quantities
+
+our cuto violates a number of physical principles of lfft, including lorentz covariance and gauge
+covariance8. this means that the operators in the imo are not required to respect these physical
+principles. in addition, since there is no locality in the longitudinal direction in hamiltonian lfft9,
+these operators can contain arbitrary functions of longitudinal momenta. to uniquely determine the
+
+imo in this case, we have to place some restrictions on it. the rst restriction is that it must produce
+cuto-independent physical quantities. to enforce this, we require m2() to satisfy
+
+m2() = u (, ) m2() u (, ),
+
+where u is a unitary transformation that changes the imos cuto and
+
+ <  < 2.
+
+(4)
+
+(5)
+
+we have placed an upper limit on  because eq. (4) is perturbatively valid only if  is not too much
+larger than  [19]. note that we are considering m2() to be a function of its argument; i.e. m2()
+has the same functional dependence on  that m2() has on . in ref.
+[1], we proved that eq. (4)
+forces m2() to produce cuto-independent physical quantities.
+
+the unitary transformation that we use is designed to alter the cuto implemented in eq. (2), and
+
+is a simplied version of a transformation introduced by wegner [17], modied for implementation with
+
+the imo. it is uniquely dened by a linear rst-order dierential equation:
+
+with one boundary condition:
+
+du (, )
+d(4)
+
+= t ()u (, ),
+
+u (, ) = 1.
+
+u (, ) is unitary as long as t () is anti-hermitian and linear [1]. we dene
+
+which is anti-hermitian and linear.
+
+t () =(cid:2)m2
+
+free,m2()(cid:3) ,
+
+(6)
+
+(7)
+
+(8)
+
+to solve for m2() perturbatively, we need to turn eq. (4) into a perturbative restriction on the
+reduced interaction, v (). we outlined how to do this in ref. [1], and here we simply state the results
+
+that we need. the perturbative version of eq. (4) in terms of the reduced interaction is
+
+v ()  v () = v,
+
+(9)
+
+where v is the change to the reduced interaction and is a function of both  and :
+
+8our regulator breaks these symmetries because the mass of a free state is neither gauge-invariant nor rotationally
+
+invariant (except for rotations about the 3-axis).
+
+9that there is no longitudinal locality in hamiltonian lfft is evident from the fact that the longitudinal momentum
+
+of a free particle appears in the denominator of its dispersion relation, (~p 2
+
+ + m2)/p+.
+
+7
+
+hf| v |ii =
+
++
+
+1
+
+2xk
+4xk,l
+
+1
+
+hf| v ()|kihk| v ()|ii t (,)
+hf| v ()|kihk| v ()|lihl| v ()|ii t (,)
+
+(f, k, i)
+
+2
+
+3
+
++ o(cid:16)[v ()]4(cid:17) .
+
+(f, k, l, i)
+
+(10)
+
+in this equation, the sums are over complete sets of free states and the cuto functions are dened by
+
+t (,)
+
+2
+
+(f, k, i) = (cid:18) 1
+
+f k 
+
+1
+
+ki(cid:19)(cid:16)e24f k ki  e24f k ki(cid:17)
+
+(11)
+
+and
+
+t (,)
+
+3
+
+(f, k, l, i) =
+
+(cid:18) 1
+kl 
++ (cid:18) 1
+kl 
++ (cid:18) 1
++ (cid:18) 1
+
+f k 
+
+f k 
+
+1
+
+1
+
+1
+
+1
+
+1
+
+f k + ik
+
+li(cid:19)(cid:18) 1
+li(cid:19)
+kl(cid:19)(cid:18) 1
+kl(cid:19)
+
+f k(cid:19) e24klli (cid:16)e24f k ki  e24f k ki(cid:17)
+
+ki 
+klli + f k ki (cid:16)e24(f k ki +klli )  e24(f k ki +klli )(cid:17)
+li 
+f kkl + f lli (cid:16)e24(f k kl+f lli )  e24(f k kl+f lli )(cid:17) .
+
+f l(cid:19) e24f k kl(cid:16)e24f lli  e24f lli(cid:17)
+
+f l + il
+
+1
+
+(12)
+
+the above denitions for the cuto functions assume that none of the s that appear in the denominators
+
+is zero. in the event one of them is zero, the appropriate cuto function is dened by
+
+t (,)
+
+i
+
+( = 0) = lim
+0
+
+t (,)
+
+i
+
+().
+
+(13)
+
+2.3 restrictions from physical principles
+
+eq. (9) is the rst restriction on the imo. to uniquely determine the imo, we need to place additional
+
+restrictions on it, and we do this using the physical principles of the theory that are not violated by the
+
+cuto. (see footnote 5.)
+
+2.3.1 symmetry principles
+
+any lfft should exhibit manifest momentum conservation, boost covariance, and covariance under
+
+rotations about the 3-axis. our cuto does not violate any of these principles; so we restrict the imo to
+
+conserve momentum and to be invariant under boosts and rotations about the 3-axis.
+
+2.3.2 transverse locality
+
+ideally, the imo should be local in the transverse directions, and thus each of its matrix elements
+
+should be expressible as a nite series of powers of transverse momenta with expansion coecients
+
+8
+
+that are functions of longitudinal momenta. in our case, the cuto suppresses interactions that have
+
+large transverse-momentum transfers and replaces them with interactions that have smaller transverse-
+
+momentum transfers. this is equivalent to suppressing interactions that occur over small transverse
+
+separations and replacing them with interactions that occur over larger transverse separations; so we
+
+do not expect our interactions to be perfectly transverse-local. nonetheless, we expect that interactions
+in m2() should appear local relative to transverse separations larger than 1 or, equivalently, to
+transverse momenta less than . this means that for transverse momenta less than  we should be
+able to approximate each matrix element of m2() as a nite power series in ~p/. we enforce this by
+assuming that transverse locality is violated in the weakest manner possible, i.e. that any matrix element
+
+of the imo can be expressed as an innite series of powers of transverse momenta with an innite radius
+
+of convergence. in other words, we assume that the matrix elements of the imo are analytic functions
+
+of transverse momenta.
+
+2.3.3 cluster decomposition
+
+since the matrix elements of the imo conserve momentum, they can be written as a sum of terms, with
+
+each term containing a unique product of momentum-conserving delta functions [20]. we require the imo
+
+to satisfy approximate cluster decomposition [1]; i.e. when any of its matrix elements is written as an
+
+expansion in the possible products of momentum-conserving delta functions, the coecient of any term
+
+in the expansion is restricted as follows. (if there is more than one possible set of spectators for a given
+
+product of momentum-conserving delta functions, then the coecient has to be broken into a distinct
+
+part for each possible set, and these restrictions hold for each part separately.) it can depend on the
+
+cuto, the quantum numbers of the interacting particles, and the total longitudinal momentum. it must
+
+be proportional to a quantum-number-conserving kronecker delta for each discrete quantum number for
+
+each spectator. it can have no other dependence on the quantum numbers of spectators, and it cannot
+
+contain delta functions that x momenta.
+
+the reason that the imo does not respect exact cluster decomposition and that the coecients in
+
+the delta-function expansion can depend on the momenta of spectators (through a dependence on the
+
+to see this, note that the change in free mass for some process is given by p +(pj p 
+
+total longitudinal momentum) is that our cuto on free-mass dierences violates cluster decomposition.
+i ), where
+the pis are the momenta of the particles in the initial state, the p
+js are the momenta of the particles
+in the nal state, and p + is the total longitudinal momentum of each state. the minus momenta of any
+spectators cancel in this dierence, but their longitudinal momenta still contribute to the overall factor
+of p +.
+
+j pi p
+
+2.3.4 representation of the theory of interest
+
+the preceding restrictions on m2() are valid for any lfft in more than two dimensions. in order to
+represent a particular theory, we must place additional restrictions on m2().
+
+we assume that we can compute m2() perturbatively, which means that we can expand v () in
+powers of the coupling at the scale . our cuto has no eect in the noninteracting limit; so our imo
+
+9
+
+must reproduce free pure-glue qcd in this limit. according to eq. (2), this means that v () vanishes
+
+in the noninteracting limit.
+
+in pure-glue qcd, the only fundamental parameter is the coupling; so we require the imo to depend
+
+only on it and the scale. (for an example of the application of our method to a theory with more than
+
+one parameter, see ref. [18].) in this case, the expansion of v () takes the form
+
+v () =
+
+
+
+xr=1
+
+v (r)(),
+gr
+
+(14)
+
+where g is the coupling at the scale . we refer to v (r)() as the o(gr
+for convenience the coupling is factored out.
+
+ ) reduced interaction, although
+
+g is the correct fundamental parameter for pure-glue qcd if and only if its denition is consistent
+
+with the canonical denition of the coupling. the canonical denition is
+
+g = h163p+
+
+1 (3)(p1  p2  p3) <| g2g3|v|g1>|i1
+
+hg2g3|m2 |g1i ,
+
+(15)
+
+where v is the canonical interaction and <| j|v|i>| denotes a modied matrix element of v. (see appendix a
+for our light-front pure-glue qcd conventions.) the denominator removes all dependence on momentum,
+
+spin, and color in the canonical matrix element for gluon emission, and thus isolates the coupling. we
+
+dene the coupling g by
+
+g = (cid:26)h163p+
+= (cid:26)h163p+
+
+1 (3)(p1  p2  p3) <| g2g3|v|g1>|i1
+1 (3)(p1  p2  p3) <| g2g3|v|g1>|i1
+
+hg2g3|m2()|g1i(cid:27)sn=1; cn=n
+hg2g3| v ()|g1i(cid:27)sn=1; cn=n
+
+~p2=~p3; p+
+
+~p2=~p3; p+
+
+,
+3 ; =0
+
+2 =p+
+
+2 =p+
+
+3 ; =0
+
+(16)
+
+where n = 1, 2, 3, and  is a longitudinal-momentum cuto that we dene below. momentum conservation
+
+and boost invariance imply that the matrix element that denes the coupling can depend only on the
+transverse momentum of particle 2 in the center-of-mass frame and the ratio p+
+1 . the restrictions
+~p2 = ~p3 and p+
+
+3 x these quantities to be 0 and 1/2, respectively.
+
+2 = p+
+
+2 /p+
+
+our denition of the coupling is consistent with the canonical denition because the conditions on
+
+the matrix elements in eq. (16) have no eect on the right-hand side (rhs) of eq. (15) and do not force
+hg2g3|m2 |g1i to vanish. according to eq. (14), the imo is coupling coherent [14, 15, 21] because the
+couplings of its noncanonical operators are functions only of the fundamental parameters of the theory
+
+and they vanish in the noninteracting limit.
+
+we have assumed that the imo obeys approximate transverse locality, which means that we can
+expand any matrix element hf| v (r)()|ii in powers of transverse momenta. each term in this expansion
+is either cuto-dependent or cuto-independent. we dene v (r)
+cd() to be the cuto-dependent part of
+v (r)(), i.e. the part that produces the cuto-dependent terms in transverse-momentum expansions of
+matrix elements of v (r)(). we dene v (r)
+ci to be the cuto-independent part of v (r)(), i.e. the part
+that produces the cuto-independent terms in transverse-momentum expansions of matrix elements of
+v (r)(). then
+
+v (r)() = v (r)
+
+cd() + v (r)
+ci .
+
+(17)
+
+10
+
+this separation is necessary because the procedures for computing v (r)
+
+cd() and v (r)
+
+ci dier.
+
+we believe that if m2() is to reproduce the perturbative scattering amplitudes of pure-glue qcd,
+then it is necessary and sucient for the reduced interaction to satisfy the following conditions10. we
+prohibit v (r)() from having a three-point interaction unless r is odd, and we prohibit v (r)() from
+having a four-point interaction unless r is even. we require
+
+v (1) = p + 163
++ p + 163
+
+2! z d1d2d3 a
+2! z d1d2d3 a
+
+2a
+
+3a1 (3)(p1  p2  p3) <| g2g3|v|g1>|
+3a1a2 (3)(p1 + p2  p3) <| g3|v|g1g2>|
+
+(18)
+
+and
+
+ci = p + 163
+v (2)
++ p + 163
++ p + 163
+
+2! 2! z d1d2d3d4 a
+3! z d1d2d3d4 a
+3! z d1d2d3d4 a
+
+2a
+
+3a
+
+4a1 (3)(p1  p2  p3  p4)
+
+3a
+
+4a1a2 (3)(p1 + p2  p3  p4)
+
+4a1a2a3 (3)(p1 + p2 + p3  p4)
+
+where
+
+and
+
+and
+
+(1)
+1,2;3,4 = 1,
+(2)
+1,2;3,4 = (|p+
+(3)
+1,2;3,4 = (|p+
+(4)
+1,2;3,4 = 1,
+
+1  p+
+1  p+
+
+3 |  p +),
+4 |  p +),
+
+(1)
+1;2,3,4 = 1,
+(2)
+1;2,3,4 = (|p+
+(3)
+1;2,3,4 = (|p+
+(4)
+1;2,3,4 = (|p+
+
+1  p+
+1  p+
+1  p+
+
+2 |  p +),
+3 |  p +),
+4 |  p +),
+
+(1)
+1,2,3;4 = 1,
+(2)
+1,2,3;4 = (|p+
+(3)
+1,2,3;4 = (|p+
+(4)
+1,2,3;4 = (|p+
+
+1  p+
+2  p+
+3  p+
+
+4 |  p +),
+4 |  p +),
+4 |  p +).
+
+4
+
+4
+
+xi=1
+xi=1
+xi=1
+
+4
+
+(i)
+1,2;3,4 <| g3g4|v|g1g2>| i
+
+(i)
+1;2,3,4 <| g2g3g4|v|g1>| i
+
+(i)
+1,2,3;4 <| g4|v|g1g2g3>| i, (19)
+
+(20)
+
+(21)
+
+(22)
+
+the presence of  in these step-function cutos ensures that we will avoid divergences from exchanged
+
+gluons (either instantaneous or real) with innitesimal longitudinal momentum. in section 5 we show
+how we can take  to zero before we diagonalize m2().
+
+10any longitudinal regulator that is consistent with the physical principles that we use to restrict the imo is sucient.
+
+it is not necessary to use our  cuto in order to reproduce the perturbative scattering amplitudes of pure-glue qcd.
+
+11
+
+we have not yet proved that the above conditions on the reduced interaction are necessary and
+
+sucient to reproduce the perturbative scattering amplitudes of pure-glue qcd. we can, however, show
+in 3 theory [1] that analogous conditions are necessary and sucient to reproduce all second-order
+scattering amplitudes.
+
+2.4 the recursion relations for the invariant-mass operator
+
+the restrictions that we have placed on the imo are sucient to uniquely determine it order-by-order in
+perturbation theory. in this subsection, we present the recursion relations that dene m2() in terms of
+v (1) and v (2)
+ci , which we have dened above. to begin, we consider the restriction that forces the imo
+to produce cuto-independent physical quantities:
+
+v ()  v () = v.
+
+(23)
+
+this restriction is in terms of the reduced interaction and the change to the reduced interaction.
+
+v is dened in eq. (10), which makes it clear that since v () can be expanded in powers of g , so
+
+can v :
+
+v =
+
+
+
+xt=2
+
+ v (t).
+gt
+
+(24)
+
+we refer to v (t) as the o(gt
+is factored out. note that v (t) is a function of  and .
+now eq. (23) can be expanded in powers of g and g :
+
+ ) change to the reduced interaction, although for convenience the coupling
+
+
+
+xt=1
+
+v (t)() 
+gt
+
+
+
+xt=1
+
+ v (t)() =
+gt
+
+ v (t).
+gt
+
+
+
+xt=2
+
+(25)
+
+this equation is a bit tricky to use because it involves the couplings at two dierent scales. to see how
+they are related, consider the matrix element of eq. (23) for g1  g2g3:
+
+hg2g3| v ()|g1i  hg2g3| v ()|g1i = hg2g3| v |g1i .
+
+according to the denition of the coupling, this equation implies that
+
+g  g =(cid:26)h163p+
+
+1 (3)(p1  p2  p3) <| g2g3|v|g1>|i1
+
+hg2g3| v |g1i(cid:27)sn=1; cn=n
+
+~p2=~p3; p+
+
+(26)
+
+. (27)
+
+2 =p+
+
+3 ;=0
+
+since v (1) changes particle number by 1, inspection of eq. (10) reveals that hg2g3| v |g1i is o(g3
+
+ ); so
+
+this implies that
+
+g = g + o(g3
+ ).
+
+g = g +
+
+
+
+xs=3
+
+ cs(, ),
+gs
+
+where the css are functions of  and . for an integer t  1, eq. (29) implies that
+
+
+
+ = gt
+gt
+
+ +
+
+xs=2
+
+ bt,s(, ),
+gt+s
+
+12
+
+(28)
+
+(29)
+
+(30)
+
+where the bt,ss are functions of  and , and can be calculated in terms of the css by raising eq. (29)
+to the tth power.
+
+we substitute eq.
+
+(30) into eq. (25) and demand that it hold order-by-order in g . at o(gr
+ )
+
+(r  1), this implies that
+
+v (r)()  v (r)() = v (r) 
+
+r1
+
+xs=2
+
+brs,sv (rs)(),
+
+(31)
+
+where v (1) = 0, and we dene any sum to be zero if its upper limit is less than its lower limit. the
+cuto-independent parts of v (r)() and v (r)() cancel on the left-hand side (lhs), leaving
+
+cd()  v (r)
+v (r)
+
+cd() = v (r) 
+
+r1
+
+xs=2
+
+brs,sv (rs)().
+
+(32)
+
+this equation can be used to derive the desired recursion relations.
+
+in the remainder of this section, we summarize the results of appendix b, which contains a derivation
+
+of the recursion relations that dene the imo. appendix b is an extension of appendix d of ref. [1] to
+
+the case of pure-glue qcd.
+
+recall that momentum conservation implies that any matrix element hf| v ()|ii can be written as
+an expansion in unique products of momentum-conserving delta functions. this means that an arbitrary
+
+matrix element of eq. (32) can be expanded in products of delta functions and thus is equivalent to a set
+
+of equations, one for each possible product of delta functions. given approximate transverse locality, each
+
+of the resulting equations can be expanded in powers of transverse momenta. matching the coecients
+
+of the powers of transverse momenta on either side of these equations allows us to rigorously derive the
+
+following results (see appendix b for details).
+
+first, the cuto-dependent part of the o(gr
+
+reduced interactions by
+
+ ) reduced interaction is given in terms of lower-order
+
+hf| v (r)
+
+cd()|ii ="hf| v (r) |ii 
+
+r1
+
+xs=2
+
+brs,s hf| v (rs)()|ii# terms
+
+,
+
+(33)
+
+where  terms means that the rhs is to be expanded in powers of transverse momenta and only the
+
+terms in the expansion that are proportional to powers or inverse powers of  contribute. recall that
+v (r) is dened by eqs. (10) and (24).
+
+second, the cuto-independent part of v (r)() has two contributions: a four-point interaction with
+no transverse-momentum dependence, and a three-point interaction that is linear in transverse momenta.
+if there are no such contributions to v (r)(), then it is completely determined by eq. (33). third,
+the coupling runs at odd orders; i.e. cs is zero if s is even [see eq. (29)]. fourth, there is no wave-
+function renormalization at any order in perturbation theory in our approach because this would violate
+
+the restrictions that we have placed on the imo.
+
+the fth and nal result from appendix b is that the cuto-independent parts of the o(gr
+
+) reduced interactions for odd r  3 are determined by the coupled integral equations11
+
+ ) and
+
+11it is very dicult to prove that integral equations of this type have a unique solution; so we simply assume that it is
+
+o(gr+1
+
+
+
+true in this case.
+
+13
+
+hf| v (r)
+
+ci |ii =
+
+hf| v (r+1)
+
+ci
+
+|ii =
+
+1
+
+r+1
+
+br,2 "hf| v (r+2) |ii 
+xs=3
+br+1,2 "hf| v (r+3) |ii 
+xs=3
+
+r+2
+
+1
+
+br+2s,s hf| v (r+2s)()|ii#3point
+br+3s,s hf| v (r+3s)()|ii#4point
+
+ term
+
+~p 1
+
+,
+
+~p 0
+
+ term
+
+(34)
+
+.
+
+(35)
+
+to use these equations, the right-hand sides have to be expanded in powers of transverse momenta. only
+three-point interactions that are linear in transverse momenta contribute to v (r)
+ci , and only four-point
+interactions that are independent of all transverse momenta contribute to v (r+1)
+.
+ci and v (r+1)
+
+these equations are coupled integral equations because both v (r)
+
+appear on the rhs
+
+ci
+
+ci
+
+ci
+
+ci
+
+appears on the rhs of eq. (35) inside integrals in
+also appears on the rhs of eq. (35) inside integrals in v (r+3), but
+cannot couple to v (1) to produce a transverse-momentum-independent four-point contribution
+vanishes when the intermediate state is massless
+
+of eq. (34) inside integrals in v (r+2), and v (r+1)
+v (r+3). it would seem that v (r+2)
+v (r+2)
+ci
+to v (r+3). this is because the cuto function t (,)
+and all external transverse momenta are zero. this means that since we specied v (1) and v (2)
+ci
+subsection 2.3.4, we can use eqs. (34) and (35) to solve for v (3)
+ci simultaneously, and v (5)
+ci simultaneously, and so on. note that before we can use these equations to solve for v (r)
+v (6)
+simultaneously, we must rst use eq. (33) both to compute v (r)
+and to express v (r+1)
+
+in
+ci and
+ci and v (r+1)
+cd() in terms of lower-order interactions
+
+cd () in terms of lower-order interactions and v (r)().
+
+ci and v (4)
+
+ci
+
+2
+
+3 the basis for the expansion of physical states
+
+3.1 preliminaries
+
+in the remainder of this paper, we use the results of our renormalization procedure to compute the
+physical states of pure-glue qcd and their masses. the states will be eigenstates of m2(). since our
+cuto preserves translational covariance and covariance under rotations about the 3-axis, we would like
+
+the states to also be simultaneous eigenstates of the generators of these symmetries, but this is impossible
+
+because translations do not commute with rotations. however, a rotation about the 3-axis separates into
+
+a part that rotates the centers of mass of states and a part that rotates states internal degrees of freedom,
+
+and translations do commute with these internal rotations.
+
+to be precise, we dene j3 to be the generator of rotations about the 3-axis, and j r
+
+3 to be the part of
+j3 governing gluons momenta in the center-of-mass frame and spin polarizations. m2(), p +, ~p, and
+j r
+3 are a set of commuting observables; so an eigenstate of m2() can be labeled by their eigenvalues.
+we choose to write a physical state as (cid:12)(cid:12)jn(p )(cid:11), where p is the three-momentum of the state, j is the
+eigenvalue of j r
+n = 2 has the second-smallest mass, etc.). note that because (cid:12)(cid:12)jn(p )(cid:11) will be determined by m2(), it
+an examination of the matrix elements of m2() leads us to believe that the light-front infrared
+divergences (see the discussion below) will not cancel unless the physical states are color singlets, although
+
+3 for the state, and n labels the mass eigenvalue of the state (n = 1 has the smallest mass,
+
+will implicitly depend on  and g.
+
+14
+
+we do not have a rigorous proof of this. therefore, we assume that the physical states are color singlets.
+
+using the fock-space expansion for the identity operator (see appendix a for our light-front pure-glue
+
+qcd conventions), we can expand a physical state in terms of the number of gluons:
+
+(36)
+
+(cid:12)(cid:12)jn(p )(cid:11) = 1(cid:12)(cid:12)jn(p )(cid:11) 
+
+1
+
+2!z d1d2(cid:10)g1g2(cid:12)(cid:12)jn(p )(cid:11) |g1g2i ,
+
+where there is no one-gluon component because there is no color-singlet gluon. we neglect contributions
+
+to the states with more than two gluons, which is a severe approximation. this means that we are
+
+approximating all physical states as relatively simple single-glueball states, and j is then the projection
+
+of the glueballs spin onto the 3-axis. from now on, we refer to the approximate physical states simply
+
+as glueball states.
+
+any eigenstate of m2() can be written as a superposition of cross-product states:
+
+jn
+
+(cid:12)(cid:12)jn(p )(cid:11) = xi
+
+i (p )e ,
+where |n,ii is the color part of the ith contribution to the state and (cid:12)(cid:12)(cid:12)
+
+i (p )e is the momentum/spin
+the free state |g1g2i is dened as a two-gluon state in which one particle has quantum numbers p1,
+|g1g2i is symmetrized with respect to
+
+s1, and c1, and the other has quantum numbers p2, s2, and c2.
+particle labels. thus we can write
+
+|n,ii (cid:12)(cid:12)(cid:12)
+
+part.
+
+jn
+
+(37)
+
+|g1g2i =
+
+1
+
+2h|g1; g2i + |g2; g1ii,
+
+(38)
+
+where the semi-colon in |g1; g2i indicates that particle #1 has quantum numbers p1, s1, and c1, and
+particle #2 has quantum numbers p2, s2, and c2. then we can write the wave function as the sum of
+two permutations:
+
+(cid:10)g1g2(cid:12)(cid:12)jn(p )(cid:11) =
+
+1
+
+2hhg1; g2| + hg2; g1|i(cid:12)(cid:12)jn(p )(cid:11) .
+
+this implies that the wave function (cid:10)g1g2(cid:12)(cid:12)jn(p )(cid:11) is symmetric under exchange of particles 1 and 2.
+
+using eq. (37), we can write the rst permutation as
+
+(39)
+
+(40)
+
+(cid:10)g1; g2(cid:12)(cid:12)jn(p )(cid:11) = xi
+
+hc1; c2 |n,iidp1, s1; p2, s2(cid:12)(cid:12)(cid:12)
+
+jn
+
+i (p )e .
+
+permutation of the ith contribution to the total wave function.
+
+jn
+
+i (p )e are the color and momentum/spin wave functions for the rst
+
+hc1; c2 |n,ii and dp1, s1; p2, s2(cid:12)(cid:12)(cid:12)
+
+3.2 calculation of the color wave function
+
+in our two-gluon approximation, the fact that the glueball states are color singlets uniquely determines
+their color wave functions. using the completeness relation for color states, the color part of the ith
+contribution to the glueball state can be written
+
+|n,ii = xc1c2
+
+|c1; c2ihc1; c2 |n,ii .
+
+15
+
+(41)
+
+let y be the unitary operator that rotates two-gluon states in color space. then under a color rotation,
+
+we have
+
+|n,ii (cid:12)(cid:12)
+
+n,i(cid:11) = xc1c2
+= xc1c2
+
+y |c1; c2ihc1; c2 |n,ii
+|c
+1; c
+
+2ihc1; c2 |n,ii ,
+
+(42)
+
+where the primes on the basis vectors denote rotated basis states. since |n,ii is a color singlet, it does
+not change under a color rotation:
+
+a gluon color-rotated state is given by [22]
+
+1; c
+|c
+
+2ihc1; c2 |n,ii .
+
+n,i(cid:11) = xc1c2
+
+|n,ii =(cid:12)(cid:12)
+1i = u |c1i =xc2
+|c
+
+|c2ihc2| u |c1i =xc2
+
+uc2c1 |c2i ,
+
+where
+
+and
+
+u = eic1
+
+f c1
+
+f c1
+c2c3 = if c1c2c3.
+
+here c is a vector of n 2
+
+c  1 real numbers that parameterize the color rotation. since
+
+1; c
+|c
+
+2i = |c
+
+1i  |c
+
+2i ,
+
+eqs. (43) and (44) imply that
+
+|n,ii = xc1c2c3c4
+
+hc1; c2 |n,ii uc3c1uc4c2 |c3; c4i .
+
+as a guess, let us try
+
+hc1; c2 |n,ii =
+where n is some constant. then eq. (48) becomes
+
+1
+n
+
+c1,c2,
+
+|n,ii =
+
+1
+
+n xc1c3c4
+
+uc3c1uc4c1 |c3; c4i .
+
+(u 1)cc = (u )cc = u 
+
+cc = ucc.
+
+note that
+
+then
+
+|n,ii =
+
+c3,c4 |c3; c4i
+
+hc1; c2 |n,ii |c1; c2i
+
+1
+
+n xc3c4
+= xc1c2
+= |n,ii .
+
+16
+
+(43)
+
+(44)
+
+(45)
+
+(46)
+
+(47)
+
+(48)
+
+(49)
+
+(50)
+
+(51)
+
+(52)
+
+since this is true, our guess for a color-singlet wave function was correct. this solution is unique [23]; so
+
+we can drop the subscript i in eq. (40). n is determined by normalization to be pn 2
+
+now eq. (39) becomes
+
+c  1.
+
+(cid:10)g1g2(cid:12)(cid:12)jn(p )(cid:11) =
+
+1
+c  1)
+
+c1,c2"(cid:10)p1, s1; p2, s2(cid:12)(cid:12)jn(p )(cid:11) +(cid:10)p2, s2; p1, s1(cid:12)(cid:12)jn(p )(cid:11)#.
+
+p2(n 2
+
+(53)
+
+since the imo conserves momentum, the factor in brackets must be proportional to a momentum-
+
+conserving delta function. thus we can write
+
+hg1g2|jn(p )(cid:11) = 2!(163)
+
+3
+
+2 (3)(p  p1  p2)
+
+1
+c  1)
+
+c1,c2qp+
+
+1 p+
+
+2 jn
+
+s1s2 (p1, p2),
+
+(54)
+
+p2(n 2
+
+where jn
+
+s1s2 (p1, p2) is the momentum/spin wave function with the momentum-conserving delta func-
+tion removed, and all the extra factors in this equation are present to simplify the normalization of
+jn
+s1s2 (p1, p2), and this equation indicates that it is symmetric under
+
+s1s2 (p1, p2). we must solve for jn
+
+exchange of particles 1 and 2.
+
+3.3 jacobi variables
+
+using eq. (54), the fock-state expansion for a glueball state in eq. (36) becomes
+
+(cid:12)(cid:12)jn(p )(cid:11) =
+
+1
+
+163
+
+1
+
+c  1) xs1s2c1c2
+
+p2(n 2
+
+c1,c2z d2p1dp+
+qp+
+
+1
+1 p+
+2
+
+(p+
+
+1  p +)(p+
+
+2  p +)
+
+(55)
+
+ jn
+
+s1s2 (p1, p2)|g1g2i ,
+
+where momentum conservation implies that p2 = p  p1. it is useful to separate the motion of the center
+of mass of the state from the internal motions of the gluons. to do this, we change variables from p1 to
+the jacobi variables x and ~k:
+
+p1 = (xp +, x ~p + ~k),
+p2 = ([1  x]p +, [1  x] ~p  ~k).
+
+(56)
+
+here x is the fraction of the total longitudinal momentum that is carried by particle 1, and ~k is the
+transverse momentum of particle 1 in the center-of-mass frame. we only display the longitudinal and
+
+transverse components of the momenta. (since the glueball state is a superposition of free-particle states,
+and since the momentum of a free gluon satises p2 = 0, the minus components of the momenta of g1
+and g2 are constrained to be given by p
+
+i = ~p 2
+
+i/p+
+
+i .)
+
+in terms of the jacobi variables, the glueball state is
+
+(cid:12)(cid:12)jn(p )(cid:11) =
+
+1
+
+163
+
+p2(n 2
+s1s2 (x, ~k, p )(cid:12)(cid:12)(cid:12)
+
+ jn
+
+1
+
+d2kdx
+
+c1,c2z
+
+c  1) xs1s2c1c2
+g(x, ~k, p ; s1, c1)g(1  x,~k, p ; s2, c2)e ,
+
+px(1  x)
+
+(x  )(1  x  )
+
+where we explicitly show the dependence of the rhs ket on the jacobi variables and the total momentum.
+s1s2 (x, ~k, p ) is independent of p . to do this, we note that
+we can use boost covariance to show that jn
+
+(57)
+
+17
+
+under a longitudinal boost, the longitudinal momentum of each particle in pure-glue qcd (whether the
+
+particle is point-like or composite) transforms according to
+
+p+  ep+,
+
+(58)
+
+where  is a boost parameter [24, 25]. under a transverse boost, each particles transverse momentum
+
+transforms according to
+
+~p  ~p + p+~v,
+
+(59)
+
+where ~v is a boost parameter. this means that if we apply a boost operator to both sides of eq. (57),
+we nd that
+
+(cid:12)(cid:12)jn(p )(cid:11) =
+
+1
+
+163
+
+p2(n 2
+s1s2 (x, ~k, p )(cid:12)(cid:12)(cid:12)
+
+ jn
+
+1
+
+d2kdx
+
+c1,c2z
+
+c  1) xs1s2c1c2
+g(x, ~k, p ; s1, c1)g(1  x,~k, p ; s2, c2)e ,
+
+px(1  x)
+
+(x  )(1  x  )
+
+where the boost takes the glueballs momentum from p to p . note that the boost does not aect the
+wave function, only the kets. since eq. (57) holds for all p , it holds in particular for p :
+
+(60)
+
+(61)
+
+(cid:12)(cid:12)jn(p )(cid:11) =
+
+1
+
+163
+
+p2(n 2
+s1s2 (x, ~k, p )(cid:12)(cid:12)(cid:12)
+
+ jn
+
+1
+
+d2kdx
+
+c1,c2z
+
+c  1) xs1s2c1c2
+g(x, ~k, p ; s1, c1)g(1  x,~k, p ; s2, c2)e .
+
+px(1  x)
+
+(x  )(1  x  )
+
+eqs. (60) and (61) contradict each other unless the wave function jn
+
+s1s2(x, ~k, p ) is independent of p :
+
+s1s2 (x, ~k, p ) = jn
+jn
+
+s1s2 (x, ~k).
+
+thus we can write (cid:12)(cid:12)jn(p )(cid:11) as
+p2(n 2
+where  = (x  )(1  x  ).
+
+(cid:12)(cid:12)jn(p )(cid:11) =
+
+163
+
+1
+
+1
+
+c  1) xs1s2c1c2
+
+c1,c2z d2kdx
+
+1
+
+px(1  x)
+
+jn
+
+s1s2 (x, ~k)|g1g2i ,
+
+(62)
+
+(63)
+
+3.4 the momentum and spin wave-function bases
+
+to solve for jn
+s1s2 (x, ~k) is symmetric under exchange of particles 1 and 2,
+jn
+
+s1s2 (x, ~k), we expand it in a complete orthonormal basis for each degree of freedom. since
+
+s1s2 (x, ~k) = jn
+jn
+
+s2s1 (1  x,~k).
+
+to use this, we dene
+
+s1s2 (x, ~k) =
+jn
+
+where the spin wave functions are
+
+q jn
+s1s2
+
+q (x, ~k),
+
+4
+
+xq=1
+
+18
+
+(64)
+
+(65)
+
+s1s2
+
+1
+
+s1s2
+
+2
+
+s1s2
+
+3
+
+s1s2
+
+4
+
+= s1,1s2,1,
+
+= s1,1s2,1,
+
+=
+
+=
+
+1
+2
+1
+2
+
+[s1,1s2,1 + s1,1s2,1] ,
+
+[s1,1s2,1  s1,1s2,1] ,
+
+where s = s, and the momentum wave functions satisfy
+
+note that
+
+1 (x, ~k) = jn
+jn
+2 (x, ~k) = jn
+jn
+3 (x, ~k) = jn
+jn
+4 (x, ~k) = jn
+jn
+
+1 (1  x,~k),
+2 (1  x,~k),
+3 (1  x,~k),
+4 (1  x,~k).
+
+q s1s2
+s1s2
+
+q = q,q .
+
+xs1s2
+
+we dene k = |~k|, and we dene the angle  by
+
+~k = k cos  x + k sin  y.
+
+we expand the momentum wave function in complete orthonormal bases:
+
+jn
+
+q (x, ~k) =
+
+
+
+
+
+
+
+xl=0
+
+xt=0
+
+xa=
+
+r
+
+jn
+
+qltal(e)
+
+l
+
+(x)t (d)
+
+t
+
+(k)aa(),
+
+(66)
+
+(67)
+
+(68)
+
+(69)
+
+(70)
+
+where l(e)
+(k), and aa() are basis functions for the longitudinal, transverse-magnitude, and
+transverse-angular degrees of freedom. e and d are parameters that govern the widths of the longitudinal
+
+(x), t (d)
+
+t
+
+l
+
+and transverse-magnitude basis functions, respectively. we can adjust these widths to optimize the bases.
+jn
+qltas depend on e and d such that
+
+note that if we do not truncate the sums in eq. (70), then the r
+jn
+
+q (x, ~k) is independent of e and d, although we do not indicate this dependence explicitly.
+
+we dene the transverse-magnitude basis functions t (d)
+
+t
+
+(k) by
+
+t (d)
+t
+
+(k) = d ek2d2
+
+t,sksds,
+
+t
+
+xs=0
+
+(71)
+
+where the t,ss are constants that we have computed numerically using the gram-schmidt orthogonal-
+ization procedure and are such that
+
+z 
+
+0
+
+dk k t (d)
+
+t
+
+(k)t (d)
+
+t (k) = t,t.
+
+(72)
+
+adjusting d allows us to adjust the width of the gaussian weight function in eq. (71). d cannot be
+allowed to pass through zero, because when d is zero, t (d)
+
+(k) is zero. we choose d to be positive without
+
+t
+
+19
+
+loss of generality. when doing numerical computations, we work with a dimensionless form of these basis
+
+functions:
+
+t t(kd) =
+
+1
+d
+
+t (d)
+t
+
+(k).
+
+under exchange of the two particles, k is unaected; so t (d)
+
+t
+
+(k) is unaected.
+
+we dene the longitudinal basis functions l(e)
+
+l
+
+(x) by
+
+l(e)
+
+l
+
+(x) = [x(1  x)]e
+
+(e)
+
+l,mxm,
+
+l
+
+xm=0
+
+where
+
+(e)
+l,m = (1)lm
+
+1
+
+m!(l  m)!
+
+these denitions imply that
+
+(1 + 4e + l + m)
+
+(1 + 2e + m) s l!(1 + 4e + 2l)
+
+(1 + 4e + l)
+
+dxl(e)
+
+l
+
+(x)l(e)
+
+l (x) = l,l ,
+
+z 1
+
+0
+
+(73)
+
+(74)
+
+.
+
+(75)
+
+(76)
+
+as long as e > 1/2. (if e  1/2, then the state is not normalizable.) we can adjust the width of the
+weighting function in eq. (74) by adjusting e. it is often more convenient to work with
+
+l(e)
+
+l
+
+(x) =
+
+l(e)
+
+l
+
+(x).
+
+1
+
+px(1  x)
+
+under exchange of the two particles, x  1  x, which means that l(e)
+
+l
+
+we dene the transverse-angular basis functions aa() by
+
+and then
+
+aa() =
+
+1
+2
+
+eia,
+
+z 2
+
+0
+
+da
+
+a ()aa() = a,a .
+
+(x)  (1)ll(e)
+
+l
+
+(x).
+
+(77)
+
+(78)
+
+(79)
+
+these basis functions are useful because they are eigenfunctions of lr
+3 , the part of the generator of
+rotations about the 3-axis that governs gluons momenta in the center-of-mass frame. under exchange
+of the two particles,    + , which means that aa()  (1)aaa().
+using the above denitions of the bases, (cid:12)(cid:12)jn(p )(cid:11) can be written
+(cid:12)(cid:12)jn(p )(cid:11) =
+
+c  1) xs1s2c1c2qlta
+
+z d2kdx l(e)
+
+(k)aa()|g1g2i . (80)
+
+since the glueball state is symmetric under exchange of the two gluons, the behaviors of the spin and
+
+p2(n 2
+
+163
+
+c1,c2r
+
+jn
+qltas1s2
+
+q
+
+1
+
+(x)t (d)
+
+t
+
+l
+
+1
+
+momentum wave functions under exchange of the two gluons imply that if q = 4, then l + a must be odd,
+and if q 6= 4, then l + a must be even (so that the spin and momentum wave functions have the same
+symmetry under exchange).
+
+20
+
+3.5 rotations about the 3-axis
+
+is given by
+
+we want to ensure that(cid:12)(cid:12)jn(p )(cid:11) is an eigenstate of j r
+j3(cid:12)(cid:12)jn(p )(cid:11) =
+
+c  1) xs1s2c1c2qlta
+
+1
+
+1
+
+c1,c2r
+
+p2(n 2
+1  ip1
+
+
+p1
+
+1
+
+
+p2
+
+1
+
++ ip2
+
+2
+
+
+p1
+
+2  ip1
+
+2
+
+163
+ (cid:26)(cid:20)ip2
+ |g1g2i .
+
+1
+
+jn
+
+qltas1s2
+
+q
+
+z d2kdx
+
+
+p2
+
+2
+
++ s1 + s2(cid:21) l(e)
+
+l
+
+(x)t (d)
+
+t
+
+(k)aa()(cid:27)
+
+(81)
+
+3 with eigenvalue j. the action of j3 on the state
+
+using the denitions of the jacobi variables, we can separate the center-of-mass and internal degrees of
+
+freedom:
+
+1
+
+c  1) xs1s2c1c2qlta
+
+
+
+p 2
+
+  i
+
+
+
+
+c1,c2r
+
+jn
+
+qltas1s2
+
+q
+
+z d2kdx
+
++ s1 + s2(cid:21) l(e)
+
+l
+
+(x)t (d)
+
+t
+
+(k)aa()(cid:27) |g1g2i .
+
+(82)
+
+3 on the glueball state is given by
+
+c  1) xs1s2c1c2qlta
+
+c1,c2r
+
+jn
+
+qltas1s2
+
+q
+
+z d2kdx
+
+(x)t (d)
+
+t
+
+(k)aa()(cid:27) |g1g2i
+
+c1,c2r
+
+jn
+qltas1s2
+
+q
+
+c  1) xs1s2c1c2qlta
+
+z d2kdx [a + s1 + s2] l(e)
+
+l
+
+(x)
+
+(83)
+
+1
+
+
+
+
+
+1
+
+1
+
+
+
+p 1
+
+p2(n 2
+  ip 1
+
+j3(cid:12)(cid:12)jn(p )(cid:11) =
+
+j r
+3 (cid:12)(cid:12)jn(p )(cid:11) =
+
+163
+ (cid:26)(cid:20)ip 2
+this implies that the action of j r
+p2(n 2
++ s1 + s2(cid:21) l(e)
+p2(n 2
+(k)aa()|g1g2i .
+since (cid:12)(cid:12)jn(p )(cid:11) is an eigenstate of j r
+
+163
+ (cid:26)(cid:20)i
+
+
+163
+
+ t (d)
+
+=
+
+1
+
+1
+
+t
+
+l
+
+3 with eigenvalue j, it must be the case that a + s1 + s2 = j for all
+values of a, s1, and s2 that contribute to the sums in this equation. this implies that for some set of
+coecients rjn
+qlt,
+
+r
+
+jn
+
+qlta = rjn
+
+qlt [q,1a,j2 + q,2a,j+2 + q,3a,j + q,4a,j] .
+
+this means that (cid:12)(cid:12)jn(p )(cid:11) can be written
+
+(cid:12)(cid:12)jn(p )(cid:11) = xqlt
+
+rjn
+qlt |q, l, t, ji ,
+
+where
+
+|q, l, t, ji =
+
+1
+
+163
+
+1
+
+c  1) xs1s2c1c2z d2kdxc1,c2s1s2
+
+q
+
+p2(n 2
+
+l(e)
+
+l
+
+(x)t (d)
+
+t
+
+(k)ajs1s2 ()|g1g2i .
+
+(86)
+
+we are going to calculate the matrix elements of the imo in the |q, l, t, ji basis and diagonalize it.
+3 , we can do this for each value of j separately. the diagonalization
+
+since m2() commutes with j r
+procedure will yield mass eigenvalues and the rjn
+
+qlt coecients. as long as the coecients satisfy
+
+(84)
+
+(85)
+
+rjn
+
+qlt rjn
+
+qlt = j,j n,n ,
+
+j,jxqlt
+
+21
+
+(87)
+
+the glueball state will have a plane-wave normalization:
+
+(cid:10)jn
+
+(p )|jn(p )(cid:11) = 163p +(3)(p  p )j,j n,n.
+
+(88)
+
+due to the symmetry of the glueball state under the exchange of particles 1 and 2, the basis state
+|q, l, t, ji is zero if l + j is odd and q 6= 4, or if l + j is even and q = 4. to take advantage of this, we
+consider only the subspace in which l + j is even if q 6= 4, and l + j is odd if q = 4.
+
+3.6 the eigenvalue equation
+
+the imos eigenvalue equation is
+
+m2()(cid:12)(cid:12)jn(p )(cid:11) = m 2
+n indicates that it is an eigenvalue of m2() rather than an eigenvalue
+
+n(cid:12)(cid:12)jn(p )(cid:11) ,
+
+(89)
+
+where the lower-case subscript on m 2
+of m2
+
+free. (an example of an eigenvalue of m2
+in the basis that we have dened, the eigenvalue equation takes the form
+
+free is m 2
+
+k.)
+
+m2()xqlt
+
+rjn
+qlt |q, l, t, ji = m 2
+
+nxqlt
+
+rjn
+qlt |q, l, t, ji .
+
+if we project hq, l, t, j| onto the left of this equation and use the identity
+
+hq, l, t, j |q, l, t, ji = 163p +(3)(p  p )q,q l,l t,t ,
+
+then we nd that the eigenvalue equation in our basis is
+hq, l, t, j|m2()|q, l, t, ji
+
+xqlt
+
+163p +(3)(p  p )
+
+rjn
+
+qlt = m 2
+
+nrjn
+
+qlt.
+
+(90)
+
+(91)
+
+(92)
+
+4 calculation of the free-state matrix element of the invari-
+
+ant-mass operator
+
+4.1 preliminaries
+
+to solve the eigenvalue equation, we must calculate the matrix elements hq, l, t, j|m2()|q, l, t, ji.
+these can be written in terms of the free-state matrix element hg
+2|m2()|g1g2i, which is specied
+by our renormalization procedure. we are going to calculate this matrix element to second order in
+
+1g
+
+perturbation theory.
+
+before continuing, we would like to point out three simplications that we repeatedly use in this
+section. to make these simplications clear, we note that the matrix elements hq, l, t, j|m2()|q, l, t, ji
+can be written as integrals of wave functions times the free-state matrix element hg
+2|m2()|g1g2i.
+1g
+to make the rst simplication, we observe that hg
+2|m2()|g1g2i has step functions on the particles
+longitudinal momenta, and these step functions are redundant because they also appear in the integrals
+that dene hq, l, t, j|m2()|q, l, t, ji. we drop these step functions in the formulas that we present
+2|m2()|g1g2i. to make the second simplication, we point out that the matrix elements
+for hg
+
+1g
+
+1g
+
+22
+
+hq, l, t, j|m2()|q, l, t, ji are symmetric under exchange of the two initial-state gluons and also under
+exchange of the two nal-state gluons. because of this, when we are computing hg
+2|m2()|g1g2i, we
+combine terms that are related by exchange of the two initial-state or two nal-state gluons. finally, due
+1g
+to the color-singlet nature of the glueball states, certain parts of hg
+2|m2()|g1g2i do not contribute
+to hq, l, t, j|m2()|q, l, t, ji, and we drop these terms.
+
+1g
+
+we begin by dening jacobi variables for the nal state of the free matrix element:
+
+1 = (xp +, x ~p + ~k 
+p
+2 = ([1  x]p +, [1  x] ~p  ~k 
+p
+).
+
+),
+
+then using the denition of the imo in terms of the reduced interaction in eqs. (1), (2), and (14),
+
+hg
+1g
+2|m2()|g1g2i = hg
+1g
+2|m2
+free |g1g2i + hg
+1g
+2|m2
+int()|g1g2i
+e42
+2| v (2)
+f i hg
+1g
+= m 2
+i hg
+1g
+2| g1g2i + g2
+e42
+2| v (2)
+1g
+f i hg
+cd()|g1g2i ,
+
++ g2
+
+ci |g1g2i
+
+where the free masses of the nal and initial states are given by
+
+m 2
+
+f =
+
+m 2
+
+i =
+
+,
+
+k 2
+
+x(1  x)
+.
+
+k2
+
+x(1  x)
+
+(93)
+
+(94)
+
+(95)
+
+4.2 the cuto-independent part of the reduced interaction
+
+based on the denition of v (2)
+ci
+
+in eq. (19), we nd that
+
+2| v (2)
+1g
+hg
+
+ci |g1g2i = 163p +(3)(p  p )
+
+4
+
+xi=1
+
+(i)
+1g
+1,2;1,2 <| g
+
+2|v|g1g2>| i.
+
+(96)
+
+we can divide this matrix element into contact (momentum-independent) and instantaneous-exchange
+
+interactions:
+
+2| v (2)
+hg
+1g
+
+2| v (2)
+ci |g1g2i = hg
+1g
+
+2| v (2)
+ci |g1g2icon + hg
+1g
+
+ci |g1g2iin ,
+
+where
+
+and
+
+2| v (2)
+1g
+hg
+
+ci |g1g2icon = 163p +(3)(p  p )(1)
+= 323p +(3)(p  p )f c1c
+
+1g
+1,2;1,2 <| g
+
+1cf c
+
+2c2c(cid:0)s2,s
+
+1
+
+2|v|g1g2>| 1
+s1,s
+
+2  s
+
+1,s
+2
+
+2| v (2)
+1g
+hg
+
+ci |g1g2iin = 163p +(3)(p  p )
+
+(i)
+1g
+1,2;1,2 <| g
+
+= 323p +(3)(p  p )(|x  x|  )f c1c
+
+
+(x  x)2 (x + x)(1  x + 1  x).
+
+1
+
+3
+
+xi=2
+
+2|v|g1g2>| i
+1cf c
+
+2c2cs1,s
+
+1
+
+(97)
+
+(98)
+
+(99)
+
+s1,s2(cid:1) ,
+
+s2,s
+
+2
+
+(the remaining term in eq. (96) vanishes because the |q, l, t, ji states are color singlets.) the contact
+interaction is displayed in figure 1 and the instantaneous-exchange interaction is displayed in figure 2.
+
+23
+
+
+
+
+  
+  
+
+2| v (2)
+1g
+figure 1: a diagrammatic representation of hg
+numbers label the particles.
+
+ci |g1g2icon, the two-gluon contact interaction. the
+
+figure 2: a diagrammatic representation of hg
+interaction. the numbers label the particles.
+
+2| v (2)
+1g
+
+ci |g1g2iin, the two-gluon instantaneous-exchange
+
+4.3 the cuto-dependent part of the reduced interaction
+
+4.3.1 preliminaries
+
+according to our recursion relation for the cuto-dependent part of the reduced interaction, eq. (33),
+2| v (2)
+1g
+hg
+
+cd()|g1g2i is given by
+2| v (2)
+hg
+1g
+ ) change to the reduced interaction in eqs. (10) and (24), we nd that
+
+cd()|g1g2i = hg
+1g
+2| v (2) |g1g2i  terms
+
+(100)
+
+.
+
+using the denition of the o(gr
+cd()|g1g2i =
+
+2| v (2)
+1g
+hg
+
+1
+
+2xk
+
+2| v (1) |kihk| v (1) |g1g2i t (,)
+1g
+hg
+
+2
+
+(f, k, i)
+
+.
+
+(101)
+
+ terms
+
+the intermediate state can be either a one-particle or three-particle state. the contribution to the
+eigenvalue equation from the one-particle-intermediate-state part is zero because the |q, l, t, ji states are
+color singlets. this means that
+
+2| v (2)
+1g
+hg
+
+cd()|g1g2i =
+
+1g
+2| v (1) |g3g4g5ihg3g4g5| v (1) |g1g2i
+
+1
+
+12z d3d4d5 hg
+
+ t (,)
+
+2
+
+(f, k, i)
+
+,
+
+ terms
+
+(102)
+
+where m 2
+equation, and simplifying, we nd that
+
+k is the mass of the state |g3g4g5i. substituting the denition of v (1) in eq. (18) into this
+
+2| v (2)
+1g
+cd()|g1g2i = hg
+where the self-energy interaction is given by
+
+2| v (2)
+1g
+hg
+
+2| v (2)
+1g
+cd()|g1g2ise + hg
+
+cd()|g1g2iex ,
+
+(103)
+
+cd()|g1g2ise = p +2(163)2z d3d4d5t (,)
+2| v (2)
+1g
+hg
+
+2
+
+the exchange interaction is given by
+
+(f, k, i) 2,5 2,5 134
+
+134  terms
+
+,
+
+(104)
+
+24
+
+(cid:13)
+
+
+
+
+
+
+  
+  
+
+figure 3: a diagrammatic representation of hg
+numbers label the particles.
+
+2| v (2)
+1g
+
+cd()|g1g2ise, the self-energy interaction. the
+
+figure 4: a diagrammatic representation of hg
+bers label the particles.
+
+2| v (2)
+1g
+
+cd()|g1g2iex, the exchange interaction. the num-
+
+cd()|g1g2iex = 2p +2(163)2z d3d4d5t (,)
+2| v (2)
+1g
+hg
+
+2
+
+(f, k, i) 2,5 1,3 134
+
+245  terms
+
+,
+
+(105)
+
+and we have dened
+
+and
+
+ijk = (p+
+
+i )(p+
+
+j )(p+
+
+k )(3)(pi  pj  pk) <| gjgk|v|gi>|
+
+i,k = 163p+
+
+i (3)(pi  pk)si,sk ci,ck .
+
+(106)
+
+(107)
+
+the self-energy interaction is displayed in figure 3 and the exchange interaction is displayed in figure 4.
+
+4.3.2 the self-energy interaction
+
+after some simplication, the self-energy interaction takes the form
+
+2| v (2)
+1g
+hg
+
+cd()|g1g2ise = p +2 2,2 (3)(p1  p
+
+1) xs3s4c3c4z d2p3dp+
+
+p+
+3
+
+3
+
+(p+
+
+3  p +)
+
+1
+p+
+4
+
+(p+
+
+4  p +)
+
+ t (,)
+
+2
+
+(f, k, i) <| g3g4|v|g1>| <| g
+
+1|v|g3g4>|  terms
+
+,
+
+(108)
+
+where p4 = p1  p3. at this point, it is useful to change variables from p3 to jacobi variables y and ~r:
+(109)
+
+p3 = (yp+
+
+1 , y~p1 + ~r).
+
+then the free mass of the intermediate state is
+
+25
+
+and after a lot of additional simplication,
+
+=
+
+m 2
+
+k = (p
+
+4 + p
+
+5 )p +  ~p 2
+
+
+
+3 + p
+k2
+
+r2
+
+x(1  x)
+
+xy(1  y)
+
++
+
+,
+
+(110)
+
+2| v (2)
+hg
+1g
+
+cd()|g1g2ise =
+
+nc
+
+22r 
+
+2 (cid:2)2   2(cid:3) 1,1 2,2 (x  2)(cid:20) log x  log  
+
+11
+
+12(cid:21)  terms
+
+.
+
+(111)
+
+recalling that  terms means that we are to expand the rhs of this equation in powers of transverse
+
+momenta and keep only the terms that are proportional to powers or inverse powers of , we nd that
+
+2| v (2)
+hg
+1g
+
+cd()|g1g2ise =
+
+nc
+
+22r 
+
+2
+
+2 1,1 2,2 (x  2)(cid:20) log x  log  
+
+11
+
+12(cid:21).
+
+(112)
+
+this result shows that our cuto violates cluster decomposition. the evidence is that the self-energy
+depends on x = p+
+
+2 ), even though p2 is the momentum of a spectator (see figure 3).
+
+1 + p+
+
+1 /(p+
+
+4.3.3 the exchange interaction
+
+for the exchange interaction, the free mass of the intermediate state is
+
+m 2
+
+3 + p
+
+k = (p
+k 2
+x +
+
+=
+
+5 )p +  ~p 2
+4 + p
+
+(~k  ~k 
+)2
+k2
+x  x +
+1  x
+
+.
+
+(113)
+
+then the changes in free mass are
+
+f k = 
+
+ik = 
+
+where  =   .
+
+using the identity
+
+k 2[1  x]2 + k2[1  x]2  2kk(1  x)(1  x) cos 
+
+(1  x)(x  x)(1  x)
+
+k2x 2 + k 2x2  2kkxx cos 
+
+,
+
+xx(x  x)
+
+the exchange interaction becomes
+
+~s ~k = 1
+2
+
+k s eis,
+
+,
+
+(114)
+
+(115)
+
+2| v (2)
+1g
+hg
+ (cid:18) 1
+
+cd()|g1g2iex = 643p +(3)(p  p )f c1cc
+ik(cid:19)(cid:16)e24f k ik  e24f k ik(cid:17)
+
+f k
+
++
+
+1
+
+3
+
+xi,m=1
+
+1f cc2c
+
+2
+
+(x  x  )
+
+x  x
+
+q(i,m)
+
+,
+
+(116)
+
+ terms
+
+where
+
+q(1,1) =
+
+1
+
+1s2,s
+
+x  x s1s
+1(cid:26) x
+
+2s2,s
+
+x
+
+x
+
+2(cid:26) x
+keis1  keis1(cid:27)(cid:26)keis
+
+keis1  keis1(cid:27)nkeis
+1  x
+1  x keis
+2 
+
+[1  x]  keis
+2(cid:27) ,
+
+1
+
+1[1  x]o ,
+
+q(1,2) = s1s
+
+26
+
+q(1,3) = s1s2s
+q(2,1) = 2s1,s
+
+1
+
+q(2,2) = s1,s
+
+1
+
+q(2,3) = s2s
+
+2s1,s
+
+1
+
+q(3,1) = s1s
+
+1s2,s
+
+2
+
+q(3,2) = s
+1s
+q(3,3) = s2s
+
+1s1,s
+
+1
+
+x
+
+1
+
+1
+
+1
+
+1,s
+
+s2,s
+
+2
+
+
+
+s2s
+2
+
+1  x
+1  x
+
+keis2(cid:27) ,
+
+keis1  keis1(cid:27)(cid:26)keis2
+
+2(cid:26) x
+(x  x)2 (cid:8)x(1  x)k 2 + x(1  x)k2  kk [x(1  x) + x(1  x)] cos (cid:9) ,
+x  x nxkeis2
+x  x nxkeis
+x  x n x
+x keis
+2s1,s2n x
+x keis
+2n x
+x keis
+
+1  x
+1  x keis
+1  x
+
+1  x
+[1  x]  keis1[1  x]o ,
+1  x
+1  x keis
+1  x
+keis2(cid:27) .
+1  x
+
+2 
+2o(cid:26)keis2
+1onkeis1
+2 
+
+ xkeis2o(cid:26)keis
+ xkeis
+ keis
+1o(cid:26)keis
+1o(cid:26)keis2
+
+2(cid:27) ,
+keis2(cid:27) ,
+
+ keis
+ keis
+
+2(cid:27) ,
+
+
+
+1
+
+1
+
+2
+
+1
+
+(117)
+
+in eq. (116), if we expand everything multiplying the delta function in powers of transverse momenta,
+
+the lowest-order terms from the two exponentials cancel and leave two types of terms: those proportional
+to inverse powers of  and those proportional to inverse powers of . we can isolate the terms that are
+proportional to inverse powers of  without altering the cancellation of the lowest term by replacing the
+
+rst exponential with a 1:
+
+2| v (2)
+1g
+hg
+
+cd()|g1g2iex = 643p +(3)(p  p )f c1cc
+
+1f cc2c
+
+2
+
+1
+
+1
+
+(x  x)
+ik(cid:19)(cid:16)1  e24f k ik(cid:17)
+
+3
+
+(x  x  )
+xi,m=1
+
+q(i,m).
+
+(118)
+
+ (cid:18) 1
+
+f k
+
++
+
+4.4 combining the interactions
+
+in order to get the infrared (  0) divergences to cancel, it is useful to combine the interactions in a
+particular manner. from eqs. (94), (97), and (103),
+
+1g
+1g
+2|m2()|g1g2i = hg
+1g
+1g
+hg
+2|m2()|g1g2ike + hg
+2|m2()|g1g2icon + hg
+2|m2()|g1g2iin
++ hg
+1g
+2|m2()|g1g2ise + hg
+1g
+2|m2()|g1g2iex ,
+
+(119)
+
+where
+
+2|m2()|g1g2ike = m 2
+1g
+hg
+hg
+1g
+2|m2()|g1g2icon = g2
+2|m2()|g1g2iin = g2
+1g
+hg
+1g
+hg
+2|m2()|g1g2ise = g2
+2|m2()|g1g2iex = g2
+1g
+hg
+
+1g
+i hg
+e42
+e42
+e42
+e42
+
+2| g1g2i ,
+2| v (2)
+f i hg
+1g
+2| v (2)
+1g
+f i hg
+2| v (2)
+1g
+f i hg
+2| v (2)
+1g
+f i hg
+
+ci |g1g2icon ,
+ci |g1g2iin ,
+cd()|g1g2ise ,
+cd()|g1g2iex .
+
+(120)
+
+we break the instantaneous interaction into two parts: a part that is above the cuto, i.e. a part
+that would vanish if we took   , and a part that is below the cuto, i.e. a part that would survive
+if we took   :
+
+27
+
+2|m2()|g1g2ia
+1g
+1g
+hg
+2|m2()|g1g2iin = hg
+
+2|m2()|g1g2ib
+1g
+in + hg
+in ,
+
+(121)
+
+where
+
+2|m2()|g1g2ia
+1g
+hg
+2|m2()|g1g2ib
+hg
+1g
+
+in = (cid:16)1  e24f k ik(cid:17) hg
+in = e24f k ik hg
+1g
+2|m2()|g1g2iin .
+
+1g
+2|m2()|g1g2iin ,
+
+next, we break the self-energy and exchange interactions into nite and divergent parts:
+
+2|m2()|g1g2if
+1g
+1g
+hg
+2|m2()|g1g2ise = hg
+2|m2()|g1g2if
+hg
+1g
+2|m2()|g1g2iex = hg
+1g
+
+2|m2()|g1g2id
+1g
+se + hg
+se ,
+2|m2()|g1g2id
+ex + hg
+1g
+
+ex ,
+
+(122)
+
+(123)
+
+where the divergent part of the self-energy interaction consists solely of the term containing the log , and
+the divergent part of the exchange interaction consists solely of the term containing q(2,1). finally, we
+dene an interaction that is a combination of the instantaneous interaction above the cuto and the
+
+divergent part of the exchange interaction:
+
+2|m2()|g1g2ia
+1g
+1g
+hg
+2|m2()|g1g2iin+ex = hg
+
+2|m2()|g1g2id
+1g
+in + hg
+
+ex .
+
+(124)
+
+then
+
+2|m2()|g1g2if
+2|m2()|g1g2icon
+1g
+2|m2()|g1g2ike + hg
+1g
+2|m2()|g1g2i = hg
+1g
+se + hg
+1g
+hg
+2|m2()|g1g2if
+2|m2()|g1g2ib
+1g
++ hg
+2|m2()|g1g2iin+ex + hg
+ex + hg
+1g
+1g
+2|m2()|g1g2id
++ hg
+1g
+se .
+
+in
+
+(125)
+
+perry showed that with a suitable denition of long-range interactions, a renormalization method that
+is similar to ours yields a logarithmically conning potential for quark-antiquark bound states at o(g2
+)
+[7]. his calculation uses sharp step-function cutos and is based on an analysis of the part of the two-body
+
+interaction that is most singular in the limit in which the exchanged gluon has innitesimal longitudinal
+2|m2()|g1g2iin+ex
+momentum. the corresponding part of our interaction, which is contained in hg
+and hg
+in, is similar to what perry found in the quark-antiquark case. however, to
+determine whether or not our interaction is truly conning, we would have to do a careful analysis of the
+
+2|m2()|g1g2ib
+1g
+
+1g
+
+complete two-body potential, not just the most singular part. this analysis would be complicated by the
+
+smooth cuto that we employ, and we leave it for future consideration.
+
+5 calculation of the matrix elements of the invariant-mass op-
+
+erator in the basis for physical states
+
+the matrix elements hq, l, t, j|m2()|q, l, t, ji, which appear in the eigenvalue equation, can be divided
+into contributions corresponding to the dierent terms in eq. (125):
+
+28
+
+hq, l, t, j|m2()|q, l, t, ji = hq, l, t, j|m2()|q, l, t, jike + hq, l, t, j|m2()|q, l, t, jif
++ hq, l, t, j|m2()|q, l, t, jicon + hq, l, t, j|m2()|q, l, t, jif
++ hq, l, t, j|m2()|q, l, t, jiin+ex + hq, l, t, j|m2()|q, l, t, jib
++ hq, l, t, j|m2()|q, l, t, jid
+se .
+
+ex
+
+se
+
+in
+
+(126)
+
+in this section we express these dierent contributions in terms of integrals that can be computed numer-
+
+ically. these integrals fall into two classes: two-dimensional and ve-dimensional. we treat each class of
+
+integral separately.
+
+each of the terms in eq. (126) is proportional to the plane-wave normalization factor 163p +(3)(p 
+p ). to make the remaining equations that we present simpler, we suppress this factor. we also take
+  0 in any contribution to hq, l, t, j|m2()|q, l, t, ji that is nite in this limit.
+
+5.1 the two-dimensional integrals
+
+5.1.1 the kinetic energy
+
+using the denition of our basis in eq. (86) and the expression for the free-state matrix element of the
+
+kinetic energy in eq. (120), we nd that
+
+hq, l, t, j|m2()|q, l, t, jike = q,q
+
+1
+
+d2 z 1
+
+0
+
+dx l(e)
+
+l (x) l(e)
+
+l
+
+(x)z 
+
+0
+
+drr3t t(r)t t(r).
+
+(127)
+
+note that the kinetic energy is innite unless e > 0, whereas normalizability requires only e > 1/2.
+
+these integrals can be computed with standard numerical integration routines, but the results can
+have large errors for large values of the function indices l, l, t, and t, due to the oscillating nature of
+the basis functions. it is better to rewrite the integrals as sums that can be computed numerically with
+
+mathematica [26] to any desired precision. using the denitions of the basis functions,
+
+hq, l, t, j|m2()|q, l, t, jike = q,q
+2 (cid:18)2 +
+
+t,s 23 s+s
+
+t,s
+
+t
+
+
+
+xs=0
+
+ " t
+xs=0
+
+(2e)
+
+d2 " l
+xm=0
+2 (cid:19)#.
+
+s + s
+
+(e)
+l,m
+
+l
+
+xm=0
+
+(e)
+l,m
+
+(2e + m + m)
+
+(4e + m + m)#
+
+(128)
+
+5.1.2 the finite part of the self-energy interaction
+
+the self-energy interaction conserves each particles momentum, thus m 2
+f for this contribution.
+this means that the gaussian cuto factor in eq. (120) has no eect on the self-energy. for the nite
+
+i = m 2
+
+part of the self-energy, we use the same method for evaluating integrals that we use for the kinetic energy.
+
+this yields
+
+hq, l, t, j|m2()|q, l, t, jif
+
+se = q,q t,t
+
+ (cid:20)log x 
+
+11
+
+12(cid:21)
+
+29
+
+
+
+ncg2
+
+42 r 
+
+2
+
+2z 1
+
+0
+
+dx l(e)
+
+l (x) l(e)
+
+l
+
+(x)x(1  x)
+
+(129)
+
+ncg2
+
+
+
+42 r 
+
+xm=0
+= q,qt,t
+ [(1 + 2e + m + m)  (2 + 4e + m + m)](cid:19),
+
+11
+12  (1 + 2e)
+
+2(cid:18)l,l
+
+2
+
+l
+
+where the digamma function (z) is given by
+
+(z) =
+
+d(z)
+
+dz
+
+(z)
+
+.
+
+5.2 the five-dimensional integrals
+
+5.2.1 the contact interaction
+
+(e)
+l,m
+
+l
+
+xm=0
+
+(e)
+l ,m
+
+(1 + 2e + m + m)
+(2 + 4e + m + m)
+
+(130)
+
+(131)
+
+using the denition of our basis in eq. (86) and the expression for the free-state matrix element of the
+
+contact interaction in eqs. (98) and (120), we nd that
+
+hq, l, t, j|m2()|q, l, t, jicon = 
+
+
+
+ncg2
+
+82 "j,2q,2q,2 + j,2q,1q,1  j,0q,3q,3#z dk dk k k
+
+ (k)(k)t (d)
+
+t (k)t (d)
+
+t
+
+(k)z dx dx (x)(1  x)(x)(1  x) l(e)
+
+l (x) l(e)
+
+l
+
+(x)e42
+
+f i .
+
+(132)
+
+the reader may have noticed that this integral is not ve-dimensional as we have implied, but rather four-
+
+dimensional. however, when we numerically compute the integrals that have more than two dimensions,
+
+it is most ecient if we combine them into one integral; so we want their integration variables and their
+
+ranges of integration to be identical. thus we increase the number of dimensions of this integral by one
+by introducing an extra integral over  =    using the identity
+2 z d () (2  ).
+
+(133)
+
+1 =
+
+1
+
+this will help us to combine this integral with others that contain integrals over  that cannot be done
+
+analytically.
+
+since the integration domain of the exchange interaction is restricted so that x > x when   0 [note
+the step function in eq. (118)], we would like to enforce this restriction in the other contributions. using
+
+the identity
+
+1 = (x  x) + (x  x),
+we break the longitudinal integral in eq. (132) into two parts:
+
+z dx dx (x)(1  x)(x)(1  x) l(e)
+
+l (x) l(e)
+
+l
+
+(x)e42
+
+f i [(x  x) + (x  x)].
+
+in the second term, we let x  1  x and x  1  x, and then the longitudinal integral becomes
+
+z dx dx (x)(1  x)(x)(1  x) l(e)
+
+l (x) l(e)
+
+l
+
+(x)e42
+
+f i (x  x)h1 + (1)l+li .
+
+(134)
+
+(135)
+
+(136)
+
+recall that we are restricting ourselves to the subspace of the states |q, l, t, ji in which l + j is even if
+q 6= 4, and l + j is odd if q = 4. then since q = q for the contact interaction, l and l must both be even
+
+30
+
+or both be odd for this interaction. this means that the two terms in eq. (136) are equal. thus we can
+
+write the contact interaction contribution as follows:
+
+hq, l, t, j|m2()|q, l, t, jicon = 
+
+
+
+ncg2
+
+83 "j,2q,2q,2 + j,2q,1q,1  j,0q,3q,3#
+
+ z d  e42
+
+f i ,
+
+where
+
+and
+
+d = dx dx dk dk d k k (x) (1  x) (x) (x  x) (k) (k) () (2  ),
+
+ = l(e)
+
+l (x) l(e)
+
+l
+
+(x)t (d)
+
+t (k)t (d)
+
+t
+
+(k).
+
+(137)
+
+(138)
+
+(139)
+
+5.2.2 the finite part of the exchange interaction
+
+in order to simplify the contribution to hq, l, t, j|m2()|q, l, t, ji from the nite part of the exchange
+interaction, we wish to change variables from  to  =   :
+
+d2kd2k
+
+ = dk dk d d k k (k) (k) () (2  ) () (2  )
+
+= dk dk d d k k (k) (k) ( + ) (2    ) () (2  ).
+
+(140)
+
+all the contributions to hq, l, t, j|m2()|q, l, t, ji depend on  only through dependence on cos  and
+sin . this means that we can use the identity
+
+z 2
+
+
+
+df (cos , sin ) =z 2
+
+0
+
+df (cos , sin )
+
+to write
+
+(141)
+
+(142)
+
+d2kd2k
+
+ = dk dk d d k k (k) (k) () (2  ) () (2  ).
+inspection of eq. (116) implies that the integrals in hq, l, t, j|m2()|q, l, t, jif
+
+exponentials of  and . however, using the identity
+
+ex depend on complex
+
+z 2
+
+0
+
+df (cos ) sin a = 0,
+
+(143)
+
+where a is an integer, it is possible to trivially do the  integral in hq, l, t, j|m2()|q, l, t, jif
+ex and
+write the remainder as a real quantity with integrals that depend on  only through cos  and sin . the
+
+result is
+
+hq, l, t, j|m2()|q, l, t, jif
+ (cid:16)1  e24f k ik(cid:17)(cid:20)m 2
+
+ex = 
+i s(1)
+
+ncg2
+
+
+
+83 z d  e42
+
+f i
+
+kk
+
+q,q + m 2
+
+f s(2)
+
+q,q +
+
+1
+
+f k
+
+x  x (cid:18) 1
+q,q(cid:21) ,
+
+s(3)
+
++
+
+1
+
+ik(cid:19)
+
+(144)
+
+x(1  x)x(1  x)
+
+where some of the s(1)
+
+q,q s and s(3)
+
+q,q s are given by
+
+31
+
+s(3)
+1,3 =
+
+cos(j)[x 2 + (1  x)2],
+cos([j  1])(x[1  x] + x[1  x])(x 2 + [1  x]2),
+cos(j)(1  2x),
+cos([j  1])(1  2x)(x[1  x] + x[1  x]),
+cos([j  2])[x2 + (1  x)2],
+
+s(1)
+1,1 = cos([j  2]),
+s(3)
+1,1 =  cos([j  1])[x(1  x) + x(1  x)],
+1,3 = 1
+s(1)
+2
+1
+2
+1
+s(1)
+2
+1,4 =
+1,4 = 1
+s(3)
+2
+3,1 = 1
+s(1)
+2
+s(1)
+3,3 = cos(j)[x2 + (1  x)2  2x(1  x)],
+s(3)
+3,3 =  cos(j) cos (x[1  x] + x[1  x])(1  2x[1  x]  2x[1  x]),
+s(1)
+3,4 = 0,
+s(3)
+3,4 = sin  sin(j)(2x3  2x2[1 + x] + x[1  2x] + x[1  2x + 4x 2]),
+s(1)
+4,1 =
+
+cos([j  2])(1  2x),
+
+1
+2
+s(1)
+4,3 = 0,
+s(1)
+4,4 = cos(j)(1  2x  2x + 4xx),
+s(3)
+4,4 =  cos  cos(j)(1  2x)(1  2x)(x + x  2xx),
+
+and
+
+q,q = s(3)
+s(3)
+
+q,q
+
+.
+
+xx
+
+the rest of the s(1)
+
+q,q s and s(3)
+
+q,q s are given by
+
+s(i)
+1,2 = s(i)
+s(i)
+2,2 = s(i)
+
+1,1
+
+2,1 = 0,
+
+jj
+
+jj
+
+,
+
+,
+
+,
+
+,
+
+,
+
+1,4
+
+1,3
+
+s(i)
+2,3 = s(i)
+s(i)
+2,4 = s(i)
+s(i)
+3,2 = s(i)
+s(i)
+4,2 = s(i)
+
+3,1
+
+4,1
+
+jj
+
+jj
+
+jj
+
+where i = 1, 3. the s(2)
+
+q,q s are given by
+
+q,q = s(1)
+s(2)
+
+q,q
+
+.
+
+xx
+
+32
+
+(145)
+
+(146)
+
+(147)
+
+(148)
+
+5.2.3 the instantaneous and exchange interactions combination
+
+using similar methods for the contribution to hq, l, t, j|m2()|q, l, t, ji from the combination of the
+instantaneous interaction above the cuto and the divergent part of the exchange interaction, we nd
+
+that
+
+hq, l, t, j|m2()|q, l, t, jiin+ex = 
+x  x(cid:18) 1
+
+ "(x + x)(1  x + 1  x) +
+ kk [x(1  x) + x(1  x)] cos (cid:19)#,
+
+2
+
+f k
+
+ncg2
+
+
+
+83 z d  wq,q e42
+
+f i
+
+1
+
+(x  x)2 (cid:16)1  e24f k ik(cid:17)
+
++
+
+1
+
+ik(cid:19)(cid:18)x(1  x)k 2 + x(1  x)k2
+
+(149)
+
+where
+
+wq,q = q,1q,1 cos([j  2]) + q,2q,2 cos([j + 2]) + q,3q,3 cos(j) + q,4q,4 cos(j).
+
+(150)
+
+note that the divergences from the two interactions that comprise hq, l, t, j|m2()|q, l, t, jiin+ex can-
+cel, allowing us to take   0 in this contribution.
+
+5.2.4 the instantaneous interaction below the cuto
+
+the contribution to hq, l, t, j|m2()|q, l, t, ji from the instantaneous interaction below the cuto is
+divergent. in this subsection, we extract the divergence, show that it cancels the divergent part of the
+self-energy, and compute the remainder of hq, l, t, j|m2()|q, l, t, jib
+in.
+
+after simplication, the complete contribution to hq, l, t, j|m2()|q, l, t, ji from the instantaneous
+
+interaction below the cuto is
+
+hq, l, t, j|m2()|q, l, t, jib
+
+in = 
+
+
+
+ncg2
+
+164 z 1
+
+2
+
+dxz x
+
+
+
+dx
+
+1
+
+x  x f (x, x),
+
+where
+
+f (x, x) =z d2kd2k
+
+
+
+
+
+x  x wq,q e42
+
+f i e24f k ik (x + x)(1  x + 1  x).
+
+to extract the divergence, we integrate eq. (151) by parts with respect to x:
+
+hq, l, t, j|m2()|q, l, t, jib
+
++ log(x  x)f (x, x)
+ b1 + b2 + b3.
+
+x=
+
+dx"  log(x  x)f (x, x)
+
+x=x
+
+
+
+2
+
+ncg2
+
+164 z 1
+dx log(x  x)
+
+in = 
++z x
+
+
+
+df (x, x)
+
+dx
+
+#
+
+the rst contribution to hq, l, t, j|m2()|q, l, t, jib
+
+in is
+
+b1 =
+
+
+
+log 
+
+ncg2
+164
+
+ z 1
+ (1  x + 1  x)
+
+2
+
+ wq,q e42
+
+f i e24f k ik (x + x)
+
+dxz d2kd2k
+
+.
+
+x=x
+
+33
+
+(151)
+
+(152)
+
+(153)
+
+(154)
+
+to simplify this, we change variables from x to y:
+
+x = y(1  3) + 2,
+
+and from ~k and ~k 
+
+ to ~q and ~n:
+
+~k =
+
+~k 
+ =
+
+then
+
+~q +  ~n
+~q   ~n
+
+2
+
+2
+
+,
+
+.
+
+(155)
+
+(156)
+
+b1 =
+
+
+
+ncg2
+
+644 (1  3) log z 1
+ (2  2y[1  3]  3)
+
+0
+
+.
+
+x=x
+
+dyz d2qd2n wq,q e42
+
+f i e24f k ik (2y[1  3] + 3)
+
+(157)
+
+(q/2)z d2ne24n 4
+
+(158)
+
+as   0, the only contribution that survives is
+
+b1 =
+
+
+
+0
+
+ncg2
+
+164 q,q log z 1
+42 r 
+2|m2()|g1g2id
+1g
+
+dy y(1  y) l(e)
+2z 1
+dx l(e)
+se is the part of hg
+
+= q,q t,t
+
+ncg2
+
+2
+
+0
+
+
+
+l (x) l(e)
+
+l
+
+since hg
+1g
+eq. (129) we see that hq, l, t, j|m2()|q, l, t, jid
+11/12] factor replaced with  log . this means that
+
+l (y) l(e)
+
+l
+
+t (q/2)t (d)
+
+t
+
+(y)z d2qt (d)
+(x)x(1  x) log .
+
+2|m2()|g1g2ise with the log  [see eq.
+se is just hq, l, t, j|m2()|q, l, t, jif
+
+(112)], from
+se with the [log x
+
+b1 =  hq, l, t, j|m2()|q, l, t, jid
+se .
+
+(159)
+
+thus the divergence in hq, l, t, j|m2()|q, l, t, jib
+
+in cancels hq, l, t, j|m2()|q, l, t, jid
+se.
+
+the second contribution to hq, l, t, j|m2()|q, l, t, jib
+b2 = 
+
+dx log(x  x)z dk dk d k k (k) (k) () (2  )
+
+83 z 1
+
+ncg2
+
+in is
+
+2
+
+
+
+ e24f k ik (x + x)(1  x + 1  x)
+
+.
+
+x=
+
+
+
+x  x wq,q e42
+
+f i
+
+(160)
+
+to evaluate this, we change variables from k to s = k/. then the leading term as   0 is
+l,0 z 1
+ncg2
+dx(2  x) log xz dk ds d k s (k) (s) () (2  ) l(e)
+83 d t,0(e)
+x2 (1x)2(cid:3)
+4(cid:2)s4+
+
+b2 = e+ 1
+ t (d)
+
+(k)wq,q e
+
+k4
+
+0
+
+
+
+t
+
+2
+
+l
+
+= 0,
+
+(x)
+
+(161)
+
+to simplify the third contribution to hq, l, t, j|m2()|q, l, t, jib
+
+in, we take the derivative of f (x, x)
+
+since e > 1/2.
+
+and take   0. then
+
+b3 = 
+
+ncg2
+
+
+
+83 z d log(x  x)wq,q t (d)
+
+t (k) l(e)
+
+l
+
+(k)e4(2
+
+f k +2
+
+ik )
+
+5
+
+xi=1
+
+5
+
+e
+i
+
+ym=1; m6=i
+
+em,
+
+(162)
+
+(x)t (d)
+
+t
+
+34
+
+where
+
+and
+
+1
+
+e1 =
+
+x  x ,
+l (x),
+
+e2 = 1,
+e3 = l(e)
+e4 = x + x,
+e5 = 1  x + 1  x,
+
+1
+
+e
+
+(x  x)2 ,
+
+1 =
+e
+2 = 24(f k
+3 = l(e)
+e
+4 = 1,
+e
+5 = 1,
+
+(x),
+
+e
+
+l
+
+f k + ik
+
+ik),
+
+(e
+
+i = dei/dx, except for i = 2) and
+
+l(e)
+
+l
+
+(x) =
+
+d l(e)
+l (x)
+dx
+
+2 1[1  2x]
+
+l
+
+xm=0
+
+l,mx m
+(e)
+
++ [x(1  x)]e 1
+
+2
+
+1
+
+2(cid:19) [x(1  x)]e 1
+l,mx m1,
+
+m(e)
+
+= (cid:18)e 
+xm=1
+
+
+l
+
+and
+
+
+
+f k =
+
+
+
+ik =
+
+df k
+dx =
+dik
+dx =
+
+k 2
+
+(1  x)2 
+k 2
+x 2 
+
+(~k  ~k 
+)2
+(x  x)2 ,
+(~k  ~k 
+)2
+(x  x)2 .
+
+(163)
+
+(164)
+
+(165)
+
+(166)
+
+this means that we can write the contribution to hq, l, t, j|m2()|q, l, t, ji from the instantaneous
+interaction below the cuto as a divergent part and a nite part:
+hq, l, t, j|m2()|q, l, t, jib
+in =  hq, l, t, j|m2()|q, l, t, jid
+where
+hq, l, t, j|m2()|q, l, t, jib,f
+
+se + hq, l, t, j|m2()|q, l, t, jib,f
+
+(k)e4(2
+
+t (k) l(e)
+
+in , (167)
+
+(x)t (d)
+
+f k +2
+
+ncg2
+
+ik )
+
+
+
+t
+
+l
+
+83 z d log(x  x)wq,q t (d)
+in = 
+xi=1
+
+ym=1; m6=i
+
+em.
+
+e
+i
+
+
+
+5
+
+5
+
+(168)
+
+using the results of this section, the expression in eq. (126) for the matrix elements of the imo
+
+becomes
+
+35
+
+hq, l, t, j|m2()|q, l, t, ji = hq, l, t, j|m2()|q, l, t, jike + hq, l, t, j|m2()|q, l, t, jif
+
+se
+
++ hq, l, t, j|m2()|q, l, t, jicon + hq, l, t, j|m2()|q, l, t, jif
++ hq, l, t, j|m2()|q, l, t, jiin+ex + hq, l, t, j|m2()|q, l, t, jib,f
+in .
+
+ex
+
+(169)
+
+each of these terms is nite and we have taken   0 everywhere. we have written the rst two terms as
+sums that can be computed numerically, and the four remaining terms as ve-dimensional integrals that
+
+can be grouped into one integral suitable for numerical calculation. (see appendix c for a discussion
+
+of some of the technical issues involved in the numerical calculation of these matrix elements.) once
+
+we have computed these matrix elements, we can diagonalize the matrix to obtain glueball states and
+
+masses.
+
+6 results and error analysis
+
+in this section we diagonalize the imo matrix, obtaining glueball states and masses. we then discuss
+
+the sources of error in the calculation. we begin by discussing the procedure that we use to calculate the
+
+results.
+
+6.1 the procedure for calculating results
+
+we represent a state using the notation j p c
+our best guess for the parity of the state, c represents the charge-conjugation eigenvalue of the state (it
+
+, where j is our best guess for the spin of the state, p is
+
+j
+
+is always + because we have an even number of gluons), and j is the projection of the states spin onto
+
+the 3-axis. we need to distinguish states with identical js and p s and dierent js because we do not
+
+have manifest rotational symmetry. if j = 0, we omit the subscript j in the state notation. we use an
+
+asterisk in the state notation next to the value of c to denote an excited state with the given quantum
+
+numbers. we will base our guesses for j and p on the numerical degeneracies of the states that have
+
+identical js and p s and dierent js, and on the ordering of the states according to lattice data (see
+
+the discussion below). we consider only the ve lightest glueballs (not counting as distinct those states
+that dier only in their value of j). the ve lightest glueballs have spins j  2. this means that we
+need to consider only |j|  2. for a given |j|, the states with j = |j| and j = |j| are degenerate and
+simply related (see appendix c); so we explicitly consider only j = 0, 1, 2. we consider nine values of
+the coupling:  = g2
+/(4) = 0.1, 0.2, 0.3, . . . , 0.9. to calculate our results, we implement the following
+four-step procedure.
+
+we execute the rst step for all pairs (j,  ).
+
+in this step, we dene  = 1 and diagonalize
+hq, l, t, j|m2()|q, l, t, ji with all 4 spin basis functions (q = 1, 2, 3, 4), but with only the lowest
+transverse-magnitude basis function (t = 0) and the two lowest longitudinal basis functions (l = 0, 1). (it
+
+is necessary to use an even number of longitudinal basis functions so that symmetry and antisymmetry of
+the wave function under x  1  x are equally represented.) we perform this diagonalization as a func-
+tion of the basis-function parameters d and e that determine the widths of the transverse-magnitude and
+
+36
+
+longitudinal wave functions, respectively, and we nd the values of d and e that minimize the ground-state
+mass. this yields what we consider to be the optimal wave-function widths for each pair (j,  ).
+
+we also execute the second step of the procedure for all pairs (j,  ). in this step, we x d and e
+to be their computed optimal values and again dene  = 1. we diagonalize the matrix with all 4 spin
+
+basis functions, nt transverse-magnitude basis functions, and nl = 2nt longitudinal basis functions, for
+a total of 8n 2
+t basis functions, with nt = 1, 2, 3, . . . , 10. we use twice as many longitudinal functions
+as transverse-magnitude functions because |q, l, t, ji is zero if l + j is even and q = 4, or if l + j is odd
+and q 6= 4. we want to use as many basis functions as possible, but we nd for all pairs (j, ) that
+when nt > 7, the statistical errors from the monte carlo integrations of the matrix elements become
+overwhelming and the spectrum and wave functions become unreliable. the evidence of the breakdown
+
+is sudden contamination of the low-lying wave functions with high-order components. (see appendix c
+
+for a more complete discussion of this topic.) thus in the remainder of our procedure, we analyze the
+
+results that we nd in this step when nt = 7, which corresponds to 392 basis functions.
+
+in the third step of the procedure, we use the mass of the 0+ state (our most numerically reliable
+state) to determine the value of  for each  . to do this, we note that  is the only mass scale in the
+problem. this means that the mass of the 0+ state, m0+ , can be written
+
+m0+ = b(),
+
+(170)
+
+where b is a dimensionless function of . since we dened  = 1 in the second step of our procedure,
+the diagonalization of the imo as a function of  yielded b( ). in this third step, we consider  to be
+a parameter and dene m0+ to be a constant. then for a given coupling, we can use the results of the
+second step of our procedure to write the cuto in units of m0+:
+
+/m0+ =
+
+1
+
+b()
+
+.
+
+(171)
+
+figure 5 shows the result for the third step of our procedure: a plot of the coupling as a function
+
+of the cuto. when  > 0.7 it is not a single-valued function of the cuto. this is an indication that
+the coupling is too large. for this reason, we consider only   0.7 in the remainder of our procedure.
+when   0.7, the coupling decreases as the cuto increases, as expected. however,  depends on
+ more strongly than one may expect. we expect that perturbative pure-glue qcd would indicate
+that   1/ ln , but the result that we get is much closer to   exp(a), where a is a constant.
+the reason for this is that the truncation of the perturbative series for m2() and the truncation of
+the free-sector expansion of the states introduce spurious cuto dependence in our results for physical
+
+quantities. m0+ is one such physical quantity. the spurious cuto dependence of m0+ is manifested
+through incorrect dependence of b() on . this means that  has to compensate by depending on
+ incorrectly in order to keep m0+ a constant function of  . this results in the strong dependence
+of  on  that is shown in figure 5.
+
+using the recent anisotropic euclidean lattice results of morningstar and peardon [27], we can make
+
+a rough estimate of the range over which our cuto is varying in figure 5. they found that the mass of
+the 0+ state is m0+ = 2.590  0.040  0.130 gev. this means that our cuto is varying from about
+3.1  6.0 gev in figure 5.
+
+37
+
+the fourth step of our procedure is to determine the optimal value of the cuto, or equivalently, the
+
+optimal value of the coupling. we use two criteria to determine this. first we determine the value of the
+
+cuto for which the computed masses are most independent of the cuto. figures 6, 7, and 8 show the
+
+masses of our states with j = 0, 1, 2, respectively, as functions of the cuto. the masses and the cuto
+
+are displayed in units of m0+. (recall that m0+ was dened to be independent of the cuto in the
+process of dening the cuto as a function of the coupling.) the seven values of the cuto at the points
+
+that we display correspond, from right to left, to  = 0.1, 0.2, 0.3, . . . , 0.7. it is dicult to tell from these
+plots where the cuto dependence is weakest (more points are needed), but we see that the dependence
+
+is relatively weak from  = 0.5 to  = 0.7, which corresponds to /m0+ = 1.33 to /m0+ = 1.20.
+the second criterion that we use to determine the optimal cuto is the degree to which the states with
+
+a given j and p and dierent js are degenerate. this determines the cuto that minimizes the violation
+of rotational symmetry. we nd that these degeneracies are best when  = 0.5. given this and the fact
+that figures 6  8 indicate that the cuto dependence of the masses is weak when  = 0.5 to  = 0.7,
+we determine that  = 0.5 is the optimal coupling, and thus the optimal cuto is /m0+ = 1.33.
+using the result of morningstar and peardon for the mass of the 0+ state, we estimate that this cuto
+is about 3.4 gev.
+
+6.2 results
+
+now we present our main results. our glueball masses for  = 0.5 are summarized in table 1, in units
+of the mass of the ground state (the 0++ state). table 1 also shows an average of lattice results from
+a number of dierent calculations for the sake of comparison [28]. the uncertainties in our results that
+
+we report in table 1 are only the statistical uncertainties associated with the monte carlo evaluation of
+the matrix elements of m2(). the full errors are much larger (see the discussion of sources of error
+below). we list three values of the masses for the 2++ and 2++ states for our calculation, corresponding
+to j = 0, 1, 2. in each case the three masses would be degenerate if our calculation were exact. our
+
+results agree with the lattice results quite well, perhaps better than we should have expected.
+
+we display our spectrum graphically in figure 9. the masses are plotted in units of the mass of
+the 0++ state and the vertical widths of the levels represent the statistical uncertainties in the masses.
+the black lines connect the states that we believe should be degenerate. we see that the 2++
+and 2++
+glueballs are relatively degenerate with their 2++
+is not too bad,
+but the 2++
+expected degeneracies are based on the ordering of the lattice states (see table 1) and the apparent
+degeneracies of the 2++
+
+glueball is much too light. our labeling of the states and subsequent assignment of the
+
+counterparts, and the 2++
+
+states, respectively.
+
+and 2++
+
+states with the 2++
+
+and 2++
+
+0
+
+and 2++
+
+1
+
+1
+
+0
+
+2
+
+2
+
+0
+
+0
+
+1
+
+1
+
+we want to show some of the features of the glueball wave functions. rather than presenting the
+
+spin-dependent wave functions themselves, we present more illuminating spin-independent probability
+
+densities. a glueball state has the plane-wave normalization shown in eq. (88) as long as the wave
+function jn
+
+s1s2 (x, ~k) satises
+
+this implies that
+
+z d2kdx(x)(1  x)xs1s2(cid:12)(cid:12)jn
+
+s1s2 (x, ~k)(cid:12)(cid:12)
+
+2
+
+= 1.
+
+(172)
+
+38
+
+z 
+
+0
+
+(cid:19)z 1
+d(cid:18) k
+
+0
+
+dx (x, k/) = 1,
+
+where we dene the dimensionless probability density (x, k/) by
+
+(x, k/) = 2kxs1s2(cid:12)(cid:12)jn
+
+s1s2 (x, ~k)(cid:12)(cid:12)
+
+2
+
+.
+
+(173)
+
+(174)
+
+we show the probability densities for some of our glueballs in figures 10  14. the masses of the
+states tend to increase as the probability densities move away from the region x  1/2 and more towards
+the edges. this is what we expect based on the form of the kinetic energy of a free state. notice that
+the probability density for the 2++
+glueball is peaked around the region x  1/2 and looks similar to the
+probability density for the 0++ glueball. this is consistent with its small mass.
+
+2
+
+6.3 error analysis
+
+we now turn to a discussion of the sources of error in our calculation. the sources of error are:
+
+ truncation of the renormalized imo at o(g2
+ );
+ truncation of the free-sector expansion of physical states at two gluons;
+ truncation of the basis-function expansion of wave functions;
+ numerical approximation of the matrix elements of m2().
+we do not know how to estimate the size of any physical eects that require nonperturbative renor-
+
+malization. however, we can naively estimate the size of the eects of higher-order perturbative renor-
+malization. we have calculated the matrix elements of m2() through o( ); so the corrections to
+these matrix elements should be o(2
+ /2).
+since we have used  = 0.5, we estimate that the uncertainty in the mass spectrum from the eects of
+higher-order perturbative renormalization is about 13%.
+
+ ). this translates to corrections to the mass spectrum of o(2
+
+we do not know how to estimate the size of any physical eects that require an innite number of
+
+particles. in fact, until we include at least two free sectors, it is impossible to directly estimate the size
+of corrections from higher free sectors. however, we can use the lack of degeneracy of the 2++
+with the 2++
+states to estimate these corrections. according to table 1, the discrepancy in the
+various 2++ states is about 33%, if we believe the quoted lattice result. since the uncertainty in the mass
+spectrum from eects of higher-order perturbative renormalization is around 13%, an uncertainty of 30%
+
+and 2++
+
+state
+
+2
+
+0
+
+1
+
+due to the truncation of the free-sector expansion is necessary to explain the lack of rotational symmetry
+
+in the spectrum (neglecting the other sources of error, which we expect to be small).
+
+as we mentioned, when we increase the number of basis functions that we use to represent the wave
+
+functions, we nd that we reach a point where the statistical errors from the monte carlo evaluations
+
+of the matrix elements are overwhelming and cause our results to become completely unreliable (see
+
+appendix c). for this reason, we have to truncate our basis-function expansion for the wave functions at
+
+nt = 7 transverse-magnitude functions. (nl = 2nt = 14, and there are 4 spin basis functions, for a total
+of 392 basis functions.) this truncation results in additional errors in our results. in figures 15, 16, and
+
+39
+
+17, we show the convergence of the masses of the states with j = 0, 1, 2 respectively, as functions of nt.
+the masses do not decrease as rapidly as functions of the number of states as one might expect. this
+
+is primarily because we have already optimized the states quite a bit by determining the widths of the
+transverse-magnitude and longitudinal basis functions that minimize the mass of the 0++ state (using
+nt = 1). our best guess for the uncertainty that we introduce into the spectrum when we truncate the
+basis-function expansion, based on figures 15  17, is a few percent12.
+
+we can estimate the uncertainty in our results associated with the monte carlo evaluation of our
+matrix elements. to do this, we compute our results with  = 0.5 four times, obtaining statistically
+independent results, and we compute the standard deviations of the masses that we obtain. this leads
+
+us to estimate that the uncertainty in the spectrum from the monte carlo routine is 1  2%. this is the
+
+uncertainty that we report in table 1 and figure 9. combining this uncertainty with the others leads us
+
+to estimate that the total uncertainty in our results is about 33%.
+
+12technically, this is not an uncertainty because improving the states can only reduce their masses, according to the
+
+variational principle. however, our discussion of errors is not meant to be rigorous.
+
+40
+
+ . . . . . . . . .	(cid:11)(cid:3)
+
+.
+
+.
+
+.
+
+.	
+
+.
+(cid:3)=m (cid:0)+
+
+.
+
+.
+
+figure 5: the coupling as a function of the cuto. we show the cuto in units of the mass of the 0+
+state, and we use 14 longitudinal basis functions, 7 transverse-magnitude basis functions, and 4 spin
+
+basis functions, for a total of 392 basis functions. using the recent anisotropic euclidean lattice result
+of morningstar and peardon for the mass of the 0+ state [27], we estimate that the cuto is roughly
+varying from about 3.1  6.0 gev in this gure.
+
+41
+
+m=m (cid:0)+
+
+  ++(cid:3)
+ (cid:0)+++ ++(cid:3)
+ ++
+
+ . . . .	. ...
+
+.  
+
+.
+
+.
+
+.
+(cid:3)=m (cid:0)+
+
+. 
+
+.
+
+figure 6: the masses of the ve lightest glueballs with j = 0, as functions of the cuto. the masses
+and the cuto are displayed in units of the mass of the 0+ state. the seven values of the cuto at the
+points that we display correspond, from right to left, to  = 0.1, 0.2, 0.3, . . . , 0.7. we use 14 longitudinal
+basis functions, 7 transverse-magnitude basis functions, and 4 spin basis functions, for a total of 392 basis
+
+functions.
+
+42
+
+m=m (cid:0)+
+
+++++(cid:3)
+
+
+ . . . .	. ...
+
+.  
+
+.
+
+.
+
+.
+(cid:3)=m (cid:0)+
+
+. 
+
+.
+
+figure 7: the masses of the two lightest glueballs with j = 1, as functions of the cuto. the masses
+and the cuto are displayed in units of the mass of the 0+ state. the seven values of the cuto at the
+points that we display correspond, from right to left, to  = 0.1, 0.2, 0.3, . . . , 0.7. we use 14 longitudinal
+basis functions, 7 transverse-magnitude basis functions, and 4 spin basis functions, for a total of 392 basis
+
+functions.
+
+43
+
+m=m (cid:0)+
+
+++(cid:3)
+
+++
+
+ . . . .	. ...
+
+.  
+
+.
+
+.
+
+.
+(cid:3)=m (cid:0)+
+
+. 
+
+.
+
+figure 8: the masses of the two lightest glueballs with j = 2, as functions of the cuto. the masses
+and the cuto are displayed in units of the mass of the 0+ state. the seven values of the cuto at the
+points that we display correspond, from right to left, to  = 0.1, 0.2, 0.3, . . . , 0.7. we use 14 longitudinal
+basis functions, 7 transverse-magnitude basis functions, and 4 spin basis functions, for a total of 392 basis
+
+functions.
+
+44
+
+state m/m0++
+0+
+1.38  0.02
+1.58  0.01
+1.58  0.02
+1.11  0.01
+1.70  0.01
+1.68  0.02
+1.62  0.02
+1.77  0.02
+
+2++
+
+2++
+
+0++
+
+lattice [28]
+1.34  0.18
+
+1.42  0.06
+
+1.85  0.20
+
+1.78  0.12
+
+table 1: the glueball masses from our calculation compared to an average of lattice results from a
+number of dierent calculations [28]. we display the masses in units of the mass of the 0++ state.
+the uncertainties for our results are only the statistical uncertainties associated with the monte carlo
+evaluation of the matrix elements of m2(). the three values of the masses for the 2++ and 2++ states
+for our calculation correspond to j = 0, 1, 2. we use the optimal coupling  = 0.5, with 14 longitudinal
+basis functions, 7 transverse-magnitude basis functions, and 4 spin basis functions, for a total of 392 basis
+
+functions.
+
+45
+
+m=m ++
+
+.  .......
+
+ ++(cid:3)
+++++(cid:3)
+ (cid:0)+
+ ++
+
+(cid:11)(cid:3)= :
+
+j= 
+
+j=
+
+j=
+
+figure 9: our glueball spectrum. the masses are plotted in units of the mass of the 0++ state and
+the vertical widths of the levels represent the statistical uncertainties in the masses. the black lines
+
+connect the states that we believe should be degenerate. we use the optimal coupling  = 0.5, with
+14 longitudinal basis functions, 7 transverse-magnitude basis functions, and 4 spin basis functions, for a
+
+total of 392 basis functions.
+
+46
+
+(cid:13)
+(cid:5) ++
+
+ 
+
+2
+
+0
+
+6
+
+4
+
+ .
+
+0.2
+0.2
+
+ .
+x
+
+0.4
+0.4
+
+ .
+
+0.6
+0.6
+
+ .
+
+0.8
+0.8
+
+ 
+
+0
+
+ .
+
+ .
+k=(cid:3)
+
+0.1
+
+0.2
+
+ .
+
+ .
+
+0.3
+
+0.4
+
+ .
+
+
+
+0.5
+
+figure 10: the probability density of the 0++ glueball. we use the optimal coupling  = 0.5, with
+14 longitudinal basis functions, 7 transverse-magnitude basis functions, and 4 spin basis functions, for a
+
+total of 392 basis functions.
+
+47
+
+(cid:5) (cid:0)+
+ .. 
+
+10
+7.5
+5
+2.5
+0
+
+ .
+
+0.2
+0.2
+
+ .
+x
+
+0.4
+0.4
+
+ .
+
+0.6
+0.6
+
+ .
+
+0.8
+0.8
+
+ 
+
+0
+
+ .
+
+ .
+k=(cid:3)
+
+0.1
+
+0.2
+
+ .
+
+ .
+
+0.3
+
+0.4
+
+ .
+
+
+
+0.5
+
+figure 11: the probability density of the 0+ glueball. we use the optimal coupling  = 0.5, with
+14 longitudinal basis functions, 7 transverse-magnitude basis functions, and 4 spin basis functions, for a
+
+total of 392 basis functions.
+
+48
+
+(cid:5)++ 
+
+   
+
+15
+10
+5
+0
+
+ .
+
+0.2
+0.2
+
+ .
+x
+
+0.4
+0.4
+
+ .
+
+0.6
+0.6
+
+ .
+
+0.8
+0.8
+
+ 
+
+0
+
+ .
+
+ .
+k=(cid:3)
+
+0.1
+
+0.2
+
+ .
+
+ .
+
+0.3
+
+0.4
+
+ .
+
+
+
+0.5
+
+figure 12: the probability density of the 2++
+glueball. we use the optimal coupling  = 0.5, with
+14 longitudinal basis functions, 7 transverse-magnitude basis functions, and 4 spin basis functions, for a
+
+0
+
+total of 392 basis functions.
+
+49
+
+(cid:5)++
+
+ 
+
+6
+4
+2
+0
+
+ .
+
+0.2
+0.2
+
+ .
+x
+
+0.4
+0.4
+
+ .
+
+0.6
+0.6
+
+ .
+
+0.8
+0.8
+
+ 
+
+0
+
+ .
+
+ .
+k=(cid:3)
+
+0.1
+
+0.2
+
+ .
+
+ .
+
+0.3
+
+0.4
+
+ .
+
+
+
+0.5
+
+figure 13: the probability density of the 2++
+glueball. we use the optimal coupling  = 0.5, with
+14 longitudinal basis functions, 7 transverse-magnitude basis functions, and 4 spin basis functions, for a
+
+1
+
+total of 392 basis functions.
+
+50
+
+(cid:5)++
+
+ 
+
+6
+4
+2
+0
+
+ .
+
+0.2
+0.2
+
+ .
+x
+
+0.4
+0.4
+
+ .
+
+0.6
+0.6
+
+ .
+
+0.8
+0.8
+
+ 
+
+0
+
+ .
+
+ .
+k=(cid:3)
+
+0.1
+
+0.2
+
+ .
+
+ .
+
+0.3
+
+0.4
+
+ .
+
+
+
+0.5
+
+figure 14: the probability density of the 2++
+glueball. we use the optimal coupling  = 0.5, with
+14 longitudinal basis functions, 7 transverse-magnitude basis functions, and 4 spin basis functions, for a
+
+2
+
+total of 392 basis functions.
+
+51
+
+m(cid:3)
+
+ . . . . .	. ...
+
+(cid:11)(cid:3)= :
+
+
+
+
+
+
+
+
+nt
+
+
+
+
+
+
+
+  ++(cid:3)
+ (cid:0)+++ ++(cid:3)
+ ++
+
+figure 15: the masses of the ve lightest glueballs with j = 0, in units of the cuto, as functions of the
+number of transverse-magnitude basis functions, nt. we use the optimal coupling  = 0.5, with 4 spin
+basis functions and nl = 2nt longitudinal basis functions, for a total of 8n 2
+
+t basis functions.
+
+52
+
+m(cid:3)
+
+ . . . . .	. ...
+
+(cid:11)(cid:3)= :
+
+++++(cid:3)
+
+
+
+
+
+
+
+
+
+nt
+
+
+
+
+
+
+
+figure 16: the masses of the two lightest glueballs with j = 1, in units of the cuto, as functions of the
+number of transverse-magnitude basis functions, nt. we use the optimal coupling  = 0.5, with 4 spin
+basis functions and nl = 2nt longitudinal basis functions, for a total of 8n 2
+
+t basis functions.
+
+53
+
+m(cid:3)
+
+ . . . . .	. ...
+
+(cid:11)(cid:3)= :
+
+
+
+
+
+
+
+
+nt
+
+
+
+
+
+
+
+++(cid:3)
+
+++
+
+figure 17: the masses of the two lightest glueballs with j = 2, in units of the cuto, as functions of the
+number of transverse-magnitude basis functions, nt. we use the optimal coupling  = 0.5, with 4 spin
+basis functions and nl = 2nt longitudinal basis functions, for a total of 8n 2
+
+t basis functions.
+
+54
+
+7 conclusion
+
+we have presented a formalism for pure-glue qcd that allows the physical states of the theory to rapidly
+
+converge in a free-sector expansion. in this approach, we force the free-state matrix elements of the imo
+
+to satisfy three conditions to make the desired expansion possible. first, the diagonal matrix elements
+
+of the imo must be dominated by the free part of the imo. second, the o-diagonal matrix elements of
+
+the imo must quickly decrease as the dierence of the free masses of the states increases. third, the free
+
+mass of a free state must quickly increase as the number of particles in the state increases.
+
+we assume that we can use perturbation theory to derive the operators of the theory, and if this
+
+is valid, then the rst condition is automatically satised. to satisfy the second condition, we place a
+
+smooth cuto on the imo. we use lfft so that the eects of the vacuum are isolated in particles with
+
+zero longitudinal momentum, and we remove these particles from the theory with the intent of replacing
+
+their physical eects with interactions. this makes it reasonable to expect that the third condition on
+
+the imo is satised automatically due to the free-particle dispersion relation of lfft.
+
+the cuto that we use violates a number of physical principles of light-front pure-glue qcd. however,
+
+by requiring the imo to produce cuto-independent physical quantities and by requiring it to respect
+
+the unviolated physical principles of the theory, we are able to derive recursion relations that uniquely
+
+determine the imo to all orders in perturbation theory.
+
+we have applied our method to the calculation of physical states and masses. for this calculation,
+
+we approximated all physical states as two-gluon states. we calculated the color parts of the states
+
+analytically, and we expanded the states momentum and spin degrees of freedom in terms of basis
+
+functions. we designed the states to be simultaneous eigenstates of the imo, the three-momentum
+
+operator, and the projection of the internal rotation generator onto the 3-axis.
+
+using our recursion relations for the imo, we calculated to second order in perturbation theory the
+
+two-gluon to two-gluon matrix element of the imo, which is required for the calculation of physical states.
+
+we then used it to calculate the imo matrix in terms of the basis functions. we showed that the infrared
+
+divergences in the matrix from exchanged gluons with innitesimal longitudinal momentum cancel when
+
+treated properly.
+
+in order to diagonalize the imo matrix, we computed the ve-dimensional integrals in the matrix
+
+elements using monte carlo methods. we calculated the glueball spectrum for a range of couplings and
+
+found that we could not use more than about 400 basis functions without the statistical errors becoming
+overwhelming. we used the mass of our 0+ glueball to compute the nonperturbative cuto dependence
+of the coupling, and we analyzed the cuto dependence of the spectrum. we found that the cuto
+
+that minimizes our errors is /m0+ = 1.33. the corresponding coupling is  = 0.5. we presented
+the probability densities for some of our glueballs and found that our results for the spectrum compare
+favorably with recent lattice data. the largest discrepancy seems to be the 2++
+light. finally, we analyzed the errors in our calculation from the various possible sources, and estimated
+
+state, which is much too
+
+2
+
+the total uncertainty in our spectrum to be 33%.
+
+there are two main paths that we can take for future work with our approach. the rst path is
+
+to further test our method with the theories that we have considered so far. since the scalar theory
+
+55
+
+that we considered in ref.
+
+[1] is relatively simple, it would be interesting to use it compute the imo
+
+to higher orders in perturbation theory. this would require us to solve the integral equation for the
+
+cuto-independent reduced interaction and could be used to further check our conjecture that our imo
+
+leads to correct scattering amplitudes order-by-order in perturbation theory.
+
+in pure-glue qcd, we can further test our approach for calculating physical states by computing the
+
+imo to higher orders in perturbation theory and by keeping more free sectors in the expansion of the
+
+states. however, to keep more free sectors in the expansion of the states, we have to be able to calculate
+
+imo matrices that have more degrees of freedom, while controlling the statistical errors in the spectrum.
+
+this means that we need a better algorithm for determining how accurately individual matrix elements
+
+of the imo have to be computed in order to get a desired uncertainty in the spectrum. we could also use
+
+a better basis that requires fewer momentum functions to represent a wave function. overcoming these
+
+problems will be challenging, but it is important to test our method by studying the rate of convergence
+
+of the free-sector expansion of states as a function of both the cuto and the masses of the states.
+
+another test of our method that we can do with pure-glue qcd is to analyze the interaction that
+
+we have derived in this paper to test the conjecture that it is logarithmically conning. it would also be
+
+interesting to analyze the long-range parts of higher-order interactions to see if the perturbative series
+
+for the interaction is building towards a linearly conning potential. analyzing the long-range parts of
+
+higher-order interactions may be much easier than computing these interactions in their entirety.
+
+the second main path that we can take in the future is to extend our method to other theories and
+
+operators. in order to compute quantities that can be compared with experiment, we wish to extend
+our method to full qcd13. this is complicated for two reasons. first, there is additional algebraic
+and numerical complexity from the the vertices involving quarks. second, quark masses complicate the
+
+method for determining the imo because they increase the number of reduced interactions that can be
+
+cuto-independent [18]. in addition, if large and small quark masses are considered simultaneously, then
+
+ecient numerical representation of the states and accurate calculation of the imos matrix elements
+
+become more dicult. masses also quickly enlarge the parameter space that must be explored to compare
+
+to experimental data.
+
+we can also extend our method by applying it to the computation of operators other than the imo,
+
+such as the rotation generators, the parity operator, and currents. the rotation generators and the parity
+
+operator are of particular interest because they may aid in the classication of the physical states of a
+
+theory.
+
+in summary, there are many avenues of research that must be explored, and some of them are quite
+
+complex. however, all the improvements that we have discussed are necessary if we are to accurately
+
+represent the physical states of quantum eld theories as rapidly convergent expansions in free sectors.
+
+13we are not thinking of including qcd eects that require nonperturbative renormalization or an innite number of
+
+particles because these would require a new method rather than an extension of our current approach.
+
+56
+
+appendix a: conventions for light-front pure-glue qcd
+
+the purpose of this appendix is to state our conventions. with these conventions, any four-vector a
+
+is written in the form
+
+where in terms of equal-time vector components,
+
+a = (a+, a, ~a),
+
+and
+
+a = a0  a3,
+
+~a =
+
+2
+
+xi=1
+
+ai
+ei =
+
+aiei,
+
+2
+
+xi=1
+
+where ei is the unit vector pointing along the i-axis. the inner product is
+
+and
+
+a  b =
+
+1
+2
+
+a+b +
+
+1
+2
+
+ab+  ~a ~b,
+
+~a2
+ = ~a ~a.
+
+a spacetime coordinate is a four-vector, and according to eq. (175), it is written
+
+x = (x+, x, ~x).
+
+(175)
+
+(176)
+
+(177)
+
+(178)
+
+(179)
+
+(180)
+
+the time component is chosen to be x+. x is referred to as the longitudinal component, and ~x contains
+the transverse components.
+
+the gradient operator is treated just like any other four-vector. its components are
+
+and
+
+ = 2
+
+
+x ,
+
+ = 
+i
+xi
+
+
+.
+
+the canonical lagrangian density for pure-glue qcd is
+
+l = 
+
+1
+4
+
+fcf 
+
+c
+
+,
+
+where
+
+c = a
+f 
+
+c  a
+
+c  ga
+
+c1a
+
+c2f c1c2c.
+
+(181)
+
+(182)
+
+(183)
+
+(184)
+
+greek indices are lorentz indices, cs are color indices, repeated indices are summed over, and the f s
+
+are the su(nc) structure constants.
+
+we derive the canonical hamiltonian from l by the following procedure:
+1. we choose the light-cone gauge, a+
+
+c = 0.
+
+57
+
+2. we derive the euler-lagrange equation that determines a
+
+c in terms of ~ac.
+
+3. using the canonical procedure and treating the eld classically (i.e.
+
+letting it and its derivatives
+commute), we derive the hamiltonian in terms of ~ac, dropping terms that are zero if the gluon
+eld is zero at spacetime innity.
+
+4. we quantize the gluon eld by expanding it in terms of free-particle creation and annihilation
+
+operators. (we dene the eld expansion and its inverse longitudinal derivative below.)
+
+5. in each term in the hamiltonian, we treat the creation and annihilation operators as if they commute
+
+and move all the creation operators to the left of all the annihilation operators. (this normal
+
+ordering drops the so-called self-inertias, as well as some constants.)
+
+6. we drop the terms in the hamiltonian that have no eect if there are no particles with p+ = 0.
+
+we work in the schrodinger representation, where operators are time-independent and states are
+
+time-dependent. thus we quantize the eld by dening it to be a superposition of solutions to the
+klein-gordon equation (since gluons are bosons), with the quantization surface x+ = 0:
+
+~ac(x, ~x) = z d1c,c1ha1~s1eip1x + a
+
+1~ 
+
+s1 eip1xi x+=0
+
+where
+
+di =
+
+nc
+
+xci=1 xsi=1,1
+
+d2pidp+
+i
+163p+
+i
+
+(p+
+
+i  p +).
+
+,
+
+(185)
+
+(186)
+
+here si is the spin polarization of particle i, p is the four-momentum operator,  is a positive innitesimal,
+and the gluon polarization vector is dened by
+
+~s = 1
+2
+
+(s, i).
+
+(187)
+
+p+ and ~p are the momenta conjugate to x and ~x; so they are referred to as the longitudinal and
+transverse momenta, respectively. the purpose of  is to regulate divergent eects from exchanged
+gluons (either instantaneous or real) with innitesimal longitudinal momentum. we take   0 before
+we calculate physical quantities (see section 5).
+
+in the process of deriving the canonical hamiltonian, we need to take the inverse longitudinal derivative
+
+of the gluon eld. we do this by moving the derivative inside the expansion:
+
+1
++
+
+~ac(x, ~x) = z d1c,c1(cid:20)
+
+1
+ip+
+1
+
+a1~s1 eip1x +
+
+1
+ip+
+1
+
+a
+1~ 
+
+s1eip1x(cid:21) x+=0
+
+.
+
+(188)
+
+the expansion coecients a
+
+i and ai are identied as particle creation and annihilation operators.
+
+they follow the convention
+
+and have the commutation relations
+
+ai = a(pi, si, ci),
+
+[ai, a
+
+j] = i,j  163p+
+
+i (3)(pi  pj)si,sj ci,cj
+
+58
+
+(189)
+
+(190)
+
+and
+
+where
+
+[ai, aj] = [a
+
+i , a
+
+j] = 0,
+
+(3)(pi  pj) = (p+
+
+i  p+
+
+j )(2)(~pi  ~pj).
+
+(191)
+
+(192)
+
+let m2 be the invariant-mass operator. the momentum conjugate to x+ is p; so the hamiltonian
+
+is identied as p  and it follows from
+
+that
+
+p 2 = m2
+
+p  =
+
+~p 2
+ + m2
+p +
+
+.
+
+(193)
+
+(194)
+
+the canonical hamiltonian that results from the above procedure can be written as the sum of a free
+
+part and an interacting part:
+
+where
+
+p  = p 
+
+free + v,
+
+free =z d1
+p 
+
+~p 2
+1
+p+
+1
+
+a
+1a1.
+
+we give the interaction in terms of its modied matrix elements:
+
+(195)
+
+(196)
+
+163
+
+163
+
+v = g
+
++ g
+
+2a
+
+2! z d1d2d3 a
+2! z d1d2d3 a
+2! 2! z d1d2d3d4 a
+3! z d1d2d3d4 a
+3! z d1d2d3d4 a
+
+4a1a2 (3)(p1 + p2  p3  p4)
+
+3a1 (3)(p1  p2  p3) <| g2g3|v|g1>|
+3a1a2 (3)(p1 + p2  p3) <| g3|v|g1g2>|
+xi=1
+xi=1
+xi=1
+
+4a1a2a3 (3)(p1 + p2 + p3  p4)
+
+4a1 (3)(p1  p2  p3  p4)
+
+3a
+
+2a
+
+3a
+
+4
+
+4
+
+4
+
++ g2 163
+
++ g2 163
+
++ g2 163
+
+<| g3g4|v|g1g2>| i
+
+<| g2g3g4|v|g1>| i
+
+<| g4|v|g1g2g3>| i,
+
+(197)
+
+where a modied matrix element is dened by
+
+<| i|v|j>| =
+
+< i|v|j >
+
+163(3)(pi  pj)
+
+.
+
+g=1
+
+(198)
+
+the modied matrix elements are
+
+<| g2g3|v|g1>| = if c1c2c3(cid:20)s2,s3~s1(cid:26)(~p2  ~p3) 
+
+~p1
+p+
+1
+
+3 )(cid:27)
+2  p+
+(p+
+
++ s1,s3~ 
+
+s2(cid:26)(~p1 + ~p3) 
+
+~p2
+p+
+2
+
+(p+
+
+1 + p+
+
+3 )(cid:27)
+
+59
+
++ s1,s2~ 
+
+s3(cid:26)(~p1 + ~p2) +
+
+~p3
+p+
+3
+
+(p+
+
+1 + p+
+
+2 )(cid:27)(cid:21) ,
+
+<| g3|v|g1g2>| = if c1c2c3(cid:20)s2,s3~s1(cid:26)(~p3 + ~p2) 
+~p1
+p+
+1
+2 )(cid:27)
+(p+
+1  p+
+3 )(cid:27)(cid:21) ,
+
+s3(cid:26)(~p1  ~p2) 
+ s1,s2~ 
++ s1,s3~s2(cid:26)(~p1 + ~p3) +
+
+~p3
+p+
+3
+~p2
+p+
+2
+
+1 + p+
+
+(p+
+
+(p+
+
+3 + p+
+
+2 )(cid:27)
+
+(199)
+
+and
+
+<| g3g4|v|g1g2>| 1 = [f c1c3cf c4c2c (s2,s3 s1,s4  s3,s4 s1,s2 ) + f c1c4cf c3c2c (s2,s4 s1,s3  s3,s4 s1,s2)
+
+<| g3g4|v|g1g2>| 2 = f c1c3cf c4c2cs1,s3s2,s4
+
++ f c1c2cf c3c4c (s2,s4s1,s3  s1,s4s2,s3 )] ,
+p+
+4 + p+
+2
+4  p+
+p+
+2
+3 + p+
+p+
+2
+p+
+3  p+
+p+
+4  p+
+3
+p+
+4 + p+
+3
+
+p+
+1 + p+
+3
+1  p+
+p+
+3
+1 + p+
+p+
+4
+p+
+1  p+
+p+
+1  p+
+2
+p+
+1 + p+
+2
+
+4
+
+2
+
+<| g3g4|v|g1g2>| 3 = f c1c4cf c3c2cs1,s4s2,s3
+
+<| g3g4|v|g1g2>| 4 = f c1c2cf c4c3cs1,s2s3,s4
+
+,
+
+,
+
+,
+
+(200)
+
+and
+
+and
+
+<| g2g3g4|v|g1>| 1 = [f c1c3cf c4c2c (s2,s3 s1,s4 + s3,s4 s1,s2) + f c1c4cf c3c2c (s2,s4 s1,s3 + s3,s4 s1,s2)
+
+<| g2g3g4|v|g1>| 2 = f c1c2cf c4c3cs1,s2 s3,s4
+
+<| g2g3g4|v|g1>| 3 = f c1c3cf c4c2cs1,s3 s2,s4
+
++ f c1c2cf c3c4c (s2,s4 s1,s3 + s1,s4 s2,s3 )] ,
+p+
+4  p+
+3
+p+
+4 + p+
+3
+p+
+4  p+
+2
+p+
+4 + p+
+2
+2  p+
+p+
+3
+p+
+2 + p+
+3
+
+p+
+1 + p+
+2
+p+
+1  p+
+2
+1 + p+
+p+
+3
+p+
+1  p+
+3
+p+
+1 + p+
+4
+p+
+1  p+
+
+4
+
+<| g2g3g4|v|g1>| 4 = f c1c4cf c2c3cs1,s4 s3,s2
+
+,
+
+,
+
+,
+
+(201)
+
+<| g4|v|g1g2g3>| 1 = [f c1c3cf c4c2c (s2,s3 s1,s4 + s3,s4 s1,s2) +f c1c4cf c3c2c (s2,s4 s1,s3 + s3,s4 s1,s2)
+
+<| g4|v|g1g2g3>| 2 = f c1c4cf c3c2cs1,s4 s2,s3
+
++ f c1c2cf c3c4c (s2,s4 s1,s3 + s1,s4 s2,s3 )] ,
+p+
+3  p+
+2
+p+
+3 + p+
+2
+p+
+3  p+
+1
+p+
+3 + p+
+1
+p+
+1  p+
+2
+p+
+1 + p+
+2
+
+p+
+1 + p+
+4
+p+
+1  p+
+4
+p+
+2 + p+
+4
+p+
+2  p+
+4
+p+
+3 + p+
+4
+p+
+3  p+
+
+4
+
+,
+
+,
+
+,
+
+<| g4|v|g1g2g3>| 3 = f c2c4cf c3c1cs2,s4 s1,s3
+
+<| g4|v|g1g2g3>| 4 = f c3c4cf c1c2cs3,s4 s2,s1
+
+where sn = sn.
+
+we work in the free basis, the basis of eigenstates of p 
+2  a
+
+|g1g2  gni = a
+
+1a
+
+n |0i ,
+
+free. they are given by
+
+60
+
+(202)
+
+(203)
+
+(204)
+
+(205)
+
+(206)
+
+(207)
+
+(208)
+
+(209)
+
+for any integer n  0. the associated eigenvalue equation is
+
+n
+
+p 
+free |g1g2  gni =
+
+p
+i |g1g2  gni ,
+
+xi=1
+
+where
+
+p
+i =
+
+~p 2
+i
+p+
+i
+
+(since p2
+
+i = 0) and the sum is zero if n = 0.
+the noninteracting limit of eq. (194) is
+
+p 
+free =
+
+~p 2
+ + m2
+
+p +
+
+free
+
+,
+
+where m2
+
+free is the free invariant-mass operator. it has the eigenvalue equation
+
+m2
+
+free |g1g2  gni = m 2 |g1g2  gni ,
+
+where
+
+m 2 = p +
+
+n
+
+xi=1
+
+i  ~p 2
+p
+,
+
+and p is the total momentum of the state.
+
+finally, in terms of the free states, the completeness relation is
+
+1 = |0ih0| +z d1 |g1ihg1| +
+
+1
+
+2!z d1d2 |g1g2ihg1g2| +  .
+
+61
+
+appendix b: the derivation of the recursion relations for the reduced
+
+interaction
+
+this appendix is an extension of appendix d of ref. [1] to the case of pure-glue qcd. in subsection
+
+2.4, we derived a constraint on the o(gr
+
+) reduced interaction for r  1:
+cd() = v (r) 
+
+r1
+
+brs,sv (rs)().
+
+v (r)
+cd()  v (r)
+
+xs=2
+
+(210)
+
+since we already know the rst-order reduced interaction [see eq. (18)] and the cuto-independent part
+of the second-order reduced interaction [see eq. (19)], we wish to use this equation to compute v (r)
+cd()
+for r  2 and v (r)
+
+for r  3, in terms of lower-order reduced interactions.
+
+ci
+
+b.1 the recursion relation for the cuto-dependent part
+
+we begin by computing the recursion relation for the cuto-dependent part of the reduced interaction.
+
+recall that momentum conservation implies that any matrix element of v () can be written as an
+
+expansion in unique products of momentum-conserving delta functions. this means that an arbitrary
+
+matrix element of eq. (210) can be expanded in products of delta functions:
+
+xi
+
+hf| v (r)
+
+cd()|ii(i) xi
+
+hf| v (r)
+
+cd()|ii(i) =xi "hf| v (r) |ii 
+
+r1
+
+xs=2
+
+brs,s hf| v (rs)()|ii#(i)
+
+, (211)
+
+where the (i) superscripts denote that we are considering the ith product of delta functions that can
+occur in a delta-function expansion of hf| v (r)()|ii. this equation is equivalent to a set of equations,
+one for each possible product of delta functions:
+
+hf| v (r)
+
+cd()|ii(i)  hf| v (r)
+
+cd()|ii(i) ="hf| v (r) |ii 
+
+brs,s hf| v (rs)()|ii#(i)
+
+.
+
+r1
+
+xs=2
+
+cluster decomposition implies that we can write
+
+(212)
+
+(213)
+
+hf| v (r)
+
+cd()|ii (i) = 
+
+
+n (i)
+
+
+
+yj=1
+
+(i)
+
+j 
+
+
+f (i)
+cd({pn},{sn},{cn}, ),
+
+
+
+is the j th momentum-conserving delta function in the ith product of delta functions ((i)
+where (i)
+j
+j
+includes a longitudinal-momentum factor), n (i)
+is the number of delta functions in the ith product, and
+f (i)
+cd is a function of the cuto and the quantum numbers of the particles in the matrix element, but does
+not contain delta functions that x momenta. we dene npart to be the number of particles in state |ii
+plus the number of particles in state |fi, and n = 1, 2, 3, . . . , npart. the momentum, spin polarization,
+and color of particle n are given by pn, sn, and cn. we dene n (i)
+int to be the number of particles in the
+matrix element that participate in an interaction for the ith product of delta functions. in order for the
+imo to have the dimensions (mass)2, f (i)
+int . note that we are
+suppressing the dependence of the rhs of this equation on r.
+
+cd must have the dimensions (mass)4n (i)
+
+we have assumed that any matrix element of the imo can be expanded in powers of transverse
+
+momenta, not including the momentum-conserving delta functions; so
+
+62
+
+cd({pn},{sn},{cn}, ) = 4n (i)
+f (i)
+
+int x{mnt}
+
+z{mnt}
+i
+
+(cid:16){p+
+
+n},{sn},{cn}(cid:17)
+
+npart
+
+yn=1
+
+2
+
+yt=1(cid:18) pt
+
+n
+
+ (cid:19)mnt
+
+,
+
+(214)
+
+where t denotes a component of transverse momentum and mnt is a non-negative integer index associated
+with transverse-momentum component t of particle n. the sum is over all values of each of the mnts,
+subject to the constraint that
+
+4  n (i)
+
+int xn,t
+
+mnt 6= 0,
+
+(215)
+
+which is necessary to avoid terms in the momentum expansion that are cuto-independent. the z{mnt}
+are the coecients for the momentum expansion. they depend on i and the mnts and are functions of
+the particles longitudinal momenta, spin polarizations, and colors.
+
+s
+
+i
+
+since the rhs of eq. (212) has the same product of delta functions as the lhs, we can write
+
+"hf| v (r) |ii 
+
+r1
+
+xs=2
+
+brs,s hf| v (rs)()|ii#(i)
+
+n (i)
+
+
+
+yj=1
+
+=
+
+
+(i)
+
+j 
+
+
+g(i)({pn},{sn},{cn}, , ),
+
+(216)
+
+where g(i) has dimensions (mass)4n (i)
+int , and by inspection of the lhs of eq. (212) and eq. (213), is a
+function of the quantum numbers of the particles, , and . substitution of eqs. (216) and (213) into
+eq. (212) yields
+
+f (i)
+cd({pn},{sn},{cn}, )  f (i)
+
+cd({pn},{sn},{cn}, ) = g(i)({pn},{sn},{cn}, , ),
+
+(217)
+
+where the momenta in this equation are constrained by the delta-function conditions.
+
+since the lhs of eq. (217) is the dierence of a function of  and the same function with   ,
+g(i) must be as well. since the lhs of eq. (217) can be expanded in powers of transverse momenta, g(i)
+must have the form
+
+g(i)({pn},{sn},{cn}, , ) = x{mnt}
+
+i
+
+z {mnt}
+
+(cid:16){p+
+n},{sn},{cn}(cid:17)
+ (cid:19)mnt
+int yn,t(cid:18) pt
+  4n (i)
+
+n
+
+ "4n (i)
+
+int yn,t(cid:18) pt
+
+n
+
+ (cid:19)mnt# ,
+
+(218)
+
+where the sum is restricted by eq. (215).
+
+substituting eqs. (218) and (214) into eq. (217), we nd that
+
+4n (i)
+
+  4n (i)
+
+int x{mnt}
+int x{mnt}
+
+n
+
+z{mnt}
+i
+
+z{mnt}
+i
+
+n},{sn},{cn}(cid:17)yn,t(cid:18) pt
+(cid:16){p+
+n},{sn},{cn}(cid:17)yn,t(cid:18) pt
+(cid:16){p+
+int yn,t(cid:18) pt
+
+n},{sn},{cn}(cid:17)"4n (i)
+(cid:16){p+
+
+ (cid:19)mnt
+ (cid:19)mnt
+ (cid:19)mnt
+
+n
+
+n
+
+z {mnt}
+
+i
+
+= x{mnt}
+
+63
+
+  4n (i)
+
+int yn,t(cid:18) pt
+
+n
+
+ (cid:19)mnt# . (219)
+
+matching powers of transverse momenta on both sides of this equation gives
+
+z{mnt}
+i
+
+= z {mnt}
+
+i
+
+n},{sn},{cn}(cid:17)h4n (i)
+(cid:16){p+
+n},{sn},{cn}(cid:17)h4n (i)
+(cid:16){p+
+
+int n,t mnt   4n (i)
+int n,t mnt   4n (i)
+
+int n,t mnti
+int n,t mnti .
+
+(220)
+
+the factor in brackets cannot be zero because  6=  and eq. (215) holds. thus eq. (220) implies that
+(221)
+
+= z {mnt}
+
+.
+
+z{mnt}
+i
+
+i
+
+then eqs. (214), (218), and (221) imply that
+
+f (i)
+cd({pn},{sn},{cn}, ) = g(i)({pn},{sn},{cn}, , )
+
+,
+
+ terms
+
+(222)
+
+where  terms means that g(i) is to be expanded in powers of transverse momenta and only the terms
+in the expansion that are proportional to powers or inverse powers of  contribute. from eqs. (213),
+
+(216), and (222),
+
+hf| v (r)
+
+cd()|ii (i) ="hf| v (r) |ii 
+
+brs,s hf| v (rs)()|ii#(i)
+
+ terms
+
+r1
+
+xs=2
+
+,
+
+(223)
+
+where it is understood that the momentum-conserving delta functions are ignored for the purposes of
+
+transverse-momentum expansions. since a matrix element is the sum of the contributions to it from
+
+dierent products of delta functions, both sides of this equation can be summed over i to obtain
+
+hf| v (r)
+
+cd()|ii ="hf| v (r) |ii 
+
+r1
+
+xs=2
+
+brs,s hf| v (rs)()|ii# terms
+
+.
+
+(224)
+
+this equation tells us how to calculate the cuto-dependent part of the o(gr
+terms of lower-order contributions.
+
+) reduced interaction in
+
+b.2 the recursion relation for the cuto-independent part
+
+since we have specied v (1) and v (2)
+
+ci , we need to determine v (r)
+
+ci
+
+which contributions to v (r)() can be cuto-independent.
+
+for r  3. it is useful to rst consider
+
+a matrix element of the cuto-independent part of v (r)() can be expanded in products of delta
+functions and in powers of transverse momenta just as was done for the cuto-dependent part. thus we
+
+can write
+
+where
+
+and
+
+hf| v (r)
+
+ci |ii =xi
+ci |ii (i) = 
+
+
+yj=1
+
+n (i)
+
+
+
+hf| v (r)
+
+hf| v (r)
+
+ci |ii (i) ,
+
+f (i)
+ci ({pn},{sn},{cn})
+
+(i)
+
+j 
+
+
+ci ({pn},{sn},{cn}) = 4n (i)
+f (i)
+
+int x{mnt}
+
+w{mnt}
+
+i
+
+(cid:16){p+
+
+n},{sn},{cn}(cid:17)
+
+npart
+
+yn=1
+
+64
+
+2
+
+yt=1(cid:18) pt
+
+n
+
+ (cid:19)mnt
+
+(225)
+
+(226)
+
+.
+
+(227)
+
+the sum is over all values of each of the mnts, subject to the constraint that
+
+which ensures that all the terms in the expansion of f (i)
+
+ci are cuto-independent.
+
+4  n (i)
+
+int xn,t
+
+mnt = 0,
+
+(228)
+
+eq. (228) places constraints on the possible cuto-independent contributions to the reduced interac-
+int  2, but eq. (228) can only hold if
+
+tion. any contribution to a matrix element of v (r)() has an n (i)
+n (i)
+int  4.
+suppose that n (i)
+
+int = 2. in this case, eq. (228) implies that f (i)
+
+ci is quadratic in transverse momenta.
+due to approximate cluster decomposition, only interacting particles transverse momenta can appear in
+ci . so any contribution to f (i)
+f (i)
+ci can depend on the transverse momenta of two interacting particles.
+thus f (i)
+ci can be written as a sum of terms, where each term corresponds to a distinct pair of interacting
+particles. the momentum dependence of each term in f (i)
+ci is limited to dependence on the momenta of
+the interacting particles and the total longitudinal momentum:
+
+f (i)
+
+ci ({pn},{sn},{cn}) = xm
+= xm
+
+f (i,m)
+ci
+
+(km, k
+
+m, p +,{sn},{cn})
+
+f (i,m)
+ci
+
+(km, p +,{sn},{cn}),
+
+(229)
+
+m are the momenta for the initial and nal particles in the mth interacting pair, and
+where km and k
+m. f (i,m)
+where we have used the fact that for n (i)
+must be quadratic in ~km or it must be zero. the matrix elements of the imo are boost-invariant, as is
+the delta-function product in eq. (226). this means that f (i)
+ci must be boost-invariant, but it cannot be
+if f (i,m)
+ci must be zero. thus the reduced interaction does not contain any
+cuto-independent two-point interactions.
+
+int = 2, momentum conservation implies that km = k
+
+is quadratic in ~km; so f (i,m)
+
+ci
+
+ci
+
+note that two-point interactions are self-energies, and they change the particle dispersion relation.
+
+if they change the dispersion relation such that the coecients of the free relation become modied
+
+ci or f (i)
+
+int = 2. we have just shown that boost invariance prevents this for f (i)
+
+by interactions, then this can be viewed as renormalization of the eld operators, i.e. wave-function
+renormalization. this eect is absent unless either f (i)
+cd can be quadratic in transverse momenta
+for n (i)
+ci , and according to eq. (215),
+cd cannot be quadratic in transverse momenta for n (i)
+f (i)
+int = 2; so there is no wave-function renormalization
+at any order in g in our approach.
+according to eq. (228), if n (i)
+
+int = 4,
+ci has to be independent of all transverse momenta. according to assumptions that we made in
+int = 3
+ci can contain only three-point interactions that are linear
+ci can contain only four-point interactions that are
+
+then f (i)
+subsection 2.3.4, if r is odd then v (r)
+part. this means that if r is odd, then v (r)
+in transverse momenta, and if r is even, then v (r)
+independent of all transverse momenta.
+
+ci has to be linear in transverse momenta, and if n (i)
+
+int = 4 part, and if r is even then v (r)
+
+int = 3, then f (i)
+
+ci has no n (i)
+
+ci has no n (i)
+
+to calculate v (r)
+
+ci , we consider eq. (212) with r  r + 2:
+
+hf| v (r+2)
+
+cd ()|ii(i)  hf| v (r+2)
+
+cd ()|ii(i) ="hf| v (r+2) |ii 
+
+br+2s,s hf| v (r+2s)()|ii#(i)
+
+.(230)
+
+r+1
+
+xs=2
+
+65
+
+in the remainder of this appendix, we assume that r is odd. then we need to consider only n (i)
+initially. we expand eq. (230) in powers of transverse momenta and keep only the linear term:
+
+int = 3
+
+r+1
+
+0 ="hf| v (r+2) |ii 
+
+br+2s,s hf| v (r+2s)()|ii#(i)
+
+xs=2
+cd ()|ii(i) has no linear part when n (i)
+where we have used the fact that hf| v (r+2)
+br+2s,s hf| v (r+2s)()|ii#(i)
+
+ci |ii(i) ="hf| v (r+2) |ii 
+
+we move the rst term in the sum on the rhs to the lhs:
+
+br,2 hf| v (r)
+
+ term
+
+r+1
+
+~p 1
+
+,
+
+xs=3
+
+(231)
+
+int = 3 [see eq. (215)].
+
+.
+
+(232)
+
+~p 1
+
+ term
+
+now we can sum over all values of i corresponding to three-point interactions:
+
+hf| v (r)
+
+ci |ii =
+
+1
+
+br,2 "hf| v (r+2) |ii 
+
+r+1
+
+xs=3
+
+br+2s,s hf| v (r+2s)()|ii#3point
+
+~p 1
+
+ term
+
+.
+
+(233)
+
+to use this equation, we also need to use eq. (230) to solve for v (r+1)
+
+ci
+
+. since r is odd, r + 1 is even.
+
+thus v (r+1)
+analogous to those that led to eq. (233), we nd that
+
+ci
+
+will contain only transverse-momentum-independent four-point interactions. using steps
+
+hf| v (r+1)
+
+ci
+
+|ii =
+
+1
+
+br+1,2 "hf| v (r+3) |ii 
+
+r+2
+
+xs=3
+
+br+3s,s hf| v (r+3s)()|ii#4point
+
+~p 0
+
+ term
+
+.
+
+(234)
+
+to use these equations, the right-hand sides have to be expanded in powers of transverse momenta. only
+three-point interactions that are linear in transverse momenta contribute to v (r)
+ci , and only four-point
+interactions that are independent of all transverse momenta contribute to v (r+1)
+.
+
+ci
+
+these equations are coupled integral equations14 because both v (r)
+
+ci and v (r+1)
+
+ci
+
+appear on the rhs
+
+ci
+
+ci
+
+appears on the rhs of eq. (234) inside integrals in
+also appears on the rhs of eq. (234) inside integrals in v (r+3), but
+cannot couple to v (1) to produce a transverse-momentum-independent four-point contribution to
+vanishes when the intermediate state is massless and
+
+of eq. (233) inside integrals in v (r+2), and v (r+1)
+v (r+3). it would seem that v (r+2)
+v (r+2)
+ci
+v (r+3). this is because the cuto function t (,)
+all external transverse momenta are zero. this means that since we specied v (1) and v (2)
+ci
+2.3.4, we can use eqs. (233) and (234) to solve for v (3)
+simultaneously, and so on. note that before we can use these equations to solve for v (r)
+simultaneously, we must rst use eq. (224) both to compute v (r)
+and to express v (r+1)
+
+in subsection
+ci and v (6)
+ci and v (r+1)
+cd() in terms of lower-order interactions
+
+cd () in terms of lower-order interactions and v (r)().
+
+simultaneously, and v (5)
+
+ci and v (4)
+
+ci
+
+ci
+
+ci
+
+2
+
+before concluding this appendix, we would like to deduce a bit more about the relationship of g to
+g . according to eq. (27) and the surrounding discussion, this relationship is determined by the matrix
+element hg2g3| v |g1i, which can be expanded in powers of g :
+
+
+
+14it is very dicult to prove that integral equations of this type have a unique solution; so we simply assume that it is
+
+hg2g3| v |g1i =
+
+ hg2g3| v (t) |g1i .
+gt
+
+(235)
+
+xt=3
+
+true in this case.
+
+66
+
+recall that v (t) is built from products of v (r)()s. this implies that v (t) can change particle number
+by 1 only if t is odd, and thus eq. (235) implies that the coupling runs at odd orders; i.e. cs is zero if s
+is even [see eq. (29)].
+
+67
+
+appendix c: technical issues in the numerical calculation of matrix
+
+elements
+
+in this appendix, we discuss some of the technical issues involved in the numerical calculation of the
+matrix elements hq, l, t, j|m2()|q, l, t, ji. in section c.1 we discuss how we put the matrix elements
+into a form that is amenable to numerical calculation. in section c.2 we briey cover three topics: we
+show how the glueball state with j r
+3 eigenvalue j can be written in terms of the glueball state with
+j r
+3 eigenvalue j, we list a few tricks that allow us to reduce the number of matrix elements that we must
+compute, and we present our method for estimating how numerical uncertainties in the matrix elements
+
+translate into uncertainties in the spectrum.
+
+c.1 preparation of integrals for monte carlo
+
+there are two types of contributions to hq, l, t, j|m2()|q, l, t, ji: nite sums and ve-dimensional
+integrals. we use mathematica [26] to evaluate the nite sums to as many digits as we wish. to evaluate
+
+the integrals, we combine them into one integral and use the vegas monte carlo routine [29]. it takes
+
+a bit of work to put the integral into a form that will converge.
+
+there are two main diculties with getting the integral to converge. the rst diculty is that
+hq, l, t, j|m2()|q, l, t, jib,f
+in looks divergent: as x  x, the sum in eq. (168) diverges. this divergence
+is misleading because it actually contributes nothing to the integral (assuming that we calculate the
+
+integral carefully; see the discussion below). left unchecked, this false divergence prevents the integral
+
+from converging with vegas. to rectify the problem, we want to subtract the false divergence from the
+
+integrand. since it integrates to zero, this is allowed.
+
+the second main diculty with getting the integral to converge is roundo error. even after we
+subtract the false divergence from the integrand, the integrand peaks around x = x, and in this region
+there are large cancellations in some of the quantities that we have dened. to prevent these cancellations
+
+from causing roundo error, we rewrite these quantities so that the cancellations are explicit, before we
+
+turn to numerics.
+
+c.1.1 subtraction of the false divergence
+
+we begin by dening a set of variables that is natural for dealing with the false divergence. we dene
+
+we change variables from ~k and ~k 
+
+ to the dimensionless transverse variables ~r and ~w:
+
+ = x  x.
+
+~r =
+
+~w =
+
+d
+2
+d
+2
+
+),
+
+(~k + ~k 
+~k  ~k 
+
+
+.
+
+we dene the angle between ~r and ~w to be :
+
+we also dene
+
+~r  ~w = rw cos .
+
+68
+
+(236)
+
+(237)
+
+(238)
+
+and then we can derive a host of useful relations:
+
+r = qr2 + w2  2rw cos ,
+
+~k =
+
+~k 
+ =
+
+~r +  ~w
+~r   ~w
+
+d
+
+,
+
+,
+
+d
+
+~k  ~k 
+
+,
+
+,
+
+k =
+
+k =
+
+r+
+d
+r
+d
+1
+d2 (r2  w2),
+r2  w2
+r+r
+sin  = 2rw
+
+ =
+
+cos  =
+
+,
+
+sin ,
+
+r+r
+
+(239)
+
+(240)
+
+(241)
+
+(242)
+
+,
+
+(244)
+
+and
+
+dk dk d k k (k) (k) () (2  ) =
+
+4
+d4 dr dw d r w (r) (w) () (2  ).
+
+in terms of these variables, hq, l, t, j|m2()|q, l, t, jib,f
+hq, l, t, j|m2()|q, l, t, jib,f
+
+ncg2
+
+
+
+in takes the form
+
+23d2 z d log  wq,q t t(r)t t(r+)e(d)4( 2
+in = 
+xi=1
+
+ym=1; m6=i
+
+em,
+
+e
+i
+
+
+
+5
+
+5
+
+f k + 2
+
+ik )
+
+where
+
+d = dx dx dr dw d r w  (x) (1  x) (x) (x  x) (r) (w) () (2  ) l(e)
+
+l
+
+(x).
+
+(243)
+
+to avoid roundo error, we have dened simplied dimensionless versions of the dierences of the free
+
+masses and the derivatives of these dierences:
+
+r2(1  x  x) + w22(1  x  x)  2wr(x[1  x] + x[1  x]) cos 
+r2 + w2(1  x + 1  x)2 + 2rw(1  x + 1  x) cos 
+r2 + w2(x + x)2  2rw(x + x) cos 
+
+x(1  x)x(1  x)
+
+(1  x)(1  x)
+
+,
+
+,
+
+xx
+
+f i =
+
+f k = 
+ik = 
+
+f k =
+
+
+
+ik =
+
+w2
+
+
+,
+
+r2
+
+
+(1  x)2  4
+r2
+
+x 2  4
+
+w2
+
+
+.
+
+eq. (242) is now dimensionless, except for the factor in front of the integral, which is proportional to
+1/d2.
+
+69
+
+as x  x (  0), the contributions to the integrand from the rst and second terms in the sum
+
+diverge. in the limit x  x, the contribution to the integral from these terms can be written15
+l (x)(x + x)
+
+23d2 q,qz d log  t t(r)t t(r)e32(d)4w4(cid:20) 1
+
+2  64(d)4 w4
+
+2(cid:21) l(e)
+
+ncg2
+
+
+
+
+
+(245)
+
+ (1  x + 1  x).
+
+an examination of this integral reveals a problem: the transverse integrals are zero and the longitudinal
+
+integrals are innite. to solve this problem, we consider what would have happened if we had not yet
+taken   0. in this case, the transverse integrals would be zero and the longitudinal integrals would be
+nite. thus the   0 limit of this integral would be zero. this means that this integral is actually zero,
+and we can subtract it from the full integral in eq. (242):
+
+hq, l, t, j|m2()|q, l, t, jib,f
+in = 
+ " wq,q t t(r)t t(r+)e(d)4( 2
+ q,q t t(r)t t(r)e32(d)4 w4(cid:18) 1
+
+
+
+ncg2
+
+23d2 z d log 
+
+5
+
+f k + 2
+
+ik )
+
+5
+
+xi=1
+
+em
+
+e
+i
+
+ym=1; m6=i
+2(cid:19) l(e)
+
+2  64(d)4 w4
+
+l (x)(x + x)(1  x + 1  x)#.
+
+(246)
+
+once we have performed this subtraction, there is no ambiguity about the value of the full integral, and
+
+it converges when computed numerically.
+
+c.1.2 combination of the integrals
+
+we now combine all the ve-dimensional integrals into one integral:
+
+hq, l, t, j|m2()|q, l, t, ji5d = 
+
+where
+
+
+
+ncg2
+
+23d2 z dhicon + i f
+
+ex + iin+ex + i b,f
+
+(247)
+
+in i ,
+
+icon = [j,2q,2q,2 + j,2q,1q,1  j,0q,3q,3] l(e)
+ex = l(e)
+i f
+
+l (x)t t(r)t t(r+)e(d)4 2
+
+1
+
+f i
+
+r2
++
+
+ (cid:20)
+
+x(1  x)
+iin+ex = wq,q l(e)
+
+s(1)
+q,q +
+
+r2
+
+
+x(1  x)
+
+s(2)
+q,q +
+
+l (x)t t(r)t t(r+)e(d)4 2
+
+l (x)t t(r)t t(r+)e(d)4 2
+
+f i ,
+
+1
+
+ik(cid:19)(cid:16)1  e2(d)4 f k ik(cid:17)
+
++
+
+r+r
+
+f k
+
+ (cid:18) 1
+q,q(cid:21) ,
+x(1  x)x(1  x)
+f i(cid:16)1  e2(d)4 f k ik(cid:17)
+x(1  x)x(1  x)
+
+s(3)
+
+1
+
+
+1
+
+f k ik
+
+ h  5w4  24w2(r2 + 2w2[1  2x])  3(r4 + 4r2w2[1  2x] + 6w4[1  2x]2)
+ 4 cos rw([1 + 2]r2 + w2[1  x  x]2)(1  x  x) + 8r2w2x(1  x)
+ 4 cos2 r2w2(4 + 23[1  2x] + 4x[1  x]  42x[1  x]  2[1  2x])
+ 42w2(w2[1  2x]3 + r2[1  2x(1  x)])
++ 2(r4  2r2w2[1  2x]  4w4x[1 + 3x  4x2 + 2x3])i,
+
+15we do not replace all the occurrences of x with x because doing so hampers the convergence of the integral.
+
+70
+
+i b,f
+
+in = log (cid:20)wq,q t t(r)t t(r+)e(d)4( 2
+
+ q,q t t(r)t t(r)e32(d)4w4(cid:18) 1
+ (1  x + 1  x)(cid:21).
+
+5
+
+5
+
+ik )
+
+e
+i
+
+f k + 2
+
+xi=1
+2  64(d)4 w4
+2(cid:19) l(e)
+
+em
+
+ym=1; m6=i
+
+l (x)(x + x)
+
+(248)
+
+we have rewritten the integrand of hq, l, t, j|m2()|q, l, t, jiin+ex to eliminate large roundo errors,
+at the expense of making it more complicated. to further avoid roundo errors, we rewrite a few of the
+s(i)
+q,q s:
+
+s(1)
+3,3 = cos(j)(22 + 2(1  2x) + (1  2x)2),
+s(3)
+3,4 =  sin  sin(j)(22[1  2x] + [1  6x + 6x2]  2x[1  3x + 2x2]),
+s(1)
+4,4 = cos(j)(1  2x)(1 + 2  2x).
+
+(249)
+
+note that to compute some of the trigonometric functions that appear in this integral [such as cos(j)]
+
+in terms of the integration variables, it is necessary to use recursion relations that dene these functions
+
+in terms of cos  and sin  so that we can use eq. (240).
+
+the integral in eq. (247) converges slowly. this is because it is strongly peaked when x  x, even
+though we have subtracted the false divergence. to spread out this region, we change variables from x
+to p where
+
+now the integral is
+
+hq, l, t, j|m2()|q, l, t, ji5d = 
+
+x = x(cid:0)1  ep(cid:1) .
+dxz 
+23d2 z 1
+ hicon + i f
+
+ncg2
+
+0
+
+0
+
+
+
+dpz 
+
+0
+
+0
+
+drz 
+in i .
+
+ex + iin+ex + i b,f
+
+(250)
+
+dwz 2
+
+0
+
+d r w 2 l(e)
+
+l
+
+(x)
+
+(251)
+
+as a nal step, we note that vegas requires the region of integration to be nite. thus we change
+
+variables from p, r, and w to yp, yr, and yw:
+
+p =
+
+r =
+
+w =
+
+2
+
+1 + yp  1,
+
+2
+
+1 + yr  1,
+
+2
+
+1 + yw  1,
+
+(252)
+
+and then the nal expression for the contribution to the matrix elements from the ve-dimensional integral
+
+is
+
+hq, l, t, j|m2()|q, l, t, ji5d = 
+
+
+
+4ncg2
+
+3d2 z 1
+
+0
+
+dxz 1
+
+1
+
+1
+
+(1 + yr)2
+
+
+
+1
+
+(1 + yw)2 2 l(e)
+
+l
+
+(x)hicon + i f
+
+ex + iin+ex + i b,f
+
+dyrz 1
+
+1
+
+dywz 2
+
+0
+
+d r w
+
+1
+
+(1 + yp)2
+
+(253)
+
+1
+
+dypz 1
+in i .
+
+the integral converges nicely in this form.
+
+71
+
+c.2 miscellaneous issues
+
+c.2.1 rotational symmetry: j  j
+
+to compute the glueball spectrum, we compute the matrix hq, l, t, j|m2()|q, l, t, ji and diagonalize
+it for each value of j separately. for a given |j|, the matrices with j = |j| and j = |j| are simply related,
+and we can use this fact to avoid computing and diagonalizing both of them. by inspection, we determine
+
+that
+
+where
+
+hq, l, t,j|m2()|q, l, t,ji = xq,q hq, l, t, j|m2()|q, l, t, ji f (q, q)f (q, q),
+
+f (q, q) = q,1q,2 + q,2q,1 + q,3q,3  q,4q,4.
+
+(254)
+
+(255)
+
+this simply means that the basis |q, l, t,ji is related to the basis |q, l, t, ji by swapping the states
+|1, l, t, ji and |2, l, t, ji, and changing the sign of |4, l, t, ji. renaming basis states and changing their
+
+phases has no eect on the eigenvalues of the matrix; so (cid:12)(cid:12)(j)n(p )(cid:11) has the same mass as (cid:12)(cid:12)jn(p )(cid:11). it
+
+also means that since
+
+(cid:12)(cid:12)jn(p )(cid:11) = xqlt
+
+rjn
+qlt |q, l, t, ji
+
+= xlt hrjn
+
+1lt |1, l, t, ji + rjn
+
+2lt |2, l, t, ji + rjn
+
+3lt |3, l, t, ji + rjn
+
+4lt |4, l, t, jii ,
+
+(256)
+
+(257)
+
+we have
+
+(cid:12)(cid:12)(cid:12)
+
+(j)n(p )e = xlt hrjn
+
+1lt |2, l, t, ji + rjn
+rjn
+qltf (q, q)|q, l, t, ji .
+
+= xqqlt
+
+2lt |1, l, t, ji + rjn
+
+3lt |3, l, t, ji  rjn
+
+4lt |4, l, t, jii
+
+thus by diagonalizing hq, l, t, j|m2()|q, l, t, ji, we also obtain the eigenvalues and eigenstates of
+hq, l, t,j|m2()|q, l, t,ji.
+
+c.2.2 reducing the number of matrix elements to compute
+
+there are a few facts that allow us to reduce the number of matrix elements that we have to compute.
+first, because of gluon-exchange symmetry, the basis state |q, l, t, ji is zero if l + j is even and q = 4, or
+if l + j is odd and q 6= 4. second, m2() is hermitian, and its matrix elements in this basis are real; so
+it is symmetric in this basis. third, by inspection, we see that
+
+finally, there are some redundancies and additional zeros in the matrix when j = 0:
+
+h1, l, t, j|m2()|2, l, t, ji = 0.
+
+h2, l, t, 0|m2()|2, l, t, 0i = h1, l, t, 0|m2()|1, l, t, 0i ,
+h1, l, t, 0|m2()|3, l, t, 0i = h2, l, t, 0|m2()|3, l, t, 0i ,
+h1, l, t, 0|m2()|4, l, t, 0i =  h2, l, t, 0|m2()|4, l, t, 0i ,
+h3, l, t, 0|m2()|4, l, t, 0i = 0.
+
+72
+
+(258)
+
+(259)
+
+c.2.2 estimating uncertainties in the spectrum
+
+when we use the vegas monte carlo routine to compute the matrix elements, the results for the
+
+matrix elements have statistical uncertainties.
+
+in order to control the resulting uncertainties in the
+
+spectrum, we would like to have a method that allows us to estimate how accurately we must calculate
+
+any given matrix element in order for the spectrum to have a desired uncertainty.
+
+suppose a diagonal matrix element hq, l, t, j|m2()|q, l, t, ji is given by
+
+hq, l, t, j|m2()|q, l, t, ji = z  ,
+
+(260)
+
+where z is the monte carlo estimate of the matrix element and  is the associated absolute uncertainty.
+
+using mathematica with test matrices, it is straightforward to convince oneself that if  is small, then
+n  /z in the eigenvalues of the matrix16. this translates to a
+
+it will yield a relative uncertainty e
+relative uncertainty of emn  /(2z) in the masses.
+
+estimating the uncertainty in the spectrum due to uncertainties in o-diagonal matrix elements is
+
+m 2
+
+more dicult. using mathematica with test matrices, the simplest method that we have found that is
+
+reasonably reliable is to use a type of degenerate perturbation theory. when we have an o-diagonal
+
+matrix element given by
+
+we diagonalize the two matrices
+
+hq, l, t, j|m2()|q, l, t, ji = z  ,
+
+(261)
+
+(262)
+
+(263)
+
+(264)
+
+and
+
+  hq, l, t, j|m2()|q, l, t, ji
+
+z + 
+
+  hq, l, t, j|m2()|q, l, t, ji
+
+z  
+
+  hq, l, t, j|m2()|q, l, t, ji
+
+z
+
+z + 
+
+hq, l, t, j|m2()|q, l, t, ji ! ,
+hq, l, t, j|m2()|q, l, t, ji ! ,
+hq, l, t, j|m2()|q, l, t, ji ! .
+
+z  
+
+z
+
+and we compare their eigenvalues to the eigenvalues of the matrix
+
+m 2
+n
+
+to be the largest relative deviation that we have found in the eigenvalues, and we
+
+we then dene e
+estimate the resulting relative uncertainty in the mass spectrum to be emn  e
+to work well unless there are too many diagonal matrix elements that are nearly degenerate with either
+hq, l, t, j|m2()|q, l, t, ji or hq, l, t, j|m2()|q, l, t, ji.
+
+/2. this estimate tends
+
+to achieve a relative uncertainty of o() in the glueball masses, we require emn <  for each matrix
+element. this method tends to work reasonably well. the main diculty is that we have neglected to
+
+m 2
+n
+
+consider the highly nonlinear couplings between the uncertainties in dierent matrix elements. for this
+
+reason, as we increase the size of the matrix, the error in our estimate of the uncertainty eventually
+
+becomes critical. at this point, the spectrum that we get when we diagonalize the matrix becomes
+
+completely unreliable. (the evidence of the breakdown is sudden contamination of the low-lying wave
+
+functions with high-order components.) it should be possible to develop more sophisticated methods of
+
+estimating uncertainties to suppress this problem.
+
+16in the development of this method, we are guided by the principles of quantum-mechanical perturbation theory, although
+
+we cannot legitimately use perturbation theory to analyze the uncertainties.
+
+73
+
+acknowledgments
+
+we would like to thank roger d. kylin, richard j. furnstahl, and john hiller for useful discussions.
+
+this work has been partially supported by national science foundation grant phy-9800964.
+
+references
+
+[1] b. h. allen and r. j. perry, phys. rev. d 58, 125017 (1998), hep-th/9804136.
+
+[2] i. tamm, j. phys. (moscow) 9, 449 (1945).
+
+[3] s. m. danco, phys. rev. 78, 382 (1950).
+
+[4] r. j. perry, a. harindranath, and k. g. wilson, phys. rev. lett. 65, 2959 (1990).
+
+[5] st. d. g lazek and k. g. wilson, phys. rev. d 48, 5863 (1993); 49, 4214 (1994).
+
+[6] k. g. wilson, t. s. walhout, a. harindranath, w.-m. zhang, r. j. perry, and st. d. g lazek, phys.
+
+rev. d 49, 6720 (1994), hep-th/9401153.
+
+[7] r. j. perry, hamiltonian light-front field theory and quantum chromodynamics. proceedings of
+
+hadrons 94, v. herscovitz and c. vasconcellos, eds. (world scientic, singapore, 1995), and revised
+
+version hep-th/9407056.
+
+[8] b. d. jones, r. j. perry, and st. d. g lazek, phys. rev. d 55, 6561 (1997), hep-th/9605231.
+
+[9] st. d. g lazek, acta phys. pol. b 29, 1979 (1998), hep-th/9712188.
+
+[10] e. l. gubankova and g. papp, light-cone hamiltonian ow for positronium. the numerical solu-
+
+tions, preprint hep-th/9904081; e. l. gubankova, flow equations for the quantum electrodynam-
+
+ics on the light-front, ph. d. dissertation, ruprecht-karls-universitat, heidelberg, february 1999;
+
+and references therein.
+
+[11] t. s. walhout, phys. rev. d 59, 065009 (1999), hep-th/9806097.
+
+[12] w.-m. zhang, phys. rev. d 56, 1528 (1997), hep-ph/9705226.
+
+[13] m. brisudova and r. j. perry, phys. rev. d 54, 1831 (1996), hep-ph/9511443; m. brisudova, r.
+
+j. perry, and k. g. wilson, phys. rev. lett. 78, 1227 (1997), hep-ph/9607280; m. brisudova, s.
+
+szpigel, and r. j. perry, phys. lett. b 421, 334 (1998), hep-ph/9709479.
+
+[14] r. j. perry, ann. phys. (n.y.) 232, 116 (1994), hep-th/9402015.
+
+[15] r. j. perry and k. g. wilson, nuc. phys. b 403, 587 (1993).
+
+[16] k. g. wilson, phys. rev. 140, b445 (1965); phys. rev. d 2, 1438 (1970); 3, 1818 (1971).
+
+[17] f. j. wegner, ann. phys. (leipzig) 3, 77 (1994).
+
+[18] r. d. kylin, b. h. allen, and r. j. perry, phys. rev. d 60, 067704 (1999), hep-th/9812080.
+
+74
+
+[19] k. g. wilson, rev. mod. phys. 47, 773 (1975).
+
+[20] see, for example, s. weinberg, the quantum theory of fields (cambridge university press, new
+
+york, 1995).
+
+[21] r. oehme, k. sibold, and w. zimmermann, phys. lett. b147, 115 (1984); r. oehme and w.
+
+zimmermann, commun. math. phys. 97, 569 (1985); w. zimmermann, commun. math. phys. 97,
+
+211 (1985); j. kubo, k. sibold, and w. zimmermann, nucl. phys. b259, 331 (1985); r. oehme,
+
+prog. theor. phys. supp. 86, 215 (1986).
+
+[22] see, for example, w. greiner and b. muller, quantum mechanics: symmetries (springer-verlag,
+
+new york, 1994).
+
+[23] see, for example, t.-p. cheng and l.-f. li, gauge theory of elementary particles (oxford university
+
+press, oxford, 1984), p. 109.
+
+[24] j. b. kogut and l. susskind, phys. rep. c 8, 75 (1973).
+
+[25] h. leutwyler and j. stern, ann. phys. (n.y.) 112, 94 (1978).
+
+[26] s. wolfram, the mathematica book, 3rd ed. (wolfram media/cambridge university press, 1996).
+
+[27] c. j. morningstar and m. peardon, the glueball spectrum from an anisotropic lattice study,
+
+preprint hep-lat/9901004.
+
+[28] m. j. teper, glueball masses and other physical properties of su(n) gauge theories in d=3+1: a
+
+review of lattice results for theorists, preprint hep-th/9812187; and references therein.
+
+[29] g. p. lepage, j. comput. phys. 27, 192 (1978); vegas: an adaptive multidimensional integration
+
+program, publication no. clns-80/447 (cornell university, ithaca, ny, 1980).
+
+75
+
+

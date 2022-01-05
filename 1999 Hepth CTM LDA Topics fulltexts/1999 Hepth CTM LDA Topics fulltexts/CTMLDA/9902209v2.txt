@@ -1,0 +1,2621 @@
+9
+9
+9
+1
+
+ 
+t
+c
+o
+4
+1
+
+ 
+
+ 
+ 
+
+2
+v
+9
+0
+2
+2
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+ftuam-98-24
+
+ift-uam/csic-99-4
+
+n = 1 supersymmetric yang-mills on the lattice
+
+at strong coupling
+
+e. gabrielli 1, a. gonzalez-arroyo 2 and c. pena 3
+
+departamento de fsica teorica c-xi
+
+universidad autonoma de madrid,
+
+cantoblanco, madrid 28049, spain.
+
+instituto de fsica teorica c-xvi,
+
+universidad autonoma de madrid,
+
+cantoblanco, madrid 28049, spain.
+
+abstract
+
+we study n = 1 supersymmetric su(nc) yang-mills theory on the lattice at
+
+strong coupling and large nc. our method is based on the hopping parameter
+
+expansion in terms of random walks, resummed for any value of the wilson
+
+parameter r in the small hopping parameter region. results are given for the
+
+mesonic (2-gluino) and fermionic (3-gluino) propagators and spectrum.
+
+pacs numbers: 11.15.ha, 10.60.jv, 11.15.me, 11.15.pg
+
+keywords: lattice gauge theories, supersymmetry, strong coupling
+
+expansion, large n expansion.
+
+1e-mail: egabriel@daniel.ft.uam.es
+2e-mail: tony@martin.ft.uam.es
+3e-mail: carlos@martin.ft.uam.es
+
+1
+
+1 introduction
+
+the non-perturbative aspects of the strongly interacting supersymmetric
+
+(susy) gauge theories were intensely investigated in the past [1] and re-
+
+cently they have been the object of renewed interest [2, 3]. these theories are
+
+interesting from a phenomenological point of view as their non-perturbative
+
+properties might play a crucial role in the understanding of the susy break-
+
+ing mechanism [1]. however, besides the relevant phenomenological implica-
+
+tions, the susy gauge theories have intrinsic importance as their very nature
+
+allows the calculation of some exact non-perturbative solutions [2, 3].
+
+in this paper we concentrate our attention on the most simple susy
+
+gauge theory: the pure n = 1 susy yang-mills (sym) with su(nc) gauge
+
+group. this contains the purely gluonic action, plus one avour of majorana
+
+fermions in the adjoint representation of the colour group.
+
+it is believed
+
+that this theory is characterised by the same non-perturbative phenomena
+
+as qcd: colour connement and chiral symmetry breaking [4]. nevertheless,
+
+noticeable dierences between the sym theory and qcd appear to exist
+
+even at the fundamental level. due to supersymmetry there is indeed a new
+
+anomalous susy current which belongs to the same supermultiplet together
+
+with the anomalous chiral and energy-momentum tensor currents [2].
+
+the fundamental question of the breaking of the supersymmetry in n = 1
+
+sym theory was addressed in [4, 5]. according to the general argument
+
+of the witten index [5] or the veneziano-yankielowicz low energy eective
+
+theory [4], the supersymmetry does not break. nevertheless, here the chiral
+
+symmetry breaks and the gluino condensate acquires a vacuum expectation
+
+value [4, 6]. however, the authors of ref. [7] argue that in this theory the
+
+spontaneous breaking of chiral symmetry implies the spontaneous breaking
+
+2
+
+of supersymmetry due to non-perturbative eects.
+
+from [4, 6] we learn that the low energy supermultiplet contains three
+
+degenerate massive colourless bound states: a scalar, a pseudoscalar and a
+
+fermion eld (where the appearance of the fermion eld in the low-energy
+
+supermultiplet is a consequence of the colour adjoint representation for the
+
+gluino). moreover, there is no pseudo-goldstone boson (or pion) associated
+
+with the chiral symmetry breaking, as the latter is broken by the anomaly.
+
+some time ago curci and veneziano [8] suggested that the sym theories
+
+can be studied non-perturbatively on the lattice by using numerical monte
+
+carlo simulations. this is clearly analogous to the approach used in qcd
+
+theory. they argued [8] that, even if the lattice breaks explicitly supersym-
+
+metry, it is possible to recover the susy and chiral ward identities on the
+
+continuum limit.
+
+recently two dierent collaborations [9]-[12] studied non-perturbatively
+
+on the lattice the spectrum of the sym (n = 1) theory following the guide-
+
+lines suggested in [8]. in [11], because of the limitations deriving from the
+
+use of computing resources, the quenched approximation was used to study
+
+the spectrum. this approximation consists in neglecting the internal gluino
+
+loops. in other words, in the correlation functions of fermion composite op-
+
+erators, the fermion determinant is not included. in sym theories, if general
+
+arguments are taken into account [4], the quenched approximation cannot
+
+be justied on the basis of large nc dominance, since gluinos are in the ad-
+
+joint representation of the colour group. however, in [11] it is observed that,
+
+within the statistical errors of the monte carlo simulation, the spectrum
+
+seems to show no deviations from the supersymmetry expectations under
+
+the approximations considered there. in connection with this result, in [13],
+
+by means of an eective lagrangian approach, the splitting in the low energy
+
+3
+
+supermultiplet induced by the quenched approximation has been analysed,
+
+and it is argued that the splittings from the supersymmetry predictions are
+
+small.
+
+in any case, in [10, 12] unquenched results for an su(2) sym gauge theory
+
+were obtained by using numerical simulations with dynamical gluinos. it is
+
+likely that new results in this eld will quickly follow.
+
+in this paper we study the spectrum of the sym (n = 1) on the lattice
+
+at strong coupling and in the large nc limit. the lattice strong coupling ex-
+
+pansion technique (see [14] and references therein) has been extensively used
+
+as an analytical probe to test qualitative properties both of the continuum
+
+and of the lattice theory by itself. up to now, however, the main part of
+
+the results refers to qcd, and to our knowledge no work deals with a su-
+
+persymmetrised version of it. in detailed computations the strong coupling
+
+expansion of su(nc) theories is frequently combined with the large nc one.
+
+our reference comes from works in which issues such as the phase struc-
+
+ture of qcd or the computation of meson and baryon masses are addressed
+
+[15]-[21]. the most frequent computational frameworks split into two types:
+
+ eective actions: the wilson-dirac lattice action is considered at large
+nc and small . the large nc expansion can be recognised as a saddle-
+
+point expansion of the gauge functional integral, previously simplied
+by the   0 limit[15]-[17]. the method allows the study of the large
+and small hopping parameter regions at the expense of introducing
+
+assumptions on the form of the saddle points. the main disadvantage
+
+of this method for our purposes is that the one matrix integration
+
+formulae, a basic ingredient of the construction, are not available for
+
+matrices in the adjoint representation, and the generalization does not
+
+seem straightforward.
+
+4
+
+ path resummation: the fermion matrix m is inverted by using the
+standard hopping parameter expansion [14, 16, 21]. this allows to
+
+compute propagators m1 in terms of sums over paths on the lattice
+
+(random walks); the objects to be summed are traces of products of
+spin matrices (ri  ), r being the wilson parameter. we will see
+that provided the hopping parameter  is small enough and some con-
+
+straints on the parameters are imposed, no assumptions are required
+to perform this computation in the nc  ,   0 limit. in some
+of the previous references the analysis has been performed only for the
+
+case r = 1, where the structure of the series is considerably simplied
+[16]. the main diculty of path combinatorics arising for r 6= 1 was
+addressed in ref. [22]. in ref. [23] an independent derivation of the
+main resummation formulas for r 6= 1 is given.
+
+in our case, it will be shown that the hopping parameter expansion in
+
+terms of random walks is valid, with slight changes, for the case of gauge
+
+elds in the adjoint representation. thus, using the formulas of ref. [23] we
+
+will be able to give expressions for propagators and masses for any value of
+
+r and small enough . we considered that keeping r arbitrary could be very
+
+important. this allows the possibility of searching for multicritical points,
+
+where several lattice masses vanish. in particular, we investigated whether
+one could nd a critical point in the   r plane where the massless modes
+would form a supermultiplet. this would signal a possible candidate for a
+
+supersymmetric continuum limit, in the spirit of the chiral restoration of or-
+
+dinary qcd. for example, if a low energy theory of the type described in [8]
+
+would take place, one would nd a massless pseudoscalar meson, together
+
+with a scalar meson and a fermion. we should warn the reader that by
+
+massless we refer to the vanishing of the lattice masses, not necessarily the
+
+5
+
+renormalised physical masses. however, in our approximations the diagrams
+
+contributing to the anomaly, and giving mass to the pseudoscalar, are sub-
+
+leading, indicating that the physical masses are also zero, as predicted for a
+
+goldstone boson associated to the spontaneous breaking of chiral symmetry.
+
+this situation contrasts with what one obtains in perturbation theory and
+
+constitutes one of the most salient features of our result.
+
+in addition to the path resummation formulae, we also need to analyse
+
+the behaviour in the large nc limit of integrals over the group of products
+
+of matrices in the adjoint representation. these are studied in [25]. in this
+
+paper we will only need to know the order in nc of certain integrals. given
+
+this, the actual leading order results are very simple.
+
+to increase the usefulness of our paper, many of our formulas will be
+
+given for arbitrary space-time dimensionality d. in addition, we will indicate
+
+the necessary changes to make the formulae valid for matter elds in the
+
+fundamental representation and for dirac, rather than majorana, fermions.
+
+specic attention will be paid, however, to the supersymmetric cases of d =
+
+3, 4.
+
+the paper is organised as follows: in section 2 we present the formalism
+
+and general formulae for the expectation values and correlation functions
+
+of two and three gluino operators in the strong coupling large nc limit. in
+
+section 3 we analyse the specic channels and present the results for the
+
+spectrum in the meson and fermion sector. finally in section 4 we summarise
+
+our conclusions, discuss the physical implications and explain the prospects
+
+for possible future extensions of our results. the paper is completed by
+
+collecting in the appendix the terminology and formulae on lattice paths
+
+that we will use along the text.
+
+6
+
+2 general formalism
+
+we begin by xing our notation and terminology. let us consider a d-
+dimensional hypercubic lattice l  z d. we introduce an index set i having
+2d elements. to any direction in space-time we associate two indices  and 
+
+corresponding to the two opposite senses (forward and backward) associated
+to each direction . given an element   i, the element  labels the one
+with reverse orientation ( = ). to any element   i, we can associate a
+vector v() as follows:
+
+v() = e
+
+v() = e ,
+
+(1)
+
+with e the unit vector in the  direction (the lattice spacing is set to 1). in
+
+the appendix we give some additional results and terminology that we will
+
+be using in the following sections.
+
+let us now write down the lattice version of the susy yang-mills action:
+
+s = sg +
+
+1
+2
+
+ijmij
+
+,
+
+(2)
+
+where sg is the pure gauge part and i is a grassman variable representing
+
+the eld of a majorana fermion. the index i is a short form for the three
+
+indices n, a and a. the index n species a point in the d-dimensional
+hypercubic lattice l. the index a takes n 2
+c  1 values corresponding to the
+dimension of the lie algebra of su(nc). the index a is a spinorial index
+taking 2[d/2] values (the symbol [x] stands for integer part of x). without
+
+much problem, but at the expense of breaking supersymmetry, we could add
+
+a avour index ranging over a nite number of values. the matrix m must
+
+be antisymmetric and its form is given by
+
+m = c m
+
+m =(cid:0)i pi (cid:1) ,
+
+7
+
+(3)
+
+(4)
+
+where i is the unit matrix and cab is the charge conjugation matrix, satis-
+
+fying:
+
+t
+ c = c 
+c t = c ,
+where the superscript t stands for transpose.
+
+finally the matrix  is given by:
+
+()ij =  m n+v() u ab
+
+ (n) (ri  )ab ,
+
+(5)
+
+(6)
+
+(7)
+
+with i = (n, a, a), j = (m, b, b);  is the hopping parameter, and r is the
+
+wilson parameter. for  = , u(n) is the gauge eld link variable (which
+
+is in the adjoint representation) and  the dirac matrix, while for  =  we
+have u(n) = u t
+
+(n  e) and  = . notice that we have:
+
+ = 2(r2  1) i .
+
+(8)
+
+it is easy to show that given the conditions eqs. (5)-(6), the matrix m is
+
+indeed antisymmetric.
+
+customarily, the value of r is taken in the interval [0, 1]. this follows from
+
+the requirement of osterwalder-schrader positivity. however, at strong cou-
+
+pling this is not a necessary condition for the physical correlation functions
+
+to admit an analytical continuation to unitary minkowski green functions.
+
+for that reason we will be working for arbitrary r and comment at the rel-
+
+evant places whether the p-gluino correlation functions satisfy the positivity
+
+conditions.
+
+the constraint imposed by the existence of the matrix c, together with
+
+the needed matching of fermionic and bosonic degrees of freedom, makes
+
+the naive continuum limit of the above lagrangian supersymmetric (n =
+
+8
+
+1) in d = 3, 4. the same lagrangian is supersymmetric in d = 10 if 
+
+is a majorana-weyl eld, and in d = 6 if  is a weyl spinor. however,
+
+the requirement of weyl character conicts with the well-known absence of
+
+chirality on the lattice, which prevents us from directly writing a lattice
+
+version of the required lagrangian (indeed, our wilson-type action breaks
+
+chirality explicitly). on the other hand, the general argument by curci and
+
+veneziano [8] linking the recovery of chirality and supersymmetry could play
+
+a role in the interpretation of these cases, as of course does in the (more
+
+transparent) d = 3, 4 as well.
+
+having in mind this caveats regarding the interpretation of the results, in
+
+the rest of our exposition we will try to work as much as possible in arbitrary
+
+dimension d without specifying more. this has the advantage that it allows
+
+our formulae to be used with little changes by other researchers with other
+
+physical interests. for example, links can be established with the technique
+
+of 1/d expansions [24].
+
+we will concentrate upon gauge invariant operators of the form:
+
+oi(x) = a1
+
+a1(x) . . . ap
+
+ca1...ap
+is an invariant colour tensor and sa1...ap
+
+ap(x) sa1...ap
+
+i
+
+i
+
+,
+
+(9)
+
+where ca1...ap
+index i labels dierent possibilities for the denition. the restriction to
+
+a spin tensor. the
+
+i
+
+i
+
+operators obtained by multiplying gluino elds at the same lattice point (ul-
+
+tralocal operators) will not aect our spectrum results which will be general.
+
+in particular, this aects the composite fermion operator which belongs to
+
+the same supermultiplet as the scalar and pseudoscalar:
+
+a(x) =
+
+1
+2
+
+()abf a
+
+(x)a
+
+b(x) ,
+
+(10)
+
+where in this formula the fermion elds  ,  and the yang-mills eld f
+live in the continuum spacetime, and  = 1
+2[, ]. later on, we will
+
+9
+
+argue that its corresponding minimal mass will be contained within the set
+
+of masses corresponding to 3-gluino operators.
+
+note that the operators in eq. 9 are non-vanishing only when the gluino
+
+elds are combined in a completely antisymmetric way. by putting this
+together with the requirement of ci being an invariant tensor, we arrive at
+certain constraints on the possible operators; for example, in the case of
+meson-like operators (p = 2) it turns out that, necessarily, ci = i and si is
+an antisymmetric matrix. as an example, table 1 displays a complete basis
+
+of 2-gluino operators in d = 4.
+
+in this paper we will be interested in computing the expectation values
+
+of these operators and products of these operators:
+
+hoi(x)i =
+
+gij(x  y)  hoi(x)oj(y)i =
+
+1
+
+1
+
+z ynl z d(n)y z du(n)! oi(x) es
+z ynl z d(n)y z du(n)! oi(x) oj(y) es (12)
+
+(11)
+
+at strong coupling. we will be able to accomplish this goal for  = 0, and in
+the large nc limit. corrections to the formulae in powers of  and 1
+nc
+
+are in
+
+principle feasible and will be considered elsewhere.
+
+as usual, one can explicitly integrate out the fermions in eq. (11)-(12).
+
+the main formula that one uses is:
+
+yi (cid:18)z di(cid:19) exp{
+
+1
+2
+
+ij mij+jii} = p f (m) exp{
+
+1
+2
+
+jijj(m1c1)ij} ,
+(13)
+
+where p f (m) stands for the pfaan of the matrix m. the square of the
+
+pfaan is the determinant, so that up to a sign we can write:
+
+p f (m) =pdet(c) det(m) = exp{
+
+10
+
+1
+2
+
+t r(log(m))} ,
+
+(14)
+
+where we have used the standard exponential representation of a determinant,
+
+and the fact that we can choose pdet(c) = 1. concerning the sign, it is
+
+clear that what matters is the relative sign for dierent values of the gauge
+eld conguration. however, for very small , the matrix m is close to the
+unit matrix and our representation (eq. (14)) is valid. problems can only
+arise when one of the eigenvalues of m crosses zero. using the schwartz
+inequality and our expression for m, one can conclude that this problem
+never occurs provided || <
+
+2d (|r|+1).
+
+1
+
+what we will do now is to expand the quantities entering in eq. (13) as
+
+a sum of paths. using the terminology of the appendix, we obtain:
+
+p f (m) = exp{ 1
+
+(m1(x, y))ab
+
+ab =ps(xy) w ab() ab()
+
+1
+
+2pxlpl=1psl(xx)
+
+l t r(w ()) t r(())} , (16)
+
+where x, y are lattice points, w () is the path ordered product (along the
+
+path ) of the gauge eld link variables, and () denotes the appropriate
+
+product of the spin matrices:
+
+(15)
+
+(17)
+
+(18)
+
+(19)
+
+(  (x, ~)) = l(r  1)    (r  l) .
+
+let us rst consider 2-body operators:
+
+oi(x) = sab
+
+i a
+
+a(x) a
+
+b(x) = (x)bsi(x)
+
+with bsi = c1si .
+
+the second expression in (18) has the same form as for dirac fermions, the
+
+dierence being that for majoranas we have the relation  = tc. notice
+that si is an antisymmetric matrix. using the formula (13) and expanding
+
+11
+
+by using wicks theorem we obtain:
+
+hoi(x)i = 
+
+gij(x  y) =
+
+1
+
+1
+
+hp f (m)ight r(cid:0)m1(x, x) c1 si(cid:1) p f (m)ig
+hp f (m)ighp f (m) 
+[2 t r(cid:0)c1 sim1(x, y) c1 sjm1(y, x)(cid:1)
++t r(cid:0)m1(x, x) c1 si(cid:1) t r(cid:0)m1(y, y) c1 sj(cid:1)]ig ,
+
+(20)
+
+(21)
+
+where t r denotes the trace over colour and spin indices and the symbol
+h ig denotes expectation value with respect to the pure gauge action part.
+the rst term on the right hand side of eq. (21) represents the so-called
+
+ozi contribution, while the second term contains the disconnected and non-
+
+ozi contributions [8]. now using the formulae (15)-(16) we can write back
+
+expressions (20)-(21) in terms of products of sums of paths.
+
+up to now the expressions have been completely general, but now we
+will consider the simplication arising from considering  = 0 and nc  .
+what we need to know is the expectation value of the product of traces of
+
+wilson loops in this limit. the main result that we will use [25] is that for
+a collection of closed paths {1, . . . , s} which are not pure spikes (see the
+appendix) we have:
+
+h t r(w (1)) . . . t r(w (s))ig = o(1) .
+
+(22)
+
+ever, for a pure spike path w () = i, and therefore its trace is n 2
+
+this is true both for connected and disconnected expectation values. how-
+c  1. we
+see that the connected correlation between a pure spike wilson loop and any
+
+other operator vanishes. our rst conclusion is then that, at leading order
+
+in nc, the factor p f (m) cancels between numerator and denominator. this
+
+is precisely the quenched approximation, which turns out to be exact in this
+
+12
+
+limit. in principle, the result is surprising since fermions carry indices taking
+n 2
+c  1 values (as gluons), and the usual arguments why fermion loops are
+subleading in the fundamental representation do not apply here. this adds
+
+to the results obtained by other methods [11, 13], pointing towards the fact
+
+that the deviations introduced by the quenched approximation are not too
+
+large.
+
+other conclusion that follows from formula (22) is the suppression in the
+
+large nc limit of the non-ozi contributions to the connected correlation func-
+
+tions. this includes the mass induced by the anomaly on the pseudoscalar
+
+goldstone boson. we should, hence, expect such a massless state signaling
+
+the recovery of chiral symmetry and its spontaneous breaking. as mentioned
+
+in the introduction this result, as well as the exactness of the quenched ap-
+
+proximation, contrasts with the behaviour obtained in perturbation theory
+
+to leading order in nc.
+
+our results have been obtained at  = 0. however, one can introduce the
+
+pure gauge action in various ways having the same naive continuum limit. if
+
+one chooses to write the wilson action in the adjoint representation of the
+
+group, formula (22) implies that to the order we are working (and in the
+
+small  region) there are no corrections to any order in . this is not the
+
+case if the customary fundamental representation wilson action is chosen.
+
+the conclusion of the previous paragraphs is that to leading order in nc
+
+all that we have to take into account are closed loops which are pure spikes.
+
+for that purpose the results of ref.[23] and collected in the appendix are
+
+needed. notice that for a pure spike path of length l, the spinor matrix is
+
+given by:
+
+() = (2(r2  1))l/2 i .
+
+(23)
+
+13
+
+thus, using the formulae given in the appendix we can conclude:
+
+c  1) f (0, 2(r2  1)) t r(c1 si) =
+hoi(x)i = (n 2
+c  1) t r(bsi)
+(n 2
+1 p1  4(2d  1)2(r2  1)
+
+1
+1  2d
+2d1 
+
+ 
+
+2
+
+,
+
+.
+
+(24)
+
+(25)
+
+with
+
+this is the contribution of closed paths which are pure spikes. the corrections
+
+coming from other paths are order 1, and thus subleading. the previous
+
+formulae are obtained by resummation of a series. the radius of convergence
+
+is given by the closest singularity. thus the formulae are strictly speaking
+only valid in the region |2(r21)| < 1
+4(2d1) . it is possible that, by analytical
+continuation, the formulae could be valid in some points beyond this region,
+such as for larger negative 2(r2  1).
+
+expression (24) is also valid for dirac fermions.
+
+it is also valid if the
+
+elds (dirac or majorana) transform in the fundamental representation of
+c  1) is replaced by nc, the dimension of the
+
+the colour group, provided (n 2
+
+representation in question.
+
+now we look at the correlation function of two-fermion operators. in this
+case we have two factors of m and hence we have an expansion in terms of
+paths  going from x to y, and paths  going from y to x. nevertheless,
+
+the integration over the gauge group forces the combined path to be a pure
+
+spike path. to take this into account we proceed as follows. we replace the
+
+summation over paths by a summation over paths with no spikes, resumming
+
+all paths which have such a path as reduced path. thus, each term in the
+
+new expansion corresponds to a reduced path  going from x to y, and
+
+another one  that returns to x. however, now the condition imposed by
+the integration over the gauge group is simply that  is the reverse path of 
+
+14
+
+(which we label 1). in this way the double summation reduces to a single
+
+summation. summing up all that we have just expressed in words, we can
+
+give the following formula for the connected correlation function:
+
+g(conn.)
+
+ij
+
+(x  y) =  dr
+
+(f (l, 2(r2  1)))2 
+
+xl=0 x sl(xy)
+t r(cid:16)bsi()bsj (1)(cid:17) .
+
+the previous formula has been written in a way which makes it valid for
+
+majorana ( = 2) or dirac ( = 1) fermions. the symbol dr stands for the
+dimension of the gauge group representation (n 2
+c  1 for the adjoint and nc
+for the fundamental). now we can use the expression for f (l, 2(r2  1))
+and the formulae for resumming over paths that are given in the appendix,
+
+to conclude:
+
+g(conn.)
+
+ij
+
+(x  y) = r2()y
+
+(z d
+
+2
+
+where we have:
+
+) e(xy)hsi| [2()i  a2()]1ec1
+
+2 |sji ,
+(27)
+
+(26)
+
+(28)
+
+(29)
+
+(30)
+
+(31)
+
+1  2d2
+2d1x
+1  2d
+2d1x
+x2
+
+(2d  1)
+
+r2(x)   dr
+
+2(x)  (1  x)2 +
+a2()  2 xi
+ec2  c  c .
+
+e(r  )  (r  )
+
+|sii is just given by the matrix si, but considered as a 2[ d
+2 ]  2[ d
+vector. it is useful to express the matrix elements of the 22[ d
+a2 between si states in terms of the matrices bsi dened in eq. (19). we
+
+2 ] dimensional
+2 ]  22[ d
+
+2 ] matrix
+
+15
+
+have:
+
+hsi| a2()ec1
+
+2 |sji = 2 xi
+
+e t r[bsi(r  )bsj(r + )] .
+
+(32)
+
+with this interpretation, formula (27) is valid for dirac fermions as well. we
+
+will leave to the next section the evaluation of this expression and the study
+
+of the properties of the resulting propagator.
+
+we now turn our attention to 3-gluino fermion operators of the form:
+
+oi(x) = a1
+
+a1(x)a2
+
+a2(x)a3
+
+a3(x)ca1a2a3
+
+i
+
+sa1a2a3
+
+i
+
+.
+
+(33)
+
+in this case there are two possible invariant colour tensors: dabc and fabc.
+
+the main result that we will need on the group integration at large nc is the
+
+following: given three paths without spikes 1, 2 and 3, we have:
+
+cabc cabc
+
+hw aa
+
+(1)w bb
+
+(2)w cc
+
+(3)ig = n 3
+
+c (1 = 2 = 3)
+
++subleading terms ,
+
+(34)
+
+where cabc is either f or d ( the antisymmetric and symmetric su(nc) invari-
+ant tensors). the mixed terms f  d are subleading in nc. also subleading
+are contributions in which the three paths are non-equal. using this expres-
+
+sion and the formulae derived in the appendix, it is possible to compute the
+
+expectation values of products of 3-gluino operators. now the wick expan-
+
+sion gives a total of 6 terms (once the nc-subleading ones are discarded).
+
+these terms ensure that if the colour invariant tensor is f or d, the spin ma-
+trix sj can be chosen completely symmetric or antisymmetric respectively,
+as required by fermi statistics. with this choice the 6 terms give the same
+
+contribution, and the correlation function can be written as:
+
+hoi(x)oj(y)i = r3()y
+
+(z d
+
+2
+
+) e(xy) hsi| [3()i  a3()]1ec1
+
+3 |sji ,
+
+16
+
+where now:
+
+r3(x)  6n 3
+
+c
+
+3(x)  (1  x)3 +
+a3()  3 xi
+ec3  c  c  c .
+
+(1  x)3  ( x
+2d1)3
+(1 (cid:0) 2d
+2d1(cid:1) x)3
+e(r  )  (r  )  (r  )
+
+(2d  1)2
+
+x3
+
+(35)
+
+(36)
+
+(37)
+
+(38)
+
+(39)
+
+(40)
+
+as before, the vector |sii is the one constructed from the corresponding spin
+matrix. explicitly:
+
+hsi| a3()ec1
+
+3 |sji = 3 pi e 
+
+i
+
+((r  )c1)a1b1((r  )c1)a2b2((r  )c1)a3b3sb1b2b3
+
+sa1a2a3
+the class of operators considered (eq. (33)) does not include the lattice
+
+.
+
+j
+
+counterpart of that in eq. (10). a possible candidate would be:
+
+a(x) =
+
+1
+2
+
+()abp ab
+
+(x)f abcc
+
+b(x) ,
+
+(41)
+
+where p(x) is an appropriate combination of adjoint plaquettes in the
+(, ) plane whose naive continuum limit is, up to a convenient multiplicative
+
+factor, the adjoint gauge eld f (x). this has the advantage of including
+
+only gauge variables in the adjoint representation, allowing the use of our
+
+integration formulas. however, by examining the strong coupling large nc
+
+expansion of the correlation of 2 such operators, one easily realises that it is
+
+given by combinations of triple paths joining the two operators. thus, we
+
+expect that the mass spectrum following from 3-gluino ultralocal operators
+
+would include also the states coupled to (41).
+
+17
+
+to conclude we simply want to mention that in a similar way one can
+
+obtain expressions for expectation values and correlations of p-gluino opera-
+
+tors. no additional diculty arises, and the nal expression looks just like
+eq. (35) but with corresponding functions and matrices rp, p, cp, and ap.
+in particular:
+
+xp
+
+(2d  1)p1
+
+p(x)  (1  x)p +
+ap()  p xi
+
+(42)
+
+(43)
+
+.
+
+e (r  )  . . .  (r  )
+|
+}
+
+{z
+
+p
+
+3 explicit results on the propagators and spec-
+
+tra
+
+in this section we will analyse the results on the expectation values presented
+
+in the previous one. our main goal will be the extraction of the spectrum of
+
+the theory at  = 0 and leading order in the 1/nc expansion.
+
+we will rst of all look at the expectation values of single 2-gluino oper-
+ators. our main result is formula (24). the only independent operator si
+giving a non-vanishing spinorial trace can be chosen as si = c i. on physi-
+cal terms, it corresponds to a non-vanishing gluino scalar condensate for the
+full range of values where our resummation is valid ( 12
+2). once
+the dierent normalisations of the elds and operators, and the appropriate
+
+2    1
+
+colour factors are taken into account, this expression coincides with the re-
+
+sult given in ref. [17] for this expectation value when the fermion eld is in
+
+the fundamental representation.
+
+our next step will be to analyse the results for the correlations of two
+
+fermion operators gij(x), and the corresponding (meson) spectrum. the
+
+expression given in the preceding section for the correlation (formula (27))
+
+18
+
+requires the inversion of a 2d2d matrix. (for odd space-time dimensions one
+2]). this matrix is 2()i a2() dened in eqs. (29,30).
+must replace d by 2[ d
+thus, in even space-time dimensions, it is convenient for the study to choose
+
+as a basis of the 2d-dimensional space of meson operators, those correspond-
+
+ing to bsi being the standard basis of the d-dimensional cliord algebra, for
+
+which we adopt the writing:
+
+where (n) is an appropriate phase which we will choose equal to zero in
+
+bs(n)  e(n) n0
+
+0    nd1
+d1
+
+,
+
+(44)
+
+corresponding to the gamma matrices , and so on.
+
+what follows. thus, one state of the basis is the scalar operator bss corre-
+sponding to the unit matrix, other elements are the vector operators bsv ()
+bs(n) associated to the standard basis of the cliord algebra (which is basi-
+
+cally the same as for dimension d  1), but one must take into account that
+they are not independent. they are constrained by the identity:
+
+for odd space-time dimensions, one could also consider the operators
+
+0    d1 = kd i ,
+
+(45)
+
+where kd is a phase depending on the space-time dimension.
+
+going back to the even-dimensional case, we have to express the matrix
+elements of the matrix a2() within this basis. to do so it is convenient to
+view the 2d-dimensional space in question as the fock space of a system of
+fermions: the gamma-fermions. each integer n  {0, 1} entering eq. (44)
+can be interpreted as the occupation number of the state . it is convenient
+to add an additional one-particle state labelled 1 whose usefulness will be
+clear in what follows. thus, in the standard second quantization notation
+
+we can write:
+
+bs(n)  |n1, n0, . . . nd1i ,
+
+19
+
+(46)
+
+with bs(n) dened in (44). the extra occupation number n1 is xed to be a
+
+parity bit state, taking the value 1 when the total number of gamma-fermions
+
+in the other states is odd and the value 0 if it is even. hence, in both cases,
+
+this imposes the constraint that the total number of fermions must be even.
+with this convention it is possible to express the matrix a2() in terms of
+creation and annihilation operators of these fermions as follows:
+
+a2() = 2(2(r2  1 + 2a+
+4rpd1
+
+1a1)  2(4a+
+=0 sin()(a+
+with  =pd1
+
+1a1  2)pd1
+
+1a)) ,
+
+ a1 + a+
+=0 cos() .
+
+=0 cos()a+
+
+ a 
+
+(47)
+
+we see that the operator conserves the number of gamma-fermions. hence,
+each even number of gamma-fermions 2p characterises a block in which a2()
+can be diagonalised or inverted. within each block one has two subspaces
+corresponding to n1 = 1 and n1 = 0, which correspond to the product of
+2p  1 and 2p gamma matrices respectively. the matrix a2() mixes these
+2 subspaces.
+
+let us clarify the previous formulae by looking at a few examples. if p = 0,
+
+we have the gamma-fermionic fock vacuum state, which is an eigenstate of
+a2() with eigenvalue 22(r2  1). this state is precisely the scalar meson
+operator. next, we consider the space of 2p = 2 gamma-fermions. the
+subsector n1 = 1 corresponds to the vector operators (bsv () = ) and the
+n1 = 0 to tensor states (bst () = ). the conclusion is that vector and
+
+tensor states mix between themselves but not with other states. considering
+
+the space of 2p gamma-fermions, we conclude that the operators associated
+to the product of 2p  1 dirac gamma matrices mix with those involving 2p
+gamma matrices, but with no other states. the inversion or diagonalisation
+
+problem has been considerably simplied with this technique. this is the
+
+20
+
+generalisation of the block structure found by previous authors studying qcd
+
+at strong coupling [16].
+
+in the previous analysis we have not taken into account the restriction
+
+imposed by the fact that our gluinos are majorana. as mentioned before, in
+
+this case if the operators involve the product of the gluino elds at the same
+point (ultralocal operators), the matrices si can be chosen antisymmetric.
+this restriction translates in our language into p being an even number: the
+
+number of gamma fermions must be a multiple of 4. thus, for instance,
+
+the only relevant blocks in d = 4 for this ultralocal operators are the scalar
+
+singlet and the p = 2 containing the pseudoscalar (5) and the axial vector
+
+(5).
+
+we now introduce an important symmetry of the operator given in (47).
+
+this is the unitary transformation c related to the charge conjugation of
+
+gamma-fermions:
+
+ca+
+ c = a
+1c = a1
+
+ca+
+
+c|0i = kd |1, . . . , 1i .
+
+(48)
+
+(49)
+
+(50)
+
+up to a phase the operation exchanges occupied by empty for all states. one
+
+can easily see that the previous transformation commutes with the operator
+a2() given in expression (47). notice, that with this change a state with 2p
+gamma-fermions changes into one with (d+12p), which for even space-time
+dimensions (d = 2s) is an odd number. we see that the spaces with an odd
+
+number of gamma fermions are useful after all. thus, there is a hierarchy
+
+of complexity in the fock space of gamma-fermions as the number grows.
+
+the fock vacuum corresponding to the scalar operator is an eigenstate of
+a2(). next, comes the 1-particle space, which through charge conjugation
+
+21
+
+of gamma-fermions corresponds to the operator involving the matrix  
+0    d1 and .
+in what follows we will proceed to invert the matrix
+2()i  a2() and obtain the propagator for these simplest cases.
+
+before proceeding to the inversion, let us comment about the necessary
+
+changes to deal with an odd-space time dimension d. in this case we might
+
+introduce gamma-fermions as well, but due to the constraint (45) there are
+
+actually 2 states corresponding to the same operator. however, with a bit
+
+of eort one can show that the two states are precisely the 2 states that
+are mapped by the transformation c, provided kd is chosen equal to kd
+entering in eq. (45). with this choice, one can see that for odd space-time
+
+dimension expression (47) remains valid, but that the physical space of meson
+
+operators has to be identied with the subspace of the gamma-fermion fock
+
+space which is invariant under c and has an even number of gamma-fermions.
+
+with this in mind all that follows can be applied to even and odd space-time
+
+dimensions equally.
+
+now we consider the scalar state (corresponding to the unit matrix) rst.
+
+indeed, to comply with the normalisation chosen for the d = 4 case in ta-
+2 ]i. the matrix a2() reduces here to the constant
+22(r2  1). then we can directly write the momentum-space propagator
+explicitly:
+
+ble 1, we take bss = 2 1
+
+2 [ d
+
+where we have dened the following functions:
+
+2x(1  x)
+
+and ,  and dr are the ones dened in section 2. the function 2 is
+
+22
+
+h()
+
+,
+
+=0 cos()
+
+bgss() =
+2() pd1
+2d1x(cid:1)
+h(x) =  dr(2d  1)(cid:0)1 + 2d2
+2x(1  x)(cid:0)1  2d
+2d1 x(cid:1)
+
+(1  x)2(2d  1) + x2
+
+2(x) =
+
+,
+
+(51)
+
+(52)
+
+decreasing for all  6= 0 in the convergence interval, and in addition satises
+the following properties:
+
+2(1/2) = d
+
+  (0, 1/2)  2() > d
+
+ < 0  2() < d .
+
+next, for even space-time dimension, we proceed to study the space of 1
+
+gamma-fermion. as mentioned previously it corresponds to the matrix  (5
+
+in 4 dimensions) and . expression (47) reduces in this case to:
+
+a2() = 22(r2  1) + 2
+
+d1x,=1
+
+t a+
+
+ a ,
+
+(53)
+
+where
+
+t1 1 = 4
+
+t1  = t 1 = 4r sin()
+
+t  = 4 cos() .
+
+(54)
+
+now the propagator can be obtained by inverting the matrix 2i  t . this
+can be done by making a non-unitary change of variables which brings t to a
+diagonal matrix up to a 22 block. in this way, one obtains the expression for
+
+the propagator in momentum space bg(p a) in the 1-gamma fermion sector, i.e.,
+
+the axial vector and the pseudoscalar block in d = 4. to make a contact with
+
+the usual conventions, we change the normalisation of the operators to the
+forms (remember d is even) p = 2d/4 and a() = 2d/4, generalising
+
+again the 4-dimensional ones given in table 1. the result is:
+
+bgp p () = h() d +
+
+2
+
+
+!1
+
+d1x=0
+
+23
+
+
+
+1
+
+ d +
+
+bgp a()() = bga()p () = 
+d1x=0,6=
+bga()a()() =
+bga()a()() = bga()a()() = 
+
+bgp p ()
+!bgp p ()
+bgp p ()
+
+
+
+2
+
+
+,  6=  ,
+
+(55)
+
+where h and 2 are the quantities dened in eqs. (52), and the functions
+
+d,  and  have the following expression:
+
+d = 2() 
+
+r2 + 1
+r2  1
+
+cos()
+
+d1x=0
+
+(56)
+
+d1x=0
+
+cos() 
+
+2
+
+r2  1
+
+cos()
+
+sin() .
+
+ = 2() 
+
+ = 2
+
+r
+
+r2  1
+
+obtaining momentum-space propagators for other blocks is feasible, but the
+
+expressions become more and more complicated. furthermore, for ultralo-
+
+cal operators in 4 dimensions, the previous propagators are the only non-
+
+vanishing ones. thus, we will focus in what follows on the analysis of the
+
+meson spectrum.
+
+the lattice masses are the minima of the lattice energies as we vary the
+
+spatial momentum ~. these minima can only occur at special momenta
+~ = ~(special) ((special)
+
+= 0, ). the advantage is that now sin((special)
+
+) =
+
+i
+
+i
+
+0, which simplies expression (47) considerably. the procedure to obtain
+the masses is the following: extract the eigenvalues of the matrix 2()i 
+a2(~(special)), which are functions of the temporal momentum 0. then
+determine pole
+, the (complex) value of 0 for which the eigenvalue vanishes.
+
+0
+
+24
+
+the lattice masses are now given by m = log(|epole
+|). this coincides with
+the denition of mass as the exponent controlling the decay of correlation
+
+0
+
+functions at long times.
+
+now let us proceed to obtain the eigenvalues. by looking at expres-
+
+sion (47), one sees that the matrix is diagonal except for the term propor-
+tional to (a+
+1a0). thus, the occupation numbers of the spatial states
+ni are not changed by the operator. hence, for xed values of these num-
+
+0 a1 +a+
+
+bers, the operator reduces to a 4 by 4 matrix: an operator acting on the
+two-state fermion system labelled by n1 and n0. furthermore, the states
+having n1 = n0 = 0 and n1 = n0 = 1 are eigenstates of the matrix
+a2(~(special)). the other two states are mixed, but nding the eigenvalues
+and eigenvectors is trivial, since it is a 2  2 matrix. we can summarise the
+results obtained in the following formulae:
+
+a2(~(special))|0, 0, ~ni = (22(r2  1) cos(0) + 22r2  22 ) |0, 0, ~ni
+a2(~(special))|1, 1, ~ni = (22(r2  1) cos(0) + 22r2 + 22 ) |1, 1, ~ni
+22(r2 + (r2 + 1) cos(0) p 2  4r2 sin2(0))|mixed , ~ni ,
+
+a2(~(special))|mixed , ~ni =
+
+(57)
+
+where we have introduced the following notation:
+
+i=1 i
+
+ =pd1
+ =pd1
+
+i=1 (1)nii
+ = 1
+
+r21
+ = r2+1
+r21
+
+(58)
+
+i = cos(i)  {1, 1} .
+
+from these eigenvalues one can apply the previously described procedure
+
+25
+
+and obtain the formulae for the masses m(n1, n0, n1, . . . , nd1):
+
+cosh(m(0, 0, ~n)) = | +  |
+cosh(m(1, 1, ~n)) = |   |
+
+cosh(m(mixed , ~n)) =   p(2  1)(2  1) +  22
+
+with  = 2()  r2 ,
+
+(59)
+
+(60)
+
+(61)
+
+where 2() is dened in eq. (52) and the remaining symbols in (58).
+
+now let us discuss these results. all the dependence on the occupation
+
+numbers ni lies in the quantity  . on the other hand, both  and  depend
+
+on the choice i = 0, . from the denition of  one sees that its maximum
+
+positive value is obtained whenever all states having i = 1 are empty and
+those with i = 1 occupied. the maximum negative value is attained in the
+opposite situation. in both cases, the maximal absolute value is the same:
+d  1. let us now comment briey on the main features of the spectrum
+formulae:
+
+n1 = n0 sectors
+this sector contains the scalar state corresponding to n1 = n0 = ni = 0,
+whose mass is given by:
+
+cosh(ms) = |2()  | .
+
+(62)
+
+for |r| > 1 ( > 0) the scalar ground state corresponds to zero momentum
+~ = ~0. for |r| < 1 ( < 0) it corresponds to the doubler state i = . the
+state with minimum mass within these sectors corresponds to || = d  1
+and i = 0, which is the state associated to the matrix 0. its corresponding
+
+mass is:
+
+cosh(mv ) = |2()  (d  1)| .
+
+(63)
+
+26
+
+n1 + n0 = 1 sector
+let us consider rst even space-time dimensions. in that case this sector has
+
+lighter states than the previous one. notice that the argument of the square
+root in eq. (61) can be written as (   1)2  ((  )2   22). thus, the
+lightest state corresponds to the maximum value of || = d1. furthermore,
+one can prove that the mass decreases with ||, and hence the lightest state
+corresponds to i = 0. combining this with the maximal  one sees that this
+
+lightest state corresponds to  and 0 ( 5 and 05 in 4 dimensions). its
+mass is given by formula (61) with  = 2()  (d  1)r2 and || = d  1.
+the corresponding critical line, where this lightest meson becomes massless,
+
+marks the edge of the physical region. it also marks the boundary of validity
+
+of our formulae. the equation for this critical line is given by:
+
+2() = d  .
+
+(64)
+
+along this line, the other meson states have a positive denite mass. the only
+
+exception occurs for  = 1 ( = 0). the latter is an interesting region, where
+
+all the meson masses are degenerate and dependent only on . all states
+become massless at  = 1
+2. notice that the region corresponds to the limit
+r  ,   0 with r xed. if we look at the expression of the action in
+this limit we see that the normal dirac term becomes negligible with respect
+
+to the wilson term. we have then essentially the masses corresponding to
+
+the scalar-gauge theory. unphysical features could be expected to arise in
+this limit, because, as we commented in the previous section, |r| > 1 would
+be forbidden by the requirement of osterwalder-schrader positivity at the
+
+lattice level. however, it can be checked that the meson propagators in this
+
+limit satisfy the positivity condition.
+
+if we solve in this even-dimensional case for the critical hopping 2
+
+c which
+
+27
+
+denes the critical line as a function of r we get, in particular, the result
+2
+c(r = 1) = 1/4d, in agreement with the well-known 2
+d = 4 [16]-[19].
+
+c(r = 1) = 1/16 for
+
+for odd space dimensions the previous analysis has to be modied. now,
+it is not possible to satisfy || = d  1 and i = 0 simultaneously, due to the
+requirement that the number of gamma-fermions must be even. thus, the
+
+lightest state has a higher mass. this state is a mixed vector-tensor state (i
+and 0i). the critical line is given by |2() (d 1)| = 1 and corresponds
+to a massless vector meson. for r > 1 this massless state is obtained for
+~ = ~0 and for r < 1 it corresponds to one direction being i = . there are
+no other massless particles except for r  .
+
+after this general presentation, we will now restrict ourselves to the most
+
+interesting cases of 3 and 4 dimensions, where the continuum theory is su-
+
+persymmetric. we will start by considering d = 4. the formulae for the
+
+propagators and masses follow from the general formulae obtained previ-
+
+ously. the normalisation of our operators in this case is given in table 1. as
+
+mentioned previously, if we consider correlation functions of ultralocal oper-
+
+ators the only non-zero ones for majorana fermions are the scalar (s) and
+
+the pseudoscalar-axial (pa) sectors. for ease of access to the results we now
+
+collect the expressions for the scalar mass ms and the lightest pseudoscalar
+
+mass mp :
+
+(65)
+
+cosh(ms) = |2()  3|
+
+cosh (mp ) =   p(2  1)(2  1) + 92 ,
+
+where the  in cosh(ms) is for |r| < 1 and |r| > 1, respectively. we recall
+
+28
+
+the expression for 2 and  in this dimension:
+
+2(x) =
+
+8x2  14x + 7
+2x(1  x)
+ = 2()  3r2 .
+,  and  are, as usual, the ones in eqs. (25, 58).
+
+the critical line where the pseudoscalar particle becomes massless is given
+
+by  = c(r), where the critical hopping parameter 2
+23r2 + 9 + 39r4 + 46r2 + 9
+
+c is given by:
+
+.
+
+(66)
+
+2
+c(r) =
+
+896r4
+
+our formulae are equal for elds in the fundamental and the adjoint
+
+representation of the group, so that up to a normalisation factor, they can be
+
+directly compared with the results obtained previously on the literature [16]-
+
+[19]. once the appropriate normalisation of the elds is taken into account,
+
+we nd perfect agreement with the results obtained by previous authors.
+
+now we discuss the d = 3 case, for which no explicit results have been
+
+given previously. the expression for the propagator does not follow from
+
+our previous formulae. in this case the basis of meson operators is given by
+
+the set of 2 by 2 matrices bsi = {1, i}, where i are the pauli matrices.
+
+to comply with the conventional indexing of the pauli matrices, we will
+
+adopt the names (1, 2, 3) for the lattice momentum coordinates, time
+
+being assigned by convention to coordinate 1.
+
+it is easy to see that here
+
+the propagator splits into two separate blocks: the scalar and the vectorial
+
+sector, corresponding to the unit matrix and pauli matrices respectively. by
+inverting the matrix 2()i  a2() we nd the following results for the
+scalar bgss() and vectorial bgv v () propagators:
+2() p3
+
+bgss() =
+
+(67)
+
+h()
+
+i=1 cos(i)
+
+29
+
+h() m v
+
+1 2 3 +p3
+3xj,k=1
+3xk=1
+
+i +
+
+1
+2
+
+m v
+
+ii = 2
+
+(ijk)2 j k
+
+bgv v () =
+
+.
+
+2
+i i
+
+i=1
+
+where the matrix elements of m v on the i basis are given by
+
+i6=j = i j 
+m v
+
+ijk k k ,
+
+(68)
+
+ijk is the completely antisymmetric tensor and the functions i
+
+j are given
+
+by
+
+i = 2()  
+i = 2 r sin(i) .
+
+3xi=1
+
+cos(i) + 2 cos(i)
+
+(69)
+
+for d = 3, the functions h and 2 adopt the form:
+
+2(cid:19)
+h(x) =  dr (cid:18)5
+
+2(x) =
+
+6x2  10x + 5
+2x(1  x)
+
+4x  5
+
+x(x  1)(6x  5)
+.
+
+(70)
+
+let us now consider meson masses. the general formulae (59)-(61) are
+
+valid for this case. the restriction to gamma-fermion states which are eigen-
+
+states of the charge conjugation operator c simply eliminates the double
+
+degeneracy of all levels. taking into account the necessary evenness of the
+
+number of gamma-fermions, we arrive at:
+
+cosh(ms) = 2   =  + 
+cosh(m11) = 2   =   
+
+cosh(mmix) =   p(2  1)(2  1) + 2(4  2) ,
+
+30
+
+(71)
+
+(72)
+
+(73)
+
+where, as usual,  = p3
+
+i=2 i, and i  cos(i) takes values {1, 1}.  is
+dened below eq. (61). the analysis of the lightest meson follows the general
+
+presentation done previously for odd space-time dimension.
+
+finally, we will consider correlation functions of the 3-gluino operators
+
+given in eq. (33). we recall that depending on the choice of the invariant
+colour tensor (f or d) the spin matrix si can be chosen completely symmetric
+or completely antisymmetric under the exchange of the 3 spinorial indices.
+
+the general expression for the propagator was given in section 2 (eq. (35)),
+and involves the inversion of the matrix 3()i  a3. although performing
+this inversion explicitly in general seems a fairly complicated problem, we
+
+will be able to perform it inversion for the simplest case. this corresponds
+to a completely antisymmetric si matrix. actually, for d = 4 it gives the
+full antisymmetric subspace. we proceed by introducing the antisymmetric
+matrices aa, where a is an spinorial index which can be looked at as the
+spin components of a composite fermion (a spin 1/2 fermion in 4 dimensions).
+the form of aa is given by:
+
+(aa)a1a2a3 = c a1a2c a3a  c a1a3c a2a + c a2a3c a1a ,
+
+(74)
+
+3 |aai are the basis of
+an invariant subspace under the action of a3. this allows us to perform the
+aa the momentum
+space propagator between the states si = aa and sj = aa, we can write:
+aa = r3() (6  3t r(ispin)) 
+
+the advantage of these matrices is that the states ec1
+appropriate inversion in this subspace. if we label by bg(a)
+bg(a)
+ c[(3()  23r(r2  1))i + 23(r2  1)x
+
+sin()]1!
+
+(75)
+,
+
+aa
+
+where t r(ispin) is the dimension of the spin space (equal to 2d/2 for even d)
+
+and  =p cos(). the inversion of the matrix contained in the previous
+
+31
+
+formula can be done in the standard way for a fermion propagator: (a +
+b)1 = (a  b)/(a2  b2
+).
+
+setting as usual the space-like momenta to 0 or , we might extract the
+
+mass of this fermion state from the position of the pole in the propagator.
+
+the result is:
+
+cosh(m 1
+
+2
+
+) = r3 p(3)2  
+
+,
+
+where we recall that  = 1/(r2  1) and the symbol 3 stands for:
+
+3 =
+
+3()2
+
+23  r
+
+(76)
+
+(77)
+
+with  =pi cos((special)
+
+i
+
+). it can be shown that, although the mass formula
+
+depends on the sign of  and r, the spectrum does not. without loss of
+generality, we can set  > 0; then, the lowest mass is obtained for ~ = ~0
+when r > 1 or 1 < r < 0, and for i =  i when r < 1 or 0 < r < 1.
+
+obtaining the remaining masses of 3 gluino states analytically in general
+
+is a complicated problem. nevertheless, we do not need them for the phys-
+
+ical conclusions of this paper. indeed as we saw in the case of mesons the
+
+only point in parameter space were the scalar and the pseudoscalar became
+
+degenerate in mass occurred for   0, r   with r =  xed. ex-
+
+tracting the masses and propagators for all p-gluino states in this limit is
+
+fairly simple. as in the case of mesons all spin states are degenerate, and
+
+the masses only depend on . by looking at the expressions (42,43) for the
+
+matrix to be inverted when considering a p-gluino operator, we immediately
+
+see that:
+
+pi  ap
+
+r (p  2prp)i .
+
+(78)
+
+now, the eigenvalues, whose zeroes gives the masses, are explicit. their value
+
+32
+
+is given by:
+
+cosh(mp) =  (cid:18)(2d  1)(1  )
+
+
+
+(cid:19)p/2!   ,
+
+(79)
+
+where we have used the denition (25) of  and introduced the function
+
+(x) =
+
+1
+
+2(cid:18)x +
+
+(2d  1)
+
+x
+
+(cid:19) .
+
+(80)
+
+as p increases (cid:16) (2d1)(1)
+
+, the argument of the function  in (79), in-
+creases. it is easy to see that within the relevant range (x  1) the function
+(x) is monotonously increasing. this allows us to prove the following in-
+
+
+
+(cid:17)p/2
+
+equality:
+
+mp > mq
+
+for p > q
+
+(81)
+
+as a consequence for any value of  in the physical range [0, 1
+
+2 ] and i = 0,
+the mass of the 3-gluino states is higher than the mass of the 2-gluino states.
+in particular at the critical point  = 1
+
+2, the 3-gluino states are massive.
+
+it is also interesting to know whether there are points within the physical
+
+region (bounded by the 2-gluino critical lines) where some 3-gluino states be-
+
+come massless. for example, in ref. [7] it is predicted that if chiral symmetry
+
+is broken spontaneously then so is supersymmetry, and a massless goldstino
+
+particle appears. we have explicitly checked that this does not occur within
+
+our framework for the 3 and 4-dimensional cases. the 3-gluino states are
+
+always massive.
+
+4 conclusions and future outlook
+
+in this section we will summarise our results and discuss their implications.
+
+we have obtained the spectrum of n=1 susy yang-mills on the lattice at
+
+33
+
+large number of colours nc and strong coupling, by considering the hopping
+
+parameter expansion as a sum over lattice paths (random walks). we have
+
+resummed the expressions in the hopping parameter in a certain region en-
+
+closing the origin, for an arbitrary value of the wilson parameter r. we
+
+have worked at zeroth order in , the pure gauge coupling constant. how-
+
+ever, wilsons action for the gauge part can be added either as a trace in
+
+the fundamental representation or as a trace in the adjoint one, with the
+
+corresponding couplings related to match the same naive continuum limit.
+
+indeed, if we choose the adjoint version of wilson action, our results (prop-
+
+agators and masses) are valid to all orders in  (probably only within some
+
+region encircling the origin). this can be proven in the same way that one
+
+sees that the quenched approximation is exact in our case.
+
+we have given formulae for the propagators and masses of 2 and 3 gluino
+
+states. the 2-gluino masses do coincide with the results for the meson spec-
+
+trum in ordinary lattice qcd at strong coupling [17]-[19], and obtained by
+
+means of the eective potential method. our method is based on the ran-
+
+dom walk resummation technique [22], [23]. this generalises the method of
+kawamoto [16] for r 6= 1. both methods have their relative advantages and
+disadvantages and occasionally there have been some conicting conclusions
+
+(see the u(1) problem discussion in refs. [19] and [21]). the random walk
+
+method does not rely on specic assumptions about the symmetries of the
+
+saddle point solution. it is rather based on the resummation of convergent
+
+series. convergence is simple to see, since the number of lattice paths of
+
+length l grows like a power of l and the matrices involved are bounded.
+
+the radius of convergence is given by the distance to the nearest singularity.
+
+in our case, we have two resummations involved. one on the pure spike
+4(2d1)(r21), and a second one whose
+
+paths, which converges provided 2 <
+
+1
+
+34
+
+border line in four dimensions, is given by the critical line (eq. (66)) where
+
+the pseudoscalar becomes massless. furthermore, in our case, the replace-
+
+ment of the pfaan by the square root of the determinant can be rigorously
+2d(|r|+1). this falls a bit too short compared to the other lim-
+justied if || <
+its. finally, we want to stress that we have provided formulae for arbitrary
+
+1
+
+space-time dimensions d, which could be of interest for other researchers in
+
+the eld.
+
+apart from the technical interest of our methods and results, we consider
+
+that the main usefulness of our results, is that they provide a guideline and
+
+boundary formulae for groups investigating this model by monte carlo sim-
+
+ulations. of course, our results are only valid for large nc, but experience
+
+teaches us that this is frequently a numerically good approximation. there
+
+is one issue in which unfortunately our method could perhaps not help. it
+
+has been predicted, that this model should have a rst order phase transition
+
+in  [26]. our work predicts the presence of a second order phase transition
+
+associated to the vanishing of the pseudoscalar mass. it can be argued how-
+
+ever, that a series expansion like ours can be seen as the expansion around
+
+one of the eective potential vacua. thus, the mentioned second order tran-
+
+sition could lie in the metastable phase. the point about the order of the
+
+phase transition should be settled by future monte carlo simulations.
+
+finally, it is tempting to speculate about the relevance of our results in
+
+the spirit of supersymmetry breaking. for that purpose one is interested
+
+in critical lines where a continuum limit can be dened. the states whose
+
+lattice mass vanish at the critical line, are the states that survive this con-
+
+tinuum limit.
+
+if supersymmetry is recovered at this continuum limit one
+
+expects these states to form a supermultiplet. the analysis of curci and
+
+veneziano leads to a multiplet in which in addition to the pseudoscalar par-
+
+35
+
+ticle, there is a scalar one and a spin 1
+
+2 fermion. these particles have equal
+positive continuum masses. since the contribution to the mass of the pseu-
+
+doscalar comes through the anomaly, which vanishes in our case, we should
+
+expect a massless multiplet. nevertheless, it is doubtful that the analysis
+
+of curci and veneziano applies at strong coupling since it is based on the
+
+continuum susy yang-mills lagrangian. by power counting, this model has
+
+a single relevant parameter, the gluino mass, and hence ne tuning one of
+
+the bare couplings one could nd a line corresponding to vanishing mass and
+
+restored supersymmetry. however, at strong coupling the gluonic degrees of
+
+freedom stay of the order of the cut-o. hence, the low energy lagrangian, if
+
+supersymmetric, would rather coincide with the wess-zumino model. this
+
+has many more relevant operators (the dierent masses and couplings) and
+
+demands tuning of more bare parameters to approach it.
+
+in this respect
+
+the situation in 3 dimensions could be interesting since the model would be
+
+interacting. in 4 dimensions we would expect a free low energy lagrangian
+
+giving the physics of the continuum limit. with all these concerns in mind
+we did not want to loose the opportunity to explore the   r parameter
+space in search for degenerate low energy multiplets. actually, we concluded
+
+that the only point where several mesons become massless is in the limit
+2). the masses at this point are
+  0, r   and r =
+the ones corresponding to a gauge-higgs system: an interesting model in its
+
+22d1 (i.e.,  = 1
+
+1
+
+own right. at this point we looked at the masses of the p-gluino states with
+
+p > 2. this includes fermionic degrees of freedom (for p odd). however,
+
+we showed that these states remain massive (in cut-o units) at this critical
+point. so that the main conclusion is that there is no point in the  r plane
+giving a possible candidate for a supersymmetric continuum limit.
+
+we conclude the paper by mentioning a few possible improvements of our
+
+36
+
+results. first of all, the possibility of extending the calculations and formulae
+
+to next to leading order in 1/nc seems a feasible one. the most important
+
+consequence of this extension could be in cases when the eects are absent
+
+to leading order, like the eect of quenching, anomalies, etc. then one can
+
+try to include higher orders in f undamental, or combined 1/nc and adjoint.
+
+then, of course, it would be very good to rederive the results of this paper
+
+with the eective action method. this technique, as mentioned previously,
+
+would allow the discovery of possible rst order phase transitions. finally, it
+
+should be commented that our methods and results could be used to study
+
+other supersymmetric models, such as susy qcd.
+
+acknowledgements
+
+we would like to thank j.m.f. labastida for some clarications concerning
+
+supersymmetric lagrangians. e.g. would also like to thank c. di cairano
+
+for useful discussions. this work has been partially nancially supported by
+
+the cicyt under grant aen97-1678. e.g. also acknowledges the nancial
+
+support of the tmr network project ref. fmrx-ct96-0090.
+
+appendix
+
+in this appendix we will present the terminology and main results on random
+
+walks that we will need in the text. not to conict with other denitions,
+
+we will refer to these random walks as lattice paths and a precise denition
+
+will be provided. we will work in arbitrary dimension d and will employ
+
+additional denitions given at the beginning of section 2. proofs will not be
+
+given. for that we address the reader to ref. [23].
+
+37
+
+n +pl
+
+a lattice path of length l is an element   (n, ~)  l  i l. the
+point n  l is the origin of the path, ~ is the path sequence, and m =
+i=1 v(i) is the endpoint of the path. we can label the dierent path
+sets as follows. let sl(n) be the space of all paths with origin n and length
+l; sl(n  m) is the space of all paths with origin n, endpoint m and length
+l. now we will introduce the notion of a spike.
+
+a path   (n, 1, . . . , l) has spikes if there exist one integer 1  i  l
+in the converse case one says that the path has no
+
+such that i+1 = i.
+
+spikes. the set of all paths without spikes of length l and origin n is
+labelled sl(n) ( sl(n  m) if the endpoint is xed to m). now, we can
+associate to any path  a corresponding path  called its reduced path, by
+
+simply eliminating in an orderly manner all pairs i+1 = i in its sequence.
+
+notice that this procedure preserves the origin and endpoint of the path.
+
+our main strategy will be to convert the sum of paths into a sum over
+
+reduced paths. for that we would rst need to compute the following func-
+
+tion:
+
+f ( l, z) =
+
+zp n( l, p) ,
+
+(82)
+
+xp=0
+
+where n( l, p) is the number of paths of length l + 2p whose reduced path
+is a path (with no spikes) of length l. this number does not depend on the
+
+path itself but only on its length. in ref. [23] it is shown that:
+
+f ( l, z) =
+
+ =
+
+1
+
+1
+(1  ) l
+(1  2d
+2d1 )
+1 p1  4(2d  1)z
+.
+
+2
+
+(83)
+
+(84)
+
+in addition, we would need to be able to perform sums over the set of
+
+reduced paths with origin in n of a product of matrices. to be specic, let
+a for   i, be a collection of matrices satisfying aa  = i, with i the
+
+38
+
+unit matrix. then we want to compute the matrix:
+
+t (a) = 1 +
+
+xl=1 x(n,~) sl(n)
+
+a1    a l.
+
+it can be shown [23] that t (a) is given by the formula:
+t (a) = (1  )(1 + (2d  1)  a)1 ,
+
+(85)
+
+(86)
+
+where a =pi a.
+
+in the text we will need to evaluate an expression like eq. (85) with a
+
+slight variation. we would need to sum only over paths going from one lattice
+
+point x to another one y. this modied situation can be reduced to the case
+
+given before by the following procedure. instead of considering the matrix
+a we will multiply it by a phase e, where  = . then, diagrams
+that go from x to y have coecients that go like e(xy). thus, the required
+
+expression can be obtained by projecting onto this term:
+
+2 (cid:19) e(xy) (1  )(1 + (2d  1)  a())1 , (87)
+
+txy(a) =y (cid:18)z d
+with a() =pi e a.
+
+39
+
+references
+
+[1] i. aeck, m. dine and n. seiberg, nucl. phys. b256 (1985) 557;
+
+v.a. novikov, m.a. shifman, a.i. vainshtein and v.i zakharov, nucl.
+
+phys. b260 (1985) 157;
+
+d. amati, y. meurice, g.c. rossi and g. veneziano, nucl. phys. b263
+
+(1986) 591;
+
+d. amati, k. konishi, y. meurice, g.c. rossi and g. veneziano, phys.
+
+rep. 162 (1988), 162.
+
+[2] m. shifman, prog. part. nucl. phys. 39 (1997) 1, and references therein.
+
+[3] n. seiberg and e. witten, nucl. phys. b426 (1994), 19; b431 (1994),
+
+484;
+for a recent review on seiberg-witten theories see: l. alvarez-gaume
+
+and s. f. hassan, fortsch. phys. 45 (1997) 159.
+
+[4] g. veneziano and s. yankielowicz, phys. lett. 113b (1982) 321.
+
+[5] e. witten, nucl. phys. b202 (1982) 253.
+
+[6] a. kovner and m. shifman, phys. rev. d56 (1997) 2396;
+
+g.r. farrar, g. gabadadze and m. schwetz, phys. rev. d58 (1998)
+
+015009; hep-th/9806204.
+
+[7] m.leibundgut and p. minkowski, nucl.phys. b531 (1998) 95.
+
+[8] g. curci and g. veneziano, nucl. phys. b292 (1987) 555.
+
+[9] i. montvay, nucl. phys. b466 (1996) 259.
+
+[10] a. donini and m. guagnelli, phys. lett. b383 (1996) 301.
+
+40
+
+[11] a. donini, m. guagnelli, p. hernandez and a.vladikas, nucl. phys.
+
+b523 (1998) 529.
+
+[12] r. kirchner, s. luckmann, i. montvay, k. spanderen and j. westphalen,
+
+hep-lat/9808024.
+
+[13] a. donini, e. gabrielli and m.b. gavela, nucl. phys. b546 (1999) 119.
+
+[14] m. creutz, quarks, gluons and lattices. cambridge university press,
+
+cambridge, 1983.
+
+h.j. rothe, lattice gauge theories. an introduction. world scientic,
+
+singapore, 1992.
+
+i. montvay and g. munster, quantum fields on a lattice. cambridge
+
+university press, cambridge, 1994.
+
+[15] e. brezin and d.j. gross, phys. lett. 97b (1980) 120;
+
+h. kluberg-stern, a. morel, o. napoly and b. petersson, nucl. phys.
+
+b190[fs3] (1981) 504.
+
+[16] n. kawamoto, nucl. phys. b190[fs3] (1981) 617.
+
+[17] n. kawamoto and j. smit, nucl. phys. b192 (1981) 100.
+
+[18] s. aoki, phys. rev. d30 (1984) 2653.
+
+[19] s. aoki, phys. rev. d33 (1986) 2399.
+
+[20] j. hoek, n. kawamoto and j. smit, nucl. phys. b199 (1982) 495;
+
+d. hochberg and j. hoek, nucl. phys. b270 (1986) 603.
+
+[21] j. frohlich and c. king, nucl. phys. b290[fs20] (1987) 157.
+
+41
+
+[22] j.m. blairon, r. brout, f. englert and j. greensite, nucl. phys.
+
+b180[fs2] (1981) 439;
+
+o. martin, phys. lett. b130 (1983) 411;
+
+o. martin and b. siu, phys. lett. b131 (1983) 419;
+
+h. gausterer and c.b. lang, z. phys. c 28 (1985) 475.
+
+[23] a. gonzalez-arroyo, combinatorics of lattice paths with and without
+
+spikes, preprint ftuam-99-4, ift-uam/csic-99-5; hep-lat/9903037.
+
+[24] b. rosenstein and a.d. speliotopoulos, phys. lett. b365 (1996) 252.
+
+[25] a. gonzalez-arroyo and c. pena, jhep 9909 (1999) 007.
+
+[26] i. montvay, nucl. phys. proc. suppl. 63 (1998) 108.
+
+42
+
+table 1: nomenclature and normalisation for the spin si and colour ci matri-
+ces used to dene the four dimensional 2-gluino operators. the last column
+
+gives the number of components associated to each one of them. the vec-
+
+tor and tensor spin matrices v () and t () are symmetric, thus forbidden
+
+when the eld is majorana.
+
+i label
+
+s
+
+v ()
+
+t ()
+
+a()
+
+p
+
+si
+1
+2ci
+1
+2c
+c[, ]
+
+
+42
+
+2c5
+1
+2c5
+
+ci # d.f.
+i
+
+1
+
+i
+
+i
+
+i
+
+i
+
+4
+
+6
+
+4
+
+1
+
+43
+
+

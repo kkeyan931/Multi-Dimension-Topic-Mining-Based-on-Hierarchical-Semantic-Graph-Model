@@ -1,0 +1,6903 @@
+variational approximations for correlation functions in
+
+quantum eld theories
+
+cecile martin
+
+groupe de physique theorique,
+institut de physique nucleaire,
+f-91406 , orsay cedex, france 
+
+abstract
+
+applying the time-dependent variational principle of balian and veneroni, we
+derive variational approximations for multi-time correlation functions in 4 eld
+
+theory. we assume rst that the initial state is given and characterized by a density
+
+operator equal to a gaussian density matrix. then, we study the more realistic
+
+situation where only a few expectation values are given at the initial time and we
+
+perform an optimization with respect to the initial state. we calculate explicitly
+
+the two-time correlation functions with two and four eld operators at equilibrium
+
+in the symmetric phase.
+
+9
+9
+9
+1
+
+ 
+
+p
+e
+s
+9
+2
+
+ 
+
+ 
+ 
+
+1
+v
+1
+1
+2
+9
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+e-mail address : martinc@ipno.in2p3.fr
+
+1
+
+variational correlation functions
+
+2
+
+contents
+
+1-introduction
+
+2-variational approximation for two-time correlation functions : opti-
+
+mization of the dynamics
+
+ 2-1 denition of the generating functional for correlation functions
+ 2-2 variational evaluation of the generating functional
+ 2-3 choice of the variational spaces
+ 2-4 dynamical equations with sources
+ 2-5 expansion in powers of the sources
+
+ 2-5a- tdhb equations for the expectation values
+
+ 2-5b-two-time correlation functions
+
+3-optimization of the initial state
+
+ 3-1 introduction
+ 3-2 variational spaces
+ 3-3 dynamical equations
+ 3-4 expansion in powers of the sources
+ 3-5 approximation for the two-time and two-point correlation function in the sym-
+
+metric phase. the case in equilibrium. the uctuation-dissipation theorem.
+
+ 3-6 two-time and four-point correlation function :
+
+relation between the response function r(q2, t, t) and the four-point correla-
+tion function . the case of the symmetric phase. a perturbative resolution
+of the dynamical equations. the variational expression for the response function
+r(q2, t, t) at the lowest order and at the rst order in the loop term.
+
+4-conclusion
+
+appendices
+
+3
+
+ appendix a : characterization of a gaussian state
+ appendix b : expression of the von neuman entropy for bosons in the hartree-
+
+bogoliubov approximation
+
+ appendix c : parametrization of the product of two gaussians
+ appendix d : dynamical equations for the expectation values d, d, a, a
+ appendix e : useful integrals for the resolution of the dynamical equations of section
+
+3
+
+ appendix f : solutions of the backward dynamical equations to rst order
+
+4
+
+1
+
+introduction
+
+the description of the time evolution of a system with initial conditions which are out
+of equilibrium is one of the main challenges in quantum eld theory at nite tempera-
+ture. this problem appears in dierent contexts in cosmology or in particle physics. in
+inationary models for the primordial universe, the problem is to describe the evolution
+of the inaton scalar eld in order to be abble to predict the duration of the inationary
+phase. another important problem is the prediction of the density uctuations and its
+relation to the distribution of galaxies [1].
+in particle physics, the experiments at the
+brookhaven relativistic heavy ion collider (rhic) or soon at the cern large hadron
+collider (lhc) may show a phase transition between a state where the quarks and the
+gluons are deconned and chiral symmetry restored and the state of ordinary matter.
+the state of the matter formed after the collision is out of equilibrium and the study of
+the dynamics near the phase transition requires a nonperturbative method. the chiral
+phase transition can be studied in a model of scalar elds with an o(n) symmetry. the
+relaxation of inhomogeneous pions congurations formed during the collision (called dis-
+oriented chiral condensates or dcc) could be the signal of the chiral phase transition
+through a pions distribution with strong correlations [2].
+in the standard model, one
+is interested in the dynamical properties of the electroweak phase transition in order to
+describe the baryogenesis. the violation of the baryonic number, which is related to the
+desintegration of non-trivial topological eld congurations, the sphalerons, is evaluated
+from a correlation function calculated at high temperature in a classical approximation
+[3].
+
+the scale for the energy density involved in the primordial universe or the length
+scale which is important for the collective modes in quantum chromodynamics require
+non-perturbative approaches. variational methods are therefore particularly adapted.
+
+in the mean-eld hartree-fock (hf) approximation for fermions or the hartree-
+bogoliubov (hb) approximation for bosons, one minimizes the free energy or, at zero
+temperature, the energy with a gaussian variational ansatz for the density matrix or the
+pure state. for a time-dependent problem, the corresponding approximations (tdhf or
+tdhb) are obtained by minimizing an action also with a gaussian variational ansatz. (at
+zero temperature, a time-dependent variational principle was already introduced by dirac
+[4]. it was used by the authors of reference [5] in the context of quantum eld theories .)
+these methods are well adapted to the calculation of expectation values. however, they
+are not suitable for multi-time correlation functions. in order to obtain approximations for
+these multi-time correlation functions, a variational principle was recently introduced in
+the context of non-relativistic fermions [6]. the action to minimize has for stationary value
+the generating functional for the correlation functions. this functional is a functional of
+
+5
+
+the time-dependent sources coupled to the operators of interest. the action involves
+two types of variational objects, one a(t) related to the observables of interest and the
+other d(t) akin to a density matrix. the temporal evolution of a(t) is described by a
+backward equation while that of d(t) involves a time running forward. let us notice
+that this doubling of the number of degrees of freedom with two temporal arrows appears
+already in the formalism of schwinger and keldysh for time-dependent problems at nite
+temperature [7]. (for a review of the dierent formalisms used at nite temperature,
+see reference [8]). by restricting the variational spaces for a(t) and d(t) to gaussian
+operators, one obtains evolution equations which are coupled. the expansion at rst
+order in powers of the sources of these equations (or at the second order for the generating
+functional ) provides approximations for the two-time correlation functions. in spite of
+the gaussian character of the variational ansatze, the approximations obtained in this
+way go beyond the usual mean-eld approximations and include correlations between
+particles. this comes from the fact that the variational principle of balian and veneroni
+[6] has been precisely constructed to provide directly the quantity of interest, namely the
+generating functional.
+
+our aim is to generalize this formalism to quantum eld theories. for simplicity,
+we will consider the case of a scalar eld described by a 4 interaction in a minkowski
+space. we will choose sources coupled to local operators such as (x) or (x) (written
+here in the schrodinger representation) and to composite operators such as (x)(y) or
+(x)(y). the second derivative of the generating functional with respect to the sources
+will thus give two-time correlation functions which have up to four eld operators.
+
+in the rst part of the paper, we will consider that the initial state is given and char-
+acterized by a density operator d(t0) equal to a gaussian density matrix. we will write
+the action functional to be minimized (eqs. (2.14) and (2.15)). then we will restrict our
+variational spaces to operators which are exponentials of quadratic and linear forms in the
+eld operators (x) and (x) (called gaussian operators). an adequate parametrization
+of the variational objects allows us to write the coupled dynamical equations in a compact
+form. we stress again the fact that the variational method we use introduces a doubling
+of the degrees of freedom. we obtain four coupled equations (two for the expectation
+values of one-eld operator and two for the expectation values of two-eld operators).
+therefore we have twice as many dynamical equations as the usual mean-eld approach.
+the expansion of these equations to lowest zero order in powers of the sources leads to a
+decoupling of these equations whose a half is identical to the time-dependent mean-eld
+equations for the 4 theory written in reference [9]. we have showed in a previous pa-
+per that these dynamical equations can be put into a classical noncanonical hamiltonian
+framework with a poisson structure which is a generalization of the standard poisson
+bracket [10]. at the lowest order we thus obtain an approximation for the single-time
+
+6
+
+expectation values of one or two eld operators. the expansion of the coupled equations
+to rst order in powers of the sources provides an approximation for the two-time cor-
+relation functions with two, three or four eld operators. their evaluation proceeds in
+the following way : rst one solves the mean-eld tdhb equations, then one calculates
+the kernel which corresponds to small deviations arround the mean-eld solution (which
+is analogous to the random phase approximation (rpa) kernel of reference [6]) and -
+nally one solves a backward dynamical equation which involves the kernel calculated for
+the mean-eld solution. these results have been obtained for the generating functional
+of correlation functions with time-ordered product of the eld operators. we also give
+the corresponding expressions for the retarded green functions. indeed, these retarded
+green functions appear when one studies the response of the system to a small external
+perturbation. a less complete version of this rst part of the paper has been published
+in reference [11].
+
+in section 2, we have supposed that the initial state d(t0) was known. in practice,
+this is not the case. only the expectation values of a few observables are known. in section
+3, we use the form of the variational principle introduced by balian and veneroni which
+optimizes also the initial state [6]. the approximations obtained in this way for the two-
+time correlation functions include not only the correlations between particles originating
+from the dynamics but also those present in the initial state. one introduces again
+two variational objects which now evolve in imaginary time. we study the symmetric
+phase. we will consider the two-time function with two eld operators  and the two-
+time function with four eld operators . we will relate it to the standard polarization
+function r. at equilibrium, in the symmetric phase, the case of the correlation function
+with two eld operators is special since the approximations obtained with or without
+optimization with respect to the initial state concide. for the correlation function with
+four eld operators, we will be obliged to combine the variational approximation with a
+perturbative approximation valid for small values of the coupling constant, by neglecting
+or taking into account at rst order a loop term in the dynamical equations. however, the
+solutions remain nonperturbative since they depend on the self-consistent hb solution.
+at the lowest order, by neglecting the loop term, the two-time function with four eld
+operators is simply related to the two-time function with two eld operators according
+to the wick theorem. at equilibrium, in the symmetric phase, we give to rst order
+the expression for the two-time polarization functions with four eld operators : the
+retarded green function r(q2, t, t) (eq. 4.133a) and the non-retarded green function
+(q2, t, t) (eq. (3.144)). we verify explicitly that these functions depend only on the
+time dierence t  t and not on the initial time t0. this is not the case for the non-
+retarded green function if, like in the section 2, we optimize only the dynamics and not the
+initial state. we check also that our approximations for the two-time correlation functions
+
+7
+
+satisfy the uctuation-dissipation theorem. the last section contains some conclusions and
+perspectives for future work.
+
+2 variational approximation for the two-time corre-
+
+lation functions : optimization of the dynamics
+
+2.1 denition of the generating functional for correlation func-
+
+tions
+
+we dene the operator a(j, t) which is a functional of the sources j and a function of
+the time t in the following way :
+
+a(j, t) = t exp iz 
+
+t
+
+dt (cid:26)z d3x j (x, t)h (x, t, t) + j (x, t)h (x, t, t)
+
++z d3x d3y j (x, y, t) (cid:16)h (x, t, t)h (y, t, t) + h (y, t, t)h(x, t, t)(cid:17)
++j (x, y, t) h (x, t, t)h(y, t, t) + j (x, y, t) h(x, t, t)h(y, t, t)o
+
+(2.1)
+where t is the time-ordered product of operators and h(x, t, t) and h (x, t, t) are
+respectively the eld and momentum operators dened in the heisenberg representation.
+they satisfy the boundary condition : h(x, t, t) = (x) and h(x, t, t) = (x), (x)
+and (x) being the operators in the schrodinger representation. we use the short hand
+notation
+
+,
+
+a(j, t) = t exp(cid:18)iz 
+
+t
+
+dt jj(t) oj(t, t)(cid:19)
+
+(2.2)
+
+the sources jj(t) (which are local or depend on two space points) are turned on between
+t = t and t = +.
+
+the functional a(j, t) satises the equation
+
+d
+dt
+
+a(j, t) = i[a(j, t), h]  i a(j, t)xj
+
+jj(t)oj
+
+(2.3)
+
+with the boundary condition a(t = +) = 1. we will consider the case of a self-
+interacting scalar eld in a minkowski metric described by the hamiltonian h = r d3xh(x)
+
+with :
+
+h(x) =
+
+1
+2
+
+2(x) +
+
+1
+2
+
+[~(x)]2 +
+
+m2
+0
+2
+
+2(x) +
+
+4(x) .
+
+(2.4)
+
+b
+4!
+
+we work in three spatial dimensions. the constants m0 and b are respectively the bare
+mass and the bare coupling constant.
+
+the generating functional for the causal green functions writes
+
+z(j, t0) = t r (d(t0) a(j, t0)) ,
+
+(2.5)
+
+8
+
+d(t0) being the initial state. the statistical operator d(t0) may represent a thermal
+equilibrium or a nonequilibrium state. at zero temperature, it reduces to a projection
+operator. in addition to the sources j, the generating functional z depends on the initial
+time t0. this is a dierence with the generating functional usually considered in quantum
+eld theories [12]. we want to evaluate the functional derivative of
+
+w (j, t0) = i ln z(j, t0) .
+
+(2.6)
+
+w (j, t0) is the generating functional for the connected green functions. let us note that
+for hermitic operators a(t) and d(t), w (j, t) is real. the expansion in powers of the
+sources of w (j, t) writes :
+
+w (j, t0) = i ln(n0) +z +
+2 z z +
+
++
+
+t0
+
+t0
+
+i
+
++...
+
+dt dt {z d3x1 d3x2 j(x1, t) j(x2, t) c 2
+
+(x1, x2, t, t) + ...}
+
+dt {z d3x j(x, t) (x, t) +z d3x d3y j(x, y, t) g(x, y, t) + ...}
+
+,
+
+(2.7)
+where n0 = t rd(t0) ( we choose not to normalize the operator d(t0)). we introduce the
+following notations for the expectation values of one and two eld operators :
+
+(x, t) =
+
+1
+n0
+
+t r(cid:16)h (x, t, t0) d(t0)(cid:17) ,
+
+g(x, y, t) =
+
+1
+n0
+
+t r(cid:16)h (x, t, t0) h (y, t, t0) d(t0)(cid:17)  (x, t) (y, t) .
+
+the two-time causal functions with two eld operators are dened according to :
+
+(2.8)
+
+(2.9)
+
+c 2
+
+(x, y, t, t) =
+
+1
+n0
+
+t r(cid:16)t h(x, t, t0) h (y, t, t0) d(t0)(cid:17)  (x, t) (y, t) .
+
+(2.10)
+
+similarly, we dene the functions c 2
+
+, c 2
+
+. from the expansion (2.7), we have :
+
+2w
+
+1
+i
+
+2w
+
+(2.11)
+
+= c 2
+
+(x, y, t, t) .
+
+we dene also the three-point and four point two-time correlation function c 3 et c 4 :
+
+j(x, t)j(y, t)(cid:12)(cid:12)(cid:12)(cid:12)j=0
+j(x, t)j(y, z, t)(cid:12)(cid:12)(cid:12)(cid:12)j=0  c 3(x, y, z, t, t)
++(y, t) (cid:16)c 2(x, z, t, t) + (x, t) (z, t)(cid:17) + (z, t) (cid:16)c 2(x, y, t, t) + (x, t) (y, t)(cid:17) ,
+j(x, y, t)j(z, u, t)(cid:12)(cid:12)(cid:12)(cid:12)j=0  c 4(x, y, z, u, t, t)
++(cid:16)c 2(x, z, t, t) + (x, t) (z, t)(cid:17) (cid:16)c 2(y, u, t, t) + (y, t) (u, t)(cid:17)
++(cid:16)c 2(x, u, t, t) + (x, t) (u, t)(cid:17) (cid:16)c 2(y, z, t, t) + (y, t) (z, t)(cid:17) .
+
+(2.12)
+
+(2.13)
+
+2w
+
+1
+i
+
+1
+i
+
+9
+
+2.2 variational evaluation of the generating functional
+
+we will use the time-dependent variational principle of balian and veneroni [6] to obtain
+an approximation for our quantity of interest t r(d(t0)a(j, t0)). this principle is an
+illustration of the general method developped in reference [13] to construct a variational
+principle suited to the evaluation of a desired quantity. the basic idea is to consider
+the equation (2.3) which denes a(j, t0) as a constraint and to introduce a lagrangian
+multiplier d(t0) associated to this constraint.
+
+we dene the action functional :
+
+z (a(t),d(t)) = t r (a(t0) d(t0)) + zdyn ,
+
+where
+
+zdyn = t r z 
+
+t0
+
+dt d(t) 
+
+
+dt  i(cid:20)a(t),z d3xh(x)(cid:21) + ia(t) 
+da(t)
+xj
+
+jj(t)qj
+
+
+we have written in a compact form the term which involves the sources j :
+
+(2.14)
+
+. (2.15)
+
+
+
+
+(2.16)
+
+pj jj(t)qj = z d3x (cid:16)j (x, t)(x) + j (x, t)(x)(cid:17)
+
++z d3x d3y j (x, y, t) ((x)(y) + (y)(x))
++z d3x d3y (cid:16)j (x, y, t)(x)(y) + j (x, y, t)(x)(y)(cid:17) .
+
+the variational quantities of the action functional z are the observable-like operator
+a(t) and the density-like operator d(t). we look for the stationarity of z with respect to
+variations of a(t) and d(t) with the boundary conditions : a(t = +) = a(t = +) = 1
+and d(t0) = d(t0). d(t0) is the initial statistical operator which we assume to be given
+and equal to a gaussian density matrix. by construction of the variational principle,
+the generating functional for the connected green functions will be approximated by the
+value of the functional z at the stationary point :
+
+w (j, t0) = i lnzst .
+
+(2.17)
+
+2.3 choice of the variational spaces
+
+we restrict ourselves to trial operators a(t) and d(t) which are exponentials of quadratic
+and linear forms of the eld operators (x) and (x) which we shall loosely call gaussian
+operators.
+
+a gaussian state d(t) is completely characterized by the vector (x, t) and the
+
+matrix (x, y, t) dened by :
+
+(x, t) =   (x, t)
+
+i(x, t)! ,
+
+10
+
+(2.18)
+
+where
+
+(x, y, t) =   2g(x, y, t) it (x, y, t)
+
+it (y, x, t) 2s(x, y, t)! ,
+
+(x, t) =
+
+1
+
+n(t)
+
+t r(d(t)(x)) ,
+
+(x, t) =
+
+1
+
+n(t)
+
+g(x, y, t) =
+
+s(x, y, t) =
+
+1
+
+n(t)
+
+1
+
+n(t)
+
+t r(d(t)(x)) ,
+t r(d(t) (x) (y)) ,
+t r(d(t) (x) (y)) ,
+
+(2.19)
+
+(2.20)
+
+(2.21)
+
+(2.22)
+
+(2.23)
+
+(2.24)
+
+t (x, y, t) =
+
+1
+
+n(t)
+
+t r(d(t)( (x) (y) + (y) (x))) ,
+n(t) = t rd(t) ,
+
+(2.25)
+and, for any operator o : o = o  t r(d(t)o). the hermiticity of d(t) implies that the
+matrices g, s and t are real and that g and s are symmetric in the space indices.
+
+the heisenberg invariant is equal to :
+
+i(x, y) = r d3z
+
+(cid:16)4 < (x) (z) >< (z) (y) >
+ < (x) (z) + (z) (x) > < (z) (y) + (y) (z) >(cid:17)
+
+i(x, y) = z d3z (11(x, z) 22(z, y) + 12(x, z) 12(z, y)) .
+
+for a pure state :
+
+11 22  2
+12 + 1 = 0
+i(x, y) = 3(x  y)
+
+(2.26)
+
+(2.27)
+
+(2.28)
+
+(2.29)
+
+in appendix a, we give the relations between our parametrization of a gaussian state
+and the parametrization used by the authors of reference [9].
+
+we then introduce the operators tb = a(t) d(t) and tc = d(t) a(t) [14]. the
+operator tb is a gaussian operator which is characterized by the following expectation
+values :
+
+n(t) = t rtb = t rtc ,
+
+n(t)
+
+t r(tb(x)) ,
+
+b(x, t) =
+
+b(x, t) =
+
+1
+
+1
+
+n(t)
+
+gb(x, y, t) =
+
+1
+
+n(t)
+
+t r(tb(x)) ,
+t r(tb (x) (y)) ,
+
+11
+
+(2.30)
+
+(2.31)
+
+(2.32)
+
+(2.33)
+
+sb(x, y, t) =
+
+1
+
+n(t)
+
+t r(tb (x) (y)) ,
+
+tb(x, y, t) =
+
+1
+
+n(t)
+
+t r(tb( (x) (y) + (y) (x))) ,
+
+(2.34)
+
+(2.35)
+
+with (x) = (x)  b(x, t) and (x) = (x)  b(x, t).
+
+similarly the operator tc is a gaussian operator which is characterized by the quan-
+tities n, c, c, gc, sc, tb ( obtained by replacing tb by tc in (2.31)-(2.35)). for d(t) = 1,
+one has b(x, t) = c(x, t) = a(x, t) (and similar denitions for a, ga, sa, ta). for
+a(t) = 1, one has b(x, t) = c(x, t) = d(x, t) (and similar denitions for d, gd, sd, td).
+in appendix c, we give the expressions of b, c, b and c as functions of the independent
+variational quantities a, a and d, d which characterize respectively a and d.
+
+with this choice of the trial spaces for a(t) and d(t) , the wick theorem allows us
+
+to express the functional z in the form :
+
+z = n(t0) +z +
+
+t0
+
+dt " dn
+
+dt |d(t)=cte  i n(t) z d3x (ec(x, t)  eb(x, t))
+
++i n(t) z d3x1d3x2 kc(x1, x2, t)(cid:21)
+
+,
+
+(2.36)
+
+where the energy density e(x, t) = t r (d(t) h(x, t)) is given, for the hamiltonian density
+(2.4), by :
+
+e(x, t) =
+
+1
+2
++
+
++
+
+and
+
+m2
+0
+2
+
+1
+(~(x, t))2 +
+2
+1
+s(x, x, t) 
+2
+g2(x, x, t) +
+
+2(x, t) +
+1
+2
+b
+8
+
+g(x, y, t)|x=y +
+b
+2(x, t) g(x, x, t)
+4
+
+m2
+0
+2
+
+2(x, t) +
+
+b
+24
+
+4(x, t)
+
+g(x, x, t)
+
+(2.37)
+
+ln n(t) = ln na + ln nd 
+
+1
+2
+
+bc ad
+
+ln det(cid:16)1(1 +  )(a + d)1(1 +  )(cid:17) ,
+where bc = b  c and  and 1 are the following 2  2 matrices :
+
++
+
+1
+2
+
+1 =   0 1
+
+1 0! ,  =   0
+1
+
+1
+
+0! .
+
+(2.38)
+
+(2.39)
+
+involves the sources j and the expectation values indexed by c.
+
+the last term of the functional (2.36), kc = t r(cid:16)tc pj jj(t) qj(cid:17) = r d3x1d3x2kc(x1, x2, t),
+with the parametrization we use, the boundary conditions d(t0) = d(t0) and
+
+a(t = +) = 1 correspond respectively :
+
+nd(t0) = n0 , d(t0) = 0 , d(t0) = 0 ,
+
+(2.40)
+
+12
+
+where n0, 0 and 0 characterize the gaussian initial state d(t0), and
+
+na(t = +) = 1 , 1
+
+a (t = +) = 0 ,
+
+1
+a
+
+a(t = +) = 0 .
+
+(2.41)
+
+we will write the conditions for the stationarity of the functional z with respect to the
+variations of nd, d, d and na, a, a.
+
+2.4 dynamical equations with sources
+
+by varying the expression (2.36) with respect to nd, d, d, with the boundary conditions
+
+nd(t0) = n0 , d(t0) = 0 , d(t0) = 0 ,
+
+(2.42)
+
+we obtain the evolution equation for na, a and a. integrating (2.36) by parts and varying
+with respect to na, a, a with the boundary conditions
+
+na(t = +) = 1 , 1
+
+a (t = +) = 0 ,
+
+1
+a
+
+a(t = +) = 0 ,
+
+(2.43)
+
+we obtain the evolution equations for nd, d and d. in general the evolution equations
+for nd, d, d and those for na, a, a are coupled. the solutions nd, d, d and na, a, a
+depend on the sources. owing to this dependence, we will be abble to obtain non trivial
+approximations for the correlation functions in spite of the gaussian nature of the trial
+
+operators.
+
+by combining the evolution equation for nd, d, d with those for na, a, a, the
+dynamical equations for the expectation values b, b and c, c can be written in the
+following compact form :
+
+i b =  wb ,
+i c =  (wc  wc
+
+k) ,
+
+i b = 2 (b hb    hb b) ,
+k)    (hc  i c
+
+i c = 2 (c (hc  i c
+
+k) c) .
+
+(2.44)
+
+(2.45)
+
+(2.46)
+
+(2.47)
+
+we have also n(t) = 0.
+
+the vector wb and the matrix hb are dened from the variation of < h >b=
+
+2 z d3x d3y tr [hb(x, y, t) b(y, x, t)] .
+
+(2.48)
+
+k are dened from the variation of < h >c= t r(tch) and
+
+t r(tbh) :
+ < h >b= z d3x wb(x, t) b(x, t) 
+similarly, wc,hc and wc
+from the variation of the source term kc.
+
+k,i c
+
+1
+
+13
+
+therefore, by using a convenient parametrization for the two variational objects
+d(t) and a(t), we have been abble to obtain dynamical equations in a very compact form
+even for nite values of the sources. the dynamical equations for d, d and a, a have
+a more complicated form. they are given in appendix d where we give also the explicit
+expressions of the vectors w, wc
+k in the case of the 4
+theory. in spite of their simple form, the equations (2.44)-(2.47) are coupled because the
+solutions b, b and c, c do not satisfy simple boundary conditions.
+
+k and of the matrices h and i c
+
+let us note that the coupled equations for d, d (a, a) do not conserve neither
+the energy < h >d (< h >a) nor the entropy sd (sa) (see appendix b for the denition
+of the von-neuman entropy for bosons). on the other hand, the dynamical equations for
+b and b (eqs. (2.44) and (2.46) ) which have the same form as the mean-eld tdhb
+equations conserve the pseudo-energy < h >b and the pseudo-entropy sb.
+
+the expansion in powers of the sources of the stationarity conditions (2.44)- (2.47)
+will provide approximate dynamical equations for the expectation values and the corre-
+lation functions dened in eqs. (2.8)-(2.13).
+
+2.5 expansion in powers of the sources
+
+2.5.1 tdhb equations for the expectation values
+
+we will use the upper index(0) for the solutions of the dynamical equations when there
+are no sources. the limit with vanishing sources corresponds to
+
+(0)
+b = (0)
+
+c = (0)
+
+d
+
+, (0)
+
+b = (0)
+
+c = (0)
+
+d
+
+from equations (c.4) and (c.5) and from
+
+b  c = 2 
+
+1
+
+a + d
+
+(a  d) ,
+
+we obtain that in the limit with vanishing sources
+
+1
+
+a = 0
+
+,
+
+1
+a
+
+a = 0 .
+
+.
+
+(2.49)
+
+(2.50)
+
+(2.51)
+
+we have also wb
+equations (d.2) and (d.3) for d and d become (we suppress the index d) :
+
+(0) = h(0). in this limit, the dynamical
+
+(0) = w(0) and hb
+
+(0) = hc
+
+(0) = wc
+
+i (0) =  w(0) ,
+
+i (0) = h(cid:16)(0) + (cid:17) h(0) (cid:16)(0)  (cid:17) (cid:16)(0)  (cid:17) h(0) (cid:16)(0) + (cid:17)i .
+
+(2.52)
+
+(2.53)
+
+14
+
+these equations are the analog for the 4 theory of the time-dependent hartree-bogoliubov
+(tdhb) equations in nonrelativistic physics. they are equivalent to the dynamical equa-
+tions obtained in reference [9] where the authors used an alternative form of the balian-
+veneroni variational principle suited to the evaluation of single-time expectation values
+[15].
+
+in reference [10], we have shown that these tdhb equations for the 4 theory
+can be written as classical dynamical equations with a nonsymplectic poisson structure
+with the free-energy density playing the role of a classical hamiltonian. the heisenberg
+invariant (2.26) appears as a structural invariant of the poisson structure.
+
+the static hb solution satises w0 = 0 that is, in the uniform case :
+
+(m2
+
+0 +
+
+b
+6
+
+0 +
+
+b
+2
+
+g0(x, x))0 = 0
+
+and the so-called gap
+
+which can also be written as :
+
+0 =  coth(h0 )
+
+h0 =
+
+1
+2
+
+ ln(cid:18) 0 + 
+
+0  (cid:19) .
+
+more explicitly, in the uniform case, by going to the momentum space :
+
+0(p) =   1
+
+p
+
+coth p
+2
+
+0
+
+0
+
+2 ! ,
+
+p coth p
+
+and for the 4 theory, p = qg0(p) with
+g0(p) = (p2 + m2
+
+0 +
+
+b
+2
+
+2
+
+0 +
+
+b
+2
+
+g0(x, x)) .
+
+(2.54)
+
+(2.55)
+
+(2.56)
+
+(2.57)
+
+(2.58)
+
+the solution 0 = 0 of equation (2.54) corresponds to the symmetric phase while
+
+the solution 0 6= 0 corresponds to the broken phase.
+
+we dene the self-consistent mass m() depending on the temperature as the solu-
+
+tion of the gap equation :
+
+m2() = m2
+
+0 +
+
+b
+2
+
+2
+
+0 +
+
+b
+2
+
+g0(x, x)
+
+by using eq. (2.54), we have also :
+
+m2() = c m2
+
+0 +
+
+b
+2
+
+g0(x, x)!
+
+with c = 1 in the symmetric phase and c = 2 in the broken phase.
+
+15
+
+(2.59)
+
+(2.60)
+
+the gap equation (2.59) has ultraviolet divergences and requires a regularization.
+0 (x, x) of g0(x, x) comes from the zero temperature contribution.
+
+the divergent part gdiv
+by introducing a cuto  in momentum,
+
+gdiv
+
+0 (x, x) =
+
+1
+
+82 "2  m2 log  2
+
+e m!#
+
+(2.61)
+
+where m = m(t = 0). the gap equation can be put in a nite form by choosing the
+following renormalization conditions [16] :
+
+2 =
+
+0 + b2
+m2
+162
+162 log( 2e)
+c + b
+
+1
+
+,  = 0,1
+
+1
+
+gr()
+
+=
+
+2
+cb
+
++
+
+1
+
+e!
+82 log  2
+
+(2.62)
+
+(2.63)
+
+where  is an arbitrary mass scale. the renormalized gap equation writes at zero tem-
+perature :
+
+m2 = 2 +
+
+gr()
+
+162 m2 log  m2
+2 !
+
+(2.64)
+
+in the next sections, the dynamical equations for the two-time correlation functions
+will involve the bare coupling constant b. this one will be understood as a function of
+the cuto . we will solve the dynamical equations for a nite value of the cuto. in
+the static case, we will show that the nal formula obtained for the two-time correlation
+functions can be written with the renormalized parameters.
+
+at nite temperature, we can isolate the divergent part of g0(x, x) according to :
+
+g0(x, x) = z
+
+d3k
+(2)3
+
+1
+2k
+
++z
+
+d3k
+(2)3
+
+1
+k
+
+1
+
+ek  1
+
+therefore, the gap equation at nite temperature writes :
+
+m2() = 2 +
+
+gr()
+
+162 m2() log  m2()
+2 !
+
++
+
+gr()
+
+162 m2()z
+
+2.5.2 two-time correlation functions :
+
+d3k
+(2)3
+
+1
+k
+
+1
+
+ek  1
+
+(2.65)
+
+(2.66)
+
+the rst derivatives of w (j, t0) = i lnzst with respect to the sources are equal to the
+expectations values with the index c. indeed, the functional z depend on the sources
+both explicitly and implicitly since the approximate solutions for d(t) and a(t) depend
+
+16
+
+on the sources. however, at the stationary point, only the explicit dependence contributes
+to the rst derivative :
+
+which gives for instance :
+
+dz
+djj(t)
+
+=
+
+z
+jj(t)
+
+= i t r (d(t)a(t)qj) ,
+
+w
+
+j(x, t)
+
+= c(x, t) .
+
+(2.67)
+
+(2.68)
+
+the expressions for the second derivatives of w are much more complicated. the intro-
+duction of sources coupled to the composite operators (x)(y), (x)(y) and (x)(y)
+together with eq. (2.68) allows us to obtain dynamical equations for the two-time cor-
+relation functions with three or four eld operators merely from the expansion of the
+expectation values c and c at the rst order in powers of the sources.
+
+from the rst order corrections c  (0) and c  (0), we dene the two-time
+
+correlation functions  and  ( is a vector and  is a matrix) :
+
+c(x, t) (0)(x, t)  i z 
+
+t0
+
+dt (cid:26)z d3y (x, y, t, t) j (y, t) +  j 
+
++z d3x1d3x2 (x, x1, x2, t, t) j (x1, x2, t) +  j  +  j (cid:27)
+dt (cid:26)z d3x1 (x, y, x1, t, t) j (x1, t) +  j 
+
+c(x, y, t) (0)(x, y, t)  i z +
+
+t0
+
+,
+
+(2.69)
+
++z d3x1d3x2 (x, y, x1, x2, t, t) j (x1, x2, t) +  j  +  j (cid:27)
+
+(2.70)
+
+.
+
+we have :
+
+
+1 (x, y, z, t, t) =
+
+1
+2
+
+
+
+11(x, y, z, t, t) .
+
+(2.71)
+
+the functions  and  provide approximations for the exact two-time correlation functions
+c 2, c 3 and c 4 dened by eqs. (2.10)-(2.13) :
+
+c 2
+(x, y, t, t)  
+c 3(x, y, z, t, t)  
+(x, y, z, t, t)
+
+1
+
+1 (x, y, t, t) ,
+
+(2.72)
+
+,
+
+(2.73)
+
+(0)(y, t) (cid:16)
+(0)(z, t) (cid:16)
+
+1 (x, z, t, t) + (0)(x, t)(0)(z, t)(cid:17)
+1 (x, y, t, t) + (0)(x, t)(0)(y, t)(cid:17)
+
+c 4(x, y, z, u, t, t) 
+
+1
+2
+
+
+
+11 (x, y, z, u, t, t)
+
+(cid:16)
+(cid:16)
+
+1 (x, z, t, t) + (0)(x, t) (0)(z, t)(cid:17) (cid:16)
+1 (x, u, t, t) + (0)(~x, t) (0)(u, t)(cid:17) (cid:16)
+
+1 (y, u, t, t) + (0)(y, t) (0)(u, t)(cid:17)
+1 (y, z, t, t) + (0)(y, t) (0)(z, t)(cid:17)
+
+(2.74)
+
+.
+
+the expansion in powers of the sources of the dynamical equations (2.45) and (2.47)
+
+for c and c yields :
+
+i  c =  (wc  wc
+
+k) ,
+
+17
+
+(2.75)
+
+i  c = 2
+
+hc h(0)    h(0) c
++(0) (hc  i c
+
+k)    (hc  i c
+
+k) (0)i
+
+.
+
+(2.76)
+
+in these equations the matrix h has to be evaluated for the tdhb solutions (0), (0) of
+eqs. (2.52) and (2.53). the variations of wc
+k(x, y, t)
+(eqs. (d.20)-(d.22)) with respect to j(t) will give terms proportional to (t t). from
+the variations wc and hc, we dene the matrices tij, ti,jk, rij,k, rij,kl (which are the
+analogues of the random phase approximation (rpa) kernel of balian and veneroni [6]) :
+
+k(x, t) (eqs. (d.18)-(d.19)) and of i c
+
+1
+
+2 z d3y d3z ti,jk(x, y, z, t) c
+
+kj(z, y, t) , (2.77)
+
+wc
+
+i (x, t) = z d3y tij(x, y, t) c
+j(y, t) 
+ij(x, y, t) = z d3z rij,k(x, y, z, t) c
+
+1
+
+hc
+
+k(z, t) 
+
+2 z d3z d3u rij,kl(x, y, z, u, t) c
+
+lk(u, z, t) .
+(2.78)
+these matrices depend on the tdhb solutions (0) and (0). their expressions in the case
+of the 4 theory are given in appendix d. with these notations, the dynamical equations
+for the two-time and two-point correlation function  and the two-time and three-point
+correlation function  write :
+
+i d
+dt (x, y, t, t) = 
+
+t,(jk(x, z, u, t) 
+
+kj)(u, z, y, t, t)
+
+(cid:20)t(x, z, t) (z, y, t, t) 
++i   1
+
+0! (x  y) (t  t)#
+
+1
+2
+
+,
+
+(2.79)
+
+.
+
+(2.80)
+
+i d
+dt 
+
+ij(x, y, x1, t, t) = 2 h h(0)    h(0) 
+k)    r,(k 
+
++(0) r,(k 
+
+
+1
+2
+
+(0) r,(kl 
+
+lk)  +
+
+1
+2
+
+k) (0)
+ r,(kl 
+
+lk)(0)(cid:21)ij
+
+we obtain similar equations for the three-point functions , ,  and the four-point
+functions ,  and .
+
+these dynamical equations are not sucient since the boundary conditions are
+a (t = +) = 0, 1
+1
+a(t = +) = 0 and d(x, t0) = 0(x), d(x, y, t0) = 0(x, y). but,
+at this step, we have used the expansion of only one half of our variational parameters.
+we will use also the dynamical equations for the two-time functions m and l dened from
+the expansion in powers of the sources of 1
+
+a a and of a at the rst order :
+
+a
+
+1
+a
+
+t0
+
+a(t)  i z +
+a (t)  i z +
+
+t0
+
+1
+
+dt mk(t, t)jk(t) ,
+
+dt lk(t, t)jk(t) .
+
+(2.81)
+
+(2.82)
+
+(we have ommitted the space indices)
+
+18
+
+from the relations of appendix c, we will be abble to obtain relations between
+the functions k(t0, t) and lk(t, t0) one the one hand and the functions k(t0, t) and
+mk(t, t0)  lk(t, t0)0 on the other hand. indeed, that at the rst order :
+
+1
+
+a = 
+
+1
+a
+
+a
+
+1
+a  
+
+1
+
+a + d
+
+a
+
+1
+
+a + d
+
+,
+
+from eqs. (c.5) and (c.2), we obtain at the rst order :
+
+c = ((0)   ) 1
+
+a
+
+((0) +  ) + d
+
+and
+
+(2.83)
+
+(2.84)
+
+c = ((0)   ) (
+
+a
+
+a + d
+
+) + ((0)   )
+
+1
+
+a + d
+
+a
+
+1
+
+a + d
+
+(0) + d .
+
+(2.85)
+
+at the initial time, d = 0, d = 0 and we have the following relations between the
+two-time functions :
+
+k(t0, t) = (0   ) lk(t, t0) (0 +  )
+
+k(t0, t) = (0   ) (mk(t, t0)  lk(t, t0)0)
+
+(2.86)
+
+(2.87)
+
+by using the dynamical equation for 1
+
+a at the rst order
+
+d
+
+i
+
+dt (cid:16)1
+
+a (cid:17) = hc + hb + i c
+
+k + 2 1
+
+a h(0)  2 h(0) 1
+
+a
+
+,
+
+(2.88)
+
+and the variations wc  wb and hc  hb, we obtain a backward dynamical equation
+for lk(t, t) :
+
+i d
+
+dt lk(t, t)ij = 2 rij,k kl (mk  lk(0))l  rij,kl (cid:16)(0) l    l (0)(cid:17)lk
+
++"2 lkh(0)  2 h(0)  lk  i
+
+i c
+k
+jk
+
+(t  t)#ij
+
+,
+
+(2.89)
+
+where the matrices r and r have been dened in (2.78).
+
+similarly, from the dynamical equation for 1
+
+a a at the rst order, we obtain a
+backward dynamical equation for mk(t, t). it is actually more convenient to consider the
+function mk(t, t)  lk(t, t)(0)(t) which is solution of :
+i d
+
+dt (cid:16)mk(t, t)  lk(t, t)(0)(t)(cid:17) = t  (cid:16)mk(t, t)  lk(t, t)(0)(t)(cid:17)
+t,jk ((0) lk    lk (0))kj +
+
+(t  t)
+
+wc
+k
+jk
+
+(2.90)
+where the matrices t and t have been dened in (2.77). the reason to use this function
+will appear with the introduction of the function f (t, t) bellow (see 2.100).
+
+i
+2
+
+1
+2
+
+
+
+,
+
+19
+
+the boundary conditions for these two equations are :
+
+l(t, t) = 0, m(t, t) = 0 pour
+
+t > t
+
+l(t, t) = 0 ,
+
+l(t, t) = 0
+
+1
+l
+11 (x, y, z, u, t, t) = 
+2
+l
+12 (t, t) = 2i
+
+(3(x  z)3(y  u) + 3(x  u)3(y  z))
+,
+
+l
+21 (t, t) = 2i
+
+l
+22 (t, t) = 1
+
+,
+
+the other elements of the matrix l are equal to zero.
+
+m
+1 (x, y, t, t) = 
+
+1
+2
+1 (x, x1, x2, t, t)  l
+m
+m
+1 (x, x1, x2, t, t)  l
+2 (x, x1, x2, t, t)  l
+m
+m
+2 (x, x1, x2, t, t)  l
+
+3(x  y)
+1i (t, t)(0)
+1i (t, t)(0)
+2i (t, t)(0)
+2i (t, t)(0)
+
+, m
+
+2 (x, y, t, t) = 
+
+i
+2
+
+3(x  y)
+
+i (t) = (0)(x2, t)3(x  x1) + sym.
+i (t) = (0)(x2, t)3(x  x1) + sym.
+i (t) = i(0)(x2, t)3(x  x1) + sym
+i (t) = i(0)(x2, t)3(x  x1) + sym
+
+(2.91)
+
+(2.92)
+
+(2.93)
+
+(2.94)
+
+(2.95)
+
+(2.96)
+
+(2.97)
+
+(2.98)
+
+(2.99)
+
+where sym. means the same terms obtained by exchanging x2, x and x1.
+
+the same matrices t, t, r, r coming from the expansion of < h > at the second
+order arround the tdhb solution appear in equations (2.79),(2.80) for  and  and in
+equations (2.89),(2.90) for m and l. this leads to consider the following quantity :
+
+f k(t, t) = 2(cid:16) mk(t, t)  (0)(t)lk(t, t)(cid:17) k(t, t) 
+
+1
+2
+
+tr(cid:16)lk(t, t)k(t, t)(cid:17)
+
+(2.100)
+
+where m is the transpozed vector of m. more explicitly, by reintroducing the space
+coordinates, f (t, t) writes in the case of the functions m, l,  and  :
+
+f (t, t) = 2z d3x(cid:18) m(x, x1, t, t) z d3u (0)(u, t)l(u, x, x1, t, t)(cid:19) (x1, x2, t, t)
+
+1
+
+
+
+2 z d3x d3z tr(cid:16)l(x, z, x1, t, t)(z, x, x2, t, t)(cid:17)
+
+(2.101)
+the quantity f k is independent of the time t : from the dynamical equations (2.79),(2.80)
+and (2.89),(2.90), one shows that its derivative with respect to t is equal to a sum of
+functions (t  t) and (t  t) :
+dt f k = i k(t, t)
+i d
+tr(i
+
+(t  t) + i2( mk(t, t)  (0)(t)lk(t, t))
+(t, t)(t  t) + ilk(t, t)(0)(t)
+
+ (t  t)  ilk(t, t)
+
+wc
+k
+jk
+ik
+jk
+
+(t  t)
+
+ik
+jk
+
+wc
+jk
+
+1
+2
+
+
+
+(0)(t)(t  t)) .
+
+ik
+jk
+(2.102)
+
+20
+
+the fact that f k does not depend on the time t will save us to solve one dynamical
+equation.
+
+by considering the local sources j (x, t) and by integrating equation (2.102) from
+t = + to t = t0, we obtain an approximation for the two-time and two-point function.
+for t > t :
+
+
+
+1 (t, t) = 2h m(t, t0)  0l(t, t0)i (t0, t)
+
+1
+2
+
+
+
+trhl(t, t0)(t0, t)i
+
+.
+
+(2.103)
+
+in the uniform case, we have in momentum space :
+
+
+
+1 (p, t, t) = 2(cid:16) m(p, t, t0)  0l(0, p,p, t, t0)(cid:17) (p, t0, t)
+
+1
+
+2 z d3k trhl(p + k,k,p, t, t0)(k,p  k, p, t0, t)i
+
+
+
+our conventions for the fourrier transforms are dened in appendix d.
+
+(2.104)
+
+these two last expressions will still be valid when we will optimize with respect to
+the initial state in section 3. on the contrary, the following expression will not be valid
+in section 3. by using (2.86) and (2.87), we obtain :
+
+1 (t, t) = 2( m(t, t0)  0l(t, t0)) (0   ) (m(t, t0)  l(t, t0)0)
+
+
+.
+
+(2.105)
+
+trhl(t, t0)(0   )l(t, t0)(0 +  )i
+
++
+
+1
+2
+
++
+
+1
+2
+
+for t > t, one interchanges the operators h(t, t0) and h(t, t0). by using the expres-
+sion of the retarded green functions (see bellow), we show :
+
+1 (t, t) = 2( m(t, t0)  0l(t, t0)) (0   ) (m(t, t0)  l(t, t0)0)
+
+
+.
+
+(2.106)
+
+trhl(t, t0)(0   )l(t, t0)(0 +  )i
+
+for the correlation functions with the anti-t-product, it is sucient to replace in
+the functional z (2.36) the source term kc by the analogous term kb. this is equivalent
+to exchange the matrices 0   and 0 +  in the previous formula (or to exchange t
+and t).
+
+1 (t, t) and for the two-time and four-point function 
+
+from the function f k(t, t), we obtain also, by considering now the bilocal sources
+j (x, y, t), an expression which relates the approximations for the two-time and three-
+point function 
+11 (t, t). for
+t > t :
+
+(x1, x1, x2, t, t)(0)(x2, t) + 
+1 (x2, x1, x2, t, t)(0)(x1, t)
+1
+1
+11 (x2, x1, x1, x2, t, t)(cid:17) =
+4 (cid:16)
+
+2z d3x (cid:18) m(x, x1, x2, t, t0) z d3u 0(u)l(u, x, x1, x2, t, t0)(cid:19) (x, x1, x2, t0, t)
+2 z d3x d3z trhl(x, z, x1, x2, t, t0)(z, x, x1, x2, t0, t)i
+
+11 (x1, x2, x1, x2, t, t) + 
+
++
+
+1
+
+(2.107)
+
+.
+
+21
+
+in the uniform case, we have in momentum space :
+
+1
+
+1
+1
+
+(p2, q,(p2 + q), t, t)3(p1)i (0)(t)
+
+h
+(p1, q,(p1 + q), t, t)3(p2) + 
+4 h
+11 (p1, p2, q,(p1 + p2 + q), t, t) + 
+
+2h m(p1  p2, p1, p2, t, t0)  0l(0,p1  p2, p1, p2, t, t0)i
+(p1 + p2, q,q  p1  p2, t0, t)
+1
+2 z d3k trhl(k  p1  p2,k, p1, p2, t, t0)(k,k + p1 + p2, q,q  p1  p2, t0, t)i
++
+
+11 (p2, p1, q,(p1 + p2 + q), t, t)i =
+
+(2.108)
+
+2 = 
+
+12 + 
+
+(t, t) by : 
+
+let us recall that the function 
+
+11 is related to 
+11. by
+1
+comparing the dynamical equations for 
+(t, t) and 
+ij(t, t) we obtain on the other
+hand : 
+and two integrales
+11 and 
+over the momenta which involve 
+ij are there-
+fore completly known if 
+and 
+11 are known. however, we note a diculty in the
+asymmetric phase since we have two equations (2.103) and (2.107) for the three functions
+
+1 (t, t), 
+
+21 and an expression for 
+
+22 in terms of 
+
+1 (t, t) and 
+
+. the functions 
+
+11 = 2
+
+11 (t, t).
+
+1 = 1
+
+2
+
+1
+
+1
+
+1
+
+i
+
+in the symmetric phase, equations (2.105) and (2.107) simplify. indeed, from
+the boundary condition l(t, t) = 0 and the dynamical equation (2.89) for l, we deduce
+l(t, t) = 0 for t  t. similarly, m(t, t)  l(t, t)(0)(t) = 0 for t  t. therefore, we
+have in the symmetric phase and for t > t :
+
+1 (p, t, t) = 2 m(p, t, t0) (0(p)   ) m(p, t, t0)
+
+
+(2.109)
+
+and for the four-point function :
+
+
+
+11 (p1, p2, p3,p pi, t, t) =  r d3p
+
+(2)3
+
+trhl(p  p1  p2,p, p1, p2, t, t0)
+11 (p,p + p1 + p2, p3,x pi, t0, t)i
+
+
+
+(2.110)
+
+by using (2.86) :
+
+
+
+11 (p1, p2, p3,p pi, t, t) = z
+
+d3p
+
+(2)3 trhl(p  p1  p2,p, p1, p2, t, t0)(0(p)   )
+l(p,p + p1 + p2, p3,x pi, t, t0)(0(p + p1 + p2) +  )i
+
+(2.111)
+let us emphasize that it is 0, the static hb solution and not (0) which appears in
+expression (2.111).
+
+for t > t, we have, still in the symmetric phase :
+
+
+1 (p, t, t) = 2 m(p, t, t0) (0(p) +  ) m(p, t, t0)
+
+(2.112)
+
+
+
+11 (p1, p2, p3,p pi, t, t) = z
+
+d3p
+
+(2)3 trhl(p  p1  p2,p, p1, p2, t, t0)(0(p)   )
+l(p,p + p1 + p2, p3,x pi, t, t0)(0(p + p1 + p2) +  )i
+
+(2.113)
+
+22
+
+to conclude, in order to obtain approximations for the causal correlation functions
+c 2, c 3 and c 4, we have rst to solve the tdhb equations (2.52) and (2.53) for (0)(t) and
+(0)(t) and to evaluate the matrices r, r, t and t for the tdhb solutions. we then solve
+equations (2.89) and (2.90) for l(t, t) and m(t, t)  l(t, t)(0)(t) (t > t  t0) backward
+in time from t to t0 with the boundary conditions (2.91)-(2.99). finally, we evaluate
+expression (2.105). therefore, it is not necessary to solve the dynamical equations (2.79)
+and (2.80) for (t, t) and (t, t) .
+
+the expressions we obtain in this way for three-point and four point correlation
+functions are not completly satisfactory. indeed, in the static case, when (0)(t) = 0 and
+(0)(t) = 0 are time-independent, the approximate correlation functions do not depend
+only on the time dierence t t as they should (the two-point function in the symmetric
+phase is a particular case). we will cure this artefact by optimizing with respect to the
+initial state in section 3.
+
+retarded green functions :
+
+the function 
+
+1 is an approximation for the green function with the time-ordered
+
+green function :
+
+c 2
+
+(x, y, t, t) = t r(cid:16)t h (x, t, t0) h (y, t, t0)d(t0)(cid:17)
+
+t r(cid:16)h(x, t, t)d(t0)(cid:17) t r(cid:16)h (y, t, t0)d(t0)(cid:17)
+
+.
+
+(2.114)
+
+to obtain the approximations for the anticausal two-time functions, it is sucient to
+replace in the functional (2.36) the term kc by the analogous term kb. formula (2.105)
+and (2.106) are then interchanged.
+
+the retarded green function is dened by :
+
+(x, y, t, t) = i (t  t)t r(cid:16)[h (x, t, t0), h(y, t, t0)]d(t0)(cid:17) .
+
+(2.115)
+
+it is interesting to obtain an approximation for the retarded green function. it is this
+green function which appears in the study of the response of the system to a small exter-
+nal perturbation. moreover, the kms condition allows to relate the dierent components
+of the green function in the real time formalism for quantum field theories at nite
+temperature [17]. these components can all be expressed from the retarded green func-
+tion. the real parts of the time-ordered green function c 2 and of the retarded green
+function  coincide. they describe phenomena such as debye screening in a plasma in the
+problem of charged particules in an external electromagnetic eld. but one has to con-
+sider the imaginary part of the retarded green function to describe damping phenomena
+[18]. the optimization with respect to the initial state in section 3 will allows to obtain
+approximated green functions wich verify the kms condition (the uctuation-disspation
+theorem).
+
+23
+
+from expression (2.106) and the analogous formula for the correlation function with
+
+the anti-t product, we obtain an approximation for the retarded green function :
+
+(x, y, t, t) = i (t  t)
+
+h4(cid:16) m(t, t0)  0l(t, t0)(cid:17)  (cid:16)m(t, t0)  l(t, t0)0(cid:17)
++tr(cid:16)l(t, t0)0l(t, t0)(cid:17)  tr(cid:16)l(t, t0) l(t, t0)0(cid:17)i
+
+(2.116)
+
+in the symetric phase :
+
+(~x, ~y, t, t) = i (t  t) 4 m(t, t0) m(t, t0) .
+
+(2.117)
+
+the exact expression (2.115) remains identical if we translate the refence time t0
+to another time t such as t > t > t0. by using the dynamical equation for (0)(t)
+and equations (2.89) and (2.90), we show that the approximation (2.116) has the same
+property. indeed, if we call r(t, t) the expression obtained by replacing in the bracket
+of equation (2.116) t0 by t with t0  t < t, we have for t > t :
+
+dr
+dt
+
+= 2( m(t, t)  (0)(t))l(t, t)   1
+
+0! (t  t)
+
+we deduce : dr
+
+dt = 0 pour t < t. we thus have :
+
+(x, y, t, t) = i (t  t)r(t, t)
+
+(2.118)
+
+(2.119)
+
+when the time t tends to t, the exact formula (2.115) concides with the commuta-
+tor of two elds h(t, t0) at equal time which is vanishing. the approximated expression
+gives also (t, t) = 0 since m
+
+2 and l(t, t) = 0.
+
+1 (t, t) =  1
+
+similarly, we can obtain approximations for the retarded green function with two
+
+eld operators  dened according to :
+
+,(x, y, z, u, t, t) = i(tt)t r(cid:16)[h (x, t, t0)h (y, t, t0), h (z, t, t0)h (u, t, t0)]d(t0)(cid:17) .
+
+(2.120)
+in the symmetric phase, from expression (2.113) and from the analogous formula for the
+correlation function with the anti-t product, we deduce an approximation for the retarded
+green function with two eld operators :
+
+,(p1, p2, p3,x pi, t, t) = i (t  t) z
+tr[l(p  p1  p2,p, p1, p2, t, t0) 0(p) l(p,p + p1 + p2, p3,x pi, t, t0)  ]
+tr[l(p  p1  p2,p, p1, p2, t, t0)  l(p,p + p1 + p2, p3,x pi, t, t0) 0(p + p1 + p2)]
+
+(2.121)
+indded, if
+again, the right member of this equation does not depend on the time t0.
+we call s(t, t) the expression obtained by replacing in the right member t0 by t, with
+
+d3p
+(2)3
+
+24
+
+t0  t < t, we have for t > t :
+= 2 tr[l(t, t) 0
+
+ds
+dt
+
+and we deduce : ds
+
+ik
+j  0] (t  t) ,
+
+ik
+j    l(t, t) 
+dt = 0 for t < t. we have therefore :
+,(p1, p2, p3,x pi, t, t) = i (t  t)s(t, t)
+
+(2.122)
+
+(2.123)
+
+the limit when the two times t and t concide :
+
+when t  t, t = t = t + 0, expression (2.105) for the approximated two point
+
+function becomes :
+
+1 (t, t) = 2( m(t, t0)  0l(t, t0)) (0   ) (m(t, t0)  l(t, t0)0)
+
+
++
+
+1
+2
+
+trhl(t, t0)(0   )l(t, t0)(0 +  )i
+
+(2.124)
+
+at the initial time t = t0, we get as we should the tdhb result : 
+1 (t0, t0) = g0. indeed,
+1 (t0, t0) = 1/2 and l(t0, t0) = 0. however for later times, this approximation is in
+m
+general dierent from the result of the tdhb evolution : 1
+2(0)(t) = g(0)(t). the case at
+equilibrium in the symmetric phase is a special case since, as we will show in section 3,
+we have :
+
+
+1 (p, t = 0) = g0(p)
+
+(2.125)
+
+this wont be true in the asymmetric phase. the result (2.125) is to relate to the fact
+that, at equilibrium in the symmetric phase, the two approximations for the two-time and
+two-point function obtained with or without the optimization with respect to the initial
+state concide (see below eq. (3.58)).
+
+let us examine the four-point function when the two times concide. in the sym-
+metric phase, the limit t = t  0 = t + 0 in expression (2.111) for the four-point function
+
+11 gives :
+
+
+
+11 (p1, p2, p3,p pi, t, t) = z
+
+d3p
+(2)3 tr[l(p  p1  p2,p, p1, p2, t, t0)(0(p)   )
+l(p,p + p1 + p2, p3,x pi, t0, t)(0(p + p1 + p2) +  )
+
+(2.126)
+
+]
+
+the boundary conditions for the function l write
+
+l
+
+11 (p1, p2, p3,x pi, t, t) = 
+
+1
+
+2 h3(p1 + p3) + 3(p2 + p3)i ,
+
+(2.127)
+
+the other matrix elements of l being equal to zero. we thus have at the initial time :
+
+
+
+11 (p1, p2, p3,x pi, t0, t0) =
+
+1
+2
+
+0
+11(p1)0
+
+11(p2)h3(p1 + p3) + 3(p2 + p3)i .
+
+(2.128)
+
+25
+
+the mean-eld approximation for which c4 = 0 corresponds to (see eq. (2.74)) :
+
+
+
+11 (x, y, z, u, t, t) = 2
+
+1 (x, z, t, t)
+
+1 (y, z, t, t)
+= 2g(0)(x, z, t)g(0)(y, u, t) + 2g(0)(x, u, t)g(0)(y, z, t)
+
+1 (y, u, t, t) + 2
+
+1 (x, u, t, t)
+
+.
+
+(2.129)
+
+in momentum space, this corresponds to :
+
+
+
+11 (p1, p2, p3,x pi, t, t) = 2
+
+1 (p1, t, t)
+
+1 (p2, t)[(p3 + p1) + (p3 + p2)]
+
+(2.130)
+
+at the initial time, we recover the result of the wick theorem given by expression 2.128 in
+momentum space. however, for later times, owing to the correlations we have taken into
+account in the dynamics, approximation (2.126) for the four-point correlation function is
+dierent from the result of the wick theorem.
+
+in nonrelativistic many-body problems, the mean-eld tdhf calculations correctly
+predict the expectation values but underestimate the uctuations. balian and veneroni
+have showed the advantage to use a variational principle adapted to calculate the uctua-
+tions. for a pur state in the case of heavy-ions collisions, one obtains in this way a better
+agreement with experiments for the width of the mass distributions [19]. the example of
+the quartic oscillator in one dimension shows also the usefullness of the method developped
+by balian and veneroni to calculate the uctuations of the operator x2, < x4 >  < x2 >2,
+though staying in a mean-eld approach [14].
+
+26
+
+3 optimization of the initial state
+
+3.1
+
+introduction
+
+in physical situations, the initial state is not completly known. only the expectation
+values of a few observables are known, for instance :
+
+, h(x)(y)it0
+
+, h(x)(y)(z)it0
+
+h(x)it0
+the exact state d(t0) can be written as exp( h). the operator h is equal to
+the hamiltonian of the system at thermal equilibrium but it can also contain other terms
+corresponding to conserved quantities, like the charge operator for a complex scalar eld.
+for a nonequilibrium situation, the operator h is dierent from the hamiltonian h.
+
+, h(x)(y)(z)(u)it0 .
+
+(3.1)
+
+we will approximate this initial state in the following way. we use the fact that the
+
+operator e h is a solution of the bloch equation :
+
+d
+du
+
+eu h =  h eu h , 0 < u <  .
+
+(3.2)
+
+following the general method of [6], [13] to evaluate variationally a given quantity, we
+introduce an ansatz operator d(t) and we consider equation (3.2) as a constraint for the
+complex times t = t0 + i(u) with the boundary condition d(t0 + i) = 1. we introduce
+also a lagrange multiplier a(t) associated to this constraint. the functional to minimize
+writes :
+
+z(a(t),d(t)) = t r (a(t0 + i 0) d(t0 + i 0))t rz t0+i
+(3.3)
+where zdyn is given by expression (2.15) of section 2. the ansatz operators d(t) and a(t)
+are subject to the boundary conditions a() = 1 and d(t0 + i ) = 1.
+
++ i h d(t)!+zdyn ,
+
+dta(t) dd(t)
+
+dt
+
+t0
+
+let us note that for a complex value of t, a(t) is not close to 1 in the limit of vanish-
+ing sources. indeed, the stationarity condition of z with respect to arbitrary variations
+of d(t) writes :
+
+da(t)
+dt  ia(t) h = 0
+
+(3.4)
+
+and the solution of this equation for t = t0 + i(  u) is equal to : a(t) = a(t0) exp(( 
+u) h).
+
+the approximate dynamical equation for d(t) and a(t) are coupled. d(t0) depends
+
+on a(t) for t > t0 and therefore on the sources j contrary to the exact state d(t0).
+
+27
+
+3.2 the variational spaces
+
+for the variational spaces for d(t) and a(t), we choose again gaussian operators charac-
+terized by the contractions d(x, t), d(x, y, t) and a(x, t), a(x, y, t) where the time t is
+on the two segments [t0 + i , t0[ and [t0, +[ in the complex plane.
+
+the boundary condition d(t0 + i) = 1 writes :
+
+1
+
+d (t0 + i) = 0
+
+,
+
+1
+d
+
+d(t0 + i) = 0 .
+
+(3.5)
+
+let us write the functional z (3.3) with the elementary contractions :
+
+z(na, a, a; nd, d, d) = n(t0)z t0
+
+t0+i 
+
+dt "dn(t)
+
+dt
+
+|a(t)=cte + i n(t) z d3x ec(x, t)# +zdyn ,
+
+(3.6)
+
+or, by integrating by part :
+
+z(na, a, a; nd, d, d) = n(t0+i)+z t0
+
+t0+i 
+
+dt"dn(t)
+
+dt
+
+|d(t)=cte  i n(t) z d3x ec(x, t)#+zdyn .
+
+(3.7)
+
+we have used the notation :
+
+z d3x ec(x, t) = t r(cid:16)d(t) a(t) h(cid:17) =< h >c
+
+.
+
+(3.8)
+
+3.3 the dynamical equations
+
+for complex values of the time t0 + i  < t < t0, the dynamical equations for the contrac-
+tions d, d, a and a write :
+
+2i d =  (d +  ) hc (d   )  bc + (d +  ) wc ,
+
+i d =  (d +  ) hc (d   ) ,
+
+2i a = (a   ) hc (a +  )  cb  (a   ) wc ,
+
+i a = (a   ) hc (a +  ) .
+
+(3.9)
+
+(3.10)
+
+(3.11)
+
+(3.12)
+
+these dynamical equations are coupled through the boundary conditions d(t0 + i) =
+1,a(t = +) = 1 which write :
+
+1
+
+d (t0 + i) = 0 ,
+
+1
+a (t = +) = 0 ,
+
+d(t0 + i) = 0 ,
+
+a(t = +) = 0 .
+
+1
+d
+
+1
+a
+
+28
+
+(3.13)
+
+(3.14)
+
+for the contractions b, b et c, c, the dynamical equation write :
+
+b = 0 ,
+
+b = 0 ,
+
+i c =  wc ,
+
+i c = 2 (cid:16)c hc   hcc(cid:17) .
+
+(3.15)
+
+(3.16)
+
+(3.17)
+
+(3.18)
+
+we have d< h>c
+
+dt = 0. we have introduce the vector wc and the matrix hc (analogous
+to w and h ) to express the variation  < h > in terms of the variations c and c. all
+the contractions  et  are continous at t = t0. in the complex time interval [t0 + i, t0],
+b and b are constant : b = b(t0), b = b(t0).
+
+3.4 expansion in powers of the sources
+
+d (t), a(t) = (0)
+
+d (t), d(t) = (0)
+
+we use the index (0) for the solutions of the dynamical equations in the limit with no source
+: d(t) = (0)
+a (t), a(t) = (0)
+a (t). since a(t) 6= 1 even in
+the limit with no source, this limit does not correspond to 1
+a = 0, contrary
+a
+to what happens when we do not optimize the initial state (see section 2). therefore,
+(0)
+d . however, we can use a continuity property at t = t0. in the
+b
+limit with no source, a(t0 + i0) = a(t0 + 0)  1. at the time t0, we thus have :
+
+d and (0)
+
+a = 0, 1
+
+6= (0)
+
+b
+
+6= (0)
+
+(0)
+b (t0) = (0)
+
+c (t0) = (0)
+
+d (t0) = 0 ,
+
+(0)
+b (t0) = (0)
+
+c (t0) = (0)
+
+d (t0) = 0 ,
+
+(3.19)
+
+(3.20)
+
+where 0 and 0 are the hb static solutions associated to the operator h and verify :
+
+w0 = 0 ,
+
+(3.21)
+
+0 h0  =  h0 0 .
+
+(3.22)
+0 et h0 are related by equations similar to (2.55) and (2.56). the expressions for
+the vector w0 = w( 0, 0) and the matrix h0 = h( 0, 0) are obtained from those in
+appendix d by replacing f0 and g0 by the time-independent functions f0 and g0. (we
+recall that h comes from the variation of < h > with respect to  and has to be evaluated
+at 0, 0 to obtain h0. since h is a time-independent operator, h0 is time-independent.)
+we stress the dierence between the quantities (0), 0 and 0.
+
+29
+
+the expansion at zero order of equations (3.9)-(3.12) writes :
+
+2 i (0)
+
+i (0)
+d = (cid:16)(0)
+
+2 i (0)
+
+i (0)
+
+a = (cid:16)(0)
+
+d  (cid:17) ,
+
+d = (cid:16)(0)
+d + (cid:17) w0 ,
+d + (cid:17) h0 (cid:16)(0)
+a = (cid:16)(0)
+a  (cid:17) w0 ,
+a  (cid:17) h0 (cid:16)(0)
+a + (cid:17) .
+(0)
+d = 0 and (0)
+
+since w0 = 0, we have for t0 + i < t < t0 :
+continuity at t = t0, we thus obtain for 0 < u <  :
+
+a = 0. by using the
+
+(0)
+d (t0 + i  i u) = 0 .
+a)(0)(t0 + i  i u) = 0 ,
+
+1
+a
+
+(
+
+(3.27)
+
+(3.28)
+
+the solution of (3.24) with the boundary condition (0)1
+
+d
+
+(t0+i) = 0 is the following
+
+(3.23)
+
+(3.24)
+
+(3.25)
+
+(3.26)
+
+(3.29)
+
+(3.30)
+
+(3.31)
+
+(3.32)
+
+(0)
+d (t0 + i  i u) =  coth(u h0  ) ,
+
+which can also be written as :
+
+d (t0 + i  iu) =   1 
+(0)
+
+2
+
+1  exp(u h02 )!
+
+or in the uniform case :
+
+p
+
+(0)
+
+d (t0 + i  iu) =   1
+with, for the 4 theorie, p = qg0(p) and
+g0(p) =  p2 + m2
+
+coth( up
+2 )
+
+0
+
+0
+
+2 )!
+p coth( up
+
+0 +
+
+b
+2
+
+2
+
+0 +
+
+b
+2
+
+g0(x, x)!
+
+at u = , we have to obtain the static hb solution associated to the hamiltonian h , 0
+
+(0)
+d (t0 + i 0) = 0 =  coth( h0  ) ,
+
+the solution of (3.26) writes :
+
+a (t0 + i  i u) =  coth((  u) h0  ) .
+(0)
+
+one checks that for u = , (0)1
+
+a
+
+(t0) = 0.
+
+(3.33)
+
+(3.34)
+
+30
+
+at the rst order, w(0)
+
+c (t0) = w0(t0) = 0 and (0)
+
+c (t0) = 0. therefore the right
+members of equations (3.17) and (3.18) are vanishing at t0. we deduce that at the rst
+order in the expansion in powers of the sources, c and c are constant in the interval [t0 +
+i, t0] and equal to 0 and 0 respectively. we can also obtain this result from the relations
+of appendix c and from the expressions obtained above for (0)
+a (t).
+
+a (t), (0)
+
+d (t), (0)
+
+d (t), (0)
+
+at the next order, the approximated initial state characterized by d(t0), d(t0) is
+
+no more equal to the static hb solution 0, 0.
+
+instead of using the expansion of equations (3.9) and (3.10) for d and d, it is
+more convenient to expand at the rst order equations (3.17) and (3.18) for c and c.
+for t0 + i  t  t0 :
+d
+dt
+
+(~x, ~y, t, t) =  (cid:20)t (t, t) 
+
+kj)(t, t)(cid:21) ,
+
+t,(jk 
+
+(3.35)
+
+1
+2
+
+i
+
+i d
+dt
+
+ij(~x, ~y, ~x1, t, t) = 2 h h0    h0 
+k)    r,(k 
+
+0
+
+k)
+ r,(kl 
+lk)
+
+.
+
+(3.36)
+
+0(cid:21)ij
+
++0 r,(k 
+
+
+1
+2
+
+0 r,(kl 
+
+lk)  +
+
+1
+2
+
+the matrices t, t and r, r associated to the operator h and depending on 0 and on
+0 are analogous to the matrices t, t, r and r. the quantities h0, 0, 0 are time-
+independent for t0 + i  t  t0. the matrices t, t and r, r are also time-independent for
+t0 +i  t  t0. indeed, these are dened from the expansion of wc and hc in terms of the
+variations c and c (see equations (2.77) and (2.78)) and they have to be evaluated for
+the values (0)
+. now, as we have noticed before, these quantities do not depend
+on the complex time and are equal respectively to 0 and 0. for the same reason, 0
+appears in the last two lines of (3.36) and not (0)
+d as in equation (2.80) which describes
+the evolution of (t, t) for real time.
+
+c and (0)
+c
+
+3.5 approximation for the two-point function
+
+in the following we consider an uniform problem. in momentum space, equation (3.35)
+for  writes :
+
+d2
+dt2 
+
+1 (p, t, t) = g0(p) 
+
+1 (p, t, t) +
+
+b
+4
+
+0 zp1+p2=p
+
+d3p1
+(2)3
+
+i
+
+d
+dt
+
+1 (p, t, t) = 
+
+
+2 (p, t, t)
+
+31
+
+d3p2
+(2)3 
+
+11(p1, p2, p, t, t) .
+
+(3.37)
+
+(3.38)
+
+symmetric phase
+
+in the symmetric phase, 0 = 0 and the equation for the function 
+
+1 (p, t, t) for
+
+t0 + i < t < t0 writes :
+
+d2
+dt2 
+
+1 (p, t, t) = g0(p)
+
+1 (p, t, t) ,
+
+where
+
+ g0(p) = p2 + m2
+
+0 +
+
+b
+2
+
+g0(x, x)
+
+we can therefore relate 
+
+1,2(p, t0, t) to 
+
+1,2(p, t0 + i, t) :
+
+  
+
+1
+
+
+2 ! (p, t0, t) = a(p)   
+
+1
+
+
+2 ! (p, t0 + i, t)
+
+where a(p) is the matrix :
+
+a(p) =   cosh p
+
+p sinh p cosh p!
+
+p
+
+sinh p
+
+(3.39)
+
+(3.40)
+
+(3.41)
+
+(3.42)
+
+with p = qg0(p).
+
+we then use the fact that d(t0 + i) = 1. we deduce :
+
+c(t0 + i) = b(t0 + i)
+
+, c(t0 + i) = b(t0 + i) .
+
+(3.43)
+
+by introducing the functions  and  which come from the expansion at the rst order in
+powers of the sources of b and b (and which are analogous to  and ), we thus have :
+
+(t0 + i, t) = (t0 + i, t)
+
+(t0 + i, t) = (t0 + i, t)
+
+(3.44)
+
+(3.45)
+
+now b and b are constants for t0 + i < t < t0 (eq. (3.15) and (3.16)). consequently :
+
+(t0, t) = (t0 + i, t)
+
+(t0, t) = (t0 + i, t)
+
+(3.46)
+
+(3.47)
+
+let us compare the expansion of b, c and b, c at t0. by using equation (c.6) at t = t0,
+
+k(t0, t) = (0 +  ) lk(t, t0) (0   ) ,
+
+and from equation (c.1) :
+
+k(t0, t) = (0 +  )(mk(t, t0)  lk(t, t0) 0) .
+
+(3.48)
+
+(3.49)
+
+32
+
+the comparison of these last two equations to (2.86) and (2.87) leads to :
+
+k(t0, t) = k(t0, t) + 2 (mk(t, t0)  lk(t, t0)0)
+
+k(t0, t) = k(t0, t) + 2 0lk(t, t0)  2  lk(t, t0)0 .
+
+finally, we use :
+
+(t0 + i, t) = (t0, t)
+
+(t0 + i, t) = (t0, t)
+
+in the symmetric phase, l = 0, therefore :
+
+(t0 + i, t) = (t0, t) + 2 m(t, t0)
+
+from equation (3.41), we obtain :
+
+(p, t0, t) = (cid:16)a1(p)  1(cid:17)1
+
+2 m(p, t, t0)
+
+(3.50)
+
+(3.51)
+
+(3.52)
+
+(3.53)
+
+(3.54)
+
+(3.55)
+
+for t > t, the relation (2.109) of section 2 is therefore modied according to :
+
+1 (p, t, t) = 4 m(p, t, t0)(a1(p)  1)1 m(p, t, t0)
+
+(a1(p)  1)1 =  
+!
+
+ 1
+
+2 p)
+
+ 1
+
+2
+
+2p
+
+2 coth( 
+
+2 p)
+
+coth( 
+ 1
+
+2
+
+ p
+
+with
+
+for t > t, we have :
+
+(3.56)
+
+(3.57)
+
+(3.58)
+
+
+
+1 (p, t, t) = 4 m(p, t, t0)(cid:16)(a1(p)  1)1 + 1(cid:17)  m(p, t, t0)
+
+we check again that in the limit t = t = t0, we obtain the tdhb solution at t0 :
+1 (p, t0, t0) = 1
+
+2p
+
+coth(p) = g0(p, t0).
+
+for the two-point function in the symmetric phase, one can check from expression
+(2.57) for the matrix 0 (and where the quantities which appear correspond now to h
+and no more h) that :
+
+0(p)   = 2(a1(p)  1)1
+
+(3.59)
+
+therefore expressions (2.109) and (3.56) for 
+1 in the symmetric phase obtained without
+or with optimization with respect to the initial state concide when 0 = 0 which is
+the case at equilibrium. this is not true in the asymmetric phase. it will be also more
+interesting to study the four-point function in section 3.6.
+
+it is also interesting to calculate the approximation obtained for the retarded green
+function (2.115) when we optimize both the dynamics and the initial state. in the sym-
+metric phase, we have for the time-ordered correlation function for t > t :
+
+1 (t, t) = 2 m(t, t0)(t0, t)
+
+
+(3.60)
+
+33
+
+for the anti-t product and t > t :
+
+
+1 (t, t) = 2 m(t, t0)(t0, t)
+
+by using (3.55) and the fact that
+
+we obtain :
+
+(a1(p)  1)1 +h (a1(p)  1)1it
+(p, t, t) = i(t  t) 4 m(p, t, t0) m(p, t, t0)
+
+=  ,
+
+(3.61)
+
+(3.62)
+
+(3.63)
+
+which is identical to the formula (2.117) obtained without the optimization of the initial
+state. for the retarded green function the approach of section 2 is therefore sucient.
+
+the case at equilibrium
+
+in this case, the two-time functions should depend only on the dierence t  t.
+unfortunatly, this is not true for the expressions we gave for the three-point and four-
+point functions in section 2. at equilibrium, (0)(t) = 0, (0)(t) = 0 and the matrices
+t, t, r, r are constant. in equations (2.89) and (2.90) for lk and mk, the shift t  t + t is
+therefore equivalent to a shift of the initial time t0  t0t. by writing the corresponding
+shifts of the functions lk and mk  lk0 and by inserting them in eq. (2.105) or in eq.
+(2.107), one sees that, in general, our approximations are not invariant under the shift
+t  t + t, t  t + t, t0 being constant. they contain a spurious dependence on the
+initial time t0.
+
+11g0 +0
+
+1 is proportional to 0
+
+the case of the two-point function in the symmetric phase is special. from equation
+(2.90) for m, we have m = it mt and the variation of expression (2.109) is equal to
+zero because 
+22 which is vanishing for the static solution.
+however, this is no more true for the four-point function  given by equation (2.113).
+the variation  involves two types of terms : one with the matrix r proportional to
+the coupling constant and another with the matrix h0. generally,  is non vanishing.
+this spurious dependence on the initial time will disappear when we take into account the
+optimization with respect to the initial state : the two-time correlation functions depend
+only on the time dierence t  t as they should.
+
+at equilibrium, in the symmetric phase, we can solve equation (2.90) for m :
+
+m
+1 (p, t, t0) = 
+1
+m
+2 (p, t, t0) = 
+2i
+
+1
+2
+
+cos(p(t0  t))
+1
+sin(p(t0  t))
+p
+
+(3.64)
+
+(3.65)
+
+we dene t = t  t. for t < 0, equation (3.56) gives
+cos pt 
+
+
+1 (p, t) =
+
+1
+2p
+
+(coth
+
+p
+
+2
+
+34
+
+1
+i
+
+sin pt)
+
+(3.66)
+
+for t > 0, we use equation (3.58) :
+
+
+1 (p, t) =
+
+1
+2p
+
+(coth
+
+p
+
+2
+
+cos pt +
+
+1
+i
+
+sin pt)
+
+(3.67)
+
+we check that 
+1 depends only on t = t  t. expressions (3.66) and (3.67) are
+interchanged by changing t to t, which was not explicit on formula (3.56) and (3.58).
+1 (p, t = 0) = g0(p). in this case, at equal time, the two-
+time and two-point function concides with the mean-eld hb solution for the two-point
+function.
+
+for t = 0, we obtain 
+
+by taking the fourrier transform in time of equations (3.66) and (3.67) :
+
+
+
+1 (p, ) = z 0
+
+
+
+d(t)ei(i)t
+
+1 (p, t) +z +
+
+0
+
+d(t)ei(+i)t
+
+1 (p, t) ,
+
+(3.68)
+
+we obtain :
+
+
+
+1 (p, ) = i"
+
+np + 1
+
+2  (p  i)2 
+
+np
+
+2  (p + i)2#
+
+(3.69)
+
+where np is the occupation number : 2np + 1 = coth p
+2 .
+
+we will now show that our approximation for the two-time correlation function with
+two eld operators satises to the uctuation-dissipation theorem. this theorem can be
+written as a relation between the fourrier transform in time of the correlation function
+c 2
+
+(x, x, t, t) and the response function
+
+2(x, x, t, t) = t r(cid:16)[h (x, t, t0), h(x, t, t0)]d(t0)(cid:17)
+
+in the following way :
+
+2(x, x, ) = (1  e) c 2
+
+(x, x, ) ,
+
+where the fourrier transform in time is dened according to :
+
+2(x, x, ) = z +
+
+
+
+d(t  t) ei(tt )2(x, x, t  t)
+
+(3.70)
+
+(3.71)
+
+(3.72)
+
+the correlation function c 2 gives us informations about the uctuations in the equilib-
+rium state while the response function 2 contains informations on the dynamics of the
+system which has been driven from the equilibrium by a small external perturbation.
+the function 2 appears also in the dissipation energy of the system. therefore, the
+uctuation-disspation theorem tells us that, in systems near equilibrium, the transport
+properties which are linear in the external forces can be calculated from the uctuations
+at equilibrium [20].
+
+by using the denition
+
+t r(h(x, t, t0)h(y, t, t0)d(t0))  (x, t)(y, t) < (x,  )(y,  ) >
+
+(3.73)
+
+35
+
+with  = t  t, the uctuation-dissipation theorem can be written in the following way :
+
+
+
+r +
+
+d ei < (x,  )(y) >= ez +
+= z +
+
+
+
+d ei < (y)(x,  ) >
+d ei(i) < (x,   i)(y) >
+
+
+
+(3.74)
+
+in order to check the uctuation-dissipation theorem on our approximations for the two-
+point correlation function, it is therefore sucient to check that expression (3.66) for
+t =  is equivalent to expression (3.67) for t =   i, which can be done easely.
+
+at equilibrium, expression (2.117) for the retarded green function with two eld
+
+operators in the symmetric phase gives :
+
+(p, t, t) = (t  t)
+
+1
+p
+
+sin p(t  t)
+
+(3.75)
+
+3.6 four-point function : a perturbative expansion
+
+still in the symmetric phase and for the uniform case, we consider now the four-point
+function .
+
+3.6.1 the response function r(q2, t, t)
+
+when one couples a source j (x, y, t) to the the operator h (x, t, t0)h(y, t, t0), the
+linear response theory gives the variation of g(x, y, t) = t r(h(x, t, t0)h (y, t, t0)d(t0))
+in presence of the source :
+
+g(x, y, t) = z +
+
+t0
+
+dtz d3z d3u ,(x, y, z, u, t, t)j (z, u, t)
+
+(3.76)
+
+where , is the retarded green function with four eld operators dened in eq.
+(2.120). in presence of a source of the following type :
+
+j (x1, x2, t) = j (t)eiq .x13(x1  x2) ,
+
+g(x, y, t) = z +
+
+t0
+
+dtj (t)z d3z eiq .z,(x, y, z, z, t, t)
+
+(3.77)
+
+(3.78)
+
+by introducing the fourrier transform , we obtain for x = y :
+
+g(x, x, t) = eiq .xz dtj (t)z
+
+d3k
+(2)3
+
+d3p1
+(2)3 ,(k,qk, p1, qp1, t, t) (3.79)
+
+the polarization function r is dened according to :
+
+r(q2, t, t) 
+
+g(x, x, t)
+
+eiq .xj (t)(cid:12)(cid:12)(cid:12)(cid:12)j =0
+
+36
+
+(3.80)
+
+i. e. :
+
+r(q2, t, t) = z
+
+d3k
+(2)3
+
+d3p1
+(2)3 ,(k,q  k, p1, q  p1, t, t)
+
+(3.81)
+
+a variational approximation for the polarization function r is obtained by using expres-
+sion (2.121) for , as a function of l and 0.
+
+in the static case, r(q2, t, t) depends only on t = t  t and is proportional to
+
+(t  t). we thus dene its fourrier transform in time by :
+
+r(q2, ) = z +
+
+0
+
+d(t) eit+tr(q2, t)
+
+(3.82)
+
+the polarization function r(q2, t, t) can be recognized as the fourrier transform
+with respect to x  y of the retarded green function for the operators 2(x) and 2(y) :
+2,2(x, x, y, y, t, t) = i(tt)t r(cid:16)[h (x, t, t0)h (x, t, t0), h(y, t, t0)h (y, t, t0)]d(t0)(cid:17)
+
+(3.83)
+
+we have :
+
+2,2(q2, t, t) = z d3x eiq .(xy) 2,2(x, x, y, y, t, t)
+
+= r(q2, t, t)
+
+(3.84)
+
+this function is directly related to the viscuosity in the 4 theory. from the spectral
+representation :
+
+2,2(p, p0) = lim
+
+0+z +
+
+
+
+the viscuosity is dened by :
+
+d
+
+2,2(p, )
+p0   + i
+
+,
+
+2,2  lim
+
+p,p00"2,2(p, p0)
+
+p0
+
+#
+
+(3.85)
+
+(3.86)
+
+calculations of 2,2 have been done in the limit of high temperature and the result have
+been compared to the classical approximation [21].
+
+actually we will begin by calculating the following non-retarded green function :
+
+(q2, t, t) 
+
+1
+2
+
+c
+
+11(x, x, t)
+
+eiq .xj (t)(cid:12)(cid:12)(cid:12)(cid:12)j =0
+
+11 as :
+
+which can be written with the four-point function 
+
+(q2, t, t) =
+
+i
+
+2 z
+
+d3k
+
+(2)3 z d3p1
+
+(2)3 
+
+11 (k,q  k, p1, q  p1, t, t)
+
+(3.87)
+
+(3.88)
+
+in the following, we will therefore consider the function (k,q  k, p1, q  p1, t, t).
+we will show the dierences between the approximations for the function (q2, t, t)
+when we do or do not optimize with respect to the initial state.
+
+37
+
+3.6.2 resolution of the dynamical equations for complex values of the time
+
+in the symmetric phase, we have for t0 + i  t  t0 :
+
+i
+
+d
+dt
+
+
+
+i
+
+d
+dt
+
+12  
+
+21
+
+11 (p1, p2, p3,x pi, t, t) = 
+12 = g0(p2)
+
+21 = g0(p1)
+
+
+11  
+11  
+
+22 
+
+22 
+
+b
+4
+b
+4
+
+0
+11(p1) i
+0
+
+11(p2) i
+
+i
+
+d
+dt
+
+i
+
+d
+dt
+
+
+22 = g0(p2)
+
+21 + g0(p1)
+12
+
+where i is the following integral :
+
+i = zp4+p5=p1+p2
+
+d3p4
+(2)3
+
+d3p5
+(2)3 
+
+11 (p4, p5, p3,x pi, t, t)
+
+(3.89)
+
+(3.90)
+
+(3.91)
+
+(3.92)
+
+(3.93)
+
+these equations are analogous to (2.80), the matrices h0, r and r being replaced by the
+time-independent matrices h0, r and r associated to h and (0) by 0. we see that we
+are not abble to obtain directly an expression analogous to (3.41) which would relate the
+matrices (t0, t) and (t0 + i, t) since the loop term b
+11 i involve all the momenta.
+4
+we will use a perturbative expansion where we neglect this loop term to lowest order.
+from the expression for 0
+
+11, we see that this expansion will be valid when
+
+0
+
+where m() is the self-consistent mass dened by :
+
+b
+4
+
+coth
+
+m()
+
+2  1
+
+m2() = m2
+
+0 +
+
+b
+
+2 z
+
+d3p
+(2)3
+
+1
+
+2qp2 + m2()
+
+coth  
+
+2qp2 + m2()!
+
+(3.94)
+
+(3.95)
+
+at zero temperature, the condition (3.94) for the validity of the perturbative expansion
+writes simply b
+2  m() with m2() 
+m2 + b
+
+4  1. at high temperature it becomes :
+
+b
+
+242 .
+
+to lowest order, by neglecting the loop term i, the solutions of equations (3.89)-
+
+(3.92) write :
+
+
+11 (k,qk, p1, qp1, u, t) = a1 cosh(3u)+b1 sinh(3u)+c1 cosh(4u)+d1 sinh(4u)
+(3.96)
+12 (u, t) = q+k [a1 sinh(3u) + b1 cosh(3u) + c1 sinh(4u) + d1 cosh(4u)] (3.97)
+
+21 (u, t) = k [a1 sinh(3u) + b1 cosh(3u)  c1 sinh(4u)  d1 cosh(4u)]
+
+(3.98)
+
+
+
+38
+
+
+22 (u, t) = kq+k [a1 cosh(3u) + b1 sinh(3u)  c1 cosh(4u)  d1 sinh(4u)]
+
+(3.99)
+where we have used the variable u dened by : t = t0 + i(  u) and we have introduced
+the frequencies
+
+3 = q+k + k
+
+4 = q+k  k
+
+(3.100)
+
+(3.101)
+
+we can therefore express (k,q  k, p1, q  p1, t0 + i, t) as a function of
+
+k being dened by k = qg0(k).
+(k,q  k, p1, q  p1, t0, t). the result is the following :
+(k,qk, p1, qp1, t0+i, t) = a1(k)(k,qk, p1, qp1, t0, t)(at )1(q+k)
+(3.102)
+
+where the matrix a(k) is dened by (3.42) :
+
+k sinh(k)
+
+a(k) =   cosh(k)
+a1(k) =   cosh(k)
+k sinh(k)
+
+k
+
+sinh(k)
+
+cosh(k)!
+ sinh(k)
+cosh(k)!
+
+k
+
+(3.103)
+
+(3.104)
+
+by introducing a column formed with the elements ij, we can write this expression
+
+in the following way, which will be usefull in section 3.6.4 :
+
+
+11
+
+12
+
+21
+
+22
+
+
+
+
+
+
+
+(k,qk, p1, qp1, t0, t) = n(k, q+k)
+
+
+11
+
+12
+
+21
+
+22
+
+
+
+
+
+
+
+where n(k, q + k) is the following 4 by 4 matrice :
+
+n(k, q + k) =
+
+
+
+
+with
+
+a
+
+k+qc
+kd
+
+c
+
+k+q
+a
+k
+
+b
+
+k+q
+
+d
+k
+k+q
+
+k
+a
+
+b
+
+kk+qb kd k+qc
+
+a = cosh(k+q) cosh(k)
+
+b = sinh(k+q) sinh(k)
+
+c = sinh(k+q) cosh(k)
+
+d = cosh(k+q) sinh(k)
+
+39
+
+(k,qk, p1, qp1, t0+i, t)
+
+b
+
+kk+q
+
+d
+k
+c
+
+k+q
+a
+
+
+
+
+(3.105)
+
+(3.106)
+
+(3.107)
+
+(3.108)
+
+(3.109)
+
+(3.110)
+
+if we do not optimize with respect to the initial state, an approximation for the
+
+four-point function 
+
+11 (t, t) is given by equation (2.111) for t > t.
+
+on the other hand, if we optimize with respect to the initial state, 
+
+11 (t, t) is
+
+given by (2.110) for t > t :
+
+
+
+11 (p1, p2, p3,x pi, t, t) =  z
+trhl(p  p1  p2,p, p1, p2, t, t0)(p,p + p1 + p2, p3,x pi, t0, t)i(3.111)
+
+d3p
+(2)3
+
+and we use (3.51) and (3.53) to write
+
+(p1, p2, p3,x pi, t0 + i, t) = (p1, p2, p3,x pi, t0, t)
++2h0(p1)l(p1, p2, p3,x pi, t, t0)   l(p1, p2, p3,x pi, t, t0)0(p2)i
+
+(3.112)
+
+or :
+
+a1(k)(k,q  k, p1, q  p1, t0, t)(at )1(q + k)  (k,q  k, p1, q  p1, t0, t) =
+2h0(k)l(k,q  k, p1, q  p1, t, t0)   l(k,q  k, p1, q  p1, t, t0)0(q  k)i
+
+(3.113)
+
+where 0 is given by (2.57), g0 being replaced by g0.
+
+the matrix elements 
+
+ij (t0, t) can therefore be written in terms of l
+
+ij (t, t0). by
+using (3.111), we nally obtain an approximation for the two-time and four-point function
+
+11 (t, t) which involves only the function l. we recall that this approximation has
+been obtained by neglecting the loop term i (3.93) in the evolution equations of  for
+complex values of the time.
+
+3.6.3 resolution of the dynamical equations for l in the static case
+
+the dynamical equations for the matrix elements of l are given by (2.89). in the static
+case, (0)(t) is equal to 0 given by (2.57), (0)(t) = 0 and g0 is time-independent. in
+the symmetric phase , equations (2.89) write more explicitly in momentum space :
+
+i
+
+d
+dt
+
+11 (k,q  k, pi,pi + q, t, t) = g0(k)l
+l
+
+21  g0(q + k)l
+
+12 + j
+
+i
+
+d
+dt
+
+l
+12 = l
+
+22
+
+11  g0(k)l
+11  g0(q + k)l
+l
+22 = l
+
+12 + l
+21
+
+22
+
+i
+
+d
+dt
+
+l
+21 = l
+
+i
+
+d
+dt
+
+40
+
+(3.114)
+
+(3.115)
+
+(3.116)
+
+(3.117)
+
+with the boundary conditions (2.127). j is the following integral :
+
+j =  b
+
+4 r d3p
+
+(2)3
+
+d3p
+(2)3
+
+1
+p
+
+coth(
+
+p
+2
+
+h0(p)l(p,q + p, pi,pi + q, t, t)
+ l(q  p, p, pi,pi + q, t, t)0(p)i11
+)hl
+12 (p,q + p, pi,pi + q, t, t) + l
+
+j =
+
+b
+
+4 z
+
+(3.119)
+in the previous equations, in order to make the notations more compact, we have ommitted
+when it was possible the arguments of l. let us remark that, on the contrary to
+equations (3.89)-(3.92) for , the solution 0(p) appears inside the loop integral.
+
+similarly to the resolution of the equations for , we will solve the equations
+for l, perturbatively, neglecting rst the loop term j. in the following section, we will
+take into account of the loop term j to rst order. to lowest order, the solutions of
+(3.114)-(3.117) write :
+
+(3.118)
+
+21 (q  p, p, pi,pi + q, t, t)i
+
+l
+11 (k,qk, p1, qp1, t, t) = 
+
+1
+
+l
+12 (k,qk, p1, qp1, t, t) = 
+
+l
+21 (k,qk, p1, qp1, t, t) = 
+
+l
+22 (k,qk, p1, qp1, t, t) =
+
+1
+
+(3.120)
+
+2 h3(k + p1) + 3(q  k + p1)i cos(k+q(tt)) cos(k(tt))
+2ik+q h3(k + p1) + 3(q  k + p1)i sin(k+q(tt)) cos(k(tt))
+2ik h3(k + p1) + 3(q  k + p1)i cos(k+q(tt)) sin(k(tt))
+2kk+q h3(k + p1) + 3(q  k + p1)i sin(k+q(tt)) sin(k(tt))
+
+(3.122)
+
+(3.121)
+
+1
+
+1
+
+(3.123)
+
+formula (3.111) and (3.113) then give, for t = t  t < 0 :
+11 (k,qk, p1, qp1, t, t) = 2h3(k + p1) + 3(q  k + p1)i 
+
+
+
+1 (k, t)
+
+1 (q+k, t)
+(3.124)
+
+where 
+
+1 (k, t) is given by (3.66). we thus have at the lowest order :
+
+(0)(q2, t) = 2iz
+
+d3k
+(2)3 
+
+1 (k, t)
+
+1 (q + k, t)
+
+(3.125)
+
+when we neglect the loop terms i and j in the dynamical equations for  for the
+complex time and in the dynamical equations for l for the time t > t0, we thus recover
+the wick theorem as we should. let us stress that we have neglected the interactions
+which appear in the terms i and j but the interactions remain in the frequencies k which
+involve the renormalized self-consistent mass m() (eq. (2.66)).
+
+at this order, 
+
+11 depends only on the time dierence t = t  t and our ap-
+proximation satises the uctuation-dissipation theorem for the two-time and four-point
+correlation function.
+
+41
+
+if we apply formula (2.111), obtained without optimization with respect to the initial
+state, with the solutions l given by (3.120)-(3.123), we nd again the result of the wick
+theorem. when we neglect the terms with the interaction in the dynamical equations for
+ and l, the two approximations for 
+11 (t, t) obtained with or without optimization
+with respect to the initial state therefore concide. accordingly, at zero order, we can use
+instead of expression (3.113) the simpler expression :
+
+(k,qk, p1,p1+q, t0, t) = (cid:16)0(k)  (cid:17) l(k,qk, p1, qp1, t, t0)(cid:16)0(q  k) + (cid:17)
+
+(3.126)
+the existence of such an expression with matrices (to distinguish from a vectorial expres-
+sion like (3.105) was not obvious at the beginning.
+
+for the polarization function r(q2, t, t), we obtain to lowest order :
+
+r (q2, t, t) = (t  t)z
+(0)
+
+d3p
+(2)3
+
+1
+
+pq+p
+
+"coth
+
+p
+
+2
+
+cos pt sin p+qt + coth
+
+p+q
+
+2
+
+cos p+qt sin pt#
+
+(3.127)
+
+its fourrier transform in time writes :
+
+(0)
+r
+
+d3p
+(2)3
+
+(q2, ) = z
+"(np+q + np + 1)
+
+1
+
+pq+p
+
+p+q + p
+
+( + i)2  (p+q + p)2  (np+q  np)
+
+p+q  p
+
+( + i)2  (p+q  p)2#
+
+(3.128)
+a similar expression appears for instance in [22]. here, we have derived it variationally.
+we stress again that this formula is nonperturbative in the sense that it contains the
+renormalized self-consistent mass.
+
+3.6.4 resolution of the dynamical equations with the interaction terms i and
+
+j at rst order
+
+at rst order, we will solve the dynamical equations (3.89)-(3.92) for
+(k,q  k, p1,p1 + q, u, t) by replacing in the loop integral i the solution 
+obtained at the lowest order. we thus have to solve a rst order dierential sytem with
+a nonhomogeneous term which involves :
+
+i(u) = z
+
+d3l
+(2)3 [a cosh(5u) + b sinh(5u) + c cosh(6u) + d sinh(6u)]
+
+(3.129)
+
+with (see the analogous denitions (3.100) and (3.101) ) :
+
+5 = q+l + l
+
+(3.130)
+
+42
+
+6 = q+l  l
+
+(3.131)
+
+the constants a,b,c and d depend on the momenta l and q. they can be expressed in terms
+of the matrix elements ij(l,ql, pi, qpi, t0, t) and cosh(5), sinh(6), cosh(6),
+sinh(6). at the order we consider, we can use (3.126) and express a, b, c, d with the
+matrix elements l
+2 ) and with the
+occupation numbers nl et nl+q dened by :
+
+ij (l,q  l, pi, q  pi, t, t0), with coth( 5
+
+2 ), coth( 6
+
+2nl + 1 = coth(
+
+l
+2
+
+) .
+
+(3.132)
+
+the relation between 
+
+ij (t0, t) and 
+
+ij (t0 + i, t) writes now :
+
+
+11
+
+12
+
+21
+
+22
+
+
+
+
+
+
+
+
+11
+
+12
+
+21
+
+22
+
+
+
+
+
+
+
+(k,qk, p1, qp1, t0, t) = n(k, q+k)
+
+(k,qk, p1, qp1, t0+i, t)+w (t0, t)
+
+(3.133)
+where the matrix n(k, q + k) given by (3.106) does not contain explicitly the coupling
+constant and w is a vector whose components are proportional to the coupling constant
+b.
+
+by using the fact that the rst term can be written as (3.126), we write in matrix
+
+notation :
+
+(k,q  k, p1, q  p1, t0, t) = (cid:16)0(k)  (cid:17) l(k,q  k, p1, q  p1, t, t0)
+
+(cid:16)0(q  k) + (cid:17) + x(t0, t)
+
+(3.134)
+
+(3.135)
+
+(3.136)
+
+where
+
+and
+
+x3 x4!
+x(t0, t) =   x1 x2
+
+xi = (1  n)1
+
+ij wj
+
+x(t0, t) depends on the momenta k, k + q. the elements xi can be expressed relatively
+simply with the integrals in, jn, kn, ln, mn of appendix e :
+
+b
+
+x1 =
+
+8kk+q{ (nk+q + nk + 1) [3(i1 + i2 + k1 + k2 + k3 + k4)
+
+3
+
+)(j1 + j2  m1  m2  m3  m4)#
+ coth(
+(nk  nk+q) [4(i3 + i4 + l1 + l2 + l3 + l4)
+)(j4 + j3  n1  n2  n3  n4)#
+ coth(
+
+4
+
+2
+
+2
+
+}
+
+(3.137)
+
+43
+
+x2 = b
+
+8k{ (nk+q + nk + 1)"3 coth(
+
+3
+
+2
+
+)(i1 + i2  k1  k2  k3  k4)
+
+4
+
+(j1 + j2 + m1 + m2 + m3 + m4)]
+(nk  nk+q)"4 coth(
+(j4 + j3 + n1 + n2 + n3 + n4)]
+3
+
+2
+
+)(i3 + i4  l1  l2  l3  l4)
+
+}
+
+(3.138)
+
+x3 = b
+
+8k+q{ (nk+q + nk + 1)"3 coth(
+
+)(i1 + i2  k1  k2  k3  k4)
+
+2
+
+(j1 + j2 + m1 + m2 + m3 + m4)]
+(nk  nk+q)"4 coth(
+(j4 + j3 + n1 + n2 + n3 + n4)]
+
+4
+
+2
+
+)(i3 + i4  l1  l2  l3  l4)
+
+}
+
+(3.139)
+
+x4 = b
+
+8{ (nk+q + nk + 1) [3(i1 + i2 + k1 + k2 + k3 + k4)
+
+2
+
+3
+
+)(j1 + j2  m1  m2  m3  m4)#
+ coth(
+(nk  nk+q) [4(i3 + i4 + l1 + l2 + l3 + l4)
+ coth(
+
+)(j4 + j3  n1  n2  n3  n4)#
+
+4
+
+2
+
+}
+
+(3.140)
+
+by using the expressions of appendix e, we obtain the elements xi in terms of l
+ij .
+
+the approximation for the function (q2, t, t) is given by :
+
+(q2, t, t) =
+
+i
+
+2 z
+
+d3k
+(2)3
+
+d3p1
+(2)3 
+
+11 (k, q  k, p1, q  p1, t, t)
+
+(3.141)
+
+or
+
+(q2, t, t) =  i
+2 r
+
+d3k
+(2)3
+
+d3p1
+(2)3
+
+d3p
+(2)3
+
+trhl(p + q,p, k,q  k, t, t0)(p,p  q, p1, q  p1, t0, t)i
+
+(3.142)
+
+it remains now to solve the dynamical equations for l taking into account of the
+loop term j (3.118). we will do it in the static case. equations (3.114)-(3.117) form a
+nonhomogeneous rst order dierential system. the solutions l
+ij (k,q  k, pi,pi +
+q, t, t) are given in appendix f. the approximation to rst order for (q2, t, t) is
+composed of two terms which are for t < t :
+
+(q2, t, t) =
+
+i
+
+2 z
+
+d3k
+(2)3
+
+d3p1
+(2)3
+
+d3p
+(2)3
+
+trhl(p + q,p, k,q  k, t, t0)(0(p)   )l(p,p  q, p1, q  p1, t, t0)(0(p + q) +  )i
+ tr[l(p + q,p, k,q  k, t, t0)x(t0, t)]
+
+(3.143)
+
+44
+
+the rst term corresponds to the approximation one obtains without optimization with
+respect to the initial state (by replacing 0 by 0) . when one optimizes with respect to
+initial state, one has to take into account of the second term. we insert in the previous
+formula the expressions obtained to rst order for the solutions l in the static case. we
+obtain the following result at the rst order, for t = t  t < 0 :
+
+(1)(q2, t, t) = 
+
+i
+2
+
+b
+
+2 z
+
+d3k
+(2)3
+
+d3p1
+(2)3
+
+1
+
+3
+
+kk+qp1p1+q
+(nk+q + nk + 1) (np1+q + np1 + 1)
+ coth(
+(nk+q  nk) (np1+q + np1 + 1)
+ coth(
+
+7
+4  2
+2
+) cos(4t) + i sin(4t)!
+
+) cos(3t) + i sin(3t)!
+
+4
+
+7
+2
+3  2
+
+2
+
+2
+
+7  (np1+q  np1)
+
+8!
+8
+3  2
+2
+
+7  (np1+q  np1)
+
+8!
+8
+4  2
+2
+
+(3.144)
+
+(3.145)
+
+(3.146)
+
+with
+
+3 = k+q + k , 4 = k+q  k
+
+7 = p1+q + p1
+
+, 8 = p1+q  p1
+
+this is the essential result of this section. one has to add to this formula the term
+(3.125) obtained to lowest order. in the static case, we obtain an approximation for the
+correlation function (q2, t, t) which depends only on the time dierence t = t  t.
+if we do not optimize with respect to the initial state, which corresponds to consider only
+the rst term in (3.143), the approximation obtained for (q2, t, t) contains a spurious
+
+45
+
+dependence on the initial time t0 which writes :
+
+b
+
+2
+
+2
+
+i
+
+d3k
+(2)3
+
+d3p1
+(2)3
+
+7  3 coth(
+
+3
+
+7  7 coth(
+
+(nk+q  nk)(np1+q + np1 + 1)
+
+(nk+q  nk)(np1+q + np1 + 1)
+
+(nk+q + nk + 1)(np1+q + np1 + 1)
+
+2 z
+4kk+qp1p1+q
+(nk+q + nk + 1)(np1+q + np1 + 1)
+
+1
+2
+3  2
+1
+2
+3  2
+7  7 coth(
+
+p (1) = 
+1
++
+2
+ [cos 7(t0  t) cos 3(t0  t) + cos 7(t0  t) cos 3(t0  t)]
+1
++
+2
+ [sin 7(t0  t) sin 3(t0  t) + sin 7(t0  t) sin 3(t0  t)]
+1
+
+2
+ [cos 7(t0  t) cos 4(t0  t) + cos 7(t0  t) cos 4(t0  t)]
+1
+
+2
+ [sin 7(t0  t) sin 4(t0  t) + sin 7(t0  t) sin 4(t0  t)]
+1
+
+2
+ [cos 8(t0  t) cos 3(t0  t) + cos 8(t0  t) cos 3(t0  t)]
+1
+
+2
+ [sin 8(t0  t) sin 3(t0  t) + sin 8(t0  t) sin 3(t0  t)]
+1
+)  4 coth(
++
+2
+ [cos 8(t0  t) cos 4(t0  t) + cos 8(t0  t) cos 4(t0  t)]
+1
+)  8 coth(
++
+2
+ [sin 8(t0  t) sin 4(t0  t) + sin 8(t0  t) sin 4(t0  t)]
+
+1
+2
+4  2
+1
+2
+4  2
+1
+2
+3  2
+1
+2
+3  2
+8  8 coth(
+
+1
+4  2
+2
+1
+4  2
+2
+
+(nk+q + nk + 1)(np1+q  np1)
+
+(nk+q + nk + 1)(np1+q  np1)
+
+(nk+q  nk)(np1+q  np1)
+
+(nk+q  nk)(np1+q  np1)
+
+7  7 coth(
+
+7
+
+2
+
+8  4 coth(
+
+4
+
+8  3 coth(
+
+3
+
+8  8 coth(
+
+3
+
+2
+
+2
+
+2
+
+2
+
+4
+
+3
+
+)  3 coth(
+
+)  7 coth(
+
+7
+
+2
+
+7
+
+2
+
+)!
+
+)!
+
+4
+
+)  4 coth(
+
+2
+
+7
+
+2
+
+)!
+
+) + 4 coth(
+
+4
+
+2
+
+)!
+
+)  3 coth(
+
+)  8 coth(
+
+8
+
+2
+
+8
+
+2
+
+)!
+
+)!
+
+8
+
+2
+
+8
+
+2
+
+)!
+
+)!
+
+(3.147)
+
+when we optimize with respect to initial state, the second term of (3.143) tr[l(t, t0)x(t0, t)]
+cancels exactly the term p (1). one checks also that at t = t = t0, this second term is
+vanishing.
+
+in order to obtain the expression of (q2, t, t), we have used a symmetry in the
+exchange of k and p1 of the function to integrate in (q2, t, t). it is important to note
+that the function r d3p1
+
+11 (k,q  k, p1, q  p1, t, t) remains dependent on t0.
+
+(2)3 
+
+for t > t, expression (3.143) becomes :
+
+(q2, t, t) =
+
+i
+
+2 z
+
+d3k
+(2)3
+
+d3p1
+(2)3
+
+d3p
+(2)3
+
+trhl(p + q,p, k,q  k, t, t0)(0(p)   )l(p,p  q, p1, q  p1, t, t0)(0(p + q) +  )i
+ tr[l(p + q,p, k,q  k, t, t0)x(t0, t)]
+
+(3.148)
+
+46
+
+and one shows that one obtains (1)(q2, t) from (3.144) by replacing t by t.
+
+similarly to the case of the green function with two eld operators (x)(y), we can
+check the uctuation-dissipation theorem for the green function with four eld operators
+2(x)2(y). the expression of (q2,  ) for t > 0 is indeed equivalent to expression
+(3.144) of (q2,  i) for t < 0.
+
+let us study the retarded green function with two eld operators ,(t, t)
+dened by (2.120) when we optimize with respect to the initial state. for t > t and with
+the time-ordered product :
+
+
+
+11 (k,q  k, p1, q  p1, t, t) = z
+
+d3p
+
+(2)3 trhl(p  q,p, k,q  k, t, t0)
+
+(p,p  q, p1, q  p1, t0, t)i
+
+(3.149)
+
+for t > t and the anti-t product :
+
+
+
+11 (k,q  k, p1, q  p1, t, t) = z
+
+d3p
+
+(2)3 trhl(p  q,p, k,q  k, t, t0)
+
+(p,p  q, p1, q  p1, t0, t)i
+
+(3.150)
+we use formula (3.134) obtained at the rst order in perturbation. the retarded green
+function ,(t, t) is given by expression (2.121) obtained by optimizing only the
+dynamics and a term equal to :
+
+z
++z
+
+d3p
+(2)3 tr[l(p  q,p, k,q  k, t, t0)x(t0, t)]
+d3p
+(2)3 tr[l(p  q,p, k,q  k, t, t0)x(t0, t)]
+
+(3.151)
+
+where tr[l(t, t0)x(t0, t)] is equal to the term p (1) (eq.
+(3.147)). we see from the
+expression of p (1) by interchanging t and t that the dierence tr[l(t, t0)x(t0, t)] 
+tr[l(t, t0)x(t0, t)] is vanishing.
+
+to conclude, for the the linear response formula which involves the retarded green
+functions, we obtain the same result with or without the optimization with respect to
+initial state. it is sucient to solve the backward dynamical equations (3.114-3.117) in
+real time for l.
+
+47
+
+the rst order contribution to the polarization function r writes :
+
+b
+
+4 z
+(q2, t, t) = (t  t)
+"(np+q + np + 1) sin 1t z
+(np+q  np) sin 2t z
+
+d3k
+(2)3
+
+d3p
+(2)3
+d3k
+(2)3
+
+1
+
+pp+q
+
+1
+
+kqk
+1
+
+kqk
+
+[(nqk + nk + 1)
+
+[(nqk + nk + 1)
+
+3
+2
+1  2
+3
+2  2
+2
+
+3  (nqk  nk)
+
+4
+1  2
+2
+]#
+4
+3  (nqk  nk)
+2  2
+2
+(3.152)
+
+4
+
+4
+
+]
+
+(1)
+r
+
+with
+
+1 = p+q + p 2 = p+q  p
+3 = qk + k 4 = qk  k
+
+(3.153)
+
+(3.154)
+
+and t = t  t.
+
+by taking its fourrier transform in time and adding the zero order term and the
+
+rst order term, we obtain :
+
+d3p
+(2)3
+
+1
+
+pp+q
+1
+
+1
+
+1
+
+( + i)2  2
+kqk
+2
+
+b
+
+r(q2, ) = z
+"(np+q + np + 1)
+d3k
+ 1 +
+(2)3
+(np+q  np)
+d3k
+ 1 +
+(2)3
+
+4 z
+
+4 z
+
+b
+
+[(nqk + nk + 1)
+
+3
+2
+1  2
+
+3  (nqk  nk)
+
+4
+2
+1  2
+
+4
+
+]!
+
+( + i)2  2
+
+2
+
+1
+
+kqk
+
+[(nqk + nk + 1)
+
+3
+2
+2  2
+
+3  (nqk  nk)
+
+4
+2
+2  2
+
+4
+
+]!#
+
+(3.155)
+although the coupling constant appears linearly in the numerator, this formula includes
+nonperturbative contributions since the frequencies involves the self-consistent renormal-
+ized mass m2() eq. (2.66).
+
+the divergent part of the integrals at high momentum is entirely determined by the
+
+contribution at t = 0. this one writes :
+
+r(q2, ) = z
+ 1 +
+
+d3p
+(2)3
+b
+
+4 z
+
+pp+q
+d3k
+(2)3
+
+1
+
+kq+k
+
+1
+
+p+q + p
+
+( + i)2  (p+q + p)2
+
+q+k + k
+
+(p+q + p)2  (q+k + k)2!
+
+(3.156)
+
+(we remark that there is no term i in the denominator of the second integral.)
+
+at zero temperature, r(q2, ) depends only on the variable s = 2  q2. at the
+
+lowest order,
+
+r (s) = z
+(0)
+
+d3p
+(2)3
+
+p+q + p
+
+pp+q
+
+1
+
+( + i)2  (p+q + p)2
+
+(3.157)
+
+48
+
+which is related to the explicitly lorentz invariant form :
+
+f (s) = iz
+
+d4p
+(2)4
+
+1
+
+1
+
+p2  m2 + i
+
+(p + q)2  m2 + i
+
+(3.158)
+
+where q = (, q). we have re(0)
+r (s) = sign()imf (s). m is
+the renormalized self-consistent mass at zero temperature given by eq. (2.64). by using
+for instance the results of kerman and lin [16],
+
+r (s) = ref (s) and im(0)
+
+(0)
+r (s) = 
+
+1
+
+42 log  2
+
+e! +
+
+1
+
+42 log  m
+
+!
+
+1
+82 f (s) (s 4 m2)
+
+i
+
+8s s  4 m2
+
+s
+
+(3.159)
+
+where  is a momemtum cut-o,  is an arbitrary mass scale and the function f (s) is
+dened by :
+
+log
+
+s  s  4 m2
+s + s  4 m2
+
+si
+
+s > 4 m2
+
+(3.160)
+
+si
+
+0 < s < 4 m2
+
+(3.161)
+
+s
+
+f (s) = 2 +s s  4 m2
+f (s) = 2  2s4 m2
+f (s) = 2 +s s  4 m2
+
+s
+
+s
+
+tan1s s
+4 m2
+
+s  4 m2  s
+s + 4 m2 + s
+
+log
+
+si
+
+s < 0
+
+(3.162)
+
+adding the zero order term and the rst order term, we have at zero temperature :
+
+r(s) = (0)
+
+r (s) 1 
+
+b
+
+162 log  2
+
+e!!
+
+(3.163)
+
+and (0)
+r (s) is given by expression (3.159). we see that at the order we have considered,
+the logarithmic divergence appears squared. by resumming the perturbative serie, we
+obtain :
+
+r(s) =
+
+1 + b
+
+r (s)
+
+(0)
+162 log(cid:16) 2e(cid:17)
+
+we can dene a renormalized coupling constant gr() by
+
+i. e. :
+
+2gr()(0)
+
+r (s) = br(s)
+
+1
+
+2gr()
+
+=
+
+1
+b
+
++
+
+1
+
+e!
+162 log  2
+
+(3.164)
+
+(3.165)
+
+(3.166)
+
+this renormalization is identical to the one obtained by kerman and lin in the symmetric
+phase [16].
+
+49
+
+4 conclusion
+
+in this paper, we have shown how to derive variational approximations for two-time cor-
+relation functions in 4 theory. we have studied in particular the two-time correlation
+functions with two eld operators (x) and with four eld operators (x) in the symmetric
+phase. by using the variational principle introduced by balian and veneroni [6], we have
+shown how to take into account correlations both in the dynamics and in the initial state
+while keeping uncorrelated ansatze for the variational objects. the calculation sheme
+we have presented is valid for arbitrary time-dependent problems. as an illustration,
+we have calculated explicitly the two-time correlation functions with two eld operators
+and with four eld operators at equilibrium in the symmetric phase. the approximation
+we have obtained for the two eld operators correlation function is identical in this case
+with the usual mean-eld result. this wont be true in the asymmetric phase or for a
+time-dependent problem. the approximation for the two-time and four eld operators
+correlation function contains already in the simple case we have considered corrections to
+the standard mean-eld result. for the non-retarded correlation functions, it is important
+to optimize with respect to the initial state in order not to obtain a spurious dependence
+on the initial time. however, for the retarded correlation functions, the same result is
+obtained whether or not we optimize with respect to the initial state. our variational
+approximations for the two-time correlation functions satisfy the uctuation-dissipation
+theorem. for the four eld operators correlation function, we were obliged to solve the
+dynamical equations perturbatively. the zero order approximation was already known
+in the litterature but we have shown here how to derive it variationally. we have cal-
+culated also the rst order approximation. at zero temperature, it is possible to resum
+the perturbative serie and to dene in this way a renormalized coupling constant. we
+stress that our approximations remain nonperturbative since they involve a self-consistent
+renormalized mass.
+
+there are several important questions for future works. first, how can one obtain
+variational approximations which include damping. it would be very interesting to ob-
+tain a variational nonperturbative approximation for the viscosity dened in eq. (3.86).
+damping eects are probably related to a non symmetrical form in x and y for the matrix
+t dened in eq. (2.24) to characterize our gaussian variational ansatze and to a choice
+for the operator h dierent from the hamiltonian h. a second interesting problem is the
+evolution of a scalar eld in self-interaction in a time-dependent metric. the diculty
+in this case is to solve the backward dynamical equations in order to obtain variational
+
+50
+
+approximations for the two-time correlation functions.
+
+aknowledgements
+
+i would like to thank roger balian and marcel veneroni for very fruitful discussions.
+
+i thank also olivier martin for a critical reading of a part of the manuscript.
+
+appendix a : characterization of a gaussian state
+
+we call a gaussian operator an operator which is an exponential of quadratic and
+linear forms of the eld operators (x) and (x). a gaussian operator d(t) is completely
+characterized by the vector (x, t) and the matrix (x, y, t) dened by the equations
+(2.18)-(2.25) of the section 2.3.
+
+instead of the quantities g, t and s, the authors of reference [9] have introduced
+
+the quantities g,  and ,  being the degree of mixing (for a pur state,  = 1) :
+
+t r(d(t) (x) (y)) = (cid:16)g1/2
+(1 + )g1/2
+
+1
+
+
+
+
+
+t r(d(t) (x) (y)) =
+
+4 (cid:16)g1/2
+t r(d(t) (x) (y)) =
+it is usefull to relate our notations to those of the authors of [9]. for a pure state
+
+(1  )1g1/2
+ (cid:17) (x, y, t) .
+
+3(x  y) + 2(cid:16)g1/2
+
+ (cid:17) (x, y, t) ,
+
+(a.2)
+
+(a.3)
+
+i
+2
+
+ (cid:17) (x, y, t) ,
+
+
+
+(1  )1g1/2
+(cid:17) (x, y, t)+4(cid:16)g1/2
+(1  )1g1/2
+
+
+
+
+
+(a.1)
+
+( = 0),
+
+t (x, y, t) = 2 (g + g)(x, y, t) ,
+
+s(x, y, t) =
+
+1
+4
+
+g1(x, y, t) + 4 (g)(x, y, t) .
+
+for an uniform conguration, we have the following relations :
+
+g(p) = g(p)(1  (p))1 ,
+ (p) (1 + (p)) + 42
+
+(p)g(p)
+
+g1
+
+s(p) =
+
+1
+4
+
+1
+
+1  (p)
+
+,
+
+t (p) = 4g(p)
+
+(p) ,
+
+1
+
+1  (p)
+
+and the heisenberg invariant is related to the degree of mixing according to :
+
+i(p) =
+
+1 + (p)
+1  (p)
+
+51
+
+(a.4)
+
+(a.5)
+
+(a.6)
+
+(a.7)
+
+(a.8)
+
+(a.9)
+
+appendix b : expression of the von neuman entropy for bosons in the
+
+hartree-bogoliubov approximation
+
+the von-neuman entropy is given as a function of the density operator d by :
+
+s = 
+
+t rd log d
+
+t rd
+
++ log t rd .
+
+(b.1)
+
+in the hb approximation, d is the exponential of linear and quadratic forms of the eld
+operator  and . the entropy density then writes in terms of the matrix  :
+
+s = r d3p
+
+(2)3
+
+1
+4
+
++
+
+2
+
+tr(cid:26)(cid:18)1
+log det(1
+
+1
+2
+
+(1   )  (1   )  1(cid:19) log(cid:18)  + 
+
+4   1
+
+1
+
+1 1!  (1   ) 
+
+  (cid:19)(cid:27)
+2   0 1
+
+1 0!) .
+
+1
+
+where  is the 2  2 matrix
+
+ =   0
+1
+
+1
+
+0!
+
+it can also be written in terms of the heisenberg invariant i (2.26) :
+
+s = z
+
+d3p
+
+(2)3 "1
+
+2
+
+i log(
+
+i + 1
+i  1
+
+) +
+
+1
+2
+
+log(i  1)# .
+
+(b.2)
+
+(b.3)
+
+(b.4)
+
+for the static hb solution characterized by 0, 0, we have : i = 0
+
+easy to convince oneself that expression (b.4) is in this case identical to :
+
+110
+
+22. it is
+
+s = z
+
+d3p
+(2)3 [(np + 1) log(np + 1)  np log np] ,
+
+(b.5)
+
+where the occupation number np is related to the degree of mixing (p) according to :
+
+2np + 1 = vuut
+
+1 + (p)
+1  (p)
+
+= qi(p) .
+
+(b.6)
+
+by using the parametrization (p) =
+
+1
+
+cosh p
+
+, we have also : 2np + 1 = coth( p
+
+2 ). in the
+
+4 theory, p = qg0(p) and
+
+g0(p) =  p2 + m2
+
+0 +
+
+b
+2
+
+2
+
+0 +
+
+b
+2
+
+g0(x, x)! .
+
+the static solution satises :
+
+11(p) g0(p) = 0
+0
+
+22(p) ,
+
+52
+
+(b.7)
+
+(b.8)
+
+and
+
+in terms of the frequency p :
+
+0
+11(p) 0
+
+22(p) = 
+
+1 + (p)
+1  (p)
+
+.
+
+0
+
+11(p) =
+
+1
+p
+
+coth(
+
+
+2
+
+p)
+
+
+2
+
+p)
+
+0
+22(p) = p coth(
+
+i(p) = coth2(
+2
+
+p)
+
+(b.9)
+
+(b.10)
+
+(b.11)
+
+(b.12)
+
+the matrix of the second derivatives of the entropy evaluated for the static solution
+
+0 is given by the following elements :
+
+2
+p
+
+2s
+
++
+
+coth x
+
+1
+
+= 
+
+2s
+
+= 
+
+11(p)11(p)(cid:12)(cid:12)(cid:12)(cid:12)0
+11(p)22(p)(cid:12)(cid:12)(cid:12)(cid:12)0
+22(p)22(p)(cid:12)(cid:12)(cid:12)(cid:12)0
+
+4 (cid:20) x
+4 (cid:20) x
+coth x 
+p (cid:20) x
+12(p)12(p)(cid:12)(cid:12)(cid:12)(cid:12)0
+
+= 
+2s
+
+1
+42
+
+2s
+
+coth x
+
+where we have introduced the notation x = p/2.
+
+1
+
+1
+
+coth2 x  1(cid:21)
+coth2 x  1(cid:21)
+coth2 x  1(cid:21)
+
+1
+
++
+
+x
+
+=
+
+coth x
+
+(b.13)
+
+(b.14)
+
+(b.15)
+
+(b.16)
+
+appendix c : parametrization of the product of two gaussians
+
+in this appendix, we give the expressions of the expectation values b, c, b and c
+
+in terms of d, a, d and a.
+
+b = (a   )
+
+c = (d   )
+
+1
+
+a + d
+
+1
+
+a + d
+
+d + (d +  )
+
+a + (a +  )
+
+1
+
+a + d
+
+1
+
+a + d
+
+a ,
+
+d ,
+
+where  is 2  2 matrix :
+
+ =   0
+1
+
+1
+
+0! .
+
+for the matrices , we have the following relations :
+
+b   = (a   )
+
+1
+
+a + d
+
+(d   ) ,
+
+53
+
+(c.1)
+
+(c.2)
+
+(c.3)
+
+(c.4)
+
+c   = (d   )
+
+1
+
+a + d
+
+(a   ) .
+
+b +  = (d +  )
+
+c +  = (a +  )
+
+1
+
+a + d
+
+1
+
+a + d
+
+(a +  ) ,
+
+(d +  ) .
+
+appendix d
+
+in this appendix, we give the evolution equations for nd, d, d na, a, a.
+
+i
+
+nd
+nd
+
+= f (d)
+
+c  f (d)
+
+b  f (d)
+
+kc
+
+2i d =  [(d +  ) (hc  i c
+
+k) (d   )  (d   ) hb (d +  )]  bc
+
++d (wc  wb) +  (wc + wb)  (d +  ) wc
+i d =  [(d +  ) (hc  i c
+
+k
+
+k) (d   )  (d   ) hb (d +  )]
+
+(c.5)
+
+(c.6)
+
+(c.7)
+
+(d.1)
+
+(d.2)
+
+(d.3)
+
+(d.4)
+
+na
+na
+2i a = [(a   ) (hc  i c
+k) (a +  )  (a +  ) hb (a   )]  cb
+
+b  f (a)
+
+c + f (a)
+
+= f (a)
+
+kc
+
+i
+
++a (wb  wc) +  (wc + wb)  (a   ) wc
+i a = [(a   ) (hc  i c
+
+k) (a +  )  (a +  ) hb (a   )]
+
+k
+
+,
+
+(d.5)
+
+(d.6)
+
+the expressions for the vector w and the matrices h and i are the following :
+
+wb(x, t)1 =
+
+ < h >b
+b(x, t)
+
+= fb(x, t)
+
+, wb(x, t)2 = i
+
+ < h >b
+b(x, t)
+
+= ib(x, t) ,
+
+(d.7)
+
+hb(x, y, t)ij = 2
+
+ < h >b
+
+b(x, y, t)ji
+
+,
+
+hb(x, y, t)11 = 
+
+hb(x, y, t)22 = +
+
+ < h >b
+gb(y, x, t)
+ < h >b
+sb(y, x, t)
+
+=
+
+=
+
+1
+2
+
+1
+2
+
+gb(x, y, t) ,
+
+(x  y) ,
+
+hb(x, y, t)12 = 2i
+
+ < h >b
+tb(y, x, t)
+
+= 0 .
+
+54
+
+(d.8)
+
+(d.9)
+
+(d.10)
+
+(d.11)
+
+the quantities f which appear in equations (d.1) and (d.3) are dened by :
+
+b = z d3x (eb(x, t)  wb(x, t)bd(x, t))
+f (d)
+
+1
+
++
+
+2 z d3xd3y tr [hb(x, y, t)(b  d + 2bd bd)(y, x, t)]
+
+kc = z d3x (kc(x, t)  wkc(x, t)cd(x, t))
+f (d)
+
+1
+
++
+
+2 z d3xd3y tr [ikc(x, y, t)(c  d + 2cd cd)(y, x, t)]
+
+for the 4 theory, we have :
+
+fb(x, t) =   + m2
+gb(x, y, t) =   + m2
+
+0 +
+
+0 +
+
+b
+6
+
+2
+
+b(x, t) +
+
+b
+2
+
+2
+
+b(x, t) +
+
+b
+2
+
+b
+2
+
+gb(x, x, t)! b(x, t) ,
+gb(x, x, t)! (x  y) .
+
+from the variations of the source term kc, we obtain :
+
+wc
+
+k(x, t)1 =
+
+kc
+
+c(x, t)
+
+, wc
+
+k(x, t)2 = i
+
+kc
+
+c(x, t)
+
+,
+
+i c
+k(x, y, t)ij = 2
+
+kc
+
+c(y, x, t)ji
+
+.
+
+(d.12)
+
+(d.13)
+
+(d.14)
+
+(d.15)
+
+(d.16)
+
+(d.17)
+
+wc
+
+k(x, t)1 = j (x, t)+2z d3x2 (cid:16)j (x, x2, t) c(x2, t) + j (x, x2, t) c(x2, t)(cid:17) , (d.18)
+k(x, t)2 = i j (x, t) + 2 i z d3x2 (cid:16)j (x, x2, t) c(x2, t) + j (x, x2, t) c(x2, t)(cid:17) ,
+
+wc
+
+i c
+k(x, y, t)11 = j (x, y, t) ,
+i c
+k(x, y, t)12 = 2i j (x, y, t) ,
+i c
+k(x, y, t)22 = j (x, y, t) .
+
+(d.19)
+(d.20)
+
+(d.21)
+
+(d.22)
+
+the expressions for the matrices t, t, r and r which appear in the dynamical equa-
+
+tions for the two-time correlation functions are the following :
+
+t11(x, y, t) = g(0)(x, y, t) , t22(x, y, t) = (x  y) ,
+
+t1,11(x, y, z, t) = 
+
+b
+2
+
+(0)(x, t)(x  y) 3(x  z) , t2,jk = 0 ,
+
+r11,1(x, y, z, t) = t1,11(x, y, z, t)
+
+r11,11(x, y, z, u, t) =
+
+b
+4
+
+3(x  y) 3(x  z) (x  u) .
+
+(d.23)
+
+(d.24)
+
+(d.25)
+
+(d.26)
+
+the other elements are equal to zero.
+
+55
+
+we use the following denitions for the fourrier transform :
+
+n
+
+d3pn
+(2)3 exp(i
+
+w (x1, ..., xn) = z d3p1
+(2)3 ...
+w (p1, ..., pn) = z d3x1...d3xn exp(i
+w (p1, p2, ..., pn) = (2)3 3(p1 + p2 + ... + pn) w (p1, p2, ..., pn) .
+
+pj . xj) w (p1, ..., pn) ,
+
+pj . xj) w (x1, ..., xn) ,
+
+xj=1
+xj=1
+
+n
+
+so for the two-point function  :
+
+
+
+1 (x, x1, t, t) = z
+
+d3p
+(2)3 ei p.(x1x) 
+
+1 (p, t, t) .
+
+(d.27)
+
+(d.28)
+
+(d.29)
+
+(d.30)
+
+appendix e
+
+we give in this appendix the expressions of the integrals in, jn, kn, ln, mn, nn,
+ij . we
+
+n = 1, 2, 3, 4 in termes of the constants a, b, c, d introduced in (3.129) and of l
+introduce the frequencies
+
+3 = k+q + k , 4 = k+q  k
+, 6 = l+q  l
+5 = l+q + l
+
+we dene :
+
+i1 = z
+i3 = z
+j1 = z
+j3 = z
+
+k1 = z
+k3 = z
+
+d3l
+(2)3
+d3l
+(2)3
+
+5
+
+a
+3  2
+2
+c
+2
+3  2
+
+6
+
+5
+
+5
+
+d3l
+(2)3
+d3l
+(2)3
+d3l
+(2)3
+d3l
+(2)3
+
+a
+3  2
+2
+a
+2
+4  2
+b5
+2
+3  2
+b5
+2
+4  2
+cosh(5)
+
+5
+
+5
+
+cosh(6)
+
+6
+
+6
+
+, i2 = z
+, i4 = z
+, j2 = z
+, j4 = z
+, k2 = z
+, k4 = z
+
+d3l
+(2)3
+d3l
+(2)3
+d3l
+(2)3
+d3l
+(2)3
+d3l
+(2)3
+d3l
+(2)3
+
+c
+3  2
+2
+c
+2
+4  2
+d6
+2
+3  2
+d6
+2
+4  2
+b
+3  2
+2
+d
+2
+3  2
+
+6
+
+6
+
+5
+
+6
+
+(e.1)
+
+(e.2)
+
+(e.3)
+
+(e.4)
+
+(e.5)
+
+(e.6)
+
+(e.7)
+
+(e.8)
+
+sinh(5)
+
+sinh(6)
+
+the integrals ln are obtained from the integrals kn by replacing 3 by 4.
+
+m1 = z
+
+d3l
+(2)3
+
+b5
+2
+3  2
+
+5
+
+cosh(5)
+
+, m2 = z
+
+d3l
+(2)3
+
+a5
+2
+3  2
+
+5
+
+sinh(5)
+
+(e.9)
+
+56
+
+m3 = z
+
+d3l
+(2)3
+
+d6
+2
+3  2
+
+6
+
+cosh(6)
+
+, m4 = z
+
+d3l
+(2)3
+
+c6
+2
+3  2
+
+6
+
+the integrals nn are obtained from the integrals mn by replacing 3 by 4.
+
+sinh(6)
+
+(e.10)
+
+the expressions of sums of integrals in terms of l
+
+ij are usefull :
+
+i1 + i2 = v r
+
+d3l
+
+(2)3 (
+
+nl+q + nl + 1
+
+1
+
+5
+
+2
+3  2
+6 "(
+nl+q  nl
+2
+3  2
+
++
+
+ll+q
+l
+11  l
+
+ll+q
+
+"(
+
+1
+
+l
+11 + l
+
+22 ) coth(
+
+22 ) coth(
+
+6
+
+2
+
+) +
+
+1
+l
+
+5
+
+2
+
+1
+
+l
+
+21 #
+
+) +
+
+1
+l
+l
+12 
+
+l
+12 +
+
+l+q
+l
+
+21 #)
+
+1
+
+l+q
+
+(e.11)
+i3 + i4 is obtained from i1 + i2 by replacing 3 by 4. the arguments of the functions
+l
+ij
+
+in these integrals are l
+
+ij (l,q  l, p1, q  p1, t, t0).
+
+j1 + j2 = v z
+
+d3l
+(2)3
+5
+2
+3  2
+6
+
+2
+3  2
+
+5
+
+6
+
+(nl+q + nl + 1)"(
+(nl+q  nl)"(
+
+1
+
+ll+q
+1
+
+ll+q
+
+l
+11  l
+
+22 ) + (
+
+l
+12 +
+
+1
+l
+l
+12 
+
+1
+l
+
+1
+
+l+q
+1
+
+l+q
+
+11 + l
+l
+
+22 ) + (
+
+l
+21 ) coth(
+
+l
+21 ) coth(
+
+5
+
+)#
+
+2
+6
+
+)#
+
+2
+(e.12)
+
+j3 + j4 is obtained from j1 + j2 by replacing 3 by 4.
+
+k1 + k2 + k3 + k4 = v z
+
+d3l
+(2)3
+nl+q + nl + 1
+
+5
+
+"(
+6 "(
+
+1
+
+ll+q
+
+1
+
+ll+q
+
+2
+3  2
+nl+q  nl
+2
+3  2
+
++
+
+l
+11 + l
+
+22 ) coth(
+
+l
+11  l
+
+22 ) coth(
+
+2
+
+5
+
+2
+6
+
+l
+12 +
+
+1
+)  (
+l
+1
+l
+12 
+) +
+l
+
+1
+
+l+q
+1
+
+l
+
+21 )#
+21 #
+
+l
+
+l+q
+
+(e.13)
+
+l1 + l2 + l3 + l4 is obtained from k1 + k2 + k3 + k4 by replacing 3 by 4.
+
+m1 + m2 + m3 + m4 = v z
+5
+2
+3  2
+6
+2
+3  2
+
++
+
+5
+
+6
+
+d3l
+(2)3
+(nl+q + nl + 1)"(
+(nl+q  nl)"(
+
+1
+
+ll+q
+
+1
+
+ll+q
+
+l
+11 + l
+
+l
+12 +
+
+l
+21 ) coth(
+
+22 )  (
+22 ) + (
+
+1
+l
+1
+l
+
+l
+11  l
+
+l
+12 
+
+1
+
+l+q
+
+1
+
+l+q
+
+5
+
+2
+6
+
+2
+
+)#
+)#
+
+l
+21 ) coth(
+
+(e.14)
+
+n1 + n2 + n3 + n4 is obtained from m1 + m2 + m3 + m4 by replacing 3 by 4.
+
+appendix f
+
+57
+
+in this appendix, we give the solutions of the backward dynamical equations for l
+ij
+
+at the rst order . by noting :
+
+3 = k+q + k , 4 = k+q  k
+5 = piq + pi
+, 6 = piq  pi
+b
+f =
+4
+
+1
+
+piqpi
+
+l
+11 (k,q  k, pi,pi + q, t, t)) =
+1
+[3(k + pi) + 3(q  k + pi)] cos q+k(t  t) cos k(t  t)
+
+2
+(nqpi + npi + 1)" 5
+f
+
+2
+3  2
+2
+(nqpi  npi)" 6
+f
++
+3  2
+2
+2
+(nqpi + npi + 1)  5
+5
+f
+2
+4  2
+2
+3  2
+2
+(nqpi  npi)  6
+6! cos 6(t  t)
+f
+6
++
+4  2
+2
+3  2
+2
+2
+
+5
+cos 3(t  t) +
+2
+4  2
+6
+2
+4  2
+
+5! cos 5(t  t)
+
+cos 3(t  t) +
+
+
+
++
+
++
+
+6
+
+6
+
+5
+
+5
+
+6
+
+5
+
+cos 4(t  t)#
+
+cos 4(t  t)#
+
+1
+
+f
+
+f
+
+2ik+q
+
+l
+12 (k,q  k, pi,pi + q, t, t)) =
+
+2ik+q
+
++
+
+[3(k + pi) + 3(q  k + pi)] sin q+k(t  t) cos k(t  t)
+(nqpi + npi + 1)" 5
+2
+3  2
+(nqpi  npi)" 6
+2
+3  2
+(nqpi + npi + 1)  3
+4
+4  2
+2
+3  2
+2
+6! sin 6(t  t)
+(nqpi  npi)  3
+4
++
+2
+2
+3  2
+4  2
+
+5
+sin 3(t  t) +
+2
+4  2
+6
+2
+4  2
+
+5! sin 5(t  t)
+
+sin 3(t  t) +
+
++
+
+f
+
+2ik+q
+
+2ik+q
+
++
+
+f
+
+6
+
+5
+
+5
+
+6
+
+5
+
+sin 4(t  t)#
+
+sin 4(t  t)#
+
+6
+
+1
+
+
+2ik+q
+l
+21 (k,q  k, pi,pi + q, t, t)) =
+
+2ik
+
++
+
+2ik
+
+f
+
+f
+
+5
+
+[3(k + pi) + 3(q  k + pi)] cos q+k(t  t) sin k(t  t)
+(nqpi + npi + 1)" 5
+2
+3  2
+(nqpi  npi)" 6
+3  2
+2
+(nqpi + npi + 1)  3
+4
+5 
+4  2
+2
+2
+3  2
+6! sin 6(t  t)
+(nqpi  npi)  3
+4
+6 
+4  2
+2
+3  2
+2
+
+5
+sin 3(t  t) 
+2
+4  2
+6
+2
+4  2
+
+5! sin 5(t  t)
+
+sin 3(t  t) 
+
+6
+
+5
+
+6
+
+sin 4(t  t)#
+
+sin 4(t  t)#
+
+2ik
+
+f
+
+2ik
+
+f
+
+2ik
+
++
+
+
+
+58
+
+(f.1)
+
+(f.2)
+
+(f.3)
+
+(f.4)
+
+(f.5)
+
+(f.6)
+
+l
+22 (k,q  k, pi,pi + q, t, t)) =
++
+2kk+q
+
+1
+
+f
+
+2kk+q
+
+f
+
+2kk+q
+
+f
+
+2kk+q
+
+f
+
+2kk+q
+
+
++
+
++
+
+
+
+5
+
+[3(k + pi) + 3(q  k + pi)] sin q+k(t  t) sin k(t  t)
+(nqpi + npi + 1)" 5
+2
+3  2
+(nqpi  npi)" 6
+2
+3  2
+(nqpi + npi + 1)  5
+5
+5 
+4  2
+2
+2
+3  2
+(nqpi  npi)  6
+6! cos 6(t  t)
+6
+6 
+4  2
+2
+3  2
+2
+
+5
+cos 3(t  t) 
+2
+4  2
+6
+2
+4  2
+
+5! cos 5(t  t)
+
+cos 3(t  t) 
+
+6
+
+cos 4(t  t)#
+
+5
+
+cos 4(t  t)#
+
+6
+
+(f.7)
+
+references
+
+[1] for reviews on inationary cosmology, see : r. h. brandenberger, rev. mod. phys.
+57, 1 (1985) ; a. linde, in current topics in astrofundamental physics, proceedings
+of the chalonge erice school, edited by n. sanchez and a. zichichi, nato asi series
+c vol 467, kluwer academic, dordrecht, 1995.
+
+[2] f. cooper, y. kluger, e. mottola and j. p. paz, phys. rev. d51 (1995), 2377 ;
+d. boyanovsky, h. j. de vega and r. holman, phys. rev. d51 (1995), 734; d.
+boyanovsky, f. cooper, h. j. de vega, p. sodano, phys. rev. d 58 (1998) 025007.
+
+[3] d. yu. grigoriev, v. a. rubakov and m. e. shaposhnikov, nucl. phys. b326 (1989),
+
+737; d. bodeker, nucl. phys. b486 (1997) 500
+
+[4] p. dirac, proc. cambridge philos. soc. 26 (1930) 736
+
+[5] r. jackiw and a. kerman, phys. lett. a71 (1979) 158
+
+[6] r. balian and m. veneroni, nucl. phys. b408 (1993) 445
+
+[7] j. schwinger, j. math. phys. 2 (1961) 407; l. v. keldish, jetp 20 (1965) 1018
+
+[8] n. p. landsmann and c. g. van weert, phys. rep. 145 (1987) 141
+
+[9] o. eboli, r. jackiw and s. y. pi, phys. rev. d37 (1988) 3557
+
+[10] c. martin, ann. of phys. 271 (1999) 294
+
+[11] c. martin, phys. rev. d52 (1995) 7121
+
+59
+
+[12] j. zinn-justin, quantum eld theory and critical phenomena, the international
+
+series of monographs on physics, oxford university press, 1990.
+
+[13] e. gerjuoy, a. r. p. rau and l. spruch, rev. mod. phys. 55 (1983), 725
+
+[14] m. benarous, phd thesis (university of paris-sud, orsay, 1991)
+
+[15] r. balian and m. veneroni, ann. of phys. 164 (1985) 334
+
+[16] a. k. kerman and c. y. lin, ann. of phys. 241 (1995) 185; ann. of phys. 269
+
+(1998) 55
+
+[17] g. aarts and j. smit, nucl. phys. b511 (1993) 4991
+
+[18] l. dolan and r. jackiw, phys. rev. d9 (1995) 185
+
+[19] p.bonche and h. flocard, nucl. phys. a437 (1987) 301.
+
+[20] g. parisi, statistical field theory (addison-weysley publishing compagny, 1988)
+
+[21] e. wang and u. heinz, phys. rev. d53 (1996), 5978; a. jakovac, hep-th/9808349
+
+[22] d. boyanovsky, h. j. de vega, r. holman, s. prem kumar and r. d. pisarski, phys.
+
+rev. d58 125009
+
+60
+
+

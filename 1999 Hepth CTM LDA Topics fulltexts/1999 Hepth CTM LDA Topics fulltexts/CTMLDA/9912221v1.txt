@@ -1,0 +1,1451 @@
+9
+9
+9
+1
+
+ 
+c
+e
+d
+2
+2
+
+ 
+
+ 
+ 
+
+1
+v
+1
+2
+2
+2
+1
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+hep-th/9912221
+cpt-99/p.3814
+
+introduction to hopf algebras in renormalization and
+
+noncommutative geometry 
+
+raimar wulkenhaar 
+
+centre de physique theorique
+
+cnrs-luminy, case 907
+
+13288 marseille cedex 9, france
+
+abstract
+
+we review the appearance of hopf algebras in the renormalization of
+quantum eld theories and in the study of dieomorphisms of the frame
+bundle important for index computations in noncommutative geometry.
+
+1 introductory remarks
+
+this contribution focuses on two applications discovered during the last two years
+of the hopf algebra of rooted trees. they suggest an amazing link between
+mathematics and physics. there exists an excellent review [1] of these topics,
+written by the authors of these ideas. in what follows i am going to explain parts
+of this development which i was able to understand. i hope it can be useful to
+somebody else.
+
+in mathematics, foliations provide a large class of examples of noncommuta-
+tive spaces and lead to an index problem for the transverse hypoelliptic operator
+[2]. the computation of the cocycles in the local index formula turned out to be
+extremely lengthy even in dimension one. alain connes and henri moscovici [3]
+were looking for an organizing principle for that calculation, which they found
+in the cyclic cohomology of a hopf algebra ht obtained by the action of vector
+elds on a crossed product of functions by dieomorphisms.
+
+concerning physics, dirk kreimer [4] discovered that a perturbative quantum
+eld theory carries in a natural way a hopf algebra structure hr given by oper-
+ations on feynman graphs. the antipode reproduces precisely the combinatorics
+of renormalization, i.e. it produces the local counterterms to make the divergent
+integral corresponding to the feynman graph nite.
+
+noticing that both hopf algebras have formally a very similar structure,
+connes and kreimer gave the precise relation [5] between ht and hr. this
+is very transparent in the language of rooted trees they used. the commutative
+hopf subalgebra h1 of connesmoscovici is (in dimension 1) a hopf subalgebra
+of kreimers hopf algebra for a quantum eld theory with a single primitively
+divergent graph.
+
+recently it was pointed out [6] that the same algebra of rooted trees plays a
+
+role in rungekutta methods of numerical analysis.
+
+based on talk given at the hesselberg99 conference march 1519, 1999
+e-mail raimar@cpt.univ-mrs.fr
+supported by the german academic exchange service (daad), grant no. d/97/20386
+
+1
+
+2 the hopf algebra of connesmoscovici
+
+in principle, the hopf algebra of connes and moscovici can be understood from
+classical dierential geometry [7]. we give here a somewhat shortened version of
+the derivation and refer to [8] for more details. we recommend [9] for a useful
+introduction to hopf algebras and related topics.
+
+we regard the frame bundle f + of a manifold m and in particular the vector
+elds on f +. there is a natural notion of vertical vector elds, these are the
+tangent vectors to curves in f + obtained by the right action of the group gl+(n)
+of n  n matrices with positive determinant. the horizontal vector elds are not
+canonically given, they are determined once a connection is specied. for our
+purpose we can work in local coordinates.
+
+let {x}=1...,n be the coordinates of x  m within a local chart of m and
+{y
+i },i=1,...n be the coordinates of n linearly independent vectors of the tangent
+space txm with respect to the basis . on f + there exist the following geomet-
+rical objects, written in terms of the local coordinates (x, y
+
+i ) of p  f +:
+
+1) an rn-valued (soldering) 1-form  with i = (y1)i
+
+dx ,
+
+2) a gl(n)-valued (connection) 1-form  with i
+
+j = (y1)i
+
+(dy
+
+j + 
+
+ y
+
+j dx),
+
+where 
+
+ depends only on x ,
+
+3) n2 vertical vector elds y i
+
+j = y
+
+j i
+
+ ,
+
+4) n horizontal (with respect to ) vector elds xi = y
+
+i (  
+
+y
+
+j j
+
+) .
+
+a local dieomorphism  of m has a lift  : (x, y
+i ) 7 ((x),  (x)y
+i )
+to the frame bundle and induces the following transformations of the previous
+geometrical objects:
+
+.
+
+
+
+(dy
+
+1) ( )(cid:12)(cid:12)p = (cid:12)(cid:12)p
+2) ( )(cid:12)(cid:12)p = (y1)i
+(cid:12)(cid:12)x = (((x))1)
+i )(cid:12)(cid:12)p = y j
+i (cid:12)(cid:12)p
+ xi)(cid:12)(cid:12)p = y
+
+3) ( y j
+
+4) ( 1
+
+,
+
+we refer to [8] for the proof.
+
+ y
+
+j dx) is again a connection form, with
+(x)(x) + (((x))1)
+
+ (x) ,
+
+j + 
+ 
+
+(cid:12)(cid:12)(x)
+
+i (  
+
+y
+
+j j
+
+) is horizontal to  .
+
+given these tools of classical dierential geometry, the new idea is to apply
+the vector elds x, y to a crossed product a = c 
+c (f +) >  of the algebra of
+smooth functions on f + with compact support by the action of the pseudogroup
+ of local dieomorphisms of m. as a set, a can be regarded as the tensor
+product of c 
+
+c (f +) with . it is generated by the monomials
+
+f u 
+
+ ,
+
+f  c 
+
+c (dom( )) ,    ,
+
+(1)
+
+2
+
+where  is the dieomorphism of f + obtained as the lift of   . as an algebra,
+the multiplication rule in a is dened by
+
+f1u 
+
+1 f2u 
+
+2 := f1(f2  1)u 
+
+21 .
+
+(2)
+
+here, the function f1(f2  1) evaluated at p (in the domain of denition) gives
+f1(p) f2( 1(p)), i.e. we have a non-local product on the function algebra.
+
+the action of vector elds on a is dened as the action on the function part.
+interesting is the application to the product (2), because the non-locality in the
+function part leads to a deviation from the leibniz rule. for v being a vector
+eld on f + one computes
+
+v (f1u 
+
+1 f2u 
+
+2) = v (f1u 
+
+1) f2u 
+
+2 + f1u 
+
+1 (cid:0) 1(v )(cid:1)(cid:0)f2u 
+
+2(cid:1) .
+
+(3)
+
+since dieomorphisms and right group action commute, we get the unchanged
+leibniz rule for the vertical vector elds,
+
+y j
+i (ab) = y j
+
+i (a) b + a y j
+
+i (b) ,
+
+a, b  a .
+
+(4)
+
+for the horizontal vector elds, however, there will be an additional term
+a(1xi  xi)(b). comparing 4), 4) and 3) above we have 1xi  xi = k
+jiy j
+k ,
+for some function k
+ji. using (2) we commute this function in front of a and obtain
+
+xi(ab) = xi(a) b + a xi(b) + k
+
+ji(a) y j
+
+k (b) ,
+
+a, b  a .
+
+the operator k
+
+ji on a is computed to
+
+ji(f u 
+k
+
+) = (
+
+  
+
+)y
+
+j y
+
+i (y1)k
+
+f u 
+
+ ,
+
+(5)
+
+(6)
+
+where 
+is a derivation:
+
+ are the connection coecients belonging to . it turns out that k
+
+ji
+
+k
+ji(ab) = k
+
+ji(a) b + a k
+
+ji(b) .
+
+(7)
+
+these formulae can now be interpreted in the dual sense, for instance xi(ab) =
+(xi) (a  b), which leads to a structure of a coalgebra on the linear space
+r(1, xi, y j
+
+k , k
+
+ji),
+
+k ,
+
+k ) = y k
+
+j  1 + 1  y j
+
+(y j
+(xi) = xi  1 + 1  xi + k
+(k
+(1) = 1  1 ,
+
+ji  1 + 1  k
+
+ji) = k
+
+ji ,
+
+ji  y j
+
+k ,
+
+(8)
+
+with 1 being the identity on a. coassociativity (  id)   = (id  )   is
+easy to check.
+
+vector elds form a lie algebra, so the next step is to ask whether
+
+r(1, xi, y j
+
+k , k
+
+ji) close under the lie bracket. the rst commutators are ok,
+
+[y i
+[y k
+[y i
+
+l ](f u 
+j , y k
+j , xi](f u 
+lm](f u 
+j , k
+
+) = (i
+) = k
+) = (i
+
+l y k
+j  k
+i xj(f u 
+l k
+jm + i
+
+j y i
+) ,
+mk
+
+l )(f u 
+
+) ,
+
+lj  k
+
+j i
+
+lm)(f u 
+
+) .
+
+(9)
+
+3
+
+the next one between horizontal elds
+
+[xi, xj] = rk
+
+lijy l
+
+k + k
+
+ijxk
+
+(10)
+
+leads to new generators, because curvature r and torsion  are no structure
+constants. therefore, one uses a dierent strategy and considers instead of a a
+
+morita equivalent algebra a based on a at manifold n = ` u  the disjoint
+
+union of the charts u of m. now, there is neither curvature nor torsion, and
+horizontal vector elds commute. there remain the commutators of x with ,
+which lead indeed to new generators of the lie algebra:
+
+ji,1...n(f u 
+k
+
+) := [xn, . . . , [x1, k
+
+= n . . . 1(cid:16)(((x))1)
+
+ji] . . .](f u 
+)
+ (x)(cid:17)y
+j y
+ji,1...n commute with each other.
+
+all these generators k
+
+i (y1)k
+
+ y1
+
+1    yn
+
+n
+
+(11)
+
+f u 
+ .
+
+now having established a lie algebra, we call h its enveloping algebra, i.e.
+the algebra of polynomials in {1, xi, y k
+ji,1...n...}, with the commutation
+relations inherited from the lie algebra. with the coproduct  on the lie algebra,
+h becomes automatically a bialgebra, where the coproduct is dened via the
+algebra homomorphism axiom:
+
+j , k
+
+ji, k
+
+(h1h2) = (h1) (h2) := x h1
+1h1
+
+2  h2
+
+1h2
+2 ,
+
+(hi) = x h1
+
+i  h2
+i ,
+
+(12)
+
+for h1, h2  h. the counit  : h  c is dened by
+
+(1) = 1c ,
+
+(h) = 0 h 6= 1 .
+
+(13)
+
+the counit axiom (  id)  (h) = (id  )  (h) = h is straightforward to
+check.
+
+there also exists an antipode on h which makes it to a hopf algebra. the
+
+antipode is the unique antiautomorphism of h satisfying
+
+s(h1h2) = s(h2)s(h1) ,
+
+m  (s  id)  (h) = 1(h) = m  (id  s)  (h) ,
+
+(14)
+
+for h, h1, h2  h, and where m denotes the multiplication. from the second line
+and (8) one easily obtains
+
+s(1) = 1 ,
+
+k ) = y j
+k ,
+ji) = k
+ji ,
+
+s(y j
+s(k
+s(xi) = xi + k
+
+jiy j
+
+k .
+
+(15)
+
+the action of s on the other generators of h can be derived from (14).
+
+the purpose of this hopf algebra h is to ease the computation [3] of cocycles
+in the local index formula [2] of connes and moscovici. so far i did not study
+this calculation for myself, but i think a good way to learn it would be to consult
+[10].
+
+4
+
+3 rooted trees
+
+coproduct and antipode for the generators k
+ji,1...n... are only recursively dened
+via the axioms of coproduct and antipode. now we are going to present an explicit
+solution  via the concept of rooted trees. this was introduced by connes and
+kreimer [5] to clarify the relation between the two hopf algebras in the theory
+of foliations and in perturbative quantum eld theory. we generalize [8] their
+construction from dimension 1 to arbitrary dimension of the manifold m. to the
+rst three classes of s we associate the following trees:
+
+ji ,
+
+ji =  k
+k
+ k
+ji
+
+k
+ji,l =
+
+k
+ji,lm =
+
+,
+
++
+
+ k
+
+a
+ji
+
+a l  m
+
+.
+
+(16)
+
+ l
+ k
+ji
+ l
+
+ m
+
+the rule is obvious. a symbol k
+ji,a, for a a string of |a| indices, is obtained
+from k
+a a new vertex with label
+ successively to the right of each vertex. the root (with three indices) remains
+the same and order is important.
+
+a by attaching to each of its trees t|a|
+
+ji,a = p|a|!
+
+a=1 t|a|
+
+coproduct and antipode require the denition of cuts of a tree. an elementary
+cut along a chosen edge splits a tree into two  the trees above (trunk) and below
+(cut branch) the cut. it is clear that we have to add 2 indices to complete the root
+of the cut branch. this will be a pair of summation indices. we dene the action
+of a cut as the shift of one index of the vertex above the cut to the rst position
+of the new root of the cut branch. the remaining position to complete the root of
+the cut branch is lled with a summation index and the same summation index
+is put into the vacant position of the trunk. in the case of cutting immediately
+below the root, we have to sum over the three possibilities of picking up indices of
+the root, adding a minus sign if we pick up the unique upper index. the following
+examples illustrate the denition of a cut, where we write the trunk as the rhs of
+the tensor product and the cut branch as the lhs:
+
+ k
+ji
+
+ l
+ k
+
+a
+ji
+a
+
+ l  m
+ k
+ji
+
+ l
+
+ m
+
+=  a
+
+jl   k
+
+ai +  a
+
+il   k
+
+ja   k
+
+al   a
+
+ij ,
+
+=  a
+
+jm   k
+
+ai,l +  a
+
+im   k
+
+ja,l   k
+
+am   a
+
+ji,l ,
+
+=  a
+
+lm 
+
+ k
+ji
+
+ a
+
+.
+
+(17)
+
+a multiple cut consists of several elementary cuts, where the order of cuts is from
+top to bottom and from left to right. an admissible cut is a multiple cut such
+that on the path from any vertex to the root there is at most one elementary cut.
+
+5
+
+the product of all cut branches forms the lhs of the tensor product, whereas the
+trunk alone containing the old root serves as the rhs.
+
+the purpose of these denitions is to give an explicit formula for coproduct
+
+and antipode. indeed, by induction one can prove the following:
+
+proposition 1 the coproduct of k
+
+ji,a = p|a|!
+
+a=1 t|a|
+
+a
+
+|a|!
+
+is given by
+
+(k
+
+ji,a) = k
+
+ji,a  1 + 1  k
+
+ji,a +
+
+xa=1 xc
+
+p c(t|a|
+
+a )  rc(t|a|
+
+a ) ,
+
+(18)
+
+where for each t|a|
+rc(t|a|
+t|a|
+a
+
+a ) is the trunk and p c(t|a|
+via the multiple cut c.
+
+a
+
+the sum is over all admissible cuts c of t|a|
+a .
+
+in eq. (18),
+a ) the product of cut branches obtained by cutting
+
+proof. we start from
+
+ji,a) = [(k
+(k
+ji,a), (x)] = k
+ji,a = [x  1 + 1  x, rk
+rk
+
+ji,a  1 + 1  k
+ji,a] + [m
+
+n  y n
+
+ji,a + rk
+
+ji,a ,
+ji,a + (1  k
+
+m, rk
+
+ji,a)]  h  h .
+
+by denition of the tree, the commutator with x attaches a vertex  successively
+to all previous vertices, where x  1 attaches to the cut branches and 1  x
+attaches to the trunk. next, the commutator with m
+m puts for each vertex
+of the trunk (due to the commutator with y ) a cut branch consisting of a single
+vertex to the lhs of the tensor product. both contributions together yield precisely
+all admissible cuts of the trees corresponding to k
+
+n  y n
+
+ji,a.
+
+the antipode is obtained by applying the antipode axiom m  (s  id)   = 0
+
+to (18). by recursion one proves
+
+proposition 2 the antipode s of k
+
+is given by
+
+ji,a = p|a|!
+
+a=1 t|a|
+
+a
+
+|a|!
+
+s(k
+
+ji,a) = k
+
+ji,a 
+
+xa=1 xca
+
+(1)|ca| p ca(t|a|
+
+a ) rca(t|a|
+
+a ) ,
+
+(19)
+
+where the sum is over the set of all non-empty multiple cuts ca of t|a|
+(multiple
+cuts on paths from bottom to the root are allowed) consisting of |ca| individual
+cuts.
+
+a
+
+4 feynman graphs and rooted trees
+
+in a perturbative quantum eld theory it is convenient to symbolize contribu-
+tions to greens functions by feynman graphs. these feynman graphs stand for
+analytic expressions of momentum variables. internal momentum variables have
+to be integrated out. very often some of these integrations formally yield innity.
+the art of obtaining meaningful results out of these integrals is called renormal-
+ization. a central problem is the existence of subdivergences which cannot be
+regularized by a simple subtraction of the divergent part. bogoliubov [11] found
+
+6
+
+a recursion formula for the regularization of feynman graphs with subdivergences
+and zimmermann gave an explicit solution  the forest formula [12].
+
+in 1997 dirk kreimer discovered [4] that there is the structure of a hopf
+algebra behind this art of renormalization, with the combinatorics of the forest
+formula produced by the antipode. kreimers idea was to visualize the divergence
+structure of feynman graphs in terms of parenthesized words, which are in 1:1
+correspondence to rooted trees [5]. let us exemplify this idea by a feynman
+
+2
+
+3
+graph from qed:4
+5
+
+1
+
+=
+
+ v5  v4
+  s1
+@@ v2
+
+@@ p3
+
+(20)
+
+straight lines stand for fermions and wavy lines for bosons, and the boxes contain
+divergent sectors. a criterion for supercial divergence of a region conned in
+a box is power counting.
+if a box has nb bosonic and nf fermionic outgoing
+legs, the power counting degree of divergence d is (in four dimensions) dened by
+d := 4  nb  3
+2 nf  0. owing to symmetries the actual degree of divergence of
+one graph or a sum of graphs can be lower than d, see [13]. the construction of
+the rooted tree from the feynman graphs with identied divergent sectors is clear:
+the outermost (supercial) divergence (5) is the root v5. the box (5) contains
+the boxes (3) and (4) as immediate subdivergences, hence we connect two vertices
+p3 and v4 directly to the root v5. the box (4) contains the subdivergences (1)
+and (2), so we attach the vertices s1 and v2 to v4. this works as long as there are
+no overlapping divergences, which must be resolved before in terms of disjoint
+and nested ones and lead to a sum of rooted trees [14, 15].
+
+having identied the trees to feynman graphs, it are the same cutting opera-
+tions on trees as before which give us coproduct and antipode. here, a cut splits
+a feynman graph into several subgraphs  a standard operation in renormaliza-
+tion. it is very remarkable that the antipode obtained in this way reproduces the
+combinatorics of renormalization [4]. these surprising facts have been extended
+to a complete renormalization of a toy model [16], which we review in the next
+section.
+
+before, let us ask an interesting question: what is the role of the operators
+k
+ji,1...n in quantum eld theory, and what is the meaning of the individual trees
+for dieomorphisms? i am not aware of an answer, but there is an interesting
+observation [8] concerning the relation of the decorated rooted trees (16) to feyn-
+man graphs. the trees emerging from the connesmoscovici hopf algebra are
+decorated by spacetime indices (three for the root) whereas in qft the decora-
+tion is a label for divergent feynman graphs without subdivergences. although
+the operators  are invariant under permutation of the indices after the comma,
+for instance k
+ji,ml, see (11), this symmetry is lost on the level of individual
+trees. that leads us to speculate that the sum of feynman graphs according to
+
+ji,lm = k
+
+7
+
+the collection of rooted trees to s has more symmetry than the individual feyn-
+man graphs. this should be checked in qft calculations. another interpretation
+would be the observation from (16)
+
+ k
+ji
+ l
+
+ m
+
++
+
+ k
+
+a
+ji
+
+a l  m
+
+
+
+ k
+ji
+ m
+
+ l
+
+
+
+ k
+
+a
+ji
+
+a m  l
+
+= 0 ,
+
+(21)
+
+which could possibly be regarded as a relation between feynman graphs similar
+to those derived in [17]. according to a private communication by kreimer, (21)
+is satised in qft for the leading divergences, as it can be derived from sec.
+v.c in [18]. for non-leading singularities there will be (probably systematic)
+modications.
+
+in mathematics, connes and kreimer extended the investigation of the com-
+mutative hopf subalgebra h1 in [3] to the level of individual trees [5]. they
+showed that the hopf algebra of rooted trees hr is the solution of a universal
+problem in hochschild cohomology. we recall [3] that h1 is the dual of the en-
+veloping algebra of the lie algebra l1 of formal vector elds on r vanishing to
+order 2 at the origin, and that h1 itself is isomorphic to the hopf algebra of
+coordinates on the group of dieomorphisms of r of the form (x) = x + o(x).
+by analogy, connes and kreimer regard hr as the hopf algebra of coordinates
+on a nilpotent formal group g whose lie algebra l1 they succeed to compute.
+this group was recently found to be related to the butcher group in numeri-
+cal analysis [6]. it will certainly contain precious information for quantum eld
+theory because the antipode in hr governing renormalization is the dual of the
+inversion operation in g. renormalization seems to provide a new mathematical
+calculus which generalizes dierential calculi.
+
+5 a toy model: iterated integrals
+
+in the spirit of kreimer [16] we are going to give the reader a feeling for renormal-
+ization by considering a toy model. the toy model is given by iterated divergent
+integrals, in close analogy to qft. the only dierence is that the integrals are
+very simple to compute.
+
+let us take the integral
+
+1(t) = z 
+
+t
+
+dp1
+p1+
+1
+
+,
+
+(22)
+
+which diverges logarithmically for   0. we can regard it as the analytic
+expression to the feynman graph
+
+ = 
+ppppp
+
+8
+
+to a feynman graph with subdivergence there corresponds an iterated integral:
+
+= 
+pppppp
+= 
+pppppp
+
+
+
+
+
+
+
+
+
+
+ 2(t) = z 
+
+t
+
+dp1
+p1+
+1
+
+z 
+
+p1
+
+dp2
+p1+
+2
+
+,
+
+ 3(t) = z 
+
+t
+
+dp1
+p1+
+1
+
+z 
+
+p1
+
+dp2
+p1+
+2
+
+z 
+
+p2
+
+dp3
+p1+
+3
+
+.
+
+(23)
+
+clearly, these iterated integrals form a hopf algebra of rooted trees without
+side branches, and the coproduct is given by the admissible cuts of the trees.
+the renormalization of these integrals requires an algebra homomorphisms a on
+iterated integrals, which represents a certain way of evaluation under a set of
+conditions a. for our purpose we take
+
+a(cid:16)yii
+
+i(t)(cid:17) := yii
+
+i(a) ,
+
+(24)
+
+the evaluation of the integrals at t = a. in qft, a should be regarded as an
+energy scale, and a evaluates the feynman graphs at this scale.
+
+the essential idea [16] is now to consider the convolution product of these
+
+homomorphisms, dened via the hopf algebra structure:
+
+(  )(h) := m  (  )  (h) ,
+
+h  h .
+
+(25)
+
+the antipode axiom can be written in the compact form s id = 1 . it is however
+more interesting to consider the following modication:
+
+a,b = sa  idb := (a  s)  b .
+
+(26)
+
+due to the hopf algebra properties, the a,b satisfy a groupoid law. we give the
+derivation in full detail, using 1) associativity of m and coassociativity of , 2)
+the antipode axiom, 3) homomorphism property of , 4)   1 = 1, 5) the counit
+axiom:
+
+a,b  b,c = m (cid:16)(cid:0)m (cid:0)sa  b)  (cid:1)(cid:1) (cid:0)m (cid:0)sb  c)  (cid:1)(cid:1)(cid:17)  
+
+= m  (m  m) (cid:16)sa  b  sb  c(cid:17)  (  )  
+= m  (id  m)  (m  id  id) (cid:16)sa  b  sb  c(cid:17) 
+
+(  id  id)  (id  )  
+
+=1 m  (m  id)  (m  id  id) (cid:16)sa  b  sb  c(cid:17) 
+
+(  id  id)  (  id)  
+
+= m  ((cid:16)m  (m  id)  (sa  b  sb)  (  id)  (cid:17)  c)  
+=1 m  ((cid:16)m  (id  m)  (sa  b  sb)  (id  )  (cid:17)  c)  
+
+9
+
+= m  ((cid:16)m  {sa (cid:16)m  (b  b)  (id  s)  (cid:17)}  (cid:17)  c)  
+=2,3 m  ((cid:16)m  {sa (cid:16)b  1(cid:17)}  (cid:17)  c)  
+=4 m  ((cid:16)m  (sa  id)  (id  1)  (cid:17)  c)  
+
+= m  (m  id)  (sa  id  c)  (id  1  id)  (  id)  
+=1,4 m  (id  m)  (sa  c  c)  (id  1  id)  (id  )  
+=3 m  (sa  c)  (id (cid:0)m  (1  id)  (cid:1))  
+=5 m  (sa  c)  
+= a,c .
+
+we apply now the a,b operation to the divergent integrals to compute
+
+a,b(i(t)) = i
+
+a,b:
+
+1
+
+a,b = m  (a  b)  (s  id)  ()
+
+= m  (a  b) (cid:0)    1 + 1  )
+= 1(a) + 1(b) = z a
+
+dp
+p1+
+
+.
+
+b
+
+the result 1
+a,b is nite for   0 and vanishes for a = b. we proceed with the
+next integral, using the denition of  as given by the admissible cuts and s as
+given by all cuts (with sign from the number of elementary cuts) of the graphs:
+
+2
+
+a,b = m  (a  b)  (s  id)  (cid:16) 
+(cid:17)
+= m  (a  b) (cid:16)s(cid:16) 
+= m  (a  b) (cid:16) 
+= 2(a) + 1(a)1(a)  1(b)1(a) + 2(b)
+
+(cid:17)  1 + s()   + 1 
+
+
+
+
+
+ 1 +   1     + 1 
+
+
+
+(cid:17)
+
+
+
+(cid:17)
+
++z 
+
+a z 
+
+a
+
+z 
+
+b z 
+
+a
+
++z 
+
+b z 
+
+p1 (cid:17) dp1
+
+p1+
+1
+
+dp2
+p1+
+2
+
+= (cid:16) z 
+= z a
+
+a z 
+z a
+
+dp1
+p1+
+1
+
+p1
+
+p1
+
+b
+
+dp2
+p1+
+2
+
+.
+
+again, the result is nite. note that in    the root which stands for the p1
+integration is the right vertex and hence is evaluated at t = b. the computation
+for 3
+
+a,b is left as an exercise.
+
+from the identity a,b  b,c = a,c and the coproduct rule given by admissible
+
+cuts of a tree without side branches we get chens lemma [19]:
+
+i
+a,c = i
+
+a,b + i
+
+b,c +
+
+i1
+
+xj=1
+
+a,bij
+j
+
+b,c
+
+.
+
+(27)
+
+10
+
+for i = 2 it reads
+
+z a
+
+c
+
+dp1
+
+p1 z a
+
+p1
+
+dp2
+p2
+
+= z a
+
+b
+
+dp1
+
+p1 z a
+
+p1
+
+dp2
+p2
+
++z b
+
+c
+
+dp1
+
+p1 z b
+
+p1
+
+dp2
+p2
+
++z b
+
+c
+
+dp1
+
+p1 z a
+
+b
+
+dp2
+p2
+
+.
+
+the purpose of these considerations was the renormalization of a qft. let
+us assume a theory where all contributions to the coupling constant come from
+the following ladder diagrams:
+
+
+
+hhh
+
+
+= 
+hhh
+= 0
+
++ 
+pppppp
+
++ 
+pppppp
+
++ 
+pppppp
+
++
+
+1
+
++
+
+2
+
++
+
+3
+
++ . . .
+
++ . . .
+
+formally, this series evaluates to innity, but this innity can be renormalized to
+a nite but undetermined value. that value has to be adapted to experiment and
+yields a normalization condition. at some energy scale a we are allowed to x
+the coupling constant a = 0(a). but suppose we measure now the value of the
+coupling constant at another energy scale b. the normalization condition is xed
+so that in the diagrams we have to use in all vertices the normalized coupling
+constant 
+hh = a. since the renormalization removing the innities was scale
+dependent, the loop diagrams i now give a contribution, and this contribution
+is precisely i
+
+a,b. hence,
+
+b = a + 1
+
+a,b + 2
+
+a,b + 3
+
+a,b + . . .
+
+(28)
+
+assuming the series converges, we get a nite shift of the coupling constant. in
+realistic quantum eld theories, the agreement of this value with experiment is
+overwhelming.
+in particular, in rst order we recover the familiar logarithmic
+energy dependence of the coupling constant. we also learn from (28) that one
+can completely avoid talking about innities.
+
+as it is clear from our model, the running coupling constants resulting from
+renormalization are governed by the hopf algebra structure together with the
+convolution product. the hopf algebra structure not only produces the combi-
+natorics of the forest formula, it also allows to compare dierent renormalization
+schemes, which arise from each other by a nite re-normalization. the theory is
+consistent without a preferred scale or preferred renormalization scheme. they
+are always related by the convolution identity a,c = ab  bc, where a, b, c stand
+for parameterizations of dierent renormalization schemes. applications of these
+ideas to qft calculations are starting [18].
+
+acknowledgements
+
+i am grateful to the organizers of the hesselberg99 conference, florian scheck,
+harald upmeier and wend werner, for the invitation and the possibility to
+present these ideas.
+it is a pleasure to thank my colleagues bruno iochum,
+thomas krajewski, serge lazzarini, thomas schucker and daniel testard for
+collaboration and numerous discussions. finally, i would like to thank alain
+connes and dirk kreimer for important advice at various stages of my study of
+the hopf algebras.
+
+11
+
+references
+
+[1] a. connes & d. kreimer, lessons from quantum eld theory, lett. math. phys. 48 (1999)
+
+8596, hep-th/9904044.
+
+[2] a. connes & h. moscovici, the local index formula in noncommutative geometry, gafa
+
+5 (1995) 174243.
+
+[3] a. connes & h. moscovici, hopf algebras, cyclic cohomology and the transverse index
+
+theory, commun. math. phys. 198 (1998) 198246, math.dg/9806109.
+
+[4] d. kreimer, on the hopf algebra structure of perturbative quantum eld theories, adv.
+
+theor. math. phys. 2.2 (1998) 303334, q-alg/9707029.
+
+[5] a. connes & d. kreimer, hopf algebras, renormalization and noncommutative geometry,
+
+commun. math. phys. 199 (1998) 203242, hep-th/9808042.
+
+[6] c. brouder, runge-kutta methods and renormalization, hep-th/9904014
+[7] y. choquet-bruhat, c. de witt-morette & m. dillard-bleick, analysis, manifolds and
+
+physics, north holland, amsterdam (1982).
+
+[8] r. wulkenhaar, on the connesmoscovici hopf algebra associated to the dieomorphisms
+
+of a manifold, math-ph/9904009.
+
+[9] s. majid, quasitriangular hopf algebras and yangbaxter equations, int. j. mod. phys.
+
+a 5 (1990) 191.
+
+[10] m. crainic, cyclic cohomology of hopf algebras, and non-commutative chernweil theory,
+
+math.qa/9812113.
+
+[11] n. n. bogoliubov & d. v. shirkov, introduction to the theory of quantized fields, j. wi-
+
+ley (1980).
+
+[12] w. zimmermann, convergence of bogoliubovs method of renormalization in momentum
+
+space, commun. math. phys. 15 (1969) 208234.
+
+[13] c. itzykson and j. b. zuber, quantum field theory, mcgraw-hill (1980).
+[14] t. krajewski & r. wulkenhaar, on kreimers hopf algebra structure of feynman graphs,
+
+eur. phys. j. c 7 (1999) 697708, hep-th/9805098.
+
+[15] d. kreimer, on overlapping divergences, commun. math. phys. 204 (1999) 669689,
+
+hep-th/9810022.
+
+[16] d. kreimer, chens iterated integral represents the operator product expansion, adv.
+
+theor. math. phys. 3.3, hep-th/9901099.
+
+[17] d. kreimer, weight systems from feynman diagrams, j. knot theor. ramications 7
+
+(1998) 6185, hep-th/9612011.
+
+[18] d. kreimer & r. delbourgo, using the hopf algebra structure of qft in calculations,
+
+phys. rev. d 60 (1999) 105025, hep-th/9903249.
+
+[19] k.-t. chen, iterated path integrals, bull. amer. math. soc. 83 (1977) 831879.
+
+12
+
+

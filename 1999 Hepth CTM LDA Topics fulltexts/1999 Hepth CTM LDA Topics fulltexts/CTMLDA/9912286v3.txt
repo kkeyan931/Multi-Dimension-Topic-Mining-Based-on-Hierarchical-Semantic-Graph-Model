@@ -1,0 +1,5447 @@
+0
+0
+0
+2
+
+ 
+r
+p
+a
+7
+
+ 
+
+ 
+ 
+
+3
+v
+6
+8
+2
+2
+1
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+exact renormalized one-loop quantum
+
+corrections to energies of solitonic field
+
+congurations
+
+by
+
+noah matthew graham
+
+submitted to the department of physics
+
+in partial fulllment of the requirements for the degree of
+
+doctor of philosophy
+
+at the
+
+massachusetts institute of technology
+
+june 1999
+
+c(cid:13) noah matthew graham, mcmxcix. all rights reserved.
+the author hereby grants to mit permission to reproduce and
+
+distribute publicly paper and electronic copies of this thesis document
+
+in whole or in part.
+
+author . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+department of physics
+april 30, 1999
+
+certied by . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+edward farhi
+professor
+thesis supervisor
+
+accepted by . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+thomas j. greytak
+associate department head for education
+
+exact renormalized one-loop quantum corrections to
+
+energies of solitonic field congurations
+
+by
+
+noah matthew graham
+
+submitted to the department of physics
+
+on april 30, 1999, in partial fulllment of the
+
+requirements for the degree of
+
+doctor of philosophy
+
+abstract
+
+we develop a method for computing exact one-loop quantum corrections to the ener-
+gies of static classical backgrounds in renormalizable quantum eld theories. we use
+a continuum density of states formalism to construct a regularized casimir energy in
+terms of phase shifts and their born approximations. this method unambiguously
+incorporates denite counterterms xed in the standard way by physical renormal-
+ization conditions. the result is a robust computation that can be eciently imple-
+mented both numerically and analytically. we carry out such calculations in models
+of bosons and fermions in one and three dimensions.
+
+thesis supervisor: edward farhi
+title: professor
+
+2
+
+acknowledgments
+
+i would like to thank professors edward farhi and robert l. jae for being out-
+
+standing teachers and collaborators, providing constant support, guidance and en-
+
+couragement throughout this project. i would also like to thank benjamin scarlet
+
+for computational help, especially for suggesting a crucial speedup to the calculation
+
+of higher order born approximations. i also would like to thank sergei bashinsky,
+
+oliver dewolfe, kieran holland, tamas hauer, and herbert weigel for many valuable
+
+discussions. and my deepest thanks to nancy, daniel, and my parents.
+
+3
+
+contents
+
+1 introduction
+
+2 4 theory in 1+1 dimensions
+
+2.1 formalism . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.2 applications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.3 analytic results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3 fermions in one dimension
+
+3.1 formalism . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3.2 applications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+4 the supersymmetric model in one dimension
+
+4.1 formalism . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+4.2 applications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+4.3 supersymmetry algebra and the central charge . . . . . . . . . . . . .
+
+5 scalars in three dimensions
+
+5.1 formalism . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+5.2 calculational methods
+
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+
+5.3 results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+5.4 derivative expansion . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+6 fermions in three dimensions
+
+7 conclusions
+
+4
+
+6
+
+11
+
+11
+
+16
+
+20
+
+22
+
+22
+
+26
+
+30
+
+30
+
+36
+
+38
+
+46
+
+46
+
+51
+
+53
+
+55
+
+57
+
+63
+
+list of figures
+
+2-1 the trajectory of e[0] in the complex energy plane, with e in units of
+m . arrows indicate the
+. . . . . . . . . . . . . . . . . . . . . . . . .
+
+m, for x0 increasing from 0 to 6
+
+ow along the real axis.
+
+m in steps of 0.02
+
+2-2 solutions to the equations of motion with a source given by eq. (2.2),
+
+as functions of x and x0 in units of 1
+
+m . the shaded graph is 0(x, x0),
+which is guaranteed to be a solution by the construction of j. the
+
+unshaded graph gives the second solution 0(x, x0). (a ner mesh is
+
+used for this graph between x0 = 0 and x0 = 0.1
+
+m in order to illustrate
+. . . . . . . . . . . . . . . . . . . . . . .
+
+its behavior in this region.)
+
+18
+
+19
+
+3-1 fermion bound state energies as a function of mx0 in units of m. even
+
+parity states are denoted with  and odd parity states with +.
+
+. . .
+
+27
+
+3-2 negative-parity phase shifts as functions of k/m for x0 = 2.0, 3.0, 4.0,
+
+5.0, 6.0, and 8.0. for any nite separation, the phase shift is equal to
+
+ at k = 0, but as x0 gets larger, the phase shift ascends more and
+
+more steeply to 3
+2 .
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+28
+
+3-3 boson bound state squared energies as a function of mx0 in units of m.
+
+symmetric states are denoted with  and antisymmetric states with +. 28
+
+3-4 one-loop fermionic correction to the energy as a function of x0 in units
+
+of m. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+29
+
+5-1 one-loop diagrams. . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-2 e[h] in units of v, for d = 1 and g = 1, 2, 4, 8, as a function of w.
+5-3 |(e  ede)/(e  ecl)| for d = 0.25, g = 4, as a function of w.
+
+. . . . .
+
+. . .
+
+48
+
+54
+
+56
+
+5
+
+chapter 1
+
+introduction
+
+given a static eld conguration in a renormalizable quantum eld theory, a natural
+
+question to ask is what its energy is. this question is especially relevant in the
+
+study of solitons, since they are local minima of the energy. classically, the energy is
+
+simple to calculate from the lagrangian density of the theory. however, quantization
+
+of the theory introduces corrections to this classical result. such corrections can be
+
+expanded as a power series in the coupling constants of the theory, which is equivalent
+
+to an expansion in h.
+
+in this work we will consider the leading quantum corrections to the classical en-
+
+ergies of eld congurations in a variety of quantum eld theories. since the power of
+
+h counts the number of loops in the diagrammatic expansion of the energy, taking the
+
+leading correction will correspond to a one-loop calculation, in which we sum all one-
+
+loop diagrams with arbitrary numbers of insertions of the classical background eld.
+
+this calculation is equivalent to summing the shifts in the 1
+
+2 h zero-point energies of
+all the small uctuations modes in the presence of the background eld. this sum
+
+is known as the casimir energy. as usual in quantum eld theory, the result of such
+
+a calculation diverges, and we must introduce divergent counterterms that are xed
+
+through a nite set of renormalization conditions. the renormalization conditions
+
+dene the theory in terms of physical quantities. our challenge will be to implement
+
+such a calculation in a robust, ecient and unambiguous way. in particular, we must
+
+isolate the cancellation of divergent quantities without missing any nite contribu-
+
+6
+
+tions, and we must be sure that we have implemented the renormalization conditions
+
+faithfully. merely canceling the innities is clearly not sucient when we want to
+
+regard a nite result as a physical prediction of a particular theory dened under
+
+xed renormalization conditions.
+
+one application of this method is in coupling of the higgs sector of the standard
+
+model to heavy quarks. if we imagine adjusting the yukawa coupling for a quark dou-
+
+blet so that the quarks mass becomes very large, we would expect that when they
+
+become suciently heavy, they eectively decouple from the theory. however, this
+
+cannot be the whole story, since if we simply removed a quark doublet from the stan-
+
+dard model, we would ruin anomaly cancellation. the resolution of this paradox [1]
+
+requires that solitons in the higgs eld carry the quantum numbers of the decoupled
+
+fermions. this result suggests a picture in which heavy quarks are realized at small
+
+coupling as elementary fermion excitations, and at large coupling as higgs solitons.
+
+in between these two limits, one might then expect to nd a hybrid conguration,
+
+with the heavy quark tightly bound to a deformation in the higgs eld. to see if this
+
+picture is correct, we need to do a variational computation: we must nd the eld
+
+conguration of lowest energy that carries the heavy quark quantum numbers. this
+
+application highlights the importance of unambiguously xing our renormalization
+
+conditions and avoiding nite errors in our energy computation. if our renormaliza-
+
+tion conditions were not xed precisely, we would eectively be changing the theory as
+
+we moved from one background eld to another, rendering the variational calculation
+
+meaningless.
+
+one could imagine building a higgs conguration that brings a heavy quark level
+
+down from the mass of the quark closer to (or below) zero. the higgs conguration
+
+itself would have an energy cost from the gradient and potential terms in the classical
+
+bosonic hamiltonian. this cost could be balanced by the shift in the valence
+
+quark energy level, since the quark occupying this state moves to a lower energy.
+
+in particular, for strong quark yukawa coupling (which means large quark mass),
+
+and small higgs self-coupling (which means small higgs mass), deforming the higgs
+
+eld would be favored. however, these two pieces alone do not form a self-consistent
+
+7
+
+semiclassical calculation. we have included the classical energy along with one part of
+
+the leading quantum correction to that energy, the shift in the valence level. we have
+
+no justication for ignoring the shifts in all the other quark levels, which contribute
+
+at the same order through their zero-point energies. thus we are forced consider the
+
+full casimir energy in this problem. if we do include the casimir energy, we obtain
+
+a self-consistent semiclassical result. one may doubt the validity of the semiclassical
+
+approximation as the coupling gets large, of course, but we will obtain a result that
+
+is valid in a well-dened approximation. (in some models, it is also the exact result
+
+in a large-n limit [2].)
+
+although we must compute the full casimir energy, not just the valence contri-
+
+bution, it is still possible to construct self-consistent approximations to this quantity.
+
+of course, these approximations further restrict the domain of validity of the com-
+
+putation. in particular, if the background eld is slowly varying on the scale of the
+
+compton wavelength of the quantum uctuations, the derivative expansion becomes
+
+valid. indeed, it has been used in models similar to the ones we will consider [2].
+
+however, in both models of heavy quarks and other models we will want to explore,
+
+the scale at which the background eld varies is precisely the compton wavelength
+
+of the quantum uctuations, so that all the terms in the derivative expansion will be
+
+about the same size, rendering the expansion unreliable. our approach will be exact
+
+to one-loop order.
+
+central to our technique will be to re-express the casimir sum in the continuum
+
+in terms of phase shifts, using a formalism that originates with schwingers work on
+
+qed in the presence of strong elds [3]. we will consider only eld congurations with
+
+some form of spherical symmetry, so that we can use a partial-wave decomposition.
+
+in each channel, the dierence between the free and interacting density of states is
+
+related to the phase shift by
+
+(k) = 0(k) +
+
+1
+
+
+d(k)
+
+dk
+
+(1.1)
+
+which follows from imposing a boundary on the system and then sending the boundary
+
+8
+
+to innity, or by more formal s-matrix arguments. in any channel, for any k, the
+
+phase shift is a nite, well-dened, physical quantity. its analytic structure is well
+
+understood in terms of jost functions, and it can also be rigorously related to the
+
+greens functions and s-matrix of the theory. the sum over continuum modes is then
+
+replaced by an integral over the density of states
+
+e =
+
+1
+
+2 xj
+
+j +
+
+1
+
+2 z 
+
+0
+
+dkk2 + m2(k)
+
+(1.2)
+
+in which the bound states are still included explicitly. this mathematical artillery
+
+leads to several important properties of the phase shifts:
+
+ we can expand the phase shifts as a born series in the strength of the poten-
+tial. this expansion is in exact correspondence with the expansion of the full
+
+propagator of the theory in terms of the free propagators connecting insertions
+
+of the potential. the born expansion also has simple behavior at large k and
+
+becomes more and more accurate in this limit, which will enable us to use it as
+
+a regulator of ultraviolet divergences.
+
+ the phase shifts track level crossings, ensuring a consistent counting of modes
+as states become bound. this property allow us to avoid a serious problem we
+
+would encounter if we put the system in a box, because in that case we would
+
+have a hard time ensuring that we have kept the appropriate number of modes
+
+when computing the casimir energy and the contribution of the counterterms.
+
+missing even one mode in the casimir sum will lead to a drastic change in the
+
+nal answer; although such an error is small compared to the leading (divergent)
+
+behavior of the sum, the leading behavior is cancelled by the counterterms. the
+
+nal answer is generically of the same order as a typical energy level. our key
+
+tool here will be levinsons theorem, which relates the phase shift at k = 0 to
+
+the number of bound states.
+
+ the phase shifts and their born approximations are simple, robust quantities
+amenable to both numerical and analytic calculation. we will see that they
+
+9
+
+enable us to replace the cancellations of large quantities, the casimir energy
+
+against the counterterms, by the much more manageable cancellation of exact
+
+phase shift against born approximation. many cases will in the end be tractable
+
+only numerically, but we will also nd that numerical analysis will also shed light
+
+on analytic results by allowing us to continuously interpret between a trivial
+
+conguration and one that can be solved analytically.
+
+ the absence of boundaries will allow us to avoid spurious contributions from
+articial boundary conditions. this property will be especially useful in models
+
+with fermions.
+
+ in principle, phase shifts can even be computed in fractional dimensions, since
+they obey a simple radial dierential equation that depends analytically on
+
+the dimension of space. in particular, the rst born approximation the bosonic
+
+phase shifts can be analytically calculated in arbitrary dimensions terms of gen-
+
+eralized bessel functions. this result agrees exactly with the result one would
+
+nd for the corresponding tadpole graph evaluated in dimensional regulariza-
+
+tion.
+
+much of this work originally appeared in [4].
+
+10
+
+chapter 2
+
+4 theory in 1+1 dimensions
+
+we will begin with examples in 1+1 dimensions. the study of exactly soluble 1+1
+
+dimensional problems has yielded many insights into fundamental problems in eld
+
+theory. other 1+1 dimensional problems cannot be solved exactly, making it impor-
+
+tant to understand which properties of exact results will generalize to more generic
+
+cases and which are special to the exactly soluble cases. the renormalization process
+
+is simpler in one dimension than it is in three, since theories in lower dimensions are
+
+less divergent, but it still must be approached carefully. indeed, we will nd that the
+
+one dimensional problem actually contains additional subtleties not present in higher
+
+dimensions.
+
+2.1 formalism
+
+we will consider a standard 4 theory with spontaneous symmetry breaking and a
+
+source j(x). the action is
+
+s[] =
+
+m2
+
+ z   1
+
+2
+
+()2 
+
+m2
+8
+
+(2  1)2  j(x) + lct! d2x
+
+(2.1)
+
+where lct is the counterterm lagrangian. our metric has gtt = gxx = 1. we
+have rescaled the eld  somewhat unconventionally in order to make explicit the
+
+correspondence between the powers of  and the powers of h, which we have set equal
+
+11
+
+to 1. classical terms will go as 1
+
+, the one-loop terms we compute will go as 0, and
+higher loops will contribute with higher powers of . the mass of uctuations around
+the trivial vacua (x) = 1 is m, and we dene the potential u() = m2
+8 (2  1)2.
+we consider a xed eld conguration 0(x). initially we will assume that 0(x) =
+0(x), which restricts us to the topologically trivial sector of the theory. however,
+we will see that our method works equally well for the case of 0(x) = 0(x), so
+that in fact we can deal with congurations with any topology as long as u(0) has
+
+reection symmetry. we adjust the source so that 0 is a stationary point of the
+
+action, which means that j then solves the equation
+
+j(x) =
+
+d20
+dx2 
+
+1
+2
+
+m2(3
+
+0  0).
+
+(2.2)
+
+we can always solve this equation for j, but there is no guarantee that the j we nd
+
+will always correspond to a unique 0, as we will see later. if 0 is a solution to the
+
+equations of motion, of course the source will be zero.
+
+we would like to consider the leading quantum correction to the classical energy
+
+of this conguration, which we can represent as the sum of the zero-point energies of
+
+the normal modes of small oscillations around 0. writing  = 0 + , the normal
+
+modes are solutions of
+
+d2
+dx2 + (v (x) + m2) = 2
+
+
+
+(2.3)
+
+with v (x) = u(0(x))  m2 = 3
+going from the trivial vacuum to 0(x) is then
+
+2 m2(2
+
+0(x)  1). the quantum change in energy in
+
+e[0] =
+
+1
+2
+
+(x  x 0) + ect = e + ect
+
+(2.4)
+
+where 0 are the free solutions (with 2
+
+0(x) = 1), and ect is the contribution from the
+
+counterterms.
+
+note that it is possible that some of the values of 2 will be negative, so that
+
+in these directions our stationary point is a local maximum rather than a minimum
+
+of the action. these solutions will add an imaginary part to the energy, which we
+
+12
+
+can interpret via analytic continuation as giving the decay rates through the unstable
+
+modes [5]. if there is a direction in eld space in which small oscillations lower the
+
+energy, we should be able to keep going in that direction and arrive at a lower min-
+
+imum. later, we will see explicitly that the appearance of unstable modes coincides
+
+with the existence of a second solution to the 0 equation with the same j and lower
+
+energy.
+
+we would like to rewrite the sum over zero-point energies as an integral over
+
+phase space of the product of the energy and the density of states. we can then
+
+break this integral into a sum over bound states and an integral over a continuum,
+
+representing the latter in terms of phase shifts. in order to do so, however, we must
+
+review the peculiarities of levinsons theorem in one dimension. for more details on
+
+these results see [6] and [7]. for a symmetric v (x), we can divide the continuum states
+
+into symmetric and antisymmetric channels, and then calculate the phase shift as a
+
+function of k separately for each channel, where 2 = k2 + m2. the antisymmetric
+
+channel is completely equivalent to the l = 0 case in three dimensions, so we have
+
+a(0) = na
+
+(2.5)
+
+where na is the number of antisymmetric bound states. however, we must be careful
+
+in dealing with the special case of a state exactly at k = 0. in this case the solution
+to eq. (2.3) with k = 0 goes asymptotically to a constant as x  , as opposed to
+the generic case where the k = 0 solution goes to a constant plus linear terms in x.
+
+just as in the l = 0 case in three dimensions, this state contributes 1
+
+2 to na. we will
+
+refer to such states as half-bound states.
+
+in the symmetric channel, levinsons theorem becomes
+
+s(0) = ns 
+
+
+2
+
+(2.6)
+
+where a bound state at k = 0 contributes 1
+
+2 to ns, just as in the antisymmetric case.
+we can see the importance of getting the half-bound states right by looking at the
+
+free case: the phase shift is zero everywhere, and the right-hand side is zero because
+
+13
+
+the free case has a half-bound state (the wavefunction  = constant). the situation
+
+is equally subtle for reectionless potentials, all of which have half-bound states and
+
+s(0) + a(0) equal to an integer times .
+
+we are now ready to rewrite the change in the zero-point energies in terms of
+
+phase shifts. letting ej be the bound state energies (again with k = 0 bound states
+
+contributing with a 1
+
+2), (k) be the density of states and 0(k) be the free density of
+
+states, we have
+
+1
+
+1
+
+=
+
+e =
+
+ej 
+
++z 
++z 
+where (k) = k2 + m2 and we have used
+
+2 xj
+2 xj
+
+m
+4
+
+m
+4
+
+ej 
+
+dk
+2
+
+dk
+2
+
+(k)((k)  0(k))
+
+(k)
+
+d
+dk
+
+(a(k) + s(k))
+
+(2.7)
+
+0
+
+0
+
+(k) = 0(k) +
+
+1
+
+
+d
+dk
+
+(a(k) + s(k)).
+
+(2.8)
+
+note that the m
+
+4 term subtracts the contribution of the free half-bound state.
+
+eq. (2.7) is divergent (the phase shifts fall as 1
+
+k for k  ), which is what we
+should expect since it includes the divergent contribution from the tadpole graph
+
+without the divergent contribution from the counterterms that cancels it.
+
+to avoid infrared problems later, we rst use levinsons theorem to compute the
+
+change in particle number, which is given by
+
+0 = xj
+
+1 +z 
+
+0
+
+dk
+
+
+d
+dk
+
+(a(k) + s(k)) 
+
+1
+2
+
+(2.9)
+
+where again, half-bound states are counted with a 1
+
+comes from the contribution of the free half-bound state. subtracting m
+
+2 in the sum over j and the  1
+2
+2 times this
+
+equation from eq. (2.7), we have
+
+e =
+
+1
+
+2 xj
+
+(ej  m) +z 
+
+0
+
+dk
+2
+
+((k)  m)
+
+d
+dk
+
+(a(k) + s(k)).
+
+(2.10)
+
+14
+
+next, we and subtract the rst born approximation to eq. (2.10), which corre-
+
+sponds exactly to the tadpole graph. we must then add it back in using ordinary
+
+renormalized perturbation theory. however, in 1+1 dimensions we can adopt the
+
+simple renormalization condition that the counterterms cancel the tadpole graph and
+
+perform no additional nite renormalizations beyond this cancellation. with this
+
+choice, there is then nothing to add back in.
+
+the rst born approximation is given by
+
+(1)
+s (k) = 
+(1)
+a (k) = 
+
+1
+
+k z 
+k z 
+
+1
+
+0
+
+0
+
+v (x) cos2 kx dx
+
+v (x) sin2 kx dx.
+
+(2.11)
+
+notice that the sum of these two depends on v (x) only through the quantity hv i =
+r 0 dxv (x), so we can indeed cancel the tadpole contribution with available countert-
+
+erms.
+
+subtracting the rst born approximation, we have
+
+e[0] =
+
+1
+
+2 xj
+
+(ej  m) +z 
+
+0
+
+dk
+2
+
+((k)  m)
+
+d
+dk
+
+(a(k) + s(k) + hv i
+k
+
+).
+
+(2.12)
+
+since the born approximation becomes exact at large k, the hv i
+k
+
+term exactly cancels
+
+the leading 1
+
+completely nite and well-dened, since the integrand goes like 1
+
+k behavior of the phase shift at large k. as a result, this integral is
+k2 for k   and
+goes to a constant at k = 0. we must nd such a result, since in 1+1 dimensions
+
+eliminating the tadpole is sucient to render the theory nite.
+
+in particular, we are free to integrate by parts, giving an expression that will be
+
+easier to deal with computationally,
+
+e[0] =
+
+1
+
+2 xj
+
+(ej  m) z 
+
+0
+
+dk
+2
+
+k
+
+(k)
+
+(a(k) + s(k) + hv i
+k
+
+).
+
+(2.13)
+
+our use of levinsons theorem to regularize e in the infrared (replacing eq. (2.7)
+
+by eq. (2.10)) avoided a subtlety of the born approximation in one dimension that
+
+15
+
+does not occur in higher dimensions: as k  0, the symmetric contribution from
+eq. (2.11) introduces a spurious infrared divergence, since it goes like 1
+k . (each higher
+dimension adds a power of k near k = 0. we can see this in the feynman diagram
+
+calculation, where these powers of k come from the measure.)
+
+2.2 applications
+
+we can now use eq. (2.13) to calculate quantum energies for specic eld congura-
+
+tions. knowing that our model has a kink soliton solution 0(x) = tanh mx
+
+2 , we
+will consider a family of eld congurations that continuously interpolate between
+
+the trivial vacuum and a soliton/antisoliton pair,
+
+0(x, x0) = tanh
+
+m
+2
+
+(x + x0)  tanh
+
+m
+2
+
+(x  x0)  1,
+
+(2.14)
+
+with 2x0 measuring approximately the separation between the soliton and antisoliton.
+
+unlike the kink, these congurations are not solutions of the equations of motion,
+except in the x0  0 and x0   limits. thus we will need to to introduce a source
+that will vanish in these limits, and we must analyze the stability questions we raised
+
+earlier.
+
+for x0 very small, we simply have a small attractive perturbation from the trivial
+
+vacuum held in place by a small source, which we would not expect to introduce any
+
+instabilities.
+
+in terms of the scattering problem, for small x0, the potential is too
+
+weak to bind a state with a binding energy greater than m, which would give an
+
+imaginary eigenvalue.
+
+for x0 very large, we have a widely separated soliton/antisoliton pair. we know
+
+from translation invariance that a single soliton has a mode with 2 = 0. since this
+
+zero mode corresponds to a nodeless wavefunction, it is the lowest energy mode. the
+
+soliton/antisoliton pair has two translation modes that will mix, giving a symmetric
+
+eigenstate with a slightly lower energy and an antisymmetric eigenstate with a slightly
+
+higher energy. thus we expect to nd a single symmetric mode with 2 < 0, which
+
+16
+
+will contribute an imaginary part to e[0]. the imaginary part gives the rate for
+our eld conguration to decay through this mode toward the trivial vacuum. as
+x0  , we should nd that the imaginary part goes to zero, and the real part goes
+to twice the energy of a single soliton, which we compute exactly below.
+
+according to this analysis, there should be a nite, nonzero value of x0 where
+
+the imaginary eigenvalue rst appears. at this point, the eld becomes unstable
+
+with respect to small perturbations in some direction in eld space. therefore, the
+
+energy must have a lower minimum that we can reach by moving in that direction.
+
+this conguration 0(x, x0) is a second stationary point of the action with the same
+
+source, which crosses 0 at the value of x0 where the imaginary part for the energy
+
+appears. (for smaller values of x0, this solution still exists but has higher energy.)
+
+in terms of the scattering problem, this crossing appears when the potential has a
+
+bound state with 2 = 0. we can identify this state explicitly: since 0 and 0
+
+satisfy eq. (2.2) with the same j, as we approach the crossing, the wavefunction
+(x) = 0(x, x0)  0(x, x0) becomes a solution to eq. (2.3) with 2 = 0.
+
+we have carried out this computation numerically, and nd results that agree
+
+with all of these expectations. to compute the antisymmetric phase shift, we will
+
+parameterize the wavefunction as
+
+(x) = eikx  eikxe2i(x)
+
+(2.15)
+
+where (x) is an arbitrary complex function. solving the dierential equation for
+
+(x) subject to (0) = 0, we nd
+
+a(k) = 2 re (k, 0)
+
+where (k, x) is 0 at x =  and satises
+
+ i + 2k + 2()2 +
+
+1
+2
+
+v (x) = 0,
+
+(2.16)
+
+(2.17)
+
+with prime denoting dierentiation with respect to x. to obtain the symmetric phase
+
+17
+
+shift, we can follow the same derivation, but instead of imposing (0) = 0 on the
+
+wavefunction, we instead impose (0) = 0, giving
+
+e2is =
+
+e2i
+e2i
+
+k + 2
+k + 2
+
+with  the same as above, so that
+
+s(k) = a(k)  tan1(
+
+2 im (k, 0)
+
+k + 2 re (k, 0)
+
+).
+
+(2.18)
+
+(2.19)
+
+x0=6.0/m
+
+x0=0
+
+x0=0.75/m
+
+0
+
+-0.1
+
+-0.2
+
+-0.3
+
+-0.4
+
+-0.5
+
+-0.6
+
+-0.7
+
+-0.6
+
+-0.5
+
+-0.4
+
+-0.3
+
+-0.2
+
+-0.1
+
+0
+
+0.1
+
+0.2
+
+figure 2-1: the trajectory of e[0] in the complex energy plane, with e in units of
+m, for x0 increasing from 0 to 6
+m . arrows indicate the ow along the
+real axis.
+
+m in steps of 0.02
+
+fig. 2-1 shows the trajectory of e[0] in the complex plane as a parametric function
+of x0, starting from the origin at x0 = 0. when x0  0.75
+m , a single imaginary
+eigenvalue appears and e[0] leaves the real axis. for x0 large, e[0] approaches
+2( 1
+2 ), twice the standard result for a single soliton. the actual trajectory
+of e[0] has little signicance, since it depends in detail on the functional form of
+
+43  3
+
+18
+
+(cid:13)
+(cid:13)
+(x, x0). however, the general features  beginning at the origin, moving up the real
+
+axis, out into the complex plane, and nally asymptotically to the real two-solution
+
+value  are characteristics of any 0 that begins at the vacuum and ends at a well
+
+separated kink and antikink.
+
+fig. 2-2 shows 0(x, x0) and the second solution to the equations of motion with
+the same j, 0(x, x0). 0 goes to the trivial vacuum as x0  , and becomes a
+widely separated soliton/antisoliton pair as x0  0, crossing 0 at x0  0.75. for x0
+below this value, 0 has lower classical energy, while above this point, 0 has lower
+
+classical energy, and this crossing appears precisely where the imaginary eigenvalue
+
+appears in the small oscillations spectrum.
+
+1
+
+0.5
+
+0
+
+-0.5
+
+-1
+
+0
+0
+
+6
+
+4
+
+x
+
+2
+
+1
+1
+
+x0
+
+2
+2
+
+0
+
+3
+3
+
+figure 2-2: solutions to the equations of motion with a source given by eq. (2.2),
+as functions of x and x0 in units of 1
+m. the shaded graph is 0(x, x0), which is
+guaranteed to be a solution by the construction of j. the unshaded graph gives the
+second solution 0(x, x0). (a ner mesh is used for this graph between x0 = 0 and
+x0 = 0.1
+
+m in order to illustrate its behavior in this region.)
+
+through this continuous deformation from the trivial vacuum, we have arrived at a
+
+widely separated soliton/antisoliton pair, which we can now separate into independent
+
+congurations with nontrivial topology. these congurations are exactly soluble, so
+
+we will be able to study them analytically. however, our method does not rely on
+
+19
+
+f
+having an analytic solution, so we could numerically calculate the energy of a generic
+
+eld conguration with nontrivial topology using the same techniques.
+
+2.3 analytic results
+
+in one dimensional quantum mechanics, potentials of the form
+
+v(x) = 
+
+ + 1
+
+
+
+m2sech2(
+
+mx
+
+
+)
+
+(2.20)
+
+with  an integer are exactly soluble and reectionless. their properties are sum-
+
+marized in appendix a. the single soliton solution in our model, 0(x) = tanh mx
+2 ,
+corresponds to v (x) =  3
+2 , the  = 2 case of this family. (the sine-gordon
+soliton corresponds to the  = 1 case.) for a reectionless potential, s(k) = a(k); to
+
+2m2sech2 mx
+
+reconcile this equality with levinsons theorem in the symmetric and antisymmetric
+
+channels, vl(x) must have a half-bound state. (we saw this behavior already for the
+ = 0 case, the free particle.) we also note that although s = a, (1)
+s
+
+a , so the
+
+6= (1)
+
+renormalized contributions from the symmetric and antisymmetric channels are not
+
+the same. in addition, the bound state contributions will also be unequal.
+
+for our case, the exact result for the phase shift is
+
+s(k) = a(k) =  tan1
+
+3mk
+
+m2  2k2 ,
+
+(2.21)
+
+where the branch of the arctangent is chosen so that the phase shift is continuous
+and goes to zero for k  . the born approximation is
+
+(1)
+s (k) + (1)
+
+a (k) =
+
+3m
+k
+
+.
+
+(2.22)
+
+there are three bound states: a translation mode with e = 0, a state with
+
+e = m3
+
+2
+
+, and a half-bound state with e = m. using eq. (2.12) or eq. (2.13) we nd
+
+e[0] = m(
+
+1
+43 
+
+3
+2
+
+)
+
+20
+
+(2.23)
+
+in agreement with [11], [10], and the mode number cuto method in [8].
+
+we can calculate the energy of the soliton of the sine-gordon model using the
+
+same methods. in this model, the m2
+
+4 (2  1)2 potential is replaced by
+
+u() = m2(cos   1)
+
+which has soliton (anti-soliton) solutions
+
+0 = 4 tan1(exp(m(x  x0))).
+
+the phase shift is
+
+with born approximation
+
+s(k) = a(k) = tan1 m
+k
+
+(1)
+s (k) + (1)
+
+a (k) =
+
+2m
+k
+
+.
+
+(2.24)
+
+(2.25)
+
+(2.26)
+
+(2.27)
+
+the bound states are just the translation mode at e = 0 and the half-bound state
+
+at e = m, giving
+
+e[0] = 
+
+m
+
+
+(2.28)
+
+again agreeing with the established results.
+
+21
+
+chapter 3
+
+fermions in one dimension
+
+we next extend our methods by adding fermions. we will see that our techniques
+
+extend cleanly and unambiguously to this case, and deal elegantly with the subtleties
+
+of boundary conditions.
+
+3.1 formalism
+
+we consider a majorana fermion  interacting with a scalar background eld , with
+
+the classical lagrangian density
+
+l =
+
+m2
+
+2 (cid:16)i /  m  + l(cid:17)
+
+(3.1)
+
+where l is the lagrangian density for the  background eld, which we will take
+to be the same as in the last section, with the same soliton solutions. we note
+
+that choosing the lagrangian density in this way causes the bosonic and fermionic
+
+degrees of freedom to be related by supersymmetry for a background eld that is a
+
+solution to the equations of motion (such as a single soliton or an innitely separated
+
+soliton/antisoliton pair). in this section, we will use this property only because we
+
+will nd it instructive to compare the bosonic and fermionic small oscillations spectra.
+
+in the next section, we will consider the full supersymmetric model.
+
+the one-loop corrections to the energy due to fermionic uctuations will be
+
+22
+
+given by the appropriately renormalized sum of the zero-point energies,  1
+2 , of
+the fermionic small oscillations. the spectrum of fermionic small oscillations in a
+
+background 0(x) is given by the dirac equation,
+
+0 i1 d
+
+dx
+
++ vf (x)! k(x) = f
+
+k k(x)
+
+(3.2)
+
+where vf (x) = m0(x) is the fermionic potential and k = 2  m2 is the momen-
+
+tum labeling the scattering states.
+
+we will choose the convention 0 = 2 and 1 = i3 so that the majorana con-
+
+dition becomes simply  = . we note that since our lagrangian is cp invariant,
+
+all of our results for the spectrum of a majorana fermion can be extended to a dirac
+
+fermion simply by doubling.
+
+again, we will need to nd the phase shifts. we can solve for the phase shifts
+of any fermionic potential vf (x) that satises vf (x) = vf (x) and vf (x)  m as
+x   by generalizing the methods of the previous section. this form will be
+useful for considering our example of a sequence of background eld congurations
+
+that continuously interpolates between the trivial vacuum and a widely separated
+
+soliton-antisoliton pair.
+
+in the limit of innite separation, the phase shift for the
+
+pair goes to twice the result for a single soliton. for comparison, we also do the
+
+computation for a single soliton directly below.
+
+we dene the parity operator acting on fermionic states as p = 0, where 
+sends x  x. p commutes with the hamiltonian, so parity is a good quantum
+number. as a result, we can separate the small oscillations into positive and negative
+
+parity channels, now restricted to k > 0 in the continuum.
+
+we parameterize the fermion solutions by
+
+and
+
+(3.3)
+
+ei(x)
+
+iei(x)ei
+
+1(x) = 
+
+m and  and  are complex functions of x. we then nd the phase
+
+2(x) = 
+
+
+ eikx
+
+ eikx
+
+ei(x)
+
+ei
+
+iei(x)
+
+where  = tan1 k
+
+23
+
+shift in each channel (k) by solving eq. (3.2) subject to the boundary conditions
+
+(0)  
+
+
+1
+
+i
+
+
+giving the phase shift as
+
+(0) = e
+
+i
+
+2 2(0)  e2i(k)e i
+
+2 1(0).
+
+(3.4)
+
+(3.5)
+
+our boundary conditions assure that the wavefunctions  are eigenstates of the
+parity operator with eigenvalues 1. we obtain
+
++(k) = re (0) +
+(k) = re (0) +
+
+
+2
+
+2
+
++
+
++
+
+1
+2i
+1
+2i
+
+log
+
+log
+
+y  1
+1  y 
+1 + y
+1 + y 
+
+(3.6)
+
+where y = 1
+
+ (vf (0)  ik + i(0)) and (x) satises
+
+ i(x) + (x)2 + 2k(x) + vf (x)2  vf (x)  m2 = 0
+
+(3.7)
+
+with the boundary condition that (x) and (x) vanish at innity. the total phase
+
+shift is given by summing the phase shifts in each channel, f (k) = +(k) + (k).
+
+again, once we know the phase shifts, levinsons theorem tells us how many
+
+bound states there will be. it works exactly the same way as in the bosonic case [7]:
+
+in the odd parity channel, the number of bound states n is given by
+
+(0) = n
+
+while in the even parity channel the number of bound states n+ is given by
+
++(0) = (n+ 
+
+1
+2
+
+).
+
+(3.8)
+
+(3.9)
+
+one can derive this result either by the same jost function methods used in the boson
+
+24
+
+case, or by observing that at small k, the nonrelativistic approximation becomes valid
+
+so the bosonic results carry over directly. as in the boson case, for a particular
+
+potential there may exist a k = 0 state in either of the two channels whose dirac
+wavefunction goes to a constant spinor as x  . (generically, for k = 0 the
+components of the dirac wavefunction go to straight lines as x  , but not lines
+with zero slope.) just as in the bosonic case, such threshold states (which we will
+
+again call half-bound states) should be counted with a factor of 1
+
+2 in levinsons
+
+theorem.
+
+given the phase shifts and bound state energies, we can calculate the one-loop
+
+fermionic correction to the energy. we continue to work in the simple renormalization
+scheme in which we add a counterterm proportional to 2 1, and perform no further
+renormalizations. the counterterm is xed by requiring that the tadpole graph cancel.
+
+as in the bosonic case, we use the density of states
+
+(k) = 0(k) +
+
+1
+
+
+df (k)
+
+dk
+
+1
+
+2 xj
+
+j z 
+
+0
+
+dk
+2
+
+
+
+df (k)
+
+dk
+
++ ect
+
+(3.10)
+
+(3.11)
+
+to write
+
+e[0] = 
+
+where  = k2 + m2 and the sum over j counts bound states with appropriate factors
+of 1
+2 as discussed above. next, we use eq. (3.8) and eq. (3.9) to rewrite this expression
+
+as
+
+e[0] = 
+
+1
+
+2 xj
+
+(j  m) z 
+
+0
+
+dk
+2
+
+(  m)
+
+df (k)
+
+dk
+
++ ect.
+
+(3.12)
+
+in terms of the shifted eld   1, the (divergent) contribution from the tadpole
+graph is given by the leading born approximation to f . a corresponding divergence
+related by    symmetry appears in the second-order diagram. to subtract
+the tadpole graph, we subtract the leading born approximation in vf  m. in order
+to maintain the    symmetry, we also subtract the corresponding piece of
+the second-order diagram by subtracting the part of the second born approximation
+
+related by the symmetry. since we have chosen the counterterm to exactly cancel
+
+25
+
+these subtractions, there is nothing to add back in. thus we have
+
+1
+
+2 xj
+
+(j  m) z 
+
+0
+
+dk
+2
+
+(  m)
+
+d
+dk
+
+(f (k)  (1)
+
+f (k))
+
+e[0] = 
+
+where
+
+(1)(k) = 
+
+1
+
+k z (cid:16)vf (x)2  vf (x)  m2(cid:17) dx
+
+(3.13)
+
+(3.14)
+
+which can also be obtained numerically by iterating eq. (3.7). for the soliton/antisoliton
+
+pair, the contribution from v (x) vanishes since it is a total derivative, so that again
+our subtraction is indeed proportional to 2  1.
+
+3.2 applications
+
+we continue to study a sequence of background elds labeled by a parameter x0 that
+
+continuously interpolates from the trivial vacuum (x) = 1 at x0 = 0 to a widely
+separated soliton/antisoliton pair at x0  ,
+
+(x, x0) = 1 + tanh
+
+m(x  x0)
+
+2
+
+ tanh
+
+m(x + x0)
+
+2
+
+.
+
+(3.15)
+
+fig. 3-1 shows the fermionic bound state energies as a function of x0. in the limit
+
+x0   two bound states approach energy m
+parity combinations of the single soliton bound state at m
+
+3
+2 . these are simply the odd and even
+3
+2 . the third (positive
+parity) bound state approaches  = 0 where the single soliton also has a bound state,
+
+but there is only one such state (with  > 0). thus for a single soliton we must thus
+
+count the zero mode with a factor of 1
+
+2. we will see this result analytically below.
+
+for any nite x0, levinsons theorem holds without subtleties; there are no states
+
+that require factors of 1
+
+2. thus for a large but nite x0, we nd
+
++(0) =
+
+3
+2
+(0) = 
+
+26
+
+(3.16)
+
+1
+
+0.9
+
+0.8
+
+0.7
+
+0.6
+
+0.5
+
+0.4
+
+0.3
+
+0.2
+
+0.1
+
+0
+
+0
+
+0.5
+
+1
+
+1.5
+
+2
+
+2.5
+
+3
+
+3.5
+
+4
+
+4.5
+
+5
+
+figure 3-1: fermion bound state energies as a function of mx0 in units of m. even
+parity states are denoted with  and odd parity states with +.
+
+consistent with having two positive parity and one negative parity bound states (see
+fig. 3-1). in the limit x0  , an even parity half-bound threshold state enters
+the spectrum at  = m just as in the bosonic case. also, in this limit, the lowest
+
+(positive parity) mode approaches  = 0, and is only counted as a 1
+
+2 as described
+above. finally, a negative parity mode enters the spectrum from below, also to be
+
+weighted by 1
+2.
+
+theorem requires the phase shift (0) to jump from  to 3
+
+thus the net change is to add half of a negative parity state, which via levinsons
+2 as x0  . this jump
+occurs by the same continuous but nonuniform process as in all cases where a new
+
+state gets bound, which is illustrated in fig. 3-2. just as in the bosonic case, in the
+
+limit of innite separation the potential we have chosen becomes reectionless, which
+
+requires +(k) = (k).
+
+to contrast the behavior of the zero modes, fig. 3-3 shows 2 for the bound states
+
+of the bosonic small oscillations. because we have chosen the bosonic potential to be
+
+consistent with supersymmetry, the bosonic and fermionic spectra are related. again
+as x0   the bound state energies approach those of the single soliton, and the
+
+27
+
+4.8
+
+4.6
+
+4.4
+
+4.2
+
+4
+
+3.8
+
+3.6
+
+3.4
+
+3.2
+
+3
+
+2.8
+
+0
+
+0.05
+
+0.1
+
+0.15
+
+0.2
+
+0.25
+
+figure 3-2: negative-parity phase shifts as functions of k/m for x0 = 2.0, 3.0, 4.0,
+5.0, 6.0, and 8.0. for any nite separation, the phase shift is equal to  at k = 0, but
+as x0 gets larger, the phase shift ascends more and more steeply to 3
+2 .
+
+1
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+0
+
+-0.2
+
+-0.4
+
+0
+
+0.5
+
+1
+
+1.5
+
+2
+
+2.5
+
+3
+
+3.5
+
+4
+
+4.5
+
+5
+
+figure 3-3: boson bound state squared energies as a function of mx0 in units of m.
+symmetric states are denoted with  and antisymmetric states with +.
+
+28
+
+for the single soliton. however, we see that in the boson case both the mode at m
+
+wavefunctions are formed from the odd and even combinations of the wavefunctions
+3
+2
+2 in counting the bosonic
+
+and the mode at  = 0 are doubled, so there is no factor of 1
+
+zero modes.
+
+0.4
+
+0.3
+
+0.2
+
+0.1
+
+0
+
+-0.1
+
+-0.2
+
+0
+
+0.5
+
+1
+
+1.5
+
+2
+
+2.5
+
+3
+
+3.5
+
+4
+
+4.5
+
+5
+
+figure 3-4: one-loop fermionic correction to the energy as a function of x0 in units
+of m.
+
+fig. 3-4 shows the values of e[0] we obtain from eq. (3.13) as a function of x0.
+in the x0   limit, we can also do the calculation analytically. we will expand on
+this technique in our discussion of the supersymmetric case below. we nd a phase
+
+shift
+
+with born approximation
+
+f (k) = 4 tan1 m
+2k
+
++ 2 tan1 m
+k
+
+(1)
+f (k) =
+
+4m
+k
+
+(3.17)
+
+(3.18)
+
+and contributions from two bound states at  = m
+
+3
+2 and one at  = m. we thus
+
+nd
+
+e[0] = 2m  1
+ 
+
+1
+
+43!
+
+(3.19)
+
+which agrees with the numerical calculation.
+
+29
+
+chapter 4
+
+the supersymmetric model in one
+
+dimension
+
+having analyzed bosons and fermions separately, we now combine these results and
+
+consider the full supersymmetric mode in one dimension. here we will work analyt-
+
+ically using a general potential, with the 4 and sine-gordon theories providing two
+
+concrete examples. the supersymmetric model also introduces another quantity, the
+
+central charge, which we must also compute in order to check the consistency of our
+
+results for the energy. a review of the literature shows a wide variety of conicting
+
+results[8, 12, 13, 9, 14, 15]. our techniques for dealing with the regularization, renor-
+
+malization and calculation of one-loop corrections to the energies of classical eld
+
+congurations will enable us to take a fresh look at this problem. we will obtain an
+
+unambiguous result for the energy and the central charge, and in the process we will
+
+see how our techniques are related to the expansion of the quantum eld in creation
+
+and annihilation operators.
+
+4.1 formalism
+
+we begin with the classical supersymmetric lagrangian density in 1+1 dimensions
+
+l =
+
+m2
+
+2 (cid:16)()()  u()2 + i /  u() (cid:17)
+
+(4.1)
+
+30
+
+where  is a real scalar,  is a majorana fermion, and u() = m
+
+2 (2  1) for the 4
+model and u() = 2m sin(/2) for the sine-gordon model. these models support
+
+classical soliton and antisoliton solutions, which are the solutions to
+
+0(x) = u(0)
+
+(4.2)
+
+for the soliton and antisoliton respectively. in the 4 model, the soliton solution is
+
+the kink that we have already discussed,
+
+kink
+
+0
+
+(x) = tanh
+
+mx
+2
+
+,
+
+while the soliton in the sine-gordon model is given by
+
+sg
+0 (x) = 4 tan1 emx,
+
+(4.3)
+
+(4.4)
+
+and in both cases the antisoliton is obtained from the soliton by sending x  x.
+the eigenvalue equations for the bosonic and fermionic small oscillations are
+
+d2
+
+ 
+
+dx2 + u(0)2 + u(0)u(0)! k(x) = (b
++ u(0)! k(x) = f
+
+0 i1 d
+
+dx
+
+k )2k(x)
+
+k k(x).
+
+the bosonic potentials are given by
+
+u(0)2 + u(0)u(0)  m2 =    + 1
+
+ ! m2sech2 mx
+
+  v(x)
+
+(4.5)
+
+(4.6)
+
+(4.7)
+
+with  = 1 for the sine-gordon soliton and  = 2 for the kink. repeating our results
+
+from above, we have phase shifts
+
+b (k) = =2(k) = 2 tan1  3mk
+kink
+b (k) = =1(k) = 2 tan1 m
+sg
+k
+
+2k2  m2!
+
+(4.8)
+
+31
+
+and bound states at  = 0 for the kink  =
+
+3m
+2
+
+, and at  = 0 for the sine-gordon
+
+soliton. as discussed above, both potentials have half-bound states at threshold, a
+
+necessary consequence of their reectionless property.
+
+as above, we avoid subtleties of boundary conditions by computing the fermionic
+
+phase shifts for a widely separated soliton and antisoliton solution, with the antisoliton
+on the left so that u()  m as x  . we will use the second-order equation
+obtained by squaring eq. (4.6),
+
+ d2
+dx2 + v(x)
+
+0
+
+
+
+
+for the soliton and
+
+dx2 + v(x)
+ d2
+
+0
+
+
+
+
+(4.9)
+
+(4.10)
+
+0
+
+dx2 + v(x)
+ d2
+
+ k(x) = k2k(x)
+
+0
+
+dx2 + v(x)
+ d2
+2 v1( x
+
+ k(x) = k2k(x)
+
+for the antisoliton, where v(x) = 1
+
+ ). an incident wave far to the left is given
+
+by
+
+k(x) = eikx
+
+
+1
+
+iei
+
+
+(4.11)
+
+with  = tan1 k
+
+m . to start with, we will restrict to the case of a reectionless
+potential, such as the kink or sine-gordon soliton. it thus scatters without reection
+
+through the antisoliton becoming
+
+k(x) = eikx
+
+
+ei
+
+iei(+)
+
+
+(4.12)
+
+where (k) is the phase shift for the bosonic potential v(x) and (k) is the phase
+shift for the bosonic potential v(x). it then scatters without reection through the
+
+soliton giving
+
+k(x) = eikx
+
+
+ei(+)
+
+iei(++)
+ .
+
+(4.13)
+
+32
+
+by rescaling the results from appendix a, we easily obtain
+
+(k) = (k)  2 tan1 m
+
+k
+
+so that for the soliton/antisoliton pair,
+
+and thus for a single soliton
+
+f (k) = b(k)  2 tan1 m
+
+k
+
+f (k) = b(k)  tan1 m
+
+k
+
+(4.14)
+
+(4.15)
+
+(4.16)
+
+in both models. this result has been also been obtained in [13] and [9]. through
+
+this analysis, we see that the decit between the boson and fermion phase shifts is
+
+necessary so that eq. (4.12) correctly solves the dirac equation in the region where
+vf (x) = m. this result also agrees with the methods of the previous section.
+
+these results generalize to any supersymmetric potential u() that supports a
+soliton 0 with 0(x) = 0(x). we can still consider eq. (4.9), with v(x) and
+v(x) replaced by
+
+and
+
+v (x) = u(0)2 + u(0)u(0)  m2
+
+v (x) = u(0)2  u(0)u(0)  m2.
+
+(4.17)
+
+(4.18)
+
+these are symmetric, though now not necessarily reectionless, bosonic potentials.
+we decompose their solutions into symmetric and antisymmetric channels. for x 
+, these solutions are given in terms of phase shifts as
+
+s
+k (x) = cos(kx  s(k))
+k (x) = i cos(kx  s(k))
+s
+
+a
+k (x) = sin(kx  a(k))
+k (x) = i sin(kx  a(k))
+a
+
+(4.19)
+
+where the arbitrary factors of i are inserted for convenience later. for all x these
+
+33
+
+wavefunctions are related by
+
+k s
+
+k a
+
+k (x) = i  d
+k (x) = i  d
+
+dx
+
+dx
+
++ u(0)! a
++ u(0)! s
+
+k (x)
+
+k (x)
+
+ka
+
+ks
+
+k (x) = i  d
+k (x) = i  d
+
+dx  u(0)! s
+dx  u(0)! a
+
+k (x)
+
+k (x)
+
+(4.20)
+
+so that the solutions to the dirac equation are
+
++
+
+k (x) = 
+
+
+s
+k
+a
+k
+
+
+
+
+and
+
+k (x) = 
+
+
+a
+k
+s
+k
+
+
+
+
+(4.21)
+
+with positive and negative parity respectively. the phase relation between the upper
+and lower components of these wavefunctions must be dierent as x   since the
+mass term has opposite signs in these two limits.
+putting this all together gives, as x  ,
+
+1
+
+dx  vf (x)! sin(kx  a(k))
+
+k   d
+cos(kx  s(k)) =
+k (cid:16)k cos(kx  a(k))  m sin(kx  a(k))(cid:17)
+=
+=  sin(kx  a(k)  ) = cos(kx  a(k)   
+
+1
+
+and thus
+
+and similarly
+
+s(k) = a(k) + tan1 m
+k
+
+a(k) = s(k) + tan1 m
+k
+
+.
+
+
+2
+
+) (4.22)
+
+(4.23)
+
+(4.24)
+
+the fermion phase shift in each channel is given by the average of the bosonic phase
+
+shifts of the two components
+
++(k) =
+
+(k) =
+
+1
+2
+1
+2
+
+(s(k) + a(k)) = s(k) 
+(a(k) + s(k)) = a(k) 
+
+1
+2
+1
+2
+
+tan1 m
+k
+tan1 m
+k
+
+(4.25)
+
+34
+
+so that
+
+f (k) = +(k) + (k) = s(k) + a(k)  tan1 m
+
+k
+
+(4.26)
+
+and we obtain the same result, eq. (4.16), as we found in the reectionless case.
+
+since f (0) 6= b(0), levinsons theorem requires that the spectrum of fermionic
+and boson bound states dier. the dierence is that, although there is a fermionic
+
+fermions. (the fermionic states at threshold also count as 1
+
+bound state for every bosonic bound state, the mode at  = 0 only counts as 1
+
+2 for the
+2, the same as in the boson
+case.) we have seen this dierence in the previous section by the tracking the bound
+
+state energies as we interpolated between the trivial vacuum and a soliton/antisoliton
+
+pair. we can also check this result analytically by observing that the residue of the
+pole at k = im in the reection coecient tf is half the residue of the pole at k = im
+in tb because of eq. (4.16). as a nal check, we imagine doubling the spectrum
+by turning  into a complex scalar and  into a dirac fermion. then in a soliton
+
+background  would have two zero-energy bound states, one involving its real part and
+
+one involving its imaginary part. however,  would have only a single zero-energy
+
+bound state, with wavefunction given by
+
+(x) = 
+
+
+0
+
+er x
+
+vf (y)dy
+
+0
+
+
+
+
+(4.27)
+
+with vf (x) = u(0). the corresponding solution with only an lower component is
+
+not normalizable; for an antisoliton, we would nd the same situation with upper and
+
+lower components reversed. thus when we reduce to a majorana fermion, we count
+
+this state as a half.
+
+we note that the fermionic phase shift and bound state spectrum are simply
+
+given by the average of the results we would obtain for the two bosonic potentials
+v(x) and v(x). we also note that just as the bosonic zero mode arises because the
+
+soliton breaks translation invariance, the fermionic zero mode arises as a consequence
+
+of broken supersymmetry invariance (which we can think of as breaking translation
+
+invariance in a fermionic direction in superspace). for a soliton solution, only the
+
+35
+
+supersymmetry generator q is broken, while q+ is left unbroken (the situation is
+reversed for an antisoliton). thus since the supersymmetry is only half broken, it is
+
+not surprising that the corresponding zero mode counts only as a half. in both cases,
+
+acting with the broken generator on the soliton solution gives the corresponding zero
+
+mode.
+
+4.2 applications
+
+to compute the one-loop correction to the energy, we now follow the same method
+
+as in the previous sections and sum the quantity 1
+
+2 over bosonic and fermionic
+states, with the fermions entering with a minus sign as usual. we will discuss the
+
+case of an isolated soliton, and see that results agree with the widely separated soli-
+
+ton/antisoliton pair considered in the last section.
+
+thus our formal expression for the energy correction is
+
+h =
+
+1
+
+2 xj
+
+b
+j 
+
+1
+
+2 xj
+
+f
+
+j +z 
+
+0
+
+dk
+2
+
+  db
+dk 
+
+df
+
+dk !
+
+(4.28)
+
+where the states at threshold and the fermion bound state at  = 0 are weighted by
+
+1
+2 as discussed above. the free density of states has cancelled between bosons and
+fermions, as required by supersymmetry. again, to avoid infrared problems later, we
+
+use levinsons theorem
+
+to rewrite eq. (4.28) as
+
+(0) = (nb 
+
+1
+2
+
+)
+
+(4.29)
+
+df
+
+dk !
+
+(4.30)
+
+1
+
+(f
+
+1
+
+h =
+
+(b
+
+2 xj
+
+j  m) 
+
+2 xj
+2 in eq. (4.29) has cancelled between bosons and fermions.
+
+j  m) +z 
+
+0
+
+dk
+2
+
+(  m) db
+dk 
+
+where the 1
+
+the continuum integral in eq. (4.30) is still logarithmically divergent at large
+
+k, as we should expect since we have not yet included the contribution from the
+
+counterterm. as above, we can isolate this divergence in the contributions from the
+
+36
+
+low order born approximations to the phase shifts b and f . we then identify these
+
+contributions with specic feynman graphs, subtract the born approximations, and
+
+add back in the associated graphs. for the boson, the divergence comes from the rst
+
+born approximation, which corresponds exactly to the tadpole graphs with a bosonic
+
+loop. for the fermion, the source of the divergence is more complicated: we subtract
+
+the rst born approximation to the fermionic phase shift and the piece of the second
+
+born approximation that is related to it by the spontaneous symmetry breaking of
+
+. this subtraction corresponds exactly to subtracting the tadpole graph with a
+
+fermionic loop and the part of the graph with two external bosons and a fermionic
+
+loop that is related to the tadpole graph by spontaneous symmetry breaking (the
+
+rest of the two-point function is then nite). for both the boson and fermion, this
+
+the leading 1
+
+these 1
+
+subtraction amounts to simply subtracting the term proportional to 1
+
+k that cancels
+k behavior of the phase shift at large k. we can identify the coecient of
+k terms with the coecients of the logarithmic divergences in the corresponding
+diagrams. as a result, by computing the divergences in the bosonic and fermionic
+
+diagrams, we obtain a check on eq. (4.16), to leading order in 1
+
+k for k large.
+
+of course we must add back all that we have subtracted, together with the con-
+
+tribution from the counterterm. to do so we must consider renormalization. we will
+
+continue to use our simple renormalization scheme, in which we introduce only the
+
+subtraction
+
+which is equivalent to
+
+l  l  cu()u()  cu() 
+
+u()  u() +
+
+
+m2 cu()
+
+(4.31)
+
+(4.32)
+
+and thus preserves supersymmetry. we x the coecient c by requiring that the
+
+boson tadpole (which includes contributions from both boson and fermion loops as
+
+we have described above) vanish. in this scheme, the counterterm completely cancels
+
+the terms we have subtracted from eq. (4.30), so there is nothing to add back in. in
+
+the sine-gordon theory, this scheme also makes the physical mass of the boson equal
+
+to m, while in the 4 theory, there is a one-loop correction to the physical mass of
+
+37
+
+the boson from the diagram with two three-boson vertices, giving a physical mass
+of m  
+4m3 [9]. for us it is more important to guarantee that the tadpole graphs
+vanish, assuring us that we have chosen the correct vacuum for the theory, than to
+
+have the physical mass equal to the lagrangian parameter m; for the sine-gordon
+
+case we happen to be able to do both at once. furthermore, such renormalization
+
+conditions can be applied uniformly to arbitrary u().
+
+thus the eect of regularization and renormalization in our renormalization scheme
+
+is to subtract
+
+(1)(k) = (1)
+
+b (k)  (1)
+
+f (k) =
+
+m
+k
+
+(4.33)
+
+from the dierence of the boson and fermion phase shifts, giving
+
+h =
+
+1
+
+(b
+
+(f
+
+2 xj
+j  m) 
+j  m)
+dk !
+(  m)  db
+dk
+df
+dk 
+dk 
+2
+dk (cid:18)tan1 m
+d
+k 
+(  m)
+
+dk
+2
+
+d(1)
+
++z 
+
+0
+
+1
+
+2 xj
++z 
+
+0
+m
+4
+
+= 
+
+m
+
+k (cid:19) = 
+
+m
+2
+
+(4.34)
+
+for both the kink and sine-gordon soliton. this result agrees with [9] and [14], and
+
+disagrees with [12], [8], [13], and [15]. as pointed out in [9], in the case of the sine-
+
+gordon soliton, it also agrees with the result obtained from the yang-baxter equation
+
+assuming the factorization of the s-matrix [17].
+
+we note that in the end this result depended only on eq. (4.16) and its impli-
+
+cations for levinsons theorem. thus, since eq. (4.16) holds in general for antisym-
+
+metric soliton solutions, eq. (4.34) gives the one-loop correction to the energy in our
+
+renormalization scheme of any supersymmetric soliton that is antisymmetric under
+
+reection.
+
+4.3 supersymmetry algebra and the central charge
+
+our second application of the apparatus we have developed is to compute the one-loop
+
+quantum correction to the central charge in the presence of the kink or sine-gordon
+
+38
+
+soliton.
+
+first we summarize the supersymmetry algebra. we dene
+
+q =
+
+(1  i1)
+
+2
+
+m2
+
+ z (/ + iu)0 dx =
+
+m2
+
+ z ( + (  u)) dx
+
+(4.35)
+
+where  = 1i1
+relations, we have
+
+2  and q = 1i1
+
+2 q. using the canonical equal-time (anti)commutation
+
+m2
+ {i(x), (y)} = i(x  y)
+[(x), (y)] = i(x  y)
+
+m2
+
+
+(4.36)
+
+where  =  is the momentum conjugate to  and all other (anti)commutators vanish.
+
+the supersymmetry algebra is
+
+{q, q} = 2h  2z
+
+{q+, q} = 2p,
+
+(4.37)
+
+where h, p , and z are given classically by
+
+h =
+
+p =
+
+z =
+
+m2
+
+m2
+
+m2
+
+2 z (cid:16)2 + ()2 + u 2 + i(+ + +
+ z (cid:18) +
+ z u dx.
+
+(++ + 
+
+
+)(cid:19) dx
+
+i
+2
+
+
+
+) + 2iu+(cid:17) dx
+
+(4.38)
+
+it is easy to check that h is the same hamiltonian as would be determined canonically
+
+from eq. (4.1).
+
+at the classical level, using eq. (4.2),
+
+hcl =
+
+m2
+
+2 z (cid:16)0(x)2 + u(0)2(cid:17) dx = 
+
+m2
+
+ z u(0(x))0(x) = zcl,
+
+(4.39)
+
+for the soliton and antisoliton respectively.
+
+the hermiticity of q gives the bps bound on the expectation values of h and
+
+39
+
+z in any quantum state:
+
+hhi  |hzi| .
+
+(4.40)
+
+classically, the values of h and |z| are equal so this bound is saturated. we have
+found a negative correction to h at one-loop, so if there is no correction to z, eq. (4.40)
+
+will be violated.
+
+to unambiguously compute the corrections to the central charge for a soliton,
+
+it is easier to consider corrections to q2
+
++ = h + z, which is zero classically (for the
+
+antisoliton we should consider q2
+
+ = h+z). one reason to consider q2
+
++ rather than h
+
+and z separately is that this quantity is nite and independent of the renormalization
+
+scheme. using eq. (4.31) and eq. (4.32) we see explicitly that the contribution from
+
+the counterterm cancels:
+
+hct = cz u(0)u(0) dx = cz u(0)0 dx = zct
+
+(4.41)
+
+(and we only need consider the tree-level contribution since the counterterm coecient
+
+c is already order 0).
+
+next we expand (x) = 0(x) + (x), where the soliton solution 0 is an ordinary
+
+real function of x. neglecting terms of order 3 and higher (which give higher-loop
+
+corrections), we obtain
+
+hh + zi =
+
++ u(0)! #2
+
+dx
+
+m2
+
+2 z *2 +"  d
++i+  d
++i  d
+
+dx  u(0)! 
++ u(0)! ++
+
+dx
+
+dx,
+
+(4.42)
+
+where hi denotes expectation value in the classical soliton background.
+
+to evaluate this expression, we decompose the elds  and  using creation and
+
+annihilation operators for the small oscillations around 0. the small oscillation
+
+modes will be given in terms of the eigenmodes of the bosonic potentials v(x) and
+ ). for any mode k(x) of v(x) with nonzero energy k = k2 + m2,
+v(x) = 1
+
+2 v1( x
+
+40
+
+there is a mode k(x) of v(x) with the same energy, related by
+
+k k(x) = i  d
+kk(x) = i  d
+
++ u(0)! k
+dx  u(0)! k.
+
+dx
+
+we use these wavefunctions to obtain
+
+dk
+
+4k (cid:16)akk(x)eikt + akk(x)eikt(cid:17)
+
+(x) = s 
+m2 z
++s 
+m2 =0(x)a=0
+(x) = s 
+m2 z
++s 
+m2 =0(0)b=0
+
+dk
+
+4k (cid:16)bkk(x)eikt + bkk(x)eikt(cid:17)
+
+where k(x) = k(x), the creation and annihilation operators obey
+
+[ak, ak] = {bk, bk} = (k  k)
+
+with all other (anti)commutators vanishing, and
+
+k(x) = k
+
+
+k(x)
+
+k(x)
+ .
+
+(4.43)
+
+(4.44)
+
+(4.45)
+
+(4.46)
+
+we note that the integral over k also includes discrete contributions from the bound
+
+states (which correspond to imaginary values of k). these are understood to give
+
+discrete contributions to the results that follow (with dirac delta functions replaced
+
+by kronecker delta functions appropriately). however, we have explicitly indicated
+
+the contribution from the bound states at  = 0 following [18].
+
+we normalize the wavefunctions k such that
+
+z dk
+
+2
+
+k(x)k(y) = (x  y)
+
+(4.47)
+
+41
+
+which implies
+
+z dk
+
+2
+
+k(x) k(y) = (x  y).
+
+(4.48)
+
+with this normalization, the elds  and  obey canonical commutation relations.
+
+elementary algebra yields
+
+dk
+
+dx
+
+i  d
+
+m2 z dkk4 (cid:16)ak k(x)eikt  ak k(x)eikt(cid:17)
++ u(0)!  = s 
+m2 z dkk4 (cid:16)akk(x)eikt  akk(x)eikt(cid:17)
+i = s 
++ = s 
+m2 z
+4 (cid:16)bkk(x)eikt + bkk(x)eikt(cid:17)
++s 
+m2 =0(x)b=0
+ = s 
+m2 z
++ u(0)! + = s 
+i  d
+m2 z kdk
+dx  u(0)!  = s 
+i  d
+m2 z kdk
+
+4 (cid:16)bk k(x)eikt + bk k(x)eikt(cid:17)
+4 (cid:16)bk k(x)eikt  bk k(x)eikt(cid:17)
+4 (cid:16)bkk(x)eikt  bkk(x)eikt(cid:17)
+
+dx
+
+dk
+
+and we nd
+
+hh + zi = z dxz dk
+z dxz dk
+
+k |k(x)|2 +z dxz dk
+k |k(x)|2 z dxz dk
+
+8
+
+8
+
+8
+
+8
+
+k |k(x)|2
+k |k(x)|2 = 0
+
+(4.49)
+
+(4.50)
+
+and the bps bound remains saturated.
+(if we instead considered an antisoliton,
+we would nd the same result for hq2
+i  = hh  zi , with the roles of + and
+ reversed.) our result disagrees with [9] and [15], which claim that there is no
+correction to the central charge at one loop in this renormalization scheme. we note
+
+that this result did not depend on any specic properties of u, so it holds for any
+
+supersymmetric soliton satisfying eq. (4.2).
+
+the second line of eq. (4.50) is simply the unregulated fermionic contribution to
+
+the energy, and is explicitly equal to minus the average of the contributions from
+the bosonic potentials v and v, in agreement with what we found above. as a
+
+42
+
+nal consistency check, we recalculate the full one-loop correction to the energy and
+
+central charge using our expansion in terms of quantum elds. for h we obtain,
+
+again neglecting 3 terms,
+
+h = hhi  hcl
+
+m2
+
+=
+
+d2
+
+dx2 + u(0)2 + u(0)u(0)! 
++ u(0)! ++
+
+2 z *2 +  
++i+  d
++z dxz dk
+
+dx  u(0)!  + i  d
+k |k(x)|2 z dxz dk
+
+dx
+
+4
+
+= hct
+
+dx
+
+8
+
+k(cid:16)|k(x)|2 + |k(x)|2(cid:17) . (4.51)
+
+to relate this expression to our phase shift formalism, we consider the greens function
+
+for the bosonic eld
+
+g(x, y, t) = it h(x, t)(y, 0)i
+
+= iz
+
+dk
+
+4k (cid:16)eiktk(x)k(y)(t)
+
++eiktk(x)k(y)(t)(cid:17)
+
+and its fourier transform
+
+g(x, y, ) = z g(x, y, t)eitdt = z dk
+
+2   k(x)k(y)
+k  i!
+
+2  2
+
+whose trace gives the density of states according to
+
+giving as a result
+
+b() = im
+
+2
+
+ z g(x, x, ) dx
+
+b(k) =
+
+1
+
+ z dx|k(x)|2.
+
+similarly for the fermions we nd
+
+f (k) =
+
+1
+
+2 z dx(cid:16)|k(x)|2 + |k(x)|2(cid:17) .
+
+43
+
+(4.52)
+
+(4.53)
+
+(4.54)
+
+(4.55)
+
+(4.56)
+
+these results enable us to verify that eq. (4.51) is in agreement with eq. (4.34).
+
+in the exact same way, we can calculate the correction to z directly. we start from
+
+the classical expression for z in eq. (4.38) and expand about the classical solution
+
+ = 0, giving
+
+z = hzi  zcl
+m2
+
+= zct +
+
+= zct +
+
+ z (cid:28)u 
+2 z * (
+
+d
+dx
+
+m2
+
+1
+2
+
+uu2(cid:29)
+
+dx
+
++ u)!2
+
+ ()2  2(u)2  uu2+
+
+dx.(4.57)
+
+after substituting the expansions of eq. (4.49) we obtain
+
+z = zct +z dxz dk
+8
+1
+(j  m) 
+
+=
+
+1
+
+4 xj
++z dk
+4 z dk
+
+4
+
+2
+
+m
+
+(k  m)
+
+(  m)
+
+8
+
+k |k(x)|2 z dxz dk
+4 xj
+(j  m)
+dk (cid:16)l(k)  l(k) + 2(1)(k)(cid:17)
+dk (cid:18)tan1 m
+k 
+
+k (cid:19) =
+
+m
+2
+
+m
+
+d
+
+d
+
+=
+
+k |k(x)|2
+
+= h.
+
+(4.58)
+
+another work [20] has explained the dierence between our result for the central
+
+charge and the result obtained in ref. [9] and predecessors. the earlier works found
+
+z = 0 based on an argument that involves direct manipulation of the z operator.
+
+however, ref. [20] showed that manipulations of this type are only valid if the operator
+
+is augmented with an anomalous correction of order h.
+
+we have systematically avoided the questionable manipulations that would have
+
+led to z = 0 by computing only matrix elements, where we have the phase shift
+
+formalism available to guide us. first we developed an unambiguous renormaliza-
+
+tion procedure for h based on physical quantities. classical bps saturation denes
+
+the operator z at tree level. once we have xed a renormalization scheme in our
+
+computation of h, the expectation value of z (or any other physical quantity) is
+
+determined. we then carried out the one-loop computation of z exactly in parallel
+
+to the computation of h so that no new ambiguities could arise, and found that bps
+
+44
+
+saturation is maintained at one loop, as conrmed in ref. [20]. our use of levinsons
+
+theorem and the born approximation also prevented the appearance of the spurious
+
+linear divergences found in ref. [9].
+
+thus we consistently included the eects of the svv anomaly in both h and
+
+z, though of course we found only a particular matrix element instead of the full
+
+operator. however, by working in the continuum (without boundaries), we avoided
+
+the diculties that ref. [20] faced in separating the unphysical contributions at the
+
+boundaries from the physical eects localized at the soliton.
+
+45
+
+chapter 5
+
+scalars in three dimensions
+
+having fully analyzed models in one dimension, we now turn to three dimensions.
+
+we will continue to consider models with spherical symmetry, so that we can use a
+
+partial wave decomposition. thus, in addition to an integral over k, we will also have
+
+a sum over  to consider. on the other hand, the subtleties of the symmetric channel
+
+in one dimension will be absent. theories in three dimensions will also have stronger
+
+divergences than we found in one dimension. thus we will have to subtract more born
+
+terms and add back in more corresponding diagrams. however, since all the theories
+
+we will consider are renormalizable, only a nite number of born subtractions will
+
+be required. we will again begin with a scalar model, but our techniques will easily
+
+generalize to include fermions.
+
+5.1 formalism
+
+we consider a renormalizable eld theory with a real scalar eld  coupled to a
+charged scalar . we take the classical potential v ()  (2  v2)2, and  acquires
+a mass through spontaneous symmetry breaking. at the quantum level we put aside
+the  self-couplings and consider only the eects of the  interactions. we further
+restrict ourselves to o(h) eects in the quantum theory, which correspond to one-loop
+diagrams.
+
+46
+
+our model is dened by the classical action
+
+s[, ] = z d4x( 1
+
+2
+
+()2 
+
+
+4!
+
+(2  v2)2 +   g2
+
++a()2  b(2  v2)  c(2  v2)2 (cid:27) ,
+
+where we have separated out the three counterterms necessary for renormalization
+
+and written them in a convenient form. at one-loop order in , these are the only
+
+counterterms required.
+
+we quantize around the classical vacuum  = v and dene h =   v, so that
+
+s[h, ] = z d4x( 1
+
+2
+
+(h)2 
+
+m2
+8v2 (h2 + 2vh)2  g(h2 + 2vh)
+
++  m 2
++a(h)2  b(h2 + 2hv)  c(h2 + 2hv)2 (cid:27)
+where m = gv is the  mass and m2 = v2/3 is the h mass.
+
+the one-loop quantum eective action for h is obtained by integrating out 
+
+to leading order in h. we are interested in time-independent eld congurations
+h = h(~x), for which the eective action yields an eective energy e[h] that has three
+parts:
+
+e[h] = ecl[h] + ect[h] + e[h] ,
+
+where ecl[h] is the classical energy of h,
+ecl[h] = z d3x ( 1
+ect[h] is the counterterm contribution,
+
+2|~h|2 +
+
+m2
+
+8v2 (h2 + 2vh)2) ,
+
+ect[h] = z d3xna|~h|2 + b(h2 + 2hv) + c(h2 + 2hv)2o ,
+
+(5.1)
+
+(5.2)
+
+(5.3)
+
+and e[h] is the one-loop quantum contribution from . ect[h] and e[h] are divergent,
+but we will see explicitly that these divergences cancel for any conguration h(~x).
+
+47
+
+figure 5-1: one-loop diagrams.
+
+we x the counterterms by applying renormalization conditions in the perturba-
+
+tive sector of the theory. having done so, we have dened the theory for all h(~x). we
+
+choose the on-shell renormalization conditions
+
+1 = 0, 2(m2) = 0,
+
+and
+
+= 0,
+
+(5.4)
+
+d2
+
+dp2(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)m2
+
+where 1 and 2(p2) are the one- and two-point functions arising only from the loop
+
+and counterterms as seen in fig. 5-1. we denote the one-loop diagrams with one
+
+insertion by  and with two insertions by (p2), and nd
+
+1 = 2vg + 2vb ,
+
+2(p2) = (2vg)2(p2) + g + b + (2v)2c + ap2 .
+
+(5.5)
+
+dening
+
+(p2) 
+
+d(p2)
+
+dp2
+
+,
+
+(5.6)
+
+the renormalization conditions eq.(5.4) then yield
+
+a = (2vg)2(m2) , b = g , c = g2(m2(m2)  (m2)) ,
+
+(5.7)
+
+which we then substitute into the counterterm energy, eq. (5.3).
+
+now we consider the calculation of e[h]. this energy is the sum over zero point
+
+48
+
+energies, 1
+
+2h, of the modes of  in the presence of h(~x),
+
+e[h] = x
+
+k[h]
+
+(5.8)
+
+where k are the positive square roots of the eigenvalues of the small oscillations
+
+hamiltonian,
+
+(cid:16)~2 + m 2 + g(h2 + 2vh)(cid:17) k = 2
+
+k
+
+(5.9)
+
+the fact that  is complex accounts for the absence of 1
+
+2 in eq. (5.8).
+
+e is highly divergent. however our model is renormalizable and therefore the
+counterterms xed in the presence of the trivial h must cancel all divergences in e.
+rather than attempt to regulate the divergent sum in eq. (5.8) directly, we study
+
+the density of states that denes the sum. we can isolate the terms that lead to
+divergences in e and renormalize them using conventional methods. thus our task
+is to generalize the construction of eq. (2.7) to this case.
+
+for xed h(~x) the spectrum of h given in eq. (5.9) consists of a nite number
+
+(possibly zero) of normalizable bound states and a continuum beginning at m 2, pa-
+rameterized by k, with e(k) = +k2 + m 2. furthermore, h depends on h only
+through the combination
+
+ = h2 + 2hv ,
+
+(5.10)
+
+so we can consider e to be a functional of . we restrict ourselves to spherically
+symmetric h. then
+
+e[] = xj
+
+ej +x
+
+(2 + 1)z dk(k)e(k)
+
+(5.11)
+
+where (k) is the density of states in k in the th partial wave and the ej are the
+
+bound state energies. (k) is nite, but the sum over  and the integral over k are
+
+divergent. furthermore
+
+(k) = free
+
+
+
+(k) +
+
+1
+
+
+d(k)
+
+dk
+
+,
+
+(5.12)
+
+where (k) is the usual scattering phase shift for the th partial wave, and free
+
+
+
+(k) is
+
+49
+
+the free (g = 0) density of states. this relationship between the density of states and
+
+the derivative of the phase shift is shown for example in [14].
+
+at the outset, we subtract free(k) from the density of states since we wish to
+compare e[] to e[0]. viewing e[] as the sum of one loop diagrams, we see that
+only the diagrams with one or two insertions of g are divergent. a diagram with n
+
+insertions corresponds to the nth term in the born expansion, so all possible diver-
+
+gences can be eliminated by subtracting the rst and second born approximations
+
+from the phase shifts that determine the density of states. standard methods allow
+
+us to construct the born approximation for the phase shifts [6], which is a power
+
+series in the potential g.
+
+we dene the combination
+
+(k)  (k)  (1)
+
+ (k)  (2)
+
+ (k) ,
+
+(5.13)
+
+where (1)
+
+ (k) and (2)
+
+ (k) are the rst and second born approximations to l(k). we
+
+then have
+
+e[] = xj
+
+ej +x
++g2z
+
+(2 + 1)z 
+
+0
+
+dk
+
+d(k)
+dk
+
+1
+
+
+e(k) + gz
+
+d3p
+(2)3 (0)
+
+(5.14)
+
+d3p
+(2)3 (~p 2)| (~p)|2
+
+where
+
+(~p) = z d3x(~x)ei~p~x ,
+
+(5.15)
+
+and likewise for h(~p). both h and  are real and depend only on q  |~p| for spherically
+symmetric h. we have subtracted out the order g and g2 contributions by using
+(k) instead of (k), and added them back in by using their explicit diagrammatic
+representation in terms of the divergent constant  and the divergent function (p2).
+
+we can now combine e and ect and obtain a nite result:
+
+e + ect = xj
+
+ej +x
+
+(2 + 1)z 
+
+0
+
+dk
+
+1
+
+
+d(k)
+
+dk
+
+e(k) + 2[h]
+
+(5.16)
+
+50
+
+where
+
+2[h] =
+
+g2
+
+2 z 
+2 z 
+
+0
+g2
+
+0
+
++
+
+q2dq
+
+22 h(cid:16)(q2)  (m2) + m2(m2)(cid:17) (q)2i
+22 h4v2q2(q2)h(q)2i .
+
+q2dq
+
+(5.17)
+
+ is log divergent, but both {(q2)  (m2)} and  are nite, so 2[h] is nite as
+well.
+
+each term in the born approximation to the phase shift goes to zero at k = 0, so
+by levinsons theorem (0) = (0) = n where n is the number of bound states
+with angular momentum . as k  , (k) falls o like 1
+ (k) falls o like 1
+k ,
+and (2)
+k2 . since the born approximation becomes exact at large k,
+(k) falls like 1
+k3 . thus we see that the rst subtraction renders each integral over k
+convergent. the second subtraction makes the -sum convergent. we are then free
+
+ (k) falls o like 1
+
+k , (1)
+
+to integrate by parts in (5.16), obtaining
+
+e[h] = ecl[h] + 2[h] 
+
+1
+
+ x
+
+(2 + 1)z 
+
+0
+
+dk (k)
+
+k
+
+e(k)
+
++xj
+
+(ej  m) .
+
+(5.18)
+
+in this expression we see that each bound state contributes its binding energy, ejm,
+so that the energy varies smoothly as we strengthen h and bind more states.
+
+5.2 calculational methods
+
+in this section we describe the method that allows us to construct e[h] as a functional
+of h and search for stationary points. we now consider the calculation of each of the
+
+terms in eq. (5.18) in turn. the classical contribution to the action is evaluated
+
+directly by substitution into eq. (5.2). 2[h] of eq. (5.17) is obtained from a feynman
+
+diagram calculation,
+
+2[h] =
+
+0
+
+g2
+
+q2dq
+
+(4)2 z 
+
+
+m 2 + q2x(1  x)
+m 2  m2x(1  x)
+
+0 "log
+(2)2 z 1
+m2x(1  x)
+m 2  m2x(1  x)# (q)2dx
+
+51
+
+g2
+
+(4)2 z 
+
+0
+
+
+
+q2dq
+
+0 "
+(2)2 z 1
+
+x(1  x)
+
+m 2  m2x(1  x)
+
+4v2q2h(q)2# dx.
+
+(5.19)
+
+the partial wave phase shifts and born approximations are calculated as follows.
+
+the radial wave equation is
+
+ u +"( + 1)
+
+r2
+
++ g(r)# u = k2u,
+
+(5.20)
+
+where k2 > 0, and (r)  0 as r  . we introduce two linearly independent
+solutions to eq. (5.20), u(1)
+
+ (r) and u(2)
+
+ (r), dened by
+
+ (r) = e2i(k,r)rh(1)
+u(1)
+ (k,r)rh(2)
+u(2)
+ (r) = e2i
+
+ (kr)
+
+ (kr)
+
+(5.21)
+
+is the spherical hankel function asymptotic to eikr/r as r  , h(2)
+
+where h(1)
+
+h(1)
+r  . the scattering solution is then
+
+(kr), and (k, r)  0 as r  , so that u(1)
+
+ (r)  eikr and u(2)
+
+ (kr) =
+ (r)  eikr as
+
+u(r) = u(2)
+
+ (r) + e2i(k)u(1)
+
+ (r) ,
+
+and obeys u(0) = 0. thus we obtain
+
+(k) = 2 re (k, 0).
+
+(5.22)
+
+(5.23)
+
+furthermore,  obeys a simple, non-linear dierential equation obtained by substi-
+tuting u(1)
+
+
+into eq. (5.20),
+
+ i  2ikp(kr) + 2()2 +
+
+1
+2
+
+g(r) = 0 ,
+
+(5.24)
+
+where primes denote dierentiation with respect to r, and
+
+p(x) =
+
+d
+dx
+
+lnhxh(1)
+
+ (x)i
+
+52
+
+(5.25)
+
+is a simple rational function of x.
+
+we solve eq. (5.24) numerically, integrating from r =  to r = 0 with (k,) =
+(k,) = 0, to get the exact phase shifts. to get the born approximation to , we
+solve the equation iteratively, writing  = g1 + g22 + . . ., where 1 satises
+
+and 2 satises
+
+ i1  2ikp(kr)1 +
+
+1
+2
+
+(r) = 0
+
+ i2  2ikp(kr)2 + 2(1)2 = 0.
+
+(5.26)
+
+(5.27)
+
+we can solve eciently for 1 and 2 simultaneously by combining these two equa-
+
+tions into a coupled dierential equation for the vector (1, 2). this method is
+
+much faster than calculating the born terms directly as iterated integrals in r and
+
+will generalize easily to a theory requiring higher-order counterterms.
+
+having found the phase shifts, we then use levinsons theorem to count bound
+
+states. we then nd the energies of these bound states by using a shooting method to
+
+solve the corresponding eigenvalue equation. we use the eective range approximation
+
+[6] to calculate the phase shift and bound state energy near the threshold for forming
+
+an s-wave bound state.
+
+5.3 results
+
+for the model at hand, we calculated the energy e[h] for a two-parameter (d and w)
+family of gaussian backgrounds
+
+h(r) = dver2v2/2w2
+
+.
+
+(5.28)
+
+in fig. 5-2, we show results which are representative of our ndings in general. we
+
+plot the energy of congurations with xed d = 1 as a function of w, for g = 1, 2, 4, 8
+
+(from top to bottom). we note that to this order, for g = 8 the vacuum is unstable
+
+to the formation of large  = 0 regions.
+
+53
+
+25
+
+20
+
+15
+
+10
+
+5
+e[h]
+
+0
+
+-5
+
+-10
+
+-15
+
+0
+
+(cid:13) g=1
+
+g=2
+
+g=4
+
+g=8
+
+0.5
+
+1
+
+1.5
+
+2
+
+2.5
+
+3
+
+3.5
+
+4
+
+w
+
+figure 5-2: e[h] in units of v, for d = 1 and g = 1, 2, 4, 8, as a function of w.
+
+to explore whether the charged scalar forms a non-topological soliton in a given 
+background, we add to e[h] the energy of a valence  particle in the lowest bound
+state. we then compare this total energy to m, the energy of the  particle in a at
+
+background, to see if the soliton is favored. this is the scalar model analog of t-quark
+
+bag formation.
+
+for xed g and m, we varied h looking for bound states with energy e such that
+e +e[h] < m. however, for those values of g and m where we did nd such solutions,
+we always found that by increasing w, we could make e[h] < 0, so that the vacuum is
+unstable, as we pointed out above in the case of g = 8 in fig. 5-2. thus we nd that
+
+if we stay in the g, m parameter region where the vacuum is stable, the minimum is
+
+at h = 0, so there are no nontopological solitons.
+
+although we did not nd a non-trivial solution at one-loop order in this simple
+
+model, our calculation demonstrates the practicality of our method in three dimen-
+
+sions. we can eectively characterize and search the space of eld congurations,
+
+h(r), while holding the renormalized parameters of the theory xed. the same meth-
+
+ods can be used to study solitons in theories with richer structure in three dimensions.
+
+54
+
+(cid:13)
+(cid:13)
+5.4 derivative expansion
+
+our results are exact to one-loop order. the derivative expansion, which is often
+
+applied to problems of this sort, should be accurate for slowly varying h(r). we
+
+found it useful to compare our results with the derivative expansion for two reasons:
+
+rst, we can determine the range of validity (in d and w) of the derivative expansion;
+
+and second, where the derivative expansion is expected to be valid, it provides a check
+
+on the accuracy of our numerical work and c++ programming. where expected, the
+
+two calculations did agree to the precision we specied (1 %).
+
+in our model, the rst two terms in the derivative expansion of the one-loop
+
+eective lagrangian can be calculated to be
+
+l1 = lct + z + z2 +
+
+g2v4
+
+322 (cid:20)(1 + z)2 ln(1 + z)  z 
+
+3
+2
+
+z2(cid:21) +
+
+g
+
+1
+
+482v2
+
+1 + z
+
+(z)2 ,
+
+(5.29)
+
+where z = g/m 2 = (h2 + 2hv)/v2,  and  are cuto-dependent constants, and
+lct is the same counterterm lagrangian as we used in sec. 2. for 4 scalar eld
+theory a similar result was rst derived in [5]. the last term above is proportional
+
+to (h)2, and is completely cancelled by a nite counterterm that implements the
+
+renormalization prescription of sec. 2. in this prescription, counterterms also cancel
+the z and z2 terms above. thus the o(p2) derivative expansion for the eective
+energy, to be compared with the phase shift expression for e[h], is
+
+ede[h] = z d3x
+
+
+g2v4
+
++
+
+2
+
++
+
+(~h)2
+
+m2
+8v2 (h2 + 2hv)2
+322 (cid:20)(1 + z)2 ln(1 + z)  z 
+
+3
+2
+
+z2(cid:21)) .
+
+(5.30)
+
+the results of the comparison with the phase shift method can be seen in fig. 5-3
+
+for d = 0.25, and g = 4. a similar pattern holds in general for other values of both
+
+d and g. as the width becomes larger, the two results merge. this is as expected,
+
+since it is for large widths, and thus small gradients, that we expect the derivative
+
+55
+
+(cid:13)d e/e
+
+1
+
+0.9
+
+0.8
+
+0.7
+
+0.6
+
+0.5
+
+0.4
+
+0.3
+
+0.2
+
+0.1
+
+0
+
+0
+
+0.2
+
+0.4
+
+0.6
+
+0.8
+
+1
+
+1.2
+
+1.4
+
+w
+
+figure 5-3: |(e  ede)/(e  ecl)| for d = 0.25, g = 4, as a function of w.
+
+expansion to yield accurate results. as the width tends to zero, both results tend
+
+to zero, and the fact that the plot tends to 1 simply indicates that the derivative
+
+expansion result goes to zero faster than the phase shift result.
+
+56
+
+chapter 6
+
+fermions in three dimensions
+
+it is now an easy matter to extend these three dimensional results to fermions. we
+
+continue to consider a classical background , now coupled to a dirac fermion . our
+
+lagrangian becomes
+
+l =
+
+
+4!
+
+1
+()2 
+2
++a()2  b(2  v2)  c(2  v2)2
+
+(2  v2)2 + i /  g 
+.
+
+the small oscillations are now given by the dirac equation,
+
+0(cid:16)iii + m + gh(cid:17) k = k
+
+(6.1)
+
+(6.2)
+
+where h =  v and m = gv. we will continue to work with a symmetric background
+h, so we can decompose our small oscillations into channels according to angular
+
+momentum.
+
+letting i = 0i and  = 0, we will work in the basis
+
+0
+
+1
+
+0 1
+
+
+k = 
+
+
+0
+
+k
+
+k
+
+0 
+
+
+and
+
+ = 
+
+
+57
+
+(6.3)
+
+where the k are the standard pauli matrices. we dene the operator
+
+q = (~  ~l)
+
+(6.4)
+
+where ~l = ~r ~p. this operator commutes with the hamiltonian, and is related to the
+total angular momentum operator ~j = ~l + 1
+4. we can thus restrict
+to states with a particular eigenvalue q of the operator q, with q = 1,2,3 . . ..
+we also introduce the radial momentum operator
+
+2~ by q2 = ~j 2 + 1
+
+pr = i  d
+
+dr
+
++
+
+1
+
+r!
+
+which allows us to rewrite eq. (6.2) as
+
+(cid:18)rpr +
+
+i
+r
+
+rq + (m + gh(r))(cid:19) k = k
+
+where r = r  ~. the solutions to this equation will be of the form
+
++
+
+k =
+
+1
+
+r 
+
+
+f (r)y m
+(q1)j
+ig(r)y m
+
+qj
+
+
+
+
+for q > 0 and
+
+k =
+
+(6.5)
+
+(6.6)
+
+(6.7)
+
+(6.8)
+
+1
+
+r 
+
+
+f (r)y m
+|q|j
+ig(r)y m
+
+(|q|1)j
+
+
+
+
+for q < 0, where y m
+to a state with total angular momentum j, orbital angular momentum , and a z
+
+is the two-component spinor spherical harmonic corresponding
+
+j
+
+component of angular momentum m. these two solutions are eigenstates of parity
+with eigenvalues (1)q respectively. the functions f and g obey the coupled radial
+equations
+
+((  m)  gh(r)) f +
+(( + m) + gh(r)) g 
+
+dg
+dr
+df
+dr
+
++
+
++
+
+q
+r
+q
+r
+
+g = 0
+
+f = 0.
+
+(6.9)
+
+58
+
+if we set h(r) = 0, f and g obey the second-order equations
+
+ 
+ 
+
+d2
+dr2 +
+d2
+dr2 +
+
+q(q  1)
+
+r2
+
+q(q + 1)
+
+r2
+
+! f = k2f
+! g = k2g
+
+(6.10)
+
+where  = k2 + m2. thus the free solutions for f and g will be spherical harmonics
+j(kr), with  equal to the orbital angular momentum of the spherical harmonic that
+
+the radial function multiplies in eq. (6.7) or eq. (6.8).
+
+in each channel, it is convenient to work with the full second-order equation that
+
+we obtain by squaring the dirac equation. any solution to the dirac equation must
+
+solve this equation as well, and if we choose our boundary conditions so that the dirac
+
+equation is solved, a solution to the second-order equation will automatically solve the
+
+dirac equation. to facilitate our numerical computation, we will focus on the upper
+component, since its equation will involve the quantity  + m rather than   m, and
+the former is easier to deal with numerically at small k. (the small k limit is also
+
+the nonrelativistic limit, and in this limit the upper component is large compared
+
+to the lower component, which makes it easier to deal with numerically; if we were
+
+investigating negative energy solutions it would be easier to use the lower component.)
+
+we will therefore label our channels by parity (as above) and by  = 0, 1, 2, . . ., the
+
+orbital angular momentum of the upper component. the total spin j is then equal
+
+to  + 1
+
+2 for positive parity and   1
+
+2 for negative parity. (only positive parity exists
+
+for  = 0.)
+
+plugging f (r) = e2i(r)rh(1)
+
+ (kr) into the full second-order equation for f gives
+
+i+
+
+ 2ikp(kr)+
+
+ +2(+
+
+ )2+
+
+1
+
+2  g2 + g
+
+h(r)(kp(kr)  +1
+
+(e + m + gh(r))
+
+ )
+r + i+
+
+! = 0 (6.11)
+
+in the positive parity channel, and
+
+ i  2ikp(kr)  + 2( )2 +
+
+1
+
+2  g2 + g
+
+h(r)(kp(kr) + 
+
+r + i )
+
+(e + m + gh(r))
+
+! = 0 (6.12)
+
+59
+
+in the negative parity channel. as in the bosonic case, we have dened
+
+ = h2 + 2hv.
+
+again, the phase shift is given by
+
+ (k) = 2 re  (k, 0).
+
+(6.13)
+
+(6.14)
+
+we also have stronger divergences than in the bosonic case, so we must subtract the
+
+rst four terms in the born approximation and add them back in as diagrams. as
+
+a result, the numerical computation is somewhat more complicated; nonetheless, the
+
+basic method is the same: we iterate the dierential equations for the phase shifts to
+
+obtain the born approximations, which again cancel the divergences at large k and
+
+ (though for small k and , the born approximation may deviate widely from the
+
+exact phase shift). as in the boson model, the born approximations to the phase
+
+shift go to zero at k = 0, while the exact phase shifts go to  times the number of
+
+bound states in that channel. and, as we would expect, there is an overall fermi
+
+minus sign in front of the entire result.
+
+this computation adds the full casimir energy to the computation of [22]; as indi-
+
+cated above, to consistently compute the eect of the shift in the valence quark level
+
+requires that we include the casimir energy as well. however, in this model, although
+
+the quantitative results are modied, the qualitative conclusions for moderate values
+
+of g are unchanged.
+
+an interesting generalization of this model is to add isospin, making the back-
+
+ground eld into a complex 2-component vector. we can then construct hedgehog
+
+congurations that have nontrivial topology. these congurations are no longer cp
+
+invariant. in particular, they can have spectral asymmetry, which is reected by a
+
+fermion level crossing during the process of adiabatically constructing the congura-
+
+tion from the trivial vacuum. if a level crossing does occur, the conguration carries
+
+fermion number and we do not need to ll an energy level at all. even if a level
+
+crossing does not occur, the level that is heading toward zero is often strongly bound
+
+60
+
+and thus costs only a small amount of energy.
+
+to consider congurations that violate cp , we must address the question of
+whether to sum the quantity  1
+2|| over all modes or the quantity  the negative
+modes. (if c or cp is not broken, the two methods give the same answer.) the for-
+
+mer shows more consistency with the boson computation, while the latter is what one
+
+would expect from a dirac sea picture, since the negative modes are the ones that are
+
+lled. the rst method is correct. one can prove this formally [21], but here we will
+
+show it via a simple example, ordinary qed. consider qed with a massive fermion,
+
+and imagine turning on a very weak, slowly varying electric eld. to leading order
+
+in the coupling, this eld will shift both positive and negative energy levels in the
+
+same direction, with corresponding particle and antiparticle states being shifted by
+
+the same amount. if we were to sum only the shifts in the negative energy levels, we
+
+would nd a divergent result at the leading order in the born approximation. how-
+
+ever, there is no available counterterm to cancel this innity. if instead we calculate
+
+the shift summing all of the levels, to rst order we simply get zero, since the shifts in
+
+the particle states cancel against the shift in the antiparticle states. this result agrees
+
+with the loop calculation, where we nd that the leading contribution is identically
+
+zero, with no contribution from the counterterm. (note that this result is dierent
+
+from what we nd to leading order for scalar eld.
+
+in that case, the particle and
+
+antiparticle levels move toward zero, and both sums give the same divergent result.
+
+however, in this case there is a counterterm available to cancel out this divergence.)
+
+a hedgehog conguration breaks rotational invariance, but we can choose it to
+
+stay within the spherical ansatz, so that it is invariant under grand spin (simultaneous
+
+rotations in physical space and isospin space). we decompose the spectrum into a
+
+sum over channels labeled by their grand spin and their parity. each channel now
+
+has two coupled degrees of freedom instead of one, but still can be described by a
+
+second-order (matrix) dierential equation. summing the two eigenphases gives us
+
+the total contribution to the density of states from that channel. this matrix equa-
+
+tion must also be iterated through fourth order to obtain the born approximations
+
+corresponding to the divergent diagrams.
+
+61
+
+calculation in this generalized model in principle requires no further modications
+
+to the framework presented above. however, there are practical diculties associated
+
+with the increased computational complexity. even in the model without isospin, the
+
+third- and fourth- order diagrams involve multidimensional integrals over external
+
+momenta and feynman parameters. one possible simplication is to use a toy
+
+boson model with the same divergence structure as the third- and fourth-order dia-
+
+grams. if chosen properly, this model will exhibit the same local at second order as
+
+the fermions have at third and fourth order, so subtracting its second-order phase
+
+shifts and adding back in its second-order diagram (in the fermionic renormalization
+
+scheme, of course) can regulate the theory in a computationally simpler way. such a
+
+manipulation is possible only because the divergences are simple, local functions of
+
+the background eld; the nite parts of the bosonic diagram will of course be very dif-
+
+ferent from the nite parts of the fermionic diagrams. however, because we add back
+
+in everything we have subtracted, using counterterms xed in the fermion theory, we
+
+have not changed the nal answer. work is underway on this model [23].
+
+62
+
+chapter 7
+
+conclusions
+
+we have seen that the continuum density of states formalism has allowed us to apply
+
+the powerful calculational tools of quantum mechanics  phase shifts, born approx-
+
+imations and levinsons theorem  to nontrivial problems in quantum eld theory.
+
+these formal tools provide the robust framework we need to do unambiguous cal-
+
+culations. without them, we could have easily missed the subtleties of bosonic and
+
+fermionic spectra that we have seen above, and such a mistake would lead to a dras-
+
+tic change in the end result. such errors are intolerable because of their theoretical
+
+consequences, as in the case of the saturation of the bps bound in 1+1 dimensional
+
+supersymmetric theories, and because of their phenomenological consequences, as in
+
+the case of heavy quark bags in the standard model.
+
+one can envision many other applications of this work. as mentioned above,
+
+the most immediate is to include fermions coupled to scalars with isospin in the
+
+spherical ansatz. one could also imagine adding gauge elds to such a model, to
+
+bring it still closer to the real standard model. one could then apply these methods
+
+to other gauge theory solitons, such as t hooft-polyakov monopoles or ux tubes in
+
+superconductors. it would also be interesting to see if one could use these techniques
+
+to compute quantum corrections to the action of instantons.
+
+63
+
+appendix a: properties of
+
+reectionless potentials in one
+
+dimension
+
+in this section we review the properties of solutions of
+
+with
+
+ 
+
+d2
+
+dx2 + v(x)! (x) = k2(x)
+
+v(x) = ( + 1)m2sech2mx
+
+(1)
+
+(2)
+
+for an integer . for more details, see [19]. the results used in the soliton problems
+above will then be obtained by rescaling x  x
+raising and lowering operators
+
+ . the basic technique will be to dene
+
+a = i  d
+a = i  d
+
++ m tanh mx!
+dx  m tanh mx!
+
+dx
+
+so that we can rewrite eq. (1) as
+
+(cid:16)aa  2m2(cid:17) (x) = k2(x) = (cid:16)a+1a+1  ( + 1)2m2(cid:17) (x).
+
+(3)
+
+(4)
+
+we can then connect the solutions for a given  with those for  1 by observing that
+eq. (4) implies that if (x) is an eigenstate in the potential v1, then (x) = a (x)
+
+64
+
+is an eigenstate in the potential v with the same eigenvalue k2. thus we have
+
+ (x) = a(x)
+(x) = a (x)
+
+(5)
+
+with  = k2 + l2m2. thus the spectra of v and v1 are identical, except that
+
+the spectrum of v might contain additional states annihilated by a. indeed, there
+is exactly one such state, at k2 = 2m2 (which becomes the zero mode of the
+corresponding soliton).
+
+by iterating this process, we arrive at  = 0, which is a free particle. since we
+
+know how to solve that problem completely, we can go backwards and solve for any v
+
+simply by applying raising operators and at each step solving for the one additional
+
+zero mode.
+
+for example, for  = 1 we start with the free scattering states eikx and apply a1,
+
+giving
+
+1
+k(x) =
+
+i
+
+1   d
+
+dx  m tanh mx! eikx = 
+
+1
+1
+
+(k + im tanh mx)eikx
+
+(6)
+
+and a new bound state at k2 = 1 that satises
+
+i  d
+
+dx
+
++ m tanh mx! 1
+
+0(x) = 0  1
+
+0(k) =
+
+1
+2
+
+sechmx.
+
+(7)
+
+we can then proceed to  = 2, obtaining scattering states
+
+i
+
+2   d
+
+dx  2m tanh mx! 1
+
+k(x)
+
+2
+k(x) =
+
+=
+
+=
+
+1
+
+12
+
+1
+
+12
+
+((k + 2im tanh mx)(k + im tanh mx) + m2sech2mx)eikx
+
+(m2 + k2 + 3imk tanh mx  3m2 tanh2 mx)eikx
+
+(8)
+
+65
+
+a bound state at k2 = 1 given by
+
+2
+1(x) =
+
+i
+
+3   d
+
+dx  2m tanh mx! 1
+
+0(x) = is 3
+
+2
+
+sechmx tanh mx
+
+(9)
+
+and a new bound state with k2 = 4 solving
+
+i  d
+
+dx
+
++ 2m tanh mx! 2
+
+0(x) = 0  2
+
+0(k) = s 3
+
+4
+
+sech2mx.
+
+(10)
+
+we can extend to any integer  by repeating this process. we nd that the
+
+scattering from these potentials is reectionless, with phase shift
+
+and bound states at
+
+(k) = 2
+
+tan1 jm
+k !
+
+
+
+xj=1
+
+k2 = (mj)2
+
+(11)
+
+(12)
+
+for j = 0, . . . , . the state at k2 = 0 is a half-bound state, right at threshold, which
+goes to a constant as x  . this state is given by acting with our raising operators
+on the threshold state in the free case, which is just a constant wavefunction. thus
+
+for  = 1 we nd
+
+1
+thresh =
+
+and for  = 2 we obtain
+
+i
+
+m   d
+
+dx  m tanh mx! 1 = i tanh mx
+
+2
+thresh(x) =
+
+=
+
+i
+
+dx  2m tanh mx! 1
+
+2m   d
+(1  3 tanh2 mx).
+
+1
+2
+
+thresh(x)
+
+(13)
+
+(14)
+
+we see that in both cases, these states are the k  0 limit of the scattering states,
+and have the property that they go to a constant (rather than a straight line of some
+nonzero slope) as x  .
+
+66
+
+since v is symmetric, we can separate the spectrum of wavefunctions into sym-
+
+metric and antisymmetric channels. the symmetry of the bound states will alternate,
+
+with the lowest energy bound state being symmetric. the phase shift can also be de-
+
+composed into contributions from the two channels, with
+
+(k) = s
+
+ (k) + a
+
+ (k).
+
+that the scattering is reectionless is equivalent to
+
+s
+ (k) = a
+
+ (k).
+
+levinsons theorem for the two channels gives [7]
+
+a
+ (0) = na
+
+s
+ (0) = (ns
+
+ 
+
+1
+2
+
+)
+
+(15)
+
+(16)
+
+(17)
+
+where na
+
+ and ns
+
+ are the numbers of antisymmetric and symmetric bound states
+
+in partial wave , with threshold states counted as one half. thus we see that the
+
+threshold states are essential in reconciling eq. (16) with eq. (17).
+
+67
+
+appendix b: phase shifts in
+
+arbitrary dimensions
+
+in this section we demonstrate explicitly the link between the leading born approxi-
+
+mation to the phase shifts and tadpole diagrams by computing both in dimensional
+
+regularization. we consider only the bose case for simplicity.
+
+in n spatial dimensions, we consider the bosonic small oscillations in partial wave
+ with wave number k in the presence of a ndimensionally spherically symmetric
+bosonic potential v (x). as in three dimensions, we can separate variables and obtain
+
+a dierential for the wavefunction (r) in partial waves . also as in three dimensions,
+
+it is convenient to use a rescaled wavefunction u = r
+
+n
+
+2 1, giving a generalized bessels
+
+equation
+
+  d2
+
+dr2 +
+
+1
+r
+
+d
+dr 
+
+1
+
+r2 (cid:18)( + n  2) + (1 
+
+n
+2
+
+)2(cid:19)! u + v u = k2u.
+
+(18)
+
+casimir operator l2 = 1
+
+this is the same equation as in three dimensions except that the eigenvalue of the
+2mm  has been generalized from ( + 1) to ( + n  2).
+the degeneracy factor for this partial wave (i.e. the dimension of this representa-
+
+tion of the rotation group, which gives the generalization of 2+1 in three dimensions)
+
+is the dimension of the space of symmetric tensors with  indices that each run from
+
+1 to n with all traces (contractions) removed. working out the combinatorics gives
+
+n n
+
+ =
+
+(n +   1)!
+!(n  1)! 
+
+(n +   3)!
+(  2)!(n  1)!
+
+(19)
+
+68
+
+which we will analytically continue to arbitrary n using the gamma function, which
+
+satises
+
+x (x) =  (x + 1)
+
+and
+
+ (n + 1) = n!
+
+(20)
+
+for a fuller derivation of eq. (18) and eq. (19) see for example appendix b of [24].
+
+as we have seen above, the tadpole graph requires the external momentum to be
+
+equal to zero. thus we should expect that both the leading born approximation and
+
+the tadpole graph will depend only on the spatial average of the potential (its p = 0
+
+component),
+
+hv i =
+
+v (r)rn1 dr.
+
+the leading born approximation to the phase shift is
+
+n
+2
+
+2
+
+2(cid:17) z 
+(cid:16) n
+
+0
+
+(1)
+ (k) = 
+
+
+
+2 z 
+
+0
+
+2 +1(kr)2v (r)r dr
+j n
+
+(21)
+
+(22)
+
+where j(z) is an ordinary bessel function, related to the spherical bessel function
+
+by jp(z) = q 
+
+2z jp+ 1
+
+2
+
+(z). the leading correction to the energy is
+
+e (1) =
+
+
+
+x=0
+
+n n
+
+ z 
+
+0
+
+dk
+2
+
+(  m)
+
+d(1)
+ (k)
+dk
+
+(23)
+
+where we have used levinsons theorem as in eq. (2.10). this manipulation was not
+
+necessary in our calculations in three dimensions since we did not have any singular-
+
+ities at k = 0, but it still would have been a perfectly valid thing to do; all the born
+approximations vanish at both k = 0 and k = . however, to calculate in arbitrary
+dimensions we will need to perform the  sum rst. thus, to avoid the same infrared
+
+singularities we saw in one dimension, we again have used levinsons theorem to add
+
+a total derivative to the unregulated integral. as a result, our analysis of arbitrary
+
+dimensions will provide further evidence that the correct form of the unregulated sum
+
+is indeed that of eq. (2.10).
+
+69
+
+using the bessel function identity
+
+(2q + 2)(2q +   1)!
+
+!
+
+jq+(z)2 =
+
+
+
+x=0
+
+we can explicitly do the sum over , giving
+
+(2q)!
+
+(q!)2 (cid:18)z
+
+2(cid:19)2q
+
+e (1) = 
+
+(4)
+
+n
+
+hv i
+2 (cid:16) n
+
+2(cid:17) z 
+
+0
+
+(  m)(n  2)kn3 dk.
+
+(24)
+
+(25)
+
+the k integral can be calculated near n = 1
+
+2 and then analytically continued, giving
+
+z 
+
+0
+
+(  m)kn3 dk = 
+
+mn1
+4
+
+(cid:18)1  n
+
+2 (cid:19) (cid:18)n  2
+2 (cid:19)
+
+and so we nd
+
+e (1) = hv i
+
+(4)
+
+n+1
+
+2
+
+(cid:18)1  n
+
+2 (cid:19) mn1
+
+(26)
+
+(27)
+
+in agreement with what we obtain using standard dimensional regularization of the
+
+tadpole diagram in n + 1 space-time dimensions.
+
+70
+
+bibliography
+
+[1] e. dhoker and e. farhi, nucl. phys. b248 (1984) 59, e. dhoker and e. farhi,
+
+nucl. phys. b248 (1984) 77
+
+[2] j. bagger and s. naculich, phys. rev. lett. 67 (1991) 2252, phys. rev. d45
+
+(1992) 1395.
+
+[3] j. schwinger, phys. rev. 94 (1954) 1362. see also w. greiner, b. muller and
+
+j. rafelski, quantum electrodynamics of strong fields (springer, berlin, 1985).
+
+[4] e. farhi, n. graham, p. haagensen and r. l. jae, phys. lett. b427 (1998) 334-
+
+342, n. graham and r. l. jae, phys. lett. b435 (1998) 145-151, n. graham
+
+and r. l. jae, nucl. phys. b544 (1999) 432-447, n. graham and r. l. jae,
+
+hep-th/9901023, to appear in nuclear physics b.
+
+[5] s. coleman, aspects of symmetry (cambridge university press, cambridge,
+
+1985); (north-holland, amsterdam, 1982).
+
+[6] l. schi, quantum mechanics (mcgraw-hill, ny, 1968).
+
+[7] g. barton, j. phys. a: math. gen. 18 (1985) 479.
+
+[8] a. rebhan and p. van nieuwenhuizen, nucl. phys. b508 (1997) 449.
+
+[9] h. nastase, m. stephanov, p. van nieuwenhuizen and a. rebhan,
+
+nucl. phys. b542 (1999) 471.
+
+[10] m. bordag, j. phys. a: math. gen. 28 (1995) 755.
+
+71
+
+[11] r. dashen, b. hasslacher, and a. neveu, phys. rev. d10 (1974) 4114, 4130.
+
+[12] a. dadda and p. di vecchia, phys. lett. 73b (1978) 162; a. dadda,
+
+r. horsley and p. di vecchia, phys. lett. 76b (1978) 298; r. horsley,
+
+nucl. phys. b151 (1979) 399; s. rouhani, nucl. phys. b182 (1981) 462.;
+
+h. yamagishi, phys. lett. 147b (1984) 425; a. k. chatterjee and p. majum-
+
+dar, phys. rev. d30 (1984) 844; phys. lett. 159b (1985) 37; a. uchiyama,
+
+nucl. phys. b244 (1984) 57; a. uchiyama, progr. theor. phys. 75 (1986) 1214;
+
+a. uchiyama, nucl. phys. b278 (1986) 121; a. rebhan and p. van nieuwen-
+
+huizen, nucl. phys. b508 (1997) 449.
+
+[13] r. k. kaul and r. rajaraman, phys. lett. 131b (1983) 357;
+
+[14] j. f. schonfeld, nucl. phys. b161 (1979) 125.
+
+[15] c. imbimbo and s. mukhi, nucl. phys. b247 (1984) 471.
+
+[16] d. olive and e. witten, phys. lett 78b (1978) 97.
+
+[17] k. schoutens, nucl. phys. b344 (1990) 665; c. ahn, d. bernard and a. leclair,
+
+nucl. phys. b246 (1990) 409; c. ahn, nucl. phys. b354 (1991) 57.
+
+[18] r. jackiw and c. rebbi, phys. rev. d13 (1976) 3398.
+
+[19] p. morse and h. feshbach, methods of mathematical physics (mcgraw-hill,
+
+new york, 1953).
+
+[20] m. shifman, a. vainshtein and m. voloshin, phys. rev. d59 (1999) 045016.
+
+[21] r. alkofer, h. reinhardt, and h. weigel, phys. rept. 265 (1996) 139.
+
+[22] s. dimopoulos, b. lynn, s. selipsky and n. tetradis, phys. lett. 253b (1991)
+
+237;
+
+[23] s. bashinsky, e. farhi, n. graham, r. l. jae and h. weigel, to appear.
+
+[24] s. lee, s. minwalla, m. rangamani, and n. seiberg, adv. theor. math. phys. 2
+
+(1998) 697.
+
+72
+
+

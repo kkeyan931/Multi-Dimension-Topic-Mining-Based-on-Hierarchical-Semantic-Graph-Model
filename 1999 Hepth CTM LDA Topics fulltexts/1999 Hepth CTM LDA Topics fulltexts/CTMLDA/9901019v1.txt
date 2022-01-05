@@ -1,0 +1,593 @@
+9
+9
+9
+1
+
+ 
+
+n
+a
+j
+ 
+
+5
+
+ 
+ 
+
+1
+v
+9
+1
+0
+1
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+het1161
+ta563
+
+new numerical methods for iterative or perturbative solution of
+
+quantum field theory1
+
+stephen c. hahn2 and g. s. guralnik3
+
+department of physics, brown university,
+
+providence ri 029121843
+
+abstract
+
+a new computational idea for continuum quantum field theories is outlined.
+this approach is based on the lattice source galerkin methods developed by
+garca, guralnik and lawson. the method has many promising features in-
+cluding treating fermions on a relatively symmetric footing with bosons. as a
+spino of the technology developed for exact solutions, the numerical methods
+used have a special case application to perturbation theory. we are in the pro-
+cess of developing an entirely numerical approach to evaluating graphs to high
+perturbative order.
+
+1 general approach
+
+conventional numerical evaluation of quantum eld theory involves evaluating the path
+
+integral on a spacetime lattice using monte carlo integration methods. monte carlo
+
+methods have been very successful for many problems and have served to at least
+
+roughly conrm the standard model of particle interactions. however, many serious
+
+issues are either not yet solved by this approach or not likely to be calculable at all.
+
+these include dealing with actions that are not manifestly positive denite or which
+
+have important eects from the details of fermionic interactions beyond the quenched
+
+approximation. consequently, it is worthwhile to search for supplementary methods of
+
+numerical calculation.
+
+1to appear in proceedings of fourth workshop on quantum chromodynamics, american univer-
+
+sity of paris, 16 june 1998.
+
+2e-mail: hahn@het.brown.edu.
+3e-mail: gerry@het.brown.edu.
+
+1
+
+the source galerkin method, although at a relatively primitive stage of devel-
+
+opment, appears to work on both the lattice and the continuum while dealing with
+
+fermions as easily as bosons. of course, the continuum version of source galerkin com-
+
+pletely avoids the usual lattice problem of fermionic multiplicity and the tricks used
+
+to minimize errors from this problem. furthermore, our source galerkin method is
+
+less restrictive as to the class of allowed actions. source galerkin tends to use signif-
+
+icantly less compute time than monte carlo methods but can consume signicantly
+
+larger amounts of memory. the formulation of a source galerkin approximation to a
+
+given eld theory can also require much more initial work and input to the calculation
+
+than the usual monte carlo approaches.
+
+we conne this discussion to the continuum analysis of 4 interactions; examples
+
+of lattice calculations have been given elsewhere.[1, 2, 3] our continuum results to date
+
+include non-linear sigma models and four-fermion interactions. we have gauge theory
+
+calculations in progress.
+
+we start with the dierential equations satised by the the vacuum function z for
+
+a scalar eld  with interaction g4/4 coupled to a scalar source j(x) which satises
+
+the equation:
+
+(cid:0)2
+
+d + m 2(cid:1)
+
+z
+
+j(x)
+
++ g
+
+3z
+
+j 3(x)
+
+ j(x)z = 0
+
+(1)
+
+the source galerkin technique is designed to directly solve functional dierential equa-
+
+tions of this type. before we proceed to outline a solution technique, it is essential
+
+to point out that this equation by itself does not uniquely specify a theory.[4] since it
+
+is a set of third order dierential equations at every point in space time, it possesses,
+
+a priori, an innite solution set. the solution studied in this talk will be the usual
+
+one which corresponds to the symmetry preserving solution obtained from evaluating
+
+a path integral with real axis denitions for the regions of integration. this is the
+
+solution that is regular in the coupling, g, as it approaches zero.
+
+2
+
+if we write (1) in the form:
+
+ej z(j) = 0
+
+(2)
+
+the source galerkin method is dened by picking an approximation z (j) to the
+
+solution z(j) such that
+
+ej z (j) = r
+
+(3)
+
+where r is a residual dependent on j. we pick the parameters of our approximation to
+
+make this residual as small as possible on the average. to give this statement a mean-
+
+ing, we dene an inner product over the domain of j: i.e. (a, b) r d(j) a(j)b(j).
+
+in addition, we assume we have a collection of test functions which are members of a
+
+complete set: {i(j)}. the source galerkin minimization of the residual r is imple-
+
+mented by setting the parameters of our test function z (j) so that projections of test
+
+functions against the residual vanish so that ||z   z||2  0 as the number of test
+
+functions  .
+
+the equations dening the quantum eld theory are dierential equations in the
+
+eld sources and spacetime. we can deal with the continuum by taking advantage of
+
+our knowledge of functional integration to evaluate integrals of the form:
+
+and use this to dene an inner product of sources on the continuum as follows:
+
+i =z [dj] exp(cid:2)j 2(x)/2(cid:3) p (j)
+
+(j(x1)    j(xn), j(y1)    j(ym))j =(n+m+{x1    xny1    ym} n + m even
+
+otherwise
+
+0
+
+where we have absorbed a factor of 2 by redening . + is dened by
+
++{x    } = (x  )+{    } + (x  )+{    } +    ,
+
++{x} = (x  ).
+
+3
+
+(4)
+
+(5)
+
+(6)
+
+(7)
+
+in addition to this inner product denition, we need good guesses for approximate
+
+form for z  and numerical tools to calculate, symbolically or numerically, various func-
+
+tions and their integrals, derivatives, and so on. for most of our calculations, we have
+
+found it very useful to choose a lesser known class of functions, with very suitable
+
+properties for numerical calculation, known as sinc functions. we take our notation
+
+for the sinc functions from stenger:[5]
+
+s(k, h)(x) =
+
+sin((x  kh)/h)
+
+(x  kh)/h
+
+(8)
+
+sinc approximations satisfy many identities,[5] which make these functions very easy
+
+to use for galerkin methods, collocation, integration by parts, and integral equations.
+
+with the denition of a norm and set of expansion functions, we can postulate an
+
+ansatz for z:
+
+z  = exp(cid:20)xzxy
+
+j(x)g2(x  y)j(y) +   (cid:21)
+
+(9)
+
+this ansatz with only free eld structure is very simple and one would not expect
+
+to describe the entirety of a given theory with it. however, the strength of the galerkin
+
+method to force convergence to correct answers is often strong enough to yield remark-
+
+ably good results for the lowest state of a theory. extremely good approximations
+
+to theories are obtained as additional source structure combined with the appropriate
+
+spacetime structure is added to the ansatz.
+
+in principle, it is possible to allow the functions multiplying the sources to be totally
+
+arbitrary and then to x them by expanding in sinc functions and apply the galerkin
+
+technique. the associated computations soon demand more memory than is available
+
+from current computing systems.
+
+instead we can use our knowledge of the spectral
+
+representations of eld theory and graphical approaches (developed from perturbation
+
+theory but we emphasize that our approach is not perturbative) to introduce a beautiful
+
+4
+
+and intuitive approach of regulated lehmann representations to produce candidates for
+
+z . these build the appropriate spacetime lorentz structure into our approximations
+
+and make the operational cost of our numerical approach independent of spacetime
+
+dimension. since any exact two-point function can be represented as a sum over free
+
+two-point functions an appropriate representation of the two-point function greatly
+
+facilitates this approach. we choose as the basis of our numerical solutions a regulated
+
+euclidean propagator structure:
+
+(m; x) z (dp)
+
+eipxp2/2
+
+p2 + m2 =z (dp)z 
+(2)dz 
+
+=
+
+1
+
+ds eipxp2/2s(p2+m2)
+
+0
+
+0
+
+ds (cid:20)
+
+
+
+s + 1/2(cid:21)d/2
+
+esm2
+
+x2
+
+4(s+1/2 )
+
+(10)
+
+(11)
+
+this cuto in the galerkin test function as well as the denition of inner product
+
+assures that we never have to address the issue of a divergence during the course of a
+
+calculation, just as in the case of lattice calculation where the lattice spacing serves as
+
+the cuto.
+
+this integral can be approximated using sinc methods
+
+(m; x) 
+
+h
+
+(2)d
+
+n
+
+xk=n
+
+1
+
+ekh (cid:20)
+
+
+
+zk + 1/2(cid:21)d/2
+
+exp(cid:20)zkm2 
+
+x2
+
+4(zk + 1/2)(cid:21) ,
+
+(12)
+
+here zk = ekh . for practical purposes, a sum over eighty terms with 2 = 10 gives
+
+accuracy out to twelve digitsmore than adequate for most hardware oating-point
+
+representations. thus we have a form for a two-point scalar green function, regulated
+
+by the scale 2 with constant computational cost regardless of spacetime dimension.
+
+we can take derivatives explicitly or by construction:
+
+2(m; x) = m2(m; x)  (x)
+
+(13)
+
+where (x) = ex22/4
+
+5
+
+2.5
+
+2
+
+1.5
+
+1
+
+0
+
+2
+
+4
+
+6
+
+8
+
+figure 1: one dimensional 4 mass gap versus coupling (dashed line gives exact from
+hioe and montroll, 1975)
+
+from this representation, we can directly construct a fermion two-point function:
+
+s(m; x) = (    m)(m; x)
+
+(14)
+
+these representations mean that free scalar and free fermion results are exact and
+
+immediate in any galerkin evaluation of these trivial cases.
+
+2 results: 4
+
+we itemize some results obtained using a regulated single propagator with parameters
+
+set by the source galerkin method. at lowest order, our ansatz for the generating
+
+functional is
+
+z  = expz 1
+
+2
+
+jxgxyjy.
+
+(15)
+
+results for this ansatz are given in figure 1. these results are strikingly accurate and
+
+can matched up essentially exactly with results of monte carlo calculations in two and
+
+higher dimensions.
+
+6
+
+figure 2: additional connector-based ansatzen for the four-point function, h, in 4.
+in the bottom row, we have two contact ansatzen on the left, followed by two mediated
+ansatzen.
+
+we can enhance these results by including additional 4 source terms in z . some
+
+simple additional terms that we include with weights and masses to be calculated using
+
+the source galerkin technique are the terms of the forms given in figure 2. the eect
+
+of adding a fourth order term is shown in figure 3.
+
+3 perturbation theory
+
+the representation that we have given for the free propagator (10) provides the basis for
+
+an entirely numerical expansion of any feynman graph. we have examined the possibil-
+
+ity of of generating all graphs of a theory through automatic functional dierentiation
+
+of a vacuum amplitude and then numerically analyzing the resultant expressions using
+
+sinc expansions.[6, 7] this method generates and evaluates graphs at a speed which
+
+to our knowledge far exceeds any method used in the past. we believe that it will be
+
+possible to calculate to quite high orders in perturbation theory.
+
+7
+
+hhhh
+
+exact
+
+lowest order
+
+2.4
+
+2.2
+
+2
+
+1.8
+
+1.6
+
+1.4
+
+1.2
+
+1
+
+mass, m
+
+0
+
+2
+
+4
+
+6
+
+8
+
+coupling, 
+
+figure 3: comparison of four-h approximation with lowest order and exact answer, in
+one-dimension (2 = 70).
+
+4 conclusions
+
+we have discussed a method for numerical calculations for eld theories on the con-
+
+tinuum; this method being based on the original lattice source galerkin technique.[1]
+
+we presented a lorentz-invariant regulated representation derived from lehmann rep-
+
+resentations. this approach has the computational advantages of minimal memory uti-
+
+lization and parallelizable algorithms and also allows direct representation of fermionic
+
+green functions. finally, a number of useful peripheral calculations can be made using
+
+this approximate representation: one can calculate diagrams in a regulated pertur-
+
+bation theory, as well as calculating dimensionally regularized loops numerically.
+
+in
+
+general, this technique of evaluating eld theories takes advantage of the symmetries of
+
+the lorentz group; future work includes the extension of the method to more general
+
+internal groups, such as gauge groups or supersymmetry.
+
+8
+
+acknowledgments
+
+this work was supported in part by u. s. department of energy grant de-fg09-91-
+
+er-40588task d. the authors have been the beneciaries of many valuable conver-
+
+sations with r. easther, w.-m. wang, s. garca, z. guralnik, j. lawson, k. platt, and
+
+p. emirdag. certain results in this work were previously published in hahn.[8] com-
+
+putational work in support of this research was performed at the theoretical physics
+
+computing facility at brown university.
+
+references
+
+[1] s. garca, g. s. guralnik, and j. w. lawson. a new approach to numerical quantum
+
+eld theory. physics letters, b333:119, 1994.
+
+[2] j. w. lawson and g. s. guralnik. source galerkin calculations in scalar eld theory.
+
+nuclear physics, b459:589, 1996. hep-th/9507130.
+
+[3] j. w. lawson and g. s. guralnik. new numerical method for fermion eld theory.
+
+nuclear physics, b459:612, 1996. hep-th/9507131.
+
+[4] s. garca, z. guralnik, and g. s. guralnik. theta vacua and boundary conditions
+
+of the schwingerdyson equations. hep-th/9612079, 1996.
+
+[5] f. stenger. numerical methods based on sinc and analytic functions. springer
+
+series in computational mathematics. springerverlag, 1993.
+
+[6] w.-m. wang. perturbative calculations in quantum eld theory using sinc func-
+
+tions. scb thesis, brown university, 1998.
+
+[7] r. easther, g. s. guralnik, and s. c. hahn. fast evaluation of feynman diagrams.
+
+het1158, in preparation.
+
+9
+
+[8] s. c. hahn. functional method of weighted residuals and quantum eld theory. phd
+
+thesis, brown university, 1998.
+
+10
+
+

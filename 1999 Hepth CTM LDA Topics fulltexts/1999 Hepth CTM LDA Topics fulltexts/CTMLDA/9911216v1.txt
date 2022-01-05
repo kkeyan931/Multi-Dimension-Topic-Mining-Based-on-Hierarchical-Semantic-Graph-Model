@@ -1,0 +1,3846 @@
+9
+9
+9
+1
+
+ 
+
+v
+o
+n
+6
+2
+
+ 
+
+ 
+ 
+
+1
+v
+6
+1
+2
+1
+1
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+dftt 58/99
+hub-ep-99/42
+
+critical amplitudes and mass spectrum of
+
+the 2d ising model in a magnetic eld
+
+m. casellea and m. hasenbuschb
+
+a dipartimento di fisica teorica delluniversit`a di torino
+istituto nazionale di fisica nucleare, sezione di torino
+
+via p.giuria 1, i-10125 torino, italy
+
+b humboldt universitat zu berlin, institut fur physik
+
+invalidenstr. 110, d-10099 berlin, germany
+
+abstract
+
+we compute the spectrum and several critical amplitudes of the
+two dimensional ising model in a magnetic eld with the transfer
+matrix method. the three lightest masses and their overlaps with the
+spin and the energy operators are computed on lattices of a width
+up to l1 = 21.
+in extracting the continuum results we also take
+into account the corrections to scaling due to irrelevant operators. in
+contrast with previous monte carlo simulations our nal results are
+in perfect agreement with the predictions of s-matrix and conformal
+eld theory. we also obtain the amplitudes of some of the subleading
+corrections, for which no s-matrix prediction has yet been obtained.
+
+email: caselle @to.infn.it
+email: hasenbus@physik.hu-berlin.de
+
+1 introduction
+
+in these last years there has been much progress in the study of 2d spin
+models in the neighbourhood of critical points. the scaling limit of such
+models is described in general by the action a obtained by perturbing the
+conformal eld theory (cft) which describes the critical point with one (or
+more) of the relevant operators which appear in the spectrum of the cft.
+
+a = a0 + z d2x (x)
+
+(1)
+
+where a0 is the action of the cft at the critical point [1] and (x) is the
+perturbing operator. few years ago a. zamolodchikov in a seminal paper [2]
+suggested that in some special cases these perturbed theories are equivalent
+to relatively simple quantum eld theories [3] whose mass spectrum and s-
+matrix are explicitly known. later it was realized that these theories had
+a deep connection with the dynkin diagrams of suitable lie algebras and,
+from the exact knowledge of the s-matrix, several other informations, and
+in particular some critical amplitudes were obtained (for a review, see for
+instance [4]). while these results have formally the status of conjectures,
+they successfully passed in these last years so many tests that they are now
+universally accepted. the most fascinating example of these s-matrix models
+is the ising model perturbed by an external magnetic eld, which is also the
+model which was originally studied by zamolodchikov in [2]. this model is
+highly non-trivial. its spectrum contains 8 stable scalar particles, all with
+dierent masses. both the masses and the entries of the s-matrix are based
+of the numerology of the e8 exceptional lie algebra. in particular the ratio
+between the rst two masses is predicted to be the golden ratio m2/m1 =
+2 cos( 
+5 ). the simplest realization of this qft is the 2d ising model at  = c
+in presence of an external magnetic eld h. however there are several other
+models which belong to the same universality class. in particular, the rst
+numerical check of the predictions of [2] was performed on the ising quantum
+spin chain [5] in which the rst few states of the spectrum were precisely
+observed. another interesting realization was presented, in [6, 7] where the
+dilute a3 irf (interaction round a face) model was solved exactly.
+
+despite these successes, little progress has been achieved in testing zamolod-
+
+chikovs proposal directly in the 2d ising spin model. even more, it is exactly
+for this model that one faces the only existing discrepancy between zamolod-
+
+1
+
+chikovs results and monte carlo simulations.
+
+the ising spin model in a magnetic eld was studied numerically in [8, 9].
+in both papers the authors studied the spin-spin correlator and did not nd
+the spectrum predicted by [2]. their data were compatible with the presence
+in the spectrum of only the lowest mass state. the explanation suggested
+in [8, 9] was that probably the higher masses had a negligible overlap am-
+plitude with the spin operator. however, later, in [10] these overlaps were
+evaluated explicitly in the s-matrix framework and turned out to be of the
+same order of magnitude as the overlap with the lowest mass state.
+
+in this paper we shall address this problem. we shall show that zamolod-
+chikovs proposal (and the calculations of [10]) is correct also in the case of
+the 2d ising spin model and that the apparent disagreement was due to the
+fact that it is very dicult to extract a complex spectrum from a multi-
+exponential t to the spin-spin correlator. we have been prompted to this
+explanation by another example that we recently studied, in which exactly
+the same phenomenon happens: the 3d ising model [11]. in this case also, a
+multi-exponential t to the spin-spin correlator seems to indicate the pres-
+ence of a single state in the spectrum, while, using a suitable variational
+method and diagonalizing a set of improved operators one can clearly see the
+rich spectrum of the model.
+
+while in previous numerical works [8, 9] the model was studied by using
+monte carlo simulations we tried in the present paper a dierent approach
+based on the exact diagonalization of the transfer matrix.
+
+this approach has various advantages: it gives direct access to the mass
+spectrum of the model and allows to obtain numerical estimates of various
+quantities with impressively small uncertainties. however it has the serious
+drawback that only transfer matrices of limited size can be handled and it
+is dicult to extract from them the continuum limit results in which we are
+interested. during the last years various strategies have been elaborated to
+attack this problem, but all of them are aected by systematic errors whose
+size is in general unknown.
+
+in this paper we propose a new approach based on the fact that, by using
+the exact solution of the ising model at the critical point, one can construct
+very precise expansions for the scaling functions in powers of the perturbing
+eld. more precisely, thanks to the knowledge of the spectrum of the model,
+it is possible to list all the irrelevant elds which may appear in the eective
+hamiltonian and select them on the basis of the symmetry properties of the
+
+2
+
+observables under study.
+
+our strategy could be summarized as follows.
+
+ choose a set of values of h for which the correlation length is much
+smaller than the maximum lattice size that we can study1. diagonalize
+the transfer matrix for various values of the transverse size of the lattice
+and extract all the observables of interest.
+
+ extrapolate the numbers thus obtained to the thermodynamic limit.
+thanks to the very small correlation length, the nite size behaviour is
+dominated by a rapidly decreasing exponential and the thermodynamic
+limit can be reached with very small uncertainties (we list in a set of
+tables at the end of the paper the results that we obtained in this way).
+
+ construct for each observable the scaling function keeping the rst 7
+
+or 8 terms in the expansion in powers of the perturbing eld.
+
+ fit the data with these truncated scaling functions. by varying the
+the number of input data and of subleading terms used in the scaling
+functions we may then obtain a reliable estimate of the systematic
+deviations involved in our estimates (see the discussion in sect.6).
+
+which are the observables of interest mentioned above?
+usually, when looking at the scaling regime of statistical models one
+can study only adimensional amplitude ratios which are the only quanti-
+ties which, thanks to universality, do not depend on the details of the lattice
+models, but only on the features of the underlying qft. however the ising
+model can be solved exactly at the critical point also on the lattice and ex-
+plicit expressions for the spin-spin and energy-energy correlators are known.
+this allows to write the explicit expression in lattice units of the amplitudes
+evaluated in the framework of the s-matrix theory. thus one is able to pre-
+dict not only adimensional amplitude ratios but also the values of the critical
+amplitudes themselves. this greatly enhances the predictive power of the s-
+matrix theory and makes much more stringent the numerical test that we
+perform.
+
+1in particular we decided to keep the ratio 
+l0
+
+< 0.1. this means that we only studied
+
+values of h for which the correlation length was smaller than two lattice spacings.
+
+3
+
+the nal result of our analysis is that all the observables that we can
+
+measure perfectly agree with the s-matrix predictions.
+
+in particular we obtain very precise estimates for the rst three masses,
+for several critical amplitudes and, what is more important, for the overlap
+amplitude of the rst two masses with the spin and energy operators, a result
+which had never been obtained before.
+
+we also measure the amplitude of some of the subleading corrections in
+the scaling functions, for which no s-matrix prediction exists for the moment.
+in particular we found that the amplitude of the corrections due to the energy
+momentum tensor in translationally invariant observables is compatible with
+zero.
+
+this paper is organized as follows. in sect. 2 we introduce the model in
+which we are interested, collect some known results from s-matrix theory
+and nally give the translation in lattice units of the critical amplitudes
+evaluated in the s-matrix framework.
+in sect. 3 we construct the scaling
+functions. this only requires the use of very simple and well known results
+of conformal field theory. notwithstanding this it turns out to be a rather
+non trivial exercise. since it could be a result of general utility (it could be
+extended to other models for which the cft solution is known or to other
+quantities of the ising model in a magnetic eld that we have not studied in
+the present paper) instead of simply giving the results, we derived the scaling
+functions explicitly and tried to give as much details as possible. sect. 4 is
+devoted to a description of the transfer matrix method. in sect. 5 we deal
+with the thermodynamic limit while in sect. 6 we analyze the transfer matrix
+results and give our best estimates for the critical amplitudes in which we
+are interested. sect. 7 is devoted to some concluding remarks.
+
+to help the reader to reproduce our analysis (or to follow some alternative
+tting procedure) we list in four tables at the end of the paper the data that
+we obtained with the transfer matrix approach.
+
+2 ising model in a magnetic eld
+
+in this section we shall review the existing theoretical informations on the
+ising model in a magnetic eld. this will require four steps. first (in
+sect. 2.1) we shall dene the lattice version of the model, discuss its action
+and dene the observables in which we shall be interested in the following.
+
+4
+
+then (in sect. 2.2) we shall turn to the continuum version of the theory,
+described in the present case by the action:
+
+a = a0 + hz d2x (x)
+
+(2)
+
+where (x) is the perturbing operator. in particular we shall discuss, within
+the framework of the renormalization group, the expected scaling behaviour
+of the various quantities of interest and dene the corresponding critical
+amplitudes. in sect. 2.3 we shall use the knowledge of the s-matrix of the
+model to obtain the value of some of the amplitudes of interest by using
+the thermodynamic bethe ansatz (tba) and the form factor approach.
+finally in sect. 2.4 we shall turn back to the lattice model and show how the
+continuum results can be translated in lattice units.
+
+2.1 the lattice model
+
+the lattice version of the ising model in a magnetic eld is dened by the
+partition function
+
+z = xi=1
+
+e(phn,mi nm+hpn n)
+
+(3)
+
+where the eld variable n takes the values {1}; n  (n0, n1) labels the sites
+of a square lattice of size l0 and l1 in the two directions and hn, mi denotes
+nearest neighbour sites on the lattice. in our calculations with the transfer
+matrix method we shall treat asymmetrically the two directions. we shall
+denote n0 as the time coordinate and n1 as the space one. the number of
+sites of the lattice will be denoted by n  l0l1. in the thermodynamic limit
+both l0 and l1 must go to innity and only in this limit we may recover the
+results of the continuum theory. in our actual calculations with the transfer
+matrix method we shall study nite values of l1 and then extrapolate the
+results to innity. this extrapolation induces systematic errors which are
+the main source of uncertainty of our results, since the rounding errors in the
+transfer matrix diagonalization are essentially negligible. in sect. 6 below,
+we shall discuss these systematic errors and estimate their magnitude.
+
+in order to select only the magnetic perturbation, the coupling  must
+
+be xed to its critical value
+
+ = c =
+
+1
+2
+
+log (2 + 1) = 0.4406868...
+
+5
+
+by dening hl = ch we end up with
+
+z(hl) = xi=1
+
+ecphn,mi mm+hlpn n
+
+.
+
+(4)
+
+hl denotes the lattice discretization of the magnetic eld h which appears
+in the continuum action eq. (2). it must be, for symmetry reasons, an odd
+function of h.
+
+2.1.1 lattice operators
+
+it is useful to dene the lattice analogous of the spin and energy operators
+of the continuum theory. they will correspond to linear combinations of
+the relevant and irrelevant operators of the continuum theory with suitable
+symmetry properties with respect to the z2 symmetry of the model (odd for
+the spin operator and even for the energy one). near the critical point this
+linear combination will be dominated by the relevant operator and the only
+remaining freedom will be a conversion constant relating the continuum and
+lattice versions of the two operators (we shall nd this constants in sect. 2.5).
+the simplest choices for these lattice analogous are
+
+ spin operator
+
+l(x)  x
+
+(5)
+
+i.e. the operator which associates to each site of the lattice the value
+of the spin at that site.
+
+ energy operator
+
+l(x) 
+
+1
+4
+
+x  xy n.n. x
+
+y!  b
+
+(6)
+
+where the sum runs over the four nearest neighbour sites y of x. b
+represents a constant bulk term which we shall discuss below.
+
+the index l indicates that these are the lattice discretizations of the contin-
+uous operators. we shall denote in the following the normalized sum over all
+the sites of these operators simply as
+
+l 
+
+1
+
+n xx
+
+l(x)
+
+l 
+
+1
+
+n xx
+
+l(x)
+
+.
+
+(7)
+
+6
+
+2.1.2 observables
+
+ free energy
+
+the free energy is dened as
+
+f (hl) 
+
+1
+n
+
+log(z(hl))
+
+.
+
+(8)
+
+it is important to stress that f (hl) is composed by a bulk term fb(hl)
+which is an analytic even function of hl and by a singular part fs(hl)
+which contains the relevant informations on the theory as the critical
+point is approached. the continuum theory can give informations only
+on fs. the value of fb(0) can be obtained from the exact solution of
+the lattice model at hl = 0,  = c (see [12])
+
+fb =
+
+2g
+
+
++
+
+1
+2
+
+log 2 = 0.9296953982...
+
+(9)
+
+where g is the catalan constant.
+
+ magnetization
+
+the magnetization per site m(hl) is dened as
+
+m(hl) 
+
+1
+n
+
+
+hl
+
+(log z(hl)) =
+
+1
+
+n hxi
+
+.
+
+ii
+
+hence we have
+
+m(hl) = hli
+
+.
+
+ magnetic susceptibility
+
+the magnetic susceptibility  is dened as
+
+(hl) 
+
+m(hl)
+
+hl
+
+.
+
+ internal energy
+
+we dene the internal energy density e(hl) as
+
+e(hl) 
+
+1
+
+2n h xhn,mi
+
+nmi
+
+.
+
+7
+
+(10)
+
+(11)
+
+(12)
+
+(13)
+
+as for the free energy, also in this case one has a bulk analytic contri-
+bution eb(hl) which is an even function of hl. let us dene b  eb(0).
+the value of eb(0) can be easily evaluated (for instance by using
+kramers-wannier duality) to be b = 12. let us dene e(hl) 
+e(hl)  b, we have
+
+e(hl) =
+
+1
+
+2n h xhn,mi
+
+nmi 
+
+1
+2
+
+.
+
+hence we have
+
+e(hl) = hli
+
+.
+
+(14)
+
+(15)
+
+as usual the internal energy can also be obtained by deriving the free
+energy with respect to . however it is important to stress that, due
+to the magnetic perturbation (see eq.(3)) in performing the derivative
+we also extract from the boltzmann factor a term proportional to hl.
+hence we have:
+
+e(hl) =
+
+1
+2n
+
+
+
+
+(log z(hl)) 
+
+hl
+2c
+
+l
+
+.
+
+(16)
+
+this observation will play an important role in the following.
+
+2.1.3 correlators
+
+we are interested in the spin-spin and in the energy-energy connected corre-
+lators dened as
+
+g,(r)  hl(0)l(r)i  hli2  hl(0)l(r)ic
+g,(r)  hl(0)l(r)i  hli2  hl(0)l(r)ic
+
+,
+
+.
+
+(17)
+
+(18)
+
+for a nonzero magnetic eld these correlators are very complicated, unknown,
+functions of h and r, however a good approximation in the large distance
+regime r   is2
+
+g(r)
+
+hli2 = xi
+
+i (h)|2
+|f 
+
+
+k0(mi(h)r)
+
+(19)
+
+2for a discussion of the limits of this approximation and of the corrections which must
+
+be taken into account when the short distance regime is approached see [13].
+
+8
+
+where mi(h) denotes the mass of the ith state of the spectrum and the func-
+tions f 
+
+i (h) their overlap with the  operator. similarly we have
+
+g(r)
+
+hli2 = xi
+
+i (h)|2
+|f 
+
+
+k0(mi(h)r)
+
+(20)
+
+where the spectrum is the same as for the spin-spin correlator but the overlap
+constants are dierent. a particular role is played by the lowest mass m1
+which gives the dominant contribution in the large distance regime. its in-
+verse corresponds to the (exponential) correlation length  of the model and
+sets the scale for all dimensional quantities in the model. in particular the
+large distance regime mentioned few lines above means large with respect
+to the correlation length.
+
+2.1.4 time slice correlators
+
+it is very useful to study the zero momentum projections of the above de-
+ned correlators. they are commonly named time slice correlators. the
+magnetization of a time slice is given by
+
+sn0 
+
+1
+
+l1 xn1
+
+(n0,n1)
+
+.
+
+the time slice correlation function is then dened as
+
+g0
+
+( )  xn0 {hsn0sn0+i  hsn0i2}
+
+(21)
+
+(22)
+
+where the index 0 indicates that this is the zero momentum projection of the
+original correlator. starting from eq. (19) it is easy to show that in the large
+ limit g0
+
+( ) behaves as
+
+g0
+( )
+hli2
+
+= xi
+
+i (h)|2
+|f 
+mi(h)l1
+
+emi(h)||
+
+.
+
+(23)
+
+a similar result, with the obvious modications, holds also for g0
+
+,.
+
+9
+
+2.2 critical behaviour
+
+in this section we discuss the critical behaviour of the model by using stan-
+dard renormalization group methods, keeping in the expansions only the rst
+order in the perturbing eld. both the results and the analysis are well known
+and can be found in any textbook. we report it here since it will serve us
+as a starting point for the more rened analysis which we shall perform in
+sect. 3 below.
+
+2.2.1 critical indices
+
+the starting point of the renormalization group analysis is the singular part
+of the free energy fs(t, h) (where t is the reduced temperature). standard
+renormalization group arguments (see for instance [14]) allow to write fs in
+terms of a suitable scaling function :
+
+fs(t, h) = (cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+uh
+
+uh0(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+d/yh
+
+ 
+
+ut/ut0
+
+|uh/uh0|yt/yh!
+
+(24)
+
+where ut0 and uh0 are reference scales that depend on the model. uh and ut
+denote the scaling variables associated to the magnetic and energy operators
+respectively and yh, yt are their rg-exponents. ut and uh do not exactly
+coincide with t and h but are instead analytic functions of them. the only
+constraint is that they must respect the z2 parity of t and h . near the
+critical point we may suitably rescale  so as to identify ut = t and uh = h.
+thus, setting t = 0 we immediately obtain the asymptotic critical behaviour
+of fs
+
+fs  |h|d/yh
+
+.
+
+(25)
+
+taking the derivative with respect to h (or t) and then setting t = 0 we
+can obtain from eq. (24) also the asymptotic critical behaviour of the other
+observables in which we are interested
+
+m  |h|d/yh1
+  |h|d/yh2
+e  |h|(dyt)/yh
+
+.
+
+10
+
+(26)
+
+(27)
+
+(28)
+
+from the exact solution of the ising model at the critical point we know
+8 and yt = 1. inserting these values in the above expressions we
+
+that yh = 15
+nd
+
+(29)
+
+(30)
+
+(31)
+
+(32)
+
+(33)
+
+16
+
+1
+
+15
+
+15
+
+fs  |h|
+m  |h|
+  |h| 14
+e  |h|
+
+15
+
+8
+
+15
+
+.
+
+the masses mi have as scaling exponent, as usual, 1/yh, hence
+
+mi  |h|
+
+8
+
+15
+
+.
+
+finally from the denitions of eqs. (19) and (20) we see that the overlap
+
+amplitudes behave as adimensional constants.
+
+2.2.2 critical amplitudes
+
+in order to describe the scaling behaviour of the model we also need to know
+the proportionality constants in the above scaling functions. these constants
+are usually called critical amplitudes. using the results collected in eqs. (29)-
+(32) we have the following denitions:
+
+af  lim
+h0
+
+f h 16
+
+15 ,
+
+am  lim
+h0
+e h 8
+
+15 ,
+
+ae  lim
+h0
+i  lim
+h0
+
+af 
+
+f 
+i
+
+,
+
+m h 1
+
+15 ,
+
+ami  lim
+h0
+i  lim
+af 
+h0
+
+a  lim
+h0
+mi h 8
+15 ,
+f 
+i
+
+.
+
+ h
+
+14
+
+15 ,
+
+(34)
+
+(35)
+
+(36)
+
+notice for completeness that in the literature (see for instance [15]) the
+
+amplitudes a, am and am1 are usually denoted as
+
+a  c , am  d 1
+
+c
+
+15
+
+, am1 
+
+1
+c
+
+.
+
+(37)
+
+we shall show in the next section that all these amplitudes can be exactly
+evaluated in the framework of the s-matrix approach. as a preliminary step
+let us notice that since m and  are obtained as derivatives of f we have
+
+am =
+
+16
+15
+
+af ,
+
+a =
+
+1
+15
+
+am .
+
+(38)
+
+11
+
+2.2.3 universal amplitude ratios
+
+from the above critical amplitudes one can construct universal combinations
+which do not depend on the particular realization of the model. for this
+reason they have been widely studied in the literature. in particular there are
+two classical amplitude combinations which involve the critical amplitudes
+dened above (see for instance [15]). they are:
+
+r  dcb14
+
+q2  (/c)(c/0)
+
+7
+
+4
+
+(39)
+
+where we used the notations of eq. (37).  and 0 denote the critical ampli-
+tudes of the susceptibility and exponential correlation length for h = 0 and a
+small positive reduced temperature, while b denotes the critical amplitude
+of the magnetization for h = 0 and a small negative reduced temperature.
+notice however that, since (as we mentioned in the introduction) we are
+able to give the explicit relation between lattice and continuum expectation
+values, we are not constrained to study only universal combination but can
+determine exactly the various critical amplitudes.
+
+2.3 s-matrix results
+
+in 1989 a. zamolodchikov [2] suggested that the scaling limit of the ising
+model in a magnetic eld could be described by a a scattering theory which
+contains eight dierent species of self-conjugated particles aa, a = 1, . . . , 8
+with masses
+
+= (1.6180339887..) m1 ,
+
+= (1.9890437907..) m1 ,
+
+= (2.4048671724..) m1 ,
+
+= (2.9562952015..) m1 ,
+
+(40)
+
+= (3.2183404585..) m1 ,
+
+m2 = 2m1 cos
+
+m3 = 2m1 cos
+
+m4 = 2m2 cos
+
+m5 = 2m2 cos
+
+m6 = 2m2 cos
+
+m7 = 4m2 cos
+
+m8 = 4m2 cos
+
+
+5
+
+30
+7
+30
+2
+15
+
+30
+
+5
+
+5
+
+cos
+
+cos
+
+= (3.8911568233..) m1 ,
+
+= (4.7833861168..) m1
+
+7
+30
+2
+15
+
+12
+
+where m1(h) is the lowest mass of the theory. as mentioned above it coincides
+with the inverse of the (exponential) correlation length. few years later, from
+the knowledge of the s-matrix of the theory v. fateev [16] obtained explicit
+predictions for some of the critical amplitudes dened above.
+
+in order to evaluate the amplitudes one must rst x the normalization of
+the operators involved which can be set, for instance, by xing the constant
+in front of the long distance behaviour of the correlators at the critical point.
+it is important to make explicit this normalization choice, since it will allow
+us, by comparing with the corresponding correlators in the lattice theory to
+convert explicitly the continuum results in lattice units. following the choice
+of [16] we assume:
+
+h(x)(0)i =
+
+h(x)(0)i =
+
+with these conventions one nds [16]:
+
+4
+
+1
+
+1
+|x|
+1
+|x|2 ,
+
+,
+
+|x|  
+
+|x|  .
+
+am1 = c
+c2
+
+8 (sin 2
+
+3 + sin 2
+
+5 + sin 
+15)
+
+af =
+
+(41)
+
+(42)
+
+(43)
+
+(44)
+
+where
+
+c =
+
+4 sin 
+
+5(cid:17)
+5 (cid:16) 1
+3(cid:17) (cid:16) 8
+15(cid:17)
+
+(cid:16) 2
+
+4
+
+5
+
+
+
+
+42(cid:16) 3
+(cid:16) 1
+
+4(cid:17) 2(cid:16) 13
+16(cid:17)
+4(cid:17) 2(cid:16) 3
+16(cid:17)
+
+
+
+
+= 4.40490858... .
+
+(45)
+
+from af one immediately obtains am and a.
+
+the amplitude ae requires a more complicated analysis. its exact ex-
+
+pression has been obtained only recently in [17]
+
+ae = 2.00314... .
+
+(46)
+
+we summarize in tab. 1 these s-matrix predictions for the critical ampli-
+
+tudes.
+
+13
+
+am1 = 4.40490858..
+af
+= 1.19773338..
+am = 1.27758227..
+a
+= 0.08517215..
+ae = 2.00314..
+
+table 1: critical amplitudes.
+
+r = 6.77828502..
+q2 = 3.23513834..
+
+table 2: classical amplitude ratios.
+
+from these critical amplitudes, and using the values of , b and 0 one
+immediately obtains the classical amplitude ratios dened above (see for
+instance [18]). they are reported in tab. 2 .
+
+finally, the critical overlap amplitudes af 
+
+and af 
+
+i
+
+were evaluated in
+
+i
+
+[10, 19]. they are reported in tab. 3 and 4 .
+
+af 
+af 
+af 
+af 
+af 
+af 
+af 
+af 
+
+1 = 0.64090211..
+2 = 0.33867436..
+3 = 0.18662854..
+4 = 0.14277176..
+5 = 0.06032607..
+6 = 0.04338937..
+7 = 0.01642569..
+8 = 0.00303607..
+
+table 3: critical overlap amplitudes for the spin operator.
+
+2.4 conversion to lattice units
+
+while the values listed in tab. 2, 3 and 4 are universal, the amplitudes listed
+in tab. 1 depend on the details of the regularization scheme. thus some
+further work is needed to obtain their value on the lattice. we shall denote
+
+14
+
+af 
+af 
+af 
+af 
+af 
+af 
+af 
+af 
+
+1 = 3.70658437..
+2 = 3.42228876..
+3 = 2.38433446..
+4 = 2.26840624..
+5 = 1.21338371..
+6 = 0.96176431..
+7 = 0.45230320..
+8 = 0.10584899..
+
+table 4: critical overlap amplitudes for the energy operator.
+
+in the following the lattice critical amplitudes with an index l. thus, for
+instance,
+
+al
+
+m = lim
+
+hl0hli h 1
+
+l
+
+15
+
+,
+
+(47)
+
+to be compared with the continuum critical amplitude dened in eq. (34)
+
+am = lim
+
+h0hi h 1
+
+15 .
+
+(48)
+
+in order to relate the lattice results with the continuum ones we must
+study the relationship between the lattice operators and the continuum ones.
+in general the lattice operators will be given by the most general combina-
+tion of continuum operators compatible with the symmetries of the lattice
+operator multiplied by the most general analytic functions of t and h (with a
+parity which is again constrained by the symmetry of the operators involved).
+thus, for instance, anticipating the discussion that we shall make in sect. 3,
+we have
+
+l = f 
+
+(49)
+where f 
+0 (t, h) and fi(t, h) are suitable functions of t and h and with the
+notation i we denote all the other elds of the theory (both relevant and
+irrelevant) which respect the symmetries of the lattice.
+
+0 (t, h) + fi(t, h)i
+
+a similar relations also holds for the energy operator:
+
+l = g
+
+0(t, h) + gi(t, h)i
+
+.
+
+(50)
+
+finally, also hl is related to the continuum magnetic eld h by a relation
+
+of the type
+
+hl = b0(t, h)h
+
+(51)
+
+15
+
+where b0(t, h) must be an even function of h
+
+at the rst order in t and h these combinations greatly simplify and es-
+sentially reduce to a dierent choice of normalization between the continuum
+operators and their lattice analogous:
+
+l  r ,
+
+l  r ,
+
+hl  rhh
+
+(52)
+
+0 , g
+
+0 and b0 functions.
+
+where r, r and rh are three constants which correspond to the h  0,
+t  0 limit of the f 
+if we want to compare the s-matrix results discussed in the previous sec-
+tion with our lattice results we must x these normalizations3. the simplest
+way to do this is to look at the analogous of eqs. (41,42) at the critical point
+(namely for hl = 0) [20] .
+
+in fact, if hl = 0 it is possible to obtain an explicit expression for the
+spin-spin and energy-energy correlators (for a comprehensive review see for
+instance [21]) directly on the lattice, for any value of . choosing in par-
+ticular  = c, and looking at the large distance behaviour of these lattice
+correlators we may immediately x the normalization constants. let us look
+rst at r.
+
+we know from [22] that:
+
+hijih=0 =
+
+r2
+
+|rij|1/4
+
+(53)
+
+where rij denotes the distance on the lattice between the sites i and j and
+
+r2
+
+ = e3(1)25/24 = 0.70338... .
+
+by comparing this result with eq.(41) we nd
+
+r = 0.83868...
+
+.
+
+(54)
+
+(55)
+
+from this we can also obtain the normalization of the lattice magnetic
+eld which must exactly compensate that of the spin operator in the pertur-
+bation term h. we nd:
+
+rh = (r)1 = 1.1923...
+
+.
+
+(56)
+
+3this essentially amounts to measure all the quantities in units of the lattice spacing.
+
+for this reason we can x in the following the lattice spacing to 1 and neglect it.
+
+16
+
+combining these two results we obtain the value in lattice units of the
+
+constant a
+
+al
+
+m = (r)16/15am = 1.058...
+
+.
+
+(57)
+
+from this one can easily obtain also al
+
+f , al
+
+ and am1.
+
+let us look now at r. in the case of the energy operator the connected
+correlator on the lattice, at hl = 0 and for any value of  has the following
+expression [23]:
+
+!2
+hl(0)l(r)ic =   
+
+hk 2
+1 (r)  k 2
+
+0 (r)i
+
+(58)
+
+where k0 and k1 are modied bessel functions,  is a parameter related to
+the reduced temperature, dened as
+
+ = 4|  c|
+
+(59)
+
+and with the index c we denote the connected correlator (notice that thanks
+to the denition (14) no disconnected part must be subtracted at the critical
+point and the index c becomes redundant). this expression has a nite value
+in the   0 limit (namely at the critical point). in fact the bessel functions
+dierence can be expanded in the small argument limit as
+
+hk 2
+1 (r)  k 2
+
+0 (r)i =
+
+1
+(r)2 + ...
+
+thus giving, exactly at the critical point:
+
+hl(0)l(r)i =
+
+1
+
+(r)2
+
+.
+
+by comparing this result with eq. (42) we nd
+
+r =
+
+1
+
+
+and from this we obtain the expression in lattice units of a
+
+al
+
+ = (r)8/15(r)a = 0.58051...
+
+.
+
+our results are summarized in tab. 5 .
+
+17
+
+(60)
+
+(61)
+
+(62)
+
+(63)
+
+al
+m1 = 4.01039911...
+al
+= 0.99279949...
+f
+al
+m = 1.05898612...
+al
+= 0.07059907...
+
+al
+e = 0.58051...
+
+table 5: critical amplitudes in lattice units.
+
+2.4.1 alternative derivation of r
+
+hli =
+
+2( )3( )4( )
+
+2( ) + 3( ) + 4( )
+
+1
+l1
+
+(64)
+
+.
+
+l1
+
+in this section we discuss, for completeness, an alternative derivation of r.
+it can be used in those cases in which the correlators are not known, but the
+internal energy is known on a nite size lattice at the critical point. then
+r can be obtained by comparing the nite size behaviour of the internal
+energy on the lattice with that predicted by conformal eld theory in the
+continuum. in the case of the ising model, thanks to the beautiful work by
+ferdinand and fisher [12], we know that on a square lattice of size l0  l1
+with l0 > l1 with periodic boundary conditions the internal energy must
+scale as:
+
+where i( ) denotes the ith jacobi theta function and   i l0
+cft techniques. the result [24] is
+
+the same behaviour can be studied in the continuum theory, by using
+
+hi =
+
+1( )
+
+2( ) + 3( ) + 4( )
+
+1
+l1
+
+.
+
+by using the relation
+
+1( ) =  2( )3( )4( )
+
+(65)
+
+(66)
+
+which allows to express the derivative of the 1( ) in terms of ordinary theta
+functions we see that the two equations (64) and (65) agree only if we choose,
+as we did in the previous section, r = 1
+ .
+
+18
+
+3 scaling functions
+
+in this section we shall construct the scaling functions for the various quan-
+tities in which we are interested. our aim is to give the form (i.e. the value
+of the scaling exponents) of the rst 7-8 terms of the expansion in powers of
+h of the scaling functions and at the same time to identify the operators in
+the lattice hamiltonian from which they originate. to this end we shall rst
+deal in sect. 3.1 with the theory at the critical point. we shall in particular
+discuss its spectrum, which can be constructed explicitly by using cft tech-
+niques. next, in sect. 3.2, we discuss in the framework of the renormalization
+group approach the origin of the subleading terms in the scaling functions,
+and show how to obtain their exponents from the knowledge of the renor-
+malization group eigenvalues yi of the irrelevant operators. while in general
+this analysis is only of limited interest since the yi of the irrelevant operators
+are unknown, in the present case, thanks to the cft solution discussed in
+sect. 3.1, it becomes highly predictive and will allow us to explicitly construct
+in sect.s 3.3 and 3.4 the scaling functions. in particular in sect. 3.3 we shall
+list all the irrelevant operators which may appear in the eective hamiltonian
+and discuss their symmetry properties, while in sect. 3.4 we shall write the
+scaling functions and identify the operators involved in the various scaling
+terms.
+
+3.1 the ising model at the critical point
+
+the ising model at the critical point is described by the unitary minimal
+model with central charge c = 1/2 [1].
+its spectrum can be divided into
+three conformal families characterized by dierent transformation properties
+under the dual and z2 symmetries of the model. they are the identity, spin
+and energy families and are commonly denoted as [i], [], []. let us discuss
+their features in detail.
+
+ primary elds
+
+each family contains a relevant operator which is called primary eld
+(and gives the name to the entire family). their conformal weights
+are hi = 0, h = 1/16 and h = 1/2 respectively. the relationship
+between conformal weights and renormalization group eigenvalues is:
+y = 2  2h. hence the relevant operators must have h < 1.
+
+19
+
+ secondary elds
+
+all the remaining operators of the three families (which are called sec-
+ondary elds) are generated from the primary ones by applying the
+generators li and li of the virasoro algebra. in the following we
+shall denote the most general irrelevant eld in the [] family (which
+are odd with respect to the z2 symmetry) with the notation i and
+the most general elds belonging to the energy [] or to the identity
+[i] families (which are z2 even) with i and i respectively. it can be
+shown that by applying a generator of index k: lk or lk to a eld
+ (where  =, i, ,  depending on the case) of conformal weight h we
+obtain a new operator of weight h = h + k. in general any combina-
+tion of li and li generators is allowed, and the conformal weight of
+the resulting operator will be shifted by the sum of the indices of the
+generators used to create it. if we denote by n the sum of the indices
+of the generators of type li and with n the sum of those of type li
+the conformal weight of the resulting operator will be h + n + n. the
+corresponding rg eigenvalue will be y = 2 2h  n n, hence all the
+secondary elds are irrelevant operators.
+
+ nonzero spin states
+
+the secondary elds may have a non zero spin, which is given by the
+dierence n  n. in general one is interested in scalar quantities and
+hence in the subset of those irrelevant elds which have n = n. however
+on a square lattice the rotational group is broken to the nite subgroup
+c4 (cyclic group of order four). accordingly, only spin 0, 1, 2, 3 are
+allowed on the lattice. if an operator  of the continuum theory has
+spin j  n, then its lattice discretization l behaves as a spin j (mod 4)
+operator with respect to the c4 subgroup. as a consequence all the
+operators which in the continuum limit have spin j = 4n with n non-
+negative integer can appear in the lattice discretization of a scalar eld.
+this will play a major role in the following.
+
+ null vectors
+
+some of the secondary elds disappear from the spectrum due to the
+null vector conditions. this happens in particular for one of the two
+states at level 2 in the  and  families and for the unique state at
+
+20
+
+level 1 in the identity family. from each null state one can generate,
+by applying the virasoro operators a whole family of null states hence
+at level 2 in the identity family there is only one surviving secondary
+eld, which can be identied with the stress energy tensor.
+
+ secondary elds generated by l1
+
+among all the secondary elds a particular role is played by those gen-
+erated by the l1 virasoro generator. l1 is the generator of trans-
+lations on the lattice and as a consequence it has zero eigenvalue on
+translational invariant observables. another way to state this results is
+to notice that l1 can be represented as a total derivative, and as such
+it gives zero if applied to an operator which can be obtained as the in-
+tegral over the whole lattice of a suitable density (i.e. a translationally
+invariant operator).
+
+3.2 rg analysis for h 6= 0
+
+we shall discuss the higher order corrections to the rg analysis of sect. 2.2
+along the lines of [25], to which we refer for a more detailed discussion. the
+only improvement that we make with respect to [25] is in the part devoted
+to the contribution due to the irrelevant operators, in which we shall make
+use of the results discussed in the previous section.
+
+we expect three types of corrections to the asymptotic results reported
+
+in sect. 2.2:
+
+a] analytic corrections.
+
+they are due to the fact, already mentioned in sect 2.2, that the actual
+scaling variables in the rg approach are not hl and t but uh and ut
+which are in principle the most general analytic functions of hl and
+t which respect the z2 parity of hl and t. let us write the taylor
+expansion for uh and ut, keeping only those rst few orders that are
+needed for our analysis (we use the notations of [25]).
+
+uh = hl [1 + cht + dht2 + ehh2
+
+l + o(t3, th2
+
+l )]
+
+(67)
+
+ut = t + bth2
+
+l ) (68)
+
+l + ctt2 + dtt3 + etth2
+
+l + fth4
+
+l + o(t4, t2h2
+
+21
+
+the corrections induced by the higher terms in uh and ut are of three
+types.
+
+ the rst one is very simple to understand. it is due to the higher
+powers of hl contained in uh which lead to corrections to the power
+behaviours listed in sect. 2.2.1 which are shifted by even integer
+powers of hl. for instance in the free energy, as a consequence of
+the ehh2
+
+l term in uh, we expect a correction of this type:
+
+fs(hl) = al
+
+f|hl|
+
+16
+
+15 (1 + al
+
+f,3|hl|2 + ....)
+
+.
+
+(69)
+
+with al
+f,3 = eh. the indices f, 3 in af,3 only denote the fact (that
+we shall discuss in detail in the next section) that this term is
+the third term in the hl expansion of the scaling function of the
+singular part of the free energy.
+
+ the second type of correction is due to the terms that depend on
+hl which appear in ut. their peculiar feature is that, even if they
+are originated by analytic terms in the scaling variables, they lead
+in general to non analytic contributions in the scaling functions
+for instance, as a consequence of the bth2
+l term in ut, we nd in
+the free energy a correction of the type:
+
+fs(hl) = al
+
+f|hl|
+
+16
+
+15 (1 + al
+
+f,2|hl|2 yt
+= 22
+15 .
+
+yh + ....)
+
+.
+
+(70)
+
+with af,2 = 15
+16
+
+(0)
+
+(0) and 2  yt
+
+yh
+
+ the corrections of the third type only appear when studying the
+internal energy. they are due to the terms linear in t which are
+present in uh and ut. the most important of these contributions
+is the one due to the cht term in uh which gives a correction pro-
+to the dominant scaling behaviour of the internal
+portional to h
+15
+l
+energy. we shall discuss these terms in sect. 3.4.3 below.
+
+8
+
+b] corrections due to irrelevant operators in the lattice hamilto-
+
+nian.
+
+these can be treated within the framework of the rg as follows. let
+us study as an example the case of an irrelevant operator belonging to
+the identity family. let us call the corresponding scaling variable u3
+
+22
+
+and its rg eigenvalue y3 (since u3 is irrelevant, y3 < 0). in this case
+the dependence of u3 on t and hl is 4
+
+u3 = u0
+
+3 + at + bh2
+
+l +   
+
+.
+
+(71)
+
+let us for the moment neglect higher order terms and assume u3 = u0
+3.
+then looking again at the singular part of the free energy we nd
+
+fs(t, hl) = |hl/h0|d/yh(
+
+t
+
+|hl|yt/yh
+
+, u0
+
+3|hl||y3|/yh)
+
+.
+
+(72)
+
+3|hl||y3|/yh is small as hl  0 it is reasonable to assume that we
+since u0
+can expand fs in a taylor series of u0
+3|hl||y3|/yh (notice that in eq. (72) fs
+is not singular since it is evaluated at |hl| > 0). hence we nd (setting
+again t = 0)
+(73)
+
+fs = |hl|d/yh(a1 + a2u0
+3 are non-universal constants.
+
+3|hl||y3|/yh +   )
+
+where a1, a2, u0
+this analysis can be repeated without changes for any new irrelevant
+operator: u4, y4 and so on. as a last remark, notice that on top of these
+non analytic corrections we also expect analytic contributions due to
+the higher order terms contained in eq. (71).
+
+while in general this analysis is only of limited interest since the yi of
+the irrelevant operators are usually unknown, in the present case we
+may identify the irrelevant operators with the secondary elds discussed
+in 3.1 and use the corresponding rg-exponents as input of our analysis.
+
+c] logarithmic corrections.
+
+as it is well known, the specic heat of the 2d ising model at hl = 0 ap-
+proaches the critical point with a logarithmic singularity. this means
+that in the free energy there must be a term of the type 0u2
+t log(ut).
+while in general we could expect 0 to be a generic function of the ratio
+ut/u8/15
+, the absence of leading log corrections in m and  strongly con-
+straints this function which is usually assumed to be a simple constant.
+notwithstanding this, the presence of terms that depend on hl in ut
+
+h
+
+4in general for the irrelevant operators there is no need to tune u0
+
+the critical point. however we shall see below that, for symmetry reasons, u0
+the irrelevant operators belonging to the [] and [] families.
+
+3 to 0 to approach
+3 = 0 for all
+
+23
+
+implies that log type contributions may appear also in the case t = 0,
+6= 0 in which we are interested. these can be easily obtained by
+hl
+inserting eq.(68) into 0u2
+t log(ut) and then making the suitable deriva-
+tives and limits [25]. in the case of the free energy one obtains a term
+proportional to h4
+l log(hl) which is too high to be observed in our ts.
+however for the internal energy the rst contribution is proportional
+to a smaller power of hl: h2
+l log(hl) and must be taken into account in
+the scaling function.
+
+3.3 the eective lattice hamiltonian
+
+let us call hcf t the hamiltonian which describes the continuum theory at
+the critical point. the perturbed hamiltonian in the continuum is given by:
+
+h = hcf t + h .
+
+(74)
+
+the aim of this section is to construct the lattice analogous (which we shall
+call hlat) of h.
+
+notice that hlat is dierent from the microscopic hamiltonian which ap-
+pears in the exponent of eq. (4). eq. (4) describes the model at the level
+of the lattice spacing. we are instead interested in the large distance eec-
+tive action which one obtains when the short range degrees of freedom are
+integrated out, i.e. after a large enough number of iterations of the renormal-
+ization group transformation has been performed. hlat will contain all the
+irrelevant operators which are compatible with the symmetries of the lattice
+model. in this section we shall rst discuss the relation between the lattice
+and the continuum operators, then we shall construct the lattice hamiltonian
+in the hl = 0 case and nally we shall extend our results to the hl 6= 0 case.
+
+3.3.1 relations between lattice and continuum operators.
+
+the lattice operators are given by the most general combination of continuum
+operators compatible with the symmetries of the lattice operator multiplied
+by the most general analytic functions of t and hl (with a parity which is again
+constrained by the symmetry of the operators involved). in the following, to
+avoid a too heavy notation, we shall neglect the t dependence5.
+
+5the t dependence in the scaling variables of the irrelevant operators plays a role only
+in the construction of the scaling function for the internal energy and we shall resume it
+
+24
+
+for the spin operator we have
+
+l = f 
+
+0 (hl) + hlf 
+
+0(hl) + f 
+
+i (hl)i + hlf 
+
+i (hl)i + hlf i
+
+i (hl)i,
+
+i  n (75)
+
+where f 
+
+i (hl) f 
+
+i (hl) and f i
+
+i (hl) are even functions of hl.
+
+for the energy operator we have
+
+l gi
+
+l = g
+
+i (hl)i + h2
+
+0(hl) + hlg
+
+0 (hl) + hlg
+
+i (hl)i + g
+
+i (hl)i,
+
+i (hl) g
+
+i (hl) and gi
+
+i (hl) are even functions of hl and the h2
+
+i  n (76)
+where again g
+l term
+in front of gi
+i (hl) is due to the change of sign of the  operator under duality
+transformation at hl = 0 (see the discussion at the beginning of sect. 3.3.2).
+among all the possible irrelevant elds only those which respect the lattice
+symmetries (i.e. those of spin 0 (mod 4)) are allowed in the sums. at this
+stage also irrelevant operators containing l1 or l1 appear in the sums. it
+is only when these operators are applied on translationally invariant states
+(i.e. on the vacuum) that they disappear. this will happen for instance
+when we shall study the mean value of the free energy.
+
+3.3.2 construction of hlat(hl = 0)
+
+in this case all the operators belonging to the [] family are excluded due to
+the z2 symmetry. also the operators belonging to the [] family are excluded
+for a more subtle reason. the ising model (both on the lattice and in the
+continuum) is invariant under duality transformations while the operators
+belonging to the [] family change sign under duality, thus they also cannot
+appear in hlat(hl = 0). thus we expect
+
+hlat = hcf t + u0
+
+i i,
+
+i  [i]
+
+,
+
+(77)
+
+where the u0
+
+i are constants. there are however further restrictions:
+
+ hlat is a scalar density, hence only operators  with angular momentum
+
+j = 4k, k = 0, 1, 2    are allowed.
+
+ hlat is a translational invariant operator hence only operators  which
+
+do not contain the generators l1 or l1 are allowed.
+
+in sect. 3.4.3 below.
+
+25
+
+let us list in order of increasing conformal weight the rst few operators
+which fulll all the constraints:
+
+0 = i,
+
+1 = l2 l2i,
+
+2 = (l2)2i,
+
+3 = ( l2)2i,
+
+4 = l4i,
+
+5 = l4i,
+
+6 = l3 l3i
+
+...
+
+.
+
+(78)
+
+(79)
+
+some of these elds have a natural interpretation. 0 gives rise to the bulk
+contribution in the free energy (see the discussion of sect. 2.1.2). 1, 2, 3
+are related to the energy momentum tensor: t t , t 2, t 2 respectively. all
+the elds listed above except the identity and 6 have the same conformal
+weight h = 4. the corresponding rg eigenvalue is y = 2. the eld 6
+has conformal weight h6 = 6 and rg eigenvalue y6 = 4.
+
+3.3.3 extension to hl 6= 0
+mimicking the continuum case we have, also on the lattice,
+
+hlat(hl) = hlat(hl = 0) + hll
+
+.
+
+inserting the expression of l of eq. (75) we nd
+
+hlat(hl) = hcf t + ui(hl) i
+
+(80)
+
+(81)
+
+where this time there is no more restriction coming from the z2 symmetry
+and duality, hence i denotes here the most general operator of the spectrum
+with spin j = 4k, k = 0, 1, .. the ui(hl) are even or odd functions of hl,
+depending on the parity of i but in the even sector only for the operators
+belonging to the identity family limhl0 ui(hl) 6= 0 (according to eq. (71) we
+have ui(hl = 0) = u0
+i ). for the operators belonging to the energy family the
+rst nonzero contribution in the ui(hl) functions is of order h2
+l .
+
+let us list, starting from those with the lowest conformal weight, the new
+operators which were not present in hlat(hl = 0). for future convenience
+let us separate those which do not contain l1, l1 generators from the
+remaining ones.
+a] states which are not generated by l1, l1.
+
+ states belonging to []
+
+26
+
+in the [] family the lowest ones are l4, l4 and l3 l3.
+in fact l1 disappears for translational invariance and due to
+the null vector equation the l2 state which appears at level 2
+can always be rewritten as l2
+1 with suitable coecients. the
+conformal weights of l4 and l4 are h,4 = 4 + 1
+8. the corre-
+sponding rg eigenvalue is y,4 = 2  1
+8 . the conformal weight
+of l3 l3 is h,33 = 6 + 1
+8. the corresponding rg eigenvalue is
+y,33 = 4  1
+8 .
+
+ states belonging to []
+
+l  which is responsible for the h2
+
+the most important contribution from the [] family is the one
+proportional to h2
+l term which
+appears in ut as we discussed in the previous section. besides this
+one, the lowest states which appear in the [] family must be of
+the type l4 or l4. in fact the same mechanism which allowed
+us to eliminate the secondary elds of level 2 in the [] family also
+works for the [] family. on top of this in the [] family a new null
+vector appears at level 3, thus allowing us to eliminate also all the
+elds at this level. keeping also into account the fact that the
+corresponding ui(hl) functions must start from h2
+l we immediately
+see that all these states have too high powers of hl to contribute
+to the scaling function and can be neglected.
+
+b] states which contain l1, l1 generators.
+
+the lowest states are, in order of increasing weight:
+
+ l1 l1, whose conformal weight is h,11 = 2 + 1
+l2
+1, whose conformal weight is h,22 = 4 + 1
+
+sponding rg eigenvalue is y,11 =  1
+8.
+ l2
+1
+sponding rg eigenvalue is y,22 = 2  1
+8.
+ l1 l1, whose conformal weight is h,11 = 3. the corresponding
+
+8. the corre-
+
+8. the corre-
+
+rg eigenvalue is y,11 = 1.
+
+3.4 scaling functions
+
+using the results of the previous section we are now in the position to write
+the expression for the scaling functions keeping all the corrections up to the
+
+27
+
+order h3
+l .
+
+3.4.1 the free energy
+
+due to translational invariance, only the secondary elds which are not gen-
+erated by l1, l1 contribute to the free energy. we nd, for the singular
+part of the lattice free energy:
+
+fs(hl) = al
+f |hl|
+al
+f,5|hl|
+
+16
+
+15 (1 + al
+15 + al
+
+38
+
+f,6|hl|
+
+15 .....)
+
+f,1|hl|
+
+44
+
+16
+
+15 + al
+
+f,2|hl|
+
+22
+
+15 + al
+
+f,3|hl|
+
+30
+
+15 + al
+
+f,4|hl|
+
+32
+
+15 +
+
+(82)
+
+where al
+the nth subleading correction.
+
+f,n denotes the amplitude, normalized to the critical amplitude, of
+
+16
+
+let us discuss the origin of the various corrections:
+ al
+
+f ,1|hl|
+this term is entirely due to the t t , t 2 and t 2 irrelevant elds in the
+hamiltonian.
+
+15
+
+22
+
+ al
+
+15
+
+f ,2|hl|
+this term is due to the bth2
+ance of a h2 term in the hamiltonian).
+
+l term in ut (or, equivalently, to the appear-
+
+30
+
+ al
+
+15
+
+f ,3|hl|
+this term is due to the ehh2
+
+l term in uh.
+
+32
+
+ al
+
+15
+
+f ,4|hl|
+this term keeps into account the second term in the taylor expansion
+of the t t like corrections and the contribution of the elds l3 l3i
+and hl4 in the hamiltonian.
+f ,5|hl|
+this is the product of the af,1 and af2 corrections.
+
+38
+
+15
+
+ al
+
+44
+
+ al
+
+15
+
+f ,6|hl|
+this is the second term in the taylor expansion of the h2
+
+l  correction.
+
+28
+
+to these terms we must then add the bulk contributions
+
+fb(hl) = fb + fb,1h2
+
+l + fb,2h4
+
+l +   
+
+.
+
+(83)
+
+we have already noticed in sect. 2.1.2 that fb can be obtained from the
+exact solution of the ising model on the lattice at the critical point. also the
+next term: fb,1 can be evaluated (with a precision of ten digits) by noticing
+that it corresponds to the constant contribution to the susceptibility at the
+critical point. this term has been evaluated in [26]. we neglect for the
+moment this information and keep the fb,1 amplitude in the scaling function
+as a free parameter. it is the rst subleading term in the scaling function and
+as such it can be rather precisely estimated with the tting procedure that
+we shall discuss below. we shall compare our estimates with the expected
+value in sect. 6 and use the comparison as a test of the reliability of our
+results.
+
+combining eqs. (82) and (83) we nd:
+
+16
+
+f (hl) = fb + al
+al
+f,3|hl|
+
+f |hl|
+15 + al
+
+30
+
+14
+
+16
+
+22
+
+f,b|hl|
+15 + al
+
+32
+
+15 (1 + al
+f,4|hl|
+f,6 takes also into account now the contribution
+
+15 + al
+f,5|hl|
+
+f,1|hl|
+15 + al
+
+15 + al
+f,6|hl|
+
+f,2|hl|
+15 .....)
+
+15 +
+
+(84)
+
+38
+
+44
+
+where al
+
+f,b is fb,1
+al
+f
+
+of fb,2.
+
+and al
+
+deriving this expression with respect to hl we obtain the scaling functions
+
+for the magnetization and the susceptibility6.
+
+3.4.2 mass spectrum
+
+the simplest way to deal with the mass spectrum is to combine the two
+relations eq. (43) and eq. (44) and t the square of the masses. the scaling
+function is very similar to that which describes the singular part of the free
+energy eq. (82). the only additional terms are due to the secondary elds
+which contain l1 l1. it turns out that the corresponding scaling dimension
+exactly match those which already appear in eq. (82). in fact
+
+6in this way we obtain directly the lattice denitions of these two quantities, since we
+are deriving the lattice free energy with respect to the lattice magnetic eld. there is no
+need to go through the continuum denition of the magnetization.
+
+29
+
+ hll1 l1 gives a contribution which scales with |hl|
+
+tude can be absorbed in al
+
+f,1.
+
+ hll2
+1
+
+l2
+1 gives a contribution which scales with |hl|
+
+tude can be absorbed in al
+
+f,4.
+
+ h2
+
+l l1 l1 gives a contribution which scales with |hl|
+tude can be absorbed in al
+
+f,5.
+
+16
+
+15 and its ampli-
+
+32
+
+15 and its ampli-
+
+38
+
+15 and its ampli-
+
+thus the functional form of the scaling function for the masses is exactly
+
+the same of eq. (82).
+
+m2
+
+16
+
+mi)2 |hl|
+i (hl) = (al
+al
+mi,5|hl|
+
+38
+
+15 (1 + al
+mi,6|hl|
+
+mi,1|hl|
+15 .....)
+
+44
+
+15 + al
+
+16
+
+15 + al
+
+mi,2|hl|
+
+22
+
+15 + al
+
+mi,3|hl|
+
+30
+
+15 + al
+
+mi,4|hl|
+
+32
+
+15 +
+
+(85)
+
+however we shall see below that the presence of these new elds and in
+
+particular of l1 l1 has very important consequences.
+
+3.4.3 internal energy
+
+15 and 40
+
+we may obtain the internal energy as a derivative with respect to t of the
+singular part of the free energy. however in doing this we must resume (as
+discussed above) the t dependence in the scaling variables. this leads to
+some new terms in the scaling function with powers 8
+15 (due to the cht term
+in uh), 24
+15 (due to the t terms in scaling variables of the irrelevant
+operators). it is nice to see that the presence of these additional contributions
+can be understood in another, equivalent, way. looking at eq.(16) or (76) we
+see that the internal energy on the lattice contains a term of type hl. the
+powers listed above are exactly those that we obtain keeping into account the
+additional hl term in the scaling function. keeping also into account the
+bulk contribution we end up with the following scaling function. we have:
+
+e(hl) = al
+e |hl|
+al
+e,3|hl|
+
+8
+
+15 (1 + al
+15 + al
+
+24
+
+e,1|hl|
+
+30
+
+8
+
+15 + al
+
+e,2|hl|
+
+32
+
+e,5|hl|
+e,b denotes the amplitude of the h2
+
+e,4|hl|
+
+15 + al
+
+16
+
+15 + al
+
+e,b|hl|
+
+38
+
+22
+
+15 + al
+
+15 + al
+
+e,6|hl|
+
+15 + al
+
+e,7|hl|
+
+22
+
+e,log|hl|
+
+15 log|hl| +
+15 + .....) (86)
+
+40
+
+where al
+l term in the bulk part of the
+internal energy, al
+l log|hl| term discussed
+in sect.3.1 and the bulk constant term has been already taken into account
+
+e,log denotes the amplitude of the h2
+
+30
+
+in the denition of e(h). the rst correction which appears in the internal
+energy (with amplitude al
+e,1) is the one with the lowest power of hl among
+all the subleading terms of the various scaling functions this. its eect on
+the scaling behaviour of the internal energy is very important and it is easily
+observable also in standard monte carlo simulations [13].
+
+3.4.4 overlaps
+
+also in this case we tted the square of the overlap constants. the scaling
+functions can be obtained with a straightforward application of the argu-
+ments discussed above. also elds generated by hl1 l1 must be taken into
+account. moreover, for the overlaps with the internal energy also the h
+term must be taken into account. we end up with the following result for
+the magnetic overlaps.
+
+f 
+
+|f 
+i (hl)|2 = |al
+al
+
+i ,1|hl|
+i ,1|hl|
+while for the energy overlaps we have
+
+i |2(1 + al
+f 
+15 + al
+i ,1|hl|
+
+f 
+
+f 
+
+28
+
+14
+
+15 + al
+
+f 
+
+i ,1|hl|
+.
+
+16
+
+15 + al
+
+f 
+
+i ,1|hl|
+
+22
+
+15 +
+
+(87)
+
+30
+
+15 + .....)
+
+|f 
+i (hl)|2 = |al
+al
+
+f 
+
+f 
+
+i |2(1 + al
+f 
+15 + al
+i ,1|hl|
+
+i ,1|hl|
+i ,1|hl|
+
+f 
+
+24
+
+8
+
+15 + al
+
+f 
+
+i ,1|hl|
+.
+
+16
+
+15 + al
+
+f 
+
+i ,1|hl|
+
+22
+
+15 +
+
+(88)
+
+30
+
+15 + .....)
+
+4 the transfer matrix method
+
+we computed the mass spectrum and observables by numerical diagonaliza-
+tion of the transfer matrix. the transfer matrix was introduced by kramers
+and wannier [27] in 1941. for a discussion of the transfer matrix see e.g.
+refs. [28, 29]. the starting point is a simple transformation of the boltzmann
+factor
+
+exp
+
+ x<n,m>
+
+nm + hlxn
+
+n
+ = t (u1, u2) t (u2, u3) ... t (ul0, u1)
+
+(89)
+
+31
+
+where un0 = ((n0,1), (n0,2), ... (n0,l1)) is the spin conguration on the time
+slice n0. t is given by
+
+t (un0, un0+1) = v (un0)1/2 u(un0, un0+1) v (un0+1)1/2
+
+(90)
+
+with
+
+and
+
+u(un0, un0+1) = exp
+
+
+l1
+
+xn1=1
+
+v (un0) = exp
+
+
+l1
+
+xn1=1
+
+the partition function becomes
+
+(n0,n1)(n0,n1+1) + hl
+
+(n0,n1)(n0+1,n1)
+
+(n0,n1)
+ .
+
+xn1
+
+l1
+
+(91)
+
+(92)
+
+z = xn1
+
+exp
+
+ x<n,m>
+
+nm + hlxn
+
+n
+ = tr t l0 = xi
+
+l0
+i
+
+(93)
+
+where t is interpreted as a matrix. the time-slice congurations are the
+indices of the matrix. the number of congurations on a time slice is 2l1.
+therefore the transfer matrix is a 2l1  2l1 matrix. by construction the
+transfer matrix is positive and symmetric. the i are the eigenvalues of the
+transfer matrix.
+
+4.1 computing observables
+
+observables that are dened on a single time slice can be easily expressed in
+the transfer matrix formalism. let us discuss as examples the magnetisation
+and the internal energy.
+
+< 1,1 > = p=1 exp(cid:16)p<n,m> nm + hlpn n(cid:17) 1,1
+
+z
+
+=
+
+tr s t l0
+tr t l0
+
+= pi l0
+
+i < i|s|i >
+pi l0
+
+i
+
+(94)
+
+where s is a diagonal matrix. the values on the diagonal are given by 1,1
+on the congurations. (s(u, u) = (u, u) u(1) where u(1) denotes  on the
+rst site of the time slice). the |i > are normalized eigenvectors of t .
+
+32
+
+in the limit l0   the expression simplies to
+
+< 1,1 >=< 0|s|0 >
+
+(95)
+
+where |0 > is the eigenvector with the largest eigenvalue.
+corresponding to the energy is given by
+
+the energy can be computed in a similar way. the diagonal matrix
+
+e(u, u) = (u, u) u(1)u(2)
+
+.
+
+(96)
+
+note that we can only express the product of nearest neighbour spins in this
+simple form if both spins belong to the same time slice.
+
+in order to understand the relation of the mass spectrum with the eigen-
+value spectrum of the transfer matrix we have to compute correlation func-
+tions with separation in time direction. the time-slice correlation function
+eq. (22) becomes in the limit l0  
+
+< s0 s >= xi
+
+exp(mi ||) < 0| s|i > < i| s|0 >
+
+with
+
+mi =  log  i
+0!
+
+(97)
+
+(98)
+
+and s = 1
+l1
+space direction) and has therefore only overlaps with zero-moment eigenvec-
+tors of t .
+
+(u, u) pn1 un1. note that s is translational invariant (in the
+
+with eq. (23) we get
+
+i | = qmi l1
+|f 
+
+< 0| s|i >
+< 0| s|0 >
+
+.
+
+(99)
+
+an analogous result can be obtained for the energy.
+
+4.2 computing the eigenvectors and eigenvalues of t
+
+the remaining problem is to compute (numerically) eigenvectors and eigen-
+values of the transfer matrix. since we are interested in the thermodynamic
+limit as well as in the continuum limit we would like to use as large values of
+l1 as possible. this soon becomes a very dicult task since the dimension
+
+33
+
+of the transfer matrix increases exponentially with l1. the problem slightly
+simplies if one is interested in the computation of the the leading eigenval-
+ues and eigenvectors only, and in these last years various methods have been
+developed to address this task (for a comprehensive discussion of existing
+approaches see e.g. ref. [29] or the appendix of ref. [30]). in particular there
+are two approaches which have shown to be the most eective ones.
+
+ the rst one reduces the numerical complexity of the problem by writ-
+ing the transfer matrix as a product of sparse matrices. see refs.
+[29, 30].
+
+ the second one is to reduce the dimension of the transfer matrix by
+
+restricting it to denite channels.
+
+since we are only interested in the zero-momentum states of the system we
+decided to follow the second approach and to compute the zero-momentum
+reduced transfer matrix. the zero-momentum reduced transfer matrix acts
+on the space of equivalence classes of congurations on slices that transform
+into each other by translations.
+
+the matrix elements of the reduced transfer-matrix are given by
+
+t (u, v) = (n(u) n(v))1/2 xuuxvv
+
+t (u, v) = (n(u)/n(v))1/2xvv
+
+t (u, v) .
+
+(100)
+where n(u) is the number of congurations in u. for example for l0 = 20
+the dimension of the transfer matrix is reduced from 1048576 to 52488.
+
+still the matrix is too large to save all elements of the matrix in the mem-
+ory of the computer. therefore we applied an iterative solver and computed
+the elements of t whenever they were needed.
+
+as solver we used a generalized power method as discussed in the ap-
+
+pendix of ref. [30].
+
+the lattice sizes that we could reach in this way were large enough for
+our purpose, thus we made no further eort to improve our method and it is
+well possible that our algorithm might still not be the optimal one.
+
+we propose here, as a suggestion to the interested reader, some directions
+
+in which it could be improved.
+
+ one could try to mix the two strategies mentioned above and try to
+factorize the reduced transfer matrix as a product of sparse matrices.
+
+34
+
+however note that the complexity of the problem increases exponen-
+tially with the lattice size. therefore even a big improvement in the
+method would allow just to go up in the maximal l1 by a few sites.
+
+ one could study the transfer matrix along the diagonals of the square
+lattice. since the distance between two points on the diagonal is 2,
+naively one could increase the accessible lattice size by a factor of 2.
+
+5 thermodynamic limit
+
+in order to take the thermodynamic limit we must know the nite size scaling
+behaviour of the various observables as a function of l1. this is a very inter-
+esting subject in itself and several exact results have been obtained in this
+context starting from the exact s-matrix solution and using thermodynamic
+bethe ansatz (tba) techniques [16, 31].
+
+for instance, it is possible to construct a large l asymptotic expansion for
+the nite size scaling (fss) of the energy levels based only on the knowledge
+of the exact s-matrix of the theory [32, 33]. let us look to this fss behaviour
+in mode detail.
+
+let us dene ma(l) as the deviation of the mass ma of the particle a
+
+from its asymptotic value:
+
+ma(l)  ma(l)  ma()
+
+.
+
+(101)
+
+then in the large l limit, the shift (normalized to the lowest mass m1) is
+dominated by an exponential decrease of the type
+
+ma(l)
+
+m1  
+
+1
+
+8m2
+a
+
+2
+abc
+abc
+
+
+
+xb,c
+
+exp (abcl)
+
+(102)
+
+where the constants abc and abc can be obtained from the s-matrix and
+the prime in the sum of eq. (102) means that the sum must be done only on
+those combinations of indices that fulll the condition: |m2
+a. in
+particular the abc turn out to be of order one, so that the fss corrections are
+dominated (as one could naively expect) by a decreasing exponential of the
+type exp(l1/) where the correlation length  is the inverse of the lowest
+mass of the theory.
+
+c| < m2
+
+b  m2
+
+35
+
+in principle we could use our data to test also the tba predictions for the
+fss. however we preferred to follow a dierent approach. we chose values of
+h large enough so as to fulll the condition l1/ >> 1 for the largest values
+of l1 that we could reach. in this way we could essentially neglect all the
+details of the fss functions and approximate them with a single exponential
+(or, in some cases, with a pair of exponentials). in order to study the fss
+functions one should choose smaller values of h. we plan to address this
+issue in a forthcoming paper. with our choice of h we drastically simplify
+the fss problem, however nothing is obtained for free. the price we have to
+pay following this route is that we need to know several terms in the scaling
+functions to t such large values of h. this explains the major eort that we
+devoted to this issue in sect. 3.
+
+5.1 numerical extrapolation
+
+according to the above discussion, for the extrapolation of our data to the
+thermodynamic limit we made no use of the quantitative theoretical results.
+we made only use of the qualitative result that the corrections due to the
+nite l1 vanish exponentially.
+
+we used as ansatz for the extrapolation either
+
+a(l1) = a() + c1 exp(l1/z1)
+
+or
+
+a(l1) = a() + c1 exp(l1/z1) + c2 exp(l1/z2)
+
+where a represents any of the quantities that we have studied.
+
+(103)
+
+(104)
+
+in order to compute the free parameters a(), c1 and z1 or a(), c1, z1,
+c2 and z2 we solved numerically the system of equations that results from the
+lattice sizes l1,max, l1,max 1 and l1,max 2 or l1,max, l1,max 1, l1,max 2,
+l1,max  3 and l1,max  4.
+the error of a() was estimated by comparing results where l1,max is
+the largest lattice size that is available and from l1,max = l1,max  1. mostly
+ansatz (104) was used to obtain the nal result. in some cases however the
+numerical accuracy was not sucient to resolve the second exponential term.
+then the nal result was taken from the ansatz (103).
+
+in tab. 6 we give, as example, the extrapolation to the thermodynamic
+limit of the free energy at hl = 0.075. as input for the extrapolation we used
+
+36
+
+l1
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+
+f , eq. (103)
+
+f , eq. (104)
+
+f
+0.993343441146
+0.992384038449
+0.992160642059 0.992092835647
+0.992102865951 0.992082710940
+0.992086845804 0.992080699493 0.992080279141
+0.992082188258 0.992080279123 0.992080180502
+0.992080787928 0.992080185903 0.992080161487
+0.992080356320 0.992080164020 0.992080157709
+0.992080220728 0.992080158619 0.992080156931
+0.992080177480 0.992080157225 0.992080156758
+0.992080163514 0.992080156853 0.992080156721
+0.992080158958 0.992080156752 0.992080156716
+0.992080157458 0.992080156722 0.992080156709
+0.992080156961 0.992080156715 0.992080156713
+0.992080156795 0.992080156712 0.992080156710
+0.992080156739 0.992080156710 0.992080156710
+0.992080156721 0.992080156712 0.992080156713
+0.992080156714 0.992080156710 -
+
+table 6: extrapolation of the free energy at hl = 0.075 to the thermodynamic
+limit. in the rst column we give the lattice size l1. in the second column
+the free energy for this lattice size is given. in the third column we present
+the extrapolation with a single exponential and in the fourth column the
+extrapolation with a double exponential ansatz.
+
+the free energy computed up to 12 digits. we consider all these digits save
+of rounding errors. within the given precision the free energy has not yet
+converged at l1 = 21. the single exponential extrapolation (103) converges
+(within the given precision) at l1 = 18. for larger lattices the result uctu-
+ates in the last digit due to rounding errors of the input data. the double
+exponential extrapolation (103) converges at l1 = 16. as nal result for the
+thermodynamic limit we quote f (0.075) = 0.99208015671.
+
+37
+
+6 analysis of the results
+
+the major problem in extracting the continuum limit results from the data
+listed in tabs. 10-13.
+is to estimate the systematic errors involved in the
+truncation of the scaling functions that we use in the ts. we shall devote
+the rst part of this section to a detailed description of the procedure that
+we followed to estimate this uncertainty. we shall give upper and lower
+bounds for the critical amplitudes which turn out to be very near to each
+other and allow for high precision predictions (in some cases we can x 5 or
+even 6 signicative digits). we then compare our predictions with the results
+obtained in the framework of the s-matrix approach. in all cases we nd a
+perfect agreement within our bounds. finally in sect. 6.3, we give, assuming
+as xed input the s-matrix predictions for the critical amplitudes, our best
+estimates for the amplitudes of some of the subleading terms involved in the
+ts.
+
+6.1 systematic errors
+
+in order to estimate the systematic errors involved in our estimates of the
+critical amplitudes we performed for each observable several independent
+ts starting with a tting function containing only the dominant scaling
+dimension and then adding the subleading elds one by one. for each tting
+function we tried rst to t all the exiting data (those listed in tabs. 10-13)
+and then eliminated the data one by one starting from the farthest from the
+critical point (i.e.
+from those with the highest values of hl). among the
+(very large) set of estimates of the critical amplitudes we selected only those
+fullling the following requirements:
+
+1]
+
+the reduced 2 of the t must be of order unity 7. in order to x
+precisely a threshold we required the t to have a condence level larger
+than 30%.
+
+7this is a slightly incorrect use of the 2 function since the input data are aected by
+errors which are of systematic more than statistic nature. notice however that we do not
+use it to determine best t values for the observables that we t (we shall only give upper
+and lower bounds for them) but only as a tool to eliminate those situations in which the
+tting functions are clearly unable to describe the input data.
+
+38
+
+2]
+
+3]
+
+the number of degrees of freedom of the t (i.e. the number of data
+tted minus the number of free parameters in the tting function) must
+be larger than 3.
+
+for all the subleading elds included in the tting function, the am-
+plitude estimated from the t must be larger than the corresponding
+errors, otherwise the eld is eliminated from the t.
+
+4] the amplitudes of the subleading elds (in units of the critical ampli-
+tude) must be such that when multiplied for the corresponding power
+of hl, (for the largest value of hl involved in the t) must give a contri-
+bution much smaller than 1 (in order to x a threshold we required it
+to be strictly smaller than 0.3).
+
+in general only a small number of combinations of data and degrees of free-
+dom fullls simultaneously all these requirements. among all the correspond-
+ing estimates of the critical amplitude we then select the smallest and the
+largest ones as lower and upper bounds8.
+
+6.2 critical amplitudes
+
+in tab. 7 we report as an example the ts to the magnetization (with the
+scaling function obtained by deriving eq. (84)) fullling the above require-
+ments. for each value of nf we only report the ts with the minimum and
+maximum allowed number of d.o.f., since the best t result for al
+m changes
+monotonically as the data are eliminated from the t. this is a general pat-
+tern for all the observables that we studied and greatly simplies the analysis
+of the data. looking at the table one can see that at least four parameters
+are needed in the t to have a reasonable condence level, due to the very
+small error of the data that we use. in the last line we report the only t in
+which all the 25 data reported in tab. 10 have been used. it required taking
+into account the rst eight terms of the scaling function. for nf > 8, even
+if we use all the data at our disposal we cannot full requirement 3. it is
+interesting to notice that the ts which give the best approximations to the
+exact value of al
+m are those in which we use the largest possible number of
+8in making this choice we also keep into account the errors in the estimates induced
+
+by the systematic errors of the input data.
+
+39
+
+terms of the scaling function. this is a general pattern for all the observables
+that we studied. all the ts were performed using the double precision nag
+routine go2daf. the bounds that we obtained are listed in tab. 8 together
+with the s-matrix predictions. from these results we immediately obtain the
+upper and lower bounds for the universal amplitude ratios of tab. 2. they
+are reported in the last two lines of tab. 8.
+
+nf
+
+al
+m
+1.05898893(196) 4
+1.05899447(58)
+4
+5
+1.05898584(74)
+1.05898882(22)
+5
+1.05898178(156) 6
+6
+1.05898375(8)
+7
+1.05898433(8)
+8
+1.05898694(18)
+1.05898729(13)
+8
+
+d.o.f. c.l.
+83%
+4
+6
+50%
+94%
+6
+48%
+7
+6
+98%
+98%
+10
+80%
+14
+99%
+15
+17
+96%
+
+table 7: fits to the magnetization fullling the requirements 1-4 (see text).
+in the rst column the best t results for the critical amplitude (with in
+parenthesis the error induced by the systematic errors of the input data), in
+the second column the number of parameters in the t, in the third column
+the number of degrees of freedom and in the last column the condence level.
+for each value of nf we only report the ts with the minimum and maximum
+allowed number of d.o.f, since the best t of al
+f changes monotonically as
+the data are eliminated from the t.
+
+6.3 subleading operators
+
+in principle we could try to estimate in the ts discussed above also the
+amplitudes of the rst two or three subleading terms in the scaling functions,
+however it is clear that the results that we would obtain would be strongly
+cross correlated and we would not be able to give reliable estimates for the
+corresponding errors (except, at most, for the rst one of them, the next to
+leading term in the scaling function).
+
+40
+
+m1
+
+m2
+
+m3
+
+observable lower bound upper bound theory
+al
+f
+al
+m
+al
+
+al
+e
+al
+al
+al
+|al
+|al
+|al
+|al
+r
+q2
+
+0.9927985
+1.058980
+0.07055
+0.58050
+4.01031
+6.486
+7.91
+0.6405
+3.699
+0.3
+3.32
+6.7774
+3.2296
+
+0.9928005
+1.058995
+0.07072
+0.58059
+4.01052
+6.491
+8.02
+0.6411
+3.714
+0.35
+ 3.45
+6.7789
+3.2374
+
+0.9927995...
+1.058986...
+0.070599...
+0.58051...
+4.01040...
+6.4890...
+7.9769...
+0.6409...
+3.7066...
+0.3387...
+3.4222...
+6.77828...
+3.23514...
+
+1 |
+1|
+2 |
+2|
+
+f 
+
+f 
+
+f 
+
+f 
+
+table 8: lower and upper bounds for various critical amplitudes discussed
+in the text and, in the last two lines, for the two universal amplitude ratios
+r and q2.
+
+in order to obtain some information on the subleading terms we decided
+to follow another route. the results of the previous section strongly support
+the correctness of the s-matrix predictions. we decided then to assume
+these predictions as an input of our analysis, xing their values in the scaling
+functions. then we used the same procedure discussed in sect. 6.1 to identify
+the amplitude of the rst subleading eld. let us look to the various scaling
+functions in more detail
+
+6.3.1
+
+free energy
+
+this is the case for which we have the most precise data. moreover we may
+use the data for the magnetization and the susceptibility as a cross check of
+our estimates.
+
+combining all the data at our disposal we end up with a rather precise
+
+estimate for al
+
+f,b, which turns out to be bounded by:
+
+ 0.055 < al
+41
+
+f,b <  0.050 .
+
+(105)
+
+as mentioned in sect. 3.4.1 it is possible to evaluate this amplitude in a
+completely dierent way, by looking at the constant term in the magnetic
+susceptibility of the model at the critical point. the comparison between
+our estimate and the expected value represents a test of the reliability of our
+tting procedure. the expected value of this amplitude [26] is (in our units)
+
+al
+f,b =  0.0524442...
+
+(106)
+
+which is indeed in perfect agreement with our estimates.
+
+we can then use the value of eq. (106) as a xed input and try to estimate
+the amplitude of the following subleading eld which has a very important
+physical meaning being the contribution due to the presence of the t t (and
+related terms) operator in the lattice hamiltonian. remarkably enough, it
+turns out, by applying the usual analysis, that the corresponding amplitude
+al
+f,1 is compatible with zero. more precisely we see that, changing the number
+of input data and of parameters in the scaling function, the sign of al
+f,1
+changes randomly and its modulus is never larger than 104. the same
+pattern is reproduced in the magnetization and in the susceptibility. we
+summarize these observations with the following bound
+
+|al
+
+f,1| < 0.00005
+
+.
+
+(107)
+
+this result is rather surprising since there seems to be no obvious reason
+for which the t t term should be absent in the lattice hamiltonian. notice
+however that it agrees with some independent observation concerning the
+absence of corrections due to irrelevant operators in the nite size scaling
+of various observables evaluated exactly at the critical point (for a thorough
+discussion of this point see [34]).
+
+if we also assume that al
+
+f,1 = 0 then we may give a reliable estimate for
+
+the amplitude of al
+
+f,2 which turns out to be bounded by:
+
+0.020 < al
+
+f,2 < 0.022 .
+
+(108)
+
+this is the highest subleading term that we could study with a reasonable
+
+degree of condence in our scaling functions.
+
+6.3.2 internal energy
+
+in the case of the internal energy the rst subleading amplitude can be stud-
+ied with very high condence since it is associated to a very small exponent:
+
+42
+
+8
+
+15 . the result turns out to be
+
+|hl|
+
+ 0.646 < al
+
+e,1 <  0.644 .
+
+(109)
+
+in this case the ts are so constrained that we can study with a rather good
+degree of condence also the next subleading correction, al
+e,2 which is very
+interesting, since it again contains the t t term discussed above. in agree-
+ment with the previous observations also in this case the amplitude turns
+out to be compatible with zero. more precisely its sign changes randomly as
+the input data are changed in the ts and its modulus can be bounded by:
+
+|al
+
+e,2| < 0.005
+
+.
+
+(110)
+
+which is not as strong as the bound of eq. (107) but clearly goes in the same
+direction.
+
+6.3.3 masses
+
+the most interesting feature of the scaling functions for the masses is that
+there is no analytic term and the rst subleading contribution al
+mi,1 is the
+exact analogous of the al
+f,1 term for the free energy. surprisingly, in this case
+we nd a non zero contribution for al
+mi,1. in particular we nd the following
+bounds for the three masses that we studied:
+
+ 0.21 < al
+ 0.48 < al
+ 0.65 < al
+
+m1,1 <  0.20
+m2,1 <  0.41
+m3,1 <  0.50 .
+
+(111)
+
+(112)
+
+(113)
+it is well possible that the t t operator which has an expectation value
+compatible with zero in the ground state acquires a nonzero expectation value
+on the massive eigenstates. there is however another possible explanation.
+m,1, besides the contribution coming from t t ,
+remember in fact that in al
+we also have the contribution due to hl1 l1. thus the values that we
+nd could well be due to the expectation value of this eld which is zero in
+the ground state due to translational invariance. it is interesting to notice
+that a similar contribution has been observed also in the case of the thermal
+perturbation of the ising model in [35] where the authors studied the breaking
+
+43
+
+of rotational invariance in the two point correlator (see sect.iv-g of [35] for
+a discussion of this point).
+
+our results on the amplitude of the subleading corrections are summa-
+
+rized in tab. 9.
+
+f,b
+
+f,2
+
+e,1
+
+0.055 < al
+<  0.050
+|al
+0.00005
+f,1| <
+0.020 < al
+<
+0.022
+0.646 < al
+<  0.644
+|al
+0.005
+e,2| <
+< al
+m1,1 <  0.20
+0.21
+< al
+m2,1 <  0.41
+0.48
+< al
+0.65
+m3,1 <  0.50
+table 9: lower and upper bounds for the amplitudes of some of the sublead-
+ing corrections.
+
+7 conclusions
+
+the major goal of this paper was to test the s-matrix description proposed
+by zamolodchikov in [2] for of the 2d ising model perturbed by a magnetic
+eld. to this end we developed some tools and obtained some results which
+are rather interesting in themselves. in particular
+
+ we improved the standard transfer matrix calculations by implement-
+ing a zero momentum projection which allowed us to drastically reduce
+the dimension of the matrix.
+
+ we discussed in detail the relationship between continuum and lattice
+
+observables.
+
+ by using cft results at the critical point we constructed the rst 7-8
+
+terms of the scaling functions for various quantities on the lattice.
+
+we could obtain in this way very precise numerical estimates for several
+critical amplitudes (in some cases with 5 or even 6 signicative digits) and
+
+44
+
+in all cases we found a perfect agreement between s-matrix predictions and
+lattice results.
+
+by assuming the s-matrix predictions as an input of our analysis we could
+estimate some of the subleading amplitudes in the scaling functions. in one
+case the value of the subleading amplitude was already known and again we
+found a complete agreement between theoretical prediction and numerical
+estimate. for the remaining ones there is up to our knowledge no theoretical
+prediction. they are collected in tab. 8 and represent the most interesting
+outcome of our analysis. we leave them as a challenge for theorists working
+in the eld.
+
+among the others, the most surprising result concerns the t t term which
+turns out to have a negligible amplitude in the scaling functions of the trans-
+lationally invariant observables. it would be nice to understand which is the
+reason of such behaviour.
+
+let us conclude by stressing that the techniques that we have developed
+can be easily extended to the case in which a combinations of both thermal
+and magnetic perturbations is present. in this case the exact integrability
+is lost and our numerical methods could help to test new approaches and
+suggest new ideas.
+
+acknowledgements we thank a.b. zamolodchikov, al.b. zamolod-
+chikov, v. fateev, m. campostrini, a. pelissetto, p. rossi, e. vicari and
+r. tateo for useful discussions and correspondence on the subject. in par-
+ticular we are deeply indebted with a.b. zamolodchikov for his help in the
+construction of the scaling functions discussed in sect. 3. this work was par-
+tially supported by the european commission tmr programme erbfmrx-
+ct96-0045.
+
+45
+
+references
+
+[1] a.a. belavin, a.m. polyakov and a.b. zamolodchikov, nucl. phys.
+
+b241 (1984) 333.
+
+[2] a.b. zamolodchikov, in advanced studies in pure mathematics 19
+
+(1989) 641; int. j. mod. phys. a3 (1988) 743.
+
+[3] a.b. zamolodchikov, al b. zamolodchikov, ann. phys. 120 (1979) 253.
+
+[4] g. mussardo, phys. rep. 218 (1992) 215.
+
+[5] m. hankel and h.saleur, j. phys. a22 (1989) l513.
+
+[6] v. bazhanov, b. nienhuis and s.o. warnaar, phys. lett. b322 (1994)
+
+198.
+
+[7] u. grimm, b. nienhuis phys. rev. e55 (1997) 5011.
+
+[8] p.g. lauwers and v. rittenberg, phys. lett. b233 (1989) 197, and
+
+preprint bonn university bonn-he-89-11 (unpublished).
+
+[9] c. destri, f. di renzo, e. onofri, p. rossi and g.p. tecchiolli, phys.
+
+lett. b278 (1992) 311.
+
+[10] g. delno, g. mussardo, nucl. phys. b455 (1995) 724.
+
+[11] m. caselle, m. hasenbusch and p. provero, nucl. phys. b556 (1999)
+
+575.
+
+[12] a.e. ferdinand and m.e. fisher, phys. rev. 185 (1969) 832.
+
+[13] m. caselle, p. grinza and n. magnoli, hep-th/9909065.
+
+[14] j. cardy, scaling and renormalization in statistical physics, cambridge
+
+university press 1996.
+
+[15] v. privman, p.c. hohenberg, a. aharony, universal critical-point am-
+plitude relations, in phase transition and critical phenomena vol. 14,
+c. domb and j.l. lebowitz eds. (academic press 1991).
+
+[16] v. fateev, phys. lett. b324 (1994) 45.
+
+46
+
+[17] v. fateev, s. lukyanov, a. zamolodchikov and al. zamolodchikov,
+
+nucl. phys. b516 (1998) 652.
+
+[18] g. delno, phys. lett. b419 (1998) 291.
+
+[19] g. delno, p. simonetti, phys. lett. b 383 (1996) 450.
+
+[20] a.v. smilga, phys. rev. d55 (1997) 443.
+
+[21] b.m. mccoy and t.t. wu, the two dimensional ising model, (harvard
+
+univ. press, cambridge,1973).
+
+b.m. mccoy,
+bazhanov and c.j. burden, world scientic, 1995.
+
+in statistical mechanics and field theory, eds. v.v.
+
+[22] t.t. wu, phys. rev. 149 (1966) 380.
+
+[23] r. hecht, phys. rev. 158 (1967) 557.
+
+[24] p. di francesco, h. saleur and j-b. zuber, nucl. phys. b290 (1987) 527
+
+[25] a. aharony and m.e.fisher, phys. rev. b27 (1983) 4394
+
+[26] x.p. kong, h. au-yang and j.h.h. perk phys. lett. a116 (1986) 54.
+
+[27] h.a. kramers and g.h. wannier, phys. rev. 60 (1941) 252, ibid. p 263.
+
+[28] w. j. camp and m. e. fisher, phys. rev. b6 (1972) 946.
+
+[29] m.p. nightingale, in finite size scaling and numerical simulation of
+
+statistical systems, ed. v. privman, world scientic 1990.
+
+[30] h. l. richards, m. a. novotny and p. a. rikvold, phys. rev. b48
+
+(1993) 14584.
+
+[31] al.b. zamolodchikov, nucl. phys. b342 (1990) 695, and phys. lett.
+
+b253 (1991) 391.
+
+[32] m. henkel, j. phys. a24 (1991) l133.
+
+[33] t.r. klassen and e. melzer, nucl. phys. b362 (1991) 329.
+
+[34] j. salas and a.d. sokal, cond-mat/9904038v1.
+
+47
+
+[35] m. campostrini, a. pelissetto, p. rossi and e. vicari, phys. rev. e57
+
+(1998) 184.
+
+48
+
+tables of data
+
+m
+
+e
+
+table 10: data used in the ts
+f
+hl
+1.106272538601(1) 0.934113075978(1) 0.182495416253(1)
+0.20
+1.096943627061(1) 0.931644255995(1) 0.179101587939(1)
+0.19
+1.087640179593(1) 0.929017517063(1) 0.175544472125(1)
+0.18
+1.078363862266(1) 0.926215008782(1) 0.171809915290(1)
+0.17
+1.069116534998(1) 0.923215694344(1) 0.167881687799(1)
+0.16
+1.059900287285(1) 0.919994540350(1) 0.163741028380(1)
+0.15
+1.050717483321(1) 0.916521430645(1) 0.159366050850(1)
+0.14
+0.154730958303(1)
+1.041570819851(1) 0.91275968274(1)
+0.13
+1.032463401585(1) 0.90866397795(1)
+0.149804982192(1)
+0.12
+0.14455091814(1)
+1.023398841451(1) 0.90417740232(1)
+0.11
+0.13892305302(1)
+1.014381396853(1) 0.89922709483(1)
+0.10
+0.13286414108(1)
+0.89371763122(1)
+1.00541615982(1)
+0.09
+0.99650933082(1)
+0.88752055778(1)
+0.12630083230(1)
+0.08
+0.1228010112(1)
+0.88411094491(1)
+0.075
+0.99208015671(1)
+0.1161548337(1)
+0.87741739906(1)
+0.066103019026467 0.98424336850(1)
+0.055085849188723 0.97462849835(1)
+0.86771621938(2)
+0.10703505648(2)
+0.10241966(1)
+0.86255168(1)
+0.05
+0.096641767(1)
+0.8558157835(1)
+0.044068679350978 0.96513182856(1)
+0.084469355(1)
+0.840485633(1)
+0.033051509513233 0.95578360408(2)
+0.03
+0.83533709(5)
+0.0806726(1)
+0.0695436(1)
+0.81901353(2)
+0.022034339675489 0.9466343376(2)
+0.0663409(2)
+0.8139196(1)
+0.02
+0.015
+0.7988985(1)
+0.057595(1)
+0.047045(3)
+0.77805(5)
+0.01
+0.0088137358702
+0.771605(1)
+0.044149(2)
+
+0.94497330(2)
+0.9409395(1)
+0.936994(1)
+0.93607461(2)
+
+0.97022834(1)
+
+0.95322656(1)
+
+49
+
+table 11: data used in the ts
+
+1/m2
+
+1/m3
+
+1/m1
+hl
+0.59778522553(1) 0.37795775263(1) 0.310888(1)
+0.20
+0.61388448719(1) 0.38765653507(1) 0.318578(1)
+0.19
+0.63134670477(1) 0.39818995529(1) 0.326940(1)
+0.18
+0.65037325706(1) 0.40968266918(1) 0.336077(2)
+0.17
+0.67120940172(1) 0.42228634593(5) 0.346115(3)
+0.16
+0.69415734924(1) 0.43618773124(1) 0.357209(3)
+0.15
+0.71959442645(1) 0.45161985381(4) 0.369548(4)
+0.14
+0.74799884641(1) 0.4688779288(2)
+0.38338(1)
+0.13
+0.3990(1)
+0.77998715416(1) 0.488342470(1)
+0.12
+0.4168(1)
+0.81637015277(1) 0.510513817(1)
+0.11
+0.4374(5)
+0.85823913569(5) 0.5360654(1)
+0.10
+0.9071039295(1)
+0.5659287(6)
+0.4624(5)
+0.09
+0.492(1)
+0.60144(1)
+0.965123997(1)
+0.08
+0.508(1)
+0.62189(1)
+0.075
+0.998514180(1)
+0.066103019026467 1.067300500(2)
+0.66405(5)
+0.543(1)
+0.7305(1)
+0.055085849188723 1.17524158(3)
+0.768(1)
+0.05
+1.237044(1)
+0.044068679350978 1.322589(6)
+0.82(1)
+0.033051509513233 1.54057(2)
+0.03
+1.6218(2)
+0.022034339675489 1.91(1)
+
+50
+
+table 12: data used in the ts
+
+|f 
+2 |2
+
+|f 
+1 |2
+hl
+0.29041938711(1) 0.03800933(1)
+0.20
+0.29570405694(1) 0.04039999(1)
+0.19
+0.30107729858(1) 0.04291078(1)
+0.18
+0.30653975241(1) 0.04554676(1)
+0.17
+0.31209194307(1) 0.04831337(1)
+0.16
+0.31773424601(1) 0.05121641(1)
+0.15
+0.32346684419(1) 0.05426214(1)
+0.14
+0.05745711(3)
+0.3292896717(1)
+0.13
+0.0608082(1)
+0.3352023388(1)
+0.12
+0.0643227(2)
+0.3412040323(4)
+0.11
+0.3472933781(4)
+0.068008(1)
+0.10
+0.07187(1)
+0.3534682486(5)
+0.09
+0.0759(1)
+0.359725487(1)
+0.08
+0.362883627(1)
+0.0780(2)
+0.075
+0.066103019026467 0.368548928(2)
+0.0818(5)
+0.055085849188723 0.3756378(4)
+0.05
+0.378934(5)
+0.044068679350978 0.38280(2)
+0.033051509513233 0.3899(1)
+
+51
+
+table 13: data used in the ts
+
+|f 
+2|2
+
+|f 
+1|2
+hl
+11.7000114647(1) 8.0468067(5)
+0.20
+11.8448924368(1) 8.3246112(5)
+0.19
+11.9888157747(1) 8.6017424(5)
+0.18
+12.1315853880(1) 8.8774943(5)
+0.17
+12.2729879270(1) 9.1511600(5)
+0.16
+12.4127893980(1) 9.422023(1)
+0.15
+12.5507307560(1) 9.689348(2)
+0.14
+12.6865220830(5) 9.952360(5)
+0.13
+10.21022(1)
+12.819834783(1)
+0.12
+10.46202(3)
+12.950290902(2)
+0.11
+13.077448185(2)
+10.7067(5)
+0.10
+10.943(3)
+13.200778543(2)
+0.09
+11.17(1)
+13.31963596(3)
+0.08
+13.3771415(1)
+11.28(1)
+0.075
+11.46(2)
+0.066103019026467 13.475815(5)
+0.055085849188723 13.59037(3)
+11.6(5)
+0.05
+13.6398(5)
+0.044068679350978 13.695(1)
+0.033051509513233 13.78(1)
+
+52
+
+

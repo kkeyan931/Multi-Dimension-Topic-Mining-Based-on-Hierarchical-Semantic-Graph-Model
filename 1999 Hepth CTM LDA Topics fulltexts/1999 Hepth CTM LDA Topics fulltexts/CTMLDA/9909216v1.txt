@@ -1,0 +1,4055 @@
+dtp-99-67
+kcl-mth-99-39
+itfa 99-26
+hep-th/9909216
+september 29, 1999
+
+9
+9
+9
+1
+
+ 
+
+p
+e
+s
+9
+2
+
+ 
+
+ 
+ 
+
+1
+v
+6
+1
+2
+9
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+g-function ow in perturbed
+
+boundary conformal eld theories
+
+patrick dorey1, ingo runkel2, roberto tateo3 and gerard watts4
+
+1department of mathematical sciences,
+
+university of durham, durham dh1 3le, england
+
+3universiteit van amsterdam, inst. voor theoretische fysica
+
+1018 xe amsterdam, the netherlands
+
+2,4mathematics department,
+
+kings college london, strand, london wc2r 2ls, u.k.
+
+abstract
+
+the g-function was introduced by aeck and ludwig as a measure of the ground state
+degeneracy of a conformal boundary condition. we consider this function for pertur-
+bations of the conformal yanglee model by bulk and boundary elds using conformal
+perturbation theory (cpt), the truncated conformal space approach (tcsa) and the
+thermodynamic bethe ansatz (tba). we nd that the tba equations derived by leclair
+et al describe the massless boundary ows, up to an overall constant, but are incorrect
+when one considers a simultaneous bulk perturbation; however the tba equations do cor-
+rectly give the non-universal linear term in the massive case, and the ratio of g-functions
+for dierent boundary conditions is also correctly produced. this ratio is related to the
+ysystem of the yanglee model and by comparing the perturbative expansions of the
+ysystem and of the g-functions we obtain the exact relation between the uv and ir
+parameters of the massless perturbed boundary model.
+
+1e-mail: p.e.dorey@durham.ac.uk
+2e-mail: ingo@mth.kcl.ac.uk
+3e-mail: tateo@wins.uva.nl
+4e-mail: gmtw@mth.kcl.ac.uk
+
+1
+
+introduction
+
+consider the partition function of a classical statistical-mechanical system dened on a
+cylinder of length r and circumference l. among the characteristics of the model might
+be a bulk mass scale m and boundary scales depending on the boundary conditions  and
+ imposed at the two ends of the cylinder; we will highlight the role of these quantities by
+denoting the partition function z(m, r, l). if r is taken to innity with all other variables
+held xed, then
+
+z(m, r, l)  a(m, l) er ecirc
+
+0
+
+(m,l) ,
+
+(1.1)
+
+0
+
+where ecirc
+(m, l) is the ground state energy of the model on a circle of circumference l.
+to derive this asymptotic r-dependence, it is sucient to treat the boundary conditions as
+boundary states |  i [1] in a formalism where time runs along the length of the cylinder, and
+states are propagated by a bulk hamiltonian hcirc(m, l):
+
+z(m, r, l) = h  | exp(rhcirc(m, l))|  i .
+
+(1.2)
+
+at large r the contribution of the ground state | i dominates, establishing (1.1) and also
+giving
+
+a(m, l) = h  | ih |  i
+
+h | i
+
+.
+
+(1.3)
+
+the inner products appearing in (1.3) should in general contain a term corresponding to a
+free-energy per unit length, i.e.
+
+log(
+
+h |  i
+h | i1/2
+
+) = lf + log(g(m, l)) .
+
+(1.4)
+
+this linear term can in principle be extracted unambiguously from the large l behaviour of
+log(h |  i ). the question is then whether the functions log(g(m, l)) now contain universal
+information.
+in the case m = 0, i.e. for critical bulk, aeck and ludwig [2] pointed out that the uv
+and ir limits of these functions, log(g(0, 0)) and log(g(0,)), play the role of a generalised
+ground state degeneracy for the uv and ir conformal boundary conditions respectively.
+these can be easily calculated for many conformal eld theories, and can enable one to
+identify the boundary conditions uniquely.
+
+the universality of the g-functions is however a somewhat delicate issue when the model
+has a mass scale, either in the bulk or at the boundary. for example, one could imagine that
+in some calculational schemes the boundaries acquire a nite thickness, and so the eective
+cylinder length would decrease by some nite amount  to r , in which case log(g) would
+be altered
+
+log(g(m, l))  log(g(m, l)) +
+
+
+12l
+
+c(ml) ,
+
+where c(ml) is related to the ground state energy on the circle by
+
+ecirc
+
+0
+
+(m, l) = fbulkl 
+
+
+6l
+
+c(ml) .
+
+1
+
+(1.5)
+
+(1.6)
+
+more generally, the fact that the g-functions have to be extracted from subleading contri-
+butions to log z makes their calculation much trickier than that of the corresponding bulk
+quantity c(m l).
+
+if the model is integrable, one might hope to be able to address these issues in greater
+depth. this was one of the topics of some work by leclair et al. [3]. using the thermodynamic
+bethe ansatz (tba) technique, they proposed equations for log(g), but up to now these have
+not been checked in detail. the main purpose of this paper is to provide some such checks
+in a concrete example, namely the scaling yang-lee model, making use both of conformal
+perturbation theory and of a recently-introduced generalisation of the tcsa to boundary
+situations [4]. we nd that the tba g-functions describes the massless ow well (up to
+an overall constant) but the massive ows are not well described. however, we nd that the
+tba g-functions of [3] do appear to describe correctly the ratio of the g-functions for dierent
+boundary conditions of the same bulk model. further, the tba expression for this ratio has
+a very simple form in terms of the yfunction of the yanglee model. this enables us to (a)
+provide a perturbative expansion for the massive yfunction and (b) nd the coecient in
+the relation between uv and ir parameters in the boundary yang-lee model model exactly,
+a result announced in [4].
+
+we rst discuss the conformal perturbation theory (cpt) expressions for log g and then
+how the truncated conformal space approach (tcsa) can be used to investigate these func-
+tions. we then turn to the tba equations and the properties of their solutions. finally we
+compare the results of the two methods and nd the relation between uv and ir parameters.
+
+2 boundary conformal eld theory
+
+we begin with a sketch of boundary conformal eld theory in general, although we shall often
+specialise to those theories described in the bulk by a minimal virasoro theories with atype
+diagonal modular invariant. at the end we give the details for the yang-lee model. for a
+general discussion of the boundary content of the virasoro minimal models see [5].
+
+a boundary conformal eld theory is specied by giving the eld content in the bulk, a
+list of the possible boundary conditions and the eld contents of these boundary conditions,
+the elds which interpolate them, and some constants.
+
+in the bulk there are primary elds i of weights hi, hi which for a diagonal modular
+
+invariant are equal; under conformal transformations they obey
+
+xi
+
+i(w, w) ,
+
+i(z, z) =(cid:12)(cid:12)(cid:12)(cid:12)
+
+w
+
+z(cid:12)(cid:12)(cid:12)(cid:12)
+
+where xi = 2hi.
+
+for the aseries, the conformal boundary conditions (which we shall denote by ) may
+themselves also be indexed by the virasoro minimal representations [1, 5]. we adopt the
+notation ()
+(x) for a eld of weight hj which interpolates two boundary conditions , ,
+i is one,
+which may be the same or dierent. such a eld exists if the fusion coecient n 
+and does not exist if it is zero. we take such boundary primary elds to transform under
+remember that for a-modular invariant virasoro minimal models all representations are self-conjugate
+
+j
+
+and all the fusion coecients are either 1 or 0
+
+2
+
+conformal transformations as
+
+()
+i
+
+hi
+
+()
+i
+
+(w) .
+
+(z) =(cid:12)(cid:12)(cid:12)(cid:12)
+
+w
+
+z(cid:12)(cid:12)(cid:12)(cid:12)
+
+inside correlation functions we assume that the product of elds can be replaced by their
+operator product expansion  we do not try to interpret them as genuine expansions of the
+actions of operators, nor do we consider the associated problems of orderings of the arguments
+of the elds.
+
+there are three dierent operator products  bulk-bulk, bulk-boundary and boundary-
+
+boundary. the rst are the standard expressions ,
+
+next we have the operator products of the boundary primary elds:
+
+i(z, z) j(w, w) xk
+(w) xk
+
+(z) ()
+
+j
+
+()
+i
+
+cij
+
+k |z  w|xkxixj k(w, w) + . . . .
+
+(2.1)
+
+c()
+
+ij
+
+k |z  w|hkhihj ()
+
+k
+
+(w) + . . . .
+
+(2.2)
+
+finally, a primary bulk eld near a boundary of type  may be expanded in boundary elds
+as
+
+()bj
+
+i |2(z  w)|hjxi ()
+
+j
+
+(w) + . . . ,
+
+(2.3)
+
+i(z, z) xj
+
+where z is in the bulk and w is the point on the boundary closest to z.
+
+to determine the correlation functions consistently, one needs to normalise the dierent
+boundary conditions dierently. one way to do this is to give the zero-point functions on a
+disc of radius 1 with boundary condition , which we denote by z,
+
+z = h 1idisc
+
+
+
+.
+
+(2.4)
+
+the rules for calculating the various constants in equations (2.1), (2.2), (2.3) and (2.4) are
+essentially given in a series of papers by cardy and lewellen [1,7,8], but some work is required
+to obtain explicit expressions. for the structure constants of the atype model, see [9].
+
+using these structure constants, zero-point functions and the chiral blocks, we can assign a
+value to any n-point function, i.e. to any surface with some assignment of conformal boundary
+conditions to the boundaries, and some insertions of bulk and boundary elds; if the boundary
+conditions change at some point along a boundary, then there is of necessity a boundary
+changing eld inserted at this point.
+
+we can now express various simple correlation functions on a disc of radius 1 in terms of
+
+there is some choice in the transformations of boundary elds, see [6]
+n.b. in the a-type invariant we only have spinless bulk primary elds
+
+3
+
+these structure constants:
+
+i
+
+
+
+d ()
+(ei)edisc
+h i(z, z)idisc
+d i(rei) ()
+(1)edisc
+(2)edisc
+d ()
+(3)edisc
+
+(1) ()
+
+(2) ()
+
+
+
+k
+
+j
+
+j
+
+i
+
+i
+
+(1) ()
+
+d ()
+
+i
+
+= 0 ,
+
+h 1 idisc
+
+ = z
+
+jj
+
+i c()
+
+ = (cid:0) ()b1
+i z(cid:1) (1  |z|2)xi ,
+= (cid:16) ()bj
+1 z(cid:17)(cid:12)(cid:12)12r cos +r2(cid:12)(cid:12)hj (cid:12)(cid:12)1r2(cid:12)(cid:12)hjxi ,
+2 (cid:12)(cid:12)(cid:12)
+1 z(cid:17)(cid:12)(cid:12)(cid:12)2 sin 12
+= (cid:16) c()
+1 z(cid:17)
+= (cid:16) c()
+2 (cid:12)(cid:12)(cid:12)
+2 (cid:12)(cid:12)(cid:12)
+2 (cid:12)(cid:12)(cid:12)
+hihjhk(cid:12)(cid:12)(cid:12)2 sin 13
+hkhihj(cid:12)(cid:12)(cid:12)2 sin 23
+ (cid:12)(cid:12)(cid:12)2 sin 12
+
+k c()
+kk
+
+hjhkhi
+
+2hi
+
+ij
+
+ii
+
+,
+
+(2.5)
+
+,
+
+where ij = i  j, etc.
+to relate all the quantities of interest to simpler correlation functions on a disc.
+
+we are interested in calculating correlation functions on the cylinder but we will be able
+
+let us consider the partition function of a right cylinder of length r, with the two ends
+being circles of circumference l with conformal boundary conditions  and . this can be
+realised as a rectangle in the upper half plane with vertices 0, l, ir and l + ir, with the two
+vertical sides identied. the partition function can be written as
+
+z cyl
+
+()(r, l) = trh()(cid:16)exp(lbh strip
+
+() (r))(cid:17) .
+
+(2.6)
+
+by mapping this rectangle to a half-annulus in the upper half plane by z 7 exp(z/r), we
+can use the operator formalism in the upper-half plane. the hilbert space h() decomposes
+into a direct sum of irreducible representations of one copy of the virasoro algebra
+
+and the hamiltonian is given as
+
+h() = i n()
+
+i hi ,
+
+so that
+
+(l0 
+
+c
+24
+
+) ,
+
+
+r
+
+() =
+
+bh strip
+()(r, l) =xi
+
+z cyl
+
+n
+
+i i(q) ,
+
+where i(q) is the character of the representation i, q = exp(l/r), and n
+verlinde fusion numbers.
+
+(2.7)
+
+(2.8)
+
+(2.9)
+
+i are the
+
+we can also map the cylinder into a complete annulus of inner and outer radii exp(2r/l)
+and 1 respectively by z7w= exp(2iz/l), and use the operator formalism on the plane. the
+hilbert space for the bulk theory on the plane carries a representation of two copies of the
+virasoro algebra, in terms of which the cylinder hamiltonian is given as
+
+2
+l
+
+(l0 + l0 
+
+c
+12
+
+) .
+
+bh circ =
+
+4
+
+(2.10)
+
+this space carries a representation of two copies of the virasoro algebra. the highest weight
+states | ii are labelled by the highest weight representations of the virasoro algebra and given
+by the action of the bulk primary elds on the sl(2)invariant vacuum | 0i by
+
+and hence
+
+| ii = lim
+w0
+
+i(w, w)| 0i ,
+
+h i| j i = ij cii
+
+1 h 0| 0i .
+
+(2.11)
+
+the partition function on the cylinder can be calculated in terms of boundary states |  i,
+
+we shall not necessarily normalise the vacuum to be norm 1, and indeed for the yang-lee
+model it is convenient to take h 0| 0i = 1.
+|  i in the hilbert space for the bulk theory on the plane:
+ = h  | erbh circ(l) |  i .
+
+for a boundary state to represent a circular boundary with conformally invariant boundary
+condition, it must satisfy
+
+(2.12)
+
+z cyl
+
+(cid:0)lm  lm(cid:1)|  i = 0 , h  |(cid:0)lm  lm(cid:1) = 0 .
+
+a basis of states satisfying these conditions are the ishibashi states. there is one such state
+for each virasoro representation in the minimal model in question, which we denote by
+
+l1l1
+
+| iii =(cid:26)1 +
+hh i| = h i|(cid:26)1 +
+
+l2l2
+
+c/2
+
+l2l2
+c/2
+
+2hi
+
+l1l1
+2hi
+
++ . . .(cid:27)|ii ,
++ . . .(cid:27) ,
+
+| 0ii =(cid:26)1 +
+hh 0| = h 0|(cid:26)1 +
+hh i| erbh circ(l) | j ii = ij i(eq)h i| ii ,
+
++ . . .(cid:27) |0i .
++ . . .(cid:27) .
+
+these are normalised so that
+
+whereeq = exp(4r/l). we expand the boundary states in terms of the ishibashi states as
+
+|  i =xj
+
+gj
+ | j ii .
+
+(it is always possible to normalise the elds and states such that the coecients gi
+ are real,
+and we shall assume that has been done. see [9] for details). using these states, the partition
+function is given from (2.12) by
+
+noting that
+
+z cyl
+
+()(r1, r2) = xi
+ =xij
+
+z cyl
+
+n i
+
+gi
+ gi
+
+ i(eq)h i| ii .
+j j(eq) ,
+
+ si
+
+5
+
+(2.13)
+
+where si
+
+j is the matrix implementing the modular transformation, we arrive at cardys result,
+
+gi
+ gi
+
+ h i| ii =xj
+
+n
+
+j sj
+
+i .
+
+(2.14)
+
+these equations can then be solved to nd the gi
+.
+
+one can also show that the same boundary states |  i describe a circular boundary of
+radius one in the plane and so the constants z can now be found by expressing the one-point
+functions on a disc of radius 1 in two dierent ways as
+
+()b11
+
+i z = h i(0)idisc
+
+ = h  | ii =xj
+
+gj
+ hh j | ii = gi
+
+ h i| ii ,
+
+to nd
+
+z
+
+()b11
+
+i = gi
+
+ h i| ii .
+
+(2.15)
+
+(2.16)
+
+this completes the identication of the structure constants and zero-point functions. to end
+this section we recall how to nd the conformal values of the g-functions in terms of this
+conformal data. to x the g-functions g, we note that the leading term in the cylinder
+partition function is given by
+
+z cyl
+()(r, l)  g
+
+ g
+
+ ere h | i .
+
+(2.17)
+
+where | i is the state of lowest conformal weight in the theory dened on the plane. this
+means that the g-functions g satisfy
+
+g g = g
+
+ g
+
+ h | i .
+
+however, recalling that the conformal vacuum representation 0 satises n0
+from (2.14) that
+
+(2.18)
+
+i = i
+
+, we see
+
+(g
+
+11 )2 =
+
+,
+
+g
+11 g
+
+ =
+
+.
+
+(2.19)
+
+s0
+h | i
+
+s
+h | i
+
+finally, we recall that the modular s-matrix for the virasoro minimal models satises s>0
+for all representations , and so if we require the g-functions to be positive and the gi
+ to be
+real we should take h | i > 0 and can read o their values from eqns. (2.18) and (2.19) as
+
+g11 = |s0|1/2 ,
+
+g =
+
+s
+|s0|1/2
+
+,
+
+g
+ =
+
+gph | i
+
+we now give the explicit results for the case of the yang-lee model.
+
+.
+
+(2.20)
+
+2.1 the yang-lee model
+
+the yang-lee model is the simplest non-unitary conformal eld theory, m2,5, and has central
+charge 22/5 and eective central charge 2/5. there are only two representations of the
+virasoro algebra of interest, of weight 0 and 1/5, and consequently only two bulk primary
+n.b. the normalisations of annulus partition functions dier from those of cylinder partition functions [10],
+
+so some care must be taken to dene boundary states for discs of general radius.
+
+6
+
+elds, the identity 11 of weight 0, and  of weight x = 2/5; equally there are only two
+conformally-invariant boundary conditions, which we denote by 11 and . the fusion rules
+are
+
+11  11 = 11 ,
+11   =  ,
+   = 11 +  .
+
+(2.21)
+
+from these rules we read o that there are only three non-trivial boundary elds, all of weight
+h = 1/5. two of these interpolate the two dierent conformal boundary conditions,
+
+which we shall both denote by , and one lives on the  boundary,
+
+(11)
+1/5 ,
+
+(11)
+1/5 ,
+
+  ()
+1/5 .
+
+(2.22)
+
+(2.23)
+
+as indicated, we shall often simply denote the non-trivial boundary primary eld on the 
+boundary by .
+
+if we label the two representations of the virasoro algebra by  and 1 then the modular
+
+s-matrix is
+
+s =(cid:18) s11 s1
+
+s1 s(cid:19) = 25   sin 2
+
+5
+sin 
+5
+
+sin 
+5
+sin 2
+
+5 ! =(cid:18)0.8506..
+
+0.5257..
+
+0.5257..
+
+0.8506..(cid:19) .
+
+(2.24)
+
+2.1.1 yanglee structure constants
+
+we give here the structure constants appearing in all the operator products of interest, that
+is the bulk ope
+
+(z, z) (w, w) = c
+
+11 |z  w|4/5 + c
+
+ |z  w|2/5 (w, w) + . . . ,
+
+the boundary opes,
+
+(z) (w) = c
+(z) (w) = c
+
+11 |z  w|2/5 + c
+|z  w|1/5 (w) + . . . ,
+
+ |z  w|1/5 (w) + . . . ,
+
+and the two bulkboundary opes
+(z) |11 = (11)b11
+(z) | = ()b11
+
+ |2(z  w)|2/5 + . . . ,
+ |2(z  w)|2/5 + ()b
+
+ in this model, there is only a single non-trivial bulk eld, a single boundary condition admitting a relevant
+perturbation, and a single non-trivial boundary eld, all labelled by the same virasoro representation, and
+hence we have denoted them by ,  and  respectively, in the hope that this will reduce confusion.
+
+ |2(z  w)|1/5 (w) + . . . .
+
+7
+
+we want all these structure constants to be real, and a suitable choice is
+
+c
+
+c
+
+c
+
+c
+
+1/2
+
+11 = c
+1/2
+ 2 ,
+  ,
+  ,
+
+2
+
+2
+
+1+5(cid:12)(cid:12)(cid:12)
+ = (cid:12)(cid:12)(cid:12)
+ = (cid:12)(cid:12)(cid:12) 1+5
+(cid:12)(cid:12)(cid:12)
+1+5(cid:12)(cid:12)(cid:12)
+ = (cid:12)(cid:12)(cid:12)
+ = (cid:12)(cid:12)(cid:12)
+
+1/2
+
+2
+
+(1/5) (6/5)
+
+(3/5) (4/5)(cid:12)(cid:12)(cid:12)
+
+11 =  1 ,
+(11)b11
+
+()b11
+
+()b
+
+1/2
+
+3/2
+
+1/2
+
+2
+
+ =
+
+1+5(cid:12)(cid:12)(cid:12)
+ = (cid:12)(cid:12)(cid:12)
+(cid:12)(cid:12)(cid:12) 1+5
+(cid:12)(cid:12)(cid:12)
+(cid:12)(cid:12)(cid:12)
+(cid:12)(cid:12)(cid:12) 5+5
+
+ =
+1/2
+
+2
+
+2
+
+.
+
+the state of lowest conformal dimension in the bulk theory is
+
+and we choose to normalise the bulk highest-weight states as
+
+| i = | i ,
+
+,
+
+,
+
+  ,
+
+(2.25)
+
+(2.26)
+
+with this, and demanding g
+
+h 0| 0i = 1  h | i = 1 .
+ > 0, the coecients appearing in the boundary states are
+
+(2.27)
+
+1/4
+
+1/4
+
+g0
+11 =
+
+(cid:12)(cid:12)(cid:12)
+ = (cid:12)(cid:12)(cid:12)
+
+g0
+
+5+1
+
+25 (cid:12)(cid:12)(cid:12)
+525 (cid:12)(cid:12)(cid:12)
+
+,
+
+,
+
+1/4
+
+1/4
+
+g
+
+g
+
+51
+
+25 (cid:12)(cid:12)(cid:12)
+11 = (cid:12)(cid:12)(cid:12)
+ = (cid:12)(cid:12)(cid:12) 2+55 (cid:12)(cid:12)(cid:12)
+
+the zero-point functions are then given as
+11 = h 11 | 0i = g0
+finally, the g-functions are given by g = g
+
+z11 = h 1idisc
+
+log g11 = 1
+log g = 1
+
+51
+
+25 (cid:12)(cid:12)(cid:12) =  1
+4 log(cid:12)(cid:12)(cid:12)
+4 log(cid:12)(cid:12)(cid:12) 2+55 (cid:12)(cid:12)(cid:12) = 3
+
+2.1.2 yanglee correlation functions
+
+ = h | 0i = g0
+ .
+ , i.e.
+
+8 log 5 = 0.321482.. ,
+8 log 5 = 0.159729.. .
+
+11 , z = h 1idisc
+ph | i = g
+4 log(cid:12)(cid:12)(cid:12) 1+5
+(cid:12)(cid:12)(cid:12)  1
+4 log(cid:12)(cid:12)(cid:12) 1+5
+(cid:12)(cid:12)(cid:12)  1
+
+2
+
+2
+
+(2.28)
+
+(2.29)
+
+(2.30)
+
+in terms of the structure constants (2.25), the simple correlation functions (2.5) on a disc of
+unit radius are
+
+
+
+h 1 idisc
+(cid:10) ( rei) (cid:11)disc
+(cid:10) (ei) (1) (cid:11)disc
+(cid:10) ( rei ) (1) (cid:11)disc
+
+
+
+
+
+
+
+ = 0
+
+(cid:10) (ei) (cid:11)disc
+ z (1  r2)2/5
+11 z (2 sin(/2))2/5
+
+= z ,
+= ()b11
+
+= c
+= ()b
+
+ c
+
+11 z (1  2r cos  + r2)1/5(1  r2)1/5
+
+(2.31)
+
+we shall also need two more correlation functions, which are given in terms of chiral four-
+point blocks. a basis for the chiral four-point functions of the weight 1/5 eld are f 1 and
+f , given in terms of hypergeometric functions by
+
+f 1(x) = [x(1  x)]2/5 f ( 3
+
+5 , 4
+
+5 ; 6
+
+5 ; x) ,
+
+f (x) = x1/5 (1  x)2/5 f ( 2
+
+5 , 3
+
+5 ; 4
+
+5 ; x) .
+
+(2.32)
+
+8
+
+in terms of these chiral blocks we can give the bulk two-point functions on a disc of radius 1:
+
+d (0) (rei)edisc
+
+
+
+= z n c
+
+f (r2)o ,
+
+11f 1(r2) + ()b11
+
+ c
+
+(2.33)
+
+which is rotationally invariant. we can also give the 1-bulk2-boundary point functions in
+terms of these two chiral blocks, but it is more convenient to perform some transformations
+on the arguments to make the expressions manifestly real, in which case we nd
+
+d (0) (1) (ei)edisc
+
+
+
+11n ()b11
+
+(2 sin 
+
+= z c
+
+ (2 sin 
+
+2 )2/5 (cos 
+
++ ()b
+
+ c
+
+2 )1/5 (cos 
+
+2 )3/5 f ( 3
+
+2 )4/5 f ( 4
+10 ; 9
+
+10 , 8
+
+10 ; 11
+
+10 , 9
+10 ;  tan2 
+
+10 ;  tan2 
+2 )
+2 )o .
+
+(2.34)
+
+3
+
+g-functions and perturbed conformal eld theory
+
+we dene the g-functions of the perturbed theory as
+g = h  | i
+h | i1/2
+
+,
+
+(3.1)
+
+where |  i is the (possibly perturbed) boundary state and | i is the ground state of the
+perturbed theory. typically these functions will not be equal to the g-functions g but will
+dier by the extensive freeenergy terms discussed in the introduction:
+
+log g = log g  l f pcft
+
+
+
+.
+
+however it is the g that are accessible in conformal perturbation theory, and not the g.
+currently it is not possible to determine f pcft
+directly from conformal perturbation theory,
+but using the truncated conformal space approximation (tcsa), it is possible to approximate
+the functions g numerically for a reasonable range of l, and this will enable us in some cases
+to estimate f pcft
+ . for the case of the yanglee model, the boundary conditions of interest
+are 11 (which admits no relevant perturbation) and (h), the perturbation of the conformal
+ boundary by the integral along the boundary
+
+
+
+the bulk perturbation corresponds to a term in the action
+
+hz (x) dx .
+z (w, w) d2w .
+
+the functions g therefore have expansions
+
+log g11(, l) = pn=0 dn (l12/5)n ,
+log g(h)(, l) = pm,n=0 cmn (hl6/5)m(l12/5)n .
+
+9
+
+(3.2)
+
+(3.3)
+
+(3.4)
+
+in section 3.3 we discuss the tcsa calculation of g, but before that, in the next section we
+calculate the following coecients in their expansions:
+
+log g11(, l) = log g11 + d1 (l12/5) + . . . ,
+
+log g(h)(, l) = log g + c10 (hl6/5) + c20 (hl6/5)2 + c01 (l12/5) + . . .
+
+(3.5)
+
+to the order to which we will work, the bulk and boundary perturbations can be treated
+independently, so we shall rst calculate c01 and d1, and then c10 and c20.
+
+3.1 the bulk perturbation
+
+for a purely bulk perturbation (3.3), after mapping to the plane, the hamiltonian of the
+perturbed theory is
+
+bh circ(, l) = bh0 +  bh1
+
+=
+
+2
+l
+
+(l0 + l0 
+
+c
+12
+
+) + (cid:18) l
+
+2(cid:19)7/5i (ei) d .
+
+the full ground state is given by
+
+| i = | i + xa
+
+a| a i + o(2) ,
+
+(3.6)
+
+(3.7)
+
+where the sum is over an orthonormal eigenbasis of bh0 (where the  indicates that the ground
+
+state | i is to be excluded) and the coecients a are given by rst order perturbation
+theory as
+
+a =
+
+combining (3.8) and (3.6), we nd
+
+h a | bh1 | i
+
+h |bh0| i  h a |bh0| a i
+
+.
+
+a| a i = (cid:18) l
+
+2(cid:19)12/5
+
+xa
+
+(1p )
+
+1
+
+l0 + l0 + 2/5
+
+(1p )i (ei)| i d ,
+
+(3.8)
+
+(3.9)
+
+where p = | ih | is the projector onto the state | i. from (3.7), the norm of | i is
+unchanged to order , and hence the correction to the g-function is given by
+
+log g(, l)
+g(0, l)
+
+= l12/5a + o(2) ,
+
+(3.10)
+
+where
+
+a = 
+
+1
+g
+
+(2)12/5i dh |(1p )
+
+1
+
+l0 + l0 + 2/5
+
+(1p ) (ei)| i .
+
+(3.11)
+
+using the rotational invariance of the boundary state and of h | and the relations
+
+z 1
+
+0
+
+x dx =
+
+1
+
+ + 1
+
+,
+
+xl0+l0 (1) xl0l0 = x2/5 (x) ,
+
+h  |p = gh | ,
+
+10
+
+we arrive at
+
+a = (2)7/5z 1
+
+0
+
+dx
+
+x7/5(cid:18) 1
+
+gh  |(x)| i  h |(x)| i(cid:19) .
+
+the correlation functions in (3.12) are
+
+h  | (x)| i = h (x)(0)idisc
+ x2/5 ,
+h | (x)| i = c
+
+ = z n c
+
+11f 1(x2) + ()b11
+
+ c
+
+f (x2)o
+
+so that using (2.16), the expression for a simplies to
+
+a = (2)7/5(cid:16)c
+
+ i2 +
+
+11
+
+c
+()b11
+
+
+i1(cid:17) ,
+
+where the integrals i1 and i2 are given (by mathematica) as
+
+i1 = z 1
+
+0
+
+dx
+
+x7/5 f 1(x2) = z 1
+
+0
+5 ) ( 2
+5 )
+( 4
+5 )2
+and the somewhat obscure expression
+
+10 sin(2/5)
+
+( 1
+
+=
+
+
+
+dx x3/5(1  x2)2/5f ( 3
+
+5 , 4
+
+5 ; 6
+
+5 ; x2)
+
+= 2.48171... ,
+
+(f (x2)x2/5) = z 1
+
+0
+
+0
+
+i2 = z 1
+=  15
+5 , 8
+5 ; 9
+= 0.083937990... .
+
+dx
+x7/5
+56 3f2(1, 7
+
+5 , 12
+
+5 ; 1) + 
+
+8
+
+dx
+
+x (cid:16)(1  x2)2/5f ( 2
+5 , 3
+4 log 1+5
+5
+
+(5+5)3/2
+
+10
+
+5 ; 4
+
+5 ; x2)  1(cid:17)
+
+2 + 5
+
+8 (log 5  2)
+
+substituting these values into a we nd
+
+d1 = a11 = (2)7/5(cid:16)c
+c01 = a = (2)7/5(cid:16)c
+
+ i2 +
+
+ i2 +
+
+11
+
+c
+(11)b11
+
+11
+c
+()b11
+
+
+i1(cid:17) = 0.25311758.. ,
+i1(cid:17) = 0.0797648257.. .
+
+while the expression for i2 is rather unwieldy, it cancels exactly from the ratio
+
+log g(, l)
+g11(, l)
+so that cpt predicts
+
+= log
+
+g
+g11  (l12/5)(2)7/5i1c
+
+11(cid:16) 1
+
+()b11
+
+  1
+
+(11)b11
+
+(cid:17) + . . . ,
+
+(3.12)
+
+(3.13)
+
+(3.14)
+
+(3.15)
+
+(3.16)
+
+(3.17)
+
+c01  d1 = (2)2/5 53/4
+
+( 1
+
+5 ) ( 2
+5 )
+(1 + 5) ( 4
+5 )2
+
+= 0.3328824.. .
+
+(3.18)
+
+in section 5 we shall compare this with the tba results from section 4.
+
+11
+
+3.2 the boundary perturbation
+
+the boundary condition (h) corresponds to the perturbation of the  boundary by the
+addition to the action of the term
+
+s = hz |dz| (z) .
+
+(3.19)
+
+to calculate c10 and c20 we can assume that the bulk theory is unperturbed which means
+that we can replace the ground state | i by | i. the perturbed boundary state is
+
+h (h)| = h |(cid:16)1  s + 1
+
+2 (s)2 + . . .(cid:17) ,
+
+and so the coecients in the expansion
+
+can be written in terms of the simple disc amplitudes
+
+the correlation functions appearing in (3.21) are given in section 2.1.2. the two-point function
+h (0)(ei)idisc
+
+
+
+g
+
+(2)6/5
+
+h (h)| i = g(cid:16)1 + ec10 hl6/5 + ec20 (hl6/5)2 + . . .(cid:17)
+ec10 = 
+ec20 = 1
+is rotationally invariant and so the integration inec10 is trivial, giving
+
+z 2
+0 d (ei) (0) edisc
+2z0 d (ei) (ei
+2z0
+
+) (0) edisc
+
+(2)12/5
+
+d d .
+
+()b
+
+d ,
+
+g
+
+
+
+
+
+11
+
+2
+
+= 0.99777..
+
+( 2
+
+5 )( 6
+5 )
+2 cos(/5)( 4
+
+c
+()b11
+
+
+= (2)1/551/4(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+1/2
+
+5 )2(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+i4) ,
+
+()b
+
+()b11
+
+
+ec10 = (2)1/5
+
+it is a little more complicated to ndec20, which is given as
+
+11
+
+11 i3 + c
+
+ c
+
+where the integrals i3 and i4 are given by
+
+ec20 = (2)7/5(c
+i3 = z 
+i4 = z 
+
+(2 sin 
+
+(2 sin 
+
+0
+
+0
+
+2 )2/5(cos 
+
+2 )4/5f ( 4
+
+10 , 9
+
+10 ; 11
+
+2 )1/5(cos 
+
+2 )3/5f ( 3
+
+10 , 8
+
+10 ; 9
+
+10 ; tan2 
+10 ; tan2 
+
+2 ) d ,
+
+2 ) d ,
+
+(3.20)
+
+(3.21)
+
+(3.22)
+
+(3.23)
+
+(3.24)
+
+which do not seem to have simple closed expressions. however, by making use of the substi-
+tution v = cos2(/2) and the explicit forms for the structure constants appearing in (3.23),
+one can show that the specic combination of i3 and i4 in (3.23) is given by
+
+ec20 =
+
+1
+5
+
+12
+
+(ec10)2 .
+
+(3.25)
+
+taking the logarithm of (3.20), we nd
+
+so that the coecients c10 and c20 in (3.5) are given by
+
+2 (ec10)2) (hl6/5)2 + . . . ,
+log g(h)(0, l) = log g + ec10hl6/5 + (ec20  1
+5 )2(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+c10 = (2)1/551/4(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+2(cid:17) (c10)2 .
+c20 = (cid:16) 15 1
+
+5 )( 6
+5 )
+2 cos(/5)( 4
+
+= 0.99777.. ,
+
+( 2
+
+1/2
+
+(3.26)
+
+(3.27)
+
+the coecients c10 and c20 have also been calculated using the free-eld construction in [22],
+with the same results that we nd.
+
+3.3 evaluating log(g) using the tcsa method
+
+the truncated conformal space approximation (tcsa) introduced in [11] gives numerical
+approximations to the lowest eigenvalues of the hamiltonian of a perturbed conformal eld
+theory by restricting the hamiltonian to a nite dimensional subspace, working out the matrix
+elements exactly and diagonalising the resulting matrix numerically.
+
+originally developed for systems on a circle, we outlined in [4] how this method can also
+be applied to a system on a strip with conformal boundary conditions ,  on the two ends
+and perturbed simultaneously by a bulk eld  of weight x and by boundary elds l and
+r of weights xl and xr. the resulting hamiltonian is
+
+
+
+bh(r, , hl, hr)
+r(cid:16)l0  c
+
+=
+
+z=0
+(cid:12)(cid:12)2x
+
+24 + (cid:12)(cid:12) r
+
+(cid:12)(cid:12)1xr r(1)(cid:17) .
+the matrix elements of bh can be easily calculated numerically and the hamiltonian diago-
+
+(cid:12)(cid:12)1xl l(1) + hr(cid:12)(cid:12) r
+
+(exp(i)) d + hl(cid:12)(cid:12) r
+
+the partition function on a cylinder of circumference l can be estimated numerically as
+
+nalised on spaces of the order of 100 states.
+
+the trace over the nite-dimensional truncated space.
+
+z(hl)(hr)(l, r, ) = tr(exp(lbh(r, , hl, hr))) .
+
+more details will be given in the next section where the method is applied to perturbations of
+the 11 and (0) boundary conditions, both by bulk perturbations, and (for the (0) boundary
+condition) at the boundary. in the presence of the bulk perturbation, the mass scale is set by
+the mass m of the single massive particle of the scaling yanglee model, which is related to
+ by [12, 13]
+
+m = 5/12 ,
+
+ = 219/12
+
+((3/5)(4/5))5/12
+55/16(2/3)(5/6)
+
+= 2.642944 . . . ,
+
+we present the results for the (11, 11) and (11, (h)) boundary conditions in the next two
+sections.
+
+13
+
+3.3.1 the strip with (11, 11) boundary conditions
+
+the (11, 11) system has no relevant boundary perturbations and so the strip hamiltonian is
+simply
+
+(exp(i)) d(cid:17) .
+
+bh(r, ) =
+
+
+
+r(cid:16)l0  c
+
+24 + (cid:12)(cid:12) r
+
+z=0
+(cid:12)(cid:12)2x
+
+the spectrum comprises scattering states of a single massive particle of mass m and no
+
+boundary bound states. in gure 1 we plot the 15 lowest eigenvalues of bh/m against r = m r
+
+we estimate the partition function by taking the sum over all the tcsa eigenvalues
+
+(as estimated from tcsa with 29 states).
+
+etcsa
+
+i
+
+at the given truncation level
+
+z(r, l) =xi
+
+exp(letcsa
+
+i
+
+) ,
+
+where l = m l. for any particular l, we expect that the behaviour of z(r, l) for small r is
+dominated by the conformal point, while at large r truncation errors will dominate. if we are
+lucky, there will be an intermediate range of r (the scaling region) in which z(r, l) exhibits
+the scaling form
+
+log z(r, l)  a(l) r + b(l) + . . . .
+
+(3.28)
+
+from equations (1.1), (1.3) and (3.1), we expect that
+
+a(l) =
+
+ecyl
+0
+m
+
+,
+
+b(l) = 2 log g11(l) .
+
+to test for the behaviour (3.28) we plot log(d log z(r, l)/dr) to see if, for given l, there is a
+region in r for which it is approximately constant. in gure 2 we plot log(d log z(r, l)/dr)
+against log(r/l) for various xed values of l calculated using the tcsa with 19 states and
+with 106 states. for small values of l we see the typical behaviour expected  as r increases,
+log(d log z(r, l)/dr) attens out to a scaling region in which it is approximately constant
+before truncation eects take over. we can be fairly sure that this is indeed the scaling region
+by comparing the behaviour for dierent truncation levels, and, as expected, increasing the
+truncation level extends the scaling region further into the ir. on close examination we nd
+for small l . 1 that the scaling region is centred on log(r/l)  1.21 for 19 states and on
+log(r/l)  1.46 for 106 states. hence we shall take the tcsa estimates of a(l) and b(l) to
+be those at log(r/l) = 1.21 and log(r/l) = 1.46 for 19 and 106 states respectively. for larger
+values of l > 1 the eects of truncation start to interfere for log r  2.75 and it is not clear
+whether we have actually reached the scaling region or not.
+
+14
+
+4
+
+3
+
+2
+
+1
+
+-1
+
+-2
+
+2
+
+4
+
+6
+
+8
+
+10
+
+12
+
+14
+
+2
+
+1.5
+
+1
+
+0.5
+
+-2
+
+-1
+
+1
+
+2
+
+3
+
+-0.5
+
+-1
+
+-1.5
+
+-2
+
+figure 1: the rst 15 eigenvalues of bh/m for
+
+the (11, 11) system plotted against r from tcsa
+with 29 states.
+
+figure 2: plots of log(d log z(r, l)/dr) vs.
+log(r/l) for l=2n, with (from left to right)
+n = 4, 3, 2, 1, 0,1,2,3,4. results are for
+106 (solid) and for 19 (dashed) states.
+
+in gure 3 we plot a(l) as estimated in this way from the tcsa with 106 states and include
+a plot of ecirc
+(l)/m for comparison. it is clear from the graph that it is possible to estimate
+a(l) eectively this way.
+
+0
+
+in gure 4 we plot b(l) as estimated in the same way. the onset of the linear behaviour
+in gure 5 we plot db(l)/dl and give for
+(1.4) expected for large l is clear in this plot.
+it is clear that while the tcsa
+comparison the exact tba prediction from eqn. (4.20).
+cannot predict the correct value, it agrees with the tba to our accuracy, and so in gure 6
+we plot the combination
+
+lf tba
+
+11 + log gtcsa
+
+11
+
+(l) ,
+
+f tba
+11
+
+= 1
+
+4 (3  1) ,
+
+showing its interpolation between the uv and ir values. finally in table 1 we give the tcsa
+estimate of the coecients g(n)(0)/n! of the series expansion (3.4) from truncations to nite
+dimensional spaces and the extrapolation of these coecients to innite level:
+
+tcsa
+
+75 states
+
+63 states
+
+90 states
+
+106 states  states
+d0 0.321615 0.321558 0.321518 0.321580 0.3215 0.32148269..
+d1 0.25230 0.25252 0.25269 0.25260 0.253
+0.25311758..
+d2
+0.0775
+d3 0.03510 0.03569 0.03599 0.03606 0.0360
+0.019
+d4
+
+0.077570
+
+0.076715
+
+0.077208
+
+0.077523
+
+
+
+
+
+exact
+
+0.01787
+
+0.01841
+
+0.01857
+
+0.01893
+
+table 1
+
+15
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+-0.2
+
+-0.4
+
+-0.6
+
+-0.8
+
+-1
+
+-0.5
+
+-1
+
+-1.5
+
+-2
+
+-2.5
+
+-3
+
+figure 3: a(l) as estimated from tcsa with
+19 states (dashed line) and 106 states (solid
+line) together with ecirc
+plotted against l.
+
+(l)/m (points)
+
+0
+
+figure 4: b(l) as estimated from tcsa with
+19 states (dashed line) and 106 states (solid
+line) plotted against l.
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+0
+
+-4
+
+-2
+
+2
+
+-0.1
+
+-0.15
+
+-0.2
+
+-0.25
+
+-0.3
+
+-0.1
+
+-0.2
+
+-0.3
+
+-0.4
+
+figure 5: db/dl as estimated from tcsa
+with 19 states (dashed line) and 106 states
+(solid line) plotted against l. also shown is
+the tba prediction 2f t ba
+
+11
+
+.
+
+figure 6: log g11(l) vs. log l from f tba
+the g-function from the tcsa with 19
+(dashed line) and 106 (solid line) states. also
+shown are the exact uv and ir values.
+
+and
+
+11
+
+3.3.2 the strip with (11, (h)) boundary conditions: massive case
+
+we now consider the strip with boundary conditions (11, (h)), corresponding to a hamilto-
+nian
+
+bh(r, , h) =
+
+
+
+r(cid:16)l0  c
+
+z=0
+(cid:12)(cid:12)12/5
+24 + (cid:12)(cid:12) r
+
+(cid:12)(cid:12)6/5
+(exp(i)) d + h(cid:12)(cid:12) r
+
+(1)(cid:17) .
+
+(3.29)
+
+the general partition function is now a function of three dimensionless combinations of r,
+l,  and h. in the massive case it is convenient to take these as the scaled lengths and the
+scaled boundary eld, dened by
+
+with the expectation that
+
+l = m l ,
+
+r = m r ,
+
+bh = h m6/5 ,
+log z(11,(h))(r, l, )  r a(l,bh) + b(l,bh) ,
+
+b(l,bh) = log(g11(l, )g(h)(l, ) )  
+
+l
+m
+
+16
+
+(f(bh) + f11) + log( g11(l) g(bh)(l) ) . (3.32)
+
+(3.30)
+
+(3.31)
+
+to simplify matters, in this section we will only discuss the model with a purely bulk pertur-
+bation, so that h = 0. this corresponds to the value b = 1/2 of the ir boundary parameter
+dened in eqn. (4.4). in gure 7 we show the spectrum of the model with these boundary
+conditions and truncation to 81 states (the rst excited state here is actually a boundary
+bound state). examining d log(z(r, l))/dr, we nd that, as before, for small values of l there
+is a scaling region in r which broadens with increasing l before truncation eects intervene.
+for 140 states, the small l scaling region is centred on log(r/l)  1.38 while for large l trun-
+cation eects occur for log r  1.5. for small l we can clearly see that scaling has set in and
+can be condent that we can estimate a(l) and b(l) using the values at the midpoint of the
+scaling region. for large l we can assume that the best guesses of a(l) and b(l) are given by
+their values at either (a) the small l eective value of r, or (b) the largest value of r before
+truncation eects are obvious. in other words we consider the two estimates of re (l) dened
+by
+
+(a) log re (l) = 1.38 + log l ,
+
+and (b) log re (l) = min( 1.38 + log l , 1.5 ) .
+
+in gures 8 and 9 we plot a(l) and db/dl using these two methods. we see that this second
+method of taking the best guess at the large l values gives quite pleasing results for these
+two quantities while having the problem that the errors are hard to estimate. in gure 10
+we plot log(g11(l) g(0)(l)) using method (b) and compare the results using the tba value of
+f and a tted value as was used in [4]. as we see, the large l behaviour of the g-function
+appears to be improved by using a tted value of f, but again the errors induced by doing
+this are unknown.
+
+4
+
+3
+
+2
+
+1
+
+-1
+
+-2
+
+2
+
+4
+
+6
+
+8
+
+10
+
+12
+
+14
+
+-0.2
+
+-0.4
+
+-0.6
+
+-0.8
+
+-1.2
+
+-1.4
+
+2
+
+4
+
+6
+
+8
+
+10
+
+figure 7: the rst 15 eigenvalues of bh/m for
+
+the (11, (0)) system plotted against r from
+tcsa with 81 states.
+
+figure 8: a(l) vs. l, as estimated from tcsa
+with 140 states using methods (a) (dashed
+line) and (b) (solid line), together with
+ecirc
+
+(l)/m (points).
+
+0
+
+17
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+0
+
+-0.025
+
+-6
+
+-4
+
+-2
+
+2
+
+-0.075
+
+-0.1
+
+-0.125
+
+-0.15
+
+-0.02
+
+-0.04
+
+-0.06
+
+-0.08
+
+-0.1
+
+-0.12
+
+figure 9: db/dl as estimated from tcsa
+with with 140 states using methods (a)
+(dashed line) and (b) (solid line), together
+with the tba prediction.
+
+figure 10: log(g11(l) g(0)(l)) vs. log l from
+the tcsa with 140 states using method (b)
+and f tba
+(dashed line) and a tted value of
+f (solid line). also shown are the exact uv
+and ir values.
+
+
+
+in table 2 we give the coecients in the power series expansion (3.4) as found from the
+tcsa data by estimating the n-th derivatives of log(g11g(0)) wrt  at  = 0. we also give
+the result of extrapolating these coecients to innite level.
+combined with the results for dm in table 1 we can then estimate the coecients (c0mdm)
+which appear in the expansion of the ratio log(g(h)/g11). these are compared with the results
+from the tba in section 5, table 7.
+
+81 states
+
+98 states
+
+c00 + d0 0.16089 0.16108 0.16123 0.1613
+c01 + d1 0.1754 0.1750 0.1748
+0.1746
+c02 + d2
+0.06676
+0.06712
+0.0363
+c03 + d3 0.0370 0.0370 0.0366
+0.02225
+0.02230
+c04 + d4
+
+tcsa
+117 states 140 states  states
+0.162
+0.174
+0.0628
+0.033
+0.02
+
+0.02248
+
+0.06745
+
+0.06703
+
+0.02267
+
+exact
+
+0.161753565..
+0.173352755..
+
+
+
+
+
+table 2: the coecients (c0n+dn) from tcsa and cpt
+
+3.3.3
+
+(11, (h)) boundary conditions: massless case
+
+we now consider the (11, (h)) model with the bulk massless. for this case, the three combi-
+nations (3.30) do not make much sense, and it is better to consider the system as a function
+of the two variables
+
+er = r/l = r/l ,
+
+eh =bh l6/5 = h l6/5 .
+
+as was shown in gure 1(b) of our previous paper [4], the spectrum of bh here is real foreh
+positive, and for eh  1 approaches that of the strip with (11, 11) boundary conditions. for
+suciently negativeeh, the spectrum becomes complex.
+
+the hamiltonian on the circle is unperturbed if the bulk is massless, and so the ground
+
+state energy on the circle is simply given by (2.10):
+
+(3.33)
+
+r ecirc
+
+0
+
+(0) = 
+
+
+15
+
+r
+l
+
+= 
+
+
+
+15er .
+
+18
+
+similarly the massless limit of the linear term in g, (lfb), is simply given by (4.21), so that
+(3.31) and (3.32) become
+
+log z(11,(h))(r, l, 0) 
+
+
+
+15er + b(eh) ,
+b(eh)  21/6 (cid:12)(cid:12)(cid:12)(cid:12)(cid:12) eh
+hc(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+(3.34)
+
++ log(g(h)(l, 0)) .
+
+(3.35)
+
+5/6
+
+2
+
+1.5
+
+1
+
+0.5
+
+-1.2
+
+in gures 11a11c we show the tcsa estimates of z(er,eh) for various values of eh for
+truncations to 29, 67 and 140 states. there is good convergence forer . 8.
+
+17.5
+
+2.5
+
+300
+
+15
+
+250
+
+12.5
+
+10
+
+7.5
+
+5
+
+2.5
+
+200
+
+150
+
+100
+
+50
+
+2
+
+4
+
+6
+
+8
+
+10
+
+2
+
+4
+
+6
+
+8
+
+10
+
+2
+
+4
+
+6
+
+8
+
+10
+
+(a) eh = 1 .
+(c) eh = 4 .
+figure 11: graphs of log z vs.er for xed values ofeh from the tcsa to 29
+
+states (dashed line), 67 states (dotted line) and 140 states (solid line)
+
+(b) eh = 1 .
+
+log z grows approximately linearly, and include the exact value log(/15) from eqn. (3.34)
+
+in gures 12a12c we plot log(d log(z(er,eh))/der) vs. er to show the scaling region in which
+for comparison. we see from these graphs that for small values ofeh there is good convergence
+forer . 3  6.
+
+-1
+
+-1
+
+-1
+
+-1.2
+
+-1.2
+
+-1.4
+
+-1.6
+
+-1.8
+
+-2.2
+
+-2.4
+
+2
+
+4
+
+6
+
+8
+
+10
+
+-1.4
+
+-1.6
+
+-1.8
+
+-2.2
+
+-2.4
+
+2
+
+4
+
+6
+
+8
+
+10
+
+-1.4
+
+-1.6
+
+-1.8
+
+-2.2
+
+-2.4
+
+2
+
+4
+
+6
+
+8
+
+10
+
+(a) eh = 1 .
+figure 12: graphs of log(d log z/der) vs.er for xed values ofeh from the
+
+tcsa to 29 states (dashed line), 67 states (dotted line) and 140 states
+(solid line). also shown is the exact value log(/15).
+
+(b) eh = 1 .
+
+(c) eh = 2 .
+
+we can estimate b(eh) in two ways  using the exact value of recirc
+calculated using eqn. (3.32). with b(eh) calculated in either manner we can nally use the
+
+tba value of (f l) to calculate the g-function from eqn. (3.35). in gure 13 we plot the tcsa
+estimate of log(g(h)) using the exact value of ecirc
+and the estimated value, together with
+
+or using the tcsa value
+
+0
+
+0
+
+19
+
+the massless tba result (suitably normalised). we see that there is excellent agreement.
+
+-0.2
+
+-0.3
+
+-0.4
+
+-0.5
+
+-0.6
+
+-4
+
+-2
+
+0
+
+2
+
+4
+
+6
+
+figure 13: graphs of log(g(eh)) vs. log(eh) from the tcsa with 140 states
+
+using the exact value of ecirc
+line) together with the tba results (points).
+
+(dashed line) and the estimated value (solid
+
+0
+
+as a further check, in table 3 we give the tcsa estimates of the coecients cn0. from [14],
+we know that the tba and cpt g-functions agree in the massless case; in table 3 we give the
+values of c00, c10 and c20 from cpt and c30 from tba. as can be seen, the extrapolations of
+c00 and c10 are really quite good but the tcsa under-estimates the value of c20 by about 15%
+and the value of c30 by a similar amount. however, the tcsa estimates are still increasing
+quite fast with truncation level and would probably agree better on increasing the truncation
+level.
+
+tcsa
+
+cpt/tba
+
+67 states
+
+81 states
+
+98 states
+
+117 states
+
+140 states  states
+0.99777
+0.997758
+
+0.997714
+
+c00 0.161720 0.161731 0.161739 0.161745 0.161749 0.16176 0.1617535656..
+0.9977728216..
+c10
+0.0525515368..
+c20 0.044147 0.044428 0.044674 0.044890 0.045083 0.046
+0.00966359
+0.0084
+c30
+
+0.008122
+
+0.997751
+
+0.008076
+
+0.997731
+
+0.997742
+
+0.007897
+
+0.007965
+
+0.008024
+
+table 3: the coecients cn0 from tcsa, cpt and tba (denoted by *)
+
+4 the tba approach to g-functions
+
+the tba is an alternative to conformal perturbation theory and is characterised by its use
+of ir scattering data - the bulk scattering matrix of the massive particles, and the reection
+factors describing the scattering of the particles o the boundaries.
+
+exact tba equations describing the g-function ow for both massive and massless bulk
+were proposed in [3], following on from earlier work in [15]. the derivation of these equations
+(which we recall briey in section 4.2) involved a number of assumptions, but to date only
+some simple limiting behaviours have been checked. we will perform a more detailed analysis
+for the yang-lee case, which will lead to the conclusion that the equations of [3] do not tell
+the whole story in every situation.
+
+4.1 the yanglee scattering data
+
+as a massive scattering theory, the yanglee model can be thought of as a reduction of
+the sine-gordon model at coupling constant 8/ = 3/2 (in the normalisation of [16]). the
+
+20
+
+bulk spectrum reduces to a single particle (the rst sine-gordon breather) with twoparticle
+smatrix [17]
+
+in [4], the boundary reection factors corresponding to the boundary conditions (h) and 11
+discussed in the previous sections were identied as
+
+s() = (1)(2) , (x) =
+
+sinh(cid:0) 
+sinh(cid:0) 
+
+6 (cid:1)
+2 + ix
+6 (cid:1) .
+2  ix
+
+r(h)() = rb() , r11() = r0() ,
+
+(4.1)
+
+(4.2)
+
+(4.3)
+
+(4.8)
+
+where
+
+2(cid:1)(cid:0) 4
+2(cid:1)(cid:0) 3
+2(cid:1)1(cid:0)s( + i b+3
+rb() =(cid:0) 1
+
+6 )s(  i b+3
+
+6 )(cid:1)1
+
+these reection factors are special cases of the general sine-gordon breather reection factors
+proposed in [18] with the parameters ,  of [18, 19] taking the values
+
+2
+
+
+= (
+
+b
+2
+
++ 2) ,
+
+2i
+
+
+= (
+
+b
+2
+
++ 1) .
+
+in [4] the relation between b and h was conjectured on the basis of numerical ts to be
+
+h = |hc| sin((b + .5)/5) m 6/5 ,
+
+hc = 0.685289983(9) .
+
+(4.4)
+
+5 (b + 1
+
+respectively.
+
+(4.5)
+
+(4.6)
+
+5 (b + 1
+
+2 )) l6/5 .
+
+eh = hl6/5 = |hc| sin( 
+
+an exact formula for hc was also proposed, though no derivation was given; that gap will
+be lled in section 4.3.5 below. taking b real gives |h|<|hc|m 6/5; to obtain h<|hc|m 6/5 or
+h>|hc|m 6/5 we take b=3ibb and b=2+ibb (withbb real) respectively.
+the massless limit is obtained by taking m l = l  0 while keepingeh constant, where
+since |h/(hcm )|   in this limit, b takes the values 3  ibb and 2 + ibb foreh > 0 andeh < 0
+foreh > 0, with b = 3  ibb, we have sin( 
+hence the massless limit is l  0,bb  +, (lebb/6) nite. substituting b = 3 ibb into (4.3)
+
+2 |hc|(cid:16)m lebb/6(cid:17)6/5
+eh  1
+2(cid:1)1(cid:16)s( + bb
+6 )(cid:17)1
+3ibb() =(cid:0) 1
+2(cid:1)(cid:0) 3
+2(cid:1)(cid:0) 4
+2 )) = cosh(bb/5) and forbb  0,
+foreh < 0, b = 2 + ibb, so sin( 
+2 |hc|(cid:16)m lebb/6(cid:17)6/5
+hence the massless limit witheh < 0 is l  0,bb  +, (lebb/6) nite. substituting b = 2 + ibb
+
+which is still a pure phase for real . hence, although b is now complex, rb should still
+describe a physical reection process.
+
+2 )) =  cosh(bb/5), and forbb  0,
+
+eh   1
+2(cid:1)1(cid:16)s(  bb
+r2+ibb() =(cid:0) 1
+2(cid:1)(cid:0) 4
+2(cid:1)(cid:0) 3
+
+6 + i 5
+
+6 )s( + bb
+
+6  i 5
+
+6 )s(  bb
+
+6 )(cid:17)1
+
+,
+
+(4.7)
+
+.
+
+.
+
+,
+
+(4.9)
+
+we nd
+
+r
+
+5 (b + 1
+
+into (4.3),
+
+21
+
+which is not in general a pure phase for real . hence, rb should not describe a physical
+reection process and (in particular) we can no longer expect to nd a real spectrum in the
+ir limit, which was indeed what was found in [4] in the tcsa analysis of the spectrum in
+
+the massless case witheh < 0.
+
+4.2 the tba for g-functions
+
+the starting-point for the tba analysis of [3, 15] was the generalisation of the bethe-ansatz
+quantisation equation for particles on a line segment of length r  . far from the end
+points, the scattering is characterised by a two-body s-matrix element; information about
+the reection of the particles at the end points is encoded in the reection factors r() and
+r(). the main dierence with the standard tba analysis is that the quantity of interest
+is a sub-leading term (order 1/r with respect to the bulk quantities) of the free energy.
+
+the initial assumption is that a particle state can be approximated in the thermodynamic
+limit (r  ) by a distribution of particles in scattering states of given rapidities satisfying
+self-consistency equations which simultaneously dene a density of possible particle states
+() and a density of occupied particle states r(), related by
+
+2() = 2() + 2m r cosh  + () + ()  2(2) +z 
+
+
+
+r()(  )d , (4.10)
+
+() = i
+
+d
+d
+
+log s() ,
+
+() = i
+
+d
+d
+
+log r() .
+
+assuming that the number of allowed states with eective particle density r() is n [r()],
+one can write the partition function as an integral
+
+z = xstates
+
+el e =z d[r()] n [r()] el e[r()] ,
+
+(4.11)
+
+where the energy of the conguration is e = r 0 (m cosh ) r() d . the standard tba
+method is to calculate n [r()] by taking the number of allowed congurations in the interval
+ with a xed number of occupied states rr() to be
+
+(r())!
+
+(rr())!(r()  rr())!
+
+,
+
+(4.12)
+
+and replacing the factorials by the two leading terms log (z)  z log z  z + . . . of stirlings
+formula, so that the total number of congurations with a given eective density r() is
+
+n [r()]  exph z 
+
+0
+
+( log   r log r  (  r) log(  r)) di .
+
+(4.13)
+
+we can then calculate z in the limit r   by the saddle point method, giving the leading
+behaviour
+
+log z  recirc
+
+0
+
+(l) + log(g(l) g (l)) ,
+
+22
+
+where (extending the range of  by symmetry where necessary and setting  = log(/r  1) )
+
+0
+
+ecirc
+
+(l) = z 
+log(g(l) g (l)) = z 
+
+
+
+m cosh  l() d
+2
+
+(cid:16)() + ()  2(2)  2()(cid:17) l() d
+
+4
+
+where l() = log(1 + e()) and () solves the equation
+
+(4.14)
+
+(4.15)
+
+(4.16)
+
+() = ml cosh  z 
+
+(  ) l() d
+2 .
+
+
+(l) as the usual tba on a circle [12]. the g-
+
+this gives exactly the same result for ecirc
+functions are then identied as
+
+0
+
+log(g(l)) = r 
+
+(cid:16) ()  (2)  ()(cid:17) l() d
+
+4
+
+there are a number of possible sources of error in this expression. firstly there are possible
+corrections from the next-to-leading term ( log z/2) in stirlings formula, and secondly from
+the corrections to the saddle point evaluation of the integral in (4.11). finally, the initial
+assumption that the hilbert space for the model on a line segment can be satisfactorily
+approximated by scattering states might be wrong. unfortunately we do not as yet know
+how account for these eects in a consistent way.
+in [3] they were formally bypassed by
+assuming that they give an overall contribution (also appearing in the periodic case) which
+can be neglected when considering changes in the g-functions. further problems may arise due
+to the presence of boundary bound states; again, these were neglected in the above discussion.
+in section 4.3.1 below the corrections that are necessary for the yanglee model in this case
+will be found empirically, but a rst-principles treatment is still lacking. with these caveats,
+equations (4.15) and (4.16) form the prediction of [3].
+
+4.3 properties of the tba g-functions
+
+from (4.15) and (4.16) it is possible to derive several analytic properties of the tba g-
+functions.
+
+in section 4.3.1 we examine possible ambiguities in the g-functions, and give the prescrip-
+tion which we have adopted in this paper. in section 4.3.2, under the assumption that the
+tba g-functions are the sum of a term linear in l and a term which is regular in l6/5, the
+coecient of the linear term is evaluated analytically. this enables us to dene the tba
+g-functions, which are directly comparable with the tcsa results.
+the behaviour of l() in the uv and ir limits is well understood so it is possible to nd
+the net change in the g-functions along the ow. the g-functions in eqn. (4.16) suer from
+ambiguities due to the possibility to change the integration contour, but we show in section
+4.3.3 that there are no contours for which the net change in the tba g-functions agrees with
+the tcsa result.
+
+in section 4.3.5 we show that the expression for the ratio log(g(h(b))(l)/g11(l)) is rather
+simpler than that for the two g-functions separately, as was also the case in the perturbed
+
+23
+
+conformal eld theory analysis. this enables us to make an expansion in the massless case
+and obtain the analytic value of hc dened in eqn. (4.4).
+
+we give some numerical power series ts to the tba results in section 4.3.6, and nd a
+
+combination of functions which appears to be regular in l12/5.
+
+finally in section 4.3.7 we discuss the singularities that occur in g(h) for suciently
+
+negativebh and relate these to the singularity in the ground-state energy on the strip observed
+
+in [4].
+
+4.3.1 the contour prescription for the g-functions
+
+if we examine the formula (4.16) for the g-function in a little more detail, we notice a couple
+of immediate problems. firstly, the two distinct boundary conditions (h(b = 0)) and 11 are
+described by the same reection factor and hence have the same kernel function 0, yet have
+dierent g-functions. secondly, b describing the (h(b)) boundary condition has poles which
+are bdependent and (in particular) cross the real axis for b = 1. this means that taking the
+naive interpretation of (4.16), with the integration contour always along the real axis, will lead
+to g-functions which are discontinuous at b = 1 whereas the physical g-functions should be
+continuous in b. the resolution of these two problems appears to be that the contour in (4.16)
+depends on the boundary condition, and in particular is dierent for the 11 and (h(b = 0))
+boundary conditions. changing the integration contour will mean encircling some of the poles
+of b, the poles so encircled being called active, in analogy with the terminology adopted
+in [20] in a related context.
+
+the exact choice is, at this stage, a matter of trial and error. in section 4.3.3 we show
+that there are no choices which will give the same g-functions as the tcsa, but with the
+following prescription at least the ratios of g-functions agree:
+
+1. the 11 boundary condition
+
+we take log(g11) to be given by the straightforward application of (4.16), that is
+
+log(g11) =z 
+
+(cid:16) 0()  (2)  ()(cid:17) l() d
+
+4 ,
+
+with the integration contour along the real axis.
+
+2. the (h(b)) boundary condition
+
+we take log(g(h(b))) to be given by (4.16) for 3 < b <1, that is
+
+log(g(h(b))) =z 
+
+(cid:16) b()  (2)  ()(cid:17) l() d
+
+4 , 3 < b < 1 ,
+
+with the integration along the real axis. for all other values of b, it is given by the
+
+analytic continuation of this function. in particular, forbh>|hc| (i.e. b=3ibb) in the
+massive case, and foreh > 0 in the massless, the integration contour may again be taken
+
+along the real axis.
+
+24
+
+the simplest way to derive the continuation of log(g(h(b))) is to isolate the terms in the
+integrand which have bdependent poles and treat these separately. we have
+
+b() = 0()  (  i b+3
+
+6 )  ( + i b+3
+
+6 ) ,
+
+so that for 3 < b <1,
+
+log(g(h(b))) = log(g11) z 
+
+(cid:16)(  i b+3
+
+6 ) + ( + i b+3
+
+(4.17)
+
+6 )(cid:17)l() d
+
+4 .
+
+when the integration contour is along the real axis (but not necessarily otherwise) the two
+terms in the integral (4.17) give the same contribution, so at least for 3 < b <1 we have
+
+log(g(h(b)))  log(g11) = z 
+
+
+
+(  i b+3
+
+6 ) l() d
+
+2
+
+(4.18)
+
+the term in the integral (  i b+3
+ = i b5
+
+ = i b1
+
+6 + 2ni ,
+
+6 + 2ni ,
+
+6 ) has poles at
+
+ = i b+1
+
+6 + 2ni ,
+
+ = i b+5
+
+6 + 2ni . (4.19)
+
+this means that as  passes from b < 1 to b > 1, the contour must deform away from the
+real axis to avoid a discontinuity from the pole at  = i(b+1)/6, or equivalently the pole at
+i(b+1)/6 is active for b > 1, and similarly the pole at i(b1)/6 is active for b > 1, as
+shown in gure 14.
+note that the poles that are active are exactly those associated with boundary bound
+states [4, 21]. it is clear that the transition of a scattering state into a boundary bound state
+is always associated with a pole in  crossing the real axis, and in this case the converse is
+also true. (recall that the general interpretation of simple poles can be subtle, and not all
+correspond to boundary bound states  see [21].) hence, this seems the natural prescription
+for the integration contour in the presence of such bound states and it would be interesting
+to arrive at this result from rst principles and check it in further models.
+
+ =  i 
+
+b + 1
+
+6
+
+ =  i  b - 1
+6
+
+ =  i 
+
+b + 1
+
+6
+
+ =  i  b - 1
+6
+
+-3 < b < -1
+
+ =  i 
+
+b + 1
+
+6
+
+ =  i  b - 1
+6
+
+-1 < b < 1
+
+1 < b < 2
+
+figure 14: the determination of the contour through the analytic
+continuation of log(g(h(b))) from b<1 to b>1.
+
+25
+
+4.3.2 analytic structure of the tba g-functions.
+
+we expect the g-functions as evaluated in the tba to be regular functions of l6/5 after the
+removal of an extensive part, linear in l. thus they should have the form
+
+under this assumption, the coecient of the linear term can be evaluated analytically as
+
+log g = lf + log g .
+
+al. zamolodchikov showed in [12] that, in the limit l  0,  > 0,
+
+f =  m
+
+d
+dl
+
+.
+
+g(l)(cid:12)(cid:12)(cid:12)l=0
+
+with
+
+l()  lkink(  log 2
+l )
+z 
+
+e dlkink()
+
+d = 
+
+
+
+d
+
+
+3
+
+substituting this into (4.15) we arrive at
+
+foreh > 0 that
+
+f tba
+b
+
+f tba
+b
+
+4 + sin b
+
+=(cid:16)31
+6(cid:17) m ,
+l   21/6(cid:12)(cid:12)(cid:12)eh/hc(cid:12)(cid:12)(cid:12)
+
+5/6
+
+.
+
+.
+
+(4.20)
+
+independent of the contour prescription we choose. in the massless limit, using (4.6) we nd
+
+4.3.3 net change in the tba g-functions along the ows
+given (4.16), it is straightforward to calculate log(g) in the two limits l  0 and l  
+using the result
+
+2
+
+0 ,
+
+l() (cid:26) log( 1+5
+log( g )(cid:12)(cid:12)(cid:12)ir
+
+) ,
+
+uv,
+ir.
+
+= 0 ,
+
+(4.22)
+
+(4.23)
+
+the uv limit depends on the choice of integration contour in (4.16). although we have given
+above a particular prescription for the contours, no matter which contour is chosen, one must
+end up with
+
+while the ir result is simple,
+
+therefore the most general prediction of (4.14) would be an interpolating ow
+
+= n
+
+4 log( 1+5
+
+2
+
+) ,
+
+n  z .
+
+= n
+
+4 log( 1+5
+
+2
+
+) ,
+
+n  z .
+
+log( g )(cid:12)(cid:12)(cid:12)uv
+
+log(g)(cid:12)(cid:12)(cid:12)uv  log(g)(cid:12)(cid:12)(cid:12)ir
+
+26
+
+there are two distinct physical situations: massless bulk and massive bulk.
+
+(4.21)
+
+(4.24)
+
+(4.25)
+
+1. massless bulk
+
+there is a single identiable massless ow with eh > 0, from  to 11, for which (2.30)
+
+gives
+
+log(g)  log(g11) = log( 1+5
+
+2
+
+(4.26)
+
+) ,
+
+and which is in agreement with (4.25) for n = 4.
+
+2. massive bulk
+
+for the massive ows from 11 and from (h) withbh>|hc|, gu v are given by conformal
+
+eld theory, and our expectation that for the massive theory g|ir = 1 (already proposed
+in [4] and well-supported by the tcsa results) leads to the results
+
+log(g11)(cid:12)(cid:12)(cid:12)uv  log(g)(cid:12)(cid:12)(cid:12)ir
+log(g(h))(cid:12)(cid:12)(cid:12)uv  log(g)(cid:12)(cid:12)(cid:12)ir
+
+these are in contradiction with (4.25).
+
+=  1
+=
+
+3
+
+2
+
+4 log(cid:12)(cid:12)(cid:12) 1+5
+4 log(cid:12)(cid:12)(cid:12) 1+5
+
+2
+
+(cid:12)(cid:12)(cid:12)  1
+(cid:12)(cid:12)(cid:12)  1
+
+8 log 5 ,
+
+8 log 5 .
+
+(4.27)
+
+thus we see that the tba equations (4.15) do not agree with the tcsa even at the level of
+the overall change in the g-functions without investigating ner detail.
+
+we note however that the ratio log(g(h)/g11) also changes by log( 1
+
+2 (5 + 1)) along a
+
+massive ow, so the tba equations do have the possibility to describe the ratio correctly,
+and indeed we shall nd supporting evidence for this later on.
+
+4.3.4 the relation of the tba g-functions to the yfunction
+
+having written the ratio of the g-functions in the form (4.18), we observe that the integral
+on the right hand side is exactly of the form appearing in the tba equation determining the
+pseudo-energy :
+
+log(g(h(b)))  log(g11) = z 
+
+
+= (i b+3
+
+6 ) l() d
+
+2
+
+(  i b+3
+6 ) + l sin( b
+6 ) .
+
+(4.28)
+
+if we absorb the linear term into the g-functions following (4.20) we obtain exactly the g-
+functions, so that the g-functions which follow from the tba equations of [3] predict the
+particularly simple form for the ratio of the g-functions
+
+log(cid:0)g(h(b)) /g11(cid:1) = (i b+3
+
+6 ) = log y (i b+3
+
+6 ) .
+
+(4.29)
+
+the same result was also obtained in [14] by a dierent method, but with the restriction
+to the massless case. given this, the extension (4.29) to the massive case is perhaps not so
+surprising, but the derivation via the tba seems unrelated to the methods of [14]. just to
+nish this section, we comment that we have subjected (4.29) to several tests outlined in later
+sections, all of which support this identity.
+
+27
+
+4.3.5 the expansion of log( g(h(b))(l) ) in the massless limit
+
+the perturbative expansion of () in the massless limit has been found in [14, 22]. if ()
+2 , then for
+
+is normalised so that for large (l exp ) it has the asymptotic behaviour ()  l e
+
+small (l exp ) it has an expansion
+1 + 5
+
+() = log
+
+2
+
++ c1 (l e)6/5 + c2 (l e)12/5 + . . . ,
+
+where (from appendix a of [22])
+
+c1 =
+
+27/57/5( 1
+5 )
+5 ( 2
+
+3 )( 3
+
+5 )2( 4
+
+cos 
+
+5 )   ( 2
+
+3 )
+( 1
+
+6 )!6/5
+
+, c2 =(cid:16) 15  1
+
+2(cid:17) c 2
+
+1 .
+
+from perturbed conformal eld theory the coecients in the expansion (3.5) are
+
+log g(h)(0, l)
+g11(0, l)
+
+= log
+
+g
+g11
+
++ c10 (hl6/5) + c20 (hl6/5)2 + . . .
+
+(4.30)
+
+and were found in section 3.2 to be given by (3.27):
+
+c10 = (2)1/551/4(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+given that in the massless limit we have
+
+( 2
+
+5 )( 6
+5 )
+2 cos(/5)( 4
+
+1/2
+
+,
+
+c20 =(cid:16) 15 1
+
+2(cid:17) (c10)2 .
+
+5 )2(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+
+log g(h)(0, l)
+g11(0, l)
+
+= (
+
+hl6/5 =  1
+
+2 hc (lebb/6)6/5 ,
+
+(4.31)
+
+(4.32)
+
+we deduce that
+
+hc = 
+
+2c1
+c10
+
+= 3/5 24/5 51/4
+
+sin 2
+5
+5 )( 4
+
+(( 3
+
+6
+
+) ,
+
+bb
+5 ))1/2  ( 2
+
+6 )!6/5
+
+3 )
+( 1
+
+= 0.68528998399118 . . . .
+
+(4.33)
+
+this is in perfect agreement with the numerical result obtained in [4].
+
+4.3.6 series expansions of ingredients of the tba expressions
+
+in an attempt to understand better the discrepancies between the tba results and those
+from other approaches, we have investigated numerically the various ingredients of the tba
+g-functions. the aim was to determine their analytic structure by various power series ts in
+the variables x  l12/5 and y  hl6/5. these results give highly accurate determinations
+of the rst few coecients, but the accuracy rapidly tails o.
+in each case we initially assumed an analytic expansion in x1/2 with the addition of
+possible non-analytic terms of the form x5n/12, with the results given in table 4. on the
+basis of these results we then performed a t to more restricted functional forms (with fewer
+non-analytic terms) with the results as in table 5. finally, we know on theoretical grounds
+
+28
+
+that (i(b + 3)/6) has an expansion in x and h and we give the numerical determination of
+these coecients in table 6.
+
+2 l(0)  1
+ 1
+
+2 (0)  (i/3)
+
+l( i
+6 )
+
+ 0() l() d
+2
+
+ (2) l() d
+2
+
+r 
+r 
+r 
+(0()  (2)) l() d
+
+0.240605912529803 2.2 1014 x5/12 + 0.419185703387 x1/2
+3. 1012 x10/12  0.26930751 x 3.6 108 x15/12 + 0.0120551 x3/2
+1. 107 x20/12 + 0.07138 x2  2.5 105 x25/12  0.0096 x5/2 + . . .
+0.481211825059603 4. 1014 x5/12  0.67825671567 x1/2
+9.1 1013 x10/12 + 0.308598962 x 7. 108 x15/12 + 0.05575394 x3/2
+1.3 107 x20/12  0.08108 x2  2.6 105 x25/12  0.023 x5/2 + . . .
+0.240605912529 7.3 1010 x5/12  0.67825671 x1/2
++0.8102843 x10/12  0.33287 x  0.0002 x15/12
++0.062 x3/2  0.045 x20/12 + . . .
+0.4812118250596 + 0.967384888 x5/12  4.3 109 x1/2
+0.8102843 x10/12 + 0.20572x + 0.00026x15/12
++ . . .
+0.2406059125298 + 0.96738488748 x5/12  0.6782567157 x1/2
+2 +6. 109 x10/12  0.1271498 x + 5. 107 x15/12 + 0.055748 x3/2
+
++9. 106 x20/12  0.02350 x2 + 0.00004 x25/12 + . . .
+
+table 4: the results of inital ts to the tba data
+
+0.240605912529802 + 0.4191857033888 x1/2  0.269307520 x
++0.0120552 x3/2 + 0.07138 x2  0.0096 x5/2
++ . . .
+0.481211825059603 0.678256715680 x1/2 + 0.30859896278 x
++0.055753953 x3/2  0.081082 x2  0.023 x5/2
++ . . .
+0.240605912529805 0.67825671 x1/2 + 0.8102848 x10/12
+0.332875 x  0.00020 x15/12 + 0.0615 x3/2
+0.043 x20/12 + . . .
+0.481211825059593 + 0.96738488736 x5/12  0.8102849 x10/12
++0.20572 x + 0.00021 x15/12  0.0060 x3/2 + 0.043 x20/12
++ . . .
+0.240605912529802 + 0.9673848874698 x5/12
+
+ 1
+2 l(0)
+
+l( i
+6 )
+
+ 0() l() d
+2
+
+ (2) l() d
+2
+
+r 
+r 
+r 
+(0()  (2)) l() d
+
+2 0.6782567156814 x1/2  0.127149765 x + 0.05575395 x3/2
+
++0.023491 x2  0.020 x5/2 + . . .
+
+table 5: the results of more restricted ts to the tba data
+
+29
+
+( b+3
+
+6 ) = ml sin b
+
+ (i b+3
+
+6  )l() d/(2)
+
+6 r 
+
+0.48121182508 + 0.332882394 x  0.09242282 x2 + 0.040463 x3
+
+ 0.02047 x4 + 0.0104 x5
+
+ 0.00385 x6
+
++0.9977728224 y  0.086482609 xy + 0.03812851 x2y  0.01991664 x3y + 0.010374 x4y  0.00377 x5y
+0.052551643 y2 + 0.02553410 xy2
++0.00966359 y3
+0.0021742 y4 + 0.002199 xy4
++0.000563 y5
+
+ 0.0148490 x2y2 + 0.008372 x3y2
+
+ 0.0076724 xy3 + 0.005150 x2y3
+
+ 0.003206 x4y2
+
+ 0.00225 x3y3
+
+ 0.00119 x2y4
+
+ 0.00046 xy5
+
+ 0.00016 y6
+
+table 6: numerical t to the expansion of 
+
+we immediately notice that with the contour prescription of section 4.3.1, not only does
+g11 not have the correct net overall change, but neither is g11 a pure power series in x ().
+even sacricing universality, with the lack of such a basic property there is no hope to identify
+this quantity with a properly dened g-function.
+
+however, we observe that it is possible to nd a function which has a regular expansion in x
+from the various ingredients of the tba. if we drop the term l(0)/2 (which was introduced
+in [3] to account for the absence of a zero-momentum single particle state on the strip), and
+further, instead of running the contour on the real axis, we instead also encircle the singularity
+of 0 at  = i/6 clockwise to pick up an extra contribution l(i/6)  (i/2), we arrive
+at the function
+
+
+for which we nd the expansion
+
+z 
+
+(0()  (2)) l()
+
+d
+2  ( i
+
+2 ) ,
+
+0.7218177375894 + 0.967384887468 x5/12 + 2. 1013 x1/2  0.435748727 x
+
++ 6. 1010 x3/2 + 0.10457 x2 + 0.004 x5/2
+
+which has (within our accuracy) better prospects of being a purely analytic function of x,
+
+plus a term in x5/12 which we can identify as (3  1) x5/12/2 = (3  1)l/2.
+
+to conclude, the g-functions predicted by the tba equations of [3] do not match the
+quantities derived perturbatively in this paper, nor do they have the expected analytic prop-
+erties. although we have partial evidence that the latter problem could be overcome with an
+ad-hoc contour prescription, at the present stage of our understanding we have no denite
+justication for the above-mentioned discrepancies.
+
+4.3.7
+
+singularities for bh < |hc|
+
+in section 4.3.1, we made the following identication in the case of massive bulk:
+
+log(g(h(b)))  log(g11) = (i b+3
+
+6 ) + l sin( b
+
+6 ) .
+
+(4.34)
+
+the tcsa analysis in [4] revealed the existence of a critical value of hm6/5, in the range
+08 to 06, for which log(g(h(b))g11) diverges  this was signalled by a pole in a rational
+t to the g-function. furthermore, the ground state energy on the strip has a squareroot
+
+30
+
+singularity at some real value of r for hm6/5 < hcm6/5 = 0.68529.. (see section 6 of [4]).
+this led us to the conjecture that the singularities in the two quantities occur at the same
+critical threshold hcm6/5. armed with relation (4.34) we can now prove this. first note
+that the quantity y (, r) = exp((, r)) is entire in ; further, for r  rm real, it has zeroes
+on the line im  = 5/6 (or equivalently im  = 5/6), arranged symmetrically about the
+imaginary axis. while their exact locations n are not known, for large r a good approximation
+is sinh(re n) = (2n + 1)/r (n = 0, 1, 2, . . .). hence as r grows these zeroes move towards
+re  = 0.
+relevant for (4.34) lies on
+the line im  = 5/6. as r increases, the zeroes n of y move along the line im  = 5/6
+and at some critical value rc(b) one will pass through (b), so that y ((b), rc(b)) = 0. this
+conrms the presence of logarithmic singularities in (4.34), xes the critical threshold at b=2
+and proves (through eq. (4.4)) the above mentioned conjecture. a similar analysis shows that
+logarithmic singularities appear in the massless h < 0 case too.
+
+suppose now that re b = 2 so that the value (b) = i b+3
+6
+
+5 comparison of tba, cpt and tcsa results
+
+firstly, it is a consequence of [14] that the tba and cpt methods give the same answer for
+the g-function along the massless ow. this is borne out by the comparison of our tcsa
+data with the tba. however, we nd disagreement between the tcsa and tba predictions
+for the massive ows.
+
+on general grounds we showed in section 3 that the perturbative parts of the g-functions,
+denoted by g-functions, should have a series expansion for small l in l6/5. however, when we
+try to combine the power series expansions for the various ingredients given in section 4.3.6
+we see that the g-functions predicted by the massive tba equations of [3] do not have the
+correct behaviour. this is compounded by the fact that in the massive case the net change
+in the g-functions does not agree with the cft predictions. this leads us to our conclusion
+that the g-functions and g-functions given by the massive tba equations of [3] do not agree
+with those obtained viewing the theory as a perturbed conformal eld theory.
+one of the most natural sources of this discrepancy is from a neglected sub-leading term in
+the saddle point evaluation of log z, but we have not been able to calculate such a term. what
+is clear is that the discrepancy between the tba and cpt calculations of the g-functions is
+independent of the boundary conditions. this is consistent with our observations in tables 7
+and 3 that the rst few coecients in the power series expansions obtained from the tba and
+tcsa for the ratio of g-functions, log(g(h)/g11) do agree and that the extensive free-energy
+terms (the linear behaviour of the g-functions for large l) are also the same in the tba and
+tcsa results.
+
+tcsa ( states)
+0.332
+0.092
+0.039
+0.02
+
+c01  d1
+c02  d2
+c03  d3
+c03  d3
+table 7: the coecients (c0ndn) from tcsa, tba and cpt
+
+0.332882394
+0.09242282
+0.040463
+0.02047
+
+tba
+
+exact
+
+0.332882407..
+
+
+
+
+
+31
+
+as further evidence we show in gure 15 the tcsa and tba estimates for the ratio of
+
+gb=1.1 and gb=1.2.
+
+0.006
+
+0.005
+
+0.004
+
+0.003
+
+0.002
+
+0.001
+
+-4
+
+-3
+
+-2
+
+-1
+
+1
+
+2
+
+3
+
+figure 15: the dierence log(gb=1.1)  log(gb=1.2)
+vs. log l for the massive yl model. the solid line is the
+tba result and the points are from the tcsa to 117
+states.
+
+6 conclusions
+
+we have investigated the relation between the g-functions proposed on the basis of a tba
+analysis in [3] and those obtained from perturbed conformal eld theory.
+
+we found that the massless case is correctly described by the tba g-functions (up to
+an overall constant) but that the massive case is not. however, in all cases, the ratios of g-
+functions for dierent boundary conditions of the same model are correctly predicted by the
+tba. a consequence of the tba proposal of [3] is that this ratio of perturbative g-functions
+should satisfy
+
+this relation is already contained in the results of [14] in the massless case, but the derivation
+there seems rather dierent to ours. we have tested (6.1) in the massive case in two ways:
+we have compared the power series expansions from ts to the tba data to the perturbed
+conformal eld theory and tcsa calculations of these expressions; we have further compared
+the ratio of g-functions directly over a range of l using the tba and tcsa. both tests
+support (6.1).
+we have also found strong support from the tcsa for the correctness of the tba calcu-
+
+lation of the extensive boundary free energy f.
+
+to summarise, we have found strong evidence for the relation
+
+gcft
+
+
+(l) = gtba
+
+
+
+(l) + k(l) ,
+
+where k(l) is an (unknown) function of l vanishing at l = , and which is independent of the
+boundary conditions, and where gtba
+is the function which results from the equations of [3],
+analytically continued from the massless regime. in section 4.3.6 we further conjectured that
+
+
+
+g(h(b))
+
+g11
+
+= y (i b+3
+
+6 ) .
+
+(6.1)
+
+gcft
+
+
+(l) = gtba
+
+
+
+(l) + 1
+
+4 l(0)  1
+
+2 ( i
+
+2 ) +ek(l) ,
+
+32
+
+where ek(l) is an (unknown) regular function of l12/5 vanishing at l = , and which is in-
+
+dependent of the boundary conditions, and where again gtba
+is analytically continued from
+the massless regime. this is just the sort of relation that would arise if the tba prediction
+of [3] has neglected some corrections arising as next-to-leading order terms in the saddle-point
+evaluation of the path integral giving the partition function. as yet we have not been able to
+check this possibility.
+
+
+
+one of the unresolved problems we encountered was the correct contour prescription when
+the kernel function  contained parameter-dependent poles. the result we found in section
+4.3.1 is that it is consistent to take the contour to encircle those poles which correspond to
+boundary bound states. as mentioned there, it will be interesting to arrive at this result
+from rst principles and check it in further models. however it is clear that no change in this
+contour prescription can correct the tba g-functions of [3] which will still have the wrong
+net overall change in g along the massive ows.
+
+we should also like to point out that the g-functions we obtain to not satisfy the g
+
+theorem, but since this model is non-unitary that is perhaps no surprise.
+
+another point to mention is that, in the massive case, y (, r) possesses square-root sin-
+gularities in the parameter r. these singularities lead to branch-points connecting the bulk
+vacuum energy to excited states [20], for which the yfunctions are described by so-called ex-
+cited state tba equations [20,22]. it would be nice to understand the role of these excited
+branches of y in the framework of boundary theories, especially in the light of the result 6.1
+from the discussion in [22] it seems clear that in the massless case the excited branches yn
+give the coecients of the boundary state expanded in the eigenstates of the conformal eld
+theory conserved quantities, i.e. if h n | is the n-th excited state of the conformal eld theory
+and | (h)i is the boundary state for the massless perturbation of the boundary , then (cf.
+eq. (4.32))
+
+h 0 | (h)i = h | (h)i = y ( bb
+
+6 )h | 11 i ,
+
+h n | (h)i = yn( bb
+
+6 )h n | 11i .
+
+quite how this generalises to the massive model is not yet clear, but for the ground state we
+have given strong evidence for
+
+h | (h)i
+h | 11 i
+
+= y (i b+3
+6 )
+
+so it is reasonable to suppose that, by analytic continuation in , the same should remain
+true in general, i.e.
+
+some preliminary numerical and cpt checks support this conjecture.
+
+h n | (h)i
+h n | 11i
+
+= yn(i b+3
+
+6 ) .
+
+the tba for g-functions was used in a recent paper by lesage et al. [23], as part of an
+analysis of boundary ows in minimal models. in the light of the doubts raised above, it is
+possible that some of their conclusions for cases where the bulk as well as the boundary is
+perturbed should now be re-examined. however, since we have deliberately focussed on just
+one model in this paper, we will leave these questions for future work.
+
+al. zamolodchikov has recently found the exact correspondence between the uv and ir
+parameters in the sine-gordon model based on calculations of the extensive term f from the
+
+33
+
+tba g-functions and from exact results for the expectation value of the boundary eld [24].
+since the yanglee model can be viewed as one special case of the sine-gordon model, his
+results should include our result relating h, m and b, summarised in equations (4.4) and
+(4.33), as a special case. so far, his results are not directly comparable with ours, but they
+are of the same functional form, only hc not being identied. a complete comparison between
+his results and ours would require the relation between the normalisations of the elds in the
+two approaches, and this has yet to be found.
+
+acknowledgements  the work was supported in part by a tmr grant of the european
+commission, contract reference erbfmrxct960012, in part by a nato grant, number
+crg950751, and in part by an epsrc grant gr/k30667. ped and gmtw thank the
+epsrc for advanced fellowships, and rt thanks the universiteit van amsterdam for a
+post-doctoral fellowship. ir thanks the daad, epsrc and kcl for nancial support.
+
+gmtw would like to thank j.-b. zuber for numerous discussions; ped and gmtw
+
+would like to thank al. zamolodchikov for discussions of these results and those of [24].
+
+references
+
+[1] j.l. cardy, boundary conditions, fusion rules and the verlinde formula, nucl. phys. b324
+
+(1989) 581596.
+
+[2] i. aeck and a.w.w. ludwig, universal noninteger ground-state degeneracy in critical
+
+quantum systems, phys. rev. lett. 67 (1991) 161164.
+
+[3] a. leclair, g. mussardo, h. saleur and s. skorik, boundary energy and boundary states in
+
+integrable quantum eld theories, nucl. phys. b453 (1995) 581618, hep-th/9503227.
+
+[4] p. dorey, a. pocklington, r. tateo and g. watts, tba and tcsa with boundaries and excited
+
+states, nucl. phys. b525 (1998) 641663, hep-th/9712197.
+
+[5] r.e. behrend, p.a. pearce, v.b. petkova and j.-b. zuber, boundary conditions in rational
+
+conformal field theories, hep-th/9908036.
+
+[6] i. runkel and g. watts, in preparation.
+
+[7] j.l. cardy and d.c. lewellen, bulk and boundary operators in conformal eld theory, phys.
+
+lett. b259 (1991) 274278.
+
+[8] d.c. lewellen, sewing constraints for conformal eld theories on surfaces with boundaries,
+
+nucl. phys. b372 (1992) 654682.
+
+[9] i. runkel, boundary structure constants for the a-series virasoro minimal models, nucl. phys.
+
+b549 (1999) 563-578, hep-th/9811178.
+
+[10] j.l. cardy and i. peschel, finite size dependence of the free energy in two-dimensional critical
+
+systems, nucl. phys. b300 (1988) 377392
+
+[11] v.p. yurov and al.b. zamolodchikov, truncated conformal space approach to the scaling
+
+lee-yang model, int. j. mod. phys. a5 (1990) 3221-3246.
+
+[12] al.b. zamolodchikov, thermodynamic bethe ansatz in relativistic models. scaling 3-state potts
+
+and lee-yang models, nucl. phys. b342 (1990) 695-720.
+
+[13] al.b. zamolodchikov, mass scale in sine-gordon model and its reductions, int. j. mod. phys.
+
+a10 (1995) 1125-1150.
+
+34
+
+[14] v.v. bazhanov, s.l. lukyanov and a.b. zamolodchikov, integrable structure of conformal
+
+field theory, quantum kdv theory and thermodynamic bethe ansatz, commun. math. phys.
+177 (1996) 381398, hep-th/9412229.
+
+[15] p. fendley and h. saleur, deriving boundary s matrices, nucl. phys. b428 (1994) 681693,
+
+hep-th/9402045.
+
+[16] a.b. zamolodchikov and al.b. zamolodchikov, factorized smatrices in two dimensions as the
+
+exact solutions of certain relativistic quantum eld theory models, ann. phys. 120 (1979)
+253291.
+
+[17] j.l. cardy and g.mussardo, s matrix of the yang-lee edge singularity in two dimensions,
+
+phys. lett. b225 (1989) 275278.
+
+[18] s. ghoshal, boundary state boundary s-matrix of the sine-gordon model, int. j. mod. phys.
+
+a9 (1994) 48014810, hep-th/9310188.
+
+[19] s. ghoshal and a.b. zamolodchikov, boundary s matrix and boundary state in two-dimensional
+
+integrable quantum eld theory, int. j. mod. phys. a9 (1994) 3841-3886, hep-th/9306002.
+
+[20] p. dorey and r. tateo, excited states by analytic continuation of tba equations, nucl. phys.
+
+b482 (1996) 639659, hep-th/9607167;
+
+ excited states in some simple perturbed conformal eld theories, nucl. phys. b489
+
+(1998) 575-623, hep-th/9706140.
+
+[21] p. dorey, r. tateo and g.m.t. watts, generalisations of the coleman-thun mechanism and
+
+boundary reection factors, phys. lett. b448 (1999) 249-256, hep-th/9810098.
+
+[22] v.v. bazhanov, s.l. lukyanov and a.b. zamolodchikov, integrable quantum eld theories in
+
+nite volume: excited state energies, nucl. phys. b489 (1997) 487531, hep-th/9607099.
+
+[23] f. lesage, h. saleur and p. simonetti, boundary ows in minimal models, phys. lett. b427
+
+(1998) 8592, hep-th/9802061.
+
+[24] al.b. zamolodchikov, talk at the 4th bologna workshop on conformal and integrable models,
+
+june 30 - july 3, 1999 [unpublished].
+
+35
+
+

@@ -1,0 +1,3364 @@
+recursive graphical construction for
+
+feynman diagrams of quantum electrodynamics
+
+institut fur theoretische physik, freie universitat berlin, arnimallee 14, 14195 berlin, germany
+
+michael bachmann, hagen kleinert, and axel pelster
+
+(september 11, 2013)
+
+we present a method for a recursive graphical construction of feynman diagrams with their
+correct multiplicities in quantum electrodynamics. the method is rst applied to nd all diagrams
+contributing to the vacuum energy from which all n-point functions are derived by functional dif-
+ferentiation with respect to electron and photon propagators, and to the interaction. basis for our
+construction is a functional dierential equation obeyed by the vacuum energy when considered as
+a functional of the free propagators and the interaction. our method does not employ external
+sources in contrast to traditional approaches.
+
+9
+9
+9
+1
+
+ 
+l
+u
+j
+ 
+
+7
+
+ 
+ 
+
+1
+v
+4
+4
+0
+7
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+i. introduction
+
+in quantum eld theory, it is well known [1,2] that the complete knowledge of all vacuum diagrams implies the
+knowledge of the entire theory (the vacuum is the world). indeed, it is possible to derive all correlation functions
+and scattering amplitudes from the vacuum diagrams. this has been elaborated explicitly for 4 theory [3,4], following
+a general theoretical framework laid out some time ago [5,6]. however, this knowledge has not yet been applied for
+constructing an ecient algebraic method along these lines for eld theories of fundamental particles. the purpose
+of the present paper is to do this for quantum electrodynamics (qed). we show how to derive systematically all
+feynman diagrams of the theory together with their correct multiplicities in a two step process: first we nd the
+vacuum energy from a sum over all vacuum diagrams by a recursive graphical procedure. this is developed by solving
+a functional dierential equation which involves functional derivatives with respect to the free electron and photon
+propagators. in a second step, we nd all correlation functions by a diagrammatic application of functional derivatives
+upon the vacuum energy. in contrast to conventional procedures [712], no external currents coupled to single elds
+are used, such that there is no need for grassmann sources for the electron elds. an additional advantage of our
+procedure is that the number of derivatives to be performed for a certain correlation function is half as big as with
+external sources.
+
+in section ii we establish the partition function of euclidean qed as a functional with respect to the inverse electron
+and photon progators as well as a generalized interaction. by setting up graphical representations for functional
+derivatives with respect to these bilocal and trilocal functions, we show in section iii that the partition function
+constitutes a generating functional for all correlation functions. this forms the basis for a perturbative expansion of
+the vacuum energy in terms of connected vacuum diagrams. in section iv we then derive a recursion relation which
+allows to graphically construct the connected vacuum diagrams order by order. from these we obtain in section v
+all diagrams for self interactions and scattering processes by cutting electron as well as photon lines or by removing
+vertices. along similar lines we apply in section vi our method for scattering processes in the presence of an external
+electromagnetic eld.
+
+ii. generating functional without particle sources
+
+we begin by setting up a generating functional for all feynman diagrams of quantum electrodynamics which does
+
+not employ external particle sources coupled linearly to the elds.
+
+a. partition function of qed
+
+our notation for the action of qed in euclidean spacetime with a gauge xing of feynman type is
+
+aqed[ , , a] =z d4x (cid:20) (i
+
+ + m) +
+
+1
+2
+
+a(2)a  e 
+
+a(cid:21)
+
+(2.1)
+
+with dirac spinor elds ,  = 
+of the vacuum are completely described by the partition function
+
+0
+
+ (,  = 1, . . . , 4) and maxwells vector eld a ( = 0, . . . , 3). the properties
+
+1
+
+zqed =i d dda eaqed[ ,,a],
+
+where the electron elds  and  are grassmannian. let us split the action into the three terms
+
+aqed[ , , a] = a[ , ] + aa[a] + aint[ , , a],
+
+(2.2)
+
+(2.3)
+
+corresponding to the dirac, maxwell, and interaction terms in (2.1). for the upcoming development it will be useful
+to consider the free parts of the action as bilocal functionals. the free action of the electrons is
+
+with a kernel
+
+a[ , ] =zz d4xd4x (x) s1
+
+f(x, x) (x),
+
+f(x, x) = (i
+s1
+
+ + m)(x  x),
+
+while the free action for the maxwell eld reads
+
+aa[a] =
+
+with a kernel
+
+1
+
+2zz d4xd4x a(x) d1
+
+f (x, x) a(x)
+
+in the following, we shall omit all vector and spinor indices, for brevity.
+
+d1
+
+f(x, x) = 2(x  x) .
+
+b. generalized action
+
+our generating functional will arise from a generalization of the free action
+
+a(0)[ , , a] = a[ , ] + aa[a]
+
+to bilocal functionals of arbitrary kernels s1(x1, x2) and d1(x1, x2) = d1(x2, x1) according to
+
+a[ , ]  a[ , ; s1] =zz d4x1d4x2 (x1) s1(x1, x2) (x2),
+2zz d4x1d4x2 a(x1) d1(x1, x2) a(x2).
+
+aa[a]  aa[a; d1] =
+
+1
+
+(2.4)
+
+(2.5)
+
+(2.6)
+
+(2.7)
+
+(2.8)
+
+(2.9)
+
+(2.10)
+
+the kernels s1(x1, x2) and d1(x1, x2) are only required to possess a functional inverse s(x1, x2) and d(x1, x2).
+similarly, we shall generalize the interaction to
+
+aint[ , , a]  aint[ , , a; v ] = ezzz dx4
+
+1dx4
+
+2dx4
+
+3 v (x1, x2; x3) (x1)(x2)a(x3),
+
+(2.11)
+
+where v (x1, x2; x3) is an arbitrary trilocal function. at the end we shall return to qed by substituting s  sf, d 
+df and ev (x1, x2; x3)  e(x1  x2)(x1  x3).
+
+the generalized partition function
+
+z =i d dda ea[ ,,a;s1,d1,v ]
+
+with the action
+
+a[ , , a; s1, d1, v ] = a[ , ; s1] + aa[ , ; d1] + aint[ , , a; v ]
+
+(2.12)
+
+(2.13)
+
+then represents a functional of the bilocal quantities s1(x1, x2), d1(x1, x2), and of the trilocal function v (x1, x2; x3).
+all n-point correlation functions of the theory are obtained from expectation values dened by
+
+2
+
+h o1(x1) o2(x2)    i = z 1i d dda o1(x1)o2(x2)    ea[ ,,a;s1,d1,v ],
+
+(2.14)
+
+where the local operators oi(x) are products of eld operators (x), (x), and a(x) at the same spacetime point.
+important examples for expectation values of this kind are the photon and the electron propagators of the interacting
+theory
+
+(2.15)
+
+(2.16)
+
+(2.17)
+
+(2.18)
+
+g2(x1, x2)  h a(x1) a(x2) i = z 1i d dda a(x1)a(x2) ea[ ,,a;s1,d1,v ],
+eg2(x1, x2)  h (x1) (x2) i = z 1i d dda (x1) (x2) ea[ ,,a;s1,d1,v ].
+
+for a perturbative calculation of the partition function z we dene the free vacuum functional
+
+whose action is quadratic in the elds. the path integral is gaussian and yields
+
+z (0) i d dda ea(0)[ ,,a;s1,d1],
+
+z (0) = exp(cid:2)tr ln s1(cid:3) exp(cid:20)
+
+1
+2
+
+tr ln d1(cid:21) .
+
+the free correlation functions of arbitrary local electron and photon operators o(x) are dened by the free part of
+the expectation values (2.14)
+
+h o1(x1) o2(x2)    i(0) = [z (0)]1i d dda o1(x1)o2(x2)    ea(0)[ ,,a;s1,d1],
+
+and the free-eld propagators are the expectation values
+
+g2(0)
+eg2(0)
+
+(x1, x2) = d(x1, x2)  h a(x1) a(x2) i(0)  d(x2, x1),
+(x1, x2) = s(x1, x2)  h (x1) (x2) i(0).
+
+(2.19)
+
+(2.20)
+
+(2.21)
+
+to avoid a pile up of innite volume factors in a perturbation expansion, it is favourable to go over from z (0) to the
+negative vacuum energy w (0) dened by
+
+where the free electron and photon parts are
+
+w (0)  ln z (0) = w (0)
+
+ + w (0)
+a ,
+
+and
+
+the negative total vacuum energy
+
+w (0)
+
+ = tr ln s1
+
+w (0)
+
+a = 
+
+1
+2
+
+tr ln d1.
+
+w = ln z
+
+is obtained perturbatively by expanding the functional integral (2.12) in powers of the coupling constant e:
+
+w =
+
+
+
+xp=0
+
+e2p w (p),
+
+(2.22)
+
+(2.23)
+
+(2.24)
+
+(2.25)
+
+(2.26)
+
+where the quantities w (p) with p  1 are free-eld expectation values of the type (2.19):
+
+w (p) =z16p
+
+v123    v6p2 6p1 6ph 6p1    5 2
+
+1
+
+4    6p2
+
+a3 a6    a6p i(0),
+
+p  1.
+
+(2.27)
+
+3
+
+throughout this paper we shall use from now on the short-hand notation 1 = x1, 2 = x2, . . . and r1 = r d4x1    .
+
+the expectation values in (2.27) are evaluated with the help of wicks rule as a sum of feynman integrals, which are
+pictured as connected vacuum diagrams constructed from lines and vertices. a straight line with an arrow represents
+an electron propagator
+
+1
+
+
+
+2  s12,
+
+whereas a wiggly line stands for a photon propagator
+
+the vertex represents an integral over the interaction potential:
+
+1
+
+
+
+2  d12.
+
+
+
+ ez123
+
+v123.
+
+the vacuum energies (2.23) and (2.24) will be represented by single-loop diagrams
+
+and
+
+w (0)
+
+ = 
+
+
+
+w (0)
+
+a =
+
+1
+2 
+
+.
+
+(2.28)
+
+(2.29)
+
+(2.30)
+
+(2.31)
+
+(2.32)
+
+this leaves us with the important problem of nding all connected vacuum diagrams. for this we shall exploit that the
+partition function (2.12) is a functional of the bilocal functions s1(x1, x2), d1(x1, x2), and of the trilocal function
+v (x1, x2; x3).
+
+iii. perturbation theory
+
+as a preparation for our generation procedure for vacuum diagrams, we set up a graphical representation of
+functional derivatives with respect to the kernels s1, d1, the propagators s, d, and the interaction function v .
+after this we express the vacuum functional w in terms of a series of functional derivatives of the free partition
+function z (0) with respect to the kernels.
+
+a. functional derivatives with respect to s1(x1, x2), d1(x1, x2), and v (x1, x2; x3)
+
+each feynman diagram is composed of integrals over products of the propagators s, d and may thus be considered as
+a functional of the kernels s1, d1. in the following we set up the graphical rules for performing functional derivatives
+with respect to these functional matrices. with these rules we can generate all 2n-point correlation functions with
+n = 1, 2, . . . from vacuum diagrams. to produce also (2n + 1)-point correlation functions with n = 1, 2, . . . such as
+the fundamental three-point vertex function from vacuum diagrams, it is useful to introduce additionally a functional
+derivative with respect to the interaction function v123.
+
+1. functional derivative with respect to the photon kernel
+
+the kernel d1
+
+[3]:
+
+12 of the photon is symmetric d1
+
+12 = d1
+
+21 , so that the basic functional derivatives are also symmetric
+
+d1
+12
+d1
+34
+
+
+
+1
+2
+
+{1342 + 1432} .
+
+(3.1)
+
+by the chain rule of dierentiation, this denes the functional derivative with respect to d1 for all functionals of
+d1. as an example, we caculate the free photon propagator (2.20) by applying the operator /d1
+12 to eq. (2.17).
+taking into account eq. (2.22) and eq. (3.1), we nd
+
+4
+
+inserting the explicit form (2.24), we obtain
+
+d12 = 2
+
+w (0)
+a
+d1
+12
+
+.
+
+d12 =
+
+
+
+d1
+12
+
+tr ln d1,
+
+with the notation (2.29) and (2.32), we can write relation (3.2) graphically as
+
+1
+
+
+
+2 = 
+
+
+
+d1
+12
+
+.
+
+
+
+(3.2)
+
+(3.3)
+
+(3.4)
+
+this diagrammatic equation may be viewed as a special case of a general graphical rule derived as follows: let us
+apply the functional derivative (3.1) to a photon propagator d12. because of the identity
+
+we nd
+
+d11d1
+
+12 = 12
+
+z1
+
+
+
+d12
+d1
+34
+
+=
+
+1
+2
+
+{d13d42 + d14d32} .
+
+(3.5)
+
+(3.6)
+
+diagrammatically, this equation implies that the operation /d1
+cutting the line:
+
+34 applied to a photon line (2.29) amounts to
+
+
+
+
+
+d1
+34
+
+1
+
+
+
+2 =
+
+1
+
+2( 	
+
+1
+
+3
+
+4
+
+(cid:10)
+
+2 + (cid:11)
+
+1
+
+4
+
+3
+
+(cid:12)
+
+2 ).
+
+(3.7)
+
+note that the indices of the kernel d1
+ways due to the dierentiation rule (3.1). this rule implies directly the diagrammatic equation (3.4).
+
+34 are symmetrically attached to the newly created line ends in the two possible
+
+consider now higher-order correlation functions which follow from higher functional derivatives of w (0)
+denition (2.19) and eq. (2.10), we obtain the free four-point function as the second functional derivative
+
+a . from the
+
+g4(0)
+
+1234  h a1 a2 a3 a4 i(0) = 4 ew (0)
+
+a
+
+2
+d1
+12 d1
+34
+
+ew (0)
+a .
+
+(3.8)
+
+because of the symmetry of d12, the order in which the spacetime arguments appear in the inverse propagators is of no
+importance. inserting for w (0)
+a },
+the second derivative applied to this gives with the rule (3.6) and, once more (3.3),
+
+a the explicit form (2.24), the rst derivative yields via eq. (3.3) just d34 exp{w (0)
+
+the right-hand side has the graphical representation
+
+g4(0)
+
+1234 = d13d24 + d32d14 + d12d34.
+
+g4(0)
+
+1234 =
+
+2
+
+1
+
+3
+
+2
+
+3
+
+2
+
++
+
++
+
+(cid:13)
+
+
+
+(cid:15)
+
+4
+
+1
+
+4
+
+1
+
+3
+
+4
+
+.
+
+(3.9)
+
+(3.10)
+
+the same diagrams are obtained by applying the cutting rule (3.7) twice to the single-loop diagram (2.32).
+
+while derivatives with respect to the kernel d1 amount to cutting photon lines, we show no that derivatives with
+respect to the photon propagator d amount to line amputations. the transformation rule between the two operations
+follows from relation (3.6):
+
+which is equivalent to
+
+
+
+d1
+12
+
+= z34
+
+d13d24
+
+
+
+d34
+
+,
+
+5
+
+(3.11)
+
+the functional derivative with respect to d12 satises of course the fundamental relation (3.1):
+
+
+
+d12
+
+= z34
+
+d1
+
+13 d1
+24
+
+
+
+d1
+34
+
+.
+
+d12
+d34
+
+=
+
+1
+2
+
+{1342 + 1432} .
+
+we shall represent the right-hand side graphically by extending the feynman diagrams by the symbol:
+
+if we write the functional derivative with respect to the propagator d12 graphically as
+
+1
+
+(cid:16)
+
+2  12.
+
+we may express eq. (3.13) as
+
+
+
+d12
+
+
+
+
+
+ (cid:17)
+
+1
+
+2
+
+,
+
+
+
+ (cid:18)
+
+1
+
+3
+
+2 (cid:19)
+
+4 =
+
+1
+
+2( 1
+
+3
+
+4
+
+(cid:20)
+
+(cid:21)
+
+2 + 1
+
+4
+
+3
+
+(cid:22)
+
+(cid:23)
+
+2 ).
+
+(3.12)
+
+(3.13)
+
+(3.14)
+
+(3.15)
+
+(3.16)
+
+thus, dierentiating a photon line with respect to the corresponding propagator amputates this line, leaving only the
+symmetrized indices at the end points.
+
+2. functional derivative with respect to the electron kernel
+
+setting up graphical representations for functional derivatives for electrons is dierent from that in the photon case
+
+since the kernel s1 is no longer symmetric. the functional derivative is therefore the usual one
+
+s1
+12
+s1
+34
+
+= 1342,
+
+(3.17)
+
+from which all others are derived via the chain rule of dierentiation. the free electron propagator s12 is found in
+analogy to (3.2) by deriving the free electron vacuum functional (2.23) with respect to the inverse electron propagator
+s1:
+
+this implies
+
+s12 =
+
+w (0)
+
+s1
+21
+
+.
+
+s12 =
+
+
+
+s1
+21
+
+tr ln s1,
+
+(3.18)
+
+(3.19)
+
+which follows also from eq. (3.17) and the chain rule of dierentiation. the graphical interpretation of the func-
+tional derivative /s1
+21 is quite analogous to the photon case. in analogy to eq. (3.4), we write expression (3.19)
+diagrammatically as
+
+this, in turn, can be understood as being a consequence of the general cutting rule for electron lines:
+
+1
+
+(cid:24)
+
+2 = 
+
+
+
+s1
+21
+
+.
+
+(cid:25)
+
+
+
+s1
+43
+
+1
+
+(cid:26)
+
+2 = 
+
+1
+
+4
+
+(cid:27)
+
+2
+
+3
+
+,
+
+which graphically expresses the derivative relation
+
+6
+
+(3.20)
+
+(3.21)
+
+s12
+s1
+43
+
+= s13s42.
+
+the free electron 4-point function is obtained from two functional derivatives according to
+
+eg4(0)
+
+1234  h 1 2
+
+3
+
+4 i(0) = ew (0)
+
+
+
+2
+s1
+32 s1
+41
+
+ew (0)
+ .
+
+(3.22)
+
+(3.23)
+
+1
+here, the electron elds must be properly rearranged to 2
+to s1. using eqs. (3.18) and (3.22) we obtain from eq. (3.23)
+
+3
+
+4 for applying the functional derivatives with respect
+
+or graphically
+
+eg4(0)
+
+1234 = s23s14  s24s13,
+
+eg4(0)
+
+1234 =
+
+2
+
+1
+
+3
+
+2
+
+
+
+(cid:28)
+
+(cid:29)
+
+4
+
+1
+
+3
+
+4
+
+.
+
+derivatives with respect to the propagators s satisfy the relation
+
+s12
+s34
+
+= 1342,
+
+which in analogy to (3.13) is represented graphically as an amputation of an electron line
+
+
+
+ (cid:30)
+
+3
+
+1
+
+4 (cid:31)
+
+2 = 1
+
+3
+
+4
+
+ 
+
+!
+
+2.
+
+here we have introduced the additional diagrammatic symbols
+
+1
+
+"
+
+
+
+2  12,
+
+
+s12
+
+
+
+.
+
+ #
+
+1
+
+2
+
+(3.24)
+
+(3.25)
+
+(3.26)
+
+(3.27)
+
+(3.28)
+
+(3.29)
+
+dierentiating an electron line with respect to the corresponding propagator removes this line, leaving only the indices
+at the end points of the remaining lines.
+
+the analytic relations between cutting and amputating lines are now, just as in eqs. (3.11) and (3.12):
+
+
+
+s1
+12
+
+
+s12
+
+= z34
+= z34
+
+s31s24
+
+s1
+31 s1
+24
+
+
+
+,
+
+s34
+
+
+s1
+34
+
+.
+
+(3.30)
+
+(3.31)
+
+with the above graphical representations of the functional derivatives, it will be possible to derive systematically all
+vacuum diagrams of the interacting theory order by order in the coupling strength e, and from these all diagrams
+with an even number of legs.
+
+3. functional derivative with respect to the interaction
+
+if we want to nd amplitudes involving an odd number of photons such as the three-point function from vacuum
+diagrams, the derivatives with respect to the kernels s1, d1 are not enough. here the general trilocal interaction
+function v123 of eq. (2.11) is needed. thus, we dene an associated functional derivative with respect to this interaction
+to satisfy
+
+by introducing the graphical rule
+
+v123
+v456
+
+= 145236.
+
+7
+
+(3.32)
+
+
+3
+  
+
+2
+
+1
+
+
+
+
+
+v123
+
+,
+
+the denition of the functional derivative (3.32) can be expressed as
+3
+
+3
+
+
+6 
+
+2
+
+ 
+
+5
+
+4
+
+=
+
+1
+
+6
+
+5
+
+4
+
+
+
+2
+
+(3.33)
+
+(3.34)
+
+,
+
+1
+
+where the right-hand side represents a product of -functions as dened in eqs. (3.14) and (3.28).
+
+b. vacuum energy as generating functional
+
+with the above-introduced diagrammatic operations, the vacuum energy w [s1, d1, v ] constitutes a generating
+functional for all correlation functions. its evaluation proceeds by expanding the exponential in the partition function
+(2.12) in powers of the coupling constant e, leading to the taylor series
+
+z =
+
+
+
+xp=0
+
+e2p
+
+(2p)! i d dda (cid:18)z16
+
+v123v456 12a3 45a6(cid:19)p
+
+ea(0)[ ,,a;s1,d1].
+
+(3.35)
+
+the products of pairs of elds 12 and a3a6 can be substituted by a functional derivative with respect to s1 and
+d1, leading to the perturbation expansion
+
+z 
+
+
+
+xp=0
+
+e2pz (p) =
+
+
+
+xp=0
+
+(2e2)p
+
+(2p)! (cid:18)z16
+
+v123v456
+
+3
+12 s1
+45 d1
+
+36 (cid:19)p
+
+s1
+
+z (0).
+
+(3.36)
+
+note the two advantages of this expansion over the conventional one in terms of currents coupled linearly to the elds.
+first, it contains only half as many functional derivatives. second, it does not contain derivatives with respect to
+grassmann variables.
+
+inserting for z (0) the free vacuum functional (2.22), we obtain for the rst-order term z (1)
+
+z (1) =
+
+1
+
+2!z16
+
+v123v456(2)
+
+3
+12 s1
+45
+
+d1
+
+36 s1
+
+z (0).
+
+since
+
+this corresponds to a rst-order correction w (1) to the vacuum energy w (0):
+
+z = z (0) + e2z (1) + . . . = expnw (0) + e2w (1) + . . .o ,
+
+w (1) =
+
+1
+
+2!z1...6
+
+v123v456(2)
+
+w (0)
+a
+d1
+
+36   2w (0)
+
+s1
+
+12 s1
+45
+
+
+
++
+
+w (0)
+
+s1
+12
+
+w (0)
+
+s1
+
+45 ! .
+
+(3.37)
+
+(3.38)
+
+(3.39)
+
+expressing the derivatives with respect to the kernels by the corresponding propagators via eqs. (3.2), (3.18), and
+taking into account (3.22), w (1) becomes
+
+w (1) =
+
+1
+
+2z1...6
+
+v123v456 d36 (s21s54  s24s51) .
+
+according to the feynman rules (2.28)(2.30), this is represented by the diagrams
+
+w (1) =
+
+1
+2 
+
+
+
+1
+2 
+
+.
+
+(3.40)
+
+(3.41)
+
+note that each closed electron loop causes a factor 1. this is a consequence of the negative sign on the right-hand
+side of the cutting rule for electron lines in eq. (3.21).
+
+8
+
+iv. graphical recursion relation for connected vacuum diagrams
+
+in this section, we derive a functional dierential equation for the vacuum functional w [s1, d1, v ] whose solution
+
+leads to a graphical recursion relation for all connected vacuum diagrams.
+
+a. functional dierential equation for w = ln z
+
+the functional dierential equation for the vacuum functional w [s1, d1, v ] is derived from the following func-
+
+tional integral identity
+
+i d dda
+
+
+
+ 1 n 2 ea[ ,,a;s1,d1,v ]o = 0
+
+(4.1)
+
+with the action (2.13). this identity is the functional generalization of the trivial integral identity r +
+
+ dx f (x) = 0
+for functions f (x) which vanish at innity. nontrivial consequences of eq. (4.1) are obtained by performing the
+functional derivative in the integrand which yields
+
+i d dda (cid:26)12 +z3
+
+2s1
+
+13 3 + ez34
+
+v134 23a4(cid:27) ea[ ,,a;s1,d1,v ] = 0.
+
+(4.2)
+
+substituting the eld product 23 by functional derivatives with respect to the electron kernel s1
+can be expressed in terms of the partition function (2.12):
+
+23 , this equation
+
+z12 z3
+
+s1
+13
+
+z
+s1
+23
+
+ ez34
+
+v134
+
+
+
+s1
+23
+
+[h a4iz] = 0.
+
+(4.3)
+
+to bring this functional dierential equation into a more convenient form, we calculate explicitly the term containing
+the expectation of the eld a. this is done starting from the integral identity
+
+after dierentiating the action in the exponential, we nd the expectation of the photon eld
+
+i d dda
+
+
+
+a1
+
+ea[ ,,a;s1,d1,v ] = 0.
+
+multiplying this with r2 d25, we yield
+
+z1
+
+h a1 id1
+
+12 = ez34
+
+v342h 4 3 i.
+
+h a5 i = ez234
+
+v342d25
+
+w
+s1
+34
+
+,
+
+where we have used z = ew . inserting this into eq. (4.3), we obtain
+
+12 z3
+
+s1
+13
+
+w
+s1
+23
+
+= e2z37
+
+v134v567d47(cid:26) 2w
+
+s1
+
+23 s1
+56
+
++
+
+w
+s1
+23
+
+w
+s1
+
+56 (cid:27) .
+
+(4.4)
+
+(4.5)
+
+(4.6)
+
+(4.7)
+
+setting x1 = x2 and performing the integration over x1, this leads to the nonlinear functional dierential equation for
+the vacuum functional w
+
+z1
+
+11 z12
+
+s1
+12
+
+w
+s1
+12
+
+= e2z16
+
+v123v456d36(cid:26) 2w
+
+s1
+
+12 s1
+45
+
++
+
+w
+s1
+12
+
+w
+s1
+
+45 (cid:27) ,
+
+(4.8)
+
+which will form the basis for deriving the desired recursion relation for the vacuum diagrams. the rst term on the
+left-hand side of eq. (4.8) is innite, but in the next section we will show that this cancels against an innity in the
+second term.
+
+9
+
+b. recursion relation
+
+equation (4.8) contains functional derivatives with respect to the electron kernel s1 which are equivalent to cutting
+lines in the vacuum diagrams. for practical purposes it will be more convenient to work with derivatives with respect
+to the propagators s which remove electron lines. the second term on the left-hand side of eq. (4.8) contains the
+
+12 /s1
+
+12 , which we convert into the dierential operator
+
+operation r12 s1
+
+nf =z12
+
+s12
+
+
+
+s12
+
+(4.9)
+
+with the help of (3.30). this operator has a simple graphical interpretation. the derivative /s12 removes an electron
+line from a feynman diagram, and the factor s12 restores it. this operation is familiar from the number operator in
+second quantization. the operator nf counts the number of electron lines in a feynman diagram g:
+
+when applied to the vacuum diagrams w (p) of order p  1, this operator gives
+
+nfw (p) = 2p w (p),
+
+p  1,
+
+nfg = nfg.
+
+(4.10)
+
+(4.11)
+
+since the number of electron lines in a vacuum diagram without external sources in quantum electrodynamics is twice
+as big as the number of vertices. the restriction in eq. (4.11) to p  1 is necessary due to a special role of the vacuum
+diagram. take, for example, the electron vacuum diagram of the free theory (2.23). by applying the operator nf, we
+obtain with (3.18)
+
+nfw (0)
+
+ = z12
+
+s1
+
+12 s21 = z1
+
+11,
+
+(4.12)
+
+which is a divergent trace integral precisely canceling the innite rst term in eq. (4.8).
+
+separating out w (0) in the expansion (2.26) of the vacuum functional, the left-hand side of the functional dierential
+
+equation (4.8) has the expansion
+
+11 + nfw =
+
+z1
+
+
+
+xp=1
+
+2p e2p w (p) =
+
+
+
+xp=0
+
+2(p + 1) e2(p+1) w (p+1).
+
+(4.13)
+
+on the right hand side of eq. (4.8), we express the rst and second functional derivatives with respect to the kernel
+s1 in terms of functional derivatives with respect to the propagator s by using eq. (3.30) and
+
+2
+s1
+12 s1
+34
+
+=z5678
+
+s51s26s73s48
+
+2
+s1
+56 s1
+78
+
++z56
+
+[s53s41s26 + s23s46s51]
+
+
+
+s56
+
+.
+
+(4.14)
+
+inserting here the expansion (2.26) and comparing equal powers in e with those in eq. (4.13), we obtain the following
+recursion formula for the expansion coecients of the vacuum functional
+
+w (p+1) =
+
+1
+
+v123v456d36s71s28s94s5 10
+
+2w (p)
+
+s78s9 10
+
+2(p + 1)(z1...10
++2z1...8
+xq=1 z1...10
+
+p1
+
++
+
+v123v456d36 (s51s28s74  s71s28s54)
+
+w (p)
+s78
+
+v123v456d36s71s28s94s5 10
+
+w (q)
+s78
+
+w (pq)
+
+s9 10 ),
+
+p  1
+
+(4.15)
+
+and the initial value (3.40). this equation enables us to derive the connected vacuum diagrams systematically to any
+desired order from the diagrams of the previous orders, as will now be shown.
+
+10
+
+with the help of the feynman rules (2.28)(2.30), the functional recursion relation (4.15) can be written diagram-
+
+matically as follows
+
+c. graphical solution
+
+w (p+1) 
+
+1
+
+2(p + 1)( 
+
+1
+2
+3
+4
+
+2w (p)
+
+ 
+
+1
+
+2  
+
+3
+
+4
+
++ 2" 	
+
+1
+
+2
+
+
+
+.
+
+1
+
+2 # w (p)
+
+ /
+
+1
+
+2
+
++
+
+p1
+
+xq=1
+
+w (pq)
+ 0
+
+1
+
+1
+
+2 12
+
+3
+
+4
+
+w (q)
+ 2
+
+3
+
+4 ),
+
+p  1
+
+(4.16)
+
+and the rst-order result is given by eq. (3.41). the right-hand side contains four graphical operations. the rst three
+are linear and involve one or two electron line amputations of the previous perturbative order. the fourth operation
+is nonlinear and mixes two dierent electron line amputations of lower orders. to demonstrate the working of this
+formula, we calculate the connected vacuum diagrams in second and third order. we start with the amputation of
+one or two electron lines in rst order (3.41):
+
+w (1)
+ 3
+
+1
+
+2
+
+
+
+1
+
+2
+
+4
+
+
+
+1
+
+2
+
+,
+
+5
+
+2w (1)
+
+ 6
+
+1
+
+2  7
+
+3
+
+4
+
+
+
+1
+2
+3
+4
+
+8
+
+
+
+1
+4
+3
+2
+
+9
+
+.
+
+(4.17)
+
+inserting (4.17) into (4.16), where we have to take care of connecting only legs with the same label, we nd the
+second-order correction of the vacuum functional w :
+
+w (2) 
+
+1
+4 
+
++
+
+
+
+
+
+1
+2 
+
+
+
+1
+4 
+
+
+
+1
+2 
+
+.
+
+(4.18)
+
+the calculation of the third-order correction w (3) leads to the following 20 diagrams:
+
+w (3) 
+
+1
+2 
+
++
+
+1
+6 
+
++
+
+1
+6 
+
++
+
+	
+
+
+
+1
+6 (cid:10)
+
++
+
+1
+2 (cid:11)
+
++
+
+
+
+(cid:12)
+
+(cid:13)
+
+
+
+(cid:15)
+
++
+
++
+
+
+
+
+
+1
+2 (cid:16)
+
+
+
+(cid:17)
+
+(cid:18)
+
++
+
+1
+3
+
++
+
+1
+2(cid:20)
+
+
+
+1
+2 (cid:21)
+
+
+
+1
+6 (cid:22)
+
+
+
+(cid:23)
+
+(cid:19)
+
+
+
+1
+2 (cid:24)
+
+
+
+1
+3 (cid:25)
+
+.
+
+(4.19)
+
+from the diagrams (3.41), (4.18), and (4.19), we read o a simple mnemonic rule for the weights of the connected
+vacuum diagrams in qed. each weight is equal to the reciprocal number of electron lines, which, by cutting, generate
+dierent two-point diagrams. the sign is given by (1)l, where l denotes the number of electron loops. let us also
+note that the total weight, which is the sum over all weights of the vacuum diagrams in the order to be considered,
+vanishes in qed. these simple weights are a consequence of the fermi statistics and the three-point form of interaction
+(2.11). the weights of the vacuum diagrams in other theories, like 4-theory [35], follow more complicated rules.
+
+11
+
+v. scattering between electrons and photons
+
+from the above vacuum diagrams, we obtain all even-point correlation functions by cutting electron or photon lines.
+for the generation of the odd-point functions we use the functional derivative (3.34) with respect to the interaction
+function v which removes a vertex from a diagram.
+
+as an illustration, we generate the diagrams for the self interactions described by the propagators (2.15) and (2.16)
+
+and the four-point functions
+
+g2
+
+12 = h a1 a2 i,
+
+eg2
+
+12 = h 1
+
+2 i
+
+g4
+
+1234 = h a1 a2 a3 a4 i,
+
+eeg4
+
+1234 = h 1 2
+
+3
+
+4 i,
+
+eg4
+
+1234 = h 1 a2 a3
+
+4 i,
+
+(5.1)
+
+(5.2)
+
+which represent the simplest scattering processes of the theory. in addition, we give the perturbative expansion of
+the three-point vertex function
+
+g3
+
+123 = h 1
+
+2
+
+a3 i.
+
+(5.3)
+
+a. self interactions
+
+substituting the product of the photon elds a1a2 in the functional integral (2.15) by the photonic functional
+
+derivative 2/d1
+
+12 , the photonic two-point function of the interacting theory is given by
+
+applying the associated cutting rule (3.7) to the vacuum diagrams (3.41) and (4.18) leads to the connected diagrams
+
+g2
+
+12 = 2
+
+
+
+d1
+12
+
+w [s1, d1, v ].
+
+(5.4)
+
+g2,c
+
+12  (cid:26)
+
+1
+
+2  e2
+
+(cid:27)
+
++ e4" 
+
+(cid:28)
+
+(cid:29)
+
+(cid:30)
+
+
+
+
+
++
+
++
+
+(cid:31)
+
+ 
+
++
+
+! # + o(e6).
+
+(5.5)
+
+for brevity, we have omitted the labels 1 and 2 at the ends of the higher-order diagrams. the full and the connected
+propagators g2
+
+12 satisfy the cumulant relation
+
+12 and g2,c
+
+g2,c
+
+12 = g2
+
+12  h a1 ih a2 i.
+
+(5.6)
+
+note that although the expectation value of the electromagnetic eld h a(x) i is zero in quantum electrodynamics,
+it does not vanish in our generalized theory with arbitrary propagators s and d [see eq. (4.6)].
+
+the derivative of vacuum diagrams with respect to the electron kernel s1,
+
+eg2
+
+12 =
+
+
+
+s1
+21
+
+w [s1, d1, v ],
+
+(5.7)
+
+leads to the electronic two-point function, whose connected diagrams are
+
+eg2
+
+12  "
+
+1
+
+2 + e2" #
+
+
+
+  # + e4"
+
++
+
+
+
+12
+
++
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
++
+
+
+
+
+
+
+
+. # + o(e6).
+
+	
+
+the diagrams of the photon and the electron two-point functions (5.5) and (5.8) can always be written as
+
+g2
+
+12 =z12
+
+d11 12 d22,
+
+eg2
+
+12 =z12
+
+s11 12 s22,
+
+(5.8)
+
+(5.9)
+
+where 12 and 12 dene the corresponding self-energies. these can immediately be obtained by amputating lines in
+vacuum diagrams,
+
+12 = 2
+
+w
+d12
+
+ 2
+
+w
+ /
+
+1
+
+2
+
+, 12 = 
+
+w
+s12
+
+ 
+
+w
+ 0
+
+1
+
+,
+
+2
+
+(5.10)
+
+and discarding disconnected pieces.
+
+the generation of diagrams for scattering processes between electrons and photons (5.2) and higher even-point
+
+functions is now straightforward.
+
+b. scattering processes
+
+the four-point function of photons is obtained by cutting two photon lines in the vacuum diagrams or one photon
+
+line in the photonic two-point function:
+
+1. photon-photon-scattering
+
+g4
+
+1234 = 4(cid:26)
+
+2w
+12 d1
+34
+
+d1
+
++
+
+w
+d1
+12
+
+w
+d1
+
+34 (cid:27) = 2
+
+ g2
+12
+d1
+34
+
++ g2
+12
+
+g2
+
+34.
+
+after applying one of the two possible operations in (5.11), the resulting connected diagrams to order e4 are
+
+g4,c
+
+1234  e4" 1
+
+2
+
+1
+
+3
+
+4
+
++ 5 perm.# + o(e6),
+
+each permutation of two external spacetime coordinates leading to a dierent diagram.
+
+2. mller and bhabba scattering
+
+the scattering of two electrons (mller scattering) is described by the electronic four-point function
+
+eeg4
+
+1234 =
+
+2w
+41 s1
+32
+
+s1
+
++
+
+w
+s1
+41
+
+w
+s1
+32
+
+=
+
+ eg2
+23
+s1
+41
+
++ eg2
+14
+
+eg2
+
+23.
+
+to order e4, the connected diagrams contributing to the fermionic four-point function are
+
+13
+
+(5.11)
+
+(5.12)
+
+(5.13)
+
+eeg4,c
+
+1234  e2" 2
+
+2
+
+1
+
+3
+
+4
+
+ (3  4)# + e4" 3
+
++
+
++
+
+4
+
+5
+
++
+
+
+
++
+
++
+
++
+
++
+
+
+
+6
+
+7
+
+8
+
+9
+
+:
+
+;
+
+
+
+
+
+
+
+<
+
+=
+
+>
+
+?
+
+ (3  4)# + o(e6),
+
+(5.14)
+
+where the spacetime indices in all diagrams are arranged as in the rst. each diagram on the right-hand side has
+a partner with opposite sign, where the spacetime indices either of the incoming or of the outgoing electrons are
+interchanged. just as disconnected diagrams, the tadpole diagrams vanish for physical propagators s = sf, d = df.
+in our general vacuum functional, however, we must not discard them, since they contribute to higher functional
+derivatives, which would be needed for the calculation of, e.g., the six-point function.
+
+by interchanging spacetime arguments in the kernels of eq. (5.14) apparently, the feynman diagrams (5.14) describe
+
+also scattering of electron and positron (bhabba scattering) and scattering of two positrons.
+
+3. compton scattering
+
+the amplitude of compton scattering is given by the mixed four-point function eg4
+
+1234. to obtain the relevant
+
+feynman diagrams, we have to perform one of the possible operations
+
+eg4
+
+1234 = 2(cid:26) 2w
+
+d1
+
+23 s1
+41
+
+w
+d1
+23
+
+w
+s1
+
+41 (cid:27) =
+
+ g2
+23
+s1
+41
+
++ eg2
+14
+
+g2
+
+23 = 2
+
+ eg2
+14
+d1
+23
+
++ eg2
+14
+
+g2
+
+23.
+
+(5.15)
+
+the resulting feynman diagrams to order e4 are
+
+eg4
+
+1234  e2" 
+
+2
+
+1
+
+3
+
+4
+
++ (2  3)# + e4" a
+
++
+
++
+
+b
+
+c
+
++
+
+
+
++
+
++
+
+
+
+
+
+
+
+d
+
+e
+
+f
+
+g
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ (2  3)# + o(e6),
+
+(5.16)
+
+where the diagrams with interchanged photon coordinates 2  3 possess the same sign as the original one.
+
+c. three-point vertex function
+
+the three-point vertex function is obtained from the vacuum energy w by performing the derivative with respect
+
+to the interaction function v123, which we have dened in eq. (3.32):
+
+g3
+
+123 = 
+
+1
+e
+
+w
+v213
+
+.
+
+(5.17)
+
+the easiest way to nd the associated feynman diagrams is to apply the graphical operation (3.33), which removes
+a vertex from the vacuum diagrams in all possible ways and lets the remaining legs open. dropping disconnected
+diagrams by considering the cumulant
+
+14
+
+g3,c
+
+123 = g3
+
+123  h 1
+
+2 ih a3 i
+
+(5.18)
+
+we obtain
+
+3
+
+g3,c
+
+123 = e
+
+
+
+1
+
+2
+
++ e3" 
+
++
+
++
+
+
+
+
+
+
+
+
+
+	
+
+r
+
+
+
+s # + o(e5).
+
+(5.19)
+
+vi. scattering of electrons and photons in the presence of an external
+
+electromagnetic field
+
+to describe the scattering of electrons and photons on external electromagnetic elds, the action a[ , , a] in
+eq. (2.13) must be extended by an additional external current j, which is coupled linearly to the electromagnetic
+eld a:
+
+then the partition function (2.12) becomes a functional in the physical current j and is given by
+
+aj [ , , a, j] = a[ , , a] + ez1
+
+j1a1.
+
+z[j] =i d dda eaj [ ,,a,j]
+
+(6.1)
+
+(6.2)
+
+with z = z[0]. the external current is usually supplied by some atomic nucleus of charge n e with integer number n .
+for this reason, the factor e is removed from the current in eq. (6.1) to be able to collect systematically all feynman
+diagrams of the same order in e.
+
+a. recursion relation for the vacuum energy with external source
+
+along similar lines as before, we derive the recursion relation for the vacuum energy in the presence of an external
+current, w [j] = ln z[j] which is now also a functional of j (suppressing the other arguments d1, s1, v ). after
+that, we derive a recursion relation only producing those vacuum diagrams which contain a coupling to the source. it
+turns out that the resulting recursion relation for current diagrams is extremly simple. hence, this recursion relation
+is the ideal extension of the former eq. (4.16) which generates only the source-free diagrams.
+
+1. complete recursion relation for all vacuum diagrams
+
+the recursion relation for all vacuum diagrams with and without external source is derived in a similar manner as
+that for all source-free vacuum diagrams (4.16). there will be, however, a few signicant dierences in comparison
+with the procedure in sec. iv. since the current j couples to the electromagnetic eld a, vacuum diagrams with
+external current always contain photon lines. for this reason, we start with the identity
+
+instead of eq. (4.1). performing the functional derivative leads to
+
+i d dda
+
+
+
+a1 na2eaj [ ,,a,j]o = 0
+
+z[j]12 + 2z3
+
+d1
+13
+
+z[j]
+d1
+23
+
+ ez34
+
+v341
+
+
+
+s1
+34
+
+[h a2 ij z[j]] + ej1h a2 ij z[j] = 0
+
+(6.3)
+
+(6.4)
+
+in analogy to eq. (4.3). the expectation value of the electromagnetic eld a in the presence of an external source j
+is found by exploiting the identity
+
+15
+
+to derive, as in eqs. (4.4)(4.6),
+
+i d dda
+
+
+
+a1
+
+eaj [ ,,a,j] = 0
+
+h a1 ij = ez234
+
+v234d14
+
+w [j]
+s1
+23
+
++ ez2
+
+d12j2,
+
+(6.5)
+
+(6.6)
+
+where we have set w [j] = ln z[j].
+dierential equation reads
+
+inserting the expectation value (6.6) into eq. (6.4), the resulting functional
+
+12 + 2z3
+
+d1
+13
+
+w [j]
+d1
+23
+
+= e2z37
++2e2z345
+
+v341v567d27(cid:26) 2w [j]
+ e2z3
+
+w [j]
+s1
+34
+
+v345d25j1
+
+34 s1
+56
+
+s1
+
++
+
+w [j]
+s1
+34
+
+w [j]
+s1
+
+56 (cid:27)
+
+j1d23j3.
+
+(6.7)
+
+using relations (3.11) and (3.30), and taking the trace, this becomes
+
+z1
+
+11 + 2z12
+
+d12
+
+w [j]
+d12
+
+(cid:26) 2w [j]
+
+s78s9 10
+
+= 2e2z18
+
++
+
+w [j]
+s78
+
+v123v456d36s71s24s58
+
+w [j]
+s78
+
+w [j]
+
+s9 10 (cid:27) + 2e2z16
+
+v123d34j4s51s26
+
++ e2z110
+
+w [j]
+s56
+
+v123v456d36s71s28s94s5 10
+
++ e2z12
+
+j1d12j2,
+
+(6.8)
+
+(6.9)
+
+which generalizes eq. (4.8). expanding w [j] as in eq. (2.26),
+
+w [j] = w (0) +
+
+e2p w (p)[j],
+
+
+
+xp=1
+
+and using the fact that the free vacuum energy w (0)[j] = w (0)[0] = w (0) is independent of the external current, the
+rst term on the left-hand side in eq. (6.8) is canceled by an identity following from eq. (3.2)
+
+d12
+
+w (0)
+d12
+
+2z12
+
+=z1
+
+11.
+
+introducing a feynman diagram for the coupling to the current j
+
+we obtain the graphical recursion relation
+
+1  j1,
+
+
+
+(6.10)
+
+(6.11)
+
+2
+
+1
+
+w (p+1)[j]
+
+
+
+2
+
+ 
+
+1
+
+2
+
+
+
+1
+2
+3
+4
+
+
+
+2w (p)[j]
+2  
+
+3
+
+ 
+
+1
+
++ 2" 
+
+1
+
+2
+
+4
+
+
+
+
+
+1
+
+2 # w (p)[j]
+
+ 	
+
+1
+
+2
+
++
+
+p1
+
+xq=1
+
+w (pq)[j]
+
+1
+
+3
+
+ (cid:10)
+
+1
+
+2 (cid:11)2
+
+4
+
+and the rst-order diagrams
+
+w (q)[j]
+ (cid:12)
+
+3
+
+4
+
++ 2
+
+1
+
+(cid:13) 2
+
+w (p)[j]
+ 
+
+1
+
+2
+
+,
+
+p  1,
+
+(6.12)
+
+w (1)[j] = w (1)[0] +
+
+1
+2
+
+
+
+,
+
+(cid:15)
+
+(cid:16)
+
+(6.13)
+
+where w (1)[0] = w (1) contains the source-free rst-order vacuum diagrams (3.41). an important dierence between
+the recursion relation (6.12) and the previous (4.16) is that the vacuum diagrams in a series of the coupling constant e
+contain dierent numbers of photon (or electron) lines, thus not satisfying a simple eigenvalue equation like (4.11). in
+
+16
+
+fact, each vacuum diagram, generated by using the right-hand side of the recursion relation (6.12), must be divided by
+twice the number of photon lines in the diagram to obtain the correct weight factor. this procedure is a consequence
+of the left-hand side of eq. (6.12), which counts the number of photon lines in each diagram separately. by taking
+this into consideration, the second-order vacuum diagrams are given by
+
+w (2)[j] = w (2)[0] 
+
+
+
+(cid:17)
+
+(cid:18)
+
+
+
+1
+2
+
+(cid:19)
+
+(6.14)
+
+with the source-free diagrams given in (4.18). in third order, there are 15 diagrams which couple to the physical
+source:
+
+w (3)[j] = w (3)[0] 
+
+
+
+
+
++
+
++
+
+(cid:20)
+
+(cid:21)
+
+(cid:22)
+
+(cid:23)
+
+(cid:24)
+
++
+
++
+
++
+
+
+
+
+
+(cid:25)
+
+(cid:26)
+
+(cid:27)
+
+(cid:28)
+
+(cid:29)
+
+
+
+1
+2
+
+
+
+
+
++
+
+1
+2
+
+
+
+1
+3
+
+(cid:30)
+
+(cid:31)
+
+ 
+
+"
+
+.
+
+(6.15)
+
+!
+
+when generating these vacuum diagrams in an external eld, the vertices of the photon elds with the external source
+must be permuted. for instance, the following second-order vacuum diagrams are equivalent:
+
+=
+
+.
+
+#
+
+ 
+
+(6.16)
+
+in the following we derive a recursion relation which allows us to generate only those vacuum diagrams which contain
+a coupling to the source.
+
+2. recursion relation for vacuum diagrams coupled to the external source
+
+since we have the possibility to generate all source-free vacuum diagrams with the help of the recursion relation
+(4.16), we are able to set up a recursion relation to generate only the diagrams with source coupling. inserting on the
+left-hand side of eq. (6.6) the equation
+
+h a1 ij =
+
+1
+e
+
+w [j]
+
+j1
+
+,
+
+multiplying both sides with j1, and performing the integral r1 yields
+
+v234d14j1s52s36
+
+w [j]
+s56
+
+j1
+
+z1
+
+w [j]
+
+j1
+
+= e2z16
+
+(6.17)
+
+(6.18)
+
++ e2z12
+
+j1d12j2.
+
+on the right-hand side we have changed the functional derivatives with respect to the kernel s1 into functional
+derivatives with respect to the propagator s using eq. (3.30). inserting the decomposition (6.9) and utilizing the fact
+that w (0) from eq. (2.22) is source-free, w (0)/j1 = 0, we nd
+
+17
+
+j1
+
+z1
+
+w (n+1)[j]
+
+=
+
+j1
+
+w (1)[j]
+
+
+
++
+
+j1
+
+e2nz1
+
+xn=1
+v234d14j1s32 +z12
+
+j1
+
+z14
+
+j1d12j2 +
+
+
+
+xn=1
+
+e2nz16
+
+v234d14j1s52s36
+
+w (n)[j]
+
+s56
+
+.
+
+to lowest order, the right-hand side yields source diagrams are
+
+w (1)[j] =
+
+1
+2
+
+
+
+,
+
+
+
+
+
+(6.19)
+
+(6.20)
+
+where we have used the wiggle to indicate the restriction to the source diagrams of w (1)[j] in eq. (6.13). the full
+functional solving eq. (rrj02) consists of the terms
+
+where the source-free contributions w (n)[0] = w (n) of sect. iv represent integration constants undetermined by
+eq. (rrj02). introducing a diagram for the functional derivative with respect to the current j,
+
+w (n)[j] = w (n)[0] + w (n)[j]
+
+(6.21)
+
+the recursion relation for the vacuum diagrams with source-coupling eq. (rrj02) is graphically written for n  1 as
+
+
+
+ 
+
+1
+
+
+
+
+j1
+
+,
+
+(6.22)
+
+1
+
+
+
+w (n+1)[j]
+
+ 
+
+1
+
+
+
+1
+
+ 2
+
+w (n)[j]
+ 
+
+1
+
+2
+
+.
+
+(6.23)
+
+the iteration of this recursion relation is very simple since the right-hand side is linear. each diagram calculated with
+the right-hand side of this equation must be divided by the number of source-coupling within the diagram since the
+operation on the left-hand side counts the number of source-couplings in the diagram. by considering eq. (6.21), one
+easily reproduces the higher-order vacuum diagrams given in the eqs. (6.14) and (6.15).
+
+b. scattering of electrons and photons in the presence of an external source
+
+typically, an external electromagnetic eld is produced by a heavy particle such as a nucleus or an ion. quantum
+electrodynamical eects like pair creation, bremsstrahlung, and lamb shift are caused by such electromagnetic elds.
+the feynman diagrams for the n-point functions associated with these processes are again obtained by cutting electron
+or photon lines from the just-derived vacuum diagrams.
+
+1. vacuum polarization induced by external field
+
+the photon propagator in the presence of an external source
+
+is found by cutting a photon line in the vacuum diagrams (6.13)(6.15):
+
+g2
+
+12[j] = 2
+
+w [j]
+d1
+12
+
+g2,c
+
+12 [j] = g2,c
+
+12 [0] + e4 " 
+
+showing polarization caused by the external eld.
+
+1
+
+2
+
+ (1  2)# + o(e6),
+
+
+
+18
+
+(6.24)
+
+(6.25)
+
+2. lamb-shift and anomalous magnetic moment
+
+the important phenomena of lamb shift and anomalous magnetic moments are obtained from the perturbative
+
+corrections in the electron propagator:
+
+whose diagrams come from cutting an electron line in the vacuum diagrams (6.13)(6.15). to order e4, we have
+
+eg2
+
+12[j] =
+
+w [j]
+s1
+21
+
+,
+
+(6.26)
+
+eg2
+
+12[j] = eg2
+
+12[0] + e2
+
+1
+
+2
+
++ e4 " .
+
++
+
+	
+
++
+
+
+
+
+
+
+
+/
+
+0
+
+1
+
+2
+
+3
+
++
+
+4 # + o(e6).
+
+(6.27)
+
+3. pair creation, pair annihilation and bremsstrahlung
+
+by dierentiating the vacuum energy diagrams (6.13)(6.15) with respect to the interaction function v123, we obtain
+
+the vertex function in the presence of an external eld:
+
+the connected feynman diagrams are to order e3:
+
+g3
+
+123[j] = 
+
+1
+e
+
+w [j]
+v213
+
+.
+
+g3,c
+
+123[j] = g3,c
+
+123[0] + e3 " 5
+
+2
+
+3
+
+3
+
++
+
+1
+
+2
+
+1
+
+6
+
+# + o(e5)
+
+(6.28)
+
+(6.29)
+
+with g3,c
+processes.
+
+123[0] = g3,c
+
+123 of eq. (5.19). these diagrams appear in pair creation, pair annihilation, or bremsstrahlung
+
+vii. summary
+
+we have introduced a graphical recursion relation obeyed by the vacuum diagrams in quantum electrodynamics. its
+iterative solution allows us to generate all vacuum diagrams with their correct weights order by order in perturbation
+theory by cutting and joining lines. by removing photon and electron lines as well as vertices from these, we obtain
+all diagrams of scattering processes with their multiplicities.
+
+one of us (m.b.) is supported by the studienstiftung des deutschen volkes.
+
+acknowledgements
+
+[1] r.f. streater, a.s. wightman, pct, spin and statistics, and all that, benjamin (1964).
+[2] j. schwinger, particles, sources, and fields, vol. i and ii, addison-wesley (1973).
+
+19
+
+[3] h. kleinert, a. pelster, m. bachmann, b. kastening (to be published).
+[4] h. kleinert, v. schulte-frohlinde, critical properties of 4-theories, world scientic (1999).
+[5] h. kleinert, fortschr. phys. 30, 187 (1982).
+[6] h. kleinert, fortschr. phys. 30, 351 (1982).
+[7] j.d. bjorken, s.d. drell, vol. i relativistic quantum mechanics, vol. ii relativistic quantum fields, mcgraw-hill (1965).
+[8] d.j. amit, field theory, the renormalization group and critical phenomena, mcgraw-hill (1978).
+[9] c. itzykson, j.-b. zuber, quantum field theory, mcgraw-hill (1985)
+
+[10] m. le bellac, quantum and statistical field theory, oxford science publications (1991).
+[11] j. zinn-justin, quantum field theory and critical phenomena, third edition, oxford science publications (1996).
+[12] m.e. peskin, d.v. schroeder, introduction to quantum field theory, addison-wesley (1995).
+
+20
+
+

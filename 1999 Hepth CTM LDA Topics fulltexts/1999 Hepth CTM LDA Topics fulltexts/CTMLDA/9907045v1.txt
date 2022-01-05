@@ -1,0 +1,2147 @@
+solution of schwinger-dyson equations for pt -symmetric
+
+quantum field theory
+
+okhep9905
+
+carl m. bender,1, kimball a. milton,2 and van m. savage1
+
+1department of physics, washington university, st. louis, missouri 63130, usa
+
+2department of physics and astronomy, university of oklahoma, norman, oklahoma 73019,
+
+usa
+
+(february 1, 2008)
+
+abstract
+
+in recent papers it has been observed that non-hermitian hamiltonians,
+such as those describing ig3 and g4 eld theories, still possess real pos-
+itive spectra so long as the weaker condition of pt symmetry holds. this
+allows for the possibility of new kinds of quantum eld theories that have
+strange and quite unexpected properties.
+in this paper a technique based
+on truncating the schwinger-dyson equations is presented for renormalizing
+and solving such eld theories. using this technique it is argued that a g4
+scalar quantum eld theory in four-dimensional space-time is renormalizable,
+is asymptotically free, has a nonzero value of h0||0i, and has a positive de-
+nite spectrum. such a theory might be useful in describing the higgs boson.
+
+11.15.pg, 11.30.qc, 25.75.-q, 3.65.-w
+
+9
+9
+9
+1
+
+ 
+l
+u
+j
+ 
+
+7
+
+ 
+ 
+
+1
+v
+5
+4
+0
+7
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+typeset using revtex
+
+electronic mail: cmb@howdy.wustl.edu
+
+electronic mail: milton@mail.nhn.ou.edu
+
+electronic mail: vmsavage@hbar.wustl.edu
+
+1
+
+]
+
+i. introduction
+
+it has recently been observed [1,2] that quantum mechanical theories whose hamiltonians
+are pt -symmetric have positive denite spectra even if the hamiltonian is not hermitian.
+a class of such theories that has been studied extensively is dened by the hamiltonian
+
+h = p2  (ix)n (n  2).
+
+(1.1)
+
+it is believed that the reality and positivity of the spectra are a direct consequence of pt
+symmetry.
+the positivity of the spectra for all n is an extremely surprising result; it is not at
+all obvious, for example, that the hamiltonian h = p2  x4 corresponding to n = 4 has
+a positive real spectrum. to understand this result it is necessary to dene properly the
+boundary conditions in the corresponding schrodinger equation.
+
+for the hamiltonian in eq. (1.1) the schrodinger dierential equation corresponding to
+
+the eigenvalue problem h = e is
+
+ (x)  (ix)n (x) = e(x).
+
+(1.2)
+
+the boundary conditions for this equation are discussed in detail in ref. [1]. there, it was
+shown how to continue analytically in the parameter n away from the harmonic oscillator
+value n = 2. this analytic continuation denes the boundary conditions in the complex-x
+plane. the regions in the cut complex-x plane in which (x) vanishes exponentially as |x| 
+ are wedges. in ref. [1] the wedges for n > 2 were chosen to be analytic continuations of
+the wedges for the harmonic oscillator, which are centered about the negative and positive
+real axes and have angular opening 
+2 . for arbitrary n > 2 the anti-stokes lines at the
+centers of the left and right wedges lie below the real axis at the angles
+
+n + 2(cid:19) 
+
+left =  +(cid:18)n  2
+n + 2(cid:19) 
+right = (cid:18)n  2
+
+2
+
+,
+
+2
+
+.
+
+(1.3)
+
+2
+n +2. in ref. [1] the time-independent schrodinger
+the opening angle of these wedges is
+equation was integrated numerically inside the wedges to determine the eigenvalues to high
+precision.
+
+the quantum mechanical hamiltonian in eq. (1.1) has additional remarkable properties.
+for example, for all n > 2 the expectation value h0|x|0i of the position operator x in the
+ground state is nonzero. this surprising result is true even when n = 4 [1].
+these results for quantum mechanics raise some interesting questions regarding quantum
+eld theory. in particular, does the self-interacting scalar quantum eld theory dened by
+the lagrangian
+
+1
+2
+
+l =
+
+()2 +
+
+1
+2
+
+m22 
+
+g
+n
+
+(i)n
+
+2
+
+(1.4)
+
+have a positive denite spectrum and a nonvanishing value of h0||0i for all n > 2? we
+believe that the answer to this question is yes. because of these properties, we believe that
+when n = 4 the resulting quantum eld theory in four-dimensional space-time could serve
+as a good description of the higgs particle. as we argue in this paper, the g4 theory is
+particularly advantageous because, like the conventional g4 it has a dimensionless coupling
+constant, but unlike the conventional theory, it is asymptotically free and is thus not a trivial
+theory.
+
+the question of how to determine the properties of pt -symmetric non-hermitian quan-
+tum eld theories has already been examined. as we will see in this paper, conventional
+feynman diagrammatic perturbation theory is not adequate for studying these theories.
+thus, in previous work [3,4] the perturbative approach that was used was to take n = 2 + ,
+where  is treated as a small parameter. while some interesting results regarding parity
+violation [3] and supersymmetry [4] were obtained, unfortunately this perturbative scheme
+has a severe drawback: it is not known how to carry out the renormalization procedure
+required to understand higher-dimensional theories.
+
+why is it that feynman diagrams cannot be used to perform calculations in theories
+such as g4? as we have already stated, in this theory h0||0i 6= 0. there is no way to
+obtain this result using the standard feynman rules; one cannot obtain a one-point greens
+function using four-point vertex amplitudes. indeed, as we will show in sec. iii in the context
+of zero-dimensional theories, the standard feynman rules are incorrect for this theory.
+
+in this paper we perform a systematic truncation of the schwinger-dyson equations as
+a calculational procedure. this idea has already been applied in a simple context to obtain
+greens functions and energy levels in conventional quantum mechanical problems [5]. trun-
+cating the schwinger-dyson equations is an inherently variational approach; including more
+and more of the higher greens functions is equivalent to enlarging the space of variational
+parameters. in a recent study of the pt -symmetric, non-hermitian quantum mechanical
+hamiltonian in eq. (1.1) variational methods were found to be extremely accurate [6].
+this paper is organized as follows: in sec. ii we review the general approach used in
+this paper. we show how to derive the schwinger-dyson equations using simple functional
+methods and we explain our truncation procedure. in sec. iii we examine the numerical
+accuracy of our truncation method in the context of zero-dimensional eld theory. we study
+the massless zero-dimensional version of eq. (1.4) in very high order in the truncation process
+for the cases n = 3 and n = 4. in the case of a zero-dimensional massive theory we show
+that the feynman rules are inapplicable. in sec. iv we examine the theory in eq. (1.4) in
+one-dimensional space-time (quantum mechanics). finally, in sec. v we apply our methods
+to eld theory in arbitrary dimension. as an application of our procedure we calculate the
+callan-symanzik function (g) for a four-dimensional g4 theory for small g. we show
+that to leading order (g) is negative and thus the theory is asymptotically free. this result
+is in distinct contrast with the result for a conventional g4 theory.
+
+ii. elementary derivation of the schwinger-dyson equations
+
+the schwinger-dyson equations are an innite set of coupled equations relating the
+greens functions of a quantum eld theory. in this section we derive the schwinger-dyson
+
+3
+
+equations using elementary formal functional methods.
+
+we begin with eq. (1.4) and append a term that represents the coupling of the eld (x)
+
+to an external c-number source j(x):
+
+l =
+
+1
+2
+
+()2 +
+
+1
+2
+
+m22 
+
+g
+n
+
+(i)n  j.
+
+(2.1)
+
+this lagrangian represents a self-interacting scalar quantum eld theory in d-dimensional
+euclidean space-time. if we vary the action with respect to (x) we obtain the eld equation:
+
+ 2(x) + m2(x)  ig[i(x)]n 1 = j(x).
+
+(2.2)
+
+next, leaving the source turned on, we take the expectation value of the eld equation
+(2.2) in the vacuum state of the theory |0i and divide by the vacuum-vacuum functional
+z[j] = h0|0i:
+
+ 2g(j)
+
+1 (x) + m2g(j)
+
+1 (x)  gin h0|n 1(x)|0i
+
+h0|0i
+
+= j(x),
+
+(2.3)
+
+where g(j)
+
+1 (x) is the one-point greens function in the presence of the external source:
+
+1 (x)  h0|(x)|0i
+g(j)
+h0|0i
+
+.
+
+(2.4)
+
+note that the function j(x) appears alone on the right side of eq. (2.3) because it is a
+c-number and therefore can be factored out of matrix elements.
+
+the objective is now to use eq. (2.3) to calculate the greens functions of the theory.
+the (connected) greens functions in the presence of the source j are dened as functional
+derivatives of the logarithm of z[j] with respect to the source j(x):
+
+g(j)
+n (x1, x2, . . . , xn) 
+
+n
+
+j(x1)j(x2)    j(xn)
+
+ln(z[j]).
+
+(2.5)
+
+to obtain the standard connected greens functions of the theory (the connected part of the
+vacuum expectation value of the time-ordered product of the elds; that is, the sum of the
+connected n-point feynman diagrams) we then turn o the source:
+
+gn(x1, x2, . . . , xn) = g(j)
+
+.
+
+(2.6)
+
+n (x1, x2, . . . , xn) (cid:12)(cid:12)(cid:12)j0
+
+note that turning o the source restores translation invariance. as a result, the one-point
+greens function g1 is a constant independent of x, the two-point greens function depends
+only on the dierence x  y, g2(x, y) = g2(x  y), g3(x, y, z) = g3(x  y, x  z) depends
+on two dierences, and so on.
+before one can proceed, one must express the third term in eq. (2.3) in terms of the con-
+nected greens functions of the theory. to do this we recall that functionally dierentiating
+with respect to j(x) is equivalent to inserting (x) in matrix elements [5].
+
+let us consider the simple case n = 3.
+
+in this case it is necessary to calculate the
+
+quantity h0|2(x)|0i. to do so we begin with eq. (2.4) multiplied by z[j]:
+
+4
+
+taking the functional derivative of this equation with respect to j(x) gives
+
+g(j)
+1 (x)z[j] = h0|(x)|0i.
+
+[g(j)
+
+1 (x)]2z[j] + g(j)
+
+2 (x, x)z[j] = h0|2(x)|0i.
+
+hence, we can eliminate h0|2(x)|0i from eq. (2.3) to obtain
+1 (x)]2 + g(j)
+
+1 (x) + m2g(j)
+
+ 2g(j)
+
+1 (x) + gi(cid:16)[g(j)
+
+2 (x, x)(cid:17) = j(x).
+
+(2.7)
+
+(2.8)
+
+(2.9)
+
+we now obtain the rst of the schwinger-dyson equations by setting j  0 (turning o the
+source):
+
+m2g1 + gihg2
+remember that by translation invariance g1 is a constant, so that its derivative vanishes
+and that g2(0) = g2(x  x) = g2(x, x).
+derivative of eq. (2.9) with respect to j(y),
+
+to obtain the second of the schwinger-dyson equations for n = 3 we take a functional
+
+1 + g2(0)i = 0.
+
+(2.10)
+
+2 (x, y) + m2g(j)
+
+ 2g(j)
+and then set j  0 in this equation:
+
+2 (x, y) + gih2g(j)
+
+1 (x)g(j)
+
+2 (x, y) + g(j)
+
+3 (x, x, y)i = (x  y),
+
+(2.11)
+
+ 2g2(x  y) + m2g2(x  y) + gi [2g1g2(x  y) + g3(0, x  y)] = (x  y).
+if we continue the process of functionally dierentiating with respect to j and setting
+j  0, we obtain the innite tower of coupled dierential equations known as the schwinger-
+dyson equations. for example, the third in the sequence is
+
+(2.12)
+
+2g3(x  y, x  z) + m2g3(x  y, x  z)
+
++gi[2g1g3(x  y, x  z) + 2g2(x  z)g2(x  y) + g4(0, x  y, x  z)] = 0.
+
+(2.13)
+
+note that these schwinger-dyson equations are incomplete in the sense that there are
+too many unknowns. the rst equation contains g1 and g2, the second contains g1, g2,
+and g3, and so on. thus, each new equation contains a new unknown greens function
+and the system never closes. however, we can force the system to close by truncating the
+sequence of coupled equations and setting gn+1 = 0 in the last equation. we will use this
+method throughout the remainder of the paper.
+
+as a second example we derive the rst four schwinger-dyson equations from eq. (2.3)
+for the case n = 4. using the same approach as we did for the case n = 3, we begin by
+reexpressing h0|3(x)|0i. we do this by taking the functional derivative of eq. (2.8) with
+respect to j(x) to obtain
+
+[g(j)
+
+1 (x)]3z[j] + 3g(j)
+
+1 (x)g(j)
+
+2 (x, x)z[j] + g(j)
+
+3 (x, x, x)z[j] = h0|3(x)|0i.
+
+(2.14)
+
+substituting this result into the n = 4 version of eq. (2.3), we have
+
+5
+
+1 (x) + m2g(j)
+
+ 2g(j)
+we obtain the rst schwinger-dyson equation for n = 4 by setting j  0:
+
+1 (x)  g(cid:16)[g(j)
+
+1 (x)]3 + 3g(j)
+
+2 (x, x) + g(j)
+
+1 (x)g(j)
+
+3 (x, x, x)(cid:17) = j(x). (2.15)
+
+m2g1  ghg3
+
+1 + 3g1g2(0) + g3(0, 0)i = 0.
+
+(2.16)
+
+using the same procedure as for n = 3 we now take a functional derivative of eq. (2.15)
+
+with respect to j(y) to obtain
+
+2g(j)
++3g(j)
+
+2 (x, y) + m2g(j)
+1 (x)g(j)
+
+2 (x, y)  g(cid:16)3[g(j)
+2 (x, x)g(j)
+
+1 (x)]2g(j)
+
+2 (x, y)
+2 (x, y) +g(j)
+
+3 (x, x, y) + 3g(j)
+
+4 (x, x, x, y)(cid:17) = (x  y).
+now, setting j  0 gives the second of the schwinger-dyson equations for n = 4:
+
+2g2(x  y) + m2g2(x  y)  g[3g2
+
+1g2(x  y)
+
++3g2(0)g2(x  y) + 3g1g3(0, x  y) + g4(0, 0, x  y)] = (x  y).
+
+(2.17)
+
+(2.18)
+
+repeating this process once more by functionally dierentiating eq. (2.17) with respect
+
+to j(z) and setting j  0 gives
+
+2g3(x  y, x  z) + m2g3(x  y, x  z)
+
+g[6g1g2(x  y)g2(x  z) + 3g2
++3g2(x  z)g3(0, x  y) + 3g2(x  y)g3(0, x  z) + 3g2(0)g3(x  y, x  z)
++3g1g4(0, x  y, x  z) + g5(0, 0, x  y, x  z)] = 0,
+
+1g3(x  y, x  z)
+
+(2.19)
+
+the third of the schwinger-dyson equations for n = 4. the fourth schwinger-dyson equa-
+tion is
+
+2g4(x  y, x  z, x  w) + m2g4(x  y, x  z, x  w)
+
+g[6g2(x  y)g2(x  z)g2(x  w) + 6g1g2(x  y)g3(x  z, x  w)
++6g1g2(x  z)g3(x  y, x  w) + 6g1g2(x  w)g3(x  y, x  z)
++3g3(0, x  y)g3(x  z, x  w) + 3g3(0, x  z)g3(x  y, x  w)
++3g3(0, x  w)g3(x  y, x  z) + 3g2
++3g2(x  y)g4(0, x  z, x  w) + 3g2(x  z)g4(0, x  y, x  w)
++3g2(x  w)g4(0, x  y, x  z) + 3g2(0)g4(x  y, x  z, x  w)
++3g1g5(0, x  y, x  z, x  w) + g6(0, 0, x  y, x  z, x  w)] = 0.
+
+1g4(x  y, x  z, x  w)
+
+(2.20)
+
+again, we observe that the set of equations is incomplete; for this case the number of
+unknown greens functions is two more than the number of equations (instead of one more
+as in the case n = 3). that is, the rst equation for n = 4 contains the three unknowns
+g1, g2, and g3, the second contains g1, g2, g3, and g4, and so on. to solve this system
+of equations we truncate after the nth equation, but now to close the system of equations
+we must set gn+1 = 0 and gn+2 = 0 in the last and next to last equations.
+
+how do we generalize this derivation to arbitrary n? clearly, when n is an integer and
+n > 2 we can use the two cases n = 3 and n = 4 discussed above as paradigms. all that
+
+6
+
+is needed is to functionally dierentiate eq. (2.7) n  2 times. this gives an expression for
+h0|n 1(x)|0i in eq. (2.3). for example, when n = 5 we have
+
+z[j](cid:16)[g(j)
++4g(j)
+
+1 (x)]4 + 6[g(j)
+1 (x)g(j)
+
+1 (x)]2g(j)
+3 (x, x, x) +g(j)
+
+2 (x, x)]2
+
+2 (x, x) + 3[g(j)
+4 (x, x, x, x)(cid:17) = h0|4(x)|0i,
+
+when n = 6, we have
+
+(2.21)
+
+(2.22)
+
+z[j](cid:16)[g(j)
++10[g(j)
++5g(j)
+
+1 (x)]5 + 10[g(j)
+1 (x)]2g(j)
+1 (x)g(j)
+
+4 (x, x, x, x) + g(j)
+
+1 (x)]3g(j)
+
+2 (x, x) + 15g(j)
+
+1 (x)[g(j)
+
+2 (x, x)]2
+
+3 (x, x, x) + 10g(j)
+
+2 (x, x)g(j)
+
+3 (x, x, x)
+
+5 (x, x, x, x, x)(cid:17) = h0|5(x)|0i,
+
+and so on. once this calculation is completed, repeated functional dierentiation with
+respect to j followed by setting j  0 gives the complete set of coupled greens function
+equations.
+note that while these equations are rather complicated, they are easily expressible in
+terms of multinomial coecients. following the notation of abramowitz and stegun [7],
+the multinomial coecients are dened as follows: for each integer n, there is a set of
+multinomial coecients; each coecient expresses the number of possible ways to par-
+tition n = a1 + 2a2 + . . . + nan dierent objects into ak subsets containing k objects
+(k = 1, 2,
+. . . , n). for the rst few integers n the sets of multinomial coecients (called
+m3 in ref. [7]) are {1} for n = 1, {1, 1} for n = 2, {1, 3, 1} for n = 3, {1, 4, 3, 6, 1} for
+n = 4, and {1, 5, 10, 10, 15, 10, 1} for n = 5. observe that these are precisely the coecients
+that appear in (2.7) for h0|(x)|0i, (2.8) for h0|2(x)|0i, (2.14) for h0|3(x)|0i, (2.21) for
+h0|4(x)|0i, and (2.22) for h0|5(x)|0i. also, in these equations the powers of the greens
+functions are the numbers ak.
+to be precise, for each n we must take all possible combinations of the numbers ak
+satisfying n = a1 + 2a2 + . . . + nan. in the notation of ref. [7],  = 1a1, 2a2, . . . , nan. this
+allows us to read o the subscripts of the greens functions and the powers to which they are
+raised; the numbers ak are the powers and the numbers they exponentiate are the subscripts
+of the greens functions in that term. from this we calculate the quantity
+
+m3 = (n; a1, a2, . . . , an) =
+
+n!
+
+(1!)a1a1!(2!)a2a2! . . . (n!)anan!
+
+,
+
+(2.23)
+
+which is the coecient for that particular combination of greens functions.
+
+for example, given h0|3(x)|0i there are three possible combinations of the numbers ak
+that satisfy n = a1 + 2a2 + . . . + nan: a1 = 3; a1 = 1 and a2 = 1; and a3 = 1. this
+gives  = 13;  = 1, 2; and  = 3. thus, there are terms of the form g3
+1, g1g2, and g3.
+calculating m3 we nd that the coecients of these terms are 1, 3, and 1. hence, we are
+able to reconstruct eq. (2.14).
+
+when n is noninteger, the situation is much more dicult. to derive an expression for
+h0|n 1(x)|0i in this case, we assume rst that n is integer and use the general formula
+for h0|n 1(x)|0i in terms of multinomial coecients. then, in principle, we can continue
+analytically o the integers using analytical expressions in terms of gamma functions for
+these multinomial coecients.
+
+7
+
+of course, this procedure is complicated, but we illustrate it below by considering the
+simplest truncation possible in which we keep only the rst two schwinger-dyson equations
+and set gn = 0 for all n > 2. in this case, for integer values of n we have the beautiful
+result that the only multinomial coecients that appear are precisely the coecients of the
+hermite polynomials. thus, for noninteger values of n we have parabolic cylinder functions
+with the exponential divided o. it is in this fashion that we are able to continue o the
+integers n.
+
+to be explicit, we use the standard notation d(x) to represent the parabolic cylinder
+
+function [8] and dene the function w(x) by
+
+d(x) = ex2/4xw(x).
+
+(2.24)
+
+then, for integer n we factor [g(j)
+variables (j) and  by
+
+1 ]n out of the equation for h0|n (x)|0i and introduce the
+
+(j) =
+
+1 (x)
+
+ig(j)
+qg(j)
+
+2 (x, x)
+
+and  =
+
+.
+
+ig1
+
+qg2(0)
+
+we then obtain for arbitrary noninteger n
+
+h0|n (x)|0i
+
+z[j]
+
+= [g(j)
+
+1 (x)]n wn ((j))
+
+= [g(j)
+
+1 (x)]n
+
+
+
+xk=0
+
+(1)kn!
+
+(n  2k)!2kk![(j)]2k .
+
+(2.25)
+
+(2.26)
+
+(this series terminates if n is integer but is an innite series if n is noninteger.) as we will
+see, when j  0, the constant g1 is a negative imaginary number and the constant g2(0) is
+real and positive. thus, the argument  of wn is real and positive.
+using eq. (2.26) we write the eld equation (2.3) explicitly in terms of the greens
+
+functions of the theory:
+
+ 2g(j)
+
+1 (x) + m2g(j)
+
+1 (x)  gin [g(j)
+
+1 (x)]n 1wn 1((j)) = j(x).
+
+(2.27)
+
+(remember that in the derivation of this equation we have discarded all greens functions
+higher than g2.) as before, we obtain the rst of the greens functions for arbitrary n by
+setting the source j  0:
+
+m2g1  gin gn 1
+
+1 wn 1() = 0.
+
+(2.28)
+
+we obtain the second of the schwinger-dyson equations for arbitrary n by taking the
+
+functional derivative of eq. (2.27) with respect to j(y):
+
+2g(j)
+
+2 (x, y) + m2g(j)
+gin (n  1)[g(j)
+1 (x)]n 1w
+
++i[g(j)
+
+2 (x, y)
+1 (x)]n 2g(j)
+
+n 1((j))
+
+2 (x, y)wn 1((j))
+
+2 (x, y)
+
+2 (x, x)! = (x  y),
+
+g(j)
+qg(j)
+
+(2.29)
+
+8
+
+3 = 0. now, setting j  0 in the above equation yields the second of
+
+where we have set g(j)
+the schwinger-dyson equations:
+2g2(x  y) + m2g2(x  y)
+
+gin 
+(n  1)gn 2
+
+
+1 g2(x  y)wn 1() + ign 1
+
+1 w
+
+n 1()
+
+= (x  y). (2.30)
+
+g2(x  y)
+
+qg2(0) 
+
+
+this equation can be simplied by using the recurrence relations for parabolic cylinder
+
+functions [8],
+
+xw
+
+n 1(x) = (n  1)[wn 2(x)  wn 1(x)],
+
+(2.31)
+
+to obtain
+ 2g2(x  y) + m2g2(x  y) + (n  1)g(ig1)n 2wn 2()]g2(x  y) = (x  y).
+thus, eq. (2.28) and eq. (2.32) are a closed system of two equations and two unknowns.
+the solution of this system for various choices of space-time dimension will be discussed in
+the following sections.
+
+(2.32)
+
+iii. zero-dimensional theories
+
+in zero-dimensional space-time the integral representation for the vacuum-vacuum func-
+
+tional z[j] corresponding to the lagrangian in eq. (1.4) is an ordinary integral
+
+z[j] = z 
+
+
+
+d exp(cid:20)
+
+1
+2
+
+m22 +
+
+g
+n
+
+(i)n + j(cid:21) .
+
+(3.1)
+
+to demonstrate the numerical accuracy of our truncation method we rst study massless
+theories of the form in eq. (3.1) where all quantities are exactly calculable. we nd that for
+arbitrary n the greens functions can be expressed exactly in terms of gamma functions.
+then, we examine massive theories and show that weak-coupling diagrammatic methods are
+inadequate for the analysis of pt -symmetric theories.
+
+a. massless theories in zero dimensions
+
+using eqs. (3.1), (2.5), and (2.6) the expectation value of the eld (the one-point con-
+
+nected greens function) is
+
+g1 = i  4n
+
+g !1/n (cid:16) 1
+
+2(cid:17) cos(cid:16) 
+n(cid:17)
+n + 1
+
+
+,
+
+(3.2)
+
+and the expectation value of the eld squared is
+
+h0|2|0i
+h0|0i
+
+=  n
+
+g !2/n (cid:16) 3
+
+n(cid:17)  3 cos2(cid:16) 
+n(cid:17)hsin2(cid:16) 
+n(cid:17)i
+(cid:16) 1
+n(cid:17)
+
+9
+
+.
+
+(3.3)
+
+using eq. (2.8) with j  0 we express the two-point connected greens function as g2 =
+h0|2(x)|0i/h0|0i g2
+1, which can be calculated exactly using the two equations given above.
+observe that for any n  2, g1 is pure imaginary and negative and g2 is real and
+positive, as claimed earlier. this is in fact true in any dimension. the reality of g2 and
+the imaginarity of g1 follows from the pt symmetry of these quantities. applying p to g1
+changes the sign, while applying p to g2 leaves the sign intact. hence, under t , which acts
+as complex conjugation, g1 changes sign again and thus is pure imaginary, while g2 does
+not change sign and thus is real.
+
+the rst truncation approximations to g1 and g2 obtained by keeping just the rst two
+schwinger-dyson equations are found by solving the zero-dimensional massless versions of
+eqs. (2.28) and (2.32). observe that with m = 0, eq. (2.28) demands that
+
+wn 1() = 0.
+
+(3.4)
+
+in zero-dimensional space-time there are no derivatives with respect to x and the delta
+function is unity. thus, all schwinger-dyson equations are algebraic. the second schwinger-
+dyson equation is
+
+(n  1)g(ig1)n 2wn 2(0)g2 = 1,
+
+where 0 is the solution of eq. (3.4). (note that there is some ambiguity with regard to
+which zero to choose. our numerical studies suggest that the most positive zero is always
+the correct choice, but we do not have a proof. we nd that it is this zero that gives the
+most accurate numerical results.) recalling the denition of , we insert g2 = g2
+0 to
+obtain an expression for g1:
+
+1/2
+
+g1 = i"
+
+2
+0
+
+(n  1)gwn 2(0)#1/n
+
+.
+
+again using the denition of , we express g2 as
+
+g2 = "
+
+2n
+0
+
+(n  1)gwn 2(0)#2/n
+
+.
+
+(3.5)
+
+(3.6)
+
+table i compares the exact results with the corresponding rst approximations for n = 3,
+n = 4, and n = 5.
+
+deriving an expression for the second approximation in terms of n is dicult. however,
+for a specic n, solving larger and larger systems of schwinger-dyson equations in which
+more and more greens functions are included can be done symbolically on a computer.
+the case n = 3 is comparatively simple. if we keep n equations, then for k < n, the kth
+equation is linear in gk+1. thus, we can systematically solve a sequence of linear equations
+for the greens functions, substitute the results into the nth equation, and solve the resulting
+polynomial equation for g1.
+
+for n = 3, the rst six approximations to ig1g1/3 are 0.79370, 0.69336, 0.74690, 0.71256,
+0.73987, and 0.71237. the exact answer, taken from eq. (3.2) with n = 3, is 0.72901 (see
+table i). note that the approximations oscillate around the correct answer. for the case
+of a hermitian hamiltonian we would expect that the approach to the correct answer is
+
+10
+
+monotone. this is because the calculation that we are performing is variational in nature.
+keeping more and more greens functions corresponds to enlarging the parameter space.
+however, in this case the hamiltonian is not hermitian, so this oscillation is not surprising.
+indeed, it is consistent with our variational studies of pt -symmetric quantum mechanical
+systems in ref. [6].
+apart from the oscillations, we would hope that successive approximations would come
+closer to the correct value. thus, the fact that the sixth approximation is worse than the
+fth and that eventually most of the approximations become complex is a startling result.
+we believe that this is also due to the non-hermiticity of the hamiltonian. indeed, while
+these approximations are numerically extremely accurate, we nd that the convergence is
+rather slow and it may even be that this truncation method does not converge. to examine
+the convergence we have numerically solved very large systems of coupled schwinger-dyson
+equations for n = 3; we have plotted in fig. 1 all solutions for the one-point greens function
+in the complex plane for the system of 150 coupled schwinger-dyson equations that lie near
+the exact answer. in this gure we see that the algebraic solutions for the one-point greens
+function form a very small loop around the exact value. the largest dimension of the loop is
+along the real axis and is approximately 0.04. the furthest distance of a point on the loop
+from the correct answer is approximately 0.034. a weighted average of the points on the
+loop is extremely close to the correct answer 0.72901.
+
+the case n = 4 is more complicated than that of n = 3 because now the last two
+schwinger-dyson equations, rather than just the last equation, are nonlinear. as a result
+the largest number of equations we can solve and hence, the largest number of greens func-
+tions we can include, is ten. the rst ve approximations to ig1g1/4 are 1.10668, 0.90560,
+1.02988, 0.96159, and 1.02868. the exact value is 0.97774 (see table i). just as for n = 3,
+the approximations oscillate around the exact answer and successive approximations are nu-
+merically accurate but appear to converge very slowly. in this case, the fth approximation
+is worse than the fourth. we have plotted in fig. 2 all solutions of the rst ten coupled
+schwinger-dyson equations for the one-point greens function that lie near the exact an-
+swer. as in the case of fig. 1 these solutions form a small loop in the complex plane around
+the exact answer.
+
+the numerical work that we have done on zero-dimensional massless theories suggests
+that solving systems of truncated schwinger-dyson equations gives extremely accurate nu-
+merical approximations to the greens functions. the convergence of the method is still not
+understood and warrants further study.
+
+b. massive theories in zero dimensions
+
+in zero-dimensional space-time, massless theories are so simple that it is possible to solve
+the schwinger-dyson equations as algebraic systems. however, in higher dimensions, the
+coupled schwinger-dyson equations are quite complicated. thus, we will be interested in
+obtaining perturbative solutions for the case of small coupling constant g.
+
+to gain a rudimentary understanding of the perturbative nature of the theories in
+eq. (1.4), we study in this subsection the path-integral expressions for the n-point dis-
+connected greens functions fn of a zero-dimensional g4 eld theory. these disconnected
+
+11
+
+greens functions are expressed as ratios of integrals:
+
+ d n exp(cid:16) 1
+fn = r 
+ d exp(cid:16) 1
+r 
+
+4 4(cid:17)
+2 m22 + g
+4 4(cid:17)
+2 m22 + g
+
+.
+
+(3.7)
+
+although these integrals cannot be done exactly, we can use the method of steepest
+descents to obtain an asymptotic result for small g with m xed. we will see that, depending
+on whether the sign of m2 is positive or negative, we obtain drastically dierent results.
+
+we begin by replacing  by the dimensional quantity x according to  = q2/g|m|x.
+
+this gives
+
+fn =   2|m|2
+
+g !n/2 r 
+ dx xn exp[(x2  x4)]
+r 
+ dx exp[(x2  x4)]
+
+,
+
+(3.8)
+
+where  = m4/g is a large positive parameter as g  0 and we have distinguished between
+the two cases m2 > 0 and m2 < 0.
+to calculate the integrals in eq. (3.7) asymptotically, we nd the stationary points of
+
+the function (x) in the exponent, where
+
+(x) = x2  x4.
+
+(3.9)
+
+setting the derivative of this function equal to zero gives the solutions x = 0,  1/2 for
+m2 > 0 and x = 0,  i/2 for m2 < 0. these stationary points are shown on figs. 3 and 4.
+
+next, we nd the paths of steepest ascent and descent that pass through these stationary
+points. substituting x = u + iv into eq. (3.9) and separating the real and imaginary parts
+yields
+
+(u + iv) = (u2  v2)  u4  v4 + 6u2v2 + i[2uv  4uv(u2  v2)].
+
+(3.10)
+
+thus, the paths along which im  = 0 are given by u = 0, v 6= 0; v = 0, u 6= 0; and
+u2 = v2  1/2, where the  depends on the sign of m2.
+to determine whether each of these paths is a steepest ascent or descent path, we perform
+a local analysis of the paths at each of the saddle points. the results of this analysis are
+displayed in figs. 3 and 4. the stationary phase contour is chosen such that the boundary
+conditions are obeyed. using eq. (1.3), we choose the end points that lie below the real axis
+
+at the angles /6 and 5/6. for m2 > 0 the contour follows the path u = qv2 + 1/2
+from the lower left quadrant of the complex-x plane up to the stationary point at 1/2,
+then goes along the real axis from 1/2 through the stationary points at the origin and
+at 1/2, and nally leaves the point 1/2 and follows the path u = qv2 + 1/2 down to
+v = qu2 + 1/2, which passes through the stationary point at i/2.
+
+the lower right quadrant of the complex-x plane. for m2 < 0 the contour follows the path
+
+now, we determine the disconnected greens functions fn for both the m2 > 0 and
+m2 < 0 cases by evaluating the integrals in eq. (3.8) along the appropriate stationary phase
+contours. for m2 > 0 the greens functions with odd subscript vanish (by oddness) along
+the part of the contour that lies on the real axis. evaluating the integrals asymptotically
+
+12
+
+along the remaining parts of the contour gives an exponentially small result; apart from a
+multiplicative constant
+
+f2n+1  gn1/2e/4
+
+(g  0+).
+
+(3.11)
+
+the dominant contribution to greens functions of even subscript comes from the portion of
+the contour along the real axis. evaluating the integrals near the saddle point at the origin,
+we nd that the small-g behavior of these greens functions is given by
+
+f2n  m2n
+
+(g  0+),
+
+(3.12)
+
+apart from a multiplicative constant. note that the greens functions with even subscript
+behave very dierently than the greens functions with odd subscript. further, notice that
+the behavior of the greens functions with odd subscript is inherently non-perturbative
+and, as a result, feynman perturbative methods cannot be used to calculate these greens
+functions.
+
+for m2 < 0 the dominant contribution to all of the greens functions comes from the
+
+saddle point at i/2. as a result, all of the greens functions exhibit similar behavior.
+
+to be specic, we have
+
+fn  (i)n|m|ngn/2
+
+(g  0+).
+
+(3.13)
+
+thus, once again, it is clear that these results cannot be obtained using feynman diagrams.
+as we will see in sec. v this theory is also the one that is asymptotically free in four
+dimensions and the more interesting of the two cases.
+
+iv. numerical study of one-dimensional theories
+
+our success with zero-dimensional massless theories prompts us to study one-dimensional
+(quantum mechanical) massless theories of the form in eq. (1.4). numerical computations
+have been performed in one-dimension which allow us to compare with exact numbers [1].
+in analogy with the last section, we nd the rst approximation to g1 and g2 by solving
+the one-dimensional massless versions of eqs. (2.28) and (2.32). observe that with m = 0
+we obtain eq. (3.4) once again. in fact, eq. (3.4) holds independent of the dimension. the
+second schwinger-dyson equation is given by
+
+ 2g2(x  y) + (n  1)g(ig1)n 2wn 2(0)g2(x  y) = (x  y).
+
+(4.1)
+
+this equation depends on the dimension d through the partial derivative. if we introduce
+the variable m dened by m 2 = (n  1)g(ig1)n 2wn 2(0), it is clear that eq. (4.1) is just
+the equation for the feynman propagator, whose solution in one-dimension can be written
+
+g2(x  y) =
+
+1
+2m
+
+e|xy|.
+
+(4.2)
+
+consequently, g2(0) = 1/(2m). recalling the denition of  we use g2(0) = g2
+did in the previous section to obtain an expression for g1:
+
+1/2
+
+0 as we
+
+13
+
+g1 = i"
+
+4
+0
+
+4(n  1)gwn 2(0)#1/(n +2)
+
+.
+
+(4.3)
+
+substituting g1 into our expression for m yields
+
+(n  1)gwn 2(0)  02!n 2
+m = 
+
+
+
+2/(n +2)
+
+,
+
+(4.4)
+
+which further allows us to write g2(0) as
+
+2/(n +2)
+
+.
+
+(4.5)
+
+g2(0) =
+
+1
+
+2 
+
+
+1
+
+g(n  1)wn 2(0)   02!2n
+
+
+for eld theories, m represents the renormalized mass, which is nothing more than the
+dierence in energy between the rst excited state and the ground state e1  e0. table ii
+compares the exact values of m and g1 with the corresponding rst approximations for the
+cases n = 3, n = 4, and n = 5. (here, we must set g = n/2 and multiply m by 2 to
+match the lagrangians studied in ref. [1].)
+
+in one dimension it is dicult to obtain the second approximation, even for a specic
+n, because it requires solving coupled systems of nonlinear dierential equations. as in
+the previous section, the easiest case to study is n = 3. the rst three schwinger-dyson
+equations are given in sec. i as eqs. (2.10), (2.12), and (2.13) with m = 0. to close this
+system of equations we set g4 = 0 and z = y. then, the third schwinger-dyson equation
+becomes
+
+ 2g3(x  y) + gi[2g1g3(x  y) + 2g2
+
+2(x  y)] = 0.
+
+(4.6)
+
+next, we fourier transform the second and third schwinger-dyson equations to obtain
+
+(p2 + m 2) g2(p) + gi g3(p) = 1
+
+and
+
+(p2 + m 2) g3(p) + 2giz 
+
+
+
+dq
+2
+
+g2(q) g2(p  q) = 0,
+
+(4.7)
+
+(4.8)
+
+where we have used the same denition of m as above, the convolution property of fourier
+transforms, and the translation invariance of greens functions g3(0, x y) = g3(x y, x
+y) = g3(x  y).
+
+we now solve for g2(p) and obtain
+
+g2(p) =
+
+1
+
+p2 + m 2 
+
+2g2
+
+(p2 + m 2)2 z 
+
+
+
+dq
+2
+
+g2(q) g2(p  q).
+
+(4.9)
+
+the simplest approach to solving this nonstandard integral equation is to iterate it to
+high order in the small parameter g. this iterative procedure can be represented in terms
+of diagrams. these diagrams all have a similar structure: they begin with one line that
+
+14
+
+branches into two lines. this branching process continues until the maximum number of
+lines is attained. then the process is reversed, with lines combining in pairs until only one
+line remains. we were able to perform the calculations symbolically on a computer. we
+calculated the propagator to order o(g10); the rst three terms in the expansion are
+
+g2(p) =
+
+1
+
+p2 + m 2 
+
+2g2
+
+m(p2 + m 2)2(p2 + 4m 2)2
+(456m 4 + 70m 2p2 + 4p4)g4
+
++
+
+9m 6(p2 + m 2)2(p2 + 4m 2)2(p2 + 9m 2)
+
++ o(g6).
+
+(4.10)
+
+now that we have g2(p) to high order in g, we make the ansatz that it can be expressed
+
+in the form
+
+g2(p) =
+
+z1
+
+p2 + m 2
+1
+
++
+
+z2
+
+p2 + m 2
+2
+
++
+
+z3
+
+p2 + m 2
+3
+
++ . . . ,
+
+(4.11)
+
+where mn = nm + b1,ng2 + b2,ng4 + b3,ng6 + . . ., z1 = 1 + a1,1g2 + a2,1g4 + a3,1g6 + . . .,
+z2 = a1,2g2+a2,2g4+a3,2g6+. . ., z3 = a2,3g4+a3,3g6+. . ., and so on. by matching this ansatz
+to our calculation, we determine the coecients ak,n and bk,n. [the expansion of the ansatz
+does not exactly match the expansion of our calculation. this is easily understood because
+our calculation for g2(p) only involves special diagrams described above, while the ansatz
+involves all types of diagrams. however, the system of equations is neither overdetermined
+nor underdetermined, so all coecients may still be calculated.]
+
+the series for the mn are
+
+9641179g10
+5598720m 24 ,
+
+98287g8
+93312m 19 +
+33161g8
+279936m 19 ,
+
+m1 = m +
+
+m2 = 2m +
+
+m3 = 3m +
+
+m4 = 4m +
+
+m5 = 5m +
+
+g2
+3m 4 
+2g2
+3m 4 
+g2
+m 4 +
+4g2
+3m 4 +
+5g2
+3m 4 .
+
+1279g6
+1944m 14 
+133g6
+1944m 14 +
+101g6
+486m 14 ,
+
+31g4
+72m 9 +
+11g4
+108m 9 +
+29g4
+216m 9 +
+109g4
+270m 9 ,
+
+(4.12)
+
+since we now have expressions for mn in terms of m, we need only determine m ac-
+curately to nish the calculation. this is done using the rst schwinger-dyson equation
+(2.10), which implies that
+
+observe that
+
+m 4 = 4g2g2(0).
+
+g2(0) = z 
+
+
+
+dp
+2
+
+g2(p).
+
+(4.13)
+
+(4.14)
+
+so, based on our calculation of the rst three terms above, the rst few terms are
+
+15
+
+g2(0) =
+
+1
+2m 
+
+g2
+9m 6 +
+
+7g4
+96m 11 .
+
+this allows us to express m and g as
+
+m 2 = q4g2g2(0)
+= s 2g2
+m 
+
+4g4
+9m 6 +
+
+7g6
+24m 11 + o(g8).
+
+(4.15)
+
+(4.16)
+
+keeping terms to order o(g10) we obtain m = 1.126151g2/5.
+
+with this value of m, the mn become numerical series multiplied by an overall factor
+of g2/5. successive terms in this numerical series decrease in magnitude and thus the series
+appears to be convergent. to compare with the numerical results and match the lagrangian
+in ref. [1], we set g = 3/2 and multiply the mn by 2; results are given in table iii.
+
+v. schwinger-dyson equations in d dimensions
+
+in this section we show how to solve truncated systems of schwinger-dyson equations in
+d dimensions. first, we consider the case d < 2, in which it is not necessary to perform
+any renormalization. then we consider the case of arbitrary d, in which it is necessary to
+discuss renormalization.
+
+a. schwinger-dyson equations for d < 2
+
+in this subsection we solve eqs. (2.28) and (2.32) in arbitrary dimension d with m = 0.
+
+this calculation is a straightforward generalization of the one for d = 1.
+
+as previously stated, when m = 0, eq. (2.28) implies eq. (3.4). in addition eq. (2.32)
+
+continues to imply eq. (4.1),
+
+ 2g2(x  y) + m 2g2(x  y) = (x  y),
+
+in which we have dened the renormalized mass m 2 by
+
+m 2 = gin (n  1)gn 2
+
+1 wn 2(0).
+
+(5.1)
+
+(5.2)
+
+equation (5.1) is just the dierential equation satised by the feynman propagator.
+
+we solve these two equations in arbitrary dimension d by taking the fourier transform
+
+to obtain the propagator:
+
+g2(p) = 1/(p2 + m 2).
+
+(5.3)
+
+fourier transforming this propagator back to position space and then setting x = y gives
+
+g2(0) = m d2(1  d/2)d/22d.
+
+(5.4)
+
+using eqs. (2.25) and (5.2) we solve for g1:
+
+16
+
+g1 = in[(n  1)gwn 2(0)](d2)/2(1  d/2)(4)d/22
+
+0o2/(n d+2n +2d)
+
+substituting this result into eq. (5.2) yields
+
+.
+
+(5.5)
+
+m =n [(n  1)gwn 2(0)]2 h (1  d/2)(4)d/22
+
+0 in 2o1/(n d+2n +2d)
+
+,
+
+(5.6)
+
+and substituting the last two results into eq. (5.4) gives an expression for g2. these expres-
+sions reduce to the zero-dimensional and one-dimensional solutions given in the previous
+two sections. notice that each of these expressions becomes singular at d = 2.
+
+using these approximate solutions we can determine the large-n behavior of the greens
+functions as n  . to do so, we need to determine the asymptotic behavior of the
+zeros of the parabolic cylinder function. according to ref. [9], the largest zero of wn1()
+for large n is given by 0  2n. substituting this into the integral representation for
+wn2() and using eq. (2.31) we perform a steepest-descent calculation to obtain wn2 
+q2/31/6(1/3)2nn1/6en/2. we have veried these results numerically to high accuracy.
+taking n   in the expressions for g1, g2, and m above and using the asymptotic results
+for the parabolic cylinder function, we obtain
+
+g1  2i/e = 1.21306i,
+g2  1/(ne),
+m 2  he(1  d/2)(4)d/2ni2/(2d)
+
+.
+
+(5.7)
+
+observe that g1 is independent of both n and d to this order, g2 depends on n but
+not on d, and m 2 depends on both n and d. these results are valid for large n for all
+d < 2. these properties are evident in zero dimensions from eqs. (3.2) and (3.3). while the
+behavior of g1 and h0|2(0)|0i is correctly predicted, the behavior of g2 is not because the
+rst-order behaviors of g1 and h0|2(0)|0i cancel, leaving a second-order term to describe
+g2. also, this calculation predicts that m 2 increases like n 2/(2d). that is, for large n the
+separation between the energy levels diverges and hence, the energy levels must diverge. in
+d = 1 our approximation suggests that m grows like n. in fact, m grows like n 2 in d = 1
+as discussed in ref. [10]. this is the simplest possible truncation, but it suggests the correct
+behavior.
+
+b. perturbative renormalization of the schwinger-dyson equations in
+
+d-dimensions and leading-order calculation of the beta function
+
+let us rst consider the pt -symmetric ig3 theory in six space-time dimensions. the
+greens functions for that theory are governed by the system of equations beginning with
+eq. (2.10), (2.12), and (2.13). let us seek a perturbative solution to this system of equations
+in which gn  gn2. in leading order we have rst, from eq. (2.10),
+
+g1 = i
+
+m2
+g
+
+.
+
+(5.8)
+
+then, from eq. (2.12), the two-point function in momentum-space is
+
+17
+
+where
+
+g2(p) = z d6x eip(xy)g2(x  y) =
+
+1
+
+p2 + m 2 ,
+
+m 2 = m2 + 2igg1 = m2.
+
+(5.9)
+
+(5.10)
+
+thus, in order to avoid unphysical singularities, we must have for this type of solution
+m2 < 0. the leading solution to eq. (2.13) is
+
+g3(p, q) =
+
+2ig
+
+(p2 + m 2)(q2 + m 2)[(p + q)2 + m 2]
+
+,
+
+(5.11)
+
+which has an obvious interpretation as a vertex with three external lines.
+
+more generally, the solution to eq. (2.10) is
+
+g1 =
+
+1
+
+2 (cid:20)im2/g  iq(m2/g)2 + 4g2(0)(cid:21) ,
+
+which corresponds in the perturbative case, where |g2(0)|  (m2/g)2, to
+
+g1 = (
+
+i m2
+g ,
+m2 g2(0).
+
+i g
+
+(5.12)
+
+(5.13)
+
+the second solution given in eq. (5.13) corresponds to the usual perturbative tadpole con-
+tribution to the vacuum expectation value of the eld, while the rst is the new, nontrivial
+solution given in eq. (5.8).
+
+perturbatively solving the next in the sequence of schwinger-dyson equations, we obtain
+
+for the four-point function in leading order
+
+g4(p, q, r) =
+
+((p + q + r)2 + m 2)(p2 + m 2)(q2 + m 2)(r2 + m 2)
+
+2ig
+
+"
+
+1
+
+(p + q)2 + m 2 +
+
+1
+
+(p + r)2 + m 2 +
+
+1
+
+(q + r)2 + m 2# .
+
+(5.14)
+
+inserting this back into eq. (2.13), we obtain the one-loop correction to the three-point
+function. apart from a tadpole term, this is just the same as that found in the conventional
+3 theory; correspondingly, the beta function is obtained from that in the conventional
+theory by the replacement g  ig (see, for example, ref. [11])
+
+(g) = 
+
+g
+
+
+=
+
+3
+
+2 (cid:18) g
+
+4(cid:19)3
+
+,
+
+(5.15)
+
+where g() is the running coupling at scale . unlike the usual 3
+theory given here is not asymptotically free.
+
+6 theory, the pt symmetric
+4 theory is of far greater interest. in particular, it plays a crucial role in
+the standard model as the origin of particle masses through the higgs mechanism. yet the
+
+of course, the 4
+
+18
+
+triviality of that theory is a source of diculty. what happens here, when we set n = 4 in
+eq. (1.1)?
+
+the rst few schwinger-dyson equations are given in eqs. (2.16), (2.18), (2.19), and
+(2.20). note that the last three equations can be simplied through the introduction of the
+renormalized mass
+
+m 2 = m2  3gg2(0)  3gg2
+1.
+
+thus we obtain the following equations for the two-point function,
+
+(2 + m 2)g2(x  y)  gg1g3(0, x  y)  gg4(0, 0, x  y) = (x  y),
+
+the three-point function
+
+(5.16)
+
+(5.17)
+
+(2 + m 2)g3(x  y, x  z)  6gg1g2(x  y)g2(x  z)  3g[g2(x  y)g3(0, x  z)
++g2(x  z)g3(0, x  y)]  3gg1g4(0, x  y, x  z)  gg5(0, 0, x  y, x  z) = 0,
+and the four-point function
+
+(5.18)
+
+(2 + m 2)g4(x  y, x  z, x  w)  6gg2(x  y)g2(x  z)g2(x  w)
+ 3g[g2(x  y)g4(0, x  z, x  w) + g2(x  z)g4(0, x  y, x  w)
++ g2(x  w)g4(0, x  y, x  z)]  6gg1[g2(x  y)g3(x  z, x  w)
++ g2(x  z)g3(x  y, x  w) + g2(x  w)g3(x  y, x  z)]
+ 3g[g3(0, x  y)g3(x  z, x  w) + g3(0, x  z)g3(x  y, x  w)
++ g3(0, x  w)g3(x  y, x  z)]  3gg1g5(0, x  y, x  z, x  w)
+ 3gg6(0, 0, x  y, x  z, x  w) = 0.
+
+(5.19)
+
+now there are two regimes. if m2 > 0 the only consistent perturbative solution to the
+above system of equations is one in which the odd greens functions are exponentially small,
+g2n+1  e1/g, and the even and odd greens functions decouple. [this result is analogous
+to that in eq. (3.11).] the even greens functions possess the same perturbative expansion
+as in the usual 4 theory except for a change of sign of the coupling constant, so again the
+sign of the beta function reverses:
+
+(g) = 27(cid:18) g
+
+2(cid:19)2
+
+.
+
+(5.20)
+
+this theory is asymptotically free. furthermore, in the nonperturbative regime it exhibits
+parity symmetry breaking, but possesses pt symmetry because g1 is imaginary.
+the other regime is even more interesting. if m2 < 0 it is consistent to proceed in analogy
+with our treatment of the 3 theory above. we may assume a perturbative solution of the
+form gn  gn/21, as we have already seen in eq. (3.13). then we have a purely imaginary
+vacuum expectation value of the eld, from eq. (2.16):
+
+g1 = s m2
+
+g
+
+,
+
+19
+
+(5.21)
+
+while the leading two-point function has the usual form of a propagator:
+
+g2(p) =
+
+1
+
+p2 + m 2 .
+
+here the renormalized mass in leading order is positive:
+
+m 2 = m2  3gg2
+
+1 = 2m2.
+
+the leading three-point function has an evident diagrammatic interpretation:
+
+g3(p, q) = 6gg1
+
+1
+
+1
+
+p2 + m 2
+
+q2 + m 2
+
+1
+
+(p + q)2 + m 2 .
+
+the tree-level four-point function is easily extracted from eq. (5.19):
+
+g4(p, q, r) =
+
+6g
+
+(p2 + m 2)(q2 + m 2)(r2 + m 2)[(p + q + r)2 + m 2]
+3m2
+
+3m2
+
+3m2
+
+(cid:20)1 +
+
+(p + q)2 + m 2 +
+
+(p + r)2 + m 2 +
+
+(q + r)2 + m 2(cid:21),
+
+(5.22)
+
+(5.23)
+
+(5.24)
+
+(5.25)
+
+being composed of contibutions from primitive four-point and three-point vertices.
+now we have perturbative parity symmetry breaking: the scalar eld acquires a vacuum
+expectation value comparable to that of the gauge bosons in the standard model, gg1.
+further, it appears likely that the theory is asymptotically free, because the sign of the
+four-point vertex is reversed. indeed, apart from one-particle-reducible graphs, eq. (5.25)
+gives just the usual primitive vertex in the high momentum limit, except for a change in
+sign. the theory is renormalizable because, apart from divergences associated with the 2-,
+3-, and 4-point functions, no additional divergences occur. this is due to the fact that, for
+example, the 5-point function has no primitive vertices, as can be easily seen from the next
+in the sequence of schwinger-dyson equations after eq. (5.18). the lowest order diagrams
+contributing to g5 are as sketched in fig. 5.
+
+we have shown that the signs of the beta functions for a conventional g3 theory and for a
+pt -symmetric ig3 theory in six space-time dimensions are reversed. thus, while the former
+theory is asymptotically free, the latter is not. similarly, the beta functions for a conventional
+g4 theory and for a pt -symmetric g4 theory in four space-time dimensions are reversed.
+thus, while the former theory is not asymptotically free, the latter is. similarly, as we have
+already argued in ref. [12], we believe that while conventional quantum electrodynamics is
+not asymptotically free, pt -symmetric electrodynamics is asymptotically free and possesses
+a nontrivial xed point.
+one of us, cmb, thanks arthur lue for many useful discussions at the aspen center
+
+for physics. this work was supported in part by the u.s. department of energy.
+
+20
+
+references
+
+[1] c. m. bender and s. boettcher, phys. rev. lett. 80, 5243 (1998).
+[2] c. m. bender, s. boettcher, and p. n. meisinger, j. math. phys. 40, 2201 (1999).
+[3] c. m. bender and k. a. milton, phys. rev. d 55, r3255 (1997).
+[4] field theoretic hamiltonians that are both supersymmetric and pt symmetric are
+[5] c. m. bender, g. s. guralnik, r. w. keener, and k. olaussen, phys. rev. d 14, 2590
+
+examined in c. m. bender and k. a. milton, phys. rev. d 57, 3595 (1998).
+
+(1976).
+
+[6] c. m. bender, f. cooper, p. n. meisinger, and v. m. savage, submitted.
+[7] m. abramowitz and i. a. stegun, handbook of mathematical functions (national bu-
+
+reau of standards, washington, 1964), p. 831.
+
+[8] higher transcendental functions, ed. by a. erdelyi, (mcgraw-hill, new york, 1953),
+
+vol. ii, chaps. 8 and 10.
+
+[9] g. szego, orthogonal polynomials (american mathematical society, new york, 1939),
+
+chap. 6.
+
+[10] c. m. bender, h. f. jones, and v. m. savage, submitted.
+[11] t. muta, foundations of quantum chromodynamics (world scientic, singapore,
+
+1987), p. 217.
+
+[12] c. m. bender and k. a. milton, j. phys. a: math. gen. 32, l87 (1999).
+
+21
+
+figures
+
+0.1
+
+0.075
+
+0.05
+
+0.025
+
+0.65 0.675
+
+0.725 0.75 0.775 0.8 0.825
+
+-0.025
+
+-0.05
+
+-0.075
+
+-0.1
+
+fig. 1. solutions of the rst 150 coupled schwinger-dyson equations for the dimensionless
+one-point greens function ig1g1/3 for the case of a massless zero-dimensional n = 3 theory. note
+that the solutions (indicated by dots) lie in a small portion of the complex plane very close to the
+exact answer 0.72901.
+
+0.2
+
+0.15
+
+0.1
+
+0.05
+
+0.5
+
+0.6
+
+0.7
+
+0.8
+
+0.9
+
+1.1
+
+-0.05
+
+-0.1
+
+-0.15
+
+-0.2
+
+fig. 2. solutions of the rst ten coupled schwinger-dyson equations for the dimensionless
+one-point greens function ig1g1/4 for the case of a massless zero-dimensional n = 4 theory. the
+solutions (indicated by dots) lie in a small portion of the complex plane very close to the exact
+answer 0.97774.
+
+22
+
+m  > 02
+
+down
+
+down
+
+up
+
+up
+
+down
+
+v
+
+up
+
+0
+
+up
+
+saddle
+points
+
+down
+
+down
+
+up
+
+up
+down
+
+/6
+
+stationary
+phase
+contour
+
+u
+
+/6
+
+fig. 3. saddle points and steepest-descent paths for the function (x) in eq. (3.9) for the case
+
+m2 > 0.
+
+v
+
+up
+
+m  < 02
+
+down
+
+down
+
+up
+
+down
+
+up
+
+up
+
+0
+
+down
+
+up
+
+down
+
+down
+
+up
+
+saddle
+points
+
+u
+
+/6
+
+/6
+
+stationary
+phase
+contour
+
+fig. 4. saddle points and steepest-descent paths for the function (x) in eq. (3.9) for the case
+
+m2 < 0.
+
+23
+
+6gg1
+
+6g
+
+6gg1
+
+6gg1
+
+6gg1
+
+fig. 5. lowest order graphs contributing to g5.
+
+24
+
+tables
+
+1
+
+g1/n and gexact
+
+g2/n [see eqs. (3.2) and (3.3)] compared
+table i. exact values igexact
+2
+2 g2/n , which are obtained from the rst two
+1 g1/n and gsd
+with the rst approximations igsd
+schwinger-dyson equations and given in eqs. (3.5) and (3.6). this is done for the three cases
+n = 3, n = 4, and n = 5. observe that the percent error increases with n for g1 and decreases
+with n for g2. these trends continue until g1 has a maximum error of 23.2% at n = 53, and
+until g2 has a minimum error of 0.34% at n = 8. for n > 53 the error for g1 decreases until
+it levels o at 21.3%. for n > 8 the error for g2 increases like n . the large-n behavior of our
+approximations is more fully discussed later.
+
+n
+3
+4
+5
+
+igexact
+
+1
+
+g1/n
+0.72901
+0.97774
+1.07865
+
+igsd
+
+1 g1/n
+0.79370
+1.10668
+1.24829
+
+gexact
+
+2
+
+g2/n
+0.53146
+0.28000
+0.16433
+
+gsd
+
+2 g2/n
+0.27516
+0.14907
+0.10158
+
+table ii. exact values of igexact
+
+and m exact = e1  e0 (see ref. [1]) compared with the rst
+and m sd, which are obtained from the rst two schwinger-dyson equations
+approximations igsd
+(4.3) and (4.4). this is done for the three cases n = 3, n = 4, and n = 5. note that the error is
+worse than for the zero-dimensional theories, and that the error for m increases with n . however,
+the error for ig1 is smallest for n = 4.
+
+1
+
+1
+
+n
+3
+4
+5
+
+igexact
+
+1
+0.59007
+0.86686
+1.01310
+
+m exact
+
+2.95293
+4.52620
+6.70000
+
+m sd
+2.70192
+3.63424
+4.72160
+
+1
+
+igsd
+0.37011
+0.82548
+1.15416
+
+table iii.
+
+schwinger-dyson approximations for mn compared with exact values of the energy dier-
+ence, en  e0, calculated in ref. [1]. these approximations are based on the truncation of
+the rst three schwinger-dyson equations for an ig3 eld theory of the type in eq. (1.4).
+notice that m1 is greater than the numerical result in this case, while in table ii, m1 was
+less than the numerical answer. this suggests that in one dimension the oscillatory nature of
+successive approximations is present once again. moreover, the percent error has decreased
+signicantly; the error is 8.50% for m1 calculated using the rst two schwinger-dyson equa-
+tions compared with 3.52% calculated using the rst three schwinger-dyson equations.
+
+n
+1
+2
+3
+4
+5
+
+en  e0
+
+2.952962
+6.406007
+10.158155
+14.135286
+18.295263
+
+m sd
+n
+3.056763
+6.191828
+9.610135
+12.871434
+15.681836
+
+% error
+
+3.52
+3.34
+5.39
+8.94
+14.28
+
+25
+
+

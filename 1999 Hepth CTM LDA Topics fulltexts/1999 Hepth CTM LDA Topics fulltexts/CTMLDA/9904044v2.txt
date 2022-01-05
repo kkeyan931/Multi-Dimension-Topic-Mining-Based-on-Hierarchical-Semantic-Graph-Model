@@ -1,0 +1,756 @@
+9
+9
+9
+1
+
+ 
+r
+p
+a
+3
+1
+
+ 
+
+ 
+ 
+
+2
+v
+4
+4
+0
+4
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+lessons from quantum field theory
+
+hopf algebras and spacetime geometries
+
+a. connes
+
+d. kreimer
+
+ihes/m/99/22, hep-th/9904044
+
+institut des hautes etudes scientique
+
+le bois-marie, 35 route de chartres
+
+f-91440 bures-sur-yvette, france
+
+we dedicate this paper to moshe flato.
+
+abstract
+
+we discuss the prominence of hopf algebras in recent progress in quan-
+tum field theory.
+in particular, we will consider the hopf algebra of
+renormalization, whose antipode turned out to be the key to a concep-
+tual understanding of the subtraction procedure. we shall then describe
+several occurences of this, or closely related hopf algebras, in other math-
+ematical domains, such as foliations, runge-kutta methods, iterated in-
+tegrals and multiple zeta values. we emphasize the unifying role which
+the butcher group, discovered in the study of numerical integration of
+ordinary dierential equations, plays in qft.
+
+keywords: quantum field theory, noncommutative geometry, renormalization,
+hopf algebras, foliations, ode.
+msc91 81t15,16w30,46l87,58b30,58f18,34axx.
+
+1 introduction
+
+the leitmotiv of this survey paper is our belief that in some way the true
+geometry of spacetime is actually dictated by quantum eld theories as currently
+used by particle physicists in the calculation of radiative corrections.
+
+there are two major ingredients in this use of the theory, the rst is the
+renormalization technique, with all its combinatorial intricacies, which is per-
+fectly justied by its concrete physical roots and the resulting predictive power.
+
+connes@ihes.fr
+kreimer@ihes.fr
+
+1
+
+the second is the specic lagrangian of the theory, the result of a long dia-
+logue between theory and experiment, which, of course, is essential in producing
+meaningful physical results.
+
+this lagrangian is a unique mixture of several pieces, some very geometri-
+cal and governed by the external symmetry group of the equivalence principle,
+i.e. the dieomorphism group di , the others governed by the internal group of
+gauge transformations gauge. the overall symmetry group is the semi-direct
+product g = gauge > di , which is summarized by the following exact se-
+quence of groups
+
+1  gauge  g  di  1.
+
+but there is more group structure than the external and internal symmetries
+of this lagrangian of gravity coupled with matter. our goal in this paper is
+to explain how the understanding of the group-theoretic principle underlying
+the working machine of renormalization [18] should allow one to improve the
+understanding of the geometrical nature of particle physics which was proposed
+in [10].
+
+the main point in the latter proposal is that the natural symmetry group
+g of the lagrangian is isomorphic to the group of dieomorphisms di (x)
+of a space x, provided one stretches ones geometrical notions to allow slightly
+noncommutative spaces. indeed, the automorphism group aut(a) of a noncom-
+mutative algebra a which replaces the dieomorphism group of any ordinary
+manifold has exactly this very feature of being composed of two pieces, one
+internal and one external, which, again, can be given equivalently as an exact
+sequence of groups
+
+1  int(a)  aut(a)  out(a)  1.
+
+in the general framework of ncg the conuence of the two notions of metric
+and fundamental class for a manifold led very naturally to the equality
+
+ds = 1/d,
+
+(1)
+
+which expresses the line element ds as the inverse of the dirac operator d,
+hence under suitable boundary conditions as a propagator. the signicance of
+d is two-fold. on the one hand, it denes the metric by the above equation,
+on the other hand its homotopy class represents the k-homology fundamental
+class of the space under consideration. while this new geometrical framework
+was immediately useful in various mathematical examples of noncommutative
+spaces, including the noncommutative torus [12, 11], it is obvious that it cannot
+be a satisfactory answer for spacetime precisely because qft will unavoidably
+dress the free propagator, as fig.(1) indicates. it nevertheless emphasizes that
+spacetime itself ought to be regarded as a derived concept, whose structure in
+we believe follows from the properties of qft if one succeeds describing the
+latter in purely combinatorial terms.
+
+whereas it was simple in the undressed case to recover the standard ingredi-
+ents of intrinsic geometry directly from the dirac propagator and the algebra a,
+
+2
+
+figure 1: the dressed line element is obtained from the transition of the bare
+to the dressed propagator.
+
+it is much more challenging in the dressed case, and we shall naturally propose
+the schwinger-dyson equation for the full fermion propagator as the proper
+starting point in the general case.
+
+let us now describe various appearances of hopf algebras relevant to quan-
+tum field theory. we will start with the hopf algebra of renormalization,
+whose antipode turned out to be the key to a conceptual understanding of the
+subtraction procedure. we shall then describe several occurences of this, or
+closely related hopf algebras, in other mathematical domains, such as foliations
+[14], runge-kutta methods [6], iterated integrals [9, 20] and multiple zeta values
+[17].
+
+we will nally address the schwinger dyson equation as a prototype of a
+
+generalized form of an ordinary dierential equation (ode).
+
+2 the pertinence of hopf algebras
+
+2.1 renormalization and the antipode in the algebra of
+
+rooted trees
+
+renormalization occurs in evaluating physical observable quantities which in
+simple terms can be written as formal functional integrals of the form
+
+z el(,)p (, )[d], l = l0 + li .
+
+computing such an integral in perturbative terms leads to a formal power se-
+ries, each term g of which is obtained by integrating a polynomial under a
+gaussian el0. such feynman diagrams g are given by multiple integrals over
+spacetime or, upon fourier transformation, over momentum space, and are typ-
+ically divergent in either case. the renormalization technique consists in adding
+counterterms lg to the original lagrangian l, one for each diagram g, whose
+role is to cancel the undesired divergences. in good situations to which we are
+allowed to restrict ourselves if we take guidance from nature, this can be done
+by local counterterms, polynomials in elds and their derivatives.
+
+the main calculational complication of this subtraction procedure occurs for
+diagrams which possess non-trivial subdivergences, i.e. subdiagrams which are
+already divergent. in that situation the procedure becomes very involved since
+it is no longer a simple subtraction, and this for two obvious reasons:
+i) the
+divergences are no longer given by local terms, and ii) the previous corrections
+(those for the subdivergences) have to be taken into account.
+
+3
+
+to have an example for the combinatorial burden imposed by these dicul-
+ties consider the problem below of the renormalization of a two-loop four-point
+function in massless scalar 4 theory in four dimensions, given by the following
+feynman graph:
+
+it contains a divergent subgraph
+
+[2] =
+
+.
+
+[1] = .
+
+we work in the euclidean framework and introduce a cut-o  which we as-
+sume to be always much bigger than the square of any external momentum pi.
+analytic expressions for these feynman graphs are obtained by utilizing a map
+ which assigns integrals to them according to the feynman rules and employs
+the cut-o  to the momentum integrations. then [[1,2]] are given by
+
+[[1]](pi) = z d4k
+
+(2  k2)
+
+k2
+
+1
+
+(k + p1 + p2)2 ,
+
+and
+
+[[2]](pi) = z d4l
+
+(2  l2)
+
+l2(l + p1 + p2)2 [[1](p1, l, p2, l)].
+
+it is easy to see that [[1]] decomposes into the form b log  (where b is a real
+number) plus terms which remain nite for   , and hence will produce a
+divergence which is a non-local function of external momenta
+
+ log z d4l
+
+(2  l2)
+
+l2(l + p1 + p2)2
+
+ log  log(p1 + p2)2.
+
+fortunately, the counterterm l[1]  log  generated to subtract the divergence
+in [[1]] will precisely cancel this non-local divergence in [2].
+
+that these two diseases actually cure each other in general is a very non-
+trivial fact that took decades to prove [1]. for a mathematician the intricacies
+of the proof and the lack of any obvious mathematical structure underlying it
+make it totally inaccessible, in spite of the existence of a satisfactory formal
+approach to the problem [15].
+
+the situation is drastically changed by the understanding of the mechanism
+behind the actual computations of radiative corrections as the antipode in a very
+specic hopf algebra, the hopf algebra hr of decorated rooted trees discovered
+in [18, 13, 19].
+
+this algebra is the algebra of coordinates in an ane nilpotent group gr,
+and all the non-linear aspects of the subtraction procedure are subsumed by the
+action of the antipode, i.e. the operation g  g1 in the group gr.
+
+this is not only very satisfactory from the conceptual point of view, but it
+does also allow the automation of the subtraction procedure to arbitrary loop
+
+4
+
+order (see [5] for an example of feynman graphs with up to twelve loops) and to
+describe the more elaborate notions of renormalization theory, -change of scales,
+renormalization group ow and operator product expansions-, from this group
+structure [5, 20, 21].
+
+in [13] we characterized this hopf algebra of renormalization, hr, abstractly
+as the universal solution for one-dimensional hochschild cohomology. the hopf
+algebra hr together with the collecting map (cf.[13]) b+ : hr  hr is the
+universal solution of the following hochschild cohomology equation. we let h
+be a commutative (not necessarily cocommutative) hopf algebra together with
+a linear map l : h  h. the hochschild equation is then bl = 0, i.e.
+
+l(a) = l(a)  1 + (id  l)(a).
+
+we shall see later the intimate relation between this problem and the generalized
+form of odes.
+
+renormalization can now be summarized succinctly by saying that it maps
+an element g  gr to another element g1
+o g  gr. typically, g is associated
+with bare diagrams and go is a group element in accordance with a chosen
+renormalization scheme. in the ratio g1
+o g the undesired divergences drop out.
+hence, g1
+o g the renormalized green function.
+it is precisely this group law which allowed the description of the change of scales
+and renormalization schemes in a comprehensive manner [20]. indeed, if g1
+o g is
+one renormalized green function, and g1
+o g)(g1g) another, then we
+immediately see the group law underlying the evolution of the renormalization
+group.
+
+o delivers the counterterm and g1
+
+o g = (g1
+
+2.2 foliations
+
+quite independently, the problem of computation of certain characteristic clas-
+ses coming from dierential operators on foliations led [14] to a very specic
+hopf algebra h(n) associated to a given integer n, which is the codimension of
+the foliation.
+
+the construction of this hopf algebra was actually dictated by the commu-
+tation relations of the algebra a (corresponding to the noncommutative leaf
+space) with the operator d (cf.(1)) describing the transverse geometry in the
+sense of (1). the structure of this hopf algebra revealed that it could be ob-
+tained by a general procedure from the pair of subgroups g0, g1 of the group
+di (rn) of dieomorphisms of rn: one lets g0 be the subgroup of ane dif-
+feomorphisms, while g1 is the subgroup of those dieomorphisms which x the
+origin and are tangent to the identity map at this point. this specic structure
+of a hopf algebra not only led in this case to a solution of the computational
+problem, but also provided the proper generalization of lie algebra cohomology
+to the general hopf framework in the guise of cyclic cohomology (see the paper
+cyclic cohomology and hopf algebras by connes and moscovici in this volume).
+in [13] we established a relation between the two hopf algebras which led
+us to extend various results of [14] to the lie algebra l1 of rooted trees, in
+
+5
+
+particular we extended l1 by an additional generator z1, intimately related
+to natural growth of rooted trees.
+
+let us mention at this point that the extended lie algebra l has a radical as
+well as a simple quotient. the former is nilpotent and innitely generated, the
+latter turns out to be isomorphic to the lie algebra of di (r), thus exhibiting
+an intrinsic relation between the two groups.
+
+extension of this relation between h(1) and hr leads to the hopf algebra
+of decorated planar rooted trees, explored by r. wulkenhaar [22], whose new
+feature is that the decoration of the root provides the information necessary to
+dene the notion of parallel transport, while the decorations of other vertices
+are mere spacetime indices.
+
+2.3 numerical integration methods
+
+our description in [13] of the simplest realization of the hopf algebra hr and
+its related group, together with the elaboration of this group structure in [5, 20],
+allowed c. brouder [6] to recognize a far reaching relation with the combinatorics
+of numerical analysis as worked out by butcher several decades ago.
+
+indeed, butcher, in his seminal work on the algebraic aspects of runge-
+kutta methods (and other numerical integration methods) [7] discovered the
+very same hopf algebra and group gr.
+
+let us rst remind the reader of the simplest numerical integration methods
+
+in the integration of a given ordinary dierential equation
+
+y = f (y), y(0) = y0,
+
+(2)
+
+where t  y(t) is a curve in euclidean space e. the runge method, designed
+to approximate the value y(h) of y at t = h is given by the formula,
+
+y(h) = y0 + hf (y0 +
+
+h
+2
+
+f (y0)).
+
+(3)
+
+the virtue of this simple iteration of f is that the taylor expansion of y for
+small h agrees up to order two with the taylor expansion of the actual solution
+y(h).
+
+more generally a runge-kutta method is an iterative procedure, governed
+by two sets of data, traditionally denoted by a and b, where bi, i = 1, . . . , n,
+and aij are scalars while the implicit equations are
+
+xi(h) = y0 + hx aij f (xj(h)),
+y = y0 + hx bif (xi(s)).
+
+(4)
+
+(5)
+
+their solution is known to be a sum over rooted trees, involving the very com-
+binatorial quantities ascribed to rooted trees by the study of qft, namely tree
+factorials, cm weights and symmetry factors [7, 6, 5, 20]. it has been known
+since cayley [8] that rooted trees are the correct way to label polynomials in
+
+6
+
+f(n)
+
+.................
+
+figure 2: the tree structure of derivatives.
+
+higher derivatives of a smooth map f : e  e. for instance an nth derivative
+f (n) corresponds to a vertex with n adjacent branches, as in fig.(2).
+
+what butcher discovered is that runge-kutta methods naturally form a
+group, whose elements are actually scalar functions of rooted trees. he gave
+explicit formulas for the composition of two methods as well as for the inverse
+method. he also showed how the standard solution of a dierential equation
+is obtained from a particular (continuous) method which he called the picard
+method. there is a nuance between runge-kutta methods and the butcher
+group of scalar functions of rooted trees, but butcher proved that the runge-
+kutta methods are dense in the latter group.
+
+in [20] scalar functions of rooted trees were used to parametrize and general-
+ize iterated integrals, allowing a unied description of renormalization schemes.
+this immediately allowed c. brouder to identify the above group gr (in the
+simplest undecorated case) with the butcher group.
+
+the supplementary freedom in constructing group elements or operations on
+them provided by the runge-kutta description matches the freedom to choose a
+renormalization scheme or to describe the change of a chosen scheme. hence the
+group product, as well as the counterterm, -the inverse group element, have im-
+mediate and equally elegant counterparts in the runge-kutta language worked
+out recently by brouder [6].
+
+moreover, comparing the data a, b of a runge-kutta method with our char-
+acterization of the hopf algebra hr by the hochschild cohomology problem
+leads us to the following natural framework for the formulation of a univer-
+sal dierential equation (which also covers the case of the schwinger-dyson
+equation) given a non-linear map f : e  e. the only nuance between our
+framework and the butcher framework of an algebra b together with a linear
+map a : b  b (cf.[7]) is that we now assume that the abelian algebra b is in
+fact a hopf algebra while the map a satises our hochschild equation
+
+a(p ) = a(p )  1 + (id  a)(p ).
+
+the simplest example of such data is already given by the picard method of [7]
+where the hopf algebra structure (not provided in [7]) is given by
+
+x = x  1 + 1  x,
+
+a(p )(x) = z x
+
+0
+
+p (u)du,
+
+7
+
+cf.[13]. the dierence between such data and a runge-kutta method is that we
+now have translation invariance available. exactly as the runge-kutta method
+was producing an element in the butcher group, the above data give a homo-
+morphism from the underlying group (by the milnor-moore theorem) to the
+butcher group, a situation which is dual to our theorem on the universality of
+hr.
+
+we can now reformulate the ode in general as an equation for y  b  e,
+
+y = 1  0 + (l  id)f (y),
+
+where 0  e is the initial datum and f (y) is uniquely dened by f (y)(x) =
+f (y(x)) for any x  spec(b).
+
+this is very suggestive: somehow the usual solution curve for an ode should
+not be considered as an ultimate solution and the universal problem should be
+thought of as a renement of the idea of a scalar time parameter. we regard
+butchers work on the classication of numerical integration methods as an
+impressive example that concrete problem-oriented work can lead to far reaching
+conceptual results.
+
+2.4 iterated integrals and numbers from primitive dia-
+
+grams
+
+the circle of ideas described so far certainly allows us to come to terms with
+the combinatorics of the subtraction procedure so that we can now concentrate
+only on those diagrams without subdivergences, i.e. the decorations at vertices
+of rooted trees.
+
+the proper denition for the integral in the new calculus used in noncom-
+mutative geometry is the dixmier trace, i.e.
+the invariant coecient of the
+logarithmic divergence of an operator trace. a supercial understanding of
+qft would lead one to consider it as far too limited a tool to confront the
+divergences of qft. this misgiving is based on the ignorance of the plain fact
+that the divergence of a subdivergence-free diagram is a mere overall logarith-
+mic divergence, and that such diagrams, for which fig.(3) gives archetypical
+examples, appear at all loop orders (the expert will notice that the decorations
+which are to be used are actually feynman graphs with appropriate polynomial
+insertions which are the remainders when we shrink subgraphs to points).
+
+in dimensional regularization the decorations appearing at the rooted trees
+deliver a rst-order pole in d4. in other words, the dixmier trace, or rather its
+residue guise res, is perfectly sucient to disentangle and determine a general
+feynman graph g, making full use of the decomposition dictated by the hopf
+algebra structure, which gives the joblist [5] for the practitioner of qft: the list
+of diagrams which correspond to analytic expressions suering from merely an
+overall divergence.
+
+analyzing the corresponding residues of the decorations and their number-
+theoretic properties is a far reaching subject (discussed in part by m. kontsevich
+in this issue) which by itself reveals some interesting hopf algebra structures,
+based on the algebraic properties of iterated integrals.
+
+8
+
+figure 3: diagrams free of subdivergences and hence delivering a rst order
+pole in dimensional regularization. they are typically reecting the skeleton
+expansion of the theory.
+
+iterated integrals came to prominence with the work of k.t. chen [9]. es-
+
+sentially, they are governed by two rules, chens lemma
+
+f i
+r,t = f i
+
+r,s + f i
+
+s,t + xi=(i ,i )
+
+f i 
+r,sf i 
+
+s,t
+
+and the shue product
+
+f i 
+r,sf i 
+
+r,s = x
+
+f [i]
+r,s ,
+
+where the sum is over all (p, q) shues of the symmetric group sp+q acting on
+a string i of, say, n = p + q integers parametrizing the one-forms which give the
+iterated integral as their integral over the n-dimensional standard simplex.
+
+if we dene ti to be a tree without sidebranches decorated with these one-
+forms in the appropriate order, then each iterated integral corresponds to a map
+from such a decorated tree to a real number, so that chens lemma expresses
+the familiar group law of the butcher group in this special case. it is then the
+shue product which guarantees that iterating one-forms in accordance with a
+general rooted tree [20] will not produce anything new: any such integral is a
+linear combination of the standard iterated integrals.
+
+most interestingly, the calculus of full perturbative qft can be understood
+as a calculus of generalized iterated integrals, where the boundaries r, s are to
+be replaced by elements of the butcher group: scalar functions of (decorated)
+rooted trees [20]. the group law still holds naturally for such generalized inte-
+grals, but the shue product only holds for the leading term in the asymptotic
+expansion of bare diagrams [21].
+
+we hope that an investigation of this situation has far reaching consequences
+for the understanding of the number-theoretic content of feynman diagrams,
+whose richness is underwritten by a wealth of empirical data which provide a
+plethora of interesting numbers like multiple zeta values [23], their alternating
+cousins [4], and even sums involving non-trivial roots of unity in numerators [3].
+it is gratifying then that the regularization of iterated integrals based on
+forms dx/x, dx/(1  x), providing the iterated integrals representation of multi-
+ple zeta values, is in full accord with the renormalization picture developed here.
+the appearance of such numbers in the solution of the knizhnik-zamolodchikov
+equation, and the relation to the drinfeld associator upon renormalizing this
+
+9
+
+solution so that it extends to the unit interval, clearly motivates one to in-
+vestigate the dierential equations which encapsulate the iterative structure of
+green functions in perturbative qft, the bare and renormalized schwinger-
+dyson equations.
+
+before we close this survey with a couple of remarks concerning these equa-
+tions, let us mention yet another application where the freedom of having tree-
+indexed scales, hence elements of the butcher group, will prove essential.
+
+the formulation of operator product expansion clearly takes place in a con-
+guration space of the same nature as the fulton-macpherson compactication
+[16], known to be stratied by rooted trees. however, there is a very important
+nuance which can already be fully appreciated in the case of two points. in that
+case, the fulton-macpherson space is simply the blow-up of the diagonal in the
+space x  x, whereas the geometric data which encodes most of the semiclas-
+sical deformation aspect in a dieomorphism invariant manner are provided by
+a smooth groupoid, called the tangent groupoid in [11].
+
+essentially, the relation between the latter and the former is the same as the
+relation between a linear space and the corresponding projective space. that
+the transition to a linear space is a crucial improvement can be appreciated from
+the fact that it is only in the linear space that fourier transform takes its full
+power.
+
+it is thus of great interest to extend the construction of the tangent groupoid
+from the two-point case to the full set-up of the congurations of n points.
+this clearly involves the freedom of having scales available for any strata in
+the compactication, hence again elements of the butcher group. this is in
+full accord with the use of tree-indexed parameters in the momentum space
+description of the operator product expansion undertaken in [20], which clearly
+shows the necessity of allowing for the full linear space to be able to describe the
+variety of renormalization prescriptions employed by the practitioners of qft.
+
+2.5 the schwinger-dyson equations
+
+recalling that equation (1) demands an understanding of the full dressed line
+element (cf. fig.( 1)) , we nally consider schwinger-dyson equations. the prop-
+agator, the vertex and the kernel functions provide a system of such schwinger-
+dyson equations, whose solution is at the heart of any lagrangian qft [2].
+though the fermion propagator, hence the line element, comes to prominence
+in these equations due to gauge covariance, a full solution is not yet known for
+any qft of interest.
+
+in the simplest form, the schwinger-dyson equation is typically an equation
+
+of the form
+
+(q) =  +z d4k(k)p (k)2k(k, q),
+
+which is the structure of the schwinger-dyson equation for the qed vertex at
+zero momentum transfer. here, p is a propagator, hence a geometric series in
+a self-energy (so that the resulting equations are highly non-linear) and k is a
+
+10
+
+qed four-point kernel function, actually one which is a typical generator (in its
+undressed form) of decorations upon closure of two of its legs.
+
+nevertheless it is not dicult to identify an operator lk such that the
+
+solution is the formal series
+
+(q) =  +xi
+
+li
+
+k(),
+
+where the operator lk amounts to the operator b+ combined with all decora-
+tions provided by the kernel k. if the above schwinger-dyson equation is for
+the bare vertex, the one for the renormalized vertex  is obtained by multiply-
+ing it with the counterterm z which amounts, in full accordance with the g1
+o g
+notation used before, to the equation
+
+(q) = z +z d4k(k)p (k)2k(k, q),
+
+which neatly summarizes the hopf algebra structure of perturbative qft. from
+the above structure, we conclude that runge-kutta methods are fully available
+for this system.
+
+let us close this paper by noting an amusing coincidence: if we restrict the
+kernel k to the rst two terms k [1], k [2] in its skeleton expansion, restrict p to
+the free propagators and label each of the two terms k [1], k [2] by noncommuting
+variables k1 and k2 say, then we are naturally led to the equation
+
+(q) =  + k1(cid:20)z d4k
+
+1
+
+k4 (k)k [1](cid:21) + k2(cid:20)z d4k
+
+1
+
+k4 (k)k [2](cid:21) ,
+
+which obviously involves a sum over all words in k1, k2 in its solution and is
+fascinatingly close to the k-z equation in two variables considered before.
+
+acknowledgements
+
+d.k. thanks the ihes for extended hospitality and marvelous working condi-
+tions. d.k. also thanks the dfg for support as a heisenberg fellow.
+
+references
+
+[1] n.n. bogoliubov, d.v. shirkov, introduction to the theory of quantized
+
+elds, 3rd ed., wiley 1980;
+k. hepp, comm.math.phys.2 (1966) 301-326;
+w. zimmermann, comm.math.phys.15 (1969) 208-234.
+
+[2] j.d. bjorken, s.d. drell, relativistic quantum fields, mcgraw hill 1965.
+
+[3] d.j. broadhurst, massive 3-loop feynman diagrams reducible to sc prim-
+itives of algebras at the sixth root of unity, to appear in eur.phys.j.c,
+hep-th/9803091.
+
+11
+
+[4] d.j. broadhurst, d. kreimer, phys.lett.b393 (1997) 403-412, hep-
+
+th/9609128.
+
+[5] d.j. broadhurst, d. kreimer, renormalization automated by hopf algebra,
+
+to appear in j.symb.comp., hep-th/9810087.
+
+[6] c. brouder, runge kutta methods and renormalization, hep-th/9904014.
+
+[7] j.c. butcher, math.comp.26 (1972) 79-106.
+
+[8] a. cayley on the theory of the analytical forms called trees, phil.mag.xiii
+
+(1857) 172-176.
+
+[9] k.t. chen, bull.amer.soc.83 (1977) 831-879.
+
+[10] a. connes, comm.math.phys.182 (1996) 155-176, hep-th/9603053.
+
+[11] a. connes, noncommutative geometry, acad.press 1994.
+
+[12] a. connes, m. douglas, a.schwarz, jhep 9802:003 (1998), hep-
+
+th/9711162.
+
+[13] a. connes, d. kreimer, comm.math.phys.199 (1998) 203-242, hep-
+
+th/9808042.
+
+[14] a. connes, h. moscovici, comm.math.phys.198 (1998) 199-246,
+
+math.dg/9806109.
+
+[15] h. epstein, v. glaser, ann.inst.h.poincare 19 (1973) 211-295.
+
+[16] w. fulton, r. macpherson, annals of math.(2).130 (1994) 183-225.
+
+[17] a. goncharov, polylogarithms in arithmetic and geometry, proc. of icm-94
+
+(zurich), vol.1,2 374-387, birkhauser 1995.
+
+[18] d. kreimer, adv.theor.math.phys.2 (1998) 303-334, q-alg/9707029.
+
+[19] d. kreimer, on overlapping divergences, to appear in comm.math.phys.,
+
+hep-th/9810022.
+
+[20] d. kreimer, chens iterated integral represents the operator product ex-
+
+pansion, hep-th/9901099.
+
+[21] d. kreimer, r. delbourgo, using the hopf algebra of qft in calculations,
+
+hep-th/9903249.
+
+[22] r. wulkenhaar, on the connes-moscovici hopf algebra associated to the
+
+dieomorphisms of a manifold, preprint cpt luminy april 1999.
+
+[23] d. zagier, values of zeta functions and their applications, first european
+
+congress of mathematics, vol. ii, 497-512, birkhauser, boston, 1994.
+
+12
+
+

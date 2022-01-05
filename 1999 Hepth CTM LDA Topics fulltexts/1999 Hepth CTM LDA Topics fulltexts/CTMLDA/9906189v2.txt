@@ -1,0 +1,1004 @@
+9
+9
+9
+1
+
+ 
+l
+u
+j
+ 
+
+7
+
+ 
+ 
+
+2
+v
+9
+8
+1
+6
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+a non-perturbative analysis of symmetry
+
+breaking in two-dimensional 4 theory using
+
+periodic eld methods
+
+pablo j. marrero, erick a. roura, and dean lee
+
+department of physics and astronomy
+
+university of massachusetts, amherst, ma 01003
+
+february 15, 2014
+
+abstract
+
+we describe the generalization of spherical eld theory to other modal
+expansion methods. the main approach remains the same, to reduce a
+d-dimensional eld theory into a set of coupled one-dimensional systems.
+the method we discuss here uses an expansion with respect to periodic-
+box modes. we apply the method to 4 theory in two dimensions and
+compute the critical coupling and critical exponents. we compare with
+lattice results and predictions via universality and the two-dimensional
+ising model.
+[pacs numbers: 05.10-a, 05.50+q, 11.10.-z, 11.30.qc,
+12.38lg]
+
+1 introduction
+
+recently spherical eld theory has been introduced as a non-perturbative method
+for studying quantum eld theory [1]. the starting point of this approach is to
+decompose eld congurations in a d-dimensional euclidean functional integral
+as linear combinations of spherical partial waves. regarding each partial wave
+as a distinct eld in a new one-dimensional system, the functional integral is
+rewritten as a time-evolution equation, with radial distance serving as the pa-
+rameter of time. the core idea of spherical eld theory is to reduce quantum
+eld theory to a set of coupled quantum-mechanical systems. the technique
+used is partial wave decomposition, but this can easily be generalized to other
+modal expansions.
+instead of concentric spheres and partial waves, we might
+instead consider a generic smooth one-parameter family of (d  1)-dimensional
+
+support provided by the national science foundation under grant 5-22698
+email: marrero@het.phast.umass.edu
+email: roura@het.phast.umass.edu
+email: dlee@het.phast.umass.edu
+
+1
+
+manifolds (disjoint and compact) and basis functions dened over each mani-
+fold. there are clearly many possibilities and we can optimize our expansion
+scheme to suit the specic problem at hand.
+
+one important and convenient feature of spherical eld theory is that it
+eliminates the need to compactify space  the spherical quantization surface
+is already compact. this is useful for studying phenomena which might be in-
+uenced by our choice of boundary conditions, such as topological excitations.
+another interesting example arises in the process of quantization on noncom-
+mutative geometries. spherical eld methods have recently been adapted to
+study quantum eld theory on the noncommutative plane [2].
+in many in-
+stances, however, maintaining exact translational invariance is of greater value
+than non-compactness or exact rotational invariance.
+in that case one could
+consider a system whose spatial dimensions have been compactied to form a
+periodic box. the next step would be to expand eld congurations using
+free modes of the box and evolve in time. we will refer to this arrangement as
+periodic-mode eld theory or, more simply, periodic eld theory.1 the main ad-
+vantages of this method is that the hamiltonian is time independent and linear
+momentum is exactly conserved. in this work we describe the basic features of
+periodic eld theory and use it to analyze spontaneous symmetry breaking in
+two-dimensional 4 theory.
+
+the organization of this paper is as follows. we begin with a derivation
+of periodic eld theory. we then analyze two-dimensional 4 theory and its
+corresponding periodic-eld hamiltonian using diusion monte carlo methods.
+we compute the critical coupling at which    reection symmetry is
+broken, and determine the critical exponents  and .2 we nd that our value
+of the critical coupling is in agreement with recent lattice results [7], and our
+values for the critical exponents are consistent with predictions via universality
+and the two-dimensional ising model.
+
+2 periodic elds
+
+we start with free scalar eld theory in two dimensions subject to periodic
+boundary conditions
+
+(t,l) = (t, l).
+
+(1)
+
+let j be an external source satisfying the same boundary conditions and which
+vanishes as |t|  . the generating functional in the presence of j is given
+by
+
+z[j ]  z d expnr 
+
+
+
+dtr l
+
+ldxh 1
+
+2 (cid:16)( 
+
+t )2 + ( 
+
+x )2(cid:17) + 2
+
+2 2  j io .
+
+(2)
+
+1periodic eld theory could be viewed as a hybrid of the hamiltonian and momentum-space
+
+lattice formalisms. this combination, however, has not been discussed in the literature.
+
+2we are using standard notation.  is associated with the inverse correlation length, and
+
+ corresponds with the behavior of the vacuum expectation value of .
+
+2
+
+we now expand in terms of periodic-box modes,
+
+(t, x) = q 1
+j (t, x) = q 1
+
+2lpn=0,1,...n(t)einx/l,
+2lpn=0,1,...jn(t)einx/l.
+
+(3)
+
+these are also eigenmodes of momentum and each n or jn carries momentum
+n
+l .
+
+in terms of these modes, we have
+
+z[j ]  z qndn expnr 
+
+
+
+dtpnh 1
+
+2
+
+dn
+
+dt
+
+for notational purposes we will dene
+
+dn
+dt + 1
+
+2 (cid:16) n22
+
+l2 + 2(cid:17) nn  jnnio .
+
+(4)
+
+using the feynman-kac formula, we nd
+
+n = q n22
+
+l2 + 2.
+
+z[j ]  h0| t expnr 
+
+
+
+dt hjo|0i ,
+
+where
+
+hj = pnh 1
+
+2
+
+
+
+
+
+qn
+
+qn
+
++ 1
+
+2 2
+
+nqnqn  jnqni ,
+
+(5)
+
+(6)
+
+(7)
+
+and |0i is the ground state of h0. since h0 is the usual equal time hamiltonian,
+|0i is the vacuum. h0 consists of a set of decoupled harmonic oscillators, and
+it is straightforward to calculate the two-point correlation functions,
+
+h0|n(t2)n(t1)|0i =
+
+exp [n |t2  t1|] . (8)
+we now include a 4 interaction term as well as a counterterm hamiltonian,
+
+jn(t1) z[j ](cid:12)(cid:12)(cid:12)j =0
+
+= 1
+2n
+
+jn(t2)
+
+
+
+
+
+which we denote as hc.t.. the new hamiltonian is
+
+
+
+
+
+hj = pnh 1
+
+nqnqn  jnqni
++ 
+4!2lpn1+n2+n3+n4=0qn1 qn2 qn3 qn4 + hc.t..
+
+2 2
+
++ 1
+
+qn
+
+qn
+
+2
+
+(9)
+
+we will regulate the sums over momentum modes by choosing some large pos-
+itive number nmax and throwing out all high-momentum modes qn such that
+|n| > nmax. this corresponds to a momentum cuto
+
+l (cid:1)2
+2 = (cid:0) nmax
+
+.
+
+(10)
+
+in two-dimensional 4 theory, renormalization can be implemented by normal
+ordering the 4 interaction term. this corresponds to cancelling diagrams of
+the type shown in figure 1. using (8), we nd
+
+hc.t. = 6b
+
+4!2lpn=nmax,nmax
+
+qnqn,
+
+(11)
+
+3
+
+where
+
+for the remainder of our discussion we will use the hamiltonian
+
+b = pn=nmax,nmax
+
+1
+
+2n
+
+.
+
+h = h0 = pnh 1
+
+n  b
++ 
+4!2lpn1+n2+n3+n4=0qn1 qn2 qn3 qn4 .
+
+qn
+
++ 1
+
+2 (2
+
+2
+
+
+
+
+
+qn
+
+4l )qnqni
+
+(12)
+
+(13)
+
+3 the 4
+
+2 phase transition
+
+the existence of a second-order phase transition in two-dimensional 4 theory
+has been derived in the literature [3][4]. the phase transition is due to  devel-
+oping a non-zero expectation value and the resultant spontaneous breaking of
+   reection symmetry. it is generally believed that this theory belongs
+to the same universality class as the two-dimensional ising model and there-
+fore shares the same critical exponents.
+in this section we apply periodic eld
+methods to 4 theory in order to determine the critical coupling and critical
+exponents  and . we have chosen  and  since these are, in our opinion,
+the easiest to determine from direct computations. all other exponents can
+be derived from these using well-known scaling laws. from the ising model
+predictions we expect
+
+ = 1,
+
+ = 1
+8 .
+
+(14)
+
+ is the exponent associated with the inverse correlation length or, equiva-
+lently, the mass of the one-particle state. we will determine the behavior of the
+mass as we approach the critical point from the symmetric phase of the theory.
+let |ai be any state even under reection symmetry. we consider the matrix
+element
+
+(15)
+
+(16)
+
+f (t) = ha| q0 exp (th) q0 |ai .
+
+inserting energy eigenstates |ii satisfying h |ii = ei |ii, we have
+
+f (t) = pi exp (tei)|hi| q0 |ai|2 .
+
+since |ai and |0i are even under reection symmetry and q0 is odd, the vacuum
+contribution to the sum in (16) vanishes. in the limit t  , (16) is dominated
+by the contribution of the next lowest energy state, the one-particle state at
+rest.3 in this limit we have
+
+3we are assuming that this contribution does not also vanish. this is generally true, and
+
+we can always vary |ai to make it so.
+
+f (t)  emt,
+
+(17)
+
+4
+
+where m is the mass. we can compute f (t) numerically using the method of
+diusion monte carlo (dmc). the idea of dmc is to model the dynamics of the
+imaginary-time schrodinger equation using the diusion and decay/production
+of simulated particles. the kinetic energy term in the hamiltonian determines
+the diusion rate of the particles (usually called replicas) and the potential
+energy term determines the local decay/production rate. a self-contained in-
+troduction to dmc can be found in [5].
+
+ is dened by the behavior of m near the critical coupling c,
+
+m  (c  ) .
+
+(18)
+
+once we determine f (t) using dmc simulations we can extract m and  using
+curve-tting techniques. we have calculated m as a function of  for several
+dierent values of l and nmax. results from these calculations are presented
+in the next section.
+
+ is the critical exponent describing the behavior of the vacuum expectation
+value.
+in the symmetric phase the vacuum state is unique and invariant under
+the reection transformation    (or equivalently qn  qn, for each n).
+in the broken-symmetry phase the vacuum is degenerate as l  , and q0, the
+zero-momentum mode, develops a vacuum expectation value.
+in the l  
+limit tunnelling between vacuum states is forbidden. one ground state, |0+i , is
+non-zero only for values q0 > 0 and the other, |0i, is non-zero only for q0 < 0.
+we will choose |0+i and |0i to be unit normalized.
+
+let us now dene the symmetric and antisymmetric combinations,
+
+|0si = 12 (cid:0)(cid:12)(cid:12)0+(cid:11) +(cid:12)(cid:12)0(cid:11)(cid:1)
+|0ai = 12 (cid:0)(cid:12)(cid:12)0+(cid:11) (cid:12)(cid:12)0(cid:11)(cid:1) .
+
+we will select the relative phases of |0i and |0+i so that they transform from
+|0si and |0ai are then symmetric
+one to the other under reection symmetry.
+and antisymmetric (respectively) under reection symmetry.
+to avoid notational confusion in the following, we will write qn to denote the
+quantum-mechanical position operator and qn for the corresponding ordinary
+be the spectral family associated with the operator
+a d pz is a projection operator whose action on a general
+
+variable. let n pzoz(,)
+.4 this implies thatr b
+q02l
+wavefunction  is
+
+(19)
+
+(20)
+
+(21)
+
+a d pz(cid:17) (q0, q1, ) = ( q02l  a)(b  q02l
+(cid:16)r b
+from the support properties of |0+i and |0i, we deduce
+0 d pz |0si = 2r 
+0 d pz |0ai
+2r 0
+d pz |0si = 
+
+(cid:12)(cid:12)0+(cid:11) = 2r 
+(cid:12)(cid:12)0(cid:11) = 2r 0
+
+has been included for later convenience.
+
+
+
+4the extra factor
+
+12l
+
+)(q0, q1, ).
+
+d pz |0ai .
+
+
+
+5
+
+using our new spectral language, we can write
+z d pz.
+
+q02l
+
+= r 
+
+
+
+(22)
+
+we now consider the vacuum expectation value h0+| |0+i.5 making use of
+
+translational invariance, we have
+
+(cid:10)0+(cid:12)(cid:12) (cid:12)(cid:12)0+(cid:11) = 1
+
+2lr l
+
+ldx (cid:10)0+(cid:12)(cid:12) (t, x)(cid:12)(cid:12)0+(cid:11) = (cid:10)0+(cid:12)(cid:12)
+
+q02l (cid:12)(cid:12)0+(cid:11) .
+
+from (21) and (22), we conclude that
+
+(cid:10)0+(cid:12)(cid:12) (cid:12)(cid:12)0+(cid:11) = 2 h0s|r 
+
+0 zd pz |0si = 2r 
+
+0 dz zg(z),
+
+where
+
+g(z) satises the normalization condition
+
+g(z) = h0s| d pz
+
+dz |0si .
+
+r 
+
+
+
+dz g(z) = 2r 
+
+0 dz g(z) = 1.
+
+(23)
+
+(24)
+
+(25)
+
+(26)
+
+in our calculations we will be working with large but nite l.
+
+in this
+case the ground state degeneracy is not exact, and the symmetric state |0si is
+slightly lower in energy than the antisymmetric state |0ai. we can now use
+this observation (that |0si is the lowest energy state) to rewrite g(z) as
+
+g(z) = h0s| d pz
+
+dz |0si = lim
+t
+
+hb| exp{t h}
+
+d pz
+dz exp{th}|bi
+
+hb|t exp{2t h}|bi
+
+,
+
+(27)
+
+where |bi is any state such that h0s|bi is non-zero.
+
+for free eld theory g(z) can be exactly calculated,
+
+g(z) = q 2l
+
+ e2lz2
+
+.
+
+(28)
+
+for non-trivial coupling we can calculate the right-hand side of (27) using dmc
+in figure 2 we have plotted g(z) for l = 2.5 and l = 5.
+methods.
+in
+each case 
+4! = 2.76 and  = 4. all quantities are measured in units where
+ = 1. as can be seen, the distributions are bimodal and the maxima for both
+curves occur near 0.55. we observe that the peaks are taller and narrower
+for larger l. this is consistent with our intuitive picture of uctuations in the
+functional integral. for a small but xed deviation in the average value of
+, the net change in an extensive quantity such as the action or total energy
+scales proportionally with the size of system. consequently the average size of
+the uctuations must decrease with l. we can estimate the amplitude of the
+uctuations, , by assuming a quadratic dependence in  about the local
+
+5we could also consider (cid:10)0(cid:12)(cid:12) (cid:12)(cid:12)0(cid:11). by reection symmetry (cid:10)0(cid:12)(cid:12) (cid:12)(cid:12)0(cid:11) = (cid:10)0+(cid:12)(cid:12) (cid:12)(cid:12)0+(cid:11) .
+
+6
+
+minimum. the net eect of the uctuation should not scale with l, and we
+conclude that6
+
+  (cid:16) 1l(cid:17)#spatial dim.
+
+= 1l
+
+.
+
+(29)
+
+this agrees with the free eld result in (28) and also appears to be consistent
+with the peak widths plotted in figure 2.
+
+let zmax be the location of the non-negative maximum of g(z). since g(z)
+
+becomes sharply peaked as l  ,
+
+(cid:10)0+(cid:12)(cid:12) (cid:12)(cid:12)0+(cid:11) = 2r 
+
+0 dz zg(z) l
+
+2zmaxr 
+
+0 dz g(z) = zmax.
+
+(30)
+
+this gives us another option for calculating the vacuum expectation value. we
+can either integrate 2z g(z) or read the location of the maximal point zmax.
+both will converge to the same value as l  . however, the zmax result is
+less prone to systematic error generated by the o( 1l
+) uctuations described
+above.7 we will therefore use
+
+ is dened by the behavior of the vacuum expectation value as we approach
+
+the critical coupling,
+
+(cid:10)0+(cid:12)(cid:12) (cid:12)(cid:12)0+(cid:11) = zmax.
+
+(cid:10)0+(cid:12)(cid:12) (cid:12)(cid:12)0+(cid:11)  (  c) .
+
+(31)
+
+(32)
+
+using dmc methods, we have computed the  dependence of the vacuum ex-
+pectation value for several values of l and nmax. the results are shown in the
+next section.
+
+4 results
+
+the results of our diusion monte carlo simulations are presented here. for
+each set of parameters l and nmax, the curves for m and h0+| |0+i near the
+critical coupling have been tted using the parameterized forms
+
+m = a(cid:16) m
+
+4!(cid:17)
+4!  
+
+c
+
+and
+
+(33)
+
+(34)
+
+.
+
+(cid:10)0+(cid:12)(cid:12) (cid:12)(cid:12)0+(cid:11) = b(cid:16) 
+
+4! (cid:17)
+4!  hi
+
+c
+
+6the dimension of time does not enter here since we are considering properties of the
+vacuum, the ground state of the hamiltonian dened at a given time. this is in contrast
+with lattice calculations which usually consider the quantity hi, the average of  over all
+space and time.
+
+7we can see this explicitly in free eld theory, where the vacuum expectation value should
+
+vanish. zmax = 0 as desired, but 2r 0 dz zg(z) =
+
+12l
+
+.
+
+7
+
+the curves for the data set l = 2.5 and nmax = 10 are shown in figures 3
+and 4. as mentioned before, we are using units where  = 1. the nal results
+of the ts are as follows:
+l = 2.5, nmax = 8 ( = 3.2):
+
+m
+c
+
+4! = 3.1,  = 1.0, a = 0.32, hi
+
+c
+
+4! = 2.5,  = 0.15, b = 0.65;
+
+l = 2.5, nmax = 10, ( = 4):
+
+m
+c
+
+4! = 2.9,  = 1.1, a = 0.35, hi
+
+c
+
+4! = 2.5,  = 0.18, b = 0.70;
+
+l = 5, nmax = 16, ( = 3.2):
+
+m
+c
+
+4! = 3.0,  = 1.2, a = 0.33, hi
+
+c
+
+4! = 2.7,  = 0.12, b = 0.62;
+
+l = 5, nmax = 20, ( = 4):
+
+m
+c
+
+4! = 2.9,  = 1.2, a = 0.35, hi
+
+c
+
+4! = 2.5,  = 0.12, b = 0.65.
+
+(35)
+
+(36)
+
+(37)
+
+(38)
+
+these results are subject to errors due to the nite size l and nite cuto
+scale . we now use our data for dierent values of l and  to extrapolate
+to the limit l  ,   . for the parameters , a, , b we use the simple
+asymptotic form
+
+x(l, ) = x + 1
+
+2 x2 + 1
+
+l2 xl2 +  .
+
+(39)
+
+for the critical couplings m
+according to the nite-size scaling hypothesis [6]
+
+c and hic
+
+, however, we modify the nite l correction
+
+(l, ) =  + 1
+
+2 2 + 1
+
+l1/ l1/ +  .
+
+the results we nd are
+
+m
+c
+
+4! = 2.5  0.2,  = 1.3  0.2, a = 0.40  0.03,
+4! = 2.5  0.1,  = 0.14  0.02, b = 0.72  0.04.
+
+c
+
+hi
+
+(40)
+
+(41)
+
+the error bounds represent our best estimates of the net error due to statistical,
+systematic, and extrapolation inaccuracies.
+in all cases statistical errors were
+the smallest source of error. next in size were systematic errors arising from
+our choice of initial state and time step parameter in the dmc simulations.
+for data generated from the mass curves, the main source of error was due to
+extrapolation. the extrapolation error for the vacuum expectation value data
+was still the most signicant, though considerably smaller than that for the
+mass calculations. this reduction is probably a result of the method used to
+
+8
+
+measure the vacuum expectation value.8 our results for the critical exponents
+are consistent with the ising model predictions
+
+ = 1,
+
+ = 1
+8 .
+
+(42)
+
+the two results for the critical coupling m
+well as the recently obtained lattice result [7]9
+
+4! and hi
+
+c
+
+c
+
+4! agree with each other as
+
+4! = 2.56+.02
+c
+.01.
+
+(43)
+
+5 summary
+
+we have discussed the generalization of spherical eld theory to other modal
+expansion methods, in particular, periodic eld theory. using periodic eld
+methods we have analyzed two-dimensional 4 theory and computed the critical
+coupling and critical exponents  and  associated with spontaneous breaking of
+   reection symmetry. our value of the critical coupling is in agreement
+with a recent lattice calculation, and our values for the critical exponents are
+consistent with the critical exponents of the two-dimensional ising model. this
+lends support to the popular belief that the two theories belong to the same
+universality class.
+
+the full set of diusion monte carlo computations used in our analysis re-
+quired about 30 hours on a 350 mhz pc processor. complete codes can be
+obtained upon request from the authors. the required computational time
+appears to be dominated by the number of operations required to update the
+hamiltonian, which scales as n 2
+max. errors can be reduced quite substantially
+by using larger values of l and nmax and utilizing large-scale parallel process-
+ing. no less important, however, is that periodic eld theory provides a simple
+and ecient approach to studying non-perturbative phenomena with only mod-
+est computer resources. future studies have been planned to analyze phase
+transitions in other eld theory models.
+
+acknowledgment
+
+we are grateful to eugene golowich for useful advice and discussions. we also
+thank john machta for comments on nite-size scaling.
+
+references
+
+[1] d. lee, phys. lett. b439 (1998) 85.; d. lee, phys. lett. b444 (1998) 474.;
+b. borasoy, d. lee, phys. lett. b447 (1999) 98; d. lee, n. salwen, hep-
+th/9905077.
+
+8we are refering to the result (cid:10)0+(cid:12)(cid:12) (cid:12)(cid:12)0+(cid:11) = zmax, which eliminates peak broadening eects
+
+for nite l. this is discussed at the end of the previous section.
+
+9critical exponents were not measured in this study.
+
+9
+
+[2] m. chaichian, a. demichev, p. presnajder, hep-th/9904132.
+
+[3] j. glimm, a. jae, phys. rev. d10 (1974) 536; j. glimm, a. jae, t.
+
+spencer, comm. math. phys. 45 (1975) 203.
+
+[4] s. chang, phys. rev. d13 (1976) 2778.
+
+[5] i. kosztin, b. faber, k. schulten, amer. j. phys. 64 (1996) 633.
+
+[6] m. fisher, m. barber, phys. rev. lett. 28, 1516 (1972).
+
+[7] w. loinaz, r. willey, phys. rev. d58 (1998) 076003.
+
+figures
+
+figure 1. the only divergent diagram, which can be cancelled by normal order-
+ing.
+figure 2. plot of g(z) for l = 2.5 and l = 5.
+ = 4 .
+figure 3. plot of m as a function of 
+figure 4. plot of h0+| |0+i as a function of 
+
+4! for l = 2.5, nmax = 10.
+
+4! for l = 2.5, nmax = 10.
+
+in each case 
+
+4! = 2.76 and
+
+10
+
+figure 1
+
+n
+
+i
+
+i
+
+figure 2
+
+l/4! = 2.76
+
+l = 4
+
+g(z)
+
+l = 5p
+
+l = 2.5p
+
+1.2
+1
+0.8
+0.6
+0.4
+0.2
+
+-1
+
+-0.5
+
+0.5
+
+z
+
+1
+
+11
+
+figure 3
+
+l = 2.5p
+nmax = 10
+l = 4
+
+.35(2.9-l/4!)1.1
+
+2.2
+
+2.4
+
+2.6
+
+2.8
+
+3
+
+l/4!
+
+figure 4
+
+l = 2.5p
+n max = 10
+l = 4
+
+.70(l/4!-2.5).18
+
+m
+
+0.3
+0.25
+0.2
+0.15
+0.1
+0.05
+
++
+
+<0 | f |0 >
++
+
+0.6
+0.5
+
+0.4
+0.3
+0.2
+0.1
+
+2
+
+2.2
+
+2.4
+
+2.6
+
+2.8
+
+3
+
+l/4!
+
+12
+
+

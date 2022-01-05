@@ -1,0 +1,7070 @@
+9
+9
+9
+1
+
+ 
+
+y
+a
+m
+1
+1
+
+ 
+
+ 
+ 
+
+1
+v
+2
+7
+0
+5
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+derivation of the hadronic structure
+
+functions from quantum
+
+chromodynamics
+
+lectures at the the feza gursey institute, istanbul
+
+and the mittag-leer institute of the royal swedish academy of sciences,
+
+stockholm in 1998.
+s. g. rajeev1
+
+department of physics and astronomy, university of rochester, rochester,
+
+new york 14627
+
+abstract
+
+we solve a long-standing problem in particle physics: that of deriving the
+deep inelastic structure functions of the proton from the fundamental theory
+of strong interactions, quantum chromodynamics (qcd). in the bjorken
+limit, the momenta of the constituents of the proton (the partons) can be
+assumed to be in a two-dimensional plane in minkowski space: a dimensional
+reduction of qcd to two space-time dimensions. two dimensional qcd is
+then shown to be equivalent for all energies and values of number of colors n
+to a new theory of hadrons, quantum hadrondynamics (qhd). the phase
+space of qhd is the grassmannian (set of subspcaes) of the complex hilbert
+space l2(r) . the natural symplectic form along with a hamiltonian dene a
+classical dynamical system, which is equivalent to the large n limit of qcd.
+t hoofts planar limit is the linear approximation to our theory: we recover
+his integral equation for the meson spectrum but also all the interactions of
+the mesons. the grassmannian is a union of connected components labelled
+by an integer (the renormalized dimension of the subspace) which has the
+physical meaning of baryon number. the proton is the topological soliton:
+the minimum of the energy in the sector with baryon number one gives the
+structure functions of the proton. we solve the resulting integral equations
+numerically; the agreement with experimental data is quite good for values
+of the bjorken variable xb > 0.2 .
+
+1rajeev@pas.rochester.edu
+
+i
+
+ii
+
+contents
+
+1 introduction
+
+1
+4
+1.1 deep inelastic scattering . . . . . . . . . . . . . . . . . . . . .
+7
+1.2 quantum chromodynamics
+. . . . . . . . . . . . . . . . . . .
+8
+structure functions from qcd . . . . . . . . . . . . . . . . .
+1.3
+1.4 reduction of qcd to two dimensions . . . . . . . . . . . . . 10
+1.5 two dimensional qcd in null gauge
+. . . . . . . . . . . . . 12
+m . . . . . . . . . . . . . . . . . 15
+1.6 constraint on the variable
+
+2 two-dimensional quantum hadron dynamics
+
+17
+2.1 grassmannians
+. . . . . . . . . . . . . . . . . . . . . . . . . . 17
+2.2 the dirac theory of fermions . . . . . . . . . . . . . . . . . . 19
+2.3 renormalized dimension of a subspace . . . . . . . . . . . . . 22
+2.4 some submanifolds of the grassmannian . . . . . . . . . . . . 24
+2.5
+integral kernels . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+2.6 the innite dimensional unitary group . . . . . . . . . . . . . 28
+2.7 poisson structure . . . . . . . . . . . . . . . . . . . . . . . . . 29
+2.8 momentum . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+2.9 kinetic energy . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+2.10 hamiltonian . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34
+2.11 singular integrals . . . . . . . . . . . . . . . . . . . . . . . . . 35
+2.12 hamiltonian in momentum space . . . . . . . . . . . . . . . . 37
+2.13 the equations of motion . . . . . . . . . . . . . . . . . . . . 38
+2.14 linear approximation . . . . . . . . . . . . . . . . . . . . . . 39
+2.15 quantization of hadrondynamics . . . . . . . . . . . . . . . . 42
+
+3 baryons as solitons and their structure functions
+
+45
+3.1 quark distribution functions from qhd . . . . . . . . . . . . 46
+3.2 rank one ansatz . . . . . . . . . . . . . . . . . . . . . . . . . 48
+
+i
+
+3.3 approximate analytic solution for  = 0 . . . . . . . . . . . 51
+3.4 numerical solution with the rank one ansatz . . . . . . . . . 53
+3.5 quantization of the rank one ansatz . . . . . . . . . . . . . 55
+3.6 valence quark distributions . . . . . . . . . . . . . . . . . . . 59
+
+4 the parton model
+
+63
+4.1 parton wavefunctions
+. . . . . . . . . . . . . . . . . . . . . . 64
+4.2 hamiltonian . . . . . . . . . . . . . . . . . . . . . . . . . . . . 65
+4.3 hartree ansatz . . . . . . . . . . . . . . . . . . . . . . . . . . 66
+
+5 beyond the valence parton model
+
+69
+5.1 a co-ordinate system . . . . . . . . . . . . . . . . . . . . . 69
+5.2 the method of steepest descent . . . . . . . . . . . . . . . . . 71
+5.3
+. . . . . . . . . . . . . . . . . . 72
+
+sea quarks and anti-quarks
+
+a a null co-ordinate system
+
+75
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . 75
+a.1 kinematics
+a.2 dirac matrices
+. . . . . . . . . . . . . . . . . . . . . . . . . . 76
+a.3 free fermions . . . . . . . . . . . . . . . . . . . . . . . . . . . 77
+a.4 gauge fields
+. . . . . . . . . . . . . . . . . . . . . . . . . . . 77
+a.5 the dirac vacuum . . . . . . . . . . . . . . . . . . . . . . . . 78
+
+b operator ideals
+
+81
+b.1 compact and hilbert-schimdt operators . . . . . . . . . . . . 81
+b.2 schatten ideals
+. . . . . . . . . . . . . . . . . . . . . . . . . . 82
+b.3 the restricted unitary group and its grassmannian . . . . . 83
+b.4 fredholm index . . . . . . . . . . . . . . . . . . . . . . . . . . 84
+
+c quadrature of singular integrals
+
+87
+c.1 quadrature formulas
+. . . . . . . . . . . . . . . . . . . . . . 87
+c.2 singular measures . . . . . . . . . . . . . . . . . . . . . . . . . 89
+
+ii
+
+list of figures
+
+tions for  = 0 .
+
+. . . . . . . . 53
+
+3.1 the approximate analytic solution for  = 0 .
+3.2 comparison of numerical and approximate analytic solu-
+3.3 comparison of parton wavefunctions (x) . the mrst
+distribution agrees with our prediction best when the fraction
+f of the momentum carried by the valence quarks is about 0.6 . 60
+
+. . . . . . . . . . . . . . . . . . . . . . . . . 54
+
+iii
+
+iv
+
+chapter 1
+
+introduction
+
+the rst indication that the atom contains a pointlike nucleus came from
+experiments of rutherford. he scattered alpha particles (which are positively
+charged) from a gold foil. since the negative charges (electrons) were known
+to be much lighter than the alpha particles,they would not scatter the alpha
+particles very much. if the positive charges inside the atom were more or less
+uniformly distributed, the alpha particles would not be scattered through
+wide angles. rutherford found to the contrary that the alpha particles were
+scattered by wide angles. in fact the probability of scattering through an
+2 , exactly what would happen if all the
+angle
+positive charge of the atom were concentrated at a point: he had discovered
+the atomic nucleus. soon after, it was realized that the nucleus is of nite
+size, although small compared to the atom. it is composed of protons and
+neutrons bound together by the strong interaction.
+
+ is proportional to
+
+sin4 
+
+many years later, another celebrated series of experiments studied the
+structure of the proton itself. it was found that it was not an elementary
+particle either, in fact that it was made of point-like constituents. in such
+a deep inelastic scattering experiment an electron (or neutrino) beam is
+scattered by a proton (or a nucleus containing both protons and neutrons).
+the idea is to learn about the still mysterious strong interactions using the
+electroweak interactions as a probe.
+
+a particle that can take part in the strong interactions is called a hadron.
+there are two kinds of hadrons: those of half-integer angular momentum are
+called baryons and those of integer angular momentum are the mesons.
+the proton is the lightest baryon and the
+ -meson (pion) the lightest
+meson. there are an innite number of baryons and mesons but the more
+
+1
+
+energetic ones are unstable against decay into the lighter hadrons. (we con-
+sider an idealized world in which the electromagnetic, weak and gravitational
+interactions of the hadrons with each other are ignored. thus a particle is
+considered stable if its decays are purely electromagnetic or weak. this is
+the sense in which the pion is stable. )
+
+the hadrons are composed of more elementary constituents: the quarks,
+anti-quarks and gluons. these constituents are collectively called partons[1,
+2]. however, it has been found experimentaly that it is impossible to create
+the partons in isolation: they only exist inside hadrons, and thus, are not
+true particles. this is the phenomenon of connement. more precisely,
+only combinations of quarks and gluons invariant under the action of the
+color group su(n)
+(see below) exist as isolation. thus hadrons can be
+dened to be states that are invariant under color. some authors use the word
+hadron to include the quarks and gluons. we will use the term hadron to
+refer to a bound state of quarks and gluons which can exist as an isolated
+particle. of course such a particle may be unstable against decay into other
+hadrons.
+
+around the same time of these developments an entirely dierent picture
+of a baryon was proposed by skyrme [3]: that it is a topological soliton
+made of an innite number of mesons. unfortunately, this idea did not t
+with the dominant view of the time and was largely ignored. in the mid-
+eighties skyrmes idea was nally revived by a group at syracuse university
+(including the author) [4, 5, 6] and integrated into the modern theory of
+strong interactions, i.e., quantum chromodynamics. witten [7] claried
+why the baryons are fermions (when n is odd) even though the underlying
+theory has only bosonic elds. ( witten had already arrived at the idea that
+baryons are solitons in the large n limit of t hooft [8] by independent
+arguments [9]. )
+
+but then the problem remains how to reconcile it with the picture of a
+baryon as a bound state of point-like constituents. we will show in these
+lectures how the parton model can be derived from the soliton model. it fact
+it had never been possible to derive the distribution functions of the partons
+inside the hadron from fundamental principles. our picture will solve this
+problem, providing for the rst time a quantitative theory of the structure
+of a proton.
+
+the basic idea of our approach is to nd a new description of strong in-
+teractions directly in terms of hadrons rather than in terms of quarks and
+gluons. it should be equivalent to the color singlet sector of qcd at all ener-
+
+2
+
+gies and all values of the number of colors. we will call this theory quantum
+hadrondynamics. in four dimensions this is still just an idea; we havent been
+able to show yet that such a new paradigm for strong interactions exists.
+however in the two dimensional case, i constructed such an equivalent alter-
+native formalism some years ago. part of the motivation for studying the two
+dimensional case was that it would provide a solution to the problem of de-
+riving the structure functions of four dimensional qcd. (it has been known
+since the early work of feynman and bjorken that deep inelastic scattering
+can be explained by a two dimensional theory of strong interactions.) the
+rst report of the idea of such an equivalent theory was in ref.
+[10]. the
+solutions of the integral equations for the baryon wavefunction was rst stud-
+ied in ref. [11]. a more detailed description of the theory appeared in ref.
+[12]. in another direction, these ideas were applied to spherically symmetric
+situations in ref.
+[13]. the methods of geometrical quantization were ap-
+plied to the problem in ref. [14]. there a version with bosonic quarks was
+also studied. we returned to the study of the baryon wavefunctions in ref.
+[15] where the derivation of the parton model, already mentioned in [12] was
+given in more detail. in papers which will soon appear [16] we will extend
+these results to include the anti-quark and sea quark distributions. some of
+the ideas that go into this work are outlined in the last chapter. the basic
+mathematical ideas necessary to derive the gluon structure functions have
+also been developed [17]. we hope to solve that problem as well in the near
+future.
+
+the collinear approximation to qcd has alos been studied by other pa-
+pers [18] however the combination of these ideas with the picture of a baryon
+as a soliton as well as the idea of a quantum hadrondynamics seem unique
+to our approach.
+
+the ideas we introduce range from innite dimensional geometry to the
+phenemenology of particle physics. indeed a whole new set of tools had to
+be developed in order to implement the new paradigm we propose. some
+of the methods are currently not associated with particle physics: they are
+more closely related to classical mechanics and are perhaps more familiar to
+mathematicians. but the new ideas of one generation become the standard
+lore of the next. i hope these lecture notes will prepare a new generation of
+theoretical physicists to pursue these ideas. prior knowledge of quantum eld
+theory is not essential, but will provide perspective. in general, a higher de-
+gree of mathematical maturity than specialized knowledge of particle physics
+is assumed.
+
+3
+
+in the next few sections of this introduction we give a quick summary of
+the physics background necessary. the reader who nds this boring should
+skip to the next chapter, after a glance at sections 1.4 and 1.5 which are
+essential to the argument.
+
+1.1 deep inelastic scattering
+
+let us consider in more detail the scattering of an electron by a proton. the
+electron emits a virtual photon of momentum q = kf  ki where ki and
+kf are the initial and nal electron momenta. this photon then interacts
+|x > which could contain many
+with the hadron producing some state
+particles: several mesons and some excited baryons and anti-baryons. this
+is an inelastic scattering process. if we sum over all the states
+|x > so
+produced, we will get the inclusive cross-section for the scattering of the
+electron. upto wellknown electromagnetic eects, the cross-section for this
+scattering is given by the matrix element[19]
+
+1
+
+w(p, q) =
+
+=
+
+< p |j(0)|x >< x|j(0)|p  > (2)44(p + q  px)
+
+8x xx
+8x z dxeiqx < p |j(x)j(0)|p  > .
+
+1
+
+here,
+
+j(x)
+
+is the electromagnetic current operator which is the one
+appropriate for electron scattering: the weak interactions of the electron are
+much smaller in comparison. for neutrino scattering it would instead be the
+charged weak current (correponding to w  ) if the neutrino is converted into
+an electron; and the neutral current (corresponding to z 0 ) otherwise. also,
+p is the momentum of the hadron and we assume that we have averaged
+over the spin
+ of the hadron. (the target is usually not polarized, so
+that we must average over the values of the spin variables. more detailed
+measurements with polarized targets have been made more recently; we will
+not consider these for now.)
+
+the tensor w is symmetric and transverse: conservation of the electric
+
+current gives
+
+qw(p, q) = 0
+
+(1.1)
+
+lorentz invariance and parity (which is a symmetry of the electromagnetic
+
+4
+
+interactions) imply that the tensor w(p, q) has the form
+
+w(p, q) = (cid:20) 
+
+1
+
+m2(cid:18)p  q
+
+qq
+
+q2 (cid:21)w1(xb, q2) +
+q2 (cid:19)(cid:18)p  q
+p  q
+
+(1.2)
+
+q2 (cid:19)w2(xb, q2).
+p  q
+
+q2 and p  q ( p 2
+
+being lorentz scalars, the structure functions w1,2 can depend only
+on the lorentz scalars
+is xed to have the value
+m2 , where m is the mass of the proton). when an electron is scattered
+against a target, the momentum q of the photon it emits is space-like.it is
+conventional to use the positive number q2 = q2 to describe the energy
+of the photon. the higher the value of q2
+the better the resolution of
+our measurement of the structure of the hadron. as the other independent
+variable we can take the dimensionless ratio (bjorken variable)
+
+xb =
+
+q2
+2p  q
+
+.
+
+(1.3)
+
+if the hadron we are studying is stable against strong decays (which is always
+the case for experimental reasons ) it will be the lightest particle with its
+quantum numbers. then, the mass of the intermediate state will be greater
+than or equal to the mass of the target:
+
+(p + q)2  m2;  [
+
+1
+xb  1]  0.
+
+this shows that the bjorken variable takes values in the range
+
+1  xb  0.
+
+(1.4)
+
+(1.5)
+
+it is often more convenient to use another equivalent pair of structure
+
+functions
+
+f1(xb, q2) = w1(x, q2), f2(xb, q2) =
+
+p  q
+m2 w2(xb, q2).
+
+(1.6)
+
+in its rest frame the hadron has a certain size
+
+a : it is of the order of
+a1  100mev . if we take the limit
+the the charge radius of the proton,
+q2 >> a2 keeping xb xed we are looking deep inside the hadron: this is
+the region of deep inelastic scattering. the basic idea is much like that of a
+
+5
+
+microscope: to see inside an object of size a we need light of a wavelength
+that is small compared to a ; or equivalently an energy for the photon that
+is large compared to a1 .
+
+when the states are normalized by the usual convention
+
+< p|p  >= 2ep (2)33(p  p ),
+
+(1.7)
+
+the functions f1,2(xb, q2) are dimensionless. it is found experimentally
+that these functions are approximately independent of q2 : they depend
+essentially only on the dimensionless ratio xb . the simplest explanation of
+this phenomenon is that the proton is made of pointlike massless constituents:
+the structure function would then depend only on the dimensionless ratio xb
+.
+
+if we multiply
+
+p  q and q2 by the same number, the structure
+functions are approximately invariant: this is the approximate symmetry
+of scale invariance.
+in the rst versions of this model, the partons were
+concieved of as free particles. of course they must interact to bind into a
+hadron, but the idea was that at high enough q2
+the interaction would
+for some reason be small. this was the germ of the idea of asymptotic
+freedom: that the constituents of the hadrons behaved like free particles at
+short distances, or high energies.
+
+this parton model was subsequently derived [20, 21, 22], [23] from a
+much deeper fundamental theory of strong interactions, quantum chromo-
+dynamics (qcd). this is a nonabelian gauge theory which has the un-
+usual property that at high q2 the coupling constant (which measures the
+strength of the interaction) vanishes like
+. here  is a parame-
+
+1
+
+log q2
+2
+
+ter with the dimensions of momentum which is a fundamental parameter of
+qcd. hence at high energies (compared to  ) qcd tends to a free theory,
+yielding asymptotic freedom and the parton model. in the limit of large q2
+, the structure functions are predicted to be independent of q2 . at nite
+values of q2 , the structure functions have a slow dependence on q2 ; as a
+polynomial in the coupling constant, or equivalently,
+. moreover, we
+
+1
+
+log q2
+2
+
+can calculate this dependence on
+
+using perturbation theory: scale
+
+invariance is broken in a way that is calculable. perturbation theory allows
+us to calculate the q2 dependence of the structure functions: given the
+value of f1,2(xb, q2) at one (large) value of q2 , we can calculate it for
+any other large value of q2 . ( we mean that q should be large compared
+
+1
+
+log q2
+2
+
+6
+
+to  , which is of the order of 100 mev . if q
+theory can no longer be used.)
+
+ is not large, perturbatiion
+
+it is one of the triumphs of modern particle physics that perturbative
+
+qcd accurately describes these scale violations.
+
+however, the xb dependence of the structure functions are not as well-
+understood. perturbation theory is not sucient to calculate it: f2(xb, q2)
+is in a certain sense the probability distribution (in momentum space) of a
+parton inside a hadron. thus it describes how partons bind together to form
+a hadron. perturbation theory around a free eld theory can never describe
+such bound states. due to the lack of any fundamental understanding of the
+xb dependence of the structure functions, physicists have been forced to ex-
+tract them directly from experiment. a whole generation of experimentalists
+and phenemenologists have worked to produce a quite reliable extraction of
+the xb dependence of structure functions from data. it will be our goal to
+explain this from the fundamental theory of strong interactions, qcd.
+
+in the next section we will summarize the denition of qcd as a quantum
+
+eld theory.
+
+1.2 quantum chromodynamics
+
+quantum chromodynamics is the fundamental theory of strong interactions.
+it is a non-abelian gauge theory with gauge group su(n) with matter elds
+(quarks ) which are spin half fermions transforming under ( nf copies of
+) the fundamental representation of
+su(n) . the natural number n
+is called the number of colors.
+3 in nature; but it
+will be convenient to leave it unspecied until the very end when we make
+comparisons with data. the number of avors nf is 2 for most purposes
+although it can be as high as
+6 in principle: the heavier avors of quarks
+can be ignored for most purposes. again, it is best to leave nf as an
+arbitrary parameter for now.
+
+it has the value
+
+the action principle that denes qcd is
+
+s =
+
+n
+
+4z trff d4x +
+
+nfxa=1z qa[i   + ma]qad4x
+
+the yangmills eld strength is
+
+f = a  a + [a, a]
+
+7
+
+(1.8)
+
+(1.9)
+
+adx
+where a are a set of four n  n anti-hermitean matrices:
+is a one-form taking values in the lie algebra of the unitary group u(n)
+. in perturbation theory, this gauge eld  describes gluons: massless spin
+one particles analogous to the photon.
+qa is a fermionic eld (describing
+quarks) which is a dirac spinor transforming in the fundamental represen-
+tation of the color group u(n) , for each
+a . the index takes values
+a = 1    nf , where nf is the number of copies of such quarks: the number
+of avors.
+the parameters of the theory are (in addition to n and nf ), the quark
+masses ma
+a = 1,   nf and the dimensionless coupling constant
+ . in fact the quantum theory is dened by an additional set of rules for
+renormalization which replace the constant  by a new parameter 
+which has the dimensions of mass as well. these issues are well-known and
+have been reviewed in several articles [23], so we will avoid them here. t he
+basic point is that the the coupling constant acquires a dependence on the
+energy scale   1
+log q2
+2
+
+these nf + 1 parameters should in principle determine the masses and
+decay rates as well as the structure functions of all the hadrons. it has turned
+out to be quite dicult to predict hadronic properties from this fundamental
+theory. we need to develop approximation methods which make the problem
+tractable. for the most part this problem is still not solved. in these talks
+we will describe how we solved a part of this puzzle: that of calculating the
+hadronic structure functions from qcd.
+
+for
+
+.
+
+1.3
+
+structure functions from qcd
+
+we noted earlier that since the electromagnetic interactions are well-understood,
+it is sucient to concentrate on the unknown part of the problem, which
+is encoded in the structure functions w1,2(xb, q2) . these were dened in
+terms of the expectation values of the product of current operators. now,
+part of qcd is tractable by perturbation theory; this allows us to reduce the
+unknown part of the problem further to the expectation values of simpler
+operators: the structure functions can be expressed in terms of parton dis-
+tribution functions. the problem we will solve is that of calculating these
+distribution functions.
+
+the basic result that makes this reduction possible is called the factor-
+ization theorem: the structure function can be written as a convolution of
+
+8
+
+xb and q2 dependence can be calculated in
+two factors: one whose
+perturbation theory (the hard factor); and another (the soft factor) which
+has an unknown xb dependence but which is independent of q2 . this is
+a result of quantum eld theory that can be proved to all orders of perturba-
+tion theory; so it is comparable in depth to the proof of renormalizability of
+gauge theories. we will just give an intuitive argument, pointing the reader
+to the literature on perturbative qcd for details [19, 24].
+
+the photon is scattered by a quark of charge
+
+ea inside the hadron. to
+leading order, the probability of the photon being scattered by the proton
+can be written as the product of two pieces: the probablity that a quark
+of some momentum k will scatter the photon and the probability that
+there is such a quark inside the proton. (then we of course sum over the
+intermediate momentum k .) this is the simplest version of the factorization
+theorem. in the next order of perturbation theory, we will have to include the
+possibility that quark might emit a gluon before absorbing the photon and
+then re-emit it. we can imagine the scattering of the photon by the quark as
+a subprocess with its own structure function, except that it can be calculated
+within perturbation theory. the probability that a hadron contains a quark
+of a given momentum is of course not calculable in perturbation theory: that
+is the distribution function which we will attempt to understand.
+
+in other words, the structure function of the proton can be written as
+the convolution of two pieces: the structure function of a parton (which is
+computable perturbatively) and the distribution function of the parton inside
+the hadron (which is non-perturbative).
+
+in more detail,
+
+f2(xb, q2) = xi=a,a,gz 1
+
+0
+
+d
+
+
+c i
+2(
+
+x
+
+
+, q2)i().
+
+(1.10)
+
+here a(xb) is the probability of nding a quark of avor and momentum
+fraction
+is the probability for an anti-quark of
+g for gluons. note that all the q2 dependence is
+avor
+in the rst factor; it can be calculated as a power series in
+using
+
+xb inside a proton;
+
+a , and
+
+a
+
+1
+
+log q2
+2
+
+the standard rules of perturbation theory. to leading order in perturbation
+theory, even the rst factor is independent of q2 :
+
+c a
+
+2 (xb, q2) = c a
+
+2 (xb, q2) = e2
+
+2 (xb, q2) = 0.
+
+(1.11)
+
+a(xb  1), c g
+9
+
+bi(k), b
+
+i (k) are the creation-annihilation operators for the parton, we
+
+if
+have
+
+i(xb) =x z d2kt
+
+(2)2 < p |b
+
+i (xbp, kt )bi(xbp, kt )|p  > .
+
+(1.12)
+
+here, we are averaging over all possible values of the part of the momentum
+orthogonal to the plane spanned by p and
+q , (called the transverse
+momentum kt ).
+
+in terms of the eld operators, we get the quark distribution functions
+
+a(xb) =
+
+1
+
+2x z dyeixbp y < p |qa(y, 0t )qa(0)|p  >
+
+and the anti-quark distribution functions
+
+a(xb) = 
+
+1
+
+2x z dyeixbp y < p |qa
+
+(y, 0t )[] qa
+
+(0)|p  > .
+
+(1.13)
+
+(1.14)
+
+the position arguments of the eld operators are separated by a null line in
+the plane spanned by p and q . the averaging over transverse momenta
+implies that in position space, these eld operators have the same transverse
+co-ordinates.
+
+since the gluons do not carry electric charge, to the leading order of
+perturbative qcd, the gluon distribution functions are not necessary in order
+to understand the structure of the proton. we will ignore them for now.
+
+these formulae are not gauge-invariant and are to be understood in the
+null gauge a = 0 . in a general gauge we should insert a parallel transport
+
+operator p er a(y,0t )dy along the null line connecting two eld operators.
+
+1.4 reduction of qcd to two dimensions
+
+we are probing the hadron (whose momentum is a time-like vector
+p )
+by a photon (or w, z -boson) with a spacelike momentum q . these
+two vectors dene a two-dimensional subspace of minkowski space. there
+is also a spacelike vector
+a which characterizes the size of the hadron:
+a is the charge radius of the hadron. in the deep inelastic
+the length of
+limit, q2 = q2 >> |a|1 keeping
+2p q xed. this means
+that the hadron is of very large size in the directions transverse to the two
+
+xb = q2
+
+10
+
+dimensional subspace spanned by p and q . by the uncertainty principle,
+|a|1 , which is thus
+the transverse momentum of its constituents is of order
+small compared to q . a reasonable rst approximation would be to let
+the hadron have innite extent in the transverse directions; and to require
+the momenta of the constituents to lie entirely in the plane spanned by p, q
+. in other words the approximation is that the elds are independent of the
+transverse spatial co-ordinates.
+
+this is analogous to the procedure of dimensional reduction popular in
+unied eld theories of gravity. the main dierence is that the dimensions
+that are ignored do not form a subpace of small volume:
+instead they are
+innite in extent. the point is that the momenta in these directions are
+small which is the same as requiring that the elds are independent of those
+spatial directions: a dimensional reduction.
+
+thus deep inelastic scattering is described by the dimensional reduction
+of qcd to two dimensions. that is what makes this phenomenon accessi-
+ble: two dimensional gauge theories have been understood by the large n
+method. with some further (less drastic) approximations we will be able to
+determine the spectrum and structure of hadrons in two dimensions. these
+should then be veriable experimentally.
+
+the dimensional reduction of qcd to two dimensions is given by the
+
+action principle
+
+s =
+
+41z trff d2x +
+21z tr(a)2d2x +
+
+nfxa=1z qa[i   + ma]qad4x
+21z tr[3, 4]2d2x +z qa(i)a
+
+n
+
+n
+
+n
+
++
+
+ aqad2x.
+
+0, 1 . the gauge
+here we allow the indices ,  to take only the values
+eld now splits into a 1-form in the two dimensional space with components
+a and a pair of scalar elds
+corresponding to the
+transverse polarization states of the gluon.
+
+3 = a3, 4 = a4
+
+the four dimensional dirac spinor q splits into a pair of twodimensional
+q , corresponding the two eigenvalues of 34 . moreover 1 is
+spinors
+the coupling constant of the two-dimensional theory which has dimensions of
+(mass)2. it is a combination of  and the size of the hadron:
+1  a2
+. thus the reduction of qcd to two dimensions gives a gauge theory with
+scalar elds in the adjoint representation, and twice as many avors of quarks
+as the original theory.
+
+11
+
+we will study for the most part two dimensional qcd, dened by the
+
+action
+
+s =
+
+n
+
+41z trff d2x +
+
+nfxa=1z qa[i   + ma]qad4x.
+
+this is not quite the same as the dimensional reduction of four dimensional
+qcd to two dimensions: there are no scalar elds. this truncated theory will
+be sucient to to determine the quark and anti-quark structure functions to
+the accuracy we need. the essential techniques required to solve the theory
+including the scalar elds have been developed as well. we will return to
+them in a later publication.
+
+1.5 two dimensional qcd in null gauge
+
+the essential simplication of two dimensional qcd is that the gauge elds
+can be removed completely from the problem, leaving just the quark elds
+q and q and the scalar gluons a . this should not be too surprising: in
+d dimensional space-time, a gauge eld has d  2 polarization states.(
+of course, we still have the scalar elds  which are the remnants in two
+dimensions of the two polarization states of the gluon in four dimensional
+gauge theory. but we will ignore them, as they are mostly relevant to the
+determination of the gluon structure functions: a problem we will postpone
+to a later publication.)
+
+we will change notation slightly from the last section:the indices
+
+a, b
+etc. will denote the pairs
+1, 2,   2nf
+.this simply reects the fact that the two dimensional theory has twice as
+many avors as the four dimensional theory: the transverse polarization label
+looks just just like a avor index to the two-dimensional theory.
+
+a ,
+
+b , so they will range over
+
+in the null gauge, the action of the theory becomes (see appendix a)
+
+l = a(it)a  a(cid:26) 1
+
+2
+
+[p +
+
+m2
+p
+
+]  iat(cid:27)a +
+
+n
+21
+
+tr[xat]2.
+
+(1.15)
+
+the eld at carries no dynamical degrees of freedom: it can be elimi-
+
+nated in terms of  by solving its equations of motion:
+
+ai
+
+tj(x) =
+
+i
+n
+
+1z 1
+
+2|x  y| : ai(y)aj(y) : dy.
+
+(1.16)
+
+12
+
+(the coulomb potential in one-dimensional space is given by
+(x  y) .) the hamiltonian of the resulting theory is
+
+2
+x2
+
+1
+
+2|x y| =
+
+h = z dxai 1
+1z 1
+
+1
+2n
+
+
+
+[p +
+
+2
+
+m2
+p
+
+]ai
+
+2|x  y| : ai(x)aj(x) :: bj(y)bi(y) : dxdy
+
+now dene the operator
+
+m a
+
+b (x, y) = 
+
+2
+n
+
+: ai(x)bi(y) :
+
+(1.17)
+
+x and
+which is gauge invariant. it describes the creation of a quark at
+an anti-quark at
+y , but in a color invariant combination: in other words
+it describes a meson. the hamiltonian above can be expressed entirely in
+terms of this operator after some reordering of factors of  .
+
+we can rearrange the quartic operator in the  s as a quadratic operator
+
+in m . first,
+
+: ai(x)aj(x) :: bj(y)bi(y) : = : ai(x)aj(x)bj(y)bi(y) :
+
++ : ai(x)bi(y) :< 0|aj(x)bj(y)|0 >
++ < 0|ai(x)bi(y)|0 >: aj(x)bj(y) :
+
+now,(see appendix a)
+
+b z 0
+< 0|ai(x)bi(y)|0 >= na
+
+
+
+dp
+2
+
+eipx+ipy = na
+b
+
+1
+2
+
+[(x  y) + (x  y)]
+
+where,
+
+thus,
+
+(x  y) = pz sgn (p)eip(xy) dp
+
+2
+
+.
+
+: ai(x)aj(x) :: bj(y)bi(y) : = : ai(x)aj(x)bj(y)bi(y) :
+
++ : ai(x)ai(y) ::
+
+[(x  y) + (x  y)]
+[(x  y) + (x  y)] : ai(x)ai(y) :
+
+n
+2
+
++
+
+n
+2
+
+13
+
+on the other hand,
+
+m a
+
+b (x, y) m b
+
+n(cid:19)2
+a(y, x) = (cid:18) 2
+n(cid:19)2
+= (cid:18) 2
+
+: ai(x)bi(y) :: bj(y)aj(x) :
+
+: ai(x)bi(y)bj(y)aj(x) :
+
+the terms corresponding to other orderings of  will involve (y, y) which
+should be interpreted as zero. so,
+
+2(cid:19)2
+: ai(x)aj(x) :: bj(y)bi(y) : = (cid:18) n
+2(cid:19) m a
++(cid:18) 
+[(x  y) + (x  y)](cid:18) 
+
+b (x, y) m b
+a(y, x)
+n
+2
+
+a (x, y)
+
+n
+2
+
+m a
+
+n
+
++
+
+[(x  y) + (x  y)]
+a (y, x)
+
+2(cid:19) m a
+
+n
+
+thus,
+
+[p +
+
+] m
+
+a
+a(p, p)
+
+2
+p
+
+2
+
+n
+
+h = (cid:18) 
+
++(cid:18) 
+
+1
+2n
+
+2(cid:19)z 1
+1z 1
+2 (cid:19) m a
+
+n 2
+
++
+
+dp
+2
+m a
+
+2(cid:19)2
+2|x  y|(cid:26) (cid:18)n
+a (x, y)(x  y)(cid:27)dxdy
+
+b (x, y) m b
+
+a(y, x)
+
+we have dropped terms involving (x  y)|x y| since this product is just
+zero; moreover the two terms involving
+(x  y) are equal and have been
+combined.
+
+now we use the identity
+
+z 1
+2|x  y|(x  y)f (x  y)dxdy = 
+
+1
+
+pz 1
+
+p
+
+f (p, p)
+
+dp
+2
+
+.
+
+(1.18)
+
+thus
+
+where
+
+h
+n
+
+= 
+1
+8
+
+1
+
+2z 1
+1z 1
+
+] m
+
+2
+p
+
+[p +
+
+2
+2|x  y| m a
+
++
+
+a
+a(p, p)
+
+dp
+2
+b (x, y) m b
+
+a(y, x)dxdy
+
+2 = m2 
+
+1
+
+
+.
+
+14
+
+(1.19)
+
+the commutation relations can also be expressed entirely in terms of the
+variables
+m
+
+m :
+
+m
+
+m
+
+a
+b (p, q),
+
+a
+d(p, s)]
+
+c
+
+{
+
+d(r, s)} =
+
+1
+
+n(cid:18)c
+b2(q  r)[a
+d2(s  p)[c
+a
+
+d sgn (p  s) +
+m
+b sgn (r  q) +
+
+c
+
+d(r, q)](cid:19).
+
+we notice that in the limit of large n , these commutators become small:
+it is a sort of classical limit.
+
+1.6 constraint on the variable
+
+m
+
+we have all the essential ingredients of a reformulation of two dimensional
+qcd in terms of the color singlet variable m , eliminating quarks and
+gluons from the picture. the commutation relations and the hamiltonian
+m . however there is one
+together inply the time evolution equations for
+m
+more ingredient which we can miss at rst: the set of allowed values of
+m behaves much like bosonic
+. being bilinear in the fermionic variables,
+variables: they satisfy commutation relations (rather than anti-commutation
+relations). also, they have a classical limit; in our case this is the large n
+limit when there commutators become small. but their origin as fermion
+bilinears have a residual eect: they satisfy a quadratic constraint. this
+constraint is ultimately an expression of the pauli exclusion principle; even
+in the large n limit the fact the underlying degrees of freedom are fermions
+cannot be ignored.
+
+regard the classical variable
+
+1
+n i(x)i(y) as a matrix in the variables
+
+(x, y) obtained by taking the large n
+limit of
+y . it is in
+fact the density matrix of quarks. its eigenvalues have to be between zero
+and one: zero when the state is completely empty and one when it is lled.
+for the color singlet states (hadrons), each state is either completely lled
+with quarks or completely empty. hence the eigenvalue is either 0 or one,
+and this density matrix is a projection operator:
+
+2 =  or,
+
+x and
+
+z (x, y)(y, z)dz = (x, z).
+
+(1.20)
+
+this is a quadratic constraint on the classical variable.
+
+another (oversimplied) way to understand this constraint is that (x, y)
+corresponds to a meson state where a quark is created at x and an anti-
+
+15
+
+quark at
+y . if we now create two mesons, with the position of the anti-
+quark of the rst coinciding with the quark of the second, they will annihilate
+eachother leaving us with one meson!.
+
+we will usually use the normal ordered variable m(x, y) = 1
+
+n : i(x)j(y) :
+
+, which has the advanatage that m = 0 on the vacuum. in terms of it the
+constraint becomes, in matrix notation
+
+[, m]+ + m 2 = 0.
+
+(1.21)
+
+m has to satisfy some technical conditions as well, but we will talk about
+them later.
+
+it is possible to prove these constraints by a straightforward calculation
+on the operators, even when n is held nite. ] (see the appendix of ref.
+[13].) it is important to note that they only hold in the color singlet subspace
+of the fermionic operators.
+
+this means that it is possible to understand two dimensional qcd with-
+m is gauge
+out ever mentioning quarks, antiquarks or gluons. the operator
+invariant and can be the eld variable of a theory that directly describes
+hadrons. from this point of of view quarks and gluons are just mathematical
+artifacts. this gives us a whole new paradigm for the theory of strong inter-
+actions. instead of a quantum chromodynamics in terms of unobservable
+quarks and gluons but a new quantum hadrondynamics in terms of the
+directly observable particles, the hadrons.
+
+in the next chapter we will develop just such a point of view. we will
+rst present a classical theory which is equivalent to the large n limit of
+the above theory. upon quantization we will recover two-dimensional qcd.
+
+16
+
+chapter 2
+
+two-dimensional quantum
+hadron dynamics
+
+in this chapter we will present rst the classical hadron theory and then its
+quantization. we will see that the quantum hadron theory is equivalent to
+qcd in two dimensions.
+
+2.1 grassmannians
+
+let h = l2(r)  c n2f be the complex hilbert space of complex-valued
+functions on the real line1. dene the subspace of functions whose fourier
+transforms vanish for negative momenta:
+
+h+ =(cid:26)|(x) =z 
+
+0
+
+2(cid:27)
+(p)eipx dp
+
+and its orthogonal complement
+
+h =(cid:26)|(x) =z 0
+
+
+
+2(cid:27).
+(p)eipx dp
+
+(2.1)
+
+(2.2)
+
+the functions in h+ are boundary values of analytic functions on the upper
+half of the complex plane in the variable x . (of course h is related to
+the lower half of the complex plane in the same way.) dene the operator
+
+1the number n2f is the number of avors of the two dimensional theory; it is twice
+
+the number of avors of the four-dimensional theory.
+
+17
+
+ (the sign of the momentum) to be 1 on h and +1 on h+ .
+clearly
+
+ = ,
+
+2 = 1.
+
+(2.3)
+
+the grassmannian of h is the set of all its subspaces. to each subspace
+w , there is an operator  which is 1 on w and +1 on w  .
+again,
+
+ = , 2 = 1.
+
+(2.4)
+
+conversely any such operator corresponds to an orthogonal splitting of h
+: it will have eigenvalues 1 and w can be identied as the subspace
+with negative eigenvalue. thus the set of such  s is the same as the set
+of subspaces of h .the set of subspaces of h is the grassmannian, which
+we can thus also regard as the set of operators  satisfying the above
+condition.
+
+but we dont want to allow all such subspaces: since h is innite
+dimensional, that would give a grassmannian that is too big. for example,
+its tangent space will not be a hilbert space, and it wouldnt admit a riemann
+metric. we should only allow subspaces w that are at a nite distance
+from h . it is convenient to introduce the variable
+
+m =   
+
+(2.5)
+
+which measures the deviation from the standard point  , which corresponds
+to the subspace h . we will require that m be hilbert-schmidt. that
+is, the sum of the absolute magnitudes squared of all its matrix elements is
+nite. (see appendix b for a rapid summary of some functional analysis we
+will need.) this sum is a measure of the distance of w from h .
+
+thus we dene the restricted grassmannian to be,
+
+gr(h, ) = {m  = m,
+
+[, m]+ + m 2 = 0, trm 2 < }.
+
+(2.6)
+
+the set of all such m s forms an innite dimensional hilbert manifold.
+this manifold is dened by a quadratic equation in the (real) hilbert space
+of self-adjoint hilbert-schmidt operators.
+
+if we split the operator into
+
+2  2 blocks (as in  =(cid:18)1
+
+0
+
+0
+
+1(cid:19) ),
+
+m =(cid:18) a
+
+b
+
+b
+
+d(cid:19)
+
+18
+
+(2.7)
+
+we get (using the constraint on m ),
+
+a =
+
+1
+2
+
+(bb + a2),
+
+d = 
+
+1
+2
+
+(bb + d2),
+
+ab + bd = 0.
+
+(2.8)
+
+since m as a whole is hilbert-schmidt,
+b : h+  h is hilbert-schmidt
+as well. the above constraints then imply that a and d are trace-class.
+this means roughly speaking that the sum of their eigenvalues is absolutely
+convergent (see the appendix b for precise denition).
+
+note that
+
+a is a positive operator and
+
+d a negative operator. in
+
+particular,
+
+tra  0 and
+
+trd  0 .
+
+the tangent space at the origin is given by the special case where a, b, c, d
+are all innitesimally small. the constraints then show that a and d are
+second order innitesimals while b are rst order. in the rst order the only
+constraint on b is that it has to be a hilbert-schmidt operator. thus, the
+tangent space at the origin is a complex hilbert space, consisting of operators
+
+of the form m =(cid:18) 0
+
+b
+
+b
+
+0(cid:19) . in other words we have the identication,
+
+t0 gr(h, ) = i 2(h+  h).
+
+(2.9)
+
+2.2 the dirac theory of fermions
+
+we have introduced the grassmannian from a purely geometric point of view
+above. but it has a natural physical interpretation in terms of the dirac
+theory of fermions.
+
+in diracs theory, the complex hilbert space h represents the set of
+states of a single fermion. there is a self-adjoint operator h representing
+energy. in the null co-ordinates we are using, energy is
+
+p0 =
+
+1
+2
+
+[p +
+
+m2
+p
+
+].
+
+(2.10)
+
+thus it has the same sign as the null component of momentum p . the main
+physical obstacle to this interpretation is that the energy is not positive: all
+states are thus unstable with respect to decay into the negative energy states
+of lower and lower energy.
+
+diracs main idea was that in any physical state all except a nite number
+of the negative energy states are occupied. since fermions obey the pauli
+
+19
+
+exclusion principle, only one particle can occupy a given state: decay into
+states of very low energy is forbidden because those states are occupied. in
+particular the vacuum is not the state containing no particles. instead the
+vacuum is the state where all the negative energy states are occupied and
+the positive energy states are empty. the lled negative energy states in
+the vacuum is called the dirac sea. all physical quantities such as energy
+or charge are to be measured in terms of their departure from the vacuum
+value: even though the vacuum contains an innite number of particles, it is
+still assiged zero energy, charge etc.
+
+an excitation from the vacuum could be a state where a nite number
+of positive energy states are occupied and a nite number of negative energy
+states are empty. such a state will have positive energy compared to the
+vacuum. the empty negative energy states (also called holes) have positive
+energy. the holes themselves behave just like the particles except that they
+have the opposite value for some observables such as electric charge. they
+are the anti-particles. the number of particles minus the anti-particles is a
+conserved quantity which can take any integer value. an arbitrary physical
+state is a linear combination of such states containing a nite number of
+particles and anti-particles.
+
+a mathematical interpretation of this situation can be given in terms of
+a modied exterior product of h . in familiar non-relativistic theories, the
+space of states of a multi-particle system of fermions would be the exterior
+r=0 rh . instead
+power of order
+in diracs theory we split the one particle hilbert space into two subspaces
+h  h+ of negative and positive energy. the space of states of the multi-
+particle system is
+
+r , where is the number of fermions: p
+
+f =
+
+xr,s=0
+
+sh
+
+  rh+.
+
+(2.11)
+
+this space of multi-particle states is called the fock space.
+
+there is a subset of states in this fock space cosnisting of wedge products
+of single particle states. ( a general state is a linear combination of such
+wedge products.) suppose, w is a subspace which doesnt dier too much
+from h . that is, the intersection of w with h+ and the intersection
+of w  with h are both nite dimensional. then we can form a state in
+f in which all states of w are occupied and all those in w  are empty.
+is a basis in w  h+ and and fj a basis in w   h .
+suppose
+
+ei
+
+20
+
+then the state in f corresponding to occupying w will contain particles
+in w  h+ and holes in w   h :
+
+f 1
+
+ f 2
+
+     e1  e2  e3     .
+
+(2.12)
+
+is the dual basis in [w  h] ). moreover this is independent
+(here, f j 
+(upto multiplication by a complex number) of the choice of basis. thus to
+each such subspace w  h there is a state (upto scalar multiple) in the
+fock space f . in other words we have an embedding of the grassmannian
+into the projective space pf ) . this is the innite dimensionl version of
+the plucker embedding familiar from algebraic geometry. [25, 26].
+the grassmannian describes this subset of states in diracs theory. the
+condition that the operator m =    corresponding to a subspace w
+be hilbert-schmidt is precisely what is required for the above construction
+to go through. (it is not necessary to require that the projection operator
++ : w  h+ be nite dimensional as we did above: the precise condtion
+for the construction to work is that it be hilbert-schmidt.) what is special
+about this family of states is that they are coherent states: they minimize the
+uncertainty in the physical observables. hence they are the states that have
+a sensible classical limit. the set of such coherent states is the classical phase
+space of the theory. that is why it is sensible to choose the grassmannian
+as the classical phase space of our theory of hadrons.
+
+diracs theory was originally meant to describe electrons. we should
+think of it now as applied to quarks. since the quarks are also fermions, this
+is reasonable. but there is one impotant twist: each quark comes in n
+colors: thus each state in h can be occupied by n quarks, not just
+one. moreover, only states that are invariant under the action of the group
+su(n) are allowed: these are the states that describe the hadrons. the
+classical limit referred to above is the large n limit.
+
+the operator  has eigenvalue 1 on states that are completely
+lled and +1 on states that are empty. the variable m measures the
+deviation from the vacuum state, in which all the negative energy states are
+completely lled. a baryon is essentially a color invariant bound state of n
+quarks. thus the dirac sea of quarks can also be thought as a sea of baryons:
+each state is lled either by n quarks or by a baryon. an innitesimal
+disturbance from this can be thought of either as the creation of a meson (
+a quarkanti-quark pair) or as the promotion of a quark from the negative
+energy sea to a positive energy state. this is an innitesimal change if the
+
+21
+
+number of colors n is large. the operator m thus has to be determined
+by a map b : h  h+ . the block-diagonal elements of m are zero in
+this innitesimal limit.
+in addition to such small deviations from the vacuum, the theory also
+allows for topological solitons which are not connected to the vacuum by any
+continuos path. these are very important, as they describe the baryons. to
+see how they arise we need to understand the topological properties of the
+grassmannian. this is the subject of the next section.
+
+2.3 renormalized dimension of a subspace
+
+recall that  = +m has eigenvalues 1 . hence in some formal sense the
+trace of  is an even integer: the dierence between the number of positive
+eigenvalues and the number of negative eigenvalues. but of course this trace
+is not convergent. even if we subtract the contribution of the vacuum, it
+is divergent: the
+trm can diverge, only the trace of its square needs to
+be convergent in general, since we only required it to be hilbert-schmidt.
+however the trace of m is conditionally convergent: we can dene it to be
+the trace with respect to the above splitting into submatrices:
+
+trm = tra + trd.
+
+(2.13)
+
+this trace exists since a and d are trace-class matrices. it can be shown
+to be an even integer, which is invariant under the continuous deformations
+of the operator m .
+
+the interpretation of  in terms of subspaces will help us understand
+the meaning of this integer. imagine that we take a state from h+ and add
+it to h to get a subspace w : then w has dimension one more than
+h . this should change the trace of  by 2 : one of the eigenvalues of
+trm is essentially the dierence
+ has changed from +1 to 1 . since
+between the traces of  and  , we have
+trm = 2 . thus
+
+b = 
+
+1
+2
+
+trm
+
+(2.14)
+
+is the renormalized dimension of the subspace it describes: the dierence
+between its dimension and the dimension of the standard subspace h .
+in fact this is the only topological invariant of m : any two oper-
+ators with the same conditional trace can be connected to each other by
+
+22
+
+a continuous path. thus the restricted grassmannian is a union of con-
+nected components labelled by an integer, which is called the virtual rank
+or renormalized dimension of that component. since it is invariant under
+all continuous deformations, in particular it will be invariant under time
+evolution. this is true for any reasonable denition of time evolution, inde-
+pendent of the choice of hamiltonian. thus the renormalized dimension is a
+topologically conserved quantity.
+
+each connected component of the grassmannian by itself is an innite
+dimensional manifold. although the dierent components are the same (dif-
+feomorphic) as manifolds, the component of rank zero has a special role as it
+contains the vacuum m = 0 . an example with renormalized dimension
+one is a factorizable operator,
+
+m = 2  .
+
+(2.15)
+
+the constraints on m are satised if  is a positive energy state of length
+one:
+
+ = ,
+
+||||2 = 1.
+
+(2.16)
+
+in the interpretation in terms of the dirac theory, we have lled a positive
+energy state  in addition to all the negative energy states. hence this
+state contains an additional fermion occupying the state  .
+
+more generally, let a be an orthonormal system of states satisfying
+
+(2.17)
+
+(2.18)
+
+ = a, < a, b >= a
+b .
+
+then
+
+m = 2xa
+
+aa  
+
+a
+
+is a solution of the constraints with renormalized dimension pa a . in this
+
+conguration, we have lled a certain number if positive energy states ( a
+with positive a ) while creating holes in some others, a , with negative
+a . the renormalized dimension is just the dierence between the number
+of occupied positive energy states and the number of holes in the negative
+energy states.
+
+thus we see that the renormalized dimension is just the fermion number
+if we interpret the grassmannian in terms of the dirac sea. we will see
+
+23
+
+that the separable conguration is related to the valence quark model of the
+baryon.
+
+as noted earlier,
+
+a  0 and d  0 ; thus
+
+a contributes negatively
+to the baryon number and d positively. the only congurations that have
+b = 0 implies
+b = 0 are the separable ones above. to see this note that,
+that
+in order to
+be trace class, these have to be nite rank projections: corresponding to a
+certain number of baryons and anti-baryons.
+
+d are proportional to projection operators.
+
+a and
+
+the valence parton approximation of the parton model corresponds to
+the separable ansatz in our soliton model. in that approximation, a(p) is
+zero: there are no antiquarks in the proton within the valence approximation.
+
+2.4 some submanifolds of the grassmannian
+
+in principle a baryon can be in any of the congurations of renormalized di-
+mension one: the ground state (proton) will be the one of least energy. once
+we have determined the energy function (see below), the proton structure
+functions are determined by minimizing this energy over all possible cong-
+urations. later on, we will describe a method to do just that numerically:
+the steepest descent method. however this is a computationally intensive
+and slow method. a much faster method will be to minimize the energy
+over some submanifold of the grassmannian, which is chosen so that the
+minimum in this submanifold is close to the true minimum, yet is easier to
+nd.
+
+physical intuition plays an important role in the choice of the ansatz
+of congurations explored this way. such restricted phase spaces play an
+important role in our conceptual understanding as well: we will see that the
+theory restricted to rank one congurations of the type
+||||2 = 1
+
+m = 2  ,
+
+ = ,
+
+(2.19)
+
+is just the valence parton model: we will be able to derive the parton model
+from qhd this way.
+
+note that a change of phase   ei does not aect m . indeed
+the set of rank one congurations is a submanifold of the grassmannian
+dieomorphic to p(h+) . if we restrict the dynamics of our theory to this
+submanifold, we get an approximate theory which we will show is equivalent
+to the valence parton model.
+
+24
+
+allowing for a slightly larger set of congurations will give us the parton
+model with sea quarks and anti-quarks. we will describe here the subman-
+ifold of the grassmannian that descibes this approximation to our theory.
+we generalize the above rank one ansatz to a nite rank ansatz
+
+m = 
+.
+
+(2.20)
+
+here, the
+orthonormal:
+
+ are a nite number
+
+r of eigenstates of
+
+ which are
+
+ = , 
+
+ = 
+ .
+
+the constraints
+
+m = m ,
+
+( + m)2 = 1, 
+
+1
+2
+
+trm = 1,
+
+trm 2 < 
+
+become the constraints on the
+
+r  r matrix  :
+
+ = ,
+
+[ + ]2 = 1, 
+
+1
+2
+
+tr = 1.
+
+(2.21)
+
+(2.22)
+
+(2.23)
+
+ =
+
+1
+0
+
+0
+
+0
+2
+
+  
+
+  
+  
+  
+r
+
+
+
+here,
+
+is a diagonal
+
+r  r matrix, the restriction of
+
+ to the nite dimensional subspace spanned by the  . the condition
+trm 2 <  is of course automatic since m is now an operator of nite
+rank.
+thus, given a set of vectors  satisfying the above conditions, we get a
+point in the grassmannian of renormalized dimension one if  itself belongs
+to a nite dimensional grassmannian. if there are
+r+ vectors  with
+positive momentum and r with negative momentum, we have
+
+tr[ + ] = r+  r  2.
+
+(2.24)
+
+the simplest solution is,
+r+ = 1, r = 0, so that  is just a number: it
+then has to be 2 . this is the rank one solution desribed earlier, which
+leads to the valence parton model.
+r = r+ + r is two, there is no solution to the above requirements
+(more precisely all solutions reduce to the rank one solution). the next
+
+if
+
+25
+
+simplest possibility is of rank three, with
+r+ = 2, r = 1 . then each
+solution to the constraints on  determines a one dimensional subspace of
+c 3 ; i.e., a point in cp 2 . in other words, for each such  , there is a unit
+
+vector
+
+ =
+
+
+0
++
+
+  c 3 such that
+
+ +  = 1 + 2   ,
+
+||||2 = 1.
+
+(2.25)
+
+now, there is a u(1)  u(2) gauge symmetry in the problem: we can
+rotate the two positive energy vectors 0 and + into each other and
+change the phase of the negative energy vector  without changing m ,
+provided we make the corresponding changes in  as well. this u(1)u(2)
+action changes the phase of  and rotates the other two components among
+each other. this freedom can be used to choose
+
+ =
+
+
+0
+
+[1   2
+
+]
+
+ ,
+
+ > 0.
+
+(2.26)
+
+in summary the submanifold of rank three congurations of renormalized
+dimension one is given by
+
+m = 20  
++[1   2
+
+0 + 2{[  
+][  
+
++ + +  
+]}
+where , 0, + are three vectors in h satisfying
++ = +,
+
+0 = 0,
+
+ = ,
+
+  +  
++]
+
+||||2 = ||0||2 = ||+||2 = 1, 
+
+0+ = 0.
+
+also,
+
+0    1.
+
+(2.27)
+
+(2.28)
+
+(2.29)
+
+the special case
+
+ = 0 reduces to the rank one ansatz.
+
+the physical meaning is clear if we consider the negative momentum
+
+components of m . the anti-quark distribution function is
+
+a(p) = maa(p,p) =  2
+
+
+
+|a(p)|2.
+
+(2.30)
+
+26
+
+ 2
+ is the probability of nding an anti-quark inside the baryon.
+thus
+ 2
+|a(p)|2
+is the distribution function of the anti-quark of avor
+also,
+| 0a(p)|2 +  2
+is the distribution function
+a . in the same way
+| 0a(p)|2
+for quarks. in a loose sense
+is the valence quark wavefunction
+and | +a(p)|2 is the sea quark wavefunction. but the splitting of the quark
+distribution into a valence and a sea distribution is rather arbitrary and has
+no real physical meaning.
+
+| +a(p)|2
+
+by using the ansatz above with a larger and larger rank we can get better
+and better approximations to the grassmannians. but the expressions get
+quite complicated beyond the rank three ansatz. we will nd that this
+rank three ansatz holds the key to understanding the anti-quark and sea
+quark disributions in the quark model. a variational ansatz based on these
+congurations will provide a derivation of the parton model with sea quarks
+and anti-quarks from quantum hadrondynamics.
+
+2.5 integral kernels
+
+we can express the operator m in terms of its integral kernel in position
+space2:
+
+m(x) =z m(x, y)(y)dy.
+
+(2.31)
+
+alternately we can think in terms of its action on the momentum space
+wavefunctions:
+
+(p) =z (x)eipxdx, (x) =z (p)eipx dp
+
+2
+
+and
+
+(2.32)
+
+(2.33)
+
+(2.34)
+
+the two points of view are of course related by fourier transformation:
+
+.
+
+dq
+2
+
+g[m](p) =z m(p, q) (q)
+m(x, y) =z m(p, q)eipxiqy dpdq
+(2)2 .
+
+2 we will often suppress the indices a, b etc. labelling the basis in c n2f
+
+27
+
+the operator
+
+ is diagonal in momentum space:
+
+it can also be described in position space as a distribution:
+
+f(p) = sgn (p) (p).
+pz
+
+i
+
+(x) =z (x  y)(y)dy =
+
+(2.35)
+
+1
+
+x  y
+
+(y)dy
+
+(2.36)
+
+in fact this is a well-known object in complex function theory: the hilbert
+transform (except for a factor of
+i ). it relates the real and imaginary parts
+of analytic functions.
+
+the constraints on m become then,
+
+m(p, q) = m (q, p)
+
+[ sgn (p) + sgn (q)] m(p, q) + z m (p, r) m(r, q)
+
+dr
+2
+
+= 0
+
+z |m(p, q)|2 dpdq
+
+2
+
+< 
+
+or equivalently, position space,
+
+m(x, y) = m (y, x)
+
+z [(x, y)m(y, z) + m(x, y)(y, z) + m(x, y)m(y, z)]dy = 0
+z |m(x, y)|2dxdy < .
+
+it is useful to see what the tangent space at the origin is like. since m
+
+is innitesimally small, the constraint can be linearized:
+
+[ sgn (p) + sgn (q)] m (p, q) = 0.
+
+(2.37)
+
+m (p, q) is only non-zero if p and q are of opposite signs. in fact,
+thus
+the case where
+p > 0, q < 0 determines the opposite one because of the
+hermiticity condition on m . thus the tangent space is just the space of
+square integrable functions of one positive variable and one negative variable
+m (p, q) .
+
+2.6 the innite dimensional unitary group
+
+given any self-adjoint operator  ,
+transformation
+
+g is unitary,
+
+if the
+gg = gg = 1 , it preserves the condition
+
+is also self-adjoint.
+
+gg
+
+28
+
+2 = 1 . indeed the action of the unitary group on such operators is tran-
+sitive: any operator satisfying  =  and 2 = 1 can be taken to any
+other by a unitary transformation. in terms of the variable m , the unitary
+transformation is
+
+m 7 gmg + g[, g].
+
+(2.38)
+
+in the innite dimensional case, we have required that m be hilbert-
+schmidt (h-s). this means that there is a corresponding condition on the
+family of allowed unitary transformations: we dene the restricted unitary
+group,
+
+u(h, ) = {g|gg = 1, [, g]  i 2}.
+
+(2.39)
+
+it is straightforward to verify that the h-s condition on the commutator is
+preserved under the multiplication and inverse operations, since
+is an
+ideal in the algebra of bounded operators.
+
+i 2
+
+indeed the restricted grassmannian is a homogenous space of this re-
+
+stricted unitary group:
+
+gr(h, ) = u(h, )/u(h+)  u(h).
+
+the lie algebra of the restricted unitary group is
+
+u(h, ) = {u|u = u, [, u]  i 2}.
+
+the innitesimal action on the variable m is:
+
+m 7 [u,  + m].
+
+2.7 poisson structure
+
+(2.40)
+
+(2.41)
+
+(2.42)
+
+we will regard the grassmannian as the phase space of our dynamical sys-
+tem. the matrix elements of the operator m are then a complete set of
+observables. we will seek a set of poisson brackets among these variables.
+fortunately there is a natural choice: there is a unique choice that is invariant
+under the action of the restricted unitary group. in fact the grassmannian
+can be viewed as the co-adjoint orbit of the (central extension of the ) unitary
+group. we can regard the poisson structure as induced by the kirillov sym-
+plectic form on this orbit. however, the physical arguments use the poisson
+
+29
+
+brackets rather than the symplectic form so in thsi paper we will not say
+much aboutthe sympletic form. (see refs. [12, 14] for an elaboration of this
+more geometric point of view.)
+
+if the poisson brackets are invariant under the action of the group, the
+
+innitesimal action,
+
+would be a canonical transformation for any u satisfying
+
+m  [u,  + m]
+
+u = u, [, u]  i 2.
+
+(2.43)
+
+(2.44)
+
+the natural choice of a function that generates this canonical transformation
+is of the form
+
+fu = k tr um
+
+(2.45)
+
+k . there is a technical problem: the trace may not
+
+for some constant
+exist. now remember that under the splitting h = h  h+ ,
+i 2 i 1(cid:19)
+d(cid:19) (cid:18)i 1 i 2
+
+i 2 b (cid:19) , m =(cid:18) a
+
+u =(cid:18) 
+
+
+
+
+(cid:19) (cid:18) b i 2
+
+b
+
+b
+
+(2.46)
+
+(2.47)
+
+so that the conditional trace
+
+trum = tra + trb  trb + trd
+
+exists. moreover its value is some imaginary number, so that the constant
+k should also be purely imaginary in order that
+
+fu = k trum
+
+be a real-valued function.
+
+thus we postulate the poisson brackets
+
+these imply, of course that
+
+{fu, m} = [u,  + m].
+
+{fu, fv} = k trv[u,  + m] = f[u,v] + k trv[u, ].
+
+(2.48)
+
+(2.49)
+
+(2.50)
+
+the commutation relations of the restricted unitary group are satised only
+upto a constant term: it is the central extension of the unitary group that
+
+30
+
+acts on the grassmannian, not the group itself. this has been studied at
+great length in the book by pressley and segal [27] so we wont go too far in
+that direction.
+
+we can write the poisson brackets also in terms of the integral kernel of
+
+the operator m in position space:
+
+k{m a
+
+b (x, y), m c
+
+d(z, u)} = c
+b(y  z)[a
+d(x  u)[c
+a
+
+d(x, u) + m a
+
+d (x, u)]
+
+b(z, y) + m c
+
+d(z, y)],
+
+or momentum space:
+
+k{ m a
+
+b (p, q), m c
+
+b2(q  r)[a
+d(r, s)} = c
+a
+d2(s  p)[c
+
+d sgn (p  s) + m a
+b sgn (r  q) + m c
+
+d (p, s)]
+
+d(r, q)].
+
+the principle of invariance under the unitary group cannot determine the
+constant k in the poisson brackets. in a sense it doesnt matter what value
+we choose for it, as long as the values of all the observables are also multiplied
+by k . however it will be convenient to choose the value k = i
+2 as we will
+see in the next subsection.
+
+soon we will have to calculate the poisson bracket of functions
+
+f (m)
+which is not linear in m . the derivative of such a function can be thought
+of as an operator valued function f (m) of m :
+
+df = trf (m)dm =z f b
+
+a (m)d m a
+
+b (p, q)
+
+dpdq
+(2)2
+
+(2.51)
+
+then we can use the above poisson brackets to get
+
+k{f, m} = [f (m),  + m]
+
+where the l.h.s.
+ + m . we leave the proof as an exercise to the reader.
+
+involves the commutator, as operators, of
+
+(2.52)
+
+f (m) and
+
+2.8 momentum
+
+the above poisson brackets are invariant under translations. there must be
+a canonical transformation that implements this symmetry. formally, this is
+given by chosing u to be the derivative operator with respect to position;
+or,
+i times the multiplication by momentum. (strictly speaking this is not
+
+31
+
+in the lie algebra of the unitary group since it is not bounded, but let us
+ignore this technicality for the moment.) thus, momentum is
+
+p = ikz p m (p, p)
+
+dp
+2
+
+.
+
+(2.53)
+
+now, imagine calculating this quantity for the separable conguration of
+
+renormalized dimension one:
+
+m = 2  ,
+
+||||2 = 1,
+
+ = .
+
+with the choice k = i
+
+2 we would have,
+
+p =z 
+
+0
+
+p| (p)|2 dp
+
+2
+
+.
+
+(2.54)
+
+(2.55)
+
+this has a simple physical interpretation:
+of momentum is a state with wavefunction
+
+p is just the expectation value
+(p) .
+
+note that
+
+p is always a positive function: the quadratic constraint
+
+becomes, for p = q ,
+
+2 sgn (p) m (p, p) = z |m(p, r)|2 dr
+
+2
+
+so that momentum can be written as
+
+p =
+
+1
+
+4z |p| | m(p, r)|2 dp
+
+2
+
+dr
+2  0.
+
+(2.56)
+
+(2.57)
+
+this makes physical sense if we regard this as the null component of the
+momentum vector.
+
+2.9 kinetic energy
+
+for a free particle of mass
+(energy), p0 is related to the spatial component
+
+ , the time-like component of momentum
+
+if we introduce the variables
+
+p2
+0  p2
+
+1 = 2.
+
+p = p0 + p1,
+
+p = p0  p1
+32
+
+p1 by the condition
+
+(2.58)
+
+(2.59)
+
+this becomes
+
+(2p0  p)p = 2,
+
+pp = 2.
+
+(2.60)
+
+thus the kinetic energy is related to the null component of momentum
+through the dispersion relation:
+
+p0 =
+
+1
+2
+
+(p +
+
+2
+p
+
+),
+
+p =
+
+2
+p
+
+.
+
+(2.61)
+
+notice that in this point of view the sign of energy
+p0 and of momentum
+p are the same: this will prove to be convenient when studying the structure
+of the ground state of relativistic fermion theories. (see the appendix a for
+more details.)
+
+thus we will postulate the kinetic energy of our dynamical system on the
+
+grassmannian to be
+
+k = 
+
+1
+
+2z 1
+
+2
+
+[p +
+
+2
+p
+
+] m (p, p)
+
+dp
+2
+
+.
+
+by the same argument as for momentum we can see that
+
+k =
+
+1
+
+8z [|p| +
+
+2
+|p|
+
+] | m(p, r)|2 dp
+
+2
+
+dr
+2  0
+
+(2.62)
+
+(2.63)
+
+if we add to this an appropriate potential energy u we will get the hamil-
+tonian of the system. this potential energy must transform like
+p , in
+(p, p + u) transform like the null components of momentum.
+order that
+
+under lorentz tranformations,
+
+p  p,
+
+p  1p.
+
+the poisson bracket be invariant under lorentz transformations,
+
+m (p, q) 7 m(p, q) =  m(p, q).
+
+in position space, x  1x so that
+
+m(x, y) 7 m(x, y) = 1m(1x, 1y).
+
+(2.64)
+
+(2.65)
+
+(2.66)
+
+lorentz invariance will constrain the form of the potential energy as well.
+
+33
+
+2.10 hamiltonian
+
+the total hamiltonian will be a sum of kinetic energy k and a potential
+energy u . while the kinetic energy is best understood in momentum space,
+potential energy is best written in position space. the simplest choice of u
+will be a quadratic function of m(x, y) . (anything simpler will lead to
+linear equations of motion.) thus we postulate
+
+u[m] =
+
+b (x, y)m b
+
+a(y, x)v(x, y)dxdy
+
+(2.67)
+
+1
+
+4z m a
+4z m a
+
+1
+
++
+
+a (x, x)m b
+
+b (y, y)v1(x, y)dxdy.
+
+this will have the requisite invariance under the internal symmetry u(f ) .
+lorentz invariance requires that u transform like p or, equivalently,
+
+like
+
+1
+p or x . thus,
+
+(2.68)
+moreover, they can only depend on the dierence x  y due to translation
+invariance. thus
+
+v(1x, 1y) = 1v(x, y).
+
+1|x  y|,
+for some pair of constants 1, 2 .
+
+v1(x, y) =
+
+1
+2
+
+v2(x, y) =
+
+1
+2
+
+2|x  y|
+
+(2.69)
+
+thus the hamiltonian of our theory is
+
+e[m] = 
++
+
++
+
+1
+
+1
+
+4z [p +
+8 z m a
+8 z m a
+
+2
+2
+
+2
+p
+
+] m (p, p)
+
+dp
+2
+
+b (x, y)m b
+
+a (x, x)m b
+
+a(y, x)|x  y|dxdy
+b (y, y)|x  y|dxdy.
+
+the constants m, 1, 2 have to xed later based on experimental data.
+they are the coupling constants of our theory.
+
+we have already shown that the kinetic energy is positive. the potential
+energy is manifestly positive when 1, 2  0 the way we have written
+it in position space. thus the minimum value of e is zero and it is
+attained at the point m = 0 .( this is in fact why we choose to parametrize
+our system by the variable m and not
+ .) this of course lies in
+the connected component with renormalized dimension zero. in the other
+components,energy will have a minimum again, but it is not zero. in fact we
+will spend much time estimating this ground state energy.
+
+34
+
+2.11 singular integrals
+
+it will be convenient for later purposes to express the hamiltonian in mo-
+mentum space variables. this will require the use of some singular integrals.
+
+the basic singular integral is the cauchy principal value [28]
+
+pz b
+
+a
+
+f (p)
+p  q
+
+dp
+2
+
+= lim
+
+0+(cid:20)z q
+
+a
+
+q+(cid:21) f (p)
++z b
+p  q
+
+dp
+2
+
+(2.70)
+
+this exists whenever f is holder continuous 3 of order greater than zero at
+the point p = q . ( of course we are assuming that a < q < b ). the basic
+idea of the principal value integral is to cut-o the integral by removing a
+small interval of width 2 located symmetrically about the singular point
+and then take the limit as
+  0 . (if the function vanishes at the point
+p = q the limit might exist even if not taken symmetrically: then we have
+an improper integral rather than a singular integral.)
+
+if we had cut-o the integral asymmetrically, the contribution of the
+
+region close to the singularity would have been
+
+f (q)(cid:20)z q1
+
+a
+
+q+1(cid:21) 1
++z b
+p  q
+
+dp
+2 
+1 and
+
+1
+2
+
+f (q) log
+
+1
+1
+
+.
+
+(2.71)
+
+1
+
+1 = 2
+
+to go to zero. requiring
+this can take any value as we let
+that
+removes this ambiguity. indeed there are many other rules
+that could have been chosen: the particular one we choose must be justied
+by physical considerations: rather like the choice of boundary conditions in
+the solution of dierential equations. in problems of interest to us there is
+a symmetry
+p  p (ultimately due to charge conjugation invariance)
+which selects out the principal value (or the finite part we will dene soon)
+as the correct prescription.
+
+we already saw a use of the cauchy principal value in the denition of
+
+the operator
+
+ :
+
+(x) =
+
+i
+
+pz (y)
+x  y
+
+dy.
+
+(2.72)
+
+the symmetric choice of regularization implicit in the principal value is re-
+quired by the condition that
+
+ is hermitean.
+
+3 a function f is holder continuous of order  (or f  c  ) if
+
+exists for all
+
+q .
+
+limpq
+
+|f (p)f (q)|
+
+|pq|
+
+35
+
+we will often have to deal with integrals that have a worse singularity:
+
+z b
+
+a
+
+f (p)
+(p  q)2
+
+dp
+2
+
+.
+
+(2.73)
+
+the hadamard finite part (part nie) of such an integral is dened in
+terms of the cauchy principal value:
+
+f (p)
+(p  q)2
+
+fpz
+f  c 1 , this will make sense: the vanishing of the numerator
+although we wont need this yet, we note for completenes the denition
+
+as long as
+on the r.h.s. makes the integral exist as a cauchy principal value.
+
+= pz f (p)  f (q)
+(p  q)2
+
+dp
+2
+
+(2.74)
+
+dp
+2
+
+.
+
+of the nite part integral for a nite range of integration:
+
+fpz b
+
+a
+
+f (p)
+(p  q)2
+
+dp
+2
+
+= pz b
+
+a
+
+f (p)  f (q)
+(p  q)2
+
+dp
+2
+
++
+
+f (q)
+
+2 " 1
+
+a  q 
+
+we need the notion of a nite part integral because
+
+fpz 1
+
+p2 eipx dp
+
+2
+
+1
+2|x  y|.
+
+= 
+
+1
+
+b  q# . (2.75)
+
+(2.76)
+
+the quantity on the right hand side is a greens function of the laplace
+operator on the real line:
+
+d2
+dx2
+
+1
+2|x  y| = (x  y).
+
+(2.77)
+
+the choice of boundary conditions in this greens function corresponds to
+the choice of the denition of the singular integral above.
+
+as an aside we note that
+
+fpz g(p)
+
+p2
+
+dp
+2
+
+if
+
+= lim
+
+0+(cid:20)z 
+
+
+
++z 
+
+
+
+(cid:21) g(p)  g(0)
+
+p2
+
+dp
+2  0
+
+for all p . this is useful in checking that the hamiltonian is positive.
+
+g(p)  g(0)
+
+36
+
+(2.78)
+
+(2.79)
+
+2.12 hamiltonian in momentum space
+
+now,
+
+similarly,
+
+1
+
+2z m a
+
+b (x, y)m b
+
+b (p, q) m b
+
+a(y, x)|x  y|dxdy =
+m a
+a(p, q)
+
+fpz 1
+z eir(xy)+ipxiqy+ipyiqxdxdy
+= fpz 1
+
+b (p, q) m b
+
+m a
+
+r2
+
+r2
+
+dpdpdqdqdr
+
+(2)5
+
+a(q + r, p + r)
+
+dpdqdr
+(2)3
+
+1
+
+2z m a
+
+a (x, x)m b
+
+b (p, q) m b
+
+b (y, y)|x  y|dxdy
+m a
+a(p, q)
+
+fpz 1
+z eir(xy)+ipxiqx+ipyiqydxdy
+= fpz 1
+
+a (p, p + r) m b
+
+m a
+
+r2
+
+r2
+
+dpdpdqdqdr
+
+(2)5
+
+b (p, p  r)
+
+dpdpdr
+(2)3
+
+thus the hamiltonian becomes
+
+(2.80)
+
+(2.81)
+
+e[m] = 
+
+
+
+1
+
+1
+
+2
+p
+
+4z [p +
+4 fpz 1
+4 fpz 1
+
+2
+
+r2
+
+r2
+
+] m (p, p)
+
+dp
+2
+b (p, q) m b
+
+m a
+
+a(q + r, p + r)
+
+m a
+
+a (p, p + r) m b
+
+b (p, p  r)
+
+dpdqdr
+(2)3
+dpdpdr
+(2)3
+
+in spite of the minus signs on the r.h.s., this is in fact a positive function
+m . we already saw that the kinetic energy is positive whenever the
+of
+constraint is satised.
+
+we can rewrite the second term in a more symmetric form,
+
+e[m] = 
+
+
+1
+
+2
+p
+
+4z [p +
+4 fpz 1
+
+1
+
+r2
+
+] m (p, p)
+
+m a
+
+b (p 
+
+dp
+2
+r
+, q 
+2
+
+r
+2
+
+) m b
+
+a(q +
+
+r
+2
+
+, p +
+
+r
+2
+
+)
+
+dpdqdr
+(2)3
+
+37
+
+2
+
+4 fpz 1
+
+r2
+
+
+
+m a
+
+a (p, p + r) m b
+
+b (p, p  r)
+
+dpdpdr
+(2)3
+
+now,
+
+satises
+
+f (r) = z m a
+
+b (p 
+
+r
+2
+
+, q 
+
+r
+2
+
+) m b
+
+a(q +
+
+r
+2
+
+, p +
+
+r
+2
+
+)
+
+dpdq
+(2)2
+
+so that the second term in the hamiltonian can be written as
+
+f (r) = f (r)
+
+1
+
+4 fpz 1
+
+r2 re f (r)
+
+dr
+2
+
+.
+
+
+
+moreover, by a simple use of the schwarz inequality, we see that
+
+ref (r)  f (0).
+
+(2.82)
+
+(2.83)
+
+(2.84)
+
+thus this term in the hamiltonian is positive. in the same way the last term
+can also be proved to be positive.
+
+2.13 the equations of motion
+
+from our poisson brackets and the above hamiltonian we can derive the
+equations of motion. we can regard the derivative e(m) = e
+m of the
+energy with respect to m as an operator valued function of m :
+
+de = tre(m)dm =z eb
+
+a (m; q, p)d m a
+
+b (p, q)
+
+dpdq
+(2)2 .
+
+(2.85)
+
+explicitly,
+
+de = 
+
+
+
+1
+
+1
+
+2
+p
+
+4z [p +
+2 fpz 1
+2 fpz
+
+2
+
+r2
+
+dr
+(2)
+
+d m a
+
+dpdq
+(2)2
+
+a (p, q)
+
+b (p, q)
+dp
+2
+
+d m a
+
+dpdq
+(2)2 .
+
+]d m a
+
+a (p, p)
+
+dp
+2
+
+m b
+
+a(q + r, p + r)
+
+1
+
+(q  p)2
+
+m b
+
+b (p, p + p  q)
+
+38
+
+thus
+
+eb
+a (m; q, p) = 
+
+
+
+[p +
+
+1
+4
+1
+
+2 fpz 1
+b
+afp
+
+2
+2
+
+r2
+
+2
+p
+
+]2(p  q)b
+
+a
+
+m b
+
+a(q + r, p + r)
+
+dr
+(2)
+
+1
+
+(q  p)2z m c
+
+c (p, p + p  q)
+
+dp
+2
+
+.
+
+now the equations of motion implied by our poisson brackets are, in
+
+operator notation,
+
+k
+
+dm
+dt
+
+= k{e(m), m} = [e(m),  + m].
+
+(2.86)
+
+k is the constant we xed earlier to be
+
+(here,
+2 .) substituting the
+above formula for e(m) will give a rather complicated system of integral
+equations as our equations of motion.
+
+i
+
+in particular, static solutions are given by
+
+[e(m),  + m] = 0
+
+the obvious solution to this equation is the vacuum,
+
+m = 0.
+
+(2.87)
+
+(2.88)
+
+this is just the point where the hamiltonian is a minimum. actually each
+connected component will have a minimum for the hamiltonian; the absolute
+minimum is the one with renormalized dimension zero. we will return to the
+study of the minimum in the components of non-zero renormalized dimension.
+
+2.14 linear approximation
+
+if m is innitesimally close to the vacuum value m = 0 we can linearize
+the equations of motion:
+
+d m a
+b (p, q)
+dt
+
+i
+2
+
+= 
+
+
+1
+[ k(p)  k(q)] m a
+2
+2 fpz 1
+1
+
+s2 [ m a
+
+b (p, q)
+
+b (p + s, r + s)2(r  q) sgn (q)
+
+39
+
+b (r + s, q + s)]
+
+drds
+(2)2
+
+1
+
+a
+
+2(p  r) sgn (p)m a
+2
+
+2
+
+
+bfpz h
+(r  q)2 2(p  r) sgn (p) m c
+
+1
+
+(p  r)2 2(r  q) sgn (q) m c
+
+c (p, p + r  p)
+
+c (p, p + q  r)idp
+
+2
+
+dr
+(2)
+
+simplifying,
+
+i
+2
+
+=
+
+b (p, q)
+
+d m a
+b (p, q)
+dt
+1
+[ k(p)  k(q)] m a
+
+2
+2 fpz 1
+1
+s2 [ m a
+b (p + s, q + s) sgn (q)  sgn (p)m a
+
+bfpz h
+1
+(p  q)2 sgn (q) m c
+
+(p  q)2 sgn (p) m c
+
+
+c (p, p + q  p)idp
+
+c (p, p + q  p)
+
+2
+2
+
+2
+
+a
+
+1
+
+b (p + s, q + s)]
+
+ds
+2
+
+here,
+
+k(p) =
+
+1
+2
+
+[p +
+
+2
+p
+
+].
+
+(2.89)
+
+recall that the constraint on m becomes, in this linear approximation,
+
+[ sgn (p) + sgn (q)] m (p, q) = 0;
+
+(2.90)
+
+i.e., that p and q have opposite signs. we can assume that p > 0, q < 0
+since the opposite case is determined by the hermiticity condition
+
+m(p, q) = m (q, p).
+
+(2.91)
+
+thus,
+
+d m a
+b (p, q)
+dt
+
+i
+2
+
+= 
+
+1
+2
+
+[ k(p)  k(q)] m a
++1fpz 1
+
+m a
+
+s2
+
+b (p, q)
+
+b (p + s, q + s)
+
+ds
+2
+
+40
+
++2a
+
+bfpz
+
+1
+
+(p  q)2
+
+m c
+
+c (p, p + q  p)
+
+dp
+2
+
+m(p, q) 7
+now, under translation, m(x, y)  m(x + a, y + a) and
+ei(pq)a m (p, q) . thus the total momentum, which is a conserved quantity,
+is p = p  q . we can use as independent variables
+
+xb = p/p , p = p  q.
+
+clearly 0  xb  1 and p  0 . for a stationary solution,
+
+m (p, q; t) = eit(xb).
+
+(2.92)
+
+(2.93)
+
+2
+p xb
+
++
+
+2
+
+p (1  xb)
+
+](xb) 
+
+1
+
+2p fpz 1
+
+0
+
+(y)
+
+(x  y)2 dy (2.94)
+
+1
+4
+
++
+
+[2p +
+
+2
+
+2p z 1
+
+0
+
+(y)dy
+
+we get thus
+
+1
+2
+
+(xb) =
+
+nents by,
+
+we get
+
+2(xb) =
+
+recalling that the mass  of the meson is given in light cone coompo-
+
+2p  p 2 = 2
+
+(2.95)
+
+[
+
+2
+xb
+
++
+
+2
+
+(1  xb)
+
+](xb) 
+
+21
+
+ fpz 1
+
+0
+
+(y)
+
+(xb  y)2 dy 
+
+2
+
+ z 1
+
+0
+
+(y)dy
+
+if we set 2 = 0 this is exactly the equation that t hooft obtained for
+
+the meson spectrum of two dimensional qcd.
+
+t hooft obtained this result by summing over an innite class of feynman
+diagrams. he showed that in the usual perturbaton series of two dimensional
+qcd, the diagrams of planar topology dominate in the large n limit. he
+then found a set of integral equations that describe the sum over these planar
+diagrams.
+
+41
+
+t hoofts approach is limited by its origins in perturbations theory. it
+does not in fact reproduce the full large n limit of two dimensional qcd;
+only the linear approximation to the large n limit is obtained this way.
+the complete large n limit that we have constructed, by very dierent
+methods, is a nonlinear theory, reproduces the earlier theory of t hooft as
+just the linear approximation.
+
+our theory of course contains much more information:
+
+it describes all
+the interactions among the mesons, since the hamiltonian is a non-linear
+function of the co-ordinates on the grassmannian. indeed it is not even a
+polynomial which means that there are interaction vertices at every order in
+perturbation theory. some of these have been determined, but our analysis
+gives all the innite number of vertices in terms of a single constant: the
+geometry of the grassmannian xes all these uniquely in terms of 1 . the
+rst such vertex was obtained by a summation of planar diagrams as well; but
+this approach will quickly get bogged dpwn by combinatorial complications.
+before our work there was no indication that it was even possible to get a
+closed formula for all the interactions among the mesons in the large n
+limit of two dimensional qcd.
+
+the solution of this linear integral equation will give the structure func-
+tions of mesons. experimental data exists on the structure functiosn of
+mesons as well.
+it is not from deep inelastic scattering, but from drell-
+yan scattering. preliminary results on the comparison of these structure
+functions with data are encouraging. however the focus of these lectures is
+the much more conceptually deep problem of obtaining the structure function
+of the proton.
+
+in fact our quantum hadrondynamics is not only a theory of mesons but
+also of baryons. we will show in the next chapter that there are topological
+solitons in our theory that describe baryons.
+
+2.15 quantization of hadrondynamics
+
+we have so far described a classical theory, whose phase space is the grass-
+mannian. the poisson bracket relations for the m(x, y) play a role anal-
+ogous to the canonical commutation relations. there are two distinct ap-
+proaches to quatization of this theory:
+(i) find a representation of the lie algebra in terms of operators ona com-
+plex hilbert space ( canonical quantization, pursued in ref. [12]; and, (ii)
+
+42
+
+realize the wavefunctions as holomorphic sections of a line bundle on the
+grassmannians (geometrical quantization pursued in ref. [14].
+
+in the rst approach, we can use the complete classication of highest
+weight unitary representation of the (central extension of the ) innite-
+dimensional unitary lie algebra, due to kac and peterson [29]. these turn
+out to be described by young tableaux just as in the nite dimensional case,
+except they may have innite depth. the question arises which irreducible
+representation to choose. the quadratic constraint selects out one class of
+representations, whose young tableaux are rectangular, of width n and
+innite depth. such a representation can be realized as
+
+m (x, y) =
+
+1
+n
+
+: qi(x)qi(y) :
+
+(2.96)
+
+where q, q satisfy the canonical anti-commutation relations. the represen-
+tation is carried by the vector space of color invariant states in the fermionic
+fock space. thus we recover exactly the light-cone gauged xed version of
+two dimensional qcd with n colors as the quantum theory of hadron-
+dynamics. we have shown that two dimensional qcd and two dimensional
+hadrondynamics are exactly equivalent at all energies and for all values of
+the number of colors. we have already given the details of this argument in
+ref.[12].
+
+in the geometric approach, we construct a line bundle of chern number
+n on the grassmannian. there is a connection on this line budle whose
+curvature is the natural symplectic form of the grassmannian. the innite
+dimensional grassmannian is a complex manifold, just like the nite dimen-
+sional ones. holomorphic sections of the line bundle exist when the chern
+number is a positive integer. an inner product can be established on the
+vector space of these holomorphic sections by using ideas of segal [30] or the
+measure of pickrell [31]. the observables m(x, y) can be represented as
+operators on this hilbert space. again the formulae we get are just the same
+as that of light-cone gauge xed qcd. see [14] for details.
+
+in addition it is sometimes convenient to quantize a restricted version
+of the theory where the phase space is some symplectic submanifold of the
+grassmannian. this will give us some insight into the connection between
+our theory and the parton model. we will return to this in the next chapter.
+to summarize,we have a theory that doesnt just describe mesons to all
+orders in perturbation theory; we even have a theory of baryons. the topo-
+logically non-trivial solutions of the theory- the solitons- describe baryons.
+
+43
+
+in the next chapter we will study these solitons in more detail and obtain a
+theory of the structure functions of the baryon.
+
+44
+
+chapter 3
+
+baryons as solitons and their
+structure functions
+
+we saw that our phase space is a disconnected manifold, each connected
+component being labelled by an integer
+
+b = 
+
+1
+2
+
+trm.
+
+(3.1)
+
+thus each connected component will have a minimum for the energy. these
+will describe stable static solutions of the equations of motion. they are
+called topological solitons.
+
+the minimum of the energy in each connected component with a given
+value of b desribes a stable particle, as the only particles with lower energy
+would be in a sector with a dierent value of b . it cannot decay into those
+states since b is a conserved quantity.
+
+we saw that hadron dynamics describes, in the linearized approximation,
+the spectrum of mesons of two dimensional qcd. what does a topological
+soliton describe? it is an old idea of skyrme that the topological solitons of
+a theory of hadrons are baryons. this idea was revived in the mid eighties
+[4, 5] and shown to be consistent with qcd in four dimensions.
+
+with this in mind, we should expect that the topological solitons of our
+two-dimensional theory describe baryons in the deep inelastic region.
+in
+the center of mass frame, a baryon will (due to lorentz contraction) have a
+thin at shape: one that can be described within a two dimensional theory.
+this oers us the possibility of solving one of the long-standing problems of
+particle physics: to explain the structure functions of hadrons as measured
+
+45
+
+in deep inelastic scattering. by solving the static equations of motion, we
+will be able to determine the shape of the soliton, which will then give us
+the dependence of the hadronic structure function on the bjorken xb vari-
+able. the equations we need to solve are certain singular nonlinear integral
+equations. they are exactly solvable, so we will have to resort to numerical
+techniques. indeed some ingenuity is needed even in the numerical part of
+this project: o the shelf methods do not work due to the singularities in
+the integrals. these singularities do not pose any new conceptual problems
+however: we are dealing with a nite quantum eld theory. the basic def-
+initions of these singular integrals ( as dealt with an earlir section) go back
+to the nineteenth century work of cauchy and hadamard.
+
+the static equations of motion are
+
+[e(m),  + m] = 0
+
+(3.2)
+
+where e(m) is the derivative of the energy, computed above. it will be
+m (p.q) , the integral
+most convenient to view them as integral equations for
+kernel in momentum space. of course we must solve these equations subject
+to the constraints
+
+[, m]+ + m 2 = 0;
+
+trm = 2.
+
+(3.3)
+
+the last condition picks out the sector with baryon number one.
+
+3.1 quark distribution functions from qhd
+
+if we split the operator m into submatrices according to the splitting
+h = h  h+ ,
+
+(3.4)
+
+d : h+  h+ is negative.
+2 trm is the sum of two terms: one from
+
+b
+
+m =(cid:18) a
+
+d(cid:19) ,
+a : h  h is positive while
+
+b
+
+the operator
+the baryon number b =  1
+positive momenta and one from negative momenta:
+2xa z 
+
+[aaa(p,p) + daa(p, p)]
+
+b = 
+
+1
+
+0
+
+46
+
+dp
+2
+
+.
+
+(3.5)
+
+the rst term is always negative and the second always positive. thus,
+a(p) = 1
+2 aaa(p,p) can be thought of as the distribution function of anti-
+quarks in a hadron while a(p) =  1
+2 daa(p, p) is the distribution function
+for quarks. the quantity
+
+a (p) = a(p)  a(p)
+v
+
+(3.6)
+
+corresponds to what is usually called the valence parton distribution.
+integral over
+
+p and sum over a is equal to the baryon number.
+
+its
+
+so the quark distribution function can be thought of as the sum of the
+
+valence and sea contributions:
+
+a(p) = v
+
+a (p) + s
+
+a (p).
+
+(3.7)
+
+the sea quark distribution function is thus just the same as the anti-quark
+distribution function:
+
+s
+
+a (p) = a(p).
+
+(3.8)
+
+we nd this terminology a bit confusing and mention it only for purposes
+of comparison. the point is that there is no physical meaning to the splitting
+of the quark distribution function into a valence and a sea quark contribu-
+tion: only the sum has a measurable, physical signicance. the anti-quark
+distribution does in fact have a physical signicance. the above denition of
+a sea quark distribution is thsu completely arbitrary and is not imposed on
+us by any symmetry such as charge conjugation invariance. in fact we will
+nd later that there is another splitting which is more natural, where the
+sea quarks have a wavefunctions are orthogonal to the valence quark wave-
+function. this at least respects the pauli principle for quarks. even that
+spliting is merely a matter of convenience of interpretation: all comparisons
+with experiment should be in terms of the measurable quantities a(p) and
+a(p) .
+
+actually the distribution functions are usually thought of as functions of
+a dimensionless variable
+xb . if p is the total momentun (in the null
+direction) of the hadron, the momentum of the quark can be measured as a
+fraction of p . so we should actually write
+
+a(xb) = 
+
+1
+
+2xa
+
+daa(xbp ), a(xb) =
+
+1
+
+2xa
+
+aaa(xbp ).
+
+(3.9)
+
+47
+
+these identications of the parton distribution functions in terms of the
+mab(p, p) can also be seen in terms of the
+diagional matrix elements of
+formula we derived in terms of qcd.
+
+3
+
+the structure functions are supposed to vanish for xb > 1 . why should
+the r.h.s. of the above equation vanish for such xb ? for large n , the
+structure functions will be of order ecn
+2 at xb = 1 . so even though the
+wavefunction doesnt vanish at xb = 1 , it is exponentially small. a more
+proper analysis of the large n limit, taking into account semi-classical
+corrections will in fact reproduce wavefunctions that vanish at
+xb = 1 .
+the dierence between these two versions of the large n limit is like the
+dierence between the microcanonical ensemble and the canonical ensemble
+in statistical mechanics.
+
+3.2 rank one ansatz
+
+before we set out to solve the above integral equations, it is useful to con-
+sider a simpler, variational approximation to them. a solution to the above
+constraints on m is the rank one (or separable) ansatz,
+
+m = 2  .
+
+(3.10)
+
+we showed earlier that this is a solution to the constraints with baryon
+number one if  is a positive energy wavefunction of length one:
+
+ = , xa z | a(p)|2 dp
+
+2
+
+= 1.
+
+(3.11)
+
+we are not claiming that the exact solution of the static equations of motion
+are of this form: only that this is a reasonable variational ansatz for it. the
+physical meaning of this ansatz will be made clear in the next section: it is
+equivalent to the valence quark model of the baryon in the large n limit.
+the technical advantage of this ansatz is that it solves the constraint;
+more precisely it reduces it to the much simpler constraint that
+ is
+of length one. geometrically, the set of states we are considering forms a
+projective space: changing  by a complex number of modulus one does
+not change m . the separable ansatz is an embedding of the complex
+projective space cp (h+) of the positive energy states into the component
+of the grassmannian with renormalized dimension one. instead of minimizing
+
+48
+
+the energy on the whole grassmannian, in this approximation, we minimize
+it on this submanifold.
+
+the parton structure functions have a simple meaning within this approxi-
+mation: the structure function a(xb) is just the square of the wavefunction
+(p) in momentum space:
+
+a(xb) = | a(xbp )|2.
+
+(3.12)
+
+the anti-quark structure function is just zero in this separable approxima-
+tion.
+
+the energy on this submanifold can be easily calculated:
+
+e1() = xa z 
+
+1
+2
+1 + 2
+
+0
+
+[p +
+
++
+
+where as usual,
+
+2
+p
+
+]| a(p)|2 dp
+
+2
+
+2 xab z |a(x)|2|b(y)|2|x  y|dxdy
+
+a(x) =z 
+
+0
+
+a(p)eipx dp
+2
+
+.
+
+(3.13)
+
+(3.14)
+
+(3.15)
+
+1 such a positive momentum function has an analytic continuation into the
+upper half plane in the x variable. a simple choice would be
+
+a(x) =
+
+ca
+
+(x + ib)2
+
+(3.17)
+
+with the location of the double pole serving as a variational parameter. ca
+is constrained by the normalization condition that the length of  is one.
+(a simple pole would have innite kinetic energy, so we consider the next
+simplest possibility.) it is easy to see that there is a term in energy that
+(coming from p| (p)|2 ) and the remaining terms scale
+scales like
+like
+b . thus there is a minimum. this encourages us to proceed to a more
+accurate determination of the wavefunction  that minimizes the energy.
+
+b1
+
+1we will nd it convenient to denote
+
+1 + 2 = g2
+
+(3.16)
+
+to agree with previous papers.
+
+49
+
+the integral equations we have to solve are
+
+1
+2
+
+[p +
+
+2
+p
+v (p) = 
+
+] a(p) + fp g2z v (p  q) a(q)
+p2z 
+
+a(p + q) a(q)
+
+dq
+2
+
+1
+
+.
+
+0
+
+dq
+2
+
+=  a(p)
+
+2 = 1 . the
+subject of course to
+second of the above integral equations is just the momentum space version
+of poissons equation of electrostatics:
+
+p  0 and
+
+| (p)|2 dp
+
+(p) = 0 for
+
+0
+
+r 
+
+from gauss law,
+
+v (x) = a(x)a(x).
+
+v (x) 
+
+1
+2|x|
+
+(3.18)
+
+(3.19)
+
+as
+near the origin. thus
+
+|x|   : it is just the electrostatic potential of a unit charge located
+
+v (q)  
+
+1
+q2
+
+(3.20)
+
+as |q|  0 . this is why the integrals are singular: the nite part prescription
+is just a way of imposing the boundary condition that
+2|x| at
+innity in position space. we also note that for a solution centered at the
+origin,
+
+v (x)  1
+
+(x) = (x)
+
+(3.21)
+
+and v (x) = v (x) . the boundary condition at the origin we impose is
+(3.22)
+
+v (0) = 0
+
+which translates to
+
+fpz v (q)
+
+dq
+2
+
+= 0.
+
+50
+
+(3.23)
+
+3.3 approximate analytic solution for  = 0
+
+it will be useful to have an approximate analytical solution; even if it only
+works for a physically uninteresting region it will help us to validate our
+numerical method.
+
+consider the singular integral (setting
+
+w (q) = q2 v (q) ):
+
+fpz v (q) a(p + q)
+
+dq
+2
+
+= pz w (q)a(p + q)  w (0)a(p)
+
+q2
+
+dq
+2
+
+=
+
+=
+
+1
+
+1
+
+2pz w (q)[ a(p + q) + a(p  q)]  2 w (0) a(p)
+2pz w (q)
+2(cid:20)pz 2[ w (p)  w (0)]
+
+[ a(p + q) + a(p  q)  2 a(p)]
+
+2(cid:21) a(p)
+
+q2
+dq
+
+dq
+2
+
+1
+
++
+
+q2
+
+q2
+
+dq
+2
+
+the rst integral is not singular any more. the integral in the square brackets
+in the last term is in fact zero by our boundary condition:
+
+pz 2[ w (p)  w (0)]
+
+q2
+
+dq
+2
+
+= fpz v (q)
+
+dq
+2
+
+= v (0) = 0.
+
+(3.24)
+
+thus
+
+fpz v (q) a(p + q)
+
+dq
+2
+
+=
+
+1
+
+2z w (q)
+
+[ a(p + q) + a(p  q)  2 a(p)]
+
+q2
+
+dq
+2
+
+.(3.25)
+
+so far we havent made any approximations on this integral: just rewritten
+the singular integral in a better way. the main contribution to this integral
+ought to come from the neighbourhood of the point q = 0 . so we should be
+able to approximate the quatity in the square brackes by its leading taylor
+series approximation
+
+fpz v (q) a(p + q)
+
+dq
+
+2 (cid:20)z q2 v (q)
+
+dq
+
+2(cid:21) 
+
+a(p).
+
+(3.26)
+
+then our nonlinear singular integral equation reduces to an ordinary dier-
+ential equation:
+
+ b 
+
+a(p) +
+
+1
+2
+
+[p +
+
+2
+p
+
+51
+
+] a(p) =  a(p)
+
+(3.27)
+
+where
+
+b is determined by the self-consistency constraint
+
+b = z q2 v (q)
+
+dq
+2
+
+a(q)
+
+2
+
+.
+
+(3.28)
+
+= xa (cid:12)(cid:12)(cid:12)(cid:12)z 
+
+0
+
+dq
+
+2(cid:12)(cid:12)(cid:12)(cid:12)
+
+b1
+
+this equation can be thought of as the nonrelativistic schrdinger equa-
+in a linear plus coloumb potential. the
+tion for a particle of mass
+b is determined by the above self-
+only additional complications are that
+consistency relation and also, we have the boundary condition (p) = 0 for
+p  0 .the only non-linearity in the problem is in the equation determining
+b .
+such non-relativistic models with linear plus coloumb potentials have
+been used to describe mesons made of heavy quarks [34]. but the physical
+origin of this schrodinger equation is completely dierent in our case: we get
+this equation in momentum space and not position space. the eigenvalue
+ does not have the physical meaning of energy for us: energy is to be
+determined by substituting the solution into the formula for the hamiltonian.
+moreover, we are studying the fully relativistic bound state problem. and of
+course we are studying baryons not mesons. still it is encouraging that it is
+possible to reduce a fully relativistic bound state problem to a mathematical
+problem that is no more complicated than the non-relativistic case.
+
+the special case  = 0 is particularly simple. in this extreme relativistic
+
+case, the solution is an airy function:
+
+(p) = cai(cid:18)
+
+3(cid:19)
+
+1
+
+(3.29)
+
+[2b(1 + 2)]
+
+p  2
+r | (p)|2 dp
+
+c is xed by normalization:
+by the continuity of the wavefunction: since it must vanish for
+require it to vanish at p = 0 as well by continuity. then
+
+2 = 1 . the eigenvalue is xed
+p  0 we
+
+ = 
+
+1
+2
+
+1[2b(1 + 2)]
+
+1
+3
+
+(3.30)
+
+ = 2.33811 is the zero of the airy function closest to the origin.
+b by putting this back into the nonlinear self-
+
+where
+now we x the constant
+consistency condition. we get
+
+2b = g
+
+1
+
+(2)
+
+3
+2
+
+|r 
+1 ai ()d|3
+[r 
+1 ai 2()d]
+
+3
+2
+
+52
+
+the analytic approximation to the wave function with m=0
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+1
+
+2
+
+3
+
+4
+
+p(cid:144)g
+
+figure 3.1: the approximate analytic solution for  = 0 .
+
+ =
+
+|1|
+
+2(2)
+
+1 ai ()d
+1 ai 2()d]
+
+r 
+[r 
+
+g  0.847589g.
+
+1
+2
+
+moreover
+
+(p) = c ai (1(
+
+p
+g  1)).
+
+(3.31)
+
+we plot the solution so obtained below.
+
+3.4 numerical solution with the rank one
+
+ansatz
+
+we now describe how to solve our integral equation numerically. first we
+replace the nonlinear integral into a recursion relation.
+
+1
+2
+
+[p +
+
+and
+
+2
+
+p  2s] s+1(p) + 1pz 
+
+0
+
+vs(p  q) s+1(q)
+
+dq
+2
+
+= 0
+
+(3.32)
+
+vs(p) = 
+
+1
+
+p2 z 
+
+0
+
+
+s (p + q) (q)
+
+dq
+2
+
+.
+
+(3.33)
+
+we start with an initial guess v0(p) , solve the linear integral equation to get
+1(p) . among all the solutions of this linear integral equation
+a solution
+
+53
+
+numerical and analytic wave functions
+
+<-- -numerical
+
+<-- -analytic
+
+1
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+1
+
+2
+
+3
+
+4
+
+figure 3.2: comparison of numerical and approximate analytic solutions
+for  = 0 .
+
+we pick the one without a node; this happens to be the one with the smallest
+v1(p) as above and then again solve the
+eigenvalue  . then we calculate
+integral equation to get
+
+2 and so on till our iteration converges.
+
+we pick the nodeless eigenfunction at each stage since we expect our nal
+answer for the ground state eigenfunction to have this property. it is just a
+coincidence that this happens to have the smallest eiganvalue
+in any
+case  does not have the meaning of energy.
+
+ :
+
+of course to carry out this algorithm, we need to convert the above inte-
+gral equations into matrix equations. that is done by the quadrature method
+(described in the appendix c ) for singular integrals. the whole procedure
+can be implemented in mathamatica quite well.
+
+we plot the numerical solution so obtained against the approximate an-
+
+alytical solution we got earlier for the special case  = 0 .
+
+the curves are qualitatively the same: the dierence has to do with the
+approximations we had to make in order to get an analytic solution. the
+physicaly interesting case in fact does not have  = 0 : indeed we will see
+that the value of 2
+is in fact negative. for example when m = 0 , we
+have,
+ . it is of much interest to see if there is a variant of the
+analytic approximatin method above that applies to this more realistic case.
+
+2 =  g2
+
+54
+
+3.5 quantization of the rank one ansatz
+
+we have considered elesewhere [12, 14] the quantization of our hadron dy-
+namics, to recover qcd. it is also instructive to study the quantization of
+a simpler version of our theory, corresponding to the rank one ansatz. the
+quantization of this truncated theory gives a sort of approximation to qhd
+(hence qcd) which is of some interest in itself. we will see in the next
+chapter that this is just the valence parton model with interactions between
+the partons as predicted by qcd.
+
+given a vector satisfying
+
+we have an element of the grassmannian of renormalized dimension one:
+
+ = ,
+
+||||2 = 1
+
+(3.34)
+
+m = 2  .
+
+(3.35)
+
+but this element remains the same if we change  by a complex number
+  ei . thus we have an embedding of the projective
+of modulus one:
+space p(h+) into the grassmannian. this is a sympletic embedding: the
+symplectic form on the projective space induced by this embedding is the
+same as the natural sympletic form on the projective space. thus we can
+regard the separable operators as forming a reduced phase space describing
+part of the degrees of freedom of our theory.
+a way to understand this is to consider
+
+(p) as a complex-valued
+observable on the eective phase space. in order to reproduce the poisson
+brackets of m , these must satisfy
+
+{ a(p), b(p)} = 0 = { a(p), b(p)},
+{ a(p), b(p)} = i2(p  q)b
+a.
+
+they satisfy the constraints,
+
+(p) = 0; for p < 0,
+
+z 
+
+0
+
+|(p)|2 dp
+
+2
+
+= 1.
+
+(3.36)
+
+(3.37)
+
+(3.38)
+
+we should regard the function
+dametal variable from which other observables such as
+
+(p) on momentum space to be the fun-
+
+(x) =z 
+
+0
+
+(p)eipx dp
+2
+
+55
+
+(3.39)
+
+can be obtained.
+
+both the poisson brackets and the constraint are simpler than the full
+
+theory, which is why we consider this case rst.
+
+the hamiltonian of our reduced dynamical system is obtained by putting
+
+the ansatz into e(m) :
+
+e1() = xa z 
+
+1
+2
+1 + 2
+
+0
+
+[p +
+
+2
+p
+
+]| a(p)|2 dp
+
+2
+
++
+
+2 xab z |a(x)|2|b(y)|2|x  y|dxdy.
+
+(3.40)
+
+these poisson brackets and hamiltonian form a perfectly welldened dy-
+namical system on its own right. we will now consider how to quantize this
+theory, and obtain the rules for the semi-classical approximation.
+
+we can quantize the theory by looking for operators satisfying canonical
+
+commutation relations:
+b(p)] = 0 = [
+a(p),
+
+[
+
+a
+
+b
+
+
+
+(p)],
+
+(p),
+
+a(p),
+[
+
+b
+
+
+
+(p)] =
+
+1
+n
+
+2(p  p)b
+
+a.(3.41)
+
+as usual classical poisson brackets go over to quantum commutation rela-
+tions:
+
+{a, b}  ih[ a, b].
+
+(3.42)
+
+in our case we will denote the parameter that measures the quantum correc-
+1
+n . in a minute we will see that this number n
+tion, analogous to h , by
+must actually be an integer. th elimit n   is the classical limit. the
+constraint on the observables can be implemented by restricting attention to
+those states satisfying
+
+z 
+
+0
+
+a
+
+
+
+(p)
+
+a(p)
+
+dp
+2| >= 1.
+
+(3.43)
+
+now it is obvious that a representation for our commutation relations is
+
+provided by bosonic creation annihilation operators:
+
+[aa(p), ab(p)] = 0 = [a
+
+a
+
+b
+(p), a
+
+(p)],
+
+[aa(p), a
+
+b
+
+(p)] = 2(p  q)b
+
+a.(3.44)
+
+with
+
+a(x) =
+
+1
+n
+
+aa(x), a(x) =
+
+1
+n
+
+aa(x).
+
+(3.45)
+
+56
+
+then the constraint becomes just the condition that we restrict to states
+containing n particles:
+
+z 
+
+0
+
+aa(p)ap(x)
+
+dp
+2
+
+= n.
+
+(3.46)
+
+this is why n must be an integer!.
+
+now we know that we are dealing with a system of n bosons interacting
+
+with each other under the hamiltonian
+
+1
+n
+
+e1() = xa z 
+
+1
+2
+1 + 2
+
+0
+
+[p +
+
+]aa(p)aa(p)
+
+2
+p
+
+dp
+2
+
++
+
+2
+
+nz aa(x)ab(y)ab(y)aa(x)|x  y|dxdy.
+
+(3.47)
+
+the classical (or large n ) limit we have been discussing so far is just the
+mean eld approximation to this many-body problem. the semi-classical
+approximation will give us the leading corrections in the case of nite n .
+this basic insight is due to witten, in a by now classic paper [9].
+
+what are these bosons? we will see in the next chapter that these bosons
+are just the valence quarks of the parton model, sripped of their color!.
+quarks are of course fermions. however the wavefunction of the system
+must be totally anti-symmetric in the color indices beacuse of the condition
+that the state be invariant under su(n) . thus in the remaining indices
+the wavefunction must be symmetric: if we ignore color the valence quarks
+behave like bosons.
+
+note that the momentum of the particles created by
+
+a(p)
+
+is always
+
+positive. thus the total momentum
+
+p =z 
+
+0
+
+p aa(p)aa(p)
+
+dp
+2
+
+is a positive operator. indeed on a state containing n particles,
+|a1, p1; a2, p2;   an , pn >= aa1(p1)aa2(p2)    aan (pn )|0 >
+
+(3.48)
+
+(3.49)
+
+p is just the sum of individual momenta, each of which is positive:
+p|a1, p1; a2, p2;   an , pn >= [p1 + p2 +    pn ]|a1, p1; a2, p2;   an , pn > .(3.50)
+a general state will be, in this basis described a wavefunction
+| >= xa1,anz 
+
+(a1, p1;   an , pn )|a1, p1;   an , pn > .(3.51)
+
+dp1
+2   
+
+dpn
+2
+
+
+
+0
+
+57
+
+an eigenstate of
+
+p with eigenvalue p will satisfy
+
+[p1 +    pn ] (a1, p1;   an , pn ) = p (a1, p1;   an , pn ).
+
+(3.52)
+
+pi are positive, it follows that they must each
+
+since each of the momenta
+be less than the total momentum p :
+
+0  pi  p, for i = 1,   n.
+
+(3.53)
+
+we will see in the next chapter that the
+
+pi are the momenta of the
+p .
+valence partons: the proton is a simultaneous eignstate of
+we have just seen a very important point: our theory at nite n (but
+within the approximation of the valence parton model) predicts that the
+wavefunction must vanish unless each of the parton momenta
+pi are less
+than p . but there is no n in this inequality; so it must hold even in the
+large n limit!.
+
+h and
+
+we will be nding an approximate eigenstate of
+
+h , by a variational
+principle: a sort of mean eld theory, the large n limit.the naive choice
+is a wavefunction which is a product of single particle wavefunctions. but
+such a naive version of mean eld theory will violate the exact inequality
+we just established on momentum eigenstates. we should nd our varia-
+tional approximation to the eigenstate of the hamiltonian, within the space
+of momentum eigenfunctions.
+
+thus we assume that the wavefunction is approximated by a wavefunction
+that is just a product except for the constraint that the momenta add up to
+p :
+
+(a1, p1; a2, p2;   an , pn ) = 2(xi
+
+pi  p ) (a1, p1) (a2, p2)    (an , pn ).(3.54)
+
+thus the fraction of the momentum carried by each particle is less than one:
+
+(p) = 0,
+
+unless 0 
+
+p
+p  1.
+
+(3.55)
+
+that is how we recover the fact that the quark distribution function must
+vanish when the bjorken variable is greater than one. this is a sort of semi-
+1
+classical correction in the
+n approximation. we must solve the classical
+subject to the boundary condition that it
+equations of motion for
+vanish outside of the interval
+0  p  p . this requires a modication of
+the variational ansatz but it it is possible to do that.
+this variant of mean eld theory is rather like the micro-canonical en-
+semble. the naive mean eld theory where only the expectation value of
+momentum is required to be p is like the canonical ensemble.
+
+(p)
+
+58
+
+3.6 valence quark distributions
+
+now we come to the point of comparison of the calculated valence parton
+distribuion function againt the data. it is not in fact necessary to make a
+direct comparison with the data on deep inelastic scattering. a generation
+of phenemenologists have extracted the valance parton structure functions
+from the data. more precisely they have assumed a parametric form such as
+
+(xb) = ax1
+
+b (1  xb)2[1 + a1xb + a2x2
+b]
+
+(3.56)
+
+for the parton distribution functions and t to all known data points. since
+the data consists of measurement of the dis (deep inelastic scattering)
+cross-section at dierent values of q2 this t uses the convolution of this
+distribution function with the structure functions of the quarks calculated in
+perturbation theory. there are about 6 structure functions (corresponding
+to u, u, d, d, s quarks and the and gluons ) so altogether there are about 30
+parameters in addition to the fundamental parameters of perturbative qcd.
+altogether there are about a thousand data points, coming from measure-
+  p or   n scattering
+ment of the cross-section for
+at various energies. thus the mere extraction of these distribution functions
+has itself become a subeld of particle physics [32, 19, 33]. the major groups
+seem to be in general agreement with each other, although a detailed ana-
+lyzis of the errors in their parameters is not yet available. there are recent
+attempts to estimate the systematic and statistical errors, but they seem
+incomplete.
+
+e  n ,
+
+e  p ,
+
+the comparison should be made with the weighted average over the u
+and d quark distributions,weighted so as to get an isospin invariant com-
+bination. this is because we have not yet done a collective variable variable
+quantization of the isospin degrees of freedom of the proton, so the distribu-
+tion function we are computing is the isospin invariant one.
+
+another complication in the comparison is that not all the momentum in
+the baryon is carried by the valence quarks: it is known that only about half
+of the momentum is in the valence quarks, the rest being in the anti-quarks
+(or sea quarks) or gluons. this aects our momentum sum rule. essentially
+what it does is that the n in the sumrule gets replaced by ne = n
+f
+where
+f is the fraction of the momentum carried by the valence quarks.
+until we do a complete calculation allowing for the contributions of the sea
+quarks and the gluons (i.e., without assuming the factorizable ansatz for m
+and without ignoring the scalar elds a ) we must treat f as a parameter
+
+59
+
+wave functions versus xb
+
+3
+2.5
+2
+1.5
+1
+0.5
+
+<---data
+
+<---f=.6
+
+<---f=.7
+
+0.2 0.4 0.6 0.8
+
+1
+
+<---f=1
+xb
+
+figure 3.3: comparison of parton wavefunctions (x) . the mrst
+f of the
+distribution agrees with our prediction best when the fraction
+momentum carried by the valence quarks is about 0.6 .
+
+and choose the value that gives the best t. the good news is that it is the
+only parameter: m2 is xed to be zero2, since the up and down quarks are
+known to have masses that are smal compared to the qcd scale 1 . (
+mu  5 mev and md  10 mev while 1  100 mev .)
+; but since the distri-
+bution functions are dimensionless function of a dimensionless variable, the
+dependence on 1 cancels out.
+
+the only other parameter of the theory is
+
+g2
+
+in comparison with experimental data we should keep in mind that we are
+in fact ignoring some of the constituents of the baryon: the valence quarks
+are knwon to carry only about half of the momentum of the baryon. the rest
+is in the sea quarks and the gluons. thus we introduce a parameter f , the
+fraction of the momentum carried by the valence quarks. we nd that for a
+value of
+f = 0.6 the wavenfunction predicted by us agrees quite well with
+experiment. (the value of being about a half is consistent with other ways
+of looking at the situation.) thus we have solved the problem of deriving
+the quark structure functions of the baryon from qcd.
+
+it still remains to calculate the anti-quark and gluon structure functions.
+
+2this by the way means that 2 = m2  g2
+
+is negative. there is no contradiction
+here, since the quark is not a true particle: the mass of the baryon is still predicted to be
+real.
+
+
+
+60
+
+we will turn to that in later publications. in a later chapter we will give
+some ideas that help in solving this problem.
+
+in the next chapter we will see how to reconcile the soliton model with
+
+the parton model.
+
+61
+
+62
+
+chapter 4
+
+the parton model
+
+this chapter is based on the paper [15] which in turn was an expansion of
+some short statements made in ref. [12].
+
+we have been describing the idea that the baryon is a soliton, essentially
+made up of an innite number of mesons. but this seems to contradict the
+simple and successful picture of the baryon as a bound state of quarks. at
+the time the skyrme model was revived, it was shown that the static (low
+energy properties) of the baryon that are so well explained by the quark
+model (magnetic moments, mass dierences, avor multiplet structure) can
+all be rederived in the soliton model[6]. but the only explanation for the
+structure of the proton in deep inelastic scattering still appeared to be the
+quark-parton model. in these lectures, we are describing how to explain the
+structure functions within the soliton model as well. in fact we will be able
+to go beyond the simple minded parton model.
+
+it is an old idea in the study of the structure of the proton that the
+constituents-the partons- can be thought of as free particles. this then raises
+the question of how they bind to form the proton in the rst place. it is the
+binding mechanism that determines the wavefunction of the partons and
+hence the structure functions of the hadron. in this section we will present
+a model of interacting partons. perhaps surprsingly, it will turn out to be
+equivalent to the soliton model in the factorizable ansatz (and in the large
+n limit). thus the parton model is merely an approximation to the soliton
+model. later, by a deeper analysis of the soliton model, we will derive the
+sea quark and gluon distributions as well.
+
+it is at the moment impossible to derive the particle spectrum of four
+dimensional qcd directly. there are many attempts to do compute the
+
+63
+
+spectrum by direct numerical simulation of qcd, but they have to yet to
+surmount many obstructions. for example, the asymptotic freedom of qcd
+implies that the energy of all physical states are exponentially small compared
+to the cut-o. thus extra-ordinary accuracy is required of all direct numerical
+computations of the energy, a problem that is only exacerbated by the large
+( in principle innite) number of degrees of freedom in the system. however,
+it may be possible to understand the spectrum of two dimensional qcd
+by diagonalizing its hamiltonian numerically. being a nite (rather than
+asymptotically free) theory numerical calculations are much more reliable.
+
+4.1 parton wavefunctions
+
+we will follow largely the discussion in [15] the valence parton model as-
+sumes that the proton is made of n partons (quarks) which are fermions
+transforming under the fundamental representation of color. the idea of
+color of course was not present in the original version of this model, due to
+bjorken and feynman. also it was not known then that the partons were
+spin half particles and hence fermions. but these were straightened out soon
+with the identication of the valence partons with the quarks.
+footnoteit is
+known that only about half of the momentum of the baryon is accounted for
+by these valence partons: the rest must be carried by the sea quarks and
+by the gluons.
+
+we will work think of the parton wavefunctions as functions of the null
+in addition, the partons carries the quantum
+a ) and color  . thus
+(a, , p) . since p  0 for the
+ vanish for negative p
+
+momentum p = p0 + p1 .
+numbers of avor and spin (together denoted by
+the wavefunction of a single parton will be
+null component of momomentum, we require that
+.
+
+a baryon is made of n such partons so its wavefunction is a completely
+(a1, 1, p1; a2, 2, p2;   ; an , n , pn ) . however,
+antisymmetric function
+the baryon must be invariant under color: transform under the trivial repre-
+sentation of color su(n) . this means that the wavefunction is completely
+antisymmetric in color alone:
+(a1, 1, p1; a2, 2, p2;   , an , n , pn ) = 1,2,n
+in other words, the wavefunction is completely symmetric in spin, avor and
+momentum quantum numbers. if we factor out color from the wavefunction,
+
+(1, p1; 2, p2;   n , pn )(4.1)
+
+64
+
+the partons behave as if they are bosons.
+
+4.2 hamiltonian
+
+the kinetic energy of a single parton is
+
+1
+2
+
+[p +
+
+2
+p
+
+].
+
+(4.2)
+
+hence the kinetic energy of the partons making up a baryon is
+
+xa1anz 
+
+0
+
+nxi=1
+
+1
+2
+
+[pi +
+
+m2
+ai
+pi
+
+]| (a1, p1;   ; an , pn )|2 dp1    dpn
+
+(2)n
+
+.
+
+(4.3)
+
+in the early versions of the quark-parton model, they were treated as if
+they are free particles. that cannot be quite correct, since they must after
+all bind to form the baryon. the simplest idea would be to let them interact
+through a pairwise potential 1v(x) :
+
+1
+2
+
+1 xa1anz 
+0 xi6=j
+
+v(xi  xj)|(a1, x1;   ; an , xn )|2dx1    dxn .
+
+(4.4)
+
+now we must allow for a self-energy term as well in the hamiltonian. the
+point is that the eective mass of the partons may not be the same as their
+bare mass. just as the electrons in a metal have a dierent eective mass
+from the free electron, the eective mass of the parton inside a baryon may
+be dierent from that of a bare parton: there can be a nite renormalization
+of the mass. we can allow for this by replacing the 2 in the kinetic energy
+by an eective mass 2 .
+
+since the partons (quarks) cannot be separated out to innity, one could
+wonder what the bare parton mass m means: it has no meaning as the
+mass of any particle that can exist in an asymptotic state. however, it is
+possible to give the bare parton mass a meaning in terms of high energy
+processes that do not involve asymptotic states. for example the weak in-
+teraction can be used as a probe of the quark masses: the weak decay rates
+of the quarks are sensitive to the bare masses. this gives a way to make
+sense of the bare parameter m . but for our purposes, what matters is the
+eective mass  .
+
+65
+
+thus the hamiltonian of the valence quark model is
+
+en ( ) = xa1anz 
+
+0
+
+[pi +
+
+1
+2
+
+nxi=1
+1 xa1anz 
+0 xi6=j
+
++
+
+1
+2
+
+]| (a1, p1;   an , pn )|2 dp1    dpn
+
+2
+ai
+pi
+v(xi  xj)|(a1, x1;   an , xn )|2dx1    dxn .
+
+(2)n
+
+the ground state of this hamiltonian is the baryon of the valence quark
+model.
+
+we havent yet decided what potential
+
+to use. there is ample
+evidence that the quark-quark potential is linear [34]. in any case as in qhd,
+lorentz invariance will lead to this choice n our lightcone co-ordinates. so
+we choose
+
+v(x) = 1
+
+v(x)
+
+with this choice we get exactly the same hamiltonian we had in the last
+1
+n playing the
+h . thus the rank one approximation to the topological soliton
+
+chapter, from the quantization of the rank one ansatz with
+role of
+model is equivalent to this interacting valence parton model.
+
+2|x| .
+
+4.3 hartree ansatz
+
+the ground state of a many boson system can often be described by mean
+eld theory: each boson moves in the eld created by all the others. more-
+over, all the bosons can be assumed to occupy the same single particle state
+in this ground state. after the color is factored out, the partons in our model
+behave just like bosons. hence we should be able to simplify the problem by
+making this mean eld approximation. more specically,
+
+(a1, p1;   an , pn ) = 2(xi
+
+pi  p )
+
+nyi=1
+
+(ai, pi).
+
+(4.5)
+
+here p is the total momentum of the system. since
+impose
+
+p  0 we must
+
+(p) = 0
+
+(4.6)
+
+the wavefunction satises the normalization condition
+
+p is less than the total momentum p .
+
+for p  0 . it then follows that
+z p
+
+0
+
+| (p)|2 dp
+
+2
+
+66
+
+= 1
+
+(4.7)
+
+and the momentum sum rule:
+
+nz p
+
+0
+
+p| (p)|2 dp
+
+2
+
+= p.
+
+(4.8)
+
+the energy is calculated by putting this ansatz into the earlier formula:
+
+1
+2
+
+[p +
+
+2
+a
+p
+
+]| (a, p)|2 dp
+
+2
+
++
+
+e = xa z 
+g2z 
+
+1
+2
+
+0
+
+
+
+v(x  y)xa |(a, x)|2xb
+
+|(b, y)|2dxdy.
+
+at this point we notice that we have exactly the same problem as in the
+m (p, q) is exactly the
+last chapter. the energy of the rank one ansatz for
+same as that of the parton model in the hartree approximation. thus the
+mean eld theory of the valence parton model is our classical theory on the
+projective space cp (h+) .. this interpretation of the rank one ansatz in
+terms of the parton model was already noted in ref. [12].
+what would be the leading deviation away from the large n or classical
+limit? we argued in the last chapter in exactly the same theory (but viewed
+as the quantization of the rank one ansatz) that it amounts to the ansatz
+
+(p1,   pn ) = 2(p1 + p2    pn  p )yi
+
+(pi).
+
+(4.9)
+
+there are now some correlations between the quarks: each momentum is less
+than p and also pn can be eliminated in terms of the others. the latter
+is a small eect; but the inequalities on the momenta,
+0  pi  p cannot
+be ignored.
+
+67
+
+68
+
+chapter 5
+
+beyond the valence parton
+model
+
+we saw that the separable ansatz in the soliton theory corresponds to the
+valence parton approximation. now we see how to go beyond that and get
+the true minimum of the energy. we can improve on the valence parton
+model by adding sea quarks and anti-quarks; this requires us to invent an
+improved variational ansatz. in another direction we can minimize the energy
+in the grassmannian by numerical methods. we will describe ideas in both
+directions.
+
+5.1 a co-ordinate system
+
+recall that the equations to be solved are
+
+[e(m),  + m] = 0,
+
+along with the constraints:
+
+dene
+
+[ + m]2 = 1,
+
+trm = 2.
+
+1 =   2  ,
+
+(5.1)
+
+(5.2)
+
+(5.3)
+
+where  is the minimum in the subset of separable kernels; or at least
+a good approximation to it. rather than parametrize the soliton by the
+
+69
+
+deviation from the vacuum  it makes more sense to use the deviation from
+our approximate solution
+1 which is in the same connected component.
+so we dene a new variable m1 by
+
+ + m = 1 + m1.
+
+then the constraints on m1 are
+
+[1, m1]+ + m 2
+
+1 = 0,
+
+trm1 = 0.
+
+(5.4)
+
+(5.5)
+
+the trace of m1 is zero since the baryon number is now already carried by
+1 :
+
+1
+2
+
+
+
+tr[1  ] = 1.
+
+let w be the subspace where
+
+1 takes eigenvalue 1 :
+
+w = h <  >
+
+(5.6)
+
+(5.7)
+
+where <  > denotes the linear span of  . we have an orthogonal
+splitting of h according to this splitting. we can now represent m1
+in
+terms of a co-ordinate system centered at the point
+
+1 :
+
+[1 + zz ]1z
+
+(5.8)
+
+z [1 + zz ]1 z [1 + zz ]1z(cid:19)
+
+m1 = 2(cid:18) [1 + zz ]1  1
+z : w   w is an arbitrary hilbert-schmidt operator.
+
+it is
+here,
+straighforward to check that this is a solution to the constraint equations.
+moreover, in some nite neighborhood of 1 , all points of the grassmannian
+can be represented this way. of course this co-ordinate system will break
+down if we go too far away from 1 : we are assuming that the true minimum
+lies close enough to the approximate solution to be in this co-ordinate chart.
+given a xed  , the operator z above provides a co-ordinate system
+on an neighborhood of the grassmannian. this co-ordinate system only
+covers a part of the connected component with baryon number one. it takes
+a countably innite number of such charts (corresponding to dierent choices
+of  ) to cover the whole space of baryon number one congurations.
+
+70
+
+5.2 the method of steepest descent
+
+we need to minimize the function e(m) subject to the constraints
+
+[, m]+ + m 2 = 0, 
+
+1
+2
+
+trm = 1,
+
+trm 2 < .
+
+(5.9)
+
+a simple method for minimizing functions of several variables is steepest
+descent: we start at some initial point and move along the straight line
+opposite to the gradient of the function at that point a small distance. then
+we recompute the gradient at the new point and repeat the procedure. if the
+topography of the constant energy surfaces is not too complicated we will
+eventualy arrive at the minimum.
+
+the main complication in our case is of course the constraint: the gradient
+vector e(m) is not tangential to the grassmannian so if we move opposite
+to it we will leave the constraint surface. even if we project out the tangential
+component of the vector, we will still leave the surface if we move along the
+straightline in that direction. the proper geometric solution to this problem
+is to move a small distance along the geodesic at m tangential to the
+gradient vector. then we will recompute the gradient and nd the geodesic
+at the new point. this is feasible beacuse the grassmannian is a homogenous
+manifold and we can nd the geodesic on it easily using its high degree of
+symmetry.
+
+more explicitly, recall that the tangential projection of the gradient vector
+
+is
+
+the vector
+
+t =
+
+1
+4
+
+[ + m, [ + m, e(m)]].
+
+(5.10)
+
+y =
+
+1
+2
+
+[ + m, e(m)]
+
+(5.11)
+
+is at right angles to the tangential part of the gradient: it is in fact obtained
+by multplying
+t by the complex structure of the grassmannian. just
+as in the case of the sphere, the geodesic is obtained by rotating the point
+about an axis orthogonal to the tangent vector. more explicitly, the geodesic
+starting at m tangential to t is
+
+( ) = e y [ + m]e y  .
+
+(5.12)
+
+71
+
+2[ + mk, e(mk)] .
+
+thus the steepest descent algorithm is
+1. choose an initial conguration m0 and small parameter
+2. given the kth conguration mk , calculate the gradient e(mk) and
+yk = 1
+3. set mk+1 = e yk [ + mk]e yk   and repeat the previous step.
+ has to be chosen by some trial and error. too small
+a value will produce changes in the conguration within the noise due to
+numerical errors. too large a choice will not give a convergent sequence:
+we will bounce around all over the grassmannian. but we found that in
+practice, a proper value of
+
+ can be found quickly.
+
+the value of
+
+ .
+
+how do we choose the initial conguration m0 ? since we believe
+that the valence approximation is good, we could use as the starting point a
+separable conguration, minimizing the energy within that subspace.
+
+5.3
+
+sea quarks and anti-quarks
+
+we saw that if we restrict the dynamics of our theory to the rank one ansatz,
+m = 2   , we get the valence parton model. to get a more general
+picture that includes sea quarks and anti-quarks (but is still not the total
+picture) we must use the ansatz with rank three. in fact by going to ansatzes
+of larger and larger rank we can get better and better approximations to the
+baryon structure functions.
+the rank three ansatz is
+
+1
+2
+
+
+
+m = 0  
+
+0 + {[+  
+
++    
+]
+
+[1   2
+
+][  
+
++ + +  
+
+]}
+
+where , 0, + are three vectors in h satisfying
++ = +,
+
+0 = 0,
+
+ = ,
+
+||||2 = ||0||2 = ||+||2 = 1, 
+
+0+ = 0.
+
+moreover,
+
+0   2
+
+  1.
+
+(5.13)
+
+(5.14)
+
+(5.15)
+
+we saw that  2
+
+ is the probability of nding an anti-quark inside the baryon.
+
+72
+
+as noted earlier, the anti-quark distribution function is just  2
+
+| a(p)|2
+
+. the baryon number is
+
+b =xa z 
+
+0 {| 0a(p)|2 +  2
+the total momentum is, similarly,
+
+[| +a(p)|2  a(p)|2]}
+
+dp
+2
+
+.
+
+(5.16)
+
+p =xa z 
+
+0
+
+p{| 0a(p)|2| +  2
+
+[| a(p)|2 + | +a(p)|2]}
+
+dp
+2
+
+(5.17)
+
+these conrm the interpretation of 0 as the valence quark wavefunction
+and +(p) as the sea quark wavefunction.
+
+also, the kinetic energy is
+
+k =xa z 
+
+0
+
+1
+2
+
+[p +
+
+2
+p
+
+]{| 0a(p)|2| +  2
+
+[| a(p)|2 + | +a(p)|2]}
+
+dp
+2
+
+(5.18)
+
+the potential energy is more complicated. recall that the potential en-
+ergy is simpler in position space while the kinetic energy is simpler in mo-
+mentum space. our wavefunctions now depend on a discrete variable in
+addition to momentum, and there is a unitary transformation in these dis-
+crete variables that is the counterpart to fourier transformation. this is the
+transformation to a basis in which  is diagonal; the wavefunctions will no
+longer be eigenstates of
+
+ .
+
+1
+2
+
+
+
+where
+
+m = 0  
+
+0 + {1  
+
+1  2  
+2}
+
+1 =
+
+2 =
+
+1
+
+2(cid:26)[1  ]  [1 + ]+(cid:27)
+2(cid:26)[1 + ] + [1  ]+(cid:27)
+
+1
+
+the potential energy is then,
+
+u =
+
+1
+
+2 xa z (cid:26)|0a(x)|2v00(x)+
+
+73
+
+(5.19)
+
+(5.20)
+
+(5.21)
+
+|2a(x)|2v22(x)(cid:27)dx
+1a(x)v10(x)
+
+|1a(x)|2v11(x) +  2
+ 2
+2 re xa z (cid:26)0a(x)
+1
++
+2
+2a(x)v20(x)   2
+
+0a(x)
+
+1a(x)
+
+2a(x)v21(x)(cid:27)dx.
+
+the mean elds are determined by solving the dierential equations
+
+v 
+(x) = a(x)
+
+a(x).
+
+with the boundary conditions
+
+v(x)  
+
+1
+2|x|, for |x|  .
+
+equivalently,
+
+v(0) = v 
+
+(0) = 0
+
+for the diagonal components, and,
+
+v() = v 
+for the o diagonal components.
+
+() = 0 for  6= 
+
+(5.22)
+
+(5.23)
+
+(5.24)
+
+(5.25)
+
+by choosing appropriate variational ansatzes we can estimate the anti-
+quark content of the proton. or we can derive integral equations for the func-
+tions ,0 and solve them numerically. both methods are being pursued.
+initial results are encouraging. detailed results will appear in a separate
+publication.
+
+acknowledgement
+
+i thank the students and postdoctoral fellows at rochester who have
+worked withme at various stages in implementing this research program: p.
+bedaque, k. s. gupta, s. guruswamy, i. horvath,v. john, g. krishnaswami,
+c-w. h. lee, o. t. turgut. i have also benetted from discussions with a.
+p. balachandran, a. bodek, j. mickelsson, s. okubo, d. pickrell and j.
+schechter. i am especially grateful to o. t. turgut and v. john for proof-
+reading an early version of these notes. also i thank c. saclioglu and j.
+mickelsson for invitations to istanbul and stockholm and making my visits
+there so enjoyable. this work is supported by the department of energy.
+
+74
+
+appendix a
+
+a null co-ordinate system
+
+a.1 kinematics
+
+it will be convenient to use a co-ordinate system that combines the advan-
+tages of the null and cartesian co-ordinate systems.
+
+if x0 and x1 are the usual cartesian co-ordinates in minkowski space,
+
+the metric is
+
+we dene now
+
+so that
+
+the minkowski metric is,
+
+ds2 = [dx0]2  [dx1]2.
+
+t = x0  x1,
+
+x = x1
+
+ds2 = dt[dt + 2dx].
+
+ =(cid:18) 1 1
+1 0(cid:19)
+
+(a.1)
+
+(a.2)
+
+(a.3)
+
+(a.4)
+
+thus the vector
+elds will be given on a surface of constant
+
+is time-like while
+
+
+t
+
+
+x
+
+is null. the initial values of
+
+t , which is a null line.
+
+momentum p = pdx = p0dt + pdx is a
+
+1 -form (co-vector); we
+will use the same letter to denote the momentum 1-form as well as its null
+
+75
+
+componenet, but it should be clear from the context which one we mean. to
+nd its magnitude we must use the inverse of the above metric tensor:
+
+ =(cid:18) 0
+
+1
+
+1 1(cid:19) ,
+
+p2 = pp = 2p0p  p2.
+
+thus the mass shell condition becomes
+
+p0 =
+
+1
+
+2(cid:20)p +
+
+2
+
+p (cid:21).
+
+(a.5)
+
+(a.6)
+
+here,  is the rest mass of the particle.
+
+we see now one of the main technical advantages of using the null-time
+co-ordinate system: energy and momentum have the same sign. in the usual
+1 + 2] and therefore no such simple
+space-time co-ordinates,
+in the dirac theory of fermions the states of negative
+relationship exists.
+energy are occupied; this becomes merely the condtition that the negative
+momentum states be occupied.
+
+po = [p2
+
+a.2 dirac matrices
+
+the dirac matrices are best thought of as matrix-valued vectors, since they
+appear in the form  in the action. thus the dirac algebra
+ +
+ = 2 becomes
+
+[t]2 = 0,
+
+t + t = 2,
+
+2 = 1.
+
+we will choose the explicit representation
+
+t =(cid:18) 0 2
+0 0(cid:19) ,
+
+ =(cid:18) 0 1
+0 (cid:19) .
+
+1
+
+(a.7)
+
+(a.8)
+
+in any representation of dirac matrices there is a charge-conjugation matrix
+c satisfying
+
+cc 1 = ()t .
+
+(a.9)
+
+in the usual space-time formalism this matrix is often 0 itself, but that is
+a representation-dependent fact. in our representation,
+
+c =(cid:18) 0
+
+1
+
+1
+
+0(cid:19) .
+
+76
+
+(a.10)
+
+given the dirac spinor
+
+q =(cid:18) q1
+
+q2(cid:19) , the conjugate spinor is
+
+q = qc = ( q
+2
+
+q
+1 ) .
+
+(a.11)
+
+a.3 free fermions
+
+the lagrangian of a free dirac fermion becomes
+
+ld = q[i]q + mqq
+2[it]q2 + q
+
++2q
+
+1(ix)q1  q
+
+2(ix)q2 + m[q
+
+2q1 + q
+
+1q2].
+
+we see that the eld
+q1 has no dynamical degrees of freedom: it has no
+time derivative in the action. hence it can be eliminated by its equation of
+motion:
+
+q1 = 
+
+m
+p
+
+q2
+
+(a.12)
+
+where
+
+p = ix . putting this back into the action and changing variables
+(a.13)
+
+ = 2 q2
+
+gives us the eective action for the propagating eld:
+
+l = (it)   1
+
+2
+
+[p +
+
+m2
+p
+
+].
+
+(a.14)
+
+a.4 gauge fields
+
+the lagrangian of two dimensional qcd is
+
+l =
+
+n
+
+41z trff  +
+
+nfxa=1z qa[i   + ma]qa.
+
+we have added in the avor indices a, b and the color indices
+
+i, j .
+
+the freedom of gauge transformations can be utilized partially to impose
+the null gauge condition ax = 0 . then, the fermionic part of the lagrangian
+becomes
+
+ld = qai[i(j
+
+i + aj
+
+i)]qaj + mqaiqai
+
+77
+
++ ai[i(t + aj
+
+ti)]j
+1
+1 (ix)q1ai 
+2
+
++qai
+
+ai(ix)ai +
+
+m
+2
+
+[aiq1ai + qai
+
+1 ai].
+
+which becomes
+
+l = a(it)a  a(cid:26)1
+
+2
+
+[p +
+
+m2
+p
+
+]  iat(cid:27)a
+
+(a.15)
+
+upon eliminating
+
+q1 .
+
+to this we must add the action of the yangmills eld itself, which looks
+
+quite simple in this co-ordinate system and gauge:
+
+ly m =
+
+n
+41
+
+trff =
+
+n
+21
+
+tr[xat]2.
+
+(a.16)
+
+the eld at does not propagate and can be eliminated. thus the action
+of two-dimensional qcd can be written entirely in terms of the eld  .
+
+a.5 the dirac vacuum
+
+let us return to the free fermion theory with lagrangian
+
+l = (it)  
+
+1
+2
+
+[p +
+
+m2
+p
+
+]
+
+(a.17)
+
+upon quantization, the eld  becomes an operator satisfying the fermionic
+anti-commutation relations
+
+[(x), (y)]+ = (x  y),
+
+[(x), (y)]+ = 0.
+
+(a.18)
+
+if there were only a nite number of operators, such canonical anti-
+commutation relations would have a unique representation. in the innite
+dimensional case physical ideas have to be brought in to choose the right
+representation. dirac showed that the correct choice is to assume that all
+the negative energy states are lled even in the vacuum. since energy and
+momentum have the same sign in our co-ordinate system, this condition is
+easy to implement. we dene the vacuum by
+
+(p)|0 >= 0 for p < 0,
+
+(p)|0 >= 0 for p > 0.
+78
+
+(a.19)
+
+we have dened the fourier transforms
+
+(x) =z (p)eipx dp
+
+2
+
+(a.20)
+
+etc. then the normal ordered product of a pair of operators is dened as
+
+: (p)(p) : = (p)(p)
+
+unless both p and p are negative, in which case it is
+
+: (p)(p) : = (p)(p).
+
+(a.21)
+
+(a.22)
+
+the point is that then the expectation value of normal ordered current op-
+erators are zero in the dirac vacuum. indeed,
+
+< 0|(x)(y)|0 > = z dp
+= z 0
+
+2
+
+
+
+dq
+2
+dp
+2
+
+eipx+iqy < 0| (p) (q)|0 >
+eip(yx) =
+
+[(x  y) + (x  y)].
+
+1
+2
+
+here,
+
+(x  y) =z sgn (p)eip(xy) dp
+
+x  y
+is to be thought of as a distribution. it is (upto a factor of
+a well-known integral transform, the hilbert transform.
+
+2
+
+1
+
+=
+
+1
+ip
+
+(a.23)
+
+i ) the kernel of
+
+thus we should regard the current operators of the fermionic theory as
+dened with the normal ordering. for example, the equation of motion of
+the at will be, in the quantum theory,
+
+xai
+
+ 2
+
+tj(x) =
+
+1
+n
+
+1 : ai(x)aj(x) : .
+
+(a.24)
+
+we can use this to eliminate the gauge eld from the theory completely. thus
+two dimensional qcd can be written as a theory of fermions interacting with
+each other through a coulomb-like potential. the further analysis of this
+theory is carried out in the text, towards the end of the rst chapter.
+
+79
+
+80
+
+appendix b
+
+operator ideals
+
+here we give the basic denitions of the operator ideals we use in the text.
+a deeper discussion may be found in ref. [27, 35, 36]; we give only a rough
+outline of the theory. it is the authors fervent hope that experts in functional
+analysis will not read this appendix.
+
+b.1 compact and hilbert-schimdt operators
+
+the rank of an operator a : h  h on a complex hilbert space is the
+dimension of its range; i.e., the dimension of the subspace of all vectors that
+can be written as au for some u  h . when the rank of a is nite, it
+can be thought of as a sort of rectangular matrix with (possibly) an innite
+number of columns but only a nite number of rows; at least there is a basis
+in which it has this form.
+
+for such an operator, we can dene several measures of its size (norm).
+
+for example (the operator norm),
+
+|a| = sup
+
+u
+
+||au||
+||u||
+
+.
+
+another (the hilber-schmidt or h-s norm) is
+
+|a|2 = tr[aa]
+
+1
+
+2 .
+
+(b.1)
+
+(b.2)
+
+is also the sum of the absolute squares of all the matrix elements in
+
+|a|2
+any basis.
+
+2
+
+81
+
+the completion of the space of nite rank operators in the operator norm
+is the space of compact operators. in other words, a compact operator is one
+that can be approximated arbitrarily closely by nite rank operators, distance
+between operators being measured with the operator norm.
+if we instead
+complete in the h-s norm, we get the space of hilbert-schimdt operators.
+
+a bounded operator is one which has nite operator norm; i.e.,
+
+|a| = sup
+
+uh
+
+||au||
+|u|
+
+(b.3)
+
+exists. the set of bounded operators on h is an algebra b(h) . not all
+bounded operators are compact; for example the identity is bounded yet not
+compact.
+
+a compact operator has the expansion, with n > 0 ,
+
+a = xn=1
+
+n|n >< n|
+
+(b.4)
+
+the sum being either nite (when a is of nite rank ) or innite (more
+generally). the numbers n are called singular values; if a is positive
+a and its adjoint a have the same singular
+they are its eigenvalues.
+values.
+
+roughly speaking, the operator norm of a is the largest of its singular
+values, while the hilbert-schmidt norm is the sum of the squares of the
+singular values. the singular values of a compact operator form a sequence
+that converges to zero; in fact zero is the only limit point of the sequence.
+thus, if the h-s norm is nite, the eigenvalues must be tend to zero. in fact
+all h-s operators are compact.
+
+b.2 schatten ideals
+
+many other norms can be dened in terms of the singular values. for example
+the trace class operators are those for which the sum of singular values is
+convergent. this is stronger than the requirement that the diagonal elements
+in some basis form a summable sequence: being trace-class reqires a sort
+of absolute convergence. the product of two hilbert-schimdt operators in
+trace-class.
+
+p  1 , we have the class ip(h) of operators for
+n converges. of course i2 is the space of h-s operators
+
+more generally, for
+
+which the sum p p
+
+82
+
+and i1 that of trace class operators. the space of compact operators can
+be thought of as the limiting case i and that of nite rank rank operators
+as the opposite limit, i0 . we have the inclusions
+
+i0  i1  i2   i  b.
+
+(b.5)
+
+it is very important for us that the ip are two-sided ideals in the algebra
+of bounded operators; i.e., that a  b and b  ip
+implies that both
+ab  ip and ba  ip . these are called the schatten ideals. we are
+p = 1, 2 .
+especially interested, of course, in the cases
+
+b.3 the restricted unitary group and its
+
+grassmannian
+
+in the text we are interested in the case of a hilbert space h with a
+given orthogonal splitting into two innite dimensional orthogonal subspaces:
+h = h  h+ . recall that the operator
+ is dened to have eigenvalues
+1 on h . the restricted unitary group is the subset of all unitaries
+satisfying a convergence condition:
+
+u1(h, ) = {g|gg = gg = 1; [, g]  i2}.
+
+(b.6)
+
+it is vital for this denition to make sense that i2 is an ideal; that is why
+the product of two elements still satises the convergence conditon. (any
+into submatrices
+unitary operator is bounded). if we split
+a : h  h etc., the
+a, d may not be invertible in
+
+d(cid:19) where
+
+according to the splitting
+
+g  u1(h, )
+
+submatrices
+general, but they are fredholm (see below) since
+
+b, c are h-s. the matrices
+
+g = (cid:18) a
+
+c
+
+b
+
+g1 exists.
+
+the restricted grassmannian is the set of all self-adjoint operators of
+
+square one whose distance ( in the h-s sense) from  is nite.
+
+gr1(h, ) = {| = ; 2 = 1,     i2}.
+
+(b.7)
+
+in the text we often use m =    as the variable that describes a point
+in the grassmannian. we showed that each such operator corresponds to a
+subspace of h ( the negative eigenspace of  ) which is at a nite distance
+from the standard subspace h .
+
+83
+
+the fact that
+
+is an ideal ensures that the action of the restricted
+
+unitary group on this grassmannian well-dened:
+
+i2
+
+ 7 gg, m  gmg + g[, g].
+
+(b.8)
+
+b.4 fredholm index
+
+the material in this section is contained in ref.
+[27] to which we refer for
+proofs and more precise statements. a bounded operator a is fredholm if it
+is invertible modulo a compact operator; i.e., if there is a compact operator
+k such that a + k has an inverse. the set of fredhom operators is
+a toplogical space, with the toplogy induced by the operator norm.
+it is
+disconnected, each connected component being labelled by an integer called
+the fredholm index.
+
+to understand the fredholm index, consider the kernel of an operator;
+i.e., the subspace of all u such that au = 0 . even in the nite dimensional
+case the kernel can change change discontinuosly under a small change in a
+.; for example we may cross an eigenvalue. in the nite dimensional case,
+the dimensions of the kernels of a and a are the same. in the case of
+fredholm operators on innite dimensional hilbert spaces, the dierence
+
+index (a) = dim ker a  dim kera
+
+(b.9)
+
+it however does not change under
+is always nite but need not vanish.
+it is constant in each connected component of
+continuos changes in a :
+the space of freholm operators. in fact it is the only such function: any two
+fredholm operators of the same index are connected by a continuos curve.
+now g  u1(h, ) is of course fredholm of index zero: it is invertible
+as is its adjoint. but the submatrices
+a : h  h etc.)
+dened above are not invertible in general. yet they are invertible modulo
+bb ), so they are fredholm.
+some compact operators ( products such as
+g as a whole invertible, they must have opposite fredholm indexes.
+since
+the index of a (for example) is a topological invariant of
+g . the group
+u1
+is the union of connected components labelled by this index, which can
+take any integer value. the connected component of the identity, of course,
+has index zero.
+
+a, d ( where
+
+we can understand the renormalized dimension of a subspace (called vir-
+tual rank in [27]) in terms of the fredhom index. every self-adjoint operator
+
+84
+
+can be diagonalized; an operator   gr1 can be brought to the standard
+form  by an element in u1 :
+a(g) is then
+the topological invariant associated to  .
+
+ = gg . the index of
+
+another point of view is in terms of the subspace w of h correspond-
+ing to  . if  is at a nite distance from  , w will not dier too
+much from h . more precisely, the projection operator + : w  h+
+will be compact and  : w  h will be fredholm. the index of 
+measures the dierence in dimensions between w and h ; this is the
+renormalized dimension of w . we saw in the text that this has the physical
+meaning of baryon number.
+
+it si crucial for all this that we allow only subspaces at a nite distance
+from the standard one in gr1 . if we had allowed for all subspaces, the
+grassmannian would have been contractible!. the convergence condition
+we must impose is required for the poisson brackets to make sense: the
+symplectic form of the grassmannian would not make sense otherwise. it is
+gratifying that as a consequence, we get a topological invariant which has
+the physical meaning of baryon number.
+
+although the symplectic form makes sense on all of the phase space gr1 ,
+we should not expect the hamiltonian to make sense on all of it. there should
+be some dense domain in which the hamiltonian does make sense however.
+we leave such questions as challenges for the analyst who is interested in
+solving problems of relevance to physics.
+
+85
+
+86
+
+appendix c
+
+quadrature of singular
+integrals
+
+in this appendix we summarize some ideas on the numerical methods that
+are used in the chapter on solitons. some originality is needed even in this
+part of the problem.
+
+c.1 quadrature formulas
+
+the equations we have are just too hard to be solved analytically. we have
+to resort to numerical methods. the basic idea is to convert the integral
+equation into a matrix equation by allowing
+p to take just a nite set of
+values: we must nd a way to approximate the integral by a nite sum. then
+we will solve the resulting nonlinear matrix equations by iteration.
+
+quadrature is the approximation of integrals by nite sums. there are
+standard methods for quadrature, (method of moments) going back to the
+days of gauss. but we have to modify these methods since our integrals
+are singular. the basic idea is well-known in the literature on quadrature at
+least for the case of the cauchy principal value[37]. our integrals are one
+step harder (hadamard finite part) but the idea is the same. see s. chan-
+drashekhar,s classic book [38] for a clear discussion of numerical integration.
+[a, b]
+
+(x) be a continuous positive function on the close interval
+
+let
+
+. we are interested in evaluating integrals such as
+
+z b
+
+a
+
+f (x)(x)dx
+
+87
+
+(c.1)
+
+by numerical approximations. here
+
+f (x) is some continuous function.
+
+let xj, j = 1,    be a set of points in the interval
+
+a weighted sum such as
+
+[a, b] . we expect
+
+wjf (xj)
+
+xj
+
+(c.2)
+
+to be good approximation for the integral, provided that (i) the number
+points
+ is large enough and (ii) the points xj are distributed roughly
+uniformly.
+
+every function can be approximated by a polynomial within the interval;
+as the order   1 of the polynomials grows the approximation gets better.
+f (x) by that of its polynomial
+we can thus approximate the integral of
+approximation of order   1 . the weights wj are determined (once the
+xj are chosen) by this requirement: the above formula should in
+points
+particular be exact for polynomials of order
+
+this is the same as the condition
+
+  1 .
+
+z b
+
+a
+
+xk(x)dx =xj
+
+wjxk
+
+j , for k = 0, 1,   k  1.
+
+(c.3)
+
+the left hand side are the moments of the distribution
+(x)dx , and are
+assumed to be known. then the above set of linear equations determine the
+weights in terms of xj .
+
+ points
+
+xj
+
+
+
+xj = a + (b  a) j1
+
+if the function (x)dx is not too rapidly varying, a simple choice such
+as equally spaced points
+should give reasonable
+approximation to the integral: certainly for polynomials upto order
+  1
+we will get the exact answer anyway. but it is possible to do better by
+cleverly, as pointed out by gauss: we can
+choosing the
+ensure that the answer is exact for polynomials of order
+2  1 . but we
+wont be using this idea: we will just use equal spacing for the points, which
+turns out to be more convenient. this because our integrands involveterms
+(p + r) , so it is convenient if the sum two points xj + xk is also a
+such
+point at which we evaluate the integrand. the loss of precision in quadrature
+can be made up because the simplicity of equal spacing allows us to choose
+a larger number of points.
+
+88
+
+c.2 singular measures
+
+0 f (x) dx
+
+now consider integral[37] fpr b
+
+x2 . the symbol fp indicates as
+before the hadamard nite part of the integral. for such singular integrals
+we can also nd a numerical approximation as above. but the system of
+moments is no longer positive. this is because the integation measure is
+no longer positive:
+is
+positive. the moments of the measure are given by
+
+can be negative even when
+
+0 f (x) dx
+x2
+
+fpr b
+fpz b
+
+0
+
+xk dx
+
+x2 =
+
+bk1
+k  1
+
+for k 6= 1
+
+f (x)
+
+(c.4)
+
+(c.5)
+
+and
+
+fpz b
+
+0
+
+xk dx
+
+x2 = log b for k = 1.
+
+note that the zeroth moment is negative. also the second moment violates
+scale invariance and is negative if
+
+b < 1 .
+
+given a system of points xj we can approximate the singular integral
+
+by a sum
+
+fpz b
+
+0
+
+f (x)
+
+dx
+x2 =
+
+xj=1
+
+wjf (xj)
+
+where the weights are determined as above by solving the system
+
+k =
+
+xj=1
+
+wjxk
+
+j for k = 0,     1.
+
+(c.6)
+
+(c.7)
+
+the choice of equally spaced points gives good answers in many cases.
+
+these methods are used in the text (towards the end of the second chap-
+
+ter) to solve the integrals equations for the wavefunction of the baryon.
+
+89
+
+90
+
+bibliography
+
+[1] j.d. bjorken, partons,
+
+invited talk presented at the int. conf. on
+
+duality and symmetry in hadron physics, tel-aviv, 1971
+
+[2] r. p. feynman, photon-hadron interacions benjamin, reading (1972).
+
+[3] t. h. r. skyrme,proc. royal. soc. lond. a260,127(1961);nucl. phys.
+
+31, 556(1961); j. math. phys. 12, 556(1962).
+
+[4] a. p. balachandran, v. p. nair, s. g. rajeev and a. stern, phys. rev.
+lett., 49,1124 (1982); phys. rev. d27,1153 (1983); s. g. rajeev, phys.
+rev. d29, 2844 (1984).
+
+[5] s. g. rajeev, baryons as solitons ph. d. thesis syracuse university
+
+(1984).
+
+[6] a. p. balachandran, in proceedings of the yale theoretical advanced
+study institute, high energy physics 1985 ed. m. j. bowick and f.
+gursey, world scientic, singapore (1986).
+
+[7] e. witten, nucl. phys. b223, 422 (1983); b223, 433 (1983); g. s. ad-
+
+kins, c. r. nappi and e. witten, nucl. phys. b228, 552 (1983).
+
+[8] g. t hooft nucl. phys. b72, 461 (1974);b75 461 (1974).
+
+[9] e. witten, nucl. phys. b160, 57 (1979).
+
+[10] s.g. rajeev, in 1991 summer school on high energy physics and cos-
+
+mology, ed. e. gava, et. al. world scientic, singapore, (1992)
+
+[11] p.f. bedaque,
+
+i. horvath, s.g. rajeev, mod.phys.lett.a7:3347-
+
+3356,1992;hep-th/9209027.
+
+91
+
+[12] s.g. rajeev, int.j.mod.phys.a9:5583,1994;hep-th/9401115.
+
+[13] k. s. gupta and s. guruswamy and s. g. rajeev,phys. rev. d48, 3354
+
+(1993);hep-ph/9301208.
+
+[14] s.g. rajeev and o.t. turgut, comm. math. phys. 192, 493-517, (1998);
+
+hep-th/9705103.
+
+[15] g. krishnaswami and s. g. rajeev, phys. lett. 441, 429 (1998).
+
+[16] v. john, g. krishnaswami and s. g. rajeev derivation of the anti-
+quark distribution function of the proton from quantum chromody-
+namics, in preparation.
+
+[17] c. w. h. lee and s. g. rajeev, phys. rev. lett. 80, 2285-2288(1998);
+nucl. phys. b 529, 656,(1998); j. math. phys. 39, 5199 (1998); j. math.
+phys 40, 1870 (1999); phys. lett. b 436, 91(1998).
+
+[18] s. j.brodsky, hep-ph/9807212.
+
+[19] r. brock et al. [cteq collaboration], handbook of perturbative qcd:
+
+version 1.0, rev. mod. phys. 67, 157 (1995).
+
+[20] g.  hooft, unpublished lectures at the les houches summer school
+
+(1973)
+
+[21] d. gross and f. wilczek, phys. rev. lett. 30, 1343 (1973).
+
+[22] d. politzer, phys. rev. lett. 30, 1346 (1973).
+
+[23] d. politzer, phys. rep. 14,129 (1974).
+
+[24] a. h. mueller, phys. rep. 73,237-368 (1981); j. c. collins and d. e.
+
+soper nucl. phys. b194 445 (1982)
+
+[25] s. s. chern, complex manifolds without potential theory, springer-
+
+verlag, new york (1979).
+
+[26] j. mickelsson, current algebras and groups, plenum (1989).
+
+[27] a. pressley and g. segal, loop groups clarendon press, oxford (1986).
+
+92
+
+[28] w. hackbush, integral equations: theory and numerical treatment
+
+birkhauser, boston 1995. verlag
+
+[29] v. kac and d. h. peterson, proc. natl. acad. sci. usa 78, 3308 (1981).
+
+[30] g. segal, comm. math. phys. 80, 301 9(1981).
+
+[31] d. pickrell, journ. funct. anal. 70 (1987) 323.
+
+[32] a. d. martin, r. g. roberts, w. j. stirling and r. s. thorne,
+
+hepph/9803445.
+
+[33] m. gluck, e. reya, vogt, z. phys. c67(1995) 433.
+
+[34] w. kwong, j. l. rosner and c. quigg, ann. rev. nucl. part. sci. 37,
+
+325 (1987).
+
+[35] i. c. gohberg and m. g. krein, introduction to the theory of linear
+non-self adjoint operators, translations of the amer. math. soc., 18
+(1969).
+
+[36] b. simon, trace ideals and their applications, cambridge university
+
+press, cambridge, (1979).
+
+[37] p. j. davis and p. rabinowitz methods of numerical integration, aca-
+
+demic press, orlando florida (1984).
+
+[38] s. chandrashekhar, radiative transfer dover, (1960).
+
+93
+
+

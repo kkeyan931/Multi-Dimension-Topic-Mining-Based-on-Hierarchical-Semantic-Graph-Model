@@ -1,0 +1,7837 @@
+9
+9
+9
+1
+
+ 
+
+n
+u
+j
+ 
+
+3
+2
+
+ 
+ 
+
+1
+v
+0
+8
+1
+6
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+wilson loops
+
+in two-dimensional
+
+yang-mills theories
+
+roberto begliuomini
+
+university of trento (italy)
+
+thesis submitted for the ph.d. degree in physics
+
+at the faculty of science, university of trento.
+
+january 1999
+
+contents
+
+acknowledgements
+
+introduction
+
+1 preliminaries
+
+t hooft model
+
+1.1
+1.2 two-dimensional yang-mills theories
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . .
+1.2.1 going towards d = 2: the d > 2 case . . . . . . . . . . .
+1.2.2 the strictly two-dimensional case . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . .
+
+1.3 wilson loops: not only a tool
+
+2 light-like wilson loop
+
+2.1 light-like wilson loop in feynman gauge . . . . . . . . . . . . .
+2.2 light-like wilson loop in light-cone gauge . . . . . . . . . . . .
+2.2.1 cauchy principal value prescription . . . . . . . . . . . .
+2.2.2 mandelstam-leibbrandt prescription . . . . . . . . . . . .
+2.3 concluding remarks . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3 space-time wilson loop
+
+3.1 space-time wilson loop in feynman gauge . . . . . . . . . . . .
+3.2 space-time wilson loop in light-cone gauge . . . . . . . . . . .
+3.2.1 cauchy principal value prescription . . . . . . . . . . . .
+3.2.2 mandelstam-leibbrandt prescription (d = 2)
+. . . . . . .
+3.2.3 mandelstamleibbrandt prescription (d  2) . . . . . . .
+3.3 concluding remarks . . . . . . . . . . . . . . . . . . . . . . . . .
+
+conclusions
+
+a exchange diagrams in feynman gauge
+
+b bubble diagrams in feynman gauge
+
+c spider diagrams in feynman gauge
+
+iii
+
+v
+
+1
+
+4
+4
+7
+8
+10
+13
+
+18
+19
+22
+22
+23
+25
+
+28
+29
+37
+37
+38
+42
+45
+
+48
+
+52
+
+55
+
+57
+
+d crossed diagrams in cpv formulation
+
+e crossed diagrams in ml formulation (d = 2)
+
+f bubble diagrams in ml formulation
+
+g three point green function in the limit d  2
+
+60
+
+61
+
+70
+
+72
+
+acknowledgements
+
+i want to thank all the people who have directly or indirectly contributed to this
+work, in particular:
+
+ my tutor and coauthor giuseppe nardelli for many discussions and hints,
+
+and for proofreading the thesis,
+
+ my coauthor prof. antonio bassetto for the fruitful collaboration and for
+
+proofreading the thesis,
+
+ luca griguolo and dimitri colferai,
+ the ph.d. students at the department of physics in trento,
+ luisa rossi doria,
+ my family for their support and encouragement,
+ my graduation thesis advisor at pisa university mihail mintchev,
+ the italian ministry of university for its nancial support,
+ the theoretical group at department of physics in trento university for
+
+warm hospitality and for nancial support in these last four months,
+
+ infn for nancial support of my visit in cambridge at the summer school
+
+connement, duality, and nonperturbative aspects of qcd.
+
+ the university of trento for nancial support to cover partly house rent
+
+expenses.
+
+v
+
+introduction
+
+twodimensional models have been an extraordinary laboratory to test ideas in
+quantum eld theory (see for a review ref. [?]). the interest in studying two
+dimensional theories is mainly due to the possibility of obtaining sometimes exact
+solutions, which are believed (or at least hoped!) to share important features
+with the more realistic (but also much more dicult to face with) situation in
+four dimensions.
+
+schwingers model (massless electrodynamics in two dimensions qed2) is the
+key example, which can be exactly solved, exhibiting very interesting and peculiar
+properties, like fermion connement, thetavacua and the presence of a non
+vanishing chiral condensate.
+
+qcd2 is its nonabelian generalization and has recently received most at-
+tention in many investigations, also thanks to the discovery of a string picture
+for it [?]. it is widely believed that several phenomena that can be fairly easily
+understood in two dimensions, could persist when dimensions are increased.
+
+the facts exposed above are the motivations of our perturbative enquiries on
+pure yangmills theories in 1 + 1 dimensions, which are interesting at least for
+two reasons.
+
+first, the reduction of the dimensions to d = 2 entails tremendous simpli-
+cations in the theory, so that several important problems can be faced in this
+lower dimensional context and, sometimes, solved. we are thinking for instance
+to the exact evaluation of vacuum to vacuum amplitudes of wilson loop oper-
+ators, that, for a suitable choice of contour and in some specic limit, provide
+the potential between two static quarks. another example is the spectrum of the
+bethesalpeter equation, when dynamical fermions are added to the system.
+
+the second reason, as we will see along this thesis, is that yangmills theories
+
+in d = 2 have several peculiar features that are interesting by their own:
+
+a) in d = 2 within the same gauge choice (light-cone gauge) two inequivalent
+
+perturbative formulations of the theory seem to coexist;
+
+b) d = 2 is a point of discontinuity for yangmills theories; this is an intriguing
+
+feature whose meaning has not been fully understood so far.
+
+all the features we have listed are most conveniently studied if the lightcone
+gauge is chosen. in such a gauge the faddeevpopov sector decouples and the
+
+1
+
+2
+
+introduction
+
+unphysical degrees of freedom content of the theory is minimal. the price to
+be paid for these nice features is the presence of the so called spurious poles in
+the vector propagator. to handle the spurious pole at n  k = 0 is a delicate
+matter; basically all diculties encountered in the past within the lightcone
+gauge quantization are related to this problem. as we shall see, there are two
+possible, inequivalent, ways for handling the pole: the cauchy principal value
+(cpv) prescription and the mandelstam-leibbrandt (ml) prescription.
+
+they result from dierent procedures of quantization. the cpv prescription
+is derived in the socalled nullframe formalism, but it is well dened only in
+strictly two dimension. the twodimensional case, for cpv prescription, is a sort
+of happy island: everything works well, the connement seems to show itself
+already at a perturbative level, the boundstates equation in the large n limit
+provides a discrete spectrum for mesons. but as soon as we try to escape towards
+higher dimensions, we will see that the theory encounters a lot of inconsistencies.
+instead, the ml prescription derives from the equaltime quantization, and
+is more sincere:
+it does not provide any miracle, but it is consistent also in
+higher dimensions, where it is in perfect agreement with the milestone repre-
+sented by feynman gauge 1. nevertheless, also for the ml prescription, the
+twodimensional case is peculiar: in fact, in approaching d = 2, we will discover
+the surprise of its discontinuity.
+
+the coexistence of these two formulations for d = 2 motivates our pertur-
+bative enquiries, in order to understand their relationship and if there is any
+physical reason to have a preference for one of them.
+
+as a technical tool, we will use the wilson loop, owing to its gauge invariance
+and to its reasonable infrared properties.
+it is indeed well known that, when
+approaching d = 2, ultraviolet singularities are no longer a concern, but wild
+infrared behaviors usually show up. besides, this tool will help us to reduce the
+computational eort: actually the graphs coming from the perturbative expansion
+of the wilson loop, to a given order in the coupling constant, are much easier
+to compute than the ones of the corresponding s-matrix elements. the latter,
+furthermore, are not well dened when are computed onshell, due to their
+infrared divergences.
+
+this ph.d. thesis reaches two main results. the rst one is represented by
+a detailed study, in feynman gauge, of the perturbative o(g4) contribution to a
+spacetime wilson loop, with respect to its (expected) abelianlike time exponen-
+tiation when the temporal side goes to innity. as soon as we are in dimensions
+greater than two, the expected behavior is found. but if we proceed rst to the
+dimensional limit d  2, the exponentiation is not recovered. the limits t  
+and d  2 do not commute. this result has been reached in collaboration with
+antonio bassetto and giuseppe nardelli [?].
+
+1unfortunately feynman propagator fails to be a tempered distribution for d = 2, then we
+
+will not be able to make a comparison with the covariant gauge in strictly two dimensions.
+
+introduction
+
+3
+
+the other result is the computation in dimensions d = 2 +  and in light-cone
+gauge with ml prescription of the perturbative o(g4) contribution to the same
+wilson loop, coming from diagrams with a self-energy correction in the vector
+propagator. in the limit   0 the result is nite, in spite of the vanishing of
+the triple vector vertex in lightcone gauge, and provides the expected agreement
+with the analogous calculation in feynman gauge. also this result has been
+reached in collaboration with antonio bassetto and giuseppe nardelli [?].
+
+let us conclude this introduction with a brief outline of the thesis.
+in chapter 1 we start reviewing t hooft model and its successes, and in-
+troduce the main ingredients for the formulation of two-dimensional yangmills
+theories, with particular emphasis on the two dierent lightcone gauge formula-
+tions, cpv and ml. we end with a brief reminder of wilson loop, exposing its
+usefulness as a test of gauge invariance and its physical meaning.
+
+chapter 2 is a review of the results contained in ref. [?], that represents the
+starting point from which our research begins. a lightlike wilson loop is com-
+puted in perturbation theory up to o(g4) in 1+1 dimensions, using feynman and
+lightcone gauges to check its gauge invariance. after dimensional regularization
+in intermediate steps, a nite gauge invariant result is obtained, which, however,
+does not exhibit abelian exponentiation. this result is at variance with the com-
+mon belief that pure yangmills is free in 1+1 dimensions: only cpv formulation
+gives an abelianlike result. both the discontinuity of ml formulation and the
+inequivalence of ml and cpv formulations are explicitly shown.
+
+in chapter 3 we report the results obtained from our research and exposed
+above, turning to study a spacetime wilson loop and reviewing also intermediate
+results contained in refs. [?, ?].
+
+in the conclusions we comment our results, comparing them to the available
+
+nonperturbative results, and point out some open questions.
+
+at the end, there are some technical appendices, in which we report the main
+
+aspects of the computations leading to the results exposed in chapter 3.
+
+chapter 1
+
+preliminaries
+
+in this rst chapter we review some facts and tools that we will use throughout
+this thesis. in section 1.1 we recall the basic features of t hooft model, namely
+qcd2 in the large n limit. this model is the most famous example of the
+simplications that derive from lowering dimensions of the theory from four to
+two.
+in section 1.2 we will discuss the possible choices of gauge in treating
+yangmills theories, with particular attention to their reliability according to the
+dimensions. we will distinguish between d > 2 and d = 2, where d is the
+dimension in which the theory is dened. finally, in section 1.3 we will recall
+the denition of the wilson loop operator, explaining its main features and its
+relevance in the study of yangmills theories, in particular as a tool to test gauge
+invariance and to cope with the connement issue.
+
+1.1 t hooft model
+
+in 1974, g. t hooft proposed a very interesting model [?] to describe mesons,
+starting from a su(n) yangmills theory in 1 + 1 dimensions in the large n
+limit.
+
+quite remarkably in this model quarks look conned, while a discrete set of
+quarkantiquark bound states emerges, with squared masses lying on rising regge
+trajectories. the model is solvable thanks to the instantaneous character of
+the potential acting between quark and antiquark.
+
+how does the mechanism of connement work in t hooft model? follow-
+ing coleman [?], let us start from considering schwinger model, namely two
+dimensional quantum electrodynamics. the theory is dened by the following
+lagrangian:
+
+(f01)2 + (i  ea  m),
+
+(1.1)
+
+1
+2
+
+l =
+where
+
+4
+
+t hooft model
+
+f01 = 0a1  1a0.
+
+if we choose axial gauge
+
+a1 = 0,
+
+the lagrangian becomes
+
+l =
+
+1
+2
+
+(1a0)2 + (i  ea00  m).
+
+5
+
+(1.2)
+
+(1.3)
+
+(1.4)
+
+this lagrangian is independent from time derivatives of a: then a is not a
+
+dynamical variable, but a constrained variable, that obeys to:
+
+2
+1 a0 = e  ej0.
+
+we can eliminate a0 from (1.4), solving eq. (1.5) and obtaining:
+
+(1.5)
+
+(1.6)
+
+l = l0f +
+
+e2
+
+4 z dx1dy1j0(x0, x1)(cid:12)(cid:12)x1  y1(cid:12)(cid:12) j0(x0, y1),
+
+where l0f is the free fermion lagrangian.
+the interaction between charges is linear: this potential assures connement,
+at least for small couplings, i.e.
+in the perturbative regime. the interaction
+between charges can be expressed as the eect of exchange of a photon propagator:
+
+d(k) = 
+
+i
+2
+
+00z d2xeikx(cid:12)(cid:12)x1(cid:12)(cid:12) (x0)
+
+1
+(k1)2 ,
+
+= i00p
+
+where p is the cauchy principalvalue symbol,
+
+p
+
+1
+z2 =
+
+1
+
+2(cid:20)
+
+1
+
+(z + i)2 +
+
+1
+
+(z  i)2(cid:21) = 
+
+
+
+z (cid:20)p(cid:18) 1
+
+z(cid:19)(cid:21) .
+
+(1.7)
+
+(1.8)
+
+the presence of (x0) shows the instantaneous character of this interaction.
+the principalvalue prescription for the pole violates causality, but in strictly
+two dimensions this is not a problem, because there are no propagating degrees
+of freedom at all.
+
+6
+
+preliminaries
+
+it is straightforward to generalize this simple model to chromodynamics. con-
+sidering the simplest case of one avor, we can easily realize that the non linear
+terms in f01 are proportional to the product of a0 and a1. then in axial gauge the
+selfcoupling terms of the gauge eld vanish. the only dierence from schwinger
+model is the presence of color indices, su(n) being the color gauge group:
+
+l = l0f +
+
+where
+
+g2
+
+n z dx1dy1jb
+
+0a(x0, x1)(cid:12)(cid:12)x1  y1(cid:12)(cid:12) ja
+
+0b(x0, x1),
+
+jb
+0a = 
+
+ab 
+
+b
+a
+n
+
+cc.
+
+
+(1.9)
+
+(1.10)
+
+the original t hooft work diers in some technical aspects from this peda-
+gogical presentation. but the connement is basically due to the reason exposed
+above.
+
+first, t hooft chose lightcone gauge, namely he used lightcone coordinates:
+
+x =
+
+(x0  x1)
+
+2
+
+and put
+
+a = a+ = 0
+
+(1.11)
+
+(1.12)
+
+second, in the original work of t hooft an infrared cuto is used, instead
+of the principal value prescription. but a quite remarkable feature of this theory
+is that bound state wave functions and related eigenvalues turn out to be cuto
+independent. as a matter of fact in ref. [?], it has been pointed out that the
+singularity at k = 0 of the propagator in lightcone gauge can also be regular-
+ized by a cauchy principal value prescription without nding dierences in the
+resulting meson spectrum.
+
+the 1/n expansion of qcd2 implies that we have to consider the limit
+n   at g2n xed: it corresponds to taking only the planar diagrams with
+no fermion loops.
+in this limit the model was almost exactly soluble; the simplest greens func-
+tions could be found in closed form and, moreover, the bethesalpeter equation
+was solved numerically, providing a discrete spectrum for the twoparticle states.
+the quarkantiquark states are only bound states (mesons) and only colourless
+states can escape the coulomblike potential. the physical mass spectrum con-
+sists of a nearly straight regge trajectory.
+
+two-dimensional yang-mills theories
+
+7
+
+in 1977, three years after t hooft work, such an approach was criticized by
+t.t. wu [?], who replaced the instantaneous t hoofts potential by an expression
+with milder analytical properties, choosing a causal prescription for the infrared
+singularity in the propagator.
+
+unfortunately this modied formulation led to a quite involved bound state
+equation, which may not be solved. an attempt to treat it numerically in the
+zero bare mass case for quarks [?] led only to partial answers in the form of a
+completely dierent physical scenario. in particular no rising regge trajectories
+were found. another recent investigation [?] conrms these results.
+
+after that pioneering investigation, many interesting papers followed t hoofts
+approach, pointing out further remarkable properties of his theory and blooming
+into the recent achievements of twodimensional qcd [?, ?, ?, ?, ?] whereas wus
+approach sank into oblivion.
+
+still, equal time canonical quantization of yangmills theories in lightcone
+gauge [?] leads precisely in 1 + 1 dimensions to the wus expression for the vector
+exchange between quarks [?].
+in the next section we will review in detail the
+equal time canonical quantization of yangmills theory. we will also compare the
+vector propagator obtained in this quantization scheme to the one still obtained
+in lightcone gauge but with a dierent quantization procedure, the nullframe
+formalism: in so doing, we will point out the advantages and disadvantages of
+the two dierent procedures.
+
+1.2 two-dimensional yang-mills theories
+
+we will use the following conventions for the gauge xed yangmills la-
+grangian,
+
+1
+4
+
+l = 
+
+f a
+f a + lg.f. ,
+where, in lightcone gauge:
+
+llcg
+g.f. = a(naa) ,
+
+(1.13)
+
+(1.14)
+
+and a are lagrange multipliers enforcing the light-cone gauge condition
+
+naa
+
+ = aa
+
+ = 0 ,
+
+(1.15)
+n = (1/2)(1, 1) being a constant (gauge) vector, while in feynman gauge:
+
+lf
+g.f. = +
+
+1
+2
+
+aa
+
+aa
+ .
+
+(1.16)
+
+8
+
+preliminaries
+
+without loss of generality, we consider su(n) as gauge group, so that the
+
+eld strength in eq. (1.13) is dened as
+
+f a
+ = aa
+
+  aa
+
+ + gf abcab
+
+ac
+
+ ,
+
+(1.17)
+
+f abc being the structure constants of su(n).
+for later convenience, we recall that the casimir constants of the fundamental
+
+and adjoint representations for su(n), cf and ca, are dened through
+
+cf =
+
+1
+n
+
+tr(t at a) =
+
+n 2  1
+2n
+
+,
+
+and
+
+caab = f acdf bcd = abn .
+
+(1.18)
+
+(1.19)
+
+in section 1.2.1 we focus on the d 6= 2 case, and discuss the so called mani-
+festly unitary and causal formulations of the theory in lightcone gauge. we
+shall see that the correct formulation is the causal one: the manifestly unitary
+formulation will meet so many inconsistencies to make it unacceptable. instead,
+the causal one is fully consistent with covariant gauges.
+
+in section 1.2.2 we compare the two lightcone formulations at strictly d = 2.
+surprisingly, in this case both seem to coexist, without obvious inconsistencies.
+thus, a natural question arises: are the two quantization schemes equivalent in
+d = 2? do they provide us with equal results? this question is the source of our
+enquiries: at the end of this thesis we will be able to answer in a quite accurate
+way. moreover, we will get a deeper insight into the possible formulations of
+twodimensional yangmills theories.
+
+1.2.1 going towards d = 2: the d > 2 case
+
+a formulation of yangmills theories in which no unphysical degrees of freedom
+are present is called manifestly unitary. it can be obtained by quantizing the the-
+ory in the so called nullframe formalism, rst introduced by kogut and soper [?],
+which implies the use of lightcone coordinates and interprets x+ as the evolu-
+tion coordinate (time) of the system; the remaining components x, x will be
+interpreted as space coordinates. within this quantization scheme, one of the
+unphysical components of the gauge potential (say a) is set equal to zero by the
+gauge choice whereas the remaining unphysical component (a+) is no longer a
+dynamical variable but rather a lagrange multiplier of the secondary constraint
+(gauss law). thus, already at the classical level, it is possible to restrict to the
+phase space containing only the physical (transverse) polarization of the gauge
+
+going towards d = 2: the d > 2 case
+
+9
+
+elds. then, canonical quantization on the null plane provides the answer to the
+prescription for the spurious pole in the propagator, the answer being essentially
+the cauchy principal value (cpv) prescription.
+
+unfortunately, following this scheme, several inconsistencies arise, all of them
+
+being related to the violation of causality that cpv prescription entails:
+
+ nonrenormalizability of the theory: already at the one loop level,
+dimensionally regularized feynman integrals develop loop singularities that
+manifest themselves as double poles at d = 4 [?].
+
+ power counting criterion is lost: the pole structure in the complex k0
+plane is such that spurious poles contribute under wick rotation. as a con-
+sequence euclidean feynman integrals are not simply related to minkowskian
+ones as an extra contribution shows up which jeopardizes naive power count-
+ing [?].
+
+ gauge invariance is lost: due to the above mentioned extra contributions,
+the n = 4 supersymmetric version of the theory turns out not to be nite,
+at variance with the feynman gauge result [?].
+
+consequently, manifestly unitary theories do not seem to exist. as explained
+above, all the bad features of this formulation have their root in the lack of
+causality of the prescription for the spurious pole, and the subsequent failure of
+the power counting criterion in the perturbative formulation of the theory. thus,
+a natural way to circumvent these problems is to choose a causal prescription. it
+was precisely following these arguments that mandelstam [?] and leibbrandt [?]
+independently, introduced the ml prescription
+
+1
+k  ml(
+
+1
+k
+
+) =
+
+k+
+
+k+k + i
+
+=
+
+1
+
+k + isign(k+)
+
+.
+
+(1.20)
+
+it can be easily realized that with this choice the position of the spurious pole
+is always coherent with that of feynman ones, no extra terms appearing after
+wick rotation which threaten the power counting criterion for convergence. how
+can one justify such a recipe? one year later bassetto and collaborators [?]
+lled the gap by showing that ml prescription naturally arises by quantizing the
+theory at equal time, rather than at equal x+. eventually they succeeded [?]
+in proving full renormalizability of the theory and full agreement with feynman
+gauge results in perturbative calculations [?].
+
+at present the level of accuracy of the lightcone gauge is indeed comparable
+
+with that of the covariant gauges.
+
+an important point to be stressed is that equal time canonical quantization in
+lightcone gauge, leading to the ml prescription for the spurious pole, does not
+provide us with a manifestly unitary formulation of the theory. in fact in this for-
+malism gauss laws do not hold strongly but, rather, the gauss operators obey
+
+10
+
+preliminaries
+
+to a free eld equation and entail the presence in the fock space of unphysical
+degrees of freedom. the causal nature of the ml prescription for the spurious
+poles is a consequence of the causal propagation of those ghosts. a physical
+hilbert space can be selected by imposing the (weakly) vanishing of gauss op-
+erators. this mechanism is similar to the gupta bleuler quantization scheme for
+electrodynamics in feynman gauge, but with the great advantage that it can be
+naturally extended to the nonabelian case without faddeev popov ghosts [?].
+
+1.2.2 the strictly two-dimensional case
+
+let us start from considering twodimensional yangmills theory in lightcone
+gauge. the causal formulation of the theory can be straightforwardly extended
+to any dimension, including the case d = 2, since the ml propagator is still a
+tempered distribution. on the other hand, the manifestly unitary formulation
+can only be dened in d = 2 without encountering obvious inconsistencies. the
+reason is simple: all problems are related to the lack of causality encoded in
+the cpv prescription. but at exactly d = 2 there are no degrees of freedom
+propagating at all, and then causality is no longer a concern. moreover, at exactly
+d = 2 and within the lightcone gauge, the 3 and 4gluon vertices vanish, so that
+all the inconsistencies related to the perturbative evaluation of feynman integrals
+are no longer present in this case. a manifestly unitary formulation provides
+the following instantaneouscoulomb type form for the only non vanishing
+component of the propagator:
+
+dab
+++(x) = 
+
+iab
+
+(2)2 z d2k eikx 
+
+k
+
+p(cid:18) 1
+
+k(cid:19) = iab|x|
+
+2
+
+(x+) ,
+
+(1.21)
+
+where p denotes cpv prescription, whereas equal time canonical quantiza-
+
+tion [?] gives, for the same component of the propagator,
+
+dab
+
+++(x) =
+
+iab
+
+2 z d2k eikx
+
+k2
++
+
+(k2 + i)2 =
+
+ab(x)2
+(x2 + i)
+
+.
+
+in fact, starting from the lagrangian density
+
+l =
+
+1
+2
+
+f a
++f a
+
++ + anaa,
+
+(1.22)
+
+(1.23)
+
+a being lagrange multipliers, by imposing the equal time commutation relations
+
+[aa
+
+1(t, x), f b
+
+01(t, y)] = i(x  y)ab,
+
+(1.24)
+
+we recover for the vector propagator exactly the ml prescription restricted at
+d = 2.
+
+the strictly two-dimensional case
+
+in this context the equation for the lagrange multipliers
+
+n  a = 0
+
+11
+
+(1.25)
+
+is to be interpreted as a true equation of motion and the elds a provide prop-
+agating degrees of freedom, although of a ghost type [?]. the space of states
+emerging from this treatment is an indenitemetric hilbert space. it is possible
+to select a physical subspace, with a positivesemidenite metric, by imposing in
+it the vanishing of the gauss operator.
+
+in fact, the potentials aa
+
++ have the momentum decomposition
+
+aa
+
++(k) = ua(k) + va(k),
+
+a (k) being proportional to ua: a = k+ua.
+the canonical algebra (1.24) induces on ua and va the algebra
+
+[va
+
+(k+), ub
+
+(q+)] = (k+  q+)ab,
+
+va
+ and ua
+
+ being dened as
+
+va(k+) = (k+)va
+
++(k+) + (k+)va
+
+(k+),
+
+ua(k+) = (k+)ua
+
++(k+)  (k+)ua
+
+(k+),
+
+and with the adjoint operators being:
+
++(k+)(cid:3) = va
+(cid:2)va
++(k+)(cid:3) = ua
+(cid:2)ua
+
+(k+),
+
+(k+).
+
+(1.26)
+
+(1.27)
+
+(1.28)
+
+all others commutators are vanishing.
+this algebra eventually produces the propagator (1.22).
+let us consider for instance the state ua
+
++|0i, |0i being the fock vacuum. the
+
+norm of this state is:
+
+h0|ua
+
+ua
+
++|0i = h0|ua
+
++ua
+
+|0i = 0
+
+(1.29)
+
+where the rst equality follows from the commutation relations and the second
+. therefore there is a nonnull
+
+from the denition of the destruction operator ua
+state with vanishing norm, leading to an indenite-metric hilbert space.
+
+thus, it seems we have two dierent formulation of yangmills theories in
+d = 2, and within the same gauge choice, the lightcone gauge [?]. whether
+
+12
+
+preliminaries
+
+they are equivalent and, in turn, whether they are equivalent to a dierent gauge
+choice, such as feynman gauge, has to be explicitly veried.
+
+we can summarize the situation according to the content of unphysical degrees
+of freedom. since the paper by t hooft in 1974 [?], it is a common belief that
+pure yangmills theory in d = 2 has no propagating degrees of freedom. this
+happens in the manifestly unitary formulation leading to cpv prescription for the
+spurious pole, to the propagator (1.21) and to t hooft bound state equation. this
+formulation, however, cannot be extended outside d = 2 without inconsistencies.
+alternatively, we have the same gauge choice but with a dierent quantization
+scheme, namely at equal time, leading to the causal (ml) prescription for the
+spurious pole, to the propagator (1.22) and to wus bound state equation [?].
+here, even in the pure yangmills case, some degrees of freedom survive, as we
+have propagating ghosts. such a formulation is in a better shape when compared
+to the previous one as it can be smoothly extended to any dimension, where
+consistency with feynman gauge has been established.
+
+feynman gauge validity for any d 6= 2 is unquestionable, while, at strictly
+d = 2, the vector propagator in this gauge fails to be a tempered distribution,
+at variance with the behavior of lightcone gauge propagator both with ml and
+with cpv prescription. still, in the spirit of dimensional regularization, the best
+one can do is to evaluate the wilson loop in d dimensions, with d > 2, and
+to take eventually the limit d  2. in following this attitude, the number of
+degrees of freedom is even bigger as faddeevpopov ghosts are also to be taken
+into account. in addition, in the covariant gauge 3- and 4- gluon vertices do not
+vanish and the theory does not look free at all.
+
+we have summarized the situation in the following table:
+
+formulation
+
+feynman
+
+d = 2
+
+not viable
+
+d > 2
+
+ok
+
+lightcone (cpv)
+lightcone (ml)
+
+ok
+ok
+
+not viable
+
+ok
+
+two possible kind of enquiries can be made:
+
+ vertical enquiry, i.e. tests of equivalence of two dierent formulations;
+ horizontal enquiry, i.e.
+
+tests of continuity, comparing a formulation in
+
+d = 2 with the same formulation for d > 2, taking the limit d  2.
+
+we see from the table that we can consider for such enquiries three dierent
+
+couples, namely two vertical couples and one horizontal couple.
+
+but the complete equivalence between feynman gauge and lightcone gauge
+with ml prescription for d > 2 (rst vertical couple) has been established in
+ref. [?]. in the next chapter we will examine the second vertical couple, namely if
+
+wilson loops: not only a tool
+
+13
+
+there is a complete equivalence between the two dierent formulations in light
+cone gauge for d = 2, and the only horizontal couple, namely if the ml formu-
+lation of lightcone gauge is continuous.
+
+the tool we will use in these enquiries is the wilson loop, that we are going
+
+to describe in the next section.
+
+1.3 wilson loops: not only a tool
+
+starting from the second half of the seventies, people began to study the socalled
+phase factors (exponentials of integrals over gauge potentials ordered along a
+closed path) [?]. the main idea was to describe the dynamics of the gauge elds
+in terms of the phase factors, which are nonlocal gauge invariant objects [?, ?, ?].
+if we consider the special case of a rectangular path, we have the phase factor
+usually known as the wilson loop [?, ?]. its study may give information on the
+quark connement problem, in the sense that the asymptotic behavior of the loop
+(in a suitable limit which will be claried in the sequel) gives the structure of the
+interaction potential between two quarks [?, ?, ?, ?].
+
+to our purposes, the investigation of the wilson loop will not concern the
+formulation of gauge theories in terms of phasefactors. rather, our interest in
+it will be twofold:
+
+a) test of gauge invariance: the wilson loop, being a gauge invariant quan-
+tity, will allow us to perform perturbative tests of gauge invariance, in order
+to answer to equivalence and continuity issues explained at the end of
+the previous section. we will also study the consistency of the perturbative
+formulation of yangmills theory by means of a suitable criterion derived
+by the asymptotic behavior of the loop plus gauge invariance;
+
+b) connement issue:
+
+in the (simplied) strictly two dimensional case we
+will be able to get also some consequences about the interaction potential
+between two quarks and the boundstate equation. essentially, we will
+determine the interaction potential between two quarks assuming that we
+can reconstruct it from a resummation of the perturbative series. in so doing
+we will follow an approach that, since the pioneering work of t hooft [?],
+regards connement in qcd2 as a perturbative feature. we will discuss in
+our conclusions the validity of this assumption, but we can anticipate that
+our results lead to a criticism of this approach.
+
+let us consider rst a yangmills theory at the classical level; we dene the
+
+following functional
+
+e[a; dx] = exp(igdxa);
+
+(1.30)
+
+14
+
+preliminaries
+
+it is easy to check that, under a gauge transformation on the gauge potential,
+
+a  a
+
+ = uau 1 
+
+i
+g
+
+uu 1,
+
+e[a, dx] transforms as
+
+e[a; dx]  e[a; dx] = u(x + dx)e[a; dx]u 1(x),
+
+(1.31)
+
+(1.32)
+
+apart from higher orders in dx; the proof of eq. (1.32) can be obtained by
+
+expanding in powers of dx its righthand side.
+
+now we want to generalize eqs.
+
+(1.30) and (1.32) to the case of a nite
+displacement; to this aim we consider an arbitrary oriented path  starting from
+the point x and ending at the point y.
+
+the simplest thing to do is to decompose  as a riemann sum of innitesimal
+displacements and to use, for each of them, eq.
+k a
+small displacement, oriented in the  direction, centered at the point xk  ,
+k = 1, . . . , n. in this way, the natural generalization of the functional given in
+eq. (1.30) for a nite displacement  will be
+
+(1.32). let us call x
+
+e[a; ] = lim
+
+n
+
+x
+
+k 0
+
+y
+
+yxk=x
+
+exp(igx
+
+k  a(xk)).
+
+(1.33)
+
+equation (1.33) denes the socalled p integral, that is, the pathordered
+
+integral along the contour ,
+
+e[a; ] = p exp(cid:18)igz
+
+dxa(x)(cid:19) .
+
+(1.34)
+
+using eq. (1.32), it is easy to obtain the transformation law for e[a; ] under
+
+a gauge transformation, namely
+
+e[a; ]  u(y)e[a; ]u 1(x);
+
+(1.35)
+
+in particular, if we choose a closed path 0, we have x = y so that e[a; 0]
+
+will transform covariantly according to the corresponding representation,
+
+e[a; 0]  u(x)e[a; 0]u 1(x);
+
+(1.36)
+
+in this case e[a; 0] is commonly called phase factor. from eq. (1.36) it
+follows that the trace of e[a; 0] will be a gauge invariant object. we dene the
+
+wilson loops: not only a tool
+
+15
+
+quantum phase factor by means of the following vacuum to vacuum expectation
+value:
+
+w0 =
+
+1
+
+n h0|tr(cid:20)t pexp(cid:18)igi0
+
+dx aa
+
+(x)t a(cid:19)(cid:21)|0i ,
+
+(1.37)
+
+where t orders gauge elds in time and p orders generators t a of the gauge
+group su(n) along the closed integration path 0.
+we stress that in the denition of the quantum phase factor (1.37) the vac-
+uum has to be meant the true physical vacuum of the theory, and not the
+perturbative (fock) vacuum. in general they are dierent, and we will really ex-
+ploit this dierence to explain our nal results about the dierent formulations
+of the twodimensional case.
+
+nevertheless, since the quantum phase factor is dened as a functional average
+of a gauge invariant quantity, if we expand the r.h.s. of eq.(1.37), gauge invariance
+has to hold orderbyorder also in the perturbative expansion, that results:
+
+w0 = 1 +
+
+1
+n
+
+
+
+xn=2
+
+(ig)ni0
+
+dx1
+
+1   i0
+
+dxn
+
+n (x1 >    > xn)
+
+ tr[g1n(x1,   , xn)] ,
+
+(1.38)
+
+where g1n(x1,   , xn) is the lie algebra valued n-point green function, and
+the heavyside -functions order the points x1,   , xn along the integration path
+0.
+as a consequence, by comparing the results within dierent gauge choices, we
+can obtain a powerful test of gauge invariance. if we choose as closed path 0
+the rectangular one in fig. 1.1, the phase factor is usually called wilson loop.
+it is easy to show that the perturbative expansion of w0 is an even power
+
+series in the coupling constant, so that we can write
+
+w0 = 1 + g2w (1) + g4w (2) + o(g6) .
+
+(1.39)
+
+the advantage of using wilson loop as a test of gauge invariance with respect
+to another gauge invariant quantity, the scattering amplitude (perturbative s-
+matrix elements), is at least twofold:
+
+ in the nonabelian case, the perturbative s-matrix is only formally dened
+
+due to the occurrence of severe infrared singularities onshell ;
+
+ to a given order in the coupling constant, the computation of the graphs
+coming from the perturbative expansion of the wilson loop is much easier
+than the ones of the corresponding smatrix elements.
+
+16
+
+preliminaries
+
+x0
+
+t
+
+2 
+
+l
+
+1
+
+1
+
+x
+
+3
+
+4
+
+figure 1.1: parameterization of the closed rectangular loop  in four segments
+i.
+
+another important symmetry of yangmills theories in the twodimensional
+case is their invariance under area preserving dieomorphisms. the general rea-
+son for this fact, rst emphasized by witten [?], is that the eld strength is a
+two-form in two dimensions. the action is therefore invariant under all dieomor-
+phisms that preserve the volume element of the surface. then, the wilson loop is
+not only gaugeinvariant, but is also invariant under these dieomorphisms and
+depends only, in strictly 1 + 1 dimensions, from the area of the loop, no matter
+the orientation and the shape of the path.
+
+it is possible to derive [?, ?] that the asymptotic behavior of the wilson loop
+
+at xed l is
+
+t w(l, t ) = const. e2it v (2l) ,
+lim
+
+(1.40)
+
+where v (2l) is the potential between a static qq pair in the fundamental
+representation, separated by a distance 2l, and the wilson loop is the one in
+fig. 1.1, one side along the space direction and one side along the time direction,
+of length 2l and 2t respectively.
+
+as a matter of fact, in the strictly twodimensional case, it is possible to
+express in closed form the expectation value of the wilson loop, summing all the
+contributes in the perturbative series. when it is not possible, we will investigate
+its asymptotic behavior up to the g4 order. the tests we are going to accomplish
+represent only necessary but, in general, not sucient conditions to verify the
+correctness of the quantization scheme within the assigned subsidiary condition
+and, in particular, of the prescription we use for the spurious poles. in order to
+
+g
+g
+g
+g
+wilson loops: not only a tool
+
+17
+
+perform the test in the framework of the perturbation theory, we consider the
+expansion of the exponential:
+
+exp(2it v ) = 1  2it v  2t 2v 2 + . . . .
+
+(1.41)
+
+the potential v (2l) may be developed, in turn, as a perturbative series in
+
+g2, namely
+
+v = g2v1 + g4v2 + . . . .
+
+(1.42)
+
+a necessary condition to get the exponential behavior of the wilson loop reads
+that the coecient of t 2 at the order g4 is onehalf the square of the linear coe-
+cient in t at the order g2; this is equivalent to the cancellation of the nonabelian
+terms increasing like t 2 (or worse) in the large t limit. in order to explain this
+fact, we rst recognize as nonabelian terms in the perturbative expansion of the
+wilson loop the ones proportional to the factor f abcf abc = ca(n 2  1), where
+ca is the casimir factor in the adjoint representation of su(n). the above
+mentioned equivalence is clear, once we realize that all the terms linear in t at
+the order g2 are abelian. hence, for any diagram coming from the perturbative
+expansion of the wilson loop, we shall only deal with its nonabelian contribu-
+tions behaving, at the order g4, as t 2 (or worse) in the asymptotic limit. in order
+to obtain the expected exponential behavior, the sum of those contribution must
+vanish up to order g4. as we already pointed out, the test of the exponential
+behavior, in the large t limit, of the wilson loop w0 is a necessary although
+not sucient condition to check the gauge relativity principle, namely that in the
+perturbative quantum eld theories dierent gauge choices must yield equivalent
+descriptions of the physical phenomena, i.e. the same value of gaugeinvariant
+quantities.
+
+the aim of this test is clear: as the exponential behavior of the wilson loop
+(or, better, the cancellation up to g4 of the nonabelian terms behaving like t 2
+or worse) is a necessary condition for the gauge invariance, if it is not reproduced
+within a given gauge choice, then the corresponding formulation of the pertur-
+bation theory turns out to be poorly dened. therefore the results of this test,
+performed in particular in chapter 3, will be crucial to check the soundness of
+the perturbative approach with dierent choices of gauge and to compare the
+dierent results obtained.
+
+chapter 2
+
+light-like wilson loop
+
+we have seen in chapter 1 that yangmills theory without fermions in two di-
+mensions is, in t hooft approach, a free theory. this feature is at the root of
+the possibility of calculating the mesonic spectrum in the large n approxima-
+tion [?, ?], when quarks are introduced.
+
+still diculties in performing a wicks rotation in those conditions have been
+pointed out [?], and a causal prescription for the infrared singularity has been
+advocated, leading to a quite dierent solution for the vector propagator.
+in
+this context the bound state equation with vanishing bare quark masses [?] has
+solutions with quite dierent properties, when compared with the ones of refs. [?,
+?].
+
+in view of the above mentioned controversial results and of the fact that
+pure yangmills theory does not immediately look free in feynman gauge,
+where degrees of freedom of a ghosttype are present, it was worth performing
+a test [?] on a gauge invariant quantity: the review of this test is the subject of
+chapter 2.
+
+following [?], we choose a rectangular wilson loop with lightlike sides, di-
+ = (l, l), with l, t > 0, parame-
+
+rected along the vectors n = (t,t ) and n
+terized according to the equations:
+
+c1
+c2
+c3
+c4
+
+: x
+: x
+: x
+: x
+
+1 (t) = (tl,tl) = nt,
+2 (t) = (l + tt,l + tt ) = n + nt,
+3 (t) = (t + l  tl, t  l + tl) = n + n(1  t),
+4 (t) = (t  tt, t  tt ) = n(1  t),
+0  t  1 ,
+
+and with area
+
+ac = 2lt .
+
+18
+
+(2.1)
+
+(2.2)
+
+feynman gauge
+
+19
+
+this contour has been considered in refs. [?, ?] for an analogous test of gauge
+invariance in 1 + 3 dimensions. its lightlike character forces a minkowski treat-
+ment.
+
+we will review a perturbative calculation up to o(g4); in so doing topological
+eects will not be considered. the computation was performed in feynman gauge
+(section 2.1) and in light-cone gauge (section 2.2), with cauchy principal value
+prescription (section 2.2.1) and mandelstamleibbrandt prescription (section
+2.2.2) for the spurious pole in the vector propagator. we can anticipate the
+unexpected results that was obtained: the gauge invariant theory is not free at
+d = 1 + 1, at variance with the commonly accepted behavior; the theory in
+d = 1 + (d  1) is discontinuous in the limit d  2. besides, two dierent,
+inequivalent formulations within the same choice of gauge, the lightcone gauge,
+seem to coexist: the cauchy principal value and the mandelstamleibbrandt
+formulations.
+
+2.1 light-like wilson loop in feynman gauge
+
+in feynman gauge already the free vector propagator does not exist as a tempered
+distribution in 1 + 1 dimensions. a regularization is thereby mandatory and
+we choose to adopt the dimensional regularization, which preserves gauge
+invariance:
+
+df
+(x) = g
+
+d/2
+
+4
+
+(d/2  1)(x2 + i)1d/2,
+
+(2.3)
+
+the calculation in feynman gauge of the lightlike wilson loop (2.1), in 1 +
+(d  1) dimensions up to o(g4) has been performed in ref. [?]. actually in
+ref. [?] part of the contribution from graphs containing three vector lines, has
+only been given as a laurent expansion around d = 4, owing to its complexity.
+in the following we shall exhibit its general expression in terms of a generalized
+hypergeometric series and then we shall expand it around d = 2. we only report
+the nal results concerning the contributions of the various diagrams.
+
+the single vector exchange (o(g2)) gives
+
+1
+2 cf
+
+(2.4)
+
+w (1)
+f = 
+where cf is the casimir operator of the fundamental representation of color
+
+(d/2  1)
+(d  4)2 c,
+
+su(n) and
+
+c h(2ac + i)2d/2 + (2ac + i)2d/2i.
+
+(2.5)
+
+20
+
+light-like wilson loop
+
+one immediately notices that the propagator pole at d = 2 is cancelled after
+
+integration over the contour, leading to a nite result.
+
+there are a lot of feynman diagrams contributing to the wilson loop ex-
+pectation value at order o(g4) of perturbation theory. however, the number of
+diagrams one has to evaluate could be drastically reduced using the nonabelian
+exponentiation theorem [?, ?]. according to this theorem
+
+wc  1 +
+
+
+
+xn=1
+
+g2nw (n) = exp
+
+w(n),
+
+
+
+xn=1
+
+(2.6)
+
+where w(n) is given by the contribution of w (n) with the maximal nonabelian
+color factor to the order o(g2n) of perturbation theory, which is equal to cf for
+n = 1 and cf ca for n = 2, where ca is the casimir operator of the adjoint
+representation.
+
+in so doing, at order o(g4) we could restrict ourselves to the maximally non
+abelian contributions proportional to cf ca.
+in fact, the terms proportional
+to cf ca and to cf are distinct and cannot mix. the test reported in this
+chapter is concerned only with the nonabelian terms.
+instead, in the next
+chapter our attitude will be to compare the terms proportional to cf ca and to
+verify explicitly that, at order o(g4), the terms proportional to cf are those that
+we expect from the o(g2) computation using the nonabelian exponentiation
+theorem. the computation of the (abelian) terms proportional to cf will be
+only a further check of the internal consistency of our results, but in all cases the
+signicant test of gauge invariance will be given by the cf ca term.
+
+the diagrams contributing to order o(g4) can be grouped into three distinct
+
+families:
+
+ the ones in which the gluon propagator contains a selfenergy correction;
+ the ones with a double gluon exchange in which the propagators can either
+
+cross or uncross;
+
+ the ones involving a triple vector vertex.
+
+in strictly two dimensions and in an axial gauge only the second family is present.
+but in feynman gauge all of them must be taken into account; moreover we are
+here considering the problem in ddimensions. the second family is also the
+only one contributing to the abelian case.
+
+we start by considering the diagrams belonging to the rst category.
+the selfenergy correction to the propagator gives
+
+w (2;se)
+
+f
+
+=
+
+cf ca
+644
+
+2(d/2  1)(3d  2)
+(d  4)3(d  3)(d  1)e,
+
+(2.7)
+
+feynman gauge
+
+where
+
+e h(2ac + i)4d + (2ac + i)4di
+
+and the fermionic loop has not been considered (pure yangmills theory). eq.
+
+(2.7) exhibits a double pole at d = 2.
+
+next we consider the contribution of the socalled cross graphs, the ones
+
+with two non interacting crossed vector exchanges
+
+w (2;cr)
+
+f
+
+= 
+
+cf ca
+164
+
+2(d/2  1)
+(d  4)4
+
+(cid:20)e + 8b(cid:18)1 
+
+2(3  d/2)
+(5  d) (cid:19)(cid:21) ,
+
+where
+
+21
+
+(2.8)
+
+(2.9)
+
+(2.10)
+
+b h(2ac + i)(2ac + i)i2d/2
+
+.
+
+again a double pole occurs at d = 2.
+the contribution coming from graphs with three vector lines is by far the
+most complex one. it is convenient to split it into two parts, one coming from
+graphs with two vector lines attached to the same side
+
+w (2;ss)
+
+f
+
+=
+
+
+
+cf ca
+164
+
+1
+
+d  3
+
+e
+(d  4)4(cid:20)2(3  d/2)(d/2  1)(d  3)
+2(d/2  1)(cid:21)
+
+(2.11)
+
+and another one in which the three gluons end in three dierent rectangle sides
+
+f
+
+=
+
+cf ca
+
+644 e(cid:26)2(d/2  2)(4  d/2)(d  3)
+
+w (2;ds)
+(d  4)4h(3  d/2)(d/2  1)(d  3)  2(d/2  1)i(cid:27) .
+4
+
+(d/2)
+
+f (d)
+
++
+
+the function f (d) is dened as
+
+f (d) = s(d) +
+
+d/2  1
+
+(3  d/2)(d  4)h5(3  d/2)  (d/2  1)
+2(1)  2(5  d)i,
+
+(2.12)
+
+(2.13)
+
+22
+
+light-like wilson loop
+
+(d) being the digamma function and s(d) the convergent generalized hy-
+
+pergeometric series
+
+s(d) =
+
+
+
+xn=0
+
+1
+
+(n + 1)2
+
+1
+n!
+
+(n + d  3)
+
+(d  3)
+
+(n + 4  d/2)
+
+(4  d/2)
+
+(d/2)
+
+(n + d/2)
+
+.
+
+(2.14)
+
+both contributions exhibit a double pole at d = 2. the laurent expansion
+
+of eq. (2.12) around d = 4, reproduces exactly the expression given in ref. [?].
+
+summing eqs. (2.7), (2.9), (2.11) and (2.12) and performing a careful laurent
+expansion around d = 2, it is tedious but straightforward to prove that double
+and single poles cancel, leaving only the nite contribution
+
+w (2)
+f (d = 2) =
+
+c
+
+cf caa2
+162 (cid:18)1 +
+
+2
+
+3 (cid:19) .
+
+(2.15)
+
+the presence of a non vanishing cf ca contribution is a dramatic result: it
+means that the theory does not exponentiate in an abelian way, as a bona
+de free theory should do. in order to better understand this result, it is worth
+turning now our attention to the same wilson loop calculation, performed in the
+lightcone axial gauge n  a = 0.
+
+2.2 light-like wilson loop in light-cone gauge
+
+we have seen in section 1.2.1 and 1.2.2 that, once we have chosen the light-cone
+gauge, it is possible to adopt two dierent prescriptions for the pole of the vector
+propagator in 1 + 1 dimensions:
+
+ the so-called manifestly unitary formulation, or cauchy principal value pre-
+
+scription;
+
+ the causal formulation, or mandelstam-leibbrandt prescription.
+
+in this section we will compare these two formulations to the result of the previ-
+ous section, obtained in feynman gauge. the lightlike character of the wilson
+loop leads to the vanishing of a lot of feynman diagrams, thus simplifying the
+computation.
+
+2.2.1 cauchy principal value prescription
+
+in this section we stick in 1 + 1 dimensions, since cpv prescription is well de-
+if we interpret x+ as time direction, the eld a+ is
+ned only in this case.
+not an independent dynamical variable and just provides a nonlocal force of
+
+mandelstam-leibbrandt prescription
+
+23
+
+coulomb type between fermions. in momentum space it can be described by the
+exchange k2
+
+ has to be interpreted as in eq. (1.8):
+
+ [?, ?], where k2
+
+dcp v
+++ (x) = 
+
+i
+
+(2)2 z eikxd2k
+
+
+
+k (cid:20)p(cid:18) 1
+
+k(cid:19)(cid:21) = 
+
+i
+2|x|(x+).
+
+(2.16)
+
+it is straightforward to check that, by inserting eq. (2.16) in our wilson loop,
+
+the result (2.4) at o(g2) is recovered.
+at o(g4) in 1 + 1 dimensions, the only a priori surviving nonabelian con-
+tribution, which is due to cross graphs, vanishes using eq. (2.16) (see appendix
+d). henceforth no cf ca term appears, in agreement with abelian exponentia-
+tion, but at variance with the result obtained (after regularization!) in feynman
+gauge. the sum of the perturbative series easily gives:
+
+wcp v = exp(cid:18)
+
+i
+2
+
+cf g2ac(cid:19) .
+
+(2.17)
+
+on the other hand no fully consistent vector loop calculation would be feasible
+in 1 + (d  1) dimensions, using a cpv prescription or introducing infrared
+cutos [?].
+
+2.2.2 mandelstam-leibbrandt prescription
+
+the free vector propagator in lightcone gauge is very sensitive to the prescription
+used to handle the socalled spurious singularity. the only prescription which
+allows to perform a wicks rotation without extra terms and to calculate loop
+diagrams in a consistent way [?] is the causal mandelstamleibbrandt (ml)
+prescription [?, ?].
+in a canonical formalism it is obtained by imposing equal
+time commutation relations [?]; in two dimensions a ghost degree of freedom
+still survives, as extensively discussed in section 1.2.2. when ml prescription is
+adopted, the free vector propagator is indeed a tempered distribution at d = 2 [?],
+at variance with its behavior in feynman gauge. in particular, when x = 0,
+
+dm l
+
+++ (x) =
+
+2d/2(d/2)
+
+4  d
+
+(x)2
+
+(x2 + i)d/2 .
+
+(2.18)
+
+the calculation of the wilson loop under consideration at o(g4) in 1+(d1)
+dimensions, using lightcone gauge with mandelstamleibbrandt prescription,
+has been performed in ref. [?]. here we shall report those results and then perform
+their laurent expansion around d = 2, the value we are interested in.
+
+one might wonder why dimensional regularization should be introduced at all,
+as one might presume that single graph contributions are likely to be nite in this
+
+24
+
+light-like wilson loop
+
+gauge. on the other hand, while remaining strictly at d = 2, no selfinteraction
+should be present. these arguments are true, but the dimensional approach is
+necessary to make a complete comparison between the mandelstamleibbrandt
+results and the feynman ones.
+
+in fact, the calculation o(g2) is easily performed and the result exactly co-
+incides with eq. (2.4), for any value of d. therefore at o(g4) we again conne
+ourselves to the maximally nonabelian contributions, without losing informa-
+tion. the selfenergy graph now gives
+
+w (2;se)
+m l =
+2(d/2  1)(cid:21) +
+
+cf ca
+
+164 e(cid:26)
+
+4
+
+(4  d)4(d  3)(cid:20) 2(3  d/2)(d  3)
+2(d/2  1)
+d  2
+(4  d)3(d  3)(cid:20)3 
+d  3(cid:21)(cid:27).
+
+3d  2
+4(d  1) 
+
+(5  d)
+
+(2.19)
+
+its limit at d = 2
+
+cf caa2
+162
+
+c
+
+w (2;se)
+m l (d = 2) =
+is nite, but it does not vanish, as one might have naively expected.
+we shall discuss this point at the end of the section. for the time being let
+us recall that, when d 6= 2, transverse vector components are turned on and,
+although their contribution is expected to be o(d  2), it can compete with
+singularities arising from loop corrections. this is indeed what happens in the
+selfenergy calculation.
+
+(2.20)
+
+similarly the contribution from the cross graphs
+
+w (2;cr)
+
+m l = 
+
+cf ca
+164
+
+2(d/2  1)
+(d  4)4 (cid:26)2e
+
+d  2
+d  3
+
++ 8b(cid:20)1  2
+
+2(3  d/2)
+(5  d) (cid:21)(cid:27)
+
+(2.21)
+
+leads to a nite, non vanishing, result in the limit d = 2
+
+cf caa2
+
+w (2;cr)
+m l (d = 2) =
+summing eqs. (2.20) and (2.22) we exactly recover eq. (2.15).
+as a matter of fact the contribution due to graphs with three gluon lines [?]
+
+(2.22)
+
+48
+
+c
+
+.
+
+w (2;3g)
+
+m l
+
+= (cid:26)(d/2  2)(3  d/2) +
+
+
+2
+
+(2  d/2)
+
+s1(d)  (4  d)(3  d/2)s2(d)(cid:27)
+
+2(3  d/2)
+(5  d)
+
+6d  28
+
+(d  2)(d  4)
+
+(2.23)
+
+concluding remarks
+
+where
+
+ =
+
+2cf ca
+(2)d (2ac)4de
+
+id
+
+2
+
+cos(cid:18)d
+
+2 (cid:19) (d  4)
+(d  4)2 ,
+
+25
+
+(2.24)
+
+1
+
+
+
+(n + 3  d/2)n!(cid:20)
+(n + 2  d/2)
+
+xn=0
++(n + d/2)  (n + 3  d/2) 
+
+2
+
+(n + d/2  1)(n + d/2)
+
+n + 3  d/2
+
++
+
+(n + d/2  1)(5  d)
+
+(4 + n  d/2)
+
+(cid:21) (2.25)
+
+s1(d) =
+
+and
+
+s2(d) =
+
+
+
+xn=0
+
+(n + 3  d/2)
+(n + 6  d) (cid:20)(d/2  2)(cid:18) (n + 5  d)
+
+(n + 3  d/2) 
+
++ 2
+
+(n + 1)(d/2)
+(n + 1 + d/2)
+
+(n + 5  d)(d/2  1)
+
++
+
+(n + 4  d/2)
+
+(n + 2)
+
+(n + d/2)(cid:19)
+(n + 1)(3  d/2)
+(n + 4  d/2) (cid:21)
+
+
+
+(2.26)
+
+vanishes when d = 2.
+as a consequence the same nite result for the wilson loop o(g4) at d = 2 is
+obtained both in feynman and in lightcone gauges. however nonabelian terms
+are denitely present; the theory cannot be considered a free one in quantum loop
+calculations at d = 2, in spite of the quadratic nature of its classical lagrangian
+density in lightcone gauge. from a practical view point, in this fully interacting
+theory, the hope of getting solutions, when quarks are included, e.g.
+for the
+mesonic spectrum, in analogy with t hoofts treatment, seems remote.
+
+if we remain strictly in 1 + 1 dimensions, neither selfenergy corrections nor
+graphs with three vector lines should be considered, and we have only the con-
+tribution of crossed graphs (2.22). the result we obtain neither coincides with
+the one in feynman gauge (the limit d  2 being discontinuous), as we have
+neglected the nonvanishing selfenergy correction, nor obeys abelian exponen-
+tiation as in cpv approach, the reason being rooted in a dierent content of the
+degrees of freedom (the ghost elds a of eq. (1.25)).
+
+2.3 concluding remarks
+
+the computation of the expectation value of the wilson loop (2.1) gave the
+following unexpected results.
+
+the o(g4) perturbative loop expression in d = 1 + (d  1) dimensions is
+nite in the limit d  2. the results in feynman and lightcone gauge (with
+
+26
+
+light-like wilson loops
+
+mandelstamleibbrandt prescription) coincide, as required by gauge invariance.
+they are function only of the area ac for any dimension d and exhibit also a
+dependence on ca, the casimir constant of the adjoint representation.
+this dependence, when looked at in the light-cone gauge calculation, comes
+from non-planar diagrams with the colour factor cf (cf ca/2). besides, there is
+a genuine contribution proportional to cf ca coming from the one-loop correction
+to the vector propagator. this is surprising at rst sight, as in strictly 1 + 1
+dimensions the triple vector vertex vanishes in axial gauges. what happens is
+that transverse degrees of freedom, although coupled with a vanishing strength
+at d = 2, produce nite contributions when matching with the self-energy loop
+singularity precisely at d = 2, eventually producing a nite result. such a
+dimensional anomaly-type phenomenon is responsible of the discontinuity of
+yangmills theories at d = 2, namely of the nite, non vanishing result of eq.
+(2.19) in the limit d  2.
+surely this phenomenon could not appear in a strictly 1 + 1 dimensional
+calculation, which would only lead to the (smooth) non-planar diagram result.
+we stress that this contribution is essential to get agreement with the feynman
+gauge calculation, in other words with gauge invariance.
+
+we notice that no ambiguity aects our light-cone gauge results, which do
+not involve innities; in addition the discrepancy cannot be accounted for by a
+simple redenition of the coupling, that would also, while unjustied on general
+grounds, turn out to be dependent on the area of the loop.
+
+in order to make the argument complete, we recall that a calculation of the
+same wilson loop in strictly 1 + 1 dimension in light-cone gauge with a cpv
+prescription for the spurious singularity produces a vanishing contribution from
+nonplanar graphs. only planar diagrams survive, leading to abelianlike results
+depending only on cf , which can be resummed to all orders in the perturbative
+expansion to recover the expected exponentiation of the area.
+
+this result, which is the usual one found in the literature, although quite
+transparent, does neither coincide with the limit d  2 of the lightcone gauge
+result with ml prescription (which is in agreement with the limit d  2 in
+feynman gauge), nor with the ml result in strictly two dimensions. the test
+cannot be generalized to d 6= 2 dimensions as cpv prescription is at odds with
+causality in this case [?].
+what we can certainly state is the perturbative inequivalence of cpv and
+mandelstamleibbrandt formulations. at this point, we have two inequivalent
+formulations of the same theory, the twodimensional yangmills theory, within
+the same gauge choice. now, a natural question arises: is there any formulation
+that is clearly wrong, or are they both legitimate?
+
+to answer to this question, we will study the transition from d > 2 to d =
+2, both in feynman gauge and in lightcone gauge with ml prescription, in
+order to test the soundness of our perturbative approach when we are going
+towards the twodimensional case from higher dimensions. to do that, we will
+
+concluding remarks
+
+27
+
+apply the criterion exposed at the end of section 1.3, namely the wilson loop
+exponentiation, therefore considering a dierent wilson loop, viz a spacetime
+rectangular loop rather than a lightlike one. we already know that this wilson
+loop, from a physical point of view, is even more interesting and provides also
+information about the interaction potential between a quark and an antiquark.
+these computations, that are the subject of the next chapter, will help us to
+understand the features of yangmills theories in ml formulation.
+
+chapter 3
+
+space-time wilson loop
+
+in order to clarify whether the appearance at o(g4) of the maximally nonabelian
+term (proportional to ca) is indeed a pathology, one should examine the potential
+v (2l) between a static qq pair in the fundamental representation, separated
+by a distance 2l. therefore in this chapter, following the refs. [?, ?, ?], we will
+consider a dierent wilson loop, namely a rectangular loop with one side along
+the space direction and one side along the time direction, of length 2l and 2t
+respectively. eventually the limit t   at xed l is to be taken: the potential
+v (2l) between the quark and the antiquark is indeed related to the value of the
+corresponding wilson loop amplitude w(l, t ) through the equation [?, ?]
+
+t w(l, t ) = const. e2it v (2l) .
+lim
+
+(3.1)
+
+the crucial point to notice in eq.(3.1), as already discussed in section 1.3,
+is that the dependence on the casimir constant ca should cancel at the leading
+order when t   in any coecient of a perturbative expansion of the potential
+with respect to coupling constant. this criterion has often been used as a check
+of gauge invariance [?] and its failure has been considered as the proof of a sick
+formulation of fourdimensional theories [?]. actually, at the end of our enquiry
+we will discover that the criterion is not satised just in the twodimensional
+case. but here we will choose to have a more constructive attitude:
+in fact in
+the twodimensional case it is possible to obtain exact nonperturbative results.
+since they are at our disposal, we can proceed to a comparison with the results
+derived from our perturbative test. we could say that, in so doing, we check the
+behavior of our criterion, varying the dimension in which we are working, in the
+transition to d  2. there are some indications [?, ?] that support the conjecture
+that the failure of our perturbative criterion in the strictly twodimensional case
+depends on the need of taking into account the nonperturbative contributions,
+rather than on inconsistencies in the perturbative ml formulation. anyway, we
+will defer the discussion of this point until the conclusions.
+
+28
+
+feynman gauge
+
+29
+
+then we choose the closed path  parameterized by the following four seg-
+
+ments i,
+
+1
+2
+3
+4
+
+: x
+: x
+: x
+: x
+
+1 (s) = (st, l) ,
+2 (s) = (t,sl) ,
+3 (s) = (st,l) ,
+4 (s) = (t, sl) ,
+
+1  s  1.
+
+(3.2)
+
+describing a (counterclockwise-oriented) rectangle centered at the origin of the
+plane (x1, x0), with length sides (2l, 2t ), respectively (see fig. 1.1 at page 16)
+and with area
+
+a = 4lt
+
+(3.3)
+
+to have a sensitive check of gauge invariance, one has to consider at least the
+order g4, i.e. one has to evaluate w (2), as this is the lowest order where genuinely
+nonabelian cf ca contributions may appear. in turn, in the calculation of w (2),
+only the so called maximally nonabelian contribution needs to be evaluated,
+that in our case comes from the terms proportional to cf ca. the abelian
+contribution, proportional to c 2
+f , can be easily obtained thanks to the non
+abelian exponentiation theorem [?] and will be computed explicitly as a further
+check of consistency.
+
+in section 3.1 we will proceed to the computation of the loop (3.2) in feynman
+gauge, while in section 3.2 we will choose light-cone gauge, respectively with
+cpv (section 3.2.1) and with mandelstam-leibbrandt (sections 3.2.2 and 3.2.3)
+prescriptions for the propagator pole. we can anticipate the main result of this
+chapter, namely that, in the large t -limit when d > 2, the perturbative o(g4)
+contribution is proportional only to cf , and does not contain terms proportional
+to ca. if instead we compute the wilson loop at d = 2, the result depends also
+on ca, a pure area law behavior is recovered, but the term proportional to ca
+survives also in the limit t  .
+
+3.1 space-time wilson loop in feynman gauge
+
+in this section we will compute the wilson loop (3.2) in feynman gauge [?], in
+the framework of dimensional regularization (d = 2).
+
+an explicit evaluation of the function w (1) in eq.(1.39) gives the diagrams
+
+contributing to the loop with a single exchange (i.e. one propagator), namely
+
+w (1)
+f = 
+where df
+
+1
+2
+
+cf i i df
+
+(x  y)dxdy ,
+
+(3.4)
+
+(x) is the usual free propagator (2.3) in feynman gauge.
+
+30
+
+space-time wilson loop
+
+a fairly easy calculation leads to the result
+
+w (1)
+f =
+
+cf
+
+ (2l)22lt(cid:20)i(  3/2)(1/2)
+  2   1
+(  2)
+
+3  2  ei
+
+(n +   2)
+
+
+
+xn=1
+
+2()
+
++
+
+2n+24
+
+(2n  1)(2n + 2  3)n!!(cid:21),
+
+(3.5)
+
+where  = l/t .
+
+it should be noticed that this result does not coincide with the corresponding
+one of eq. (2.4), which was evaluated with the same gauge choice but with the
+loop sides along the x+ and x directions. contrary to what happens in eq. (2.4),
+eq. (3.5) exhibits an explicit dependence on the ratio  = l/t . only in the two
+dimensional limit the two results coincide: the limit   1 is smooth and restores
+the pure area dependence
+
+w (1)
+f (d = 2) = 
+
+i
+2
+
+cfa.
+
+(3.6)
+
+as in section 2.1, the diagrams contributing to w (2)
+
+f can be grouped into three
+
+distinct families
+
+w (2)
+f = w (2;2g)
+
+f
+
++ w (2;se)
+
+f
+
++ w (2;3g)
+
+f
+
+:
+
+(3.7)
+
+a) the ones with a double gluon exchange in which the propagators can either
+
+cross or uncross;
+
+b) the ones in which the gluon propagator contains a selfenergy correction;
+
+c) the ones involving a triple vector vertex.
+
+in strictly two dimensions and in an axial gauge only the rst family is present,
+but in feynman gauge all of them must be taken into account; moreover we
+are here considering the problem in d-dimensions, because of the dimensional
+regularization. the rst family is also the only one contributing to the abelian
+case.
+
+feynman gauge
+
+31
+
+a. exchange diagrams in feynman gauge
+
+we start by considering the diagrams belonging to the rst category, namely
+
+the ones with a double gluon exchange. a straightforward calculation gives
+
+w (2;2g)
+
+f
+
+=
+
+1
+
+8n iiii tr[p(t a
+
+x t a
+
+y t b
+
+z t b
+
+w)]d(x  y)d(z  w) dxdydzdw ,
+(3.8)
+
+where subscripts in the matrices have been introduced to specify their ordering.
+from eq. (3.8), the diagrams with two-gluons exchanges contributing to the order
+g4 in the perturbative expansion of the wilson loop fall into two distinct classes,
+depending on the topology of the diagrams:
+
+1. non-crossed diagrams: if the pairs (x, y) and (z, w) are contiguous around
+the loop the two propagators do not cross (see fig. 3.1a) and the trace in
+(3.8) gives
+
+tr[t at at bt b] = nc 2
+f ;
+
+(3.9)
+
+2. crossed diagrams: if the pairs (x, y) and (z, w) are not contiguous around
+the loop the two propagators do cross (see fig. 3.1b) and the trace in (3.8)
+gives
+
+tr[t at bt at b] = tr[t a(t at b + [t b, t a])t b] = n(c 2
+
+f  (1/2)cacf ),
+(3.10)
+
+ca being the casimir constant of the adjoint representation dened by
+f abcf dbc = caad.
+
+(a)
+
+(b)
+
+figure 3.1: example of non-crossed and crossed diagrams.
+
+we see that the c 2
+
+f term is present in both types of diagrams and with the
+same coecient. this term is usually denoted abelian term: were the theory
+abelian, only such c 2
+f terms would contribute to the loop. on the other hand,
+the cf ca term is present only in crossed diagrams and is typical of nonabelian
+theories.
+
+32
+
+space-time wilson loop
+
+thus, we can decompose w (2;2g)
+
+f
+
+part,
+
+as the sum of an abelian and a nonabelian
+
+f
+
+w (2;2g)
+moreover, the abelian part is simply half of the square of the order-g2 term,
+
++ w (2;na)
+
+= w (2;ab)
+
+(3.11)
+
+f
+
+f
+
+.
+
+i.e.
+
+w (2;ab)
+
+f
+
+=
+
+=
+
+c 2
+
+1
+8
+1
+
+f i i i i df
+2(cid:18)
+cf i i df
+
+1
+2
+
+(x  y)df
+(x  y)dxdy(cid:19)2
+
+(z  w) dxdydzdw
+
+.
+
+(3.12)
+
+crossed exchange diagrams (see appendix a for details).
+
+this result at o(g4) has been explicitly checked calculating the relevant non-
+equation (3.12) agrees with the nonabelian exponentiation theorem, which
+tells us that the abelian terms (depending only on cf ) in the perturbative ex-
+pansion of the wilson loop sum up to reproduce the abelian exponential
+
+f (l, t ) = exp(cid:18)
+w ab
+
+1
+2
+
+cf g2i i df
+
+(x  y)dxdy(cid:19) ,
+
+where the result in eq.(3.5) can be introduced.
+
+(3.13)
+
+in the limit d  2 the simple exponentiation of the area is easily recovered
+
+f (l, t ) = exp(cid:18)
+w ab
+
+i
+2
+
+cf g2a(cid:19) .
+
+(3.14)
+
+we have now to calculate loop integrals of the type given in eq.(3.8). in view
+of the parameterization (3.2), it is convenient to decompose loop integrals as sums
+of integrals over the segments i, and to this purpose we dene
+
+i, j = 1, . . . , 4 ,
+
+(3.15)
+
+ef
+
+ij (s, t) = df
+
+(cid:2)i(s)  j(t)(cid:3) 
+
+i (s) 
+
+j (t) ,
+
+where the dot denotes the derivative with respect to the variable parameterizing
+the segment. in this way, each diagram can be written as integrals of products of
+functions of the type (3.15). each graph will be labelled by a set of pairs (i, j),
+each pair denoting a gluon propagator joining the segments i and j.
+
+due to the symmetric choice of the contour  and to the fact that propagators
+(x), we have the following identities that
+
+are even functions, i.e. df
+halve the number of diagrams to be evaluated:
+
+(x) = df
+
+ef
+ij (s, t) = ef
+ef
+11(s, t) = ef
+22(s, t) = ef
+ef
+
+ji(t, s) ,
+33(s, t) ,
+44(s, t) .
+
+(3.16)
+
+feynman gauge
+
+33
+
+we remind the reader that in feynman gauge the propagators can attach
+either to the same rectangle side or to opposite sides, but not on a couple of
+contiguous ones.
+
+we have now to consider the o(g4) cf ca-terms coming from crossed dia-
+
+grams (maximally nonabelian ones), that need to be evaluated
+
+w (2;na)
+
+f
+
+= 
+
+ 
+
+1
+2
+
+1
+2
+
+cacf xi,j,k,l
+cacf xi,j,k,l
+
+z dsz dtz duz dv ef
+
+ij (s, t)ef
+
+kl(u, v)
+
+
+
+c f
+
+(ij)(kl) ,
+
+(3.17)
+
+where the primes mean that we have to sum only over crossed propagators cong-
+urations and over topologically inequivalent contributions, as carefully explained
+in the following; we have not specied the integration extrema as they depend on
+the particular type of crossed diagram we are considering (the extrema must be
+chosen in such a way that propagators remain crossed).
+
+the last equality in eq.
+
+it is
+a diagram with two crossed propagators joining the sides (ij) and (kl) of the
+contour (3.2). in fig. 3.2 a few examples of diagrams are drawn to get the reader
+acquainted with the notation.
+
+(3.17) denes the general diagram c f
+
+(ij)(kl):
+
+v
+
+s
+
+t
+
+u
+
+v
+s
+u
+t
+
+s
+
+u
+t
+v
+
+figure 3.2: examples of crossed diagrams; they are labelled as c(13)(13), c(11)(11)
+and c(13)(11), respectively
+
+the rst of eq. (3.16) permits to select just 11 types of topologically distinct
+crossed diagrams. the remaining symmetry relations (3.16) further lower the
+number to 7. as a matter of fact, although topologically inequivalent, from eq.
+(3.16) it is easy to get
+
+c f
+c f
+
+(11)(11) = c f
+(11)(13) = c f
+
+(33)(33)
+
+(33)(13)
+
+,
+
+,
+
+c f
+c f
+
+(22)(22) = c f
+(22)(24) = c f
+
+(44)(44)
+(44)(24).
+
+,
+
+(3.18)
+
+which are the 4 relations needed to lower the number of diagrams to be evaluated
+from 11 to 7. besides the 8 diagrams quoted in eq. (3.18), there are three other
+crossed diagrams that do not possess any apparent symmetry relation with other
+diagrams: c f
+(13)(24) (see fig. 3.3), so that the number of
+topologically inequivalent crossed diagrams is indeed 11.
+
+(24)(24) and c f
+
+(13)(13), c f
+
+the calculation of the 7 independent diagrams needed is lengthy and not
+trivial. the details of such calculation are sketched in appendix a. each diagram
+
+34
+
+space-time wilson loop
+
+v
+
+s
+
+t
+
+u
+
+t
+
+u
+
+v
+
+s
+
+s
+
+u
+
+v
+
+t
+
+figure 3.3: the three crossed diagrams that are unrelated to other diagrams
+through symmetry relations; they are c(13)(13), c(24)(24) and c(13)(24).
+
+depends not only on the area a = 4lt of the loop, but also on the dimensionless
+ratio  = l/t through complicated multiple integrals.
+adding all the contributions as in eq. (3.17) we eventually arrive at the follow-
+ing result o(g4) for the nonabelian part of the exchange diagrams contribution:
+(3.19)
+
+(lt )2e2i
+
+(2t )44
+
+= cf ca
+
+w (2;na)
+
+f
+
+2
+2(  1)
+
+(cid:16)
+
+(2  4)(2  3)h1 +
+
+1  
+
+(4  5)(2  3)
+
++ o(54)i(cid:17).
+
+we notice that the expression above exhibits a double and a single pole at
+
+ = 1, whose laurent expansion gives
+
+w (2;na)
+
+f
+
+2e2i
+
+cf ca(2t )44(lt )2 =
+
+1
+
+2(  1)2 +
+
+1  
+(  1)  1  2 + 2 +
+
+2
+12
+
++ o(  1) ,
+(3.20)
+
+ being the euler-mascheroni constant.
+
+b. bubble diagrams in feynman gauge
+
+we turn now our attention to the calculation of w (2;se)
+
+, namely of the dia-
+grams with a single gluon exchange in which the propagator contains a selfenergy
+correction o(g2). of course both gluon and ghost contribute to the selfenergy.
+the color factor is obviously a pure cf ca.
+ij the contribution of the
+diagram in which the propagator connects the rectangle segments i, j (see fig.
+3.4).
+
+we call them bubble diagrams. we denote by bf
+
+f
+
+there are 10 topologically inequivalent diagrams; however, the symmetries we
+have already discussed and the symmetric choice of the contour entails the four
+22 = bf
+conditions bf
+23, whereas the remaining
+two diagrams bf
+24 are unrelated by any symmetry relation. in addition,
+it is easy to see by performing a simple change of variable that bf
+34 are
+equal. thus, there are 5 independent diagrams to be evaluated
+
+33, bf
+13 and bf
+
+14 and bf
+
+14 = bf
+
+11 = bf
+
+12 = bf
+
+44, bf
+
+34, bf
+
+w (2;se)
+
+f
+
+= bf
+
+13 + bf
+
+24 + 2bf
+
+11 + 2bf
+
+22 + 4bf
+12.
+
+(3.21)
+
+feynman gauge
+
+35
+
+figure 3.4: examples of bubble diagrams. they are labelled as b11, b13 and b34,
+respectively.
+
+the calculation is sketched in appendix b. we here report the nal result in
+
+the form of an expansion with respect to the variable 
+
+w (2;se)
+
+f
+
+= cf ca
+
+(2t )44
+
+2
+
+h (3  1)2()
+2(2)(4  )
+
+(lt )2e2i 
+(1  )(2  2)(cid:16)2  6
+5  4
+
+(3.22)
+
++ o(54)(cid:17)i.
+
+again we notice the presence of a double and of a single pole at  = 1. the
+relevant laurent expansion is
+
+w (2;se)
+
+f
+
+2e2i
+
+cf ca(2t )44(lt )2 =
+
+=
+
+1
+
+(  1)2 +
+
+9  4
+2(  1)
+
++
+
+39
+2  9 + 22 +
+
+2
+6
+
++ o(  1) ,
+
+(3.23)
+
+c. spider diagrams in feynman gauge
+
+the third quantity w (2;3g)
+
+is by far the most dicult one to be evaluated. it
+comes from spider diagrams, namely the diagrams containing the triple gluon
+vertex. we denote by sf
+ijk the contribution of the diagram in which the propaga-
+tors are attached to the segments i, j, k (see fig. 3.5).
+
+f
+
+figure 3.5: examples of spider diagrams. they are labelled as s123, s112, respec-
+tively.
+
+it can be checked that all the spiders with the three legs attached to the same
+line vanish, as well as the spiders with two legs on one side and the third leg
+attached to the opposite side, i.e. sf
+133 =
+
+111 = sf
+
+444 = sf
+
+222 = sf
+
+333 = sf
+
+113 = sf
+
+36
+
+space-time wilson loop
+
+sf
+224 = sf
+244 = 0. thus, there are 12 non-vanishing topologically inequivalent
+diagrams; however, their number is just halved by the symmetric choice of the
+contour (sf
+124 = sf
+144 =
+223), so that w (2;3g)
+sf
+can be expressed in terms of the remaining 6 independent
+ones
+
+233 = sf
+
+112 = sf
+
+344 = sf
+
+123 = sf
+
+234, sf
+
+134, sf
+
+334, sf
+
+122, sf
+
+114, sf
+
+f
+
+w (2;3g)
+
+f
+
+= 2sf
+
+112 + 2sf
+
+123 + 2sf
+
+124 + 2sf
+
+233 + 2sf
+
+144 + 2sf
+
+344.
+
+(3.24)
+
+each term is represented by a multiple integral which cannot be evaluated for a
+generic dimension  in closed form. in particular it exhibits complicated analyt-
+icity properties in the variable , just in the neighborhood of the value  = 0
+which is of interest for us. the main aspects of the calculation are again deferred
+to an appendix (appendix c).
+
+we have succeeded in obtaining the following result for d > 2
+
+w (2;3g)
+
+f
+
+2e2i
+
+lim
+0
+
+cf ca(2t )44(lt )2 =
+
+= 
+
+3
+
+2(  1)2 +
+
+3  11/2
+(  1) 
+
+35
+2
+
++ 11  32 +
+
+2
+12
+
++ o(  1) .
+
+(3.25)
+
+a double and a single pole at d = 2 again are present in this expression.
+
+* * *
+
+since the abelian part of our results depends only on the casimir constant
+cf and smoothly exponentiates in the larget limit even when d > 2 (see
+eqs.(3.5,3.13)), in the following we focus our attention on the non-abelian part,
+namely on the quantity containing the factor cf ca
++ w (2;3g)
+
++ w (2;se)
+
+w (2;na)
+
+f
+
+f
+
+f
+
+.
+
+it is actually convenient to divide by the square of the loop area, by introduc-
+
+ing the new expression n
+
+n cf caa
+
+2 = w (2;na)
+
+f
+
++ w (2;se)
+
+f
+
++ w (2;3g)
+
+f
+
+.
+
+(3.26)
+
+then, from eqs. (3.19,3.22,3.25), it is easy to conclude that, thanks to the factor
+t 44, n vanishes in the limit t   when  > 1.
+this is precisely the usual necessary condition required at o(g4) in order
+to get agreement with abelianlike time exponentiation when summing higher
+orders [?].
+
+we cannot discuss the limit   1 for generic (small) values of  in our results
+
+as we are only able to master the expressions at  = 0.
+
+light-cone gauge
+
+nevertheless if we consider the quantity
+
+lim
+1
+
+lim
+0
+
+(t 44n ) ,
+
+37
+
+(3.27)
+
+we get a quite interesting result. indeed double and simple poles at  = 1
+
+cancel in the sum, leading to
+
+lim
+1
+
+lim
+0
+
+(t 44n ) =
+
+1
+
+162(cid:18)1 +
+
+2
+
+3 (cid:19) ,
+
+(3.28)
+
+which exactly coincides with eq. (2.15).
+this is, rst of all, a formidable check of all our calculations, if we conjecture
+
+that the same result is obtained by performing the limit
+
+lim
+0
+
+1n .
+lim
+
+(3.29)
+
+but it also entails the quite non trivial consequences we are going to discuss in
+section 3.3. but rst we will review the corresponding calculations in lightcone
+gauge.
+
+3.2 space-time wilson loop in light-cone gauge
+
+in this section we will proceed to the computation of wilson loop (3.2) in light-
+cone gauge, in order to compare the results obtained with the ones in feynman
+gauge. we will review the computations done in d = 2 with cauchy principal
+value prescription (section 3.2.1), and with mandelstamleibbrandt prescription
+(section 3.2.2), following ref. [?]. at the end we will complete the twodimensional
+case, computing the selfenergy contribution that arises in d > 2 and that sur-
+vives in the d  2 limit (section 3.2.3).
+
+3.2.1 cauchy principal value prescription
+
+in this section we report the results of the computation of wilson loop (3.2) in
+light-cone gauge with cauchy principal value prescription. we shall begin with
+the o(g2) contribution. from eq.
+(3.2), (2.16), (3.15) and
+(3.16)(or, better, the analogous of eq. (3.16) for lightcone gauge, see eq. (3.34))
+one can easily get
+
+(3.4), using eqs.
+
+w (1)
+cp v = 
+
+1
+2
+
+cf
+
+4
+
+xi,j=1z 1
+
+1
+
+dsz 1
+
+1
+
+dt ecp v
+
+ij
+
+(s, t) = 
+
+i
+2
+
+cfa .
+
+(3.30)
+
+38
+
+space-time wilson loop
+
+once the o(g2) term is known, simple arguments permit to evaluate any
+order in the perturbative expansion, so that in this case the loop can be exactly
+obtained. let us indeed consider the o(g4) term. as explained in the previous
+section, only the genuine non-abelian part needs to be evaluated, i.e.
+the
+crossed diagrams containing the factor cf ca, as the abelian part is already
+given by eq. (3.12), which in this case leads to
+
+w (2;ab)
+cp v = 
+
+1
+8
+
+c 2
+fa2
+ .
+
+(3.31)
+
+however, due to the contact nature of the propagator in the cpv case, all the
+crossed diagrams trivially vanish so that w (2;na)
+cp v = 0: the (x+) term in the
+propagator only tolerates diagrams with parallel propagators, which therefore
+cannot cross, both in the abelian and in the non-abelian case. obviously, this
+argument holds at any order in the perturbative expansion, so that only abelian
+terms contribute and the sum of all of them, due to the abelian exponentiation
+theorem, reproduces the exponential
+
+wcp v (l, t ) = exp(cid:18)
+
+i
+2
+
+g2cfa(cid:19) .
+
+(3.32)
+
+a detailed discussion of this point can be found in appendix d.
+
+consequently, from eq. (3.1), null plane light-cone quantization provides a
+linear conning potential for a quarkantiquark pair, with string tension  =
+g2cf /2. this is the very same result one would have obtained in an abelian
+theory, apart from the factor cf . in this sense null plane light-cone gauge quan-
+tization provides a free theory: the wilson loop does not feel the non-abelian
+colour structure of the theory. this result, obtained in a minkowskian framework,
+is in agreement with analogous euclidean calculations [?].
+
+3.2.2 mandelstam-leibbrandt prescription (d = 2)
+
+in strictly d = 2 the contribution to the expectation value of wilson loop (3.2) is
+only given by feynman diagrams with double gluon exchange, in which the prop-
+agators are crossed or uncrossed, as already discussed for the lightlike contour.
+the analysis of the diagrams is similar to the one developed in feynman gauge.
+the only dierence is that we shall use the mandelstam-leibbrandt propagator
+for d = 2:
+
+d(m l)cd
+
+++
+
+(x) = dm l
+
+++ (x)cd =
+
+icd
+
+2 z d2k eikx
+
+k2
++
+
+(k2 + i)2 =
+
+cd
+
+
+(x)2
+
+(x2 + i)
+
+(3.33)
+
+instead of feynman propagator (2.3) in d dimensions.
+
+mandelstam-leibbrandt prescription (d = 2)
+
+39
+
+the fact that we are in strictly 1 + 1 dimensions greatly simplies the pertur-
+bative expansion (1.38), as the complete green functions appearing in it become
+products of free propagators.
+
+we will again use the denition (3.15), with the same notations of the feyn-
+man case. due to the symmetric choice of the contour  and to the fact that
+propagators are even functions, i.e. dm l
+ (x), we have the following
+identities that halve the number of diagrams to be evaluated:
+
+ (x) = dm l
+
+em l
+em l
+em l
+em l
+em l
+
+(s, t) = em l
+ij
+12 (s, t) = em l
+23 (s, t) = em l
+11 (s, t) = em l
+22 (s, t) = em l
+
+(t, s) ,
+
+ji
+34 (s, t) ,
+41 (s, t) ,
+33 (s, t) ,
+44 (s, t) .
+
+(3.34)
+
+at variance with the feynman case (3.16), here also diagrams with propaga-
+tors attaching on a couple of contiguous sides contribute to the nal result, thus
+leading to a more cumbersome computation. we begin with the o(g2) terms.
+following the notation introduced in the previous section, w (1)
+m l can be written
+as the sum of 16 diagrams
+
+w (1)
+m l = 
+
+ 
+
+1
+2
+
+1
+2
+
+cf
+
+cf
+
+dsz 1
+
+1
+
+dtem l
+
+ij
+
+(s, t)
+
+4
+
+4
+
+1
+
+xi,j=1z 1
+xi,j=1
+
+ij
+
+c m l
+
+.
+
+(3.35)
+
+thanks to the symmetry properties (3.34), only 6 of them are independent, and
+an explicit evaluation gives
+
+40
+
+space-time wilson loop
+
+c m l
+
+11 = c m l
+
+33 =
+
+c m l
+
+22 = c m l
+
+44 =
+
+c m l
+
+12 = c m l
+
+21 = c m l
+
+l2
+
+ (cid:18)
+
+1
+
+2(cid:19)
+
+l2
+
+34 = c m l
+
+43 =
+
+c m l
+
+14 = c m l
+
+41 = c m l
+
+23 = c m l
+
+32 =
+
+c m l
+
+13 = c m l
+
++(cid:18) 2
+
+l2
+
+31 =
+
+ (cid:20) 1
+
+2 +(cid:18) 2
+  2(cid:19) ln(1  )(cid:21)
+ (cid:20)1 +(cid:18) 2
+2 +
+
+42 =
+
+l2
+
+c m l
+
+24 = c m l
+
+l2
+
+1
+
+l2
+
+ (cid:20)i  ln() +(cid:18)1 
+ (cid:20) ln() +(cid:18)1 
+  2(cid:19) i + 4 ln() (cid:18) 2
+
+2(cid:19) ln(1  )(cid:21)
+2(cid:19) ln(1 + )(cid:21)
++ 2(cid:19) ln(1 + )
+
+
+
+1
+
+2
+
+(cid:19) ln(1 + ) +(cid:18) 2
+2 
+
+2
+
+(cid:19) ln(1  )(cid:21)
+
+(3.36)
+
+summing up all the coecients (3.36) as in (3.35) one gets that the secondorder
+calculation is
+
+i
+2
+
+cfa .
+
+w (1)
+m l = 
+the secondorder calculation is in agreement with the cpv case (see eq.
+(3.30)). however, as often happens in wilson loop calculations, an o(g2) compu-
+tation is too weak a probe to check consistency and gauge invariance. thus, we
+have to consider the o(g4) terms. again, only crossed diagrams (maximally
+nonabelian ones) need to be evaluated
+
+(3.37)
+
+w (2;na)
+
+m l
+
+= 
+
+ 
+
+1
+2
+
+1
+2
+
+cacf xi,j,k,l
+cacf xi,j,k,l
+
+z dsz dtz duz dv em l
+
+ij
+
+(s, t)em l
+
+kl (u, v)
+
+
+
+c m l
+
+(ij)(kl) ,
+
+(3.38)
+
+where the primes mean that we have to sum only over crossed propagators cong-
+urations and over topologically inequivalent contributions, as carefully explained
+in the following; we have not specied the integration extrema as they depend on
+the particular type of crossed diagram we are considering (the extrema must be
+chosen in such a way that propagators remain crossed).
+
+the last equality in eq.
+
+it is
+a diagram with two crossed propagators joining the sides (ij) and (kl) of the
+
+(3.38) denes the general diagram c m l
+
+(ij)(kl):
+
+mandelstam-leibbrandt prescription (d = 2)
+
+41
+
+contour (3.2). the notation is the same of the feynman case (see fig. 3.2 at
+page 33). the rst of eq. (3.34) permits to select just 35 types of topologically
+distinct crossed diagrams, and to multiply each representative by a factor 8, which
+is the number of permutations of the points (x, w, y, z) leaving the propagators
+dm l
+ [x(s)  y(t)]dm l
+ [w(u)  z(v)] crossed. the remaining symmetry relations
+(3.34) further lower the number to 19. as a matter of fact, although topologically
+inequivalent, from eq. (3.34) it is easy to get
+
+(33)(33)
+
+(33)(13)
+
+(33)(34)
+
+(33)(23)
+
+(13)(34)
+
+(13)(23)
+
+c m l
+c m l
+c m l
+c m l
+c m l
+c m l
+c m l
+c m l
+
+(11)(11) = c m l
+(11)(13) = c m l
+(11)(12) = c m l
+(11)(14) = c m l
+(13)(12) = c m l
+(13)(14) = c m l
+(12)(14) = c m l
+(12)(12) = c m l
+
+(23)(34)
+
+(34)(34)
+
+,
+
+,
+
+,
+
+,
+
+,
+
+,
+
+,
+
+,
+
+(44)(44)
+
+(44)(24)
+
+(44)(14)
+
+(44)(34)
+
+c m l
+c m l
+c m l
+c m l
+c m l
+c m l
+c m l
+c m l
+
+(22)(22) = c m l
+(22)(24) = c m l
+(22)(23) = c m l
+(22)(12) = c m l
+(24)(23) = c m l
+(24)(12) = c m l
+(12)(23) = c m l
+(23)(23) = c m l
+
+(24)(14)
+
+(24)(34)
+
+(14)(34)
+
+(14)(14)
+
+,
+
+,
+
+,
+
+,
+
+,
+
+,
+
+,
+
+,
+
+(3.39)
+
+which are the 16 relations needed to lower the number of diagrams to be evaluated
+from 35 to 19. besides the 32 diagrams quoted in eq. (3.39), there are three other
+crossed diagrams that do not possess any apparent symmetry relation with other
+diagrams: c m l
+(13)(24) (see fig. 3.3 at page 34), so that the
+number of topologically inequivalent crossed diagrams is indeed 35.
+
+(24)(24) and c m l
+
+(13)(13), c m l
+
+the calculation of the 19 independent diagrams needed is lengthy and not
+trivial. the details of such calculation are fully reported in the appendix e.
+each diagram depends not only on the area a = 4lt of the loop, but also
+on the dimensionless ratio  = l/t through complicated functions involving
+powers, logarithms and dilogarithm functions, denoted by li2(z). since we shall
+be interested in the larget behavior, we always consider the region  < 1 (see
+appendix e for details).
+
+adding all the contributions as in eq.
+
+(3.38) we eventually arrive at the
+
+following result for the nonabelian part of the o(g4) contributions:
+
+w (2;na)
+m l =
+
+cacfa2
+
+
+
+48
+
+.
+
+(3.40)
+
+several important consequences can be drawn from eq. (3.40):
+
+1. the sum of all nonabelian terms, proportional to cf ca, does not vanish.
+this fact prevents any possible agreement with the cpv formulation, where
+the result is a simple abelian exponentiation (see eq. (3.32));
+
+42
+
+space-time wilson loop
+
+2. a little thought is enough to realize that the perturbative series wm l cannot
+sum to a phase factor, even taking into account possible extra nonabelian
+terms in the argument of the exponent.
+
+the result of eq. (3.40) was conrmed in ref. [?]:
+
+as the calculation o(g4) is really heavy, a consistency check of its accuracy has
+been performed. the contribution from uncrossed graphs o(g4) (which only in-
+volve c 2
+f ) has been indeed independently computed and then it has been summed
+to the expression for the corresponding c 2
+f terms coming from the crossed graphs,
+which have twice the weight of eq. (3.40) (see eq. (3.10)); in so doing the full
+o(g4) abelian result has been correctly recovered.
+in this work the authors
+managed to do a complete resummation of the perturbative series, obtaining the
+1:
+exact expression for the wilson loop for any contour p with the given area ap
+z (cid:19)n
+exp(cid:0)  ig2ap z(cid:1)(cid:18)z + 1
+
+wm l(ap ) = exp(cid:18)i
+
+n  1
+2n
+
+g2ap(cid:19) 1
+
+n i dz
+
+2i
+
+.
+
+(3.41)
+
+the contour integral, which encloses the multiple pole at z = 0, gives a laguerre
+polynomial in g2ap of order n  1: l1
+this last result coincides, at o(g4), with eq. (3.40), but diers from the cpv
+result (3.32). therefore we can state that the perturbative series of wilson loop
+computed in lightcone gauge with cpv and mandelstamleibbrandt prescrip-
+tions are denitely dierent: this dierence, as we will discuss in the conclusions,
+can be related to the dierent behavior of t hoofts and wus bound states equa-
+tions with respect to the connement issue.
+
+n 1(ig2ap ).
+
+3.2.3 mandelstamleibbrandt prescription (d  2)
+the computation of wilson loop in mandelstamleibbrandt prescription for d 
+2 is performed following the same scheme of the previous sections of this chapter.
+the diagrams contributing to the nonabelian part of w (2)
+m l can be grouped in
+(ij)(kl), spider diagrams sm l
+the usual three families, namely crossed diagrams cm l
+ijk
+and bubble diagrams bm l
+in arbitrary dimensions, the calculation of the wilson loop is much more
+awkward in lightcone gauge than in feynman gauge, due to a more complicated
+form of the vector propagator. however, when considering the d  2 limit,
+diagrams in lightcone gauge have much better analyticity properties in  than
+the ones in feynman gauge. in fact the vector propagator in lightcone gauge
+with ml prescription is a tempered distribution at d = 2, at odds with the one
+in feynman gauge. moreover it is summable along the (compact) loop contour.
+
+ij
+
+.
+
+1we recall that in the twodimensional case we have a dependence only from the area of the
+
+loop, and not from the shape of the path.
+
+mandelstam-leibbrandt prescription (d  2)
+
+43
+
+due to this property, we can conclude that all the maximally nonabelian
+contributions arising from diagrams with crossed propagators sum to an expres-
+sion that, in the limit d  2, reproduces eq. (3.40), namely
+
+w (2;na)
+m l (d = 2) =
+
+cacfa2
+
+
+
+48
+
+.
+
+(3.42)
+
+now we consider the contribution w (2;se)
+
+coming from bubble diagrams. in
+lightcone gauge and on the plane x0  x1, the only non vanishing component
+of the two point green function m l
+++ (x)  m l(x),
+that reads, at x = 0 [?],
+
+ at the order o(g2) is m l
+
+m l
+
+m l(x) = 
+
+g2
+82 ca
+
+(x)2
+
+(x2 + i)22 f () ,
+
+(3.43)
+
+where
+
+f () =
+
+1
+
+(2  )3(cid:20) 2(3  )(2  3)
+
+(5  2)
+
+
+
+(  1)()(102  19 + 10)
+(3.44)
+
+4(2  3)(2  1)
+
+(cid:21) .
+
+there are 10 topologically inequivalent bubble diagrams that contributes to
+w (2;se)
+m l . however, due to the symmetry of the green function and to the sym-
+metric choice of the contour, only six of them are independent, and the o(g4)
+contribution to the wilson loop arising from bubble diagrams can be written as
+
+w (2;se)
+m l = 2(bm l
+
+11 + bm l
+
+22 + bm l
+
+13 + bm l
+
+24 + 2bm l
+
+12 + 2bm l
+
+14 ) ,
+
+(3.45)
+
+where each single contribution bm l
+(3.43) in the formula
+
+ij
+
+can be calculated by replacing eqs. (3.2),
+
+bm l
+ij = 
+
+1
+2
+
+g2cf z 1
+
+1
+
+dsz 1
+
+1
+
+dtm l
+
+ (i(s)  j(t)) 
+
+i (s) 
+
+j (t) .
+
+(3.46)
+
+the main details of the calculation are deferred to an appendix (appendix f).
+
+the nal result is
+
+44
+
+space-time wilson loop
+
+w (2;se)
+m l =
+
+cf ca
+
+2 f ()(lt )2(2l)44(cid:26)e2i46(cid:20)
+
+1
+
+(7  4)(8  4)
+
++
+
+5  2
+
+(cid:18)1 (8 4)2f1(2  2, 2  7/2; 2  5/2; 2) + (7 4)(1 2)32(cid:19)
+1  (1  2)42
+
+(3  2)(4  2)
+(1  2)32
+(3  2)(4  2)  2f1(2  2, 2  5/2; 2  3/2; 2)
++ e2i44(cid:20)
+2f1(2  2, 1/2; 3/2; 2)i + i
+
+(6  4)(4  2)(cid:0)1  (1  2)32(cid:1)(cid:21)
+(5  4)
+(  2)(2  7/2)
+
+(2  2)
+
+e2i 42
+
+3
+
+2f1(2  2, 3/2; 5/2; 2) +
+
+2
+
+(7  4)(cid:27) .
+
+(3.47)
+
+some comments are here in order. first of all there is a dependence on the
+dimensionless ratio  = l/t , besides the area, at variance with the analogous
+result (2.19) in lightcone gauge (ml) for the rectangle with light-like sides. how-
+ever, in the equation above, one can easily check that the quantity w (2;se)
+m l /(lt )2
+is not singular for   0. actually eq.(3.47) exhibits, for  > 1, the expected
+damping factor t 44 in the larget limit.
+in the limit   1 the dependence on  disappears and the pure area law is
+
+recovered:
+
+cf caa2
+162
+
+
+
+.
+
+w (2;se)
+m l (d = 2) =
+this is exactly the missing term to be added to the expression of eq. (3.40)
+to obtain the nal result for the maximally non abelian contribution to the
+perturbative o(g4) wilson loop in the limit d  2,
+cf caa2
+162 (cid:18)1 +
+
+w (2;se)
+m l (d = 2) + w (2;na)
+
+m l (d = 2) =
+
+3 (cid:19) .
+
+(3.48)
+
+(3.49)
+
+2
+
+
+
+equation (3.49) is in fact in full agreement with eqs. (3.263.28), where the
+
+same wilson loop is calculated in feynman gauge.
+
+in turn the result above implies that spider diagrams, namely diagrams
+with a triple vector vertex, cannot contribute in the limit d  2. this is not
+surprising, as also the contribution (2.23), where the contour of the loop is chosen
+along the (x+, x) directions, does not contribute in the same limit.
+
+in order to support this conclusion, we can show that the relevant three point
+
+green function at o(g), vanishes in that limit.
+
+concluding remarks
+
+45
+
+to this aim, let us consider the three point green function v m l
+
+ (x, y, z). due
+to the lightcone gauge choice, its only non vanishing component when consid-
+ering the loop in the x0  x1 plane is v m l(x, y, z) = v m l
++++(x, y, z); up to an
+irrelevant multiplicative constant, it is given by
+
+v m l(x, y, z) =z d2
+
+
+
+z (cid:20) 
+
+x
+
+
+y+ 
+
+
+y
+
+
+
+x+(cid:21) f (x  )f (y  )g(z  )
+
++ cycl. perm. {x, y, z}  (v1  v2) + cycl. perm. {x, y, z} .
+
+(3.50)
+
+here the index  runs over the transverse components and the functions g
+
+and f are the following fourier transforms
+
+g(x) =z d2p
+f (x) =z d2p
+
+eipx
+
+p2 + i
+
+= (  1)(cid:18)
+
+x2
+4
+
++ i(cid:19)1
+
+,
+
+eipx
+
+(p2 + i)(p+ + ip)
+
+= i(  1)z x+
+
+0
+
+d(cid:18)x2
+
+  2x
+
+4
+
++ i(cid:19)1
+
+.
+
+(3.51)
+
+(3.52)
+
+let us consider, for instance, the rst term in eq. (3.50), that we call v m l
+.
+using standard feynman integrals techniques, integrations over momenta and
+over the intermediate point  can be performed, so that v m l
+can be rewritten,
+after some convenient change of variables, as
+
+1
+
+1
+
+i(4)3
+
+v m l
+1 =
+
+8
+
+(2  1)(  1)
+z 1
+ddd [(1  )]1z 
+d
+
+[(x  z)2  (1  )(y  z)2   (1  )(x  y)2 + i]21 .
+
+[(x  z)+ +  (1  )(x  y)+][(y  z)+ +  (y  x)+]2
+
+[1 +  ( + (1  ))]25
+
+(1 +  )
+
+0
+
+0
+
+(3.53)
+
+1
+
+since v m l
+
+has an explicit zero at  = 1, if we show that the integral in (3.53)
+is convergent when evaluated at  = 1, we have proved that the three point
+green function vanishes at d = 2. the derivation of this result is exhibited in
+the appendix g.
+
+3.3 concluding remarks
+
+in this chapter we have proceeded to the computation of the wilson loop (3.2)
+in dierent gauges and dimensions.
+
+46
+
+space-time wilson loop
+
+one feature that is conrmed in this series of investigations, as already seen
+in chapter 2, is the discontinuity of yangmills theories in two dimensions. the
+lightcone results in strictly 1 + 1 dimensions are dependent from the dierent
+prescription adopted for the vector propagator. but, at a rst sight, one could
+have thought to recover the result obtained in strictly 1 + 1 dimensions with ml
+prescription, if we are coming from d > 2, both with feynman gauge and with
+lightcone gauge (ml). this is not the case; as a matter of fact in strictly 1 + 1
+dimensions and in lightcone gauge the contribution from diagrams containing
+a selfenergy insertion is missing, in spite of the fact that, if calculated rst at
+d > 2, it does not vanish in the limit d  2. this contribution is essential in
+order to get agreement with the feynman gauge computation. this phenomenon,
+discovered rst in ref. [?], has been discussed at length in chapter 2.
+
+what may be surprising is that this extra contribution, required by gauge
+invariance, when considered in the limit d  2, exhibits a pure area dependence
+on its own, being the same no matter the orientation of the loop. moreover,
+in lightcone gauge (ml), dierent families of diagrams (crossed and bub-
+ble diagrams) give the same contribution (cf ca
+respec-
+tively) no matter the orientation of the loop (compare eqs. (2.20),(2.22) with
+eqs. (3.48),(3.42)). remarkably, the geometrical arguments (invariance under
+area-preserving dieomorphism) which lead to a pure area dependence in two
+dimensions, but not in higher ones, are recovered in the limit d  2, in spite
+of the singular nature of this limit, and of the dierence in the two results (with
+and without self-energy diagrams).
+
+ (cid:1)2
+and cf ca(cid:0) lt
+
+(lt )2
+
+3
+
+we consider this point quite intriguing; it seems that, in order to get beyond
+two dimensions towards higher ones, the theory needs further inputs which cannot
+be a priori guessed in two dimensions. on the other hand it is known that
+operators exist which are irrelevant at d > 2, but can be competitive in exactly
+two dimensions [?, ?].
+
+our result can therefore be interpreted as a warning when one tries to extend
+straightforwardly conclusions obtained in strictly two dimensions to more realistic
+situations.
+
+but the new result of this chapter is that we have checked that our ndings
+at o(g4) comply with the abelianlike time exponentiation in the large-t limit,
+as long as d > 2. at d = 2 this is not the case.
+in fact, while in any dimension d > 2 perturbative wilson loop calculations
+are in agreement with abelian-like time exponentiation, as all ca dependent
+terms turn out to be depressed in the large-t limit, at d = 2 neither the result
+in ref. [?] nor the one in ref. [?] share this property, as they both exhibit an
+explicit ca-dependence in the coecient of the leading term when t  . at
+d = 2 exponentiation in terms of cf occurs perturbatively only in light-front
+formulation (see eq. (3.32)).
+
+but our investigation is purely perturbative, while the wilson loop is dened
+by means of the true vacuum, that might have nonperturbative contribu-
+
+concluding remarks
+
+47
+
+tions. there are, in fact, arguments supporting the hypothesis that the expected
+abelianlike time exponentiation in the equaltime quantization could be restored
+by genuine nonperturbative contributions. this point is going to be thoroughly
+discussed in the conclusions.
+
+conclusions
+
+in this thesis we have performed a perturbative inquiry on the features of two
+dimensional yangmills theories.
+
+the rst result, obtained in chapter 2 and conrmed in chapter 3, is that
+two dierent, inequivalent perturbative formulations of twodimensional yang
+mills theories within the lightcone gauge seem to coexist:
+
+a) the lightfront quantization formulation, leading to (instantaneous) cauchy
+principal value (cpv) prescription for the spurious pole of the gluon prop-
+agator;
+
+b) the equaltime quantization formulation, leading to (causal) mandelstam
+
+leibbrandt (ml) prescription for the same pole.
+
+the cpv formulation lives only in d = 2 and in higher dimensions man-
+in fact it leads to a nonrenormalizable theory and does
+ifests inconsistencies:
+instead, the ml formulation is in full
+not agree with feynman gauge results.
+agreement with feynman gauge results for d > 2, but the comparison cannot be
+performed in strictly 1+1 dimensions, since the free propagator (2.3) in feynman
+gauge is not a tempered distribution for d = 2.
+
+just to compare these two dierent formulations at d = 2, in order to decide
+if one or the other is wrong or if there is a sort of compatibility (in spite
+of the dierent results with respect to our test of gauge invariance), we have
+performed in chapter 3 a test on the asymptotic behavior of the spacetime
+wilson loop: the dependence on ca should cancel at the leading order when
+t   in any coecient of its perturbative expansion. the failure of this
+criterion has been interpreted in the past as an evidence of a pathology of four
+dimensional perturbative formulations of quantum eld theories [?]. the second
+result obtained in this thesis is that the vanishing of the term proportional to
+ca at o(g4), and the subsequent abelianlike time exponentiation of the wilson
+loop, happens only for d > 2, but in the limit d  2 its asymptotic behavior
+fails to be the abelianlike one. in other words, if we take rst the limit d  2,
+no damping occurs when t  : the two limits do not commute. with respect
+it provides
+to this criterion the cpv formulation seems to be in better shape:
+the expected abelianlike exponentiation in an exact way, once we have summed
+all the feynman diagrams contributing to the perturbative series.
+
+48
+
+conclusions
+
+49
+
+let us summarize in detail the main perturbative features found in our wilson
+loop computations, which are common to both feynman and light-cone gauges.
+for d > 2 the o(g4) result depends on the contour: if it has lightlike sides,
+there is a dependence only on the area, no matter the value of d. if instead the
+contour is a space-time rectangle, for d > 2 there is also a dependence on the
+ratio   l/t , still reproducing the expected exponential behavior in the limit
+t   ( = 0).
+the limit d  2 of such o(g4) result is nite and depends only on the area,
+no matter the orientation and the shape of the contour. it consists of two addenda
+(compare eq. (2.15) with eq. (3.28)).
+
+in light cone gauge the second addendum comes from crossed diagrams,
+the rst one is due to the self-energy correction to the gluon propagator.
+in
+axial gauges the transverse degrees of freedom are coupled with a strength of
+order d  2; nevertheless they produce a nite contribution when matching the
+self-energy loop singularity precisely at d = 2.
+thus the ml formulation exhibits a kind of instability with respect to a
+change of dimensions and looks indeed discontinuous in the limit d  2.
+in
+fact in exactly 1 + 1 dimensions the rst addendum is missing and one just gets
+the result of ref. [?], conrmed in ref. [?] following a dierent approach. its area
+dependence is hardly surprising in view of the symmetry under area preserving
+dieomorphisms at d = 2; it is perhaps remarkable that also the rst addendum,
+which originates at d > 2, exhibits in the limit d  2 a pure area dependence
+on its own.
+however both contributions contain the factor cf ca and thereby disagree
+with the simple area exponentiation, that is obtained only in cpv formulation.
+at a perturbative level there is a discontinuity, which is not surprising in the
+light of the argument presented in ref. [?], namely the possibility of dening
+(generalized) qcd2 [?]: it tells us that one must pay attention in trying to extend
+twodimensional results to higher dimensions. however it does not explain why
+agreement with the simple area behavior is not recovered.
+
+moreover, the authors of ref. [?], working in exactly 1 + 1 dimensions, have
+succeeded in resumming the perturbative series: the result (3.41) they get does
+not exhibit the usual purely exponential area law. besides the appearance of
+laguerre polynomials, the coecient in the exponent multiplying the area is
+dierent from the usual one. we are thereby faced with a discrepancy.
+it is
+interesting to point out that they note that the limit for n   of eq. (3.41)
+gives an expression for the wilson loop that is not able to assure connement,
+at variance with its behavior at nite n. this feature suggests that wus bound
+state equation [?] is not expected to lead to a discrete meson spectrum, and is in
+agreement with the fact that no rising regge trajectories were found in refs. [?, ?].
+now we want to discuss the consequences concerning the abelianlike time
+exponentiation in the large-t limit. we have checked in chapter 3 that the space
+time wilson loop at o(g4) is in agreement with the expected cf leading behavior,
+
+50
+
+conclusions
+
+as long as d > 2. at d = 2, instead, a term proportional to ca survives;
+however it is likely that this is not an evidence of a pathology of twodimensional
+ml formulation, as it might appear at a rst glance. rather, there are some
+arguments that show that this failure has his roots in a nonperturbative issue,
+and that the expected behavior can be restored by istantonic, non perturbative
+contributions, reconciling gauge invariance with basic spectral properties and
+solving the paradox.
+
+as a matter of fact the t hooft d = 2 well established result can most safely
+be obtained by means of non perturbative techniques. actually, connement in
+qcd2 is usually regarded as a perturbative eect: in any axial gauge the theory
+is quadratic and it was a wideaccepted belief that the gluon propagator gave rise
+to a linear potential, which provides the usual area behavior for the wilson loop
+by resumming the perturbative series. but this is true only in axial gauges with a
+peculiar prescription for the propagator (the cauchy principal value, which works
+wonderfully only in d = 2, but is certainly incorrect for d > 2). the reason why
+this happens might be deep and related to peculiar properties of the d = 2 light-
+front vacuum in light-front quantization. in fact, in this latter procedure there
+are no degrees of freedom at all (manifestly unitary formulation), at variance with
+ghosts (unphysical) degrees of freedom in ml formulation: therefore there is
+no way to introduce creation and destruction operators to construct the hilbert
+space of the theory starting from the fock vacuum. this vacuum is therefore the
+only state of the space. perhaps just this feature could explain why we obtain
+the usual, abelian result for wilson loop already at a perturbative level. this
+does not happen with ml prescription: we could say that, also from this point of
+view, this latter approach is more honest, in the sense that it does not hide the
+nonperturbative roots of the connement.
+
+at a non-perturbative level there are arguments which show that at large
+n and on the sphere s2 a phase transition occurs, induced by instantons (see
+refs. [?, ?, ?, ?]). the purely exponential area behavior occurs only in the strong
+coupling phase, which is dominated by instantons. in the weak coupling phase the
+result is completely dierent and agrees (after decompactication) with the ones
+of refs. [?, ?]. this is the reason why it has been suggested that the discrepancy
+can be solved by taking instantons into account [?, ?]; they obviously do not
+contribute to any perturbative calculation, even when the perturbative series is
+fully resummed.
+
+one could say that perturbative results are irrelevant at d = 2. but just
+our perturbative results are a clear evidence of the need of a nonperturbative
+approach to the connement issue also in the twodimensional case.
+t hooft
+model works wonderfully in strictly two dimensions, but it is at least doubtful
+that it could give lessons for the real, four dimensional world. besides, at d > 2
+perturbative results are the only easily accessible ones; several perturbative tests
+of gauge invariance have been performed in the past at d > 2, just assuming
+the simple area exponentiation in the large t -limit. in chapter 3 we have proved
+
+conclusions
+
+51
+
+that indeed at d > 2 such an exponentiation occurs as expected.
+
+we do not think it is immaterial to understand how these nice features behave
+in the transition d  2, also in order to contrast them against genuine non
+perturbative results.
+
+why genuinely non perturbative contributions, which are likely to be relevant
+also in higher dimensions, are crucial only in two dimensions to possibly recover
+abelianlike time exponentiation, is at present unknown. this very interesting
+issue, together with the dierence between the vacuum structure in ml and cpv
+formulations, remain open questions to be investigated.
+
+appendix a
+
+exchange diagrams in feynman
+gauge
+
+in order to get the o(g4) contribution to the wilson loop arising from the ex-
+change diagrams, we only have to evaluate the maximally non abelian diagrams,
+that in the present case are the so called crossed diagrams. in fact, the contri-
+bution coming from planar diagrams can be easily obtained through the abelian
+exponentiation theorem, as explained in the main text. in this appendix we shall
+give the main sketch of computation of the seven independent crossed diagrams
+needed:
+
+c f
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+(13)(13) =z 1
+(24)(24) =z 1
+(13)(24) =z 1
+(11)(13) =z 1
+(22)(24) =z 1
+(11)(11) =z 1
+(22)(22) =z 1
+
+u
+
+u
+
+dv
+
+dv
+
+dv
+
+l4
+
+t 4
+
+(l2t 2)
+
+duz 1
+duz 1
+duz 1
+duz 1
+duz 1
+dtz 1
+dtz 1
+
+[4l2  (u + v)2t 2 + i]1 z 1
+[l2(u + v)2  4t 2 + i]1 z 1
+[l2(u + v)2  4t 2 + i]1 z 1
+[4l2  (u + v)2t 2 + i]1 z u
+[l2(u + v)2  4t 2 + i]1 z u
+dsz 1
+duz 1
+duz 1
+dsz 1
+
+(2t 4)
+
+(2l4)
+
+dv
+
+t
+
+t
+
+s
+
+s
+
+dv
+
+u
+
+u
+
+dv
+
+dv
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+c f
+
+c f
+
+c f
+
+c f
+
+c f
+
+c f
+
+v
+
+v
+
+dtz 1
+dtz 1
+dtz 1
+dtz 1
+dtz 1
+
+u
+
+u
+
+(2t 4)
+
+[(t  s)2t 2 + i]1[(u  v)2t 2 + i]1 ,
+[(t  s)2l2 + i]1[(u  v)2l2 + i]1 ,
+
+(2l4)
+
+ds
+
+[4l2  (t + s)2t 2 + i]1 ,
+
+(a.1)
+
+ds
+
+[l2(t + s)2  4t 2 + i]1 ,
+
+(a.2)
+
+1
+
+1
+
+1
+
+1
+
+1
+
+ds
+
+[4l2  (t + s)2t 2 + i]1 ,
+
+(a.3)
+
+1
+
+ds
+
+[(t  s)2t 2 + i]1 ,
+
+ds
+
+1
+
+[(t  s)2l2 + i]1 ,
+
+(a.4)
+
+(a.5)
+
+(a.6)
+
+(a.7)
+
+where  = [(  1)]2/(162). as an example, we report the main sketch of
+
+52
+
+exchange diagrams in feynman gauge
+
+53
+
+computation of c f
+
+(13)(13).
+
+in order to perform the integrations a series expansion of the denominators
+in (a1) is not enough as the series does not converge in the entire integration
+domains. the necessary analytic continuations are provided by two mellin-barnes
+transformations:
+
+c f
+
+(13)(13) = t 4(4l2)22
+
+[(  1)]2
+dy(  1 + y)(y)(cid:18)
+
+z +i
+
+i
+
+1
+
+1
+
+(2i)2
+
+1
+
+i
+
+2  i(cid:19)yz +i
+z 1
+dv(cid:12)(cid:12)(cid:12)(cid:12)
+
+duz 1
+
+1
+
+1
+
+1
+
+2  i(cid:19)z
+dz(  1 + z)(z)(cid:18)
+2 (cid:12)(cid:12)(cid:12)(cid:12)
+(cid:12)(cid:12)(cid:12)(cid:12)
+ds(cid:12)(cid:12)(cid:12)(cid:12)
+
+2yz 1
+
+dtz 1
+
+s + t
+
+2z
+
+2
+
+u
+
+v
+
+u + v
+
+,
+
+(a.8)
+
+where the path of integration over z is chosen in such a way that the poles of
+the function (  1 + z) lie to the left of the path of integration and the poles
+of the function (z) lie to the right of it (the same for the integration over y).
+
+after the integration over s, t, v and u we have the following expression:
+
+c f
+
+(13)(13) = t 4(4l2)22
+
+1
+
+1
+
+(2i)2 
+2  i(cid:19)yz +i
+1
+
+i
+
+[(  1)]2
+dy(  1 + y)(y)(cid:18)
+
+i
+
+z +i
+(2z + 1)(2z + 2)(cid:20)
+
+
+25
+
+1
+
+(2y + 1)(2y + 2) 
+
+dz(  1 + z)(z)(cid:18)
+
+1
+
+1
+
+2  i(cid:19)z
+
+(2y + 1)(2y + 2z + 4)
+1
+
++
+
+(2y + 2z + 3)(2y + 2z + 4) 
+
+(2z + 3)(2y + 1)
+
+(2z + 2y + 5)
+
+(cid:21) .
+
+(a.9)
+
+then one has to integrate over z and y; the integration contours have to be
+suitably chosen: for instance, in the present example, in order to apply jordans
+lemma, the integration paths must be closed with half-circles lying in the half
+planes rez < 0 and rey < 0. these integrations produce several double power
+series in the variable 2 with nite convergence radii, which are particularly suited
+for a large t (small ) expansion. for instance, the last term in the square bracket
+of eq. (a.9) gives the following contribution
+
+54
+
+appendix a
+
+t 4(4l2)22
+
+z +i
+
+i
+(2t )44
+
+=
+
+2
+
+ f4(2
+
+
+
+
+
+ f4( 
+xm=0
+xl=0
+
++ i54(
+
+1
+
+2  i(cid:19)y
+
+1
+
+1
+
+1
+
+25
+
+i
+
+(2i)2 z +i
+dy(  1 + y)(y)(cid:18)
+[(  1)]2
+2  i(cid:19)z
+dz(  1 + z)(z)(cid:18)
+(lt )2(e2i2(
+sin()(cid:19)2
+)(cid:18) 
+2 )( 9
+1
+; 2, 2) + ei12 i
+, 
+, 2 4, 
+2
+4
+2  ; 2, 2) + ei22 1
+5
+1
+2
+
+7
+2
+5
+2
+(m + 1)(l + m +   3
+
+2 )(l + m +   2)
+
+,   2,  
+
+4
+(2)l
+
+( 1
+
+1
+2
+
+1
+8
+
+,
+
+(2z + 1)(2z + 2)(cid:20)
+2  )
+
+(2z + 3)(2y + 1)
+
+(2z + 2y + 5)
+
+(cid:21)
+
+
+
+2( 3
+2  2)(5  2)
+2 )( 3
+(3  )( 7
+1
+) 
+2
+
+sin()
+
+( 1
+
+(
+
+
+
+2  )(  3
+2 )
+2  )
+
+sin()
+(2)m
+
+l!
+
+m!
+
++44 2(  3
+2 )2( 1
+2 )
+4
+
+1
+2
+
+)( 
+
+3
+2
+
+)( 
+
+5
+2
+
+) + 2(  2)(cid:21))
+
+(a.10)
+
+(l +   1
+1
+2
+
+)(  2)( 
+
+2 )(m + 3  )(m + 3
+2 )
+(cid:20) 1
+2(
+
+64
+
+) 
+
+3
+2
+
+2
+
+2
+
+with the notations as in [?].
+repeating this procedure for each integral (a1)-(a7), one eventually recover
+
+eq. (3.19).
+
+as a check of our calculations, we have explicitly veried the abelian expo-
+nentiation theorem. the sum of all the crossed diagrams, which are proportional
+to c 2
+f  (1/2)cf ca, behaves like (lt )2t 44, and therefore is depressed in the
+large t limit as long as  > 1. this means that only planar diagrams should
+contribute to the abelian exponentiation in the large t limit. as a matter of fact
+this is in fact what happens: there is a single planar diagram that, alone, provides
+the dominant term for the abelian exponentiation; it is the one in fig. (3.1a) at
+page 31. it can be checked that for such a diagram the leading term in the large t
+expansion is (1/22)((2l)44(cf lt )2((  3/2)(1/2))2, which is precisely
+the half of the square of the corresponding leading term of the sum of the single
+exchange diagrams.
+
+appendix b
+
+bubble diagrams in feynman
+gauge
+
+the complete one loop propagator (including ghost interaction) is given by
+(1  3)(2  )(3  2)(1  )2()(2  4)
+
+d(2)f,ab
+
+
+
+= ab g2ca
+162
+ (cid:20)
+xx
+
+(x2 + i)  g
+
+(2)(4  )(x2 + i)23
+2  5
+2(3  2)(cid:21) .
+
+(b.1)
+
+writing explicitly all the possible bubble diagrams bf
+14 = bf
+
+ij , it is not dicult to
+realize that bf
+23. in addition, the two
+last pairs of bubbles are in turn equal after a trivial change of variables, so that
+eq. (3.21) follows. the ve independent bubbles are then
+
+11 = bf
+
+22 = bf
+
+12 = bf
+
+33, bf
+
+44, bf
+
+34, bf
+
+bf
+
+bf
+
+bf
+
+bf
+
+bf
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+11 =z 1
+22 =z 1
+13 =z 1
+24 =z 1
+12 =z 1
+
+dsz 1
+dsz 1
+dsz 1
+dsz 1
+dsz 1
+
+1
+
+1
+
+1
+
+1
+
+dt
+
+dt
+
+dt
+
+dt
+
+dt
+
+(t 2)
+
+(l2)
+
+(t 2)
+
+[(s  t)2t 2 + i]23 (cid:20) 2  1
+2(3  2)(cid:21) ,
+[(s  t)2l2 + i]23 (cid:20) 1  2
+2(3  2)(cid:21) ,
+[(s + t)2t 2 + 4l2 + i]23 (cid:20)
+[(s + t)2l2  4t 2 + i]23 (cid:20)
+l2t 2(t  1)(s + 1)
+
+[(s + 1)2l2  t 2(t  1)2 + i]22 ,
+
+(l2)
+
+(s + t)2t 2
+
+4l2  (s + t)2t 2 + i 
+
+(s + t)2l2
+
+(s + t)2l2  4t 2 + i
+
++
+
+(b.2)
+
+(b.3)
+
+2  5
+2(3  2)(cid:21) ,
+2  5
+2(3  2)(cid:21) ,
+
+(b.4)
+
+(b.5)
+
+(b.6)
+
+(b.7)
+
+where
+
+ =
+
+g4cf ca
+162
+
+(3  1)(2  )(3  2)(1  )2()(2  4)
+
+(2)(4  )
+
+55
+
+again, integration can be performed using mellin-barnes techniques leading
+
+appendix b
+
+56
+
+to
+
+w (2;se)
+
+f
+
+=
+
+cf ca(2l)44(lt )22()(31)(1)(22)
+
+
+
+22(2)(4)
+1(47)(12)42 +(48)2f1(23, 27/2; 25/2; 2)
+
+(cid:26)e2i46(cid:20) (21)
+(46)
+
+(46)(24)
+
+21
+
+1
+
++
+
+(24)(23)
+
+[2f1(24,1/2; 1/2; 2)1]+
+[(12)421](cid:21)
+
+(24)(47)
+
+1
+
+23
+
+[2f1(23,1/2; 1/2; 2)1]
+
++e2i44 2(23)2f1(22, 25/2; 23/2; 2)(45)(12)32
+
+(23)(45)
+
+(3)(1/2)(27/2)
+
++i
+
+(22)
+
++2
+
+3
+
+(2)(47)(cid:27) .
+
+(b.8)
+
+by performing the large t limit in eq. (b.8) one arrives at eq. (3.22).
+
+appendix c
+
+spider diagrams in feynman
+gauge
+
+the spider diagrams are by far the most complicated to evaluate. the sum of
+the 6 inequivalent spider diagrams, with the appropriate weights, is given by
+
+w (2;3g)
+
+f
+
+= 2(s124 + s123 + s122 + s144 + s112 + s114) 
+
+d3(1  1  2  3)(123)2 
+
+1
+
+0
+
+0
+
+1
+
+1
+
+1
+
+322
+
+1
+
+1
+
+1
+
+1
+
+z 1
+
+0
+
+d1z 1
+
+d2z 1
+
+ds3(1(1  1) + 2(2  1)  212 + (2  1)s33)
+2)3(s2
+ds3(1(1  1) + 3(3  1)  213 + (1  3)s22)
+2)3(s2
+
+12)2(12s2
+
+1)2(12s2
+
+cf ca(2  2)l2t 64
+(cid:26)z 1
+[(12s33)22(s11s22 +3)21(12s2
++z 1
+[(s112s33)22(1 +s223)21(s2
++z 1
+[(1 +2+s33)22(s11 +s223)21(1s2
++ z 1
+[(1 +2s33)22(s11 +s22 +3)21(1s2
++ z 1
+[(1 +s22 +s33)22(s1123)21(1s2
++ z 1
+[(1s22s33)22(s11 +2+3)21(1s2
+
+ds2z 1
+ds2z 1
+ds2z 1
+ds2z 1
+ds2z s2
+ds2z s2
+
+ds1z 1
+ds1z 1
+ds1z s1
+ds1z s1
+ds1z 1
+ds1z 1
+
+ds3(1(1  1)  2(2  1) + (1  2)s33)
+12)2(12s2
+ds3(1(1  1) + 2(2  1) + (1  2)s33) 
+12)2(12s2
+ds3(2(1  2) + 3(3  1) + (2  3)s11)
+
+ds3(2(2  1) + 3(1  3) + (2  3)s11) 
+
+12)2(s2
+
+22)3(s2
+
+12)2(s2
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+32)+i]22
+
+32)+i]22
+
+2)3(s2
+
+32)+i]22
+
+2)3(s2
+
+32)+i]22
+
+22)3(s2
+
+32)+i]22
+
+32)+i]22(cid:9) .
+
+(c.1)
+
+57
+
+58
+
+appendix c
+
+the above integrals can be more conveniently grouped as
+
+w (2;3g)
+
+f
+
+=
+
+cf ca(lt )2(2t )44
+
+2
+
+e2i[i1(2) + i2(2) + i3(2) + i4(2)]
+
+(c.2)
+
+where
+
+1
+
+0
+
+0
+
+[p 32
+
+1
+
+i1(2) = (2  3)2410z 1
+i2(2) = (2  3)2410z 1
+i3(2) = (2  2)247z 1
+i4(2) = (2  2)247z 1
+
+[d]z 1
++ (s1  s2)p 32
+[d]z 1
++ (s1  s2)p 32
+[d]z 1
+[d]z 1
+
+[ds](123)2 1  2
+1 + 2
++ (s1  s2)p 32
+[ds](123)2
++ (s1  s2)p 32
+[ds](123)2 12
+1 + 2
+[ds](123)2 12
+1 + 2
+
+[p 32
+
+]
+2  1
+
+2
+
+5
+
+3
+
+6
+
+0
+
+0
+
+1
+
+1
+
+1
+
+4
+
+p 22
+
+1
+
+p 22
+
+4
+
+(c.3)
+
+
+s3
+
+
+s3
+
+2(1 + 2)
+
+]
+
+where [ds] = ds1ds2ds3, [d] = d1d2d3(1  1  2  3) and
+
+p1 = (12+s33)22(s11s223)21(1s2
+p2 = (1 +2+s33)22(s11 +s223)21(1s2
+p3 = (1 +2s33)22(s11 +s22 +3)21(1s2
+p4 = (s11s223)22(12+s33)21(s2
+p5 = (s11 +s22 +3)22(1 +2s33)21(s2
+p6 = (s11 +s223)22(1 +2+s33)21(s2
+
+12)2(12s2
+12)2(12s2
+12)2(12s2
+
+2)3(s2
+2)3(s2
+2)3(s2
+22)3(1s2
+22)3(1s2
+22)3(1s2
+
+32)+i
+32)+i
+32)+i
+32)+i
+32)+i
+32)+i
+
+12)2(s2
+12)2(s2
+12)2(s2
+
+(c.4)
+
+as already anticipated in the main text, the above integrals have not been
+evaluated exactly. however, the leading power of t is just the factor t 64
+contained in the overall constant, as can be easily realized by the fact that the
+integrals i1,   , i4 are nite when evaluated for  = 0. in turn, only i1(2 = 0)
+and i3(2 = 0) can be evaluated analytically, whereas for i2(2 = 0) and i4(2 =
+0) we have only an expansion around  = 1 that, however, is just what we need.
+the results are
+
+spider diagrams in feynman gauge
+
+59
+
+i1(2 = 0) =
+
+i2(2 = 0) = 
+17
+4
+
++
+
+(2  2)
+3  2 (cid:20)
+4(  1)2 +
+
+1
+
+()( + 1)
+
+(  2)2(2  1) 
+  1/2
+2(  1)
+
+
+
+(2  4) sin()(cid:21)
+
++
+
+1
+2
+2
+
+(1  ) +
+
+7
+24
+
+2  2 log 2 
+
+3
+2
+
+(3) + o(  1)
+
+
+
+1
+
+i3(2 = 0) =
+
+(5  2)(cid:20)(2  2)(1  )(3  ) +
+n!(cid:18) (2  2 + n)(3 + n  )
+xn=1
+i4(2 = 0) = 
+2(  1)2 +
++ 8  2  22 +
+
+  4
+(  1)
+2
+12
+
+(2n + 1)(n + )
+
++ 2 log 2 +
+
+
+
+3
+2
+
+1
+
+(3) + o(  1) .
+
+
+
+sin()
+
+(c.5)
+
+(2n + 3  2)(2   + n)(cid:19)#
+(n +   1)(4  2 + n)
+
+by expanding i1 and i3 one can easily get eq. (3.25).
+
+appendix d
+
+crossed diagrams in cpv
+formulation
+
+in order to understand why crossed diagrams cannot contribute in the cpv case,
+we rst exhibit the quantities ecp v
+(s, t). only two of them are independent,
+thanks to eq. (3.34), and dierent from zero:
+
+ij
+
+and
+
+ecp v
+
+12
+
+(s, t) =
+
+ecp v
+
+13
+
+(s, t) =
+
+il2
+2
+
+il2
+
+
+(1 + t)(1  s  (1 + t)),
+
+(s + t + 2),
+
+(d.1)
+
+(d.2)
+
+(we are considering the case  < 1).
+
+let us look at the rst diagram in fig.3.3; its contribution would be c cp v
+
+(13)(13),
+according to the notation developed in eq. (3.38). in this case the integration
+domain would be constrained by the product (s + t + 2) (u + v + 2), with
+the conditions t > u and s > v, to produce the crossing. these conditions clearly
+cannot be fullled.
+
+finally c cp v
+
+another independent possibility would be c cp v
+
+(12)(13). the constraint now would
+be given by (1  s  (1 + t)) (u + v + 2) with the crossing condition u > s,
+which is clearly impossible.
+(12)(12) would be aected by the constraint (1s(1+t)) (1u
+(1 + v)) with the conditions s > u and t > v, which again are clearly impossible.
+in higher orders the argument can be repeated considering the propagators
+pairwise. on the other hand the conclusion on the vanishing of crossed diagrams
+would become immediately apparent in a graphical picture.
+
+therefore only planar diagrams survive, both in the abelian and in the non-
+abelian case. but, for planar diagrams, the only dierence between the two cases
+is the appearance in the latter of the casimir constant cf . hence the abelian
+exponentiation theorem continues to hold, leading to eq. (3.32) (see eqs. (3.4),
+(3.13) and (3.30)).
+
+60
+
+appendix e
+
+crossed diagrams in ml
+formulation (d = 2)
+
+in this appendix we shall give the main sketch for the computation of the inde-
+pendent diagrams c m l
+(ij)(kl) needed to derive the o(g4) term in the perturbative
+expansion of the wilson loop w m l
+(l, t ) in the causal formulation of the light-
+cone gauge. as already explained in the main text, we can restrict ourselves to the
+maximally non-abelian diagrams, namely those providing a cf ca factor. such
+diagrams are those in which the position of the propagators is crossed, and there
+are 35 topologically inequivalent diagrams of this type. however, thanks to the
+symmetry relations (3.34), the number of independent diagrams to be evaluated
+is 19 (see eq. (3.39)).
+
+
+
+we rst need the em l
+
+(t, s) functions dened in eq. (3.15) that are appropriate
+to the present case: substituting the parameterization of the path (3.2) and the
+propagator in the causal formulation (3.33) in eq. (3.15), we can derive all the
+functions em l
+
+(t, s). they are given by
+
+ij
+
+ij
+
+em l
+
+11 (t, s) = em l
+
+em l
+
+22 (t, s) = em l
+
+em l
+
+12 (t, s) = em l
+
+l2
+42
+
+34 (t, s) =
+
+44 (t, s) =
+
+33 (t, s) = 
+l2
+4
+l2
+4
+l2
+4
+l2
+42
+l2
+4
+
+13 (t, s) =
+
+41 (t, s) =
+
+em l
+24 (t, s) = 
+
+em l
+
+em l
+
+23 (t, s) = em l
+
+1  t + (1 + s)
+
+1  t  (1 + s)  i
+(1  t)  (1 + s)
+(1  t) + 1 + s
+
+t + s  2
+
+t + s + 2 + i
+t + s + 2
+t + s  2
+
+(e.1)
+
+where,  = l/t and the symmetry relations (3.34) have been taken into account.
+
+61
+
+62
+
+appendix e
+
+23 (t, s), em l
+
+the position (and the appearance) of poles in the above functions clearly depends
+on the magnitude of . being interested in the larget limit, we shall always
+consider the domain  < 1. consequently, the functions em l
+41 (t, s) and
+em l
+24 (t, s) do not present poles: this is the reason why in eq. (e.1) we omitted
+the prescription for those functions as irrelevant (to this purpose, remember that
+s, t  [1, 1], see eq. (3.2)).
+
+(s, t). the notation is such that c m l
+
+(ij)(kl) are then dened in eq. (3.38) as multiple integrals of
+functions em l
+(ij)(kl) denotes the diagram with
+two crossed propagators, the rst joining the segments (i, j) and the second
+joining the segments (k, l). once one diagram c m l
+(ij)(kl) is evaluated, its value
+has to be multiplied by a factor 8, which is the number of permutations of the
+indices (ij)(kl) that maintains the position of the two propagators crossed: this
+is a consequence of the rst equation in (3.34). more explicitly, this means
+
+the diagrams c m l
+
+ij
+
+c m l
+
+(ij)(kl) = c m l
+
+(ji)(kl) = c m l
+
+(ij)(lk) = c m l
+
+(ji)(lk) = c m l
+
+(kl)(ij) = c m l
+
+(lk)(ij) = c m l
+
+(kl)(ji) = c m l
+
+(lk)(ji) .
+(e.2)
+
+to preserve crossing, the integration extrema have to be carefully chosen, and
+the integration variables t, s, u, v have to be suitably nested. just as an example,
+in the diagram c(11)(11) the integration variables have to be such that 1 > v >
+s > u > t > 1 (see fig. 3.2 at page 33). consequently, once t  [1, 1], all
+the other integration extrema are xed by the nesting, i.e. u  [t, 1], s  [u, 1],
+v  [s, 1].
+in the following calculation, we shall omit, for brevity, the factor l2/4, which
+is common to all the propagators (e.1), dening
+
+e m l
+(ij)(kl)(t, s) = (4/l2)em l
+
+(ij)(kl)(t, s).
+
+the corresponding diagrams will obviously rescale by a factor (l2/4)2, and will
+be denoted by cm l
+
+(ij)(kl), namely cm l
+
+(ij)(kl) = (4/l2)2c m l
+
+although in principle the evaluation of the 19 independent (rescaled) diagrams
+is now clear, the practical calculation is rather cumbersome. we shall list here
+the nal results.
+
+(ij)(kl).
+
+(11)(11) =z 1
+cm l
+
+1
+
+dtz 1
+
+t
+
+duz 1
+
+u
+
+dsz 1
+
+s
+
+dv e m l
+
+11 (t, s) e m l
+
+11 (u, v) =
+
+(22)(22) =z 1
+cm l
+
+1
+
+dtz 1
+
+t
+
+duz 1
+
+u
+
+dsz 1
+
+s
+
+dv e m l
+
+22 (t, s) e m l
+
+22 (u, v) =
+
+2
+34
+
+2
+3
+
+(e.3)
+
+(e.4)
+
+crossed diagrams in ml formulation (d = 2)
+
+63
+
+(11)(13) =z 1
+cm l
+= 
+
+11 (t, s)
+
+64
+3
+
+ln() +
+
+duz 1
+dv e m l
+1
+1
+32 +(cid:18)
+8
+64
+34 +
++(cid:18) 16
+16
+ 
+33 
+duz 1
+
+13 (u, v)z u
+dtz 1
+ds e m l
+1
+u
+3 (cid:19) i +
+32
+16
+16
+ 
+33 +
+3 (cid:19) ln(1 + ) +(cid:18)
+32
+24 (u, v)z u
+
+dtz 1
+
+ds e m l
+
+1
+
+1
+
+1
+
+u
+
+dv e m l
++
+
+22 (t, s)
+
+16
+33 +
+
+16
+ 
+
+32
+
+3 (cid:19) ln(1  )
+
+(e.5)
+
+32
+34 +
+
+16
+3 
+
+16
+
+3(cid:19) ln(1  )
+
+(e.6)
+
+16
+3 +
+
+16
+
+3(cid:19) ln(1 + ) +(cid:18)
+12 (u, v)z u
+dtz 1
++ 8(cid:19) i +(cid:18) 32
+
+1
+
+dv e m l
++(cid:18)
+32
+3
+
+u
+
+11 (t, s)
+
+ds e m l
+3  8(cid:19) ln() +
++(cid:18) 8
+
+34 
+
+32
+3
+
+=
+
+8
+3
+
+(22)(24) =z 1
+cm l
+64
+32 
++(cid:18)
+32
+34 
+(11)(12) =z 1
+cm l
+= 
+
+duz 1
+1
+20
+32 +
+
+1
+8
+
+
+(22)(23) =z 1
+cm l
+
+1
+
+dv e m l
+
+1
+
+duz 1
+= 
+
+23 (u, v)z u
+20
+8
+32 
+3 
+
+1
+8
+3
+
+(11)(14) =z 1
+duz 1
+cm l
+20
+= 
+32 
+
+1
+
+1
+
+(22)(12) =z 1
+cm l
+
+1
+
+1
+
+duz 1
+8
+3 
+
+=
+
+8
+
+3
+
+14 (u, v)z u
+dv e m l
+ (cid:18) 32
+21 (u, v)z u
+dv e m l
+20
+i 
+32 +
+
+1
+8
+3
+
+8
+3
+
+22 (t, s)
+
+u
+
+dtz 1
+ds e m l
+ln() +(cid:18) 8
+4 +
+dtz 1
+
+u
+
+1
+
+ds e m l
++ 8(cid:19) ln() +(cid:18) 8
+
+34 +
+
+11 (t, s)
+
+22 (t, s)
+
+u
+
+dtz 1
+ds e m l
+ln() +(cid:18) 8
+4 
+
++ 8(cid:19) ln(1  )
+
+(e.7)
+
+32
+33 +
+
+8
+
+3(cid:19) ln(1 + )
+
+(e.8)
+
+32
+3
+
++ 8(cid:19) ln(1 + )
+
+(e.9)
+
+32
+33 +
+
+8
+
+3(cid:19) ln(1  )
+
+(e.10)
+
+64
+
+appendix e
+
++ 32 + 32i(cid:19) ln() +
+3 (cid:19)i(cid:21) ln(1 + )  32 ln2() +
+64
+33 +
+64
+33 +
+
+32
+2 
+32
+2 
+
+3 (cid:19)i(cid:21) ln(1  ) +
+3 (cid:21) ln2(1  ) +
+
+32
+
+32
+
+13 (t, s)
+
+u
+
+3
+
+3
+
+1
+
+1
+
++
+
+32
+
+16
+
+dtz 1
+
+12 (u, v)z 1
+(12)(13) =z 1
+duz 1
+dv e m l
+ds e m l
+cm l
+1
+=(cid:18) 162
+3 +(cid:18) 162
+3(cid:19) 1
+3  16i(cid:19) 1
+8
+9 
+2 +
+162
++(cid:18)
+i(cid:19) 1
+  16i +(cid:18) 32
+16
+32 +
+3
++(cid:20) 16
+3  16 +(cid:18) 32
+64
+32
+2 
+32 
+33 +
+3  16 +(cid:18)
++(cid:20)
+16
+16
+16
+32
+32 +
+3 +
+34 +
++(cid:20) 16
+3 (cid:21) ln2(1 + ) +(cid:20)
+32
+16
+32
+33 +
+2 +
+
+3 (cid:21) ln() ln(1 + ) +
++(cid:20)
+32
+32
+33 
+2 
++(cid:20)
+3 (cid:21) ln() ln(1  ) +
+32
+64
+33 
+2 +
+  32(cid:21) ln(1 + ) ln(1  ) +
++(cid:20) 32
+32
+32
+2 
+3 +
+2(cid:21) li2 () +(cid:20) 32
++(cid:20)
+32
+32
+33 
+33 +
+32
+
+3
+
+32
+2 +
+li2(cid:18)1 
+
+32
+
+32
+
+
+32
+
+
+160
+
+32
+
++
+
++
+
++
+
++
+
+32
+
+3 (cid:21) li2(cid:18) 
+1 + (cid:19) 
+(cid:19) +(cid:20)
+32
+33 
+
+32
+
+1
+
+2(cid:21) li2(cid:18) 1
+
+1 + (cid:19)
+
+(e.11)
+
+duz 1
+1
+162
+33 +
+16
+4 
+16
+4 +
+
+(23)(24) =z 1
+cm l
+= 
++(cid:20)
++(cid:20)
++(cid:20) 16
+34 
++(cid:20)
+32
+4 +
++(cid:20)
+32
+34 +
+
+
+
+1
+
+1
+
++
+
+32
+
+64
+
+32
+
+u
+162
+
+24 (t, s)
+
+3 (cid:21) ln() +
+3(cid:21) ln() ln(1 + ) +
+
+dtz 1
+23 (u, v)z 1
+ds e m l
+dv e m l
+162
+9 (cid:19) 1
+32 +(cid:18) 8
++(cid:20)
+16
+64
+3 
+32 +
+
+3 (cid:21) ln(1 + ) +(cid:20)
+32
+16
+16
+16
+32 
+2 
+ 
+33 +
+3(cid:21) ln2(1 + ) +
+32(cid:21) ln(1  ) +(cid:20)
+16
+32
+32
+64
+2 +
+33 +
+3 (cid:21) ln() ln(1  ) +
+128
+16
+16
+2 
+3 +
+32
+32
+2 
+3 +
+32
+32
+3 
+2 +
+
+16
+34 +
+3(cid:21) ln2(1  ) +(cid:20)
+64
+2 +
+ (cid:21) ln(1 + ) ln(1  ) +
+3(cid:21) li2 (1  ) +(cid:20) 32
+2 
+34 li2(cid:18) 1
+1 + (cid:19) +(cid:20)
+
+3(cid:21) li2(cid:18)1 
+32
+2 +
+
+(cid:19) +
+3(cid:21) li2(cid:18)
+
+16
+
+32
+
+32
+
+32
+
+32
+
+32
+
++
+
+1
+
+1
+
+(cid:19)
+
+(e.12)
+
+crossed diagrams in ml formulation (d = 2)
+
+65
+
+dtz 1
+
+3
+
+3
+
++
+
+1
+16
+
+13 (t, s)
+
+1
+162
+
+ds e m l
+2 +(cid:18) 162
+i(cid:19) 1
+i(cid:21) ln()  16i 
+3 16+(cid:18)
+32
+3 +
+32
+33 +
+
+80
+3
+32
+2 +
+32
+
+
+3
+16
+
+32
+
+32
+
++
+
+ln2() +
+
++
+
+32
+
+3
+
+i(cid:19) 1
+ 
+
+322
+
+9
+
++
+
+ 32(cid:19)i(cid:21)ln(1 + ) +
+3 (cid:19)i(cid:21) ln(1  ) 
+
+32
+
+3 (cid:21) ln2(1  ) +
+
+32
+2 
+
+32
+
+
++
+
+14 (u, v)z u
+dv e m l
+9 (cid:19) 1
+3 +(cid:18)
+
+3
+
+3
+
+1
+
++
+
+64
+
++ 32 +
+
+1
+162
+
+duz 1
+
+(13)(14) =z 1
+cm l
+=(cid:18) 8
++(cid:20) 32
+16
+32 
+3
++(cid:20)
+16
+16
+32
+34 
+32 
+3 +
++(cid:20) 16
+3  16 +(cid:18) 
+32
+32 +
++(cid:20) 64
+32
+2 
+33 +
++(cid:20) 32
+64
+2 
+33 
++(cid:20) 32
+32
+33 
+2 +
++(cid:20)
+32
+32
+2 +
+3 +
+2(cid:21) li2 () +
++(cid:20) 32
+32
+33 
++(cid:20)
+32
+32
+2 
+33 +
+
+32
+
+32
+
+32
+
+16
+
++
+
+32
+2 
+3 (cid:21) ln2(1 + ) +(cid:20)
+32
+33 +
+3 (cid:21) ln() ln(1 + ) +
+3 (cid:21) ln() ln(1  ) +
+
+128
+
+32
+
++
+
+  32(cid:21) ln(1 + ) ln(1  ) +
+1 + (cid:19) +
+
+32
+3
+
+li2(cid:18) 
+3 (cid:21) li2(cid:18)
+
+32
+
+32
+
+
++
+
+
+
+1  (cid:19) +(cid:20)
+
+32
+33 +
+
+32
+
+2(cid:21) li2 (1  )
+
+(e.13)
+
+3
+
+9
+
+3
+
+1
+
+1
+
+1
+
++
+
+i +
+
+64
+
+32
+
+64
+
+162
+
+3
+16
+
+24 (t, s)
+
+1
+162
+
+dv e m l
+162
+
+21 (u, v)z u
+
+(12)(24) =z 1
+cm l
+= 
++(cid:20)
++(cid:20)
++(cid:20) 32
+34 +
++(cid:20)
+32
+34 +
++(cid:20)
+32
+2 +
++(cid:20) 32
+32
+2 +
+
+duz 1
+dtz 1
+ds e m l
+33 +(cid:18)
+2 +(cid:18)
++ 16i(cid:19) 1
+i(cid:19) 1
+8
+ 
+3 
+3 (cid:19)i(cid:21) ln(1 + ) +
+32 +(cid:18) 
+16
+32
+32
+32
+4 
+34 
+33 +
+3 +
+3 (cid:19)i(cid:21) ln(1  ) +
++(cid:18)
+16
+16
+16
+32
+32
+32
+16
+2 
+ 
+32 +
+4 +
+33 +
+34 +
+3
+3(cid:21) ln2(1 + ) +(cid:20)
+3 (cid:21) ln() +
+64
+16
+16
+16
+32
+32 
+2 +
+3 +
+
+3(cid:21) ln2(1  ) +(cid:20)
+ (cid:21) ln() ln(1 + ) +
+32
+64
+32
+32
+2 
+2 
+3(cid:21) ln() ln(1  ) +(cid:20)
+32
+32
+64
+32
+4 
+3 +
+2 +
+3(cid:21) li2(cid:18) 
+3(cid:21) li2 () +(cid:20)
+1 + (cid:19) 
++(cid:20) 32
+32
+3 +
+34 +
+
+ (cid:21) ln(1 + ) ln(1  ) +
+32
+34 li2 (1  ) +
+3(cid:21) li2(cid:18) 1
+32
+2 +
+
+1 + (cid:19)
+
+32
+2 
+
+64
+
+32
+
+32
+
+32
+
+32
+
++
+
+(e.14)
+
+66
+
+appendix e
+
+3
+
++
+
+64
+
+56
+
+64
+
+28
+
+64
+3
+
+16
+32 
+
+3 (cid:21) ln()+
+
+i+(cid:20)
++ 8(cid:19)i(cid:21) ln(1 + ) +
+3  8(cid:19)i(cid:21) ln(1  ) +
+3  8(cid:21) ln2(1 + ) +
+34 
+3  8(cid:21) ln2(1 ) +
+16
+2 +
+2(cid:21) li2 () +
+32
+1 + (cid:19) +
+2(cid:21) li2(cid:18) 1
+1  (cid:19)
+
+(e.15)
+
+32
+
+64
+
+
+
+64
+
++
+
+=
+
+1
+
+u
+
++
+
++
+
+64
+
+i+
+
+128
+
+28
+3
+
+1
+42
+
+3
+8
+
+
+14 (t, s)
+
+34 
+
+8
+
+128
+
+8
+3
+28
+3
+
+dv e m l
+162
+
+(12)(14) =z 1
+cm l
+
+ds e m l
+1
+82
+16
+
+3
+
+12 (u, v)z 1
+dtz 1
+i(cid:19) 1
+2 +
++(cid:18) 8
+34 
++(cid:18) 8
+34 
+
+duz 1
+94 +(cid:18)8
+3 
++(cid:20) 8
+44
+32
+32 
+33 
+2 
++(cid:20)
+44
+16
+8
+33 
+32 +
+2 +
++(cid:20)
+3 (cid:21) ln() ln(1 + ) +(cid:20) 4
+8
+16
+34 +
+2 +
+3 (cid:21) ln() ln(1 ) +(cid:20) 8
++(cid:20)
+48
+16
+2 
+34 
+34 +
++(cid:20) 16
+2 + 16(cid:21) ln(1 + ) ln(1  ) +(cid:20)
+8
+32
+4 
+34 +
++(cid:20) 8
+1 + (cid:19) +(cid:20)
+3  8(cid:21) li2(cid:18) 
+8
+16
+2 
+34 +
+3  8(cid:21) li2(cid:18)
++(cid:20) 8
+16
+34 
+2 +
+(12)(23) =z 1
+duz 1
+23 (u, v)z 1
+dtz 1
+cm l
+dv e m l
+ds e m l
+=(cid:18)642
+i(cid:19) 1
+9  8i(cid:19) 1
+3 +(cid:18)8
+2 
+3 
++(cid:20) 28
++(cid:18)8
+64
+44
+34 
+33 +
+4 +
+32 +
+3(cid:21) ln(1  ) +(cid:20) 104
++(cid:20) 28
+44
+32 
+32 
+34 +
++(cid:20)
+3(cid:21) ln2(1 + ) +(cid:20)
+8
+4
+32
+4
+33 
+4 
+4 +
+2  16(cid:21) ln() ln(1 + ) +(cid:20) 16
++(cid:20) 16
++(cid:20) 16
+4 
++(cid:20) 32
+2 
+
+2 + 16(cid:21) ln(1 + ) ln(1  ) +(cid:20)
+3(cid:21) li2(cid:18) 
+64
+33 +
+64
+33 
+
+1 + (cid:19) +(cid:20) 8
+4 
++(cid:20)
+8
+4 
+
+8
+3 
+8
+3 
+64
+33 +
+
+8
+3
+40
+
+21 (t, s)
+
+8
+3
+8
+
+42
+9
+
+52
+
+i +
+
+1
+
+1
+
+u
+
+1
+
+32
+
+8
+
+3
+
++
+
+40
+3
+
+ln2() +
+
+40
+
+3 (cid:19)i(cid:21) ln(1 + ) +
+i(cid:21) ln() +
+3(cid:21) ln2(1  ) +
+8
+2 +
+
+3
+
+4
+
+8
+
+2  16(cid:21) ln() ln(1  ) +
+3(cid:21) li2 () +
+3(cid:21) li2 (1  ) +
+1 + (cid:19)
+3(cid:21) li2(cid:18) 1
+
+32
+2 +
+8
+16
+2 
+16
+2 +
+
+8
+
+(e.16)
+
+crossed diagrams in ml formulation (d = 2)
+
+67
+
+v
+
+u
+
+1
+
+4
+3
+
+1
+42
+
+12 (t, s)
+
+ds e m l
++ 4i(cid:19) 1
+
+(12)(12) =z 1
+duz 1
+12 (u, v)z 1
+dtz 1
+cm l
+dv e m l
+3 +(cid:18)
++ 8i(cid:19) 1
+2(cid:18) 4
+34 +(cid:18)
+4
+= 
+3
++ 8i(cid:21) ln()+8 ln2()+(cid:20) 8
+(cid:20) 8
+4
+8
+4 
+3 
+2 
+3 +
++(cid:20)
+28
+16
+16
+3 
+34 +
+33 +
++(cid:20) 16
+2  16(cid:21) ln() ln(1  ) +
+
++(cid:18)8
+4 
+4 li2 (1  ) + 8 li2(cid:18)1 
+
+28
+3
+8
+2 +
+
+28
+3
+
+16
+
+8i
+
++
+
+3
+
+8
+
+2 + 8(cid:19)i(cid:21) ln(1  ) +
+
+u
+
+=
+
+(23)(23) =z 1
+cm l
+1
+42
+34 +
++(cid:20)
+28
+34 
++(cid:20) 4
+16
+4 
+
+23 (u, v)z 1
+dv e m l
+4
+32 +
+8
+2 
+
+duz 1
+1
+4
+33 
+16
+33 +
+2 + 4(cid:21) ln2(1 + ) +(cid:20) 16
+
+42
+3
+28
+
+16
+3 
+
+4
+3
+
++
+
+v
+
++
+
+28
+
+8
+3
+
+23 (t, s)
+
+4
+2 
+
+dtz 1
+ds e m l
++(cid:20) 8
+3 
+3 (cid:21) ln(1 + ) + 4 ln2() +
+2  8(cid:21) ln() ln(1 + ) 
+4 li2(cid:18) 1
+
+1 + (cid:19) 
+
+ 8 li2(cid:18) 
+
+8
+
+1 + (cid:19)
+
+3 (cid:21) ln() +
+
+i +
+
+u
+
+1
+
+1
+
+=
+
+64
+
+
+13 (u, v)z 1
+dv e m l
+32
+32 
+64
+
+
+duz 1
+32
+33 i 
+64
+2 i +
+160
+
+(13)(13) =z 1
+cm l
+4
+4 +
++(cid:20)
+32
+33 
++(cid:20) 32
+64
+33 
+
+ 64 ln() ln(1  ) +(cid:20)
+
+160
+3
+
+64
+
++
+
++
+
+3 (cid:21) ln(1  ) +(cid:20) 64
+
+dtz 1
+
+v
+
+13 (t, s)
+
+ds e m l
+i (cid:20) 320
+
+3
+
+3
+
+160
+
++ 64i(cid:21) ln() +
++ 64i(cid:21) ln(1 + ) + 64 ln2() +
+2  64(cid:21) ln() ln(1 + ) 
+
+2 + 64(cid:21) ln(1 + ) ln(1  ) +
+
++
+
+64
+2 li2 () 
+
+64
+2 li2 (1  )
+
+28
+
+42
+3 
+
+3 (cid:19) 1
+
+i
+2 + 8(cid:21) ln2(1)+
+
+16
+
+3
+
+1
+
+(cid:19)
+
+(e.17)
+
+(e.18)
+
+(e.19)
+
+68
+
+appendix e
+
+1
+
+duz 1
+1
+32
+32 + 4 +
+
+(24)(24) =z 1
+cm l
+= 
++(cid:20) 160
+34 +
+
+64
+3 
+
+v
+
+u
+
+32
+
+24 (t, s)
+
+ds e m l
+64
+
+24 (u, v)z 1
+dtz 1
+dv e m l
+2 ln2(1 + ) +(cid:20) 64
+4 
+3(cid:21) ln(1 + ) +(cid:20) 160
+34 
+64
+2 li2 () +
+
+2(cid:21) ln(1 + ) ln(1  ) +
+3(cid:21) ln(1  ) 
+64
+3 +
+1 + (cid:19)
+2 li2(cid:18) 
+
+
+
+32
+
+32
+
+64
+
+1
+
+1
+
+24 (u, v)
+
+dv e m l
+
+ds e m l
+1
+32
+
+
+(13)(24) =z 1
+dtz 1
+13 (t, s)z 1
+duz 1
+cm l
+1
+16
+= 
+i + 32i  64 ln() +
+2 
+ (cid:19)i(cid:21) ln(1 + ) +
++(cid:20) 32
++ 32 +(cid:18)64
+64
+32
+32
+3 
+3 +
+4 +
+
++(cid:20) 32
++ 32 +(cid:18) 64
+32
+128
+32
+3 
+4 
+3 
+2 +
+
+ (cid:21) ln2(1 + ) +(cid:20) 64
++(cid:20)
+128
+64
+3 
+2 
+3 
+ (cid:21) ln() ln(1 + ) +(cid:20)128
++(cid:20)128
+128
+2 
+2 +
+
+ (cid:19)i(cid:21) ln(1  ) +
+ (cid:21) ln2(1  ) +
+128
+2 +
+ (cid:21) ln() ln(1  )
+128
+
+64
+
+64
+
+64
+
+.
+
+(e.20)
+
+(e.21)
+
+some technical details on the dilogarithm function li2(z) and on its analytic
+continuations are in order. as is well known, li2(z) can be dened through its
+integral representation
+
+li2 (z) =z 0
+
+z
+
+ln(1  )
+
+
+
+d ,
+
+(e.22)
+
+where the path joining z and 0 is arbitrary, provided it does not intersect the
+half-line ]1, +[ , which is the branch-cut of the integrand function. on its
+branch-point the dilogarithm is nite, and takes the value li2 (1) = 2/6.
+if  < 1, the calculation of the above diagrams involves dilogarithmic func-
+tions, with arguments bounded by the region  < re z < 1. eventually, we
+shall be interested in taking the limit   0 (i.e. large t ). the arguments of the
+dilogarithms arising from a rst integrations of eqs. (e.3)(e.21) can tend to 0, 1
+and  as   0. on the other hand, the simplest expansion of the dilogarithm
+is around the point z = 0, where a simple series representation holds
+
+li2 (z) =
+
+zk
+k2 ,
+
+
+
+xk=1
+
+|z| < 1 .
+
+(e.23)
+
+crossed diagrams in ml formulation (d = 2)
+
+69
+
+consequently, we need analytic continuation to convert dilogarithms with argu-
+ments tending to 1 and  into dilogarithms with arguments tending to 0, for
+  0. these are given by
+
+2
+6
+
++
+
+1
+2
+
+li2 (z) = 
+2
+6  ln(z) ln(1  z)  li2 (1  z) .
+
+ln2(1 + z)  ln(z) ln(1 + z) + li2(cid:18) 1
+
+li2 (z) =
+
+1 + z(cid:19) ,
+
+(e.24)
+
+(e.25)
+
+to get the nal result for the maximally non-abelian o(g4) terms in the causal
+formulation, we have
+
+1. to sum all the results (e.3)(e.21); the integrals from eqs. (e.3) to (e.18)
+have to be multiplied by an extra factor 2 to take into account the 16
+relations (3.39);
+
+2. to multiply the result by l4/(4)2 to take into account the rescaling from
+
+cm l
+(ij)(kl) to c m l
+
+(ij)(kl);
+
+3. to multiply by a factor 8 to take into account permutations of indices as in
+
+eq. (e.2);
+
+4. to multiply by a factor cacf /16 as shown in eq. (3.38).
+following the above points (1) to (4) one arrives at eq. (3.40): using eqs. (e.24),
+(e.25), the dependence on the dimensionless ratio  = l/t exactly cancels, lead-
+ing to a pure area behavior for any value of t .
+
+appendix f
+
+bubble diagrams in ml
+formulation
+
+writing explicitly all the possible bubble diagrams bm l
+realize that bm l
+eq. (3.45) follows. the six independent bubbles, following eq. (3.46), are then
+
+, it is not dicult to
+14 = bm l
+23 , so that
+
+ij
+12 = bm l
+
+11 = bm l
+
+33 , bm l
+
+22 = bm l
+
+44 , bm l
+
+34 , bm l
+
+bm l
+
+bm l
+
+bm l
+
+bm l
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+11 =z 1
+22 =z 1
+13 =z 1
+24 =z 1
+12 =z 1
+14 =z 1
+
+dsz 1
+dsz 1
+dsz 1
+dsz 1
+dsz 1
+dsz 1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+(t 4)(s  t)2
+
+dt
+
+dt
+
+dt
+
+[(s  t)2t 2 + i]22 ,
+(l4)(s  t)2
+[(s  t)2l2 + i]22 ,
+(t 2) [t (s + t) + 2l]2
+[(s + t)2t 2 + 4l2 + i]22 ,
+(l2) [l(s + t)  2t ]2
+[(s + t)2l2  4t 2 + i]22 ,
+lt [t (1  t)  l(1 + s)]2
+[l2(s + 1)2  t 2(1  t)2 + i]22 ,
+dt lt [t (1  t) + l(1 + s)]2
+[l2(s + 1)2  t 2(1  t)2 + i]22 ,
+
+dt
+
+dt
+
+bm l
+
+bm l
+
+where
+
+ =
+
+g4cf ca
+642 f () ,
+
+(f.1)
+
+(f.2)
+
+(f.3)
+
+(f.4)
+
+(f.5)
+
+(f.6)
+
+(f.7)
+
+with f () dened in eq. (3.44).
+at this stage we could already choose d = 2, since each bubble gives a
+nite contribution, at variance with the feynman gauge result:
+in so doing we
+will easily recover eq. (3.48). but we want to study also the behavior of the
+
+70
+
+bubble diagrams in ml formulation
+
+71
+
+bubble contribution for d > 2. again, integration can be performed (using,
+when necessary, mellin-barnes techniques), leading to
+
+bm l
+
+11 = e2it 84
+
+274
+
+(7  4)(2  )
+
+,
+
+bm l
+
+22 = l84
+
+274
+
+(7  4)(2  )
+
+,
+
+bm l
+
+13 = t 84294(e2i" 2
+ 2f1(2  2, 2  7/2; 2  5/2; 2) 
+(2  2)(cid:18)(3/2)(2  5/2) 
+
+i74
+
+
+
+1
+3
+
+(f.8)
+
+(f.9)
+
+1
+
+5  4 2f1(2  2, 2  5/2; 2  3/2; 2) +
+
+7  4
+
+1
+
+#
+(1  2)32 2(5  2) + 3  2
+2(2  3)(2  4)),
+84(2  5)
+
+2(2  3)
+(5/2)(2  7/2)(cid:19) +
+
+2  4
+
+(f.10)
+
+bm l
+
+24 = e2it 84294(2f1(2  2, 1/2; 3/2; 2)2 + 2f1(2  2, 3/2; 5/2; 2)
+
+4
+3
+
+
+
+1
+
+2(2  3)(cid:20)(1  2)32(cid:18)1 +
+
+2(2  3)
+2  4 
+
+1
+
+2  4(cid:19)  1 +
+
+1
+
+2  4(cid:21)),
+
+bm l
+
+14 + bm l
+
+12 = 
+
+284t 84
+
+(2  3)(2  4)(cid:2)84 + e2i(cid:0)1  (1  2)42(cid:1)(cid:3) .
+
+(f.11)
+
+(f.12)
+
+summing all contributions according to eq. (3.45), we obtain eq. (3.47).
+
+appendix g
+
+three point green function in
+the limit d  2
+
+in this appendix we show that the three point green function tends to zero when
+d  2. as explained in the main text, it is sucient to prove that the integral
+in eq. (3.53), with the constant containing the simple zero ( 1) factorized out,
+is convergent when evaluated at  = 1. such an integral, after the change of
+variables  = ,  = (1  ) and after explicit integration over d, reads
+
+i =z 1
+
+
+0
+
+dd(1    )(cid:26)1    
+1  
+[(x  z)+ +  (x  y)+]
+
+[1 +  ( + )]3
+
++  log
+
+(1  )(1  )
+
+(cid:27)z 
+[(y  z)+ +  (y  x)+]2
+
+
+
+0
+
+d
+
+(1 +  )
+
+[(x  z)2  (y  z)2   (x  y)2 + i]
+
+,
+
+(g.1)
+
+ being the heavyside function. the most delicate region of this integral is
+    0, so that in order to check convergence of eq. (g.1) we can restrict
+ourselves to the case when the curly bracket is replaced by one. after this re-
+placement, we set  =  and  = (1 ). in the expression obtained after this
+change of variables, we rescale  =  at xed  . the integral over the  variable
+can be factorized providing a factor log(1 + 1/). finally, renaming  = 1/, eq.
+(g.1) with the curly bracket replaced by one can be equivalently written as
+
+i = z 1
+
+0
+
+dz 
+
+0
+
+d
+
+
+log(1 + )
+(1 + )3
+
+[(x  z) + (1  )(x  y)]+[(y  z) + (y  x)]2
+
+[(x  z)2 + (1  )(y  z)2 + (1  )(x  y)2  i]
+
++
+
+.
+
+(g.2)
+
+dividing the  integration domain as [0, 1]  [1,), we split i as i1 + i2. in
+i1,   [0, 1] and therefore we can use the following majorations: log(1 + ) < 
+and (1 + )3 < 1. thus, integration in d is straightforward, providing
+
+72
+
+three point green function in the limit d  2
+
+73
+
+i1  z 1
+(cid:20) 1
+
+3
+
+0
+
++
+
+(x  z)+(y  z)2
+
++
+
+d
+
+(x  z)2 + (1  )(y  z)2  i 
+(a  c) + (b  c)2 + b + 2ab  ac + (a  c)(b  c)2 log(cid:18) 1 + c
+
+c (cid:19)(cid:21) ,
+
+1
+2
+
+(g.3)
+
+where a, b and c are dened as
+
+a = (1  )(x  y)+/(x  z)+ ,
+b = (x  y)+/(z  y)+ ,
+c = (1  )(x  y)2/[(x  z)2 + (1  )(y  z)2  i] .
+
+(g.4)
+
+in this form, it is manifest that integration over  is convergent. the ex-
+plicit result goes beyond the purpose of the paper, but it can be easily evaluated
+providing combinations of rational functions, logarithms and dilogarithms.
+
+in i2, the  integration domain is [1,) and therefore we can use (1 + )3 <
+
+3. thus, the  dependent part of the integrand can be approximated by
+
+( + a)( + b)2
+
+log(1 + )
+
+=
+
+4
+
+( + c)
+log(1 + )
+( + c)
+
++
+
+=
+
+a( + b)2 + (b2 + 2b)
+
+log(1 + )
+
+( + c)3
+
+
+
+(g.5)
+
+to check convergence, in the second term of the r.h.s. we can replace log(1 +
+)/ by 1. then, integration over  becomes straightforward and the second term
+in eq. (g.5) provides integrals over d of the same kind of those in i1, where
+convergence can be easily checked. the rst term in the r.h.s. of eq. (g.5) is
+more delicate. here the majoration log(1 + ) <  is too strong as it would spoil
+convergence in the  integration. an explicit integration over  of this term gives
+
+1
+
+d
+
+(x  z)+(y  z)2
+
+z 1
+i f irst
+c (cid:20)li(cid:18) c
+c  1(cid:19) + li (c)  log 2 log(cid:18) 1 + c
+1
+
+(x  z)2 + (1  )(y  z)2  i 
+
++
+
+0
+
+1  c(cid:19)  li(cid:18) 2c
+
+c  1(cid:19)(cid:21) ,(g.6)
+
+li(z) being the dilogarithm function. although cumbersome, integration over 
+is nite.
+
+

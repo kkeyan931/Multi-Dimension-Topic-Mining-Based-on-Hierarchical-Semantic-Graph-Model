@@ -1,0 +1,836 @@
+perturbative calculation of multi-loop feynman diagrams.
+
+new type of expansions for critical exponents
+
+hagen kleinert
+
+institut fur theoretische physik,
+
+freie universitat berlin, arnimallee 14, 14195 berlin, germany
+
+we show that the calculation of l-loop feynman integrals
+in d dimensions can be reduced to a series of matrix multi-
+plications in d  l dimensions. this leads to a new type of
+expansions for the critical exponents in three dimensions in
+which all coecients are calculable exactly.
+
+1. recently, an ecient method has been developed for
+constructing all feynman diagrams of a quantum eld
+theory recursively to arbitrary order in perturbation the-
+ory [1]. the construction has also been automatized by
+computer algebra [1], so that one can now easily list all
+diagrams to any desired order, limited only by computer
+time.
+
+the only open problem is an ecient evaluation of the
+associated feynman integrals. the highest loop number
+so far has been treated in 4-theory where renormaliza-
+tion constants of eld normalization and mass are now
+known numerically up to seven loops [2].
+
+for a reliable calculation of all critical exponents with
+an accuracy which has become recently available in satel-
+lite experiments on superuid helium [3] it is desirable to
+know the perturbation expansions to even higher order
+[4,5].
+in this note we would like to propose a pertur-
+bative evaluation of many-loop feynman integrals which
+reduces the integrations over d  l loop momenta to a
+series of multiplications of d  l-dimensional matrices,
+thus reducing greatly the number of numerical opera-
+tions.
+
+2. the method is most easily introduced by treating an
+exactly solvable class of integrals
+
+9
+9
+9
+1
+
+ 
+
+g
+u
+a
+0
+1
+
+ 
+
+ 
+ 
+
+1
+v
+8
+7
+0
+8
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+i d
+
+a =z
+
+ddp
+(2)d
+
+1
+
+(1 + p2)a ,
+
+i d
+
+a () =z
+
+ddp
+(2)d
+
+1
+
+(1 + p2)a/ .
+
+(3)
+
+for this function, we can easily nd a perturbation ex-
+pansion in powers of , by rewriting it as follows:
+
+i d
+a () =
+
+1
+
+(4a)d/2 z
+
+ddp
+
+(/a)d/2 eap
+
+2
+
+s(p),
+
+(4)
+
+with
+
+s(p) 
+
+a
+
+
+log(1 + p2)  ap2
+(p)3 +
+
+(p)2 
+
+2
+3
+
+= a(cid:20) 
+
+2
+
+(5)
+
+(6)
+
+3
+4
+
+(p)4 + . . .(cid:21) .
+
+considering ap2 as a free action, we introduce the
+gaussian expectation values
+
+hf (p)i z
+
+ddp
+
+(/a)d/2 eap
+
+2
+
+f (p),
+
+and rewrite (4) as
+
+i d
+a () =
+
+1
+
+(4a)d/2 hes(p)i.
+
+(7)
+
+(8)
+
+the exponential es(p) is now expanded in a taylor se-
+ries, and the expectation values hs(p) s(p)i are cal-
+culated via a wick expansion using the basic correlation
+function
+
+hpi1 pi2i = gi1i2 =
+
+2
+a
+
+i1i2 .
+
+(1)
+
+the nonzero expectation values of higher products
+
+(9)
+
+(10)
+
+whose integration via schwingers proper-time technique
+yields
+
+hpi1  pi2ni = gi1...i2n
+
+are calculated from the recursion relation
+
+i d
+a =
+
+1
+
+(4)d/2
+
+(a  d/2)
+
+(d/2)
+
+.
+
+(2)
+
+gi1...i2n = gi1i2 gi3i4...i2n1i2n + gi1i3 gi2i4...i2n
+
++ . . . + gi1i2n1gi2i3...i2n + gi1i2n gi2i3...i2n1 .
+
+(11)
+
+our perturbative evaluation starts out by introducing
+into (1) a smallness parameter , and considering the
+functions of 
+
+email: kleinert@physik.fu-berlin.de
+
+url: http://www.physik.fu-berlin.de/kleinert
+
+for example, we nd
+
+i 1
+1 () =
+
+i 3
+2 () =
+
+1
+
+(4)1/2 (cid:18)1 +
+(4)3/2 (cid:18)1+
+
+1
+
+3
+8
+
++
+
+252
+128
+
++
+
+1053
+1024
+
++
+
+16594
+32768
+
+15
+16
+
++
+
+3852
+512
+
++
+
+47253
+8192
+
++
+
+2284594
+524288
+
++ . . .(cid:19) ,
++ . . .(cid:19) .
+
+the corresponding cumulant expansions are
+
+1
+
+and the perturbation expansion is derived from the ex-
+pression
+
+i d() =
+
+1
+
+(2)3d/2 det k 1/2hes(p1,p2,p3)i
+
+(15)
+
+via wicks rule. the results are for d = 1 and 2:
+
+i 1() =
+
+1
+
+(2)3/2
+
+i 2() =
+
+1
+
+(2)3
+
+1
+32
+1
+322
+e
+
+32 + 9 
+27 
+
+64 + 24 
+
+4096 + 249 
+
+2
+
+3
+
+4
+
+8192 +...,
+
+e
+
+2
+
+3
+
+9 
+4 + 21 
+
+32 + 13 
+
+64 + 177 
+
+4
+
+1024 +...,
+
+(16)
+
+and the successive evaluation of the exponent at  = 1
+yields the approximations
+
+0.026097,
+0.001195,
+
+0.030038,
+0.002304,
+
+0.030236,
+0.002823,
+
+0.031169,
+0.003356,
+
+(17)
+(18)
+
+which converge against the precise values of the feynman
+integral 1/32 = 0.03125 and 0.00424027 . . ., respectively.
+the same pade approximants as before yield the numbers
+
+(12)
+
+0.030894,
+0.003019,
+
+0.030171,
+0.003091,
+
+0.03064,
+0.00309,
+
+(19)
+(20)
+
+the set of numbers shows no improvement against the
+sequence (18), which tends against the exact value expo-
+nentially fast, as seen in fig. 1.
+
+i 1
+1 () =
+
+i 3
+2 () =
+
+1
+
+8
+
+(4)1/2 exp(cid:18) 3
+(4)3/2 exp(cid:18) 15
+
+16
+
+1
+
++
+
++
+
+2
+8
+52
+16
+
+33
+64
+
++
+
+4
+64
+
++
+
+753
+512
+
++
+
++
+
++ . . .(cid:19) ,
+
+413
+512
+
++ . . .(cid:19) .
+
+evaluating the exponents at  = 1 to orders 1,2,3,. . . ,15
+in  [not all written down in the above equations, for lack
+of space], the relative deviations from the respective ex-
+act values 1/2 and 1/8 following from eq. (2) are shown
+in table i: the deviation sequences tend slowly toward
+zero, and grow again for larger order as a consequence
+of the asymptotic nature of the expansions. the con-
+vergence is accelerated by approximating the exponent
+successively `a la pade, leading quite rapidly to accurate
+results, as we can see in the right-hand columns of ta-
+ble i.
+
+3. as a nontrivial example consider now the feynman
+integral
+
+i =z ddp1
+
+(2)d z ddp2
+
+(2)d z ddp3
+
+(2)d
+
+1
+
+1
+
+1
+
+1
+
+
+
+1 + p2
+1
+
+1 + p2
+2
+
+1 + p2
+3
+
+1 + (p1 + p2 + p3)2
+
+introducing again the smallness parameter  as in (3), we
+consider the function
+
+i() =z ddp1
+(2)d z ddp2
+e[p
+
+1+p
+
+2+p
+
+2
+
+2
+
+(2)d z ddp3
+
+(2)d
+
+2
+
+3+(p1+p2+p3)2]s(p1,p2,p3),
+
+with the interaction
+
+s(p1, p2, p3) =
+
+log(1 + p2
+
+3
+
+
+
+xa=1(cid:20) 1
+log
+1 +   3
+xa=1
+
++
+
+1
+
+
+a(cid:21)
+a)  p2
+pa!2
+
+pa!2
+
+   3
+xa=1
+
+.
+
+(14)
+
+the harmonic expectation values are now dened by
+hf (p1, p2, p3)i = (2)3d/2(det k)1/2
+z ddp1
+
+(2)dz ddp2
+
+(2)dz ddp3
+
+(2)d f (p1, p2, p3)e
+
+1
+
+2 paikai,bj pbj
+
+with
+
+kai,bj = kabij,
+
+kab = 2
+
+
+2 1 1
+1 2 1
+
+1 1 2
+
+ , det k = 32d.
+
+the basic correlation functions are
+
+hpaipbji = k 1
+
+gab = k1
+
+1
+
+ai,bj = gai,bj = gabij,
+3 1 1
+1
+3 1
+1 1
+
+8
+
+
+3
+ ,
+
+ab =
+
+(13)
+
+0.004
+0.0035
+0.003
+0.0025
+0.002
+0.0015
+
+i 3
+2 (1)
+
+0.1 0.2 0.3 0.4
+
+0.5 0.6
+
+e2.2n
+
+fig. 1. exponentially fast convergence of the sequence of
+approximations (18) against the exact value 0.00424027 . . . .
+the number n denotes the order of the approximations.
+
+4. the above treatment of feynman diagrams oers the
+interesting possibility of deriving a completely new type
+of power series expansions for the critical exponents of
+4-theories in three dimensions, in which expansion coef-
+cients. are calculable exactly, in contrast to the known
+expansions of ref. [2]. for this we observe that our power
+series for the feynman integrals can be reexpanded in
+powers of g by inserting   g/(m + g). then i 1
+1 () and
+i 3
+2 () become
+
+1
+
+(4)1/2 exp(cid:18) 3g
+8 
+(4)3/2 exp(cid:18) 15g
+16 
+
+1
+
++
+
+g2
+4
+5g2
+8
+
+i 1
+1 (g) =
+
+i 3
+2 (g) =
+
+2
+
++. . .(cid:19) ,
+
+g4
+11g3
+64 
+8
+235g3
+512 
+
++
+
+23g3
+64
+
++. . .(cid:19) ,
+
+table i. relative deviations of approximations i 1
+
+1 (1) and
+i 3
+2 (1) from their exact values, once from successive partial
+sums (ps), once from successive pade approximations.
+
+n i 1
+1 (1) ps
+0.17910
+1
+2
+0.06980
+3
+0.02516
+0.00981
+4
+5
+0.00516
+6
+0.00256
+7
+0.00027
+8 -0.00021
+9
+0.00124
+10
+0.00114
+11 -0.00273
+12 -0.00275
+13
+0.01001
+14
+0.01000
+15 -0.05026
+
+i 3
+2 (1) ps
+0.49063
+0.30377
+0.19394
+0.12674
+0.08416
+0.05655
+0.03836
+0.02625
+0.01810
+0.01255
+0.00875
+0.00613
+0.00432
+0.00305
+0.00216
+
+[n,m]
+[0,1]
+[1,1]
+[1,2]
+[2,2]
+[3,3]
+[4,4]
+[5,5]
+[6,6]
+[7,7]
+[8,8]
+[9,9]
+[10,10]
+[11,11]
+[12,12]
+[13,13]
+
+i 3
+2 (1) pade
+
+i 1
+1 (1) pade
+-0.391430 -3.85230
+0.18603
+0.009816
+0.002101
+0.09851
+0.02490
+0.000935
+0.001821
+0.00309
+0.000637 -0.00062
+0.000652 -0.00062
+0.000325 4.8349 105
+0.000325 8.0048 106
+0.000192 3.3873 105
+0.000194 1.6181 105
+0.000127 1.8694 105
+0.000130 1.0960 105
+0.000090 1.1146 105
+0.000095 7.3635 106
+
+where g  g/m. the coecients have now alternating
+signs. these expansions must be evaluated in the strong-
+coupling limit g  . this is again possible with the
+help of diagonal pade approximations, and the results
+are precisely the same as those in table i. note that the
+choice of the parameter m is irrelevant in this limit.
+
+now we recall that the critical behavior of 4-theory
+can also be derived from power series expansions of the
+renormalization constants in the strong-coupling limit
+gb/mb  , where gb and mb are the bare coupling
+strength and mass of the theory. let us identify the above
+expansion parameter g with cgb/mb, where c is an ar-
+bitrary parameter which may be chosen at the end to
+optimize the speed of convergence. then we insert the
+expansions of the feynman integrals in powers of gb/mb
+into the feynman diagrams of the perturbation expan-
+sions of the renormalization constants of the 4-theory.
+this leads to a new type of series in powers of gb/mb
+whose coecients are determined exactly. by going to
+the strong-coupling limit gb/mb   as described in
+ref. [6,5], we can obtain the critical exponents in three
+dimensions. in a completely new way.
+
+it is interesting to observe that the new expansions
+need no regularization since the feynman integrals are
+gaussian to each order in gb/mb.
+
+5. just as the generation of all feynman diagrams [1],
+also their evaluation can now be automatized by com-
+puter algebra. the actual calculation of diagrams with
+eight and and more loops will, of course, require a con-
+siderable amount of work. it remains to be seen whether
+the new perturbation expansions converge more rapidly
+against the exact results than the known purely numeri-
+cal ones.
+
+[1] h. kleinert, a. pelster, b. kastening, m. bachmann,
+recursive graphical construction of feynman diagrams
+and their multiplicities in 4- and 2 a-theory, berlin
+preprint 1999 (hep-th/9907168).
+
+[2] d.b. murray and b.g. nickel, unpublished.
+[3] j.a. lipa, d.r. swanson, j. nissen, t.c.p. chui and u.e.
+
+israelson, phys. rev. lett. 76, 944 (1996).
+
+[4] hagen kleinert theory and satellite experiment on criti-
+cal exponent  of specic heat in superuid helium, fu-
+berlin preprint 1999 (cond-mat/9906107).
+
+[5] h. kleinert seven loop critical exponents from strong-
+coupling 4-theory in three dimensions, fu-berlin
+preprint 1998 (hep-th/9812197).
+
+[6] h. kleinert, phys. rev. d 57, 2264 (1998) (e-print
+
+aps1997jun25 001);
+addendum (cond-mat/9803268).
+
+3
+
+

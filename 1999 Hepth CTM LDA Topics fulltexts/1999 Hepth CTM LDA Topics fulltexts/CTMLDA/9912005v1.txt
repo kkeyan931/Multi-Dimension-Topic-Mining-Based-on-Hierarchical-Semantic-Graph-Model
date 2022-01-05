@@ -1,0 +1,2466 @@
+9
+9
+9
+1
+
+ 
+c
+e
+d
+1
+
+ 
+
+ 
+ 
+
+1
+v
+5
+0
+0
+2
+1
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+quantum mass correction of solitons
+
+in (1+1)d via numerical methods
+
+tom weidig, university of durham, uk
+
+email: tom.weidig@physics.org
+
+february 1, 2008
+
+abstract
+
+we show how to calculate the quantum mass correction to (1+1)d solitonic eld theories using
+numerical methods. this is essential if we want to nd the corrections to non-integrable models. we
+start with a review of the standard derivation of the rst order quantum correction. then, we re-
+derive a trace formula which allows us to compute the mass correction mode by mode. specically,
+we are interested in the extent to which the lowest modes from both, the soliton and the vacuum,
+sectors give the leading contribution. we apply the technique to both the sine-gordon and the
+4-kink model. then, we compute all the modes numerically and hence the rst order quantum
+contribution to the mass of the sine-gordon and 4 soliton.
+
+1 introduction
+
+we focus on the computation of the mass correction of (1+1)d solitonic theories theoretically and
+numerically. we follow rajaramans semi-classical quantisation procedure; another option is via
+path integrals  see dashen et al. [4]. specically, we are interested in the use of the normal modes
+to compute the mass correction and the extent to which the lowest modes from both, the soliton
+and the vacuum, sectors give the leading contribution. we start with a review of the derivation
+of the rst order quantum correction. then, we derive the trace formula from rst principles.1
+we use this formula to re-compute the mass correction and show that the lowest modes are the
+most important ones. then, we calculate the lowest modes numerically and hence the leading
+contribution to the mass correction.
+
+2 mass quantum correction: general idea
+
+we start out with a general lagrangian for a (1+1)-dimensional eld theory
+
+l =
+
+1
+2
+
+2 
+
+1
+2
+
+2
+
+ v ()
+
+(1)
+
+for the scalar eld (t, x) and with the potential v being positive. the time-independent euler-
+lagrange equation leads to
+
+1this is not done in [3].
+
+  +
+
+= 0.
+
+(2)
+
+dv
+d
+
+1
+
+we quantise around the minimal-energy static solution st(x) satisfying (2), which could be the
+vacuum or the minimal-energy solution in a non-zero topological sector. the semi-classical ex-
+pansion states that the quantum eld (t, x) is the classical static eld st(x) plus a quantum
+correction eld (t, x),
+
+(t, x) = st(x) + (t, x)
+
+(3)
+
+where  reminds us to treat the function as a quantum object, an operator satisfying, possibly
+non-commuting, commutation relations with other operators. we have to substitute (3) into the
+hamiltonian
+
+and obtain, in orders of ,
+
+h(x) =
+
+1
+2
+
+2
+st
+
+classical
+
+|{z}
+
+2
+
+
+
+dx(cid:18) 1
+h () =z 
++ st +
+d(cid:12)(cid:12)(cid:12)(cid:12)st!
+}
+{z
+|
+
+= 0 (2)
+
+dv
+
++
+
+|
+
+2 +
+
+ 2
+
+1
+2
+
++ v ()(cid:19)
+
+1
+2
+
+2 +
+
+ 
+
+1
+2
+
+d2
+dx2 +
+{z
+
+d2v
+
+d2(cid:12)(cid:12)(cid:12)(cid:12)st!  + o(3
+}
+
+quantum
+
+(4)
+
+)
+
+(5)
+
+where  is the conjugate momentum of . we have used integration by parts, set the boundary
+terms to zero and taylor expanded the potential term in powers of . we split our hamiltonian
+into three parts,
+
+h = hclassical + hquantum + hhigherorder,
+
+(6)
+
+where the classical mass/energy can be found by substituting st into (4). we concentrate on the
+lowest order quantum energy hquantum. this is justied in the framework of a perturbation theory
+where higher order terms are neglected due to their smallness in comparison to the lowest term.
+this approximation is justied if the potential is roughly harmonic around the static solution and
+n terms depend on the coupling constant  in the form n, for example. if these conditions are
+not fullled or a better accuracy is wanted, one can resort to well-known perturbation techniques of
+standard quantum mechanics. however, let us emphasise that this would considerably complicate
+our task. therefore, barnes et al.s attempts are already signicantly hampered for those multi-
+skyrmions whose potential does not have a steep valley i.e. are not suitable for a harmonic oscillator
+approximation. this is the case for b = 2, for example.2
+
+our quantum hamiltonian, in the harmonic approximation, has the form
+
+2 h(t, x) = 2(t, x) + (t, x) 
+|
+
+d2v
+
+d2(cid:12)(cid:12)(cid:12)(cid:12)st!
+d2
+dx2 +
+}
+{z
+
+a2
+
+(t, x)
+
+(7)
+
+where a2 is an operator. if a2 acts as a number, the hamiltonian has the form of an harmonic
+oscillator and we know the quantisation procedure.
+in eect, we have to solve the eigenvalue
+equation
+
+and this is equivalent to the time-independent schrodinger equation. we have to decompose the
+quantum eld  in terms of a complete set of real and orthonormal eigenfunctions. therefore,
+
+a2(t, x) = 2(t, x)
+
+(8)
+
+2private communication from barnes
+
+(t, x) =
+
+xn
+
+2
+
+qn(t)n(x)
+
+(9)
+
+with
+
+and
+
+n(x)n(y) = (x  y)
+
+xn
+z dx [n(x)m(x)] = n,m
+
+a2 i(x) = 2
+
+i i(x).
+
+(10)
+
+(11)
+
+we substitute the decomposition (9) into (7), integrate over x and use the constraints (10) on the
+eigenfunctions. we are left with
+
+2 h(t) =xn (cid:2)p2
+
+n(t) + 2
+
+n q2
+
+n(t)(cid:3)
+
+(12)
+
+where pn is the conjugate momentum of qn. the hamiltonian is an innite sum of harmonic
+oscillators of frequency n. we have reduced our quantum eld theory with an innite number of
+degrees of freedom to a pseudo particle quantum mechanics with an innite number of harmonic
+oscillators. we are now able to use standard particle quantum mechanics. using the operator
+method with heisenbergs commutation relation
+
+we get
+
+[pn, qn] = ih,
+
+h = hxn (cid:18)n +
+
+1
+
+2(cid:19) n
+
+(13)
+
+(14)
+
+where n is the th energy level of the nth oscillator. naively speaking, we have all the information
+we need to calculate the mass correction: the classical mass and the quantum correction to rst
+order i.e. the quantum hamiltonian. unfortunately, if we were to calculate the quantum mass in a
+specic model, we would quickly realise that the mass is divergent; the innite number of oscillators,
+an inherent feature of any quantum eld theory, being the cause of this divergent result. in the
+next section, we describe, using the 4 model as our example, how to extract a meaningful quantum
+properties from our naive expression.
+
+3 mass quantum correction: derivation
+
+we follow rajaramans procedure. for a very detailed and lucid description, we refer to rajara-
+mans book [9, section 5.3]. we have re-done all the calculations by hand and with the use of maple.
+further we have expanded on the discussion of some parts, given more details and corrected some
+typographical errors.3
+
+the hamiltonian of the 4 kink model is
+
+2h =z dx(cid:18) 2 + 2  m22 +
+
+
+2
+
+4 +
+
+m4
+
+2(cid:19)
+
+(15)
+
+where m is the mass of the eld  and  the self-coupling constant. in topological charge sector
+zero, the minimal-energy solution i.e. the vacuum is
+
+3and probably introduced others.
+
+st(x) = 
+
+m
+
+
+3
+
+(16)
+
+and, in topological charge sector one, the minimal-energy solution i.e. the 1-kink is
+
+st(x) = 
+
+m
+
+
+tanh(cid:20) m(x  a)
+2
+
+(cid:21)
+
+(17)
+
+where a indicates a translational invariance (this will lead to a zero mode). we quantise around
+the solutions with the positive sign in front which is the soliton  compared with the negative sign
+in front which is the anti-soliton.
+
+the corresponding eigenvalue equation for the vacuum is
+
+(cid:20)
+
+d2
+
+dx2 + 2m2(cid:21) i(x) = 2
+
+v,i i(x) .
+
+the eigenfunctions and eigenvalues are
+
+and
+
+k(x) = exp(ikx)
+
+2
+v,k = k2 + 2m2.
+
+we use periodic boundary conditions in a box of length l and
+
+knl = 2n
+
+(18)
+
+(19)
+
+(20)
+
+(21)
+
+where n is an integer. the continuum limit is reached by taking l to innity and any discrete sum
+over kn, or simply n, turns into an integral over k of the form
+
+z dn =
+
+l
+
+2z dk
+
+xn
+
+using the constraint (21) on kn.
+
+the corresponding eigenvalue equation for the 1-kink is less trivial
+
+(22)
+
+(23)
+
+(24)
+
+(25)
+
+(26)
+
+(27)
+
+(cid:20)
+
+1
+2
+
+d2
+
+dz 2 + (3tanh2z  1)(cid:21) i(z) =
+
+k,i
+
+2
+m2 i(z),
+
+where z  mx/2 for convenience. in fact, it belongs to a class of special schrodinger equations;
+
+the sine-gordon model being another example.4 there are two discrete modes; one zero mode
+
+0(z) = cosh2 z with 2
+
+k,0 = 0
+
+and a second discrete mode
+
+1(z) = sinh z cosh2 z with 2
+
+k,0 =
+
+3
+2
+
+m2.
+
+the continuous eigenmodes, which we label with q, are 5
+
+with
+
+q(z) = eiqz(cid:0)3 tanh2 z  1  q2  3iq tanh z(cid:1)
+
+2
+
+k,q = m2(cid:18) q2
+
+2
+
++ 2(cid:19) .
+
+4private communication from jackiw and see [7, pages 683-684]
+5the eigenmodes are jacobi polynomials in tanh z. [7]
+
+4
+
+imposing periodic boundary conditions becomes more tricky. for z  , we can use the asymp-
+totic form of q(z)
+
+where (q) is the phase shift of the scattering states from the viewpoint of the schrodinger equation;
+
+q(z)  eiqz(cid:0)2  q2  3iq(cid:1)
+
+ p(q2 + 4)2(q2 + 1) exp(cid:20)i(qz 
+2  q2(cid:21) .
+
+(q) = 2 arctan(cid:20) 3q
+
+1
+2
+
+(q))(cid:21)
+
+(28)
+
+the condition imposed by the periodic boundary is
+
+qn(cid:18) ml
+
+2(cid:19) + (qn) = 2n
+
+and the sum over n becomes an integral over q in the limit where l goes to innity:
+
+z dn =
+
+1
+
+2z dq(cid:18) ml
+2
+
++
+
+
+q
+
+[(q)](cid:19)
+
+xn
+
+using the constraint (30) on n. let us briey note that the zero mode, which we have found, is noth-
+ing else but the manifestation that the 1-kink solution is translationally invariant. we can imagine
+the innite-dimensional potential space at its minimal-energy location having a 1-dimensional val-
+ley along which we can move our solution by varying a without changing the energy of the system.
+this zero mode certainly needs to worry us, for our harmonic oscillator approximation assumes
+steep valleys in all dimensions. however, this is only problematic if the zero mode is coupled with
+another mode and this does not happen in the computation of the mass correction up to rst order.
+a proper treatment of zero modes is done with collective coordinates: see rajaraman [9, chapter
+8].
+
+ek =
+
++ hm
+
+3
+
+we have all the necessary information on the eigenvalues and should naively be able to compute
+the mass of the 1-kink up to rst order quantum corrections. using (6) and the eigenvalues of the
+1-kink solution, we get an expression for the energy
+3
+22
+| {z }
+}
+
+22m3
+| {z }
+|
+
+which includes the nite classical energy, no contribution from the zero mode due to its zero
+frequency, a nite contribution from the second discrete mode and a sum over the continuous
+modes. unfortunately, if we were to perform the integral over q using (30), we would nd it to be
+divergent. this clearly shows that our naive treatment of quantum eld theory is inadequate. to
+have a nite answer, there are two modications we have to make.
+
+q2
+n + 2
+
+2
+
+hmxn r 1
+{z
+|
+{z
+
+divergent
+
++
+
+1
+2
+
+classical
+
+discrete
+
+f inite
+
+{z
+
+continuous
+
+}
+}
+
+|
+
+(29)
+
+(30)
+
+(31)
+
+(32)
+
+3.1 energy level dierence
+
+let us write out the expression for the vacuum energy up to rst order quantum corrections
+
+ev =
+
+1
+2
+
+hxn pk2
+
+n + 2m2.
+
+5
+
+(33)
+
+using (22), we get
+
+ev =
+
+hl
+
+4 z 
+
+
+
+dkpk2 + 2m2
+
+which is a quadratically divergent integral. thus, even the leading quantum contribution to the
+classical vacuum is not nite. however, we can follow the example of newtonian gravity which
+denes potential energy as the dierence between two states. it makes physical sense to dene our
+naive vacuum energy, even though it is innite, as the lowest of possible energy states in the theory
+i.e. to put it equal to zero and hence to subtract it from our naive calculation of the 1-kink energy.
+we get
+
+(34)
+
+ek  ev = ek =
+
++ hm
+
+3
+
+22m3
+|
+
+ef inite
+
+{z
+
+3
+22
+}
+
++
+
+1
+2
+
+hxn  mr 1
+
+2
+
+q2
+
+n + 2 pk2
+
+n + 2m2!
+
+(35)
+
+and we label all nite terms collectively ef inite. we go to the continuum limit and perform the
+integral over k. therefore, we re-express qn in terms of kn
+
+qn =
+
+2
+m (cid:18)kn 
+
+(qn)
+
+l (cid:19)
+
+(36)
+
+using the boundary conditions (30) and (21). the expression in the sum takes the form
+
+mr 1
+
+2
+
+q2
+
+n + 2 pk2
+
+l (cid:19)2
+
+(kn)
+
+n + 2m2 = s(cid:18)kn 
+lpk2
+arctan(cid:18) 3m
+2
+
+= 
+2
+l
+
+kn(kn)
+
+n + 2m2
+
+=
+
+n + 2m2
+
++ 2m2 pk2
+
++ o(1/l2)
+
+kn
+
+n(cid:19)
+m2  k2
+
+kn
+n + 2m2
+
+pk2
+
++ o(1/l2)
+
+(37)
+
+where we have taylor expanded the rst line, used expression (29) and taylor expanded it. both
+taylor expansions are in 1
+l and make sense, for we take the box size l to innity later. using (22),
+the expression for the energy becomes
+
+ek = ef inite +
+
++ o(1/l) .
+
+(38)
+
+h
+
+2z dk arctan(cid:18) 3m
+2
+{z
+
+|
+
+k
+
+m2  k2(cid:19)
+}
+
+du/dk
+
+k
+
+k2 + 2m2
+|
+}
+
+{z
+
+v
+
+the dependence on the box size goes away for l   and we are allowed to neglect the o(1/l)
+and higher terms. as our notation indicates, we perform integration by parts. the boundary term
+has the form
+
+h
+2
+
+lim
+
+(cid:20)arctan(cid:18) 3m
+2
+
+k
+
+m2  k2(cid:19) pk2 + 2m2(cid:21)k=
+
+k=
+
+.
+
+(39)
+
+this limit is ill-dened for trivial substitution of  = : the arctan function gives us 0 and the
+polynomial function . therefore, we use lhoptials rule and obtain a nite answer
+
+hm
+
+3
+2
+
+6
+
+(40)
+
+which we include in our ef inite. the integral obtained by integration by parts has the form
+
+32m
+2 z dk
+
+k2 + m2
+
+k2 + 2m2 (2k2 + m2)
+
+.
+
+we put a cut-o  on the k limits and change to the variable p  k/m. we get
+
+(41)
+
+(42)
+
+m
+
+lim
+
+z  
+
+
+m
+
+p2 + 1
+
+pp2 + 2 (2p2 + 1)
+
+if we perform this integral, we still nd a logarithmic divergence plus a nite contribution. we
+need to cancel the divergence with another term. we need to look closer at the innities produced
+by the innite degrees of freedom of a eld theory.
+
+3.2 normal-ordering and counter-terms
+
+we have to normal-order the hamiltonian and introduce counter-terms. we do not give a full
+introduction to all these more complicated ideas and refer to ryder [10], for example, for a detailed
+introduction. we decompose the eld  in terms of a complete set of orthonormal eigenfunctions
+of the vacuum uctuations
+
+(t, x) =xn (cid:20) eint
+
+2n
+
+ann(x) +
+
+eint
+2n
+
+ann(x)(cid:21)
+
+(43)
+
+where a is the annihilation and a the creation operator (we neglect theon them). the hamiltonian
+(7) becomes
+
+2 h =xn
+
+n(cid:0)anan + anan(cid:1) =xn
+
+n(cid:0)2anan + 1(cid:1)
+
+(44)
+
+using the orthonormality relations of  and the commutation relation between an and an. the term
+anan is viewed as the number operator nn and gives the number of nth oscillators that are excited.
+
+we see that the sumpn 1 is divergent and the common procedure is to re-dene the hamiltonian.
+
+we are free to choose the zero of energy and are allowed to neglect the 1. phrased dierently,
+we normal-order the hamiltonian by writing all annihilation operators to the right of all creation
+operators. thus, we get
+
+2 : h : = :xn
+
++anan) : = 2xn
+
+nanan
+
+(45)
+
+n(anan
+
+f lip
+
+|{z}
+
+where :: stands for normal-ordering. the relations between a normal-ordered and non-ordered
+product of the elds are
+
+: 4 :
+: 2 :
+
+= 4 + 2 + 
+= 2 + 
+
+(46)
+
+where ,  and  are constants. we write the normal-ordered hamiltonian as our non-ordered
+hamiltonian plus two counter-terms that arise from the relations (46)
+
+: h : = h z dx(cid:18) 1
+
+2
+
+m22 + (cid:19)
+
+(47)
+
+7
+
+where m is the mass correction to the eld and can be evaluated using the one-loop feynman
+diagram. the constant  is not of any importance, because it will cancel itself out due to its
+presence in both, the vacuum and the 1-kink, hamiltonian. the additional term to ef inite and the
+divergent term (42) come from subtracting the counter-term of the vacuum from the counter-term
+of the 1-kink and we get
+
+ect
+k  ect
+
+v =
+
+1
+2
+
+m2(cid:18) m2
+
+ (cid:19)z dx(cid:20)1  tanh2(cid:18) mx
+
+2(cid:19)(cid:21) =
+
+2m
+
+
+m2
+
+(48)
+
+we evaluate m2 by using the equivalent expression in 4 theory. we refer to ryder [10, section
+6.4] for a detailed discussion. the standard formula (ryder: eq 6.95) in perturbation theory for
+the 4 model is
+
+m2 =
+
+1
+2
+
+igf (0)
+
+(49)
+
+where g is the coupling and f (0) the free particle propagator of a loop diagram i.e f (x  x).
+we have to be careful when adapting the result to our case. three modications to 4 (ryder eq
+6.65) are necessary:
+
+ g/4! = /4 and g = 6.
+ the theory should be in (1+1) dimensions.
+ there is only one vacuum. the vacuum eigenvalues are k2 + m2 and those of our 4 kink
+
+theory are k2 + 2m2. therefore, we need to change the mass m2 to 2m2.
+
+the (1+1) dimensional free particle loop propagator (ryder: eq 6.14) with modied mass 2m2 has
+the form
+
+where we have a pole at k2 = 2m2 and the two-vector k equals (e,k). we evaluate the double
+integral further
+
+42
+h
+
+f (0) = z dkz
+= iz
+
+de
+
+e 2  (k2 + 2m2)
+dk
+
+k2 + 2m2
+
+(51)
+
+where we have integrated over e. we change to the variable p  k/m and put a cut-o  on p.
+substituting everything into (49), we get
+
+m2 =
+
+3h
+4
+
+m
+
+lim
+
+z 
+
+ 
+
+m
+
+which we substitute into the additional term (48).
+
+dp
+
+pp2 + 2
+
+3.3 finite mass correction
+
+finally, we are able to write the quantum mass of the 1-kink as
+
+m = ek + ect = ef inite + hm
+
+32
+4
+
+m
+
+m"
+z 
+
+ 
+
+lim
+
+dp
+
+pp2 + 2 
+
+2(p2 + 1)
+
+pp2 + 2 (2p2 + 1)# .
+
+8
+
+(52)
+
+(53)
+
+f (0) =
+
+h
+
+(2)2 z
+
+dk2
+
+k2  2m2
+
+(50)
+
+we have done the integral using a cut-o  with maple. both terms produce the same logarithmic
+divergent term which cancel each other out. taking the cut-o to innity, we get the nal answer
+for the mass of a 1-kink up to rst order quantum corrections
+
+m =  22
+
+3 ! m3
+
+
+
++ hm" 1
+
+6r 3
+2 
+
+3
+
+2#
+
+(54)
+
+where we have written ef inite out explicitly. the rst term is just the total energy of the classical
+1-kink solution. note that the presence of 1/ indicates the non-perturbative nature of the solution.
+to zeroth order in  and rst order in h, we have the rst quantum correction. it is only valid in the
+weak-coupling limit. the next term of the quantum correction would be of order h2. rajaraman
+[9, section 5.4-5.6] gives a detailed interpretation of the result and also explains why the eect of
+the counter-terms on the kink solution and the zero mode are eects of order .
+
+this concludes our derivation of the quantum mass. in the next section, we show that it is
+possible to get a formula for the mass correction which allows us to quantify the contribution of
+the dierent modes and compute the mass correction numerically by using numerically computed
+lowest eigenmodes.
+
+4 trace formula: derivation
+
+the trace formula has been rst published by cahill et al. [3], but an explicit derivation has not
+been given in their paper. we derive the formula in this section6. we start by writing out the
+hamiltonian (7)
+
+2 h(t, x) = 2(t, x) + (t, x)a2(t, x)
+
+and the equation of motion of the normal modes is
+
+with the eigenvalue equation
+
+(t, x) = 2(t, x)
+
+(55)
+
+(56)
+
+(58)
+
+(59)
+
+a2 i(x) = 2
+
+(57)
+where we ignore the  on the quantum eld. a2 depends on the static solution around which we
+expand. we label a2
+k the operator for the kink. we expand
+the quantum uctuation (t, x) in terms of the normal modes of the vacuum, which we label k(t, x),
+and the 1-kink, which we label v (t, x). in terms of the plane waves of the mesons with eigenvalue
+k,
+
+v the operator for the vacuum and a2
+
+i i(x)
+
+and, in terms of the normal modes of the 1-kink with eigenvalue n,
+
+2k
+
+v (t, x) =xn (cid:20) eikt
+k(t, x) =xn (cid:20) eint
+
+2n
+
+a(k)eikx +
+
+eikt
+2k
+
+a(k)eikx(cid:21)
+
+ann(x) +
+
+eint
+2n
+
+ann(x)(cid:21)
+
+where the plane waves exp(ikx) and the normal modes n are orthonormal eigenfunctions. the
+next step involves writing the annihilation and creation operators of the eigenmodes in terms of
+the creation and annihilation operators of the planes waves. by denition,
+
+k(t, x) = v (t, x)
+k(t, x) = v (t, x).
+
+(60)
+
+(61)
+
+6private communication by barnes
+
+9
+
+we then integrate over both equations with x, use the fact that the eigenmodes are a complete
+orthonormal set (10) and solve the set of two equations for an and an. we obtain
+
+an =
+
+an =
+
+1
+
+2xk (cid:20)a(k)n(k)(cid:18)r n
+2xk (cid:20)a(k)n(k)(cid:18)r n
+
++r k
+k r k
+
+n(cid:19) + a(k)n(k)(cid:18)r n
+n(cid:19) + a(k)n(k)(cid:18)r n
+
+n(cid:19)(cid:21)
+k r k
+n(cid:19)(cid:21)
++r k
+
+k
+
+k
+
+1
+
+(62)
+
+(63)
+
+where n(k) is the exponential fourier transform, r dx exp(ikx)n(x), of n(x). we calculate the
+
+hamiltonian in terms of soliton normal modes annihilation and creation operators in the last section
+(45) and expand the term in terms of the annihilation and creation operators of the vacuum. we
+get
+
+nanan = terms with aa, aa and aa
+
+n(cid:19) a(l)n(l)(cid:18)r n
+
+n(cid:19)
+l r l
+
++
+
+1
+4
+
+= terms with aa, aa and aa
+
+a(k)n(k)(cid:18)r n
+n(k)n(k)(cid:20) n
+
+k r k
+n  2(cid:21) n
+
+k
+
+k
+
+nxk,l
+4xk
+
++
+
+1
+
++
+
+(64)
+
+where we have used the commutation relation between operators [a(k), a(l)] = k,l and merged
+the resulting aa term into the collective term. finally, we can express the un-ordered term as
+the normal-ordered term i.e. all the terms with aa, aa and aa and an extra term:
+
+nanan = : nanan : +
+
+n(k)n(k)
+
+(n  k)2
+
+k
+
+1
+
+4xk
+
+which leads us to the nal answer
+
+: h : = : nanan : = nanan + m.
+
+(65)
+
+(66)
+
+the mass correction m can be expressed as a trace over any complete set of orthonormal states,
+
+m = 
+
+1
+4
+
+t r(cid:20) (ak  av )2
+
+av
+
+(cid:21)
+
+(67)
+
+where a2
+trace formula is nite. further further discussions see [2] and [1].
+
+v is the operator of the vacuum and a2
+
+k is the operator of the kink perturbations. this
+
+5 trace formula: theoretical result
+
+we use the trace formula to calculate the contribution of the lowest discrete modes to the mass
+correction. cahill et al. only quote the results in their paper [3].7 we can re-write the trace formula
+(67) in the following way
+
+m = 
+
+1
+
+4xn z 
+
+
+
+7see also [6] for explicit calculations
+
+dk |k,n(x)v,k(x)|2 (cid:2)2
+
+n1
+
+k  2n + k(cid:3)
+
+(68)
+
+10
+
+which reduces for the special case of the zero mode mass correction to
+
+m0 = 
+
+1
+
+4z 
+
+
+
+dk |k,0(x)v,k(x)|2 k
+
+(69)
+
+where k,n are the eigenmodes of the kink and v,k the eigenmodes of the vacuum. finding the
+appropriate fourier transform is the main technical diculty in solving these kinds of integrals.
+we have used the maple library inttrans to nd fourier exponential, cos and sin transforms and
+the book on integral tables by erdelyi et al. [5].
+
+5.1 4 kink model
+
+we have seen that the 4-kink has two discrete modes (24). the zero mode
+
+k,0(x) =s 3m
+42
+
+2(cid:19)
+cosh2(cid:18) mx
+
+with 2
+
+k,0 = 0 and the second discrete mode
+
+k,1(x) =s 3m
+22
+
+sinh(cid:18) mx
+
+2(cid:19) cosh2(cid:18) mx
+2(cid:19)
+
+(70)
+
+(71)
+
+k,1 = 3
+
+with 2
+x gives one. the normalised eigenmodes of the vacuum uctuations are
+
+2 m2 are here given in their normalised form i.e. integration of the mode squared over
+
+with eigenvalues v,k = k2 + 2m2. using (69), we obtain the following integral
+
+v,k(x) =
+
+1
+2
+
+eikx
+
+m = (. . .)z 
+
+
+
+dk pk2 + 2m2
+
+z dx
+
+eikx
+
+cosh2(cid:16) mx2(cid:17)
+
+
+
+
+
+z dy
+
+eiky
+
+2(cid:17)
+cosh2(cid:16) my
+
+
+
+
+(72)
+
+(73)
+
+(74)
+
+2
+
+which we simplify to
+
+m0 = (. . .)z 
+
+
+
+0
+
+dk pk2 + 2m2
+z 
+q2pq2 + 2
+}
+{z
+
+sinh2 q
+
+
+
+dq
+
+i0
+
+3m
+
+223 z 
+|
+
+= 
+
+dx
+
+cos(kx)
+
+cosh2(cid:16) mx2(cid:17)
+
+2
+
+
+
+
+= (. . .)z 
+
+
+
+dk
+
+k2 + 2m2 k2
+sinh2(cid:16) k2m(cid:17)
+
+. using (68), we obtain the correction to the mass from the second discrete mode
+
+where we have used eulers formula, the fourier cos transform of cosh2 and changed to the variable
+q  k2m
+m1 = (. . .)z 
+
+2  3m2 +pk2 + 2m2(cid:19)
+z 
+
+sinh(cid:16) mx2(cid:17)
+cosh2(cid:16) mx2(cid:17)
+
+dk(cid:18) 3m2
+
+(k2 + 2m2) 1
+
+dx sin(kx)
+
+
+
+
+
+
+2
+
+0
+
+11
+
+
+
+= (. . .)z 
+= (cid:18) 1
+
+dk (. . .)
+
+4(cid:19) 3m
+223 z 
+|
+
+
+
+k2 cosh2(cid:16) mx2(cid:17)
+(cid:16)1 + cosh2(cid:16) mx2(cid:17)(cid:17)
+dq   (pq2 + 4 
+pq2 + 42
+{z
+
+i1
+
+32)2
+
+!
+
+q2
+
+[1 + cosh q]2
+
+(75)
+
+}
+
+where we have used eulers formula, the fourier sin transform of sinh cosh2 and changed to the
+variable q  k2m
+
+we have evaluated i0 and i1 numerically with maple and obtain
+
+.
+
+i0 = 11.247
+1
+4
+
+i1 = 0.827
+
+and the contributions to the mass correction are
+
+compared to the full quantum correction (54)
+
+m0 + m1 = (0.384  0.0283)m =  0.413m
+
+m =  0.471m
+
+(76)
+
+(77)
+
+where we have set h to one. finally, we nd that the zero mode contributes 81.5% and the second
+discrete mode 6%, thus in total 87.5%, to the total mass correction.
+
+we are also interested to what value of k the normal modes of the vacuum uctuations have to
+go to give a reliable answer to the mass correction. intuitively, the zero and second discrete mode
+are localised and its norm with the long wavelength vacuum modes should become very small. we
+have put a cut-o  on our integral i0 and 1
+4 i1 and evaluated the integrals as a function of the
+cut-o. we have done this numerically with maple. figure 1 shows that we only need to go up to
+a cut-o of around q = 5 for the zero mode and of around q = 15 for the second discrete mode.
+(k
+
+ q) this is good news, for we can ignore long wavelength vacuum modes.
+
+2m
+
+5.2 sine-gordon model
+
+we do the same for the sine-gordon model. there is only one discrete mode, the zero mode of
+translation: see section 4 and [7]. the normalised zero mode has the form
+
+k,0(x) =r m
+
+2
+
+cosh1(mx)
+
+(78)
+
+with eigenvalue k,0 = 0. the eigenmodes of the vacuum uctuations are the same as before, but
+the eigenvalues change to v,k = k2 + m2. the mass correction takes the form
+
+m0 = (. . .)z dkpk2 + m2 (cid:20)z dx cos(kx) cosh1(mx)(cid:21)2
+
+2m(cid:19)
+= (. . .)z dkpk2 + m2 cosh2(cid:18) k
+
+m
+
+4z dqqq2 +(cid:0) 
+2(cid:1)2
+
+cosh2 q
+
+= 
+
+12
+
+(79)
+
+10
+
+8
+
+6
+
+int
+
+4
+
+2
+
+0
+
+2
+
+4
+
+cut-off
+
+6
+
+8
+
+10
+
+figure 1: value of i0 (upper curve) and i1 (lower curve) as a function of their cut-o  for q
+
+where we have used eulers formula, the fourier cos transform of cosh1 and changed to the variable
+q  k
+2m .
+we have evaluated the integral numerically with maple and obtain
+
+m0 =  3.572
+
+m
+4
+
+=  0.893
+
+m
+
+
+=  0.284 m
+
+compared to the full quantum correction ([4], [9])
+
+m = 
+
+m
+
+
+=  0.318 m
+
+(80)
+
+(81)
+
+where we have set h to one. finally, we nd that the zero mode contributes 89.3% to the total
+mass correction.
+
+again, we are interested to what value of k the normal modes of the vacuum uctuations have
+to go to give a reliable answer to the mass correction. we have put a cut-o  on the integral
+and evaluated the integral as a function of the cut-o. we have done this numerically with maple.
+figure 2 shows that we only need to go up to a cut-o of around q = 5 for the zero mode. we do
+not need to include long wavelengths vacuum modes.
+
+6 trace formula: numerical result
+
+in the last section, we have applied the trace formula to the 4 kink and the sine-gordon model. the
+results are clear-cut. the contribution from the discrete modes to the quantum mass correction
+is dominant (more than 80%). further, we do not need to probe our discrete modes for long
+wavelength of the vacuum mode. this is good news for numerical methods and we can limit
+ourselves to the lowest normal modes of uctuations in both the vacuum and the kink sector.
+moreover, in (1+1) dimension, we are not restricted by memory or computational needs and can
+include all the vacuum and kink modes.
+
+13
+
+3.6
+
+3.4
+
+3.2
+
+3
+
+2.8
+
+2.6
+
+2.4
+
+2.2
+
+2
+
+int
+
+1.8
+
+1.6
+
+1.4
+
+1.2
+
+1
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+0
+
+1
+
+2
+
+cut-off
+
+3
+
+4
+
+5
+
+figure 2: the value of the integral versus its cut-o  for q
+
+6.1 preparation
+
+we calculate the mass correction for the 4 kink and sine-gordon model. we have set the mass
+m = 1 and coupling  = 1 for simplicity. the energy functional has the form
+
+2
+
+e =z dx(cid:20) 1
+e =z dx(cid:20) 1
+
+2
+
+2 +
+
+2 +
+
+2
+
+ 2
+
+1
+2
+
+1
+2
+
++
+
+1
+4
+
+(2  1)2(cid:21)
++ (1  cos )(cid:21)
+
+(82)
+
+(83)
+
+for the 4 kink and
+
+for the sine-gordon model; where  = d
+dt . using appropriate boundary conditions, we
+nd the minimal-energy conguration, which we call st, for both models in the topological charge
+sector one. we use the gauss-seidel overrelaxation method. our box size is l = 40 from -20 to 20
+and we use 1600 points. thus, the lattice spacing is dx = 0.025.
+
+dx and  = d
+
+the corresponding eigenvalue vacuum and kink operators in terms of the static solution (see 7)
+
+are
+
+for the 4 kink and
+
+a2
+v = 
+a2
+k = 
+
+d2
+dx2 + 2
+d2
+dx2 + 1  32
+
+st
+
+a2
+v = 
+a2
+k = 
+
+d2
+dx2 + 1
+d2
+dx2 + cos st
+
+14
+
+(84)
+
+(85)
+
+eigenmode 2
+
+0.015
+
+0.01
+
+0.005
+
+0
+
+-0.005
+
+-0.01
+
+-0.015
+
+-0.02
+
+-0.025
+
+-0.03
+
+-20
+
+-15
+
+-10
+
+-5
+
+0
+
+5
+
+10
+
+15
+
+20
+
+eigenmode 3
+
+0.04
+
+0.03
+
+0.02
+
+0.01
+
+0
+
+-0.01
+
+-0.02
+
+-0.03
+
+-0.04
+
+-20
+
+-15
+
+-10
+
+-5
+
+0
+
+5
+
+10
+
+15
+
+20
+
+0.12
+
+0.1
+
+0.08
+
+0.06
+
+0.04
+
+0.02
+
+0
+-20
+
+0.1
+
+0.08
+
+0.06
+
+0.04
+
+0.02
+
+0
+
+-0.02
+
+-0.04
+
+-0.06
+
+-0.08
+
+-0.1
+
+-20
+
+eigenmode 0
+
+-15
+
+-10
+
+-5
+
+0
+
+5
+
+10
+
+15
+
+20
+
+eigenmode 1
+
+-15
+
+-10
+
+-5
+
+0
+
+5
+
+10
+
+15
+
+20
+
+figure 3: the 4 kink eigenmodes from zero to three
+
+for the sine-gordon model.
+in numerical techniques, we describe three dierent methods that
+solve the discrete eigenvalue problem. the trivial matrix diagonalisation is the more accurate and
+simplest one. however, we have to admit that the computational time grows as the cube of the
+number of points and the technique cannot be used in two or more dimensions. we substitute the
+value of the numerically minimised eld8 into the discretised eigenvalue equation and diagonalise
+the resulting matrix with periodic boundary conditions.
+
+figure 3 shows the rst four normal modes of the 4 kink. the numerical eigenvalues are
+5.78 108, 1.49998, 2 and 2.03072 compared to the exact eigenvalues 0 (zero mode), 1.5 (rst
+mode) and 2 (start of continuous modes). figure 4 shows the rst four normal modes of the sine-
+gordon soliton. the numerical eigenvalues are 5.12 108, 1.00682, 1.00682 and 1.06128 compared
+to the exact eigenvalues 0 (zero mode) and 1 (start of continuous modes).
+
+6.2 results
+
+we have all the information needed to compute the mass correction. the trace formula has the
+form
+
+which is similar to (68). k,n(xi) refers to the nth eigenmode of the kink, v,k(xi) refers to the kth
+eigenmode of the vacuum and xi to the position of the ith lattice point.
+
+we start with the 4 kink. we sum up the contributions to the mass correction, mode by
+mode. figure 5 shows that the mass correction approaches an asymptotic limit. the rst few
+mode contributions are the most important ones. we only include mode contributions up to mode
+
+8we used the relaxation method described in numerical methods
+
+15
+
+m = 
+
+1
+
+4xn,k xi
+
+k,n(xi)v,k(xi)!2
+
+(cid:2)2
+
+n1
+
+k  2n + k(cid:3)
+
+(86)
+
+0.04
+
+0.035
+
+0.03
+
+0.025
+
+0.02
+
+0.015
+
+0.01
+
+0.005
+
+0
+
+eigenmode 2
+
+0
+
+-0.02
+
+-0.04
+
+-0.06
+
+-0.08
+
+-0.1
+
+eigenmode 0
+
+-0.005
+
+-20
+
+-15
+
+-10
+
+-5
+
+0
+
+5
+
+10
+
+15
+
+20
+
+-0.12
+
+-20
+
+-15
+
+-10
+
+-5
+
+0
+
+5
+
+10
+
+15
+
+20
+
+0.04
+
+0.03
+
+0.02
+
+0.01
+
+0
+
+-0.01
+
+-0.02
+
+-0.03
+
+eigenmode 3
+
+0.04
+
+0.03
+
+0.02
+
+0.01
+
+0
+
+-0.01
+
+-0.02
+
+-0.03
+
+eigenmode 1
+
+-0.04
+
+-20
+
+-15
+
+-10
+
+-5
+
+0
+
+5
+
+10
+
+15
+
+20
+
+-0.04
+
+-20
+
+-15
+
+-10
+
+-5
+
+0
+
+5
+
+10
+
+15
+
+20
+
+figure 4: the sine-gordon eigenmodes from zero to three
+
+mass corrrection
+
+-0.38
+
+-0.39
+
+-0.4
+
+-0.41
+
+-0.42
+
+-0.43
+
+-0.44
+
+-0.45
+
+-0.46
+
+-0.47
+
+-0.48
+
+numerical value
+exact theoretical value
+
+0
+
+50
+
+100
+
+150
+
+200
+
+250
+
+300
+
+up to kink mode
+
+figure 5: the total contribution to the mass correction mode by mode
+
+16
+
+norm with kink . . .
+
+1
+
+0.9
+
+0.8
+
+0.7
+
+0.6
+
+0.5
+
+0.4
+
+0.3
+
+0.2
+
+0.1
+
+0
+
+mode 500
+
+mode 1000
+
+mode 50
+
+mode 250
+
+200
+
+400
+
+600
+
+800
+
+1000
+
+and vacuum mode
+
+figure 6: norm between four kink modes and the vacuum modes
+
+200. figure 6 shows that the norm is mostly zero and peaks for the norm between the nth kink
+mode and the nth vacuum mode. for the lowest kink mode contribution, only the lowest vacuum
+modes are important. for the highest kink mode contributions, only the highest vacuum modes
+are important. the discrete mode corrections are
+
+m0 = 0.384626
+m1 = 0.0282964
+
+which are very close to their exact values (76). the numerical value of the mass correction is
+
+m =  0.471097
+
+(87)
+
+(88)
+
+compared to the exact value of -0.471113 and is 99.997% accurate. this is a very satisfactory result.
+we turn our attention to the sine-gordon kink. we sum up the contributions to the mass
+correction mode by mode. figure 7 shows that the mass correction approaches an asymptotic limit.
+the rst few mode contributions are the most important ones. figure 8 shows the contribution
+of the rst mode for each vacuum mode. note that some contributions are zero, because the rst
+mode is an odd function and some of the vacuum modes are even functions. the discrete mode i.e.
+zero mode correction of the sine-gordon kink is
+
+which is very close to the exact value (80). the numerical value of the mass correction is
+
+m0 = 0.28402
+
+m =  0.318144
+
+(89)
+
+(90)
+
+compared to the exact value of -0.318309 and is 99.95% accurate. this is a very satisfactory result.
+
+17
+
+mass correction
+
+-0.28
+
+-0.285
+
+-0.29
+
+-0.295
+
+-0.3
+
+-0.305
+
+-0.31
+
+-0.315
+
+-0.32
+
+0
+
+numerical value
+exact theoretical value
+
+50
+
+100
+
+150
+
+200
+
+up to kink mode
+
+figure 7: the total contribution to the mass correction mode by mode
+
+contribution to mass correction
+
+0.0007
+
+0.0006
+
+0.0005
+
+0.0004
+
+0.0003
+
+0.0002
+
+0.0001
+
+0
+
+
+0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5
+
+
+
+10
+
+
+
+
+15
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+25
+
+
+
+
+30
+20
+vacuum mode
+
+
+
+45
+
+35
+
+40
+
+50
+
+figure 8: mass correction of the rst kink mode versus the vacuum modes
+
+18
+
+7 conclusion
+
+we have shown that the trace formula works very well in (1+1) dimensions for the sine-gordon
+and the 4 kink model. the numerical quantum mass correction is very close to the exact one. our
+technique can be applied with ease to any (1+1) dimensional theory. this allows us to calculate
+the mass correction to non-integrable solitonic systems, for example. specically, we are interested
+in the sine-skyrme model [8] and plan to study the mass correction numerically. or, we can look
+at the mass correction of multi-solitons, for example.
+
+there are two drawbacks. we have used a brute force matrix diagonalisation to nd the eigen-
+values.
+it works very well and is reasonably fast in (1+1) dimensions. however, if you are to
+implement the trace formula in higher dimensions, you will have to use a dierent technique.
+barnes and turok in [2] have used a diusion equation method; as discussed in the chapter on
+numerical methods. they compute the zero mode, then project it out of the initial conguration,
+get the next mode and so on. only the rst modes are accurate, because the errors are summing
+up. computational restrictions also limit the calculations to the rst few modes.
+
+references
+
+[1] c barnes. phd thesis. phd thesis, princeton, 1998.
+
+[2] c barnes and n turok. a technique for calculating quantum corrections to solitons. hep-
+
+th/9711071, 1997.
+
+[3] k cahill, a comtet, and r j glauber. mass formulas for static solutions. physics letters,
+
+64b(3):283285, september 1976.
+
+[4] r f dashen, b hasslacher, and a neveu. particle spectrum in model eld theory from
+semiclassical functional integral techniques. physical review d, 11(12):34243450, june 1975.
+
+[5] erdelyi, magnus, oberhettinger, and tricomi. tables of integral transforms. mcgraw-hill,
+
+1954.
+
+[6] g holzwarth. quantum correction to nucleon and delta mass in the skyrme model. physics
+
+letters b, 291:218222, 1992.
+
+[7] r jackiw. quantum meaning of classical eld theory. reviews of modern physics, 49(3):681
+
+706, july 1977.
+
+[8] m peyrard, b piette, and w zakrzewski. soliton like behaviour in a modied sine-gordon
+
+model. physica d, 64:335364, 1993.
+
+[9] r rajarman. solitons and instantons. north-holland, 1996.
+
+[10] l h ryder. quantum field theory. cambridge university press, 1994. chapter 10.
+
+19
+
+

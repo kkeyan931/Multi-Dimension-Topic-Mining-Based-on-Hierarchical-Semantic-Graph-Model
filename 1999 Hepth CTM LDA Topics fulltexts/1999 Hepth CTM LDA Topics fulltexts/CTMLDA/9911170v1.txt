@@ -1,0 +1,1025 @@
+aei-1999-38
+
+hep-th/9911170
+
+yang-mills integrals
+
+werner krauth, jan plefka and matthias staudacher
+cnrs-laboratoire de physique statistique, ecole normale superieure, 24, rue
+lhomond, f-75231 paris cedex 05, france
+max-planck-institut fur gravitationsphysik, albert-einstein-institut, am
+muhlenberg 1, d-14476 golm, germany
+
+abstract. su (n ) yang-mills integrals form a new class of matrix models which,
+in their maximally supersymmetric version, are relevant to recent non-perturbative
+denitions of 10-dimensional iib superstring theory and 11-dimensional m-theory. we
+demonstrate how monte carlo methods may be used to establish important properties
+of these models. in particular we consider the partition functions as well as the matrix
+eigenvalue distributions. for the latter we derive a number of new exact results for
+su (2). we also report preliminary computations of wilson loops.
+
+pacs numbers: 11.15.-q,11.25.-w,12.60.jv
+
+submitted to: class. quantum grav.
+
+9
+9
+9
+1
+
+ 
+
+v
+o
+n
+2
+2
+
+ 
+
+ 
+ 
+
+1
+v
+0
+7
+1
+1
+1
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+ talk presented by m. staudacher at strings 99, potsdam, july 19-24 1999
+
+yang-mills integrals
+
+1. motivation
+
+2
+
+recently there has been considerable interest in dimensionally reduced yang-mills
+theories as a means to obtain non-perturbative information on superstring theory and
+m-theory. the possible relevance of these systems to quantum gravity appeared in [1]
+through the light cone quantization of the 11-dimensional supermembrane. it was argued
+in [1] that 10-dimensional su(n) super yang-mills theory reduced to one dimension 
+i.e. matrix quantum mechanics  correctly quantizes the supermembrane in the large n
+limit. the very same system, rst studied (without reference to applications to quantum
+gravity) in [2], has recently been interpreted as a non-perturbative attempt at m-theory
+[3]. unfortunately, on the technical side, very little is known about this model: it is
+suspected [1], [3] that a novel, intricate large n limit is required, but only few concrete
+results are available. this motivates the study of a simpler system: the complete
+reduction of yang-mills theory to 0 + 0 dimensions. in addition, the reduction of the
+ten-dimensional susy gauge theory path integral to a matrix integral has been at the
+heart of an alternative proposal to directly dene non-perturbative iib string theory [4].
+more generally we may study the complete reduction of d-dimensional su(n) yang-
+mills theory. then the path integral of the eld theory simplies to an integral over
+the groups lie algebra, with a at measure: a yang-mills integral. denoting the gauge
+potential by x a
+
+ and their superpartners by a
+
+ we obtain
+
+d,n := z
+z n
+
+n 21
+
+ya=1   d
+y=1
+
+dx a
+
+2!  n
+y=1
+
+da
+
+! exp(cid:20)  s(x, )(cid:21).
+
+with the euclidean action
+1
+s(x, ) = 
+2
+
+tr[x, x][x, x]  tr [
+
+x, ].
+
+(1)
+
+(2)
+
+the a priori allowed dimensions for the reduced supersymmetric gauge theory are
+d = 3, 4, 6, 10 corresponding to n = 2, 4, 8, 16 real supersymmetries. for the bosonic,
+i.e. the non-supersymmetric case n = 0, we omit the grassmann variables a
+ , and may
+study all dimensions d  2.
+
+there are numerous further reasons for being interested in the integrals eq.(1):
+ the susy integrals are crucial for the computation of the witten index of the above
+mentioned quantum mechanical gauge theories, as they contribute to the so-called bulk
+part of the index [5] (cf also [6] for an earlier calculation).
+
+ in the maximally supersymmetric case, the system describes to leading order the
+
+statistical distribution of a system of n d-instantons (or 1-branes).
+
+ the n = 16 integral appears in very recent work developing a multi-instanton
+calculus for the n = 4, d = 4 su() conformal gauge theory [7], and again in the
+large n limit of sp(n) and so(n) n = 4 susy gauge theory [8].
+
+ finally we can regard the integrals eq.(1) as a version of the eguchi-kawai reduced
+gauge theory. the original work [9] focused on a lattice formulation and employed
+unitary matrices, while the above integrals use the hermitean gauge connections x a
+ .
+
+yang-mills integrals
+
+3
+
+this is similar to [10]; however, we apply neither gauge xing nor quenching prescriptions
+to the above integrals. the interesting question is whether the models eq.(1) encode
+universal information on the full gauge eld theory as n  .
+the integrals of eq.(1) appear to be singular due to the valleys of the action,
+i.e. the directions in the conguration space of the x a
+ where all d matrices commute.
+recent work has however proven this intuition wrong: yang-mills integrals do exist in
+many interesting cases.
+
+2. partition functions: convergence properties and some exact results
+
+indeed, the rigorous results of [5] (see also [6]) show that for the gauge group su(2) the
+susy integrals converge in dimensions d = 4, 6, 10. the calculations are easily repeated
+for the bosonic case [11], and the convergence condition d  5 is found. unfortunately,
+no rigorous methods exist to date for higher rank gauge groups n  3.
+
+in [11], [12],[13] we developed methods to numerically test convergence of singular
+multidimensional integrals. the idea is to perform a metropolis random walk weighted
+by the integrand, and to merely measure the autocorrelation function of subsequent
+congurations. in this approach, a unit autocorrelation function signals the presence of
+a nonintegrable singularity.
+
+as an illustration we plot in fig.1 the autocorrelation function of the su(2) bosonic
+
+integrals.
+
+1.0
+
+0.0
+
+1.0
+
+0.0
+
+1.0
+
+0.0
+
+0
+
+2 mio
+
+0
+
+1 mio
+
+0
+
+1 mio
+
+fig. 1 autocorrelation functions versus monte carlo time for the su(2) bosonic integral
+with, from the left, d = 3, 4, 5.
+
+we are clearly able to reproduce the convergence condition d  5: for d = 5
+the congurations decorrelate well and the whole integration space is properly sampled.
+(one observes increasingly improved decorrelation for d = 6, 7, . . ., not shown in fig.1.)
+in contrast for d = 3 the system gets quickly trapped in a singular conguration: the
+markov chain gets lost in a valley, and the integral is divergent. d = 4 shows marginal
+divergence, which agrees with the exact analytical results.
+
+yang-mills integrals
+
+4
+
+applying the same method to higher
+
+rank bosonic models, and to the
+supersymmetric models, we are able to map out the convergence conditions for the
+yang-mills integrals. they read
+
+d = 4, 6, 10
+
+and
+
+d = 3
+
+d = 4
+
+d  5
+
+and
+
+and
+
+and
+
+n  2 o
+
+n  4
+
+
+n  3
+
+n  2
+
+for n > 0
+
+for n = 0
+
+(3)
+
+in particular the d = 3 susy integral is divergent (see [11],[12],[13] for a more detailed
+discussion of this point).
+
+it would be nice to have a rigorous mathematical proof of the conditions (3). some
+understanding may be gained by considering one-loop perturbative estimates of the
+integrals eq.(1). one has for the supersymmetric case [14]
+
+d,n  z
+z n
+
+n,d
+
+yi,
+
+dxi
+
+ "y
+
+
+xi
+
+(cid:17)# 
+(cid:16)xi
+xg: maximal tree
+
+y(ij): link of g
+
+1
+
+(xi  xj)3(d2) + . . .
+
+(4)
+
+where the xi
+that the bosonic integrals are approximated by
+
+ are the diagonal components of the matrices x a
+
+ , while it is found in [15]
+
+d,n  z
+z n =0
+
+n,d
+
+yi,
+
+dxi
+
+ "y
+
+(cid:16)xi
+
+xi
+
+(cid:17)# yi<j
+
+1
+
+(xi  xj)2(d2)
+
+.
+
+(5)
+
+powercounting for large separations (xi  xj)2 yields precisely eq.(3). however,
+it
+should be stressed that this does not prove the convergence conditions, since one has
+to worry about congurations where some separations are small, so that the one-loop
+approximation becomes invalid.
+
+in the supersymmetric case the value for the integrals is believed to be known:
+
+z n
+d,n =
+
+n(n+1)
+
+n 1
+
+2
+
+2
+
+2
+
+
+i=1 i!
+
+2n qn 1
+
+
+
+
+1
+n 2
+
+1
+n 2
+
+d = 4, n = 4
+
+d = 6, n = 8
+
+(6)
+
+1
+
+m2 d = 10, n = 16
+
+pm|n
+
+the n = 16 expression was conjectured by green and gutperle [16] based on a
+calculation of the d-instanton eective action of the superstring. a derivation of the
+terms to the right of the curly bracket in eq.(6), based on cohomological deformation
+techniques, was given in [17]. this calculation has still an important loophole (see
+comments in [13]). however, the formula eq.(6) was numerically checked by monte
+carlo techniques in [11],[12] up to n  5.
+
+yang-mills integrals
+
+5
+
+for the bosonic case no exact value of the partition function is known except for
+
+su(2) [11], where the result reads
+4 d1 ( d
+( d
+
+zd,2 = 2 3
+
+4 )( d2
+2 )( d1
+
+4 )( d4
+4 )
+2 )( d2
+2 )
+
+for
+
+d  5
+
+(7)
+
+it would be exciting to nd the generalization of this result to higher rank gauge
+groups  this is after all the zero-mode contribution to the yang-mills partition
+function on a d-dimensional torus.
+
+3. eigenvalue densities: asymptotics and the exact su(2) densities
+
+let us shift attention from the partition functions to the correlation functions of the
+models. the simplest correlators are su(n) invariant one-matrix correlators:
+the
+moments htr x k
+di of one matrix, say the d-th: xd. these are directly related to
+the distribution of eigenvalues of the matrix: if the eigenvalues of xd are 1, . . . , n ,
+the eigenvalue density is dened for all n as
+
+() = h
+
+1
+n
+
+n
+
+xi=1
+
+(  i)i.
+
+the non-zero moments of () are then given by
+
+(8)
+
+(9)
+
+d 1
+
+n
+
+tr x 2k
+
+d e = z 
+
+
+
+d() 2k
+
+in an ordinary wigner type matrix model all moments exist. yang-mills integrals are
+more intricate. analytical calculations have only been performed for su(2), and we
+in the d = 4 susy integral all moments are
+found the following surprising results.
+innite, even though the integral itself exists, as argued above.
+in the d = 6 susy
+integral the rst two moments are nite and one nds
+
+htr x 2
+
+did=6 =
+
+1
+
+2 s 2
+
+
+
+htr x 4
+
+did=6 =
+
+25
+64
+
+(10)
+
+while all higher moments diverge. for the d = 10 susy integral we have exactly twelve
+nite moments which are
+
+htr x 2
+
+did=10 =
+
+htr x 6
+
+did=10 =
+
+htr x 10
+
+d id=10 =
+
+3
+
+8
+
+
+
+25 s 2
+32 s 2
+8192 s 2
+
+1089
+
+
+
+
+
+htr x 4
+
+did=10 =
+
+htr x 8
+
+did=10 =
+
+9
+80
+
+297
+4096
+
+htr x 12
+
+d id=10 =
+
+184041
+655360
+
+(11)
+
+it would be interesting to nd a geometrical or combinatorial interpretation for these
+numbers. which densities give rise to this convergence behavior? for su(2) we can go
+farther and nd the exact densities:
+
+susy
+d=4 () =
+
+3  25/4
+
+
+2 u(
+
+5
+4
+
+,
+
+1
+2
+
+, 84)
+
+(12)
+
+yang-mills integrals
+
+6
+
+susy
+d=6 () =
+
+susy
+d=10() =
+
+2hu(
+
+105
+23/4 
+1287
+64  23/4 
+
+9
+4
+
+,
+
+1
+2
+
+u(
+
+, 84)
+
+33
+, 84) 
+16
+17
+1
+4
+2
+17  19
+21
+,
+4
+17  19  21  23
+
+u(
+
+2h546 u(
+ 147
++ 45
+
+,
+
+8
+
+13
+4
+
+,
+
+1
+2
+
+, 84)i
+
+1
+2
+
+, 84)
+
+25
+u(
+4
+17  19  21  23  25  27
+
+256
+
+2048
+
+
+
+,
+
+1
+2
+
+u(
+
+, 84)
+
+29
+4
+
+,
+
+1
+2
+
+, 84)i
+
+where u is the kummer-u function dened as
+
+u(a, b, z) =
+
+1
+
+(a) z 
+
+0
+
+dt ta1 (1 + t)ba1 ezt
+
+(13)
+
+now we see that the above niteness properties of the moments result from a rather
+curious powerlike behavior of the densities at large values of . we have for   
+
+susy
+d
+
+() 
+
+3
+
+7
+
+15
+
+
+
+
+d = 4
+
+d = 6
+
+d = 10
+
+(14)
+
+this power-like behavior is very dierent from wigner type systems where the fall-o at
+innity is at least exponential. for the d-dimensional bosonic models the density can
+be worked out as well albeit less explicitly than in eqs.(12), and one nds the asymptotic
+behavior d()  3d.
+
+moving on to higher values of n, we are unable to analytically calculate the
+eigenvalue densities with presently known techniques. we can, however, nd numerically
+exact densities using monte carlo methods. in fig.2 we illustrate this by plotting the
+n = 2, 3, 4 d = 4 susy half-densities (we only plot the   0 part since the densities are
+symmetric functions). in the su(2) case the exact expression of eq.(12) and the monte
+carlo data cannot be separated on the scale of the gure.
+
+now we would like to know how the su(2) result eq.(14) generalizes to other values
+of n. it is impossible to extract the asymptotics from histograms such as fig.2, since the
+tails comprise only a small number of samples. instead, we can go back to the markov-
+chain technique of the last section and measure the niteness of the moments eq.(9)
+for various values of n. we nd that for the susy integrals the qualitative behavior of
+the su(2) case persists: in the d = 4, 6, 10 integrals only the rst, respectively, 0, 2, 12
+moments are nite. we thus conclude, in view of eq.(9), that the asymptotic behavior
+eq.(14) is valid for all n. this is very dierent from wigner type random matrix models,
+where as n increases, the density condenses onto a compact interval. at the sharply
+dened (at n = ) edge of the interval wigner distributions show universal behavior.
+we have argued that in susy yang-mills matrix models no such edge exists, indicating
+that the large n physics of these models is indeed very dierent.
+
+yang-mills integrals
+
+7
+
+0.5
+()
+
+0.0
+
+0.0
+
+2.0
+
+4.0
+
+
+
+()
+0.5
+
+0.0
+
+0.5
+()
+
+0.0
+
+2.0
+
+4.0
+
+
+
+0.0
+
+0.0
+
+2.0
+
+4.0
+
+
+
+fig. 2 eigenvalue (half-)densities for susy d = 4, from the left, n = 2, 3, 4
+
+let us furthermore compare supersymmetric and non-supersymmetric yang-mills
+integrals. how does the asymptotic behavior of the density eq.(14) change in the absence
+of susy? we have already mentioned above that for su(2) this behavior is powerlike as
+well. actually we can guess a general formula by looking once more at the eective one-
+loop estimate of eq.(5). for one-matrix correlators the most dangerous conguration
+stems from pulling away one coordinate xi
+d from a bulk conguration of all other d  1
+coordinates. powercounting leads to the guess
+
+d()  2n (d2)+3d5
+
+where
+
+n >
+
+(15)
+
+d
+d  2
+
+the same procedure applied to the susy estimate eq.(4) reproduces eq.(14). we then
+veried the validity of eq.(15) by the same monte carlo random walk procedure as
+above, measuring the niteness of moments. we thus notice a marked dierence to the
+susy situation: in the bosonic case all moments exist as n   for all d  3.
+in
+particular we expect the eigenvalue distribution to condense onto a compact support,
+much like for wigner type models.
+
+4. wilson loops: preliminary results
+
+a further natural set of correlation functions of yang-mills matrix integrals are wilson
+loops. due to the eguchi-kawai mechanism [9],[10], one naively expects them to
+correspond at n =  to wilson loops in the unreduced gauge eld theory.
+in the
+proposal of [4] for a non-perturbative denition of the iib superstring, they have been
+interpreted as string creation operators [18].
+
+despite the dimensional reduction of the eld theory to zero dimensions we are still
+able to dene an innite set of independent wilson loops dependent on an arbitrary
+contour c in d-dimensional euclidean space:
+
+w(c) = h
+
+dyxi
+
+(16)
+
+1
+
+n p tr eihc
+
+yang-mills integrals
+
+8
+
+due to the non-commutative nature of the connections x and the path-ordering p,
+this is a non-trivial functional of the contour c despite the fact that the x are spacially
+in the special case of a rectangular contour with lengths l and t in the
+constant.
+(y1, yd) plane this simplies to
+
+w(l, t ) = h
+
+1
+n
+
+tr eilx1eit xd eilx1eit xdi
+
+(17)
+
+we would like to understand how the loops w behave as a function of n and as a
+functional of the shape of the contours, in particular whether planar loops satisfy an
+area-law. we would also like to see whether there are any telltale dierences between
+the supersymmmetric and the bosonic loops.
+
+in the previous sections we have shown how a number of exact results may be
+derived for the simplest gauge group su(2). we have not been able to analytically
+calculate a wilson loop for an yang-mills integral even for su(2). on the other hand
+it is possible to obtain high precision numerical results for low values of n. in fig.3a
+we plot the wilson loop for a square (l = t ) in the case of susy d = 4 as a function of
+l for various values of n.
+
+1.0
+
+w(l)
+
+0.5
+
+1.0
+
+w(r)
+
+0.5
+
+0.0
+
+20.
+
+l
+
+40.
+
+0.0
+
+0.0
+
+20.
+
+40.
+
+r
+
+fig. 3 d = 4 susy wilson loops (a) square of side length l with n = 2, 4, 8 (top to
+bottom) (b) square, regular 16-gon and 64-gon enclosed in circle of radius r.
+
+the behavior for small area is easy to understand. indeed, for an arbitrary planar
+loop enclosing a small area of size a, it is straightforward to show, using stokes theorem,
+that w(c) = 1 + 1
+
+2n a2htr[x1, x2]2i + o(x 6). this immediately gives
+
+and agrees to high precision with the numerical data. a very curious feature of fig.3a
+is that the loops tend to a constant for large area. the existence of this constant can be
+demonstrated analytically. it should be considered a nite n artifact for the following
+reasons: (a) the constant decreases with n, as seen in fig.3a. (b) the constant depends
+
+w(c) = 
+
+
+4n
+
+1  1
+1  1
+
+2n
+
+n 21
+
+d1 a2 + . . .
+d a2 + . . .
+
+n 21
+
+n > 0
+
+n = 0
+
+(18)
+
+yang-mills integrals
+
+9
+
+in various ways on the shape of the contour. we checked that by distorting the rectangle
+to a slightly irregular quadrangle the constant drops to zero for all n as the size increases.
+in fig3.b we show various regular polygons approximating a circle of radius r: as we
+increase the number of edges the constant goes to zero for large r.
+
+it is clear from the mentioned features of the wilson loops that there is an area
+law neither for very small nor very large areas. an intermediate region in which an area
+law holds might still be present. we checked, by going to rather larger n, that this is
+not the case for the bosonic models. there has been an interesting suggestion [19] that
+such an intermediate region may exist for the d = 4 supersymmetric model.
+
+5. conclusions and outlook
+
+we showed how numerical markov chain methods can be used to verify non-perturbative
+convergence conditions for yang-mills integrals with and without supersymmetry. the
+same methods may be applied to establish the convergence properties of correlation
+functions. applying the technique to invariant correlators of a single matrix, we are
+able to accurately predict the asymptotic behavior of the eigenvalue density of yang-
+mills matrix models. the results demonstrate an unusual powerlaw behavior which, in
+the supersymmetric cases, persists for large n. this indicates that the large n limit
+of these new matrix models might indeed be very dierent from the one of the old
+wigner type models. we also demonstrated that monte carlo methods are capable to
+rather accurately compute various quantities relevant to these models such as partition
+functions, correlation functions, spectral distributions and wilson loops. as opposed
+to yang-mills quantum mechanics [2],[1],[3] we are confronted to a system which allows
+some non-perturbative analysis, at least for nite n.
+
+yang-mills integrals are thus an ideal
+
+laboratory for exploring new large n
+techniques. powerful analytical methods will have to be developed if we are to verify or,
+maybe more importantly, if we are to bring to good use the ideas presented in [1],[3],[4].
+
+references
+
+[1] b. de wit, j. hoppe and h. nicolai, on the quantum mechanics of supermembranes,
+
+nucl. phys. b305 (1988) 545.
+
+[2] m. claudson and m. halpern, supersymmetric ground state wave functions, nucl. phys. b250
+(1985) 689; m. baake, m. reinecke and v. rittenberg, fierz identities for real cliord algebras
+and the number of supercharges, j. math. phys. 26 (1985) 1070; r. flume, on quantum
+mechanics with extended supersymmetry and non-abelian gauge constraints, annals phys. 164
+(1985) 189.
+
+[3] t. banks, w. fischler, s. shenker and l. susskind, m-theory as a matrix model: a conjecture,
+
+phys. rev. d55 (1997) 5112, hep-th/9610043.
+
+[4] n. ishibashi, h. kawai, y. kitazawa and a. tsuchiya, a large n reduced model as superstring,
+
+nucl. phys. b498 (1997) 467, hep-th/9612115.
+
+[5] p. yi, witten index and threshold bound states of d-branes, nucl. phys. b505 (1997) 307,
+hep-th/9704098; s. sethi and m. stern, d-brane bound state redux, commun. math. phys.
+194 (1998) 675, hep-th/9705046.
+
+yang-mills integrals
+
+10
+
+[6] a.v. smilga, witten index calculation in supersymmetric gauge theory, yad. fiz. 42 (1985)
+728, nucl. phys. b266 (1986) 45; a.v. smilga, calculation of the witten index in extended
+supersymmetric yang-mills theory, (in russian) yad. fiz. 43 (1986) 215.
+
+[7] n. dorey, t.j. hollowood, v.v. khoze, m.p. mattis, and s. vandoren, multi-instantons and
+maldacenas conjecture, jhep 9906 (1999) 023, hep-th/9810243; multi-instanton calculus
+and the ads/cft correspondence in n = 4 superconformal field theory, nucl. phys. b552
+(1999) 88, hep-th/9901128.
+[8] t.j. hollowood, v.v. khoze and m.p. mattis, instantons in n = 4 sp(n ) and so(n ) theories
+
+and the ads/cft correspondence, hep-th/9910118.
+
+[9] t. eguchi and h. kawai, reduction of dynamical degrees of freedom in the large n gauge theory,
+
+phys. rev. lett. 48 (1982) 1063.
+
+[10] d.j. gross and y. kitazawa, a quenched momentum prescription for large n theories,
+
+nucl. phys. b206 (1982) 440.
+
+[11] w. krauth, h. nicolai and m. staudacher, monte carlo approach to m-theory, phys. lett. b431
+
+(1998) 31, hep-th/9803117.
+
+[12] w. krauth and m. staudacher, finite yang-mills integrals, phys. lett. b435 (1998) 350,
+
+hep-th/9804199.
+
+[13] w. krauth and m. staudacher, eigenvalue distributions in yang-mills integrals, phys. lett. b453
+
+(1999) 253, hep-th/9902113.
+
+[14] h. aoki, s. iso, h. kawai, y. kitazawa and t. tada, space-time structures from iib matrix
+
+model, prog. theor. phys. 99 (1998) 713, hep-th/9802085.
+
+[15] t. hotta, j. nishimura, a. tsuchiya, dynamical aspects of large n reduced models,
+
+nucl. phys. b545 (1999) 543, hep-th/9811220.
+
+[16] m. b. green and m. gutperle, d-particle bound states and the d-instanton measure, jhep 9801
+
+(1998) 005, hep-th/9711107.
+
+[17] g. moore, n. nekrasov and s. shatashvili, d-particle bound states and generalized instantons,
+
+hep-th/9803265.
+
+[18] m. fukuma, h. kawai, y. kitazawa and a. tsuchiya, string field theory from iib matrix model,
+
+nucl. phys. b510 (1998) 158, hep-th 9705128.
+
+[19] a. ambjorn, k. anagnostopoulos, w. bietenholz, t. hotta and j. nishimura, monte carlo studies
+
+of susy large n reduced models, poster presented by j. nishimura at strings 99.
+
+

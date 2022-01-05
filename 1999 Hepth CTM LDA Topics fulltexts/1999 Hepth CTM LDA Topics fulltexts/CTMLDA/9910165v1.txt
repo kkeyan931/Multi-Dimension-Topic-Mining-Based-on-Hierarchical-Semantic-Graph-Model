@@ -1,0 +1,2213 @@
+eective energy approach
+
+to collectively quantized systems
+
+sergei v. bashinsky
+
+center for theoretical physics
+
+laboratory for nuclear science
+
+and department of physics
+
+massachusetts institute of technology
+
+cambridge, massachusetts 02139
+
+( mit-ctp-2910, hep-th/9910165.
+
+october 1999 )
+
+abstract
+
+we generalize eective energy variational techniques to study appropriately
+quantized solitonic eld congurations. our approach rests on collective quan-
+tization ideas and is specically designed for the numerical evaluation of soliton
+parameters. we employ this method to obtain the one-loop quantum corrections
+to the soliton mass and form factor. special attention is given to the regularization
+of the physical observables in the solitonic sector of the theory. the numerical im-
+plementation of the method is demonstrated for a simple one-dimensional scalar
+eld example.
+
+9
+9
+9
+1
+
+ 
+t
+c
+o
+1
+2
+
+ 
+
+ 
+ 
+
+1
+v
+5
+6
+1
+0
+1
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+this work is supported in part by funds provided by the u.s. department of energy (d.o.e.) under
+
+cooperative research agreement #df-fc02-94er40818.
+
+email address: sergei@mit.edu, phone: (617)-253-5349, fax: (617)-253-8674.
+
+1
+
+1
+
+introduction
+
+the dilemma between our classical visualization of a soliton as a compact object and the
+plane-wave nature of its energy and momentum quantum eigenstates is as common as
+the quantum description of any composite particle. not surprisingly, this problem has
+been approached with diversity of techniques[16] such as functional integral, canonical
+quantization, semi-classical and variational procedures. the methods that have already
+been developed are able to provide reasonable qualitative understanding of the physics
+behind a quantized soliton but, as a rule, they are analytically tractable only for
+the simplest models, mostly in one space dimension. whenever it comes to denite
+predictions for physical quantities, many ambiguities appear[7,8]: consistent ultra-violet
+cuto methods, vacuum energy subtraction, and boundary conditions at innity being
+only some of the examples. these questions must be settled if we want the method to
+yield a denite nite result.
+
+the present paper is intended to complement the earlier works on soliton quantization
+in the following three aspects. first, the approach that we develop naturally unies the
+classical image of a soliton as a solitary wave and the fundamental quantum-mechanical
+principles. it makes a simple connection with such more formal views on this problem as
+the collective quantization methods[4,5] and the form-factor, kerman-klein, approach
+applied to solitons in the goldstone and jackiw paper[2]. this is demonstrated in sec-
+tions 2-4, where we review the basics of collective quantization (sec. 2), then introduce
+our variational scheme (sec. 3), and draw parallels to the kerman-klein method for
+calculating the soliton form-factor (sec. 4).
+
+second, during this work we have had in mind to construct a calculational method
+for soliton parameters which can be practically implemented as a computer algorithm.
+it then could be applied to analyze the quantum eects in theories that are too compli-
+cated for analytical solution, but from qualitative considerations[9] may possibly possess
+non-trivial stable solitonic states. much progress in this direction has already been
+achieved[7,10] in the last couple of years. however, the developed numerical methods for
+calculation of quantum corrections would not be fully satisfactory without understand-
+ing of the special role played in the system description by the cyclic variables, such as the
+soliton position in space. we discuss the relative signicance of the modications needed
+to incorporate the cyclic variables (secs. 3, 6.2) and show on a simple example of a one
+dimensional kink (secs. 6.1, 6.2) how to calculate the one-loop quantum corrections to
+the physical parameters characterizing the soliton in its true, delocalized, ground state.
+
+third, we discuss theory regularization in the solitonic sector remembering that
+renormalization conditions are conventionally imposed in the perturbative sector of the
+
+2
+
+theory (sec. 5). in dealing with this subtle issue, we prefer to apply physically realizable
+regularization methods rather than formal manipulations with divergent expressions.
+our nal formulas involve only nite quantities and convergent integrals, suitable for
+the numerical computations of section 6. a summary and conclusions are given at the
+end of the paper (sec. 7).
+
+2 collective quantization
+
+we assume that the theory has an absolutely stable solitonic state. that is, the decay
+of this soliton into plane-wave excitations over the usual vacuum is forbidden by con-
+servation of some charge q, which could be a topological charge or a fermion number.
+dierent values of the charge q split the overall hilbert space of the theory into sepa-
+rate non-mixing sectors with their own ground states, which would be the true vacuum
+for the perturbative sector and the soliton at rest for the solitonic sector. due to
+translational invariance of the theory, the total momentum operator p commutes with
+the hamiltonian,
+
+[ p, h] = 0 ,
+
+and the lowest energy state in the solitonic sector should also be an eigenstate of the
+momentum operator, corresponding to the total momentum zero. by the heisenberg
+uncertainty principle, the position of the soliton in space is completely undened. the
+techniques to handle this situation are known[16].
+
+to be specic, we illustrate the formalism on the simplest example of a real scalar
+
+eld  in one space dimension with the lagrangian density
+
+l(x, t) =
+
+1
+
+t!2
+2   
+
+
+
+1
+
+x!2
+2   
+
+ g2 u(g) .
+
+(2.1)
+
+this theory may support a stable topological soliton if the global minimum of the po-
+tential u is not unique:
+
+ 1, 2 :
+
+u(1) = u(2) = min u ,
+
+1 6= 2
+
+(we assume that the minima 1 and 2 are connected by a discrete symmetry of the
+lagrangian (2.1), e.g.   .) let (x) be an arbitrary function such that
+
+lim
+x
+
+(x) = 1 ,
+
+lim
+x+
+let also {k(x)} be a set of orthonormal functions,
+z dx k(x) l(x) = kl ,
+
+(x) = 2 .
+
+(2.2)
+
+3
+
+that are orthogonal to (x),
+
+and, together with (x), form a complete set.
+
+z dx (x) k(x) = 0 ,
+
+following the christ and lee method[4], we describe the solitonic sector of the theory
+trading the eld (x) for an equivalent set of commuting dynamical variables { x, q1, q2, ...}
+as
+
+(x) = g1(x  x) +
+
+
+
+xk=1
+
+qkk(x  x) .
+
+(2.3)
+
+given a eld conguration (x), the corresponding variables {x, q1, q2, ...} may be de-
+termined from the equations
+
+z dx (x  x)(x) = 0 ,
+qk = z dx k(x  x)h(x)  g1(x  x)i .
+
+(2.4)
+
+(2.5)
+
+let { p , 1, 2, ...} be the operators of the canonical momenta conjugate to { x, q1, q2, ...},
+so that
+
+[ p , x] = i ,
+
+[k, ql] = ikl
+
+with all other possible commutators being zero. the original hamiltonian,
+
+with
+
+h[(x), (x)] =
+
+1
+
+2 z dx ((x))2 + v [ ]
+
+v []  z dx(cid:20) 1
+
+2
+
+((x))2 + g2 u(g(x))(cid:21) ,
+
+(2.6)
+
+(2.7)
+
+when being re-expressed in terms of the new variables and their conjugate momenta,
+reads[4,11]:
+
+h( p , , q) =
+
+1
+2
+
+
+
+xk=1
+
+k + v (q) + g2h( p , , q) .
+2
+
+(2.8)
+
+in this expression h( p , , q) is an o(g2) correction to the kinetic term that is quadratic
+in the canonical momenta p or , but has somewhat intricate q-dependence[4], and v (q)
+is simply the potential term (2.7) written in terms of the new variables.
+
+the hamiltonian (2.8) does not depend on the collective coordinate x to any order
+in the coupling g reecting the system invariance to translation of the eld (x) in space
+
+4
+
+as a whole. its conjugate momentum p is, therefore, a conserved quantity:
+
+[ p , h] = 0 .
+
+it is possible to show[4,11] that the operator p indeed represents the total momentum
+of the system1. the essence of the collective quantization is to describe the original
+theory restricted to the subspace of the quantum states |pi that carry a denite total
+momentum p , for example
+
+p |0i = 0 .
+
+the zero value of the momentum can always be achieved by a proper choice of the
+lorentz frame2. in the p = 0 sector the full hamiltonian (2.8) reduces to
+
+h(, q) =
+
+1
+2
+
+
+
+xk=1
+
+2
+k + v (q) + o(g2) ,
+
+(2.9)
+
+and the remaining dynamical variables may be handled by conventional perturbative or
+semi-classical methods.
+
+we would like to conclude this section by the following remark: in the original christ
+and lee method the prole function g1(x) in eq. (2.3) is required to satisfy the classical
+eld equations of motion. in the present discussion, (x) is an arbitrary function with
+the proper asymptotic behavior, eq. (2.2), yielding a non-degenerate transformation
+(x)  {x, q1, q2, ...} . we exploit this freedom in the choice of  soon.
+
+3 reduced eective energy
+
+for the solitonic sector of the theory and a given function (x) in the canonical trans-
+formation (2.3), we dene
+
+(3.1)
+
+(3.2)
+
+1
+
+eiw [j1(t),j2(t),...] 
+[q1(t), q2(t), ...]  min
+
+(r [dq] eis[q]) z [dq] eis[q]+ip
+{jk(t)} w [j] +
+
+k=1r dt jk(t)qk(t) ,
+
+
+
+xk=1z dt jk(t)qk(t)! ,
+
+1 let us provide a simple illustration of this statement observing that the commutation relations
+
+[ p , qk] = 0
+
+and [ p , f ( x)] = if ( x)  function f (x)
+
+being applied to eq. (2.3) produce immediately the formula for the total momentum commutator:
+
+[ p , (x)] = i
+
+
+x
+
+(x) .
+
+2 quantization in moving frames may also be considered[12].
+
+5
+
+where s[q] s[q1(t), q2(t), ...] in eq. (3.1) is the classical action of our system in the
+p = 0 sector corresponding to the reduced hamiltonian (2.9), and the functional mea-
+sure [dq] = qk=1[dqk] absorbs all the factors that may have appeared in the functional
+
+integral when the canonical momenta k were integrated out. eqs. (3.1) and (3.2) are
+reminiscent of the standard denitions of the generating functional w [j(x)] and the
+
+eective action [0(x)], when the source terms would have the form r d2x j(x)(x).
+
+here, we couple the sources jk to the complicated non-linear functionals qk[(x)]. we
+refer the quantity  as the reduced eective action.
+
+let us consider the special case when the arguments of  are constant functions
+q1, q2, ... , and let the time integrals in eqs. (3.13.2) be taken over a large but nite
+interval 0  t t . then
+
+[q1(t), q2(t), ...] = ee(q1, q2, ...) t ,
+
+where the reduced eective energy ee allows a nice physical interpretation[13]. namely,
+it is the minimum of the hamiltonian expectation value among the quantum states |i
+for which the quantum expectation values of the operators {qk} are given by ee argu-
+ments, {qk}:
+
+ee(q1, q2, ...) = min
+
+|i such that
+h| qk |i=qk
+
+h| h|i
+h|i
+
+.
+
+(3.3)
+
+we primed the ket-vectors |i in order to emphasize that these states belong to the
+hilbert space associated with the reduced hamiltonian h. it is dierent from the space
+of the states, {|i}, of the original theory described by h because the latter carry an
+additional quantum number  the total momentum p . however, by construction
+
+and one can rewrite eq. (3.3) in terms of the objects of the original theory:
+
+h(, q) = h( p , , q)(cid:12)(cid:12)(cid:12) p =0
+
+,
+
+ee(q1, q2, ...) =
+
+min
+
+|i such that
+
+h| qk |i=qk , p |i=0
+
+h| h|i
+h|i
+
+.
+
+provided that we are able to compute the reduced eective energy ee , the mass of the
+soliton in its ground state, m, may be determined as
+
+m = min
+q1,q2,...
+
+ee(q1, q2, ...) = min
+
+|i such that
+
+p |i=0
+
+h| h|i
+h|i
+
+.
+
+(3.4)
+
+now we proceed to the actual computation of ee . our rst crucial step is to trade
+the discrete innite set of variables {q1, q2, ...} for a more physically intuitive continuous
+
+6
+
+shape function. as eq. (3.4) suggests, the mass of the soliton, in principle, could be
+calculated by searching for the minimum of ee over the range of parameters {q1, q2, ...}
+that are dened by means of the decomposition (2.3) with an arbitrarily chosen but xed
+function (x). however, we nd it more straightforward to always calculate ee at zero
+expectation values of all qk and vary the function (x) itself looking for the soliton mass
+as
+
+m = min
+(x)
+
+ee[(x)] .
+
+(3.5)
+
+in this equation, ee[(x)] is ee(0, 0, ...), by our previous notations, where the coordi-
+nates {qk} are dened using the given shape function (x). as shown in section 4, the
+conguration (x) that minimizes the right hand side of eq. (3.5) is closely connected
+to the soliton form factor.
+
+the semi-classical expansion for the reduced eective energy
+
+ee[(x)] = ecl[(x)] + ecas[(x)] + o(g)
+
+(3.6)
+
+starts from an o(g2) term  the classical energy associated with the eld conguration
+(x) = g1(x):
+
+ecl[] = v [g1] =
+
+1
+
+(3.7)
+
+the leading quantum correction, i
+to o(g) terms neglected in the one-loop approximation) as the casimir energy
+
+= o(g0), can be written[14] (up
+
+ecas[(x)] =
+
+,
+
+(3.8)
+
+((x))2 + u ((x))(cid:21) .
+
+2
+
+g2 z dx(cid:20) 1
+t ln det (cid:16) 2s[(x),q]
+2   
+xk=1
+
+(cid:17)(cid:12)(cid:12)(cid:12)q=0
+k[(x)]!regularized
+
+qkql
+
+1
+
+where {k}k=1,2,... by denition are the frequencies of small oscillations in the reduced
+system stabilized at q = 0 by an external source. that is, {k} are the normal
+frequencies of the hamiltonian
+
+h(, q) = h(, q) 
+
+
+
+xk=1
+
+
+
+
+h
+
+qk (cid:12)(cid:12)(cid:12)(cid:12)(cid:12)q=0
+
+2
+k + v (q) + o(g2) 
+
+
+ qk =
+
+xk=1
+
+
+
+
+=
+
+1
+2
+
+
+
+xk=1
+
+(3.9)
+
+(3.10)
+
+
+ qk .
+
+v
+
+qk(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)q=0
+
+we claim that, with the accuracy including at least o(g), the frequencies {k} are
+given by (the square roots of) the non-zero eigen-values in the following sturm-liouville
+
+7
+
+problem:
+
+(n[])2 n(x) = "
+
+where
+
+j(x)(y) + (x)j(y)
+
+d2
+
+dx2 + u()# n(x) +z dy 
+
+hr dz ((z))2i2 (x)(y)
+[r dz j(z)(z)]
+
+
+
+
+hr dz ((z))2i
+
+
+
+n(y)
+
+(3.11)
+
+j(x)  g
+
+= (x)  u ((x)) .
+
+(3.12)
+
+h
+
+(x)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)=g1
+
+one of the several methods to prove this statement consists in modifying the kinetic
+term in the stabilized reduced hamiltonian (3.10) by addition of the p -dependent
+piece g2h(p, , q) that appears in eq. (2.8). then we transform the canonical variables
+back to the continuous elds (x) and (x), when eq. (2.5) comes helpful. as the result
+of this procedure,
+
+h(, q) 
+
+1
+2
+
+
+
+xk=1
+
+2
+k + v (q) + g2h(p, , q) 
+
+
+
+xk=1
+
+
+
+
+v
+
+qk(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)q=0
+
+
+ qk =
+
+(3.13)
+
+= h[(x), (x)] +
+
+1
+
+g z dx j(x) (x + x[])  h[(x), (x)] , (3.14)
+
+where h[(x), (x)] is the hamiltonian of the original theory (2.6) and the second term
+in eq. (3.14) is the transform of the stabilizing term from the previous expression. the
+non-linear, non-local functional x[(x)] in eq. (3.14) is explicitly dened by eq. (2.4) and
+the source j(x) is precisely the one that appears in eq. (3.12). it is not hard to argue
+that the modication (3.13) does not aect the spectrum of small oscillations about the
+classical equilibrium point of this system more than o(g2), although it implies an addi-
+tional degree of freedom associated with the momentum p and the oscillation spectrum
+of h[(x), (x)] should acquire an additional eigen-mode. however, the new canonical
+variable ,x, does not explicitly enter h as it was not present in the previous expres-
+sion (3.13), leaving the hamiltonian (3.14) still being invariant under (x)  (x + a) ,
+and the eigen-frequency of the new, translational, mode being identically zero for any
+conguration (x). finally, the oscillation spectrum of h is determined by the eigen-
+value problem
+
+(n)2 n(x) = z dy 
+
+
+2 h
+
+(x)(y) (cid:12)(cid:12)(cid:12)(cid:12)(cid:12)=g1
+
+
+ n(y)
+
+that after some algebra leads to eq. (3.11) above.
+
+8
+
+to summarize, the one-loop contribution to the eective energy in the p = 0 sector
+is given by the sum3 of 1
+2 n[] that are determined by the schroedinger-type equa-
+tion (3.11) with a non-local but separable potential. this sum is terribly divergent and
+should be regularized by subtracting the casimir energy of the trivial vacuum and proper
+counterterms specied by renormalization conditions in the perturbative sector. we per-
+form this regularization in section 5. in the absence of the non-local terms in eq. (3.11),
+the sum of the corresponding eigen-modes, including 0, would yield the one-loop con-
+tribution to the conventional eective energy associated with the spatially nailed down
+eld conguration (x) = g1(x). the non-local terms vanish for (x) = cl(x)  g cl(x)
+that solves the classical euler-lagrange equation,
+
+d2cl
+dx2  u(cl) = 0 ,
+
+(3.15)
+
+because then jcl(x)  0 by its denition (3.12). these terms guarantee that eq. (3.11)
+allows a normalizable zero-frequency solution 0(x)  (x) even when (x) diers from
+the classical conguration. however, the eect of the non-local terms on the frequencies
+with n6= 0 is only quadratic in     cl . indeed, calculating   [] [cl] by
+the usual perturbation theory, we see these terms do not contribute in the rst order
+because jcl  0 and r dz n = 0 when n6= 0.
+
+minimizing the reduced eective energy (3.6) with respect to all possible congura-
+tions (x) one nds the mass of the soliton, m . a consistent approximation scheme for
+this procedure can be implemented as a power series in the coupling g that starts from
+
+mcl = min ecl = ecl[cl] = o(g2) .
+
+the next, casimir, term modies the mass by
+
+m = ecas[cl] = o(g0) .
+
+(3.16)
+
+(3.17)
+
+since, in general,
+
+ecas[]
+
+
+
+=
+
+1
+
+2 
+
+
+
+
+xk=1
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)cl
+
+k[]
+
+ (cid:12)(cid:12)(cid:12)(cid:12)(cid:12)cl
+
+
+regularized
+
+6= 0 ,
+
+the casimir term in ee also changes the minimizing conguration, or the soliton form
+factor, by o(g2). however, according to the previous paragraph, the non-local potential
+in eq. (3.11) does not aect the quantity (3.16) or the sum in eq. (3.17). we conclude
+that for the purpose of calculating the rst quantum correction to the classical values
+of the soliton mass and form factor it is sucient to sum up the oscillation frequencies
+
+3since 
+
+0  0, it does not matter whether one includes it in the sum or leaves out.
+
+9
+
+n about a spatially xed conguration (x), omitting the non-local terms in eq. (3.11),
+but throw away the lowest eigen-frequency, 0 .
+
+nevertheless, eqs. (3.8, 3.11) allow one to compute the well dened one loop eective
+energy in the p = 0 sector for the congurations not necessarily close to the solution of
+the classical equations of motion. this can be helpful in the search for non-perturbative
+radiatively generated solitons[15], at least on the qualitative level. therefore, in our
+calculational example in section 6 we exploit the full form of eq. (3.11) including all the
+non-local terms.
+
+4 shape function and the soliton form factor
+
+in this short section we demonstrate that, to our one-loop accuracy, the function (x)
+minimizing the functional ee[] has a physical interpretation of the soliton form-factor.
+indeed, let us evaluate the matrix element of the operator (x) between the stable
+solitonic states with the mass m that dier by their total momenta:
+
+hp | (x)|pi = ei(p p )xhp | (0)|pi .
+
+(4.1)
+
+first, we present the state |pi as the soliton at rest, |0i4, boosted to the momentum p
+by the lorentz boost operator p and recall the scalar nature of the eld (x). we have
+
+hp | (0)|pi = hp | (0)p|0i = hp |p (0)|0i = hq| (0)|0i = f (q) ,
+
+where
+
+describes a soliton carrying the momentum
+
+|qi = p|p i = p|p i
+
+q =
+
+p e  p e
+
+m
+
+= (p   p ) 
+
+p p 
+2m 2 (p   p ) + ... = p   p + o(g4) .
+
+for the very last estimate, we remember that m = o(g2) and that we are interested in
+the momenta p and p  of the order of the inverse soliton size that is o(g0) .
+
+second, we substitute (x) by the decomposition (2.3) and fourier transform the
+
+functions (x) and (x):
+
+f (q)  hq| (0)|0i = g1hq|( x) + g qkk( x)|0i =
+
+2 hq|eiq x [(q) + g qk k(q)]|0i .
+4 the state |0i should not be confused with the true, perturbative, vacuum.
+
+= g1z dq
+
+(4.2)
+
+10
+
+third, let us notice that the state eiq x|qi, being a momentum eigenstate because
+
+p (cid:16)eiq x|qi(cid:17) = eiq x( p  q)|qi = (q  q)(cid:16)eiq x|qi(cid:17) ,
+
+is also almost an eigenstate of the hamiltonian (2.8) :
+
+h(cid:16)eiq x|qi(cid:17) = eiq x h|qi + [ h, eiq x]|qi = m (cid:16)eiq x|qi(cid:17) + o(g2)|qi .
+
+from these two observations we conclude that
+
+eiq x|qi = (cid:16)1 + o(g4)(cid:17)|q  qi + o(g2)|(q  q)i ,
+
+(4.3)
+
+where |(q  q)i describes an excited soliton or a soliton-meson scattering state with
+the total momentum q q . the leading term in eq. (4.3) is, of course, expected to be
+the same soliton boosted to the momentum q q for a heavy, non-relativistic particle
+described by the operators x and p . the higher order corrections should be anticipated
+as well because eip x is not the complete boost operator in the eld theory.
+
+substituting the result (4.3) in eq. (4.2) and applying the normalization conditions5
+
+hq  q|0i = 2 (q  q) ,
+hq  q|qk|0i = 0 ,
+
+one arrives at the formula
+
+f (q) = g1n(q) + o(g3)o .
+
+summarizing eqs. (4.14.6),
+
+g hp | (x)|pi = ei(p p )x(cid:16)(p   p ) + o(g3)(cid:17) =
+= z dy ei(p p )y(x  y) + o(g3) ,
+
+(4.4)
+
+(4.5)
+
+(4.6)
+
+(4.7)
+
+(4.8)
+
+which is the ansatz (ii) of goldstone and jackiw[2] corrected for the one-loop quantum
+eects. in the perturbative expansion about the classical conguration,
+
+(x) = cl(x) + (x) ,
+
+(4.9)
+
+5 the normalization in eq. (4.4) is taken to agree with the paper [2]. the second equation holds
+automatically for the forward matrix element, h0|qk|0i, by our choice of the conguration (x) that keeps
+the expectation values of qs at zero (see the text around eq. (3.5)). for the o-forward matrix elements,
+
+hq  q|qk|0i =
+
+1
+
+q  q hq  q|[ p , qk]|0i = 0 ,
+
+q  q 6= 0 .
+
+11
+
+we obtain the following linear equation for the leading order correction  that minimizes
+the sum ecl + ecas:
+
+"
+
+d2
+
+dx2 + u(cl(x))# (x) = g2 
+xk=1
+
+u (cl(x)) 2
+4 k[cl]
+
+k(x)
+
++ o(g3) .
+
+(4.10)
+
+this is the formula for the one-loop correction to the soliton form-factor derived within
+the kerman-klein method[2]. the non-local terms in eq. (3.11) take care of the (would
+be innite) zero-mode term on the right hand side of eq. (4.10) but give no other con-
+tribution in this order of the perturbative expansion (4.9), as it was already stated at
+the end of section 3.
+
+5 regularization
+
+now we return to the main line of our discussion and consider the reduced casimir
+energy, currently written in the form (3.8). the aim of this section is to convert this
+formal expression into an unambiguous and nite quantity calculable numerically with
+our computer. to avoid the many possible pitfalls in this step, we attempt to be very
+explicit in details. first of all, in order to regulate the k[] sum in eq. (3.8), one
+should subtract the casimir energy of the true, perturbative, vacuum. for the scalar
+eld (x) living in a box of length l with xed  values at the boundaries, the normal
+oscillation modes (meson excitations) about the topologically trivial minimum energy
+conguration (x)  g11 (or 2) have the frequency
+!2
+
+n = 0, 1, . . . .
+
+(5.1)
+
+n  vuutu(1) +  (n + 1)
+
+l
+
+(0)
+
+n = qm2 + k2
+
+,
+
+each of the sums p k[] and p (0)
+
+n diverges badly and one should specify an ultra-
+violet cuto prescription. it must be imposed consistently in both the trivial and the
+solitonic sectors6. this is not straightforward to achieve because of many incongruities
+between both the system description and its spectrum in the two sectors.
+
+let us keep in mind that the ultra-violet divergences are unambiguously regularized
+by replacement of the continuous eld (x) with a large but nite number of degrees
+of freedom having the same low-energy behavior, as provided, for example, by a lattice
+version of the theory. we imagine a continuous and physically realizable process that
+adiabatically transfers the regularized (quantum!)
+system from the vacuum state to
+
+6 it would be dangerous, and actually wrong in one space dimension, to cut o the oscillation modes
+at some xed energy which is the same in both sectors because the number of modes below the cuto
+in these sectors generally diers.
+
+12
+
+1
+
+0
+
+>
+
+
+ 
+ 
+
+
+
+1
+
+0
+
+(x) = tanh (xa)/2 ,    a = 1.5, 0, 1.5, 5
+
+5
+
+x  >
+
+10
+
+figure 1: classical solutions of the euler-lagrange equation for a scalar eld in the box
+0 x 10 and the 4 potential, eq. (5.2). the eld satises the boundary conditions
+(0) = s [1, 1] and (10) 1. the connection between the parameter s and the kink posi-
+tion, a, is given by eq. (5.5).
+
+a solitonic one by some external inuence. as a specic example, we consider the 4
+model7
+
+u() =
+
+1
+
+8 (cid:16)2  1(cid:17)2
+
+,
+
+(5.2)
+
+where we conne the scalar eld (x) to a nite box 0 x l , l  1 and impose the
+boundary conditions
+
+(0) = g1s , 1  s  1 ;
+(l) = g1
+
+(5.3)
+
+
+
+
+that smoothly interpolate between the trivial and non-trivial topologies as the parameter
+s varies from 1 to 1. we would like to examine the behavior of the classical oscillation
+frequencies and the quantum casimir energy in the ground state of this system as a func-
+tion of s. the classical time-independent eld equation (3.15) with the potential (5.2)
+admits the solutions
+
+(x)  g(x) = tanh
+
+x  a
+
+2
+
+,
+
+ a = const .
+
+(5.4)
+
+as the constant a in eq. (5.4) varies from minus innity to l/2 , (l) stays exponentially,
+i.e. up to o(el), close to one, whereas (0) goes from 1 to 1 + o(el), as illustrated
+by fig. 1. therefore, up to unessential exponentially small corrections, we can satisfy
+the boundary conditions (5.3) by the solutions (5.4) where the parameter a is taken to
+be the following function of s:
+
+a = ln(cid:18)1  s
+
+1 + s(cid:19) .
+
+(5.5)
+
+when the variation in s drives the system from the trivial sector to the topological
+ 1 to
+
+one, the lowest of the normal frequencies (5.1) decreases from (0)
+
+0 =r1 +(cid:16) 
+l(cid:17)2
+
+7 the coecients in eq. (5.2) are chosen so that 1,2 =1 and u (1,2) m2 = 1.
+
+13
+
+an innitesimal value for l. the zero point oscillations in the lowest normal mode
+become more and more broad until the quantum ground state of the system completely
+de-localizes. by this moment, the quasi-classical description of the corresponding normal
+coordinate breaks down, and it should be replaced by the collective quantization as
+s 1. the other oscillation modes retain nite positive frequencies and their quasi-
+classical description holds all the time. thus the rst-order quantum correction to the
+soliton mass, m, may be determined as the sum of the shifts 1
+for
+the k  1 modes minus half of the frequency of the disappeared lowest vacuum mode.
+this is evident from the requirement of having an equal number of degrees of freedom,
+whether collectively quantized or not, in both sectors of the regularized theory. for
+notational convenience, let us dene 0  0  (0)
+0 where 0  0 corresponds to the
+zero eigenvalue of eq. (3.11), so that
+
+2 k  1
+
+2 k = 1
+
+2 (0)
+
+k
+
+m1loop =
+
+1
+2
+
+
+
+xn=0
+
+k + c.t. .
+
+in this equation c.t. stands for the counter terms contribution due to one-loop renor-
+malization of parameters in the theory. we will return to it shortly.
+
+by now, regularization of ecas[] should become apparent. indeed, from the phys-
+ical interpretation of the reduced eective energy, eq. (3.5), we conclude that at its
+minimum, 0,
+
+ecas[0] = m1loop =
+
+1
+2
+
+
+
+xn=0
+
+k[0] + c.t.[0] .
+
+(5.6)
+
+since all the vacuum subtractions needed to regulate ecas[], together with the unphys-
+ical 0[] 0, do not depend on the function (x) and we determined them for some
+particular conguration 0(x), they simply carry over to an arbitrary (x) in the same
+topological sector as
+
+ecas[] =
+
+1
+2
+
+
+
+xn=0
+
+k[] + c.t.[] ,
+
+k[]  k[]  (0)
+
+k
+
+.
+
+(5.7)
+
+(5.8)
+
+let us assume for simplicity that the lagrangian (2.1) is invariant under the  
+transformation and take 1 = 2 for the (x) boundary conditions (2.2). then it is
+sucient to consider only the congurations (x) that are odd functions of x so that the
+eigen-functions n(x) in eq. (3.11) are either even or odd. of course, now we imply that
+our regularization methods also respect parity, for example, the coordinate x varies from
+l to l, where l 1
+m , n(x) approaches the asymptotic form cos(knx + +)
+
+m . as x 1
+
+14
+
+or sin(knx + 
+
+frequency shifts (5.8) are related to the scattering phases +(kn) or 
+
+) for even or odd functions respectively with kn =qn
+
+2  m2 . the
+
+(kn) as
+
+ =
+
+d
+dk
+
+k =
+
+d
+
+dk  
+
+
+l ! ,
+(k)
+
+because kl = (k + k)l+
+
+contributes to the sum (5.7) as
+
+(k), provided k  1/l. this part of the spectrum of eq. (3.11)
+
+e
+
+(cont)
+cas
+
+=
+
+= 
+
++(k) + 
+
+(k)
+
+l
+
+1
+
+2 z   dkl
+2 z
+
+dk ! 
+
+ !  d
+k2 + m2 h+ + 
+
+k dk
+
+1
+
+i .
+
+! =
+
+(5.9)
+
+the spectrum of eq. (3.11) will also have a few discrete modes with n < m and the
+corresponding (0)
+
+n = m + o(l2). summing up all the contributions,
+
+ecas =
+
+1
+
+2 xdiscrete
+
+spectrum
+
+(n  m) 
+
+1
+
+2 z 
+
+0
+
+k dk
+
+k2 + m2 (cid:16)+ + 
+
+(cid:17) + c.t. .
+
+(5.10)
+
+the integral in eq. (5.9) is a poor approximation when k  l1 but because for such
+modes8  = o(l2) and their number is o(l0), we can safely set the lower limit of
+dk integration to zero, provided the integral converges in the infra-red.
+
+since the scattering phases 
+
+
+fall o as 1/k for large momenta, the integral in
+eq. (5.10) still diverges logarithmically on the upper limit. this ultra-violet divergence
+is removed by the usual parameter renormalization that manifests itself in the form of
+the counter term in eq. (5.10). let us remember that counterterms are conventionally
+dened by a certain renormalization condition in the perturbative sector of the theory
+independently of the collective quantization procedure. by translational invariance, the
+corresponding term in the action, for instance,
+
+s(4)
+
+c.t.  z d2xh2(x)  1i
+
+(5.11)
+
+in the 4 theory, can not depend on the collective coordinate x. the total momentum
+p is also g-suppressed in sc.t.[], as in eq. (2.8), or does not appear at all in the absence
+of wave function renormalization that is the case in our example (5.11). therefore,
+sc.t. = sc.t.[q] simply modies the potential v [q] in eq. (2.8), and for the purpose of
+obtaining the explicit form of the counterterm contribution to the reduced eective
+energy, we may ignore the reduction to the p = 0 sector and consider the conventional
+
+8unless the state becomes bound when it is counted separately.
+
+15
+
+p
+
++
+
+p
+
+p+k
+
+p
+
++
+
+p+k+l
++
+
+...
+
+p+k
+
+figure 2: the diagrammatic presentation of the one-loop contribution to the eective ac-
+tion, 1loop. in the momentum representation, a line carrying a momentum p stands for the
+p2m2 , and the insertions are given by v(k) = r d2x eikxv(x) where
+usual free boson propagator
+k is the injected momentum. the integration goes over all the loop and the injected momenta,
+e.g. over p, k, and l for the third graph above.
+
+1
+
+eective energy ee = /t where [] is the usual eective action describing a spatially
+localized eld conguration (x) = g1(x).
+
+the one-loop part of  in the theory (2.1) is of the form
+
+1loop[] = i ln det 2s
+
+2! = i tr ln(cid:16)2  u (g)(cid:17) =
+
+= i tr ln(cid:16)2  m2  v(cid:17) ,
+
+v(g(x))  u (g(x))  m2 ,
+
+(5.12)
+
+where again m2 stands for the value of u at its minimum and describes the mass of
+the perturbative plane wave excitations over the true vacuum. denoting the operator
+(2  m2) by 0, we have the following expansion in powers of the interaction v():
+(5.13)
+
+1loop[] = i tr ln 0  i tr(cid:16)1
+
+0 v(cid:17)  i tr(cid:16)1
+
+0 v1
+
+0 v(cid:17)  . . . .
+
+the rst term in this expansion is a constant independent of the eld conguration 
+that is trivially removed by setting the vacuum energy to zero. the rest of the terms
+may be presented graphically by the sum of the diagrams shown on fig. 2. the inclusion
+of c.t.[] =sc.t.[] should remove all the divergences from the loop integrals on fig. 2.
+for a scalar eld in one dimension this can be achieved[7] by modifying the scattering
+phases in eq. (5.10) as
+
+
+  
+
+  (1)
+ .
+
++ and (1)
+
+here (1)
+ are the rst born approximations to the scattering phases in the
+continuous spectrum of the oscillation modes about a nailed down soliton problem9,
+
+2(x) = "
+
+d2
+
+dx2 + u()# (x) = "
+
+d2
+
+dx2 + m2 + v((x))# (x) .
+
+(5.14)
+
+9 this trick works because the consecutive born approximations for eq. (5.14) and the expan-
+sion (5.13) are formulated as a power series of same quantity, v . similar methods can be carried out
+for suciently general theories of bosonic or fermionic elds in the realistic three space dimensions[16].
+
+16
+
+this operation is equivalent to adding a counter term that cancels the shift of the eld
+vacuum expectation value in the perturbative sector due to one-loop corrections. the
+rst born approximations to the scattering phases in eq. (5.14) are easily found[7] as
+
+(1)
++ (k) = 
+(1)
+ (k) = 
+
+0
+
+1
+
+k z +
+k z +
+
+1
+
+0
+
+dx v(x) cos2 kx
+
+dx v(x) sin2 kx ,
+
+and our nal formula for the casimir energy of the collectively quantized system reads :
+
+ecas =
+
+where
+
+1
+
+spectrum
+
+(n  m) 
+
+2 xdiscrete
+tot(k)  +(k) + 
+
+
+1
+
+2 z +
+
+0
+
+k dk
+
+k2 + m2
+
+tot(k) ,
+
+(k) +
+
+1
+
+k z +
+
+0
+
+dx v(x) .
+
+(5.15)
+
+(5.16)
+
+it should be reassuring that the non-local separable potential in eq. (3.11) does not aect
+the 1/k asymptotic behavior of 
+(k) and the sum (5.16) falls o as 1/k2 yielding a nite
+
+integral in eq. (5.15).
+
+6 numerical computations
+
+as a demonstration of our method, we calculate the reduced eective energy for a set
+of eld congurations in the one-dimensional 4 example
+
+1
+2
+
+l =
+
+()2 
+
+1
+
+8g2 (cid:16)(g)2  1(cid:17)2
+
++ lct .
+
+(6.1)
+
+we exploit two dierent families of trial congurations. the rst one is the scaling
+
+transformation of the classical kink solution (5.4):
+
+i(x)  g(x) = tanh
+
+x
+2w
+
+.
+
+(6.2)
+
+the parameter w characterizes the width of the kink (6.2) relative to its classical value.
+as it is seen from further calculations, the scaling transformation (6.2) possesses some
+unexpected peculiar properties. for this reason we also consider an alternative variation
+of the solution (5.4) constructed to represent some absolutely non-special direction in
+the functional space of all admissible variations:
+
+ii(x) = tanh
+
+x
+2
+
++ x exp 
+
+x2
+
+2 ! .
+
+(6.3)
+
+the classical contribution to the eective energy, ecl[], is trivially calculated from
+3g2 , at the
+
+the formula (3.7). of course, the result should take the minimum, mcl = 2
+
+17
+
+classical values of the variational parameters w = 1 or  = 0 and grow quadratically with
+ and , for example,
+
+ecl[i(x)] =
+
+1
+
+3g2 (cid:18)w +
+
+1
+
+w(cid:19) =
+
+2 + w2 + o(w3)
+
+3g2
+
+,
+
+w  w  1 .
+
+(6.4)
+
+according to the previous sections, the reduced casimir energy is determined by
+eqs. (5.15-5.16) where the discrete oscillation mode frequencies, n, and the scattering
+phases in the continuous spectrum, 
+(k), refer to the solutions of the auxiliary eq. (3.11).
+
+the following subsection 6.1 describes how to actually solve these non-local equations
+and extract the required quantities n and 
+(k). the reader who is not interested in
+
+these details should skip to subsection 6.2 where we analyze our numerical results.
+
+6.1 practical implementation
+
+substituting the explicit form of the potential u, eq. (5.2), let us rewrite eq. (3.11) as
+(6.5)
+
+ (x) + v(x)(x) + ai(x)z +
+
+
+
+dy bi(y) (y) = (cid:16)2  1(cid:17) (x) ,
+
+where we sum over the repeated index i = 1, 2 and dene
+
+v(x)  u((x))  1 =
+
+3
+
+2 (cid:16)2(x)  1(cid:17) ,
+
+a1(x) 
+
+a2(x) 
+
+1
+i
+1
+i
+
+j(x)
+
+(x)
+
+,
+
+,
+
+1
+i
+b1(y) 
+b2(y)  " 1
+i
+
+(y) ,
+
+j(y) 
+
+ij
+ii
+
+(y)#
+
+(6.6)
+
+with i  r dz ()2 , ij  r dz (j) .
+if the conguration (x) is an odd function of x, which is true in our cases (6.2, 6.3),
+the functions v(x), ai(x), and bi(x) are even and the modes {(x)} divide into the parity
+even (symmetric) and odd (antisymmetric) channels. the separable potential term in
+eq. (6.5) does not appear in the antisymmetric channel because the integral over dy
+trivially vanishes for the odd (y). changing the lower integration limit to zero in the
+symmetric channel, we reformulate the problem (6.5) as:
+
+
+
+
+k+(x) + 2ai(x)r +0
+
+with +(0) = 0
+
+dy bi(y) +(y) = 0
+
+k(x) = 0
+with (0) = 0
+
+
+
+
+18
+
+(symmetric channel) ,
+
+(6.7)
+
+(antisymmetric channel)
+
+(6.8)
+
+where k is the local linear dierential operator
+
+k = 
+
+d2
+dx2 + v(x)  (2  1) .
+
+first, let us determine the discrete spectrum, formed by the solutions with  < 1
+that exponentially vanish as x + . in the antisymmetric channel we simply integrate
+the dierential equation (6.8) from 0 to + with initial conditions (0) = 0, 
+(0) = 1
+and search for s for which (x) falls o exponentially at large x . of course, this has
+to be repeated for every conguration (x).
+
+in the symmetric channel, eq. (6.7), we can also apply this shooting technique looking
+
+for the solutions in the form
+
++(x) = 0(x) + ii(x) ,
+
+(6.9)
+
+where we sum over i = 1, 2 . in this ansatz 0, 1, and 2 solve the ordinary dierential
+equations
+
+kq(x)  q (x) + v(x)q(x)  (2  1)q(x) = 
+
+
+with the boundary conditions
+
+0
+
+aq(x)
+
+for q = 0
+
+for q  i = 1, 2
+
+0(0) = 1 , 0(0) = 0 ;
+
+i(0) , i(0) = 0 .
+
+substituting the ansatz (6.9) into eq. (6.7) we see that the latter holds provided the
+coecients 1 and 2 are determined from the following linear algebraic equation:
+
+i + i + ij j = 0 ,
+
+(6.10)
+
+where again i and j range over 1 and 2, and
+
+i  2z +
+
+0
+
+dy bi(y) 0(y) , ij  2z +
+
+0
+
+dy bi(y) j(y) .
+
+the outcome of the described procedure applied to our rst family of the trial congura-
+tions, eq. (6.2), in both symmetric and antisymmetric channels is presented on fig. 3 a)
+(solid lines). we would like to postpone its discussion until the following subsection.
+
+in the continuous spectrum of the symmetric channel we look for the solution of
+
+eq. (6.7) in the form
+
++(x) = ei
+
++(k)(x) + ei
+
++(k)(x)
+
+19
+
+where (x) is a formal solution of eq. (6.7) for x  [0, +) such that
+
+(x)  eikx
+
+as x  + ,
+
+and the scattering phase +(k) is adjusted to satisfy the condition
+
++(0) = 0 .
+
+(6.11)
+
+in order to achieve better numerical precision, we trade the oscillating function (x) for
+a smoother one, c(x), as
+
+(x) = c(x)eikx
+
+with
+
+c(+) = 1 and c(+) = 0
+
+(we remember that k 2  1 and c(x) depends on the parameter k as well). the
+
+function c(x) also satises a linear dierential equation with a separable potential,
+
+ c(x)  2ikc(x) + v(x)c(x) + 2 eikxai(x)z +
+
+0
+
+dy bi(y)eikyc(y) = 0 ,
+
+and is determined, just as in the case of eq. (6.7), with the ansatz
+
+c(x) = c0(x) + ici(x) ,
+
+(6.12)
+
+where
+
+ cq (x)  2ikcq(x) + v(x)cq(x) = 
+
+ci(+) , ci(+) = 0 .
+
+c0(+) = 1 , c0(+) = 0 ;
+
+aq(x) eikx
+
+0
+
+for q = 0 ,
+for q = 1, 2 ;
+
+again, we have the algebraic equation i + i + ij j = 0 for the coecients 1 and 2
+where
+
+i = 2z +
+
+0
+
+dy bi(y)eiky c0(y) , ij = 2z +
+
+0
+
+dy bi(y)eiky cj(y) .
+
+having calculated the function c(x), we nd the phase +(k) from the condition (6.11)
+as
+
++ =  arg [k c(0)  ic(0)] ,
+
+where the branch of the argument functions is unambiguously specied by the require-
+ment limk + = 0 .
+
+20
+
+n
+
+
+1
+
+0.5
+
+0.8
+
+0.9
+
+1
+
+1.1
+
+1.2
+
+w
+
+e
+
+0.5
+
+e(cont)
+casimir
+
+0.8
+
+0.9
+
+1.1 1.2
+
+w
+
+-0.5
+
+
+e casimir
+
+a)
+
+b)
+
+figure 3: the normal oscillation frequencies in the discrete spectrum, (a), and the reduced
+casimir energy together with the contribution to it from the continuous spectrum, (b), versus
+the soliton width, w, in the ansatz i = tanh x
+2w . the solid lines on the plots describe n,
+e(cont)
+, and ecas in the theory reduced to the p = 0 sector. the dashed lines are the results
+for n and e(cont)
+in a conventional analysis of small oscillations about a kink with a de-
+nite position in space. the only drastic dierence between the two approaches occur in the
+translational mode, for which 0  0, but 0 1  w and is imaginary when w > 1 .
+
+cas
+
+cas
+
+the antisymmetric channel is trivial: the continuous solutions of eq. (6.8) are given
+
+by
+
+where
+
+and
+
+(x) = ei
+
+(k)(x)  ei
+
+(k)(x)
+
+(cid:16) such that (0) = 0 (cid:17) ,
+
+(x) = c(x)eikx
+
+with
+
+c(+) = 1 , c(+) = 0
+
+ c(x)  2ikc(x) + v(x)c(x) = 0 .
+
+from the requirement (0) = 0 we obtain
+
+
+
+
+=  arg c(0)
+
+in the argument branch such that limk 
+= 0 . calculating the scattering phases in
+
+both channels and regularizing them by removing the rst born approximation, eq. (5.16),
+we obtain the continuous spectrum contribution to the casimir energy.
+
+6.2 discussion of the results
+
+the spectrum of small oscillations about the classical kink solution cl = tanh x
+of the continuous spectrum with  = 1 + k2, a parity odd discrete state at  =
+
+2 consists
+3
+2 ,
+
+21
+
+and the even 0 = 0 translational mode. besides, the parity even amplitude +(x) cor-
+responding to + = 1 approaches a constant value as x. innitesimally lowering
+the frequency with an arbitrarily small variation of the soliton shape, one would send
+this state into the discrete spectrum. it is often convenient to refer such a state as a
+half-bound one.
+
+d
+
+d(w)(cid:12)(cid:12)(cid:12)w = 0
+
+a small variation of the shape function induces a shift in the oscillation frequencies
+and the total casimir energy.
+in general, the shifts are expected to be linear in the
+variational parameters, w = w  1 or  in our examples (6.2) or (6.3), of course, up to
+less important in the perturbative regime higher power corrections. the non-vanishing of
+is clearly visible for the odd discrete state on fig. 3 a) and for the continuous
+contribution to the casimir energy on fig. 3 b), where the ansatz (6.2) was considered.
+the dashed lines on this figure present the same quantities computed for a localized kink
+conguration[7,10], when the non-local terms in eq. (3.11) are absent. the discrepancy
+between the two methods for the non-zero modes is barely observable, demonstrating
+the weakness of the collective quantization inuence on these modes in the perturbative
+regime.
+
+as expected, there always exists a normalizable zero-frequency solution in the sym-
+metric channel of the reduced problem (3.11). for a localized conguration, the zero-
+
+mode frequency would vary as 0 1  w and become imaginary as w exceeds 1 . this
+
+square root singularity and the imaginary contribution to the conventional eective en-
+ergy has nothing to do with the soliton instability (it is stable!).
+it is rather due to
+inadequacy of the standard eective energy formalism in describing the true solitonic
+ground state that has no specied position in space.
+
+the wide solid line on fig. 3 b) is our nal result for ecas verses the kink width. the
+
+rst perturbative correction to the soliton mass[1,17,10],
+
+m1loop = e()
+
+cas(0) =
+
+1
+43 
+
+3
+2  0.333127 ,
+
+(6.13)
+
+is numerically found to be 0.333124, which, given our numerical accuracy, is in com-
+plete agreement with the analytical result (6.13). surprisingly, the plot on fig. 3 b)
+shows no apparent dependence of ecas on the width w. indeed, in table 1 we give the
+deviations of numerically computed contributions to ecas from their classical values for
+the antisymmetric discrete mode 
+(w), which coincides with (w), and for the sum
+
+of the continuous modes, e(cont)
+obtained for a
+localized soliton and the correction to it due to collective quantization. as one can see
+from the table, the linear variation in the discrete spectrum exactly cancels by the local
+part of the continuous spectrum and one is left with the quadratic in w dependence,
+
+, the latter being separated into e(cont)
+
+cas
+
+cas
+
+22
+
+1
+
+w  1
+ 
+
+2 ()
+
+3
+4
+e(cont)
+23  3
+cas  (1  1
+cas  e(cont)
+e(cont)
+ecas  ( 1
+43  3
+2 )
+
+cas
+
+0.1
+0.0202
+
+0.05
+0.0101
+
+0.025
+0.0050
+2 ) 0.0211 0.0102 0.0050
+0.0001
+0.0001
+
+0.0023
+0.0014
+
+0.0005
+0.0004
+
+0.025
+
+0
+0.05
+0 0.0050 0.0100
+0.0104
+0
+
+0.0051
+
+0
+0
+
+0.0001
+0.0002
+
+0.0003
+0.0006
+
+table 1:
+the change in the reduced casimir energy (the last line) against the soli-
+ton width variation and the main three contributions to it. the results demonstrate
+that, up to insignicant higher power corrections, ()
+cas  (w  1), and
+(e(cont)
+) (w  1)2 . the last two values for ecas, marked by an asterisk, should
+also include the symmetric discrete mode with the frequency very close to one.
+
+  (w  1), e(cont)
+
+cas  e(cont)
+
+cas
+
+1
+
+
+2 ()
+ 
+
+0.025
+0.05
+0.00091 0.00046
+0.0009
+0.0018
+
+3
+4
+e(cont)
+23  3
+cas  (1  1
+2 )
+e(cont)
+cas  e(cont)
+ecas  ( 1
+43  3
+2 )
+table 2: the numerical results for the second family of trial congurations, {ii (x)}.
+
+0.025
+0.00046
+0.00185
+0.0009 0.0018 0.0038
+0.0201
+0.0013
+0.0181
+0.0009
+
+0.05
+0.00092
+
+0.0013
+0.0017
+
+0.0053
+0.0062
+
+0.0053
+0.0044
+
+0
+0
+0
+
+0.1
+
+0
+0
+
+cas
+
+which is largely produced by the non-local terms in eq. (3.11). thus our calculations nd
+no one-loop quantum correction to the soliton width, w. this result comes unexpected,
+remembering that (x) should receive non-vanishing one-loop correction according to
+eq. (4.10). we do nd such a correction when we consider another family of trial con-
+gurations, {ii(x)} in eq. (6.3). the numerical results for this choice are summarized
+in table 2. we obtain that
+
+resulting in
+
+=
+
+ecas
+
+ecas
+
+ (cid:12)(cid:12)(cid:12)(cid:12)(cid:12)=0  ( 1.5  0.1 )  102 ,
+ (cid:12)(cid:12)(cid:12)(cid:12)(cid:12)=0
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)=0
+1loop =  (cid:16) e
+ (cid:17)
+2 (cid:17)
+(cid:16) 2ecl
+
+= g2  ( 2.2  0.2 )  102 .
+
+cas
+
+we see that the rst quantum correction to the shape parameter  is small until g2  102 .
+however, the contribution of the non-local terms becomes signicant at a much smaller
+coupling. from our calculations,
+
+e(cont)
+cas  e(cont)
+
+cas 
+
+( 4.2  0.1 ) 2
+
+2
+
+,
+
+(6.14)
+
+2  0.6956/g2 . the eect of the quantum correction (6.14) becomes com-
+
+whereas 2ecl
+parable with the classical energy at g2  0.6956
+4.2  0.17 .
+23
+
+7 conclusion
+
+to summarize, we adapted the conventional eective energy variational techniques to
+the situation where the hamiltonian of the system possesses cyclic variables and the
+standard semi-classical methods should incorporate their collective quantization.
+in
+our formalism one may retain the description of the system in terms of a continuous
+eld, (x), by introducing an external source with a special non-linear non-local cou-
+pling. the source term in eq. (3.14) insures the coupling to all the normal degrees of
+freedom excluding the cyclic variables. the eective energy functional reduced to the
+p = 0 sector of solitonic states, ee[(x)], is given to rst order in h by the classical en-
+ergy of the conguration (x) = g1(x) and the properly regularized reduced casimir
+energy, eq. (5.15). the mass of the soliton in the ground state equals the minimum
+of ee[], and the conguration (x) at which this minimum is achieved describes the
+soliton form-factor, eq. (4.8).
+
+the eect of collective quantization technically amounts to the introduction of the
+non-local separable potential10 in the eigen-mode equation (3.11). however, in order
+to obtain the rst quantum corrections to the classical values of the soliton mass and
+form-factor, one could ignore these non-local terms but follow the rule that the lowest
+oscillation eigen-frequency must be excluded from the casimir energy. the correction to
+the reduced energy due to collective quantization grows quadratically with the deviation
+from the classical eld conguration. to get a possible insight into the physics in the
+non-perturbative regime, one may still consider ee[(x)] computed only to the one-loop
+order. this can be done numerically for an arbitrary eld conguration as described in
+section 5.
+
+it would be interesting to apply this method to investigation of the role of collective
+quantization in deeply non-perturbative regime. this could be necessary, for example,
+for a consistent treatment of the models[19] in which a non-classical eld conguration is
+stabilized by an order h contribution to the soliton energy from fermionic elds coupled
+to the scalar higgs. an extension of the method that would incorporate the fermionic
+elds as well, presents another challenge by itself.
+
+10 some aspects of the casimir energy for systems described by separable potentials has been con-
+
+sidered by jae and williamson[18].
+
+24
+
+8 acknowledgments
+
+i would like to thank e. farhi, j. goldstone, n. graham, and h. weigel for numerous
+fruitful discussions. my special thanks to robert l. jae for pointing my attention to
+this problem and for his continuous interest and helpful suggestions.
+
+references
+
+[1] r. dashen, b. hasslacher and a. neveu, phys. rev. d10, 4114 (1974).
+
+[2] j. goldstone and r. jackiw, phys. rev. d11, 1486 (1975).
+
+[3] j.l. gervais and b. sakita, phys. rev. d11, 2943 (1975).
+
+[4] n.h. christ and t.d. lee, phys. rev. d12, 1606 (1975).
+
+[5] e. tomboulis, phys. rev. d12, 1678 (1975).
+
+[6] m. creutz, phys. rev. d12, 3126 (1975).
+
+[7] e. farhi, n. graham, p. haagensen and r.l. jae, phys. lett. b427, 334 (1998)
+
+hep-th/9802015.
+
+[8] a. rebhan and p. van nieuwenhuizen, nucl. phys. b508, 449 (1997) hep-
+
+th/9707163;
+h. nastase, m. stephanov, p. van nieuwenhuizen and a. rebhan, nucl. phys.
+b542, 471 (1999) hep-th/9802074;
+n. graham and r.l. jae, nucl. phys. b544, 432 (1999) hep-th/9808140.
+
+[9] e. dhoker and e. farhi, nucl. phys. b248, 77 (1984).
+
+[10] n. graham and r.l. jae, phys. lett. b435, 145 (1998) hep-th/9805150;
+n. graham and r.l. jae, nucl. phys. b549, 516 (1999) hep-th/9901023.
+
+[11] r. rajaraman, solitons and instantons, amsterdam, netherlands: north-
+
+holland (1982).
+
+[12] v.d. tsukanov, hep-th/9812075.
+
+[13] the derivations of eq. (3.3) repeats the proof of the similar formula for the conven-
+tional eective energy that can be found, for example, in section 16.3 of s. weinberg,
+the quantum theory of elds. vol. 2, cambridge, uk: univ. pr. (1996).
+
+25
+
+[14] the proof for the usual eective energy is given, for example, in section 5 of [11]
+
+and is straightforwardly generalizable to our situation.
+
+[15] e. farhi, n. graham, r.l. jae, and h. weigel, in preparation.
+
+[16] n. graham, ph. d. thesis, mit (1999).
+
+[17] m. bordag, j. phys. a28, 755 (1995).
+
+[18] r.l. jae and l.r. williamson, hep-th/9907199.
+
+[19] w.a. bardeen, m.s. chanowitz, s.d. drell, m. weinstein and t. yan, phys. rev.
+
+d11, 1094 (1975);
+j.a. bagger and s.g. naculich, phys. rev. lett. 67, 2252 (1991);
+j. feinberg and a. zee, phys. lett. b411, 134 (1997) hep-th/9610009.
+
+26
+
+

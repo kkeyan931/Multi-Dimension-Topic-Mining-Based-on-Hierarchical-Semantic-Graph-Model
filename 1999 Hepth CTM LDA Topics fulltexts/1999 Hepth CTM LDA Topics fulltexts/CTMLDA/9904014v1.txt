@@ -1,0 +1,2333 @@
+9
+9
+9
+1
+
+ 
+r
+p
+a
+2
+
+ 
+
+ 
+ 
+
+1
+v
+4
+1
+0
+4
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+runge-kutta methods and renormalization
+
+ch. brouder
+
+laboratoire de mineralogie cristallographie
+
+universites paris 6, paris 7, ipgp, case 115, 4 place jussieu
+
+75252 paris cedex 05, france
+
+february 1, 2008
+
+abstract
+
+a connection between the algebra of rooted trees used in renormalization theory and
+runge-kutta methods is pointed out. butchers group and b-series are shown to provide
+a suitable framework for renormalizing a toy model of eld theory, following kreimers ap-
+proach. finally b-series are used to solve a class of non-linear partial dierential equations.
+
+1
+
+introduction
+
+the purpose of this paper is to point out a link between two apparently remote concepts:
+renormalization and runge-kutta methods.
+
+renormalization enables us to remove innities from quantum eld theory. recently,
+kreimer discovered a hopf algebra of rooted trees that brings order and beauty in the in-
+tricate combinatorics of renormalization [1]. he established formulas that automate the
+subtraction of innities to all orders of the perturbation expansion, and proved the eective-
+ness of his method for the practical computation of renormalized quantities in joint works
+with broadhurst [2] and delbourgo [3]. moreover, his approach shines new light on the
+problem of overlapping divergences [4, 5] and on the mechanics of the renormalization group
+[6]. furthermore, connes and kreimer revealed a deep connection between the algebra of
+rooted trees (art) and a hopf algebra of dieomorphisms [7].
+
+on the other hand, runge published in 1895 [8] an ecient algorithm to compute the
+solution of ordinary dierential equations. for an equation of the type dy/ds = f (y(s)), he
+denes recursively k1 = f (yn), k2 = f (yn + hk1/2), yn+1 = yn + hk2. his algorithm was
+improved in 1901 by kutta, and became known as the runge-kutta method. it is now one
+of the most widely used numerical methods.
+
+in 1972, butcher published an extraordinary article where he analyzed general runge-
+kutta methods on the basis of the art. he showed that the runge-kutta methods form
+a group1 and found explicit expressions for the inverse of a method or the product of two
+methods. he also dened sums over trees that are now called b-series in honour of butcher.
+altough the hopf algebra structure of art is implicit all along his paper, butcher did
+important developments were made in 1974 by hairer and wanner [9].
+
+not mention it2.
+since then, b-series are used routinely in the analysis of runge-kutta methods.
+
+our main purpose is to show that the results and concepts established by kreimer t
+nicely into the runge-kutta language, and that the tools developed by butcher have a range
+of application much wider than the numerical analysis of ordinary dierential equations.
+
+1hairer and wanner called it the butcher group [9].
+2the opposite of the present hopf structure of art was discussed in 1986 by dur ([10], p.88-90), together
+
+with the corresponding lie algebra (identical, up to a sign, with the one dened in [7]).
+
+1
+
+2.1 operations and functions on trees
+
+some trees may appear with multiplicity.
+
+the present expository paper will be reasonably self-contained. after an introduction to
+rooted trees, the genetic relation between art and dierentials is presented. then butchers
+approach to runge-kutta methods is sketched. several b-series are calculated and the
+connection with the hopf structure of art is exhibited. the application of runge-kutta
+methods to renormalization is exposed using a toy model which is solved non perturbatively.
+finally, the solution of non-linear partial dierential equations is written as a formal b-series.
+
+2 the rooted trees
+
+an important operation is the merging of trees. if t1, . . . ,tk are trees, t = b+(t1, t2, . . . , tk)
+is dened as the tree obtained by creating a new vertex r and by joining the roots of t1,
+. . . ,tk to r, which becomes the root of t. this operation is also denoted by t = [t1, t2, . . . , tk],
+but we avoid this notation because of the possible confusion with commutators.
+
+a rooted tree is a graph with a designated vertex called a root such that there is a unique
+path from the root to any other vertex in the tree [11]. several examples of rooted trees are
+given in the appendix, where the root is the black point and the other vertices are white
+points (the root is at the top of the tree). the length of the unique path from a vertex v to
+the root is called the level number of vertex v. the root has level number 0. for any vertex
+v (except the root), the father of v is the unique vertex v with an edge common with v and
+a smaller level number. conversely, v is a son of v. a vertex with no sons is a leaf. rooted
+trees are sometimes called pointed trees or arborescences.
+
+the tree with one vertex is, the tree with zero vertex is designated by 1.
+leaf to a vertex of t. for example n (1) =,
+n () =, n () = + n () =	 + 2(cid:10).
+(cid:11)! = 1
+
+in [7], connes and kreimer dened a natural growth operator n on trees: n (t) is the set
+of |t| trees ti, where each ti is a tree with |t| + 1 vertices obtained by attaching an additional
+
+a number of functions on rooted trees have been dened independently by several authors:
+|t| designates the number of vertices of a tree t (alternative notation is r(t), (t) and #t).
+
+clearly, |b+(t1, t2, . . . , tk)| = |t1| + |t2| +    + |tk| + 1.
+
+the tree factorial t! is dened recursively as
+
+b+(t1, t2, . . . , tk)! = |b+(t1, t2, . . . , tk)| t1!t2!    tk!.
+
+(an alternative notation is (t)). the notation t! is taken from kreimer [6] because t! general-
+izes the factorial of a number. besides t! has also similarities with the product of hooklengthes
+of a young diagram in the representation theory of the symmetric group [12]. a few examples
+
+may be useful(cid:12)! = 2,(cid:13)! = 6,! = 12,(cid:15)! = 24,(cid:16)! = 4.
+
+2.2 on cm(t)
+
+cm (t) was dened in [6] as the number of times tree t appears in n n(1) where n = |t| is
+the number of vertices of t. in the literature ([13], [14], p.92, [15], p.147), cm (t) is written
+
+2
+
+as (t) and considered as the number of heap-ordered trees with shape t, where a heap-
+ordered tree with shape t is a labelling of each vertex of t (i.e. a bijection between the
+vertices and the set of numbers 0, 1, . . . |t|  1) such that the labels decrease along the path
+going from any vertex to the root. this is called a monotonic labelling in [15], p.147.
+
+(cid:17) (cid:18) (cid:19)
+
+there are (n  1)! heap-ordered trees with n vertices. this can be seen by a recursive
+argument. take a heap-ordered tree t with n vertices, and make n labeled trees by adding
+a new vertex with label n to each vertex of t. then all the created trees are heap-ordered
+(because the added vertex is a leaf and all other labels are smaller than n). furthermore,
+all the heap-ordered trees created by this process from the set of heap-ordered trees with n
+vertices are dierent. therefore, there are at least n! heap-ordered trees with n + 1 vertices.
+on the other hand, in each heap-ordered tree t with n + 1 vertices, the vertex labeled n is a
+leaf, therefore t can be created from a heap-ordered tree with n vertices by adding this leaf
+with label n. so there are exactly n! heap-ordered trees with n + 1 vertices. we shall give a
+non combinatiorial proof of this fact in the sequel.
+
+since n (t) is dened by the addition of a leaf to all the vertices of t, (t) is the number
+of heap-ordered trees with shape t. this number has been calculated in [13] (see also. [14],
+p.92):
+
+(t) =
+
+|t|!
+t!st
+
+,
+
+where st is the symmetry factor of t, dened in [2, 6] and in [14] where it is denoted by (t).
+note that there is a simple correspondence between the permutations of n  1 numbers
+
+and the heap-ordered trees. let (p1, . . . , pn1) be a permutation of (1, . . . , n  1), then
+
+ p1 is a subroot, labeled p1
+ for i=2 to n  1
+
+ if all pj for 1  j  i are such that pj > pi, then pi is a subroot, labeled pi
+ otherwise, let pj be rst number such that pj < pi, in the series pi1, pi2, . . . , p1,
+
+then the i-th vertex, labeled pi, is linked to pj by a line
+
+ when all (p1, . . . , pn1) have been processed, all subroots are linked to a common root,
+
+labeled 0
+
+on the other hand, starting from a heap-ordered tree t, t is arranged so that the set of all
+vertices with a given level number are ordered with labels increasing from right to left. then
+the permutation is built by gathering the labels through a depth-rst search (backtracking)
+of the tree from left to right. for instance, the permutation corresponding to the three
+labeled trees of the above example are (312), (231) and (213).
+
+finally, we use the term algebra of rooted trees and not hopf algebra of rooted trees
+because, thanks to the work of butcher, the hopf structure is only one aspect of the art.
+
+3 dierentials and rooted trees
+
+assume that we want to solve the equation (d/ds)x(s) = f [x(s)], x(s0) = x0, where s is a
+real, x is in rn and f is a smooth function from rn to rn , with components f i(x). this
+is the equation of the ow of a vector eld.
+
+3
+
+3.1 calculation of the n-th derivative
+
+let us write the derivatives of the i-th component of x(s) with respect to s:
+
+d2xi(s)
+
+ds2
+
+=
+
+d
+ds
+
+f i[x(s)] =xj
+
+f i
+xj
+
+[x(s)]
+
+dxj
+ds
+
+f i
+xj
+
+=xj
+
+[x(s)]f j[x(s)]
+
+d3xi(s)
+
+ds3
+
+=
+
+d
+
+ds
+xj
+
+2f i
+
+f i
+xj
+
+[x(s)]f j[x(s)]
+
+
+= xjk
+
+xjxk
+
+[x(s)]f j [x(s)]f k[x(s)] +xjk
+
+f i
+xj
+
+[x(s)]
+
+f j
+xk
+
+[x(s)]f k[x(s)].
+
+a simplied notation is now required. let
+
+f i = f i[x(s)]
+kf i
+
+f i
+j1j2jk =
+
+xj1    xjk
+
+[x(s)],
+
+so that
+
+dxi(s)
+
+ds
+
+where summation over indices appearing in lower and upper positions is implicitly assumed.
+
+with this notation, we can write the next term as
+
+= f i
+
+j f j
+
+d2xi(s)
+ds2 = f i
+
+=(cid:20) (cid:21)
+
+l f l + f i
+
+= f i
+
+k f k
+
+j f j
+
+j f j
+
+d4xi(s)
+
+ds4
+
+d3xi(s)
+ds3 = f i
+
+j f j
+
+kf k,
+
+jkf jf k + f i
+
+(cid:22) (cid:23)
+
+l f kf l + f i
+
+jkf j
+
+klf kf l + 3f i
+
+jklf jf kf l
+
+this relation between dierentials and rooted tree was established by arthur cayley in
+1857 [16]. with this notation, there is a one-to-one relation between a rooted tree with n
+vertices and a term of dnx(s)/dsn
+
+3.2 elementary dierentials
+
+a little bit more formally, we can follow butcher ([14], p.154.) and call elementary dier-
+entials the t dened recursively for each rooted tree t by:
+
+i
+ = f i
+i
+t = f i
+
+j1j2jk j1
+
+t1 j2
+
+t2    jk
+
+tk when t = b+(t1, t2,    , tk).
+
+(1)
+
+using this correspondence between rooted trees and dierential expressions, we establish
+
+the identity:
+
+n t 
+
+dt
+ds
+
+= n (t),
+
+where n (t) is the natural growth operator of rooted trees dened in ref.[7].
+
+so that the solution of the ow equation is
+
+ds exp[sn ]
+(s  s0)|t|
+
+(t)t(s0),
+
+|t|!
+
+(2)
+
+x(s) = x0 +z s
+= x0 +xt
+
+s0
+
+4
+
+where |t| is the number of vertices of t, and (t) is called cm (t) in [6].
+
+4 runge-kutta methods
+
+we shall see that sum over trees appear quite naturally with dierential equations. so, if
+one is given a function  that assigns a value (e.g. a real, a complex, a vector) to each tree
+t, is there a function f such that (t) = t. generally, the answer is no. consider a function
+ such that all components are equal (and denoted also by ):
+
+((cid:24)) = 1, ((cid:25)) = a, ((cid:26)) = b,
+
+so that for any i, f i = 1, f i
+j f j
+so that the third gives f i
+dierentials (i.e.
+functions reachable as elementary dierentials is rather narrow.
+
+it cannot be the t) of a function f if b 6= a2.
+
+k f k = b. the rst two equations give pj f i
+
+j = a,
+j a = a2, and  cannot be represented as elementary
+in fact, the number of
+
+j f j = a and f i
+
+j f j
+
+kf k = pj f i
+
+given such a function  over rooted trees, we extend it to a homomorphism of the
+algebra of rooted trees by linearity and (tt) = (t)(t) where the componentwise product
+was used on the right-hand side. if vector ows are not enough to span all possible , what
+more general equation can do that? as we shall see now, the answer is the runge-kutta
+methods.
+
+4.1 butchers approach to the runge-kutta methods
+
+to solve a ow equation dx(s)/ds = f [x(s)], some ecient numerical algorithms are known
+as runge-kutta methods. they are determined by a m  m matrix a and an m-dimensional
+vector b, and at each step a vector xn is dened as a function of the previous value xn1 by:
+
+xi = xn1 + h
+
+xn = xn1 + h
+
+aij f (xj)
+
+bjf (xj),
+
+m
+
+m
+
+xj=1
+xj=1
+
+where i range from 1 to m. if the matrix a is such that aij = 0 if j  i then the method
+is called explicit (because each xi can be calculated explicitly), otherwise the method is
+implicit.
+
+in 1963, butcher showed that the solution of the corresponding equations:
+
+xi(s) = x0 + (s  s0)
+
+x(s) = x0 + (s  s0)
+
+aijf (xj(s))
+
+bjf (xj(s)),
+
+m
+
+m
+
+xj=1
+xj=1
+
+is given by
+
+xi(s) = x0 +xt
+x(s) = x0 +xt
+
+(s  s0)|t|
+
+|t|!
+
+(s  s0)|t|
+
+|t|!
+
+(t)t!
+
+m
+
+xj=1
+
+aijj(t)t(s0)
+
+(t)t!(t)t(s0).
+
+(3)
+
+these series over trees are called b-series in the numerical analysis literature, in honour
+of john butcher ([15], p.264). the homomorphism  is dened recursively as a function of
+
+5
+
+i((cid:27)) = 1
+
+a and b, for i = 1, . . . , m:
+
+aij1 . . . aijk j1 (t1) . . . jk (tk)
+
+i(b+(t1    tk)) = xj1,...,jk
+xi=1
+
+(t) =
+
+m
+
+bii(t).
+
+comparing eqs.(2) and (3) it is clear that the runge-kutta approximates the solution of
+the original ow equation up to order n if (t) = 1/t! for all trees with up to n vertices.
+
+in 1972 [17], butcher made further progress. firstly he showed that runge-kutta meth-
+ods are dense in the space of rooted tree homomorphisms. more precisely, he showed that
+given any nite set of trees t0 and any function  from t0 to r, then there is a runge-kutta
+method (i.e. a matrix a and a vector b) such that the corresponding  agrees with  on t0
+(see also [14] p.167).
+
+4.2 further developments
+
+furthermore, butcher proved that the combinatorics he used to study runge-kutta methods
+in 1963 [13] was hiding an algebra. if (a,b) and (a,b) are two runge-kutta methods, with
+the corresponding homomorphisms  and , then the product homomorphism is dened (in
+hopf algebra terms) by
+
+(  )(t) = m[(  )(t)].
+
+butcher proved that the  derived from runge-kutta methods form a group. again,
+this is nicely interpreted within the hopf structure of the art. for instance, the inverse of
+the element  is simply dened by 1(t) = [s(t)], where s is the antipode. this concept
+of inverse is quite important in practice since it is involved in the concept of self-adjoint
+runge-kutta methods, which have long-term stability in time-reversal symmetric problems
+([15], p.219). the adjoint is dened within our approach by (t) = (1)|t|[s(t)].
+
+on the other hand, butcher found an explicit expression for all the hopf operations of
+the art. given the method (a,b) for , he expressed the method (a,b) for   s (s is the
+antipode) in (simple) terms of (a,b). moreover, ([14], p.312 et sq.), if (a,b) and (a,b) are
+two runge-kutta methods (with dimensions m and m, respectively), corresponding to 
+and , the method (a,b) corresponding to the convolution product (  ) is
+
+aij = aij
+aij = aij
+aij = bj
+aij = 0
+bi = bi
+bi = bi
+
+1  i  m and 1  j  m,
+
+if
+if m + 1  i  m + m
+if m + 1  i  m + m
+if
+if
+if m + 1  i  m + m.
+
+and m + 1  j  m + m,
+and 1  j  m,
+1  i  m and m + 1  j  m + m,
+1  i  m,
+
+in 1974, hairer and wanner ([15], p.267) built upon the work of butcher and proved the
+
+following important result: if we denote
+
+b(, f ) = 1 +xt
+
+(s  s0)|t|
+
+|t|!
+
+(t)t!(t)t(s0)
+
+(4)
+
+then
+
+b(, b(, f )) = b(  , f ),
+
+(5)
+where b(, b(, f )) is the same as eq.(4), with (t) replaced by (t) and t replaced by
+(t) (i.e. (t) is calculate as t, but with the function b(, f )(s) instead of the function
+f (x(s))).
+
+in other words, the group of homomorphisms acts on the right on the functions f .
+
+6
+
+5 the continuous limit
+
+in his seminal article [17], butcher did not restrict his treatment to nite sets of indices. it
+is possible to consider the continuous limit of runge-kutta methods. a possible form of it
+is an integral equation, which we write artitrarily between 0 and 1:
+
+xu(s) = x0 + (s  s0)z 1
+x(s) = x0 + (s  s0)z 1
+
+0
+
+0
+
+dva(u, v)f (xv(s))
+
+b(u)duf (xu(s)),
+
+(s  s0)|t|
+
+|t|!
+
+(s  s0)|t|
+
+|t|!
+
+(t)t!z 1
+
+0
+
+dva(u, v)v(t)t(s0)
+
+(t)t!(t)t(s0).
+
+the solution of which are
+
+xu(s) = x0 +xt
+x(s) = x0 +xt
+
+u((cid:28)) = 1
+
+the homomorphism  is dened recursively as a function of a and b:
+
+u(b+(t1    tk)) = z 1
+(t) = z 1
+
+0
+
+0
+
+du1a(u, u1)u1 (t1)  z 1
+
+0
+
+dub(u)u(t).
+
+duka(u, uk)uk (tk)
+
+continuous rk-methods do not seem to have been much used, except for an example in
+butchers book ([14] p.325).
+
+5.1 butchers example
+
+it will be useful in the following to have the results of a modied version of butchers example.
+so, we consider:
+
+xu(s) = x0 + (s  s0)z u
+x(s) = x0 + (s  s0)z 1
+
+0
+
+0
+
+f [xv(s)]dv
+
+f [xu(s)]du,
+
+(6)
+
+which corresponds to a(u, v) = 1[0,u](v), b(u) = 1. this runge-kutta method will be used
+again in the sequel, and will be referred to as the simple integral method.
+
+if we take the derivative of eq.(6) with respect to u we obtain
+
+d
+du
+
+xu(s) = (s  s0)f [xu(s)],
+
+so xu(s) = y(s0 + (s  s0)u), where y(s) is the solution
+
+moreover
+
+f [y(s)]ds.
+
+s0
+
+y(s) = x0 +z s
+x(s) = x0 + (s  s0)z 1
+= x0 + (s  s0)z 1
+= x0 +z s
+
+s0
+
+0
+
+0
+
+7
+
+f [xu(s)]du
+
+f [y(s0 + (s  s0)u)]du
+
+f [y(s)]ds = y(s).
+
+u((cid:29)) = 1
+
+the corresponding homomorphism (t) is dened by
+
+u(b+(t1    tk)) = z u
+(t) = z 1
+
+0
+
+0
+
+du1u1 (t1)  z u
+
+0
+
+duu(t).
+
+dukuk (tk)
+
+using the facts that |b+(t1    tk)| = (|t1| +    + |tk| + 1) and b+(t1    tk)! = (|t1| +    +
+|tk| + 1)t1! . . . tk! it is proved that the solutions of these equations are
+
+u(t) =
+
+(t) =
+
+|t|u|t|1
+
+t!
+
+1
+t!
+
+.
+
+if we introduce (t) = 1/t! into eq.(3) we obtain eq.(2). so we conrm that the solution
+
+of the equation
+
+is
+
+x(s) = x0 +z s
+
+s0
+
+f [x(s)]ds
+
+x(s) = x0 +xt
+
+(s  s0)|t|
+
+|t|!
+
+(t)t(s0).
+
+5.2 first applications
+
+the above example can already bring some interesting applications. but we must start by
+giving a way to calculate t(s0) in a simple case.
+
+5.2.1 calculation of t(s0)
+
+to obtain specic results, we must choose a particular function f . the simplest choice is to
+
+take a vector function f , with components f i(x) = f (pj xj /n ), where n is the dimension
+
+of the vector space and f has the series expansion
+
+f (s) =
+
+f (n)(0)sn
+
+n!
+
+.
+
+
+
+xn=0
+
+from the denition of t in eq.(1), one can show recursively that, for i = 1, . . . , n , i
+
+t(0)
+
+is independent of i (and will be denoted t) and
+
+ = f (0)
+t = f (k)(0)t1 t2    tk when t = b+(t1, t2,    , tk).
+
+(7)
+
+in ref.[6], kreimer dened a similar quantity, that he called bt. here t and bt will be used
+as synonymous.
+
+the simplest case is f (s) = exp s and s0 = 0, where f (n)(0) = 1 and t = 1 for all trees t.
+
+5.2.2 weighted sum of rooted trees
+
+if we take f = exp, s0 = 0 and x0 = 0 in butchers example (see section 5.1), we have to
+solve the equation
+
+x(s) =z s
+
+0
+
+exp[x(s)]ds
+
+8
+
+which can be dierentiated to give x(s) = exp(x(s)) with x(0) = 0. this has the solution
+
+x(s) =  log(1  s) =
+
+sn
+n
+
+.
+
+
+
+xn=1
+
+on the other hand, the corresponding homomorphism is (t) = 1/t! and the b-series for this
+problem is
+
+comparing the last two results, we nd
+
+x(s) = xt
+
+s|t|
+|t|!
+
+(t).
+
+(t) = (n  1)!
+
+x|t|=n
+
+in other words, the number of heap-ordered trees with n vertices is (n  1)!.
+
+5.2.3 derivative of inverse functions
+
+we can try to extend the last example to an arbitrary function f (x). the equation to solve
+becomes
+
+or x(s) = f (x(s)) with x(0) = 0. let
+
+x(s) =z s
+
+0
+
+f [x(s)]ds,
+
+s(x) =z x
+
+0
+
+dy
+f (y)
+
+,
+
+which gives us s = s(x), or x(s) = s1(s), where s1 is the inverse function of s. if f = exp,
+s(x) = 1  exp(x) and we conrm that x(s) =  log(1  s).
+
+we can use this result to calculate the derivatives of a function x(s), given as the inverse
+
+of a function s(x). to do this, we dene f (x) = 1/s(x) and, using eq.(2), we obtain
+
+x(n)(0) = x|t|=n
+
+(t)t,
+
+(8)
+
+where t is calculated from f (s) using eq.(7) in section 5.2.1.
+
+this method can also be calculated to nd the function f satisfying given values for
+
+where t is calculated from f . for instance, if we want
+
+an = x|t|=n
+
+(t)t,
+
+(t)t = n!,
+
+x|t|=n
+
+we must take f (s) = 1 + s2.
+
+5.2.4 other sums over trees
+
+we give now further examples of sums over trees, that will be used in the sequel. for instance,
+assume that we need to compute
+
+(t)
+
+t!
+
+.
+
+s = x|t|=n
+
+9
+
+this term comes in the butcher series with (t) = 1/(t!)2. since this (t) is the square of the
+previous one, the corresponding runge-kutta method can be realized as the tensor product
+of two simple integral methods (see section 5.1). in other words
+
+a(u, u, v, v) = a(u, v)a(u, v) = 1[0,u](v)1[0,u](v)
+
+b(u, u) = b(u)b(u) = 1.
+
+and the runge-kutta method is now
+
+xuu (s) = x0 + (s  s0)z u
+x(s) = x0 + (s  s0)z 1
+
+0
+
+0
+
+0
+
+dvz u
+duz 1
+
+0
+
+dvf [xvv (s)]
+
+duf [xuu (s)].
+
+uu ((cid:30)) = 1
+
+the corresponding homomorphism (t) is given by
+
+uu (b+(t1    tk)) = z u
+(t) = z 1
+
+0
+
+0
+
+0
+
+du1z u
+duz 1
+
+0
+
+duuu (t).
+
+du1u1u
+
+1 (t1)  z u
+
+0
+
+dukz u
+
+0
+
+dukuk u
+
+k
+
+(tk)
+
+the solutions of these equations are
+
+uu (t) =
+
+|t|2(uu)|t|1
+
+(t!)2
+
+(t) =
+
+1
+(t!)2 ,
+
+so that, from eq.(3)
+
+xuu (s) = x0 +xt
+
+(s  s0)|t|
+
+(t)(uu)|t|
+
+|t|!
+
+t!
+
+t(s0).
+
+the conclusion is that xuu (s) is in fact a function of uu and not of u and u. more
+precisely, we know from the general formula eq.(3) that the b-series for the solution of
+
+x(s) = x0 + (s  s0)r 1
+
+0 dur 1
+
+0 duf [xuu (s)] is
+
+x(s) = x0 +xt
+
+(s  s0)|t|
+
+(t)
+
+|t|!
+
+t!
+
+t(s0),
+
+so that xuu (s) = x(s0 + (s  s0)uu). if we use the successive changes of variables w = uu,
+v = s0 + (s  s0)w and v = s0 + (s  s0)u we nd
+
+duf [x(s0 + (s  s0)uu)]
+
+dwf [x(s0 + (s  s0)w)]
+
+0
+
+0
+
+du
+
+x(s) = x0 + (s  s0)z 1
+= x0 + (s  s0)z 1
+= x0 +z 1
+= x0 +z s
+
+duz 1
+u z u
+u z s0+(ss0)u
+v  s0 z v
+
+du
+
+dv
+
+s0
+
+s0
+
+s0
+
+0
+
+0
+
+0
+
+dvf [x(v)]
+
+dvf [x(v)].
+
+with the initial values x0 = s0 = 0 this gives us
+
+x(s) = z s
+
+0
+
+dv
+
+v z v
+
+0
+
+10
+
+dvf [x(v)],
+
+(9)
+
+or sx + x = f (x) with x(0) = 0 and x(0) = f (0). if we take again f (x) = exp(x) we nd
+sx + x = exp(x) with x(0) = 0 and x(0) = 1, so that
+
+x(s) = 2 log(1  s/2) =
+
+sn
+n2n1 .
+
+
+
+xn=1
+
+comparing this with the b-series
+
+we obtain
+
+x(s) = xt
+
+s|t|
+|t|!
+
+(t)
+
+t!
+
+s = x|t|=n
+
+(t)
+
+t!
+
+=
+
+(n  1)!
+
+2n1
+
+,
+
+which is the result found by kreimer in [6] using combinatorial arguments.
+
+as a nal example, we can consider the runge-kutta method a(u, v) = 1, b(u) = 1
+which gives (t) = 1 for all trees t. the equation for x(s) is now a xed point problem
+x(s) = s exp(x(s)), whose well-known solution is
+
+so that
+
+x(s) = xn
+
+sn
+n!
+
+nn1,
+
+(t)t! = nn1.
+
+x|t|=n
+
+5.3 the antipode
+
+these examples show that b-series can be used as generating series for sums over trees.
+
+the hopf algebra structure of the art entails an antipode s. if (t) is an homomorphism,
+the action of the antipode on  can be written as s()(t) = (s(t)). if the runge-kutta
+method for  is au, b, then the runge-kutta method for s = s() is as
+u = au  b,
+bs = b. it is useful to see it working on simple cases:
+
+u ((cid:31)) = 1 = u( )
+s(!) = bs(s
+u () = as
+s() = b(s
+
+u (")) = b(u(#)) = ( )
+v ()) = au(v())  b(v()) = u()  ()
+u ()) = (	) + b(1)(.) = (/) + (0)(1)
+
+u (s
+
+s
+
+s
+
+5.4 the convolution
+
+the convolution of  and  is dened as (t) = (  )(t) = m[(  )(t)].
+
+let au, b and au, b be the runge-kutta methods of, respectively, (t) and (t). to
+be specic, we consider that u varies from 0 to 1. then the runge-kutta method for  is
+au, b, where u varies from 0 to 2 and
+
+if
+
+au(xv) = au(xv)
+au(xv) = 0 if
+au(xv) = b(xv)
+au(xv) = au1(xv1)
+b(xv) = b(xv)
+if
+b(xv) = b(xv1)
+
+if
+
+if
+
+0  u  1
+
+and 0  v  1
+
+0  u  1
+
+and 1  v  2
+
+1  u  2 and 0  v  1
+
+if
+
+1  u  2
+
+and 1  v  2
+
+0  v  1
+
+1  v  2.
+
+11
+
+again, we show the formula in action:
+
+u(2) = 1
+(3) = b(1) + b(1) = (4) + (5)
+u(6) = au(v (7)) = au(1)1[0,1](u) + (b(1) + au1(1))1[1,2](u)
+(8) = b(au(1)) + b((b(1) + au1(1))) = b(u(9)) + b(1)b(1) + b(u(:))
+= (;) + (<)(=) + (>).
+
+6 runge-kutta methods for renormalization
+
+in this section, we shall follow closely kreimers paper [6] and dene, for each operation on
+homomorphisms, a corresponding transformation of the runge-kutta methods. instead of
+attempting a general theory, we consider a specic example in detail.
+
+6.1 runge-kutta method for bare quantities
+
+we consider that a given bare physical quantity can be calculated as a sum over trees, and
+that the corresponding runge-kutta method has been found as a pair of linear operators
+au and b. the usual combinatorial proof show that the solution of the equations (we take
+s0 = 0)
+
+is
+
+where, as usually,
+
+xu(s) = x0 + sau[f (xv(s))]
+x(s) = x0 + sb[f (xu(s))],
+
+xu(s) = x0 +xt
+x(s) = x0 +xt
+
+u(?) = 1
+
+s|t|
+|t|!
+
+s|t|
+|t|!
+
+(t)t!au[v(t)]t
+
+(t)t!(t)t,
+
+u(b+(t1    tk)) = au[u1 (t1)] . . . au[uk (tk)]
+
+(t) = b[u(t)].
+
+here x(s) is the sum giving the bare quantity of interest.
+broadhurst and kreimer [2], the quantity of interest is
+
+in the examples developed by
+
+x(s) = xt
+
+s|t|
+|t|!
+
+bt,
+
+where bt is obtained recursively from given bn by
+
+b = b1
+bt = b|t|t1t2    tk when t = b+(t1, t2,    , tk).
+
+(10)
+
+in the renormalization problems considered by broadhurst and kreimer, the bn are
+
+dened from a function l() regular (and equal to 1) at the origin, by
+
+bn =
+
+l(n)
+
+n
+
+.
+
+12
+
+a pair of operators giving (t) = bt can be dened as
+
+au(xv) =
+
+1
+
+ z u
+
+0
+
+l(
+
+d
+dv
+
+v)xv, b(xv) = a1(xv).
+
+the quantity of interest x(s) is then obtained by tensoring au with the simple integral
+
+method to obtain (t) = bt/t!.
+
+the only thing that we need in the following is the action of au on a monomial vn1
+
+au(vn1) =
+
+1
+
+ z u
+
+0
+
+l(
+
+d
+dv
+
+v)vn1 =
+
+1
+
+ z u
+
+0
+
+vn1dvl(n) = bnun.
+
+(11)
+
+6.2 sr, the renormalized antipode
+
+following the results of section 5.3, the runge-kutta method for sr() can be obtained
+u (x) = au(x)  ha1(x)i, bs(x) = ha1(x)i.
+
+from the runge-kutta method of  by as
+working out the rst examples using eq.(11), we nd,
+
+in ref.[6], kreimer denes recursively a renormalized antipode3 depending on a renormaliza-
+tion scheme r. we take as an example the toy model used by kreimer, where r[] = hi is
+the projection of  on the pole part of the laurent series in  inside the bracket.
+
+u () = 1
+s(a) = ha1(1)i = hb1i
+u (b) = au(v(c))  ha1(v(d))i = au(1)  ha1(1)i = b1u  hb1i
+s(e) = ha1(s
+
+u (f))i = hb2b1i + hhb1ib1i.
+
+s
+
+s
+
+6.3 renormalized quantities
+
+finally, the renormalized quantities xr(s) are obtained from the convolution of sr() with
+. to obtain the corresponding runge-kutta method, we use the results of section 5.4.
+however, the domain where 1  u  2 is not used, and the runge-kutta method for the
+renormalized quantity is ar
+u (x) = au(x)  ha1(x)i, br(x) = a1(x)  ha1(x)i. it may
+seem surprising that such a simple equation encodes the full combinatorial complexity of
+renormalization. it is not even necessary to work examples out, because ar
+u (x)
+u (t), and the only dierence comes from the action of br.
+so that r
+
+u (x) = as
+
+u (t) = s
+
+for a real calculation of xr(s), we do not need ar
+
+u and br which give us (t) = (t), but
+the tensor product of this method with the simple integral method to obtain (t) = t!(t).
+in detail, the equation for the renormalized quantity xr(s) is
+
+x r
+
+uu (s) =
+
+xr(s) =
+
+s
+
+0
+
+ z u
+ z 1
+
+0
+
+s
+
+0
+
+dvz u
+dvz 1
+
+0
+
+dvl(vv)exvv (s)  h
+
+dvl(vv)exvv (s)i (12)
+
+dvl(vv)exvv (s)  h
+
+dvl(vv)exvv (s)i.
+
+(13)
+
+0
+
+s
+
+ z 1
+ z 1
+
+dvz u
+dvz 1
+
+0
+
+0
+
+0
+
+s
+
+for a general renormalization scheme r, one replaces hau(x)i by r[au(x)]. finally,
+chens lemma for renormalization schemes [6] is obtained from hairer and wanners theorem
+eq.(5).
+
+7 renormalization of kreimers toy model
+
+in this section, we use runge-kutta methods to renormalized explicitly kreimers toy model
+for even functions l(). in [2], remarkable properties of the renormalized sum of diagrams
+with connes-moscovici weights were noticed.
+
+3in hopf algebra terms sr()(t) = r[(t) + m[(sr  id)(  )p2(t)].
+
+13
+
+7.1 equation for the renormalized quantity
+
+the role of the sum over u in eq.(13) is to add a factor 1/t!, as in section5.2.4. therefore,
+uu (s) is in fact a function of su and we
+the same reasoning can be used to show that x r
+write x r
+u (s) can
+be found from eq.(13) and the relation x r
+
+u (su), which denes the function x r
+us(1) as
+
+u (s). the equation for x r
+
+uu (s) = x r
+
+u (s) = x r
+
+x r
+
+u (s) =
+
+xr(s) =
+
+1
+
+0
+
+ z u
+ z 1
+
+0
+
+1
+
+0
+
+dvz s
+dvz s
+
+0
+
+dsl(vv)exv (s)  h
+
+dsl(vv)exv (s)  h
+
+0
+
+1
+
+ z 1
+ z 1
+
+0
+
+1
+
+0
+
+dvz s
+dvz s
+
+0
+
+dsl(vv)exv (s)i
+
+(14)
+
+dsl(vv)exv (s)i.
+
+(15)
+
+to solve this equation, we expand x r
+
+u (s) in a power series over u:
+
+x r
+
+u (s) =
+
+an(s)un.
+
+
+
+xn=0
+
+a standard identity gives us
+
+exp(x r
+
+n(a)un, where
+
+
+
+u (s)) =
+
+xn=0
+n(a) = x||=n
+
+a1
+1    an
+n
+1!    n!
+
+with || = a1 + 22 +    + nn.
+
+n(a) depends on s through its arguments ai(s). the sets of i for a given n can be obtained
+from the partitions of n: (1, . . . , n), where 1      n by n = n, i = i  i+1 for
+i < n.
+
+the rst n(a) are
+
+0(a) = 1 1(a) = a1 2(a) = a2 +
+
+a2
+1
+2
+
+3(a) = a3 + a1a2 +
+
+a3
+1
+6
+
+.
+
+7.2 solution of the equation
+
+introducing the series expansions for x r
+
+u (s) and exp(x r
+
+u (s)) into eq.(15) we obtain
+
+
+
+xn=0
+
+or
+
+an(s)un =
+
+
+
+xn=0
+
+bn+1z s
+
+0
+
+ea0(s)n(a)dsun+1  h
+
+
+
+xn=0
+
+bn+1z s
+
+0
+
+ea0(s)n(a)dsi
+
+
+
+a0(s) = h
+
+xn=0
+an(s) = bnz s
+
+0
+
+bn+1z s
+ea0(s)n1(a)ds
+
+0
+
+ea0(s)n(a)dsi
+
+for n > 0.
+
+(16)
+
+to solve this equation, we need to go back to the equation for the bare quantity
+
+x 0
+
+u(s) =
+
+1
+
+ z u
+
+0
+
+dvz s
+
+0
+
+dsl(vv)ex 0
+
+v (s).
+
+(17)
+
+again x 0
+
+u(s) is a function of su, we dene x 0(s) = x 0
+
+s (1) which satises
+
+x 0(s) =
+
+1
+
+ z s
+
+0
+
+du
+
+u z u
+
+0
+
+14
+
+dvl(vv)ex 0(v).
+
+the solution of this equation is given by the b-series
+
+x 0(s) = xn
+
+nsn with n = x|t|=n
+
+(t)bt
+
+|t|!
+
+.
+
+(18)
+
+on the other hand, we can also expand ex 0(v) using the functions n(a). identifying both
+sides of eq.(18), we obtain the relation
+
+an =
+
+bn
+n
+
+n1(a).
+
+with this identity, we can now prove that, for the renormalized quantities,
+
+an(s) = (g(s))nan, where
+
+g(s) =z s
+
+0
+
+exp(a0(s))ds.
+
+(19)
+
+(20)
+
+since 0(a) = 1 and an = b1, this equation is true for n = 1, from eq.(16). if eq.(20) is
+true up to n  1, then n1(a) = (g(s))n1n1(a) and the derivative of eq.(16) gives us
+
+an(s) = bnea0(s)n1(a) = bng(s)(g(s))n1n1(a) = n(g(s))n1an,
+
+of the ow for the bare quantity: x r
+
+by eq.(19). integrating this equation with the condition an(s) = 0 gives eq.(20) at level n.
+by this we have proved that the ow for the renormalized quantity is a reparametrization
+u (s) = a0(s) + x 0(ug(s)) and x r(s) = a0(s) + x 0(g(s)).
+to determine a0(s) we proceed step by step. in eq.(18) we expand l(vv) over . the
+rst term is just 1, and we obtain eq.(9) with the solution x(s) = 2 log(1  s/(2)). for the
+renormalized quantity, the most singular term becomes x 0(g(s)) = 2 log(1  g(s)/(2)).
+since x r(s) is regular, this singular term must be compensated by a corresponding term in
+a0(s). by equating the most singular terms we obtain a0(s) = 2 log(1  g(s)/(2)). we
+know from eq.(20) that a0(s) = log(g(s)), and we obtain the most singular terms as the
+solution of g(s) = 1/(1  g(s)/(2))2, which is:
+s
+
+g(s) =
+
+1 + s
+2
+
+a0(s) = 2 log(1 +
+
+s
+2
+
+).
+
+by expanding a0(s) as a series in s, we obtain the most singular term observed in [2] and
+proved in [6]. one notices that the singularity of the non-pertubative term a0(s) is logarith-
+mic, and much smoother than the singularities coming from the expansion over s (i.e. the
+perturbative expression).
+
+7.3 dierential equation for the nite part
+
+in general, one should proceed now with the next singular term. to obtain it we denote
+y (s) = x 0(g(s)), this change of variable gives the equation for y (s):
+
+y (s) =
+
+1
+
+ z s
+
+0
+
+g(u)du
+
+g(u) z u
+
+0
+
+dvg(v)l( + 
+
+g(v)
+g(v)
+
+v)ey (v).
+
+now we can write y (s) = x r(s)a0(s), and notice that the term a0(s) on the left-hand
+side is compensated by a term on the right-hand side where l = 1 and exp(x r(s)) = 1. we
+obtain the equation for x r(s):
+
+x r(s) =
+
+1
+
+ z s
+
+0
+
+du
+
+u(1 + u
+
+2 )z u
+
+0
+
+dv(cid:20)
+
+1
+
+(1 + v
+
+2 )2 l(vv +
+
+v2
+2
+
+v)(1 +
+
+2
+)
+
+v
+2
+
+ex r(v)  1(cid:21) .
+
+the nice aspect of the previous equation is that it seems to have a limit as  goes to zero.
+in fact, it has a limit when l is even, as we shall show now.
+
+15
+
+writing x(s) = lim0 x r(s), and taking the limit   0 in the previous equation, we
+
+obtain
+
+x(s) = 2z s
+
+0
+
+or, in dierential form:
+
+du
+
+u2 z u
+
+0
+
+dv(cid:20) 1
+v2 l(
+
+v2
+2
+
+v)v2e
+
+x(v)  1(cid:21) ,
+
+(s2 x(s)) =
+
+1
+2
+
+1
+s2 l(
+
+s2
+2
+
+d
+ds
+
+)s2e
+
+x(s)  1.
+
+if x(s) and l() are expanded as
+
+x(s) =
+
+bnsn
+
+and l() = 1 +
+
+
+
+xn=1
+
+l(
+
+s2
+2
+
+d
+ds
+
+) = 1 +
+
+ln(
+
+s2
+2
+
+d
+ds
+
+)n,
+
+
+
+xn=1
+
+lnn,
+
+sothat
+
+
+
+xn=1
+
+(21)
+
+we obtain the following relation for the term in s: b1s = (b1 + l1/2)s. if l1 is not zero, we
+obtain a contradition and must proceed with the withdrawal of divergences. for simplicity,
+we shall assume that l1 = 0. then b1 becomes a free parameter of x(s). all terms bn with
+n > 1 can now be determined from b1 and ln (n > 1). all terms are regular.
+
+in [2], the function l() was taken even. then l1 = 0, and their results correspond to
+b1 = 0. broadhurst and kreimer have also used a function l(, ). the present treatment
+can be applied to this more general situation, with the only change that
+
+ln = n! lim
+0
+
+lim
+0
+
+dn
+dn l(, ).
+
+clearly, eq.(21) is much faster to solve than computing the sum over trees. for instance,
+the expansion could be calculated up to 20 loops (i.e. b20) within a few seconds with a
+computer.
+
+7.4 alternative point of view
+
+there is an alternative way to solve eq.(17) for the bare quantity. we dene a function f (s)
+from l() by
+
+f (s) =
+
+l(n + )
+
+n!
+
+sn = l(
+
+d
+ds
+
+s)es.
+
+
+
+xn=0
+
+a relation between f (s) and l() can also be established through the mellin transforms of
+f and l as m (f )(z) = m (l)(  z)(z).
+
+with f (s) we can write the equation for the bare quantity as
+
+x 0(s) =
+
+dvf (x 0(v)).
+
+(22)
+
+1
+
+ z s
+
+0
+
+du
+
+u z u
+
+0
+
+alternatively, one can go from f to l and consider the results of the toy model as a
+
+method to renormalize equations of the type (22).
+
+8 n-dimensional problems
+
+for applications to classical eld theory, we need to develop runge-kutta methods for the
+n-dimensional analogue of the ow equation: non-linear partial dierential equations. the
+purpose of the present section is to indicate how b-series can be used for this case4. the
+method apply to equations of the form l(r) = f [(r)], where l is a dierential operator
+(e.g. the nonlinear schrodinger equation  = 3).
+
+4kreimer was independently aware of the possibility to use b-series for non-linear partial dierential equations.
+
+16
+
+8.1 formulation
+
+we need two starting elements: a function 0(r) which is the solution of l0(r) = 0, and a
+green function g(r, r), that is a solution of the equation lrg(r, r) = (r  r), with given
+boundary conditions. the function 0(r) will play the role of an initial value, and the green
+function will decide in which direction you move from the initial value. it will also state,
+in some sense, the boundary conditions of the solution (r).
+
+using these two functions, the dierential equation l(r) = f [(r)] is transformed into
+
+(r) = 0(r) +r drg(r, r)f [(r)]. the action of l enables us to go from the second to
+
+the combinatorics is the same as for the standard runge-kutta method, and the result
+
+the rst equation.
+
+is
+
+(r) = 0(r) +xt
+
+(t)t!
+
+|t|! z drg(r, r)r (t),
+
+where r(t) is dened recursively by
+
+r(g) = f [0(r)]
+r( ) = f i[0(r)]
+
+i
+
+(23)
+
+(24)
+
+r(b+(t1    tk)) = f (k)[0(r)]z dr1g(r, r1)r1 (t1)  z drkg(r, rk)rk (tk).
+
+if  is a vector eld, the solution is the same, and equations (24) get indices:
+
+r(b+(t1    tk)) = f i
+i
+
+j1...jk [0(r)]z dr1gj1
+
+j 
+1
+
+(r, r1)j 
+
+1
+
+r1 (t1)  z drkgjk
+
+j 
+k
+
+(r, rk)j 
+
+k
+
+rk (tk),
+
+where gi
+
+j(r, r) is a component of the matrix green function.
+
+in the previous sections, the series (3) was written as a function of (t) (describing the
+eect of the runge-kutta method (a,b)) and t (describing the eect of the function f [x]).
+in the present case, this separation is no longer possible, and (t) combines both pieces of
+information.
+
+8.2 examples
+
+in this section, equation (23) is applied to the one-dimensional problem and to the schrodinger
+equation.
+
+8.2.1 the one-dimensional case
+
+it is instructive to observe how the one-dimensional case is obtained from eq.(23). the
+dierential operator is l = d/ds, so the initial function 0(s) must satisfy d/ds0(s) = 0:
+0(s) is a constant that we write x0. for the green function g(s, s), we have the equation
+lg(s, s) = (s  s), so g(s, s) = (s  s) + c(s), where (s) is the step function and
+c(s) a function of s. to determine c(s), we note that, in the simple integral method,
+there is an integral from s0 to s. from the green function g(s, s) = (s  s)  (s0  s),
+we obtain
+
+
+which is the required expression.
+
+z 
+
+g(s, s)f (s)ds = z s
+
+s0
+
+f (s)ds
+
+now, the role of 0 and the green function is clear for the one-dimensional case: 0 gives
+the initial value x0 and g species (among other things) the starting point s0. to complete
+the derivation of the one-dimensional case, we note that 0(s) = x0 does not depend on s, so
+the terms f (k)[0(s)] = f (k)[x0] are independent of s and can be grouped together to build
+t as in (1). on the other hand, the integration over green functions build up (s  s0)|t|/t!
+and we obtain eq.(2).
+
+17
+
+8.2.2 the schrodinger equation i
+
+if we write the schrodinger equation as (e + )(r) = v (r)(r), we can apply eq.(23)
+with f [] = v (r). we take for 0(r) a solution of (e + )0(r) = 0 and for g(r, r) the
+scattering green function (e.g. g(r  r) = eie|rr
+
+|/(4|r, r|) in three dimensions).
+
+the calculation of (t) is straightforward because, in a such a linear problem, f (k) = 0
+for k > 1. hence, the only rooted trees that survive are those with one branch. for these
+trees (t) = 1 and t! = |t|! and we obtain
+
+(r) = 0(r) +z dr1g(r, r1)v (r1)0(r1) +z dr1dr2g(r, r1)v (r1)g(r1, r2)v (r2)0(r2) +   
+
+where we recognize the born expansion of the lippmann-schwinger equation.
+
+8.2.3 the schrodinger equation ii
+
+we can also treat the schrodinger equation in an alternative way as the system of equations:
+
+(e + )(r) = v ()(r)
+
+i
+rj
+
+= ij .
+
+this is a matrix dierential equation. we give index 0 to the rst line, and index i (running
+from 1 to the dimension of space) to the other lines, called the space lines. the purpose of
+the space lines is just to ensure that  = r. this is a standard trick to take the r dependence
+of v into account in the expansion (see e.g. [15] p.143). as initial value we take 0(r) and
+0 = 0, the matrix green function is diagonal and it is equal to the scattering wave function
+for line 0 and to (ri  ri)  (ri) for line i.
+
+for r(), the zero-th component is v (0)0(r) and the space components are 1, for all
+r() = v (0)2z drg(r, r)0(r) +xi
+r() = v (0)3z dr1g(r, r1) + v (0)z drg(r, r)xi
+r() = 2v (0)xi
+
+the other trees, the space components are 0 and the zero-th component of the simplest tree
+is
+
+riiv (0)z drg(r, r)0(r) +xij
+
+riiv (0)0(r)
+
+rirjijv (0).
+
+riiv (0)0(r)
+
+the expressions become more and more complex, but their derivation is made systematic by
+the recurrence relation.
+
+9 conclusion
+
+butchers approach to runge-kutta methods was applied to some simple renormalization
+problems. since cayley, it is clear that the art is ideally suited to treat dierentials. this
+was conrmed here by presenting a b-series solution of a class of non-linear partial dierential
+equations.
+
+the recursive nature of b-series make them computationally ecient: u(t) can be ob-
+tained by a simple operation from the u(t) of smaller order t. this is why b-series can be
+automated and implemented in a computer.
+
+butchers approach has still much to oer. in the numerical analysis literature, b-series
+have been generalized to treat ow equations on lie groups. the main change [18] is to
+replace the algebra of rooted trees by the algebra of planar trees (also called ordered trees
+
+18
+
+[19]). the elementary dierentials get then a quantized calculus avor, especially in the
+denition given munthe-kaas [20] in terms of commutators with the vector eld f = f ii (see
+also ginocchio). using this generalized art, extended work has been carried out recently
+for the numerical solution of dierential equations on lie groups (see ref.[18, 19] and the
+web site http://www.math.ntnu.no/num/synode).
+
+b-series have been generalized in other directions, e.g. stochastic dierential equations
+[21] and dierential equations of the type dy/ds = f (y, z), g(y, z) = 0, which are called
+dierential algebraic equations [22].
+
+it is our hope that butchers approach can be applied to quantum eld theory.
+
+10 acknowledgements
+
+it is my great pleasure to thank dirk kreimer and alain connes for interest, encouragement
+and discussions.
+
+11 appendix
+
+11.1 coproduct
+
+for further reference, the action of the coproduct and the antipode on the rst few trees are
+given here.
+
+1 = 1  1
+
+ =  1 + 1 
+ =	  1 + 1 r +s t
+u =v  1 + 1 w +x y +z [
+\ =  1 + 1 ^ +_` a + 2b 
+d =e  1 + 1 f +g h +i j +k  
+ =  1 + 1  + 2  +  +	 v
+w =x  1 + 1 y +z { +| } +~ (cid:127) +(cid:129)  + 
+ =  1 + 1  + 3  + 3 (cid:141) +  
+
+19
+
+11.2 antipode
+
+s
+
+s(1) = 1
+
+s() = 
+s(cid:16)(cid:17) =  +
+s(cid:18)(cid:19) = 	 + 2 (cid:157)
+s(cid:16)(cid:17) =  + 2 
+ =  + 2 +  3(cid:173) +
+
+s ! =   + 2 +  3 +	
+s ! =  + + +  3 +
+s(cid:16)(cid:17) =  + 3  3 + 
+
+references
+
+[1] d. kreimer. on the hopf algebra structure of perturbative quantum eld theory. adv.
+
+th. math. phys., 2:303???, 1998. q-alg/9707029.
+
+[2] d.j. broadhurst and d. kreimer. renormalization automated by hopf algebra. j.
+
+symb. comput., 1999. to be published, hep-th/9810087.
+
+[3] d. kreimer and r. delbourgo. using the hopf algebra structure of qft in calculations.
+
+1999. hep-th/9903249.
+
+[4] d. kreimer. on overlapping divergences. 1998. hep-th/9810022.
+
+[5] t. krajewski and r wulkenhaar. on kreimers hopf algebra structure of feynman
+
+graphs. 1998. hep-th/9810022.
+
+[6] d. kreimer. chens iterated intregral represents the operator product expansion. 1999.
+
+hep-th/9901099.
+
+[7] a. connes and d. kreimer. hopf algebras, renormalization and noncommutative geom-
+
+etry. commun. math. phys., 199:20342, 1998.
+
+[8] c. runge. ueber die numerische auosung von dierentialgleichungen. math. ann.,
+
+46:16778, 1895.
+
+[9] e. hairer and g. wanner. on the butcher group and general multi-value methods.
+
+computing, 13:115, 1974.
+
+[10] a. dur. mobius functions, incidence algebras and power series representations. springer,
+
+berlin, 1986.
+
+[11] a. tucker. applied combinatorics. wiley, new york, 1980.
+
+[12] s.v. fomin and n. lulov. on the number of rim hook tableaux. j. math. sci., 87:4118
+
+23, 1997.
+
+[13] j.c. butcher. coecients for the study of runge-kutta integration processes. j. austral.
+
+math. soc., 3:185201, 1963.
+
+[14] j.c. butcher. the numerical analysis of ordinary dierential equations. wiley, chich-
+
+ester, 1987.
+
+20
+
+[15] e. hairer, s.p. nrsett, and g. wanner. solving ordinary dierential equations i.
+
+springer, berlin, second edition, 1993.
+
+[16] a. cayley. on the theory of the analytical forms called trees. phil. mag., 13:1726,
+
+1857.
+
+[17] j.c. butcher. an algebraic theory of integration methods. math. comput., 26:79106,
+
+1972.
+
+[18] h. munthe-kaas. runge-kutta methods on lie groups. bit, 38:92111, 1998.
+
+[19] b. owren and a. marthinsen. runge-kutta methods adapted to manifolds and based
+
+on rigid frames. bit, 39:11642, 1999.
+
+[20] h. munthe-kaas. lie-butcher theory for runge-kutta methods. bit, 35:57287, 1995.
+
+[21] y. komori, t. mitsui, and h. sugiura. rooted tree analysis of the order condition
+conditions of row-type scheme for stochastic dierential equations. bit, 37:4366,
+1997.
+
+[22] e. hairer and g. wanner. solving ordinary dierential equations ii. springer, berlin,
+
+1991.
+
+21
+
+

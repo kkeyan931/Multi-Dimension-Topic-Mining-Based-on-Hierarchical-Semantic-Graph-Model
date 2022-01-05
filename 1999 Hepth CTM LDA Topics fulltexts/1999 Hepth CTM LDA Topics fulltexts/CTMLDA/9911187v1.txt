@@ -1,0 +1,5445 @@
+9
+9
+9
+1
+
+ 
+
+v
+o
+n
+4
+2
+
+ 
+
+ 
+ 
+
+1
+v
+7
+8
+1
+1
+1
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+ane kac-moody algebras
+
+and the
+
+wess-zumino-witten model
+
+mark walton
+
+physics department, university of lethbridge
+
+lethbridge, alberta, canada t1k 3m4
+
+walton@uleth.ca
+
+abstract: these lecture notes are a brief introduction to wess-zumino-witten models,
+and their current algebras, the ane kac-moody algebras. after reviewing the general
+
+background, we focus on the application of representation theory to the computation of
+3-point functions and fusion rules.
+
+1. introduction
+
+in 1984, belavin, polyakov and zamolodchikov [1] showed how an innite-dimensional
+eld theory problem could eectively be reduced to a nite problem, by the presence of
+
+an innite-dimensional symmetry. the symmetry algebra was the virasoro algebra, or
+two-dimensional conformal algebra, and the eld theories studied were examples of two-
+
+dimensional conformal eld theories. the authors showed how to solve the minimal models
+of conformal eld theory, so-called because they realise just the virasoro algebra, and they
+
+do it in a minimal fashion. all elds in these models could be grouped into a discrete, nite
+set of conformal families, each associated with a representation of the virasoro algebra.
+
+this strategy has since been extended to a large class of conformal eld theories with
+similar structure, the rational conformal eld theories (rcfts) [2]. the new feature is
+
+that the theories realise innite-dimensional algebras that contain the virasoro algebra as
+a subalgebra. the larger algebras are known as w -algebras [3] in the physics literature.
+
+thus the study of conformal eld theory (in two dimensions) is intimately tied to innite-
+dimensional algebras. the rigorous framework for such algebras is the subject of vertex
+(operator) algebras [4] [5]. a related, more physical approach is called meromorphic con-
+
+formal eld theory [6].
+
+special among these innite-dimensional algebras are the ane kac-moody algebras (or
+their enveloping algebras), realised in the wess-zumino-witten (wzw) models [7]. they
+
+1
+
+are the simplest innite-dimensional extensions of ordinary semi-simple lie algebras. much
+is known about them, and so also about the wzw models. the ane kac-moody algebras
+
+are the subject of these lecture notes, as are their applications in conformal eld theory.
+for brevity we restrict consideration to the wzw models; the goal will be to indicate how
+the ane kac-moody algebras allow the solution of wzw models, in the same way that
+
+the virasoro algebra allows the solution of minimal models, and w -algebras the solution
+of other rcfts. we will also give a couple of examples of remarkable mathematical
+
+properties that nd an explanation in the wzw context.
+
+one might think that focusing on the special examples of ane kac-moody algebras is
+
+too restrictive a strategy. there are good counter-arguments to this criticism. ane kac-
+moody algebras can tell us about many other rcfts: the coset construction [8] builds a
+large class of new theories as dierences of wzw models, roughly speaking. hamiltonian
+
+reduction [9] constructs w -algebras from the ane kac-moody algebras.
+in addition,
+many more conformal eld theories can be constructed from wzw and coset models by
+
+the orbifold procedure [10] [11]. incidentally, all three constructions can be understood in
+the context of gauged wzw models.
+
+along the same lines, the question why study two-dimensional conformal eld theory?
+arises. first, these eld theories are solvable non-perturbatively, and so are toy models
+that hopefully prepare us to treat the non-perturbative regimes of physical eld theories.
+
+being conformal, they also describe statistical systems at criticality [12]. conformal eld
+theories have found application in condensed matter physics [13]. furthermore, they are
+
+vital components of string theory [14], a candidate theory of quantum gravity, that also
+provides a consistent framework for unication of all the forces.
+
+the basic subject of these lecture notes is close to that of [15]. it is hoped, however,
+that this contribution will complement that of gawedzki, since our emphases are quite
+dierent.
+
+the layout is as follows. section 2 is a brief introduction to the wzw model, including
+its current algebra. ane kac-moody algebras are reviewed in section 3, where some
+
+background on simple lie algebras is also provided. both sections 2 and 3 lay the founda-
+tion for section 4: it discusses applications, especially 3-point functions and fusion rules.
+
+we indicate how a priori surprising mathematical properties of the algebras nd a natural
+framework in wzw models, and their duality as rational conformal eld theories.
+
+2
+
+2. wess-zumino-witten models
+
+2.1. action
+
+let g denote a compact connected lie group, and g its simple lie algebra1. suppose
+ is a g-valued eld on the complex plane. the wess-zumino-witten (wzw) action is
+written as [7][17]
+
+sk() = 
+
+k
+
+8 z k(1, 1) d2x + 2k s() ,
+
+(2.1)
+
+where  = /x, the summation convention is used with euclidean metric, and k
+denotes the killing form of g, which is nondegenerate for g simple,
+
+k(x, y) =
+
+tr(ad x ad y)
+
+2h
+
+, x, y  g .
+
+(2.2)
+
+here h is an integer xed by the algebra g, called the dual coxeter number of g, and
+ad x(z) := [x, z]. the second term is the wess-zumino action. to describe it, imagine that
+the complex plane (plus the point at ) is a large 2-sphere s2.  then maps s2 into the
+group manifold of g.
+
+2
+
+s
+
+2
+
+(s  )
+
+g
+
+figure 1. the map  : s2  g. b is the 3-dimensional solid ball with s2 as
+its boundary, b = s2.
+
+the homotopy groups n(g) thus enter consideration (see [18], for example). the
+elements of n(g) are the equivalence classes of continuous maps of the n-sphere sn
+into (the group manifold of) g. two such maps are equivalent if their images can be
+
+1 for an excellent, elementary introduction to lie algebras, with physical motivation, see [16].
+
+3
+
+g
+g
+continuously deformed into each other. if all images of sn in g are contractible to a point,
+then the n-th homotopy group of g is trivial, n(g) = 0. a non-trivial n(g) indicates the
+presence of non-contractible n-cycles in g. (a cycle is a n-dimensional submanifold without
+boundary; a non-contractible one is also not a boundary itself.) so, homotopy is quite a
+ne measure of the topology of a group manifold g. for example, n(g) = z implies there
+is a non-contractible n-cycle cn in g that generates n(g), and a map sn  g can wind
+around this cycle any number ( z) of times.
+
+by a generalisation of stokes theorem, the existence of non-contractible cycles in g has
+to do with the existence of harmonic n-forms on g. a harmonic form hn is a dierential
+form that is closed (dhn = 0), but not exact (no form p exists such that hn = dp). recall
+that if cn is a non-contractible cycle, its boundary vanishes (cn = 0), and cn is not a
+boundary itself. in the case n(g) = z just mentioned, there exists a harmonic n-form hn
+on g, that can be identied with the volume form on cn, and can be normalised so that
+the volume of cn computed with it is 1: rcn
+
+getting back to the wess-zumino term, since 2(g) = 0 for any compact connected lie
+group,  can be extended to a map ( when we want to emphasise this) of b into g, where
+b = s2. the wess-zumino action can be written as
+
+hn = 1.
+
+s() = 1
+
+482 zb
+
+ijk k(cid:18)1 
+
+yi ,(cid:20)1 
+
+yj , 1 
+
+yk(cid:21)(cid:19) d3y
+
+(2.3)
+
+where yi (i = 1, 2, 3) denote the coordinates of b.
+
+let ta denote the elements of a basis of g, i.e. g = span{ ta : a = 1, . . . , dim g }. for
+
+hermitian ta, (ta) = ta, the commutation relations of g can be written as
+
+[ta, tb] = xc
+
+if abc tc
+
+,
+
+(2.4)
+
+where the structure constants f abc are real. normalising so that k(ta, tb) = ab, we get
+
+k(cid:0)ta, [tb, tc](cid:1) = i f abc .
+
+(2.5)
+
+since 1  
+yi
+the wess-zumino action.
+
+is an element of g, we see by (2.3) that the structure constants f abc enter
+
+now the totally antisymmetric structure constants f abc of g dene a harmonic 3-form
+h3 on the group manifold of g. s is an integral over the pull-back of this harmonic 3-form
+h3 to the space b:
+
+h3 .
+
+(2.6)
+
+s()b := zb
+
+h3 = z1s2
+
+4
+
+by the discussion of the previous paragraph, this points to a relation between the wess-
+zumino term and the homotopy of g. this will be made explicit soon.
+
+if the wzw action is to describe a local theory on s2, then the formal expression b =
+1s2 should indicate that the physics is independent of which 3-dimensional extension
+b of s2 is used. picture s2 as a circle, in order to draw a simple diagram.  : s2  g
+can be depicted as in fig. 2.
+
+2
+
+(s  )
+
+g
+
+figure 2. the map  : s2  g depicted in one lower dimension (s1 replaces
+s2).
+
+in fig. 3, the images by  of two dierent extensions b, b of s2 are pictured. in order
+
+that the physics described by b is equivalent to that described by b, we require
+
+or
+
+exph2ik s()bi = exph2ik s()bi
+
+exph2ik s()bbi = 1 .
+
+(2.7)
+
+(2.8)
+
+(b  b) is homotopically equivalent to s3 (depicted as s2 in fig. 4).
+
+now to the homotopic signicance of the wz term: s()s3 = n is the winding number
+of the map  : s3  g. since 3(g) = z (for g any compact connected simple lie group),
+we have n  z. therefore (2.8) requires k  z, and since k and k yield indistinguishable
+physics, we use k  z0, which will be the so-called level of the ane kac-moody algebra
+realised by the wzw model.
+
+the quantisation of the wz term can also be understood by its relation to anomalies,
+which have topological signicance (see [18], chapter 13, for example). consider rst a
+
+5
+
+g
+b
+
+2
+
+(s  )
+
+2
+
+(s  )
+
+g
+
+b
+
+g
+
+figure 3. the -images of two dierent extensions b, b of s2.
+
+g
+
+figure 4. (b  b) (see fig. 3).
+
+fermionic model with lagrangian density
+
+l =
+
+1
+2
+
+( + a) = (z + a) + (z + a)  .
+
+(2.9)
+
+here z = x1 + ix2, z = x1  ix2, and  are the dirac (gamma) matrices, with anti-
+commutation relations {, } = 2,. in the rst expression,  is a dirac spinor,  =
+1, and a is the gauge potential. in the second, the chiral components  = (1+)/2,
+ = (1  )/2 appear, where  := i12 is the chirality operator, and a = a1 + ia2,
+a = a1  ia2. the lagrangian is invariant under the gauge transformations
+
+a  u au 1 + u zu 1 ,   u  ;
+  u  ,
+a  u a u 1 + u z u 1 ,
+
+6
+
+(2.10)
+
+g
+g
+where u and u are two independent elements of the gauge group g. this chiral g  g
+gauge invariance is the result of the vector and axial-vector gauge invariance of the dirac
+lagrangian: u = u species a vector gauge transformation, and when u = u 1, we get
+an axial-vector transformation.
+
+in a spacetime of n dimensions, a gauge boson has n  2 degrees of freedom. in n = 2,
+what this means is that all a can be obtained by applying gauge transformations to some
+xed a, 0, say. so we can parametrise
+
+a = 1z ,
+
+a = 1z ,
+
+with ,   g. then, the gauge transformations (2.10) become
+
+  u ,
+
+   u .
+
+(2.11)
+
+(2.12)
+
+equivalently, we can say that the elds a, a are subsidiary elds that could have been
+eliminated in (2.9), giving a four-fermion interaction (and so a thirring model).
+
+the path integral
+
+z [d][d ] exp(cid:18)z l d2x(cid:19) = eseff
+
+(2.13)
+
+denes an eective action se from which the fermions have been eliminated. because of
+the form of the lagrangian (2.9) in (2.13), one often writes
+
+se = log det [( + a)] .
+
+(2.14)
+
+in simple cases, these path integrals can be computed explicitly.
+
+suppose there are extra avour indices for the fermions, suppressed in (2.9), running over
+a number nl of (avours of) left-handed fermions , and a number nr of right-handed
+fermions . if nl 6= nr, the axial-vector gauge invariance is destroyed when quantum
+corrections are taken into account. there is a chiral anomaly, proportional to nl nr. in
+the path-integral formalism, this happens because the integration measure for the chiral
+
+fermions cannot be regularised in a way that preserves the invariance [19].
+
+following polyakov and wiegmann [20] (see also [21]), consider a fermionic model with
+
+nl avours of left-handed fermions  and similarly nr right-handed fermions :
+
+l = (z + a) + (z + a)  + vk(a, a) ,
+
+(2.15)
+
+where v is a constant.
+
+7
+
+first consider the case nl = nr = 1. in the gauge a = 0, integrating out the fermions
+
+gives [20]
+
+log det [( + a)] = s1() .
+
+(2.16)
+
+this contribution comes from the left-handed fermion .
+in general gauge, one would
+expect terms s1() + s1(1), the second term coming from the left-handed fermion .
+this is not the complete answer, however, since by vector gauge invariance, we expect a
+result that depends only on 1. this is where the k(a, a) term comes in. one nds
+(2.17)
+
+log det [( + a)] = s1(1) ,
+
+and the constant v of (2.15) is adjusted so that
+
+s1(1) = s1() + s1(1) 
+
+1
+
+4 z d2xk(cid:0)(1z), (1z)(cid:1) .
+
+(2.18)
+
+this is the polyakov-wiegmann identity. as well see, the ane current algebra of the
+
+wzw model can be derived from it.
+
+now suppose nl 6= nr, so that the theory has a chiral anomaly. eliminating fermions
+
+gives
+
+se (a, a) = nls1() + nrs1(1) 
+(nl + nr)(cid:2) s1() + s1(1)(cid:3) +
+1
+=
+2
+
+1
+2
+
+1
+
+8f z d2xk(1, 1)
+(nl  nr)(cid:2) s1()  s1(1)(cid:3)
+
+1
+
+8f z d2xk(1, 1) ,
+
+
+
+(2.19)
+
+where f is a constant, related to v. it is not xed by gauge invariance here. now take the
+limit nl + nr  , with nl  nr xed. the term 1
+forced to vanish. this implies pure gauge a, a: a = 1z, a = 1z (compare to
+(2.11)). so we have
+
+2 (nl + nr)(cid:2) s1() + s1(1)(cid:3) is
+
+se = 
+
+1
+
+8f z d2xk(1, 1) + 2k s() ,
+
+(2.20)
+
+with k = nl nr. from this point of view then, k is quantised because it is the dierence
+in the number of left-handed and right-handed fermions.
+
+this last action is not quite that of the wzw model, with f being an arbitrary constant.
+its that of a (two-dimensional) principal chiral -model, with wz term. such a sigma
+
+model is asymptotically free, as is the -model without the wz term. without the wz
+term, the sigma model is strongly interacting in the infrared. but with the wz term present
+in the action, there is an infrared xed point, at 1
+f = k. the wzw model describes the
+dynamics of this xed point. well remain at 1
+
+f = k henceforth.
+
+8
+
+2.2. current algebra
+
+lets rewrite the polyakov-wiegmann identity (2.18) as
+
+sk() = sk() + sk() + ck(, ) ,
+
+(2.21)
+
+putting  = 1, and using sk() = ks1(), and
+
+ck(, ) = k c1(, ) = 
+
+k
+
+4 z d2xk(cid:0)(1z), (z1)(cid:1) .
+
+(2.22)
+
+the term ck(, ) is a cocycle:
+
+ck(, ) + ck(, ) = ck(, ) + ck(, ) .
+
+(2.23)
+
+the presence of this cocycle indicates a projective representation, of the loop group lg of
+
+g [22]. alternatively, we can say that the group dlg, an extension of lg, is represented
+non-projectively. this extension dlg has as its lie algebra the (untwisted) ane kac-
+moody algebra g, the central extension of the loop algebra of g. well call g an ane
+algebra, for short. lets see how the wzw model realises g g as a current algebra [7][23].
+then conformal invariance can be established.
+
+since
+
+ck(, 1) = 
+
+k
+
+4 z d2xk(cid:0)1z, 1z (cid:1) ,
+
+(2.24)
+
+if either z = 0 or z  = 0, then ck(, 1) = 0, and also sk() = sk( ) = 0. (2.21)
+thus establishes the local g  g invariance of the wzw model:
+sk(cid:0)(z)(z, z) 1(z)(cid:1) = sk ((z, z)) ,
+
+(2.25)
+
+sometimes called the g(z)  g(z) invariance.
+
+for innitesimal transformations  = id + (z), (z) = id + (z), the wzw eld 
+
+transforms as
+
+  = ,
+
+  =   .
+
+with  =  + , we nd
+
+sk() = 
+
+k
+
+ z d2x (cid:8)k(cid:0), z(z1)(cid:1)  k(cid:0), z(1z)(cid:1)(cid:9) .
+
+the equations of motion of the wzw model are
+
+(1) + i (1) = 0 .
+
+9
+
+(2.26)
+
+(2.27)
+
+(2.28)
+
+switching to the complex coordinates z, z, and using z = 2z, z z = i/2, etc., these give
+z(1z) = 0, with hermitian conjugate z(z1) = 0. dening
+
+we have
+
+j := kz1 ,
+
+j := k1z ,
+
+zj = 0 ,
+
+z j = 0 .
+
+(2.29)
+
+(2.30)
+
+so the currents j, j are purely holomorphic, antiholomorphic, respectively; i.e. j = j(z),
+j = j(z). these currents will realise two copies of the ane algebra g.
+
+first we must explain the quantisation scheme. we consider the euclidean time direction
+to be the radial direction, so that constant time surfaces are circles centred on the origin.
+
+more explicitly, the (conformal) transformation
+
+z = e +i , z = e i
+
+(2.31)
+
+maps the complex plane (punctured at z = 0, ) to a cylinder, with euclidean time
+coordinate   r running along its length, and a periodic space coordinate    + 2.
+the origin z = 0 then corresponds to the distant past  = , and the distant future
+ = + is at |z| = .
+
+this is called radial quantisation. in (3+1)-dimensional qft the n-point functions are
+vacuum-expectation-values of time-ordered products of elds. similarly, in radial quanti-
+
+sation one needs to consider radially-ordered products of elds:
+
+r ( a(z)b(w) ) := (cid:26) a(z)b(w) ,
+
+b(w)a(z) ,
+
+|z| > |w| ,
+|z| < |w| .
+
+(2.32)
+
+dene the correlation functions as vacuum-expectation-values of radially ordered products
+of elds, i.e.
+
+ha(z)b(w)i := h0| r (a(z)b(w)) |0i .
+
+we make the operator product expansion
+
+r (a(z)b(w)) =
+
+xn=n0
+
+(z  w)nd(n)(w) ,
+
+(n0  0) .
+
+(2.33)
+
+(2.34)
+
+we are also assuming n0 < , i.e. that there is no essential singularity at z = w. break
+this product up by dening the contraction
+
+a(z)b(w) :=
+
+1xn=n0
+
+10
+
+(z  w)nd(n)(w)
+
+(2.35)
+
+or singular part, and the normal-ordered product
+
+n (a(z)b(w)) := xn0
+
+(z  w)n d(n)(w) .
+
+n (ab) (w) := d(0)(w) ,
+
+if we also dene
+
+then we can write
+
+r (a(z)b(w)) = a(z)b(w) + n (a(z)b(w))
+
+(2.36)
+
+(2.37)
+
+(2.38)
+
+= a(z)b(w) + n (ab) (w) + o(z  w) .
+
+radial ordering will be assumed henceforth. often it is only the singular parts of operator
+
+product expansions (opes) that are relevant. we write
+
+a(z)b(w) 
+
+1xn=n0
+
+(z  w)nd(n)(w) = a(z)b(w) ,
+
+(2.39)
+
+i.e.  indicates that only the singular terms are written.
+
+to show that the currents realise two copies of g, we integrate the right hand side of
+
+(2.27) by parts, using counter-clockwise integration contours, to get
+
+i
+
+4 i0
+
+dz k ( (z), j(z)) 
+
+i
+
+4 i0
+
+dz k(cid:0) (z), j(z)(cid:1) .
+
+(2.40)
+
+(hw dz will indicate integration around a contour enclosing the point z = w.) expanding
+ =pa ata, j =pa j ata, (and , j similarly), using k(ta, tb) = ab, we get
+
+2ii0
+sk() = 1
+
+dz xa
+
+1
+
+2ii0
+
+dz xa
+
+aj a +
+
+a j a .
+
+(2.41)
+
+this transformation rule leads to the g  g current algebra. in the euclidean path integral
+formulation, a correlation function of the product x of elds is given by
+
+hxi = r [d] x es[]
+r [d] es[]
+
+,
+
+(2.42)
+
+where [d] indicates path integration over the elds  of the theory.
+
+if the action s
+
+transforms with s = h0 dz s(z), then
+hxi = i0
+
+11
+
+dz h(s)xi .
+
+(2.43)
+
+so (2.41) implies
+
+hxi =
+
+1
+
+2ii0
+
+dz xa
+
+a(z) hj a(z)xi ,
+
+(2.44)
+
+where we have put  = 0 for simplicity. put x = j b(w). with j(w) = k(z)1 and
+ = , we get
+
+more explicitly this is
+
+j = [, j]  kw .
+
+j b(w) = xc,d
+
+if bcdc(w)j d(w)  kwb(w) .
+
+in (2.44) this gives
+
+1
+
+2iiw
+
+dw c(w) hif cbd j d(w)
+z  w
+2iiw
+1
+
+=
+
++
+
+kbc
+
+(z  w)2 i
+
+dw a(w) hj a(z)j b(w)i .
+
+(2.45)
+
+(2.46)
+
+(2.47)
+
+this relation determines the singular part of the (radially-ordered) operator product of
+
+two currents:
+
+j a(z)j b(w) 
+
+kab
+
+(z  w)2 +
+
+if abcj c(w)
+
+z  w
+
+.
+
+(2.48)
+
+a similar ope holds for the currents j a(z). this ope is equivalent to an ane algebra.
+nz1n, or equiva-
+
+the laurent expansion of a current about z = 0 is j a(z) = pnz j a
+
+n = (1/2i) h0 dz znj a(z). we can translate this expansion, so that
+
+lently, j a
+
+j a(z) = xnz
+
+(z  w)1n j a
+
+n(w)
+
+(2.49)
+
+is the laurent expansion about the point z = w, and j a
+
+n(0) = j a
+
+n. of course, we also have
+
+j a
+n(w) =
+
+1
+
+2i iw
+
+dz (z  w)nj a(z) .
+
+this allows us to write
+
+[j a
+
+m, j b
+
+n] =
+
+1
+
+2ii0
+
+2ii|z|>|w|
+dw wn 1
+2ii0
+dw wm 1
+
+
+
+1
+
+2ii|z|<|w|
+
+dz zm j a(z)j b(w)
+
+dz zm j b(w)j a(z) ,
+
+(2.50)
+
+(2.51)
+
+12
+
+z
+
+w
+
+0
+
+z
+
+w
+
+-
+
+0
+
+=
+
+0
+
+z
+
+w
+
+figure 5. subtraction of contours for (2.52).
+
+where here radial ordering is not implicit in the operator products. both operator products
+
+in the integrands are r(cid:0)j a(z)j b(w)(cid:1), however. so, by subtraction of contours, we obtain
+
+[j a
+
+m, j b
+
+n] =
+
+1
+
+2ii0
+
+dw
+
+1
+
+2iiw
+
+dz zmwn r(cid:0)j a(z)j b(w)(cid:1) ,
+
+(2.52)
+
+as indicated in fig. 5.
+
+after substituting (2.48) into the last result, residue calculus then gives
+
+[j a
+
+n, j b
+
+m] = xc
+
+if abcj c
+
+n+m + knabm+n,0 .
+
+(2.53)
+
+identical commutation relations hold for the current modes j a
+m.
+
+these are the commutation relations of g  g. it is easy to see that (2.53) is a central
+extension of the loop algebra of g. consider j a  sn, with s on the unit circle in the
+complex plane, and n  z. the loop algebra of g is generated by the j a  sn, since they
+are g-valued functions on s1 (the loop). now
+
+[j a  sm, j b  sn] = [j a, j b]  sm+n = if abcj c  sm+n .
+
+(2.54)
+
+so only the central extension term ( k) is missing.
+
+the central extension term is known as a schwinger term. (2.48) is not the usual form
+in quantum eld theory, because radial quantisation is not typical. if we switch variables
+
+using z = exp(2ix/l), then laurent series become fourier series, and we recover the
+more familiar form
+
+[ j a(x), j b(y)] = if abc j c(x)(x  y) +
+
+1
+2
+
+abk(x  y) ,
+
+(2.55)
+
+13
+
+where we have put j(x) := zj a(z)/l. the schwinger term is a quantum eect (as powers
+of  would show) and is related to chiral anomalies, as the presence of k suggests (recall
+that k = nlnr in the derivation of the wzw model as an eective theory with fermions
+integrated out).2
+
+the conformal invariance of the model can now be established in a straightforward
+
+way. the sugawara construction expresses the stress-energy tensor in terms of normal-
+ordered products of currents j a(z). the normal-ordered product (2.36) of two operators
+x(w), y (w) can be rewritten as
+
+n (xy )(w) =
+
+1
+
+2i iw
+
+dz
+z  w
+
+x(z)y (w) .
+
+(2.56)
+
+with this form of normal ordering, the appropriate version of wicks theorem is
+
+x(z) n (y z)(w) =
+
+1
+
+2iiw
+
+using this we calculate
+
+dx
+
+x  wn x(z)y (x) z(w)
+
++ y (x) x(z)z(w)o .
+
+(2.57)
+
+(2.58)
+
+j a(z) xb
+
+n (j b j b)(w) = 2(k + h)
+
+j a(w)
+
+(z  w)2 ,
+
+using (2.48). here h =pa,b,c f abcf abc/(2dim g) is the dual coxeter number of g (this is
+
+consistent with (2.2), (2.4), (2.5)). so
+
+xb
+
+n (j b j b)(z) j a(w) = 2(k + h)(cid:26) j a(w)
+
+(z  w)2 +
+
+j a(w)
+
+z  w (cid:27) .
+
+(2.59)
+
+the sugawara stress-energy tensor is
+
+t (z) =
+
+1
+
+2(k + h) xa
+
+n (j aj a)(z) .
+
+(2.60)
+
+using (2.57) and (2.59) then gives
+
+t (z)t (w) 
+
+c/2
+
+(z  w)4 +
+
+2t (w)
+
+(z  w)2 +
+
+t (w)
+z  w
+
+,
+
+(2.61)
+
+2 for more detail on the relation between chiral anomalies and schwinger terms, see [24], chapter
+5.
+
+14
+
+with the central charge
+
+c =: c(g, k) =
+
+k dim g
+k + h .
+
+(2.62)
+
+this last result is the conformal algebra with central extension, or virasoro algebra, in
+
+ope form. so conformal invariance is established. substituting t (z) = pnz z2nln
+
+yields the usual form of v ir (the virasoro algebra):
+
+[lm, ln] = (m  n)lm+n +
+
+c
+12
+
+(m3  m)m+n,0 .
+
+for completeness, we also write
+
+t (z)j a(w) 
+
+j a(w)
+
+(z  w)2 +
+
+j a(w)
+z  w
+
+,
+
+which corresponds to
+
+[lm, j a
+
+n] = nj a
+
+m+n .
+
+(2.63)
+
+(2.64)
+
+(2.65)
+
+this shows that g and v ir extend to a semi-direct product in the theory. furthermore, the
+full chiral algebra of the wzw model is v ir  g, with commutation relations (2.63),(2.53)
+
+and (2.65).
+
+2.3. factorisation and primary elds
+
+a factorised form for (z, z) solves the classical equation of motion:
+
+(z, z) = l(z)r(z)  z(cid:0)1z(cid:1) = 0 .
+
+(2.66)
+
+this factorisation survives in the following form in the quantum theory. as already men-
+tioned, under an innitesimal g(z)  g(z) transformation, we have
+
+ =  ,
+
+ =   .
+
+(2.67)
+
+the currents j a(z), j a(z) generate the innitesimal transformations of the elds, so we
+have
+
+j a(z)(w, w)  1
+z  w
+j a(z)(w, w) 
+z  w
+
+1
+
+ta
+(w, w) ,
+
+(w, w)ta
+
+ ,
+
+(2.68)
+
+where ta
+
+ is the g-generator ta in the representation appropriate to (z, z).
+
+15
+
+the wzw model also contains other elds, besides (z, z), that transform in similar
+
+fashion. these are the so-called primary elds ,(z, z):
+
+j a(z),(w, w)  1
+z  w
+j a(z),(w, w) 
+z  w
+
+1
+
+ta
+,(w, w) ,
+
+,(w, w)ta
+
+ ,
+
+(2.69)
+
+here ,  are two highest weights of
+l(), l() of g, and ta
+
+, ta
+
+ are the generators in those representations.
+
+integrable unitary irreducible representations
+
+to nd the action of the current modes j a
+
+n that generate g, we use j a(z) =
+
+pnz z1nj a
+
+n in
+
+to get
+
+j a(z),(0, 0)  
+
+1
+z
+
+ta
+,(0, 0)
+
+[j a
+0 , ,(0, 0)] =  ta
+[j a
+n, ,(0, 0)] = 0 , for n > 0 .
+
+,(0, 0) ,
+
+(2.70)
+
+(2.71)
+
+this implies that the primary eld , transforms as a highest-weight representation l()
+of the ane algebra g. similar considerations work for the right action, so , transforms
+as l()  l().3
+
+for most purposes, it suces to consider only the left or right action of g. so we will
+
+write, instead of (2.69),
+
+j a(z)(w)  ta
+
+(w)
+z  w
+
+,
+
+(2.72)
+
+and similarly for j a(z) and (z),
+if need be. we must emphasise, however, that
+(z), (z) are not sensible local elds; they are only the holomorphic (left-moving)
+and antiholomorphic (right-moving) parts of the primary eld ,(z, z).
+if you like,
+,(z, z) = (z) (z).
+
+to see this, rst note that the primary eld ,(z, z) transforms nicely under conformal
+transformations. thats because of the sugawara construction (2.60), expressing the stress-
+
+energy tensor as a normal-ordered product of the currents. in terms of modes, the sugawara
+construction gives
+
+ln =
+
+where
+
+1
+
+2(k + h) xa xmz
+q ) = (cid:26) j a
+
+p j b
+j b
+q j a
+
+q ,
+p ,
+
+p j b
+
+n (j a
+
+n (j a
+
+nmj a
+
+m) .
+
+p  q ;
+p > q .
+
+(2.73)
+
+(2.74)
+
+3 as well see, a highest weight  for g determines a highest weight  for g.
+
+16
+
+we get
+
+where
+
+[ln, (0)] = (cid:26)
+h = pa tr(ta
+
+ta
+)
+
+2(k + h) tr(id)
+
+0,
+
+h(0) ,
+
+n > 0 ;
+n = 0 .
+
+=
+
+(,  + 2)
+2(k + h)
+
+(2.75)
+
+(2.76)
+
+is the conformal weight of the primary eld , and  is the weyl vector of g (the
+half-sum of the positive roots of g).
+
+in ope language, this is
+
+similarly,
+
+t (z)(0) 
+
+h(0)
+
+z2
+
++
+
+(0)
+
+z
+
+t (z) (0) 
+
+h (0)
+
+z2
+
++
+
+ (0)
+
+z
+
+.
+
+.
+
+(2.77)
+
+(2.78)
+
+now, the generator of innitesimal scaling is l0 + l0, as well show below. so h + h
+is the scaling dimension of the primary eld ,. (in radial quantisation, scaling = time-
+translation, so the hamiltonian h = l0 + l0.) l0 l0 generates rotations, so that hh
+is the spin of ,. for a single-valued (local) eld, we therefore require h  h  z. this
+is a highly nontrivial constraint on pairs (, ), since h, h  q. it is in this sense that
+(z) cannot be considered a sensible local eld in its own right.
+
+the elds , are primary because all others are in the span of operator products of
+
+currents acting on them:
+
+j a1 (z1)j a2 (z2)    j an(zn) j a1(z1)j a2 (z2)    j an (zn) ,(z, z) .
+
+(2.79)
+
+they are therefore called descendant elds. more usually, the basis elements are written
+as
+
+j a1
+n1    j an
+
+nn
+
+n1    j a n
+j a1
+
+n n
+
+,(z, z) .
+
+(2.80)
+
+2.4. field-state correspondence
+
+|0i is the vacuum of the wzw model. ta
+
+where v denotes the highest-weight vector of l(), and v  l(), we have
+
+ means pvl()(ta
+
+)u,v,v. if ,v = v,v,
+
+this is the basis of the eld-state correspondence. more generally, dening
+
+(0)|0i = |vi .
+
+|i := xvl()
+
+,v|vi ,
+
+17
+
+(2.81)
+
+(2.82)
+
+we can write
+
+we can also consistently write
+
+(0)|0i = |i .
+
+(z) = xul()
+
+,u u(z) , with u(0) |0i = |ui .
+
+in terms of |vi, the primary-eld conditions read
+
+j a
+0 |vi = ta
+
+|vi ,
+
+j a
+n|vi = 0 (n > 0) ,
+
+(2.83)
+
+(2.84)
+
+(2.85)
+
+in agreement with (2.75). the ane algebras are examples of triangularisable algebras
+
+(just like the simple lie algebras) [25]. this means their generators can be written as a
+disjoint sum of three sets, with corresponding decomposition
+
+g = g  g0  g+ .
+
+(2.86)
+
+g0 is the cartan subalgebra, while g  g0 are borel subalgebras. g+(g) correspond to
+positive (negative) roots, and so contain raising (lowering) operators. now, in the basis
+used, g+ is generated by {j a
+0 } contains the raising operators of
+g  g. but since ta
+ are the generators of g in a representation l() of highest weight ,
+we know g+|vi = 0. so by (2.85), g+|vi = 0, i.e. |vi is the highest-weight state (highest
+state/vector) of the ane representation l() of g.
+
+n>0}  g+, where g+  {j a
+
+the rest of the states in the representation l() can be obtained as descendant states,
+
+i.e. as linear combinations of states of the form
+
+n1    j an
+j a1
+
+nn (0)|0i .
+
+(2.87)
+
+now, there is still an innite number of possible highest weights. but well nd that for
+xed k  z>0, only a nite number of inequivalent highest weights are possible. these
+are the (unitary) integrable highest weights; they generate representations of g that can be
+integrated to representations of dlg. by the g(z)  g(z) invariance of the wzw model,
+
+these representations are precisely the relevant ones. we will arrive at this result from an
+
+algebraic perspective, however.
+
+to do this, we rst need to discuss g, g and their relation. this justies an interesting
+
+digression on kac-moody algebras [26] [27] [28] [29].
+
+18
+
+3. ane kac-moody algebras
+
+3.1. kac-moody algebras: simple lie algebras
+
+g, g are examples of kac-moody algebras, which can be presented in terms of a cartan
+matrix a = (ai,j), with integer entries (i.e. kac-moody algebras are generalised cartan
+matrix lie algebras). lets rst dene g this way. if x is generated by x1 and x2, for
+example, we use the notation x = hx1, x2i.
+
+recall g = g+  g0  g. now
+g+ = hei
+
+: i = 1, . . . , ri ,
+
+(3.1)
+
+: i = 1, . . . , ri , g0 = hhi
+i = 1, . . . , r} are the chevalley generators of
+where r is the rank of g, and {ei, hi, fi
+g. the commutation relations of the generators can be expressed in terms of the cartan
+matrix:
+
+: i = 1, . . . , ri , g = hfi
+
+:
+
+[hi, hj] = 0
+
+[hi, ej] = aj,iej
+[hi, fj] =  aj,ifj
+[ei, fj] = i,jhj .
+
+the chevalley presentation of the algebra g is completed by the serre relations:
+
+[ad (ei)]1aj,i ej = 0 ,
+[ad (fi)]1aj,i fj = 0 .
+
+(3.2)
+
+(3.3)
+
+the r  r cartan matrix has diagonal entries ai,i = 2, so that hei, hi, fii = s(2) for all
+i = 1, . . . , r. for simple g, g 6= r
+i=1s(2), so ai,j 6= 0 for at least one pair i 6= j, if r > 1.
+for all kac-moody algebras (including semi-simple lie, ane, hyperbolic, etc. algebras)4,
+in
+ai,i = 2 i, as just mentioned; ai,j  z0  i 6= j; and ai,j = 0  aj,i = 0.
+addition, the cartan matrices are symmetrisable: there exist positive rational numbers qj
+such that ad is a symmetric matrix, where d = diag(qj).
+
+for g a semi-simple lie algebra, ai,j  {0, 1, 2, 3} for i 6= j, and most importantly,
+det a > 0, i.e. the cartan matrix is invertible. for simple g, a must be indecomposable.
+
+the information contained in the cartan matrix can be encoded in a so-called (coxeter-
+)dynkin diagram. r nodes are drawn, each associated with a row (or column) of a. node
+i and node j (j 6= i) are joined by a number ai,jaj,i of lines; and if ai,j 6= aj,i, so that
+4 for a discussion of generalised kac-moody algebras, or borcherds-kac-moody algebras, see [5].
+
+19
+
+ar
+
+br
+
+cr
+
+dr
+
+e6
+
+e7
+
+e8
+
+f4
+
+g2
+
+r
+
+r
+
+r
+
+r
+
+r-1
+
+1
+
+1
+
+1
+
+2
+
+2
+
+2
+
+3
+
+3
+
+3
+
+1
+
+2
+
+3
+
+r-1
+
+r-1
+
+r-1
+
+r-2
+
+6
+
+1
+
+2
+
+3
+
+4
+
+5
+
+7
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+8
+
+5
+
+6
+
+7
+
+1
+
+1
+
+2
+
+2
+
+3
+
+3
+
+4
+
+4
+
+1
+
+2
+
+figure 6. the (coxeter-)dynkin diagrams of the simple lie algebras.
+
+there are more than one lines, an arrow is drawn from node i to node j if |ai,j| > |aj,i|.
+the coxeter-dynkin diagrams of the simple lie algebras are drawn in figure 6.
+
+a more direct signicance, in terms of the roots of the algebra, can be given to the cartan
+
+matrix and coxeter-dynkin diagrams. as we do this, well introduce another presentation
+of g, the cartan-weyl presentation.
+
+first, nd a maximal set of commuting hermitian generators h i, (i = 1, . . . , r):
+
+[h i, h j] = 0 (1  i, j  r) .
+
+(3.4)
+
+any two such maximal abelian subalgebras g0 (cartan subalgebras) are conjugate under
+the action of exp g (the covering group of a group with lie algebra g). fix a choice of
+cartan subalgebra g0.
+
+since the h i mutually commute, they can be diagonalised simultaneously in any repre-
+sentation of g. the states of such a representation are then eigenstates of the h i, 1  i  r.
+
+20
+
+we write
+
+h i |; i = i |; i .
+
+(3.5)
+
+here  is called a weight vector (or just a weight), with r components i. the corresponding
+r-dimensional space is known as weight space. as well discuss shortly, it is dual to the
+cartan subalgebra g0. the  of the kets |; i is meant to indicate any additional labels.
+
+a basis for the whole of g can be constructed by appending {e}, obeying
+
+[h i, e] = ie (1  i  r) .
+
+(3.6)
+
+ is a r-dimensional vector, called a root, and e is a step operator (raising or lowering
+operator, depending). for simple lie algebras, e is determined by , up to normalisation.
+if  is a non-zero root, the only multiple of  that is also a root is , and we can take
+(3.7)
+
+.
+
+e = (cid:0)e(cid:1)
+
+the set of roots of g will be denoted .
+
+to complete the presentation of g in the cartan-weyl basis, we also need:
+
+[e, e] = 
+
+
+n (, )e+
+2  h/2
+
+0
+
+if  +   
+if  +  = 0
+otherwise
+
+(3.8)
+
+where   h means pr
+
+i=1 ih i =: h , 2 := (, ) (see below), and the n (, ) are
+constants.5 here we use the scalar product (, ), dened through the killing form (2.2):
+
+(, ) = k(h , h ) = tr(cid:0)ad (h ), ad (h )(cid:1)/2h .
+
+(3.9)
+
+this completes the cartan-weyl presentation of g.
+
+0, weight space: for every weight   g
+
+the killing form also establishes an isomorphism between the cartan subalgebra g0 and
+its dual g
+0, there corresponds an element h   g0
+by () = k(h , ) (i.e. (h ) = k(h , h ) = (, ) for   ). this inner product can
+be extended, by symmetry, (, ) = (, ), to all weights ,   g
+0. by (3.8), the rescaled
+root 2/2 has importance; it is called the coroot .
+
+if we choose a xed basis for the root lattice ( weight lattice), we call  positive,
+  +, i its rst nonzero component in this basis is positive. otherwise,   , i.e. 
+is a negative root. e is considered a raising (lowering) operator if   + (  ).
+5 (3.7) implies n (, ) = n (, ). then for  +    with p    q, we can set
+n (, )2 = q(1  p)(, )/2.
+
+21
+
+a simple root is a positive root that cannot be written as a linear z0-combination of
+: i = 1, . . . , r}. the
+i = 1, . . . , r}. the basis dual to  is the dynkin
+
+other positive roots. the set of simple roots will be denoted  = {i
+set of simple coroots is  = {
+basis of fundamental weights:
+
+:
+
+i
+
+(cid:0)(cid:1)
+
+= {i
+
+: j = 1, . . . , r } .
+
+(3.10)
+
+that is, (i, 
+
+j ) = i
+j.
+
+let us now compare the chevalley and cartan-weyl presentations of g. the chevalley
+presentation emphasises the r subalgebras of type s(2) = a1 that are associated with
+each simple root (or fundamental weight). it is the more economical presentation, since
+it is written in terms of just 3r generators, those listed in (3.1). this economy allowed
+it was natural to wonder whether loosening
+the discovery of the kac-moody algebras:
+
+the constraints on the cartan matrix would lead to other interesting types of algebras.
+the price to be paid is the imposition of the more complicated serre relations (3.3). but
+
+these relations are what ensure that (among other things) a nite-dimensional algebra is
+generated.
+
+in contrast, the cartan-weyl presentation makes use of the a1-subalgebras associated
+with every positive root. for every positive root we get a raising and lowering operator,
+and the nite-dimensionality of the algebra is built in. of course, the cost is the use of
+
+more generators, a total of dim g of them.
+
+more concretely, it is not dicult to make the identications
+
+ei = ei ,
+
+fi = ei ,
+
+hi =
+
+2i  h
+
+2
+i
+
+= 
+
+i  h ,
+
+(3.11)
+
+where h =pr
+
+i=1 ihi, and nally
+
+ai,j =
+
+2(cid:0)i, j(cid:1)
+
+2
+j
+
+= (i, 
+
+j ) .
+
+(3.12)
+
+so, the cartan matrix encodes the scalar products of simple roots with simple coroots.
+
+now, det a > 0 guarantees that weight space is euclidean. consider the hyperplanes in
+i=1 ii
+
+weight space with normals i. the primitive reection ri = ri of a weight  =pr
+
+across such a hyperplane is given by
+
+ri = ri =   (, 
+
+i )i .
+
+(3.13)
+
+22
+
+being reections, the ri have order 2, and they generate a coxeter group w , which can be
+presented as
+
+with the relations
+
+w = h ri
+
+: i = 1, . . . , r i ,
+
+(rirj)mij = id .
+
+(3.14)
+
+(3.15)
+
+clearly, mii = 1 for all i, and it turns out that all mij  {2, 3, 4, 6}, when i 6= j. this
+coxeter presentation can be encoded in a coxeter diagram: nodes are drawn for each
+primitive reection, and {0, 1, 2, 3} lines between nodes for mij  {2, 3, 4, 6}, respectively
+(i 6= j). for simple g, we nd the coxeter diagrams are just the corresponding dynkin
+diagrams (see fig. 6), with the arrows omitted. in fact, the coxeter group so obtained is
+the weyl group of g.
+
+the possible weights of integrable representations will lie on the weight lattice p :=
+z(), the points in weight space that are integer linear combinations of the fundamental
+weights. of course, this lattice is periodic and lls weight space. so we can think of it
+as an innite crystal. it has a point group isomorphic to the weyl group, which explains
+the restriction mij  {2, 3, 4, 6}, familiar from crystallography.
+
+still, it is remarkable that these coxeter-weyl groups almost determine the algebra g
+completely. more accurately (br and cr have isomorphic weyl groups), the simple lie
+algebras are essentially those whose weight lattices can exist in a euclidean weight space
+of dimension equal to the rank.
+
+what is the geometry of the weyl hyperplanes in weight space? there is a weyl hy-
+perplane for each root, not just for the simple roots, and they partition the r-dimensional
+
+weight space into a nite number of sectors. each sector is of innite hypervolume, and
+w acts simply transitively on them. the example of g = a2 is pictured in fig. 7.
+
+we use the notation  = pr
+i=1 i i = (1, . . . , r), and l(1, . . . , r) = l(). fig. 8
+is the weight diagram for the a2 representation l(2, 1). notice it is symmetric under the
+action of the weyl group w = s3 for a2. let mult (; ) denote the multiplicity of a
+weight  in the representation l(). then this weyl symmetry can be written as
+
+mult (; ) = mult (; w) , w  w .
+
+(3.16)
+
+the weyl symmetry can also be expressed in terms of characters. characters are to
+
+representations what weights are to states (vectors). they are simpler than the represen-
+tations themselves, yet still contain sucient information to be useful in many contexts.
+
+precisely, the formal character of the g-representation l() is
+
+ch := trl() eh .
+
+(3.17)
+
+23
+
+r
+
+1
+
+r1
+
+2
+
+2
+
+r r
+
+2
+
+1
+
+id
+
+1
+
+r2
+
+1
+
+r
+
+2
+
+r r r
+2
+1
+
+1
+
+r r
+1
+
+2
+
+figure 7. the weyl sectors of a2 weight space. each sector is labelled by the
+weyl element that maps it to the identity (id) sector. the identity sector is
+also known as the dominant sector. also shown are the fundamental weights
+1, 2, and the roots, including the simple roots 1, 2, and the highest root
+.
+
+(2,1)
+
+figure 8. the weight diagram of l(2, 1), the a2 representation of highest
+weight (2, 1).
+
+24
+
+a
+a
+w
+q
+w
+equivalently, if we dene
+
+we can write
+
+p () := {   g
+
+0 : mult (; ) 6= 0 } ,
+
+ch = xp ()
+
+mult (; ) e .
+
+(3.18)
+
+(3.19)
+
+in (3.17) and (3.19), eh and e are formal exponentials, with the additive property ee =
+e+, for example.
+
+the weyl symmetry is made manifest in the celebrated weyl character formula:
+
+ch = pww (det w) ew.
+(1  e)
+
+q+
+
+,
+
+(3.20)
+
+where the shifted weyl action is w. := w( + )  . here det w = 1 if w can be written
+as a composition of an even number of primitive reections, and det w = 1 for an odd
+number.
+
+since the character of the singlet representation l(0) is ch0 = 1, (3.20) gives the denom-
+
+inator identity
+
+y+
+
+(1  e) = xww
+
+(det w) ew.0 .
+
+(3.21)
+
+so the weyl character formula can also be written as
+
+ch = pww (det w) ew(+)
+pww (det w) ew
+
+.
+
+(3.22)
+
+if we continue this relation to weights  6 p+, we can also derive
+
+ch = (det w) chw. .
+
+(3.23)
+
+this relation will be important later.
+
+we can informalise the formal character in the following way:
+
+ch() := xp ()
+
+mult (; ) e(,)
+
+.
+
+(3.24)
+
+the character ch() is then a polynomial in the r indeterminates ej , j = 1, . . . , r.
+
+25
+
+3.2. kac-moody algebras: ane algebras
+
+as discussed above, the ane algebras g relevant to wzw models are central extensions
+of the loop algebras of g, for g semi-simple; we restrict to g simple here for simplicity.
+they are known as untwisted ane algebras. for such g, g  g is known as the horizontal
+subalgebra of g.
+
+the chevalley presentation for g is identical to that for g except that the r  r cartan
+matrix a = (ai,j) is replaced by the (r + 1) (r + 1) cartan matrix a = ( ai,j)i,j{0,1,...,r},
+with ai,j = ai,j for i, j 6= 0. as for g, the elements of the cartan matrix are determined
+by scalar products of simple roots and coroots:
+
+ai,j = ( i, 
+
+j ) .
+
+(3.25)
+
+because of this structure, there is an intimate relation between the simple roots of g and
+those of g.
+
+an ane kac-moody cartan matrix obeys all the conditions mentioned above that the
+simple lie algebras obey, except that the det a > 0 condition is loosened. let a(i) denote
+the submatrix of (r + 1)  (r + 1) matrix a obtained by deleting the i-th row and column.
+then we must have
+
+det a = 0 , but det a(i) > 0 i  {0, 1, . . . , r} ,
+
+(3.26)
+
+if a is to be an ane cartan matrix. this means that the submatrices a(i) must be cartan
+matrices for semi-simple lie algebras. besides the untwisted ane algebras, twisted ane
+
+algebras also exist, but they are not so directly useful in conformal eld theory.
+
+(3.26) guarantees that a has no negative eigenvalues, and exactly one zero eigenvector.
+for all ane cartan matrices a, there exist positive integers a0, a1, . . . , ar, called marks,
+i=0 ai ai,j = 0. if a is ane, meaning it is the cartan matrix of an ane
+algebra, then so is at (their dynkin diagrams are obtained from each other by reversing
+j are known as
+co-marks (notice this is consistent with the symmetrisability of g). for untwisted g, the
+
+such that pr
+their arrows). because of this, we also have pr
+
+j=0
+
+ai,ja
+
+j = 0, where the a
+
+marks and co-marks are determined by the highest root  of g, which is its own co-root
+ =  (here we use the normalisation convention 2 = 2 for the longest roots ). so we
+can expand
+
+ =
+
+aii =
+
+a
+i 
+i
+
+,
+
+(3.27)
+
+rxi=1
+
+rxi=1
+
+with the expansion coecients equalling the (co-)marks. a0 = a
+specication.
+
+0 = 1 completes their
+
+26
+
+equivalently, the dynkin diagrams of the untwisted ane g are simply the extended
+dynkin diagrams of the corresponding simple algebra g, obtained by augmenting the set
+of simple roots  of g by . the dynkin diagrams of the untwisted ane algebras are
+drawn in fig. 9. so, the set of ane simple roots
+
+ = { i
+is simply related to {, 1, . . . , r}.
+
+: i  {0, 1, . . . , r} }
+
+(3.28)
+
+(1)
+
+ar
+
+(1)
+
+br
+
+(1)
+
+cr
+
+(1)
+
+dr
+
+(1)
+
+e6
+
+(1)
+
+e7
+
+(1)
+
+e8
+
+0
+
+1
+
+2
+
+3
+
+r-1
+
+r
+
+(1)
+
+a
+1
+
+0
+
+1
+
+0
+
+1
+
+2
+
+0
+
+1
+
+2
+
+3
+
+r-1
+
+r
+
+0
+
+1
+
+2
+
+3
+
+0
+
+6
+
+3
+
+r-1
+
+r
+
+r-2
+
+r
+
+(1)
+
+g2
+
+0
+
+1
+
+2
+
+r-1
+
+(1)
+
+f4
+
+1
+
+2
+
+3
+
+4
+
+5
+
+0
+
+1
+
+2
+
+3
+
+4
+
+7
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+8
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+figure 9. the (coxeter-)dynkin diagrams of the ane untwisted kac-moody
+algebras.
+
+notice that if any node of any of the dynkin diagrams of fig. 9 is omitted, one obtains
+
+27
+
+the dynkin diagram of a semi-simple lie algebra. this is also true of the twisted ane
+dynkin diagrams (not drawn here), and is in agreement with the condition (3.26). it is only
+
+the untwisted dynkin diagrams, however, that are isomorphic to the extended diagrams
+of simple lie algebras.
+
+before making this precise, we must introduce another operator. for an arbitrary
+
+symmetrisable kac-moody algebra, one can dene the inner product of simple roots di-
+rectly from the cartan matrix a by (i, j) = ai,jqj ( recall ad is symmetric, with
+d = diag(qi) ). this inner product is positive (semi-)denite i a is of (ane) nite type.
+now, many of the important results for g are obtained as straightforward generalisations
+of those for g, but these latter rely on having a non-degenerate bilinear form (, ). to
+make the bilinear form non-degenerate in the ane case, one needs to enlarge the cartan
+subalgebra g0 of g, to ge
+0, by adding a derivation d. we will denote the enlarged ane
+algebra similarly, by ge.
+
+the problem is the canonical central element
+
+k =
+
+rxi=0
+
+a
+i
+
+h i .
+
+clearly, [k, h j] = 0, and furthermore,
+
+[k, e i] = 
+
+rxj=0
+
+a
+j
+
+ai,je i = 0 ,
+
+(3.29)
+
+(3.30)
+
+showing that k is indeed central. actually, the coecient k of the wz term (2.3) in the
+wzw action (2.1) is to be identied with the eigenvalue of k, which is xed in the current
+algebra of a given wzw model.
+
+if we extend the bilinear form by choosing k(k, d) = 1, k(k, k) = k(d, d) = 0, the
+resulting form is non-degenerate. the operator d is very natural in wzw models: d will
+be identied with the virasoro zero mode l0.
+
+if a step operator e  is an element of g, with
+
+[ h i, e ] = ie 
+[k, e ] = 0 ,
+
+(i  {1, . . . , r}) ,
+[d, e ] = n ,
+
+(3.31)
+
+we denote  = (, 0, n), and write e  =: e
+n . so one can think of ane roots as vectors
+with r + 2 components, r of which describe a root of g, and the other two correspond to
+the elements k, d  ge. the inner product on ge
+
+is
+
+0
+
+( , ) = (cid:0) (, k, n), (, k, n)(cid:1) = (, ) + kn + nk .
+
+(3.32)
+
+28
+
+it is determined by the symmetry and invariance:
+
+k(x, [z, y]) + k([z, x], y) = 0 (x, y, z  ge
+
+0) ,
+
+(3.33)
+
+of the corresponding bilinear form on ge
+
+0. notice that k, n behave like light-cone coor-
+
+dinates x = (t  x)/2 in a minkowski metric, so the signature of the inner product on
+notice that  =pr
+
+i=0 ai i = (0, 0, 1), so that  is the root corresponding to d = l0 
+
+ge
+0
+
+is lorentzian.
+
+ge
+0. the dual weight is denoted 0 = (0, 1, 0).
+the ane simple roots are
+
+0 = (, 0, 1) ,
+
+i6=0 = (i, 0, 0) .
+
+(3.34)
+
+this explains why the extended dynkin diagram of g is identical to the dynkin diagram
+
+for g.
+
+the fundamental weights are
+
+0 = (0, 1, 0) = (0, a
+
+0 , 0) ,
+
+i6=0 = (i6=0, a
+
+i6=0, 0) .
+
+(3.35)
+
+for an arbitrary ane weight  = (, , n),  is called the level of the weight, and n is
+called its grade. in the wzw context, the level of weight vectors will usually be xed by
+
+the wz coecient k, and the grade is directly related to the eigenvalue of the virasoro
+zero mode l0. for  as just written, we will adopt the notational convention that  = ;
+if the hat is removed from an ane weight, the result is the horizontal projection, or
+nite part of it. this is consistent with (3.34) and (3.35), and also allows us to write
+0 = 0, 0 = , for examples. we also use  to denote  (and have so already); so
+that k 0 = 0, for instance.
+
+this notational convention also allows us to write
+
+i = i ,
+
+ i  {1, . . . , r} .
+
+(3.36)
+
+these are the ane roots and weights. what about the ane weyl group w ? it is also
+the coxeter group associated with the corresponding dynkin diagram, generated by the
+primitive weyl reections
+
+suppose  = (, k, n), then this gives
+
+ri =   (, 
+
+i ) 
+i
+
+.
+
+ri = (ri, k, n) ,
+
+i 6= 0 ;
+
+r0 =  (cid:2)k  (, )(cid:3) 0 = (cid:0)  +(cid:2) k  (, )(cid:3) , k, n (cid:2) k  (, )(cid:3)(cid:1) .
+
+29
+
+(3.37)
+
+(3.38)
+
+notice that k  (, ) plays the role of 0. this is justied by (, ) = pr
+0 +pr
+consequently, we sometimes use 0 := k  (, ). so (3.36) can be extended to include
+
+i i = 0 + (, ), which should be the eigenvalue of k, i.e. the level.
+
+i = 0, once the level k of an ane weight has been xed, as it is in wzw models.
+
+i=0 a
+i
+
+i=1 a
+
+i =
+
+the relation between w and w  w is found by calculating r  for  = (, 0, m). one
+
+gets r  = r(t)m, where
+
+t = (cid:0)  + k, k, n + 2  ( + k)2/2k(cid:1) .
+
+(3.39)
+
+tt = tt, so hti = tkq , the translation group in the (scaled) co-root lattice q of g.
+furthermore, rtr1
+
+ = rtr = tr (), so tkq is a normal subgroup of w , and
+
+w = w  tkq .
+
+(3.40)
+
+this relation has important implications for the modular properties of ane characters,
+
+as well see.
+
+the geometry of ane weyl hyperplanes can be compared to that for the weyl hy-
+perplanes of g, at least after the horizontal projection  = (, k, n) 7 . the situation
+is analogous, with sectors of weight space labelled by elements of w . but this time the
+sectors are of nite volume, and there is an innite number of them, since | w| = . see
+fig. 10 for a depiction of the case g = a2.
+
+this fact is highly suggestive: the integrable highest weights for g are those integral
+weights ( =pr
+i=1 ii with all i  z) contained in the sector labelled by id  w , so we
+expect the integrable ane highest weights to be nite in number. how does this happen?
+first, if  = (, k, n) is to be a highest weight for an integrable representation of g,
+then g  g implies  must be one for g. so   p+ = { = pr
+i=1 ii
+: i 
+z0}, ensuring that each a1 subalgebra hei, hi, fii = hei
+i (i  {1, . . . , r}) is
+represented integrably, i.e. has i = 2j with isospin j  z0/2. the extra condition
+is simply that the a1 subalgebra corresponding to the simple root 0 be represented
+integrably. this just means 0  z0 is required, i.e. k  (, ) = k pr
+i  z0.
+i = k(cid:27) ,
+
++ = (cid:26)  =
+
+: i  z0,
+
+  p k
+
+in other words,
+
+i=1 ia
+
+(3.41)
+
+0 , h i
+
+0, ei
+
+0
+
+rxi=0
+
+i i
+
+rxi=0
+
+ia
+
+explaining why there is a nite number of ane integrable highest weights at xed level
+k. if the r + 1 simple-root a1 subalgebras of g are all represented integrably, that turns
+
+30
+
+101
+
+r1
+
+10
+
+r0
+
+201
+
+01
+
+0
+
+20
+
+r2
+
+0201
+
+1
+
+id
+
+020
+
+021
+
+21
+
+2
+
+02
+
+121
+
+12
+
+102
+
+0121
+
+012
+
+1012
+
+figure 10. the ane weyl sectors of the horizontal projection of a2 (ane
+a2) weight space.
+
+out to be sucient to guarantee that the whole of g is so represented. we also write
+
++ = (cid:26)  =
+
+p k
+
+rxi=1
+
+ii
+
+: i  z0,
+
+i  k(cid:27)  p+
+
+ia
+
+rxi=1
+
+(3.42)
+
+for the set of horizontal projections of integrable ane highest weights at xed level k.
+
+integrability is signalled by the presence of null vectors, vectors (states) of zero norm.
+for example, with g = a1, and highest state |vi with  = 11 = 2j1, one nds the null
+states e1|vi (from the highest-state condition) and f 1+1
+|vi. see fig. 11
+for the example of j = 3/2, i.e. the a1 representation l(3). the existence of null vectors
+(and so integrability) goes hand-in-hand with the weyl symmetry of representations.
+
+|vi = f 2j+1
+
+1
+
+1
+
+for the integrable highest-weight representations of g, with highest weight state satisfy-
+ing ei|vi = 0 for all i  {0, 1, . . . , r}, there are r+1 primitive null vectors |ii := f 1+i
+|vi.
+primitive here means that all other null vectors (an innite number of them) can be ob-
+
+i
+
+tained as descendants of these ones. because of (3.34), these are of exactly the same form
+as the primitive null vectors of the integrable g representation of highest weight , for
+i 6= 0. the additional (i = 0) primitive null vector has interesting consequences in the
+wzw model, as well see.
+
+31
+
+null
+vector
+
+null
+vector
+
+-
+
+5
+
+-
+
+4
+
+-
+
+3
+
+-
+
+2
+
+-
+
+1
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+highest
+state
+
+figure 11. the weight diagram for the a1 representation l(31), correspond-
+ing to angular momentum j = 3/2. the weights of the null vectors are shown.
+
+the presence of the extra null vector is also consistent with the enlargement of the
+
+weyl symmetry w  w . consider the ane formal character
+
+h(cid:1)
+ch := trl()(cid:0)e
+= xp ()
+
+mult (; ) e ,
+
+(3.43)
+
+where, h = pr
+
+we dene
+
+i=0 ihi, mult (; ) denotes the multiplicity of the weight  in l(), and
+
+p () := {   ge
+
+0
+
+: mult (; ) 6= 0 } .
+
+(3.44)
+
+then it is the weyl-kac formula that makes manifest the ane weyl symmetry of ane
+
+characters:
+
+ch = p w w (det w) e w.
+(1  e )
+
+q  +
+
+,
+
+(3.45)
+
+where w. indicates the shifted action of w: w. := w( + )  , with  =pr
+
+j=0 j. +
+indicates the set of positive roots of g, to be specied shortly. ch0 = 1 leads to the ane
+denominator formula
+
+(det w) e w  ,
+
+(3.46)
+
+y +
+
+(1  e ) = xw w
+
+so that (3.45) can also be written as
+
+ch = p w w (det w) e w(+)
+p w w (det w) e w 
+
+.
+
+32
+
+(3.47)
+
+one integrable ane highest weight is special:  = k 0 has horizontal projection  = 0.
+this indicates that it corresponds to a state that is g-invariant; this state is the vacuum
+|0i. the corresponding eld k 0 = 0 is known as the identity primary eld, because of
+its action on the vacuum:
+
+k 0 (0) |0i = 0(0) |0i = |vk 0i = |v0i = |0i
+
+(3.48)
+
+(see (2.81)). now, more on the integrable highest-weight representations of g (they are
+sometimes called the standard representations, for short).
+
+in terms of chevalley generators, the highest state |vi is dened by ei|vi = 0, for all
+i  {0, 1, . . . , r}. but the highest state is annihilated by the raising operator corresponding
+to any positive root. so, using the cartan-weyl presentation, we have
+
+e
+0 |vi = 0 ,    + ;
+
+j 
+n |vi = 0 ,     , n  z>0 ,
+
+(3.49)
+
+where j 
+n  {e
+positive roots of g:
+
+n , h 
+
+n}. this then points to the appropriate choice of the set + of
+
++ = +  {n : n  z>0}  { + n :   , n  z>0} .
+
+(3.50)
+
+the full set of roots is  = +  = + ( +). all roots except 0 and the imaginary
+ones {n : 0 6= n  z} have unit multiplicity, and each relates to a single element of
+g: e+n = e
+n. n (including 0) has multiplicity r, relating to the existence of the r
+elements h i
+
+n.
+
+so, the generators of g can be written to emphasise their similarity with those for g: one
+
+simply adds mode numbers as subscripts to the symbols for the generators of g. then
+their commutation relations also take a form that is simply related to those for g, written
+
+in (3.4),(3.6),(3.8):
+
+[h i
+
+[h i
+
+n] = kmm+n,0i,j
+n ] = i e
+
+m, h j
+m, e
+  hm+n + km(2/2)m+n,0 ,
+
+m+n
+
+n (, )e+
+
+m+n ,
+,
+
+0
+
+[e
+
+m, e
+
+n] = 
+
+
+(3.51)
+
+ +  = 0
+ +   
+ +  6  .
+
+here of course, ,   , and m, n  z.
+
+by the sugawara construction, |vi is also the highest weight of a representation of v ir:
+(3.52)
+
+n (j a
+
+mj a
+
+nm) |vi = 0 , n  z>0 .
+
+ln|vi = xmz
+
+33
+
+we also have l0|vi = h|vi, as noted above, with conformal weight h given in (2.76).
+such an irreducible representation is not irreducible as a representation of v ir; rather, it
+
+decomposes into an innite number of such representations.
+
+the highest state is nevertheless the highest state of an irreducible representation of v ir.
+so, by the state-eld correspondence, the g-primary eld also transforms as a v ir-primary
+eld: under the conformal transformation z  w = w(z), an analytic function of z, and
+
+(z)  (w) = (cid:18) dw
+
+dz(cid:19)h
+
+(z) .
+
+(3.53)
+
+so a v ir-primary eld transforms in a tensorial way under conformal transformations.
+
+of particular use to us are the so-called projective transformations, where
+
+w =
+
+az + b
+cz + d
+
+, with ad  bc = 1 .
+
+(3.54)
+
+writing a, b, c, d as the elements of a 2  2 matrix shows that these transformations form
+a group isomorphic to p sl(2, c): p stands for projective, meaning the matrix and its
+negative describe equivalent transformations (3.54); s stands for special, i.e. the matrix
+
+has determinant one; and l means linear. the projective transformations are the only
+(invertible) conformal transformations that map the entire complex plane plus the point
+at  to itself. they leave the vacuum invariant:
+
+l1 |0i = l0 |0i = 0 ,
+
+(3.55)
+
+since the l1, l0 generate the s(2, c) algebra of the projective group.
+
+for more details, consider innitesimal conformal transformations, i.e. w = z + (z),
+
+with |(z)|  1. (3.53) then yields
+
+(z) = (cid:0)(z)z + h(z)(cid:1)(z) .
+
+(3.56)
+
+if we dont restrict (z) further, we are considering general innitesimal conformal trans-
+
+formations. from their general form (3.54), one can see that innitesimal projective trans-
+formations give
+
+(z) = c1 + c0z + c1z2 ,
+
+(3.57)
+
+where c1, c0 are constants. we write
+
+ (z) =
+
+1xm=1
+
+cm [lm, (z)] ,
+
+(3.58)
+
+34
+
+and nd
+
+(3.59)
+
+[lm, (z)] = (cid:0)zm+1z + (m + 1)hzm(cid:1)(z) ,
+with m = 1, 0. this last formula is consistent with the commutation relations (2.63) of
+v ir, for the modes l1,0, and shows they do generate s(2, c)  v ir.
+
+note that l1 acts as the z-translation operator and l0 as the generator of dilations:
+
+eal1 (z) eal1 = (z + a) ,
+
+eal0 (z) eal0 = (eaz) .
+
+(3.60)
+
+including both the holomorphic and antiholomorphic parts of the primary eld, this last
+equation gives
+
+eal0+a l0 ,(z, z) eal0a l0 = ,(eaz, ea z) = eahah ,(z, z) ,
+
+(3.61)
+
+using (3.53), where a denotes the complex conjugate of a. putting a =  + i, with
+,   r, we conrm that l0 + l0 is the generator of dilations (radial hamiltonian) and
+l0  l0 is the generator of rotations. furthermore, h + h is the scaling dimension of
+, and h  h is its spin.
+
+the third generator l1 generates what are known as special conformal transformations.
+all three types of transformations (translations, rotations and special conformal transfor-
+
+mations) are conformal in any number n of dimensions. if we restrict the base eld to
+r, instead of c, we have an algebra s(2, r). the antiholomorphic counterparts l1, l0
+generate another copy of this algebra, and the direct sum of the two copies is isomorphic
+
+to a real form of so(4). in n dimensions, the translations, rotations and special conformal
+transformations generate a real form of so(n + 2). in n = 2 the symmetry extends to an
+
+innite-dimensional one, with innite-dimensional algebra (2.54). after central extension,
+we nd v ir.
+
+a simple example of a standard representation of g = a1 = a(1)
+1
+
+is depicted in fig.
+12. there the weights in ge
+0 are drawn (except that the xed eigenvalue k = 2 of k is
+not indicated as a coordinate). note that the horizontal weight spaces are those for
+the simple lie algebra g = a1; in general, the horizontal subspaces of a representation
+l() of g will be (reducible) representations of g.
+(this is where the term horizontal
+subalgebra g  g comes from.) in particular, for the standard representation l(), the
+horizontal representation of lowest l0 eigenvalue is the irreducible representation l() of
+g. notice also that the weight diagram is enclosed by a parabolic envelope: a parabola
+passes through all weights  such that    is not also in the diagram. its curvature de-
+creases with increasing level. the parabola becomes a paraboloid for higher rank algebras.
+the simple roots are indicated, as well as the weights of the primitive null vectors. the
+
+35
+
+primitive
+null vector
+
+primitive
+null vector
+
+l
+
+0
+
+eigenvalue
+
+-
+
+0
+
+highest
+state
+
+-
+
+1
+
+g
+
+*
+
+0
+
+figure 12. the weight diagram of the a1 representation l(0 + 1).
+
+multiplicities of the weights rise rapidly with increasing l0 eigenvalue n; asymptotically
+
+mult(cid:0); (, k, n)(cid:1)  n3/4 exp(const.n1/2).
+
+fig. 13 shows the standard representations for arbitrary ane algebras in very schematic
+fashion. there is a nite number (the case of card p k
++ = 3 is drawn) of such representa-
+tions, each to be associated with a primary eld in the corresponding wzw model. as
+mentioned above, the representation l(k 0) is special among them: its lowest horizontal
+representation is l(0), the scalar representation, and its lowest l0 eigenvalue is the lowest
+of the low. thats because the single state in the representation l(0) is to be identied
+with the vacuum of the wzw model. the corresponding primary eld is called the identity
+
+primary eld. the other standard representations have lowest horizontal representations
+of higher dimensions, and lowest l0 eigenvalues that are higher than that of the vacuum;
+after all, h = l0 + l0, so the vacuum should have lowest energy. these last two eects
+go hand-in-hand, as the diagram is meant to indicate.
+
+(2.65) shows that elements of g commute with l0. since h = l0 + l0, this means that
+g  g is a true symmetry algebra of the wzw model. the full ane algebra g  g plays
+the role of a spectrum-generating algebra in the theory, generating all the states in the
+
+towers corresponding to the primary elds.
+
+the remarkable thing is that the states in these card p k
+
++ primary towers span the space
+of states of the wzw model! g  g generates the full spectrum of the model from the
+card p k
++ primary highest states. we can therefore say that the the innite-dimensional
+
+36
+
+a
+a
+d
+l
+
+0
+
+eigenvalue
+
+g
+
+*
+
+0
+
+figure 13. schematic drawing indicating the standard ane representations
+that are relevant to a wzw model.
+
+ane algebra eectively nitises the wzw eld theory: one need only study the nite
+
+number of primary elds.
+
+4. ane algebra representations and wzw models
+
+in the last section we laid the basis for the application of the representation theory of
+in this section well describe some specic
+
+untwisted ane algebras to wzw models.
+results in detail.
+
+4.1. gepner-witten equation
+
+null vectors constrain the possible couplings between wzw elds. consider a primary
+eld realising a standard representation of g, with highest weight . that is, the primary
+eld has holomorphic part  (z). this implies f 1+i
+ = 0, for all i  {0, 1, . . . , r}. for
+i = 0, this can be rewritten as
+
+i
+
+(cid:0)e
+1(cid:1)1+0  (z) = 0 .
+
+(4.1)
+
+now, suppose this null eld appears in a correlation function with the primary elds
+1(z1), . . . , n(zn); the correlator must then vanish:
+
+h(cid:2)(cid:0)e
+
+1(cid:1)1+0  (z)(cid:3)1(z1)    n(zn) i = 0 .
+
+37
+
+(4.2)
+
+we can deform the contour of integration in the manner indicated in fig. 14 to get
+
+after using (2.50) to rewrite last equation as
+
+h
+
+1
+
+dw
+
+2iiz
+w  z (cid:16)e(w)(cid:2)(cid:0)e
+2iizj
+nxj=1
+
+0 =
+
+1
+
+1(cid:1)0 (z)(cid:3)(cid:17) 1(z1)    n(zn) i = 0 ,
+
+dw
+
+w  z h(cid:2)(cid:0)e
+
+1(cid:1)0  (z)(cid:3)1(z1)   
+
+  (cid:2)e(w)j(zj)(cid:3)   n(zn)n(zn) i .
+1(cid:1)0  (z)(cid:3)1(z1)    n(zn) i ,
+
+(4.3)
+
+(4.4)
+
+(4.5)
+
+now since the j are primary, by (2.69) we can write
+
+0 =
+
+nxj=1
+
+t
+j
+
+z  zj h(cid:2)(cid:0)e
+
+where the j on t
+we nd
+
+j indicates that the generator should act on j. if this process is repeated,
+
+(t
+
+1)1 /1!
+(z  z1)1   
+
+(t
+
+n)n /n!
+(z  zn)n h  (z)1(z1)    n(zn) i .
+
+(4.6)
+
+0 = x{1,...,n }
+p i=1+0
+
+this is the gepner-witten equation [30]. notice that it also holds if we replace 1 + 0 with
+any p  1 + 0.
+
+z
+
+z
+
+z
+
+1
+
+z
+
+2
+
+z
+
+1
+
+z
+
+2
+
+w
+
+w
+
+z
+
+3
+
+z
+
+n
+
+z
+
+3
+
+z
+
+n
+
+figure 14. contour deformation for (4.4).
+
+38
+
+the rst consequence of (4.6) is that a non-integrable eld has vanishing correlators
+with integrable elds, i.e. a non-integrable eld decouples from integrable ones. to see
+this, let  be the identity eld in (4.6), that is, set  = k 0. then
+
+ (z)|0i = ezl1 k 0 (0)ezl1|0i = |0i ,
+
+(4.7)
+
+using (3.60),(3.55),(3.48). so we can remove  (z) from (4.6). multiply by (z  zn)p1
+and integrate over z to get
+
+0 = h 1(z1)    n1(zn1)(t
+n)pn(zn) i
+0(cid:1)p
+= h 1(z1)    n1(zn1)(cid:2)(cid:0)e
+
+n(zn)(cid:3)i ,
+
+(4.8)
+
+for all p  1 + 0. now suppose n is non-integrable, so that there is no p  z>0 such
+that [(cid:0)e
+0(cid:1)p
+n] = 0. then (4.8) will only be satised if h1(z1)    n(zn)i = 0, i.e. if the
+
+non-integrable eld n decouples from the integrable ones 1, . . . , n1.
+
+4.2. 3-point functions
+
+the second application of (4.6) will be to the 3-point correlation functions hi
+of primary elds. the 3-point functions encode the structure constants of the operator
+product algebra, the ope coecients (see below). so the 3-point functions are arguably
+
+the most important, since in principle, any n-point correlation function can be constructed
+using the operator product algebra.
+
+the 3-point functions are highly constrained by global (z-independent) gg invariance,
+and invariance under the projective transformations with s(2, c) algebra generated by
+l1, l0. well rst examine these constraints, before applying the gepner-witten equation
+to arrive at a quite powerful result.
+
+lets work with the holomorphic parts of primary elds, for simplicity. projective in-
+
+variance yields
+
+0 =
+
+(cid:20)zm+1
+
+j
+
+
+zj
+
+nxj=1
+
++ (m + 1)hjzm
+
+j (cid:21) h 1(z1)    n(zn) i ,
+
+for m  {1, 0, 1}
+
+(4.9)
+
+(compare to (3.59)). the general solution to (4.9) is
+
+h 1(z1)    n(zn) i = f(cid:0) {zpqrs}(cid:1)
+
+nyi,j=1
+
+i<j
+
+(zi  zj)hij ,
+
+(4.10)
+
+where hij = hji, pi6=j hij = 2hj , and f is an arbitrary function of the anharmonic ratios
+
+.
+
+(4.11)
+
+zpqrs :=
+
+(zp  zq)(zr  zs)
+(zq  zr)(zs  zp)
+
+39
+
+these ratios are invariant under the projective transformations zi  (azi + b)/(czi + d),
+ad  bc = 1.
+
+only n  3 of these anharmonic ratios are independent, so for the 3-point function, f
+is simply a constant. before writing the explicit form, let us change notation somewhat.
+replace 1, 2, 3 with , , , and well drop the hats on the ane weights. we can
+then write
+
+h (x)(y)(z) i = (x  y)h hh (x  z)hh h (y  z)hhh c,, . (4.12)
+so the computation of the 3-point function boils down to a computation of a constant
+c,, . this constant is related to the ope of primary elds
+
+(z)(0) 
+
+c,,  t
+zh+hh
+
+,
+
+(4.13)
+
+and so is called an operator product coecient. here t indicates the highest weight of the
+representation contragredient (charge-conjugate) to l(). (the corresponding eld is the
+unique one with a non-vanishing 2-point function with the primary eld  .)
+
+the global g invariance of a correlation function of n primary elds imposes
+
+0 =
+
+nxj=1
+
+ta
+j h 1(z1)    n(zn) i .
+
+(4.14)
+
+that is, the n-point function must be a g-singlet. for this to be possible, the tensor
+product l()  l()  l() must contain the singlet representation l(0). alternatively,
+in the tensor-product decomposition
+
+l()  l() = xp+
+
+t 
+,l() ,
+
+we require that the tensor-product coecients obey
+
+t  t
+, = t,, 6= 0 .
+
+(4.15)
+
+(4.16)
+
+this implies that the corresponding clebsch-gordan coecient c,, 6= 0. in summary,
+then, the global g-invariance gives
+
+c,, 6= 0  c,, 6= 0 .
+
+(4.17)
+
+we will henceforth concentrate on 3-point functions.
+
+40
+
+4.3. depth rule
+
+lets apply the gepner-witten equation (4.6) to the 3-point function:
+
+0 = x1 ,2
+
+1+21+0
+
+(t
+
+)1 (t
+
+)2
+
+1!2!(z  z1)1 (z  z2)2 h  (z)(z1)(z2) i .
+
+(4.18)
+
+since the z, z1, z2 dependence of h(z)(z1)(z2)i is xed, the terms in the summation
+are independent, and so
+
+(t
+
+)1 (t
+
+)2 h  (z)(z1)(z2) i = 0
+
+ 1 + 2 > 0 = k  (, ) .
+
+(4.19)
+
+t is the raising operator for the a1  g subalgebra in the direction of the highest root  of
+g. the maximum number of times it can be applied to a state (vector) v with non-vanishing
+result, is called the depth d(, v) of that state, or sometimes the -depth.
+
+to understand the name, look at the example pictured in fig. 8. there is drawn
+the weight diagram of the a2-representation l(2, 1). consider as the upward direction
+that of the highest root  (see figure 7). since e adds the root  to the weight of a
+state, the depth of a state tells us how far down it is from its top, roughly speaking.
+concentrating on the 2-dimensional subspace of weight (0, 1), we see that it breaks up
+into two one-dimensional subspaces of depths d(, v1) = 1 and d(, v2) = 2. an important
+point, however, is that d(, c1v1 + c2v2) = 2, as long as c2 6= 0.
+
+now, if we write
+
+h  (z)(z1)(z2)i =
+
+xul() xvl() xwl()
+
+,u,v,w h u(z)v(z1)w(z2) i ,
+
+(4.20)
+
+following (2.84), we can conclude from (4.19) that even if hu|w vi is non-zero, the 3-point
+function hu(z)v(z1)w(z2)i will vanish unless
+
+d(, v) + d(, w) < k + 1  (, ) = 1 + 0.
+
+(4.21)
+
+but if hu(z)v(z1)w(z2)i vanishes, then so does h (z)(z1)(z2)i. therefore, a necessary
+condition for h (z)(z1)(z2)i 6= 0 is: whenever hu|v  wi 6= 0, (4.21) must be obeyed.
+this is the gepner-witten depth rule.
+
+41
+
+4.4. tensor products and rened depth rule
+
+are |ji = f 1+j
+
+can we get additional constraints from other null vectors? no: the primitive null vectors
+|vi for i  {0, 1, . . . , r}. we have just used the rst (j = 0), and all others
+are present at the lowest grade in l(), and so are isomorphic to the primitive null vectors
+of the g-representation l(). these latter determine the clebsch-gordan coecients for
+
+j
+
+g. so, the depth rule should allow the determination of the operator product coecients
+c,, from a knowledge of the clebsch-gordan coecients c,, . this turns out to be
+less straightforward than one might hope, however.
+
+to see why, we consider the simpler problem of computing the operator product mul-
+tiplicities (called fusion coecients) from the corresponding tensor-product multiplicities
+
+(well call them tensor-product coecients). being multiplicities, these coecients are
+non-negative integers. a general tensor-product decomposition is written in (4.15); there
+the t 
+
+,  z0. the simplest example of such a decomposition is for g = a1:
+l(1)  l(1) = l(1 + 1)  l(1 + 1  2)      l(|1  1|) ,
+
+(4.22)
+
+where we write l(1) for l(11), e.g. if we change notation using 1 = 2j1, 1 = 2j2,
+and 1 = 2j, we recognise the rule for the addition of quantum angular momenta.
+
+reasoning similar to that given above leads to the following rule.
+
+if w, v, u 
+, = 0) unless when hu|w  vi 6= 0,
+
+(4.23)
+
+l(), l(), l(), respectively, then c
+we have
+
+, = 0 (and so t 
+
+(cid:0)ei(cid:1)1 |wi  (cid:0)ei(cid:1)2 |ui = 0 ,
+
+for all 1 + 2  1 + i, for i  {1, . . . , r}. if we generalise the denition of depth to:
+
+d(, v) = min{   z0 : (e)+1v = 0 } ,
+
+then we require
+
+d(i, v) + d(i, w) < 1 + i ,  i  {1, . . . , r} .
+
+(4.24)
+
+(4.25)
+
+compare this to (4.21).
+
+before writing a more useful version of this rule, lets look again at the example already
+mentioned above (4.20). suppose we have a space v spanned by two independent states
+v1, v2, of depths d(, v1) = 1, d(, v2) = 2, respectively. choosing a dierent basis, (v1 
+v2)/2, say, gives depths 2,2. the set of depths is a basis-dependent object. so, we should
+instead be concerned with the dimensions of the spaces vi := {v  v : (e)1+iv = 0},
+for i = 1, 2, which are 1 and 2 in this example, respectively. of course, a particular choice
+
+42
+
+of basis may help; {v1, v2} is a basis of v that is good for the computation of the required
+dimensions, while the other basis is not.
+
+now, the highest-weight state |vi must appear in l()  l() (as well as all others).
+
+so, we must be able to write
+
+cv
+w,u |wi  |ui ,
+
+|vi = xwl() xul()
+for some coecients cv
+w,u. it is not dicult to show that |vi must contain a non-zero
+component  |wi|ui, where |wi is the highest state of l(), and u  l(). otherwise,
+cv
+w,u = 0 would imply that cv
+w,u = 0 for all w  l(). of course, so that the component
+|wi  |ui has the correct weight , we must have
+
+(4.26)
+
+h |ui = (
+
+rxj=1
+
+jhi) |ui = (  ) |ui .
+
+therefore, we can write (see [31], for example)
+
+t 
+
+, = dim(cid:8) u  l(;   ) : (ei)1+iu = 0  i = 1, . . . , r(cid:9)
+
+= : dim v 
+
+, ,
+
+where we have used
+
+l(;   ) := (cid:8) u  l() : hu = (  )u(cid:9) .
+
+(4.27)
+
+(4.28)
+
+(4.29)
+
+for the operator product numbers, or fusion coecients (k)n
+
+tensor product, or fusion product:
+
+
+,, we write a truncated
+
+l() k l() = p k
+
++
+
+(k)n
+
+
+, l() .
+
+(4.30)
+
+of course, since p k
+in p k
+
++. but truncation here means that
+
++  p+ (see (3.42)), (k)n
+
+
+
+, are undened if any of , ,   p+ are not
+
+an argument similar to that above leads to the following conjecture [32] (see also [33]):
+
+(k)n
+
+
+
+,  t 
+
+, .
+
+(4.31)
+
+(k)n
+
+
+
+, = dim(cid:8) u  l(;   ) : (ei)1+iu = 0  i = 0, . . . , r(cid:9)
+
+= : dim (k)v
+
+
+, .
+
+(4.32)
+
+43
+
+here, a special case of the extra conditions (4.21) has been incorporated into a formula
+similar to (4.28). (recall that since 0 = (, 0, 1), 0 = .)
+
+well call (4.32) the rened depth rule. notice it explains (4.31). in fact, (4.32) implies
+
+the following stronger relations
+
+(k)n
+
+
+
+,  (k+1)n 
+
+, ,
+
+(k)n
+
+
+, = t 
+
+, .
+
+lim
+k
+
+(4.33)
+
+all this can be encoded in the concept of a threshold level [34]. when t 
+
+, > 1, we say
+that there are more than one dierent couplings l()  l()  l(). that is, there is
+more than one way to assemble the states of l() in the tensor product l()  l(). if
+in addition, l()  l() k l(), we say that the coupling is also a fusion coupling at
+level k.
+
+for each of the t 
+
+, couplings l()  l() l(), there exists a threshold level kt, such
+
+that the coupling is not a fusion coupling at levels k < kt, and is for all levels k  kt.
+
+the threshold level allows a convenient notation: the fusion products for all levels can
+
+be written as the tensor product with threshold levels as subscripts:
+
+then
+
+l()  l() = kt 
+
+(kt)n
+
+, l()kt .
+
+(k)n
+
+
+, =
+
+kxkt
+
+(kt)n
+
+, .
+
+(4.34)
+
+(4.35)
+
+in (4.35) the sum is over all couplings, and any coupling with kt  k contributes once.
+the a1 example (4.22) becomes
+
+l(1)  l(1) = l(1 + 1)1+1  l(1 + 1  2)1+11
+     l(|1  1|)max(1,1) .
+
+(4.36)
+
+this can be derived from the depth rule, by considering the coupling l(1)  l(1)l(1)
+and corresponding u  l(1), with hu = [(1  1)1]u. the depth is easily seen to be
+d(, u) = (1  1 + 1)/2, so that
+
+kt = (1  1 + 1)/2 + (, ) = (1 + 1 + 1)/2 .
+
+(4.37)
+
+let us rewrite the a1 fusion product one more way:
+
+l(1)  l(1) = min(1+1,2k11)
+
+1=|11|
+
+l(1) .
+
+(4.38)
+
+44
+
+this the original form found by gepner and witten, and it makes clear the level-truncation
+of the tensor product.
+
+an a2 example is
+
+l(1, 1)2 = l(0, 0)2  l(1, 1)2
+
+l(3, 0)3  l(1, 1)3  l(0, 3)3 
+l(2, 2)4 .
+
+(4.39)
+
+this is perhaps the simplest example with a t 
+(1,1),(1,1) = 1,
+(k>2)n (1,1)
+(1,1),(1,1) = 2. this phenomenon occurs because algebras of rank greater than one
+(i.e. g 6= a1) have most mult (; ) := dim l(; ) > 1, the spaces of xed weight  in a
+representation l() are typically not one-dimensional.6
+
+, > 1: we have (2)n (1,1)
+
+4.5. good bases and the littlewood-richardson rule
+
+now lets try to use the rened depth rule (4.32) to compute fusion products like (4.39).
+since the level k will gure more prominently henceforth, well let gk indicate the ane
+algebra g at xed level k.
+
+
+, = dim (k)v 
+
+,  v 
+
+the problem is to nd a good choice of basis of l(;   ) to simplify (as much as
+possible) the computation of (k)n
+,  l(;   ). lets rst back
+, = dim v 
+up and consider t 
+,. after all, the problem of a good choice of basis already
+exists in the computation of t 
+, (for the i-depths, if not for the -depth). suppose a
+basis b(;   ) = {ua : a = 1, . . . , dim l(;   )} of l(;   ) were to be good; what
+should that mean? ideally, one could test the ua one-by-one, and those passing would form
+a basis of v 
+, would be spanned by the subset of b(;   )
+,. it turns out that such good bases (or proper bases) b(p)(;  )
+that are elements of v 
+exist [36]:
+
+,. that is, the subspace v 
+
+v 
+, = span{ ua  b(p)(;   ) : ua  v 
+
+, } ,
+
+(4.40)
+
+for all possible highest weights , ,   p+.
+
+for the case g = ar, the basis elements are indexed by standard tableaux, for example
+
+1 2 2 4
+3 3 5
+4
+5
+
+.
+
+(4.41)
+
+6 except for a g2 exception, it turns out that mult (; ) = 1 i    has a unique expression as a
+z0-linear combination of those positive roots  of g also obeying (, ) > 0 [35].
+
+45
+
+the tableaux with numbers removed are called young tableaux, and their boxes are ar-
+ranged in left-justied rows, of non-increasing length going from top to bottom. to obtain
+a standard tableau relevant to the ar case, the numbers added must be from the set
+{1, 2, . . . , r + 1}, and they must appear in non-decreasing order from left to right in the
+rows, and in increasing order from top to bottom in the columns. notice this implies that
+a single column of a standard tableau can contain no more than r + 1 boxes, for the ar
+case.
+
+in combination with (4.28), the good bases (with elements indexed by standard tableaux)
+lead to a simple rule for the computation of tensor-product coecients, the littlewood-
+richardson rule, to be explained below. each box i
+stands for a weight in the basic
+representation l(1) of ar, so the weight wt( i ) of
+
+is
+
+i
+
+wt( i ) = 1  1  2  . . .  i1 = 
+
+
+1
+
+,
+
+i1 + i ;
+
+r
+
+,
+
+i = 1
+
+i = 2, . . . , r
+i = r + 1
+
+(4.42)
+
+notice that pr+1
+i=1 wt( i ) = 0; therefore a column of length r + 1 can be dropped from
+a standard tableau. the weight wt(t#) of a standard tableau t# is just the sum of the
+weights of its component boxes. the shape sh(t#) of a standard tableau t# is the weight
+of the tableau obtained by replacing all the numbers in the i-th row with is. notice
+that the shape of a standard tableau will always be a dominant weight (i.e. an element
+of p+); it will be the highest weight of the relevant representation. to restrict to those
+highest weights relevant to the ar wzw model, the number of columns of length less
+than or equal to r must be less than or equal to k (see (3.42)). the weight of the young
+tableau t obtained from the standard tableau t# by removing its numbers, is dened by
+wt(t ) := sh(t#).
+
+the elements of the good basis b(p)(; ) are indexed by the elements of
+
+t#(; ) = { t#  s# : sh(t#) = , wt(t#) =  } ,
+
+(4.43)
+
+where s# just means the space of standard tableaux. well write v(t#) for the state
+indexed by the standard tableau t#. the elements of these bases appropriate for the a2
+representation l(1, 1) are shown in fig. 15. there the tableaux are drawn, roughly at the
+
+positions of their weights in weight space.
+
+the action of the step operators ei and fi (i = 1, 2), can be transcribed to an action on
+the standard tableaux. i will describe it later in the more convenient language of paths.
+for the moment, their actions (up to non-zero multiplicative factors) are indicated in fig.
+
+46
+
+2 2
+3
+
+1 2
+2
+
+3
+
+2
+3
+
+3
+
+1
+2
+
+2
+
+1
+3
+
+1 1
+2
+
+3
+
+1
+3
+
+1 1
+3
+
+figure 15. shown are the standard tableaux that label the states of the a2
+representation l(1, 1) in the good basis.
+
+15 by the lines drawn. notice that a single line species the action of both ei and fi (xed
+i). thats because of the property
+
+eit# 6= 0  fieit#  t# ,
+fit# 6= 0  eifit#  t# ,
+
+(4.44)
+
+which guarantees the good-ness property, as can be seen from the diagram.
+
+also, the depths d(i, t#) := d(i, v(t#)) of a standard tableau are easily found. notice
+that the j right-most columns of a standard tableau form a standard tableau; call it t (j)
+# ,
+it turns out that the weights of these
+where j ranges from 0 to the full width of t#.
+sub-tableaux determine the depths d(i, t#) for all i = 1, 2, . . . , r. precisely, we have
+
+d(i, t#) = maxj(cid:0) wt(t (j)
+
+i (cid:1) .
+# ), 
+
+(4.45)
+
+we can also speak of the height h(i, t#). by d(i, t#) (h(i, t#)) is meant the maxi-
+mal non-negative integer  such that e
+i t# 6= 0). so, h(i, t#) = d(i, t#), for
+example. they are also simply found, since for a state u in any a1 = hei, hi, fii  g rep-
+resentation, h(i, u)  d(i, u) = (, 
+i ), if hu = (, i)u. now, notice that the tableaux
+drawn in fig. 15, can be assigned to a single irreducible representation of hei, hi, fii for
+each of i = 1, 2. this property generalises to all ranks r, and so
+
+it# 6= 0 (f 
+
+h(i, t#) = (cid:0) wt(t#), 
+
+i (cid:1) + d(i, t#) .
+
+47
+
+(4.46)
+
+the property just mentioned is another way of describing the good-ness of the required
+bases.
+
+consider the g = a2 example b(p)( (1, 1); (0, 0) ).
+
+its elements are indexed by the
+
+tableaux
+
+since
+
+(4.45) gives
+
+similarly,
+
+implies
+
+1 2
+3
+
+,
+
+1 3
+2
+
+.
+
+1 2
+
+1 2
+
+1 2
+
+wt ( 2 ) = (1, 1) , wt(cid:18) 1 2
+3 (cid:19) = 1  h(cid:18)1,
+d(cid:18)1,
+d(cid:18)2,
+3 (cid:19) = 0  h(cid:18)2,
+wt ( 3 ) = (0, 1) , wt(cid:18) 1 3
+2 (cid:19) = 0  h(cid:18)1,
+d(cid:18)1,
+2 (cid:19) = 1  h(cid:18)2,
+d(cid:18)2,
+
+3 (cid:19) = (0, 0) ,
+3 (cid:19) = 1 ;
+3 (cid:19) = 0 .
+2 (cid:19) = (0, 0) ,
+2 (cid:19) = 0 ;
+2 (cid:19) = 1 .
+
+1 3
+
+1 3
+
+1 2
+
+1 3
+
+1 3
+
+(4.47)
+
+(4.48)
+
+(4.49)
+
+(4.50)
+
+(4.51)
+
+a glance at fig. 15 conrms these results.
+
+when substituted into (4.28), the depths obtained by (4.45) yield the littlewood-
+richardson rule, a simple rule for the computation of the g = ar tensor-product coecients
+t 
+,:
+
+t 
+
+, = card(cid:8)t#  t#(;   ) : d(i, t#)  i
+
+(i = 1, . . . , r)(cid:9) .
+
+by (4.43), we have
+
+t#(;   ) = (cid:8)t#  s# : sh(t#) = , wt(t#) =   (cid:9) .
+
+(4.52)
+
+(4.53)
+
+we should mention that this is not precisely the form of the rule originally given by
+
+littlewood and richardson. it is, however, related to it by a simple transformation (see
+[37], for example).
+
+to use the littlewood-richardson rule, one can rst draw the young tableau t of shape
+. consider a standard tableau t# of shape  and weight   . add its sub-tableaux t (j)
+
+#
+
+48
+
+to t by placing boxes  to the right of the -th row (numbered from top to bottom)of
+t. an a5 example, with  = (3, 1, 2, 1),  = (1, 1, 2, 0) and  = (2, 0, 3, 2) is
+
++
+
+1 2 2 3
+3 3 4
+4 5
+
+=
+
+4 4
+
+5
+
+2 2
+3 3 3
+
+1
+
+.
+
+(4.54)
+
+if the shape of the resulting mixed tableau (dened in the obvious way) is dominant (i.e.
+,. also, the corresponding vector v(t#) is
+
+# , then t# contributes 1 to t 
+
+in p+) for all t (j)
+an element of the basis of v 
+
+,.
+
+to make things clear, consider a simple a2 example: lets verify that t 
+
+(1,0),(1,1) =
+1. the tableaux of shape  = (1, 1) and weight    = (0, 0) are those drawn in (4.47).
+adding the sub-tableaux t (j)
+gives the mixed
+tableaux
+
+# (j = 1 and 2) of the rst one to t =
+
+, = t (1,0)
+
+1
+
+2 ,
+
+2
+3
+
+,
+
+(4.55)
+
+so that the rst tableau contributes 1 to the tensor-product coecient. with the second,
+
+however, adding t (1)
+
+# = 3 to t gives
+
+.
+
+3
+
+(4.56)
+
+therefore, the second tableau of (4.47) does not contribute, and we nd t (1,0)
+
+(1,0),(1,1) = 1.
+
+one nice feature of the littlewood-richardson rule is that one simply counts the number
+of standard tableaux of a certain type that pass a specic test. furthermore, this test can be
+
+applied to the candidate tableaux one-by-one, without referring to the other candidates.
+for example, there are no redundancies or cancellations between candidates. for this
+reason, well call the littlewood-richardson rule a combinatorial rule.
+
+the littlewood-richardson rule can be stated in many dierent ways. the version
+described is well suited to the application of (4.28), however, with its connection between
+standard tableaux and the vectors of b(p)(;   ).
+
+more importantly, the standard tableaux can be replaced by universal objects, that can
+
+be dened for any simple g in a uniform way. so the littlewood-richardson rule can be
+adapted from the case of g = ar to all simple g. it was littelmann who completed this
+generalisation, rst using sequences of weyl group elements as the universal objects, and
+then using sequences of weights [38]. in the littlewood-richardson rule, both sequences
+
+49
+
+have to do with the sub-tableaux t (j)
+columns of t#, reading from right to left.
+
+# of a standard tableaux t#, or equivalently, the
+
+the more economical generalisation is the one using the sequences of weights.
+
+it is
+phrased in terms of littelmann paths in weight space. well look at the g = ar case, but
+generalisation is straightforward. to each standard tableau, we can associate a piecewise
+linear path in weight space as follows: read the weights of the columns of the standard
+
+tableau from right to left, and associate a piece of the path to each. the vector position of
+the end of such a piece minus that of the beginning equals the weight of the corresponding
+
+column. so, by adding the pieces, in order (right to left on the tableau), we obtain the
+relevant path.
+
+as an example, fig. 16 shows the littelmann paths for the outer weights of the a2
+
+representation l(2, 1).
+
+122
+2
+
+112
+2
+
+111
+2
+
+222
+3
+
+0
+
+111
+3
+
+223
+3
+
+113
+3
+
+233
+3
+
+133
+3
+
+figure 16. the littelmann paths are drawn for the outermost weights of the
+representation l(2, 1) of a2. for each such weight , the shortest route from
+0 to  is the relevant path.
+
+as promised, well indicate the action of the step operators ei, fi (i = 1, . . . , r) on
+the paths. by the equivalence of standard tableaux and littelmann paths, this will also
+
+describe the actions on the standard tableaux. it is important to realise, however, that
+what we describe is only the action of the step operators up to normalisation. let v()
+
+50
+
+denote the state labelled by the path . ei, fi acting on a path  yield other paths, ei, fi.
+then we have ei v()  v(ei) and fi v()  v(fi), with non-zero multiplicative factors
+left unspecied.
+first consider ei. parametrise a path  with parameter t  [0, 1]. wt(cid:0)(t)(cid:1) is the weight
+of a point t of the path. wt(cid:0)(0)(cid:1) = 0, and wt(cid:0)(1)(cid:1) is the weight of the path wt(),
+the highest vector. first nd the minimum non-positive integer value of (cid:0)wt((t)), 
+i(cid:1)
+for t  [0, 1]; call it mi. let t2 be the minimum value of t where (cid:0)wt((t)), 
+i(cid:1) = mi.
+if mi  1, then nd the maximum value of t < t2 such
+that (cid:0)wt((t)), 
+i(cid:1) = mi + 1, and call that t1. now break the path up into three pieces,
+
+and the weight of the corresponding vector and standard tableau. similarly, the shape
+of the path sh() equals the shape of the corresponding young tableau, or the weight of
+
+if mi = 0, then ei = 0.
+
+corresponding to the intervals:
+
+0  t  t1 ,
+
+t1  t  t2 ,
+
+t2  t  1 .
+
+(4.57)
+
+weyl reect the middle piece across the hyperplane normal to i at wt((t1)). finally,
+re-attach the third piece (corresponding to t2  t  1) at (t2) + i, to obtain the path
+ei.
+
+it is not hard to see that this action yields d(i, v() ) = mi for the vector v() that
+is indexed by the path . a diagram sketching the action of ei on a path  is given in fig.
+17.
+
+as above, consider m 
+
+the action of the lowering operator fi is dened similarly; see fig. 18. with mi dened
+i  1, rst nd the
+i(cid:1) = mi; call it t1. then obtain the minimum
+i(cid:1) = mi+1; call that t2. then the three intervals (4.57)
+
+i = wt()  mi. if m 
+maximum value of t such that (cid:0)wt((t)), 
+value of t > t1 such that(cid:0)wt((t), 
+are again relevant, and fi is found by reecting the middle piece across the hyperplane
+normal to i at wt((t1)), and re-attaching the third piece at (t2)  i.
+
+i = 0, then fi = 0. if m 
+
+it is not hard to see that m 
+
+i so dened is the height h(i, v() ) for the vector v() that
+
+is indexed by the path .
+
+with the actions so-dened, weve drawn in fig. 19 the analogue of fig. 15 for the
+a2 representation l(2, 1). again, the lines indicate the action of the step operators
+e1, e2, f1, f2.
+
+incidentally, the graphs of figs. 15,19 are (essentially) examples of so-called crystal
+graphs [39][40]. these arise in the theory of quantum groups uq(g), the q-deformations of
+the universal enveloping algebra u (g) = u1(g) of g. such quantum groups allow the con-
+struction of integrable lattice models in two-dimensions, in the spirit of the 2-dimensional
+ising model. the graphs reect the simplied representation theory of uq(g) at q = 0.
+
+51
+
+psh(
+
+)
+
+0
+
+i
+
+m
+
+m+1
+
+pe
+
+i
+
+)
+
+psh(
++
+
+i
+
+0
+
+figure 17. the action of ei on a littelmann path . the thickened parts of
+the path  are those segments to be weyl-reected by ei or fi (see fig. 18
+for the latter).
+
+(one can also say that the existence of the canonical bases at q = 1 is explained by the
+simplied representation theory at q = 0 [41].) but physically, q = 0 corresponds to
+absolute zero temperature, justifying the reference to crystals.
+
+to make the actions of the ladder operators on paths completely clear, well do a couple
+
+of examples. first consider the path of weight (2,-2) drawn in fig. 16. we indicate this
+path by the weights of its straight segments, written in sequence:
+
+ = { (0, 1), (1, 0), (1, 1) } .
+
+(4.58)
+
+52
+
+p
+a
+a
+f
+
+i
+
+psh(
+
+)
+
+-
+
+i
+
+0
+
+figure 18. the action of fi on the littelmann path  of fig. 17.
+
+122
+2
+
+112
+2
+
+222
+3
+
+223
+3
+
+122
+3
+
+112
+3
+
+113
+2
+
+123
+3
+
+133
+2
+
+133
+3
+
+123
+2
+
+233
+3
+
+111
+2
+
+113
+3
+
+111
+3
+
+figure 19. the standard tableaux of the a2 representation l(2, 1) are drawn
+(roughly) at the positions of their weights. the lines indicate the action of
+the step operators e1, e2, f1, f2 on the good basis elements indexed by the
+tableaux (or by the corresponding littelmann paths).
+
+2(cid:1); here it
+to nd e2, we rst need m2, the minimum non-positive value of (cid:0)wt((t)), 
+is -2. we nd wt((t1)) = (1, 1) and wt((t2)) = (2, 2). (notice here that the third
+piece of (4.57) corresponds to the single value t = 1.) the middle piece consists of a
+single, straight segment, of weight (1, 1), and so is reected to a similar single, straight
+
+53
+
+a
+p
+segment of weight r2(1, 1) = (0, 1). so we nd
+
+e2  = { (0, 1), (1, 0), (0, 1)} ,
+
+a path that is not drawn in fig. 16.
+
+now consider f1, with  the path
+
+ = { (1, 1), (1, 0), (0, 1)} ,
+
+(4.59)
+
+(4.60)
+
+1 = 0  (1) = 1. wt((t1)) = (1, 1) and
+of weight (0, 2). we have m1 = 1, and so m 
+wt((t2)) = (0, 1) indicate that the middle piece is a single, straight segment of weight
+(1, 0), that must be replaced by one of weight r1(1, 0) = (1, 1). as a result, we nd
+
+e1  = { (1, 1), (1, 1), (0, 1) } ,
+
+(4.61)
+
+a path that is drawn in fig. 16.
+
+what is the form of the littlewood-richardson rule in terms of paths? to calculate
+t 
+, , one considers all paths  of shape sh() =  and weight wt() =   . such a path
+, i  + wt(cid:0)(t)(cid:1) has non-negative dynkin indices for all t  [0, 1].
+will contribute 1 to t 
+that is, we require (cid:0) + wt((t)), 
+i )  0, for all i  {1, . . . , r}, and all 0  t  1. in
+other words, the -translated path  + wt(cid:0)(t)(cid:1) must remain in the dominant sector; it
+
+must be a dominant path.
+
+this form of the littlewood-richardson rule is very general, applicable to all sym-
+metrisable kac-moody algebras. these paths also have some interesting invariances. for
+example, one can generate a valid set of paths for the vectors of l() by acting successively
+
+with lowering operators on the highest path, in all inequivalent ways. furthermore, one
+can use any dominant path as the highest path [42], even the straight line from 0 to !
+
+this is all interesting, but what we really want to know is how to adapt this machinery
+
+to the formula (4.32) for the computation of fusion coecients (k)n
+,. can we nd an
+analogue of the littlewood-richardson rule for fusions: a combinatorial rule that computes
+the fusion coecients (k)n
+
+
+,?
+
+for that we also need to consider the action of e. restricting to g = ar, we have
+
+ = 1 + 2 + . . . + r. by the cartan-weyl commutation relations (3.8),
+
+e  ad (e1)ad (e2)    ad (er) er .
+
+(4.62)
+
+for example, if r = 2, e  [e1, e2]. figures 15, 19 reveal that the basis b(p)(; ) that is
+good for the calculation of tensor-product coecients, is not also good for the calculation
+of their truncated versions, the fusion coecients [32][43].
+
+54
+
+for example, consider again b(p)( (1, 1); (0, 0) ), and the relevant tableaux (4.47). we
+
+get
+
+e 1 2
+
+3
+
+e 1 3
+
+2
+
+ [e1, e2]
+
+ [e1, e2]
+
+1 2
+3
+1 3
+2
+
+= e2e1
+
+= e1e2
+
+1 2
+3
+1 3
+2
+
+,
+
+
+
+1 1
+2
+1 1
+2
+
+.
+
+
+
+(4.63)
+
+on the other hand, we know (by means to be discussed soon) that (2)n (1,1)
+(3)n (1,1)
+
+(1,1),(1,1) = 1, and
+(1,1),(1,1) = 2. this means that some linear combination v0 of the vectors labelled
+
+by
+
+1 2
+3
+
+and
+
+1 3
+2
+
+d(, v1) = 1.
+
+has depth d(, v0) = 0 and an independent vector v1 in their span has
+
+is there another basis that is good for (k)n
+
+
+,? no. such a basis must be good for the
+,, and in the case of g = a2, such a basis is unique. so no
+
+tensor-product coecients t 
+such basis exists for a2; neither does one for any ar  a2.
+
+so, to nd the fusion coecients by this route, the appropriate linear combinations must
+be found. they would be useful for the computation of the ope coecients c
+,. but
+for the fusion coecients only, this is a bit much. luckily, there is another way to nd the
+
+fusion coecients, due to verlinde.
+
+4.6. ane characters and modular transformations
+
+in order to motivate verlindes approach, let us rst discuss some results on ane
+algebras that will turn out to be important for ane fusion [44]. consider the ane
+
+character (3.43) made informal:
+
+well set
+
+ch() := xp ()
+
+mult (; ) e(,)
+
+.
+
+ = 2i(cid:0) :=
+
+rxj=1
+
+zj 
+
+j , , 0(cid:1) ,
+
+and use (3.47) to bring in the ane weyl group w . then one nds
+
+ch() = e2i(cid:0)h c(g,k)
+
+24 (cid:1) pww (det w) (k+h)
+pww (det w) (h)
+where {z} stands for (z1, z2, . . . , zr), and the theta functions are
+ei(cid:2)2(+k,) 
+
+k2 |+k|2(cid:3) .
+
+(k)
+
+ (, {z}) := xq
+
+w(+)(, {z})
+w (, {z})
+
+(4.64)
+
+(4.65)
+
+,
+
+(4.66)
+
+(4.67)
+
+55
+
+recall also that h and c(g, k) are the conformal weight of , and the virasoro central
+charge, respectively (see (2.76),(2.62)). it is convenient to dene the normalised character
+
+(, {z}) := e2i(cid:0)h c(g,k)
+
+24 (cid:1) ch() .
+
+then we have the simple relation
+
+(, {z}) = pww (det w) (k+h)
+pww (det w) (h)
+
+w(+)(, {z})
+w (, {z})
+
+.
+
+(4.68)
+
+(4.69)
+
+this last result is remarkable. first, notice that the sums are both over the nite weyl
+
+group of the simple lie algebra g. consequently, there is a striking resemblance to the
+weyl character formula (3.22) for g.
+
+one can trace the appearance of the w -sums to the semi-direct product structure of
+w , (3.40). when acting on a shifted weight, such as  + ,   p k
++, we have w =
+w  t(k+h)q . the other factor t(k+h)q is responsible for the presence of the theta
+functions. these latter are well-known to have remarkable transformation properties under
+
+the group p sl(2, z), the so-called modular group . the modular group is generated by
+the elements s :   1/ and t :    + 1, and the general modular transformation
+has the form
+
+ 
+
+a + b
+c + d
+
+,
+
+a, b, c, d  z ,
+
+ad  bc = 1 .
+
+(4.70)
+
+so, this transformation can be encoded in a 2  2 integer matrix, of determinant one, or
+the negative of such a matrix; thus  = p sl(2, z).
+
+as a consequence of the appearance of the theta functions in (4.69), we nd that the nor-
+malised characters transform among themselves under modular transformations. speci-
+
+cally, kac and peterson showed that
+
+(1/, {z/}) = xp k
+( + 1, {z}) = xp k
+
++
+
++
+
+s(k)
+
+, (, {z}) ,
+
+t (k)
+
+, (, {z}) .
+
+(4.71)
+
++ (see (3.42)) matrices s(k) and t (k),
+consider the card p k
++ = card p k
+with elements s(k)
+,, respectively; they turn out to be unitary, showing that
+the normalised characters form a unitary representation of (a subgroup of) the modular
+
++  card p k
+, and t (k)
+
++  card p k
+
+56
+
+group . the explicit forms of their elements are:
+
+s(k)
+
+t (k)
+
+(det w) e 2i
+
+, = f (g, k) xww
+24 (cid:1) ,
+, = , e2i(cid:0)h c(g,k)
+
+k+h(cid:0) +,w(+)(cid:1) ,
+
+(4.72)
+
+where f (g, k) is a constant independent of , .
+
+4.7. kac-peterson relation and verlinde formula
+
+the form of the s(k)
+
+, recalls the numerator of the weyl character formula (3.22). to
+
+recover the full character, rather than just the numerator, we can take a ratio to nd
+
+s(k)
+s(k)
+
+,
+
+0,
+
+= ch(cid:0)  2i
+
+ + 
+
+k + h (cid:1) .
+
+(4.73)
+
+well call this important result the kac-peterson relation.
+
+why should there be such an intimate relation between the modular matrix s(k) of the
+ane characters and the characters of g? an answer is provided by conformal eld theory,
+
+and more specically here, by the wzw model.
+
+first, recall one of the uses of characters in the representation theory of g. consider the
+t 
+,l(), and the formal element eh
+
+tensor-product decomposition l() l() =pp+
+
+in it. taking traces gives
+
+(4.74)
+
+(4.75)
+
+chch = xp+
+
+t 
+,ch .
+
+one says that the simple lie characters obey the tensor-product algebra.
+
+it is therefore natural to wonder if the kac-peterson ratios
+
+(k)
+ () :=
+
+s(k)
+s(k)
+
+,
+
+0,
+
+have interesting multiplicative properties. after all, (4.73) says that they are discretised
+simple lie characters. one nds
+
+(k)
+ () (k)
+
+ () = xp k
+
++
+
+(k)n
+
+
+, (k)
+
+ () ,
+
+(4.76)
+
+valid   p k
+
++. that is, the kac-peterson ratios obey the wzw fusion algebra!
+
+57
+
+if we rewrite this in terms of the modular s matrix, s(k), we nd
+
+(k)n
+
+
+
+, = xp k
+
++
+
+s(k)
+
+, s(k)
+s(k)
+
+, s(k)
+
+,
+
+0,
+
+(4.77)
+
+using the unitarity of s(k). this is the celebrated verlinde formula [45]. it is valid for all
+rcfts, when the corresponding modular s matrices are used.
+
+4.8. duality
+
+the verlinde formula, in the form (4.76), provides a rationale for the kac-peterson
+relation (4.73). as the depth rule makes clear, the wzw fusion products should be
+truncated versions of the g tensor products, because the horizontal subalgebra g  g is
+a true symmetry of the theory. it is perhaps not too surprising then that the quantities
+{(k)
++} that obey the fusion rule algebra (4.76) turn out to be discretised
+characters of g. roughly, that they are characters means that the fusion coecients are
+intimately related to the corresponding tensor-product coecients. their discretisation
+is a consequence of constraints coming from the spectrum-generating algebra g  g. it will
+imply that the fusion coecients are bounded above by the tensor-product coecients.
+
+ () :   p k
+
+but that does not explain the verlinde formula in any way: why should ratios of modular
+s matrix elements have anything to do with fusions, let alone represent the fusion algebra?
+
+the answer arises from the powerful concept of duality in conformal eld theory [46].
+consider an arbitrary correlation function in a conformal eld theory, not necessarily a
+wzw model. one nds that such a correlation function factorises into holomorphic and
+
+antiholomorphic parts:
+
+c( z1, . . . , zn, 1, . . . , m ; z1, . . . , zn, 1, . . . , m ) =
+
+xi, j
+
+ci, j bi ( z1, . . . , zn, 1, . . . , m ) b j ( z1, . . . , zn, 1, . . . , m ) .
+
+(4.78)
+
+here z1, . . . , zn are meant to indicate the positions of the n elds (points) of the correla-
+tion function, and the j are constants (sometimes moduli) set by the type of correlation
+function under consideration. for the general class of conformal eld theories known as
+
+rational conformal eld theories (rcfts), which includes the wzw models, the sums
+over i, j are (discrete and) nite. the functions bi , b j are known as conformal blocks.
+the factorisation (4.78) is not unique, however. as was alluded to earlier, the conformal
+blocks can (in principle) be calculated using the operator product algebra. if we symbolise
+
+58
+
+figure 20. the graph labelling a conformal block for the 3-point function.
+
+a non-zero operator product coecient c
+, by the graph of figure 20, we are associating
+that graph to the conformal block of a 3-point function. in a similar way, we can label a
+
+choice of conformal blocks by a trivalent graph. part of the non-uniquenes of the conformal
+blocks comes from the non-uniqueness of the trivalent graph as label.
+
+for example, consider a 4-point function. its conformal blocks can be labelled by either
+of the two trivalent graphs of fig. 21. the underlying assumption of duality is that the
+
+nal physical correlation function must not depend on the choice of graph. furthermore,
+duality states that there must be a linear relation between the conformal blocks associated
+
+with the two graphs, such that this is true. the matrix encoding the particular linear
+relation shown in the figure, is called the fusing matrix f .
+
+a
+
+b
+
+=
+
+f
+
+c,d
+
+a,b
+
+c,d
+
+d
+
+c
+
+figure 21. duality for 4-point functions.
+
+there is a another, related way of thinking of these trivalent graphs. when radial
+quantisation was mentioned earlier, the conformal transformation (2.31) from the cylinder
+
+59
+
+l
+m
+n
+s
+t+1
+
+0
+
+1
+
+figure 22. torus, as parallelogram.
+
+to the complex plane was discussed. one can think of the resulting plane as having two
+special, marked points, at the origin and at . the inverse conformal transformation
+maps the plane with these two marked points (or punctures) to a riemann surface, the
+cylinder. letting the radius shrink to zero gives a particularly simple trivalent graph, a
+straight line.
+
+if one considers a 4-point function, however, one has four marked points, and a conformal
+transformation can be found to map the plane to a riemann surface. the riemann surface
+
+will be topologically equivalent to a riemann sphere with four marked points. one can
+then recover a trivalent graph by shrinking the sphere in dierent ways. in particular, one
+
+can recover the two dierent graphs of fig. 21.
+
+with this latter picture, duality can tell us why the modular group  enters considera-
+tion. the modular group is intimately connected with riemann surfaces (with no marked
+
+points) of genus one, i.e. with tori. represent a torus by a parallelogram with opposite
+sides identied, as in fig. 22. we will consider a conformal eld theory on such a torus.
+
+by conformal invariance, the overall scale doesnt matter, so we set the sides of the par-
+alellogram as shown in the figure. the conformal class of the torus can thus be specied
+
+by one complex number, its modulus  . but this is still a redundant description. it is
+simple to see that t :    + 1 does not change the underlying torus. furthermore, after
+a rescaling, s :   1/ doesnt either. so the conformal class of the torus is invariant
+under the full modular group  = hs, ti.
+now consider the correlation function
+
+(4.79)
+
+z( ) = e2i( c
+
+24   c
+
+= trh e2i(cid:0) (l0 c
+
+24  ) trh e2i(cid:0) h(iim  )+p(re  )(cid:1)
+
+24 ) +( l0 c
+
+24 )(cid:1) ,
+
+where  is the complex conjugate of  , c and c are the holomorphic and antiholomorphic
+central charges, and h is the hilbert space of the theory. we have used that the hamil-
+
+60
+
+t
+tonian and rotation operators are h = l0 + l0 and p = l0  l0, respectively (see after
+(3.61)). (4.79) is known as the torus partition function.
+
+let us restrict once more to consideration of wzw models; what well say, how-
+ever, can also be adapted straightforwardly to all rcfts. now, by the holomorphic-
+
+antiholomorphic factorisation of wzw models, the hilbert space has the form
+
+h = ,p k
+
++
+
+m, h  h ,
+
+(4.80)
+
++) is the hilbert space of states in the conformal tower
+
++). this factorisation is manifested in the partition function:
+
+with m,  z0. here h (  p k
+of l() (  p k
+z(, ) = x,p k
+
++
+
+m, (, {0}) 
+
+( , {0}) .
+
+(4.81)
+
+that is, the conformal blocks for the torus partition function are the normalised characters.
+the corresponding trivalent graph is a loop, but the blocks are also labelled by the torus
+modulus  . but  ,  + 1, 1/ , etc., are all dierent ways of labelling the same torus. so
+duality implies the modular covariance (4.71) of the normalised characters.
+
+summarising to this point:
+
+in a rcft, (normalised) characters appear naturally as
+conformal blocks for the torus partition function, and duality implies that they must be
+
+modular covariant.
+
+~
+
+(t)
+
+0
+
+figure 23. a depiction of a 3-point function on a torus, and one possible
+conformal block for it.
+
+but this is just one simple consequence of duality; much more can be extracted, including
+the verlinde formula. to derive it from duality, one needs to consider a correlation function
+
+that can involve both the 3-point functions (and so the fusion coecients) and the torus
+(so that the modular transformations are involved). it is the 3-point functions on the torus
+
+61
+
+l
+m
+n
+l
+m
+n
+l
+n
+that are pertinent in this context. fig. 23 shows a torus with three marked points, and a
+choice of a trivalent graph to label the corresponding conformal block. that choice makes
+
+it clear how the 3-point functions and the characters appear. but there are many other
+choices of graphs, and one can also replace  with 1/ , for example. these freedoms are
+not completely independent, however. they turn out to be sucient to prove the verlinde
+
+formula, but we will not provide the detailed argument here [46].
+
+recapping, we have seen that the remarkable modular properties of ane characters are
+accounted for in the physical context of wzw models. the underlying concept is duality,
+
+a property that extends to all rcfts. it also implies many other important relations.
+the verlinde formula is just one symptom of duality in conformal eld theory.
+
+4.9. fusion coecients as weyl sums
+
+to close this section, let us return to the problem of computing wzw fusion coecients,
+and apply the verlinde formula (4.77). the kac-peterson relation (4.73) in (4.74) implies
+
+(k)
+ () (k)
+
+ () = xp+
+
+t 
+, (k)
+
+ () ,
+
+(4.82)
+
+where we have used the notation (4.75). compare this with (4.76). both are valid   p k
++.
+(4.76) led to (4.77) by the unitarity of the matrix s(k). a relation between the tensor-
+
+product coecients t 
+, should result from the same
+unitarity, except that the ranges are not identical. the sum over p+ in (4.82) must be
+restricted to a sum over p k
+
+, and the fusion coecients (k)n
+
++, as in (4.76).
+
+to do so, we make use of the alternating weyl symmetry (3.23), as applied to the
+
+kac-peterson ratios:
+
+(k)
+w.() = (det w) (k)
+
+ () ,  w  w .
+
+(4.83)
+
+this is not sucient, however. to restrict the sum over   p+ to a sum over   p k
++,
+we need to use elements of the ane weyl group w , not just w  w (see fig. 10, for
+example). more accurately, we need the action of the ane weyl group projected onto the
+weight space of the horizontal subalgebra g  g.
+
+consider the ane primitive reection r0, with action on ane weights given in (3.38).
+just as  is used to denote the horizontal part of the ane weight , r0. will indicate the
+horizontal part of r0.. one nds
+
+r0. = r. + (k + h) ,
+
+(4.84)
+
+62
+
+where r  w is the weyl reection across the hyperplane normal to the highest root .
+then
+
+e 2i
+
+k+h (r0.,+) = e 2i
+
+k+h (r .,+) ,
+
+(4.85)
+
+for   p+, since then (,  + )  z. using this and the weyl character formula (3.22),
+we nd
+
+r0.() = (det r) (k)
+(k)
+
+ () = (det r0) (k)
+
+ () .
+
+(4.86)
+
+since the ane weyl group w can be obtained from the weyl group w of g by adjoining
+r0 as a generator, we have
+
+(k)
+w.() = (det w) (k)
+
+ () ,  w  w .
+
+(4.87)
+
+using this in (4.82), and comparing with (4.76), we get
+
+xp k
+
++
+
+xw w
+
+(det w) t 
+
+, (k)
+
+ () = xp k
+
++
+
+(k)n
+
+
+, (k)
+
+ () ,
+
+(4.88)
+
++. the unitarity of s(k) means that the coecients of (k)
+
+for all   p k
+side of (4.88) can be equated with those on the right hand side, for all   p k
+we nd [26][47][48]
+
+ () on the left hand
++. therefore
+
+(k)n
+
+
+
+, = xw w
+
+(det w) t w.
+
+, .
+
+(4.89)
+
+the dependence of the right-hand side on the level k is implicit: for a xed   p+, w.
+can change with changing level, when w  w (see (4.84)).
+
+this last equation provides a fairly simple way of computing the fusion coecients. for
+
+example, one can employ the littlewood-richardson rule (or littelmanns generalisation)
+to rst nd the tensor-product coecients t 
+,, and then perform the alternating weyl
+sum of (4.89). however, since it is an alternating sum (the signs are inherited from the
+weyl character formula) cancellations occur, and the rule is not a combinatorial one.
+
+another expression can be given for the fusion coecients as an alternating ane weyl
+sum. this one will allow a connection with the rened depth rule (4.32). using (3.19)
+brings in the weight multiplicities, and in (4.74) it leads to
+
+t 
+
+, = xww
+
+(det w) mult (; w.  ) .
+
+(4.90)
+
+63
+
+in (4.89), this results in
+
+(k)n
+
+
+
+, = xw w
+
+(det w) mult (; w.  ) .
+
+(4.91)
+
+this formula encodes a straightforward algorithm for the computation of the fusion
+
+coecients. first, the weight  +  is added to all the weights of p (). the resulting
+weights are regarded as horizontal projections of ane weights, at level k + h. one then
+attempts to weyl transform the resulting weights into the dominant (w = id) sector, using
+the horizontal projection of the ane weyl group. some of the weights will be xed by an
+ane weyl reection; that is, they can only lie on the boundary of the dominant sector
+
+after weyl transformation. these should be ignored. the others will be transformed into
+the dominant sector, some by elements of w of determinant +1, and some by elements
+of determinant -1. the latter will always cancel some other dominant weights of the rst
+
+kind. the nal result will be a set of dominant weights { + } with multiplicities (k)n
+,,
+the quantities to be calculated.
+
+the algorithm can be pictured in a weight diagram, for ranks  2. a simple example is
+drawn in fig. 24. recall now the rened depth rule (4.32). the conditions (ei)1+iu =
+
+0 can be interpreted as saying that the states u that count toward (k)n
+, are those for
+which the cancelling states (ei)1+iu do not exist. if one does, then the alternating
+weyl sum formula (4.91) tells us that the cancelling states weight will be reected into
+the dominant sector, to cancel the weight , in the algorithm of the previous paragraph.
+
+this concludes our discussion of the computation of fusion coecients, as an example
+
+of an application of the representation theory of ane algebras to wzw models.
+
+5. conclusion
+
+we hope these lecture notes have given some indication of the beauty of the subject of
+
+conformal eld theory, and the associated innite-dimensional algebras.
+
+well close with a brief (and incomplete) guide to the review literature on conformal eld
+theories, ane algebras, and their relation. the most comprehensive reference to date is
+
+[49]. another monograph is [50].
+
+for the beginner in conformal eld theory, the reviews [51] [52] [53] and [54] (in french)
+are quite user-friendly. so is cardys review [12], which emphasises the statistical me-
+
+chanics applications of conformal eld theory. for more applications, see [13].
+
+for a review of rational conformal eld theory, especially its duality, see [2].
+
+64
+
+figure 24. weight diagram illustrating the computation by (4.91) of the a2
+fusion l(2, 0)3 l(2, 1) = l(0, 3) l(1, 1). darkened circles indicate weights
+that correspond to the representations l(0, 3) and l(1, 1); the others are
+cancelled.
+
+the ultimate reference for ane algebras is [26].
+
+[27] is somewhat more accessible,
+
+however, but less comprehensive. also accessible are [29] and [28]. [49] reviews the basic
+facts of ane algebras required in the study of conformal eld theory.
+
+for another treatment of ane algebras in conformal eld theory, see [55].
+elegant exposition of functional integral methods applied to the wzw model.
+
+[15] is an
+
+acknowledgements
+
+it is a pleasure to thank the members of the feza gursey institute for their warm
+
+hospitality. thanks also go to the other lecturers and the participants in the summer
+school for enjoyable conversations. i am also grateful to terry gannon and pierre mathieu
+
+for helpful readings of the manuscript. gannon gets additional thanks for encouragement,
+i.e. for gloating when he nished his lecture notes rst.
+
+the author acknowledges the support of a research grant from nserc of canada.
+
+65
+
+references
+
+[1] a.a. belavin, a.m. polyakov, a.b. zamolodchikov, nucl. phys. b241 (1984) 333
+[2] g. moore, n. seiberg, in the proceedings of the trieste spring school superstrings,
+
+1989, m. green et al, eds. (world scientic, 1990);
+and in the proceedings of the nato advanced summer institute and ban summer
+school, 1989, h.c. lee, ed. (plenum press, 1990)
+
+[3] p. bouwknegt, k. schoutens, phys. rep. 223 (1993) 183
+[4] v. kac, vertex algebras for beginners, 2nd ed. (amer. math. soc., 1998)
+[5] t. gannon, lecture notes, this volume
+[6] m. gaberdiel, p. goddard, lecture notes, this volume
+[7] e. witten, comm. math. phys. 92 (1984) 455
+[8] p. goddard, a. kent, d. olive, phys. lett. 152b (1985) 88
+[9] j. balog, l. feher, l. oraifeartaigh, p. forgacs , a. wipf, annals phys. 203 (1990)
+
+76
+
+[10] l. dixon, j. harvey, c. vafa, e. witten, nucl. phys. b261 (1985) 620; 274 (1986)
+
+285
+
+[11] r. dijkgraaf, c. vafa, e. verlinde, h. verlinde, commun. math. phys. 123 (1989)
+
+485
+
+[12] j. cardy, in les houches session xilx, fields, strings, and critical phenomena, eds.
+
+e. brezin, j. zinn-justin (elsevier, 1989)
+i. aeck, acta phys. polon. b26 (1995) 1869
+
+[13]
+[14] m. green, j. schwarz, e. witten, superstring theory, vols. 1 & 2 (cambridge u.
+
+press, 1987)
+
+[15] k. gawedzki, lecture notes, this volume
+[16] h. georgi, lie algebras in particle physics (benjamin/cummings, 1982)
+[17] s.p. novikov, usp. mat. nauk. 37 (1982) 3
+[18] m. nakahara, geometry, topology and physics (iop, 1990)
+[19] k. fujikawa, phys. rev. lett. 42 (1979) 1195
+[20] a.m. polyakov, p.b. wiegmann, phys. lett. 141b (1984) 223; phys. lett. 131b
+
+(1983) 121
+
+[21] p. di vecchia, b. durhuus, j.l. petersen, phys. lett. 144b (1984) 245
+[22] a. pressley, g. segal, loop groups (oxford u. press, 1986)
+[23] v.g. knizhnik, a.b. zamolodchikov, nucl. phys. b247 (1984) 83
+[24] j. mickelsson, current algebras and groups (plenum, 1989)
+[25] r.v. moody, a. pianzola, lie algebras with triangular decomposition (wiley, 1995)
+[26] v. kac, innite-dimensional lie algebras (cambridge u. press, 1990)
+[27] s. kass, r.v. moody, j. patera, r. slansky, ane lie algebras, weight multiplicities,
+
+and branching rules (u. california press, 1990)
+
+66
+
+[28] j. fuchs, ane lie algebras and quantum groups (cambridge u. press, 1992)
+[29] p. goddard, d. olive, int. j. mod. phys. a1 (1986) 303
+[30] d. gepner, e. witten, nucl. phys. b278 (1986) 493
+[31] d.p. zelobenko, compact lie groups and their representations (am. math. soc.,
+
+1973)
+
+[32] a.n. kirillov, p. mathieu, d. senechal, m.a. walton, nucl. phys. b391 (1993) 651; p.
+215, vol. 1 in m.a. del olmo et al (editors), group theoretical methods in physics, pro-
+ceedings of the xixth international colloquium, salamanca, spain, 1992 (ciemat,
+madrid, 1993)
+
+[33] m. a. walton, can. j. phys. 72 (1994) 527
+[34] c.j. cummins, p. mathieu, m.a. walton, phys. lett. 254b (1991) 386
+[35] a.d. berenstein, a.v. zelevinsky, funkt. anal. pril. 24 (1990) 1
+[36] o. mathieu, geom. ded. 36 (1990) 51;
+
+i.m. gelfand, a.v. zelevinsky, funkt. anal. pril. 19 (1985) 72
+
+[37] j. weyman, contemp. math. 88 (1989) 177
+[38] p. littelmann, j. alg. 130 (1990) 328; invent. math. 116 (1994) 329
+[39] m. kashiwara, commun. math. phys. 133 (1990) 249
+[40] p. littelmann, j. alg. 175 (1995) 65
+[41] g. lusztig, j. amer. math. soc. 3 (1990) 447; prog. theor. phys. suppl. 102 (1990)
+
+175
+
+[42] p. littelmann, ann. math. 142 (1995) 499
+[43] m.a. walton, j. math. phys. 39 (1998) 665
+[44] v.g. kac, d. peterson, adv. math. 53 (1984) 125
+[45] e. verlinde, nucl. phys. b300 (1988) 360
+[46] g. moore, n. seiberg, phys. lett. 212b (1988) 451
+[47] m.a. walton, phys. lett. 241b (1990) 365; nucl. phys. b340 (1990) 777
+[48] p. furlan, a. ganchev, v. petkova, nucl. phys. b343 (1990) 205
+[49] p. di francesco, p. mathieu, d. senechal, conformal field theory (springer-verlag,
+
+1996)
+
+[50] s.v. ketov, conformal field theory (world scientic, 1995)
+[51] j.-b. zuber, acta phys. polon. b26 (1995) 1785
+[52] p. ginsparg, in les houches session xilx, fields, strings, and critical phenomena,
+
+eds. e. brezin, j. zinn-justin (elsevier, 1989)
+
+[53] a.n. schellekens, fortschr. phys. 44 (1996) 605
+[54] y. saint-aubin, univ. de montreal preprint, crm-1472 (1987)
+[55] j. fuchs, lectures at the graduate course on conformal field theory and integrable
+
+models (budapest, august 1996), to appear in springer lecture notes in physics
+
+67
+
+

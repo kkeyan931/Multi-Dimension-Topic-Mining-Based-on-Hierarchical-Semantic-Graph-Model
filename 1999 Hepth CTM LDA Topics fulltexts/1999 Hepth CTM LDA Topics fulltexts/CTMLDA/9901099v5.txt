@@ -1,0 +1,2968 @@
+9
+9
+9
+1
+
+ 
+
+p
+e
+s
+8
+1
+
+ 
+
+ 
+ 
+
+5
+v
+9
+9
+0
+1
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+chens iterated integral represents the operator
+
+product expansion
+
+d. kreimer
+
+dept. of physics, mainz univ.
+
+d-55099 mainz, germany
+
+dirk.kreimer@uni-mainz.de
+
+mz-th/98-50, jan.21 1999
+
+abstract
+
+the recently discovered formalism underlying renormalization theory,
+the hopf algebra of rooted trees, allows to generalize chens lemma. in
+its generalized form it describes the change of a scale in green functions,
+and hence relates to the operator product expansion. hand in hand with
+this generalization goes the generalization of the ordinary factorial n! to
+the tree factorial t!. various identities on tree-factorials are derived which
+clarify the relation between connes-moscovici weights and quantum field
+theory.
+
+1
+
+introduction
+
+in this paper we want to explore a close resemblance between a mathematical
+structure, iterated integrals [1], and a structure from physics, renormalization.
+renormalization theory has been recently identied to be rooted in a hopf al-
+gebra structure, which encapsulates its combinatorial properties [2]. further,
+renormalization establishes a calculus which generalizes the algebraic approach
+to the dieomorphism group, featured by connes and moscovici [3, 4]. struc-
+tures due to this generalization are relevant for the practitioner of perturbative
+quantum field theory (pqft) [5].
+
+here, we will study all of these aspects in some detail, featuring in particular
+the role of renormalization schemes, the renormalization group and the operator
+product expansion (ope).
+
+to proceed, we push forward two parallel developments. one is the use of
+toy models at a more and more sophisticated level, which provide clarifying
+
+heisenberg fellow
+
+1
+
+examples to exhibit underlying ideas on which the reader can check formal de-
+velopments, which will establish a set-up which allows to recover the standard
+notions established by physicistes, the before mentioned existence of renormal-
+ization schemes, renormalization groups and operator product expansions.
+
+in this manner, we will show that the hopf algebra of rooted trees not only
+describes the combinatorics of renormalization, but also analytical structure:
+the behaviour under variations of scales.
+
+throughout this paper we assume that the results and notions of [2, 3, 5, 6]
+are familiar. we will nevertheless summarize some basic notions and conven-
+tions.
+
+1.1 notation
+
+the hopf algebra of rooted trees (which are possibly decorated multiplicative
+generators) is denoted by h, with coassociative coproduct , antipode s and
+counit e. the multiplication in the algebra is denoted by m. it is commutative,
+and hence s2 = 1. the unit of the algebra is denoted by e. the counit is
+denoted by e, with e(e) = 1 and 0 otherwise. the underlying number-eld is
+assumed to be q.
+
+the fertility of a vertex of a rooted tree is the number of outgoing edges.
+the root is always drawn as the uppermost vertex, and all edges are oriented
+away from the root.
+
+rooted trees t are graded by their number of vertices #(t). for a product
+
+of rooted treesqi ti we dene #(qi ti) =pi #(ti). obviously, #(e) = 0.
+we abbreviate the coproduct using sweedlers notation: (t) =p t(1)  t(2)
+
+t  h.
+
+1.2 summary of sections
+
+this paper is organized as follows.
+in section two we introduce the iterated
+integral. in particular, we focus on iterated integrals which have a divergence
+at the upper boundary, which is a choice motivated by the renormalization
+problem in qft, formulated in momentum space. we show how we get well-
+dened iterated integrals as renormalized green functions, and show that a
+variation of scales amounts to an application of chens lemma.
+
+in section three we focus on the multiplicativity of renormalization. crucial
+is the formulation of multiplicativity constraints, which are sucient to derive
+the multiplicativity of counterterms. we present a boundary operator dr for
+any renormalization scheme r and show that all renormalization schemes can
+be treated on the same footing on the expense of introducing tree-indexed pa-
+rameters.
+
+section four applies those results to a restricted class of feynman diagrams,
+those which represent trees with the same decoration at each vertex. such classes
+
+2
+
+were considered already in [5]. here, we use them to exemplify the results of
+section three.
+
+section ve proves some identities for rooted trees which were conjectured
+in [5] and which are useful in understanding the relation to noncommutative
+geometry.
+
+section six gives the principal reason why operator product expansions are
+
+related to chens lemma.
+
+conclusions nish the paper. it is the main objective of this paper to in-
+troduce and exhibit some essential properties of the hopf algebra approach un-
+derlying renormalization, using iterated integrals as a convenient toy all along
+on which the reader can test the relevant notions. the translation to proper
+green functions is a notational exercise which can be conveniently spelled out
+whenever needed, as, for example, in [8].
+
+while this paper introduces essential conceptual properties, details will be
+
+presented in future work.
+
+2
+
+iterated integrals and renormalization
+
+the crucial feature of renormalization is the fact that it is governed by its
+underlying hopf algebra structure of rooted trees. bare green functions as they
+appear in a perturbative approach to qft based on polynomial interactions
+provide a representation of this hopf algebra. apart from a systematic access
+to the renormalization problem of such qfts the hopf algebra also allows to
+study other representations and hence to dene models for the renormalization
+problem which deliver handy tools to study more advanced topics, for example
+the change of scales and renormalization schemes. in this section, we will largely
+consider iterated integrals for that purpose.
+
+2.1 the iterated integral
+
+we will start our considerations by reminding ourselves of some basic properties
+of iterated integrals [1, 7]. we specialize to the case of a single function f (x)
+with associated one-form f (x)dx on the real line.
+
+then, iterated integrals built with the help of f are parametrized by an
+
+integer n, and two real numbers a, t say. they are dened by
+
+f [0]
+a,t = 1, a, t  r,
+
+f [n]
+
+a,t = z t
+
+a
+
+f (x)f [n1]
+
+a,x
+
+dx, n > 0.
+
+hence we can write them as an integral over the simplex
+
+f [n]
+
+a,t =zax1<...<xnt
+
+f (x1) . . . f (xn)dx1 . . . dxn.
+
+3
+
+(1)
+
+(2)
+
+(3)
+
+we can easily generalize this to the case of dierent functions fi, and, dening
+a string of integers i = (i1, . . . , in), we can dene
+
+f i
+
+a,t =zax1<...<xn1xn
+
+fi1(x1) . . . fin (xn)dx1 . . . dxn,
+
+(4)
+
+where ik are integers, taken from some index set i, labelling the available forms
+fik (xk)dxk.
+
+it is a well-known fact [7] that such integrals full a convolution
+
+f i
+a,t = f i
+
+a,s + f i
+
+s,t + xi=(i i )
+
+a,sf i 
+f i 
+s,t ,
+
+(5)
+
+where the sum is over the n  1 partitions of the string i into two non-empty
+substrings i , i . we shall dubb (5) chens lemma, following [7].
+
+2.2 renormalization of iterated integrals
+
+let us motivate our interest in iterated integrals and chens lemma. consider
+again the trivial case of only one f and let us assume it behaves for large x  b
+as f (x)  f (; x)  x1, for 0 <   1. let us then dene
+
+g[t2]
+
+b, =(cid:20)z 
+
+b (cid:18)z 
+
+x
+
+f (y)dy(cid:19) f (x)dx(cid:21) .
+
+(6)
+
+then, in the limit   0, this expression is ill-dened. it has the structure of
+a nested y-integration, furnishing a subdivergence (in ()-brackets) in the jargon
+of renormalization theory, which is nested inside the nal x-integration, which
+diverges as well and thus provides an overall divergence (in []-brackets).
+
+to such a combination of ill-dened integrations we associate a rooted tree
+t = t2(f, f ), as in fig.(1), following the guidance of [2, 3]. generalizing to
+arbitrary n, we dene, b  r+, functions
+
+(7)
+
+(8)
+
+g[e]
+
+b, = 1,
+
+g[tn]
+
+b, = (cid:20)z 
+
+b (cid:16)g[tn1]
+
+x, (cid:17) f (x)dx(cid:21) , n  1.
+
+to them, we assign the rooted tree tn := bn
++(e) of n vertices without side-
+branching, as in fig.(1), and understand that the empty tree, the unit e of the
+hopf algebra h, is associated to g[e]
+b, = 1. as a decorated rooted tree tn carries
+the same decoration f at each vertex.
+
+it is straightforward to see that the trees tn form a closed sub-hopf algebra
+hchen of h, which is a hopf algebra based on rooted trees without sidebranch-
+ings:
+
+[tn] = tn  e + e  tn +
+
+ti  tni
+
+(9)
+
+n1
+
+xi=1
+
+4
+
+fn
+
+fn-1
+
+f1
+
+.
+.
+.
+.
+
+f2
+
+f1
+
+figure 1: rooted trees describe nested integrations. we give the trees
+t1, t2, t31 , t32 from left to right and a decorated tree without sidebranchings,
+bn
++(e), with decorations fn to f1. also, we explicitly give the tree t2(f1, f2) for
+the case n = 2.
+
+s[tn] = tn 
+
+n1
+
+xi=1
+
+s[ti]tni.
+
+(10)
+
+this remains true for decorated rooted trees and in the same spirit, we can
+assign a decorated rooted tree ti to any function
+
+g[ti ]
+
+b, = z 
+
+b
+
+g[t
+i ]
+x,fin (x)dx,
+
+(11)
+
+where t
+i is the rooted tree b(ti ), providing an index string which has the
+n-th entry in of i deleted. the hopf algebra of decorated rooted trees without
+sidebranchings is still denoted by hchen.
+
+note that the functions g[ti ]
+
+b, can be regarded as iterated integrals in their
+
+own right:
+
+g[ti ]
+
+b, = lim
+
+
+f i
+
+,b.
+
+(12)
+
+all the functions fi, i  n, are assumed to behave as limx fi(x) =
+cixji, for some constant ci and some integer ji with ji  1. hence, in the
+limit   0, these iterated integrals are ill-dened, due to a divergence at the
+upper boundary. we will have to renormalize them. the hopf algebra will
+allow us to nd a way to make sense out of the expressions g[ti ]
+b, at  = 0.
+we will discuss further aspects of the behaviour at innity in some detail later.
+all renormalization properties discussed below extend in an obvious way to the
+renormalization at endpoints dierent from innity, if it so happens that the
+functions fi(x) have singularities at such endpoints. the renormalization pro-
+cedure is a very natural operation, as we will see, and one can dene applications
+
+5
+
+largely extending the task of eliminating uv divergences. a recent review on
+its relations to many branches of science can be found in [9]. an obvious ap-
+plication is to the conguration space of n distinct points, which can be tested
+out by dierential forms which diverge at (sub-)diagonals. such an application
+will be described in [11].
+
+we can multiply the functions and add the functions g[ti ]
+
+b, freely. hence, if
+ : r+  hchen  v is the map which assigns to any decorated rooted tree
+ti  hchen and positive real number b the function g[ti ]
+b,, then this gives us a
+representation, parametrized by b,
+
+(b; ti tj ) = (b; ti )(b; tj ).
+
+(13)
+
+we also set (b; 0) = 0 and (b; e) = 1, b, in accordance with (1). for a
+chosen b, we further write b : hchen  v , t  b(t) := (b; t). the target
+space v can be considered as the ring r[1, []] of laurent series with poles
+of nite order. the parameter b is from now on denoted as the scale of the
+representation. the functions (b, t) = g[t]
+b, can be considered as role models
+for bare green functions. they depend on an external scale b. we will utilize
+this dependence to dene the renormalization procedure.
+
+let ra be the map which sends b  a. we thus evaluate at a dierent
+scale. essentialy, we claim, it is this change of external scale(s) which allows
+us to renormalize in a non-trivial manner. to the bare green function b :
+hchen  v , which denes a representation of hchen, we associate another
+function sra (b) : hchen  v by
+
+sra(b)(t) := ra[b(t) + m[(sra  id)(b  b)p2(t)]],
+
+(14)
+
+dened for any monomial t of decorated rooted trees, t 6= e. for t = e we set
+sra(b)(e) = 1. in the above, p2 denotes the projector (id  ee)  (id  ee)
+which annihilates any appearance of the unit e.
+
+the resulting map sra(b) is independent of b by the denition of ra which
+eliminates any dependence on the scale b. two examples, t = t1(fi) and t =
+t2(fi, fj) might be useful:
+
+sra (b)(t1(fi)) = a(t1(fi)) =z 
+
+a
+
+sra(b)(t2(fi, fj)) = a(t2(fi, fj)) + a(t1(fi))a(t1(fj))
+
+fi(x)dx,
+
+(15)
+
+fi(y)dyfj(x)dx +z 
+
+a
+
+fi(x)dxz 
+
+a
+
+fj(y)dy
+
+fi(y)dyfj(x)dx.
+
+= z 
+a z 
+a z x
+= z 
+
+x
+
+a
+
+now, we dene a function  : r+  r+  hchen  v by
+
+a,b(t) = x sra(b)(t(1)) b(t(2))
+
+6
+
+(16)
+
+(17)
+
+= m[(sra  id)(b  b)(t)]
+= m[(ra  b)(s  id)(t)],
+
+(18)
+
+(19)
+
+where we dene ra : hchen  v by ra = sra(b  s). note that this
+renormalized function has naturally the structure of a ratio, comparing to scalar
+functions of rooted trees with the help of the antipode. this has far reaching
+consequences [13, 9].
+
+ra is still independent of b by the denition of ra. note further that a,b(t)
+exists in the limit   0 when we integrate to innity and can be regarded as
+the renormalized iterated integral associated to the bare iterated integral gt
+b,.
+the equality between (18) and (19) follows because of sra  b = sra  b  s2 =
+ra  s,using the denition of ra and s2 = id.
+prop.1: a,b(t) = f i
+where t is the decorated rooted tree with n vertices corresponding to the string
+i.
+proof: straightforward (for example, use (5) and that gt
+integral from b to ). 2
+example:
+
+b, is itself an iterated
+
+a,b,
+
+b
+
+a,b(t(fi)) = (cid:20)z 
+a,b(t(fi, fj)) = (cid:20)z 
+b z 
+= z b
+a z x
+
+x
+
+a
+
+a (cid:21) fi(x)dx =z b
++z 
+z 
+z 
+b z 
+a z 
+
+x
+
+a
+
+a
+
+fi(y)dyfj(x)dx.
+
+fi(x)dx,
+
+(20)
+
++z 
+a z 
+
+a (cid:21) fi(y)dyfj(x)dx
+
+(21)
+
+we now read this as an instructive example for renormalization. the role of a
+bare green function, demanding renormalization, is played by gt
+b,  b(t). it
+provides n1 subdivergences, as all integrations diverge at the upper boundary.
+then, sra [(ti )] delivers a counterterm such that a,b(ti ) is a quantity
+which is renormalized: it contains only well-dened integrations and the limit
+  0 can be taken at the level of integrands.
+
+note that if the bare green function would be independent of the external
+scale furnished by the parameter b, then a(t) = b(t) and as a consequence,
+a,b(t)  0.1
+
+this can be utilized to show that a,b(t) is determined by the coecient of
+logarithmic divergence at innity. it is thus natural to look for a representation
+of h in terms of residues in the sense of [12, 9].
+
+for the moment, we note that the presence of a second scale a is unavoidable
+if we want to go from bare functions to renormalized ones. a,b(t) is essentially
+the ratio of two representations, one parametrized by b, the other by a. we call
+
+1this makes dimensional regularization a succesful regularization scheme in practice:
+annihilates scale independent terms from the beginning, and is hence extremely economic.
+
+it
+
+7
+
+a the renormalization point. for all possible values of the external scale b there
+is one place, the diagonal b = a, at which b,b(t) = 0. further,
+
+ra(a,b(t)) = ra[(sra  id)b](t) = e(t),
+
+(22)
+
+showing that sra is the inverse of the identity in the range vra of ra in v .
+this inverse is taken with respect to the induced convolution in h
+
+chen  v
+
+valid for all maps ,  : hchen  v .
+
+[  ](t) =x (t(1))(t(2)),
+
+(23)
+
+let us summarize: we start with a bunch of ill-dened integrations, labelled
+by a decorated rooted tree t from which we can determine the bare integral
+demanding renormalization.
+
+chen  v  h
+
+we then construct the analytic expressions determined by the counterterm
+map sra : h
+chen  v . this gives rise to a renormalized iter-
+ated integral a,b(t) which only involves well-dened integrations. it assigns a
+well-dened analytic expression to any decorated rooted tree. this expression
+necessary vanishes along the diagonal a = b. in contrast to this, b associated
+the ill-dened bare integral b(t) to any rooted tree t. this transition from b(t)
+to a,b(t) is what renormalization typically achieves.
+
+a nal remark in this section concerns the solution to the kniszhnik-zamo-
+1z , say. see
+
+lodchikhov (k-z) equation in two variables, based on forms dz
+[7] for a review.
+
+z , dz
+
+consider the k-z equation
+
+df
+dz
+
+=(cid:18) a
+
+z
+
+
+
+b
+
+1  z(cid:19) f.
+
+(24)
+
+here, a and b are two noncommuting variables which actually provide a free lie
+algebra on two elements. arbitrary words out of the two-letter alphabet {a, b}
+are considered and no relation amongst such words exist. let w be the set of
+all words.
+
+the length of such a word w is l(w) and the ith letter of w is w(i). let us
+
+consider the following expression
+
+g(u, v) = xwwz(u,v) yi:w(i)=a
+
+dzi
+
+(1  zi)
+
+dzi
+
+zi yi:w(i)=b
+
+(u, v) = u > zl(w) > . . . > z1 > v.
+
+(25)
+
+(26)
+
+g(u, v) is known to be a solution to the k-z equation in the interval ]0, 1[.
+
+g(u, v) contains multiple zeta values [17] (mzvs) for (u, v) = (1, 0), when-
+ever the limits u  1, v  0 are dened. but whenever a word starts with b or
+ends with a these limits do not exist.
+
+8
+
+hence this solution is a series pw wf w
+
+v,u over all words built out of two
+noncommuting variables a, b multiplying iterated integrals f w
+v,u in the interval
+]0, 1[ which possibly diverge at both endpoints of the interval ]0, 1[. let w  be
+the words which neither start with b nor end with a.
+
+renormalization can be applied to g(u, v) such that it extends to either
+boundary, and applying it successively using the renormalization schemes r0
+(which removes all words ending with a) and r1 (which removes all words
+beginning with b) at the lower and upper boundaries leaves us with the k-z
+associator
+
+(27)
+
+kz = xww z(u,v) yi:w(i)=a
+
+dzi
+
+zi yi:w(i)=b
+
+dzi
+
+(1  zi)
+
+as the renormalized green function. an iterated integrals accompanying the
+word bm1an1 bm2 . . . ank1bmk ank must be regarded as a representative of the
+rooted tree bm1
++ (e) for the renormalization at the upper boundary 1 (where b
+is the variable assigned to dz/(1  z)). for the renormalization at the lower
+boundary it represents bnk
++ (e) (where a is the variable assigned to dz/z). then,
+the renormalized iterated integral assigned to g(u, v) extends to [0, 1], where it
+is the above k-z associator.
+
+2.3 change of scales
+
+it is most interesting to consider the behaviour if we change the renormalization
+point a  a, which will lead us to the group law underlying the evolution of
+functions of rooted trees quite generally, which is the group law of the butcher
+group (comp. [13, 9] and references there). one gets
+
+a,b(ti ) = xi=(i ,i )
+
+a,a (ti )a,b(ti  ).
+
+(28)
+
+proof: this is just (5) for iterated integrals [7]. nevertheless, let us derive it
+from the hopf algebra structure of h. at this stage we should actually use
+hchen. but as we will see that nothing in the following derivation depends on
+the peculiarities of this sub-hopf algebra of h, we directly use the latter instead.
+hence dene the following operator
+
+u : h  h  h  h  v
+
+u = m[m  m](ra  a  ra  b).
+
+composition with m : h  h  h  h  h,
+
+m : = (s  id  s  id)(  )
+
+= (s  id  s  id)(  id  id)(id  )
+= (s  id  s  id)(id    id)(id  )
+
+(29)
+
+(30)
+
+(31)
+
+9
+
+gt
+
+b, = z 
+
+b
+
+fin (x)yj
+
+g[t]j
+
+x,dx,
+
+(34)
+
+gives
+
+u [m (t)] = ra [s(t(1))]a [t(2)]ra [s(t(3))]b[t(4)],
+
+where coassociativity of hr allows to use sweedlers notation throughout. the
+above is
+
+ra [s(t(1))]m[(a  ra )(id  s)(t(2))]b(t(3)).
+
+(32)
+
+as
+
+m[(a  ra )(id  s)(t)] = a (m[(id  s)(t)]) = a (e(t)) = a (0) = 0,
+
+t 6= 1, this has contributions only for t(2) = e, in which case we obtain
+
+m[(ra  b)(s  id)(t)],
+
+(33)
+
+as desired. we used sra (b) = a  s, which we prove later, see (45). 2
+
+nothing in this derivation prevents us to generalize to arbitrary rooted trees,
+extending from hchen to h. we thus dene, for a decorated rooted tree t  h
+with n vertices,
+
+where the product is over the decorated branches of the decorated tree t,
+j and fin (x) is the label attached to the root. we still write b(t)
+b,, but stress that b(t) : h  v now gives parametrized representation
+
+for gt
+for the full hopf algebra h of decorated rooted trees.
+
+b(t) =qj t
+
+we also dene, t 6= e, the functions sra(b)(t) and a,b(t) without any
+
+change:
+
+and
+
+sra(b)(t) = ra[b(t) + m[(sra  id)(b  b)p2(t)]]
+
+(35)
+
+a,b(t) = x sra (b(t(1)))b(t(2))
+
+= m[(sra  id)(b  b)(t)]
+= m[(ra  b)(s  id)(t)].
+
+(36)
+
+(37)
+
+(38)
+
+in a straightforward generalization one concludes from the above
+
+then,
+derivation
+lemma 1:
+
+a,b(t) = [sra(b)  b](t) = [ra  s  b](t) =x a,a (t(1))a,b(t(2)). (39)
+
+this lemma holds for any scalar function of rooted trees (with generalizations
+to matrix functions worked out in [8]) and hence applies to full qft [5] as well.
+
+10
+
+f1
+
+f2
+
+f3
+
+f1
+
+figure 2: an example.
+
+example: let t be the decorated rooted tree of fig.(2). then, gt
+
+b, is given
+
+as
+
+gt
+
+b, =z 
+
+b
+
+f1(x1)z 
+
+x1
+
+f2(x2)z 
+
+x2
+
+f1(x3)dx3z 
+
+x2
+
+f3(x4)dx4dx2dx1.
+
+(40)
+
+accordingly, a,b(t) becomes
+
+f1(x3)dx3
+
+f3(x4)dx4
+
+dx2
+
+dx1
+
+,(41)
+
+a
+
+z x2
+|
+
+}
+
+{z
+
+}
+
+}
+
+}
+
+a
+
+a,b(t) = z b
+|
+
+a
+
+f1(x1)z x1
+|
+
+f2(x2)z x2
+|
+
+a
+
+{z
+{z
+
+{z
+
+as the reader should check. the underbracings indicate the tree structure of the
+nested and disjoint subintegrations, which is also exemplied in fig.(2).
+
+a few remarks. we obtain a natural generalization of the iterated integral.
+actually, due to the fact that iterated integrals obey the shue product, it is not
+yet a generalization, as any bare integral representing a tree with side branch-
+ings is a linear combination of integrals representing trees in hchen. hence,
+at this stage, the generalization is merely a convenient notation. but there are
+more generalizations lying ahead, considering representations of h which ex-
+tend the notions of iterated integrals truely, still obeying the convolution which
+implies chens lemma for ordinary iterated integrals. in particular, bare green
+functions as typically derived from feynman rules in the perturbative approach
+to a local qft represent rooted trees in a manner such that trees with side-
+branchings cannot be reexpressed in terms of trees without sidebranchings, as
+a shue product is absent in such circumstances.2 nevertheless, the derivation
+of the convolution of renormalized functions is a mere application of the coas-
+sociativity of h itself, and hence applies whenever appropriate representations
+of the hopf algebra are available.
+
+it will be an interesting exercise in the future to understand the monodromy
+of green functions from this approach in the same manner as one can under-
+stand the monodromy of the polylogarithm from the study of the renormalized
+
+2though, as reported elsewhere [8], some remainders of it are still visible in qft.
+
+11
+
+solution of the k-z equation. green functions in qft are a more general class of
+functions than polylogs. nevertheless, at lower loop orders, they are intimately
+related which might well be understood one day as testimony to the fact that
+green functions in pqft realize in a wider set-up algebraic structures which
+polylogs strictly obey.
+
+another generalization lies in the possibility to consider tree-indexed param-
+eters in the integral. this will turn out a convenient means to parametrize the
+freedom which we have in the renormalization approach. to this idea we come
+back soon.
+
+it is an interesting question which information about a manifold m such
+generalizations can provide, using as functions fi the pull-back of appropriate
+forms i via paths on that manifold, or, vice versa, how one can construct
+manifolds providing, eventually, iterated integrals which evaluate to the same
+renormalized green functions as a qft. this amounts to setting up and solving
+appropriate systems of equations, making use of the recursive properties of the
+hopf algebra. apart from a few further remarks along these lines in the next
+section the reader will nd examples in [8].
+
+before we consider further generalizations by tree-indexed scales, we come
+
+to some interesting structures which can be readily observed at this level.
+
+3 multiplicativity of renormalization and conse-
+
+quences
+
+so far, we observed how a change in the renormalization point is expressed by
+the generalized form of chens lemma. this gives a very nice handle on the
+renormalization group (see below), and relates it to quite general algebraic con-
+siderations. while in this paper we will only outline the basic concepts, concrete
+applications will be worked out in future work. also, in [5], the reader already
+nds applications which prove the usefulness of the reduction of renormalization
+concepts to the hopf algebraic set-up.
+
+3.1 multiplicativity
+
+remarkable features appear when one engulfes in a detailed study of the prop-
+erties under a change of renormalization schemes. to this end, let us come back
+to the map b : h  v . clearly, t 6= e,
+
+0 = b(0) = b(e(t)) = b(m[(s  id)(t)]) = m[(b  b)(s  id)(t)]. (42)
+
+compare the expression on the rhs with the expression for a,b(t)
+
+a,b(t) = m[(ra  b)(s  id)(t)].
+
+(43)
+
+12
+
+hence, this expression is non-vanishing only because of sra  b  s  ra 6= b,
+hence, essentially only if a 6= b.3 there is a map b : h  v  v induced by
+b,
+
+b = (b  b)  ,
+
+(44)
+
+and an induced map sb : h  v , sb = b  s.
+it is more interesting to
+consider the map r : h  v  h  v given by r() = sr[  s] dened
+for any  : h  v (hence, for any   h  v ). we will now show that
+r(r()) = r(), which is the natural extension of r2 = r. this will allow
+us to dene beautiful cohomological properties for renormalization. we start
+with the consideration of renormalization schemes which merely vary external
+parameters. in the following, the reader should have in mind that a, b are to be
+considered as representatives of appropriate sets of external parameters (masses,
+external momenta in green functions) which parametrize analytic expressions
+representing elements of h.
+
+it suces to show
+
+sra (b)(t) = a(s(t)),
+
+which one readily proves by induction on the number of vertices of t:
+
+sra(b)(t) = ra[b(t) + m[(sra  id)(b  b)p2(t)]]
+
+= a(t)  ra[m[(a  b)(s  id)p2(t)]]
+= a (t  m[(s  id)p2(t)])
+= a(s(t)).
+
+in the second line, we used that
+
+ra[a(t)b(t)] = ra[a(t)]ra[b(t)], t, t  h,
+
+(45)
+
+(46)
+(47)
+
+(48)
+(49)
+
+(50)
+
+an equation which is fullled by ra, but not by general renormalization maps.
+if we regard a renormalization map r : v  v as simply a map from
+v (considered as a vector space) to v , then, in general, r[xy] 6= r[x]r[y],
+x, y  v .
+
+a good example is a minimal subtraction scheme, which we will discuss in
+some detail below. we can dene its renormalization map rm s by a projection
+to the pole part: if
+
+1 6= v =
+
+
+
+xi:=0
+
+ck+ik+i  r[1, []]
+
+for some positive integer k, then
+
+rm s(v) =
+
+ck+ik+i.
+
+3one has rb = b, as one immediately checks.
+
+k1
+
+xi:=0
+
+13
+
+(51)
+
+(52)
+
+clearly, rm s[xy] 6= rm s[x]rm s[y]. nevertheless, rm s fulls the multiplica-
+tivity constraints (m.c.s) which we formulate for an arbitrary renormalization
+map r as
+
+r
+
+r[xi]
+
+yi=1
+
+r[xi]# =
+r" r
+yi=1
+(xi  r[xi])# = 0,
+r" r
+yi=1
+
+(53)
+
+(54)
+
+and
+
+both valid for some positive integer r > 1, and arbitrary xi  v . note that,
+setting r = 2 and x2 = 1, the rst constraint implies r[r[x1]] = r[x1] and
+hence r[x1  r[x1]] = 0. the second constraint establishes the same property
+also for products of such dierences.
+
+those constraints can be concluded from a single condition:4
+
+r[xy]  r[r[x]y]  r[xr[y]] + r[x]r[y] = 0,
+
+(55)
+
+which implies the m.c.s.
+
+we call these constraints the multiplicativity constraints, as one can show
+
+that for maps r in accordance with these constraints one has
+prop.2:
+
+sr"yi
+
+(ti)# =yi
+
+sr[(ti)],   h  v.
+
+(56)
+
+we can prove this statement under fairly general circumstances:5 let h be a
+commutative, graded hopf algebra with coproduct , antipode s, multiplication
+m, unit e and counit e, over some number eld f , and such that the subalgebra
+h0 of elements of degree zero is reduced to scalars, so that h0 is the kernel of
+(id  e  e). let e be the standard inclusion of f in h, e : f  fe  h. note
+that s2 = id.
+
+let a representation  : h  v be given. this includes the case  = id, v =
+h itself. in the following, we discuss only this case, the changes necessary for the
+general case are obvious and demand only the insertion of the map  : h  v at
+appropriate places. also, the prove goes through for the non-commutative case,
+delivering the expected homomorphism property sr(xy ) = sr(y )sr(x).
+
+let then r be a map r : h  h which fulls the m.c.s (53,54). it need not
+be an algebra endomorphism, r(xy) 6= r(x)r(y). but we demand r(e) = e.
+dene p2 : h  h  h  h by
+
+p2 = (id  e  e)  (id  e  e),
+
+(57)
+
+4i thank christian brouder for pointing my attention to this fact.
+5this result has far reaching consequences showing the conceptual signicance of renor-
+
+malization by its relation to the riemannhilbert problem [10].
+
+14
+
+so that we can write
+
+(x) = p2((x)) + e  x + x  e  [e  e  e  e](x).
+
+(58)
+
+then, the antipode can be written in the form
+
+s(x) = x  m[(s  id)p2(x)] + 2ee(x),
+
+(59)
+
+using m[(s  id)(x)] = e  e(x) and (58). for any map r as above, we dene
+
+sr(x) = r[x + m[(sr  id)p2(x)]] + 2ee(x).
+
+(60)
+
+this denition works recursively, as sr on the rhs is applied to elements of
+lower degree than x. we also set sr(e) = e. we now prove prop.(2):
+it suces to prove the assertion for elements which full e(x) = 0. otherwise,
+one decomposes x = (x  e  e(x)) + e  e(x).
+
+so let x, y be two elements which are annihilated by the counit. then,
+
+sr(xy ) = r[xy ]  r[u ],
+
+where u = m[(sr  id)p2(xy )], hence
+
+u = sr[x]y + sr[y ]x + sr[xy ]y  + sr[y ]xy  + sr[x y ]x 
+
++sr[x ]x y + sr[x y ]x y ,
+
+(61)
+
+(62)
+
+abbreviating p2((x)) = x   x , (omitting the summation sign). now, as h
+is a graded hopf algebra by assumption, we can proceed by induction on that
+grading. for the start of the induction we take the grade n = 1, where the
+assertion is immediate.
+
+assume that the assertion holds for products xy of grade n, we prove that
+
+it holds for grade n + 1.
+
+thus, by assumption we can write u as
+
+u = sr[x]y + sr[y ]x + sr[x]sr[y ]y  + sr[y ]xy  + sr[y ]sr[x ]x 
+(63)
+
++sr[x ]x y + sr[x ]sr[y ]x y .
+
+now, we use the fact that r fullls the multiplicativity constraints to write
+
+r[xy ] = r[x]r[y ] + r[r[x] y ] + r[r[y ] x]
+
+r[ux uy ] = r[ux]r[uy ] + r[r[ux] uy ] + r[r[uy ] ux ]
+
+where z := z  r[z], z  h and
+
+ux := sr(x )x  = m[(sr  id)p2(x)]
+
+(64)
+(65)
+
+(66)
+
+and similarly for uy . now use sr(x) = r[x]  r[ux ] which enables us
+to completely decompose u and r[xy ] in terms of r[x], r[y ], r[ux], r[uy ].
+using (64,65) one nds
+
+ r[xy ]  r[u ] = (r[x] + r[ux ])(r[y ] + r[uy ]) = sr(x)sr(y ),
+
+(67)
+
+15
+
+as desired. 2
+
+now, renormalization maps all serve one and the same purpose: to eliminate
+the undesired divergences in the theory. typically, they can be considered
+as transformations which do not alter the behaviour at large internal scales
+(internal refererring here to scales which are to be integrated out) such that
+one can establish well-dened ratios like the functions a,b(t) dened before. in
+such ratios the dependence on large internal scales drops out and hence we nd
+nite results for renormalized green functions. general renormalization maps
+r useful in applications in qft can be simply considered as maps which full
+the multiplicativity constraints, but not necessarily the algebra homomorphism
+property r[xy] = r[x]r[y].
+
+realizing that one can label contributions to green functions of pqft by
+b,,
+
+decorated rooted trees in the same manner as we did so far with functions gt
+we consider quite generally maps  from h to some appropriate space v .
+
+let us then introduce, for any such  : h  v , from which we demand
+
+nothing more than the algebra homomorphism property (ab) = (a)(b),
+
+r : h  v, r(t) = sr[](s(t))
+
+(68)
+
+where r is any map which fulls (55) and hence the multiplicativity constraints
+(53,54). sr : h  v is still dened as
+
+sr() = r[ + m((sr  id)(  )p2].
+
+then, as before, let r be the corresponding map
+
+r : h  v  h  v, r() = r = sr[  s].
+
+all the maps r are algebra homomorphisms, due to (56).
+
+then, we dene r, : h  v by
+
+r,(t) = m[(r  )(s  id)(t)].
+
+(69)
+
+(70)
+
+(71)
+
+for example, setting  = b, r = ra we recover the previous denition. we
+clearly have
+
+r,(t) = [r  s  ](t).
+
+(72)
+
+note that r, calculates the ratio of the two representations r,  with respect
+to the convolution product, forming the ratio with the help of the antipode, as
+it should be. in general, one can dene, for any two representations u, v 
+h  v ,
+
+then, the generalized form of chens lemma takes the form
+
+u,v(t) = [u  s  v](t).
+
+u,v(t) = [u,s  s,v] (t),
+
+16
+
+(73)
+
+(74)
+
+where u, s, v are labels indexing dierent representations u, v, s : h  v .
+ra , b were examples, as are r, .
+
+let us show that r  r() = r(),
+
+r  r() = sr(sr())
+
+= r[sr() + m((sr  id)(sr()  sr())p2]
+= r[sr() + m((sr  id)(id  sr)(  )(s  id)p2)]
+= r[sr() + sr[m((  )(s  id)p2)]]
+= r[sr[  m((  )(s  id)p2)]]
+= r[sr[  s]] = sr(  s) = r().
+
+this proof works by induction on the number of vertices. from the second to
+the third line we used the assertion for lesser than n vertices, by employing
+sr  sr() = r  r() = r() = sr(  s). in the last line we utilized that
+sr maps to the range of r and r2 = r.
+
+hence, renormalization maps r which fulll the multiplicativity constraints
+fulll r2() = r(). further, if we have a renormalization scheme r and
+representations ,   h  v such that sr () =   s (that is, the natural
+generalization of (45) holds), then lemma 1 holds in the form
+
+r, = r,  r,,
+
+(75)
+
+where r can be any renormalization scheme. here, 
+r := sr (  s), and the
+condition sr () =   s essentially guarantees that we renormalize the second
+term on the rhs of (75) at a renormalization point at which the unrenormalized
+functions  in the rst term on the rhs are evaluated. hence, the lhs is a
+concatenation of two renormalized green function on the rhs, the rst evaluating
+bare green functions at parameters which we use for renormalization of the
+second, which shifts the bare function from  to . the innitesimal version
+of this reparametrization can be regarded as the generator of the ow of the
+renormalization group.
+
+indeed, in (75) we see that the rhs depends on the intermediate represen-
+if we regard  as charaterized
+tation , which does not appear on the lhs.
+by an appropriate (set of) parameter(s) b, and  characterized by a (set of)
+parameter(s) b, we can apply a dierentiation with respect to b to nd
+
+0 =
+
+d
+db
+
+[r,  r,] =(cid:18) 
+
+b
+
+r,(cid:19)  r, + r, (cid:18) 
+
+b
+
+r,(cid:19) ,
+
+(76)
+
+which is a proto-type renormalization group equation. it expresses as a dieren-
+tial equation the independence of an intermediate scale. note that in the limit
+b  b the nite ratio r, becomes an innitesimal quantity. note further
+that the dependence on b of the second term on the rhs is given by the fact that
+sr () =   s. the exercise to cast the renormalization group explicitly in
+
+17
+
+this language is a purely notational one, taking into account the dependence on
+parameters like charges, masses etc and hence establishing a coupled systems of
+such equations, which we postpone to future work. various viewpoints about
+renormalization group equations ranging from standard bphz approaches to
+the wilson viewpoint can be obtained from (75,76) depending on which param-
+eters for an intermediate scale one chooses, with dimensionful parameters of
+bare green functions or physical cut-os being some obvious choices.
+
+3.2 cohomological properties of renormalization
+
+let us consider the following problem. given is a perturbative qft, dened by
+feynman rules. this denes a series in graphs graded by the number of vertices.
+the graphs translate to unique analytical expressions, which decompose into
+feynman integrands and integrations, determined by the closed loops in the
+graph. powercounting establish a well-dened subset of supercially divergent
+subgraphs, and eventually, we realize that each of these graphs represents an
+element of h [2, 3, 5].
+
+the analytic expressions are parametrized by external momenta and masses,
+which can be regarded as complex parameters generalizing the external scale b
+of the iterated integral. for a given feynman graph , let for now b rep-
+resent this set of parameters. the integration is over internal loop momenta
+along propagators (edges) (or over internal vertices, in x-space) and diverges
+(in momentum space) when the internal momenta get large. let us specify a
+renormalization scheme by saying that for any graph  we have dened a set
+of conditions on the parameters b, for example conditions that the square of
+external momenta equals some mass square. let  be the set of parameters b
+specied in accordance with these conditions. these parameters are provided
+by the integrand constructed according to the feynman rules.6
+
+the renormalized green function established by this set-up can be calculated
+
+as
+
+r ,b
+
+(t) = [sr
+
+(b )  b ](t),
+
+(77)
+
+where t  h is obtained from , and b maps it to an analytic expressions
+according to the feynman rules and all other notation is self-evident.
+
+this can be written in the form, in an obvious shorthand notation,
+
+r, = m  (r  id)(b  b)  (s  id),
+
+(78)
+
+which shows that we fail by the deviation of r from the identity (in h  v )
+to get a trivial result. the interesting operator in the above is clearly r  id.
+let us now concatenate the renormalization step n times. hence, we assume
+that we have given a renormalized green function r, b0 as above, where the
+notation stresses that we use a set of parameters b0 for the bare function, and
+some arbitrary renormalization r.
+
+6there is an analogous story in x-space to be developped elsewhere.
+
+18
+
+let us now vary these external parameters through n steps until they reach
+a bare green function bn , which uses other values for external parameters. in
+each step, we will use a renormalized green function which subtracts bi (t)
+= bi1 . hence, we achieve a concatenation of
+at  = bi1,, thus birbi1
+renormalizations where each step fullls (75).
+
+thus consider a sequence of renormalizations sending b0  bn by an
+
+intermediate sequence of renormalizations b0  b1  . . .  bn, using
+
+bi1  rbi1 ,bi
+
+= bi1  rbi1 (bi  s)  bi
+= bi1  bi1  s  bi
+= bi1 [id  s]  bi
+= bi1 [e]  bi
+= bi .
+
+let us introduce
+
+by
+
+so that we obtain
+
+dr : h  v  (h  v )2
+
+dr(bi ) = rbi1 (bi )  bi ,
+
+bn = m [[b1  drb1
+
+(b2 )  drb2
+
+(b3 )  . . .  drbn1
+
+(bn )]
+
+(id  [s  id](n1)2n1)],
+
+(79)
+
+(80)
+
+(81)
+
+(82)
+
+where m is a concatenation of 2n multiplication maps, m : v 2n+1  v , and
+2n+1 : h  h2n+1 is the obvious map in h sending h  h2n+1 using the
+coproduct, unique due to coassociativity of the latter.
+
+this motivates to dene dr for elements (h  v )n.
+
+dr(1  2  . . .  n) =
+
+n
+
+xi=1
+
+(1)i+11  . . .  d(i)  . . .  n,
+
+(83)
+
+where it is understood that d(i) = ri1(i)  i, i > 1 and d(1) = dr(1) =
+r(1)  1. hence, at the i-th entry (i > 1), r replaces i by the element
+ri1()  i = i1  i. at the rst entry, we obtain r(1). it is convenient
+to introduce 0 := r(1), with r(0) = 0.
+
+then, one immediately checks, using r2 = r,
+
+d2
+r = 0,
+
+(84)
+
+for example:
+
+dr(dr(1)) = dr(0  1) = 0  0  1  0  r(1)  1 = 0.
+
+(85)
+
+19
+
+in this language, we have
+
+bn = m [[b1  d(2)(s  id)  . . .  d(n)(s  id)]2n+1]
+
+(86)
+
+and for the renormalized green function
+
+dr(n) = m [d(1)(s  id)  (d2)(s  id)  . . .  (dn)(s  id)2n+2].
+
+(87)
+
+in short, taking into account that the actions of m, ..., (s  id) are obvious:
+
+and
+
+n = 1d2 . . . dn
+
+dn = d1 . . . dn.
+
+(88)
+
+(89)
+
+we recommend that the reader tries these formula out on several simple exam-
+ples and marvels at their obvious cohomological relevance especially in compar-
+ison with [12].
+
+we realize that the change of scales, so typically a step in the whole of
+physics, naturally carries cohomological structure which gives hope to be able
+to cast locality in a well-dened mathematical framework in the future.
+
+much more can and should be said about these aspects. here, we have to
+
+refer the reader to future work [11].
+
+3.3 tree-indexed scales and the equivalence of schemes
+
+let us come back to chens lemma and to iterated integrals. there are further
+generalizations lying ahead. so far, we used iterated integrals as quantities which
+are naturally indexed by rooted trees, and to which the previous considerations
+apply. the rooted trees determined how the various dierential forms fi(x)dx
+are combined under the (indenite) integral operator, but outer boundaries
+where kept constant throughout.
+
+3.3.1 tree indexed scales
+
+a generalization which turns out to be quite useful in practice is to let even
+these boundaries be indexed by decorated rooted trees. hence, we redene
+
+ gb,(t) =z 
+
+bt
+
+(90)
+
+which is dened as before, only that we now label the lower outer boundary
+by a decorated rooted tree t. we understand that the map ra maps lower
+boundaries bt to at, and that the coproduct action extends to this label. similar
+considerations apply to full-edged green functions of pqft, where one can
+utilize the presence of scale dependent parameters to make them tree-dependent
+in the same manner. this idea will be pursued in the next section, and in [8].
+
+fin (x)y gt
+
+x,dx
+
+20
+
+if t2(f1, f2) is the decorated rooted tree of fig.(1) with coproduct
+
+(t2(f1, f2)) = t2(f1, f2)  e + e  t2(f1, f2) + t1(f1)  t1(f2)
+
+(91)
+
+we formally obtain (abbreviating t2(f1, f2) = t212 , t1(f1) = t11 , t1(f2) = t12 ),
+
+sra (b)(t2(f1, f2)) ="z 
+
+at212 z 
+
+x
+
++z 
+at12 z 
+
+t11# f2(x)f1(y)dydx.
+
+(92)
+
+and
+
+a,b(t2(f1, f2)) ="z 
+
+bt212 z 
+
+x
+
+z 
+bt12 z 
+
+at11
+
++z 
+at12 z 
+
+at11
+
+z 
+at212 z 
+
+x # f2(x)f1(y)dydx.
+
+(93)
+in this notation, a, b are to be regarded as representing actually a whole set of
+constants at, bt, parametrizing the relevant scales for the decorated tree consid-
+ered.
+
+still, (39) applies and describes what happens if we change the renormaliza-
+
+tion point. a,b = a,s  s,b now becomes
+
+x # f2(x)f1(y)dydx
+x # f2(x)f1(y)dydx
+x # f2(x)f1(y)dydx
+
+x
+
+x
+
+x
+
+at11
+
+at11
+
+"z 
+bt212 z 
+z 
++z 
+z 
+bt12 z 
+at12 z 
+at212 z 
+= "z 
+st212 z 
+z 
+st12 z 
++z 
+at12 z 
+z 
+at212 z 
++"z 
+bt212 z 
+z 
++z 
+z 
+bt12 z 
+st12 z 
+st212 z 
+st12# f2(x)dx,
+at11# f1(y)dy"z 
++"z 
+z 
+z 
+
+at11
+
+at11
+
+st11
+
+st11
+
+st11
+
+bt12
+
+which is evidently true, as the reader should check. it is instructive to see the
+lemma (1) in action for this simple example.
+
+finiteness of a,b now imposes conditions on the tree-indexed parameters, a
+
+fact which we will utilize in the next section.
+
+3.3.2 equivalence of schemes
+
+conceptually, the presence of tree-indexed parameters allows to describe dif-
+ferent renormalization schemes on a similar footing. the idea is the following.
+let us compare for example a bphz on-shell scheme in comparison with mini-
+mal subtracted dimensional renormalization. in the former case, one eectively
+subtracts at the level of integrands. hence, one has an integrand which gives
+
+21
+
+rise to a non-existent measure with respect to the loop integrations. the inte-
+grand is parametrized by several constants (masses, external momenta), which
+essentially play the role of the boundaries in our iterated integrals. a renor-
+malization scheme in the bphz spirit would map, upon applying the antipode
+srbp hz , such an integrand to another one, for which these parameters fulll
+certain conditions (on-shell, for example). the structure of srbp hz achieves
+that these counterterms are local [2, 6, 3].
+
+then, the map rbp hz ,(t) so-constructed delivers a subtracted integrand
+which actually establishes a well-dened measure with respect to all loop inte-
+grations. here, t is the decorated rooted tree assigned to the integrand according
+to powercounting [2, 3, 6, 5]. hence, bphz-type schemes avoid the use of reg-
+ularization altogether.
+
+on the other hand, in dimensional renormalization using minimal subtrac-
+tion (ms scheme), one introduces regularization and evaluates the bare green-
+functions rst, obtaining laurent series in the regularization parameters. the
+antipode achieves a subtraction of these poles which respects locality, and sim-
+ilarly one constructs the ms-renormalized rm s ,(t) using srm s .
+
+in the next section we will use the idea to have tree-indexed scales to show
+that we can regard a ms-scheme as a bphz type scheme on the expense of
+having to introduce tree-dependent scales.
+
+4 applications
+
+to keep the amount of notation simple, we will consider representations of h
+dened as follows. assume that we are given a set of functions bk(x) which
+are laurent series in x with a rst-order pole. using vertex weights and the
+corresponding notation as dened in the beginning of section ve below we can
+dene a function
+
+gz(t; x) = yvt [0]
+
+bw(v)(x)znx = bt(x)znx,
+
+(94)
+
+where n is the number of vertices of t and z is to be regarded as the scale
+parametrizing the representation and x is the regularization parameter. we
+
+also wrote qvt [0] bw(v)(x) = bt(x). quite a number of interesting appli-
+
+cations can be brought to this form [5, 8]. typically, whenever we iterate a
+feynman diagram in terms of itself as described by a rooted tree, one nds such
+representations. many examples are given in [5]. the case of general feynman
+diagrams is obtained by nding a proper notation for the case of dierent dec-
+orations, and by taking into account a proper form-factor decomposition. we
+refer the reader to [8] for further applications, extending to such cases.
+
+hence, in the notation of the previous section, we set z(t) = gz(t; x). then,
+
+we dene the ms renormalization scheme by setting
+
+rm s  z =< 1 >,
+
+(95)
+
+22
+
+where angle brackets denote projection on the pole part of the laurent series in
+x inside the brackets. let then the counterterm dened by srm s (z) and the
+renormalized green function by m s(z)(t) = [srm s (z) z](t), as usual. the
+reader should have no diculties conrming that for t2, the rooted tree with
+two vertices,
+
+srm s (z)(t2) =  < b2b1 > + << b1 > b1 >,
+
+(96)
+
+and
+
+rm s ,z (t2) = b2b1z2x < b1 > b1zx < b2b1 > + << b1 > b1 > .
+
+(97)
+let us compare such an approach with an on-shell approach. using the same
+bare functions, we dene the on-shell renormalization map r as
+
+r  z = .
+
+(98)
+
+if the gz(t; x) are provided by integrals whose integration is regularized by x
+where z is a parameter of the integrand, then the renormalization map just sets
+this external parameter to the value .
+
+r,z (t) = [sr [z]  z](t) is a function which has a subtracted integrand
+it
+
+such that typically the limit x  0 exists at the level of the integrand.
+becomes a taylor series in log(z/).
+
+let us now cast the ms renormalized green function in this form on the
+
+expense of introducing tree-dependent scales t.
+
+hence, we redene r()(t) = t (t), and get, still spelling out the example
+
+t = t2,
+
+sr(z)(t2) = b2b12x
+
+t2 + b1b12x
+
+t1
+
+.
+
+(99)
+
+we remind ourselves that s(t2) = t2 + t1t1.
+
+it is easy to work out the general case. to see this, we look at the trees with
+
+up to three vertices. the antipode zt := srm s (z)(t) in ms reads
+
+zt1 =  < b1 >,
+zt2 =  < b2b1 > + << b1 > b1 >,
+zt31
+
+=  < b3b2b1 > + << b1 > b2b1 > + << b2b1 > b1 >
+
+ <<< b1 > b1 > b1 >,
+
+zt32
+
+=  < b3b2
+
+1 > +2 << b1 > b2b1 >
+
+ <<< b1 > b1 > b1 > .
+
+in general, one nds
+
+zt = xfull cuts c of t
+
+(1)nc <"yi
+
+< bti ># btr > .
+
+23
+
+(100)
+(101)
+
+(102)
+
+(103)
+
+(104)
+
+the antipode z 
+t
+reads
+
+in a subtraction scheme using tree-indexed parameter sets t
+
+z 
+
+t = xfull cuts c of t
+
+(1)nc"yi
+
+bti #(ti)x
+
+ti
+
+# btr#(tr)x
+
+tr
+
+.
+
+we remind the reader that #(t) equals the number of vertices of t.
+
+equating zt = z 
+
+t determines t recursively
+
+(105)
+
+(106)
+
+(107)
+
+(108)
+
+where
+
+t = exp(cid:20)(cid:18) 1
+(1)nc"yi
+
+t/bt)(cid:21) ,
+
+xt!(cid:19) log(b
+srm s (z)(ti)# srm s (z)(tr).
+
+b := xfull cuts c of t
+
+one also conrms that now
+
+rm s ,z (t) = r,z (t)
+
+holds. note that we can discard the use of a regularization scheme in rm s ,z
+as we observe that the scales t are functions which exist in the limit x  0,
+which one conrms by using b
+
+t/bt = 1 + o(x) in (106).
+
+conceptually, this eliminates any dierence between a bphz type scheme
+and regularization followed by a minimal subtraction. each divergent subgraph
+can be subtracted at its own scale, such that a subtraction with such tree-
+dependent sets of parameters equals the result of the use of a ms scheme.
+actually, there remains an argument in favour of minimal subtraction: it incor-
+porates from the beginning the wisdom that it is only logarithmic divergence
+which counts. any integrand providing a dierent degree of divergence can be
+cast in the form of a log divergent integrand, (multiplied by a polynomial in ex-
+ternal parameters) plus scale-independent terms.7 the latter do not contribute
+anyhow after renormalization, and are economically eliminated in dimensional
+renormalization from the beginning.
+
+we know that bt is of order o(1/x#(t)), as is b(t). one immediately proves
+
+that the dierence is of lower order
+
+[bt  b
+
+t]  o(1/x#(t)1).
+
+(109)
+
+this is a direct consequence of the fact that the antipode s of h fullls s2 = 1.
+indeed, to leading order in 1/x we have
+
+b
+
+t = xfull cuts c of t
+
+(1)nc < [yi
+
+= srm s [zt]
+= zs(t) = z(s2(t)) = bt,
+dx.
+
+dx
+
+xdx
+
+x+c = cr 
+
+1
+
+x+c +r 
+
+1
+
+7an easy example: r 
+
+1
+
+24
+
+< zti > ztr >
+
+(110)
+
+(111)
+
+(112)
+
+where we used that to leading order << a > b >=< a >< b > for arbitrary
+expressions a, b so that the rst line to leading order agrees with (107), and we
+used (45). as these properties are true not only for minimal subtraction but for
+any renormalization scheme, we conclude that in any renormalization scheme
+the leading pole part is the same, a property well-known to the practitioner. it
+is nice to see it traced back to the fact that s2 = 1.
+
+once more, it is instructive to write down the rst couple of cases for b
+t.
+
+b
+b
+b
+
+t31
+
+t1 = < bt1 >
+t2 = < bt2 >  << bt1 > bt1 > + < bt1 >< bt1 >
+>  << bt1 > bt2 >  << bt2 > bt1 >
++ <<< bt1 > bt1 > bt1 > 2 < bt1 >< bt2 >
++2 < bt1 ><< bt1 > bt1 >  < bt1 >< bt1 >< bt1 > (115)
+
+= < bt31
+
+(113)
+(114)
+
+b
+
+t32
+
+= < bt32
+
+> 2 << bt1 > bt2 >
+
++ << bt1 >< bt1 > bt1 > 2 < bt1 >< bt2 >
++2 < bt1 ><< bt1 > bt1 >  < bt1 >< bt1 >< bt1 > (116)
+
+it is not a big surprise to see that a change of renormalization scheme can
+produce a lot of junk at subleading orders.
+
+a nal remark concerns momentum schemes (schemes which subtract at
+specied values of external momenta), hence schemes which full (45). we
+know already that the convolution product holds for arbitrary renormalization
+schemes. the structure of the convolution product indicates how we translate
+a renormalized green function, r,b(t), determined by a scheme r and pa-
+rameter(s) b, to r,b (t). both utilize the same freely chosen renormalization
+r = 0. the transition b  b uses the convo-
+scheme r giving an operator dr, d2
+lution by reparametrizations of the external parameter(s) b, hence a convolution
+using momentum schemes. they thus typically provide the general mediator for
+renormalized green functions, as was exhibited in [5, 8].
+
+5 tree factorials and cm weights
+
+in this section we want to prove some basic results concerning tree-factorials
+and connes moscovici weights. both entities are combinatorial in nature. for
+simplication, we work in the undecorated hopf algebra. similar identities were
+derived by butcher in his work on numerical integration methods [14, 13]. as
+our derivation is dierent we still give it in some detail.
+
+let t [0] be the set of vertices of the rooted tree t . for any vertex v of t ,
+let tv = p c(t ), where c is the single cut which removes the edge incoming to
+v. if v is the root, we set tv = t. also, #(tv) is the number of vertices of the
+
+25
+
+4
+
+3
+
+1
+
+2
+
+1
+
+1
+
+1
+
+1
+
+n(     +          ) =        + 3        +         +
+
+figure 3: we dene vertex weights and tree factorials, symmetry factors, cm-
+weights and feet of an undecorated rooted tree. for the tree t given at the left in
+the upper row we indicate the vertex weights at each vertex in the middle and
+the vertex symmetries at the right. the second row considers natural growth of
+3 = t31 + t32 . it obtains on the rhs of the equation four trees with cm-weights
+1, 3, 1, 1. we also indicate the feet of these four trees.
+
+monomial tv. then, we dene the tree factorial by
+
+t ! = yvt [0]
+
+#(tv)  yvt [0]
+
+w(v),
+
+(117)
+
+which also denes the vertex weights w(v). fig.(3) gives instructive examples.
+finally, we set e! = 1.
+
+the next denition concerns the symmetry factor st of a tree t . for any
+v  t [0] consider b(tv). this is a monomial in rooted trees, hence a product
+of branches
+
+b(tv) =
+
+tv,i.
+
+(118)
+
+in general, some of these branches can be the same rooted tree, and hence these
+
+products can be written as productsq over dierent rooted trees with integer
+
+powers:
+
+j[tv,j]nj .
+
+(119)
+
+we associate to the vertex v its vertex symmetry, built from the factorials of
+
+f (v)
+
+yi=1
+
+f (v)
+
+yi=1
+
+tv,i =q
+
+26
+
+the multiplicities nj with which a tree tv,j originates from v,
+
+and dene
+
+st,v =q
+st = yvt [0]
+
+jnj!
+
+st,v.
+
+(120)
+
+(121)
+
+fig.(3) gives examples for these notions, which were already used in [5]. in that
+paper, the symmetry factor st was dubbed (t ) and the vertex symmetry of
+the root st,r was simply denoted as (t ).8
+
+we now dene the connes moscovici weights cm (t ) for a tree t with n
+
+vertices as
+
+cm (t ) :=< zt , n >,
+
+(122)
+
+where < ,  > is the pairing of [3], < zt , t  >= t,t  , and n = n n(e) is
+the n-fold application of natural growth to e, delivering the generators of the
+commutative part of the cm-hopf subalgebra of h, obtained by natural growth
+n applied n times, cf. fig(3).
+
+two further denitions are useful. the rst concerns the feet of a rooted
+it is a subset f (t [0]) of t [0] provided by those vertices which have
+tree t .
+fertility zero, hence no outgoing edges. then, f (t ) is the set of trees consisting
+of all trees which have one foot removed. the cardinality of this set equals the
+number of feet of t .9
+
+also, we let n (t ) be the set of those trees which are generated from t by
+
+natural growth n (t )
+
+t   n (t ) < zt , n (t ) >6= 0,
+
+(123)
+
+and counting multiplicities appropriately. see fig.(3) to get acquainted with all
+these notions.
+
+we want to derive the following three results. first,
+
+n
+
+t ! = xtf (t )
+
+1
+t! ,
+
+which leads to the second result,
+
+cm (t) =
+
+n!
+t!st
+
+, t  t [n],
+
+(124)
+
+(125)
+
+8for a tree t with root vertex r one can consider st ,r to dene what could be dubbed the
+moebius function (t ) of t : (t ) = 0 i the branches at r are not square-free (hence if some
+of the powers ni > 1) and (t ) = 1 if f (r) is even, and (t ) = 1 if f (r) is odd.
+
+9what we call feet here is often called leaves in the literature on graphs.
+
+27
+
+where the tree-factorials and connes-moscovici weights are dened as in [5].
+here, t [n] is the set of trees with n vertices. finally,
+
+cm (t )
+
+t !
+
+=
+
+(n  1)!
+2(n1) .
+
+xt t [n]
+
+(126)
+
+we rst note that (124) obviously holds for trees t = bn
+
++(e), where it reduces
+to the familiar n/n! = 1/(n  1)!. hence, the tree factorial is another example
+of the replacement integers to rooted trees.
+
+the next observation is
+
+n
+t! =
+
+k
+
+yj=1
+
+1
+t!
+j
+
+,
+
+(127)
+
+where b(t) = qk
+
+j=1 tj. this identity is a mere way of writing the denition
+of the tree factorial, using that any tree factorial factorizes n for a tree with n
+vertices.
+
+instead of proving (124), we prove
+
+where we dene
+
+n1 + . . . + nk
+t !
+1t !
+2 . . . t !
+
+k
+
+= xtf (b+(t1...tk))
+
+b(t)!,
+
+b(t)! =
+
+t !
+i
+
+t !
+1 . . . t !
+
+k
+
+1
+(t 
+i )!
+
+(128)
+
+(129)
+
+i is dened by b+(t1 . . . t 
+
+and t 
+have been attached to some branch ti of b+(t1 . . . tk) which gives t 
+
+i . . . tk) = t. thus, we use that the feet must
+i  f(ti).
+let us rst show that (124) is a consequence of (128). to see this, it suces
+
+to note that
+
+f (b+(t)) = {b+(t) | t  f(t)},
+
+(130)
+
+as obviously root and feet are dierent ends of a rooted tree. fig.(3) gives an
+instructive example. hence, setting k = 1 in (128),
+
+n
+
+t! = xtf (b+(t))
+
+b(t)! = xtf (t)
+
+1
+t! ,
+
+(131)
+
+which proves (124). 2
+
+it remains to prove (128). we have, using induction on the total number
+of vertices in t1 . . . tn and the fact that a single ti has lesser vertices than the
+product,
+
+n1 + . . . + nk
+
+t !
+1 . . . t !
+
+k
+
+=
+
+k
+
+xi=1
+
+ni
+t !
+i
+
+t !
+i
+
+t !
+1 . . . t !
+
+k
+
+28
+
+(132)
+
+=
+
+=
+
+k
+
+1
+(t
+i)!
+
+if (ti)
+
+xi=1 xt
+xtf (b+(t1...tk))
+
+1
+1 . . . 
+t !
+t !
+i
+
+. . . t !
+k
+
+[b(t)]!. 2
+
+(133)
+
+(134)
+
+in the above, the  means to omit the corresponding tree factorial.
+
+we are now in the position to prove (125). we assume it holds for trees with
+n  1 vertices and simply reduce it to (124) to show that it holds for n vertices.
+
+stcm (t) =
+
+n!
+t!
+
+cm (t)st
+
+= xtf (t)
+= (n  1)! xtf (t)
+= (n  1)! xtf (t)
+
+st
+st t!
+
+1
+t! ,
+
+(135)
+
+(136)
+
+(137)
+
+which is the desired result. 2
+it remains to prove (126). by the denition of the cm-weights as counting
+multiplicities of trees under natural growth we can write
+
+xtt [n]
+
+hence we must show
+
+cm (t)
+
+t!
+
+cm (t)
+
+(t)! xtn (t)
+
+(t)!
+(t)! .
+
+= xtt [n1]
+xtn (t)
+
+(t)!
+(t)! =
+
+n  1
+
+2
+
+.
+
+then, (126) follows immediately by induction:
+
+cm (t)
+
+t!
+
+= xtt [n1]
+
+cm (t)
+
+n  1
+
+(t)!
+
+2
+
+cm (t)
+
+(n  2)!
+
+n  1
+
+=
+
+2n2
+
+2
+
+=
+
+(n  1)!
+
+2n1
+
+.
+
+xtt [n]
+ xtt [n]
+
+t!
+
+to derive (139) we write
+
+(t)!
+(t)! =
+
+xtn (t)
+
+n  1
+
+n xtn (t) q(br(t))!
+q(br(t))! ,
+
+29
+
+(138)
+
+(139)
+
+(140)
+
+(141)
+
+(142)
+
+using the denition of the tree factorial via a product of the factorials of the
+branches.
+
+natural growth either happens at one of the branches of t, or at the root
+n . in the former
+
+of t. in the latter case, the above sum gives a contribution n1
+case, assume natural growth happens at the branch t
+
+i of t. then,
+
+q(br(t))!
+q(br(t))! =
+
+(t
+i)!
+i )! ,
+(t
+
+(143)
+
+where t
+i). hence, we can use induction in the above sum, as branches of
+a tree have lesser vertices than the tree itself. thus, applying (139) for branches:
+
+i  n (t
+
+n  1
+
+n  1
+
+=
+
+n xtn (t) q(br(t))!
+q(br(t))!
+n 
+2 
+xi=1
+ =
+1 +
+
+#(t
+i)
+
+f (t)
+
+(144)
+
+n  1
+
+n (cid:18)1 +
+
+#(t)  1
+
+2
+
+(cid:19) =
+
+n  1
+
+2
+
+. 2(145)
+
+we used that the sum over all branches of t delivers n  2 vertices, as t has
+n  1 vertices. thus, eq.(46) of [5] is proven.
+
+6 operator product expansion
+
+in a way, the most general problem one faces in qft can be stated as the
+problem of nding the limit of matrix elements
+
+lim
+yx
+
+< 0 | oa(x)ob(y)p (x1, . . .) | 0 >
+
+fk(x  y) < 0 | ok((x + y)/2)p (x1, . . .) | 0 >,
+
+(146)
+
+=xk
+
+where oa, ob, ok are operators and p (x1, . . .) is a polynomial in eld operators
+at points x1, . . ., and we sum over all operators ok with appropriate quantum
+numbers and wilson coecients fk. this is the problem of the operator product
+expansion. the wilson coecients will behave as
+
+fk(x  y)  (x  y)(da+dbdk)(polynomial in log(x  y)),
+
+(147)
+
+where da, db, dk are the dimensions of the operators oa, ob, ok.
+
+viewed in momentum space, it becomes an renormalization problem: in the
+desired limit, we will get a series of contributions which will be plagued by uv
+divergences when we integrate momenta. hence, we can proceed as before and
+sort the resulting contributions by their tree-structure, followed by a renormal-
+ization based on the antipode of the resulting trees. the convolution product
+
+30
+
+extends to the coecient functions fk and one thus nds that the convolution
+product of iterated integral is a simple representation of the convolution which
+describes the change of scales in opes. this motivated the title of this paper.
+the relation between a convolution of the form (75) and the ope is most
+clearly understood if one considers the ope as a problem of the change of
+renormalization conditions, hence a problem of the change of scales, in our
+terminology. it is the standard practice in opes to nd the desired expansion
+by doing the necessary subtractions for the case x = y, which means to nd a
+larger set of appropriate forests [15, 16].
+
+let us essentially restrict to 4 theory and consider the problem
+
+(x)(y) = f (x  y)2((x + y)/2) + o((x  y)2).
+
+(148)
+
+lim
+xy
+
+one starts with the renormalized function
+
+z ddqeiq(xy)(q, {pk})
+
+(149)
+
+associated to the vev (146). here, {pk} indicates the external momenta associ-
+ated to the points xi in (146) after fourier transform, and q is the momentum
+according to the fourier transform of x  y. (q, {pk}) is a renormalized am-
+putated (n + 2)-point green function in momentum space (the grey blob in
+fig.(4)), dressed with two extra propagators to connect it to x and y.
+
+the corresponding feynman integrand can be either read as belonging to a
+(n+ 2)-point green function g[n+2] or to a n-point green function with inserted
+operator 2, g[n]
+2 . the elements of h which we shall associate to either case
+will be dierent.
+
+in the former case, before the limit x  y is taken, the renormalized green
+function g[n+2] is a well-dened nite ratio for a xed renormalization scheme
+r. now, we want to change this ratio in accord with a new renormaliza-
+tion condition which demands that the amputated greens function vanishes
+
+for p(q2)  , so that the momentum integral over q in (149) exists. note
+
+that it would be log-divergent if the amputated greens function has a nite
+value for q2  .
+
+this is a typical change achieved by a convolution product described in (75).
+the renormalized green function associated with the operator insertion, g[n]
+,
+2
+is obtained by convoluting g[n+2] with the ratio which takes into account the
+change of renormalization conditions.
+
+clearly, as the convolution of two ratios is a ratio, we can describe the so
+obtained function as a sum over forests. the leading term x = y is explicitely
+singled out in fig.(4).
+
+again, a more detailed description of this approach is mainly a notational
+
+exercise and will be given elsewhere.
+
+31
+
+x       y
+
+x
+
+x
+
+=
+
+-
+
+x1
+
+...
+
+xn
+
+x2
+
+x1
+
+x       y
+
++
+
+-
+
+-
+
+x1
+
+xn
+
+...
+
+x2
+
+x
+
+...
+
+x2
+
+xn
+
+uv
+
+x
+
+x1
+
+x1
+
+...
+
+xn
+
+x2
+
+...
+
+x2
+
+-
+
+x1
+
+xn
+
+...
+
+x2
+
+xn
+
+uv
+
+figure 4: the operator product expansion amounts to a renormalization of a
+green function such that the limit x  y is well dened.
+it amounts to a
+change in renormalization conditions such that the fourier integral over q can
+be carried out for y  x.
+
+7 comments, conclusions
+
+in this paper we emphasized the common algebraic structure of iterated integrals
+and renormalized green functions in pqft. both full a convolution law derived
+from the underlying hopf algebra structure. the shue product of iterated
+integrals allows to restrict the hopf algebra to hchen, while green functions
+represent the full hopf algebra of decorated rooted trees. typical properties
+of renormalization like rges and opes can be derived from this convolution
+law. the notational exercise to make this explicit will be presented in future
+work. the opposite exercise, expressing qft green functions as generalized
+iterated integrals, was undertaken in [8]. here we presented only the conceptual
+foundations of renormalization theory. in the form presented here it inspired
+already new results exploring the connection to the butcher group [13] which
+also emphasizes the richness of the concepts involved in the renormalization of
+a local qft [9].
+
+we argued that all renormalization schemes can be treated on the same
+footing, and gave explicit examples for the case of one-loop decorations. two
+renormalization schemes play a distinguished role: on-shell schemes (momentum
+schemes in a massless theory) which serve as the general mediator for arbitrary
+changes of the renormalization point in any choosen scheme and the minimal
+
+32
+
+subtraction scheme which annihilates scale independent quantities from the be-
+ginning.
+
+a hope is that the analytic structure of green functions will become coherent
+in a manner inspired by the study of the polylogarithm and multiple zeta values
+and the structures observed there, ranging from the k-z equations and iterated
+integrals to hopf algebras and, eventually, singular knot invariants and weight
+systems. the enormous progress in mathematics in recent years [17], so far being
+mainly related to topological qfts, will hopefully enrich our understanding of
+qft in four dimensions eventually. recent results concerning counterterms of
+feynman diagrams [18] as well as analytic structures of green functions [19]
+justify some hope, when combined with the results of this paper.
+
+one thing we have not considered here: non-trivial renormalization schemes
+establish algebraic structures on v which weaken the structure of a proper hopf
+algebra [2]. as this paper is already quite long, we will describe the resulting
+weak hopf algebra structure in more detail in forthcoming work [20].
+
+let us close this paper with one nal observation which shows the urgent
+need to work out the connection between renormalization and ncg [3] in more
+detail. using the results of section ve we write for a rooted tree t with n
+vertices
+
+.
+
+(150)
+
+1
+t! =
+
+st cm (t)
+
+n!
+
+plugging this into the model of section four (see [5] to nd such models coming
+from realistic qfts), we nd
+
+gz(t; x) = bt(x)znx =
+
+1
+t!xn ft(x)znx
+
+(151)
+
+where we factored out the pole parts such that f (0) = 1. summing over all
+trees we obtain
+
+xn xtt [n]
+
+gz(t; x) =xn
+
+1
+n!
+
+fn (x)[
+
+zx
+x
+
+]n,
+
+(152)
+
+where fn (x) =ptt [n] cm (t)stft(x) is the natural representative of the natu-
+
+ral grown n, a nice result in the light of [3, 4], emphasizing that renormalization
+almost (by the deviation of r from id) inverts bare green functions in the group
+assigned to h in the nal section of [3], in fullagreement with [13] and [9].
+
+acknowledgements
+
+this paper has benetted enormously from the enthusiasm of and exchange of
+ideas with david broadhurst and alain connes. many thanks go to christian
+brouder, who had a lot of suggestions on an earlier version of the ms and made
+me aware of some literature relating rooted trees to runge-kutta methods.
+
+33
+
+also, i am grateful for helpful discussions with bob delbourgo, jurg frohlich,
+reuben rabi and ivan todorov, and it is a pleasure to thank the latter for
+hospitality at the erwin schrodinger institute in vienna, where parts of this
+paper were conceived. the author is supported by a heisenberg fellowship of
+dfg.
+
+references
+
+[1] t.k.chen, bull.amer.math.soc.83 (1977) 831.
+
+[2] d. kreimer, adv.th.math.ph.2.2 (1998) 303, q-alg/9707029.
+
+[3] a. connes, d.kreimer, comm.math.phys.199 (1998) 203, hep-th/9808042.
+
+[4] a. connes,
+
+h. moscovici,
+
+comm.math.phys198
+
+(1998)
+
+198,
+
+math.dg/9806109.
+
+[5] d.j. broadhurst, d. kreimer, j.symb.comp.27 (1999) 581, hep-
+
+th/9810087.
+
+[6] d. kreimer, comm.math.phys.204 (1999) 669, hep-th/9810022.
+
+[7] c. kassel quantum groups, grad. text in math.155, springer 1995;
+s. shnider, s. sternberg, quantum groups, international press 1993.
+
+[8] r. delbourgo, d. kreimer, on the use of the hopf algebra structure of qft
+
+in calculations, to appear in phys.rev.d, hep-th/9903249.
+
+[9] a. connes, d. kreimer, lett.math.phys.48 (1999) 85, hep-th/9904044.
+
+[10] a. connes, d. kreimer, renormalization in quantum eld theory and the
+
+riemannhilbert problem, hep-th/9909126.
+
+[11] a. connes, d. kreimer, work in progress.
+
+[12] a. connes, noncommutative geometry, academic press 1994.
+
+[13] c. brouder, runge-kutta methods and renormalization, hep-th/9904014.
+
+[14] j.c. butcher, an algebraic theory of integration methods, math. comp.26
+
+(1972) 79.
+
+[15] j.c. collins, renormalization, cambridge univ. press 1984.
+
+[16] c.g. callan jr., introduction to renormalization theory, in methods in
+field theory, r. balian, j. zinn-justin eds., les houches 1975 (north-
+holland/world scientic 2nd edition 1981);
+d.j. gross, applications of the renormalization group to high-energy
+physics, ibid.
+
+34
+
+[17] dror bar-natan, topology 34,2 (1995) 423;
+
+complex
+
+for modular
+
+logarithm and manins
+
+a. ghoncharov, multiple polylogarithms at roots of unity and motivic lie
+algebras, mpi-62/57 preprint;
+the double
+math.res.letters4 (1997) 617;
+r.m. hain, classical polylogarithms, u. jannsen, (ed.) et al., motives, pro-
+ceedings of the summer research conference on motives, university of wash-
+ington, seattle, july 20-august 2, 1991. american mathemtical society,
+proc. symp. pure math.55, pt. 2, 3-42 (1994);
+m.e. homan, j. algebra194 (1997), 477-495;
+m.l. kontsevich, m.gelfand sem., pp137-150, adv.sov.math.16, part 2,
+ams;
+d. zagier, values of zeta functions and their applications, first european
+congress of mathematics,, vol.ii, birkhauser, boston, 1994, 497-512.
+
+curves,
+
+int.j.mod.phys.c6 (1995) 519, hep-
+
+[18] d.j. broadhurst, on the enumeration of irreducible k-fold euler sums and
+their roles in knot theory and eld theory, out-4102-62 (hep-th/9604128),
+j.math.phys., in press;
+d.j. broadhurst, conjectured enumeration of irreducible multiple zeta val-
+ues, from knots and feynman diagrams, hep-th/9612012, phys.lett.b, in
+press;
+d.j. broadhurst, d. kreimer,
+ph/9504352;
+d.j. broadhurst, d. kreimer, phys.lett.b393 (1997) 403, hep-th/9609128;
+d.j. broadhurst, d. kreimer, phys.lett.b426 (1998) 339, hep-th/9612011;
+d.j. broadhurst, r. delbourgo, d. kreimer, phys.lett.b366 (1996) 421,
+hep-ph/9509296;
+d.j. broadhurst, j. gracey, d. kreimer, z.phys.c75 (1997) 559, hep-
+th/9607174;
+d. kreimer, j.knot th.ram.6 (1997) 479-581, q-alg/9607022;
+d. kreimer, j.knot th.ram.7 (1998) 61-85, hep-th/9612010;
+d. kreimer, knots and feynman diagrams, cambridge univ. press, in
+press.
+
+[19] a.i. davydychev, r. delbourgo, j.math.phys.39 (1998) 4299-4334, hep-
+
+th/9709216;
+d.j. broadhurst, solving dierential equations for three-loop diagrams: re-
+lations to hyperbolic geometry and knot theory, hep-th/9806174.
+
+[20] m. mertens, d. kreimer, in preparation.
+
+35
+
+

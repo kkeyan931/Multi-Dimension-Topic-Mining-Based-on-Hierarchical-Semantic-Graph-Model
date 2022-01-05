@@ -1,0 +1,4174 @@
+uci-99-20
+
+september 1999
+
+9
+9
+9
+1
+
+ 
+c
+e
+d
+4
+2
+
+ 
+
+ 
+ 
+
+1
+v
+6
+4
+2
+2
+1
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+on the gravitational scaling dimensions
+
+herbert w. hamber 1
+
+department of physics and astronomy
+
+university of california
+
+irvine, ca 92171
+
+abstract
+
+a model for quantized gravitation based on the simplicial lattice discretization is studied in detail using
+
+a comprehensive nite size scaling analysis combined with renormalization group methods. the results are
+
+consistent with a value for the universal critical exponent for gravitation  = 1/3, and suggest a simple
+
+relationship between newtons constant, the gravitational correlation length and the observable average
+
+space-time curvature. some perhaps testable phenomenological implications of these results are discussed.
+
+to achieve a high numerical accuracy in the evaluation of the lattice path integral a dedicated parallel
+
+machine was assembled.
+
+(submitted to the physical review d)
+
+1e-mail address : hhamber@uci.edu; http://aeneas.ps.uci.edu/hamber
+
+1
+
+1 introduction
+
+one of the outstanding problems in theoretical physics is a determination of the quantum-mechanical
+
+properties of einsteins relativistic theory of gravitation. approaches based on linearized perturbation
+
+methods have had moderate success so far, as the underlying theory is known not to be perturbatively re-
+
+normalizable [1, 2]. due to the complexity of even such approximate calculations a fundamental coupling of
+
+the theory, the bare cosmological constant term, is usually set to zero thus further restricting the potential
+
+physical relevance of the results. in addition gravitational elds are themselves the source for gravitation
+
+already at the classical level, which leads to the problem of a intrinsically non-linear theory, where pertur-
+
+bative results are possibly of doubtful validity for suciently strong eective couplings. this is especially
+
+true in the quantum domain, where large uctuations in the gravitational eld appear at short distances. in
+
+general nonperturbative eects can give rise to novel behavior in a quantum eld theory, and in particular
+
+to the emergence of non-trivial xed points of the renormalization group (a phase transition in statistical
+
+mechanics language). it has been realized for some time that in general the universal low and high energy
+
+behavior of eld theories is almost completely determined by the xed point structure of the renormalization
+
+group trajectories [3].
+
+the situation described above bears some resemblance to the theory of strong interactions, quantum
+
+chromodynamics. non-linear eects are known here to play an important role, and end up restricting the
+
+validity of perturbative calculations to the high energy, short distance regime, where the eective gauge
+
+coupling can be considered weak due to asymptotic freedom [4]. for low energy properties wilsons discrete
+
+lattice formulation, combined with the renormalization group and computer simulations, has provided so far
+
+the only convincing evidence for quark connement and chiral symmetry breaking, two phenomena which
+
+are invisible to any order in the weak coupling, perturbative expansion.
+
+a discrete lattice formulation can be applied to the problem of quantizing gravitation. instead of con-
+
+tinuous metric elds, one deals with gravitational degrees of freedom which live only on discrete space-time
+
+points and interact locally with each other. in regges simplicial formulation of gravity [5] one approximates
+
+the functional integration over continuous metrics by a discretized sum over piecewise linear simplicial ge-
+
+ometries [6, 7, 8, 9]. in such a model, the role of the continuum metric is played by the edge lengths of the
+
+simplices, while curvature is described by a set of decit angles, which can be computed via known formulae
+
+as functions of the given edge lengths. the simplicial lattice formulation of gravity is locally gauge invariant
+
+[10] and can be shown to contain perturbative gravitons in the lattice weak eld expansion [6], making it an
+
+attractive and faithful lattice regularization of the continuum theory.
+
+2
+
+the discretized theory is restricted to a nite set of dynemical variables, once a set of suitable boundary
+
+conditions are imposed such as periodic or with some assigned boundary manifold. in the end the original
+
+continuum theory of gravity is to be recovered as the space-time volume is made large and the fundamental
+
+lattice spacing of the discrete theory is sent to zero. possibly without having to rely, at least in principle,
+
+on any further approximation to the original continuum theory.
+
+quantum uctuations in the underlying geometry are represented in the discrete theory by uctuations
+
+in the edge lengths, which can be modeled by a well-dened, and numerically exact, stochastic process.
+
+in analogy with other eld theory models studied by computer, calculations are usually performed in the
+
+euclidean imaginary time framework, which is the only formulation amenable to a controlled numerical study,
+
+at least for the immediate foreseeable future. the monte-carlo method, based on the concept of importance
+
+sampling, is well suited for evaluating the discrete path integral for gravity and for computing the required
+
+averages and correlation functions. by a careful and systematic analysis of the lattice results, the critical
+
+exponents can be extracted, and the scaling properties of invariant correlation functions determined from
+
+rst principles.
+
+studies on small lattices suggest a rich scenario for the ground state of quantum gravity [7, 9, 11, 12]. the
+
+present evidence indicates that simplicial quantum gravity in four dimensions exhibits a phase transition (in
+
+the bare coupling g) between two phases: a strong coupling phase, in which the geometry is smooth at large
+
+scales and quantum uctuations in the gravitational eld eventually average out and are bounded; and a
+
+weak coupling phase, in which the geometry is degenerate and space-time collapses into a lower-dimensional
+
+manifold, bearing some physical resemblance to a branched polymer. only the smooth, small negative
+
+curvature and thus anti-desitter-like phase appears to be physically acceptable. phrased in dierent terms,
+
+the two phases of quantized gravity found in [12], can loosely be described as having in one phase (with
+
+bare coupling g < gc, the rough branched polymer-like phase)
+
+while in the other (with bare coupling g > gc, the smooth phase),
+
+hgi = 0 ,
+
+hgi  c  ,
+
+(1.1)
+
+(1.2)
+
+with a vanishingly small negative average curvature in the vicinity of the critical point at gc. the existence
+
+of a phase transition at nite coupling g, usually associated in quantum eld theory with the appearance
+
+of an ultraviolet xed point of the renormalization group, implies in principle non-trivial, calculable non-
+
+perturbative scaling properties for correlations and eective coupling constants, and in particular in the case
+
+at hand for newtons gravitational constant. since only the smooth phase with g > gc has acceptable
+
+physical properties, one would conclude on the basis of fairly general renormalization group arguments that
+
+3
+
+at least in this lattice model the gravitational coupling can only increase with distance. furthermore, the
+
+rise of the gravitational coupling in the infrared region rules out the applicability of perturbation theory to
+
+the low energy domain, to the same extent that such an approach is deemed to be inapplicable to study the
+
+low-energy properties of asymptotically free gauge theories.
+
+it is a remarkable property of quantum eld theories that a wide variety of physical properties can
+
+be determined from a relatively small set of universal quantities [13]. namely the universal leading critical
+
+exponents, computed in the vicinity of some xed point (or xed line) of the renormalization group equations.
+
+in the lattice theory the presence of a xed point or phase transition is often inferred from the appearance
+
+of non-analytic terms in invariant local averages, such as for example the average curvature
+
+< l2 >
+
+<r d4xg r(x) >
+<r d4xg >
+
+ r(k) kkc ar (kc  k)41 ,
+
+(1.3)
+
+where k = 1/8g. from such averages one can determine the value for , the correlation length exponent,
+
+(k) kkc
+
+a (kc  k) .
+
+(1.4)
+
+an equivalent result, relating the quantum expectation value of the curvature to the physical correlation
+
+length  , is
+
+r() kkc
+
+1/4 .
+
+(1.5)
+
+matching of dimensionalities in these equations is restored by supplying appropriate powers of the ultraviolet
+cuto, the planck length lp = g. the exponent  is known to be related to the derivative of the beta
+function for g in the vicinity of the ultraviolet xed point,
+
+(gc) = 1/ .
+
+(1.6)
+
+in addition, the correlation length  itself determines the long-distance decay of the connected, invariant
+
+two-point correlations at xed geodesic distance d. for the curvature correlation one has for distances much
+
+larger compared to the correlation length
+
+< g r(x) g r(y) (|x  y|  d) >c d  
+
+d ed/ ,
+
+while for shorter distances one expects a slower power law decay
+
+< g r(x) g r(y) (|x  y|  d) >c d  
+
+1
+
+d 2 (41/)
+
+.
+
+(1.7)
+
+(1.8)
+
+the possibility of non-trivial scaling dimensions in the theory of gravitation is not new and was pointed out
+
+some time ago in a series of interesting papers [14]. moreover it is easy to see that the scale dependence of
+
+the eective newton constant is given by
+
+g(r) = g(0)h 1 + c (r/)1/ + o((r/)2/ )i ,
+
+4
+
+(1.9)
+
+with c a calculable numerical constant. in this last expression the momentum scale 1 plays a role similar
+
+to the scaling violation parameter ms of qcd. it seems natural, although paradoxical at rst, to associate
+ with some macroscopic cosmological length scale, such as the hubble distance ch 1
+
+0 , with the lack of
+
+screening of gravitational interactions ultimately accounting for such an unusual interpretation [12, 15]. of
+
+course an increase of the gravitational coupling at large distances signals a likely breakdown of perturbation
+
+theory for computing low energy properties of gravity.
+
+it should be clear, even from this brief discussion, that the critical exponents by themselves already
+
+provide a signicant amount of useful information about the continuum theory. in reality, the complexity of
+
+the lattice interactions and the practical need to sample many statistically independent eld congurations
+
+contributing to the path integral, which is necessary for correctly incorporating into the model the eects
+
+of quantum-mechanical uctuations, leads to the requirement of powerful computational resources. the
+
+results presented in this paper were obtained using a dedicated custom-built 20-gflop 64-processor parallel
+
+computer, described in detail in [16].
+
+finally one should mention that recently there has been a signicant resurgence of interest in the classical
+
+applications of the regge formulation to gravity. a description of the methods as applied to several aspects
+
+of the initial value problem in general relativity can be found in the recent references in [17]. for a related
+
+approach to lattice gravity based on dynamical triangulations see also [18].
+
+a brief outline of the paper is as follows. section 2. contains a discussion of general and nite size scaling
+
+and related issues as they apply to the lattice theory of gravity. section 3. touches on the issue of the
+
+unboundedness of the euclidean gravitational action. section 4. denes local curvature averages and their
+
+uctuations, while section 5. introduces a set of exact sum rules for averages which follow from the scaling
+
+properties of the partition function. section 6. denes a set of invariant correlations and discusses how they
+
+relate to the local uctuations dened previously. section 7. includes a general discussion of the expected
+
+properties of the theory in the presence of an ultraviolet xed point, including expectations based on the
+
+analytical 2 +  expansion. in section 8. the numerical results are presented. section 9. contains a discussion
+
+of the possible future physical relevance of the results, while section 10. contains the conclusions.
+
+2 finite size scaling
+
+one of the most important quantities used in establishing the continuum limit of a lattice eld theory are
+
+the critical exponents. reliable estimates for the exponents in a lattice eld theory require a comprehensive
+
+nite-size analysis, a procedure by which accurate values for the critical exponents are obtained by taking
+
+5
+
+into account the linear size dependence of the result computed in a nite volume v . one starts from the
+
+general euclidean action (or statistical mechanics hamiltonian)
+
+h = xi
+
+gi oi
+
+(2.10)
+
+with gi the coupling associated with the operator oi. in the gravitational case the couplings would correspond
+to the bare cosmological constant, the newtonian gravitational constant and the higher derivative coupling.
+close to a renormalization group xed point denoted by {g
+linearized renormalization group transformation, such that
+
+i } one chooses the ois to be eigenvectors of the
+
+gi  g
+
+i  byi(gi  g
+i )
+
+,
+
+(2.11)
+
+where b is the scale factor of the transformation. in the simplest statistical mechanics systems, such as a
+
+ferromagnet in the absence of an external magnetic eld, one has o  h as the only relevant operator (in
+the sense that y > 0), and g  t = t  tc. as will be discussed below, in the gravitational case the role of
+t is played by the bare gravitational coupling g. additional operators appearing in the action are classied
+
+as marginal (y = 0) or irrelevant. the relevance of the energy operator reects the fact that close to the
+
+critical point t is the only parameter that needs to be tuned to achieve criticality, synonymous with long
+
+range correlations. universality of critical behavior then accounts for the fact that many diverse physical
+
+systems exhibit the same scaling behavior in the vicinity of the critical point, as a consequence of a divergent
+
+correlation length [13].
+
+in practice the renormalization group approach is brought in via a slightly dierent route, involving a
+
+change in the overall linear size of the system. the usual starting point for the derivation of the scaling
+
+properties of the theory is the renormalization group (rg) behavior of the free energy f =  log z/v
+
+f (t,{uj}) = freg(t,{uj}) + bd fsing(byt t,{byj uj}) ,
+
+(2.12)
+
+where fsing is the singular, non-analytic part of the free energy, and freg is the regular part. b is the block
+
+size in the rg transformation, while yt and yj(j  2) are the relevant eigenvalues of the rg transformation
+(for more details see the review [19]). one denotes here by yt > 0 the relevant eigenvalue, while the remaining
+eigenvalues yj  0 are associated with either marginal or irrelevant operators. usually y1
+the next subleading exponent y2 is denoted .
+
+is called , while
+
+t
+
+the correlation length  determines the asymptotic decay of correlations, in the sense that one expects
+
+for example for the two-point function at large distances
+
+< o(x)o(y) >
+
+|xy|  
+
+e|xy|/
+
+.
+
+(2.13)
+
+6
+
+the scaling equation for the correlation length itself
+
+(t) = b  (bytt)
+
+implies for b = t1/yt that   t with a correlation length exponent
+
+ = 1/yt .
+
+(2.14)
+
+(2.15)
+
+derivatives of the free energy f with respect to t then determine, after setting the scale factor b = t1/yt ,
+
+the scaling properties of physical observables, including corrections to scaling [20]. thus for example, the
+
+second derivative of the free energy with respect to t yields the specic heat exponent  = 2 d/yt = 2 d,
+
+2
+t2 f (t,{uj})  t(2d)
+
+.
+
+(2.16)
+
+in the gravitational case one identies the scaling eld t with kc  k, where k = 1/16g involves the
+bare newtons constant. the appearance of singularities in physical averages, obtained from appropriate
+
+derivatives of f , is rooted in the fact that close to the critical point at t = 0 the correlation length diverges.
+
+the above results can be extended to the case of a nite lattice of volume v and linear dimension
+
+l = v 1/d. the volume-dependent free energy is then written as
+
+f (t,{uj}, l1) = freg(t,{uj}) + bd fsing(bytt,{byj uj}, b/l)
+
+.
+
+(2.17)
+
+for b = l (a lattice consisting of only one point) one obtains the finite size scaling (fss) form of the free
+
+energy (for a detailed presentation of this procedure see [21]; see also [22, 23] for a eld-theoretic justication).
+
+after taking derivatives with respect to the elds t and {uj}, the fss scaling form for physical observables
+follows. for a quantity o diverging like txo in the innite volume limit one has
+
+o(l, t) = lxo/ (cid:20) fo(cid:18) l
+
+(, t)(cid:19) + o(, l)(cid:21) ,
+
+(2.18)
+
+with fo a smooth scaling function, and (, t) the innite volume correlation length. for suciently large
+volumes the correction to scaling term involving  can be neglected, but in general one needs to be aware
+
+of their presence if either the volumes are not large enough or if the corrections are large due to a large
+
+amplitude or small exponent. some properties of the scaling function fo(y) can be deduced on general
+
+grounds: it is expected to show a peak if the nite volume value for o is peaked, it is analytic at x = 0 since
+no singularity can develop in a nite volume, and fo(y)  yxo for large y for a quantity o which diverges
+as txo in the innite volume limit.
+
+the last expression is useful when the innite-volume correlation length is known. but since close to the
+
+critical point   t, one can deduce the equivalent scaling from
+
+o(l, t) = lxo/ h fo (l t) + o(l)i
+
+,
+
+7
+
+(2.19)
+
+which relies on a knowledge of t, and thus of the critical point, instead. for a state of the art application of
+
+the above methods to the 3-d ising model see [24].
+
+the previous discussion applies to continuous, second order phase transitions. first order phase transi-
+
+tions are driven by instabilities, and are in general not governed by any renormalization group xed point.
+
+the underlying reason is that the correlation length does not diverge at the transition point, and thus the
+
+system never becomes scale invariant. exponents for continuous, second order phase transition in general
+
+obey the rigorous bound
+
+yt < d
+
+or
+
+ > 1/d .
+
+(2.20)
+
+first order phase transition in renormalization group theory, on the other hand, can be associated with the
+
+somewhat pathological case  = 1/d, for which the rst derivative of the free energy develops a step-function
+
+singularity. in a renormalization group framework the corresponding pseudo-critical point is denoted as a
+
+discontinuity xed point [25].
+
+in the simplest case, a rst order transition develops as the system tunnels between two neighboring
+
+minima of the free energy.
+
+in the metastable branch the free energy acquires a complex part with an
+
+essential singularity in the coupling located at the rst order transition point [26, 27]. as a consequence, such
+
+a singularity is not generally visible from the stable branch, in the sense that a power series expansion in the
+
+temperature is unaected by such a singularity. indeed in the innite volume limit the singularity associated
+
+with a rst order transition at tc becomes innitely sharp, like a  or -function type singularity. the
+singularity in the free energy at the endpoint of the metastable branch (at say t ) then cannot be explored
+
+directly, it has to reached by an analytic continuation from the stable side of the free energy branch.
+
+3 unboundedness of the euclidean theory
+
+perturbation theory on a lattice and in the continuum suggests the presence of an instability in the eu-
+
+clidean formulation for suciently smooth manifold. it is also known that the above instability is associated
+
+with the appearance of a wrong sign for the conformal mode. on the lattice the instability seems to persist
+
+close to the critical point [12], which suggests that the continuum limit has to be reached by some sort
+
+of analytic continuation from the stable phase towards the critical point, naturally dened as the point in
+
+coupling constant space where the correlation length diverges.
+
+in the weak-eld expansion [28] the einstein-hilbert action contains both spin two (graviton) and spin
+
+zero (conformal mode) contributions. in the continuum one can by a judicious choice of invariant correlation
+
+functions isolate physical properties of the graviton from the conformal mode. a similar result holds on
+
+8
+
+the lattice, as can be seen by expanding the regge action about a regular lattice and using the fact that
+
+the lattice and continuum actions are equivalent for suciently smooth manifolds [6, 29]. in general, after
+
+expanding the metric around at space (which requires  = 0),
+
+g =  + 16g h
+
+,
+
+one can cast the lowest order quadratic contribution to the action in the form
+
+ie[h] = 1
+
+2z d4x hvh ,
+
+(3.21)
+
+(3.22)
+
+where v is a matrix which can be expressed in terms of spin projection operators. in momentum space it
+
+can be written as
+
+where p (2) and p (0) are spin two and spin zero projection operators introduced in [30]. physically, the two
+
+v =(cid:2)p (2)  2p (0)(cid:3) p2
+
+,
+
+(3.23)
+
+terms correspond to the propagation of the graviton and of the conformal mode, respectively, with the latter
+
+one appearing with the wrong sign. in the landau gauge, with a gauge xing term 1(h)2 and
+
+ = 0, one obtains for the graviton propagator in momentum space
+
+g(p) =
+
+p (2)
+
+p2 
+
+1
+
+2 p (0)
+
+p2
+
+.
+
+(3.24)
+
+the unboundedness of the euclidean gravitational action shows up clearly in the weak eld expansion, with
+
+the spin zero mode acquiring a propagator term with the wrong sign. 2 it has been argued that in weak eld
+
+perturbation theory and in order to avoid the unboundedness problem one should perform the functional
+
+integral over metrics by distorting the integration contour so as to include complex conformal factors [31].
+
+one drawback of this prescription is that it only appears applicable within the framework of perturbation
+
+theory. for a recent review of the euclidean instability problem see [32].
+
+in the presence of a cosmological constant, things are further complicated by the fact that since at space
+
+is no longer a solution of the classical equations of motion, and the above expansion for the metric looses part
+
+of its meaning due to the presence of the tadpole term. but after shifting to the correct 0-th order solution,
+
+a similar result is obtained. one can further modify the action to include additional invariant terms, but
+
+things do not get any better. in the presence of higher derivative terms in the gravitational action, the above
+
+result is modied by terms o(p4), and becomes [33]
+
+g(p) =
+
+p (2)
+
+p2 + 2a
+
+k p4
+
++
+
+1
+
+2 p (0)
+p2 + a
+
+
+
+k p4
+
+.
+
+(3.25)
+
+2it should be noted that such an instability is not peculiar to gravitation. indeed the euclidean path integral for the one-
+dimensional coulomb potential, an otherwise completely well behaved quantum mechanical system, already exhibits such an
+instability. it would be premature to conclude from such a result that the problem is physically ill-posed.
+
+9
+
+the p4 terms improve the ultraviolet behavior of the theory, but do not remove the unboundedness problem,
+
+which re-appears for suciently small p2, in the low momentum or long-distance limit. moreover, the
+
+resulting theory is most likely not unitary unless the coupling a is vanishingly small. the lack of positivity
+
+of physical correlations for a > 0 can be seen explicitly even in a non-perturbative treatment [34], and makes
+
+such a modied theory of gravitation in the end somewhat unattractive.
+
+4 local averages and fluctuations
+
+in the following the relevant denitions for gravitational averages and correlations on the lattice will be
+
+briey recalled, in a form which will be used in later sections. the starting point for a non-perturbative
+
+study of quantum gravity is a suitable denition of the discrete feynman path integral. in the simplicial
+
+lattice approach one starts from the discretized euclidean path integral for pure gravity, with the squared
+
+edge lengths taken as fundamental variables,
+
+zl = z 
+
+0 ys
+
+(vd(s)) yij
+
+dl2
+
+ij [l2
+
+ij] exp(xh (cid:16) vh  k hah + a 2
+
+ha2
+
+h/vh + (cid:17)) .
+
+(4.26)
+
+the above expression represents a lattice discretization of the continuum euclidean path integral for pure
+
+quantum gravity
+
+zc = z yx (cid:16)pg(x)(cid:17)
+
+y
+
+dg (x) exp(cid:26)z d4xg(cid:16) 
+
+k
+2
+
+r +
+
+a
+4
+
+rr + (cid:17)(cid:27) ,
+
+(4.27)
+
+with k1 = 8g, and g newtons constant, and reduces to it for smooth enough eld congurations. in
+
+the discrete case the integration over metrics is replaced by integrals over the elementary lattice degrees
+
+of freedom, the squared edge lengths. the discrete gravitational measure in zl can be considered as the
+
+lattice analog of the dewitt [35] continuum functional measure [15]. the a term in the lattice action is
+
+the well-known regge term [5], and reduces to the einstein-hilbert action in the lattice continuum limit
+
+[6, 29]. a cosmological constant term is needed for convergence of the path integral, while the curvature
+
+squared term allows one to control the uctuations in the curvature [7, 9, 11, 12]. in practice, and for obvious
+
+phenomenological reasons, one is only interested in the limit when the higher derivative contributions are
+
+small compared to the rest, a  0. in this limit the theory depends, in the absence of matter and after a
+suitable rescaling of the metric, only on one bare parameter, the dimensionless coupling k2/. without loss
+
+of generality, one can therefore set the bare cosmological constant  = 1.
+
+some partial information about the behavior of physical correlations can be obtained indirectly from
+
+local invariant averages. in [7, 12] gravitational observables such as the average curvature and its uctuation
+
+10
+
+were introduced. the appropriate lattice analogs of these quantities are readily written down by making use
+
+of the usual correspondences r d4xg  phinges h vh etc.. on the lattice the natural choices for invariant
+
+operators are
+
+vh
+
+g (x)  xhinges hx
+g r(x)  2 xhinges hx
+g rr(x)  4 xhinges hx
+
+hah
+
+(hah)2/vh
+
+(4.28)
+
+(we have omitted here on the r.h.s. an overall numeric coecient, which will depend on how many hinges
+
+are actually included in the summation; if the sum extends over all hinges within a single hypercube, then
+
+there will be a total of 50 hinge contributions). in this paper no higher derivative terms will be considered,
+
+and thus only the rst and second operators will be used in the following discussion.
+
+on the lattice one prefers to dene quantities in such a way that variations in the average lattice spacing
+< l2 > are compensated by the appropriate factor as determined from dimensional considerations. in the
+
+case of the average curvature one denes the lattice quantity r as
+< 2 ph hah >
+<ph vh >
+<r d4xg r(x) >
+<r d4xg >
+
+which in the continuum corresponds to
+
+r(k)  < l2 >
+
+and similarly for the curvature uctuation,
+
+r(k) 
+
+,
+
+,
+
+r(k) 
+
+which in the continuum corresponds to
+
+< (ph hah)2)2 >  <ph hah >2
+
+<ph vh >
+
+,
+
+r(k) 
+
+< (r g r)2 >  <r g r >2
+
+<r g >
+
+.
+
+the latter is related to the connected curvature correlation at zero momentum
+
+<r d4xpg(x) >
+both r and r are related to derivatives of zl with respect to k,
+
+r  r d4xr d4y <pg(x)r(x)pg(y)r(y) >c
+
+.
+
+and
+
+r(k) 
+
+1
+v
+
+
+k
+
+ln zl ,
+
+r(k) 
+
+1
+v
+
+2
+k2 ln zl .
+
+11
+
+(4.29)
+
+(4.30)
+
+(4.31)
+
+(4.32)
+
+(4.33)
+
+(4.34)
+
+(4.35)
+
+one can contrast the behavior of the preceding quantities, associated strictly with the curvature, with the
+
+analogous quantities involving the local volumes (and which correspond to the square root of the determinant
+
+of the metric in the continuum). consider the average volume per site
+
+hv i 
+
+1
+n0
+
+vh > ,
+
+<xh
+
+(4.36)
+
+where one denotes by vh the volume associated with the hinge h. in the continuum it corresponds to the
+
+< (ph vh)2)2 >  <ph vh >2
+
+<ph vh >
+
+,
+
+(4.37)
+
+and its uctuation dened as
+
+v (k) 
+
+expression
+
+v (k) 
+
+(4.38)
+
+(4.39)
+
+the latter is related to the connected volume correlator at zero momentum
+
+< (r g)2 >  <r g >2
+
+<r g >
+
+.
+
+.
+
+v  r d4xr d4y <pg(x)pg(y) >c
+
+<r d4xpg(x) >
+
+the average volume per site < v > and its uctuation v are simply related to derivatives of zl with respect
+
+to the bare cosmological constant ,
+
+and
+
+< v > 
+
+
+
+
+ln zl ,
+
+v (k) 
+
+2
+2 ln zl .
+
+(4.40)
+
+(4.41)
+
+one would expect the uctuations in the curvature to be sensitive to the presence of a spin two massless
+
+particle, while uctuations in the volume would only probe the correlations in the conformal mode channel.
+
+5 sum rules
+
+in this section some useful sum rules will be derived, which follow from simple scaling properties of the
+
+discrete functional integral. these will be later used in the discussion of the numerical results. a simple
+
+scaling argument, based on neglecting the eects of curvature terms entirely (which vanish in the vicinity of
+
+the critical point), gives rst of all an estimate of the average volume per edge
+
+< vl > 
+
+2(1 + d)
+
+d
+
+d=4, =0
+
+1
+2
+
+.
+
+(5.42)
+
+in four dimensions the numerical simulations with  = 0 agree quite well with the above formula.
+
+12
+
+additional exact lattice identities can be obtained by examining the scaling properties of the action and
+
+measure. the bare couplings k and  in the gravitational action are dimensionful in four dimensions, but
+
+one can dene the dimensionless ratio k2/, and rescale the edge lengths so as to eliminate the overall length
+
+scale pk/. as a consequence the path integral for pure gravity,
+
+zl(, k, a) = z d[l2] ei[l2],
+
+obeys the simple scaling property
+
+(5.43)
+
+zl(, k, a) =(cid:18) k
+
+(cid:19)n1
+
+zl(cid:18) k2
+
+
+
+,
+
+k2
+
+
+, a(cid:19) = ()n1/2 zl(cid:18)1,
+
+k
+
+
+, a(cid:19) = ()n1 zl(cid:18) 
+
+k2 , 1, a(cid:19) ,
+
+(5.44)
+
+where n1 represents the number of edges in the lattice, and the dl2 measure ( = 0) has been selected [15],
+
+which is the lattice analog of the continuum dewitt functional measure. this equation implies in turn a
+
+sum rule for local averages, which (again for the specic case of the dl2 measure) reads
+
+2 <xh
+
+vh >  k <xh
+
+hah >  n1 = 0 ,
+
+(5.45)
+
+and is easily derived from eq. (5.44) and the denitions in eqs. (4.34) and (4.40). n0 represents the number
+
+of sites in the lattice, and the averages are dened per site (for the hypercubic lattice used in this paper,
+
+n1 = 15n0, n2 = 50n0, n3 = 36n0 and n4 = 24n0). the coecients on the l.h.s. of the equation reect
+
+the scaling dimensions of the various terms, with the last term on the l.h.s. term arising from the scaling
+
+property of the functional measure. this last formula is very useful in checking the accuracy of numerical
+
+calculations and the convergence properties of the monte carlo sampling, and is usually satised to high
+accuracy o(104). it is easy to see that a similar sum rule holds for the uctuations,
+42"< (xh
+
+vh >2#  k2"< (xh
+
+hah)2 >  <xh
+
+vh)2 >  <xh
+
+hah >2#  2n1 = 0 .
+
+(5.46)
+
+further sum rules can be derived by considering even higher derivatives of ln zl with respect of  and k.
+
+the last equation relates the uctuation in the curvature to uctuations in the volumes, and thus implies
+
+a relationship between their singular parts as well. in particular, a divergence in the curvature uctuation
+
+implies a divergence of the same nature in the volume uctuation. in light of the previous discussion, from
+
+now on we shall consider without loss of generality only the case of bare coupling  = 1. as a consequence,
+
+all lengths will be tacitly expressed in units of the fundamental microscopic length scale 1/4.
+
+6 invariant correlations
+
+13
+
+in quantized gravity complications arise due to the fact that the physical distance between any two points
+
+x and y in a xed background geometry,
+
+d(x, y | g) = min
+
+ z  (y)
+
+ (x)
+
+dqg() d
+
+d
+
+d
+d
+
+,
+
+(6.47)
+
+is a uctuating quantity dependent on the choice of background metric. in addition, the lorentz group used
+
+to classify spin states is meaningful only as a local concept. since the simplicial formulation is completely
+
+coordinate independent, the introduction of the local lorentz group requires the denition of a tetrad within
+
+each simplex, and the notion of a spin connection to describe the parallel transport of tensors between at
+
+simplices. some of these aspects have recently been discussed from a continuum point of view in [37, 38, 39].
+
+if the decit angles are averaged over a number of contiguous hinges which share a common vertex, one
+
+is naturally lead to the connected correlator
+
+gr(d)  < xhx
+
+hah xhy
+
+h ah (|x  y|  d) >c ,
+
+which probes correlations in the scalar curvatures
+
+gr(d)  < g r(x) g r(y) (|x  y|  d) >c .
+
+similarly one can construct the connected correlator
+
+which probes correlations in the volume elements
+
+gv (d)  < xhx
+
+vh xhy
+
+vh (|x  y|  d) >c ,
+
+gv  < g(x) g(y) (|x  y|  d) >c .
+
+(6.48)
+
+(6.49)
+
+(6.50)
+
+(6.51)
+
+the correlation length  is dened through the long-distance decay of the connected, invariant correlations
+
+at xed geodesic distance d. for the curvature correlation one has, at large distances,
+
+< g r(x) g r(y) (|x  y|  d) >c d  
+
+ed/
+
+.
+
+at shorter distances one expects a slower, power law decay
+
+< g r(x) g r(y) (|x  y|  d) >c d   (cid:18) 1
+
+d(cid:19)2n
+
+,
+
+(6.52)
+
+(6.53)
+
+with a power characterized by the exponent n. in both cases, the distances considered are much larger than
+
+the lattice spacing, d,   l0. from scaling considerations one can show (see below) n = 4  1/.
+
+simple scaling arguments allow one to determine the scaling behavior of correlation functions from the
+
+critical exponents which characterize the singular behavior of local averages in the vicinity of the critical
+
+point. a divergence of the correlation length 
+
+(k)  m(k)1 kkc
+
+a (kc  k)
+
+(6.54)
+
+14
+
+signals the presence of a phase transition, and leads to the appearance of a singularity in the free energy
+
+f (k). the presence of a phase transition usually inferred from non-analytic terms in invariant averages, such
+
+as the average curvature. the curvature critical exponent  is introduced via
+
+an additive constant could be added, but the evidence up to now points to this constant being zero. similarly
+
+r(k) kkc ar (kc  k)
+
+.
+
+(6.55)
+
+one sets for the curvature uctuation
+
+r(k) kkc ar (kc  k)(1)
+
+.
+
+scaling (eqs. 2.15 ) relates the exponent  to ,
+
+ =
+
+1 + 
+
+d
+
+.
+
+(6.56)
+
+(6.57)
+
+from such averages one can determine the value for , the correlation length exponent, an equivalent result,
+
+relating the quantum expectation value of the curvature to the physical correlation length  , is
+
+r() kkc
+
+1/4 ,
+
+(6.58)
+
+which is obtained from eqs. (6.54) and (6.55) using 6.57). matching of dimensionalities in these equations
+is restored by supplying appropriate powers of the planck length lp = g.
+
+it is then easy to relate the critical exponent  to the scaling behavior of correlations at large distances.
+
+the curvature uctuation is related to the connected scalar curvature correlator at zero momentum
+
+r(k)  r d4xr d4y < gr(x)gr(y) >c
+
+<r d4xg >
+
+kkc
+
+(kc  k)1 .
+
+(6.59)
+
+a divergence in the uctuation is then indicative of long range correlations, corresponding to the presence
+
+of a massless particle. very close to the critical point one would expect for large separations a power law
+
+decay in the geodesic distance,
+
+< gr(x)gr(y) >
+
+|xy|
+
+1
+
+|x  y|2n
+
+,
+
+(6.60)
+
+with the power n related to the exponent  via n = d/(1 + ) = d  1/. a priori one cannot exclude to
+possibility that some states acquire a mass away from the critical point, in which case one would expect the
+
+following behavior for the correlation functions,
+
+< gr(x)gr(y) > |xy|
+
+exp(|x  y|/)
+
+,
+
+(6.61)
+
+where  is the fundamental correlation length, and m = 1/ the associated mass. the above equation can
+
+in fact be considered as a denition for what is meant by the correlation length .
+
+15
+
+7 beta function and continuum limit
+
+the long distance behavior of quantum eld theories is determined by scaling behavior of the coupling
+
+constant under a change in the momentum scale. asymptotically free theories such as qcd lead to vanishing
+
+gauge couplings at short distances, while the opposite is true for qed. in general the xed point(s) of the
+
+renormalization group need not be at zero coupling, but can be located at some nite gc, leading to a
+
+non-trivial xed point or limit cycle [3, 4, 40].
+
+in the 2 +  perturbative expansion for gravity [41] one analytically continues in the spacetime dimension
+
+by using dimensional regularization, and applies perturbation theory about d = 2, where newtons constant
+
+is dimensionless. a similar method is quite successful in determining the critical properties of the o(n)-
+
+symmetric non-linear sigma model above two dimensions [42].
+
+in this expansion the dimensionful bare
+
+coupling is written as g0 = 2dg, where  is an ultraviolet cuto (corresponding on the lattice to a
+
+momentum cuto of the order of the inverse average lattice spacing,   1/l0). there seem to be some
+technical diculties with this expansion due to the presence of kinematic singularities for the graviton
+
+propagator in two dimension (the einstein action is a topological invariant in d = 2), but which seem to
+
+have been overcome recently. a double expansion in g and  = d2 then leads in lowest order to a nontrivial
+xed point in g above two dimensions
+
+(g) 
+
+g
+
+ log 
+
+= (d  2) g  0 g2 + 
+
+,
+
+(7.62)
+
+with 0 > 0 for pure gravity. to lowest order the ultraviolet xed point is then at gc = 1/0(d  2).
+integrating eq. (7.62) close to the non-trivial xed point one obtains for g > gc
+
+m =  exp z g dg
+
+(g)! ggc
+
+ | g  gc|1/ (gc)
+
+,
+
+(7.63)
+
+where m is an arbitrary integration constant, with the dimensions of a mass, and which should be associated
+
+with some physical scale. it would appear natural here to identify it with the inverse of the gravitational
+
+correlation length ( = m1), or some scale associated with the average curvature. the derivative of the
+
+beta function at the xed point denes the critical exponent , which to this order is independent of 0,
+(gc) = (d  2) = 1/.
+
+the previous results illustrate how the lattice continuum limit should be taken. it corresponds to   ,
+g  gc with m held constant; for xed lattice cuto the continuum limit is approached by tuning g to gc.
+in four dimensions the exponent  is dened by
+
+m ggc
+
+c  | g  gc| ,
+
+16
+
+(7.64)
+
+where m is proportional to the graviton mass, and c is a calculable numerical coecient. the value of
+
+ determines the running of the eective coupling g(), where  is an arbitrary momentum scale. the
+
+renormalization group tells us that in general the eective coupling will grow or decrease with length scale
+
+r = 1/, depending on whether g > gc or g < gc, respectively. the physical mass parameter m is itself
+
+scale independent, and obeys the callan-symanzik renormalization group equation
+
+
+
+
+
+
+m = 
+
+
+ { c | g()  gc| } = 0
+
+.
+
+(7.65)
+
+as a consequence, for g > gc, corresponding to the smooth phase, one expects for the running, eective
+
+gravitational coupling [12, 15]
+
+g(r) = g(0)h 1 + c (r/)1/ + o((r/)2/ )i ,
+
+(7.66)
+
+with c a calculable numerical constant. the physical mass m = 1 determines the magnitude of scaling
+
+corrections, and plays a role similar to ms in qcd. it cannot be determined perturbatively as it appears
+
+as an integration constant. physically it separates the short distance, ultraviolet regime with characteristic
+
+momentum scale ,
+
+from the large distance, infrared region
+
+l1
+0    m ,
+
+m    l1 ,
+
+(7.67)
+
+(7.68)
+
+where l =< v >1/4 is the linear size of the system.
+
+the exponent  is simply related to the derivative of the beta function for g in the vicinity of the
+
+ultraviolet xed point,
+
+(gc) = 1/ .
+
+(7.69)
+
+thus computing  is equivalent to computing the derivative of the beta function in the vicinity of the
+
+ultraviolet xed point. there are indications from the lattice theory that only the smooth phase with
+
+g > gc exists (in the sense that spacetime collapses onto itself for g < gc), which would suggest that the
+
+gravitational coupling can only increase with distance.
+
+one should also perhaps recall here the fact that a bare cosmological constant , which could appear in
+
+the original action (as indicated in eq. (4.26)) has been scaled out, when it was set equal to one by rescaling
+
+all the edge lengths. if one puts it back in, then the eective newtons constant would have to be multiplied
+
+by that bare scale. as a result one obtains for the running of newtons constant, valid for short distances
+
+  m,
+
+g(r) r
+
+l2
+
+0 1/2"gc +(cid:18) r
+
+c(cid:19)1/
+
++ # ,
+
+(7.70)
+
+17
+
+where gc is a pure number of order one, and below it will be argued that 1/ = 3. the quantity l0 is the
+
+average lattice spacing, and the correct dimensions for g() (length squared) have been restored. in addition
+
+a bare cosmological constant  was re-introduced, which was previously set equal to one in eq. (4.26) (it
+
+xes the overall length scale in the functional integral over edge lengths).
+
+8 numerical results
+
+next we come to a discussion of the numerical methods employed in this work and the analysis of the
+
+results. as in previous work, the edge lengths are updated by a straightforward monte carlo algorithm,
+
+generating eventually an ensemble of congurations distributed according to the action and measure of
+
+eq. (4.26). further details of the method as applied to pure gravity are discussed in [7, 12], and will not be
+
+repeated here.
+
+in this work lattices of size 4  4  4  4 (with 256 sites, 3840 edges, 6144 simplices) 8  8  8  8 (with
+4096 sites, 6144 edges, 98304 simplices) 16 16 16 16 (with 65536 sites, 983040 edges, 1572864 simplices)
+were considered. even though these lattices are not very large, one should keep in mind that due to the
+
+simplicial nature of the lattice there are many edges per hypercube with many interaction terms, and as
+
+a consequence the statistical uctuations can be comparatively small, unless measurements are taken very
+
+close to a critical point, and at rather large separation in the case of the potential. the results presented
+
+here are still preliminary, and in the future it should be possible to repeat such calculations with improved
+
+accuracy on much larger lattices.
+
+the topology is restricted to a four-torus (periodic boundary conditions). we have argued before that
+
+one could perform similar calculations with lattices employing dierent boundary conditions or topology,
+
+but the universal infrared scaling properties of the theory should be determined only by short-distance
+
+renormalization eects.
+
+it seems reasonable that based on physical considerations one needs to impose the constraint that the
+
+scale of the curvature be much smaller than the average lattice spacing, but still much larger than the overall
+
+size of the system. in other words
+
+< l2 >  < l2 > |r|1  < v >1/2
+
+.
+
+(8.71)
+
+or, that in momentum space the physical scales should be much smaller that the ultraviolet cuto, but much
+
+larger than the infrared cuto. an equivalent requirement is then
+
+l1
+
+< m < l1
+
+0
+
+,
+
+18
+
+(8.72)
+
+where l is the linear size of the system, m = 1/, and l0 the lattice spacing. it should be kept in mind
+
+that in this model, and contrary to ordinary gauge theories on a lattice, the lattice spacing is a dynamical
+
+quantity. even close to the critical point where the curvature vanishes the lattice is by no means regular,
+and the quantity l0 = < l2 > only represents an average cuto parameter.
+
+the bare cosmological constant  appearing in the gravitational action of eq. (4.26) was xed at 1 (since
+
+this coupling sets the overall length scale in the problem), and the higher derivative coupling a was set to 0
+
+(pure regge-einstein action). for the measure in eq. (4.26) this choice of parameters leads to a well behaved
+
+ground state for k < kc  0.053 for a = 0 [12, 11]. the system then resides in the smooth phase, with
+a fractal dimension close to four; on the other hand for k > kc the curvature becomes very large (rough
+
+phase), and the lattice tends to collapse into degenerate congurations with very long, elongated simplices
+
+[7, 9, 11, 12]. for a = 0 we investigated 22 values of k.
+
+on the 164 lattice 36,000 consecutive congurations were generated for each value of k, and 22 dierent
+
+values for k were chosen. the results for dierent values of k can be considered as completely statistically
+
+uncorrelated, since they originated from unrelated congurations. on the smaller 84 lattice 100,000 consec-
+
+utive congurations were generated for each value of k. on the 44 lattice 500,000 consecutive congurations
+
+were generated for each value of k. to accumulate the results, the machine ran continuously for about 14
+
+months.
+
+the results obtained for the average curvature r (dened in eq. 4.29) as a function of the bare coupling
+k are shown in fig. 1., on lattices of increasing size with 44, 84 and 164 sites. fig. 2. shows the 164 data by
+
+itself. the errors in are quite small, of the order of a tenth of a percent or less, and are therefore not visible
+
+in the graph.
+
+in [12] it was found that as k is varied, the curvature is negative for suciently small k (smooth phase),
+
+and appears to go to zero continuously at some nite value kc. for k  kc the curvature becomes very
+large, and the simplices tend to collapse into degenerate congurations with very small volumes (< v > / <
+l2 >2 0). this rough or collapsed phase is the region of the usual weak eld expansion (g  0); in the
+continuum it is characterized by the unbounded uctuations in the conformal mode. but there appears to
+
+be more structure to the data.
+
+accurate and reproducible curvature data can only be obtained for k below the instability point ku since,
+
+as already pointed out in [12], for k > ku  0.053 an instability develops, presumably associated with the
+its signature is typical of a sharp rst order transition, beyond which the
+unbounded conformal mode.
+
+system tunnels into the rough, elongated phase which is two-dimensional in nature and has no physically
+
+acceptable continuum limit. the instability is caused by the appearance of one or more localized singular
+
+conguration, with a spike-like curvature singularity. it is not associated with any sort of coherent eect or
+
+19
+
+the appearance of long-range order, and remains localized around a few lattice points. in other words, the
+
+correlation length  remains nite at ku. at strong coupling such singular congurations are suppressed by a
+
+lack of phase space due to the functional measure, which imposes non-trivial constraints due to the triangle
+
+inequalities and their higher dimensional analogs. in other language, the measure regulates the conformal
+
+instability at suciently strong coupling.
+
+it is characteristic of rst order transitions that the free energy develops only a delta-function singularity
+
+at ku, with the metastable branch developing no non-analytic contribution at ku. indeed it is well known
+
+from the theory of rst order transitions that tunneling eects will lead to a purely imaginary contribution
+
+to the free energy, with an essential singularity for k > ku [26]. in the following we shall clearly distinguish
+
+the instability point ku from the true critical point kc.
+
+as a consequence, the non-analytic behavior of the free energy (and its derivatives which include for
+
+example the average curvature) has to be obtained by analytic continuation of the euclidean theory into
+
+the metastable branch. this procedure, while unusual, is formally equivalent to the construction of the
+
+continuum theory exclusively from its strong coupling (small k, large g) expansion
+
+
+
+(8.73)
+
+(8.74)
+
+zl(k) =
+
+r(k) =
+
+xn=0
+xn=0
+
+
+
+ankn ,
+
+bnkn .
+
+given a large enough number of terms in this expansion, the nonanalytic behavior in the vicinity of the
+
+true critical point at kc can then be determined using dierential or pade approximants [43], for appropriate
+
+combinations of thermodynamic functions which are expected to be meromorphic in the vicinity of the true
+
+critical point [44]. in the present case, instead of the analytic strong coupling expansion, one has at ones
+
+disposal a set of (in principle, arbitrarily) accurate data points to which the expected functional form can
+
+equally be tted. and what is assumed is the kind of regularity which is always assumed in extrapolating
+
+nite series (whether convergent or asymptotic as in the case of qed or 4 in d < 4 [45]) to the boundary
+
+of their radius of convergence.
+
+ultimately it should be kept in mind that one is really only interested in the pseudo-riemannian case,
+
+and not the euclidean one for which an instability due to the conformal mode is to be expected. indeed
+
+had such an instability not occurred one might wonder if the resulting theory still had any relationship to
+
+the original continuum theory. arguments based on eective actions suggest that if the euclidean (or more
+
+appropriately, riemannian) lattice theory eventually approaches the classical continuum theory at large
+
+distances and in the vicinity of the critical point, then an instability in the quantum lattice theory must
+
+develop, since the continuum classical theory is known to be unstable.
+
+20
+
+in the following only data for k  ku will be considered; in fact to add a margin of safety only k  0.051
+will be considered throughout the rest of the paper. this choice will avoid the inclusion in the ts of any
+
+data aected by the sharp turnover which appears, for large lattices, at k = ku  0.053.
+
+to extract the critical exponent , one ts the computed values for the average curvature to the form
+
+(see eq. 6.55)
+
+r(k) kkc ar (kc  k)
+
+.
+
+(8.75)
+
+it would seem unreasonable to expect that the computed values for r are accurately described by this
+function even for small k. instead the data is tted to the above functional form for either k  0.02 or
+k  0.03 and the dierence in the t parameters can be used as one more measure for the error. additionally,
+one can include a subleading correction
+
+r(k) kkc ar (cid:2) kc  k + b (kc  k)2 (cid:3)
+
+,
+
+and use the results to further constraint the errors on ar, kc and  = 4  1.
+
+using this set of procedures one obtains on the lattice with 44 sites
+
+kc = 0.0676(20)
+
+ = 0.343(8)
+
+and on the lattice with 84 sites one nds
+
+kc = 0.0614(27)
+
+ = 0.322(16)
+
+while on the lattice with 164 sites one nds
+
+kc = 0.0630(11)
+
+ = 0.330(6)
+
+.
+
+(8.76)
+
+(8.77)
+
+(8.78)
+
+(8.79)
+
+these results suggest that  is very close to 1/3, and can be compared to the older low-accuracy estimate
+
+on an 84 lattice obtained in [12] for a = 0,  = 0.33(3).
+
+fig. 3. shows a graph of the average curvature r(k) raised to the third power. one would expect to
+get a straight line close to the critical point if the exponent for r(k) is exactly 1/3. the numerical data
+indeed supports this assumption, and in fact the linearity of the results close to kc is quite striking. the
+
+computed data is quite close to a straight line over a wide range of k values, providing further support for
+
+the assumption of an algebraic singularity for r(k) itself, with exponent close to 1/3. using this procedure
+one nds on the 164-site lattice
+
+kc = 0.0639(10)
+
+.
+
+(8.80)
+
+since the critical exponents play such a central role in determining the existence and nature of the
+
+continuum limit, it appears desirable to have an independent way of estimating them, which either does not
+
+21
+
+r(k)
+
+10
+
+8
+
+6
+
+4
+
+2
+
+0
+0.01
+
+2
+c
+
+2
+c
+
+2
+c
+
+     
+
+2
+c
+
+2
+c
+
+2
+c
+
+2
+c
+
+
+
+2
+c
+
+
+
+c
+2
+
+
+
+cc
+
+c
+
+c
+2
+c
+
+
+
+c
+
+c
+
+c
+
+c
+2
+c
+
+
+
+c
+
+2
+
+
+
+0
+
+0.01
+
+0.02
+
+0.03
+
+0.04
+
+0.05
+
+0.06
+
+0.07
+
+k = 1/8g
+
+fig. 1 . average curvature r as a function of k, on lattices with 44 (2), 84 () and 164 () sites. statistical errors
+( o(103)) are much smaller than the size of the symbols. the thin-dotted, dotted and continuous lines represent
+best ts of the form r(k) = a (kc  k).
+
+22
+
+10
+
+c
+
+c
+
+r(k)
+
+8
+
+6
+
+4
+
+2
+
+0
+0.01
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+cc
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+ = 0.330(6)
+
+kc = 0.0630(11)
+
+0
+
+0.01
+
+0.02
+
+0.03
+
+0.04
+
+0.05
+
+0.06
+
+0.07
+
+k = 1/8g
+
+fig. 2 . average curvature r as a function of k, on the 164 () lattice only. statistical errors ( o(103)) are much
+smaller than the size of the symbols. the continuous line represents a best t of the form a (kc  k) for k  0.02,
+with  = 4  1 .
+
+23
+
+10
+
+c
+
+|r(k)|1/3
+
+8
+
+6
+
+4
+
+2
+
+0
+0.01
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+kc = 0.0639(10)
+
+( = 1/3)
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+0
+
+0.01
+
+0.02
+
+0.03
+
+0.04
+
+0.05
+
+0.06
+
+0.07
+
+k = 1/8g
+
+fig. 3 . average curvature on the 164 lattice, raised to the third power. if  =  = 1/3, the data should fall on a
+straight line. the continuous line represents a linear t of the form a (kc  k). the small deviation from linearity of
+the transformed data is quite striking.
+
+24
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+cc
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+ = 0.333
+
+kc = 0.0637
+
+r(k) l41/
+
+160
+
+140
+
+120
+
+100
+
+80
+
+60
+
+40
+
+20
+
+
+
+
+
+2222222222
+
+2
+2
+
+0
+
+0
+
+50
+
+100
+
+150
+
+200
+
+250
+
+(kc  k) l1/
+
+fig. 4 . finite size scaling behavior of the scaled curvature versus the scaled coupling. here l = 4 for the lattice
+with 44 sites (2), l = 8 for a lattice with 84 sites (), and l = 16 for the lattice with 164 sites (). statistical
+errors are comparable to the size of the dots. the continuous line represents a best t of the form a + bxc. finite
+size scaling predicts that all points should lie on the same universal curve. at kc = 0.0637 the scaling plot gives the
+value  = 0.333.
+
+depend on any tting procedure, or at least analyzes a dierent and complementary set of data. by studying
+
+the dependence of averages on the physical size of the system, one can independently estimate the critical
+
+exponents.
+
+fig. 4. shows a graph of the scaled curvature r(k) l41/ for dierent values of l = 4, 8, 16, versus the
+scaled coupling (kc k)l1/. if scaling involving k and l holds according to eq. (2.19), with xo = 1 4 the
+scaling dimension for the curvature, then all points should lie on the same universal curve. from eq. (2.19),
+
+with t  kc  k and xo =  = 1  4, one has
+
+r(k, l) = l(41/ h r(cid:16)(kc  k) l1/(cid:17) + o(l)i
+
+(8.81)
+
+where  > 0 is a correction-to-scaling exponent. the data supports well such scaling behavior, and provides
+
+a further stringent test on the value for , which appears to be consistent, within errors, with 1/3.
+
+fig. 5. shows explicitly the size dependence of the average curvature. for small k the volume dependence
+
+25
+
+8
+
+7.5
+
+7
+
+6.5
+
+6
+
+5.5
+
+5
+
+4.5
+
+r(l)
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+4
+
+0
+
+0.05
+
+0.1
+
+0.2
+
+0.25
+
+0.3
+
+0.15
+
+1/l
+
+fig. 5. volume dependence of the average curvature, for l = 4, 8, 16, and (from top to bottom) k=0.040,0.045,0.050
+and 0.055.
+
+is small, and gradually increases towards the critical point. such a trend is in agreement with the expectation
+
+that the correlation length  is growing as one approaches the critical point, leading to a more marked volume
+
+dependence. for xed k 6= kc one expects on the four-torus
+
+rl(k)
+
+l1/m(k) r(k) + a m(k)1/2 l3/2 em(k)l + 
+
+,
+
+(8.82)
+
+where l = v 1/4 is the linear size of the system and m = 1 is the lightest mass in the theory. combining
+
+and averaging the estimates from correlations [34], potential [12] and nite size corrections to the average
+curvature one can in fact estimate the magnitude of this mass directly. one obtains m  0.81 (kc  k)1/3,
+giving a correlation length of about two lattice spacings at k = 0.050.
+
+the value of kc itself should depend on the size of the system. indeed such a dependence is found when
+
+comparing kc (as obtained from the algebraic singularity ts discussed previously) on dierent lattice sizes.
+
+one writes
+
+fig. 6. shows the size dependence of critical coupling kc as obtained on dierent size lattices. in all three
+
+kc(l) l
+
+kc() + c l1/ + 
+
+.
+
+(8.83)
+
+26
+
+0.07
+
+0.068
+
+0.066
+
+0.064
+
+0.062
+
+kc(l)
+
+
+
+c
+
+c
+
+
+
+
+
+c
+
+0.06
+
+0
+
+0.05
+
+0.1
+
+0.2
+
+0.25
+
+0.3
+
+0.15
+
+1/l
+
+fig. 6. volume dependence of the critical coupling kc, as determined from the singularity in the average curvature, for
+lattices with l = 4, 8, 16. the points labelled by  are obtained assuming  = 1/3; in both cases the lines represent
+simple ts of the type kc = a + b/l3.
+
+cases kc(l) is rst obtained from a t to the average curvature of the form r(k) = a (kc  k) for k  0.02.
+furthermore, if one assumes  = 1/3 and extracts kc from a linear t to r3, then the variations in kc for
+dierent size lattices are substantially reduced (points labelled by circles in fig. 6.). due to the few values
+
+of l it is not possible at this point to extract an estimate for  from this particular set of data. but since 
+
+is close to 1/3, it makes sense to use this value in eq. (8.83) at least as a rst approximation.
+
+fig. 7. shows a plot of the average curvature r(k) versus reduced coupling kc  k, for several values of
+a, the higher derivative coupling of eq. (4.26). a = 0 corresponds to the pure regge action with no explicit
+
+higher derivative lattice contribution, for which the path integral is still well dened (at least for suciently
+
+small |k|), since the decit angles are bounded, and the edge lengths uctuate around some average value,
+which is determined by the interplay of the measure and the cosmological constant term. alternatively, one
+
+can think of the uctuations in the conformal mode as becoming bounded (again at least for suciently
+
+small |k|) when a momentum cuto of order /< l2 > is dynamically generated.
+
+the slope of each straight lines determines the critical exponent  = 4  1, and it seems clear from the
+
+27
+
+c
+
+c
+
+c
+
+cccccccc
+
+c
+
+c
+
+c
+
+c
+
+ccccccccccccc
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+cc
+
+c
+
+c
+
+c
+
+c
+
+c
+
+cccccccc
+
+c
+
+cc
+
+c
+
+c
+
+c
+
+10
+
+1
+
+0.1
+
+r(k)
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+1
+
+0.01
+
+0.01
+
+0.1
+
+kc  k
+
+fig. 7. average curvature r versus reduced coupling kc  k, on a log-log scale. from top to bottom, a =
+0, 0.0005, 0.005, 0.02, 0.1, with a the higher derivative coupling. statistical errobars are comparable to the size of
+the dots. the slope of each straight lines determines the critical exponent  = 4  1. the slope is noticeably smaller
+for a = 0, suggesting that the higher derivative terms mask the true critical behavior up to very small kc  k.
+
+graph that the slope is noticeably smaller for a = 0, suggesting that the higher derivative terms mask the
+
+true critical behavior up to very small kc  k (it was already noted in [12] that for a = 0 the assumption of
+an algebraic singularity for the average curvature leads to a value for the curvature exponent which is much
+
+smaller than the estimate for a > 0, namely   0.30(4)).
+
+indeed it seems that one of the eects of the higher derivative terms is to push the region of instability
+
+towards smaller and smaller values of kc  k, until it becomes numerically undetectable. but we would argue
+that it is only close to this region that the correct continuum behavior is recovered. the situation is similar
+
+to what happens in the weak eld expansion and perturbation theory: higher derivative terms do not cure
+
+the instability problems in the physically relevant region of small momenta and large correlation lengths.
+
+fig. 8. shows a plot of the curvature amplitude ar versus the higher derivative coupling a. the rapid
+
+growth close to a = 0 is consistent with an expected catastrophic instability for a < 0 (wrong sign for higher
+
+derivative terms).
+
+28
+
+100
+
+10
+
+c
+
+c
+
+c
+
+ar(a)
+
+1
+
+c
+
+0.1
+
+0.01
+
+0
+
+0.05
+
+c
+
+0.1
+
+a
+
+0.15
+
+0.2
+
+fig. 8. curvature amplitude ar versus the higher derivative coupling a. the amplitude increases rapidly as a
+approaches zero, the pure einstein-regge limit.
+
+29
+
+
+
+0.5
+
+0.48
+
+0.46
+
+0.44
+
+0.42
+
+0.4
+
+0.38
+
+0.36
+
+0.34
+
+0.32
+
+0.3
+
+c
+
+c
+
+c
+
+c
+
+c
+
+0
+
+c
+
+0.05
+
+0.1
+
+a
+
+0.15
+
+0.2
+
+fig. 9. critical exponent  computed from the average curvature, versus the higher derivative coupling a. note the
+small errorbar on the recent value for  at a = 0. for a > 0 the higher derivative terms tend to mask the true critical
+behavior, which requires kc  k  a1.
+
+a compilation of previous estimates for , together with the new value at a = 0, is shown in fig. 9.
+
+there seems to be a clear trend toward smaller values as a approaches zero, the einstein-regge limit. while
+
+the einstein action contribution becomes the dominant one at large distances, this is no longer the case at
+
+intermediate distances in the presence of the higher derivative terms. one concludes that for a > 0 the
+higher derivative terms tend to mask the true critical behavior, which requires kc  k  a1.
+
+fig. 10. shows a plot of the average volume per site < v >, in units of the average edge length < l2 >.
+the curve is a t of the form a + b(kc  k)c, and suggests a rather sudden drop of the average volume in
+the vicinity of the critical point. a non-analiticity in < v > at kc is in fact consistent with the sum rule of
+
+eq. (5.45), which suggest that the singular behavior in the average curvature r(k) and the average volume
+< v > (k) are simply related. typically, the sum rule of eq. (5.45) is satised to one part in 103 or better.
+
+as can be seen from fig. 10, close to the transition at kc the average volume per site expressed in
+
+units of the average lattice spacing, < v > / < l2 >2 shows only a weak singularity when the critical point
+
+is approached from the smooth phase (k < kc), and tends to a nite value. on the other hand, in the
+
+30
+
+rough phase (k > kc) the volume per site seems to approach smaller and smaller values as the lengths of
+
+the runs are extended. in fact it would seem that in the rough phase the volume per site can be made to
+
+approach zero, at least for some simplices. one refers therefore alternatively to this phase as the collapsed
+
+or polymer-like phase, since its eective dimension is two 3. furthermore the relaxation times in the rough
+
+phase become exceedingly long, with the system getting stuck in some degenerate, spike-like congurations
+
+without being able to get out of it again.
+
+it seems dicult to see how the collapse of the simplices could be averted by choosing a dierent lattice
+
+structure (for example a random lattice), since its properties seem to be unaected by changes in the
+
+measure or the action, at least to the extent they have been investigated. indeed the collapsed, polymer-like
+
+phase appears even in the simplest models based on a regular tessellation of the four-sphere [7, 8]. from a
+
+continuum point of view, the existence of such a pathological phase is not unexpected, and is interpreted
+
+as reection of the unbounded uctuations in the conformal mode expected for suciently large k. indeed
+
+unbounded uctuations in the conformal mode in the continuum correspond to rapid uctuations in the
+
+simplicial volumes, and this is precisely what is observed on the lattice for k > kc, namely a rapid variation
+
+of simplicial volumes when going from one simplex to a neighboring one.
+
+fig. 11. shows a plot of the average edge length < l2 >. the curve is a t of the form a + b(kc  k)c,
+
+and suggests a rapid increase in this quantity towards the critical point at kc. indeed as the critical point
+
+is approached the number of fairly small and fairly large edge lengths proliferate, leading to an increasingly
+
+wide edge length distribution.
+
+fig. 12. shows a plot of the average curvature uctuation r(k) dened in eq. (4.31). at the critical
+
+point the curvature uctuation diverges, by denition. as in the case of the average curvature r(k) analyzed
+previously, one can extract the critical exponent  and kc by tting the computed values for the curvature
+
+uctuation to the form (see eq. (6.56))
+
+r(k) kkc
+
+ar (kc  k)(1)
+
+.
+
+(8.84)
+
+as for the curvature itself, it would seem unreasonable to expect that the computed values for r are
+accurately described by this function even for small k. instead the data is tted to the above functional form
+
+for either k  0.02 or k  0.03 and the dierence in the t parameters can be used as one more measure for
+the error. additionally, one can include a subleading correction
+
+r(k) kkc ar(cid:2) kc  k + b(kc  k)2 (cid:3)(1)
+
+,
+
+(8.85)
+
+3an elementary argument can be given to explain the fact that the collapsed phase for k > kc has an eective dimension of
+two, as was found in [12]. the instability is driven by the euclidean einstein term in the action, and in particular its unbounded
+conformal mode contribution. as the manifold during collapse reaches an eective dimension of two this term turns into a
+topological invariant, unable to drive the instability further to a still lower dimension.
+
+31
+
+0.3
+
+0.28
+
+0.26
+
+hv i/hl2i2
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+cccccccccccc
+
+c
+
+c
+
+0.24
+
+0.22
+
+0.2
+0.01
+
+0
+
+0.01
+
+0.02
+
+0.03
+
+0.04
+
+0.05
+
+0.06
+
+0.07
+
+0.08
+
+k = 1/8g
+
+fig. 10. average volume per site < v >, in units of the average edge length. statistical errors are much smaller than
+the size of the dot. the curve is a t of the form a + b (kc  k)c. note the resolution on the vertical scale.
+
+32
+
+2.5
+
+2.45
+
+2.4
+
+hl2i1/2
+
+2.35
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+cccccccccccc
+
+2.3
+
+2.25
+
+2.2
+0.01
+
+0
+
+0.01
+
+0.02
+
+0.03
+
+0.04
+
+0.05
+
+0.06
+
+0.07
+
+0.08
+
+k = 1/8g
+
+fig. 11. average edge length as a function of the bare coupling k. the curve is a t of the form a + b (kc  k)c for
+k  0.02. statistical errors are much smaller than the symbol size.
+
+33
+
+30
+
+25
+
+20
+
+r(k)
+
+15
+
+c
+
+10
+
+5
+
+0
+0.01
+
+c
+
+c
+
+2
+
+
+
+2
+
+c
+
+c
+
+
+
+c
+
+2
+
+cc
+
+2
+
+c
+
+c
+
+c
+
+c
+
+
+
+c
+
+2
+
+2 2 2 2 2
+
+        
+
+c
+2
+
+2
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+0
+
+0.01
+
+0.02
+
+0.03
+
+0.04
+
+0.05
+
+0.06
+
+0.07
+
+0.08
+
+k = 1/8g
+
+fig. 12. curvature uctuation on lattices with 44 (2), 84 () and 164 () sites. the thin-dotted, dotted and
+continuous lines represent best ts of the form r(k) = a (kc  k)(1) for k  0.02.
+
+and use the results to further constraint the errors on ar , kc and  = 4  1.
+
+the values for  and kc obtained in this fashion are consistent with the ones obtained from the average
+
+curvature r(k), but with somewhat larger errors, since uctuations are more dicult to compute accurately
+than local averages, and require much higher statistics. using these procedures one obtains on the lattice
+
+with 164 sites
+
+kc = 0.0636(30)
+
+ = 0.317(38)
+
+.
+
+(8.86)
+
+fig. 13. shows a graph of the inverse curvature uctuation r(k) on the 164-site lattice, raised to power
+
+3/2. one would expect to get a straight line close to the critical point if the exponent for r(k) is exactly
+
+2/3. the numerical data indeed supports this assumption. the computed data is consistent with linear
+behavior for small k  0.02, providing further support for the assumption of an algebraic singularity for
+r(k) itself, with exponent close to 2/3. using this procedure one nds on the 164-site lattice
+
+kc = 0.0641(17)
+
+,
+
+(8.87)
+
+which is completely consistent with the value obtained from r3 (see fig. 3. and related discussion), and
+
+34
+
+[r(k)]3/2
+
+10
+
+8
+
+6
+
+4
+
+2
+
+0
+0.01
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+kc = 0.0641(17)
+
+c
+
+c
+
+c
+
+c
+
+c
+
+cc
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+0
+
+0.01
+
+0.02
+
+0.03
+
+0.04
+
+0.05
+
+0.06
+
+0.07
+
+k = 1/8g
+
+fig. 13. inverse curvature uctuation raised to the power 3/2, on the 164 () lattice; data is scaled by a factor of
+100. the straight line represents a linear t of the form a (kc  k). the location of the critical point in k is
+consistent with the estimate obtained from the average curvature, but with a somewhat larger error.
+
+suggests again that the exponent  must be close to 1/3.
+
+fig. 14. shows the results for the logarithmic derivative of the average curvature r(k), obtained from
+the data shown in figs. 3. and 12. from the denition of the average curvature r and curvature uctuation
+(eqs. (4.29) and (4.31)), and the fact that both are proportional to derivatives of the free energy f with
+
+respect to k (eqs. (4.34) and (4.35)), one notices for the ratio
+
+2hl2i r(k)
+
+r(k)
+
+
+k
+
+ (
+
+ln zl)/(
+
+2
+k2 ln zl) 
+
+
+k
+
+ln(cid:18) 
+
+k
+
+ln zl(cid:19) .
+
+(8.88)
+
+the assumption of an algebraic singularity in k for r and r (eqs. (6.55) and (6.56)) then implies that the
+logarithmic derivative as dened above has a simple pole at kc, with residue  = 4  1
+
+2hl2i r(k)
+
+r(k)
+
+kkc
+
+
+
+k  kc
+
+,
+
+(8.89)
+
+with the critical amplitude dropping out of this particular expression. the above result is general and does
+
+not rely on k being real. this suggests that in principle the method of pade rational approximants (which
+
+35
+
+0.2
+
+0.15
+
+c
+
+c
+
+|r|/hl2ir
+
+0.1
+
+c
+
+c
+
+c
+
+c
+
+c
+
+0.05
+
+ = 0.339(9)
+
+kc = 0.0635(11)
+
+c
+
+c
+
+c
+
+c
+
+c
+
+cc
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+0
+0.01
+
+0
+
+0.01
+
+0.02
+
+0.03
+
+0.04
+
+0.05
+
+0.06
+
+0.07
+
+k = 1/8g
+
+fig. 14. inverse of the logarithmic derivative of the average curvature r(k). the straight line represents a best t of
+the form a (kc  k) for k  0.02. the location of the critical point in k is consistent with the estimate coming from
+the average curvature r. from the slope of the line one computes directly the exponent .
+
+applies only to meromorphic functions) can be employed to locate singularities in r(k), even for complex
+
+k [43, 44]. using this method on the 164 lattice one nds
+
+kc = 0.0635(11)
+
+ = 0.339(9)
+
+.
+
+(8.90)
+
+it is encouraging that the above estimates are in good agreement with the values obtained previously using
+
+the other methods.
+
+fig. 15. shows a graph of the scaled curvature uctuation r(k)/l2/4 for dierent values of l = 4, 8, 16,
+versus the scaled coupling (kc  k)l1/. if scaling involving k and l holds according to eq. (2.19), with
+t  kc  k and xo = 1   = 2  4 then all points should lie on the same universal curve. from the general
+eq. (2.19) one expects in this particular case
+
+r(k, l) = l2/4 h r(cid:16)(kc  k) l1/(cid:17) + o(l)i
+
+,
+
+(8.91)
+
+where  > 0 is again the correction-to-scaling exponent. again the data supports such scaling behavior, and
+
+provides a further estimate on the value for , close to 1/3.
+
+36
+
+1.2
+
+2
+
+1
+
+0.8
+
+2
+
+2
+
+r(k)/l2/4
+
+0.6
+
+2
+
+2
+2
+2
+22
+222
+
+0.4
+
+0.2
+
+
+
+
+0
+
+0
+
+ = 0.318
+
+kc = 0.0637
+
+c
+
+c
+
+c
+
+c
+
+cccc
+
+cccc
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+50
+
+100
+
+150
+
+200
+
+250
+
+(kc  k) l1/
+
+fig. 15. finite size scaling behavior of the scaled curvature uctuation versus the scaled coupling. here l = 4 for
+the lattice with 44 sites (2), l = 8 for the lattice with 84 sites (), and l = 16 for the lattice with 164 sites ().
+the continuous line represents a best t of the form 1/(a + bxc). finite size scaling predicts that all points should
+lie on the same universal curve. at kc = 0.0637 the scaling plot gives the value  = 0.318.
+
+37
+
+fig. 16. shows a plot of the curvature uctuation r versus the curvature r. if the curvature approaches
+zero at the critical point where the curvature uctuation diverges, one would expect the curvature uctuation
+
+to diverge at r = 0. one has
+
+r(r) kkc
+
+a |r|(1)/  a |r|(42)/(41)
+
+.
+
+(8.92)
+
+an advantage of this particular combination is that it does not require the knowledge of kc in order to
+
+estimate . using all points corresponding to k  0.02 one nds
+
+ = 0.328(6)
+
+.
+
+the error on  can be estimated, for example, by using a more elaborate t of the type
+
+r r0
+
+a | r + br2 |(42)/(41)
+
+.
+
+for  = 1/3 the exponent becomes equal to 2, and one has the simple result
+
+r r0
+
+a |r|2
+
+.
+
+(8.93)
+
+(8.94)
+
+(8.95)
+
+one concludes that the evidence supports a vanishing curvature at the critical point, where the curvature
+
+uctuation r and the correlation length  diverge. this result is further supported by the consistency of
+
+the values for kc obtained independently from r(k) and r(k) (figs. 2,3,4,12,13,14 and 15).
+
+as an independent measure of the uctuation one can also investigate the behavior of the edge length
+
+uctuation dened as
+
+l2 (k) =
+
+n1
+
+1
+
+n1 ( < (
+xi=1
+
+l2
+i )2 >  <
+
+l2
+
+i >2) kkc
+
+n1
+
+xi=1
+
+(kc  k)
+
+,
+
+(8.96)
+
+where  is a critical exponent. using an analysis similar to what is done for the curvature and curvature
+
+uctuation, on the 164 lattice it is found to diverge at
+
+kc = 0.0609(23)
+
+(8.97)
+
+in agreement within errors with the previous values quoted for kc. one would expect such a uctuation
+
+to be related to the uctuations in the local volumes, and, by the sum rule of eq. (5.45) which relates the
+
+uctuations in the volume to uctuations in the curvature, one would expect  = 1   = 2  4. the
+numerical results for gamma have larger errors but give values between 0.46 and 0.85, certainly consistent
+
+with a value of  = 2/3 for  = 1/3.
+
+finally fig. 17. summarizes the known information about the phase diagram in the k-a plane. the
+
+continuous line separates the smooth phase with small negative curvature from the rough, polymer-like
+
+phase.
+
+38
+
+0.5
+
+0.45
+
+0.4
+
+0.35
+
+0.3
+
+1/r
+
+0.25
+
+0.2
+
+0.15
+
+0.1
+
+0.05
+
+0
+
+0
+
+cc
+
+c
+
+cc
+
+c
+
+c
+
+ = 0.328(6)
+
+c
+
+c
+
+c
+
+c
+
+c
+
+cc
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+c
+
+22
+
+2
+
+22
+
+2
+
+2
+
+2
+
+2
+
+2
+2
+2
+
+22
+2
+2
+
+2
+
+2
+
+2
+
+2
+
+2
+
+2
+
+4
+
+6
+
+|r|
+
+8
+
+10
+
+12
+
+fig. 16. inverse curvature uctuation, 1/r, versus the average curvature r (2), and 1/r versus r (). points
+shown are for the largest, 164-site, lattice. for  = 1/3, 1/r is expected to be linear in r for small r.
+
+39
+
+a
+
+0.12
+
+0.1
+
+0.08
+
+0.06
+
+0.04
+
+0.02
+
+0
+
+0.2
+
+c
+
+rough phase
+
+smooth phase
+
+c
+
+c
+
+c
+
+c
+
+0
+
+0.2
+
+0.4
+
+0.6
+
+kc
+
+0.8
+
+1
+
+1.2
+
+1.4
+
+fig. 17. phase diagram for the model in the k  a plane. a critical line separates the smooth, strong coupling, phase
+from the rough, weak coupling, phase. the dotted line denotes the pure einstein theory, without higher derivative
+terms.
+
+40
+
+method
+r vs. k
+r3 vs. k
+r vs. k
+3/2
+r vs. k
+r/(hl2ir) vs. k
+r vs. r
+l2 vs. k
+l2 vs. r
+r fs scaling
+r fs scaling
+l2 fs scaling
+
+kc
+0.0630(11)
+0.0639(10)
+0.0636(30)
+0.0641(17)
+0.0635(11)
+-
+0.0609(23)
+-
+-
+-
+-
+
+
+0.330(6)
+-
+0.317(38)
+-
+0.339(9)
+0.328(6)
+ = 0.46(8)
+ = 0.54(7)
+0.333(2)
+0.318(10)
+ = 0.85(6)
+
+table i: summary table for the critical point kc and the critical exponent , as obtained from the largest lattice with
+
+164 sites. the last three entries assume a critical point at kc = 0.0636.
+
+table i summarizes the results obtained for the critical point kc = 1/8gc and the critical exponent .
+
+from the best data (with the smallest statistical uncertainties and the least systematic eects) one concludes
+
+kc = 0.0636(11)
+
+ = 0.335(9)
+
+,
+
+(8.98)
+
+which suggests  = 1/3 for pure gravity 4.
+
+9 critical exponents and phenomenoloy
+
+in this section some consequences of the results presented above will be discussed, with ultimately an
+
+eye towards possible physical applications. naively one would expect simply on the basis of dimensional
+
+arguments that the curvature scale gets determined by the correlation length
+
+r r0
+
+1/2 ,
+
+(9.99)
+
+but one cannot in general exclude the appearance of some non-trivial exponent.
+
+in the previous section arguments have been given in support of the value  = 1/3 for pure gravity. from
+
+eqs. (6.58) relating the average curvature to the correlation length one has
+
+r() kkc
+
+1
+l2d+1/
+p
+
+,
+
+d1/
+
+(9.100)
+
+4the value  = 1/3 does not correspond to any known eld theory or statistical mechanics model in four dimensions. for
+dilute branched polymers it is known that  = 1/2 in three dimensions [46], and  = 1/4 at the upper critical dimension d = 8
+[47], so one would expect a value close to 1/3 somewhere in between. i thank john cardy for a discussion on this point.
+
+41
+
+and the correct dimension for the average curvature r have been restored by supplying appropriate powers
+of the ultraviolet cuto, the planck length lp = g. one notices that close to two dimensions the exponent
+of  indeed approaches 2, since   1/(d  2), and the classical result is recovered.
+for  = 1/3 in four dimensions 5 one then obtains the remarkably simple result
+
+r() kkc
+
+1
+
+lp 
+
+.
+
+(9.101)
+
+an equivalent form can be given in terms of the curvature scale h0, dened through r = 12h 2
+has dimensions of a mass squared. one has close to the critical point
+
+0 , and which
+
+h 2
+
+0 = ch p m ,
+
+(9.102)
+
+where p = 1/g is the planck mass, m = 1/ is the inverse gravitational correlation length, and ch  4.9
+a numerical constant of order one; the value for c is extracted from the known numerical values for r and
+m close to the critical point at kc.
+
+one can raise the legitimate concern of how these results are changed by quantum uctuations of matter
+
+elds. in the presence of matter elds coupled to gravity (scalars, fermions, vector bosons, spin-3/2 elds etc.)
+
+one expects the value for  to change due to vacuum polarization loops containing these elds. a number of
+
+arguments can be given though for why these eects should not be too dramatic, unless the number of light
+
+matter elds is very large. first, in the case of a single light scalar eld the vacuum polarization eects are
+
+so small that they are barely detectable in the numerical evaluations of the path integral [48]. furthermore
+
+one notices that to leading order in the 2 +  expansion the exponent  only depends on the dimensionality
+
+of space-time, irrespective of the number of matter elds and of their type [41]. finally one can compute for
+
+example the eects of scalar matter elds on the one-loop beta function in the 2 +  expansion for gravity,
+
+and nds 0 = (2/3)(25  nf ) where nf is the number of massless scalar elds [41]. thus unless nf is large,
+the matter contribution is quite small even to next-to-leading order in the 2 +  expansion. the present
+
+evidence would therefore suggest that the approximation in which vacuum polarization eects of light matter
+
+elds are neglected should not be too unreasonable.
+
+it seems natural to identify h0 with either some (negative) average spatial curvature, or possibly with
+
+the hubble constant determining the macroscopic expansion rate of the present universe [12, 15]. in the
+
+friedmann-robertson-walker model of standard cosmology [50] on has for the ricci scalar
+
+5for all scalar eld theories (spin s = 0) in four dimensions it is known that  = 1/2, while for the compact abelian u(1)
+gauge theory (s = 1) one has  = 2/5 [49]. the value  = 1/3 for pure gravitation (s = 2) in four dimensions is then consistent
+with the simple formula  = 1/(2 + s/2).
+
+,
+
+(9.103)
+
+r
+
+r
+
+
+rricci = 6
+r!2
+  r
+
+
++
+
+k
+r2 +
+
+42
+
+where r(t) is the frw scale factor, and k = 0,1 for spatially at, open or closed universes respectively.
+today the hubble constant is given by h 2
+t0, but it is eventually expected to show some slow
+0  1028cm today is comparable to the present
+extent of the visible universe. under such circumstances from eq. (9.102) one would expect the gravitational
+
+variation in time, and its characteristic length scale ch 1
+
+0 = ( r/r)2
+
+correlation  to be signicantly larger than ch 1
+
+0 . a potential problem arises though in trying to establish
+
+a relationship between quantities which are truly constants (such as the ones appearing in eq. (9.102)), and
+
+h0 which most likely depends on time. 6 in any case it is clear that some of these considerations are in fact
+
+quite general, to the extent that they rely on general principles of the renormalization group and are not tied
+
+to any particular value of , although  = 1/3 clearly has some aesthetic appeal. additional cosmological
+
+and astrophysical arguments and proposed tests can be found in a recent paper [51].
+
+one further observation can be made regarding the running of g. assuming the existence of an ultraviolet
+
+xed point, the eective gravitational coupling is given by eq. (7.66) for short distances r  , but now
+with an exponent  = 1/3,
+
+with c a calculable numerical constant of order one. the appearance of  in this equation, which is a very
+
+g(r) = g(0)(cid:2) 1 + c (r/)3 + o((r/)6)(cid:3) ,
+
+(9.104)
+
+large quantity by eq. (9.102), suggests that the leading scale-dependent correction, which gradually increases
+
+the strength of the eective gravitational interaction as one goes to larger and larger length scales, should
+
+be extremely small. 7
+
+it is only for distances comparable to or larger than  that the gravitational potential should start to
+
+weaken and fall o exponentially, with a range given by the gravitational correlation length ,
+
+v (r) r    g(r)
+
+12 er/
+
+r
+
+.
+
+(9.105)
+
+in many ways these results appear qualitatively consistent with the expected behavior of the tree-level
+
+graviton propagator in anti-de sitter space [52, 53]. in the real world the range  must be of course very
+
+large. from the fact that super-clusters of galaxies apparently do form, one can easily set an observational
+
+lower limit  > 1025cm.
+
+it is unclear to what extent gravitational correlations can be measured directly. from the denition of
+
+the curvature correlation function in eq. (6.53) one has for short distances r   and for the specic value
+ = 1/3 the remarkably simple result
+
+< g r(x) g r(y) (|x  y|  d) >c d  
+
+a
+d2
+
+,
+
+(9.106)
+
+6the only exception being the steady state cosmological models, where h is truly a constant of nature. these models are
+
+not favored by present observations, including detailed features of the cosmic background radiation.
+
+7and suggests that the deviations from classical general relativistic behavior for most physical quantities is in the end
+
+practically negligible.
+
+43
+
+with a a calculable numerical constant of order one. one can contrast this behavior with the semiclassical
+
+result attained close to two dimensions (and which incidentally coincides with the lowest order weak eld
+
+expansion result [38]), which gives instead for the power the value 2(d1/)  2(d(d2))  4, as expected
+on the basis of naive dimensional arguments (r  2h).
+
+if one considers the curvature r averaged over a spherical volume vr = 4r3/3,
+
+one can compute the corresponding variance in the curvature
+
+g r =
+
+1
+
+vr zvr
+
+d3~xpg(~x, t) r(~x, t)
+
+[(g r)]2 =
+
+1
+v 2
+
+r zvr
+
+d3~x zvr
+
+d3~y < g r(~x) g r(~y) >c =
+
+9a
+4 r2
+
+.
+
+as a result the r.m.s. uctuation of gr averaged over a spherical region of size r is given by
+
+(g r) =
+
+3a
+2
+
+1
+r
+
+,
+
+while the fourier transform power spectrum at small ~k is
+
+p~k = | g r~k |2 =
+
+42a
+2v
+
+1
+k
+
+.
+
+(9.107)
+
+(9.108)
+
+(9.109)
+
+(9.110)
+
+one can use einsteins equations to relate the local curvature to the (primordial) mass density. from
+
+einsteins eld equations
+
+for a perfect uid
+
+r 
+
+1
+2
+
+gr = 8t
+
+t = pg + (p + )uu
+
+one obtains for the ricci scalar, in the limit of negligible pressure,
+
+r(x)  8g (x)
+
+.
+
+as a result one expects for the density uctuations a power law decay of the form
+
+< (x) (y) >c
+
+|xy|  
+
+1
+
+|x  y|2 .
+
+(9.111)
+
+(9.112)
+
+(9.113)
+
+(9.114)
+
+similar density correlations have been estimated from observational data by analyzing known galaxy number
+
+density distributions, giving a value for the exponent of about 1.770.04 for distances in the 10kpc to 10m pc
+range [54].
+
+44
+
+10 concluding remarks
+
+numerical simulation methods combined with modern renormalization group arguments and nite size
+
+scaling can provide detailed information on non-perturbative aspects of a lattice model of quantum gravity.
+
+it has been known for some time that the lattice model has two phases, only one of which is physically
+
+acceptable. in this work we have described in some detail the properties of the latter smooth phase, and
+
+provided quantitative estimates for the critical point, the scaling dimensions and the behavior of correlations
+
+at distances large compared to the cuto. in spite of the fact that the euclidean theory becomes unstable
+
+as one approaches the critical point at kc, it is still possible to determine by a straightforward analytic
+
+continuation the physical properties of the model in the vicinity of the true xed point, dened as the point
+
+where a non-analiticity develops in the strong coupling branch of zl(k), and where scaling implies that the
+
+physical correlation  diverges.
+
+if this prescription is followed, an estimate for the non-perturbative callan-symanzik beta function in
+
+the vicinity of the xed point can be obtained, to leading order in the deviation of the bare coupling from its
+
+critical value. the resulting scale evolution for the gravitational constant is then quantitatively quite small,
+
+if one assumes that the scaling violation parameter is related to an average curvature and its characteristic
+
+scale h0. its infrared growth, consistent with the general idea that gravitational vacuum polarization eects
+
+cannot exert any screening, suggests that low energy properties of quantum gravity are inaccessible by
+
+weak coupling perturbation theory: low energy quantum gravity is a strongly coupled theory. on a more
+
+quantitative side, as pointed out in the discussion there are a number of attractive features to the pure
+
+gravity result  = 1/3, including a simple form for the curvature correlations at short distances.
+
+it seems legitimate to ask the question whether the present lattice model for quantum gravity provides
+
+any insight into the problem of the cosmological constant. the answer is both yes and no. to the extent
+
+that a naive prediction of quantum gravity is that the curvature scale should be of the same order of the
+
+planck length, r  1/g, the answer is denitely yes. indeed it can be regarded as a non-trivial result of the
+lattice models for gravity that a region in coupling constant space can be found where space-time is sti and
+
+the curvature can be made much smaller than 1/g. in fact the evidence indicates that the average curvature
+
+r vanishes at the critical point kc. and this is achieved with a bare cosmological constant  which is of
+order one in units of the cuto. phrased dierently, the dimensionless ratio between the renormalized and
+
+the bare cosmological constant becomes arbitrarily small towards the critical point.
+
+at the same time the eective long distance cosmological constant is non-vanishing and of order 1/,
+
+and the value zero is only obtained when  is exactly zero, which happens only at the critical point kc.
+
+45
+
+thus to make the eective cosmological constant small requires a ne tuning, in the sense that the bare
+
+coupling kc k has to be small. but since the correlation length determines the corrections to the newtonian
+potential (and in particular its eventual decrease for large enough distances), it would seem unnatural to have
+
+a short correlation length : in such a world there would be no long-range gravitational forces, and separate
+
+space-time domains would have decoupled uctuations. from this perspective, long range forces and a small
+
+cosmological constant go hand in hand. quantum uctuation eects show that hyperbolic space-times with
+
+small curvature radii cannot sustain long-range gravitational forces, at least in this model.
+
+acknowledgements
+
+the author acknowledges useful discussions with john cardy, james hartle, gary horowitz, ruth
+
+williams and vipul periwal. the aeneas supercomputer project is supported in part by the depart-
+
+ment of energy, the national science foundation and the university of california. an earlier part of the
+
+calculation described in this paper was performed at the nsf-supported cornell theory center. part of
+
+the work presented here was done while the author was a visitor in the theoretical division at cern. the
+
+author is grateful to gabriele veneziano for discussions and hospitality.
+
+46
+
+references
+
+[1] r.p. feynman, act. phys. pol. 24 (1963) 697; caltech lecture notes, 1962;
+
+b. dewitt, phys. rev. 160 (1967) 1113; phys. rev. 162 (1967) 1195 and 1239.
+
+[2] g. t hooft and m. veltman, ann. inst. poincare 20 (1974) 69;
+
+s. deser and p. van nieuwenhuizen, phys. rev. d10 (1974) 401 and 410.
+
+[3] k.g. wilson, rev. mod. phys. 47 (1975) 773;
+
+k.g. wilson and m. fisher, phys. rev. lett. 28 (1972) 240.
+
+[4] d. gross and f. wilczek, phys. rev. lett. 30 (1973) 1343;
+
+h. d. politzer phys. rev. lett. 30 (1973) 1346.
+
+[5] t. regge, nuovo cimento 19 (1961) 558.
+
+[6] m. rocek and r.m. williams, phys. lett. 104b (1981) 31; z. phys. c21 (1984) 371.
+
+[7] h.w. hamber, simplicial quantum gravity, in the 1984 les houches summer school, session xliii,
+
+(north holland, 1986).
+
+[8] j.b. hartle, j. math. phys. 26 (1985) 804; 27 (1985) 287; 30 (1989) 452.
+
+[9] h.w. hamber and r.m. williams, nucl. phys. b248 (1984) 392; b260 (1985) 747; b269 (1986) 712;
+
+phys. lett. 157b (1985) 368.
+
+[10] h.w. hamber and r.m. williams, nucl. phys. b487 (1997) 345-408.
+
+[11] b. berg, phys. rev. lett. 55 (1985) 904; phys. lett. b176 (1986) 39;
+
+w. beirl, e. gerstenmayer, h. markum and j. riedler, phys. rev. d49 (1994) 5231;
+
+b. berg and b. krishnan, phys. lett. b318 (1993) 59;
+
+b. berg, b. krishnan and m. katoot, nucl. phys. b404 (1993) 35;
+
+w. beirl, h. markum and j. riedler, phys. lett. b341 (1994) 12;
+
+w. beirl, b. berg, b. krishnan, h. markum and j. riedler, phys. lett. b348 (1995) 355; phys. rev.
+
+d54 (1996) 7421.
+
+w. beirl and b. berg, nucl. phys. b452 (1995) 415;
+
+c. holm and w. janke, phys. lett. b335 (1994) 143; b375 (1996) 69; b390 (1997) 56; nucl. phys.
+
+b477 (1996) 465.
+
+[12] h.w. hamber, nucl. phys. b (proc. supp.) 20 (1991) 728; nucl. phys. b400 (1993) 347; h.w. hamber
+
+and r.m. williams, nucl. phys. b435 (1995) 361.
+
+47
+
+[13] l.p. kadano, physics 2 (1966) 263;
+
+k.g. wilson, phys. rev. b4 (1971) 3174; ibid. b4 (1971) 3184; phys. rev. lett. 28 (1972) 548.
+
+[14] v. de alfaro, s. fubini and g. furlan, nuovo cim. 57b (1980) 227; phys. lett. 97b (1980) 67;
+
+and the contribution in erice 1981 (plenum press, new york, 1983).
+
+[15] h.w. hamber and r.m. williams, phys. rev. d51 (1999) 064014.
+
+[16] h.w. hamber, preprint sept. 1998, gr-qc/980909 (unpublished).
+
+[17] a. gentle, d. holz, w.a. miller, and j. a. wheeler, class. quant. grav. 16 (1999) 1979;
+
+s. chakrabarti, a. gentle, a.kheyfets and w.a. miller, class. quant. grav. 16 (1999) 2381;
+
+w.a. miller, class. quant. grav. 14 (1997) l199;
+
+a. gentle and w.a. miller, class. quant. grav. 15 (1998) 389;
+
+j.b. hartle, w.a. miller and r.m. williams, class. quant. grav. 14 (1997) 2137;
+
+a. kheyfets and w.a. miller, lanl preprint la-ur-94-4148 (gr-qc/9412037);
+
+j.w. barrett, m. galassi, w.a. miller, r.d. sorkin, p.a. tuckey and r.m. williams, int. j. theor.
+
+phys. 36 (1997) 815.
+
+[18] b.v. de bakker and j. smit, nucl. phys. b484 (1997) 476, and references therein;
+
+b. de bakker phys. lett. b389 (1996) 238.
+
+[19] m.n. barber, finite size scaling and critical phenomena, edited by c. domb and j.l. lebowitz
+
+(academic press, new york, 1983) vol. 8.
+
+[20] f.j. wegner, phys. rev. b5 (1972) 4529.
+
+[21] h.w.j. blote, e. luijten and j.r. heringa, j. phys. a28 (1995) 6289.
+
+[22] e. brezin and j. zinn-justin, nucl. phys. b257 (1985) 867.
+
+[23] c. itzykson and j.m. droue, statistical field theory, cambridge university press (cambridge, 1989).
+
+[24] d.j. wallace, a.s. pawley, r. swendsen and k.g. wilson, phys. rev. b29 (1986) 403;
+
+h.g. ballesteros, l.a. fernandez, v. martin-mayor, a. munoz sudupe, g. parisi and j.j. ruiz-lorenzo,
+
+rome preprint 1998, cond-matt/9805125.
+
+[25] m. nauenberg and b. nienhuis, phys. rev. lett. 33 (1974) 944.
+
+[26] g. parisi, statistical field theory, ch. 10, addison wesley, new york (1988), and references therein.
+
+[27] j. langer, ann. phys. 41 (1967) 108.
+
+48
+
+[28] m. veltman, in methods in field theory, les houches lecture notes, session xxviii (north holland,
+
+1975).
+
+[29] h.w. hamber and r.m. williams, phys. rev. d47 (1993) 510.
+
+[30] p. van nieuwenhuizen, nucl. phys. b60 (1973) 478.
+
+[31] s.w. hawking, in general relativity - an einstein centenary survey, edited by s.w. hawking and
+
+w. israel, (cambridge university press, 1979).
+
+[32] g. modanese, phys. rev. d59 (1999) 2404.
+
+[33] e.s. fradkin and a.a. tseytlin, phys. lett. 104b (1981) 377 and 106b (1981) 63; nucl. phys. b201
+
+(1982) 469;
+
+i.g. avramidy and a.o. baravinsky, phys. lett. 159b (1985) 269.
+
+[34] h.w. hamber, phys. rev. d50 (1994) 3932.
+
+[35] b. dewitt, in dynamical theory of groups and fields, (gordon and breach, new york, 1965); phys.
+
+rev. 160 (1967) 1113; in general relativity - an einstein centenary survey, edited by s.w. hawking
+
+and w. israel, cambridge university press (1979).
+
+[36] j. cheeger, w. muller and r. schrader, comm. math. phys. 92 (1984) 405; see also the contribution
+
+to the heisenberg symposium, (springer, new york, 1982).
+
+[37] c.j. isham, lectures given at the 30th int. schladming winter school, schladming, austria (1991);
+
+published in lect. notes in phys., vol. 396 (springer, 1991).
+
+[38] g. modanese, phys. lett. b288 (1992) 69; phys. rev. d47 (1993) 502.
+
+[39] g. modanese, phys. lett. 325b (1994), 354; nucl. phys. b434 (1995) 697.
+
+[40] j. zinn-justin, quantum field theory and critical phenomena, oxford university press (oxford, 1993).
+
+[41] r. gastmans, r. kallosh and c. trun, nucl. phys. b133 (1978) 417;
+
+s.m. christensen and m.j. du, phys. lett. b79 (1978) 213;
+
+s. weinberg, in general relativity - an einstein centenary survey, edited by s.w. hawking and w.
+
+israel, (cambridge university press, 1979);
+
+h. kawai and m. ninomiya, nucl. phys. b336 (1990) 115;
+
+h. kawai, y. kitazawa and m. ninomiya, nucl. phys. b393 (1993) 280 and b404 (1993) 684.
+
+[42] e. brezin and j. zinn-justin, phys. rev. lett. 36 (1976) 691.
+
+49
+
+[43] g.a. baker and p. graves-morris eds., pade approximants, encyclopedia of mathematics and its ap-
+
+plications, vol.13, (addison-wesley, reading) 1981.
+
+[44] d.s. gaunt and a.j. guttman, in phase transitions and critical phenomena, edited by c. domb and
+
+m. green (academic press, london, 1974) vol. 3.
+
+[45] j.c. le guillou and j. zinn-justin, phys. rev. b21 (1980) 3976; and j. phys. (france) 50 (1989) 1365;
+
+j. zinn-justin, in 6th international conference on path integrals, (pi 98), florence, italy, 25-29 aug
+
+1998, hep-th/9810193.
+
+[46] g. parisi and n. sourlas, phys. rev. lett. 46 (1981) 871.
+
+[47] t.c lubensky and j. isaacson, phys. rev. a20 (1979) 2130.
+
+[48] h.w. hamber and r.m. williams, nucl. phys. b415 (1994) 463.
+
+[49] h.w. hamber, phys. rev. d24 (1981) 941;
+
+c.j. hamer and m. aydin, phys. rev. d43 (1991) 4080;
+
+j. jersak, c.b. lang and t. neuhaus, phys. rev. d54 (1996) 6909; phys. rev. lett. 77 (1996) 1933;
+
+nucl. phys. b499 (1997) 371.
+
+[50] s. weinberg, gravitation and cosmology, (wiley, new york 1972).
+
+[51] v. periwal, princeton preprint astro-ph/9906253 (june 1999).
+
+[52] s. hawking and d. page, comm. math. phys. 87 (1983) 577.
+
+[53] s. avis, c. isham and d. storey, phys. rev. d18 (1978) 3565;
+
+c. burges, d.z. freedman, s. davis and g. gibbons, ann. phys. 167 (1986) 285;
+
+b. allen, a. folacci and g. gibbons, phys. lett. b189 (1987) 304.
+
+[54] p.j.e. peebles, principles of physical cosmology, princeton university press (princeton,1993), and
+
+references therein; princeton preprint may 1998, astro-ph/9805167.
+
+50
+
+

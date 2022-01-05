@@ -1,0 +1,3612 @@
+0
+0
+0
+2
+
+ 
+r
+a
+
+ 
+
+m
+1
+2
+
+ 
+ 
+
+3
+v
+0
+3
+0
+0
+1
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+october 1999
+kul-tf-99/37
+hep-th/9910030
+
+tools for supersymmetry 1
+
+antoine van proeyen2
+
+instituut voor theoretische fysica
+
+universiteit leuven, b-3001 leuven, belgium
+
+abstract
+
+this is an elementary introduction to basic tools of supersymme-
+try: the spacetime symmetries, gauge theory and its application
+in gravity, spinors and superalgebras. special attention is devoted
+to conformal and anti-de sitter algebras.
+
+1 lectures in the spring school q.f.t., supersymmetry and super-
+strings, in calimanesti, romania, april 1998.
+2 onderzoeksdirecteur fwo, belgium;
+e-mail: antoine.vanproeyen@fys.kuleuven.ac.be
+
+contents
+
+1 introduction
+
+2
+
+2 bosonic spacetime symmetries
+
+2
+2
+2.1 colemanmandula result . . . . . . . . . . . . . . . . . . . . .
+3
+2.2 anti-de sitter algebra and spacetime . . . . . . . . . . . . . .
+5
+2.3 rigid conformal symmetry . . . . . . . . . . . . . . . . . . . .
+2.4 gauge theory and gravity . . . . . . . . . . . . . . . . . . . .
+9
+2.5 local conformal transformations . . . . . . . . . . . . . . . . . 14
+
+3 spinors in arbitrary dimensions
+
+16
+3.1 gamma matrices and their symmetry . . . . . . . . . . . . . . 16
+irreducible spinors
+3.2
+. . . . . . . . . . . . . . . . . . . . . . . . 19
+3.3
+4 dimensions . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+3.4 technical tips . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+3.4.1 complex conjugation . . . . . . . . . . . . . . . . . . . 23
+3.4.2 gamma matrix manipulations . . . . . . . . . . . . . . 25
+spinor indices . . . . . . . . . . . . . . . . . . . . . . . 26
+3.4.3
+
+4 supersymmetry algebras
+
+27
+4.1 haag lopuszanskysohnius result as introduction . . . . . . . 27
+4.2 basic properties of poincare supersymmetry . . . . . . . . . . 28
+. . . . . . . . . . . . . . . . . . . . . 29
+4.3 super-poincare algebras
+4.4 poincare algebras with central charges
+. . . . . . . . . . . . . 34
+4.5 super-anti-de sitter algebras . . . . . . . . . . . . . . . . . . . 36
+4.6 superalgebras . . . . . . . . . . . . . . . . . . . . . . . . . . . 38
+4.7 superconformal algebras . . . . . . . . . . . . . . . . . . . . . 40
+
+a conventions
+
+43
+
+1
+
+1 introduction
+
+in this review you will not nd many general ideas. it is rather meant as a
+technical introduction to some basic tools for working with supersymmetric
+eld theories. it are ingredients which i could use for various applications in
+the last 20 years.
+
+in section 2, i will consider only bosonic theories. it contains an intro-
+duction to the spacetime symmetries. also gauging of symmetries is treated,
+and special attention is devoted to a very useful theorem for calculating the
+transformation of the covariant derivative of elds.
+
+section 3 reviews the properties of cliord algebras and spinors in a
+spacetime with arbitrary dimensions and signature. it gives an overview of
+majorana, weyl, majoranaweyl and symplectic majoranaweyl spinors.
+at the end several tips are given to perform complex conjugation in practice,
+and to manipulate gamma matrices.
+
+supersymmetry is introduced in section 4. i introduce especially the al-
+gebraic approach. also the elementary facts on superalgebras are treated,
+including the real forms of these algebras. the aim is to come to supersym-
+metry algebras, as well super-poincare, as super-ads and superconformal
+algebras.
+
+2 bosonic spacetime symmetries
+
+supersymmetry is related to the structure of spacetime. before tackling
+supersymmetry algebras, i will rst review the bosonic spacetime symmetries
+and their gauging.
+
+2.1 colemanmandula result
+
+to investigate possible spacetime symmetries, coleman and mandula [1] in-
+vestigated how large the spacetime symmetry group can be in order that
+scattering amplitudes do not become trivial. they thus deal with visible
+symmetries, i.e. those which act on s-matrix elements. they restrict them-
+selves also to 4 dimensions, and assume a nite number of dierent particles
+in a multiplet. their research was before the advent of supersymmetry, so
+they were looking only at bosonic symmetries. still the result is very signif-
+icant. there are two cases to be distinguished.
+
+2
+
+1. there are massive particles. then the symmetry algebra has at most
+translations p, lorentz rotations m and an algebra g of scalar (i.e. com-
+muting with p and m) symmetries.
+2. there are only massless particles. then there is the extra possibility of
+having conformal symmetry (and a commuting group g).
+
+the second possibility will be discussed in section 2.3. the rst one
+
+contains a direct sum of g with the poincare algebra, i.e.
+
+[m, m ] = 2[
+[p, m ] = [p] ,
+
+[m]
+
+] ,
+
+[p, p ] = 0 .
+
+(2.1)
+
+for conventions, see appendix a. in supersymmetry the last commutator is
+often modied, giving rise to the (anti) de sitter algebra.
+
+2.2 anti-de sitter algebra and spacetime
+
+the poincare algebra is an inonuwigner contraction of the (anti) de sitter
+algebra:
+
+[m, m] = [m]  [m]
+[p, m] = [p]
+
+[p, p] =
+
+1
+2r2 m .
+
+(2.2)
+
+with the opposite sign for the last commutator we would have the de sitter
+algebra. as written it is the anti-de sitter (ads) algebra. and for r  ,
+we recover the poincare algebra. dening md = md = r p we have
+generators m = m  with  = 0, . . . , d, and dening the metric to be
+ = diag( + . . . + ) the algebra can be concisely written as
+
+[m, m] = [m]  [m] ,
+
+(2.3)
+
+i.e. it is the algebra so(d  1, 2). note that every point is invariant under
+the rotations around this point, while not invariant under the translations.
+in this sense we can write
+
+adsd =
+
+so(d  1, 2)
+so(d  1, 1)
+
+.
+
+3
+
+(2.4)
+
+the inonuwigner contraction is the statement that the so(d  1, 2)
+algebra reduces to the poincare algebra when taking the limit r   keeping
+p constant in the relation md = md = r p.
+to obtain a space with ads metric, we start from dening it as a subman-
+ifold of a (d + 1)-dimensional space with a at metric of (d  1, 2) signature
+(for convenience we taken here  = 0, . . . , d  2)
+ds2 = dx dx   dx +dx 
+
+(2.5)
+
+(d  2, 1) +
+
+(1, 1)  (d  1, 2)
+
+the ads space is the submanifold determined by the so(d  1, 2)-invariant
+equation
+(2.6)
+
+x x   x +x  + r2 = 0 .
+
+on the hypersurface one can take several sets of coordinates. e.g. the horo-
+spherical coordinates {x, z} are dened by
+
+x  = z1
+x  = z1x
+
+x + =
+
+ + r2z2
+x2
+
+z
+
+.
+
+(2.7)
+
+the latter being the solution of (2.6) given the rst two. the induced metric
+on the hypersurface is
+
+ds2 =
+
+1
+
+z2 (cid:16)dx2
+
+ + r2dz2(cid:17) .
+
+(2.8)
+
+the so(d  1, 2) is linearly realized in the embedding (d + 1)-dimensional
+space, and these transformations, ( = , +, and  =  )
+
+x  =  m x  = 
+
+x  .
+
+(2.9)
+
+are on the ads space distorted to1
+
+adsx = 
+adsz = z(cid:16)+
+
+  x  +
++(cid:17) .
+
+(x2 + r2z2)
++  2x
+
++x
+
++ + 2xx
+
++
+
+(2.10)
+1note that to raise or lower indices one has to use the metric in (2.5), i.e. + =  1
+2 ,
+
+and thus + = 2.
+
+4
+
+suppose i just gave you the metric (2.8). then to determine the symme-
+
+tries, one should solve the killing equation (with x m = {x, })
+
+(p gm n )x p + 2gp (m n )x p = 0 ,
+
+(2.11)
+
+which is the requirement that the lie derivative of the metric vanishes. as an
+exercise, one may prove that the transformations (2.10) are the only solutions.
+
+2.3 rigid conformal symmetry
+
+conformal symmetry is dened as the symmetry which preserves angles.
+therefore it should contain the transformations which change the metric up
+to a factor. that implies that the symmetries are determined by the solutions
+to the conformal killing equation
+
+()  1
+
+d  = 0 .
+
+(2.12)
+
+in d = 2 with as non-zero metric elements z z = 1, the killing equations are
+reduced to zz = zz = 0 and this leads to an innite dimensional conformal
+algebra (all holomorphic vectors z(z) and anti-holomorphic vectors z(z)).
+in dimensions d > 2 the conformal algebra is nite-dimensional. indeed, the
+solutions are
+
+(x) = a + 
+
+m x + dx + (x2
+
+k  2xx  k) .
+
+(2.13)
+
+corresponding to the parameters a are the translations p, to 
+m corre-
+spond the lorentz rotations m, to d are associated dilatations d, and
+
+k are parameters of special conformal transformations k. this is ex-
+pressed as follows for the full set of conformal transformations c:
+
+c = ap + 
+
+m m + dd + 
+
+kk .
+
+(2.14)
+
+with these transformations, one can obtain the algebra with as non-zero
+commutators
+
+] ,
+
+[m]
+
+[m, m ] = 2[
+[p, m ] = [p] ,
+[p, k ] = 2(d + 2m) ,
+[d, p ] = p ,
+
+5
+
+[k, m ] = [k] ,
+
+[d, k ] = k .
+
+(2.15)
+
+this is the so(d, 2) algebra2. indeed one can dene
+
+m  = 
+
+
+m 
+
+ 1
+4(p   k )
+ 1
+4(p  + k )
+
+1
+
+4(p   k )
+
+0
+1
+2 d
+
+1
+
+4(p  + k )
+
+ 1
+2 d
+0
+
+
+
+
+,
+
+(2.16)
+
+where indices are raised w.r.t. the rotation matrices m 
+ with the metric
+ = diag (1, 1, ..., 1,1). note that this is the same as the anti-de sitter
+algebra in d + 1 dimensions
+
+confd = adsd+1 ,
+
+(2.17)
+
+(obviously this concerns the algebras, not the spaces) which is an essential
+ingredient in the ads/cft correspondence which got recently so much at-
+tention. note in this respect the similarity between (2.10) and (2.13).
+
+in general, elds i(x) in d dimensions have the following transformations
+
+under the conformal group:
+
+ci(x) = (x)i(x) + 
+
++wi d(x) i(x) + 
+
+i
+
+m (x) m
+
+jj(x)
+k (k)i (x) ,
+
+(2.18)
+
+where the x-dependent rotation m (x) and x-dependent dilatation d(x)
+are given by
+
+m (x) = [] = m   4x[k ] ,
+
+d(x) = 1
+
+d = d  2x  k .
+
+(2.19)
+
+to specify for each eld i its transformations under conformal group one
+has to specify:
+
+i) transformations under the lorentz group, encoded into the matrix
+
+(m)i
+
+j. the lorentz transformation matrix m should satisfy
+
+i
+
+m
+
+km
+
+k
+
+j  m
+
+i
+
+km
+
+k
+
+j = [m]
+
+i
+
+j + [m]
+
+i
+
+j .
+
+(2.20)
+
+the explicit form for lorentz transformation matrices is for vectors
+(the indices i and j are of the same kind as  and )
+
+m
+
+(2.21)
+2in the 2-dimensional case so(2, 2) = su (1, 1)  su (1, 1) is realised by the nite
+subgroup of the innite dimensional conformal group, and is well known in terms of l1 =
+2 (p0  p1), l0 = 1
+1
+2 d  m10,
+l1 = 1
+
+2 (k0  k1). higher order ln,|n|  2 have no analogs in d > 2.
+
+2 (k0 + k1), l1 = 1
+
+2 (p0 + p1), l0 = 1
+
+2 d + m10, l1 = 1
+
+[] ,
+
+
+
+ = 
+
+6
+
+while for spinors, (where i and j are (unwritten) spinor indices)
+
+m =  1
+
+4  .
+
+(2.22)
+
+ii) the weyl weights wi.
+
+iii) possible extra parts of the special conformal transformations,
+apart from those connected to translations, rotations and dilatations
+as in (2.13) and (2.19), (k)i. the weyl weight of (ki) should be
+w  1, and k are mutually commuting operators.
+in this way, the algebra (2.15) is realised on the elds as
+
+[c(1), c(2)] = c ( = 
+
+2 
+
+1  
+
+1 
+
+2 ) .
+
+(2.23)
+
+note the sign dierence between the commutator of matrices (2.20) and the
+commutator of the generators in (2.15), which is due to the dierence between
+active and passive transformations. to understand fully the meaning of
+the order of the transformations, consider in detail the calculation of the
+commutator of transformations of elds. see e.g. for a eld of zero weyl
+weight, and notice how the transformations act only on elds, not on explicit
+spacetime points x:
+
+da[d, p](x) = (d(d)p (a)  p (a)d(d)) (x)
+= d(d)a(x)  p (a)dx(x)
+= a (dx) (x)
+= ad(x) = dap(x) .
+
+(2.24)
+
+it is important to notice that the derivative of a eld of weyl weight w
+has weight w + 1. e.g. for a scalar of weight w (and without extra special
+conformal transformations) we obtain
+
+c(x) = (x)(x) + w d(x) (x)
+
+(x)(x) + d(x)(x)  2w k(x) . (2.25)
+with these rules the conformal algebra is satised. the question remains
+when an action is conformal invariant. we consider local actions which can be
+
+m 
+
+written as s = r ddxl(i(x), i(x)), i.e. with at most rst order derivatives
+
+on all the elds. for p and m there are the usual requirements of a
+
+7
+
+covariant action. for the local dilatations we have the requirement that the
+weights of all elds in each term should add up to d, where  counts also
+for 1, as can be seen from (2.25). indeed, the explicit d transformations
+nally have to cancel with
+
+(x)l  ((x))l = dd(x)l .
+for special conformal transformations one remains with
+
+(2.26)
+
+ks = 2
+
+k z ddx l
+
+( i) (cid:16)wii + 2m
+
+
+
+
+
+
+
+s
+
+i(x)
+
+i
+
+jj(cid:17) + 
+
+k
+
+(k)i(x) .
+
+(2.27)
+
+
+ indicates a right derivative. the rst terms originate from the
+where
+k-transformations contained in (2.13) and (2.19). in most cases these are
+sucient to nd the invariance and no (k) are necessary. in fact, the latter
+are often excluded because of the requirement that they should have weyl
+weight wi  1, and in many cases there are no such elds available.
+although we will show that this condition is satised for many dilatational
+invariant theories, it is non-trivial. as a counterexample we give the action
+of the scalars 1 and 2 (with weyl weights ( d
+
+2  1))
+2! (1)(2) .
+
+1
+
+l =  1 +
+
+(2.28)
+
+exercise.
+
+there are typical cases in which (2.27) does not receive any contributions.
+
+check the following ones
+
+1. scalars with weyl weight 0.
+
+2. spinors appearing as 6  if their weyl weight is (d  1)/2. this is also
+
+the appropriate weight for actions as  6 .
+
+3. vectors or antisymmetric tensors whose derivatives appear only as eld
+strengths [1b2...p] if their weyl weight is p1. this value of the weyl
+weight is what we need also in order that their gauge invariances and
+their zero modes commute with the dilatations. then scale invariance
+of the usual square of the eld strenghts will x p = d
+2.
+
+8
+
+4. scalars x i with weyl weight d
+
+2  1 and
+
+l = (x i)aij(x j) ,
+
+(2.29)
+
+where aij are constants.
+
+2.4 gauge theory and gravity
+
+from the theory of general relativity we know how to construct actions in-
+variant under the local poincare group. however, i will now consider the con-
+structions from an algebraic viewpoint, i.e. as a gauge theory of the poincare
+group. first, recall the general equations for gauge theories with innitesimal
+transformations
+
+ = ata ,
+
+(2.30)
+
+where a thus labels all the symmetries, and a are all the parameters. for
+every symmetry one introduces a gauge eld ha
+
+ , and if the algebra is
+
+[a(a
+
+1 ), b(b
+
+c(cid:17) ,
+
+2 )] = c (cid:16)b
+2 a
+
+1 fab
+
+then these transform as
+
+()ha
+
+ = a + chb
+
+ fbc
+
+a .
+
+covariant derivatives are dened as
+
+ =   a(ha
+ ) ,
+
+(2.31)
+
+(2.32)
+
+(2.33)
+
+and their commutators are new transformations with as parameters the cur-
+vatures:
+
+[,] = a(ra
+)
+ = 2[ha
+
+ra
+
+] + hc
+
+ hb
+
+ fbc
+
+a ,
+
+(2.34)
+
+which transform covariantly as
+
+ra
+
+ = crb
+
+fbc
+
+a .
+
+i now apply this to the poincare group with gauge elds
+
+ha
+ ta = ea
+
+pa + 
+
+abmab .
+
+9
+
+(2.35)
+
+(2.36)
+
+the indices , , . . . of the algebra of the previous sections should now be re-
+placed by at indices a, b, . . .. the curvatures are then (for later convenience
+i put an indication p for the poincare curvatures)
+
+(p a) = 2[ea
+rp
+(m ab) = 2[]
+
+rp
+
+] + 2[
+
+abe]b
+ 
+
+ab + 2c[a
+
+b]
+
+c .
+
+(2.37)
+
+usually the spin connection is not considered as an independent eld. one
+can obtain the relation between the spin connection and the vierbeins by
+imposing a constraint
+
+rp
+
+(p a) = 0 .
+
+(2.38)
+
+as the vielbein ea
+spin connection
+
+ is assumed to be invertible, this can be solved for the
+
+
+
+ab = 2e[a[e]
+
+b]  eaebec[ec
+] .
+
+(2.39)
+
+such a constraint, which can be solved for a eld, is called a conventional
+constraint. similar constraints are often used in the superspace approach.
+
+the constraint is not invariant under all the symmetries. therefore the
+theory with the constraint, and thus a dependent spin connection has an al-
+gebra that is dierent from (2.1). essentially the translations pa are replaced
+by covariant general coordinate transformations
+
+cgct() = gct()  i (hi
+
+) ,
+
+(2.40)
+
+where i stands for all transformations except the translations. in fact, one
+can check that the translations pa on the vierbein take the form of general
+coordinate transformations, due to the constraint (2.38).
+
+from now on we replace translations by these covariant general coordinate
+transformations. on non-gauge elds we have (and we write these equations
+again more general than for the pure poincare algebra, as we want to use it
+later for larger algebras containing translations)
+
+ =   ea
+
+pa  i(hi
+
+) = 0 ,
+
+which, solved for pa, gives what is now called the covariant derivative
+
+pa = da  e
+
+a (cid:16)  i(hi
+
+)(cid:17) .
+
+10
+
+(2.41)
+
+(2.42)
+
+a e
+ab = e
+f a
+
+b ra
+
+  ra
+ab ,
+
+[da, db] = i (ri
+
+ab) .
+
+(2.43)
+
+(2.44)
+
+while in the original algebra translations did commute, (covariant) general
+coordinate transformations do not commute, i.e. f a
+ab 6= 0. if one takes this
+into account in (2.34), thus adding a new term with f a
+, then the full
+curvature vanishes, consistent with (2.41). then one can solve this again for
+f a
+ab, and one obtains
+
+abea
+
+eb
+
+such that still
+
+in the curvature formula (2.34) one thus takes f i
+algebra, but the other sums over symmetries include also the translations.
+
+ab = 0, as in the original
+
+the ricci tensor is a contraction of the m-curvature
+
+r = rp
+
+(m ba)eb
+
+ea ,
+
+r = rg ,
+
+(2.45)
+
+and the eld equation of the usual pure poincare action is
+
+
+
+g z d4xg r = g (cid:16)r  1
+
+2gr(cid:17) .
+
+(2.46)
+
+in the rigid theory, a scalar does transform under lorentz rotations. in-
+deed, see (2.18) where (x) contains a lorentz rotation according to (2.13).
+this is not the case in the local theory. here, (x) is the local parameter
+for general coordinate transformations. the former rotation is thus part of
+the general coordinate transformation.
+in the local theory, scalars are in-
+variant under lorentz rotations. for other elds, the rotations exclusively
+come from the part in mab (and in a conformal theory, the full m (x) is the
+local parameter, and the special conformal transformations are not part of
+it, but are exclusively contained in (k)). e.g. for a spinor, , the covariant
+derivative is (if they do not transform under any other symmetry)
+
+da = e
+
+a (cid:16) + 1
+4 
+
+bcbc(cid:17)  .
+
+(2.47)
+
+further it is important to realize that the rotations m ab act on vectors va,
+but a local spacetime vector v is invariant. on the other hand, the general
+coordinate transformation on v has not just the v term, but also the
+term v.
+
+the following theorem is extremely useful when calculating transforma-
+
+tions [2, 3].
+
+11
+
+theorem on covariant derivatives. we dene a covariant quantity as
+one whose transformation has no derivative on a parameter. in particular, it
+has to be a world scalar such that general coordinate transformations on the
+eld do not contain a derivative on . if a covariant quantity transforms
+only into covariant quantities, then a covariant derivative (2.42) on such a
+covariant quantity is a new covariant quantity.
+this implies that transformations of a covariant quantity contain only deriva-
+tives as covariant derivatives da on other covariant quantities, or in the form
+of curvatures with lorentz indices rab.
+proof. in this proof we will allow the algebra to be open, see below. first,
+we give the conditions again in formulas, which may clarify some of the
+sentences in the statement of the proof. recall that the full set of generators
+(which correspond to indices a, b, . . .), contain translations (indices a, . . .)
+and the remaining transformations are indicated by indices i. gauge elds
+of these other symmetries may have transformation laws with other terms
+than in (2.32), in particular with matter elds. their transformations under
+the (non-translation) symmetries are
+
+hi
+
+ = i + j ha
+
+ faj
+
+i + mhi
+ .
+
+(2.48)
+
+the last term can contain covariant matter elds, but not explicit gauge
+eld (apart from ea
+
+). consider a matter eld  that transforms as
+
+ = i (ti) ,
+
+(2.49)
+
+which has thus no derivative on i. the requirement that a covariant quantity
+transforms in a covariant quantity is the statement that
+
+(ti) = j (tj ti) .
+
+first, consider the transformation of the covariant derivative
+
+the algebra is
+
+d =   hi
+
+ti .
+
+(2.50)
+
+(2.51)
+
+[(1), (2)]  = j
+
+1(cid:16)fij
+2 i
+2 i
+1 [ti, tj}  = j
+
+(2.52)
+remark that all formulas have been written in a way that they are also appli-
+cable to fermionic transformations (thus the order in which elds and param-
+eters are written, is carefully chosen). the symbol [., .} will be introduced
+
+ktk + fij
+
+ada + ij(cid:17) .
+
+12
+
+later in (4.3) the commutator can include general coordinate transforma-
+tions, which act on the  as da = e
+ad. furthermore,  is a possible
+non-closure term. the previous formulas imply
+)ti  hi
+iti  (mhi
+iti
+j ji  (mhi
+consider now the transformation of (2.42), using
+
+tj(cid:17) ti  j ea
+ada  hi
+
+d = i ti  j ha
+
+= i (cid:16)  hj
+j fji
+
+j (tj ti )
+
+)ti .
+
+hi
+
+(2.53)
+
+ faj
+
+faj
+
+then the rst term on the last line of (2.53) is cancelled and we obtain
+
+a = e
+b e
+e
+
+aeb
+
+ = i ha
+
+a fai
+
+be
+b .
+
+(2.54)
+
+da = idati  ifai
+
+ata + ihj
+
+a ji  (mhi
+
+a)ti .
+
+(2.55)
+
+consider the nal result.
+in the second term the index a is used, which
+may take the value a, with ta = da. otherwise, this term appears whenever
+a gauge eld hi
+ has in its transformation law a term which is proportional
+to the vielbein ea
+. as in our terminology on covariant quantities we did not
+consider the vierbein as a gauge eld, this term can be included in mhi
+. thus
+for closed algebras (ji = 0) the result is as follows: in the transformation
+of the covariant derivative, the derivative should not work on the parameter,
+and further terms appear only from the transformation of gauge elds that
+are not proportional to gauge elds. thus gauge elds never appear naked
+in such transformations. one only has to be careful here that the vielbein is
+not considered as a gauge eld itself.
+
+e.g. consider the calculation of the transformation of (2.47). first of all,
+remark that this would not work for d, which is not a covariant quantity.
+then, the transformations of the spin connection bc
+ can be neglected as this
+eld transforms only in the derivative of a parameter or in an explicit gauge
+eld, and the latter do not appear in the nal result due to the theorem. we
+do have to take into account that the vielbein transforms as
+
+where the . . . stand for e.g. a term ea
+it contains a derivative on the parameter. the nal result is thus
+
+ea
+
+ = ea
+
+m eb + . . . ,
+
+  ab
+(2.56)
+, which can be neglected because
+
+da = (e
+
+a  m abe
+
+= bdbda  ab
+
+b )  + e
+4bc
+
+m db  1
+13
+
+(cid:16)  1
+
+m bc(cid:17)  + . . .
+4 bc
+
+m bcda .
+
+(2.57)
+
+this shows the usefulness of the theorem: although in intermediate steps we
+omitted some terms, at the end we obtain the full result.
+
+2.5 local conformal transformations
+
+we now consider the gauging of the conformal algebra, and show how poincare
+gravity is recovered in a gauge for dilatations and special conformal trans-
+formations. the gauge elds are introduced as
+
+ha
+ ta = ea
+
+pa + 
+
+abmab + bd + f a
+
+ka .
+
+(2.58)
+
+the curvatures are
+
+r(p a) = rp
+r(m ab) = rp
+r(d) = 2[b]  4f a
+r(k a) = 2[f a
+] + 2[
+
+(p a) + 2b[ea
+]
+(m ab) + 8f [a
+[e]a
+abf]b  2b[f a
+] .
+
+[eb]
+
+]
+
+(2.59)
+
+the conventional constraint (2.38) could be imposed because the gauge eld
+ab
+ appears in the curvature multiplied by the invertible vielbein. consider-
+ing the curvatures, one can see that also the gauge eld f a
+ appears in such a
+way in the curvatures of d and m. it can be solved if we impose as second
+conventional constraint:
+
+r(p a) = 0
+r(m ab)e
+
+b = 0 .
+
+(2.60)
+
+therefore as well ab
+ are dependent elds. in the rst one there is a
+modication to (2.39) due to the term proportional to b. the solution for
+the k gauge eld is (with the denitions as in (2.45))
+
+ as f a
+
+f a
+ = 1
+
+4r
+
+a  1
+
+24rea
+ .
+
+(2.61)
+
+because of the theorem on covariant derivatives it is useful to give the
+part of the transformations of gauge elds proportional to vielbeins. these
+are (with the dots representing the transformations in other explicit gauge
+elds)
+
+m eb + . . .
+
+  ab
+kea + . . .
+
+ = dea
+ea
+b = 2a
+ = 4[a
+ab
+14
+
+keb]
+
+ + . . . .
+
+(2.62)
+
+exercise
+
+it is interesting to compare transformations of derivatives of elds in
+the rigid theory with those of covariant derivatives in conformal gravity. in
+(2.25) the second line came from the derivatives of  (rst two terms) and
+the derivative of d.
+in the gauge theory, the full x-dependent (x) is
+the parameter of general coordinate transformations. show, with the help
+of the theorem on covariant derivatives, how one re-obtains (2.25) with all
+derivatives replaced by covariant ones (and changing to a-indices).
+
+show that also in the local theory, (2.27) is the rule to determine whether
+the action with ordinary derivatives replaced by covariant derivatives, is an
+invariant.
+the transformation law of a covariant derivative determines the covariant
+box
+
+
+
+c  abdbda = ea(cid:16)da  (w + 1)bda +  abdb + 2wfa(cid:17)
+
+= e1 (  (w + 2  d)b) eg (  wb)  + w
+
+6  d
+12
+
+r  .
+
+(2.63)
+
+the latter is the well-known r/6 term in d = 4. in fact, choosing w = d
+one has a conformal invariant scalar action
+
+2  1,
+
+i = z ddx e
+
+c .
+
+(2.64)
+
+exercise: show that r ddx edada is not invariant. how does the dierence
+
+between this statement and the one in (2.29) occur?
+
+consider now that we want a poincare invariant action. then we have
+to break dilatations and special conformal transformations, as these are not
+part of the poincare algebra. considering (2.62) it is clear that the latter
+can be broken by a gauge choice
+
+k  gauge :
+
+b = 0 .
+
+(2.65)
+
+therefore, of the weyl multiplet (the multiplet of elds with the gauge
+elds of the conformal algebra), only the vielbein remains. one could take
+as gauge choice for dilatations a xed value of a scalar . and one easily
+checks that then the action (2.64) reduces to the poincare gravity action.
+
+15
+
+3 spinors in arbitrary dimensions
+
+i now present information about the cliord algebra and spinors in arbitrary
+dimensions. i will discuss arbitrary signatures of spacetime. dierent from
+many other treatments, i will not consider arguments of eld theory. e.g. in
+many other papers one uses that spinors are solutions of the dirac equation.
+that is also the case in [4], which is however the rst reference for the facts
+that i will recall.
+
+3.1 gamma matrices and their symmetry
+
+i consider arbitrary spacetime dimensions d = t+s, with t timelike directions
+and s spacelike directions, and consider the general facts of cliord algebras
+and spinors, as has been done rst in [5].
+
+the cliord algebra is
+
+ab + ba = 2ab ,
+
+(3.1)
+
+where  = diag( . . .+ . . . +), writing rst the timelike directions and then
+the spacelike ones.
+i rst give a representation of the cliord algebra for signature (0, d)
+
+(only spacelike) in terms of  matrices
+
+1 0 !
+1 =   0 1
+
+0 !
+2 =   0 i
+
+i
+
+3 =   1
+
+0
+
+0 1 ! .
+
+(3.2)
+
+the only relevant properties are 12 = i3 and cyclic, and that they square
+to 2 and are hermitian.
+
+1 = 1    . . .
+2 = 2    . . .
+3 = 3  1   . . .
+4 = 3  2   . . .
+5 = 3  3  1  . . .
+. . . = . . . .
+
+(3.3)
+
+this is for even dimensions a representation of dimension 2d/2. for odd
+dimensions, e.g. d = 5, one does not need the last 1 factor in 5, and the
+
+16
+
+dimension is still 2(d1)/2. these matrices are all hermitian.
+if there are
+t timelike directions, we just have to multiply the rst t matrices in the
+representation above by i. e.g. for the minkowski case 1 = i1   . . ..
+thus we get as hermiticity property for timelike and spacelike directions
+
+
+t = t ,
+
+
+
+s = s ,
+
+or in general
+
+a = ()taaa1 ,
+
+
+a = 1 . . . t .
+
+(3.4)
+
+(3.5)
+
+of course the realization given above is not unique. one preserves (3.1) with
+
+ = u 1u .
+
+(3.6)
+
+to respect also (3.4), u has to be unitary. a further remark on the uniqueness
+will follow in footnote 5.
+
+another important fact is that in even dimensions a complete set of
+
+2d/2  2d/2 matrices is provided by {(n)} with n = 0, 1, . . . d, and
+
+(n) = a1...an  [a1a2 . . . an] .
+
+(3.7)
+
+the last matrix (d), we write as3
+
+ = (i)d/2+t1 . . . d ,
+
+ = 1 ,
+
+(3.8)
+
+where the normalization is chosen such that the last equation holds in any
+case.  is independent on the signature of spacetime, in the sense that when
+i introduced rst the  matrices in euclidean signature, and then went to an
+arbitrary signature, i multiplied the rst t gamma matrices by i. this drops
+out again by the multiplication by (i)t in (3.8). in the representation (3.3),
+ is
+(3.9)
+
+ = 3  3  3  . . . .
+
+for even dimensions we have (the levicivita tensor  is dened in ap-
+pendix a)
+
+a1...an =
+
+a1...adid/2+tad...an+1 .
+
+(3.10)
+
+3if 0 is used as label of the time direction in minkowski space, then we have  =
+
+1
+
+(d  n)!
+
+(i)d/2+101 . . . d1.
+
+17
+
+note that  anticommutes with a and can thus be used as d+1 in the next,
+odd dimension. in odd dimensions the product of all  matrices gives 1
+or i, and a basis is formed by (n) with n = 0, 1, . . . , (d  1)/2.
+there is always a charge conjugation matrix c, such that
+
+ct = c ,
+
+t
+a = cac1 ,
+
+(3.11)
+
+for  = 1 and  = 1. a formal proof can be found in [4, 5], but i prove it
+here by giving two possibilities in the representation (3.3) for even dimensions
+
+c+ = 2  1  2  1  . . .
+c = 1  2  1  2  . . .  c+
+
+ = +1
+ = 1 .
+
+(3.12)
+
+note that they satisfy c = c = c1. for odd dimensions, only one of the two
+can be used, see table 1 below. if one changes the representation as in (3.6),
+then, to preserve (3.11), the charge conjugation matrix should transforms as
+
+c = u tcu .
+
+(3.13)
+
+therefore you see that the unitarity, c = c1, is true in any representation,
+but the charge conjugation not necessarily squares to .
+we will now deduce which signs of the two variables  and  are allowed
+
+for each value of s and t. first remark that
+
+(cid:16)c(n)(cid:17)t
+
+= ()n(n1)/2()nc(n) .
+
+(3.14)
+
+this has a periodicity of n  n+4. this periodicity implies that the number
+of symmetric matrices should be the sum of lines of the following formulae
+
+0! + d
+ d
+1! + d
+ d
+2! + d
+ d
+3! + d
+ d
+
+4! + . . . = 2d2 + 2d/21 cos
+5! + . . . = 2d2 + 2d/21 sin
+6! + . . . = 2d2  2d/21 cos
+7! + . . . = 2d2  2d/21 sin
+
+d
+4
+d
+4
+d
+4
+d
+4
+
+18
+
+.
+
+(3.15)
+
+on the other hand we can count that there should be
+
+2[int d
+
+2[int d
+
+2 ]1(cid:18)2[int d
+2 ]1(cid:18)2[int d
+
+2 ] + 1(cid:19)
+2 ]  1(cid:19)
+
+symmetric matrices
+
+antisymmetric matrices.
+
+(3.16)
+
+for odd dimensions, there is a unique solution. for even dimensions, two of
+the lines in (3.15) are equal, and there are thus two possibilities for which
+matrices are symmetric. this corresponds to the two possibilities for the
+charge conjugation matrix in that case. the result is given in table 1.
+
+d (mod 8)
+
+0
+
+1
+2
+
+3
+4
+
+5
+6
+
+7
+
+s
+0,3
+0,1
+0,1
+1,0
+1,2
+1,2
+2,1
+2,3
+2,3
+3,2
+3,0
+0,3
+
+
+
+a
+
+2,1 1 +1
+2,3 1 1
+2,3 1 1
+3,2 1 1
+3,0 +1 +1
+0,3 +1 +1
+0,3 +1 +1
+0,1 +1 1
+0,1 +1 1
+1,0 +1 1
+1,2 1 +1
+1,2 1 +1
+
+table 1: for all dimensions (modulo 8) one nds which c(n) should be
+symmetric (s) and antisymmetric (a). these values of n are modulo 4).
+this determines signs of  and .
+
+exercise
+
+check with the explicit representation the signs of  and  for the two
+possible charge conjugation matrices in 4 dimensions. then consider the fth
+gamma matrix, and see that the (3.11) only holds for one choice of c.
+
+3.2
+
+irreducible spinors
+
+we still do not know whether the spinor is irreducible. there are two types
+of projections that one can envisage. the rst is only for even dimensions,
+
+19
+
+where we have  available as in (3.8). we can thus dene left and right
+spinors. for deniteness we take
+
+l = 1
+
+2 (1 + )  ,
+
+r = 1
+
+2 (1  )  .
+
+(3.17)
+
+e.g. in four dimensional minkowski space (s = 3, t = 1) we dene4
+
+5 =  = i0123 ,
+
+l = 1
+
+2(1 + 5) ,
+
+r = 1
+
+2(1  5) .
+
+(3.18)
+
+the second possible projection is a reality condition. consider rst the
+
+reality properties of the  matrices. combining (3.5) and (3.11), we have5
+
+
+a = ()tbab1 ,
+
+bt = ca1 .
+
+as a and c are unitary, we nd that also b is unitary. one obtains
+
+bb = t()t(t+1)/2 .
+
+(3.19)
+
+(3.20)
+
+to prove this equation, see rst that internal consistency of (3.5) implies that
+
+at = tca1c1 = ()t(t+1)/2tcac1 .
+
+let us now try to put a reality condition on spinors
+
+ = b ,
+
+(3.21)
+
+(3.22)
+
+for some matrix b. first of all we want consistency with lorentz transfor-
+mations, i.e. taking the lorentz transformation of both sides
+
+4 ab(cid:17)
+(cid:16) 1
+babb1 b = bab ,
+
+=  1
+
+bab
+
+4
+
+and therefore we take
+
+b = b .
+
+
+
+(3.23)
+
+(3.24)
+
+4for 4 dimensional minkowski space we write 0,. . . , 3 in stead of 1,. . . ,4.
+5here we can give some remark on the uniqueness of the cliord algebra representation.
+it is clear that  can also be used as representations of the cliord algebra. the
+equation (3.19), which for even dimensions holds for two possibilities of , implies that in
+even dimensions these representations are unitary equivalent with the original one. the
+fact that for odd dimensions only one sign of  can be used implies that in odd dimensions
+there are two unitary inequivalent representations.
+
+20
+
+for consistency,  = , (3.22) implies that b b = 1. combining this with
+(3.20) gives || = 1 and the right hand side of (3.20) should be 1. it
+turns out that this condition is satised for
+
+s  t = 0, 1, 7 mod 8
+s  t = 2 mod 8 with  = +1
+s  t = 6 mod 8 with  = 1 .
+
+(3.25)
+
+exercise: check that this can be summarized as: the charge conjugation is
+symmetric in an euclidean space with s  t spacelike dimensions.
+in these cases, we can thus dene a reality condition as in (3.22), and such
+spinors will be denoted as majorana spinors. another way of expressing
+the majorana condition is that the majorana conjugate equals the dirac
+conjugate. they are respectively
+  tc ,
+
+c  a1 .
+
+(3.26)
+
+majorana spinors can thus be thought as spinors 1 + i2, where 1 and
+2 have real components, but these are related by the above condition. the
+exact value , if it is of modulus 1, is irrelevant for our purpose here. however,
+
+to this issue in section 3.4.
+
+it determines whether e.g.  or r ddx  6 is hermitian. we will come back
+consider now that the right had side of (3.20) is not 1, thus 1. then
+there is still another possibility if we have extended supersymmetry. indeed,
+then one can dene a symplectic majorana condition
+
+
+
+i  (cid:16)i(cid:17)
+
+= bijj ,
+
+(3.27)
+
+where  is some antisymmetric matrix, with  = 1. this is e.g. the way
+to have real spinors in d = 6 minkowski space.
+having two projections, to chiral spinors and to majorana spinors, one
+may ask whether they can be combined, i.e. can we dene a reality condition
+respecting the chiral projection. as () = ()d/2+tbb1 the condition is
+that d/2 + t = 0 mod 2, i.e.
+
+mw spinor : s  t = 0 mod 4 .
+
+(3.28)
+
+table 2 gives the resulting possibilities, and its caption gives a summary.
+
+21
+
+0
+
+1
+
+2
+
+3
+
+m
+m
+
+d \ t
+1
+2
+3
+4
+5
+m+
+6
+7
+m
+8
+mw
+9
+m
+10 m
+11
+12
+
+1 m
+2 mw
+4 m
+smw 4 m+
+
+1
+1 m+
+2 m
+4 mw
+8
+8 m
+8 smw 8 m
+8
+8 m
+16 m
+32 mw 16 m+
+32 m
+64 m
+smw 64 m+
+64 mw 32 m
+
+2
+2
+2 m
+4 m
+8 mw
+16
+16 m
+16 smw 16 m+
+16
+
+4
+4
+4
+4
+8
+16
+32
+32
+32 smw 32
+64
+32
+64
+
+table 2: possible spinors in various dimensions, and for various number
+of time directions (modulo 4). m stands for majorana spinors. for even
+dimensions, m  indicates which sign of  should be used. mw indicates the
+possibility of majoranaweyl spinors. for even dimensions one can always
+have weyl spinors. symplectic majorana spinors are always possible when
+the majorana condition is not possible. smw indicates the possibility of
+symplectic majoranaweyl spinors. the number indicates the real dimension
+of the minimal spinor.
+
+3.3
+
+4 dimensions
+
+as an example take the minkowski space in 4 dimensions. in order to have
+majorana spinors we choose  = 1, and hence  = 1. there exists a majorana
+representation where the matrices  are real:
+
+3
+
+0 = (cid:18) 0
+0 (cid:19) ,
+3
+0  2(cid:19) ,
+3 = (cid:18) 2
+
+0
+
+1 = (cid:18) 0
+ 2
+0 (cid:19) ,
+ 2
+5 = (cid:18) 0 i1
+0 (cid:19) .
+i1
+
+2 = (cid:18) 0 i2
+
+0 (cid:19) ,
+
+i2
+
+(3.29)
+
+the charge conjugation matrix is proportional to 0, say c = z0, with
+|z| = 1. as a = 0, the majorana condition is  = z. thus with an
+appropriate choice of signs, z = 1, majorana spinors are just pure real
+spinors in this basis.
+
+22
+
+in another representation that i present now, 5 is diagonal. that basis is
+useful to have manifestly chiral spinors. these are then just spinors that have
+only two upper components a, while antichiral have two lower components,
+denoted as  a, (where a and a can be 1 or 2). the explicit realization is
+0 = (cid:18) 0
+0  2(cid:19) . (3.30)
+
+i = (cid:18) 0 ii
+
+5 = (cid:18) 2
+
+0 (cid:19) ,
+
+0 (cid:19) ,
+
+i 2
+
+i 2
+
+ii
+
+0
+
+and with this choice
+
+c = (cid:18) 
+
+0
+
+0 (cid:19) ,
+
+with
+
+ = (cid:18) 0
+1
+
+1
+
+0(cid:19) .
+
+(3.31)
+
+this basis makes the connection to the 2-component formalism easy. in that
+formulation, indices are raised or lowered with  in a nw-se convention
+
+a = abb ,
+
+a = bba ,
+
+(3.32)
+
+which implies abbc = a
+( a,  a) is then
+
+c, and the majorana condition for a spinor
+
+a = ( a) .
+
+(3.33)
+
+i do not use this convention, but use chiral spinors, avoiding the indices.
+
+a third representation that is often used, has diagonal 0.
+
+0
+
+0 i 2(cid:19) ,
+
+i = (cid:18) 0 ii
+
+ 2
+0 = (cid:18) i 2
+0 (cid:19) .
+(3.34)
+the charge conjugation is c = 02 and the majorana condition amounts to
+(3.35)
+
+5 = (cid:18) 0
+ 2
+
+0 (cid:19) ,
+
+ii
+
+ = (cid:18) 0 2
+
+0 (cid:19)  .
+
+2
+
+3.4 technical tips
+
+3.4.1 complex conjugation
+
+to consider complex conjugation in practice, it is useful to consider the op-
+eration c, dened by
+
+this is thus chosen such that the majorana spinors are those for which c =
+. note that the bar operation, dened by the rst equation of (3.26), on
+
+c  1b1 .
+
+(3.36)
+
+23
+
+c gives c as dened in the second equation of (3.26). the square of this
+operation gives the identity (c)c =  if the right hand side of (3.20) is 1.
+in case that this is 1, we should modify the denition of the c operation
+similar to (3.27). one can check, using (3.21), that
+
+ = tcb1 .
+
+(3.37)
+
+we are now equipped to discuss complex conjugation of bi-spinors. first
+of all, we still have to determine whether complex conjugation changes the
+order of fermions or not.
+in fact, both types of complex conjugation are
+possible. i introduce a new sign factor to reect this choice, say . thus for
+two fermionic quantities,
+
+() =  =  ,
+
+ = 1 .
+
+(3.38)
+
+consider now the complex conjugation of m, where m is some matrix in
+spinor space. with the previous equations one easily nds
+
+( m) = 2t cb1m bc .
+
+(3.39)
+
+we can thus choose in any case  appropriate in order that e.g.  is real.
+then we dene m c  b1m b, thus e.g.
+c
+ = ()d/2+t ,
+
+c
+a = ()ta
+
+(3.40)
+
+the latter for even dimensions.
+rule: to perform complex conjugation of a bispinor, rst add a factor 2t
+and then replace elds and matrices by their c-conjugates, for which (3.40)
+gives the important relations.
+
+as an example consider minkowski spaces where  =  = 1, thus in
+dimensions d = 2, 3, 4 mod 8, containing 4, 10 and 11 dimensions. we
+choose  according to the convention on complex conjugation of bi-spinors
+as 2 = 1. then (3.39) implies that we can perform complex conjugation
+by using the c operation. majorana spinors are thus considered as just real,
+and the same applies for the ordinary gamma matrices. however 5, the
+ in 4 dimensions, behaves as a pure imaginary matrix. in 10 dimensions
+this matrix can also be considered as real, which reects the possibility of
+majoranaweyl spinors in that dimension.
+exercise:
+
+24
+
+see how this should be set up in the case of symplectic majorana spinors.
+
+in extended supergravity in 4 dimensions, the chirality is indicated by the
+position of the i, j index (index running over 1, . . . n for n-extended super-
+gravity). see e.g. (4.6). the choice of chirality for the spinor with an upper
+(lower) index can change for each spinor. it is chosen conveniently on the
+rst occurrence of the spinor. with the rules of the c operation, we see that
+h.c. eectively interchanges upper and lower indices. the chiral spinor qi is
+not a majorana spinor. check that (qi)c = qi.
+
+3.4.2 gamma matrix manipulations
+
+i still give some useful identities for calculations in arbitrary dimensions [6].
+for a product of two antisymmetrized gamma matrices, one can use
+
+i+j
+
+xk=|ij|
+
+a1...aib1...bj =
+
+s = 1
+
+2(i + j  k) ,
+
+i!j!
+s!t!u!
+
+t = 1
+
+[b1
+[ai    bs
+2(i  j + k) ,
+
+at+1a1...at]
+
+bs+1...bj]
+
+(3.41)
+
+u = 1
+
+2(i + j + k) .
+
+in [6] a few extra rules are given and a diagrammatic technique is explained
+that is based on the work of kennedy [7].
+
+for contractions of repeated gamma matrices, one has the formula
+
+b1...bka1...ab1...bk = ck,a1...a
+min(k,)
+xi
+
+ck, = ()k(k1)/2k!()k
+
+i! d  
+ 
+
+k  i!()i ,
+
+(3.42)
+
+for which tables were given in [6] in dimensions 4, 10, 11 and 12, and which
+can be easily obtained from a computer programme.
+
+further, there is the fierz relation. we know that the gamma matrices
+are matrices in dimension  = 2int d/2, and that a basis of    matrices
+is given by the set
+
+{ , a, a1a2, . . . , a1...a[d]}
+
+where
+
+( [d] = d
+for even d
+[d] = (d  1)/2 for odd d ,
+(3.43)
+
+25
+
+of which only the rst has nonzero trace. this is the basis of the general
+fierz formula for an arbitrary matrix m in spinor space:
+
+[d]
+
+m
+
+ =
+
+()k(k1)/2k! (a1...ak )
+
+xk=0
+
+ tr (a1...ak m) .
+
+(3.44)
+
+more useful fierz identities can be found in [7].
+
+3.4.3 spinor indices
+
+in these notes, i mostly omit spinor indices. however, in some applications,
+this is dicult to accomplish or one prefers spinor indices. i will give here a
+way to include spinor indices in a practical way, independent of the dimension
+of spacetime. first of all, spinors get a lower spinor index. so for a spinor , i
+write . gamma matrices act on these spinors, and therefore the expression
+. note the position of the spinor indices on a usual
+a becomes (a)
+gamma matrix. this is then the same for products of gamma matrices.
+
+then i want to be able to raise and lower indices. indeed, e.g. to discuss
+ can not be used, as we can not
+symmetries of gamma matrices, the (a)
+interchange upper and lower indices. to that purpose, i introduce matrices
+c and c, which will be related to the charge conjugation matrix below.
+the convention that i adopt, is that i raise and lower indices always in the
+northwestsoutheast (nw-se) convention. that means that the contrac-
+tion indices should appear in that relative position, i.e.
+
+ = c ,
+
+ = c .
+
+in order for these two equations to be consistent, we should have
+
+cc = 
+ ,
+
+cc = 
+ .
+
+(3.45)
+
+(3.46)
+
+i choose the identications such that the majorana conjugate  is written
+as . comparing (3.45) and (3.26), we conclude that c is ct , and c
+is then c1. one may check that the symmetries of c(n) or (n)c1, which
+were discussed before, is now the symmetry of (a) or (a).
+exercise : check that  =  =  where the sign is , i.e. +()
+if the charge conjugation matrix is (anti)symmetric. the same is true for
+spinor indices at any place: (a)
+
+ = (a).
+
+26
+
+4 supersymmetry algebras
+
+4.1 haag lopuszanskysohnius result as introduction
+
+after the introduction with bosonic symmetries, and the recapitulation of
+spinor properties, i can nally consider fermionic symmetries. this means
+that the parameters of some transformations can be anticommuting numbers.
+for the generators we then have anticommutators rather than commutators.
+indeed, consider
+
+(4.1)
+for anticommuting parameters a and hence operators qa, which i will denote
+further as odd, distinguishing them from the bosonic even operators. we
+have then
+
+() = aqa ,
+
+[(1), (2)] = b
+
+2 a
+
+1 (qaqb + qbqa)  b
+
+2 a
+
+1 {qa, qb} .
+
+(4.2)
+
+here, i introduced a notation for the anticommutator, and i also introduce
+a general notation
+
+[ta, tb} = tatb  ()abtbta .
+
+(4.3)
+
+the notation [,} is a commutator except when both operators are odd, when
+it is an anticommutator. in the notation ()a one should thus understand
+a as an even number, e.g. 0, if ta is even, and a as an odd number, e.g. 1,
+if ta is odd.
+
+these algebras should also satisfy a jacobi identity. keeping the param-
+eters in place, such a jacobi identity takes the same form as the pure bosonic
+one:
+
+removing the parameters, signs appear, but an easy form to remember is
+
+[[ta, tb} , tc} = [ta, [tb, tc}}  ()ab [tb, [ta, tc}} .
+
+(4.5)
+
+the last sign factor just reects the symmetry of the commutator in the
+left-hand side.
+
+these denitions lead to a lot of extensions of algebras. we will come
+back to the mathematical part in section 4.6. first we consider the phys-
+ical input. as a generalisation of the result of [1], reviewed in section 2.1,
+haag,  lopuszansky and sohnius [8] considered the same question allowing
+
+27
+
+ha
+1 ta,hb
+
+2 tb, c
+
+3 tcii + cyclic in 1, 2, 3 = 0 .
+
+(4.4)
+
+for fermionic symmetries. as for [1], their result contained two parts: one
+general possibility (which we will label as the super-poincare algebra), and
+one for massless elds only, the superconformal algebras. an important part
+of their result is that super-poincare algebras may contain central charges,
+which we will discuss in section 4.4. they did suppose a at space, but we
+are also interested in the possibility of a curved space, i.e. the super-(anti)
+de sitter algebras.
+
+first i will give some qualitative remarks on supersymmetry in general.
+then i will consider the super-poincarealgebras, rst without central charges
+in section 4.3, then with central charges in section 4.4. i will turn to super-
+anti-de sitter algebras in section 4.5, but will have to interrupt that analysis
+to give an overview of simple superalgebras in general (section 4.6). finally
+i will turn to the superconformal algebras in section 4.7.
+
+4.2 basic properties of poincare supersymmetry
+
+in general the algebra contains respectively the poincare, conformal or (anti)
+de sitter algebra, and a number of (lorentz) scalar generators on the even
+side, and spin-1/2 odd generators. for the poincare case these are generators
+qi
+, where  is a spinor index, and i is a representation index for some part
+of the bosonic scalar generators outside of the poincare algebra. remember
+that the whole discussion here is in 4 dimensions, where the spinors can be
+split in a left and a right chirality, which we indicate by the position of the
+i index:
+
+qi
+
+ = 1
+
+2(1  5)
+
+qi
+
+ ,
+
+qi = 1
+
+2 (1 + 5)
+
+qi .
+
+their anticommutator takes the form
+
+{qi
+
+, qj} = (cid:16)c1(cid:17)
+
+pi
+j ,
+
+(4.6)
+
+(4.7)
+
+and i will return to the meaning of the charge conjugation matrix, c, in
+section 3. this is the dening relation of supersymmetries: they square to
+the translations. one of the consequences is that it has a dimension 1/2,
+where the dimension of translations is conventionally taken to be 1, i.e. as a
+mass dimension. so e.g. if a scalar  of dimension 1 transforms in a fermion6
+
+6spinor indices are deleted, and details of the notation will follow later.
+
+q =  ,
+
+(4.8)
+
+28
+
+then, as  has dimension 1/2, the dimension of  is 1/2 higher than that of ,
+and its supersymmetry transformation contains  always with a derivative or
+a mass. of course, in minimal actions of scalars and spinors, the former have
+dimension 1, and the latter 3/2, so we are not unhappy with this conclusion.
+theorem: there are an equal number of bosonic and fermionic degrees of
+freedom in any realization of the supersymmetry algebra when translations
+are an invertible operation.
+consider the commutator (4.7) on the space of all bosons. the rst q trans-
+forms the space to a space of fermions, while the second one brings us back
+to bosons, translated by p.
+
+bosons
+
+q
+
+ fermions
+
+q
+
+ bosons translated by p
+
+the latter is an invertible operator, which proves that the last space is as
+large as the rst one, and thus also the middle one, the space of the fermions
+has the same dimension. this proves the well-known fact that there are an
+equal number of bosonic and of fermionic states. it should hold when the
+algebra (4.7) holds. so this equality of bosonic and fermionic states should
+hold e.g. for on-shell states, but also for o-shell states if the algebra is also
+realized o-shell. on the other hand, it is not a general fact of a superalgebra.
+one needs the invertibility of the square of fermionic generators. this does
+not hold for massless states in an euclidean spacetime, or in 1 dimension.
+in these cases the p 2 = 0 condition for a massless state implies p = 0, and
+there is thus no invertibility.
+
+4.3 super-poincare algebras
+
+now we can study the superalgebras which are important in supersymmetry.
+i start with the result of [8] in 4 dimensions. apart from the bosonic poincare
+algebra (2.1), and the dening relation of supersymmetry (4.7), there is of
+course the statement that the supersymmetries are spinors under the lorentz
+group7:
+
+[m, qi
+
+ ] =  1
+
+4 ()
+
+qi
+
+ .
+
+(4.9)
+
+the supersymmetries may also rotate under an automorphism group ta:
+
+[ta, qi
+
+ ] = (ua)i
+
+jqj
+
+ ,
+
+[ta, qi ] = (ua)i
+
+jqj .
+
+(4.10)
+
+7 as the reader probably already noticed, we denote  matrices in 4 dimensions as 
+
+29
+
+the latter equation is obtained from the former by complex conjugation,
+thus the complex conjugate of (ua)i
+j, consistent with
+the rule mentioned at the end of section 3.4.1. the jacobi identity [t t q]
+implies that these matrices form a representation of the algebra of the ta.
+and as ta has to commute with p, as follows already from the coleman
+mandula result, it is easy to check that the [t qiqj] jacobi identity implies
+that
+
+j is denoted as (ua)i
+
+.
+
+(4.11)
+
+(ua)i
+
+j = (ua)j
+
+i  (cid:16)(ua)j
+
+i(cid:17)
+
+thus these are unitary matrices and the automorphism group is u(n), for
+i = 1, . . . , n.
+
+we can make a general statement about the isometry groups in view of
+table 2. the 4-dimensional t = 1 example is general for even dimensions
+where no majoranaweyl spinor is possible, thus indicated by m in the ta-
+ble. then the automorphism group is u(n).
+in fact, in this formulation
+we have not used the majorana property, but rather the weyl-spinor for-
+mulation. in all even dimensions we can use weyl spinors, and this leads
+to spinors of the same dimension as the majorana ones (they are the same
+in another notation). if we would have the possibility of majoranaweyl,
+then there is an extra reality condition, and we have two factors as automor-
+phism groups of the left and right spinors, i.e. we obtain so(nl) so(nr).
+for odd dimensions, we can not use the chiral formulation, and if there are
+majorana spinors, the result is so(n).
+if there are symplectic majorana
+conditions, then the same argument of the jacobi identity [t qq] leads to
+the preservation of the symplectic metric, and the automorphism algebra is
+thus reduced to usp(n) (even n)8. if there is a smw spinor, then there are
+two such factors. in summary, the automorphism groups are obtained from
+the entries of table 2:
+
+m and d odd
+m and d even
+mw
+
+s (empty in table)
+
+smw
+
+: so(n)
+: u(n)
+: so(nl)  so(nr)
+: usp(n)
+: usp(nl)  usp(nr) .
+
+(4.12)
+
+we can now write a list of supersymmetry theories in minkowski spaces of
+
+8there is often confusion about the notation of sp groups. we use notation such that
+
+sp(2) is the smallest symplectic group, see section 4.6.
+
+30
+
+various dimensions and with various extensions. table 3, which i essentially
+
+d \ q
+11
+
+10
+
+9
+
+8
+
+7
+
+6
+
+5
+
+4
+
+32
+x
+
+16
+
+8
+
+4
+
+iib
+(2, 0)
+
+iia
+(1, 1)
+
+i
+
+(1, 0)
+
+x
+
+x
+
+x
+
+x
+
+x
+
+x
+
+(2, 2)
+
+(2, 0) (1, 1)
+
+(1, 0)
+
+x
+
+x
+
+x
+
+n = 8
+
+n = 4
+
+n = 2 n = 1
+
+table 3: pure supergravity theories in dimensions 4  d  11 with the
+in
+number of independent supercharges equal to q = 32, 16, 8 and 4.
+3 spacetime dimensions, pure supergravity does not describe propagating
+degrees of freedom and is a topological theory.
+
+copied from [9], gives an overview of possible supersymmetry models9. this
+follows mainly from table 2. the limit of 32 supercharges comes from the
+requirement that one can not construct eld theories with helicities larger
+than 2. i have not explained representations of the algebras, and therefore
+can not really prove this. however, one can understand that in 4 dimensions
+any supersymmetry raises or lowers the helicity by 1/2. therefore with n = 8
+we already ll the whole range from 2 to 2. similarly rigid supersymmetry
+models are only possible for n  4, i.e. q  16. we still remark that other
+values of q, i.e. q = 12, 20, 24, are also possible in d = 4, but are rarely used.
+let me summarize the result for the super poincare algebras in 4 di-
+mensions, omitting the automorphisms (as can consistently be done for the
+super-poincare case):
+
+[m, m ] = 2[
+[p, m ] = [p] ,
+
+[m]
+
+] ,
+
+9note that the theories are not always unique. certainly if one allows arbitrary signs
+
+in kinetic terms for some elds.
+
+31
+
+[p, p ] = 0
+{qi
+[m, qi
+
+, qj} = (cid:16)c1(cid:17)
+
+(q)i
+
+
+1
+ ] = 
+4
+ ] = 0 .
+
+[p, qi
+
+pi
+j
+
+(4.13)
+
+remark that we may also consistently remove the lorentz algebra generators
+m. thus the algebra is a semi direct sum of the part with p and q only,
+with the lorentz algebra and with the automorphism algebra.
+
+let us check the reality property of the anticommutator of 2 supersym-
+metries, and generalize to other dimensions and signatures. complex conju-
+gation gives
+
+2bn(qi)c, (qj)co bt = ()tbc 1bt tp  ,
+
+(4.14)
+
+where spinor indices are implicit. the factor  results from the fact that
+complex conjugation may changes the order of fermions if  = 1. note
+that it does not change the order in which the generators act. thus there
+is only that factor, but the operators keep their order. the  spinor index,
+which was explicit in (4.7), is at the right side of the equation, and that is
+the reason of bt at the end of the left hand side, as q
+. for
+the right hand side of (4.14), i used
+
+ = qc
+
+ (bt )
+
+c1, = ct = tbc1bt ,
+
+(4.15)
+
+and the bosonic operators are real. remark that if we move the t to the
+left hand side, we nd here again the factors of (3.39) and (3.40). such
+commutators in general behave as bi-spinors, as one can imagine multiplying
+them with spinor parameters at the left and right. thus they follow the rule
+mentioned at page 24.
+
+the symmetry of the commutator (and of c1) implies that in the right
+
+hand side in 4 dimensions we can use
+
+n(qi)c, (qj)co = nqi, qjo = nqj, qio .
+
+(4.16)
+
+then the reality consistency is proven if we take (for minkowski spaces with
+ = 1) conventions with
+
+2 = 1 .
+
+32
+
+(4.17)
+
+with these methods it is easy to check how this can be generalised to
+other dimensions, with other types of spinors. e.g. in d = 11 (minkowski,
+t = 1) there are no chiral spinors, and we just have
+
+{q, q} = (cid:16)c1(cid:17)
+
+p .
+
+(4.18)
+
+the reality goes as above, one can just neglect the i indices.
+
+in d = 10 one can have majoranaweyl spinors. for having a similar
+{q, q} = p anticommutator, the p  should thus appear in the anticom-
+mutator between two supersymmetries of the same chirality. one can ask
+in general the question whether one can have the translations p in the
+right hand side of the anticommutator between two chiral supersymmetries
+{ql, ql}. if that is the case, then
+
+{ql, ql} = 1
+= 1
+
+1
+
+2 (1 + )t
+
+2 (1 + ) c1p
+4 (1 + )(cid:16)1  ()d/2(cid:17) pc1
+4 (cid:16)1  ()d/2(cid:17) (1 + ) c1p ,
+
+= 1
+
+where i used that
+
+t
+ = (i)d/2+tt
+
+d . . . t
+
+1 = (i)d/2+tcd . . . 1c1
+
+= ()d/2cc1 .
+
+(4.19)
+
+thus d/2 should be odd, as it is the case in 10 dimensions.
+if there is
+one such chiral supersymmetry, we denote this as (1, 0) supersymmetry. if
+there are two, then this is (2, 0) (which is usually called iib). there can
+be two supersymmetries of opposite chirality which is denoted as (1, 1), or
+iia supersymmetry. remark that the result (4.19) also checks that in 4
+dimensions the p does not appear in the anticommutator of 2 generators of
+the same chirality, but, as immediately shown in (4.7), in the anticommutator
+of a chiral and an antichiral supersymmetry.
+exercise. check that for d/2 even, consistency is obtained if p appears in
+the anticommutator of a chiral with an antichiral supersymmetry. further
+check that for d/2 odd, the anticommutator of two supersymmetries of the
+same chirality can only have (n)c1 for n odd, while for opposite chirality
+n should be even. this is reversed for d/2 even.
+an important consequence of supersymmetry, which we did not mention yet,
+is contained in the positivity statements of the energy. to consider these, we
+
+33
+
+want the anticommutator between a supersymmetry and its complex conju-
+gate:
+
+(4.20)
+
+{qi, (qj)} = nqi, (qj)co bt = j
+
+i a1p  ,
+
+where the i, j indices are put as for d = 4, but one can forget them for
+e.g. d = 11. the left hand side is real and positive denite if we do not
+interchange spinors in complex conjugation ( = 1). then we can choose
+ = 1, consistent with (4.17). for  = 1 the left hand side is imaginary,
+but  is then an imaginary unit. we can therefore conclude that we can
+choose , consistent with (4.17), such that
+
+1 {qi, (qj)}  0 .
+
+(4.21)
+
+as a = 0 in minkowski spaces, this exhibits the positive energy statements
+in supersymmetry. for a state at rest, i.e. p  = 
+0 m, this implies m  0.
+
+4.4 poincare algebras with central charges
+
+finally we come to an extra possibility, which are the central charges. they
+have been found in the classication of haag lopuszanskysohnius [8], and
+were realized in the massive (and short) hypermultiplets in [10]. this was
+in 4-dimensional minkowski space, to which we will restrict rst, before dis-
+cussing the generalization to higher dimensions.
+
+i did not yet give the commutator of two supersymmetries of equal chi-
+rality. as i do not want new symmetries with lorentz indices, the general
+possibility is
+
+ m
+
+ij zm ,
+
+{qi, qj} = c1
+
+(4.22)
+where m labels dierent central charges z m , characterized by independent
+antisymmetric matrices m
+ij . indeed, the properties of spinors imply that m
+ij
+should be antisymmetric. now one has to check all jacobi identities, and at
+the end one obtains that these z m should commute with all other generators
+including the supersymmetries. therefore, these are called central charges.
+considering nally [t qq], we nd a restriction on the automorphism group.
+indeed, one obtains
+
+ui
+
+kkj  ikuj
+
+k = 0 .
+
+(4.23)
+
+let us consider as an example n = 2. then for ij, there is only ij,
+as this is the only antisymmetric tensor. we thus have 1 (complex) central
+charge:
+
+{qi, qj} = c1
+
+ ijz .
+
+34
+
+(4.24)
+
+if there is such a central charge, then the automorphism group is not u(2),
+but rather the u(1)  u(1) which commutes with ij.
+central charges are essential in various application due to the modied
+positivity statements. indeed, the modied algebra allows us to obtain an-
+other positivity condition.
+
+i will show the argument for n = 2, but it can easily be generalized. the
+
+complex conjugate of (4.24) is10
+
+to diagonalize the set of anticommutators for the supersymmetries, i dene
+
+nqi, qjo = ijcz  .
+
+(4.25)
+
+(4.26)
+
+(4.27)
+
+(4.28)
+
+ai  qi + 1eiijc1
+
+ qj ,
+
+where ei is an arbitrary phase factor. the complex conjugate is
+ai  (ai) = qi + eiijqjc = eiijajc .
+
+consider now their anticommutators on a state for which p  = 
+
+0 m:
+
+1nai, ajo = j
+i 
+
+(2m + zei + z ei) .
+
+as the left hand side is a positive denite operator, the right hand side should
+be positive for all , which shows that
+
+m  |z| .
+
+(4.29)
+
+this is an important result, giving a lower limit to the mass, dependent on
+the central charge. this is called the bps bound. one can now also see
+that if the equality is satised for a state (a bps state), then that state is
+invariant under part of the supersymmetry generators. that state preserves
+thus part of the supersymmetry. another role of the central charges, is that
+one can have supersymmetry multiplets with central charges such that the
+bound is saturated. such multiplets have less components than others, and
+are therefore called short multiplets. these are the characteristics of algebras
+with central charges.
+
+knowing of this possibility of central charges in 4 dimensions, one may
+try to generalize it to higher dimensions. one looks again for generators
+10i use here qi  (qi). the tensor ij is the same as ij, namely 12 = 12 = 1,
+
+but i write one or the other according to the index structure of the equation.
+
+35
+
+in the {q, q} anticommutator. this was rst considered in the rheonomic
+approach to d = 11 supergravity [11], for solving d = 10 super-yangmills
+superspace constraints [12], and while looking for superconformal algebras in
+higher dimensions [6]. the presence of these operators will lead to positivity
+bounds, similar to the one that we found in n = 2, d = 4.
+
+consider as an example d = 11, with one supersymmetry. in the {q, q}
+
+anticommutator one can think of all sorts of objects
+
+{q, q} = xn (cid:16)(n)c1(cid:17)
+
+z(n) .
+
+(4.30)
+
+but of course, the right hand side should also be symmetric. considering
+table 1, we see that this restricts us already to n = 1, 2 mod 4, and for an
+odd dimension, the independent ones are those up to n = (d  1)/2. this
+implies that we have at most
+
+{q, q} = (cid:16)c1(cid:17)
+
+p +(cid:16)c1(cid:17)
+
+z 2
+
+ +(cid:16)c1(cid:17)
+
+z 5
+
+ . (4.31)
+
+the z 2 and z 5 are thus new generators in this anticommutator. in fact, they
+are not central in the algebra, i.e. they do not commute with all the other
+generators. as they have spacetime indices, they do not commute with the
+lorentz rotations. the terminology which is in use, refers to the fact that
+these generators have the same physical consequences as the real central
+charges in 4 dimensions, i.e. they lead to bps bounds similar to (4.29), with
+the limit obtained by states which preserve part of the supersymmetry.
+
+in 4 dimensions the scalar central charges are gauged by a vector, and
+the charges are produced by a particle. in 11 dimensions various solutions
+produce such charges, e.g. m2 or m5 branes, as has be reviewed by j. gomis
+in this school, and i refer the reader to [13, 14].
+
+4.5 super-anti-de sitter algebras
+
+remember that in the bosonic case, the poincare algebra is not a simple
+algebra, but a contraction r   of the simple (anti) de sitter algebra
+(2.2). the same will apply for the corresponding superalgebras. but in this
+section we will rst go step by step to construct a super anti-de sitter algebra.
+due to the last commutator of (2.2), we nd that we need a modica-
+tion with respect to the super-poincare algebra to satisfy the jacobi identity
+[p, p, q], see (4.5). indeed, it can not be satised anymore with [p, q] = 0.
+
+36
+
+for covariance (or consistency with lorentz transformations, i.e. [m, p, q]
+jacobi), we should have (at least for n = 1)
+
+[p, q] = xq ,
+
+(4.32)
+
+where x is an arbitrary number. but taking the complex conjugate and using
+(3.22) and (3.19) we obtain
+
+continuing with the [p, p, q] jacobi identity, we get (using (2.2))
+
+x = ()tx .
+
+x2 =
+
+1
+
+16 r2 .
+
+(4.33)
+
+(4.34)
+
+specifying to t = 1, we thus nd that for  = 1, which is e.g. the case in
+d = 11 and d = 4 if there are majorana spinors, x should be real. thus r2 is
+positive, and this implies, see the discussion following (2.2), that we can only
+have the anti-de sitter algebra, rather than de sitter. indeed, the de sitter
+algebra would require r2 < 0, which is not consistent with (4.34) and real x.
+for n = 1 in d = 4 or d = 11 this thus proves that one should consider anti-
+de sitter, rather than de sitter algebras. for extended supersymmetry, one
+could have introduced an antisymmetric matrix in the ij indices in (4.32),
+and my arguments for anti-de sitter are thus not complete. for d = 10 with
+n = 1 chiral supersymmetry one can not have either de sitter nor anti-de
+sitter, as (4.32) is not consistent with the chirality projection.
+
+continuing in this way with jacobi identities [6], we obtain the following
+
+result for d = 4, n = 1:
+
+{ql, qr} = (cid:16)c1(cid:17)
+4 q
+
+[p, q] = xq
+[m, q] =  1
+
+p + 2x(cid:16)c1(cid:17)
+
+m
+
+[m, m] = [m]  [m]
+[p, m] = [p]
+
+[p, p] = 8 x2 m ,
+
+(4.35)
+
+while in d = 11 we obtain
+
+{q, q} = (cid:16)c1(cid:17)
+
+p + 2x(cid:16)c1(cid:17)
+
+m
+
+37
+
+1
+
+5! (cid:16)c1(cid:17)
+
+z 5
+
+
+
++
+x
+2
+
+hz 5
+ , qi =
+1...5, m i = 5[
+hz 5
+
+[1
+
+ q
+
+z 5 ]
+
+2...5] ,
+
+(4.36)
+
+with the other rules of (4.35) unchanged. remark that we need now also the
+5-index central charge generator in order to be able to close the algebra.
+however, it is even less central than before, because this generator now also
+has a non-zero commutator with q. the z 2 of (4.31) has been identied
+here with the lorentz transformations.
+
+in fact, the d = 11 super ads algebra is not of the hls form. its bosonic
+algebra is not ads  g. here it is sp(32). indeed the generators of p, m
+and z 5 constitute
+
+1! + 11
+ 11
+
+2! + 11
+
+5! = 11 + 55 + 462 = 528 =
+
+32.33
+
+2
+
+generators. we can combine them in the 32  32 matrix form
+
+m =
+
+1
+x
+
+p + m +
+
+1
+x
+
+ z 5
+
+
+
+(4.37)
+
+(4.38)
+
+to see this algebra explicitly. the full superalgebra is osp(1|32), but for that
+we should rst give an introduction to superalgebras. then we will be able
+to classify also the super ads algebras in other dimensions.
+
+4.6 superalgebras
+
+lie superalgebras have been classied in [15]. i do not have the time to go
+through the full classication mechanism of course, but will consider the most
+important superalgebras, the simple lie superalgebras, which have no non-
+trivial invariant subalgebra. however, one should know that in superalgebras
+there are more subtle issues, as e.g. not any semi-simple superalgebra is the
+direct sum of simple superalgebras. a good review is [16]. the fermionic
+generators of such superalgebras are in representations of the bosonic part.
+if that dening representation of the bosonic algebra in the fermionic gener-
+ators is completely reducible, the algebra is said to be of classical type. the
+others are cartan type superalgebras w (n), s(n), s(n) and h(n), which
+we will further neglect. for further reference, i give the list of the real forms
+
+38
+
+of superalgebras of classical type. but, for xing my notations on algebras,
+it might be useful rst to recapitulate a similar list for the bosonic algebras.
+that is done in table 4. the conventions which i use for groups is that
+
+table 4: real forms of simple bosonic lie algebras. for the exceptional
+algebras, i do not repeat the obvious line that the compact form itself is one
+of the real forms. the second number in the notation for these real forms is
+the number of non-compact  number of compact generators.
+
+su(p, n  p)
+s(n)
+su (2n)
+so(p, n  p)
+so(2n)
+sp(2n)
+
+maximal compact subalg.
+su(p)  su(n  p)  u(1)
+so(n)
+usp(2n)
+so(p)  so(q)
+u(n)
+u(n)
+
+compact real form
+su(n)
+su(n)
+su(2n)
+so(n)
+so(2n)
+usp(2n)
+usp(2n) usp(2p, 2n  2p) usp(2p)  usp(2n  2p)
+g2,14
+f4,52
+f4,52
+e6,78
+e6,78
+e6,78
+e6,78
+e7,133
+e7,133
+e7,133
+e8,248
+e8,248
+
+su(2)  su(2)
+so(9)
+usp(6)  su(2)
+f4,52
+so(10)  so(2)
+su(6)  su(2)
+usp(8)
+e6,78  so(2)
+so(12)  su(2)
+su(8)
+e7,133  su(2)
+so(16)
+
+g2,2
+f4,20
+f4,4
+e6,26
+e6,14
+e6,2
+e6,6
+e7,25
+e7,5
+e7,7
+e8,24
+e8,8
+
+sp(2n) = sp(2n, ir) (always even entry), and usp(2m, 2n) = u(m, n, ih).
+s(n) is s(n, ir). further, su (2n) = s(n, ih) and so(2n) = o(n, ih).
+note that in these bosonic algebras there are the following isomorphisms,
+
+39
+
+some of which will be important later11
+
+so(2, 1) = s(2) = su(1, 1) = sp(2)
+
+so(4) = su(2)  su(2) ,
+so(4) = su(1, 1)  su(2)
+so(5) = usp(4) ,
+so(6) = su(4) ,
+
+so(2, 2) = s(2)  s(2)
+
+so(4, 1) = usp(2, 2) ,
+so(5, 1) = su (4)
+
+so(3, 2) = sp(4)
+
+so(4, 2) = su(2, 2) ,
+
+so(3, 3) = s(4)
+
+so(6) = su(3, 1)
+so(8) = so(6, 2) .
+
+(4.39)
+
+the similar table for lie superalgebras of classical type, and their real
+forms [17] is given in table 5. in this table, dening representation gives
+the fermionic generators as a representation of the bosonic subalgebra. the
+number of generators gives the numbers of (bosonic,fermionic) generators
+in the superalgebra. i mention rst the algebra as an algebra over c, and
+then give dierent real forms of these algebras. with this information, you
+can reconstruct all properties of these algebras, up to a few exceptions. the
+names which i use for the real forms is for some algebras dierent from
+those in the mathematical literature [17], and chosen such that it is most
+suggestive of its bosonic content. there are isomorphisms as su(2|1) =
+osp(2|2, 0), and su(1, 1|1) = s(2|1) = osp(2|2). in the algebra d(2, 1, )
+the three s(2) factors of the bosonic group in the anticommutator of the
+fermionic generators appear with relative weights 1,  and 1  . the real
+forms contain respectively so(4) = su(2) su(2), so(3, 1) = s(2, c) and
+so(2, 2) = s(2)  s(2). in the rst and last case  should be real, while
+ = 1 + ia with real a for p = 1. in the limit  = 1 one has the isomorphisms
+dp(2, 1, 1) = osp(4  p, p|2).
+
+4.7 superconformal algebras
+
+in this section i review the classication of superconformal algebras of a
+standard type, to be explained soon. at the same time, however, also the ads
+
+11note that the equality sign is not correct for the groups. for the algebras there are
+these isomorphism, but it are rather the covering groups of the orthogonal groups which
+are mentioned at the right hand sides.
+
+40
+
+superalgebras of the similar type will be classied, due to the isomorphism
+(2.17).
+
+in supersymmetric theories, the conformal symmetry implies the presence
+of a second supersymmetry s, usually denoted as special supersymmetry.
+indeed, the commutator of the special conformal transformations, and the
+ordinary supersymmetry q implies this s due to [k, q] = s.
+
+the anticommutator {q, s} generates also an extra bosonic algebra (some-
+times called r symmetry). the whole superalgebra can be represented in a
+supermatrix, as e.g. (symbolically)
+
+(cid:18) so(d, 2) q + s
+q  s
+
+r (cid:19) .
+
+(4.40)
+
+we can consider such superalgebras in general. that is what nahm [18] did
+in his classication. the requirements for a superconformal algebra in d or
+a super-ads algebra in d + 1 are:
+
+1. so(d, 2) should appear as a factored subgroup of the bosonic part of
+the superalgebra. for nahm, this requirement was motivated by the
+colemanmandula theorem, but one can demand it also in order that
+the bosonic algebra is the isometry algebra of a space which has the
+ads space as a factor.
+
+2. fermionic generators should sit in a spinorial representation of that
+
+group.
+
+to nd the list of superconformal algebras, one has to consider the iso-
+morphisms of groups so(d, 2) which are in (4.39). then the analysis is
+straightforward, and the result are algebras with maximal d = 612. the re-
+sult13 is given in table 6, except for d = 2. for d = 2 the nite bosonic
+ads or conformal algebra is so(2, 2)  so(2, 1)  so(2, 1), i.e. the sum
+of two d = 1 algebras. the super-ads or superconformal algebra is then
+the sum of two d = 1 algebras of table 6. notice that these are the nite
+12note the particular case of d = 6, where we use the notation osp(8|n ) for the
+superconformal algebra. often, including previous articles of ourselves, it was written
+as osp(6, 2|4), not paying attention to the existing real forms.
+in fact, in the series
+osp(m  p, p|2n) the algebra sp(2n) is non-compact. thus, a compact r-symmetry
+group, u sp(2n), is not possible in that series. the possibility of a compact r-symmetry
+exists due to the isomorphism so(8) = so(6, 2), such that one can use the next line of
+table 5. this thus works only for the signature (6,2).
+
+13we mention the superalgebra with compact r-symmetry group.
+
+41
+
+part of innite dimensional superconformal algebras in 2 dimensions. for a
+classication of the innite superconformal algebras, see [19]. one may also
+relax the condition that the bosonic algebra contains the algebra so(d, 2) as
+a factored subgroup of the whole bosonic algebra, and suce with having it
+as some subgroup. then the other bosonic symmetries are not necessarily
+scalars and the colemanmandula theorem is violated. however, this may
+still be relevant where branes are present and has been used e.g. in [6] to
+propose the osp(1|32) as super ads11 or conf10. in that case one has (4.31)
+this algebra is now known as the m-theory algebra [14].
+
+to recognize it as osp(1|32), one can write it as
+
+{q, q} = m ,
+[m, m] = c(m) + c(m) .
+
+[m, q] = q(c)
+
+(4.41)
+
+exercise: obtain the commutators in (4.36) and the lorentz algebra from
+this general rule, dening rst m as the right hand side of the anticommu-
+tator of the supersymmetries.
+in this way it is clear how all the bosonic generators form sp(32) where the
+antisymmetric metric in that algebra is c.
+these superconformal algebras are used in ads/cft correspondence, or
+other applications in m-theory. i have been rst interested in them for the
+construction of general matter couplings in super-poincare theories. this
+goes along the lines explained at the end of section 2.5. for reviews on this
+method in 4 dimensions, see [20, 2]. for 6 dimensions it has be applied for
+(1,0) supersymmetry in [21, 3] and for (2,0) supersymmetry in [22].
+
+acknowledgments.
+
+i am grateful to the organizers of the school in calimanesti, especially to
+radu constantinescu, for this very nice experience. the lectures already cir-
+culated for some time in preliminary form, and have been improved thanks to
+useful remarks of pieter-jan de smet, joeri kenes, and mauricio werneck de
+oliveira. furthermore, i thank eric bergshoe, piet claus, joaquim gomis,
+renata kallosh and walter troost for useful discussions. this work was sup-
+ported in part by the european commission tmr programme erbfmrx-
+ct96-0045.
+
+42
+
+a conventions
+
+i use the metric signature ( + . . . +). if you prefer the opposite, insert a
+minus sign for every upper index which you see, or for an explicit metric ab
+or g. the gamma matrices a should then be multiplied by an i to have
+this change of signature.
+
+the curved indices are denoted by , , . . . = 0, . . . , d  1 and the at
+(anti)symmetrization is done with weight one: a[ab] =
+
+ones by a, b, ....
+1
+2 (aab  aba) and a(ab) = 1
+
+2 (aab + aba).
+
+the anticommuting levicivita tensor is taken to be
+
+12...d = 1 ,
+
+12...d = ()t ,
+
+(a.1)
+
+where t is the number of timelike directions.
+if we use the index value 0
+for minkowski space, then 01...(d1) = 1. the contraction identity for these
+tensors is (p + n = d)
+
+a1...anb1...bpa1...anc1...cp = ()t p! n! [c1
+for the local case, we can still dene constant tensors
+
+[b1
+
+. . . cp]
+bp] .
+
+1...d = e1ea1
+
+1 . . . ead
+
+da1...ad ,
+
+1...d = ee1
+
+a1 . . . ed
+
+ad a1...ad .
+
+(a.2)
+
+(a.3)
+
+they are thus not obtained from each other by raising or lowering indices
+with the metric.
+exercises.
+
+1. show that the tensors in (a.3) are indeed constants, i.e. that arbitrary
+variations of the vierbein cancel in the full expression. you will have
+to use the so-called schouten identities, which means that antisym-
+metrizing in more indices than the range of the indices, gives zero.
+
+2. if one denes in even dimensions d = 2n the dual of an n-tensor as
+
+fa1...an = (i)d/2+t 1
+n!
+
+a1...adf ad...an+1 ,
+
+(a.4)
+
+check that
+
+f a1...an = fa1...an ,
+
+a1...an =  a1...an .
+
+(a.5)
+
+43
+
+references
+
+[1] s. coleman and j. mandula, all possible symmetries of the s matrix,
+
+phys. rev. 159 (1967) 1251.
+
+[2] a. van proeyen, superconformal tensor calculus in n = 1 and n = 2
+supergravity, in supersymmetry and supergravity 1983, ed. b. milewski,
+(world scientic publ. co., 1983), p. 93.
+
+[3] e. bergshoe, e. sezgin and a. van proeyen, superconformal tensor
+calculus and matter couplings in six dimensions, nucl. phys. b264
+(1986) 653.
+
+[4] j. scherk, extended supersymmetry and extended supergravity theories,
+in recent developments in gravitation, ed. m. levy and s. deser (plenum
+press, n.y., 1979), p.479.
+
+[5] t. kugo and p. townsend, supersymmetry and the division algebras,
+
+nucl. phys. b221 (1983) 357.
+
+[6] j.w. van holten and a. van proeyen, n = 1 supersymmetry algebras
+
+in d = 2, 3, 4, mod 8, j. phys. a15 (1982) 3763.
+
+[7] a.d. kennedy, cliord algebras in two omega dimensions, j. math.
+
+phys. 22 (1981) 1330.
+
+[8] r. haag, j.t.  lopuszansky and m. sohnius, all possible generators of
+
+supersymmetries of the s-matrix, nucl. phys. b88 (1975) 257.
+
+[9] b. de wit and j. louis, supersymmetry and dualities in various dimen-
+sions, in strings, branes and dualities, proceedings carg`ese 1997, ed. l.
+baulieu et al, nato asi series, kluwer, 1999, p. 33, hep-th/9801132.
+
+[10] p. fayet, fermi-bose hypersymmetry, nucl. phys. b113 (1976) 135 ;
+
+s. ferrara, j. scherk and b. zumino, algebraic properties of extended
+supergravity theories, nucl. phys. b121 (1977) 393.
+
+[11] r. dauria and p. fr`e, geometric supergravity in d = 11 and its hidden
+
+supergroup, nucl. phys. b201 (1982) 101.
+
+44
+
+[12] h. nicolai and a. van proeyen, oshell representations with central
+charges for 10dimensional super yangmills theory, nucl. phys. b203
+(1982) 510.
+
+[13] e. bergshoe, j. gomis and p.k. townsend, m-brane intersections
+from worldvolume superalgebras, phys. lett. b421 (1998) 109, hep-
+th/9711043.
+
+[14] p.k. townsend, m-theory from its superalgebra, in strings, branes and
+dualities, nato asi series (kluwer academic publishers, 1999), eds.
+l. baulieu et al., p.141, hep-th/9712004.
+
+[15] v.g. kac, a sketch of lie superalgebra theory, commun. math. phys.
+
+53 (1977) 31;
+w. nahm, v. rittenberg and m. scheunert, classication of all simple
+graded lie algebras whose lie algebra is reductive, j. math. phys. 17
+(1976) 1626, 1640;
+v.g. kac, a sketch of lie superalgebra theory, commun. math. phys.
+53 (1977) 31.
+
+[16] l. frappat, p. sorba and a. sciarrino, dictionary on lie superalgebras,
+
+hep-th/9607161.
+
+[17] v.g. kac, lie superalgebras, adv. math. 26 (1977) 8;
+
+m. parker, classication of real simple lie superalgebras of classical
+type, j. math. phys. 21 (1980) 689.
+
+[18] w. nahm, supersymmetries and their representations, nucl. phys.
+
+b135 (1978) 149.
+
+[19] p. ramond and j.h. schwarz, classication of dual model gauge al-
+
+gebras, phys. lett. 64b (1976) 75;
+a. sevrin, w. troost and a. van proeyen, superconformal algebras in
+two dimensions with n=4 phys. lett. b208, 447 (1988)
+
+[20] b. de wit, conformal invariance in extended supergravity, in supergrav-
+ity 81, eds. s. ferrara and j.g. taylor (cambridge univ. press, 1982),
+p.267.
+
+[21] a. van proeyen, n = 2 matter couplings in d = 4 and 6 from supercon-
+formal tensor calculus, in superunication and extra dimensions, eds.
+
+45
+
+r. dauria and p. fre, (world scientic publ. co.), (1986) p.97
+e. bergshoe, superconformal invariance and the tensor multiplet in six
+dimensions, idem p. 126.
+
+[22] e. bergshoe, e. sezgin and a. van proeyen, (2,0) tensor multiplets
+and conformal supergravity in d=6, class. quantum grav. 16 (1999)
+3193, hep-th/9904085.
+
+46
+
+number of
+generators
+m2 + n2  1,
+2(m2  1), 2m2
+
+2mn
+
+1
+
+
+so(1, 1)
+if
+u(1)
+m 6= n
+so(1, 1)
+
+2(m2  m+
+n2 + n), mn
+n even
+m, n, q even
+
+9, 8
+p = 0, 1, 2
+
+21, 16
+p = 0, 1, 2, 3
+
+14, 14
+p = 14, 2
+m2  1, m2
+m2  1, m2  1
+
+table 5: lie superalgebras of classical type.
+
+name
+
+range
+
+bosonic algebra dening
+
+su(m|n) m  2
+m 6= n
+m = n
+
+s(m|n)
+su(m  p, p|n  q, q)
+su (2m|2n)
+osp(m|n) m  1
+
+n = 2, 4, ..
+
+0 <   1
+
+osp(m  p, p|n)
+osp(m|n  q, q)
+d(2, 1, )
+dp(2, 1, )
+f (4)
+f p(4)
+g(3)
+gp(3)
+p (m  1) m  3
+q(m  1) m  3
+q(m  1)
+q((m  1))
+uq(p, m  1  p)
+
+repres.
+(m, n)
+( m, n)
+
+su(m)  su(n)
+
+u(1)
+no u(1)
+s(m)  s(n)
+su(m  p, p)  su(n  q, q)
+su (2m)  su (2n)
+so(m)  sp(n)
+
+(m, n)
+
+so(m  p, p)  sp(n)
+so(m)  usp(n  q, q)
+(2, 2, 2)
+so(4)  s(2)
+so(4  p, p)  s(2)
+so(7)  s(2)
+(8, 2)
+so(7  p, p)  s(2)
+g2  s(2)
+(7, 2)
+g2,p  s(2)
+s(m)
+su(m)
+
+(m  m)
+adjoint
+
+s(m)
+su (m)
+su(p, m  p)
+
+47
+
+table 6: super adsd+1 or confd algebras.
+
+o(n)
+su(n)  u(1) for n 6= 2
+su(2)
+
+d superalgebra r
+1 osp(n|2)
+su(n|1, 1)
+su(2|1, 1)
+osp(4|2n) su(2)  usp(2n)
+g(3)
+f 0(4)
+d0(2, 1, )
+3 osp(n|4)
+4 su(2, 2|n)
+su(2, 2|4)
+5 f 2(4)
+6 osp(8|n)
+
+g2
+so(7)
+su(2)  su(2)
+so(n)
+su(n)  u(1) for n 6= 4
+su(4)
+su(2)
+usp(n) (n even)
+
+number of fermionic
+
+2n
+4n
+8
+8n
+14
+16
+8
+4n
+8n
+32
+16
+8n
+
+48
+
+

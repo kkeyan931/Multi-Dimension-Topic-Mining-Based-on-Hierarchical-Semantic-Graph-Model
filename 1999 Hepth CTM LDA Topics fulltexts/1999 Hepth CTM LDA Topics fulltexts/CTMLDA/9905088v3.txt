@@ -1,0 +1,5767 @@
+9
+9
+9
+1
+
+ 
+
+p
+e
+s
+9
+2
+
+ 
+
+ 
+ 
+
+3
+v
+8
+8
+0
+5
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+renormalization-group method for reduction of evolution
+
+equations;
+
+invariant manifolds and envelopes
+
+shin-ichiro ei1, kazuyuki fujii2 and teiji kunihiro3
+
+1graduate school of integrated science, yokohama city university,
+
+yokohama 236-0027 japan,
+
+2department of mathematical sciences, yokohama city university,
+
+yokohama 236-0027 japan,
+
+3 faculty of science and technology, ryukoku university,
+
+otsu, 520-2194 japan
+
+abstract
+
+the renormalization group (rg) method as a powerful tool for reduction of evo-
+lution equations is formulated in terms of the notion of invariant manifolds. we
+start with derivation of an exact rg equation which is analogous to the wilsonian
+rg equations in statistical physics and quantum eld theory. it is claried that
+the perturbative rg method constructs invariant manifolds successively as the ini-
+tial value of evolution equations, thereby the meaning to set t0 = t is naturally
+understood where t0 is the arbitrary initial time. we show that the integral con-
+stants in the unperturbative solution constitutes natural coordinates of the invariant
+manifold when the linear operator a in the evolution equation is semi-simple, i.e.,
+diagonalizable; when a is not semi-simple and has a jordan cell, a slight modi-
+cation is necessary because the dimension of the invariant manifold is increased by
+the perturbation. the rg equation determines the slow motion of the would-be
+integral constants in the unperturbative solution on the invariant manifold. we
+present the mechanical procedure to construct the perturbative solutions hence the
+initial values with which the rg equation gives meaningful results. the underlying
+structure of the reduction by the rg method as formulated in the present work
+turns out to completely t to the universal one elucidated by kuramoto some years
+ago. we indicate that the reduction procedure of evolution equations has a good
+correspondence with the renormalization procedure in quantum eld theory; the
+counter part of the universal structure of reduction elucidated by kuramoto may
+be the polchinskis theorem for renormalizable eld theories. we apply the method
+to interface dynamics such as kink-anti-kink and soliton-soliton interactions in the
+latter of which a linear operator having a jordan-cell structure appears.
+
+67 pages including the rt two pages; no gures, no tables.
+
+1
+
+the proposed running head:
+renormalization-group method
+correspondence should be sent to
+prof. t. kunihiro,
+faculty of science and technology, ryukoku university,
+otsu, 520-2194 japan
+tel. (+81)-77-543-7501
+fax. (+81)-77-543-7524
+e-mail kunihiro@rins.ryukoku.ac.jp
+
+2
+
+1 introduction
+
+there is an ever growing interest in the renormalization groups (rg) [1, 2, 3] in various
+elds of science and mathematical physics since the work of wilson[4, 5, 6]. the essence
+of the rg in quantum eld theory (qft) and statistical physics may be stated as follows:
+let (, g(), ) be the eective action (or thermodynamical potential) obtained by in-
+tegration of the eld variable with the energy scale down to  from innity or a very large
+cuto 0. here g() is a collection of the coupling constants including the wave-function
+renormalization constant dened at the energy scale at . then the rg equation may
+be expressed as a simple fact that the eective action as a functional of the eld variable
+ should be the same, irrespective to how much the integration of the eld variable is
+achieved, i.e.,
+
+(, g(), ) = (, g(), ).
+
+if we take the limit   , we have
+
+d(, g(), )
+
+d
+
+= 0,
+
+(1.1)
+
+(1.2)
+
+which is the wilson rg equation[4], or the ow equation in the wegners terminology [5];
+notice that eq.(1.2) is rewritten as
+
+
+g 
+
+dg
+d
+
+
+
+
+.
+
+= 
+
+(1.3)
+
+if the number of the coupling constants is nite, the theory is called renormalizable. in
+this case, the functional space of the theory does not change in the ow given by the
+variation of ; one may say that the ow has an invariant manifold.
+
+a notable aspect of the rg is that the rg equation gives a systematic tool for ob-
+taining the infrared eective theories with fewer degrees of freedom than in the original
+lagrangian relevant in the high-energy region. this is a kind of reduction of the dy-
+namics. finding eective degrees of freedom and extract the reduced dynamics of the
+eective variables in fact have constituted and still constitute the core of various elds of
+theoretical physics. in qcd written in terms of the elds of quarks and gluons, the low
+energy eective theories in which gluons are integrated out may be nambu-jona-lasinio
+type lagrangians [7]; see for example [8]. if the quarks are further integrated out the ef-
+fective theories are sigma models written solely with meson elds[9]: the ow equations,
+variants of the rg equation, may give a foundation on such sigma models as eective
+theories of qcd at low energies[10, 11, 12]; for a review, see [13]: in terms of notions in
+the theory of dynamical systems, the functional space represented by a sigma model may
+be an attractive submanifold of qcd.
+
+statistical physics may be said to be a collection of theories on how to reduce the dy-
+namics of many-body systems to one with fewer variables, since the work of boltzmann[14].
+
+3
+
+bogoliubov showed that bbgky( bogoliubov-born-green-kirkwood-yvon) hierarchy can
+be reduced to boltzmann equation with a single-particle distribution function for dilute
+gas systems.[15] as indicated by kuramoto[16], bogoliubov seems to have claimed that
+the dilute-gas dynamics has an attractive manifold spanned by one-particle distribution
+function. boltzmann equation in turn can be further reduced to the hydrodynamic equa-
+tion (navier-stokes equation) by a perturbation theory like chapman-enskog method[17].
+recent development of the theories of pattern formation with dissipative structures gives
+a good example how to reduce complicated ordinary and partial dierential equations to
+simple equations with slow variables, such as landau-stuart equation, the time-dependent
+ginzburg-landau equation and so on.[18]
+
+some years ago, it was shown by an illinois group[21, 22, 23] and bricmont and
+kupiainen[24]that the rg equations can be used for a global and asymptotic analysis of
+ordinary and partial dierential equations, hence giving a reduction of evolution equations
+of some types. a unique feature of the illinois groups method is to start with the naive
+perturbative expansion and allow secular terms to appear; the secular terms correspond
+to the logarithmically divergent terms in qft. then introducing an intermediate time
+ and rewriting perturbative solutions in terms of renormalization constants reminiscent
+of those appearing in the perturbative renormalization theory in qft, gell-mann-low
+type rg equation is applied to obtain the evolution equations for the renormalization
+constants which are functions of  . finally, equating  with the time t appearing in
+the original perturbative solution, they obtained global solutions of dierential equations.
+bricmont and kupiainen [24] applied a scaling transformation (block transformation) to
+obtain asymptotic behavior of nonlinear diusion equations in a rigorous manner.
+
+subsequently, one of the present authors (t.k.) formulated the illinois groups method
+in terms of the classical theory of envelopes [25, 26]: he indicated that the rg equation
+can be interpreted as the basic equation for constructing envelopes of a family of curves (or
+surfaces for partial dierential equations). he also developed a short-cut prescription for
+the renormalization procedure without introducing an intermediate time  but utilizing
+an arbitrary initial time t0. in latest papers[27], it was shown that the rg method can
+be well formulated as the method dealing with the initial values at arbitrary t = t0; the
+initial values at t = t0 are determined so that the unperturbative solutions which are
+valid only locally around t = t0 are continued smoothly; this procedure is nothing but to
+construct the envelope of the perturbative solutions. he emphasized that the rg method
+is a powerful tool for reduction of evolution equations and demonstrated it by applying
+the method to obtain so-called the amplitude equations for systems of equations. he
+also suggested that if the phase equations describing slow motions in the system where a
+continuous symmetry is broken, which are classical counter part of the nambu-goldstone
+modes in qft, the rg method should be able to derive the phase equations.
+
+the rg method developed by the illinois group has been applied by many authors
+to quite a wide class of problems successfully. to mention some of them; graham[28]
+derived a rotationally invariant amplitude equation appearing in the problem of pattern
+formation. some kinds of phase equations were also derived; oono [29] discussed the
+
+4
+
+interface dynamics relevant in the spinodal decomposition, sasa derived a diusion type
+phase equation, and maruo et al [31] derived kuramoto-sivashinsky equation[32]. the
+method was applied to analyze asymptotic behavior of the non-linear equations appear-
+ing in cosmology[33, 34]. boyanovsky and de vega also used the method to derive an
+anomalous transport coecient [35] relevant in the non-equilibrium states in the early
+universe and qgp (quark-gluon plasma). before that, the boltzmann equation had been
+derived as an rg equation [36]. the rg method was also shown to be a powerful tool to
+resum divergent perturbation series appearing in problems of quantum mechanics[37, 27].
+tzenov applied the method to obtain global solutions appearing accelerator physics[38].
+possible relation between renormalizability and integrability of hamilton systems was
+discussed by yamaguchi and nambu[39]. the method was proved to be applicable to
+discrete systems[40], too.
+
+although such extensive applications have been made, only few works are known
+which attempt to reveal the underlying reasons why the rg method works to some kinds
+of equations but not to others[25]. nevertheless, it was indicated in [26, 40] that the
+rg method by the illinois group works when the unperturbed solutions are neutrally
+stable solutions that are stationary (constant in time or stationary oscillation) hence do
+not decay nor blow up with time. a decade ago, kuramoto revealed in an excellent
+paper[16] the universal underlying structure of all the existing perturbative methods for
+reduction of evolution equations; he noticed that when a reduction of evolution equation
+is possible, the unperturbed equation admits neutrally stable solutions, and succeeded
+in describing the reduction of dynamics in geometrical terms, i.e., attractive manifolds
+or invariant manifolds[20]. although his actual presentation of the theory was based on
+the reductive perturbation theory and involves some ansatz on forms of the solutions,
+he emphasized that the universal structure which he revealed should not be dependent
+on the perturbation methods one employs. in the present paper, focusing on the aspect
+of the rg method as a powerful tool for reducing evolution equations, we shall present
+a comprehensive formulation of the perturbative rg method in terms of the notion of
+invariant manifolds, guided by this kuramotos work: one will see that his ansatz are
+derived naturally in the rg method.
+it may mean that his formulation of reduction
+of evolution equations, which is actually a natural extension of the asymptotic method
+by krylov, bogoliubov and mitropolski for non-linear oscillators[41], is an rg theory
+although the term rg is not used[36].
+
+we start with adapting the exact rg equations of wilson type (ow equations) in
+quantum eld theory [4, 5] to dierential equations (evolution equations); one may rec-
+ognize that the rg method described in terms of envelopes is best formulated in the
+framework of wilson rg. then conning ourselves to cases where a perturbative treat-
+ment is possible, we shall show that an invariant manifold exists when the rg method
+works, and that the rg method is a method to construct the invariant manifold and the
+reduced dynamics on it in a mechanical way. in this method, the initial values of the so-
+lution at an arbitrary time t = t0 in the successive perturbation orders are determined so
+that the initial value make an invariant manifold, thereby the condition to set t0 = t will
+be naturally emerged. we emphasize that the present formulation give a nice foundation
+
+5
+
+for the prescriptions adopted in [25, 26, 27].
+
+the following should be mentioned here: (1) the relevance of wilson type rg equation
+to their method was noted by chen et al[22] and pashkov and oono[36], although their
+formulation was totally based on the gell-mann-low type perturbative rg method. (2)
+shirkov [3] claried that the rg equation concerns with the initial values and emphasized
+the lie group structure of the rg method[42]; he extracted the notion of functional self-
+similarity (fss) as the essence of the exact rg. he claims that the wilson rg is an
+approximation to the bogoliubov rg which is exact[3].
+
+once the underlying structure of the reduction of dynamics given by the rg method
+has become clear, one will recognize that the method could be applied to problems which
+have not been treated in the rg method so far although other methods are applied
+to them. one will also see that the rg method is simpler to apply to them than the
+previous methods. as such a problem, we take the problem to extract the interface
+interactions[43, 44, 45, 46], which are typical examples to be treated by the method of
+phase equations.
+
+in 2, we formulate the rg method as a method of reduction of dynamics, starting
+from the non-perturbative ow equation (rg equation). then on the basis of the per-
+turbation theory, we show, guided by the presentation given in [16], the way how the
+invariant manifold which is supposed to exist to the evolution equation under considera-
+tion can be constructed in our method. we shall remark that the existence of an invariant
+manifold corresponds to the notion of the renormalizability in quantum eld theory. in
+3, some simple but typical examples including the takens equation [49] are worked out
+to demonstrate how the rg method construct invariant manifolds and give the reduced
+dynamics on them. in 4, we show how to deal with generic systems which involve a linear
+operator a having zero-eigenvalue where a may or may not be diagonalizable; when a
+is not diagonalizable, the eigenvalues are degenerate and a is equivalent with a matrix
+having a jordan cell (cid:18) 0 1
+0 0(cid:19). as examples with a jordan cell, we shall show that the
+
+rg equation gives the normal forms [50] of the two-dimensional equations including the
+takens and the bogdanov equation [51], and deal with an extended version of takens
+equation with three-degrees of freedom. in 5, we apply the method to some problems
+such as the unstable motion in the lotka-volterra system and the hopf bifurcation in the
+brusselator[52]. although the examples treated in 2-5 are simple ordinary dierential
+equations, we believe that these examples should be instructive also for experts of the
+rgs or ow equations in quantum eld theory and/or statistical physics. in 6, we also
+apply the method to extract the interface dynamics of a kink-anti-kink interaction in the
+tdgl equation in one-dimension and the soliton-soliton interaction in the kdv equation.
+the nal section is devoted to a brief summary and concluding remarks. in appendix a,
+we summarize rules in a scheme of an operator method for constructing special solutions
+suitable for the rg method. in appendix b, we present an elementary method dierent
+from the rg method to derive the approximate solution for the double-well potential dis-
+cussed in subsection 3.3. in appendix c, we show that the period of the lotka-volterra
+
+6
+
+system [53] around the non-trivial xed point obtained previously[26] in the rg method
+coincides with that extracted by frame [55] in a quite dierent way.
+
+7
+
+2 reduction of evolution equations with the rg method
+
+in this section, we shall formulate the rg method in terms of the notion of invariant
+manifold.
+
+2.1 the rg equation as the ow equation for initial values
+
+2.1.1 non-perturbative rg equation
+
+let us take the following n-dimensional dynamical system;
+
+dx
+dt
+
+= f (x, t),
+
+(2.1)
+
+where n may be innity. we remark that f may depend on t explicitly. we suppose that
+the equation is solved up to an arbitrary time t = t0 from an initial time, say, at t = 0, to
+give x(t) = w (t), and then we are trying to solve the equation with the initial condition
+at t = t0,
+
+x(t = t0) = w (t0),
+
+(2.2)
+
+with w (t0) being unspecied yet. in fact, w (t) as a function of t is a solution of (2.1) by
+denition. the solution may be written as x(t; t0, w (t0)). we stress that the solution
+needs not be given by a perturbation method; if the solution is given non-perturbatively,
+the resultant equations remain non-perturbative ones.
+
+now, making use of x(t; t0, w (t0)) thus obtained, we determine w (t0) based on a
+simple fact of dierential equations. when the initial point is shifted to t0, the resultant
+solution should be the same, i.e.,
+
+x(t; t0, w (t0)) = x(t; t0, w (t0)).
+
+taking the limit t0  t0, we have[27]
+x
+t0
+
+dx
+dt0
+
+=
+
++
+
+x
+w
+
+dw
+dt0
+
+= 0.
+
+(2.3)
+
+(2.4)
+
+this equation gives the evolution equation or the ow equation of the initial value w (t0).
+this has the same form as that of the renormalization group (rg) equation in quantum
+eld theory, hence the name of the rg method. we emphasize that the equation (2.4)
+is exact; we have not used any argument based on perturbation theories. this equation
+corresponds to the non-perturbative rg equations (ow equations) by wilson[4], wegner-
+houghton[5] and so on in quantum eld theory and statistical physics[13]: the reader
+should have recognized that t0 corresponds to the logarithm of the energy scale to which
+
+8
+
+the integration is performed in the quantum eld theory. the quantities corresponding
+to the coupling constants will be found to be the integration constants. one will also
+recognize that the existence of an invariant manifold of a dynamical system corresponds
+to the renormalizability. we also notice that one needs not to equate t0 with t at this
+stage.
+
+2.1.2 perturbative rg equation
+
+so far, only the perturbative expansion method is available to make x(t; t0, w (t0)). in
+this case, x(t; t0, w (t0)) and x(t; t0, w (t0)) may be valid only for t  t0 and t  t0.
+this condition is naturally satised if we restrict that t0 < t < t0 (or t0 < t < t0)
+because the limit t0  t0 is to be taken. thus when a perturbative expansion is used for
+constructing x(t; t0, w (t0)), we demand a more restrictive rg equation as given by[27]
+
+=
+
+dx
+
+dt0(cid:12)(cid:12)(cid:12)(cid:12)t0=t
+
++
+
+x
+w
+
+x
+
+t0(cid:12)(cid:12)(cid:12)(cid:12)t0=t
+
+dw
+
+dt0 (cid:12)(cid:12)(cid:12)(cid:12)t0=t
+
+notice that the demand to set t0 = t has naturally emerged.
+
+= 0.
+
+(2.5)
+
+we remark that a geometrical interpretation of this equation has been given on the
+basis of the classical theory of envelopes [25, 26, 27]: when t0 is varied, x(t; t0, w (t0))
+gives a family of curves with t0 being a parameter characterizing curves. then eq.(2.5) is
+the condition to construct the envelope of the family of curves which are valid only locally
+around t  t0. the envelope is given by x(t; t0 = t) = w (t), i.e, the initial value. it is
+noteworthy that w (t) satises the original equation (2.1) in a global domain up to the
+order with which x(t; t0) satises around t  t0[25, 26]. in fact, one can see that
+
+dw
+dt
+
+=
+
+=
+
+x(t; t0)
+
+t
+
+x(t; t0)
+
+t
+
+on account of (2.5).
+
+(cid:12)(cid:12)(cid:12)(cid:12)t0=t
+(cid:12)(cid:12)(cid:12)(cid:12)t0=t
+
+x(t; t0)
+
+t0
+
++
+
+,
+
+(cid:12)(cid:12)(cid:12)(cid:12)t0=t
+
+,
+
+(2.6)
+
+2.2
+
+invariant manifolds and renormalizability
+
+in this section, we follow [16] for notations. if the theory has an invariant manifold m
+with the dimension less than n, we may have supposed that the initial point is on the
+manifold. let the invariant manifold m is represented by the coordinate s. the reduced
+dynamics of eq.(2.1) on m may be given in terms of a vector eld g by
+
+ds
+dt
+
+= g(s),
+
+9
+
+(2.7)
+
+and the manifold m is represented by
+
+x = r(s).
+
+(2.8)
+
+our task is to obtain the vector eld g and the representation of the manifold r in a
+perturbation method. we consider a situation where the vector eld f is composed of
+an unperturbed part f 0 and the perturbative one p , i.e.,
+
+f = f 0(x) +   p (x, t).
+
+(2.9)
+
+here notice that f 0 has no explicit t-dependence, while p (x, t) does. we assume that
+the unperturbed problem is solved and an attractive invariant manifold m0 is easily found.
+
+now we try to solve eqs.(2.1) and (2.9) by a perturbation theory with the initial
+
+condition
+
+x(t0) = w (t0),
+
+at t = t0. the decisive point of our method is to assume that
+
+w (t0) = r(s(t0)),
+
+(2.10)
+
+(2.11)
+
+that is, the initial point is supposed to be on the invariant manifold m to be determined.
+now we apply the perturbation theory, expanding
+
+x(t; t0, w (t0)) = x 0 +x nx n(t; t0, w (t0)).
+
+(2.12)
+
+here we have made it explicit that x is dependent on the initial condition. we should
+also expand the initial value,
+
+with
+
+w (t0) = w 0(t0) + (t0),
+
+(t0) =
+
+xn=1
+
+nw n(t0).
+
+now the unperturbed equation reads
+
+dx 0
+dt
+
+= f 0(x 0).
+
+as promised, we suppose that an attractive manifold is found for this equation as
+
+where c is the integral constant vector with dimc = m and may depend on t0.
+
+x 0(t) = r(s(t; c)),
+
+10
+
+(2.13)
+
+(2.14)
+
+(2.15)
+
+(2.16)
+
+here comes an important point of our method; we identify that
+
+s(t0) = c(t0),
+
+(2.17)
+
+which gives a natural parameterization of the manifold m0. this is a simple but a sig-
+nicant observation; notice that we need not to give any ansatz to the representation of
+the manifold because we only have to solve the unperturbed equation and the integral
+constants are trivially obtained.
+
+the deformation of the manifold  will be determined perturbatively on the two
+
+principles, i.e.[16],
+
+1. the function  should be independent of w 0, and
+
+2. the resultant dynamics should be as simple as possible because we are interested to
+
+reduce the dynamics to a simpler one.
+
+the choice of the  is intimately related to that of the forms of the perturbative
+
+solutions. for example, the rst order equation reads
+
+dx 1
+dt
+
+= f 0(x 0)x 1 + p (x 0).
+
+(2.18)
+
+the solution to this inhomogeneous equation is composed of a sum of the general solution
+of the homogeneous equation and the special solution of the inhomogeneous equation.
+if the unperturbed solution x 0(t) has a part of neutrally stable solution, there appear
+secular terms in the special solution as well as genuinely independent functions. it turns
+out that the secular terms can be utilized to renormalize out the homogeneous solutions
+at t = t0[25, 26]; this is a kind of renormalization conditions. then the shift of the initial
+value is now determined as
+
+w 1(t0) = x 1(t = t0).
+
+(2.19)
+
+notice that the initial value is determined after solving the equation, hence the functional
+form of it as a function of t0 is explicitly given. of course, one can make w 1(t0) = 0
+by further adding unperturbed solutions; this prescription, however, will generally give
+a more complicated dynamics. it means that the choice of  has ambiguities, but the
+demand to obtain the simplest dynamics give it uniquely. in 3 and 4, we shall give a
+mathematical and mechanical procedure to select the initial values in accordance with
+the above rules using some examples.
+
+we can repeat the procedure to any order of the perturbation. we remark that by
+this procedure the modication of the initial value (t0) and hence the total initial value
+w (t0) are given solely in terms of c(t0);
+
+w (t0) = w 0[c] + [c].
+
+(2.20)
+
+11
+
+now the dynamics of c(t) is determined by the rg equation eq.(2.5);
+
+dx
+
+dt0(cid:12)(cid:12)(cid:12)(cid:12)t0=t
+
+=
+
+x
+
+t0(cid:12)(cid:12)(cid:12)(cid:12)t0=t
+
++
+
+x
+c 
+
+dc
+
+dt0(cid:12)(cid:12)(cid:12)(cid:12)t0=t
+
+= 0,
+
+(2.21)
+
+which is an evolution equation of c(t). then the manifold m (more precisely, the trajec-
+tory on it) is represented as
+
+x = w (t) = w 0[c(t)] + [c].
+
+(2.22)
+
+eq.s (2.21) and (2.22) are essentially the basic postulates in kuramotos theory of reduc-
+tion of evolution equations[16]. thus we have derived the kuramotos basic equations in
+the rg method; in other words, kuramotos theory is actually the rg theory for reduc-
+tion of evolution equations. eq.(2.22) means that the dynamics is renormalized to that
+for c. one can now see a correspondence between the renormalizability of the theory in
+quantum eld theory[9] and the existence of a nite dimensional invariant manifold in the
+theory of dynamical systems: c = (c1, c2, . . . , cm) correspond to the collection of renor-
+malizable coupling constants and  to unrenormalizable operators; one may say that the
+fact that  can be represented solely with c is analogue of the polchinski theorem[6, 9]
+in quantum eld theory. we remark also that eq.(2.22) justies the slaving principle by
+haken[56].
+
+a comment is in order; when the unperturbed system is given by a linear operator
+with a jordan cell, there will be a slight modication of the above scenario due to a
+technical complexity; see an example in the next section and the general argument given
+in 4.
+
+3 simple examples
+
+in this section, we consider four simple equations to show our formulation of the rg
+method at work as a tool for reduction of evolution equations. we shall show how the
+initial values at t = t0 in higher orders are determined by the two principles that terms
+proportional to the unperturbed solution are suppressed and that possible fast motions
+disappear. the resultant forms of the unperturbed solutions composed of the secular
+terms which vanish at t = t0 and the functions independent of the unperturbed solution.
+the nal forms turn out to be the same as those given in the scheme adopted in [25, 26, 27],
+where unstable manifolds and cases with a jordan cell were not dealt with though. the
+resultant initial value represent the invariant manifold, and the rg equation gives the
+slow dynamics on the manifold.
+
+12
+
+3.1 a simple model with a reduction
+
+we rst consider the following simplest equation with a reduction[16];
+
+dx/dt = f (x, y),
+
+(3.1)
+writing u(x, y) = t(x, y) and we expanding u as u = u0 + u1 +    , with un(x, y) =
+t(xn, yn) (n = 0, 1, ...). we solve the equation with the initial value w (t0) at t = t0. we
+suppose that w (t0) is on an attractive manifold m.
+
+dy/dt = y + g(x).
+
+the unperturbed equation reads
+
+x0 = 0,
+
+y0 = y0 + g(x0),
+
+(3.2)
+
+y0(t) = g(c0) + c1et,
+the solution to which is readily obtained as x0(t) = const. = c0,
+with ci (i = 0, 1) being the integral constants; we make it explicit that ci may depend
+on the initial time t0 as ci = ci(t0). since we are interested in the asymptotic behavior
+as t  , we take the stationary solution putting c1 = 0;
+
+accordingly,
+
+x0(t) = const. = c0,
+
+y0(t) = g(c0),
+
+w 0(t0) = t(c0, g(c0)),
+
+which suggests that the unperturbed invariant manifold m0 is given by
+
+although the time dependence x(t) is not yet known.
+
+y = g(x),
+
+the rst order equation reads
+
+(t  a) x1
+
+y1! = f (x0, y0)
+
+0
+
+!,
+
+with
+
+0
+
+a =(cid:18) 0
+
+g(x0)  1(cid:19) .
+au 1 = 0, au 2 = (1)u 2; u 1 =  1
+
+we notice that
+
+1!.
+g!, u 2 = 0
+
+(3.3)
+
+(3.4)
+
+(3.5)
+
+(3.6)
+
+(3.7)
+
+(3.8)
+
+then the special solution with the initial value w 1(t0) is obtained as follows:
+
+y1! = e(tt0)aw 1(t0) +z t
+ x1
+
+t0
+
+dse(ts)a f (x0, y0)
+
+0
+
+!,
+
+= e(tt0)a[w 1(t0) + f gu 2] + {(t  t0)f u 1  f gu 2}.
+
+(3.9)
+
+13
+
+here we have used the relation that t(1, 0) = u 1  gu 2. for the solution to describe a
+slow motion, the rst term should vanish; thus we are naturally led to the choice of the
+initial value as
+
+w 1(t0) = f gu 2,
+
+(3.10)
+
+to kill the fast motion. thus we have also
+
+x1(t; t0) = f (c0, g(c0))(t  t0),
+
+y1(t; t0) = f (c0, g(c0))g(c0){(t  t0)  1}.
+
+(3.11)
+
+we notice that the solution and the initial value satisfy the rules given in the preceding
+subsection; w 1(t0)  (t0) is independent of w 0(t0).
+
+up to this order,
+
+with
+
+u(t; t0) =(cid:18) x(t; t0)
+w (t0) = x(t0)
+
+c0(t0) + f (c0, g(c0))(t  t0)
+
+y(t; t0)(cid:19) =(cid:18)
+y(t0)!  w 0(t0) + (t0) = 
+
+g(c0)  g(c0)f (c0, g(c0))(1 + t0  t)(cid:19) ,
+g(c0)  g(c0)f (c0, g(c0))!.
+
+(3.12)
+
+(3.13)
+
+c0
+
+now the rg equation eq.(2.5) applied to eq.(3.12) gives the evolution equation for
+
+c0(t);
+
+dc0
+dt
+
+= f (c0, g(c0)).
+
+(3.14)
+
+since x(t) = c0(t), eq.(3.14) gives the reduced dynamics, and the slow manifold is given
+by u(t) = w (t), or in terms of the components,
+
+x(t) = c0(t), y(t) = g(c0)  g(c0)f (c0, g(c0))).
+
+one sees that the attractive manifold is given by
+
+y(x) = g(x)  g(x)f (x, g(x)),
+
+(3.15)
+
+(3.16)
+
+and the original two-dimensional evolution equation has been reduced to the one-dimensional
+equation eq.(3.14).
+
+in short, to obtain the invariant manifold and the slow dynamics on it, we have started
+with a neutrally stable solution with an integral constant, which constitutes a natural
+representation of the invariant manifold. the constant moves slowly by the perturbation
+and the whole dynamics is given through this slow variable. the evolution equation of the
+slow dynamics is given by the rg equation and the trajectory on the invariant manifold
+is given as the initial value in the rg method uniquely. the initial value in the higher
+order has been determined so that the fast motion disappears.
+
+generic systems which have a linear matrix having zero eigenvalue will be extensively
+
+analyzed in 4.
+
+14
+
+3.2 when the unperturbed solution is oscillatory
+
+in the present subsection, we shall examine a case where the unperturbed solution has
+another type of neutral stability, i.e., is oscillatory . we shall treat a simplest equation
+of a damped oscillator with the geometrical terms putting an emphasis on the fact that
+the rg method concerns with the initial value.
+in a recent monograph, nishiura[57]
+used this example to indicate that a careful identication of the initial values in the
+higher order terms is needed to construct the proper perturbative solutions for obtaining
+a meaningful result in the rg method, though he failed to give general principles for a
+careful identication. one will see that the general principles given in the foreword in
+this section determine the initial values uniquely, hence nishiuras concern is resolved.
+one will also see that the initial values thus obtained are of the same forms as obtained
+in [25].
+
+the equation we deal with is
+
+x +  x + x = 0,
+
+(3.17)
+
+where 0 <  < 1. this system does not exhibit a decrease of the degrees of freedom,
+nevertheless the dynamics is reduced to a set of simpler equations for the amplitude and
+the phase, separately by the rg equation.
+
+with the denition u = t(x, y), y = x, eq.(3.17)is converted to
+
+y!,
+(t  a)u =  0
+
+with
+
+a =(cid:18) 0
+
+1 0(cid:19) .
+
+1
+
+(3.18)
+
+(3.19)
+
+we expand the dependent variable and the initial value in taylor series as u(t) =
+u0 + u1 + 2u2 +    and w (t0) = w 0 + w 1 + 2w 2 +    , with ui = t(xi, yi). the
+lowest order solution reads with the (complex) integral constant c(t0);
+
+y0(t; t0)!,
+u0(t; t0) = ceitu + + ceitu   x0(t; t0)
+
+(3.20)
+
+where u  = t(1,i); au  = iu . this is a neutrally stable solution. the initial
+value in this order reads,
+
+with
+
+w 0(t0) = z(t0)u + + c.c.,
+
+z(t0) = c(t0)eit0.
+
+15
+
+(3.21)
+
+(3.22)
+
+here c.c. denotes the complex conjugate.
+
+the rst order equation reads
+
+(t  a)u1 = y0(t)
+
+1
+2i
+
+(u +  u ),
+
+(3.23)
+
+with the initial condition u1(t0, t0) = w 1(t0) which is not yet known but to be determined.
+the equation is readily solved as follows;
+
+u1(t; t0) = e(tt0)aw 1(t0) 
+= e(tt0)a(cid:20)w 1(t0) 
+
+1
+2i
+which leads to the natural choice of the initial value
+
+2(cid:20){(t  t0)ceitu + 
+
+
+
+1
+
+t0
+
+1
+
+1
+
+2iz t
+dse(ts)ay0(s)(u +  u ),
+2i{ceit0u +  ceit0 u }(cid:21)
+ceitu } + c.c.(cid:21) , .
+
+w 1(t0) =
+
+1
+2i{z(t0)u +  z(t0)u } = 1[z, z],
+
+(3.24)
+
+(3.25)
+
+because otherwise the rst term of (3.24) gives rise to terms which could be renormal-
+ized away into the unperturbed solution with a redenition of c. we emphasize that a
+renormalization procedure enters here. hence
+
+u1(t; t0) = 
+
+1
+2{(t  t0)c(t0)eitu + 
+
+1
+2i
+
+y1(t; t0)!.
+c(t0)eitu } + c.c.  x1(t; t0)
+
+(3.26)
+
+similarly, the second order solution is given by
+
+u2(t; t0) = e(tt0)aw 2(t0) 
+
+2iz t
+= e(tt0)a(cid:20)w 2(t0)  {
+
+1
+
+dse(ts)ay1(s)(u +  u ),
+t0
+eit0u  + c.c.}(cid:21)
+c
+16
+
++
+
+ic
+8
+
+[{i(t  t0)2 + (t  t0)}u + + {t  t0 + i/2}u]eit + c.c.. (3.27)
+
+thus we are led to the choice of the initial value
+
+w 2(t0) = 
+
+1
+16
+
+z(t0)u  + c.c. = 2[z, z],
+
+(3.28)
+
+because of the same reason as in the rst-order case. hence
+
+u2(t; t0) =
+
+ic
+8
+
+[{i(t  t0)2 + (t  t0)}u + + {t  t0 + i/2}u ]eit + c.c..
+
+(3.29)
+
+collecting all the terms up to the second order, we have
+
+u(t; t0) = ceitu + 
+
+c
+2 {(t  t0)u + +
+
+i
+2
+
+u }eit,
+
++
+
+i2c
+
+8
+
+[{i(t  t0)2 + (t  t0)}u + + {t  t0 + i/2}u ]eit + c.c., (3.30)
+
+16
+
+with the initial value
+
+w (t0) = z(t0){u +  i
+
+
+4
+
+u  
+
+2
+16
+
+u } + c.c..
+
+the rg equation eq.(2.21) gives
+
+c + (/2 + i2/8)c = 0.
+
+(3.31)
+
+(3.32)
+
+parameterizing c as c = (a/2) exp(i), we have the equations governing the amplitude
+and the phase, respectively,
+
+a + /2  a = 0,
+
+ = 2/8,
+
+(3.33)
+
+which yields a(t) = a0e/2t and (t) = 2t/8 + 0 with a0 and 0 being constants.
+since u(t) = w (t), we have the nal solution to the damped oscillator as
+
+x(t) = a0e/2t{(1 
+
+2
+16
+
+) cos(t + 0) +
+
+
+4
+
+sin(t + 0)},
+
+(3.34)
+
+with  = 1  2/8 being the angular velocity. the above expression is slightly dierent
+from that given in [25] where the equation is treated as a scalar equation; a redenition
+of the constants a0 and 0 transforms the solutions to each other in this order. we see
+that although the number of the dimension of the equation is not changed, the dynamics
+is reduced to simpler equations (3.33) for the amplitude and the phase. the initial values
+in the higher order equations have been determined so that terms proportional to the
+unperturbed solution do not appear; such higher order terms have been renormalized
+away by a redenition of the integral constant in the unperturbed solution.
+
+a comment is in order: the above solution could be more eciently obtained by using
+the operator method (implicitly) adopted in [25, 26] and fully accounted in appendix a
+of the present article. for instance, the rst order solution in the operator method reads
+
+u1(t; t0) = 
+
+1
+2
+
+(t  a)1(ceit  ceit)(u +  u ),
+
+(3.35)
+
+which is readily evaluated with the use of (a. 9) and (a. 10). the second order solution
+is also readily obtained with the use of the formulae given in appendix a.
+
+3.3 unstable motion in the double-well potential
+
+next, we show that unstable manifolds are also constructed by the present method, using
+the double-well potential in mechanics;
+
+x = x  x3.
+
+17
+
+(3.36)
+
+let us obtain the unstable motion around the origin by applying the rg method. this
+example is a peculiar case where the unperturbed solution is not neutrally stable but
+composed of a blowing and decaying function with the same exponent. we shall treat
+another example of this type in 5.2.
+
+putting x = y and dening u = t(x, y), we have a system of equation
+
+x3!.
+dt  a! u =   0
+  d
+
+(3.37)
+
+we solve the equation around an arbitrary t = t0 with the initial value w (t0). the
+solution is written as u = u(t; t0, w (t0)). we expand u = u0 + u1 +    . accordingly
+the initial value w (t0) which is to be determined self-consistently is also expanded as
+w = w 0 + w 1 +    .
+
+the lowest order solution reads
+
+u0(t; t0) = c+(t0)etu + + c(t0)etu ,
+
+(3.38)
+where we have suppressed the w -dependence of u0 and u  = t(1,1) are the eigen-
+vectors of a belonging to the eigenvalues 1, respectively. the initial value w 0(t0)
+accordingly reads
+
+w 0(t0) = u0(t0; t0) = c+(t0)et0 u + + c(t0)et0u ,
+
+which will imply that the trajectory is in a hyperbolic curve
+
+m0 = {u = (x, y)|(x + y)(x  y) = const}
+
+(3.39)
+
+(3.40)
+
+with the asymptotic lines y = x.
+the rst order equation reads
+
+  d
+dt  a! u1 = 
+
+1
+2
+
+(c+(t0)et + c(t0)et)3(u +  u ),
+
+(3.41)
+
+which is solved with the initial value w 1(t0) formally as
+
+u1(t; t0) = e(tt0)aw 1(t0)
+
+1
+
+2z t
+
+t0
+
+
+
+dse(ts)a(c+(t0)es + c(t0)es)3(u +  u ),
+(f+(t0; t0)u + + f(t0; t0)u )]
+
+1
+2
+
+= e(tt0)a[w 1(t0) +
+
+1
+2
+
+
+
+with
+
+(f+(t; t0)u + + f(t; t0)u ),
+
+f+(t; t0) = 3c 2
+
+f(t; t0) = 3c+c 2
+
+
++c(t  t0)et 
+
+3
+2
+(t  t0)et 
+
+et +
+
+1
+c+c 2
+
+2
+c 2
++cet +
+
+3
+2
+
+18
+
+(3.42)
+
+(3.43)
+
+(3.44)
+
+e3t,
+
+c 3
+
++e3t.
+
++e3t 
+c 3
+c 3
+
+
+1
+4
+e3t 
+
+c 3
+
+1
+4
+
+1
+2
+
+thus the rst-order initial value w 1(t0) is chosen to be
+
+w 1(t0) = 
+
+1
+2
+
+(f+(t0; t0)u + + f(t0; t0)u ),
+
+(3.45)
+
+because otherwise the rst term of (3.42) gives rise to terms proportional to the unper-
+turbed solution which should be renormalized away with the redenition of c. we
+notice that w 1(t0) is a function of a(t0) = c(t0)et0;
+
+w 1(t0) = 1[a+, a].
+
+(3.46)
+
+applying the rg equation to u(t; t0) = u0(t; t0) + u1(t; t0), one obtains
+
+du
+
+dt0(cid:12)(cid:12)(cid:12)(cid:12)t0=t
+
+which leads to
+
+= c+etu + + cetu  + 3
+
+
+2{c 2
+
++cetu +  c+c 2
+
+
+etu +} = 0,
+
+(3.47)
+
+c+ = 
+
+3
+2
+
+c 2
++c,
+
+c =
+
+3
+2
+
+c+c 2
+
+
+.
+
+(3.48)
+
+noting that c+(t)c(t) = const  c+c, one obtains the solution to the rg equation as
+follows;
+
+c+(t) = c+e3c+ct/2, c(t) = ce3c+ct/2.
+
+(3.49)
+
+thus one nds that the global solution is given by
+
+u(t) = w (t) = w 0[a+, a] + 1[a+, a],
+
+= a+(t)u + + a(t)u 
+
+
+
+8(cid:20){2a3
+
++{a3
+
++(t)  6a+(t)a2
+
++(t)  6a2
+
+(t)  a3
+
++(t)a(t) + 2a3
+
+
+(t)}u +
+(t)}u (cid:21),
+
+(3.50)
+
+where a(t) = cexp{t} with  = 1  3c+c/2. in this case, the unstable manifold
+is represented solely with a and the dynamics on the manifold is given through the
+evolution of these variables.
+
+to compare the result with the exact solution given in terms of an elliptic function,
+
+we rst write down the rst component x(t) of u(t) given in (3.50);
+
+x(t) = (1 +
+
+3
+4
+
+)(c+et + cet) 
+4)c as c, we have
+
+
+8{c3
+
++e3t + c3
+
+
+e3t},
+
+with  = c+c. writing (1 + 3
+
+x(t) = c+et + cet 
+
+
+8{c3
+
++e3t + c3
+
+
+e3t},
+
+19
+
+(3.51)
+
+(3.52)
+
+still with  = 1  3c+c/2 up to o(2). in fact, if one solved the equation in the scalar
+form without converting the equation to the vector one and applied the operator method
+adopted in [25, 26] and explained in appendix a of the present paper, one would have
+directly reached the form given in (3.52). we stress that the method adopted in [25, 26]
+is more convenient in practice than that presented here.
+
+to make the comparison with the exact solution easier, it is found convenient to
+consider the case with the initial condition x(0) = 0. this implies that c+ = c.
+further putting c+(1 + 3/8)/2 = c, one has
+
+x(t) = c sinh t 
+
+c 3 sinh3 t,
+
+
+8
+
+with  = 1 + 3
+
+8c 2 up to o(2).
+
+now the exact solution with the initial condition x(0) = 0 reads
+
+x(t) = h cn( ()t + k(k), k),
+
+= hkf ( ()t, k),
+
+(3.53)
+
+(3.54)
+
+are functions of  and the energy e of the system, which is assumed to be positive here;
+
+dn(t, k) are jacobis elliptic functions with modulus k, k(k) the complete elliptic integral
+
+where f ( ()t, k) = sn( ()t, k)/ dn( ()t, k) with () =q/2k/h, cn(t, k), sn(t, k) and
+of the rst kind and k = 1  k2 the complementary modulus. the constants k and h
+h =s 1 + 1 + 4e
+and ()  1 + e. notice that k approaches 1 as  goes to 0. if one expands f ( ()t, k)
+w.r.t. k around k = 1 with () xed, one has
+
+k = hq/2(1 + 4e)1/4  1  
+
+q2/(1 + e/2),
+
+e
+2
+
+, (3.55)
+
+
+
+f ( ()t, k)  (1 +
+
+
+4
+
+e) sinh(1 +
+
+3
+4
+
+e)t 
+
+
+4
+
+e sinh3(1 +
+
+3
+4
+
+e)t,
+
+(3.56)
+
+up to o(2). notice that the expansion of the elliptic functions at k = 1 is subtle; we
+have made the manipulation as follows;
+
+sinh u 
+
+
+4
+
+eu cosh u = sinh u 
+ sinh(1 
+4e) = 2e(1 + 5
+
+d sinh u
+
+du
+
+,
+
+
+eu
+4
+
+4
+
+e)u.
+
+(3.57)
+
+then identifying c = hk(1 + 
+(3.53).
+formula obtained above.
+
+8e), one reproduces the above result
+in appendix b, an elementary method is presented to derive the approximate
+
+20
+
+3.4 an example with a jordan cell; takens equation
+
+as examples which involve a linear operator with a jordan cell, we take the takens
+equation [49] in the present subsections.
+
+the takens equation is given by
+
+x = y + ax2,
+
+y = bx2.
+
+(3.58)
+
+since we are interested in a slow motion in the vicinity of the origin, we make a scale
+transformation;
+
+x = x,
+
+y = y,
+
+(3.59)
+
+where  is a small parameter. to make the equation to be balanced, one nds that  = ;
+we choose  =  = 1 for simplicity. then we end up with
+
+x = y + ax 2,
+
+y = bx 2.
+
+(3.60)
+
+expanding as x = x0 + x1 +   , and y = y0 + y1 +  , we rst solve the equation
+around t  t0 with the initial value w (t0) = t(x(t0), y (t0)) = w 0(t0) + w 1(t0) +   ,
+where t0 is arbitrary.i the equations in the rst few orders read
+
+x0 = y0,
+x1 = y1 + ax 2
+0 ,
+
+y0 = 0,
+
+y1 = bx 2
+0 ,
+
+(3.61)
+(3.62)
+
+and so on.
+
+we take the stationary solution as the lowest order one to describe a slow motion on
+
+an invariant manifold, in accordance with the previous treatment; namely,
+
+x0(t; t0) = const = c0(t0),
+
+y0(t; t0) = 0,
+
+(3.63)
+
+c0(t0) is an integral constant. accordingly, w 0(t0) = t(c0(t0), 0), i.e., the unperturbed
+manifold m0 is the x axis.
+
+then the rst order equation is solved successively from y1 to x1 to yield
+
+y1(t; t0) = bc 2
+
+x1(t; t0) =
+
+b
+2
+
+0 (t0)(t  t0) + c1(t0),
+c 2
+0 (t0)(t  t0)2 + (c1(t0) + ac 2
+
+0 (t0))(t  t0),
+
+(3.64)
+
+where c1(t0) is another integral constant. accordingly, w 1(t0) = t(0, c1(t0)); namely,
+the modication of the invariant manifold is given in the y direction;
+
+m1 = {(x, y )|(x, y ) = (c0, c1)}.
+
+(3.65)
+
+21
+
+up to this order, we have
+
+x(t; t0) = c0(t0) + {
+y (t; t0) = {bc 2
+
+0 (t0)(t  t0) + c1(t0)},
+
+b
+2
+
+c 2
+0 (t0)(t  t0)2 + (c1(t0) + ac 2
+
+0 (t0))(t  t0)},
+
+with w (t0) = t(c0(t0), c1(t0)).
+
+now applying the rg equation to x(t; t0) and y (t; t0) thus obtained, we have
+
+c0 = (c1 + ac0(t)),
+
+c1 = bc 2
+0 .
+
+the trajectory is given by
+
+x(t) = x(t; t) = c0(t),
+
+y (t) = y (t; t) = c1(t),
+
+(3.66)
+
+(3.67)
+
+(3.68)
+
+(3.69)
+
+which shows that the original takens equation is reproduced. this means that takens
+equation is irreducible and can not be reduced to a simpler equation.
+
+a few comments are in order: in this case, the invariant manifold is represented with
+two variables in accordance with the dimension of the jordan cell although the dimension
+of the unperturbed solution is one; namely, the dimension of the invariant manifold is
+increased from that of the unperturbed manifold m0. the amplitude of the trajectory in
+the second direction, c1(t) is small compared with the amplitude in the rst direction
+c0, while the time dependence of the second variable is large in comparison with the rst
+variable.
+
+4 generic systems with the linear operator having
+
+zero eigenvalues
+
+in this section, we shall examine invariant manifolds and slow motions given by generic
+systems which have a linear operator having zero eigenvalues. we shall show how uniquely
+the initial values are chosen by using a simple formula for the special solutions to dier-
+ential equations as in the previous section; the initial values are determined successively
+so that terms which give fast motions and those proportional to the unperturbed solution
+do not appear. we call these unwanted terms dangerous ones. we shall also show a
+necessary condition on the type of equations for the rg method to be applicable, which
+condition is relevant when the linear operator has a jordan cell.
+
+we treat the following rather generic vector equations in this section:
+
+tu = au + f (u),
+
+(4.1)
+
+where tu = u/t, a is a linear operator, f a nonlinear function of u and  is a small
+parameter (|| < 1). we assume that a has multiply degenerated zero eigenvalues and
+other eigenvalues of a have a negative real part.
+
+22
+
+we are interested in constructing the attractive manifold m at t   and the reduced
+dynamics on it. we try to construct solve the problem in the perturbation theory by
+expanding u as
+
+u(t; t0) = u0(t; t0) + u1(t; t0) + 2u2(t; t0) +    ,
+
+(4.2)
+
+with the initial value w (t0) at an arbitrary time t0. we suppose that the equation has
+been solved up to t = t0 and the solution has the value w (t0) at t0. actually, the
+initial value must be determined by the perturbative solution self-consistently; indeed,
+u(t) = w (t) is the solution to (4.1) in the global domain. therefore it should be also
+expanded as follows;
+
+w (t0) = w 0(t0) + w 1(t0) + 2w 2(t0) +    ,
+
+= w 0(t0) + (t0),
+
+(4.3)
+
+where (t0) is supposed to be an independent function of w 0. they are not yet known
+at present but will be determined so that the perturbative expansion becomes valid. one
+of the main purposes in this section is how sensibly the initial values can be determined
+order by order.
+
+the equations in the rst few orders read
+
+(t  a)u0 = 0,
+(t  a)u1 = f (u0),
+(t  a)u2 = f (u0)u1,
+
+where
+
+(f (u0)u1)i =
+
+nxj=1{(f (u0))i/(u0)j} (u1)j,
+
+if u is an n-dimensional vector.
+
+(4.4)
+(4.5)
+(4.6)
+
+(4.7)
+
+w treat the two cases separately where a has semi-simple 0 eigenvalues or a jordan
+
+cell.
+
+4.1 when a has semi-simple zero eigenvalues
+
+in this subsection, we treat the case where a has semi-simple 0 eigenvalues. let the
+dimension of kera be m;
+
+au i = 0,
+
+(i = 1, 2, . . . , m).
+
+we suppose that other eigenvalues have negative real parts;
+
+au  = u ,
+
+( = m + 1, m + 2,   , n),
+
+23
+
+(4.8)
+
+(4.9)
+
+where re < 0. one may assume without loss of generality that u is and u s are
+linearly independent.
+
+the adjoint operator a has the same eigenvalues as a has;
+
+a u i = 0,
+a u  = 
+
+(i = 1, 2, . . . , m),
+
+u ,
+
+( = m + 1, m + 2,   , n).
+
+(4.10)
+
+here we suppose that u i and u s are linearly independent. without loss of generality,
+one can choose the eigenvectors so that
+
+h u i, u i = 0 = h u , u ii,
+
+(4.11)
+
+with 1  i  m and m + 1    n.
+
+we denote the projection operators by p and q which projects onto the kernel of a and
+the space orthogonal to kera, respectively. the projection operators can be constructed
+in terms of u i and u i (i = 1, 2, . . . , m) as follows: let up be an n  m matrix dened
+by up = (u 1, u 2, . . . , u m) and u p by u p = ( u 1, u 2, . . . , u m), then
+
+p = up ( u
+
+
+p
+
+up )1 u
+
+
+p ,
+
+(4.12)
+
+and q = 1  p .
+
+since we are interested in the asymptotic state as t  , we may assume that the
+
+lowest-order initial value belongs to kera:
+
+w 0(t0) =
+
+mxi=1
+
+ci(t0)u i = w 0[c].
+
+(4.13)
+
+thus trivially, u0(t; t0) = e(tt0)aw 0(t0) = pm
+i=1 ci(t0)u i. we notice that a natural
+parameterization of the invariant manifold in the lowest order m0 is given by the set of
+the integral constants c = t(c1, c2,   , cm) being varied.
+
+the rst order equation (4.5) with the initial value w 1(t0) which is not yet determined
+
+is formally solved to be
+
+u1(t; t0) = e(tt0)aw 1(t0) +z t
+
+t0
+
+dse(ts)af (u0(s; t0)).
+
+(4.14)
+
+we remark that one may assume that the initial value w 1(t0) is independent of w 0(t0),
+namely w 1(t0) belongs to the q-space, because if w 1(t0) had a component belonging
+to kera, the component could be renormalized away into w 0. inserting the identity
+i = p + q between the two functions in the integral, we have
+
+u1(t; t0) = e(tt0)a[w 1(t0) + a1qf (w 0(t0))]
+
++(t  t0)p f (w 0(t0))  a1qf (w 0(t0)).
+
+(4.15)
+
+24
+
+the rst term has a possibility to give rise to a fast motion, which should be avoided
+and called dangerous term: the dangerous terms here are analogous with divergent
+terms in quantum eld theory, which are subtracted away by counter terms, analogue to
+the initial values w i here, self-consistently. indeed it is nice that the initial value w 1(t0)
+not yet determined can be chosen so as to cancel out the dangerous term as follows;
+
+w 1(t0) = a1qf (w 0(t0)),
+
+(4.16)
+
+which satises p w 1(t0) = 0 and is a function solely of c(t0). thus we have for the rst
+order solution
+
+u1(t; t0) = (t  t0)p f  a1qf ,
+
+(4.17)
+
+where the argument of f is w 0[c]. notice that eq.(4.17) is consistent with (4.16).
+we remark that what we have done is actually a simple thing; we have suppressed the
+unperturbed part that would be damped out as t  .
+
+now the invariant manifold is modied to m1 given by
+
+m1 = {u|u = w 0  a1qf (w 0)}.
+
+if one stops to this order, the approximate solution reads
+
+u(t; t0) = w 0 + {(t  t0)p f  a1qf}.
+
+then the rg equation u/t0|t0=t = 0 gives
+
+w 0(t) = p f (w 0(t)),
+
+which is reduced to an m-dimensional coupled equation,
+
+ci(t) = h u i, f (w 0[c])i,
+
+(i = 1, 2,   , m).
+
+(4.18)
+
+(4.19)
+
+(4.20)
+
+(4.21)
+
+the global solution representing a trajectory on the invariant manifold up to this order
+is given by
+
+u(t) = u(t; t0 = t) =
+
+mxi=1
+
+with c(t) being the solution to (4.21).
+
+ci(t)u i  a1qf (w 0[c]),
+
+(4.22)
+
+in short, we have derived the invariant manifold as the initial value represented by
+(4.22) and the reduced dynamics (4.21) on it in the rg method in the rst order approx-
+imation.
+
+the second order solution can be obtained as follows. as has been done in the rst
+
+order case, the second order solution is formally given by
+
+u2(t; t0) = e(tt0)aw 2(t0) +z t
+
+t0
+
+dse(ts)af (u0(s; t0))u1(s; t0).
+
+(4.23)
+
+25
+
+we may assume again that the initial value w 2(t0) belongs to the q-space. a straight-
+forward evaluation of the integral yields
+
+u2(t; t0) = e(tt0)ahw 2(t0) na1qf a1qf  a2qf p foi
+
++a1qf a1qf  a2qf p f  (t  t0)np f a1qf + a1qf p fo
+(t  t0)2p f p f ,
+
+1
+2
+
++
+
+(4.24)
+
+where the argument of f and f  is w 0[c]. the initial value can be now determined so
+as to cancel out the dangerous term, i.e., the fast moving part, as before;
+
+w 2(t0) = a1qf (w 0)a1qf (w 0)  a2qf p f ,
+
+(4.25)
+
+which belongs to the q-space. this implies that the invariant manifold is modied to m2
+represented by w = w 0[c] + [c];   w 1 + 2w 2. thus we obtain for the second
+order solution
+u2(t; t0) = a1qf a1qf  a2qf p f  (t  t0)np f a1qf + a1qf p fo
+
+(4.26)
+
++
+
+1
+2
+
+(t  t0)2p f p f .
+
+notice that eq.(4.26) is consistent with (4.25). thus the full expression of the solution
+up to the second order is given by
+
+u(t; t0) = w 0(t0) + {(t  t0)p f  a1qf}
+
++2(cid:20)a1qf a1qf  a2qf p f  (t  t0)np f a1qf + a1qf p fo
+(t  t0)2p f p f(cid:21).
+
+(4.27)
+
+1
+2
+
++
+
+the rg equation u/t0|t0=t = 0 reads
+
+w 0(t)  p f  a1qf  w 0 + 2np f a1qf + a1qf p fo = 0.
+
+(4.28)
+
+operating the projections p and q to the both sides of (4.28), respectively, we have
+
+w 0(t)  p f + 2p f a1qf = 0,
+ a1qf  w 0 + 2a1qf p f = 0.
+
+(4.29)
+(4.30)
+
+firstly, we notice that the last equation (4.30) is reduced to
+a1qf ( w 0 + p f ) = 0,
+
+which is identically satised on account of (4.29) up to this order. thus, we end up with
+the reduced equation given by
+
+w 0(t) = p f  2p f a1qf ,
+
+(4.31)
+
+26
+
+which is further reduced to
+
+for i = 1, 2, . . . , m.
+
+ci = h ui, f  f a1qfi,
+
+(4.32)
+
+the global solution giving the trajectory on the invariant manifold is given by the
+
+initial value as
+
+u(t) = w (t) = w 0[c] + [c]
+
+= w 0[c]  a1qf + 2{a1qf a1qf  a2qf p f},
+
+(4.33)
+
+with c(t) being the solution to (4.32). notice that the argument of f and f  in the
+above expression is all w 0, hence the r.h.s is a function of c, i.e., u(t) = u[c]. recall
+that c was the integral constants of the unperturbed solution.
+
+a couple of remarks are in order: (1) when the present formulation is applied to
+the lorenz model[58] around the rst bifurcation point which is simple one, the result
+coincides with that given in [26]; in other words, the present formulation gives a foundation
+to the prescription adopted in that paper. (2) the present formulation using the projection
+operators and the resultant rg equation (4.32) governing the slow motion resemble those
+by mori theory [59] for stochastic motions.
+
+4.2 when a has a jordan cell
+
+in this subsection, we treat the case where a has a jordan cell. we assume the jordan
+cell is two-dimensional for simplicity, and we dene the normalized vectors u 1 and u 2 by
+
+the conjugate vectors u 1 and u 2 satisfy
+
+au 1 = 0, au 2 = u 1.
+
+a u 2 = 0, a u 1 = u 2,
+
+where a is the conjugate of a. the normalization condition is given by
+
+h u 1, u 1i = h u 2, u 2i = 1,h u 1, u 2i = 0,
+
+(4.34)
+
+(4.35)
+
+(4.36)
+
+where h , i denotes the inner product. note that h u 2, u 1i = 0 automatically holds.
+
+we denote by p the projection operator to the subspace (p-space) spanned by u 1
+
+and u 2;namely, for any vector u,
+
+p u = u 1 + u 2,
+
+(4.37)
+
+with  = h u 1, ui and  = h u 2, ui.
+
+27
+
+let q be the projection operator to the subspace (q-space) compliment of the p-space.
+
+then one can verify that
+
+etau = eta(p + q)u,
+
+= ( + t)u 1 + u 2 + etaqu.
+
+(4.38)
+
+so much for the preliminaries.
+
+now let us proceed to obtain the asymptotic solution to (4.4) as t   by the
+perturbation method: since we are interested in constructing the invariant manifold, let
+us take the stationary solution as the lowest order one;
+
+accordingly, the initial value reads
+
+u0(t; t0) = c0(t0)u 1,
+
+w 0(t0) = c0(t0)u 1.
+
+(4.39)
+
+(4.40)
+
+notice that we have not included a component in u 2 direction. the lowest order manifold
+is
+
+m0 = {u|u = c0u 1}.
+
+(4.41)
+
+the rst order solution is formally given by (4.14). the rst order initial value is
+
+chosen to be independent of w 0;
+
+w 1(t0) = c1(t0)u 2 + qw 1(t0).
+
+a simple evaluation of the integral in (4.14) gives the rst order solution as
+
+u1(t; t0) = e(tt0)a[qw 1(t0) + a1qf ]
+
++{c1(t0)(t  t0) + f (t  t0) + f
++{c1(t0) + f (t  t0)}u 2  a1qf + o((t  t0)n2),
+
+(t  t0)2}u 1
+
+1
+2
+
+where
+
+f = h u 1, fi,
+
+f = h u 2, fi.
+
+(4.42)
+
+(4.43)
+
+the argument of f in the above expressions is w 0[c0]. the initial value can be deter-
+mined so as to cancel out the fast mode as before, namely,
+
+which implies that the invariant manifold is modied to
+
+qw 1(t0) = a1qf ,
+
+m1 = {u|u = c0u 1 + c1u 2  a1qf}.
+
+28
+
+(4.44)
+
+(4.45)
+
+then the solution up to the rst order is obtained as
+
+u(t; t0) = c0(t0)u 1 + (cid:20){f (t  t0) + c1(t0)(t  t0) +
+
++{f (t  t0) + c1(t0)}u 2  a1qf(cid:21).
+
+1
+2
+
+f (t  t0)2}u 1
+
+the rg equation in this order is given by
+
+0 = c0u 1  {(f + c1)u 1 + (f  c1)u 2 +
+
+1
+a
+
+qf  c0u 1,
+
+which leads to
+
+c0 = (cid:16)h u 1, fi + c1(cid:17) ,
+
+c1 = h u 2, fi.
+
+we now see that the trajectory in the invariant manifold m1 is given by
+
+u(t) = w (t)  w 0[c0] + w 1[c0],
+
+= c0(t)u 1 + c1(t)u 2  a1qf ,
+
+(4.46)
+
+(4.47)
+
+(4.48)
+
+(4.49)
+
+with c0(t) and c1(t) being governed by (4.48). notice that u(t) is a functional of c0(t)
+and c1(t).
+
+the second order solution is obtained, similarly. the formal solution to the second
+order equation is given by eq.(4.23). let g = c1(t0)u 1 + f u 1 + f u 2 and h =
+
+
+qf + c1u 2. then, a simple manipulation as before gives
+
+1
+a
+
+u2(t; t0) = e(tt0)a[w 2(t0) + {a1qf h + a2qf g}]
+
++(t  t0)na1qf g + p f ho  {a1qf h + a2qf g}
++o((t  t0)2).
+
+thus the initial value is determined to be
+
+(4.50)
+
+(4.51)
+
+w 2(t0) = (cid:16)a1qf h + a2qf g(cid:17) ,
+
+so that the fast modes disappear; notice that w 2 belongs to the q-space. the invariant
+manifold is modied now in an apparent way; so we do not write the specication of the
+second order manifold m2. hence we have
+
+u2(t; t0) = (t  t0)na1qf g + p f ho  {a1qf h + a2qf g}
+
++o((t  t0)2).
+
+applying the rg equation to u = u0 + u1 + 2u2 thus obtained, we have
+c0u 1  (f + c1)u 1 + ( c1  f )u 2  a1qf  c0u 1
+
+2na1qf g + p f ho  2na1qf  c1u 2 + a2qf  c1u 1o = 0
+
+(4.52)
+
+(4.53)
+
+29
+
+operating p and q to (4.53), we obtain
+
+0 = c0u 1 +  c1u 2  g  2p f h,
+0 = 2a2qf  c1u 1  a1qf n c0u 1 +  c1u 2  go .
+
+we remark that from (4.54) and (4.55),
+
+qf u 1 = 0
+
+(4.54)
+
+(4.55)
+
+(4.56)
+
+must hold as a compatibility condition, which gives a necessary condition for the rg
+method to work for higher approximations. with this condition taken for granted, g is
+reduced to g = f u 2.
+
+equating the components in the u 1, u 2 in (4.54), we have the reduced dynamics as
+
+follows,
+
+c0 = (h u 1, f + f hi + c1),
+c1 = h u 2, f + f hi,
+where the argument of f and f  is w 0(t) = c0(t)u 1.
+
+the trajectory on the manifold m2 is given by
+
+u(t) = w (t) = w 0(t) + w 1(t) + 2w 2(t),
+
+= c0(t)u 1 + c1(t)u 2  a1qf
+
+2{a1qf h + h u 2, fia2qf u 2}.
+
+(4.57)
+(4.58)
+
+(4.59)
+
+comments are in order: the solution is solely described by the coordinates c0 and c1
+representing the p space as in the previous subsection. conversely, the dynamics can not
+be described only by the coordinate in the zero-th manifold in this case; the dimension of
+the invariant manifold is increased from that of the unperturbed invariant manifold. we
+remark that the formulae obtained above are completely consistent with those given for
+the takens equation in 3.
+
+4.3 practical way
+
+we have formulated the rg method so that it is claried that the method concerns with
+the initial values and the invariant manifold is constructed as the initial value perturba-
+tively: the initial values are determined so that terms proportional to the unperturbed
+solution and those representing fast motions disappear in the perturbed solutions.
+in
+eect, the special solutions of the higher order equations are composed of secular terms
+which are proportional to the unperturbed solution and vanish at t = t0 and solutions
+independent of the unperturbed solution. we remark that this way of construction of the
+perturbative special solutions have been adopted in [25, 26, 27]. in this subsection, having
+
+30
+
+known the above fact, we present the rules for constructing the special solutions in the
+form of an operator method; a detailed account of this method is given in appendix a.
+this subsection will constitute a practical summary of the results obtained in the previous
+subsections.
+
+when we try to obtain an invariant manifold and the reduced dynamics on it, the
+
+solution to the unperturbed equation (4.4) is given by a stationary one
+
+then the rst order solution is given by
+
+u0(t; t0) = w 0(t0).
+
+f (u0) =
+
+(p f (u0) + qf (u0)),
+
+u1(t; t0) =
+
+1
+
+t  a
+
+= (t  t0)p f +
+
+1
+
+t  a
+qf .
+
+1
+a
+
+here (a.16) and (a.17) have been used and a1 is written as 1
+a .
+
+similarly, the second order solution is given by
+
+(4.60)
+
+(4.61)
+
+u2(t; t0) =
+
+=
+
+=
+
+1
+
+1
+
+f (u0)u1,
+
+t  a
+t  a
+1
+(t  t0)2p f p f + (t  t0)p f 
+2
+1
+a2}qf p f +
+{(t  t0)
+
+(p + q)f (u0){(t  t0)p f +
+1
+a
+1
+a
+
+1
+a
+
++
+
+qf},
+
+1
+a
+qf
+
+1
+a
+
+qf 
+
+qf ,
+
+(4.62)
+
+which coincides with (4.26). here we have used the formulae (a.20), (a.21) and (a.22).
+the eciency of the operator method is apparent.
+
+next, let us consider the case where a has a two-dimensional jordan cell. we take a
+
+stationary solution as the zeroth-order one;
+
+u0(t; t0) = c0(t0)u 1.
+
+(4.63)
+
+notice that the kernel of a is not yet fully spanned by the solution. then the rst
+order solution is given by a sum of the remaining component of kera and the special
+solution;
+
+u1(t; t0) =
+
+1
+
+t  a{0} +
+
+1
+
+t  a
+
+f (u0),
+
+= c1(t0)(t  t0)u 1 + c1(t0)u 2 +
+= c1(t0)(t  t0)u 1 + c1(t0)u 2
+
++{(t  t0)p f +
+
+(t  t0)2h u 2, fiu 1} +
+
+1
+2
+
+1
+
+t  a
+
+(p f (u0) + qf (u0)),
+
+qf ,
+
+1
+a
+
+(4.64)
+
+31
+
+which is found to coincide with eq.(4.42). here (a.17) and (a.27) have been used. the
+ta{0} =
+unperturbed solution
+b = 0, which is solved to yield
+a(t)u 1 + b(t)u 2, one has a coupled equation a = b,
+a(t) = c1(t0)(t  t0), b(t) = c1(t0).
+
+ta{0} may be obtained in the following way: putting
+
+1
+
+1
+
+the second order solution is given by
+
+u2(t; t0) =
+
+=
+
+1
+
+1
+
+t  a
+t  a
+
+f (u0)u1(t; t0),
+
+(p + q)f (u0)u1(t; t0).
+
+(4.65)
+
+then the r.h.s. is a sum of terms which are in the form 1
+ta (t 
+t0)nqg(u0), which are calculated in appendix a. actually, since terms proportional to
+(t  t0)n (n  2) do not contribute to the rg equation nor to the resulting trajectory,
+one needs not calculate the terms of the form 1
+ta(t  t0)np g(u0) with n  1. thus we
+easily reach the nal result given in (4.52).
+
+ta (t  t0)np g(u0) or
+
+1
+
+4.4 normal form
+
+as a simple example, we try to reduce the following two-dimensional evolution equation
+with a jordan cell;
+
+x = y + a1x2 + b1xy + c1y2,
+
+y = a2x2 + b2xy + c2y2,
+
+(4.66)
+
+with ai, bi and ci (i = 1, 2) being constant. as in the takens equation examined in 3,
+we make a scale transformation
+
+then the equation is reduced to
+
+x = x,
+
+y = y.
+
+where
+
+(t  a)u = f (u), u = t(x, y ),
+
+a =(cid:18) 0 1
+
+a2x 2 + b2xy + c2y 2!.
+0 0(cid:19) , f (u) = a1x 2 + b1xy + c1y 2
+
+here the p-space is spanned by
+
+0!,
+u 1 = 1
+
+1!,
+and u 2 = 0
+
+which satisfy au 1 = 0 and au 2 = u 1. and u i = u i (i = 1, 2).
+
+32
+
+(4.67)
+
+(4.68)
+
+(4.69)
+
+(4.70)
+
+expanding as u = u0 + u1 +    , with ui = t(xi, yi), we rst solve the equation
+
+around t  t0 with the initial value w (t0) = w 0(t0) + w 1(t0) +   .
+
+we take the stationary solution as the lowest order
+
+(4.71)
+where a0(t0) is an integral constant. accordingly, w 0(t0) = t(a0(t0), 0); the unperturbed
+manifold is the x axis.
+
+u0(t; t0) = a0(t0)u 1,
+
+according to the general argument given in 4.2, we need to calculate the following
+
+quantities;
+
+(4.72)
+
+(4.73)
+
+f = h u 1, f (u0)i = a1a2
+
+0(t0),
+
+notice that qf (u0) = 0, identically. then one has
+
+f = h u 2, f (u0)i = a2a2
+
+0(t0).
+
+a2
+u1(t; t0) = {a1(t0)(1 + a1a1(t0))(t  t0) +
+2
+0(t0)(t  t0)}u 2,
+
++{a1(t0) + a2a2
+
+a2
+0(t0)(t  t0)2}u 1
+
+where a1(t0) is another integral constant. accordingly, w 1(t0) = t(0, a1(t0)). then
+
+if we stop at this order, the rg equation reads
+
+m1 = {u|u = t(a0, a1)}.
+
+a0 = (a1 + a1a2
+
+0),
+
+a1 = a2a2
+0.
+
+(4.74)
+
+(4.75)
+
+this is the takens equation; notice the trajectory is given by x(t) = x(t; t) = a0(t), y(t) =
+y (t; t) = 2a1(t). it means that the rg method gives mechanically the normal form [50]
+of the reduced equation. this is conrmed by proceeding to the second order.
+
+in the present case, g = 0 and h = a1(t0)u 2, and
+
+then the second order solution is found to be
+
+p f (u0)h = a1{b1a0u 1 + b2a0u 2}.
+
+u2(t; t0) = (t  t0)a1{b1a0u 1 + b2a0u 2} + o((t  t0)n2),
+
+accordingly, w 2(t0) = 0.
+
+up to this order, we have u = u0 + u1 + 2u2. then the rg equation reads
+
+a0 = a1 + (a1a2
+a1 = a2a2
+
+0 + b2a0a1,
+
+0 + b1a0a1),
+
+(4.76)
+
+(4.77)
+
+(4.78)
+
+which is the normal form when the linear matrix is of jordan form[50]. the trajectory
+is given by x(t) = a0(t), y(t) = 2a1(t). thus one sees that the rg equation gives the
+normal form of the reduced evolution equation on the invariant manifold. we remark
+that when a1 = b1 = 0, the rg equation is nothing but the bogdanov equation[51].
+
+we remark that one needs the second order solution to give the bogdanov equation,
+
+while the takens equation is obtained in the rst approximation.
+
+33
+
+4.5 an extended takens equation
+
+as the nal example, we deal with an extension of the takens equation to a system with
+three-degrees of freedom;
+
+x = y + ax2,
+
+y = bx2,
+
+z = z + f (x, y, z),
+
+(4.79)
+
+where f (x, y, z) is analytic function of (x, y, z). we shall show the compatibility condi-
+tion (4.56), which becomes relevant only when the system has more than two-degrees of
+freedom, gives a restriction to the form of f (x, y, z).
+
+with u = t(x, y, z), (4.79) is converted to
+
+(t  a)u = f (u),
+
+where
+
+a =
+
+0 1 0
+0 0 0
+0 0  1
+
+ , f (u) =
+
+ax2
+bx2
+
+f (x, y, z)
+
+ .
+
+notice that a has a two-dimensional jordan cell;
+
+(4.80)
+
+(4.81)
+
+(4.82)
+
+au 1 = 0, au 2 = u 1, au 3 = u 3,
+
+where u 1 = t(1, 0, 0), u 2 = t(0, 1, 0), u 3 = t(0, 0, 1). the projection operator to the
+subspace {u 1, u 2} is given by p = diag(1, 1, 0), while q = 1  p = diag(0, 0, 1). we
+also notice that u i = u i (i = 1, 2) in this simple example. we are interested in the
+asymptotic behavior of the solution at t  . we rst solve (4.80) around t  t0 with
+the initial value w (t0) at t = t0 by the perturbation theory. the solution may be written
+as u(t; t0, w (t0)), which is expanded as u = u0 + u1 + 2u2 +   . the initial value which
+is determined self-consistently with u is also expanded as w = w 0 + w 1 + 2w 2 +   .
+when t  , we may take the stationary solution as an asymptotic one to the lowest
+
+order equation;
+
+u0(t; t0) = c0(t0)u 1.
+
+(4.83)
+
+accordingly the initial value reads w 0(t0) = c0(t0)u 1, which implies that the unper-
+turbed invariant manifold is given by
+
+m0 = {u|u = c0u 1},
+
+(4.84)
+
+namely the x axis.
+
+according to the general formulation given in the previous sections, to obtain the rst
+
+order solution, we only have to evaluate
+
+f = h u 1, f (u0)i = ac 2
+
+0 (t0),
+
+a1qf (u0) = f (u0)u 3.
+
+f = h u 2, f (u0)i = bc 2
+
+0 (t0),
+
+(4.85)
+
+34
+
+then we end up with
+
+u1(t; t0) = {ac 2
++{bc 2
+
+0 (t0)(t  t0) + c1(t0)(t  t0) +
+0 (t0)(t  t0) + c1(t0)}u 2 + f (u0)u 3.
+
+1
+2
+
+bc 2
+
+0 (t0)(t  t0)2}u 1
+
+accordingly,
+
+w 1(t0) = c1(t0)u 2 + f (u0)u 3,
+
+which implies that the modied invariant manifold is given by
+m1 = {u|u = t(c0, c1, f (c0, 0, 0))}.
+
+(4.86)
+
+(4.87)
+
+(4.88)
+
+if we stop at this order, the full solution is given by u  u0 + u1. applying the rg
+
+equation, we have
+
+c0 = (ac 2
+
+0 + c1),
+
+c1 = bc 2
+0 .
+
+and the trajectory on the manifold mm1 is given by
+
+u(t) = c0(t)u 1 + c1(t)u 2 + f (c0(t), 0, 0)u 3.
+
+(4.89)
+
+(4.90)
+
+to go to the second order, we rst need to examine the compatibility condition;
+
+0 = qf (u0)u 1 =
+
+f (x, y, z)
+
+x
+
+u 3,
+
+(4.91)
+
+(cid:12)(cid:12)(cid:12)(cid:12)u=u0
+
+with u0 = t(c0, 0, 0), which means that when y = z = 0, f (x, y, z) does not depend on
+x.
+
+with this condition assumed, we can proceed to the second order. to obtain the second
+order rg equation, we notice the following; h = a1qf (u0)+c1u 2 = f (u0)u 3 +c1u 2
+and hence f (u0)h = 0. thus the rg equation which gives the evolution equation of
+c0,1(t) is not modied by the second order perturbation.
+
+to obtain the second order correction to the trajectory, we need to evaluate the fol-
+
+lowing;
+
+ a1qf h = (f (u0)
+f
+a2qf u 2 = 
+u 3,
+y
+
+f
+z
+
++ c1
+
+f
+y
+
+)u 3,
+
+(4.92)
+
+where the derivatives are evaluated at u = u0 = t(c0(t), 0, 0). thus the second order
+correction of the initial value reads
+
+w 2(t0) = (f (u0)
+
+f
+z
+
++ c1
+
+f
+y  f
+
+f
+y
+
+)u 3.
+
+(4.93)
+
+35
+
+hence the trajectory in the second order approximation is given by
+
+u(t) = w (t) = c0(t)u 1 + c1(t)u 2 + f (u0)u 3
+
++2(f (u0)
+
+f
+z
+
++ c1
+
+f
+y  f
+
+f
+y
+
+)u 3.
+
+(4.94)
+
+here c0,1(t) are governed by the takens equation (4.89). we see that the higher order
+terms does not aect the dynamics but modies the trajectory only in the u 2 and the
+q-direction.
+
+similar discussions can be made for the following extended bogdanov equation,
+
+x = y,
+
+y = ax2 + bxy,
+
+z = z + f (x, y, z),
+
+(4.95)
+
+where f (x, y, z) is an analytic function.
+
+4.6 discussion
+
+we have applied the naive perturbative expansion as the starting point of the rg method.
+however, the naive perturbation expansion is not always a good starting point. there are
+cases where a scaling transformation is needed to convert the unperturbed equation to a
+non-jordan form before applying the perturbative expansion. let us take the following
+example;
+
+u =(cid:18) 0 1  
+
+ 0 (cid:19) u,
+
+with u = t(x, y). the exact solution reads
+
+u(t) = aetu + + betu ,
+where  =q(1  ) and u  = t(1,q/(1  )); i.e.,
+
+x(t) = aet + bet, y(t) =q/(1  )  (aet  bet).
+
+(4.96)
+
+(4.97)
+
+(4.98)
+
+due to the appearance of the singular term , the naive perturbation does not give
+a sensible result even in the rg method. in this case, we rst try to convert the equation
+so that the converted equation has no jordan nature in the unperturbed part. this can
+t =  . to make the
+be performed by a scale transformation; x = ,
+unperturbed part to be a non-jordan form, we choose that    +  = 1 +   +  = 0,
+which is satised with  = 0,  =  = 1/2, i.e., x = , y = ,
+t =  /. the
+converted equation reads
+
+y = ,
+
+d
+d
+
+=   ,
+
+d
+d
+
+= ,
+
+36
+
+(4.99)
+
+which can be now solved by the rg method with no diculty. the result obtained by
+the rg method up to o(2) reads
+
+x(t) = aet + bet, y(t) = (1 + /2)(aet  bet),
+
+with  = (1  /2).
+
+(4.100)
+
+37
+
+5 applications i
+
+in this section, we present examples of non-linear equations for which the unperturbed
+linear operator has no zero eigenvalues but a pair of eigenvalues i (i = 1, 2); (i) 1,2 = i
+and (ii) 1,2 =  where  and  are real numbers. the rst case is discussed in [25, 26]
+as well as in 3. we present it here for completeness.
+
+5.1 brusselator
+
+this is an example of systems showing a hopf bifurcation. an rg treatment of generic
+systems with a bifurcation has been given in [26] where an emphasis is put on the relation
+of the rg method with the envelope theory. here we treat this interesting example in
+the present formulation emphasizing the aspect of the rg method as the one to construct
+attractive manifolds.
+
+the brusselator is given by
+
+x
+t
+y
+t
+
+= a  (b + 1)x + x 2y + dx
+= bx  x 2y + dy
+
+2y
+x2 ,
+
+2x
+x2 ,
+
+(5.1)
+
+where a(> 0), b(> 0), dx and dy are constant. we here treat a uniform system, hence
+the terms with the spatial derivatives vanish. the steady state is given by (x0, y0) =
+(a, b/a). shifting the variables as  = x  x0,  = y  y0, and dening u = t(, ),
+we have
+
+with
+
+d
+dt
+
+u =(cid:18) (b  1) + a2
+
+b  a2 (cid:19) + f (, )(cid:18) 1
+1(cid:19) ,
+
+f (, ) = b/a  2 + 2a + 2.
+
+(5.2)
+
+(5.3)
+
+the linear stability analysis shows that when b exceeds the critical value bc = 1 + a2,
+there arises a bifurcation.
+
+now let us analyze the slow motion and the slow manifold around the bifurcation
+
+(critical) point. we dene the following variables
+
+ = (b  bc)/bc,  =q||, and  = sgn(),
+
+(5.4)
+
+accordingly,  = 2. we rst expand u and the initial value u(t = t0; t0) = w (t0) as
+taylor series w.r.t : u = u1 + 2u2 + 3u3 +   , and w = w 1 + 2w 2 + 3w 3 +   .
+
+38
+
+the rst order equation reads
+
+(t  l0)u1 = 0,
+
+with
+
+l0 =(cid:18) a2
+
+(a2 + 1)  a2(cid:19) .
+
+a2
+
+the solution is readily found to be
+
+u(t; t0) = c(t0)u eit + c.c.,
+
+with  = a and
+
+u =(cid:18) 1
+
+a (cid:19) .
+
+i 1+ia
+
+here c is the (complex) integral constant. accordingly,
+
+w 1(t0) = c(t0)u eit0 + c.c..
+
+(5.5)
+
+(5.6)
+
+(5.7)
+
+(5.8)
+
+(5.9)
+
+a simple manipulation using the formulae given in appendix a gives the higher order
+
+terms as follows;
+
+u2(t; t0) = {c 2v +e2it + c.c.} + |c|2v 0,
+
+v + =
+
+1 + ia
+
+3a3 (cid:18) 2ia
+
+1 + 2ia(cid:19) , v 0 = 2
+
+a3 (cid:18) 0
+1(cid:19) ,
+a2  1
+
+u3(t; t0) =(cid:20)c1
+
+2 {(t  t0)u +
+
+1
+2i
+
+u }eit + c3
+
+4i
+
+(u +
+
+1
+2
+
+u )e3it(cid:21)+c.c.,
+
+where
+
+and
+
+where
+
+2 + a2
+
+a2 + i4a4 + 7a2  4
+c1 = bcc + {
+c3 = {2bcv+/a + 2a(v+ + v+ u + u)}c 3,
+
+3a3
+
+}|c|2c,
+
+(5.10)
+
+(5.11)
+
+(5.12)
+
+(5.13)
+
+(5.14)
+
+with v+ being the -component of v + and so on. here the initial values have been
+chosen to be
+
+w 2(t0) = {c 2v +e2it0 + c.c.} + |c|2v 0,
+w 3(t0) = (cid:20) c1
+
+u eit + c3
+4i
+
+(u +
+
+u )e3it(cid:21)+c.c..
+
+4i
+
+1
+2
+
+(5.15)
+
+here u  is the complex conjugate of u .
+
+39
+
+collecting all the terms thus obtained to have the approximate u(t; t0) and applying
+
+the rg equation to it, we have dc/dt  2c1 = 0, or
+= c + |c|2c,
+
+dc
+dt
+
+with
+
+ = (1 + a2),  = 
+
+2 + a2
+
+a2 + i4a4 + 7a2  4
+
+3a3
+
+the attractive manifold is given by the initial value as
+
+(5.16)
+
+.
+
+(5.17)
+
+u(t) = w (t)  w 1(t) + 2w 2(t) + 3w (t),
+
+= {c(t)u eit + c.c.} + 2[(c 2(t)v +e2it + c.c.) + |c|2v 0]
+
++3(cid:20)[c1(t)
+
+4i
+
+u eit + c3(t)
+4i
+
+(u +
+
+1
+2
+
+u )e3it] + c.c.(cid:21).
+
+(5.18)
+
+these results coincide with those obtained in the reductive perturbation method[18].
+
+5.2 unstable motion in lotkavolterra system
+
+the lotka-volterra (lv) equation[53] is known to be integrable, although the exact ana-
+lytic solutions of it are not known. the equation was already treated in the rg method
+by one of the present authors (tk), and an approximate solution was constructed explic-
+itly around the non-trivial xed point[26]. a numerical comparison of the results with
+the exact solution shows that the solution given by the rg method well approximates
+the exact solution in a global domain even when the small parameter in the equation , 
+(see below) are as large as 0.8 [54]. the purpose of the present subsection is to apply the
+rg method for analyzing the equation around the unstable xed point (the origin).
+
+lotkavolterra equation reads
+
+( x = ax  xy
+y = by + xy
+
+(5.19)
+
+here,x = x(t),y = y(t) and a, b, ,  are positive constants. in this work, we treat the case
+where 0 <  < 1 and 0 <  < 1 so that the perturbation theory can be applied.
+
+there are two xed points; (i) x = y = 0 and (ii) x = b/,
+
+y = a/. one can see
+that the xed point (i) is asymptotically unstable. an approximate but globally valid
+solution around the second xed point was obtained in [26]. in this paper, we treat the
+rst xed point.
+
+with the new variables dened by x = 
+
+ ,
+
+y =  (5.19) is converted to
+
+du
+dt
+
+= au + f (u),
+
+40
+
+(5.20)
+
+where
+
+u = 
+
+!, a =  a 0
+
+1!.
+0 b ! , f (u) =   1
+
+(5.21)
+
+one see that the xed point (i) is asymptotically unstable in the linear approximation.
+our aim here is to obtain the dynamics around the unstable xed point and construct
+the unstable manifold using the rg method.
+
+for later convenience, we introduce the normalized eigenvectors of a;
+
+where u 1 = t(1, 0) and u 2 = t(0, 1).
+
+au 1 = au 1, au 2 = bu 2,
+
+(5.22)
+
+now let us apply the rg method to construct an approximate solution valid in a global
+domain. we suppose that the equation is solved up to arbitrary t = t0 from the time,
+say t = 0, at which the genuine initial condition is imposed. with this up-to-dated initial
+value w (t0), we try to construct the solution to (5.20) around t  t0 by the perturbation
+theory, expanding u as u = u0+u1+2u2+0(2). thus u may be written as u = u(t; t0).
+we also expand the initial value w (t0) = w 0 + w 1 + 2w 2 + o(3).
+
+the equations to be solved are
+
+(
+
+(
+
+(
+
+d
+dt  a)u0 = 0,
+d
+dt  a)u1 = 00(u 1  u 2),
+d
+dt  a)u2 = (01 + 10)(u 1  u 2),
+
+(5.23)
+
+(5.24)
+
+(5.25)
+
+and so on, where t(i, i) = ui (i = 0, 1, 2...). it turns out that one needs to treat sepa-
+rately depending on whether a 6= b or a = b.
+
+case a: a = b
+
+this is the interesting case where secular terms appear and the rg method plays a role
+to construct an approximate solution in a global domain. the unperturbed solution reads
+
+u0 = c1(t0)eatu 1 + c2(t0)eatu 2,
+
+(5.26)
+
+implying the initial condition w 0(t0) = c1(t0)eat0 u 1 + c2(t0)eat0 u 2. the rst order
+solution now reads
+
+1
+
+u1 = c1c2
+= w 1(t0),
+
+t  a
+
+(u 1  u 2) =
+
+c1c2
+
+a
+
+(u 1 + u 2),
+
+(5.27)
+
+which is constant and independent of u0(t).
+
+41
+
+using the formulae in appendix a, the second order solution is also obtained. col-
+lecting all the terms thus obtained, we have an approximate solution valid around t  t0;
+
+c1c2
+
+u(t : t0) = c1(t0)eatu 1 + c2(t0)eatu 2 + 
+
+a
+c1c 2
+2
+2a2 eat}u 1
+(t  t0)eat}u 2].
+applying the rg equation u/t0|t0=t = 0 to (5.28), we have
+
+c 2
+1 c2
++ 2[
+a
+c 2
+1 c2
+2a2 eat +
++ {
+
+(t  t0)eat +
+
+c1c 2
+2
+
+a
+
+(u 1 + u 2)
+
+(5.28)
+
+c1 + 2 c 2
+1 c2
+a
+
+= 0,
+
+c2  2 c1c 2
+
+a
+
+2
+
+= 0.
+
+(5.29)
+
+noting the constraint c1c2 = const. = c given by (5.29), we reach
+
+c1(t) = c1e 2c
+
+a t, c2(t) =
+
+2 c
+a t,
+
+e
+
+c
+c1
+
+with c1 being a constant.
+
+our solution is given by the initial value w (t);
+
+u(t; t) = w (t) = c1(t)eatu 1 + c2(t)eatu 2 + 
+
+(u 1 + u 2)
+
++ 2c{
+
+c2(t)
+2a2 eatu 1 +
+
+c
+a
+c1(t)
+2a2 eatu 2},
+
+(5.30)
+
+(5.31)
+
+with c1,2(t) given by (5.30). introducing c2 by c = c1c2, the respective components are
+given by
+
+(t; t) = c1e(a
+
+2 c1c2
+
+a
+
+)t +
+
+c1c2
+
+a
+
++
+
+(t; t) = c2e(a
+
+2 c1c2
+
+a
+
+)t +
+
+c1c2
+
+a
+
++
+
+2c1c2
+2
+2a2 e(a
+2c2
+1c2
+2a2 e(a
+
+2 c1 c2
+
+a
+
+)t + o(2),
+
+2 c1 c2
+
+a
+
+)t + o(2).
+
+(5.32)
+
+(5.33)
+
+here, the constants c1 and c2 are determined by the initial condition imposed at t = 0.
+
+some remarks are in order: (1) our solution (5.31) shows that the speed to approach
+to and to escape from the origin is shifted from a to a 2c1c2/a  , which is dependent
+(2) the unstable manifold can be
+on the initial condition as expressed by c1 and c2.
+constructed explicitly from (5.32) and (5.33). solving et and et from these equations
+and making the product of them, we have
+
+c = (x  y )(y  x),
+
+(5.34)
+
+where x = 
+a . (5.34) shows that the
+unstable manifold is the hyperbolic curve which has the non-orthogonal asymptotic lines
+coming out of the point t(x0, x0) with the slopes  and 1/, respectively .
+
+ x  x0, y = y  y0,
+
+2a2 and x0 = y0 =  c
+
+ = 2c
+
+42
+
+case b: a 6= b
+
+this is a rather trivial case because no secular terms appear, and the rg method does
+not play any role. therefore we only write down the result:
+
+(t) = c1eat + 
+
+c1c2
+
+b
+
+e(ab)t
+
++ 2{
+
+c1c 2
+2
+2b2 e(a2b)t 
+
+c 2
+1 c2
+a(a  b)
+
+e(2ab)t} + 0(2),
+
+(t) = c2ebt + 
+
+c1c2
+
+a
+
+e(ab)t
+
++ 2{
+
+c 2
+1 c2
+2a2 e(2ab)t +
+
+c1c 2
+2
+b(a  b)
+
+e(a2b)t} + 0(2),
+
+(5.35)
+
+(5.36)
+
+where c1 and c2 are constant.
+
+43
+
+6 applications ii: pulse interactions
+
+in this section, we apply the rg method to obtain the dynamics of interacting pulses
+(or fronts) in one dimension. some yeas ago, a systematic method was developed by ei
+and ohta[45] to this problem on the basis of the phase dynamics approach [19] which
+involves a solvability condition. we shall show how the dynamics of interacting pulses
+obtained by them can be derived mechanically in the present method virtually without
+any assumptions. in other words, we shall derive the phase equations describing the front
+and pulse interactions in the rg method for the rst time, although interface dynamics in
+spinodal decomposition[29], a diusion equation[30] and kuramoto-sivashinski equation
+[31] as the phase equations have been derived in the rg method by others. as repre-
+sentative examples of pulse dynamics, we take up the kink-anti-kink interactions in the
+time-dependent ginzburg-landau (tdgl) equation and the soliton-soliton interaction in
+the kortweg-de vries (kdv) equation.
+
+6.1 kink-anti-kink interaction in tdgl equation
+
+the tdgl equation we study is given by
+
+with
+
+u
+t
+
+= 2 2u
+
+x2 + f (u),
+
+f (u) =
+
+1
+2
+
+u(1  u2),
+
+(6.1)
+
+(6.2)
+
+where u = u(x, t) is a real scalar function and 0 <  < 1. we remark that (6.1) has a
+stationary solution
+
+u(x, t) =  tanh
+
+x  h
+2  u(x  h),
+
+(6.3)
+
+where u(x) satises u() = 1 and u(0) = 0. u(x  h) (u(x  h)) is called a kink
+(an anti-kink) at the position x = h.
+
+6.1.1 interaction of one kink and anti-kink
+
+we rst consider the interaction of one kink and anti-kink. suppose the initial data at
+t = 0 are given by
+
+u0(x; x1(0), x2(0)) = u(x  x1(0)) + {u(x  x2(0))  1},
+
+44
+
+where x2(0)  x1(0) >> ; i.e., the kink (anti-kink) is located at x = x1(0) (x = x2(0)).
+since u0(x; x1(0), x2(0)) is not a solution to eq.(6.1), the position of the kink x1 and the
+anti-kink x2 will move slowly. our task is to nd the equation governing the dynamics of
+x1(t) and x2(t) at t > 0.
+
+to apply the rg method to solve this problem, we rst identify the small parameter
+and the integral constants in the unperturbed solution, which will move by the perturba-
+tion. when x2  x1 >> , u0(x; x1, x2) in the neighborhood of x = x1 may be represented
+by
+
+u0(x; x1, x2) = u0(t; x1)(x) + s(x  x2),
+
+u0(t; x1)(x) = u(x  x1),
+
+where  is a small parameter because the eect of the anti-kink u(x  x2)  1 is small
+around x = x1; the order of  is exp((x2  x1)/). this implies that as the unperturbed
+solution around x  x1, we may take u0(t; x1), where x1 is a constant. thus we are led
+to represent the solution at t  t0 by
+
+u(x, t) = u0(t; x1(t0))(x) + s(x  x2(t0)) + v(x, t),
+
+with v(x, t) as small as . inserting (6.4) into (6.1), we have
+
+tv = av + (f(u0)  f(1))s + o(2 + |v|2),
+
+with
+
+av (cid:18)2 2
+
+x2 + f(u0)(cid:19)v.
+
+(6.4)
+
+(6.5)
+
+(6.6)
+
+here, we have made use of the fact that u0 and s + 1 are stationary solutions to eq.(6.1);
+we also note that f(1) = f(1).
+
+(6.5) is an equation of the type discussed in 4.1. indeed, owing to the translational
+invariance of the tdgl equation (6.1), the self-adjoint operator a has a zero eigenvalue
+with the eigenfunction u1 together with the corresponding adjoint eigenfunction eu1
+
+(6.7)
+
+u1(x) = fu1(x) = xu(x  x1).
+
+therefore, one can obtain the approximate solutions of (6.5) and the dynamics of x1(t)
+according to the procedure developed in 4.1.
+
+the solution of the eigenvalue problem for the operator a may be seen in text books
+on quantum mechanics[47]. let p be the projection operator onto the kernel of a and q
+the one onto the subspace compliment to the kernel a; we call the respective subspaces
+p - and q-space. we notice that
+
+p u =
+
+< u1, u >
+< u1, u1 >
+
+u1(x),
+
+where < u, v > denotes the inner product dened by
+
+< u, v >=z 
+
+
+
+u(x)v(x)dx.
+
+45
+
+(6.8)
+
+(6.9)
+
+now let us apply the rg method to solve v, thereby obtain the dynamics of x1(t).
+
+first we expand v as
+
+v = v1 + o(2).
+
+(6.10)
+
+the equation for v1 read
+
+tv1 = av1 + (f(u0)  f(1))s.
+
+in this case, w0(t0) in 4.1 is u(xx1(t0)). w1(t0) in q-space is given by (a)1q{f(u0)
+f(1)}s by (4.16) and v1 is
+
+v1(t; t0)(x) = (t  t0)p (f(u0)  f(1))s + a1q(f(u0)  f(1))s.
+
+(6.11)
+
+thus, we have an approximate function
+
+u(t; t0)(x) = u(x  x1(t0)) + v1(t; t0)(x) + s(x  x2(t0)).
+
+applying the rg equation to u(t; t0)(x), one has
+
+u
+
+t0(cid:12)(cid:12)(cid:12)(cid:12)t0=t
+
+leading to the dynamics governing x1,
+
+0 =
+
+=  x1xu(x  x1)  p (f(u0)  f(1))s(x  x2) + o(2),
+
+x1 = 
+
+= 
+
++ o(2)
+
+< u1, u1 >
+
+< u1, (f(u0)  f(1))s >
+< xu(x  x1), (f(u(x  x1))  f(1)){u(x  x2)  1} >
+< xu(x), (f(u(x))  f(1)){u(x  (x2  x1))  1} >
+
+< u1, u1 >
+
++ o(2)
+
++ o(2)
+
+= 
+= 12e
+
+< u1, u1 >
+
+x2x1
+
+ + o(2),
+
+(6.12)
+
+which coincides with the result by carr-pego[44], fuco-hale[46] and ei-ohta[45] where
+an explicit evaluation of the inner products is also given.
+
+6.1.2 kink-anti-kink interaction in the presence of innite kinks and anti-
+
+kinks
+
+we next consider an initial value problem of eq.(6.1) with the initial condition where
+innite kinks (anti-kinks) are located periodically at x = h + 2n (x = h + 2n) with
+n = 0,1,2... [44, 46]: we suppose that the intervals of a kink and the neighboring
+in this
+anti-kinks are much larger than the width of a kink (anti-kink), i.e., h  .
+
+46
+
+situation, the problem may be formulated as an initial value problem with one kink at
+x = h in a nite domain 0 < x < 1 with a neumann boundary condition, i.e.,
+
+=
+
+u
+
+x(cid:12)(cid:12)(cid:12)(cid:12)x=0
+
+.
+
+u
+
+x(cid:12)(cid:12)(cid:12)(cid:12)x=1
+
+(6.13)
+
+the initial prole in this case can be approximately represented by the function
+
+u0(x; h) = u(x  h) + {u(x + h  2)  1} + {u(x + h) + 1},
+
+ u0(x) + 1r(x + h  2) + 2(x + h)
+
+(6.14)
+(6.15)
+
+where the second and the third terms denote the small eects coming from the anti-kink
+at x = 2  h and x = h, respectively; the smallness of the eects are represented by
+the parameters 1 and 2, which are the orders of exp(2h/) and exp(2(1  h)/),
+respectively.
+
+let us represent the solution for t > 0 by
+
+u(x, t) = u0(x; h) + v(x, t),
+
+(6.16)
+
+where |v(x, t)| is supposed to be as small as 1 and 2. inserting (6.16) into eq.(6.1), we
+have
+
+tv = av + (f(u0)  f(1))(1r + 2) + o(2
+
+1 + 2
+
+2 + |v|2)
+
+(6.17)
+
+in a similar manner with (6.5). here, av  (2 2
+associated with zero eigenvalue in this case is u1 = xu(x  h).
+
+x2 + f(u0))v and the eigenfunction
+
+let us apply the rg method to solve v, thereby obtain the dynamics of h(t). first
+
+we expand v as
+
+v = 1v1,0 + 2v0,1 + o(2
+
+1 + 2
+
+2).
+
+the equations for v1,0 and v0,1 read
+
+tv1,0 = av1,0 + (f(u0)  f(1))r,
+tv0,1 = av0,1 + (f(u0)  f(1)),
+
+(6.18)
+
+(6.19)
+(6.20)
+
+respectively. these are of the same form as treated in 4.1, hence readily solved to be
+(6.21)
+
+v1,0(t; t0)(x) = (t  t0)p (f(u0)  f(1))r + a1q(f(u0)  f(1))r,
+
+where r = r(x + h  2) and h = h(t0), by choosing the initial value
+
+v1,0(t0; t0)(x) = a1q(f(u0)  f(1))r(x + h(t0)  2),
+
+(6.22)
+
+and v0,1(x, t) with r  . thus, we have
+
+u(t; t0)(x) = u(x  h(t0)) + 1v1,0(t; t0)(x) + 2v0,1(t; t0)(x) + 1r + 2.
+
+47
+
+applying the rg equation to u(t; t0)(x), one has
+
+=  hu(x  h)  p (f(u0)  f(1))(1r(x + h  2) + 2(x + h))
+
+0 =
+
+u
+
+t0(cid:12)(cid:12)(cid:12)(cid:12)t0=t
+
++o(2
+
+1 + 2
+
+2),
+
+leading to the dynamics governing h,
+
+(6.23)
+
+(6.24)
+
+(6.25)
+
+(6.26)
+
+< u1, (f(u0)  f(1))(1r + 2) >
+
+< u1, u1 >
+
++ o(2
+
+1 + 2
+2)
+
+h = 
+= 12(cid:18)e 2h
+
+  e
+
+2(1h)
+
+ (cid:19) + o(2
+
+1 + 2
+
+2),
+
+which also coincides with the known result by carr-pego[44] and fusco-hale[46].
+
+6.2 soliton-soliton interaction in kdv equation
+
+the kdv equation reads
+
+which has a one-pulse solution given by
+
+tu + 6uxu + 3
+
+xu = 0,
+
+u(x, t) =
+
+sech2(cid:20)c(x  ct)
+
+2
+
+c
+2
+
+(cid:21) (x  ct; c),
+
+with c being a velocity.
+
+we consider the following problem; when two suciently separated pulses with almost
+
+the same velocities are located at x1(0) and x2(0) where |x2(0) x1(0)|  1/c, how will
+
+the locations xi(t) (i = 1, 2) change at t > 0? to solve this problem, ei and ohta [45]
+started with the ansatz
+
+u(x, t) = (x  ct  x1; c + x1) + (x  ct  x2; c + x2) + b(x  ct, t).
+
+(6.27)
+
+in the present work, we shall apply the rg method without any ansatz to this problem
+and show that the same evolution equation as that obtained by ei and ohta is derived,
+thereby give a foundation of their treatment.
+
+to study the problem, it is convenient to change the independent variables to
+
+t = t,
+
+z = x  ct,
+
+(6.28)
+
+namely to change to the co-moving frame with the pulse. then the equation is converted
+to
+
+tu + f [u] = 0,
+
+48
+
+(6.29)
+
+with
+
+we remark that
+
+f [u] = czu + 6uzu + 3
+z u.
+
+f [(z  b; c)] = 0,
+
+with b being an arbitrary constant.
+
+let us suppose that the solution around t = t0 > 0 is given by
+
+u(z, t) = (z  z1(t0); c) + (z  z2(t0); c) + v(z, t),
+
+ (1) + (2) + v,
+
+(6.30)
+
+(6.31)
+
+(6.32)
+(6.33)
+
+where |z2  z1| is suciently large. to study the eect coming from the other pulse, it is
+sucient to consider the case of either z  z1 or z  z2. then v is considered to be small.
+
+substituting eq.(6.32) into (6.29), we have the equation governing v as
+
+tv + f [(1) + (2)]v + 6z((1)(2)) + o(|v|2) = 0.
+
+(6.34)
+
+here we have used the identity f [(1) + (2)] = f [(1) + (2)]  f [(1)]  f [(2)] =
+6z((1)(2)) on account of eq.(6.31).
+
+now let z  z1, then (2) is small and we may put
+
+with a small parameter  whose order is ec(z2z1). then, (6.34) of v becomes
+
+(2) = (z  z2(t0)) = g(z  z2(t0)),
+
+tv = a(1)v  6z((1)g) + o(2 + |v|2),
+
+where
+
+a(1) = f [(1)] = cz  3
+
+z  6(z(1) + (1)z).
+
+transforming z  z1(t0) to z, we see (6.36) becomes
+
+tv = av  6z (g(h)) + o(2 + |v|2),
+
+where a = f () and g(h)(z) = (z  h) with h = z2(t0)  z1(t0).
+
+(6.35)
+
+(6.36)
+
+(6.37)
+
+(6.37) is an equation of the type discussed in 4.3; the linear operator a has a jordan
+cell reecting the translational invariance of kdv equation and the arbitrariness of the
+velocity of a pulse,
+
+where
+
+au1 = 0, au2 = u1,
+
+u1 = z, u2 = c.
+
+49
+
+(6.38)
+
+(6.39)
+
+the adjoint operator a of a reads
+
+a = cz  + 3
+
+z  + 6z ,
+
+(6.40)
+
+which has also a two-dimensional jordan cell. the zero mode eu2 of a is found to be [45]
+
+(6.41)
+
+while these eigenfunctions have not been normalized as (4.36) yet. it is known [48] that
+
+(6.42)
+
+there exists a function eu1 which satises
+
+the explicit form of it will be given later.
+
+eu2(z) = (z; c)
+
+aeu1 = eu2.
+
+let p be the projection operator onto the subspace spanned by u1 and u2, and q
+
+onto the subspace compliment of the p -space.
+
+noting that |v|  o() and expanding v as
+
+one has for v1 from (6.37)
+
+v = v1 + 2v2 +    ,
+
+tv1 = av1  6z (g(h)).
+
+(6.43)
+
+(6.44)
+
+now we can proceed according to the general procedure given in 4.3 as follows: note
+that u0 and hence w0(t0) in 4.3 correspond to (z  z1(t0); c) because both of them
+comes from the translation invariance with respect to z. let us solve the equation (6.44)
+with the initial value w1(t0). then, we have
+
+v1(t; t0) = e(tt0)aw1(t0)  6z t
+
+t0
+
+e(ts)az (g(h))ds,
+
+(6.45)
+
+with
+
+w1(t0) = c(t0)u2 + qw1(t0)
+
+(6.46)
+
+as discussed in 4.3. here we note that although w1(t0) could have a u1 component, its
+eect can be taken into account by a redenition of z1(t0) which is not yet determined.
+according to the discussion given in 4.3, the q-component of w1 should be
+
+qw1(t0) = a1q(6z (g(h))).
+
+thus we have
+
+v1(t; t0)(z) = (cid:26)(t  t0)c(t0) + (t  t0) +
+
+(t  t0)2(cid:27) u1
++{c(t0) + (t  t0)}u2  a1q(6z (g(h)))
+
+1
+2
+
+50
+
+(6.47)
+
+(6.48)
+
+and the approximate function
+
+u(t; t0)(z) = (z  z1(t0); c) + v1(t; t0)(z  z1(t0)) + g(z  z2(t0)),
+
+(6.49)
+
+where
+
+ =
+
+< eu1,6z (g(h)) >
+
+< eu1, u1 >
+
+,
+
+ =
+
+< eu2,6z (g(h)) >
+
+< eu2, u2 >
+
+.
+
+applying the rg equation to u(t; t0)(z), one has
+
+(6.50)
+
+(6.51)
+
+u
+
+t0(cid:12)(cid:12)(cid:12)(cid:12)t0=t
+
+=  z1z(1) + h{c  }u (1)
+
+1 + { c  }u (1)
+
+2 i + o(2),
+
+where u (1)
+u (1)
+
+1 = z(1), (6.51) leads to
+
+1 (z) = u1(z  z1(t0)) = z(z  z1(t0)) and u (1)
+
+2
+
+is similarly given. since
+
+z1 = c(t)  ,
+
+c = .
+
+(6.52)
+
+recalling that
+
+and
+
+ =  =
+
+ =  =
+
+< eu1,6z (g(h)) >
+< eu2,6z (g(h)) >
+
+< eu1, u1 >
+< eu2, u2 >
+
+=
+
+=
+
+< eu1,6z ((h)) >
+< eu2,6z ((h)) >
+
+< eu1, u1 >
+< eu2, u2 >
+
+,
+
+where (h)(z) = (z  h), and putting c(t) = c1(t), we nally obtain the equations of
+motion governing the position of the kink and the speed of it,
+
+z1 = c1 +
+
+< eu1,6z ((h)) >
+
+< eu1, u1 >
+
+,
+
+c1 =
+
+< eu2,6z ((h)) >
+
+< eu2, u2 >
+
+similarly, one can readily obtain the equation for z2. this is the main result in this
+subsection.
+
+.
+
+(6.53)
+
+eliminating c1 from the above equations, one can compare our result with those given
+
+by ei and ohta[45]. we rst notice that
+
+= o(2),
+
+(6.54)
+
+d
+dt
+
+ =
+
+d
+dt
+
+< eu1,6z ((h)) >
+
+< eu1, u1 >
+
+because  depends only on h = z2  z1 and h = o(). then we have
+= 16c5/2ec(z2z1) + o(2),
+
+< eu2, 6z ((h)) >
+
+z1 =
+
+< eu2, u2 >
+
+51
+
+(6.55)
+
+and similarly
+
+z2  16c5/2ec(z2z1),
+
+(6.56)
+
+which coincide with the result by ei and ohta[45]. in short, we have derived the equation
+describing the soliton-soliton dynamics in the kdv equation given by ei and ohta with
+fewer ansatz on the basis of the rg method.
+
+as noticed above, the system (6.53) have more information for the soliton-soliton
+dynamics than (6.55) (or (6.56)) because (6.53) gives the the change of the velocity c1
+as well as the speed of the position z1. it is intriguing to see an explicit form of (6.53),
+which will provide more detailed information of the dynamics of the solitons.
+
+the right hand side of the equation for c1 in (6.53) is already given in (6.55). let us
+
+calculate the r.h.s. of z1. the adjoint eigenfunction eu1 is given by
+
+eu1 =z z
+where  = m1/m2 with m1 = 1/2 (cid:18)z 
+h u 1, u 2i = 0 holds. m2 is evaluated to be c/2[45]. we here evaluate m1. we rst
+
+and m2 =< , c >[48]. note that
+
+notice that c = /c + zz/2c. then by a partial derivative, we have
+
+cds(cid:19)2
+
+c(s; c)ds + ,
+
+
+
+
+
+z z
+
+
+
+cds =
+
+
+
+hence m1 = 1/2c and
+
+ds + z(cid:19)
+1
+c
+
+1
+
+1
+
+ds =
+
+
+
+2c(cid:18)z z
+2cz 
+ = 1/cc.
+
+
+
+(z  ),
+
+(6.57)
+
+since eu1 is related with eu2(= ) through (6.42), we see that
+
+then performing a partial derivative, we have
+
+6zeu1 = czeu1  3
+h eu1,6z((h)) i = h czeu1  3
+ 2cechz 
+
+e
+
+zeu1 + .
+zeu1 + , (h) i
+cz{czeu1  3
+
+z eu1 + }dz,
+where we have used the relation (h)(z)  2cec(zh) for h >> 1. the remaining integral
+can be performed using the the asymptotic forms of the derivatives of eu1,
+zeu1  c(5  cz)ecz.
+
+zeu1  (4  cz)ecz, 2
+
+(6.59)
+
+(6.58)
+
+
+
+52
+
+thus, for l >> 1 we have
+
+
+
+z l
+z l
+
+
+
+e
+
+cleu1(l)  cz l
+czzeu1dz = e
+zeu1dz = c(9  2cl) + ce
+
+
+
+cz3
+e
+
+e
+
+czeu1dz,
+cleu1(l)  ccz l
+
+
+
+(6.60)
+
+(6.61)
+
+e
+
+czeu1dz.
+
+finally, the third term of (6.58) is evaluated to be ;
+
+z l
+
+
+
+e
+
+czdz = cz l
+
+
+
+e2zsech2zdz
+
+(l = cl/2),
+
+= 2c(cid:18)2l + log(1 + e2l
+ 2c(2l  1) = 2c(cl  1).
+
+) +
+
+1
+
+e2l + 1  1(cid:19) ,
+
+inserting (6.60)  (6.62) into (6.58), we have
+
+lz l
+h eu1,6z((h)) i  2cech lim
+
+= 14c.
+
+
+
+the normalization integral is evaluated to be
+
+e
+
+cz{czeu1  3
+
+z + }dz
+
+h eu1, u1 i = hz z
+
+
+
+thus we nally obtain
+
+cdz, z i = h c,  i = c/2.
+
+< eu1,6z((h)) >
+
+< eu1, u1 >
+
+and hence the equations for z1 and c1 is
+
+ 28cech,
+
+( z1 = c1  28cec(z2z1),
+c1 = 16c5/2ec(z2z1),
+
+(6.62)
+
+(6.63)
+
+(6.64)
+
+(6.65)
+
+together with a similar equation for z2. notice that eq.(6.65) is consistent with the order
+estimate of eq.(6.55).
+
+53
+
+7 brief summary and concluding remarks
+
+we have formulated the rg method as a powerful tool for reduction of evolution equa-
+tions in terms of the notion of invariant manifolds, starting from the exact wilson rg
+equation. we have given an argument as to why t0 should be set t = 0 in the perturba-
+tive rg method. we have shown that the perturbative rg method constructs invariant
+manifolds successively as the initial value of evolution equations; the integral constants
+in the unperturbative solution constitutes natural coordinates of the invariant manifold
+when the linear operator a in the evolution equation has no jordan cell. when a has
+a jordan cell, there is a slight complication because the dimension of the invariant man-
+ifold is to change by the perturbation. the rg equation determines the slow motion
+of the integral constants in the unperturbative solution on the invariant manifold. we
+have worked out several examples to demonstrate our formulation. we have emphasized
+that the underlying structure of the reduction by the rg method completely ts to the
+universal structure elucidated by kuramoto[16] a decade ago. the prescription suggested
+by the present formulation has turned out to be the same as that adopted in [25, 26]. we
+have applied the method to interface dynamics such as kink-anti-kink and soliton-soliton
+interactions in the latter of which a linear operator having a jordan-cell structure appears.
+
+in the present work, actual calculations are all based on the perturbation theory,
+although we have started the formulation with the exact ow equation. recently, variants
+of the exact rg equations or ow equations are applied to various problems such as the
+chiral symmetry breaking in qcd[13, 60], the bose-einstein condensation in alkali atoms
+[61] and so on. there, in stead of the perturbation theory, a truncation of the functional
+spaces are usually employed as a practical method of calculations. one may thus imagine
+that a possible practical method for applying the non-perturbative rg method could be
+a scheme similar to, say, the galerkin method[62]. such a non-perturbative rg method
+should be most interesting for analyses of partial dierential equations. an attempt to
+apply a kind of non-perturbative rg equation to partial dierential equations is given in
+[63].
+
+we have tried to formulate the rg method so that the mathematical structure of
+the method becomes as transparent as possible. then the present work could be a basis
+for clarifying a possible relation between the rg method and another powerful theory
+for reduction of evolution equations called whithams averaging method[64]: the latter
+method has been successfully used to extract the equations describing modulations of
+dispersive non-linear waves: modulations of the phase function are given by slow variables
+which are governed by so-called whitham equations. one may thus imagine that the
+modulations as described by whitham equations may also be given by the rg method as
+it gives the amplitude and phase equations. or more strongly, whitham equations might
+be derived as rg ones[65]. furthermore, whitham gave a foundation of his equations on
+the basis of a variational principle for the actions, which is reminiscent of the fact that
+wilsonian rg is formulated for eective actions which admit a variational principle.
+
+54
+
+acknowledgement
+
+we are grateful to the referee to have directed our attention to whithams method.
+
+55
+
+appendix a an ecient operator method of solution suitable
+
+for the rg method
+
+in this appendix, we shall summarize rules for obtaining appropriate special solutions
+of non-homogeneous equations appearing in the higher orders in the perturbative rg
+method. the essential point of the present method is to consider the equations with
+initial conditions at t = t0; the initial values are determined so that the terms in the
+special solutions disappear which either could be renormalized away by a redenition
+of the integral constants in the unperturbed solution or are the ones describing a rapid
+motion. we shall show that the simple rules to write down the special solutions with such
+initial conditions can be summarized as an operator method.
+
+let us consider the special solution to the equation given by
+
+with the initial condition at t = t0,
+
+(t  a)u(t; t0) = f (t),
+
+u(t0, t0) = w (t0).
+
+the solution reads
+
+u(t; t0) = ea(tt0)w (t0) + eatz t
+
+t0
+
+dseasf (s).
+
+let a be a semi-simple matrix with eigenvalues  ( = 1, 2, ...);
+
+the case where a has a jordan cell will be considered later.
+
+au  = u .
+
+let
+
+(a.1)
+
+(a.2)
+
+(a.3)
+
+(a.4)
+
+f (t) = etu  + e tu  + etu ,
+
+(a.5)
+
+with  6= , then the solution is evaluated to be
+
+u(t; t0) = ea(tt0)"w (t0) 
++(t  t0)etu  +
+
+1
+
+e t0 u  
+e tu  +
+
+  a
+1
+
+  a
+
+et0u #
+
+etu .
+
+1
+
+  a
+
+1
+
+  a
+
+the rst line suggests that the initial value should be chosen as
+
+w (t0) =
+
+1
+
+  a
+
+e t0u  +
+
+1
+
+  a
+
+et0u ,
+
+56
+
+(a.6)
+
+(a.7)
+
+where the rst term corresponds to the one which could be renormalized away by a
+redenition of the unperturbed solution and the second term to a rapid motion. thus we
+end up with the special solution given by
+
+u(t; t0) = (t  t0)etu  +
+
+1
+
+  a
+
+e tu  +
+
+1
+
+  a
+
+etu .
+
+(a.8)
+
+then one may summarize the results as rules of an operator method for obtaining
+
+special solutions as follows;
+
+1
+
+t  a
+
+etu  =
+
+=
+
+etu ,
+
+etu ,
+
+1
+
+1
+
+t  
+  
+t  
+
+1
+
+etu  =
+
+etu ,
+= (t  t0)etu .
+
+1
+
+t  a
+
+similary, one can verify that
+
+( 6= ),
+
+1
+
+t  a
+
+(t  t0)netu  =
+=
+
+1
+
+(t  t0)netu ,
+(t  t0)n+1etu .
+
+t  
+n + 1
+
+1
+
+(a.9)
+
+(a.10)
+
+(a.11)
+
+(a.12)
+
+(a.13)
+
+furthermore,when  6= ,
+
+1
+
+t  a
+
+hence, for example,
+
+(t  t0)netu  = et0
+
+= et0n
+
+
+ ne u (cid:12)(cid:12)(cid:12)(cid:12) =tt0
+e u (cid:12)(cid:12)(cid:12)(cid:12) =tt0
+
+,
+
+.
+
+1
+
+  a
+1
+
+  a
+
+1
+
+1
+
+t  a
+1
+t  a
+
+(t  t0)etu  =
+(t  t0)2etu  =
+
+1
+
+  a{(t  t0) 
+  a{(t  t0)2 
+
+1
+
+  a}etu ,
+(t  t0) +
+  a
+
+2
+
+where a may be replaced with .
+
+2
+
+(  a)2}etu ,(a.14)
+
+next, we consider the case where a has a semi-simple zero eigenvalue;
+
+let p and q be the projection operator onto the space spanned by u 0 and its orthogonal
+compliment, respectively. if g is a constant vector, then one can easily verify that
+
+au 0 = 0.
+
+(a.15)
+
+1
+
+1
+
+t  a
+t  a
+
+p g =
+
+qg =
+
+p g =z t
+1
+t
+1
+a
+
+qg.
+
+t0
+
+57
+
+dsp g = (t  t0)p g,
+
+(a.16)
+
+(a.17)
+
+similarly,
+
+1
+
+t  a
+
+1
+
+f (t)p g =
+
+f (t)qg =
+
+dsf (s)p g,
+
+p g =z t
+1
+t
+xn=0
+1
+(a1t)nqg = 
+a
+
+t0
+
+xn=0
+
+f (n)(t)
+
+1
+an qg,
+
+with f (n)(t) being the n-th derivative of f (t). thus, for example,
+
+1
+
+n + 1
+
+(t  t0)np g =
+(t  t0)qg = (cid:20)(t  t0)
+(t  t0)2qg = (cid:20)(t  t0)2 1
+
+(t  t0)n+1p g,
+a2(cid:21)qg,
++ 2(t  t0)
+
+1
+a
+
++
+
+a
+
+1
+
+1
+a2 +
+
+1
+
+a3(cid:21)qg.
+
+t  a
+
+1
+
+t  a
+1
+t  a
+1
+t  a
+
+finally we consider the case where a has a two dimensional jordan cell;
+
+the adjoint has also a jordan cell;
+
+au 1 = 0, au 2 = u 1.
+
+a u 1 = 0, a u 2 = u 1.
+
+(a.24)
+the adjoint operator a is dened by hv , aui = hav , ui, where hv , ui is the her-
+mitian inner product. we dene the projection operators p and q onto the subspace
+{u 1, u 2} and its orthogonal compliment, respectively. we suppose that the following
+normalization condition is satised;
+
+a vector u in the p-space is decomposed as u = h u 2, uiu 1 + h u 1, uiu 2.
+
+h u 2, u 1i = 1,
+
+h u 1, u 2i = 1.
+
+let g be a constant vector, then one has,
+
+1
+
+t  a
+
+f (t)p g =
+
+=
+
+=
+
+t f (t))an[h u 2, giu 1 + h u 1, giu 2],
+(n
+
+1
+t
+1
+t
+1
+t
+
+(1
+
+t a)nf (t)p g,
+
+xn=0
+xn=0
+[f (t){h u 2, giu 1 + h u 1, giu 2} +
+dsf (s)p g +z t
+
+dsz s
+
+t0
+
+t0
+
+dsf (s)h u 1, giu 1.
+
+1
+t
+
+f (t)h u 1, giu 1],
+
+(a.18)
+
+(a.19)
+
+(a.20)
+
+(a.21)
+
+(a.22)
+
+(a.23)
+
+(a.25)
+
+(a.26)
+
+(a.27)
+
+(a.28)
+
+= z t
+
+t0
+
+1
+
+thus, for example,
+
+1
+
+t  a
+
+t  a
+(t  t0)np g =
+
+p g = (t  t0)p g +
+
+1
+2
+
+(t  t0)2h u 1, giu 1,
+
+1
+
+(n + 1)
+
++
+
+(t  t0)n+1p g,
+1
+
+(n + 2)(n + 1)
+
+58
+
+(t  t0)n+2h u 1, giu 1.
+
+the formulae involving qg are the same as those in the semi-simple case.
+
+the extension to the case where a has a higher dimensional jordan cell is easy. for
+
+instance, when a has a three-dimensional jordan cell such as
+
+au 1 = 0, au 2 = u 1, au 3 = u 2,
+
+(a.29)
+
+one can easily verify that
+
+dsz s
+ds2f (s2)h u 1, giu 1,
+
+t0
+
+t0
+
+t0
+
+dsf (s){h u 2, giu 1 + h u 1, giu 2},
+
+(a.30)
+
+(a.31)
+
+1
+
+t  a
+
+dsf (s)p g +z t
+f (t)p g = z t
+ds1z s1
+dsz s
++z t
+
+t0
+
+t0
+
+t0
+
+where the adjoints satisfy
+
+a u 1 = 0, a u 2 = u 1, a u 3 = u 2.
+
+the normalization condition reads h u 3, u 1i = h u 2, u 2i = h u 1, u 3i = 1.
+
+59
+
+appendix b an elementary method to derive the approxi-
+
+mate solution for the double-well potential
+
+the rst integral of the newton equation with the initial condition x(0) = 0 for the
+
+double-well potential reads by
+
+t =z x/2e
+
+0
+
+dy
+
+1 + y2  ez4 .
+
+expanding the integral in a taylor series, one readily obtains
+
+t = (1 
+
+3
+4
+
+e)sinh1x + 
+
+e
+4
+
+x 3 + 3x
+x 2 + 1
+
+,
+
+(b.1)
+
+(b.2)
+
+with x = x/2e up to o(2). here sinh1x  ln|x + x 2 + 1|. the point of the
+
+present method is to notice that the above equation is equivalent to the following equation
+up to o(2);
+
+u = sinh1x +
+
+e
+4
+
+x 3 + 3x
+x 2 + 1
+
+,
+
+with u = (1 + 3
+
+4e)t. one may solve (b.3) perturbatively and obtains
+
+x(t) = 2e(1 
+
+3
+4
+
+e) sinh u 
+
+
+8
+
+(2e)3 sinh3 u.
+
+putting 2e{(1  3
+
+4e) = c, one ends up with
+
+8
+
+x(t) = c sinh t 
+
+c 3 sinh3 t,
+
+(b.3)
+
+(b.4)
+
+(b.5)
+
+with  = 1 + 3
+the text.
+
+8c 2 up to o(2), which coincides with the result given in subsection 3.3 in
+
+60
+
+appendix c the period of the lotka-volterra equation
+
+the lotka-volterra equation admit periodic solutions. an approximate but globally
+valid periodic solution was explicitly constructed by the rg method by one of the present
+author.[26] the main purpose of this appendix is to show that the solution constructed
+there gives the period which coincides with that obtained by frame[55] in a quite dierent
+approach. to make the argument self-contained, however, we shall repeat the rg analysis
+but in a mathematically more simple way than that given in [26].
+
+introducing the new variable u = t(, ) by
+
+x = (b + )/,
+
+y = a/ + ,
+
+eq.(5.19) is reduced to the following one:
+
+where
+
+(cid:18) d
+dt  l0(cid:19)u = (cid:18) 1
+1(cid:19) ,
+l0 =(cid:18) 0 b
+0 (cid:19) .
+
+u =(cid:18) 
+(cid:19) ,
+
+a
+
+(c.1)
+
+(c.2)
+
+(c.3)
+
+l0 has the eigenvalues  = iab  i, with the corresponding eigenvectors given by
+u 1 = t(1,i/b) and u 2 = u 1, respectively. here a denotes the complex conjugate of
+a. to make the following calculation as transparent as possible, we rst transform the
+equation to the form where l0 is diagonalized. then one nds that the vector equation
+(c.2) is reduced to a scalar equation
+
+  d
+dt  i! z = 
+
+i
+
+b
+
+(z2  z2),
+
+(c.4)
+
+where  = 1/2  (1  ib/) and z(t) = 1/2  ( + ib/  ). this equation apparently has a
+much simpler form than that treated in [26].
+
+now we try to solve (c.4) around t  t0 by the perturbation theory by expanding
+z = z0 + z1 + 2z2 + o(2), with the initial condition z(t; t0) = w (t0). w (t0) is also
+expanded as w (t0) = w0(t0) + w1(t0) + 2w2(t0) + o(2).
+
+a simple manipulation gives the solution as follows;
+
+z(t; t0) = c(t0)eit + 
+
+
+
+b (cid:18)c 2e2it +
+
+1
+3
+
+c 2e2it(cid:19)
+
+1
+3
+
+c c 2eit(cid:19)
+
++2 2
+2||2
+
+b2 (cid:18)c 3e3it 
+b2 (cid:26)
+
+1
+2
+
+c 3e3it +
+
+61
+
+2i
+3
+
+cc 2(t  t0)eit(cid:27) .
+
+(c.5)
+
+now the rg equation z
+t0
+
+(t; t0) |t0=t= 0 gives
+b2
+dc
+2 )|c|2c.
+= i
+dt0
+4 (1 + b2
+here we have used that ||2 = 1
+initial value w (t) by construction z(t)  w (t).
+
+2
+6b2 (1 +
+
+2 ). the general solution z(t, t0) is now given as the
+
+(c.6)
+
+since |c(t)|2 = const. as easily veried from (c.6), one may put c = a
+
+2iei, with a
+being a real constant. then (c.6) implies that  = 2a2/24b2  (1 + b2/2), hence
+(t) = 2a2/24b2  (1 + b2/2)t + .
+
+for a calculational convenience, let us dene  by (t) = t +  with
+
+ =(1 
+
+2a2
+24b2 (1 +
+
+b2
+
+2 )) ,
+
+(c.7)
+
+which implies that c(t)eit = a/2 (sin  i cos ). then we have nally the components
+t((t), (t)),
+(t) = a(1  2 2  b2
+
+) sin   2 1
+
+sin 2  
+
+cos 2
+
+a3
+24
+
+a2
+6
+
+a2
+3
+
+a2
+12
+
+42b2
+
+1
+
+
+1
+b
+
+ 2 32  b2
+
+42b2
+
+a3
+8
+
+sin 3 + 2 1
+b
+
+a3
+8
+
+b
+
+cos   
+cos 3 + o(2),
+
+(t) =
+
+
+
+b {2 1
+
+sin   a(1 + 2 2  b2
+
+a3
+24
+sin 3 + 2 2  3b2
+42b2
+
+42b2
+a3
+8
+
+) cos   
+cos 3} + o(2).
+
+a2
+12
+
+b
+a3
+8
+
++ 2 1
+b
+
+(c.8)
+
+1
+b
+
+a2
+6
+
+sin 2 + 
+
+1
+
+
+a2
+3
+
+cos 2
+
+(c.9)
+
+although these expressions are seemingly dierent from those given in [26], they coincides
+with each other up to o(2). in fact, by the redenition of the constant variables a(1 
+24  , (c.8) and (c.9) reproduce the result in [26], up to
+2 2b2
+42b2
+o(2).
+
+12 )  a and   2 1
+
+a2
+
+a3
+
+b
+
+it is remarkable that we have obtained the modied angular velocity  depending on
+the amplitude. a long ago, frame[55] gave the period of the motion. here, we shall show
+that the period trg = 2/ coincides with that given by frame up to o(2).
+
+our period reads
+
+trg =
+
+2
+2a2
+24b2 (2 + b2)
+
+  1
+
+
+
+=
+
+2
+ab{1 +
+
+2a2
+24b
+
+(
+
+1
+a
+
++
+
+1
+b
+
+)} + o(2),
+
+(c.10)
+
+where use has been made of  = ab. on the other hand, the period tfr given by frame
+[55] reads in his notations
+
+tfr =
+
+2
+a1a2{1 +
+
+(c1c)2
+1!1!
+
++
+
+(c1c)4
+2!2!
+
++   }.
+
+(c.11)
+
+62
+
+here, c1, c are identied with the variables expressed by our basic variables as follows ;
+
+c2
+1 =
+
+c2 =
+
+a + b
+
+,
+
+24
+2
+
+a{
+b
+
+  log(1 +
+
+
+b
+
+)} +
+
+2
+b{
+
+
+a
+
+  log(1 +
+
+
+a
+
+)}.
+
+(c.12)
+
+(c.13)
+
+we remark that the correspondence between the variables of ours and frames is summa-
+rized as follows:
+
+1 ; b  a2
+
+a  a2
+x  n1 ; y  n2 ;
+
+2 ;   a12 ;   a21
+
+b
+  n1 ;
+
+a
+  n2.
+
+it should be remarked here that c2 is actually a constant because our system has a
+conserved quantity b ln x  x + a ln y  y = const. in fact, one can easily verify that
+
+c2 =
+
+2
+ab
+
+(
+
+2
+b
+
++
+
+2
+a
+
+) + 0(2).
+
+(c.14)
+
+thus,
+
+tfr =
+
+2
+ab{1 + c2
+
+1c2} + 0(2) =
+
+2
+ab{1 +
+
+a + b
+
+24
+
+2
+ab
+
+(
+
+2
+b
+
++
+
+2
+a
+
+)} + o(2).
+
+(c.15)
+
+from (c.8) and (c.9), one sees that  = 0 + o(1),
+
+ = 
+
+b a + o(1). hence,
+
+tfr =
+
+2
+ab{1 +
+
+2
+24
+= trg + o(2).
+
+(
+
+1
+a
+
++
+
+1
+b
+
+)
+
+a2
+b } + o(2)
+
+(c.16)
+
+this is what we wanted to show.
+
+63
+
+references
+
+[1] e.c.g. stueckelberg and a. petermann, helv. phys. acta 26(1953), 499;
+
+m. gell-mann and f. e. low, phys. rev. 95 (1953), 1300.
+k. wilson, phys. rev. d3(1971), 1818,
+physics (a. h. guth et al. ed.), mit press, 1983.
+
+s.weinberg, in asymptotic realms of
+
+[2] as review articles, s.k. ma, modern theory of critical phenomena, w. a. ben-
+jamin, new york, 1976. j. zinn-justin, quantum field theory and critical phenom-
+ena, clarendon press, oxford, 1989.
+
+[3] d. v. shirkov, hep-th/9602024; hep-th/9903073.
+
+[4] k.g.wilson and m.e.fisher,phys. rev. lett. 28 (1972),240; k.g. wilson, phys. rev.
+
+lett. 28(1972), 548; k.g. wilson and j. kogut,phys. rep. 12c (1974), 75.
+
+[5] f. wegner and a. houghton,phys. rev. a8 (1973),401.
+
+[6] j. polchinski,nucl. phys. b231 (1984), 269;
+
+g. keller and c. kopper and m. salmhofer,helv. phys. acta 65 (1992), 32.
+
+[7] y. nambu and g. jona-lasinio,phys. rev. 122 (1961), 345.
+
+[8] s. klevanski, rev. mod. phys.64 (1992), 649;
+
+t. hatsuda and t. kunihiro,phys. rep. 247 (1994), 221;
+j. bijnens,phys. rep. 265(1996), 369.
+
+[9] s. weinberg,the quantum theory of fields ii, cambridge u.p., 1996.
+
+[10] c. wetterich,phys. lett. b301 (1993), 90.
+
+[11] t. r. morris, int. j. mod. phys. a 9 (1994), 2411.
+
+[12] k-i. aoki, prog. theor. phys. suppl. 131 (1998), 129, and references cited therein.
+
+[13] proceedings of 1997 yukawa international seminar, non-perturbative qcd 
+structure of the qcd vacuum,prog. theor. phys. suppl.131 (1998) (k.-i. aoki,
+o. miyamura and t. suzuki ed.).
+
+[14] l. boltzmann, lectures on gas theory university of california press, berkeley,
+
+1964.
+
+[15] n.n. bogoliubov, in  studies in statistical mechanics, vol.1, (j. de boer and g.e.
+
+uhlenbeck ed.)north-holland.
+
+[16] y. kuramoto, prog. theor. phys. suppl. 99 (1989), 244; bussei kenkyu 49(1987),
+
+299(in japanese).
+
+[17] s. chapman and t.g. cowling, the mathematical theory of non-uniform gases
+
+(3rd ed.) cambridge u.p., 1970.
+
+64
+
+[18] p. glansdor and i. prigogine, thermodynamic theory of structure, stability, and
+
+fluctuationswiley, london , 1971.
+
+[19] y. kuramoto, chemical oscillations, waves, and turbulence springer-verlag 1984;
+p. manneville, dissipative structures and weak turbulence, academic press, inc,
+1990.
+
+[20] see for example, j. guckenheimer and p. holmes, nonlinear oscillators, dynamical
+
+systems, and bifurcations of vector fields springer-verlag, 1983.
+
+[21] n. goldenfeld, o. martin and y. oono,j. sci. comp. 4(1989),4; n. goldenfeld, o.
+martin, y. oono and f. liu,phys. rev. lett. 64 (1990), 1361; n. d. goldenfeld, lec-
+tures on phase transitions and the renormalization group,addison-wesley, read-
+ing, mass., 1992.
+
+[22] l. y. chen, n. goldenfeld, y. oono and g. paquette, physica a 204(1994)111.
+
+[23] g. paquette, l. y. chen, n. goldenfeld and y. oono,phys. rev. lett. 72(1994)76;
+l. y. chen, n. goldenfeld and y. oono,phys. rev. lett.73(1994)1311; l. y. chen,
+n. goldenfeld and y. oono,phys. rev. e 54 (1996), 376.
+
+[24] j. bricmont and a. kupiainen,commun. math. phys. 150 (1992), 193; j. bricmont,
+a. kupiainen and g. lin, cooun. pure. appl. math. 47(1994), 893; j. bricmont and
+a. kupiainen, chao-dyn/9411015.
+
+[25] t. kunihiro,prog. theor. phys. 94(1995), 503; (e) ibid., 95(1996)835; jpn. j. ind.
+
+appl. math. 14 (1997), 51.
+
+[26] t. kunihiro, prog. theor. phys. 97(1997),179.
+
+[27] t. kunihiro, phys. rev. d57 (1998), r2035; prog. theor. phys. suppl. 131 (1998),
+
+459; see also patt-sol/979003.
+
+[28] r. graham, phys. rev. lett. 76 (1996) 2185; see also k. matsuba and k. nozaki,
+
+phys. rev. e56 (1997), r4926.
+
+[29] y. oono, structural stability of spinodal decomposition, preprint (1996).
+
+[30] s. sasa, physica d108 (1997), 45.
+
+[31] t. maruo, k. nozaki and a. yoshimori, prog. theor. phys. 101 (1999), 243.
+
+[32] y. kuramoto, prog. theor. phys., 55 (1976), 356;
+g. i. sivashinsky, acta astronautica 4 (1977), 1177.
+
+[33] h.j. de vega and j.f.j. salgado, phys.rev. d56 (1997),6524.
+
+[34] a. taruya and y. nambu, phys.lett. b428 (1998), 37;
+
+yasusada nambu and yoshiyuki y. yamaguchi, gr-qc/9904053.
+
+65
+
+[35] d. boyanovsky, h.j. de vega , r. holman and m. simionato, hep-ph/9809346;
+
+d. boyanovsky and h.j. de vega, phys.rev. d59 (1999), 105019.
+
+[36] o. pashko and y. oono, the boltzmann equation is a renormalization group
+
+equation, preprint (1996).
+
+[37] m. frasca, phys. rev. a 56(1997), 1549; see also i. l. egusquiza and m. a. valle
+
+basagoiti, hep-th/9611143.
+
+[38] s.i. tzenov and p.l. colestock, preprint(fermilab-pub-98-258); stephan i.
+
+tzenov, preprint(fermilab-pub-98-275).
+
+[39] yoshiyuki y. yamaguchi and yasusada nambu, prog.theor.phys. 100 (1998), 199.
+
+[40] t. kunihiro and j. matsukidaira, phys. rev. e57 (1998), 4817.
+
+[41] n.n. bogoliubov and y.a. mitropolski, asymptotic methods in the theory of non-
+
+linear oscillations, gordon and breach, 1961.
+
+[42] v.f. kovalev, v.v. pustovalov and d.v. shirkov, j. math. phys. 39 (1998), 1170.
+
+[43] k. kawasaki and t. ohta, physica a116 (1982), 573.
+
+[44] j. carr and r. l. pego, commun. pure appl. math. 42 (1989), 523.
+
+[45] s-i. ei and t. ohta, phys. rev. e50 (1994), 4672, and references cited therein.
+
+[46] g. fusco and j. hale, j. dynam. di. eq. 1 (1989), 75.
+
+[47] l.d. landau and e. m. lifshitz,  quatum mechanics, pergamon, oxford, 1977.
+
+[48] r. l. pego and m. i. weinstein, commun. math. phys.164 (1994), 305-349.
+
+[49] f. takens, publ. math. ihes 43 (1974), 47.
+
+[50] for example, see the text book, s. wiggins, introduction to applied nonlinear
+
+dynamical systems and chaos, springer-verlag, new york, 1990.
+
+[51] r. i. bogdanov, functional anal. appl. 9 (2) (1975),144.
+
+[52] p. glansdor and i. prigogine,  thermodynamic theory of structure, stability, and
+
+fluctuations, wiley, london , 1971.
+
+[53] a. j. lotka, j. amer. chem. soc. 42(1920)1595;
+
+v. volterra, th`eorie math`ematique de la lutte pour lavie, gauthier-villars, paris,
+1931.
+
+[54] t. kunihiro, unpublished (1996).
+
+[55] j. s. frame, j. theor. biol. 43 (1974)73.
+
+[56] h. haken, advanced synergetics, 2nd ed. (springer-verlag, 1983).
+
+66
+
+[57] y. nishiura, nonlinear problems i; mathematics of pattern formation 1.4, (iwanami
+
+syoten, 1998).
+
+[58] e. n., lorenz, j. atmos. sci. 20 (1963)130.
+
+[59] h. mori, prog. theor. phys. 33,(1965), 423.
+
+[60] j. meyer, g. papp, h.-j. pirner and t. kunihiro, nucl-th/9908019.
+
+[61] for example, see , j. o. andersen and m. strickland, cond-mat/9811096 and refer-
+
+ences cited therein.
+
+[62] for example, see, s. garcia, g.s. guralnik and j.w. lawson, phys. lett. b333
+
+(1994), 119.
+
+[63] l-y. chen and n. goldenfeld, phys. rev. 51(1995), 5577; cond-mat/9802103.
+
+[64] g. b. whitham, linear and non-linear waves, john wiley and sons, 1977. as for re-
+cent development in the modern context, see, for example, r. carroll, hep-th/9712110
+and references cited therein.
+
+[65] k. takasaki, talk presented at seminar in rims of kyoto university on applications
+of rg methods in mathematical sciences, 21-23 july, 1999, to be published in the
+proceedings of the seminar.
+
+67
+
+

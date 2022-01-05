@@ -1,0 +1,1423 @@
+9
+9
+9
+1
+
+ 
+l
+u
+j
+ 
+
+7
+2
+
+ 
+ 
+
+1
+v
+9
+9
+1
+7
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+the casimir energy in a separable potential
+
+r.l. jae and l.r. williamson
+
+center for theoretical physics
+laboratory for nuclear science
+
+and department of physics
+
+massachusetts institute of technology
+
+cambridge, massachusetts 02139
+
+(mit-ctp preprint 2881, hep-th/9907199
+submitted to annals of physics
+
+july 1999)
+
+the casimir energy is the rst-order-in- correction to the energy of a
+time-independent eld conguration in a quantum eld theory. we study
+the casimir energy in a toy model, where the classical eld is replaced by
+a separable potential. in this model the exact answer is trivial to compute,
+making it a good place to examine subtleties of the problem. we construct
+two traditional representations of the casimir energy, one from the greens
+function, the other from the phase shifts, and apply them to this case. we
+show that the two representations are correct and equivalent in this model.
+we study the convergence of the born approximation to the casimir energy
+and relate our ndings to computational issues that arise in more realistic
+models.
+
+i. introduction
+
+casimir energies are important in quantum eld theories, where they give the rst-
+order (in ) corrections to the energy of time-independent classical eld congurations.
+computations of the casimir energy involve formal manipulations of divergent expressions
+
+that eventually are regulated and renormalized. [2] since they go beyond perturbation theory,
+casimir energy calculations provide a potentially powerful way to study nonperturbative
+
+eects. several formally equivalent representations of the casimir energy have been used
+in numerical calculations, notably (a) in terms of integrals over scattering phase shifts and
+
+bound states; (b) as an integral over the trace of a greens function (equivalent to a functional
+determinant); and (c) as an innite sum of feynman diagrams. the aim of this paper is
+to study the various representations of the casimir energy in a simple, highly convergent
+
+toy model, where the equivalence of dierent representations can be demonstrated without
+
+this work is supported in part by funds provided by the u.s. department of energy (d.o.e.)
+under cooperative research agreement #df-fc02-94er40818.
+
+email: jae@mit.edu
+
+r.l. jae and l.r. williamson
+
+2
+
+the complication of divergences. our analysis does not demonstrate the equivalence of
+representations in realistic models, where divergences make the arguments more complex.
+
+however, we do see how the dierent representations are related in a simple, calculable
+example. also, because the model is so simple, it is possible to explore some issues of
+
+convergence and cancellation that are obscure in more realistic cases.
+
+the model we study makes use of the simple dynamics of separable potentials in nonrel-
+
+ativistic quantum mechanics. [1] our rst task is to explain how such a simple model can
+give insight into one-loop eects in a quantum eld theory. next we review the well-known
+greens function and scattering theory analysis of a separable potential. with this in hand
+
+we discuss the various representations of the casimir energy and explore their relationship.
+finally, we study convergence of the perturbative expansion and associated computational
+
+issues.
+
+formally, the casimir energy is the sum of zero point energies for the modes of a quantum
+
+eld, , in the presence of some spatially varying background, 0(x),
+
+ec = 1
+
+2 x([0]  0)
+
+(1)
+
+where {[0]} are the eigenfrequencies in the presence of the nontrivial background eld
+0, and {0} are the eigenfrequencies in the trivial background, 0 = 0. the {[0]} are
+typically related to the eigenvalues of some simple dierential operator, h[0], which looks
+like a schrodinger operator for a scalar eld,
+
+h = 
+
+d2
+dx2 + v0(x)
+
+(2)
+
+or a dirac operator for a spinor eld. v0(x) is a potential derived from the eld 0.
+although we have written eq. (2) for a scalar in one-dimension, the same considerations
+apply in three-dimensions. typically the {} are not themselves the eigenvalues, {}, of
+h but rather simple functions of the them. for example, in the case that  is a scalar,
+j = pj + m2.
+our toy model is based on two alterations in this physical picture: rst we assume that
+the {} are proportional to the eigenvalues of h, as they would be in the nonrelativistic
+case where (k) = 2k2/2m (and k2 is the eigenvalue of h); and second, we replace the
+local potential, v (x), by a nonlocal, but separable potential,
+
+v (x, x) = u(x)u(x)
+
+(3)
+
+where r dx u2(x) = 1. because of our rst assumption the casimir energy can be written as
+
+ec = 1
+
+2 tr(h  h0) .
+
+(4)
+
+r.l. jae and l.r. williamson
+
+as a consequence of the separability assumption, h can be written formally as
+
+h = h0  |uihu|
+
+3
+
+(5)
+
+where |ui is the state with wavefunction u(x) = hx|ui. combining eqs. (4) and (5) we nd
+that the casimir energy is  1
+
+2,
+
+ec =  1
+=  1
+
+2 tr{|ui hu|}
+2  .
+
+(6)
+
+this is the fundamental result that makes the study of the casimir energy in separable
+potential models interesting  the answer is so transparent. our object in this paper is to
+show that more conventional (and more complicated) methods of computing the casimir
+
+energy coincide with this simple result.
+
+the remainder of the paper is organized as follows.
+
+in the next section we review
+
+the bound states, greens functions and scattering amplitude for a separable potential. in
+section iii we derive expressions for the casimir energy in terms of integrals over greens
+
+functions or scattering phase shifts. in section iv we compute the casimir energy using the
+methods of section iii for the case of a separable potential and show that the result is  1
+2.
+in section v we specialize to a particular choice of u and explore the convergence of the
+
+casimir energy calculation as a function of the strength, , of the interaction. we conclude
+in section vi.
+
+ii. separable potentials
+
+in this section we review the solution of the scattering problem for a scalar particle
+moving in an s-wave separable potential in three dimensions. we begin with the schrodinger
+
+equation in three dimensions with a nonlocal potential,
+
+2
+
+2m 2(~r) +z d3r v (~r,~r)(~r) = (~r)
+
+
+
+where
+
+h~r|v |~ri = v (~r,~r) .
+
+(7)
+
+(8)
+
+the resulting integral equation is in general more complicated than the local case, but for a
+separable potential, eq. (3), it is simpler. for simplicity we take a separable and spherically
+
+symmetric nonlocal potential,
+
+v (~r,~r) = u(r)u(r)
+
+(9)
+
+r.l. jae and l.r. williamson
+
+for which eq. (7) reduces to
+
+2
+
+2m 2(~r)  u(r)z d3r u(r)(~r) = (~r) .
+
+
+
+4
+
+(10)
+
+for  > 0 the potential is attractive.
+
+a principal simplication with a spherically symmetric, separable potential is the absence
+of any interaction in partial waves with  > 0. this follows immediately from eq. (10) because
+
+r d3r u(r)(~r) projects out only the spherically symmetric part of . all partial waves
+
+except  = 0 cancel out of the casimir sum. we replace (~r) by u(r)/r and nd that
+eq. (10) simplies to
+
+ u (r)  4ru(r)z 
+
+0
+
+drru(r)u(r) = k2u(r)
+
+(11)
+
+where k2 = 2m/2, and where we have set  = 2m = 1 henceforth.
+
+for scattering solutions, it is useful to convert eq. (11) into an integral equation for the
+
+function, u (+)(r), obeying scattering boundary conditions,
+
+u (+)(r) = u0(r) + 4z 
+
+0
+
+drg(+)
+
+0
+
+(r, r, k)ru(r)z 
+
+0
+
+drru(r)u (+)(r)
+
+(12)
+
+where u0(r) is the free solution regular at the origin, u0(r) = sin kr, and g(+)
+free, s-wave greens function with outgoing wave boundary conditions,
+
+0
+
+(r, r, k) is the
+
+g(+)
+
+0
+
+(r, r, k) =
+
+=
+
+1
+k
+1
+
+eikr> sin kr<
+
+i z 
+
+
+
+dq
+
+eiqr sin qr
+(q2  k2  i)
+
+.
+
+(13)
+
+the properties of the greens function guarantee that u (+)(r) satises the schrodinger
+
+equation. the asymptotic form of the scattering wave at large r,
+
+u (+)(r) =
+
+lim
+r
+
+i
+2
+
+(eikr  e2i(k)eikr)
+
+(14)
+
+and the behavior of the greens function at large r enable us to read o the scattering
+amplitude in terms of u,
+
+f (k)  ei(k) sin (k) =
+
+4
+
+k z 
+
+dr r sin kru(r)z 
+
+0
+
+0
+
+dr ru (+)(r)u(r) .
+
+(15)
+
+to proceed we return to eq. (12), multiply by ru(r) and integrate over r. the resulting
+0 dr ru(r)u (+)(r), which yields f (k) upon substitution
+
+algebraic equation can be solved for r 
+
+into eq. (15),
+
+r.l. jae and l.r. williamson
+
+where we have dened
+
+f (k) =
+
+k
+
+4
+
+|0(k)|2
+1  x()
+dr ru(r)u0(r) = z 
+
+0
+
+1
+
+dq
+
+q2    i|0(q)|2 .
+
+0(k)  z 
+x() = 8z 
+
+0
+
+0
+
+dr r sin kru(r)
+
+the scattering amplitude, f (k), has a cut along the positive k2 axis induced by the cut
+in x(). the cut begins with a branch point at threshold, k2 = 0. the discontinuity across
+the cut is given by
+
+disc f (k) = 2i im f (k) = 2i sin2 (k)
+
+(18)
+
+where we have used 1/(x + i) = pv(1/x)  i(x) to separate out the imaginary part
+when x is real. the phase shift (k) can be read o eq. (16) conveniently by using the
+parameterization, f (k) = 1/(cot   i),
+
+tan (k) =
+
+.
+
+(19)
+
+4|0(k)|2/k
+0 dq |0(q)|2/(q2  k2)
+
+1  8-r 
+
+the born approximation to the scattering amplitude is obtained by expanding the denomi-
+nator in eq. (16) in a geometric series,
+4|0(k)|2
+
+fba(k) =
+
+(20)
+
+dq
+
+
+
+.
+
+k
+
+(cid:20)8z 
+
+0
+
+xn=0
+
+q2  k2  i(cid:21)n
+|0(q)|2
+
+in addition to the branch cut for real, positive k2, f (k) can be singular at values of k
+where the denominator in eq. (16) vanishes, i.e., where x() = 1. bound states appear as
+poles in f (k) for k2 < 0, or more precisely, k = i. [poles at k = i are virtual states.]
+when k2 < 0, x(2) becomes real,
+
+5
+
+(16)
+
+(17)
+
+(21)
+
+(22)
+
+dq |0(q)|2
+q2 + 2
+and a bound state occurs at the value of   0 for which
+
+x(2) = 8z 
+
+0
+
+x(2
+
+0) = 8z 
+
+0
+
+dq |0(q)|2
+q2 + 2
+0
+
+= 1 .
+
+since x(2) is a decreasing function of , the criterion for existence of a bound state is
+that x(0) > 1, or
+
+8z 
+
+0
+
+dq |0(q)|2
+
+q2 > 1 .
+
+(23)
+
+this equation denes the critical value of  at which a bound state appears for a given
+
+choice of u(r). note that there is at most one bound state in this separable potential. this
+completes our review of the properties of a particle moving in a separable s-wave potential.
+
+r.l. jae and l.r. williamson
+
+6
+
+iii. the casimir energy
+
+we are interested in (a) the greens function and (b) the phase shift expressions for the
+
+casimir energy. both representations may be derived heuristically in the eective action
+formalism in eld theory. [2] equally well, we can start from the formal expression, eq. (1),
+and convert the sum over eigenenergies to a trace of a greens function or an integral over
+
+phase shifts.
+
+a. greens function representation
+
+the greens function method starts from the greens function in coordinate/energy rep-
+
+resentation,
+
+g(~r,~r, ) = xj
+
+j (~r)
+
+j(~r)
+j  
+
+(24)
+
+where the {j(~r)} are the unit-normalized1 energy eigenstates in coordinate space and the
+summation ranges over the spectrum of h, so
+
+(h  )g(~r,~r, ) = 3(~r ~r) .
+
+(25)
+
+in order to relate this to the casimir energy, consider the dierence of the greens functions
+evaluated at   i and  + i integrated over space,
+
+z 
+
+0
+
+d3r [g(~r,~r,  + i)  g(~r,~r,   i)] = 2ixj
+
+[(  j)  (  0j)]
+
+(26)
+
+where g is the dierence between the greens function in the background potential and
+the free greens function. to obtain the casimir energy, multiply eq. (26) by , integrate
+from  to , and divide by 4i,
+d z 
+
+d3r [g(~r,~r,  + i)  g(~r,~r,   i)] .
+
+ec =
+
+(27)
+
+1
+
+4i z 
+
+
+
+0
+
+this result can be simplied further by introducing a function, f (), dened by its
+
+derivative,
+
+df ()
+
+d
+
+= z d3r g(~r,~r, )
+
+(28)
+
+1we proceed as if the spectrum is discrete and the states are normalizable. our result applies
+equally to the case (of interest) where the spectrum is continuous and the states are normalized to
+-functions.
+
+r.l. jae and l.r. williamson
+
+7
+
+fig. 1. contours in the complex -plane relevant to evaluating the casimir energy.
+
+and the condition that f ()  0 as ||  . then substituting into eq. (27) and integrat-
+ing by parts, we nd
+
+ec =
+
+1
+
+4i z 
+
+
+
+d [f (  i)  f ( + i)] .
+
+(29)
+
+the surface terms at   i can be shown to cancel.
+
+referring back to the denition of g, we see that the discontinuity in f along the re
+ axis is associated with the eigenstates of h. let 0 be the ground state of h. for all
+ < 0 we can send   0. then the integral of eq. (29) can be written as a contour integral
+over a contour c (as shown in fig. 1) that runs in from + above the re  axis to 0 and
+then returns to + below the re  axis,
+
+ec =
+
+1
+
+4i ic
+
+d f () =
+
+1
+
+4i ic
+
+d f () .
+
+(30)
+
+in the second term we have replaced the contour c by the counterclockwise circle at inn-
+ity, c, since in general the only singularities in f () lie on the real axis. this compact
+expression will be particularly useful in the separable case.
+
+b. phase shift representation
+
+the phase shift representation for ec begins from eq. (1) divided up into bound state
+
+and continuum contributions,
+
+ec = 1
+
+states
+
+2 xbound
+2 xj
+
+=  1
+
+j + 1
+
+dn 
+
+2 zcontinuum
+2 z 
+
+0
+
+bj + 1
+
+d ()
+
+(31)
+
+r.l. jae and l.r. williamson
+
+8
+
+where bj are the binding energies, and ()  dn/d is the modication of the continuum
+density of states due to the interaction. a simple and general argument connects () to
+
+the phase shift (in our case only the s-wave contributes),
+
+substituting (), and integrating by parts yields,
+
+() =
+
+1
+
+
+d()
+
+d
+
+.
+
+ec =  1
+
+2 xj
+
+bj 
+
+1
+
+2 z 
+
+d () .
+
+0
+
+(32)
+
+(33)
+
+the surface term in the integration by parts  () vanishes trivially at  = 0. for a
+general problem the surface term at innity causes problems because generically ()  1/
+as   . however, in the case of a separable potential, we shall see that the phase shift
+vanishes rapidly as   , so the surface term can be ignored. so we may immediately
+calculate the casimir energy if we are given the phase shift. eq. (30) and eq. (33) give
+
+alternative representations of the casimir energy, which should both be equivalent to eq. (6)
+for the separable case.
+
+iv. casimir energy for the separable case
+
+in this section we examine the greens function and phase shift representations of the
+
+casimir energy for the separable case.
+
+a. greens function representation
+
+to exploit eq. (27) we need an explicit expression for the trace of the greens function
+
+for the separable potential of section 2. we start with the lippmann-schwinger equation
+for g,
+
+g(~r,~r, ) = g0(~r,~r, ) + z d3r1 d3r2 g0(~r,~r1, )u(r1)u(r2)g(~r2,~r, )
+
+(34)
+
+which may be solved by iteration,
+
+g(~r,~r, ) = z d3r1 d3r2 g0(~r,~r1, )u(~r)(cid:2)1+x()+x()2+   (cid:3) u(~r)g0(~r2,~r, ) (35)
+
+where x() was dened in eq. (17).
+
+eq. (27) requires the us to set ~r = ~r and integrate. if we substitute from eq. (35) the
+
+result takes a particularly simple form,
+
+r.l. jae and l.r. williamson
+
+z d3r g(~r,~r, ) =
+
+dx
+d
+
+
+
+[x()]m
+
+m
+
+xm=0
+ln (1  x())
+
+d
+d
+
+so
+
+= 
+
+ec = 
+
+1
+
+4i ic
+
+d ln (1  x())
+
+9
+
+(36)
+
+(37)
+
+where we have identied the generic function f () of eq. (28) with  ln (1  x()) in the
+separable case. [with this identication it is easy to check that the surface terms discussed
+following eq. (29) do indeed vanish.] to evaluate the integral we need lim ln (1 x()).
+from eq. (17) and the normalization of u(r), it is easy to see that as   ,
+
+thus,
+
+ln (1  x())  x()  / .
+
+ec = 
+
+
+
+4i ic
+
+d
+
+
+
+2
+
+.
+
+= 
+
+(38)
+
+(39)
+
+conrming the value of the casimir energy is /2 as we derived in section 1 from more
+formal considerations.
+
+some comments are in order:
+
+ the method we have presented is equivalent to the usual, graphical analysis of the
+eective action in quantum eld theory. had we begun with a theory describing a
+scalar eld, , propagating in a scalar background, , then the casimir energy would
+
+have been given by the (innite) sum of one-loop graphs for  with insertions of
+the / coupling. the one-loop graphs could then be resummed into a lippmann
+schwinger equation for g(~r,~r, ). the special advantages of a separable potential are
+(a) that the resulting integral equation for g is solvable, and (b) that there are no
+ultraviolet divergences (seen as divergences in the    limit) to complicate the
+calculation.
+
+ the resummation of 1 + x + x 2 +   that generated the logarithm in eq. (36) is valid
+for small  where the series converges. the result can then be analytically continued
+
+to large  were the re-expansion into a (born) series does not converge.
+
+b. phase shift representation
+
+in section 3 we also derived a simple representation, eq. (33), for the casimir energy as
+a sum over binding energies and an integral over the phase shift (). in this subsection we
+
+r.l. jae and l.r. williamson
+
+10
+
+show explicitly that this representation is equivalent to the greens function representation
+as found, for example, in eq. (37).
+
+first, we return to the contour, c, of fig. 1,
+
+ec = 
+
+1
+
+4i ic
+
+d ln (1  x()).
+
+(40)
+
+the contour integral is equivalent to integrating the discontinuity in the integrand across
+the real axis from just below the lowest bound state 0 to ,
+
+ec =
+
+1
+
+2 z 
+
+0
+
+d im ln (1  x( + i))
+
+(41)
+
+where we have used the fact that the discontinuity in the logarithm is 2i times its imaginary
+part.
+
+there are two distinct regions in the integral. for  < 0, x() is explicitly real, and
+the logarithm can have an imaginary part if and only if x() > 1. for  > 0, x() always
+
+has an imaginary part (see eq. (17)) related to the scattering amplitude. we shall show
+that these two contributions map into the binding energy and integral over the phase shift
+respectively, as expected from eq. (33).
+
+first consider   0. according to the analysis of section 2, eqs. (21) and (22), etc.,
+x() takes its maximum at  = 0, and decreases as  decreases. if x(0) > 1 there is a
+single bound state with binding energy, b  0, determined by the equation x(b) = 1.
+thus if  is large enough to generate a bound state, then ln (1  x()) has an imaginary
+part (equal to ) for b    0. thus
+
+1
+
+2 z 0
+
+0
+
+d im ln (1  x()) =  1
+
+2 b .
+
+next consider  > 0. from the analysis of section 2, we nd
+
+ln (1  x()) = ln (cid:18)1  4z 
+
+
+
+dq |0(q)|2
+(q2  )
+
++ 4i|0(k)|2
+
+k (cid:19) .
+
+(42)
+
+(43)
+
+(44)
+
+from this we read o the imaginary part,
+
+im ln (1  x( + i)) =  tan1(cid:18)
+
+4|0(k)|2/k
+0 dq |0(q)|2/(q2  )(cid:19)
+
+1  4-r 
+
+which is just  tan (k) as dened in eq. (19). substituting from eqs. (42) and (44) into
+eq. (41), we conrm the phase shift plus binding energy representation, eq. (33),
+
+ec =  1
+
+2 xj
+
+bj 
+
+1
+
+2 z 
+
+0
+
+d () .
+
+(45)
+
+r.l. jae and l.r. williamson
+
+11
+
+v. convergence and numerical issues in a separable
+
+potential model
+
+a particular virtue of the separable potential model is that it is simple enough to allow
+us to investigate issues that are dicult to attack in more realistic theories. as an example
+
+of such an issue, we consider here some computational aspects of phase shift representation
+of the casimir energy. ref. [2] introduced a method of computing the casimir energy
+
+in realistic quantum eld theories based on the born approximation to the phase shift.
+divergences generated by the lowest-order feynman diagrams are associated with the rst
+few terms in the born approximation to the phase shift. to remove the divergences from
+
+the numerical part of the calculation, the rst few born approximations are subtracted from
+the phase shift. these contributions are then added back into the calculation in the form of
+
+(divergent) feynman diagrams, which are regulated and renormalized by means of available
+counterterms. schematically
+
+ec =  1
+
+2 xj
+
+bj 
+
+1
+
+2 z 
+
+d n () +
+
+0
+
+n
+
+xn=0
+
+dn + ct
+
+(46)
+
+where n is the phase shift with the rst n terms in the born approximation subtracted,
+
+() = () 
+
+n
+
+xn=1
+
+n(n)()
+
+(47)
+
+dn is the contribution to ec from the nth-order feynman diagram, and ct denotes the
+renormalization counterterms. both the {dn} and the counterterms depend on a cuto if
+the theory has ultraviolet divergences. the born-subtracted phase shift, however, is cuto
+independent.
+
+in realistic quantum eld theory applications the feynman diagrams, {dn}, and the
+counterterms are calculated by standard, diagrammatic methods. the integral over n
+is done numerically. the born approximations {n(n)} have just the right behavior to
+cancel the large  tail of () and render the -integral convergent. however they are a
+poor approximation to () for small , especially in partial waves where there are bound
+states. [3] numerical studies show that at low  the function n () is much larger than
+0 d n (). the origin of this eect is obscured in those studies because
+0 d (n)(), diverge. the large
+ behavior of the separable potential model is very soft, enabling us to study this issue
+explicitly.
+
+its integral r 
+the integral over the individual born approximations, r 
+
+it is convenient to specialize further to a particular choice of the separable potential
+
+function, u(r). following gottfried, we choose the yukawa function,
+
+r.l. jae and l.r. williamson
+
+a simple calculation gives
+
+u(r) = r 
+
+2
+
+er
+
+r
+
+.
+
+0(k) = r 
+
+k
+
+k2 + 2
+2
+
+
+2(  ik)2 .
+
+x(k) =
+
+12
+
+(48)
+
+(49)
+
+it is convenient to use the momentum, k, rather than  = k2 as the independent variable,
+also to introduce scaled variables, k/  z, /2  g, and nally, it is easiest to explore the
+model by studying the scattering amplitude, f (k)  f (g, z) = 1/(cot (g, z)  i),
+
+f (g, z) =
+
+.
+
+(50)
+
+2gz
+
+(1 + iz)2((1  iz)2  g)
+
+the scattering amplitude f (g, z) has two types of singularities. the double pole at
+z = i is a potential singularity arising from the fourier transform of u(r), 0(k). it is
+on the second sheet of the complex  plane where it does not aect the contour shifting
+
+arguments we used earlier in this paper. the other singularities are poles at
+
+z = 
+
+
+i(g  1)
+i(g + 1).
+
+.
+
+(51)
+
+for g > 1, z+ is associated with a bound state:
+it lies on the positive imaginary axis,
+corresponding to the negative real axis on the rst sheet of the complex -plane.2 the
+energy of the bound state is 0 = 2z2
+second sheet and is not dynamically important. the singularities in the complex-z plane
+
+ = (  )2. the pole at z is always on the
+
+are summarized (for g > 1) in fig. 2.
+
+with these considerations in mind, we can write an illuminating expression for the
+
+casimir energy,
+
+ec =  1
+
+2 =
+
+
+
+
+1
+
+d ()
+
+2 z 
+
+2 (  )2 
+ 1
+
+0
+
+1
+
+2 z 
+
+0
+
+d ()
+
+for  < 2
+
+for  > 2
+
+(52)
+
+i.e., where there is a bound state, it appears explicitly in ec. the born approximation is an
+expansion of (g, z) in powers of g obtained by expanding the denominator of f (g, z) (see
+eq. (50)) in a geometric series:
+
+2for g < 1 the z+ pole lies on the negative imaginary axis, i.e., on the second sheet of the -plane.
+as g  1 it becomes virtual state on its way to becoming a bound state.
+
+r.l. jae and l.r. williamson
+
+13
+
+fig. 2. the born expansion converges outside a circle of radius g centered at i in the complex
+z-plane. singularities in f (g, z) at z = i, z+ = i(g  1), and z = i(g + 1) are shown.
+
+(g, z) =
+
+
+
+xn=1
+
+gn(n)(z) .
+
+(53)
+
+the convergence of the born expansion is determined by the convergence of the geometric
+
+series for f (g, z), which converges provided |1  iz| > g. that is, z must lie outside the
+circle of radius g centered at z = i. to compute the casimir energy by the phase shift
+method, we must integrate over all  > 0, corresponding to z  [0,].
+
+as long as g < 1 ( < 2) the born expansion converges for all real, positive z and can
+
+be used under the integral sign in eq. (52) to compute ec,
+
+ec =  1
+
+2  = 
+
+1
+2
+
+
+
+xn=1
+
+nz 
+
+0
+
+d (n)()
+
+for  < 2 .
+
+(54)
+
+this is a remarkable result: both sides are power series in , but the left hand side consists
+of a single term. we conclude that, for  < 2, when there is no bound state, the entire
+casimir energy is given by the rst born approximation, and that the integrals over all
+
+higher born approximations to the phase shift vanish:
+
+
+
+2 z 
+
+0
+
+2  = 
+d (n)()
+
+for all n > 1 .
+
+(55)
+
+d (1)(),
+
+ec =  1
+0 = z 
+
+0
+
+r.l. jae and l.r. williamson
+
+14
+
+1.4
+
+1.2
+
+1
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+0
+
+0.5
+
+1
+
+1.5
+
+2
+
+2.5
+
+3
+
+fig. 3. the phase shift for the yukawa separable potential for g = 0.99. the solid curve is the
+
+exact result, the four dashed curves give the rst four born approximations respectively.
+
+this result may easily be veried numerically.
+
+when g > 1 ( > 2), it is no longer possible to use the born approximation to evaluate
+the -integral. a glance at the second equation in eq. (52) conrms that the born approxi-
+mation cannot converge when there is a bound state: if it did, it would yield a result analytic
+in , however the -integral must generate a factor  to cancel the contribution of the
+2 . to generate , the born expansion must not converge.
+bound state and give ec =  1
+still, it is useful to subtract some number of terms in the born expansion from the exact
+phase shift (n () = () p
+
+n=1 n(n)()) and to rewrite ec accordingly,
+
+ec =  1
+
+2  =  1
+=  1
+
+
+
+2 (  )2 
+2 (  )2  1
+
+2 z 
+2 
+
+0
+
+d (1)() 
+2 z 
+1
+
+0
+
+d n () .
+
+1
+
+2 z 
+
+0
+
+d n ()
+
+(56)
+
+here we have subtracted the rst n terms in the born approximation to convert  to
+n . when we added them back in, we used the fact that the integral of the rst born
+approximation gives exactly  1
+2, and that the integrals of all higher born approximations
+vanish. from this analysis we conclude that when there is a bound state, the integral of the
+born subtracted phase shift, n gives an n-independent contribution to ec,
+
+1
+
+2 z 
+
+0
+
+
+
+d n () = 1
+
+2(  )2 .
+
+(57)
+
+these results help to understand the eects that have been seen in numerical calculations
+in more complicated theories. in our toy model, when g is such that there is no bound state,
+
+r.l. jae and l.r. williamson
+
+15
+
+(4)
+
+(3)
+
+20
+
+15
+
+10
+
+5
+
+-5
+
+-10
+
+-15
+
+-20
+
+(2)
+
+(1)
+
+0.5
+
+1
+
+1.5
+
+2
+
+2.5
+
+fig. 4. the phase shift for the yukawa separable potential for g = 4.5. the solid curve is the
+
+exact result, the four dashed curves give the rst four born approximations respectively.
+
+the casimir energy is given entirely by the rst born approximation (which, in a theory
+with divergences, would be computed from a feynman graph). the nth born approximation
+gives a contribution to  of order gn, which may be large for g . 1, but its integrated
+contribution to the casimir energy is exactly zero. in more complicated theories the answer
+
+is very small but not exactly zero. [3] the magnitude of the eect can be seen in fig. 3,
+where we plot the exact phase shift and the rst four born approximations for g = 0.99.
+
+the rst born approximation has the same integral as the full phase shift. each higher born
+approximation integrates to zero. the situation becomes even more bizarre in when there is
+a bound state. the entire casimir energy is still given by the rst born approximation! the
+
+bound state contribution is exactly canceled by the remainder of the phase shift integral.
+one can remove any number of further born approximations from   dening n , which is
+signicantly modied by the subtraction of higher born approximations  without changing
+the integral. the eect can be seen in fig. 4, where we plot the exact phase shift and the
+rst four born approximations for g = 4.5. once again the toy model caricatures eects
+
+seen in more complex and more realistic theories.
+
+vi. summary and conclusions
+
+our principal purpose has been to develop a simple model to obtain insight into com-
+plicated calculations of casimir energies in quantum eld theories. we have veried in our
+
+r.l. jae and l.r. williamson
+
+16
+
+separable potential model that several traditional representations of the casimir energy em-
+ployed in quantum eld theories are equivalent. our model is very simple. in particular, it
+
+does not display the divergences characteristic of real quantum eld theories. thus we are
+not surprised that results are conrmed in our model that might be spoiled by divergences
+
+in more realistic theories. nevertheless, the model is rich enough to illustrate some of the
+computational diculties that have been seen numerically in more complicated theories.
+
+also, we should point out that there are cases where separable potentials do arise in the
+treatment of more realistic theories. in particular, bashinsky has shown that the collective
+coordinate quantization in theories with solitons introduces additional, separable-potential-
+
+like terms into the small oscillations hamiltonian whose eigenvalues determine the casimir
+energy. [4] the ideas developed here would apply relatively directly to such cases.
+
+acknowledgments
+
+we thank s. bashinsky, j. goldstone, n. graham, and h. weigel for conversations and
+
+suggestions related to this work.
+
+[1] see, for example, k. gottfried, quantum mechanics, volume i: fundamentals, (w.a. benjamin,
+
+reading, 1966).
+
+[2] e. farhi, n. graham, p. haagensen and r.l. jae, phys. lett. b427, 334 (1998), hep-
+
+th/9802015.
+
+[3] e. farhi, n. graham, r.l. jae, and h. weigel, in preparation.
+[4] s. bashinsky, in preparation.
+
+

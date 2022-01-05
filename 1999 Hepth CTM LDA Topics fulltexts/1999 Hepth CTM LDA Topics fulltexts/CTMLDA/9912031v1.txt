@@ -1,0 +1,1102 @@
+9
+9
+9
+1
+
+ 
+c
+e
+d
+4
+
+ 
+
+ 
+ 
+
+1
+v
+1
+3
+0
+2
+1
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+a non-fock fermion toy model
+
+boris tsirelson
+
+abstract
+
+recent progress in mathematical theory of random processes pro-
+vides us with non-fock product systems (continuous tensor products
+of hilbert spaces) used here for constructing a toy model for fermions.
+some state vectors describe innitely many particles in a nite region;
+the particles accumulate to a point. electric charge can be assigned
+to the particles, the total charge being zero. time dynamics is not
+considered yet, only kinematics (a single time instant).
+
+introduction
+
+non-interacting particles are quanta of free quantum elds.1 corresponding
+hilbert spaces, known as fock spaces,2 are direct sums of n-particle spaces
+for n = 0, 1, 2, . . . interacting particles are3 described by nonlinear quantized
+elds that do not t into fock spaces.
+
+fock spaces are also discussed by mathematicians in the context of prod-
+uct systems, that is, continuous tensor products of hilbert spaces (see [1]
+and references therein) and white noise (see [4, 3]). non-classical noises
+found recently in stochastic analysis (especially [10]; see also [9]) are a source
+of non-fock product systems. it is natural to look at these systems from the
+viewpoint of quantum eld theory. i try to do so in the present text by com-
+bining some ideas of anatoly vershik (the initiator of the trend), jonathan
+warren, and mine.
+
+toy models considered here are quite poor in several aspects. especially,
+dynamics is neglected at all, and particles are treated as utterly local in space
+(see sect. 3.3). nevertheless, we may hope for some hints toward more useful
+rigorous non-fock constructions.
+
+1see [2, chaps 1,2].
+2or fock-cook representations, see [2, sect. 1.9, p. 61].
+3or rather, should be; see [2, sect. 8.1].
+
+1
+
+1 the idea
+
+1.1 lattice fermions
+
+the model can be described at once using notions of stochastic analysis (see
+sect. 2). however, for the beginning i prefer discrete approximations. so,
+we assume for now that our physical space is a one-dimensional lattice
+z = {. . . ,2,, 0, , 2, . . .}; we ascribe a two-dimensional hilbert space
+hk to each lattice point k; we introduce on hk fermionic operators ak
+(annihilation), ak (creation), satisfying car (canonical anticommutation
+relations4) akak + akak = 1, a2
+k = 0; we consider the tensor product5
+hz of all hk containing the vacuum6 vector 0 such that ak0 = 0 for all
+k, treating now all ak as operators on hz, so that akal + alak = 0 for
+k 6= l, and akal + alak = 0 for all k, l.7 of course, hz is just the usual
+(fermionic) fock space; a non-fock space will appear later in the limit   0,
+due to a non-classical limiting procedure. the total number of particles is the
+observable nz = pk akak. its eigenvalues are 0, 1, 2, . . . the eigenspace
+h (n)
+z corresponding to an eigenvalue n is the n-particle space, spanned by
+vectors ak1 . . . akn0 for k1 <    < kn. the number of particles on an
+interval [x, y) is the observable nz
+y,z =
+x,z and nz
+nz
+
+x,y =pk:xk<y akak; clearly, nz
+
+x,y+nz
+
+= nz.
+
+,
+
+1.2 quantum states and classical random variables
+
+for each lattice point k we introduce a variable k with only two possible
+values 1. functions of these variables will be used as symbols of state
+vectors, as follows:
+
+(1.2.1)
+
+function
+
+1
+k
+kl
+
+(constant)
+
+state vector
+
+0
+ak0
+akal0
+
+(vacuum)
+
+(k < l)
+
+and so on; each factor k gives rise to a particle at k. extending the map
+by linearity we get a unitary operator from the hilbert space l2 of all square
+4physicists are acquainted with car; mathematicians may look at [5, sect. 4.6], [2,
+
+chap. 2].
+
+5in fact, only nite regions of the one-dimensional space will be used. the reader may
+restrict himself once and for all to k  [1, +1], which makes hz nite-dimensional.
+otherwise, see [2, sect. 4.5] (the direct product of grounded hilbert spaces).
+
+6it is a simplistic vacuum, see sect. 3.3.
+7to this end we identify ak  al with akal whenever k < l. the sign is chosen at
+
+will; see also [2, th. 3.2].
+
+2
+
+integrable complex-valued functions of variables k onto the hilbert space
+hz of all state vectors; l2  f 7 f  hz.
+let f  l2, kfk = 1. consider the probability kakfk2 = hakakif of
+nding a particle at k. in terms of f , it is the so-called inuence of k on
+f . for example, let  = 1 and f = f (1, 2, 3), then the inuence of 1 on f
+is, by denition,
+
+1
+
+4 xa,b{1,+1}(cid:18)f (1, a, b)  f (1, a, b)
+
+2
+
+(cid:19)2
+
+;
+
+1
+
+treating k as independent random variables,8 each with two equiprobable
+values:
+
+a probabilist writes it as the expectation e of a conditional variance var(cid:0) (cid:12)(cid:12)(cid:1) ,
+e var(cid:0) f(cid:12)(cid:12) 2, 3(cid:1) =
+
+4 xs2,s3{1,+1}(cid:18)f 2(1, s2, s3) + f 2(1, s2, s3)
+
+(cid:16) f (1, s2, s3) + f (1, s2, s3)
+
+(cid:17)2(cid:19) .
+similarly, the probability of nding at least one particle within the two-point
+set {k, l} is the inuence of {k, l} on f . for example, the inuence of
+{1, 2} on f (1, 2, 3) is
+
+2
+
+2
+
+4
+
+1
+
+in general, the probability of nding at least one particle on [x, y) is
+
+e var(cid:0) f(cid:12)(cid:12) 3(cid:1) =
+2 xs3{1,+1}(cid:18)f 2(1, 1, s3) + f 2(1,1, s3) + f 2(1, 1, s3) + f 2(1,1, s3)
+
+(cid:17)2(cid:19) .
+(cid:16)f (1, 1, s3) + f (1,1, s3) + f (1, 1, s3) + f (1,1, s3)
+e var(cid:0) f(cid:12)(cid:12) r\[x,y)(cid:1) , the inuence of r\[x,y) on f ; here r\[x,y) means the col-
+
+lection of k for all k such that k  r \ [x, y), that is, k < x or k  y.
+the projection onto the eigenspace of nz
+0; it may be written as 0nz
+note that 0nz
+x,y = lim0 nz
+
+x,y. consider
+x,y corresponding to the eigenvalue
+x,y (it is means that 00 = 1, 01 = 0, 02 = 0 . . . ;
+x,y ). its expectation h0nz
+x,yi (denoted also by
+8just classical random variables on some probability space, with (apriori) no relation
+
+the corresponding quantum observable is a function of nz
+
+4
+
+to hz.
+
+3
+
+h|0nz
+so,
+
+x,y|i or(cid:0)0nz
+
+x,y, (cid:1)) is the probability of nding no particles on [x, y).
+h0nz
+x,yif = 1  e var(cid:0) f(cid:12)(cid:12) r\[x,y)(cid:1)
+whenever f  l2, kfk = 1.
+
+(1.2.2)
+
+1.3 from a lattice to a continuum
+
+the standard limiting procedure is based on functions of the form
+
+f, = xkz
+
+(k)k
+
+(as well as polynomials of such functions); here  : r  c is a continuous
+compactly supported function (test function). clearly,
+
+kf,k2 = xk
+
+|(k)|2 0 z +
+
+
+
+|(x)|2 dx = kk2 .
+
+function ;
+
+the distribution of f, tends (for   0) to the normal distribution n(0,kk2).
+this way, the array of variables k over the lattice z turns (when  
+0) into the white noise d
+dx w (x) over r; here w is the wiener process;
+k turns into dw (x). the function f, turns into the linear functional
+f = r (x) dw (x). the lattice state vector f, = pk (k)ak0
+turns into f = r (x)a(x)0 dx, the one-particle state with the wave
+ables, the quadratic functional f = rrx<y
+to the two-particle state f = rrx<y
+the number-of-particles operator corresponding to pk akak is naturally
+denoted by n = r a(x)a(x) dx. accordingly, nx,y = r y
+x a(z)a(z) dz. still,
+nx,y + ny,z = nx,z and n, = n. the standard limiting procedure leads
+to the fock space h fock
+
+1 ak turns into a(x).9 similarly, for a function  of two vari-
+(x, y) dw (x)dw (y) corresponds
+
+(x, y)a(x)a(y)0 dxdy, and so on.
+
+, as usual.
+
+r
+
+1.4 some specic random variables and corresponding
+
+quantum states
+
+we introduce functions w z
+
+k of variables k as follows:
+
+w z
+
+(k+1)  w z
+w z
+9of course, a(x) is not an operator on h fock
+
+0 = 0 ;
+
+. rather, a() is a generalized function
+(schwartz distribution) on r taking on values in the space of linear operators on h fock
+.
+
+r
+
+r
+
+k = k
+
+for k  z .
+
+4
+
+random variables w z
+k
+k  [1, +1]:
+x z =
+
+w z
+
+max
+
+form a random walk. consider its maximum over
+
+kz[1/,1/]
+
+w z
+k ;
+
+xz = arg maxxz[1,+1] w z
+x .
+
+for almost all k the maximum is reached only once, thus x z is a well-
+dened random variable (a function of random variables k) whose values
+belong to the nite piece z  [1, 1] of the lattice. also w z
+x z is a ran-
+dom variable. both determine state vectors x z, w z
+. these are quite
+xz
+complicated linear combinations of various multi-partical states. in order to
+calculate them explicitly, one should evaluate fourier-walsh coecients by
+averaging k1 . . . knx z and k1 . . . knw z
+x z; fortunately we do not need
+it. the standard limiting procedure   0 gives the wiener process w (x),
+and w (x) = maxx[1,1] w (x), x = arg max[1,1] w () (also reached only
+once, almost sure). fourier-walsh expansion of x z becomes wiener chaos
+expansion of x into itos multiple stochastic integrals,
+
+(1.4.1)
+
+x = x0 +z x1(x) dw (x) +zzx<y
+
+x2(x, y) dw (x)dw (y) + . . .
+
+the function xk(x1, . . . , xk) for 1 < x1 <    < xk < 1 is the wave function
+of the k-particle component of x. the squared norm of x is the average
+of x 2, equal to 1/2 since arcsin x is known to be distributed uniformly on
+(/2, /2). still, it happens in the fock space.
+trying to escape the fock space, we consider such functions as exp(ix z)
+and exp(iw z
+x z); here  is a large parameter (a kind of cuto parameter),
+it will ultimately tend to . clearly, both functions become senseless for
+ = . however, it is instructive to compare the behavior of exp(ix z) and
+exp(iw z
+
+xz ) for large .
+
+xz ), consider the inuence of a single variable k on exp(iw z
+
+in order to estimate (via (1.2.2)) the density of particles in the state
+x z). it
+exp(iw z
+is an average over paths of the walk. assume k  (0, 1). a path that reaches
+its maximum on (1, k) gives a small (in most cases, just 0) contribution
+to the inuence. a path that reaches its maximum on (k, 1) contributes (in
+most cases) roughly ()2, assuming that   1/2. in the limit   0 the
+same argument, applied to the wiener process, shows that the density of the
+particles on (1, +1) is roughly 2; too much for taking   .
+consider now the density of particles in the other state, exp(ix z). the
+inuence of k on exp(ix z) is an average over paths. assume again k 
+(0, 1), and consider a path that reaches its maximum on (k, 1), not too close
+
+5
+
+to k. its contribution to the inuence is in most cases exactly 0, irrespective
+of . a non-zero contribution appears only when the maximum on (1, k)
+is -close to the maximum on (k, 1). in that case, k inuences x z by
+causing a jump of a size roughly 1. also exp(ix z) makes a jump of a size
+roughly 1 irrespective of . the probability of a particle at a given point
+
+state.
+
+( = 0) shows that the probability of at least one particle on (x, x + x) is
+
+of z is   for large . the same argument, applied on the continuum
+ x for large . this is why the limit    is of interest for such a
+of course, the expression exp(ix) is not a well-dened function over the
+wiener process, because of its innite sensitivity to small changes of w ().
+however, the sensitivity is concentrated near the maximizer. accordingly,
+particles accumulate to a single point (though it does not follow from the
+simple argument of the preceding paragraph).
+
+2 the model
+
+2.1 beyond the white noise
+
+the wiener process is the scaling limit of the random walk, which may be
+explained as follows. consider the lattice z = {. . . ,2,, 0, , 2, . . .},
+another lattice z = {. . . ,2,, 0,, 2, . . .}, and maps ux,y :
+z  z dened for x, y  z, x < y:
+
+uk,l(m) = (m + k + (k+1) +    + (l1)) ;
+
+here, as before, (k)kz is an array of independent random signs. note that
+uy,z(cid:0)ux,y(u)(cid:1) = ux,z(u), that is, uy,z  ux,y = ux,z for x < y < z; all ux,y
+are compositions of maps ux,x+ (x  z), these being independent; each
+ux,x+ is either u 7 u +  or u 7 u  . the lattice stochastic ow
+(fig. 1b) results from random alternating the two simple transformations of
+z (fig. 1a). the standard limiting procedure for   0 leads to ux,y(u) =
+u + w (y)  w (x), u  r, x, y  r, x  y (fig. 1c); as before, w () is the
+wiener process.
+now, breaking homogeneity on the u axis, we consider another pair of
+transformations z  z (fig. 2a). alternating them at random we get
+
+another lattice stochastic ow10 (fig. 2b) that has its scaling limit (fig. 2c);
+well call it the splitting ow.
+
+10the two-dimensional lattice (z)  (z) decomposes into two sublattices (even and
+
+odd), closed under the ow. in order to get a scaling limit we restrict ourselves to one of
+the two sublattices.
+
+6
+
+r
+
+r
+
+p"z
++
+p"z
++
+
+(a)
+
+(a)
+
+"z
++
+(cid:0)(cid:0)
+(randomsigns)
+(b)
+
+r
+
+(whitenoise)
+(c)
+
+figure 1: two simple transformations of the lattice z (a), alternating at ran-
+dom, form the simple lattice stochastic ow (b), consisting of parallel copies of the
+random walk. its scaling limit (  0) is the simple stochastic ow (c), consisting
+of parallel copies of the wiener process.
+
+"z
+(cid:0)(cid:0)
++
+(randomsigns)
+(b)
+
+r
+(anonclassicalnoise)
+(c)
+
+figure 2: another pair of transformations of z (a); their random alternation
+form another lattice stochastic ow (b). its scaling limit (  0) is the splitting
+stochastic ow (c).
+
+for large u, near +, the splitting ow does not dier from the simple
+
+ow:
+
+(2.1.1)
+
+ux,y(u) = u + w (y)  w (x)
+
+for u > w (x)  min
+
+[x,y]
+
+w () ;
+
+w () is still the wiener process. near  the situation is symmetric. near
+0 we have
+
+ux,y(u) = (cid:0)w (y)  min
+
+[x,y]
+
+w ()(cid:1)
+
+for |u| < w (x)  min
+
+[x,y]
+
+w () .
+
+thus, for given x, y  r, x < y, the map ux,y : r  r is chosen at random
+from a two-dimensional set g of maps,11 determined by two parameters,
+11the set g is a semigroup, and a (two-dimensional) topological space. however, it
+is not a group (maps are not invertible), nor even a topological semigroup (maps are
+discontinuous, and the composition is a discontinuous operation on the semigroup).
+
+7
+
+w (x)  min[x,y] w () and (cid:0)w (y)  min[x,y] w ()(cid:1). the rst parameter is
+uniquely determined by w (), but the second is not; its sign is a random
+variable independent of w (). on the lattice, the sign is determined by the
+parity (evenness) of the number k of the point k  [x, y] that minimizes
+w z
+k . in terms of sect. 1.4 the sign is just exp(ix) for  = / (though,
+minimum is used now, rather than maximum). for   0 it turns into the
+ill-formed expression exp(ix). however, the sign itself is well-dened, and
+may be used as a well-formed substitute for the ill-formed expression!
+the random map ux,y, that is, the family of random variables {ux,y(u) :
+u  r} (for given x, y) reduces to independent components: a single random
+sign vx,y = sgn ux,y(0), and increments {w (b)  w (a) : x < a < b < y} of
+the wiener process. the whole splitting ow {ux,y(u) : u  r, < x <
+y < +} boils down to random signs {vx,y : x < y} and wiener process
+increments {w (b)  w (a) : a < b}. however, these are dependent;
+(2.1.2)
+
+e(cid:0) vx,y(cid:12)(cid:12) w ()(cid:1) = 0 ,
+
+e(cid:0) vx1,y1vx2,y2(cid:12)(cid:12) w ()(cid:1) =(1 if arg min[x1,y1] w () = arg min[x2,y2] w (),
+
+given w (), random signs vx,y depend on x, y only via arg min[x,y] w (),
+
+0 otherwise.
+
+vx,y = varg min[x,y] w () .
+
+random signs vx are ascribed to all points x of local minima of w (). such
+points are a dense countable set. in fact,
+
+vx = lim
+0
+
+sgn ux,x+(0) ;
+
+the limit exists if (and only if) w () has a local minimum at x.
+
+2.2 from random processes to hilbert spaces
+
+ematical sense rather than physical) in the additive group r of real num-
+
+the wiener process (cid:0)w (x)(cid:1)<x< is a brownian motion (in the math-
+bers. the splitting ow (cid:0)ux,y()(cid:1)<x<y< is a brownian motion in the
+only increments are relevant, (cid:0)w (y)  w (x)(cid:1)<x<y<. for the splitting
+ow we cannot write ux,y = u0,y  u1
+we use ux,y rather than u(x) = u0,x.
+
+two-dimensional non-commutatite semigroup g. for the wiener process,
+
+0,x since u0,x is not invertible; this is why
+
+separable hilbert space lwiener
+
+all square integrable measurable functionals of the wiener process are a
+(, +). given (x, y)  r we may consider
+
+2
+
+8
+
+functionals of increments w (b)w (a) for all (a, b)  (x, y); such functionals
+form lwiener
+
+(x, y). independence of increments gives
+
+2
+
+lwiener
+
+2
+
+(x, y)  lwiener
+
+2
+
+(y, z) = lwiener
+
+2
+
+(x, z) .
+
+all square integrable measurable functionals of the splitting ow are
+a separable hilbert space lsplitting
+(, +). given (x, y)  r we may
+consider functionals of ua,b() for all (a, b)  (x, y); such functionals form
+lsplitting
+
+(x, y). independence12 gives
+
+2
+
+2
+
+lsplitting
+
+2
+
+(x, y)  lsplitting
+
+2
+
+(y, z) = lsplitting
+
+2
+
+(x, z) .
+
+the wiener process is naturally embedded into the splitting ow by (2.1.1),
+thus,
+
+lwiener
+
+2
+
+(x, y)  lsplitting
+
+2
+
+(x, y) .
+
+the space lwiener
+
+2
+
+(, +) may be identied13 with the fock space,
+
+h fock
+
+r = lwiener
+
+2
+
+(, +) ,
+
+over the space h (1)
+
+r of all one-particle state vectors, identied with linear
+
+functionals r (x) dw (x). we have also local spaces14
+
+h fock
+(x,y) = lwiener
+(x,y)  h fock
+h fock
+h (1)
+(x,y)  h (1)
+
+(x, y) ,
+2
+(y,z) = h fock
+(x,z) ,
+(y,z) = h (1)
+(x,z) .
+
+now we dene non-fock spaces of our model by
+
+hr = lsplitting
+
+2
+
+(, +) ,
+(x, y) ,
+
+h(x,y) = lsplitting
+
+2
+
+which gives
+
+(2.2.1)
+
+h(x,y)  h(y,z) = h(x,z) ,
+
+h fock
+(x,y)  h(x,y) .
+
+r, (a, b)  (x, y)} and {ua,b(u) : u  r, (a, b)  (y, z)}.
+
+12i mean independence between two families of random variables, {ua,b(u) : u 
+13recall sect. 1.3.
+14there are two equally canonical ways of identifying h fock
+
+(x,z). namely,
+for x1  (x, y), x2  (y, z) we may identify a(x1)  a(x2) with a(x1)a(x2) or alternatively
+with a(x2)a(x1) = a(x1)a(x2). see also [2, th. 3.2].
+
+(x,y)h fock
+
+(y,z) with h fock
+
+9
+
+r
+
+innitely many particles
+
+2.3
+how to count particles in a non-fock state   hr ? the number-of-particles
+operator n is dened on h fock
+only. turn to 0n. this observable indicates
+the event no particles; it is the one-dimensional projection |0ih0| onto
+the vacuum 0. it is natural to postulate that in the non-fock model the
+vacuum is still the only state with no particles.15 that is, we extend 0n
+from h fock
+onto hr by 0n = |0ih0|. in probabilistic terms 0 is just 1
+(recall (1.2.1)), and the corresponding one-dimensional projection is just e,
+the operator of mathematical expectation; 0nf = (ef )0, that is, 0nf = ef
+for f  lsplitting
+we localize the argument to (x, y)  r. namely, we postulate that in the
+(local) non-fock space h(x,y) the only state with no particles is the (local)
+vacuum state (x,y)
+(x,y)) identied with the constant random
+variable 1. that is, we have
+
+(belonging to h fock
+
+(, +).
+
+2
+
+0
+
+r
+
+0 = (x,z)
+
+(x,y)
+0  (y,z)
+0
+0 = (,+)
+
+,
+
+0
+
+,
+
+and we extend 0nx,y from h fock
+
+(x,y) onto h(x,y) by
+ih(x,y)
+0nx,y = |(x,y)
+
+0
+
+0
+
+| ,
+
+the one-dimensional projection onto the local vacuum. alternatively, we may
+treat 0nx,y as an operator on the whole space:
+
+hr = h(,x)  h(x,y)  h(y,+) ,
+0nx,y = 1 (cid:0)|(x,y)
+|(cid:1)  1 ,
+
+ih(x,y)
+
+0
+
+0
+
+the projection onto the (innite-dimensional) space h(,x)(x,y)
+0 h(y,+).
+in probabilistic terms, the space consists of all functionals of {ux1,x2(u) : u 
+r, (x1, x2)  (, x)}  {ux1,x2(u) : u  r, (x1, x2)  (y, +)}, and the
+projection is the conditional expectation,
+
+0nx,y f = e(cid:0) f(cid:12)(cid:12)f(,x)(y,+)(cid:1) ;
+
+fe stands for the -eld (on the probability space of the splitting ow)
+generated by the set {ua,b(u) : u  r, (a, b)  e} of random variables,
+whenever e  r is an interval or a union of nitely many intervals.
+15thus, to contain particles means to be orthogonal to 0. true, it is not a deep
+denition of particles. well see soon that our particles can be localized in space (too
+much for physical particles, see sect. 3.3). further they will get an electric charge, see
+sect. 3.2.
+
+10
+
+we have commuting observables 0nx,y on hr, satisfying
+
+(2.3.1)
+
+0nx,y0ny,z = 0nx,z .
+
+we may consider the corresponding joint quantum measurement. its outcome
+assigns values (0 or 1) to all nx,y respecting (2.3.1), and is interpreted as a
+conguration of particles in the (one-dimensional) space. if   h fock
+then
+the outcome is always a nite set. for   hr the outcome can be innite.
+in fact, if  is orthogonal to the fock space (that is,   hr  h fock
+), then
+the outcome is always an innite set.
+
+r
+
+r
+
+more formally, every state vector   hr, kk = 1, determines a proba-
+
+bility measure  on the space of compact subsets of r, dened by
+
+e
+
+h0nei = {c : c  e = } ;
+
+here e runs over nite unions of intervals; 0ne is dened naturally:
+
+0ne = 0nx1,y1  . . .  0nxn,yn
+
+for e = (x1, y1)      (xn, yn) ;
+
+in fact, (2.3.1) is a special case of 0ne1 e2 = 0ne1  0ne2 . see [8, sect. 2] and
+also [7] for a general theory of .
+if  = 0 then  is concentrated on {}. that is, if we measure the
+conguration of particles in vacuum, we always get the empty set .
+if   h fock
+then  is concentrated on (the set of) nite sets. that is,
+if we measure the conguration of particles in a fock state, we get a random
+nite set.
+
+r
+
+r
+
+r
+
+if   hr  h fock
+
+then  is concentrated on (the set of) innite sets.
+that is, if we measure the conguration of particles in a non-fock state
+(orthogonal to the fock space), we get a random innite set. the general
+theory [8] states that {c : c  x} = 0 for every x (and ). it follows
+that  is concentrated on (the set of) sets c of zero lebesgue measure. for
+some models, c is always of cardinality continuum.
+
+2
+
+return to our particular model, hr = lsplitting
+
+. recall that lsplitting
+is generated by lwiener
+and random signs vx,y. the simplest example of
+2
+  hr  h fock
+is  = v0,1. the corresponding  is described, rather
+explicitly, by warren [10]. it is concentrated on (the set of) innite, countable
+sets c with a single accumulation point (which was roughly explained here, in
+sect. 1.4). that is, if we measure the conguration of particles in such a state,
+we always get a random countable set with a single, random, accumulation
+point.
+
+2
+
+11
+
+3 toward more realistic models
+
+3.1 three-dimensional space
+recall the idea explained in sect. 1.4: the maximizer x = arg max[1,+1] w ()
+of the wiener process is rather insensitive to changes of w () outside of a
+neighborhood of x. the set of local maxima (or minima) of w () is a (ran-
+dom) dense countable set. and, as explained in sect. 2.1, the insensitivity
+emerges from locality of the notion of a local maximum.
+
+turning from r to the 3-dimensional space r3, we turn from w () to the
+white noise over r3; its sample function is a generalized function (schwartz
+distribution) and gives a number, being integrated over some 3-dimensional
+domain. the integral is a random variable distributed normally with zero
+mean; its variance is equal to the volume of the domain.
+
+a straightforward attempt to generalize arg max w () for r3 meets many
+diculties. however, we need only some dense countable set of (random)
+points, determined by a local property of a white noise sample function. i
+am unable to nd such a property among natural, well-known properties.
+instead, i am able to invent such a property.
+
+consider the integral s(x, r) of the 3-dimensional white noise over the
+3-dimensional ball b(x, r)  r3 of radius r  (0,), centered at x  r3.
+given x0 and r0, we consider all x1, r1 such that b(x1, r1)  b(x0, r0) and
+r1  r0/2. we choose x1, r1 maximizing |s(x1, r1)|; the maximum is reached
+only once (with probability 1). having x1, r1 we choose x2, r2 in the same way:
+b(x2, r2)  b(x1, r1), r2  r1/2, and (x2, r2) = arg max(x2,r2) |s(x2, r2)|. and
+so on. the sequence (xn) converges to a point: xn  xx0,r0. we have a family
+(cid:0)xx0,r0(cid:1)x0r3,r0(0,) of r3-valued random variables; they are functionals of
+the 3-dimensional white noise. a small change of (x0, r0) does not inuence
+xx0,r0, therefore the random set {xx0,r0 : x0  r3, r0  (0,)} is (at most)
+countable. the set is dense, since r0 may be arbitrarily small.
+now we can mimick warrens construction as follows. we introduce ran-
+
+dom signs vx,r such that (recall (2.1.2))
+
+e(cid:0) vx,r(cid:12)(cid:12) s(,)(cid:1) = 0 ,
+
+e(cid:0) vx1,r1vx2,r2(cid:12)(cid:12) s(,)(cid:1) =(1 if xx1,r1 = xx2,r2,
+
+0 otherwise.
+
+in other words, we ascribe new random signs vx to all points of the dense
+countable random set.
+
+every smoothly bounded domain d  r3 determines its hilbert space
+h fock
+d , generated by s(x, r) for all (x, r) such that b(x, r)  d. also, it
+
+12
+
+determines a larger space hd generated by s(x, r) and vx,r for all (x, r) such
+that b(x, r)  d. similarly to (2.2.1),
+h fock
+d  hd ,
+
+d1  h fock
+h fock
+d2 = h fock
+d ,
+hd1  hd2 = hd
+
+whenever d is split into two domains d1, d2 by a smooth surface.16
+
+the random sign vx,r is identied with a state vector x,r  hd  h fock
+d ,
+where d = b(x, r). if we measure the conguration of particles in such a
+state, we always get a random countable subset of d with a single, random,
+accumulation point.
+
+3.2 electric charge
+
+charged particles are quanta of complex elds. for the fock model it
+may be interpreted via the complex-valued (rather than real-valued) white
+noise.
+in one-dimensional space, every square-integrable functional of the
+complex-valued wiener process z(x) = w1(x) + iw2(x) (where w1, w2 are
+independent real-valued wiener processes) has its wiener chaos expansion
+similar to (1.4.1), but instead of dw (x), dw (x)dw (y) and so on, we get
+dz(x), dz(x), dz(x)dz(y), dz(x)dz(y), dz(x)dz(y), dz(x)dz(y) and so on;
+here z(x) is the complex conjugate to z(x). the term with dz(x) de-
+scribes a single particle with the charge +1; the charge 1 is described by
+dz(x); dz(x)dz(y) describes two particles, one of positive charge (at x), the
+other of negative charge (at y); and so on. the sector of (total) charge 0
+consists of functionals invariant under the global commutative gauge group
+z() 7 eiz(). the corresponding one-parameter unitary group on hr has
+its generator, the observable of total electric charge q. localization to h(x,y)
+gives q(x,y), the electric charge on (x, y).
+
+as far as i know, there is no interesting generalization to z() of the idea
+of sect. 1.4, based on arg max[x,y] w ().17 however, the idea of sect. 3.1 can
+be used easily. still, |s(x1, r1)| is maximized, but now s(x1, r1) is a complex
+number. the maximizer is invariant under z() 7 eiz(). we extend the
+gauge group from h fock to h by postulating that random signs vx,r are gauge
+invariant. thus, vx,r is a state vector belonging to the zero-charge sector.
+
+16fock spaces h fock
+
+d
+
+can be dened also for non-smooth domains d without loss of their
+
+natural properties, but non-fock spaces hd cannot; see [7].
+
+17we cannot place random signs at local maxima of re z(), since re(cid:0)eiz()(cid:1) has quite
+dierent local minima; the union over all  is uncountable. local minima of |z()|, that is,
+of |r x
+0 dz()|, lead to a theory treating the origin as a special point in the one-dimensional
+space.
+
+13
+
+local gauge transformations z(x) 7 ei(x)z(x) determine the (innite-
+dimensional, unitary) gauge group on hr (still, vx,r are gauge-invariant by
+denition). the group commutes with the observables 0nx,y , which means
+that we can measure both the spatial conguration of particles and (simul-
+taneously) the spatial distribution of electric charge. an outcome of such
+a measurement in the state vx,r is always a countable set of particles, each
+having a charge 1. as was said, the set has a single accumulation point.
+the charge in a neighborhood of the accumulation point is determined by
+the fact that the total charge is equal to zero.
+
+3.3 dirac sea and dynamics
+
+non-interacting electrons (and positrons) are quanta of the free dirac quan-
+tum eld,18 much more singular than our toy models. the distribution of
+the electric charge can be treated as a generalized function (schwartz distri-
+bution) on 4-dimensional space-time rather than 3-dimensional space; other-
+wise uctuations become innite.19 in terms of the lattice approximation of
+sect. 1.1 we have, roughly speaking,20
+
+dirac
+
+0
+
+=(cid:18)yn (cid:18)xk
+
+n(k)ak(cid:19)(cid:19)0 ;
+
+here 0 is the simplistic vacuum of sect. 1.1; dirac
+is the vacuum of the
+free dirac quantum eld; and functions n() on the lattice z form an
+orthonormal basis of a special subspace of l2(z), so-called negative energy
+subspace. it is innite-dimensional, moreover, it is a half of l2(z) in the
+sense that hakakidirac
+= 1/2 for all k; each lattice point is occupied with
+probability 1/2 (these events being correlated).
+
+0
+
+0
+
+according to dirac, the vacuum is such a state: all negative-energy states
+are occupied, while all positive-energy states are free. positrons are holes in
+a sea of negative electrons. see [2, sect. 6.5] for a rigorous denition of
+the relevant space that contains dirac
+(and does not contain 0). particles
+(electrons and positrons) are inherently delocalized, see [6, sect. 1].
+
+0
+
+what about lling in the dirac sea for non-fock models considered
+here? for now it remains unclear. maybe the spatial approach to product
+systems in quantum eld theory is too naive; for a dierent, 4-dimensional
+approach see [1, sect. 1].
+
+18see [5, sect. 7.2], [2, sect. 6.5].
+19 see [6, sect. 7].
+20the space should be 3-dimensional; a spinor index should be added to the spatial
+
+index k; the innite product is ill-dened.
+
+14
+
+references
+
+[1] w. arveson, e0-semigroups in quantum eld theory, proc. sympos.
+
+pure math. 59 (1996), 126.
+
+[2] j.c. baez, i.e. segal, z. zhou, introduction to algebraic and construc-
+
+tive quantum eld theory, princeton univ. press 1992.
+
+[3] t. hida, h-h. kuo, j. pottho, l. streit, white noise: an innite
+
+dimensional calculus, kluwer academic publ. 1993.
+
+[4] n. obata, white noise calculus and fock space, lecture notes in
+
+mathematics (springer) 1577 (1994).
+
+[5] a. sudbery, quantum mechanics and the particles of nature: an out-
+
+line for mathematicians, cambridge univ. press, 1986.
+
+[6] w.e. thirring, principles of quantum electrodynamics, acad. press,
+
+1958.
+
+[7] b. tsirelson, noise sensitivity on continuous products: an answer to
+
+an old question of j. feldman, math.pr/9907011.
+
+[8] b. tsirelson,
+
+unitary brownian motions
+
+are
+
+linearizable,
+
+math.pr/9806112.
+
+[9] b.s. tsirelson, a.m. vershik, examples of nonlinear continuous tensor
+products of measure spaces and non-fock factorizations, reviews in
+mathematical physics 10:1 (1998), 81145.
+
+[10] j. warren, splitting: tanakas sde revisited, math.pr/9911115.
+
+school of mathematics, tel aviv univ., tel aviv 69978, israel
+
+tsirel@math.tau.ac.il
+http://www.math.tau.ac.il/tsirel/
+
+15
+
+

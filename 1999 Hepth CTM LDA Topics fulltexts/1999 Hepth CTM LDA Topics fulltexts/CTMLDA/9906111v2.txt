@@ -1,0 +1,2934 @@
+epj manuscript no.
+(will be inserted by the editor)
+
+9
+9
+9
+1
+
+ 
+
+n
+u
+j
+ 
+
+7
+1
+
+ 
+ 
+
+2
+v
+1
+1
+1
+6
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+on the trees of quantum elds
+
+christian brouder
+
+laboratoire de mineralogie-cristallographie, cnrs umr7590, universites paris 6, paris 7, ipgp, case 115, 4 place jussieu
+75252 paris cedex 05, france
+brouder@lmcp.jussieu.fr
+
+december 29, 2013
+
+abstract. the solution of some equations involving functional derivatives is given as a series indexed by
+planar binary trees. the terms of the series are given by an explicit recursive formula. some algebraic
+properties of these series are investigated. several examples are treated in the case of quantum electrody-
+namics: the complete fermion and photon propagators, the two-body green function, and the one-body
+green function in the presence of an external source, the complete vacuum polarization, electron self-energy
+and irreducible vertex.
+
+pacs. 03.70.+k theory of quantized elds  11.15.bt general properties of perturbation theory  12.20.-
+m quantum electrodynamics
+
+1 introduction
+
+renormalization theory has been recently revitalized by
+the discovery a hopf algebra that transforms the dreadful
+combinatorics of renormalization into a mechanical appli-
+cation of the hopf algebra properties of rooted trees [1,2,
+3].
+
+in the companion paper [4], butchers theory has been
+presented as an alternative way to describe the hopf struc-
+ture of the algebra of renormalization. a particularly use-
+ful aspect of butchers approach is that solutions of non-
+linear dierential equations can be written as a sum over
+rooted trees.
+
+in the present paper, butchers strategy is adapted to
+equations involving functional derivatives, that were rst
+proposed by schwinger [5] and will be called schwinger
+equations in the rest of the paper. schwinger equations
+are not commonly considered as a useful tool for compu-
+tation. the purpose of this article is to show that, by using
+series over planary binary trees, schwinger equations can
+be turned into explicit calculation methods.
+
+the series we manipulate are indexed by planar bi-
+nary trees. so we rst present some basic properties of
+planar binary trees. then the solution of simple schwinger
+equations are written as a sum over planar binary trees,
+with recursively dened coecients. to make a compari-
+son with power series, the schwinger equation would cor-
+respond to a dierential equation for the sum of the series,
+whereas the formula we put forward corresponds to a re-
+cursive denition of the terms of the series: it does not
+contain so much information as the schwinger equation,
+but it is more explicit to calculate the terms of the series.
+as an example, the full fermion and photon propaga-
+tors of quantum electrodynamics (qed) are written as a
+
+sum over planar binary trees. renormalization is briey
+described and applications are given for qed with an ex-
+ternal source, the vacuum polarization, the fermion self-
+energy and the irreducible vertex.
+
+2 planar binary trees
+
+in contrast to ref.[4], we do not use rooted trees but pla-
+nar binary trees. both can be drawn on a plane, but no
+permutation of vertices is allowed for planar trees.
+
+as an example,
+
+and
+
+are two dierent planar
+
+trees, although they represent the same rooted tree.
+
+
+
+
+
+in planar trees, we distinguish two types of vertices:
+the leaves (which have no sons) and the remaining ver-
+tices (including the root), which we call internal vertices.
+in planar binary trees, internal vertices have exactly two
+sons.
+
+we now follow the notation of loday and ronco [6].
+planar binary trees have an odd number of vertices. we
+denote yn the set of planar binary trees with 2n + 1 ver-
+tices. if t belongs to yn, t has n + 1 leaves and n internal
+vertices. the number of elements of yn is
+n!(n+1)! : the
+catalan numbers, which enter many combinatorial prob-
+lems [7] and should probably be called ming numbers [8].
+if t1  ym and t2  yn, the grafting of t1 and t2 is the tree
+t  ym+n+1 obtained by putting t1 on the left of t2 and by
+joining the roots of t1 and t2 to a new vertex that becomes
+the root of t. this operation is denoted by t = t1  t2. for
+
+(2n)!
+
+instance, grafting  and
+
+gives  
+
+=
+
+.
+
+
+
+
+
+
+
+2
+
+christian brouder: on the trees of quantum elds
+
+in the companion paper, rooted trees were graded by
+the number of their vertices. here, planar binary trees
+have an odd number of vertices, and it is more natural
+to grade them dierently: for each tree t, we dene |t| as
+the integer n such that t  yn. thus, a tree t has 2|t| + 1
+vertices.
+
+an essential property of planar binary trees is that
+each tree t dierent from  can be written in a unique
+way as t1  t2, where t1 and t2 are called the branches
+of t. moreover, grafting provides a recursive denition of
+planar binary trees [9]:
+
+n1
+
+yk  ynk1, y0 = {	}.
+
+(1)
+
+yn =
+
+[k=0
+
+the notation yk  ynk1 means that all the trees of yk
+are grafted with all the trees of ynk1.
+
+planar binary trees have received much attention re-
+cently because of their relation to new algebraic structures
+[9,10].
+
+3 schwinger equations
+
+in this section, the solution of a linear schwinger equation
+is given as a sum over planar binary trees. but we rst
+introduce the concept of a functional derivative.
+
+a functional a() is dened loosely as a map sending
+a distribution  to a complex number (see ref.[11] for de-
+tails). if  is a distribution, the functional derivative of
+a() in the direction  is dened as the limit for   0 of
+(a( + )  a())/. finally, the functional derivative of
+a() with respect to (x), a()
+(x) , is dened as the func-
+tional derivative of a() in the direction x, where x is
+the dirac function x(y) = (y  x).
+
+3.1 examples of functional derivatives
+
+a()
+(x) = f (x). a further example, that will be useful in
+
+a classical example is a() =r dxf (x)(x), giving easily
+the sequel, is a() =r dxdyf (x, y)(x)(y). then
+= z dyf (x, y)(y) +z dyf (y, x)(y),
+
+a()
+(x)
+
+where sn is the set of permutations of n elements.
+
+in practice, a() is often a green function. take the
+green function dened by (x(x))a(; x, y) = (xy),
+which can be written a() = (  )1. to calculate the
+functional derivative, we put a( + ) = (    )1.
+the operator identity y 1 = x 1+x 1(x y )y 1 gives
+us a( + ) = a() + a()a( + ). thus, taking
+the limit   0,
+
+a(; x, y)
+
+
+
+=z dsa(; x, s)(s)a(; s, y).
+
+if we choose now the distribution (s) = (s  z) we nd
+
+a(; x, y)
+
+(z)
+
+= a(; x, z)a(; z, y).
+
+(2)
+
+this identity will be used repeatedly in the sequel.
+
+3.2 a simple schwinger equation
+
+as an introduction to the method of planar binary trees
+we consider the schwinger equation
+
+x = a + f (x,
+
+x
+v(z)
+
+),
+
+(3)
+
+where a is a functional of v, f is linear in x and x
+v(z) ,
+and z is a variable over which f integrates. in an equation
+like (3), f is called the integral operator of the equation
+and a is called its initial data.
+
+a common example of such an equation is obtained
+when x = x(x, y), the initial data a(x, y) are the green
+function (x v(x))a(x, y) = (xy) discussed in section
+3.1 and the integral operator is
+
+f (x,
+
+x
+v(z)
+
+)(x, y) = z dsdzx(x, s)f (s, z)
+
+x(s, y)
+
+v(z)
+
+,
+
+for some function f (s, z).
+
+such a schwinger equation summarizes an innity of
+equations that can be obtained by taking successive func-
+tional derivatives of eq.(3) with respect to v(z).
+
+x = a + f (x,
+
+x
+v(z)
+
+),
+
+x
+
+v(z1)
+
+=
+
+a
+
+v(z1)
+
++ f (
+
+,
+
+x
+v(z)
+
+) +
+
+x
+
+v(z1)
+2x
+
+2a()
+
+(x)(y)
+
+(y)
+
+
+
+=
+
+a()
+(x)
+
+= f (x, y) + f (y, x).
+
+f (x,
+
+  
+
+v(z1)v(z)
+
+),
+
+more generally, if
+
+a() =z dx1 . . . dxnf (x1, . . . , xn)(x1) . . . (xn),
+
+then
+
+na()
+
+(x1)    (xn)
+
+= xsn
+
+f (x(1), . . . , x(n)),
+
+when we take the n-th functional derivative of both sides
+of the (n-1)-th equation with respect to v(zn), the equa-
+tion gets an additional variable zn, and the chain rule is
+v(zn) to the right-hand side of the (n-1)-th
+used to apply
+equation.
+
+
+
+if this is iterated to all values of n, we obtain an innite
+system of nonlinear integral equations. this system seems
+dicult to solve because the n-th dierential of x depends
+on the k-th dierentials of x for k = 0 to n + 1.
+
+christian brouder: on the trees of quantum elds
+
+3
+
+3.3 the series solution
+
+eq.(4), this denes (t) recursively. the recursive deni-
+tion of (t) is given explicitly by
+
+to write the solution of eq.(3), we must introduce some
+notation. sets of arguments will be often needed, so we
+write {z}i,j = zi, zi+1, . . . , zj, ({z}i,j =  if j < i). fur-
+thermore, if f ({z}1,n) = f (z1, . . . , zn) is a function of n
+variables, then f({z}1,n) is dened as the sum of n terms,
+where the rst variable z1 is shifted step by step from the
+rst to the n-th position:
+
+f({z}1,n) = f ({z}1,n) + f (z2, z1, {z}3,n) +    +
+f ({z}2,n1, z1, zn) + f ({z}2,n, z1).
+
+for each planar binary tree t, we dene an innite-
+dimensional vector (t), with components n(t), where n
+goes from 0 to innity. the n-th component is a function
+of n variables z1, . . . , zn. now we dene the initial data.
+for t = (cid:10), we take 0((cid:11)) = a and
+
+1((cid:12); z1) =
+
+a
+
+v(z1)
+
+.
+
+(4)
+
+the most natural choice is to dene n((cid:13)) as 1/n! times
+the n-th functional derivative of a with respect to v(z),
+but this is not always the most economical choice in prac-
+tice. the only condition that we need for n > 1 is
+
+n(t; {z}1,n) =
+
+n
+
+xk=0
+
+f(cid:0)k(t1; {z}1,k),
+
+nk+1
+
+
+(t2; z, {z}k+1,n)(cid:1),
+
+(8)
+
+for t 6= (cid:21) and n((cid:22)) is dened in eq.(6).
+
+in a quantum eld interpretation, (cid:23) represents the
+represents the interaction, and the sum
+bare elds,
+over trees represents all the combinations of interaction
+that gives the full propagator.
+
+(cid:24)
+
+a proof of eqs.(7) and (8) is given in the appendix.
+
+3.4 enumeration
+
+if the initial data a is such that n((cid:25)) has only one
+term, as in eq.(6), the chain rule applied to the functional
+derivative gives a number of terms for n(t) that we de-
+note |n(t)|. equation (8) gives us the following recurrence
+relation for |n(t)|:
+
+n
+
+|n(t)| =
+
+(n  k + 1)|k(t1)||nk+1(t2)|,
+
+xk=0
+
+|n((cid:26))| = 1.
+
+n1(; {z}1,n1)
+
+v(zn)
+
+= n
+
+((cid:15); {z}1,n).
+
+(5)
+
+using the binomial identity
+
+when a(x, y) is a green function of the kind discussed in
+section 3.1, it is not dicult to build such a ((cid:16)) from
+given initial data a. we can use eq.(2) to show that
+
+0((cid:17)) = a(x, y),
+
+1((cid:18); z1) = a(x, z1)a(z1, y),
+
+. . .
+
+n
+
+xk=0(cid:18)a + k
+
+a (cid:19)(cid:18)b + n  k
+
+b
+
+(cid:19) = (cid:18)a + b + n + 1
+a + b + 1 (cid:19),
+
+it can be shown that the solution of this equation is
+
+|n(t)| = (t)(cid:18)2|t| + n
+2|t| (cid:19),
+
+n((cid:19); {z}1,n) = a(x, z1)a(z1, z2) . . . a(zn, y),
+
+(6)
+
+where (t) is an integer which depends only on the tree t
+(not on n) and is dened recursively by
+
+satises eq.(4) and condition (5).
+
+with this notation we can now write the solution of
+
+eq.(3) as
+
+(t) = (t1)(2|t2| + 1) (t2),
+((cid:27)) = 1.
+
+0(t),
+
+x = xt
+
+t1 and t2 are the two branches of t.
+
+(7)
+
+where t spans the set of planar binary trees. moreover
+
+3.5 a compact notation
+
+to write a compact expression for the recursive denition
+of (t) we dene the deconcatenation of (z1, . . . , zn) by
+[12]
+
+x
+
+v(z1)
+
+nx
+
+v(z1)    v(zn)
+
+1(t; z1),
+
+. . .
+
+= xt
+= xsnxt
+
+n(t; z(1), . . . , z(n)).
+
+(z1, . . . , zn) =
+
+(z1, . . . , zi)  (zi+1, . . . , zn).
+
+n
+
+xi=0
+
+for each planar binary tree t, the vector (t) is calcu-
+lated as a function of the vectors (t1) and (t2), where
+t1 and t2 are the branches of t. since ((cid:20)) is dened from
+
+if z belongs to the vector space v , the map (t) acts on the
+v n. sometimes,
+
+tensor module (fock space) t (v ) =
+
+
+
+ln=0
+
+4
+
+christian brouder: on the trees of quantum elds
+
+as in qed,  is dened on t (v )  m , where m is a
+xed vector space, for instance m = v 2 for the photon
+propagator.
+
+we dene the operator d(z) by
+
+d(z)n(t; z1, . . . , zn) = n+1
+
+ (t; z, z1, . . . , zn).
+
+the recursive denition of  becomes
+
+(t) = f (cid:0)id  d(z))  ((t1)  (t2))  ,
+
+where f (a  b) = f (a, b).
+
+it would be interesting to nd a family of equations
+such that, for any  from t (v ) to c, there is a member
+of the family of which  is a solution. this would gener-
+alize butchers density theorem[13], and would provide a
+general class of equations that would be satised by the
+renormalized green functions.
+
+3.6 algebra structure
+
+in the case of rooted trees, butcher [14] has dened a
+group structure of runge-kutta methods that hairer and
+wanner [15] interpreted as a composition of butcher se-
+ries. a similar approach can be used for planar binary
+trees. a powerful aspect of butchers approach is that al-
+gebraic operations are dened on two spaces at the same
+time: the space of runge-kutta methods, and the space
+of maps over trees. the same strategy will be used here,
+and the operations will be dened on the space of integral
+operators and on the space of maps over planar binary
+trees.
+
+v ) and y = b + g(y, y
+
+we start with the addition. if we have two schwinger
+equations x = a + f (x, x
+v ), the
+addition of the integral operators is h = f + g and the
+addition of the maps  (corresponding to the rst equa-
+tion) and  (for the second equation) is dened recursively
+by n((cid:28)) = n((cid:29)) + n((cid:30)), for the initial data a + b
+and
+
+n(t; {z}1,n) =
+
+n
+
+xk=0
+
+n
+
+
+
+f(cid:0)k(t1; {z}1,k), nk+1
+xk=0
+
+g(cid:0)k(t1; {z}1,k), nk+1
+
+
+
+(t2; z, {z}k+1,n)(cid:1) +
+
+(t2; z, {z}k+1,n)(cid:1).
+
+this addition denes clearly a commutative group struc-
+ture for the integral operators. it denes also a commuta-
+tive group structure for the space of maps, where the unit
+element is (t) = 0 for all t, and the opposite of (t) is
+(t) = (1)|t|(t).
+
+multiplication by a scalar  is dened similarly. an
+integral operator f becomes f , and the corresponding
+map (t) becomes |t|(t). notice that maps are not equiv-
+alent to integral operators since they contain also the ini-
+tial data. the present denition of the multiplication by
+a scalar corresponds to the case where the initial data are
+
+not changed. if the initial data are also multiplied by ,
+then (t) becomes |t|+1(t).
+
+this addition is useful when a schwinger equation is
+the sum of various terms. addition and multiplication by
+a scalar is probably all we need to renormalize quantum
+electrodynamics. however, we can proceed with butchers
+strategy and dene another operation coming from a com-
+position of solutions. if we start from two schwinger equa-
+tions x = a + f (x, x
+v ), the com-
+position of the solutions is dened as the y obtained with
+the initial data b = x.
+
+v ) and y = b + g(y, y
+
+it is shown in the appendix that, if  is the map corre-
+
+sponding to y (i.e. y =pt (t)), then (t) = (t) + (t),
+
+where (t) is the map associated to the equation for x
+and n(t) is given by n((cid:31)) = 0 and
+
+n
+
+n(t; {z}1,n) =
+
+nk+1
+
+
+(t2; z; {z}k+1,n) + nk+1
+
+xk=0
+
+g(cid:0)k(t1; {z}1,k) + k(t1; {z}1,k),
+(t2; z; {z}k+1,n)(cid:1). (9)
+
+
+
+this denes a product of integral operators and of maps.
+in the rst proof of eq.(9) given in the appendix, the
+integral operator corresponding to this product is con-
+
+structed. notice that this operator acts on vectors(cid:0) x
+x+y(cid:1).
+
+this product has a unit element (given by g = 0).
+
+in the next section, the present method will be applied
+
+to the example of quantum electrodynamics (qed).
+
+4 the case of qed
+
+we work in the at minkowski space with a diagonal met-
+ric g (the diagonal is (1, 1, 1, 1)). the electron charge
+is e = |e|. repeated indices are summed over.
+
+in 1951, schwinger [5] devised coupled equations in-
+volving functional derivatives of s(x, y; j), the full fermion
+propagator of qed in the presence of an external electro-
+magnetic source j(x):
+
+[g  (1  )]a (x; j) = j(x) 
+ietr[s(x, x; j)],
+
+hi  m  ea(x; j) + ie
+
+j(x)is(x, y; j) =
+
+
+
+(x  y). (10)
+
+building on a work by polivanov [16], bogoliubov and
+shirkov [17] transformed this equation into a schwinger
+equation coupling the full fermion propagator s(x, y) with
+the full photon propagator d(x, y):
+
+[g  (1  )]d(x, y) = g
+
+ (x  y) 
+
+a (z)
+
+(cid:3)d(z, y; a),
+(cid:2)i  m  ea(x)(cid:3)s(x, y; a) = (x  y) +
+
+iez d4z tr(cid:2) s(x, x; a)
+iez d4z d(x, z; a)
+
+s(x, y; a)
+
+a(z)
+
+,
+
+(11)
+
+(12)
+
+christian brouder: on the trees of quantum elds
+
+5
+
+where a(x) is now an external electromagnetic eld. as
+explained in ref.[17], eqs.(11) and (12) are not completely
+equivalent to eq.(10), they are valid in the limit a = 0
+(j = 0), which is the standard case of qed.
+
+multiplying eq.(11) by the bare photon propagator,
+d0
+(x, y) and eq.(12) by the bare fermion propagator in
+the presence of a, s0(x, y; a) = [i  m  ea]1,
+we obtain our starting schwinger equations:
+
+d(x, y; a) = d0
+
+(x, z)
+
+ (x, y)  iez d4zd4zd0
+tr(cid:2) s(z, z; a)
+
+a (z) (cid:3)d (z, y; a),
+s(x, y; a) = s0(x, y; a) + iez d4zd4zs0(x, z; a)
+
+d (z, z; a)
+
+s(z, y; a)
+a (z)
+
+.
+
+(13)
+
+branch is on the left and the black (fermion) branch is on
+the right.
+
+for example, the fermion trees are
+
+ 
+
+!
+
+" #  
+
+and the photon trees are
+
+
+
+
+
+. . .
+
+. . .
+
+  
+
+frabetti has calculated the number of trees with 2p +
+2q + 1 vertices, p + 1 white leaves and q + 1 black leaves
+as [10]
+
+cp,q =
+
+(p + q)!
+
+(p + q + 1)!
+
+p!q!
+
+(p + 1)!(q + 1)!
+
+.
+
+in principle, these equations fully determine s(x, y; a) and
+d(x, y; a).
+
+the following recursive denition gives (t) in terms
+2 are the branches of t:
+
+2), where t
+
+1) and (t
+
+1 and t
+
+of (t
+
+4.1 the tree solution
+
+n(t; x, y; {, z}1,n) = i
+
+n
+
+nk
+
+xk=0
+
+xk=0z d4zd4z
+
+the method of the previous section is now used to write
+the solution of eq.(13). since s0(x, z; a) depends on the
+external potential a(x), the small extension presented in
+the appendix is required. all quantities will be taken at
+a(x) = 0, so the external potential will not be mentioned
+(e.g. s(x, y) means s(x, y; a) at a = 0).
+
+the notation {, z}i,j = i, zi, i+1, zi+1, . . . , j , zj en-
+
+ables us to write the solution as
+
+s(x, y)
+a1 (z1)
+
+s(x, y) =xt
+=xt
+d(x, y) =xt
+
+e2|t|0(t; x, y),
+
+(14)
+
+e2|t|+11(t; x, y; 1z1),
+
+e2|t|0
+
+ (t; x, y),
+
+(15)
+
+ns(x, y)
+
+a1 (z1)    an (zn)
+
+nd(x, y)
+
+a1 (z1)    an (zn)
+
+e2|t|+n
+
+= xsnxt
+
+n(t; x, y; {, z}(1),(n)),
+
+e2|t|+n
+
+= xsnxt
+
+ (t; x, y; {, z}(1),(n)).
+n
+
+another change in the notation is that trees have now two
+colors. the map (t) has a supersymmetric avor because
+it has a fermion component for the full fermion propagator
+and a photon component for the full photon propagator. it
+is convenient to transfer the fermion/photon index from 
+to the tree t. thus, (t) is the photon component of (t)
+and (t) is its fermion component. futhermore, (t) will
+be drawn with a white root and (t) with a black root.
+all trees are built as t
+2, where the white (photon)
+
+1  t
+
+ (t; x, y; {, z}1,n) = i
+n
+
+nkk
+ (t
+k
+k+1
+ (t
+
+(; x, z; {, z}1,nkk)
+1; z, z; {, z}nkk+1,nk )
+2; z, y; , z, {, z}nk+1,n),
+
+(x, z)
+
+n
+
+xk=0z d4zd4zd0
+2; z, z; z, {, z}k+1,n)(cid:3).
+
+(16)
+
+(17)
+
+ (t
+k
+
+1; z, y; {, z}1,k)
+
+(t
+
+
+
+tr(cid:2)nk+1
+
+this recursive denition is completed by giving the
+
+components of n() and n():
+
+ (x, y),
+
+0
+ (	; x, y) = d0
+n
+ (.; x, y) = 0
+0(/; x, y) = s0(x, y),
+
+for n  1,
+
+1(0; x, y; 1z1) = s0(x, z1)1 s0(z1, y),
+
+n(1; x, y; {, z}1,n) = s0(x, z1)1 s0(z1, z2)2   
+
+n s0(zn, y).
+
+in practice, the double sum of eq.(16) is replaced by:
+
+n(t; x, y; {, z}1,n) =
+
+s0(x, z1)1 n1(t; z1, y; {, z}2,n) +
+
+n
+
+i
+
+xk=0z d4zd4zs0(x, z)k
+
+ (t
+
+1; z, z; {, z}1,k)
+
+nk+1
+
+
+(t
+
+2; z, y; z, {, z}k+1,n). (18)
+
+this is still a recursive denition, but it uses now the
+smaller components of  for the same tree t. notice that
+the rst term of eq.(18) is absent if n = 0.
+
+6
+
+christian brouder: on the trees of quantum elds
+
+three remarks can be useful at this point. firstly, con-
+sidering all quantities at a = 0, we nd as in section 3.1
+that s0(x, y)/a(z) = es0(x, z)s0(z, y). therefore,
+in the denition of n(2), a factor en was suppressed and
+transferred to the solution eqs.(14) and (15). it must be
+checked that this is compatible with renormalization. sec-
+ondly, it will be shown in section 6.1 that, from furrys
+theorem, the components n(t) are zero when n is odd.
+this reduces the sums in eqs.(16), (17) and (18) to the
+even components of (t
+1). finally, the vector space v of
+section 3.5 has now become the space {0, 1, 2, 3}  r4.
+
+the next term is
+
+(
+
+) =
+
+a
+
+
+
+
+
+b
+
++
+
++
+
+c
+
+d
+
+e...
+
+
+
+
+
+4.2 diagrammatic interpretation
+
+4.3 diagram enumeration
+
+the recursive solution of the previous sections can be il-
+lustrated in the usual diagrammatic language:
+
+(3) =
+
+
+4
+
+0
+0
+0
+...
+
+
+
+
+(5) =
+
+
+
+
+
+6
+
+7
+
+8
+
+9...
+
+
+
+
+
+in other words, n(:) is a propagator with n dangling
+photon lines (n starts at 0). more generally, all the com-
+ponents n(t) or n(t) has n dangling photon lines. to
+see the action of the recursive equation for the photon,
+observe that, in eq.(17) the fermion extremities of t
+1 are
+closed on an additional photon line by a bare vertex (on
+the left), and each dangling photon line of t
+1 is linked in
+turn to the photon extremities of t
+2 (on the right). dia-
+
+grammatically:
+
+the next term is
+
+;
+
+(
+
+) =
+
+<
+
+
+
+
+
+=
+
++
+
+>
+
+?...
+
+
+
+
+
+for the fermion propagator, in eqs.(16) and (18), each
+dangling photon line of t
+1 is linked in turn to the right
+photon extremity of t
+2 is
+linked to the left extremity of the electron propagator t
+1
+by an additional bare vertex.
+
+2. the left photon extremity of t
+
+if we neglect the rst term in eq.(18) we can write
+
+diagrammatically:
+
+
+
+as a warm-up exercice, we can calculate the number of
+diagrams in the component n(t), that we denote |n(t)|.
+from eqs.(16) and (17) we nd the equations for |n(t)|
+and |n(t)|
+
+n
+
+nk
+
+|n(t)| =
+
+|n(t)| =
+
+n
+
+xk=0
+xk=0
+
+(k + 1)|k(t
+
+1)||k+1(t
+
+2)|,
+
+xk=0
+
+(n  k + 1)|k(t
+
+1)||nk+1(t
+
+2)|,
+
+with n(f) = 1, n(g) = n,0.
+
+the solution of this recursive equation is
+
+n (cid:19),
+|n(t)| = (t)(cid:18)2|t| + n
+|n(t)| = (t)(cid:18)2|t| + n  1
+(cid:19),
+
+n
+
+where (t) does not depend on the colour of t and was
+dened in section 3.4.
+
+this can be used to calculate the total number of dia-
+grams for the electron or photon propagators (the number
+is the same) contributing at e2n. let us dene
+
+sn = xtyn
+
+(t) = xtyn
+
+(t1)(2|t2| + 1) (t2).
+
+using eq.(1) for n > 0 we nd
+
+n1
+
+(t1) x|t2|=nk1
+
+(2|t2| + 1) (t2)
+
+sn =
+
+=
+
+n1
+
+xk=0 x|t1|=k
+xk=0
+
+(2k + 1)sksnk1.
+
+the starting value is s0 = 1. for n = 0, 1, 2, 3, 4, 5 this
+gives us 1, 1, 4, 27, 248, 2830, in agreement with refs.[18,
+19]. the generating function y(x) for the sequence sn sat-
+ises the dierential equation 2x2yy + xy2  y + 1 = 0
+with y(0) = 1.
+
+this enumation takes into account neither symmetry
+nor furrys theorem, which says that |n(t)| = 0 if n is
+odd. the main point of this enumeration is to show that
+each tree represents the sum of a large number of diagrams
+when |t| is large. this may prove useful for practical cal-
+culations.
+
+christian brouder: on the trees of quantum elds
+
+7
+
+4.4 fourier transform
+
+5 renormalization
+
+in applications, it is often convenient to work in the k-
+space. the fourier transform of (t; x, y; {, z}1,n) is de-
+ned by
+
+(t; q, q; {, p}1,n) = z d4xd4yd4z1 . . . d4zn
+
+ei(qxqy+p1z1++pnzn)(t; x, y; {, z}1,n).
+
+this corresponds to outgoing momenta pi along the dan-
+gling photon lines. if this is introduced into eqs.(16) and
+(17), we nd
+
+(t; q, q; {, p}1,n) = (2)4(q + p1 +    + pn  q)
+
+(t; q; {, p}1,n).
+
+the full fermion and photon propagators in fourier
+
+space are
+
+s(q) = xt
+d(q) = xt
+
+e2|t| 0(t; q),
+
+e2|t| 0
+
+(t; q).
+
+here (t) satises the recursive relation
+n(t; q; {, p}1,n) = s0(q)1
+
+n1(t; q + p1; {, p}2,n) +
+
+i
+
+n
+
+xk=0z
+
+d4p
+(2)4 s0(q) k
+(t
+
+ (t
+
+1; p; {, p}1,k)
+
+nk+1
+
+
+2; q  p; , p + pk, {, p}k+1,n),(19)
+
+n
+ (t; q; {, p}1,n) = i
+
+k
+ (t
+
+1; q + pk; {, p}1,k)
+
+n
+
+xk=0z
+
+d4p
+(2)4 d0
+
+(q)
+
+tr(cid:2) nk+1
+
+
+
+(t
+
+2; p; , q  pk, {, p}k+1,n)(cid:3),
+
+where we have noted pk = p1 +  +pk and with the initial
+data
+
+(20)
+
+0
+ ( ; q) = d0
+
+ (q) = 
+
+g  (1  1/)qq/q2
+
+q2 + i
+
+,
+
+n
+ (; q) = 0
+0(; q) = s0(q) = (q  m + i)1,
+
+for n  1,
+
+1(; q; 1, p1) = s0(q)1 s0(q + p1),
+
+n(; q; {, p}1,n) = s0(q)1 s0(q + p1)2    n
+
+s0(q + p1 +    + pn).
+
+as for the real space case, the rst term of eq.(19) is
+
+absent for n = 0 and
+
+n
+(t; q; {, p}1,n) = n(t; q; {, p}1,n) +
+
+n(t; q; 2, p2, 1, p1, {, p}3,n) +    +
+n(t; q; {, p}2,n, 1, p1).
+
+in ref.[4], it has been shown that the renormalization
+through hopf algebra created by kreimer could be done
+also within the butcher approach using a dierence of
+runge-kutta methods (bare quantities minus countert-
+erms). the same method can be tried here.
+
+if x = a + f (x, x
+
+v(z) ) is the equation to renormalize,
+and if r represents a renormalization prescription (see
+ref.[2]), then the renormalized eld xr is given by
+
+0
+r(t),
+
+xr = xt
+
+where r(t) is dened recursively from the integral oper-
+ator f  r  f by n
+
+r() = n() and
+
+n
+
+n
+
+r(t; {z}1,n) =
+
+xk=0
+
+f(cid:0)k
+rhf(cid:0)k
+
+r(t1; {z}1,k), nk+1
+
+r
+
+(t2; z, {z}k+1,n)) 
+
+r(t1; {z}1,k), nk+1
+
+r
+
+(t2; z, {z}k+1,n)(cid:1)i.
+
+within this approach, renormalization looks rather sim-
+ple. at each stage of a calculation, use the renormalized 
+instead of the bare ones, and subtract the singularity. this
+rule seems promissing for the case of qed, where n() is
+regular and needs not be renormalized, and where the re-
+cursive operations described by eqs.(19) and (20) involve
+only a single loop (a fermion loop for the photon propaga-
+tor and a photon loop for the fermion propagator). since
+r(t1) and nk+1
+k
+(t2) are regular, there is no subdiver-
+gence, and thus no overlapping divergence problem.
+
+r
+
+following kreimer [2], the renormalization group equa-
+tions are a consequence of the fact that f  r(f ) =
+r(f )r(f )+f r(f ) is independent of the parameters
+of r.
+
+clearly, this presentation of renormalization is far too
+sketchy and further investigation is required to include
+renormalization prescriptions and calculation of countert-
+erms, and to check that the results are the same as in the
+standard theory.
+
+6 applications
+
+in this section, the previous results are applied to furrys
+theorem and the ward-takahashi identities. finally, a sum
+over trees is dened for the two-particle green function.
+
+6.1 furrys theorem
+
+within our approach, furrys theorem implies n(t) =
+0 for odd n. to show this, remark that, in eq.(20), the
+integral
+
+again, furrys theorem enables us to restrict the sum to
+the even components of  (t).
+
+z
+
+d4p
+
+(2)4 tr(cid:2) nk+1
+
+
+
+(t
+
+2; p; , q  pk, {, p}k+1,n(cid:3)
+
+8
+
+christian brouder: on the trees of quantum elds
+
+is a fermion loop with n  k + 2 external photon lines.
+according to furrys theorem, this loop is zero when n k
+is odd. from its explicit denition, n() = 0 is zero if n
+is odd (in fact, it is zero if n  1). we reason recursively on
+the number of vertices of t. if n(t) = 0 for odd n and t
+with up to 2n  1 vertices, take t with 2n + 1 vertices. in
+eq.(20), the integral over p is zero if n  k is odd (furrys
+theorem) and k(t
+1 has less
+vertices than t). thus, for the left-hand side of eq.(20) to
+be eventually non-zero, k and n  k must be even, so n
+must be even. therefore, n(t) = 0 for odd n.
+
+1) is zero if k is odd (because t
+
+6.2 ward-takahashi identities
+
+within the present approach, the ward-takahashi identi-
+ties take the form
+
+k n+1
+
+ (t; q; , k, {, p}1,n) = n(t; q; {, p}1,n) 
+
+we dene i by
+
+3
+
+x=0
+
+i n
+
+n (t; q; {, z}1,i1, , k, {, z}i+1,n) =
+
+k n
+
+n (t; q; {, z}1,i1, , k, {, z}i+1,n) =
+
+n1
+n1 (t; q; {, z}1,i1, {, z}i+1,n) 
+n1
+n1 (t; q + k; {, z}1,i1, {, z}i+1,n),
+
+where the last line is the ward-takahashi identity. if we
+write the usual expression for the boundary operator
+
+ n
+
+n (t; q; {, z}1,n) =
+
+n
+
+xi=1
+
+(1)ii n
+
+n (t; q; {, z}1,n),
+
+we nd by explicit calculation that 2 = 0. this was
+proved for the fermion component, but 2 = 0 for the
+photon component too, because of furrys theorem. no-
+tice that, for n = 0 we have put 0(t) = 0.
+
+x
+
+n(t; q + k; {, p}1,n). (21)
+
+6.4 two-particle green function
+
+again, these identities will be proved recursively over
+the number of vertices of t. an elementary calculation
+shows that eq.(21) is true for t = 	 (ref.[20], p.238).
+using eq.(29), we can write eq.(21) as
+
+ n(t; q; {, p}1,n)
+
+a(k)
+
+= n(t; q; {, p}1,n) 
+
+k
+
+x
+
+in ref.[5] schwinger proceeds by giving an equation for
+the full two-particle fermion green function:
+
+ m  ea(x1; j) + ie
+
+hix
+
+1
+
+
+
+j(x1)i
+
+s(x1, x2; y1, y2; j) = (x1  y1)s(x2, y2; j) 
+
+(x1  y2)s(x2, y1; j).
+
+n(t; q + k; {, p}1,n).
+
+(22)
+
+from the identity [17]
+
+
+
+
+
+(t
+
+ (t
+
+ (t
+
+1) adds a photon line to k
+
+tial operator p k
+
+the last equation can be proved by applying the dieren-
+a(k) to both sides of eq.(19). con-
+sider rst the second term of eq.(19). the dierential op-
+erator acting on k
+1),
+which gives zero by furrys theorem. the dierential op-
+erator acting on nk+1
+2) will transform according to
+eq.(22), which is valid because t
+2 has less vertices than
+t. carrying out the sum over k, we see that eq.(22) is
+true for the second term of the right-hand side of eq.(19).
+consider now the rst term of eq.(19). for n = 0 it
+does not exist, so eq.(22) is proved for n = 0 because it
+is true for the second term. the recursion runs now over
+n, the functional derivative operates either on s0(q) or on
+n1(t; q + p1; {, p}2,n). since eq.(22) is true for both,
+and for the second term, it is true for n(t; q; {, p}1,n).
+
+6.3 homology and ward-takahashi identities
+
+the previous ward-takashi indentities induce a boundary
+operator on (t). in that case, we need to start from the
+fully symmetrized form of :
+
+
+
+j (x)
+
+= z dyg(y, x)
+
+
+
+a(y)
+
+,
+
+we go from the j to the a variable (in the limit a=0)
+
+ m  ea(x1)]s(x1, x2; y1, y2; a) =
+
+(x1  y1)s(x2, y2; a)  (x1  y2)s(x2, y1; a) +
+
+1
+
+hix
+iez d4z s(x1, x2; y1, y2; a)
+
+a(z)
+
+g(z, x1).
+
+it remains to multiply by s0 and to take a = 0. this
+yields
+
+s(x1, x2; y1, y2) = s0(x1, y1)s(x2, y2)  s0(x1, y2)s(x2, y1)
+
++iez d4zd4zs0(x1, z) s(z, x2; y1, y2)
+
+a(z)
+
+g(z, z). (23)
+
+in eq.(23), s(x, y) plays the role of initial data, whereas
+it is the solution of eq.(13). therefore, we are making a
+composition of solutions, which was considered in section
+3.6. the situation is not exactly the same as that of sec-
+tion 3.6, but the proof is similar (only more cumbersome)
+and we obtain an expression for the two-particule green
+function as a sum over planar binary trees
+
+n
+
+n (t; q; {, z}1,n) = xsn
+
+n(t; q; {, z}(1),(n)).
+
+s(x1, x2; y1, y2) =xt
+
+e2|t|0(t; x1, x2; y1, y2).
+
+christian brouder: on the trees of quantum elds
+
+9
+
+according to the rule of composition,  is the sum of two
+terms:
+
+subtree of t that has si as a root, and ui the subtree of t
+that has si as a leaf. for example:
+
+n(t; x1, x2; y1, y2; {, z}1,n) =
+
+s0(x1, y1)0(t; x2, y2; {, z}1,n) 
+s0(x1, y2)0(t; x2, y1; {, z}1,n) +
+0(t; x1, x2; y1, y2; {, z}1,n),
+
+and  itself is given by
+
+n(t; x1, x2; y1, y2; {, z}1,n) = s0(x1, z1)1
+
+n1(t; z1, x2; y1, y2; {, z}2,n) +
+n
+
+i
+
+xk=0z d4zd4zs0(x1, z)k
+
+nk+1
+
+
+
+(t2; z, x2; y1, y2; , z, {, z}k+1,n).
+
+(t
+
+1; z, z; {, z}1,k)
+
+equation (24) is not very simple, but it provides a
+way to calculate recursively all orders of the perturbation
+expansion for the two-particle green function of qed. in
+that sense, it is not so complicated.
+
+7 vacuum polarization, self-energy
+
+to calculate vacuum polarization and self-energy, we in-
+troduce a further operation on planar binary trees. let
+
+p (t) =
+
+n(t)
+
+xi=1
+
+ui  vi,
+
+where n(t) is an integer recursively dened by
+
+n(r) = 0,
+n(t) = 0
+n(t) = 1 + n(t2)
+
+if
+
+t = t1  s,
+
+if
+
+t = t1  t2,
+
+t2 6= t,
+
+and the planar binary trees ui and vi are determined by
+
+p (u) = 0,
+p (t) = 0
+
+if
+
+t = t1  v,
+
+n(t2)
+
+p y! =
+
+z
+
+
+
+.
+
+[
+
+this operation will help calculating the vacuum polar-
+
+ization and the self-energy. if we dene y by
+
+0(t) =
+
+x =xt
+
+1
+
+1/0(\)  y
+
+,
+
+0() = 0,
+
+it is proved in the appendix that y =pt 0(t), where
+0(ui)0(vi)(cid:17).(26)
+
+0(^)(cid:16)0(t)
+
+0(t) =
+
+0(_)
+
+n(t)
+
+
+
+1
+
+1
+
+xi=1
+
+in this equation, ui, vi and n(t) are determined from t by
+eq.(24).
+
+7.1 vacuum polarization
+
+from the general formula, we deduce that the vacuum
+polarization is given, in terms of the map  for the full
+photon propagator, by
+
+(q) =xt
+
+e2|t|0
+
+(t; q),
+
+(t; q)(q  m) 
+0
+(t; q) = (q  m)0
+n(t)
+
+(q  m)
+
+xi=1
+
+0
+ (u
+
+i ; q)g 
+
+0
+ (v
+
+i ; q).
+
+incidentally, it can be noted that the full vacuum po-
+larization  (q) is related to the fermion loop by (ref.[21]
+p.477):
+
+ (q) = ixt
+
+e2|t|+2z
+
+d4p
+
+(2)4 tr(cid:2) 1(t; p; , q)(cid:3).
+
+(24)
+
+with 0(`; q) = 0 and
+
+p (t) = (t1  w)  t2 +
+
+(t1  ui)  vi
+
+7.2 self-energy
+
+xi=1
+
+if
+
+t = t1  t2,
+
+t2 6= x.
+
+(25)
+
+similarly, the self-energy is given, in terms of the map 
+for the full fermion propagator, by
+
+the trees ui and vi in eq.(25) are generated by eq.(24)
+for t = t2.
+
+as a more graphical denition, for a tree t, we consider
+the path starting from the root and climbing up the tree
+by taking, at each vertex, the right branch. this path
+terminates at the extreme right leaf of the tree and goes
+through n(t) + 2 vertices (including the root and the leaf).
+for each vertex si along that path, excluding the root and
+the leaf, we cut t into two trees ui and vi, where vi is the
+
+(q) =xt
+
+e2|t|0(t; q),
+
+with 0(a; q) = 0 and
+
+0(t; q) = (q  m)0(t; q)(q  m) 
+
+(q  m)
+
+n(t)
+
+xi=1
+
+0(u
+
+i ; q)0(v
+
+i ; q).
+
+10
+
+christian brouder: on the trees of quantum elds
+
+from the formula for the self-energy, we can deduce
+the complete one-particle irreducible three-point function
+ (p, p) [21], p.335. we reintroduce the external potential
+to write
+
+ y  m  ea(y)) 
+
+(ix  m  ea(x))
+
+(ix  m  ea(x))
+
+(x, y; a) =xt
+(t; x, y; a)(i
+xt
+xi=1z dz(u
+
+n(t)
+
+i ; x, z; a)(v
+
+i ; z, y; a),
+
+
+ y acts on the left. in the real space,  (x, y; z)
+
+where
+is given
+
+ (x, y; z) =
+
+(x, y; a)
+
+a(z)
+
+for a = 0.
+
+therefore,
+
+ (x, y; z) =xt
+
+e|t|+11(t; x, y; , z),
+
+with
+1(t; x, y; , z) = (z  x)
+0(t; x, y)(i
+
+ y  m) 
+(ix  m)0(t; x, y)(z  y) +
+(ix  m)1(t; x, y; , z)(i
+
+ y  m) +
+
+(z  x)
+
+i ; x, z)0(v
+
+i ; z, y) 
+
+(ix  m)
+
+i ; x, z)1(v
+
+i ; z, y; , z) 
+
+n(t)
+
+n(t)
+
+xi=1z dz0(u
+xi=1z dz0(u
+xi=1z dz1(u
+
+n(t)
+
+(ix  m)
+
+i ; x, z; , z)0(v
+
+i ; z, y).
+
+in fourier space, this gives us
+
+ (q, q + p) = xt
+
+e|t|+11(t; q; , p),
+
+with
+1(t; q; , p) = 0(t; q)(i(q + p)  m) 
+
+(iq  m)0(t; q) +
+(iq  m)1(t; q; , p)(i(q + p)  m) +
+
+8 interaction with an external eld
+
+in this section we come back to the original schwinger
+equation, because the presence of an external source is
+a convenient way to represent the nuclei in the qed of
+matter.
+
+starting from eq.(10), we multiply by the correspond-
+ing bare green functions and we introduce a(x; j) into
+the second equation to obtain
+
+ (z, z)
+
+s(x, y; j) = s0(x, y)  ez d4zd4zs0(x, z)d0
+j (z)s(z, y; j)  ie2z d4zd4zs0(x, z)
+(z, z)tr(cid:2)s(z, z; j)(cid:3)s(z, y; j) 
+iez d4zs0(x, z) s(z, y; j)
+
+j (z)
+
+d0
+
+.
+
+(27)
+
+here, the schwinger equation is a sum of three terms.
+the rst term is simply the classical interaction with the
+external source j  (z2), it can be solved by dening a bare
+propagator in the presence of this source
+
+s0(x, y; j)1 = i  m + ez d4zd0
+
+(x, z)j (z).
+
+equation (27) becomes now
+
+s(x, y; j) = s0(x, y; j)  ie2z d4zd4zs0(x, z; j)
+(z, z)tr(cid:2)s(z, z; j)(cid:3)s(z, y; j) 
+iez d4zs0(x, z; j) s(z, y; j)
+
+j (z)
+
+d0
+
+.
+
+(28)
+
+this equation is solved by the usual methods, and the
+
+recursive denition of (t) is
+
+n(b; x, y; {, z}1,n) = (1)nz d4s1 . . . d4sns0(x, s1; j)
+
+1 d0
+n d0
+
+11(s1, z1)s0(s1, s2; j) . . .
+nn (sn, zn)s0(sn, y; j)
+
+n
+
+nk
+
+n(t; x, y; {, z}1,n) = i
+
+nkk
+
+xk=0
+
+(; x, z; {, z}1,nkk)d0
+
+xk=0z d4zd4z
+tr(cid:2)k(t1; z, z; {, z}nkk+1,nk )(cid:3)
+xk=0z d4zk(d; x, z; {, z}1,k)
+
+(t2; z, y; {, z}nk+1,n) 
+
+k
+n
+
+nk+1
+
+
+
+(t2; z, y; , z, {, z}k+1,n),
+
+ (z, z)
+
+0(u
+
+i ; q + p)0(v
+
+i ; q + p) 
+
+i
+
+
+
+n(t)
+
+xi=1
+
+(iq  m)
+
+(iq  m)
+
+0(u
+
+i ; q)1(v
+
+i ; q; , p) 
+
+1(u
+
+i ; q; , p)0(v
+
+i ; q + p).
+
+n(t)
+
+n(t)
+
+xi=1
+xi=1
+
+where the last term is non zero only if t has the special
+shape t = e  t2.
+
+according to schwinger [5], the full photon green func-
+tion in the presence of an external current j is given by
+
+christian brouder: on the trees of quantum elds
+
+11
+
+the functional derivative of a(x; j) with respect to j(y).
+therefore
+
+d(x, y; j) = 
+
+a(x; j)
+
+j (y)
+
+= d0
+
+(x, y) +
+
+(x, z)tr(cid:2) s(z, z; j)
+
+j (y)
+
+(cid:3)
+
+= d0
+
+(x, y) +
+
+iez dzd0
+ie2xt z dzd0
+
+(x, z)tr(cid:2)1(t; z, z; , y)(cid:3).
+
+it is also possible to start directly from eq.(27) and to
+write a tree solution of this equation using bare fermion
+green functions. here, the strong eld case was treated
+because it is probably more interesting for applications to
+solid-state physics.
+
+9 conclusion
+
+a method was presented to write the solution of some
+schwinger equations as a series over planar binary trees.
+in quantum eld theory, it is common to expand over the
+number of loops or to use integral equations relating, for
+instance, the full propagator to the full vertex. the rst
+method gives explicit results but becomes very complex,
+and hundreds of diagrams must be built and calculated af-
+ter the rst few terms of the perturbation expansion. the
+second method is formally powerful but not very explicit
+because an n-body green function is expressed in terms
+of an unknown (n+1)-body green function. the present
+approach is a way to mix these two methods to obtain
+an explicit recursive formula for the propagators and its
+functional derivatives.
+
+the main point of the method is that explicit recur-
+sive expressions can be given for the solution of schwinger
+equations. because of the recursive structure, the results
+obtained at each step can be reused for the next step.
+
+the present paper is only a rst exploration of the
+method of series indexed by planar binary trees, and much
+work remains to be done to explore its algebraic properties
+and its applications.
+
+two kinds of applications were presented here. on the
+one hand, a series indexed by planar binary trees was given
+for various physical quantities (full fermion and photon
+propagators, full two-body green function), and a method
+was given to deduce from this a series for vacuum polariza-
+tion, fermion self-energy and irreducible vertex function.
+although the formulas may be a bit cumbersome, they
+are derived and proved easily. on the other hand, the re-
+cursive nature of the terms of the series is well suited to
+prove properties to all orders of perturbation theory. this
+was done in the case of the ward-takahashi identities.
+
+the present work can be expanded in various direc-
+tions. other eld theories can be investigated, as well as
+many-particle green functions. the present treatment was
+restricted to classical electromagnetic sources, it could be
+
+worthwile to study the case of anticommuting fermion
+sources. furthermore, planar binary trees could be used
+to solve the hedin equation [22] and investigate the gw-
+approximation [23] of solid-state physics.
+
+as a last point, it can be noticed that previous arti-
+cles have presented general planar trees as the structure
+adapted to quantum eld theory [24]. in fact, planar trees
+and planar binary trees are equivalent for that purpose.
+since the number of planar trees with n vertices is equal
+to the number of planar binary trees with 2n  1 vertices
+[7], there is a bijection  between planar trees and pla-
+nar binary trees. if t is a planar tree, the bijection can be
+realized recursively by, for example,  (f) = g and
+
+ (b+(t)) =  (t)  h,
+
+ (b+(t1, t2, . . . , tk)) =  (t1)   (b+(t2, . . . , tk)),
+
+where b+ is the grafting operator dened by kreimer [1,
+2] to build rooted trees. this bijection is also apparent in
+the existence of two methods for the numerical solution of
+dierential equations on lie groups: one based on planar
+trees [25], the other on planar binary trees [26]. planar bi-
+nary trees were chosen here because the recursive formulas
+look simpler and because of the mathematical results of
+loday, frabetti and collaborators.
+
+10 acknowledgements
+
+i am very grateful to dirk kreimer and david broadhurst
+for exciting discussions. i thank alain connes for his sug-
+gestion of concentrating on the calculation of propagators.
+my warmest thanks go to ale frabetti and jean-louis lo-
+day for the wonderful day we spent together talking about
+trees. this is ipgp contribution #xxxx.
+
+11 appendix
+
+this appendix contains proofs of some of the statements
+contained in the text.
+
+11.1 proof of eq.(8)
+
+equation (8) will be proved in two steps. firstly, it will be
+shown that if n(t) satises eq.(8), then n(t)
+ (t),
+secondly, that the sum over trees is a solution of eq.(3).
+
+v = n+1
+
+the rst step is to show that
+
+n(t; {z}1,n)
+
+v(y)
+
+= n+1
+
+ (t; y, {z}1,n).
+
+(29)
+
+this will be proved inductively. according to the construc-
+tion of n(i) from the initial data a, the relation is true
+for t = j. now we assume that the relation is true up to
+trees with 2n  1 vertices. let t be a tree with 2n + 1
+
+12
+
+christian brouder: on the trees of quantum elds
+
+(t2; y, z, {z}k+1,n)(cid:1), (30)
+
+f(cid:0)k
+
+vertices. the functional derivative of eq.(8) gives us
+
+n(t; {z}1,n)
+
+v(y)
+
+=
+
+n
+
+xk=0
+
+n
+
+xk=0
+
+k(t1; {z}1,k)
+
+v(y)
+
+,
+
+f(cid:0)
+
+nk+1
+
+
+(t2; z, {z}k+1,n)(cid:1) +
+
+f(cid:0)k(t1; {z}1,k),
+
+nk+1
+
+
+
+(t2; z, {z}k+1,n)
+v(y)
+
+(cid:1).
+
+since t1 and t2 have less vertices than t, relation (29) is
+true for them and we obtain
+
+n(t; {z}1,n)
+
+v(y)
+
+=
+
+n
+
+xk=0
+
+n
+
+xk=0
+
+ (t1; y, {z}1,k),
+
+f(cid:0)k+1
+
+nk+1
+
+
+(t2; z, {z}k+1,n)(cid:1) +
+
+f(cid:0)k(t1; {z}1,k),
+
+nk+2
+
+
+where k
+(t; {z}1,k) distributes the variables z1 and z2
+over the k positions z1, . . . , zk without changing the order
+of z3, . . . , zk. all ways to take two number among k are
+used, so it is clear that k
+(t; z1, z2, . . . , zk) is symmetric
+in z1, z2.
+
+on the other hand, we know from eq.(8) that
+
+n+1(t; y, {z}1,n) = f(cid:0)0(t1), n+2
+
+f(cid:0)n+1(t1; y, {z}1,n), 1(t2; z)(cid:1) +
+xk=1
+f(cid:0)k(t1; y, {z}1,k1), nk+2
+
+ (t2; z, y, {z}1,n)(cid:1) +
+(t2; z, {z}k,n)(cid:1).
+
+
+
+n
+
+if we symmetrize y in n+1, we obtain
+
+n+1
+
+n
+
+ (t1; y, {z}1,n), 1
+
+ (t; y, {z}1,n) = f(cid:0)0(t1), n+2
+f(cid:0)n+1
+ (t2; z)(cid:1) +
+xk=1
+f(cid:0)k
+xk=1
+f(cid:0)k(t1; {z}1,k), nk+2
+
+ (t2; z, y, {z}1,n)(cid:1) +
+(t2; z, {z}k,n)(cid:1) +
+(t2; z, y, {z}k+1,n)(cid:1).
+
+(t1; y, {z}1,k1), nk+2
+
+
+
+
+
+n
+
+comparing this with eq.(30), we see that the two expres-
+sions are identical, and the property is proved for t.
+
+if we denote by x the (formal) sum x = pt 0(t),
+v(z) = pt 1(t; z). using
+
+then from eq.(29) we obtain x
+eq.(8) we can write
+
+0(t)
+
+x =xt
+= 0(k) +xt6=
+
+f (0(t1), 1(t2; z)).
+
+at this point intervenes the essential property eq.(1) that
+each tree dierent from   is generated in a unique way
+by the grafting of two trees t1 and t2. the sum over t1
+and t2, which are the branches of t, can be replaced by an
+unrestricted sum over all trees t1 and t2. thus
+
+f(cid:0)0(t1), 1(t2; z)(cid:1)
+0(t1),xt2
+
+1(t2; z)(cid:17)
+
+x = 0() + xt1,t2
+= 0() + f(cid:16)xt1
+= a + f(cid:0)x,
+v(z)(cid:1).
+
+x
+
+a small extension of the previous result is necessary
+to treat the case of qed. the schwinger equation is now
+x = a + af (x, x
+where () is the usual initial data and the recurrence
+relation becomes
+
+v(z) ) and the solution is x = pt (t),
+
+n(t; {z}1,n) =
+
+k(; {z}1,k)
+
+n
+
+nk
+
+xk=0
+
+xk=0
+
+(t1; {z}k+1,k+k), nkk +1
+
+
+
+(t2; z, {z}k+k+1,n)(cid:1).
+
+the reasoning is the same as for the simple schwinger
+equation. we start by proving that n(t)
+ (t). this
+is done by using the recursive denition of  to write
+both sides in terms of (t1) and (t2). then we write
+
+v = n+1
+
+x = pt 0(t) and we show that, because of the recur-
+
+rence relation for , it satises x = a + af (x, x
+
+in this paper, the treatment was restricted to linear
+integral operators f . however, the method can treat other
+cases. for instance, if f depends on x 2, this square can
+be, in some sense, linearized by the planar trees. if x =
+
+v(z) ).
+
+pt 0(t), then
+
+2
+
+0(t))
+
+0(t),
+
+x 2 = (xt
+=xt
+
+0(t1)0(t2)
+
+=xt1 xt2
+
+where 0(t) (and more generally n(t)) is dened by
+
+n() = 0
+n
+
+n(t) =
+
+xk=0
+
+k(t1)nk(t2).
+
+11.2 proof of eq.(9)
+
+equation (9) will be proved by two methods. both are
+fast and easy. in the rst method, we dene a schwinger
+equation
+
+(cid:18)x
+z(cid:19) =(cid:18)a
+
+0(cid:19) + h(cid:18)x
+y(cid:19),
+
+(31)
+
+christian brouder: on the trees of quantum elds
+
+13
+
+where
+
+if this is true up to n, then, from eq.(1)
+
+h(cid:18)x
+
+z(cid:19) =(cid:18)
+
+f(cid:0)x, x
+v(z)(cid:1)
+g(cid:0)x + z, x
+
+v(z) + z
+
+v(z)(cid:1)(cid:19).
+
+this is a schwinger equation whose solution is given
+
+by eq.(8), where the map is
+
+(cid:18)
+(cid:19)(t) =
+
+n
+
+xk=0
+
+which is eq.(9).
+
+
+
+
+
+
+f(cid:0)k(t1), nk+1
+(t2)(cid:1)
+g(cid:0)k(t1) + k(t1),
+(t2)(cid:1)
+
+(t2) + nk+1
+
+
+
+nk+1
+
+
+
+ ,
+
+the upper component of eq.(31) is the rst schwinger
+equation x = a + f (x, x
+v(z) ). if we write y = x + z,
+the lower component is y = x + g(y, y
+v(z) ). therefore,
+x + z is the solution of the composition of equations. the
+map corresponding to this solution is (t) = (t) + (t).
+the second proof can also be useful. it starts by adding
+a parameter s to the schwinger equations: x(s) = a +
+sf (x(s), x(s)
+v(z) ). we
+take the n-th derivative of y with respect to s, and we
+write y (n) for its value at s = 0. the chain rule gives
+
+v(z) ) and y (s) = x(s) + sg(y (s), y (s)
+
+y (n) = x (n) + n
+
+n
+
+xk=0(cid:18)n  1
+
+k (cid:19)g(cid:0)y (k),
+
+y (nk1)
+
+v(z)
+
+(cid:1).
+
+it can be shown recursively that
+
+y (n) = n! x|t|=n(cid:0)0(t) + 0(t)(cid:1),
+
+where  satises eq.(9). the result follows by expanding
+x(s) and y (s) as power series of s and taking its value
+for s = 1.
+
+11.3 proof of eq.(26)
+
+let x(s) = 1 +pt6=
+for y (s) = 1  1/x(s) is given by y (s) =pt6=
+
+s|t|(t). let us show that the series
+s|t|(t),
+
+where (t) is dened by eq.(26).
+
+the rst step is to prove that, if p (t) is dened by
+
+
+
+
+
+eq.(25), then, with an abuse of notation,
+
+p (yn) =
+
+n1
+
+xk=1
+
+or more precisely
+
+yk  ynk,
+
+(32)
+
+p (t) =
+
+x|t|=n
+
+n1
+
+xk=1(cid:16) x|u|=k
+
+u(cid:17) (cid:16) x|v|=nk
+
+v(cid:17).
+
+as usually, this will be proved recursively. the property
+is true for n = 2, because
+
+p (
+
+) = 0, p (
+
+) =
+
+
+
+.
+
+v
+
+w
+
+
+
+	
+
+p (t) =
+
+x|t|=n+1
+
+n
+
+xk=0 x|t1|=k x|t2|=nk
+
+p (t1  t2).
+
+by denition (25),
+
+p (t) =
+
+x|t|=n+1
+
+n
+
+xk=1 x|t1|=k x|t2|=nk
+xk=2 x|t1|=k x|t2|=nk
+
+n
+
+(t1  x)  t2 +
+
+n(t2)
+
+xi=1
+
+(t1  ui)  vi.
+
+we use property (32) in the right-hand side :
+
+n
+
+(t1  y)  t2 +
+
+p (t) =
+
+x|t|=n+1
+
+n1
+
+xk=1 x|t1|=k x|t2|=nk
+xk=m+1 x|t1|=nk
+xm=1
+
+n
+
+(t1  ykm)  ym.
+
+in the second term, we use eq.(1) to sum over k by
+
+ynk  ykm = ynm+1  ynm  z.
+
+n
+
+xk=m+1
+
+therefore
+
+n
+
+(t1  {)  t2 +
+
+t1  t2 
+
+p (t) =
+
+x|t|=n+1
+
+=
+
+n1
+
+xk=1 x|t1|=k x|t2|=nk
+xm=1 x|t1|=nm+1 x|t2|=m
+xm=1 x|t1|=nm
+xm=1 x|t1|=n+1m x|t2|=m
+
+n1
+
+n
+
+(t1  |)  t2
+
+t1  t2.
+
+}
+
+thus
+
+to complete the proof, we start from x(s) = 1 +
+s|t|(t), where
+
+s|t|(t) and we dene y (s) =pt6=
+
+pt6=
+(t) is given by ((cid:127)) = 0, (t) = (t) p (ui)  (vi).
+x|t|>1
+
+s|t|(t) = x|t|>1
+
+s|t|(t)  x|t|>1
+
+(ui)(vi).
+
+xi=1
+
+s|t|
+
+n(t)
+
+~
+
+from eq.(32), we see that |t| = |ui| + |vi| and
+
+s|t|(t) 
+
+x|t|>1
+
+s|t|(t) = x|t|>1
+(cid:16) x|u|>0
+
+s|u|(u)(cid:17)(cid:16) x|v|>0
+
+s|v|(v)(cid:17).
+
+14
+
+christian brouder: on the trees of quantum elds
+
+from the denition of x(s) and y (s) we deduce
+
+y (s)  (
+
+) = x(s)  (
+
+)  1  (x(s)  1)y (s).
+
+
+
+(cid:129)
+
+from the denition of (t) we get (
+y (s) satises the equation
+
+
+
+) = (
+
+), and
+
+
+
+x(s)  x(s)y (s) = 1,
+
+or x(s) = 1/(1  y (s)). to simplify the notation, we have
+assumed () = 1. the general case is proved similarly
+and leads to eq.(26).
+
+22. l. hedin. new method for calculating the one-particle
+greens function with application to the electron-gas prob-
+lem. phys. rev. a, 139:796823, 1965.
+
+23. f. aryasetiawan and o. gunnarson. the gw method.
+
+rep. prog. phys., 61:237312, 1998.
+
+24. a. connes and d. kreimer. lessons from quantum eld
+theory - hopf algebras and spacetime geometries. lett.
+math. phys., 48, 2000. to be published (hep-th/9904044).
+25. b. owren and a. marthinsen. runge-kutta methods
+adapted to manifolds and based on rigid frames. bit,
+39:11642, 1999.
+
+26. a. iserles and s.p. nrsett. on the solution of linear dier-
+ential equations in lie groups. phil. trans., 357:9831020,
+1999.
+
+references
+
+1. d. kreimer. on the hopf algebra structure of perturbative
+quantum eld theory. adv. th. math. phys., 2:30334,
+1998.
+
+2. d. kreimer. chens iterated intregral represents the oper-
+ator product expansion. commun. math. phys, 1999. to
+be published (hep-th/9901099).
+
+3. a. connes and d. kreimer. hopf algebras, renormalization
+and noncommutative geometry. commun. math. phys.,
+199:20342, 1998.
+
+4. ch. brouder. runge-kutta methods and renormalization.
+
+euro. phys. j. c, 1999. submitted (hep-th/9904014).
+
+5. j. schwinger. on the greens functions of quantized elds.
+
+i. proc. nat. acad. sci., 37:4529, 1951.
+
+6. j.-l. loday and m.o. ronco. hopf algebra of the planar
+
+binary trees. adv. math., 139:293309, 1998.
+
+7. j.h. conway and r.k. guy. the book of numbers.
+
+springer, new york, 1996.
+
+8. p. larcombe. on the history of the catalan numbers: a
+
+rst record in china. math. today, 35:8989, 1999.
+
+9. j.-l. loday. dialgebras. springer, berlin, 1999.
+
+10. a. frabetti. simplicial properties of the set of planar bi-
+
+nary trees. j. alg. combin., 1999. to be published.
+
+11. j. glimm and a. jae. quantum physics, a functional
+
+integral point of view. springer, new york, 1981.
+
+12. j.-l. loday. notes on koszul duality for associative alge-
+
+bras. to be published.
+
+13. j.c. butcher. the numerical analysis of ordinary dier-
+
+ential equations. wiley, chichester, 1987.
+
+14. j.c. butcher. an algebraic theory of integration methods.
+
+math. comput., 26:79106, 1972.
+
+15. e. hairer and g. wanner. on the butcher group and
+
+general multi-value methods. computing, 13:115, 1974.
+
+16. m.k. polivanov. (in russian). doklady akad. nauk ussr,
+
+100:1061, 1955.
+
+17. n.n. bogoliubov and d.v. shirkov.
+
+introduction to the
+theory of quantized fields. interscience pub. inc., new
+york, 1959.
+
+18. j. touchard. sur un probl`eme de congurations et sur les
+
+fractions continues. canad. j. math., 4:225, 1952.
+
+19. p. stein. on a class of linked diagrams, i. enumeration.
+
+j. combin. th. a, 24:35766, 1978.
+
+20. m.e. peskin and d.v. schroeder. an introduction to
+
+quantum field theory. addison-wesley, reading, 1995.
+
+21. c. itzykson and j.-b. zuber. quantum field theory.
+
+mcgraw-hill, new york, 1980.
+
+

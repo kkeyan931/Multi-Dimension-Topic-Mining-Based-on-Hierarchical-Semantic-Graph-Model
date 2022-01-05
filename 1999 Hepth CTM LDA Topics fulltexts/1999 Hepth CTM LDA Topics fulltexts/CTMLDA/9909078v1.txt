@@ -1,0 +1,2681 @@
+lu tp 99-27
+nordita-1999/57 he
+hep-th/9909078
+december 17, 2013
+
+9
+9
+9
+1
+
+ 
+
+p
+e
+s
+3
+1
+
+ 
+
+ 
+ 
+
+1
+v
+8
+7
+0
+9
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+on statistical mechanics of instantons
+
+in the cp nc1 model
+
+dmitri diakonov and martin maul
+
+nordita, blegdamsvej 17, 2100 copenhagen , denmark
+
+petersburg nuclear physics institute, gatchina, st. petersburg 188 350, russia
+
+ theoretical physics ii, lund university, s-223 62 lund, sweden
+
+abstract
+
+we introduce an explicit form of the multi-instanton weight including also instanton
+anti-instanton interactions for arbitrary nc in the two-dimensional c p nc1 model.
+to that end, we use the parametrization of multi-instantons in terms of instanton
+constituents which we call zindons for short. we study the statistical mechanics of
+zindons analytically (by means of the debye-huckel approximation) and numerically
+(running a metropolis algorithm). though the zindon parametrization allows for a
+complete melting of instantons we nd that, through a combination of dynamical
+and purely geometric factors, a dominant portion of topological charge is residing in
+well-separated instantons and anti-instantons.
+
+1 introduction
+
+in the last two decades there have been much evidence that the specic uctuations of the
+gluon eld carrying topological charge, called instantons, play a very important role in the
+dynamics of qcd, the theory of strong interactions [1, 2]. instantons are most probably
+responsible for one of the main features of strong interactions, namely for the spontaneous
+breaking of chiral symmetry [3]. whether they play a role in the connement property of
+qcd is, however, not clear. the diculty in addressing this problem may be connected to
+the fact that, strictly speaking, the multi-instanton solution in the vacuum is not known.
+instead, in a dilute-gas approximation, one treats the instanton vacuum as a superposi-
+tion of one-instanton solutions. for large distances the one-instanton gluon eld falls o
+as a(x)  1/x3, which means that correlations between instantons at large distances are
+vanishing in the dilute-gas picture. however, the connement phenomenon by itself seems
+to indicate that certain correlations of gluon elds do not fall o when the distance is in-
+creased. therefore, if instantons are of any relevance to connement, it cannot be seen in
+the dilute-gas approximation: one has to enrich the arsenal of instanton methods.
+
+this motivates us to study a system where the multi-instanton solution is known, where
+one can nd many features of the strong interaction, and which is simple enough to allow for
+analytic solutions in some limits. such a system is provided by the two-dimensional cp nc1
+model. this model is known to possess both asymptotic freedom and instantons. contrary
+to the d = 4 yangmills theory where the multi-instanton solutions are not available in an
+explicit form, in the cp nc1 model they are known explicitly, and for any number of colors
+nc [4, 5]. moreover, the multi-instanton weight arising from integrating out quantum oscil-
+lations about instantons is also known [6, 7, 8]. in addition, the model is exactly solvable
+at large nc [5, 9], and the spectrum is known for all nc [10]. therefore, the model is well
+suited to monitor instantons in a controllable way. it should be added that the model has
+been much studied by lattice simulations (see, e.g. [11, 12, 13]), and instantons have been
+identied there by a cooling procedure [14].
+
+since the pioneering paper of fateev, frolov and schwartz [6] it has been known that
+the multi-instanton system in the o(3) sigma model resembles that of a two-dimensional
+coulomb plasma; it can be exactly bosonized to produce a sine-gordon theory. in a true vac-
+uum, however, one has both instantons and anti-instantons; such a system can be bosonized
+and solved exactly only at a specic value of the coupling [15] which may not be realistic.
+therefore, the general case still remains a dicult and unsolved dynamical problem.
+
+in sec. 2 we overview the cp nc1 model. in sec. 3 we derive the general partition function
+for the cp nc1 in terms of a special form of instanton variables, which are called zindons. in
+sec. 4 we shall describe an approximation to the partition function called the debye-huckel
+approximation, which is capable to account for many features of the instanton ensemble.
+
+2
+
+however, that approximation is in general insucient. therefore, in this paper we combine
+analytical study of the instantonanti-instanton ensemble with a numerical simulation. in
+sec. 5 we describe the metropolis algorithm used to study the behavior of the model in monte
+carlo simulations. it will turn out that, strictly speaking, the instanton ensemble does not
+exist for nc = 2 and that a regularization procedure is required to yield meaningful results.
+in sec. 6 we consider the question whether the system has a thermodynamically stable den-
+sity, i.e., whether the average number of instantons and anti-instantons grows proportional
+to the volume of the system. finally in sec. 7 we have a look at the size distribution, both
+seen from the instanton input and from the topological charge density.
+
+2 the cp nc1 model
+
+for a number of colors nc the main objects of the cp nc1 model are nc complex elds
+a=1 |va|2 one can introduce the normalized
+
+va(x), a = 1, . . . , nc. dening the norm |v|2 = pnc
+
+elds ua, a projector p and the unitary operator g via:
+
+ua = va/|v|,
+
+pab = uau
+b,
+
+p 2 = p = p ,
+
+g = g,
+
+g = 1  2p,
+g2 = 1.
+
+one can introduce a vector potential a and a covariant derivative :
+
+a =
+
+i
+2
+
+(uau
+
+a  u
+
+aua),
+
+ =   ia,
+
+( = 1, 2) .
+
+(1)
+
+(2)
+
+a is a real eld, depending on the x-space variables x and y that can be identied with the
+complex variables z = x + iy and z = x  iy. the eld strength tensor and the topological
+charge density are:
+
+f = a  a,
+
+q(x) =
+
+1
+4
+
+f = i
+2
+
+u
+
+aua.
+
+the theory is determined by the action
+
+s = z d2x
+
+nc
+
+xa=1|ua|2 =
+
+1
+
+8 z d2xtr [gg] ,
+
+and the partition function is:
+
+z = z dua(x)du
+= z dua(x)du
+
+a(x)da(x)(|u|2  1) exp 
+a(x)(|u|2  1) exp 
+
+g2 z d2x|ua|2!
+8g2 z d2xtr[gg]! .
+
+1
+
+1
+
+3
+
+(3)
+
+(4)
+
+(5)
+
+this formulates a nonlinear theory of self-interacting elds, where the nonlinearity is forced
+by the condition |u| = 1. there is a topological charge q in the theory dened as:
+16 z d2x  tr [ggg] .
+
+4 z d2x f =
+
+q = z d2x q(x) =
+
+(6)
+
+1
+
+2 i dxa =
+
+1
+
+i
+
+because of its unitarity g has the property gg = gg, which can be used to show:
+
+0  z d2xtr [(g  igg) (g  igg)] = 16(s  2q) .
+
+(7)
+
+this tells that the minimal action for a given topological charge of a eld conguration, i.e.
+a solution of the equation of motion, is obtained if the eld satises the self-duality equation:
+
+g  i gg = 0  v  iv = 0.
+
+(8)
+
+introducing the complex derivative z = (x  iy)/2, it means that one nds two types of
+solutions:
+(9)
+
+zv = 0  s = 2q
+
+and
+
+which are the cauchyriemann conditions [16]. one calls the rst an instanton solution and
+the second one an anti-instanton solution.
+
+zv = 0  s = 2q ,
+
+(10)
+
+3 zindons
+
+a general multi-instanton solution of the self-duality eq. (9) with topological charge q = n+
+is a product of monomials in z [6]:
+
+vinst
+a = ca
+
+n+
+
+yi=1
+(z  aai),
+
+a = 1, ..., nc.
+
+(11)
+
+similarly, a general multi anti-instanton solution of eq. (10) with topological charge q =
+n is a product of monomials in the complex conjugate variable z:
+
+vanti
+a = c
+a
+
+n
+
+(z  b
+yj=1
+
+aj),
+
+a = 1, ..., nc.
+
+(12)
+
+for a general conguration with n+ instantons and n anti-instantons we shall consider a
+product ansatz [15]:
+
+n+
+
+n
+
+va =
+
+yi=1
+(z  aai)
+
+(z  b
+yj=1
+
+aj),
+
+4
+
+(13)
+
+where aia and bja are xed 2-dim points written as complex numbers. those points have been
+called instanton quarks or instanton constituents in the past. we suggest a shorter term
+zindon to denote these entities, in analogy with similar objects introduced in the yangmills
+theory [17]. zindon is tajik or persian word for castle or prison; they are of relevance to
+describe connement in the model. there are, thus, nc types or colors of the instanton zin-
+dons (denoted by aa) and nc types of anti-instanton zindons or anti-zindons (denoted by ba).
+
+the action and the topological charge for such a multi-instantonanti-instanton ansatz are
+
+s
+
+2q ) = 2z d2x"pa |va|2|a|2  |pa |va|2a|2 /|v|2
+
+|v|2
+
+ pa |va|2|a|2  |pa |va|2a|2 /|v|2
+
+# ,
+
+n
+
+|v|2
+xj=1
+
+a =
+
+n+
+
+xi=1
+
+1
+
+z  aai
+
+,
+
+a =
+
+1
+
+z  b
+
+aj
+
+,
+
+|v|2 =
+
+nc
+
+xa=1|va|2.
+
+the topological charge can be immediately found from the cauchy theorem:
+
+q =
+
+1
+
+2 i dxa = n+  n .
+
+the geometric meaning of the zindon coordinates becomes especially clear if one takes a
+single-instanton solution, va(z) = ca(z  aa). putting it into the action eq. (14) one gets
+the standard form of the instanton prole,
+
+s = 2q = 2z d2x
+
+2
+
+[(x  x0)2 + 2]2 = 2,
+
+where the instanton center x0 is given by the center of masses of zindons,
+
+(14)
+
+(15)
+
+(16)
+
+(17)
+
+x0 = pnc
+a=1 |ca|2aa
+pnc
+a=1 |ca|2
+
+,
+
+while the spread of the eld called the instanton size  is given by the spatial dispersion of
+zindons comprising the instanton,
+
+2 = pnc
+
+a=1 |ca|2|aa  x0|2
+pnc
+a=1 |ca|2
+
+= pa<b |ca|2|cb|2|aa  ab|2
+
+(pa |ca|2)2
+
+.
+
+(18)
+
+in eqs.(17, 18) all coordinates x0, aa are understood as 2-dimensional vectors. in the multi-
+instanton case the action and topological charge densities will have extrema not necessarily
+coinciding with the position of the zindon center of masses. only when a group of zindons of
+
+5
+
+all nc colors happens to be well spatially isolated from all the rest zindons, in the vicinity of
+this group one can speak about getting a classical instanton prole (16) with the collective
+coordinates given by eqs.(17, 18), the role of the coecients ca played by a product of
+separations between a given zindon aai and all the rest zindons and anti-zindons,
+
+n+
+
+n
+
+|ca|2 =
+
+yi6=i|aai  aai|2
+
+yj=1|aai  baj|2.
+
+(19)
+
+as a matter of fact, it means that there is no need in introducing explicitly extra degrees of
+freedom ca. it should be added that in the thermodynamic limit, with the system volume v
+going to innity, we expect the number of zindons to be proportional to v . meanwhile, the
+number of the coecients ca is xed (equal to nc). therefore, one can neglect this degree
+of freedom as it plays no role in the thermodynamic limit; we shall therefore put all ca = 1.
+
+the quantum determinants in the multi-instanton background, dening the instanton weight
+or the measure of integration over collective coordinates aai, has been computed in ref. [6]
+in case of nc = 2 (which is the o(3) sigma model) and in refs. [7, 8] for arbitrary cp nc1;
+the results of these references coincide up to notations.
+
+3.1 multi-instanton weight in the case nc = 2
+
+in the nc = 2 case the multi-instanton weight is that of the coulomb gas [6, 8]:
+
+da  wa =
+
+nc=2
+
+ya=1
+
+n+
+
+yi=1
+
+d2aai  qa=1,2qi<i |aai  aai|2
+
+qi,i |a1i  a2i|2
+
+
+g2 !2
+  2
+
+
+n+
+
+c(2)
+
+
+(20)
+
+where  is the renormalization-invariant combination of the bare charge g2 and of the uv
+cuto m needed to regularize the theory; it is the analog of qcd. the numerical coecient
+c(2) depends on the regularization scheme used; in the paulivillars scheme it has been
+found in ref. [18] to be
+
+c(2) = (cid:18)2
+
+e(cid:19)6 3
+
+2 = 0.04822082 .
+
+(21)
+
+we shall absorb this constant in the denition of .
+in the one-loop approximation the
+charge g2 in eq. (20) remains unrenormalized; in two loops it starts to run. it is interesting
+that for accidental reasons (the number of zero modes per unit topological charge, equal
+four, coinciding with the ratio of the second-to-rst gell-mannlow coecients, equal to
+b/b = 4nc/nc = 4) the coupling g2 does not run in the two-loop approximation either:
+2/g2 in eq. (20) should be just replaced by (b/2)b/2b = 1. for anti-instanton zindons baj
+one has a similar expression, with n+ replaced by n. we denote the corresponding weight
+by db  wb.
+
+6
+
+3.2 partition function for arbitrary nc
+
+the general expression for the multi-instanton weight wa in the cp nc1 model is [7, 8]:
+
+nc
+
+wa = exp" n+
+xi<j
+n+ ln  nc
+
+xa
+
+nc
+2
+
+
+
+ln|aai  aaj|2 
+xa=1|ca|2! +
+nc
+2
+
+nc
+
+8 z d2x ln|va|22 ln|va|2
+
+n+ + n+
+
+ln|ca|2# ,
+
+nc
+
+xa=1
+
+va =
+
+n+
+
+yi=1
+
+ca(z  aai) .
+
+(22)
+
+in the following we set |ca| = 1 for reasons explained above. the second (integral) term in
+eq. (22) can be analytically computed only for nc = 2; it gives the coulomb interaction of
+eq. (20). for nc > 2 we approximate the integral term by a simpler explicit expression.
+to that end, let us consider a conguration with zindons of nc colors forming clusters well
+separated from each other, see fig. 1. we denote the centers of clusters by xi,
+
+xi =
+
+1
+nc
+
+nc
+
+xa=1
+
+aai ,
+
+the sizes of the instantons associated with those clusters by i,
+
+2
+i =
+
+1
+nc
+
+nc
+
+(aai  xi)2 =
+
+xa=1
+
+1
+n 2
+
+c xa<b
+
+(aai  abi)2 ,
+
+and the separation between clusters by
+
+rij = |xi  xj| ,
+
+(23)
+
+(24)
+
+(25)
+
+assuming r2
+
+ij  2
+
+i,j. in such geometry the integral term can be easily evaluated, yielding
+
+i{aai} = 
+
+ 
+
+nc
+
+8 z d2x ln|va|22 ln|va|2
+2 "2
+
+ln r2
+
+ln 2
+
+ij +
+
+nc
+
+n+
+
+n+
+
+xi=1
+
+xi<j
+
+i + n+(ln nc + 1)# + o  2
+
+i, j
+rij
+
+2! .
+
+(26)
+
+we would like to write the functional of zindon positions i{aai} in such a way that it
+(a) depends only on the separations between individual zindons, aai  abj ;
+(b) is symmetric under permutations of same-color zindons, (aai  aaj);
+(c) reduces to eq. (26) in the dilute regime;
+
+7
+
+(d) at nc = 2 comes to the exact expression valid for any geometry:
+
+n+
+
+i nc=2{aai} = 
+xi,j=1
+
+
+ln(a1i  a2j)2 + n+(1  ln 2)
+ .
+
+(27)
+
+the solution to this problem is, naturally, not unique. we shall suggest two forms of ap-
+proximate expressions for i{aai}, both satisfying the above requirements a-d. the rst form
+is
+
+n+
+
+i{aai} = 
+
+nc
+2
+
++nc
+
+ln"xa<b
+xi,j=1
+n+(n+  1)
+
+(aai  abj)2# +
+nc(nc  1)
+
+ln
+
+.
+
+2
+
+2
+
+nc
+2
+
+n+(ln nc  1)
+
+combining it with other terms in (22) we get the following multi-instanton weight:
+
+nc
+
+wa = exp " n+
+xi<i
+n+(n+  1)
+
+xa=1
+
++nc
+
+2
+
+ln(aai  aai)22 
+# .
+nc(nc  1)
+
+ln
+
+2
+
+nc
+2
+
+n+
+
+xi,i=1
+
+ln" nc
+xa<b
+
+(aai  abi)22#
+
+(28)
+
+(29)
+
+this form of the interactions between zindons belonging to instantons will be used in com-
+puter simulations of the ensemble, see below. this form is, however, inconvenient for analyt-
+
+ical estimates since it involves many-body interactions represented by lnpa<b(aai  abi)2.
+
+therefore, we suggest a more simple second form involving only two-body interactions:
+
+i{aai} = 
+
+1
+
+nc  1
+
+n+
+
+nc
+
+xi,j=1
+
+xa<b
+
+ln(aai  abj)2 +
+
+nc
+2
+
+n+(ln nc  1) .
+
+(30)
+
+the second form reproduces correctly only the leading term in (22) in the dilute regime;
+however it is exact for nc = 2. consequently, the multi-instanton weight can be written in
+a compact form:
+
+wa = exp
+
+
+
+2
+
+nc
+nc  1
+
+n+
+
+xi,j=1
+
+nc
+
+xa,b=1pab ln(aai  abj)22
+
+
+(31)
+
+here pab is a projector nc  nc matrix such that pab = (nc  1)/nc when a = b and
+pab = 1/nc when a 6= b, so that p 2 = p, and p has nc1 unit eigenvalues and one zero.
+in both forms, (29) and (31), we have introduced an inverse temperature  for future
+convenience, in fact  = 1. we have also borrowed certain powers of the scale  from the
+
+8
+
+overall weight coecient to make the arguments of the logarithms dimensionless. a com-
+parison of numerical simulations using the weight (29) with analytical calculations using the
+weight (31) shows that the results do not dier signicantly; it means that ensembles gener-
+ated with the two weights are to a good accuracy equivalent. at nc = 2 they both coincide
+with the exact weight (20). for the multianti-instanton weight wb one can use either of
+the forms (29), (31) with an obvious substitution of the instanton-zindon coordinates aai by
+anti-zindon coordinates bai.
+
+finally, we turn to the instantonanti-instanton interaction factor wab. we assume that
+it is mainly formed by the classical defect of the action,
+
+wab = exp 
+
+1
+
+g2 uint(a, b)! ,
+
+uint(a, b) = sansatz  2(n+ + n),
+
+(32)
+
+where sansatz is the action computed on the product ansatz, (13). again, it is possible to
+evaluate this quantity in a regime, when zindons belonging to denite instantons or anti-
+instantons are grouped together and are well separated from other groups. after some work
+one obtains the classical interaction potential between zindons and anti-zindons in a form of
+dipole interactions in two dimensions, valid for any number of colors nc:
+
+uint = 8 xall i i pairs
+
+1
+
+nc xa
+
+(aa  xa)(ba  xb)
+
+1
+
+r2 (cid:18)  2
+
+rr
+
+r2 (cid:19) ,
+
+xa =
+
+a1 + ... + anc
+
+nc
+
+,
+
+xb =
+
+b1 + ... + bnc
+
+nc
+
+,
+
+r = xa  xb.
+
+(33)
+
+in terms of zindons, this is a many-body interaction, however, eq. (33) can be rewritten
+as a pair interaction of individual zindons, which, naturally, appears to be of a coulomb
+type. this is one of the great advantages of using the zindon parametrization of instantons.
+we rewrite the dipole interaction (33) as a sum of two-body interactions using the nc  nc
+projector pab introduced above:
+
+uint = 
+
+4
+nc
+
+n+
+
+xi=1
+
+n
+
+xj=1
+
+nc
+
+xa,b=1pab ln|aai  bbj|2.
+
+(34)
+
+in the case when groups of nc zindons form clusters well separated from groups of nc
+anti-zindons, this reduces to the dipole interaction (33). notice that the interaction of
+same-color zindons is repulsive while that of dierent-color is attractive. at nc = 2 the
+projector matrix pab is
+
+(35)
+
+so that the interaction becomes just a sum of coulomb interactions between charges of
+dierent signs. in this case this form has been known previously [18, 15]. in ref. [15] it has
+
+1
+
+p nc=2
+ab =
+
+2   1 1
+
+1 ! ,
+
+1
+
+9
+
+been shown that this form of the interaction possesses an additional conformal symmetry,
+and one can think that its domain of validity in the zindon conguration space is wider than
+the one where it has been actually derived. we shall, thus, use for the mixed instanton
+anti-instanton weight:
+
+wab = exp
+
+
+21
+
+n+
+
+xi=1
+
+n
+
+xj=1
+
+nc
+
+xa,b=1pab lnh(aai  bbj)22i
+
+
+,
+
+1 =
+
+2
+g2nc
+
+.
+
+the full partition function takes the form (for arbitrary instanton angle ):
+
+z = xn+,n
+
+ein+
+
+(n+!)nc
+
+ein
+
+(n!)nc z dadb2nc(n++n)wawbwab
+
+(36)
+
+(37)
+
+with wab given by (36), and wa,wb given either by (29) or (31). if one uses the form (31)
+the interpretation is especially clear: the partition function describes two systems of zindons
+(instanton and anti-instanton ones) experiencing logarithmic coulomb interactions, whose
+strength is nc  1 times stronger for same-color zindons than for dierent-color zindons.
+one has attraction for zindonsanti-zindons of dierent color and repulsion for zindons
+anti-zindons of the same color. at nc = 2 one can think of the ensemble as of that of
+e+, e, +,  particles [15]. the interaction of opposite-kind zindons are suppressed by an
+additional factor 1 = 2/(g2nc). it is actually a running coupling, depending on the scale in
+the problem. since there is only one scale here, the density of zindons at the thermodynamic
+equilibrium, this 1 should be found self-consistently from the arising equilibrium density at
+the end of the calculations.
+
+4 the debye-huckel approximation
+
+to get an insight in the dynamics of the system by simple analytical methods we consider
+here the so-called debye-huckel approximation to the partition function (37). let us consider
+rst a general case of a statistical ensemble of f kinds of particles with two-body interactions
+given by:
+
+uint = xij
+
+uint(xi  xj) .
+
+(38)
+
+the number of particles of kind f is nf , f = 1, . . . , f . one writes the partition function for
+xed numbers of particles as:
+
+z = ef =
+
+1
+
+n1! . . . nf ! z
+
+f
+
+nf
+
+yf =1
+
+yif =1
+
+dxf
+
+if euint ,
+
+(39)
+
+10
+
+where f is the helmholtz free energy and xf are coordinates of particles of kind f . the
+one-particle density of particles of kind f is dened as:
+
+nf (xf
+
+1 ) =
+
+1
+z
+
+z dxf
+
+1 nf (xf
+
+1 ) = 1 ,
+
+1
+
+n1!   nf ! z dxf
+
+2    dxf
+
+nf yg6=f
+
+ng
+
+yig=1
+
+dxg
+
+ig euint ,
+
+(40)
+
+which diers from the full partition function by that one does not integrate over the coor-
+dinates of one particle of kind f . similarly, one can introduce the two-particle density by
+avoiding integrating over coordinates of particle f and of particle g:
+
+nf g(xf
+
+1 , xg
+
+2) =
+
+1
+z
+
+1
+
+n1!   nf ! z dxf
+
+2 . . . dxf
+
+nf dxg
+
+1dxg
+
+3    dxg
+
+ng yh6=f
+
+h6=g
+
+this function can be written as
+
+nf g(xf
+
+1 , xg
+
+2) = nf (xf
+
+1)ng(xg
+
+2)ef g(xf
+
+1 xg
+
+2) ,
+
+nh
+
+yih=1
+
+dxh
+
+iheuint .
+
+(41)
+
+(42)
+
+which serves as a denition of the two-particle correlation function f g(x1, x2). if this func-
+tion is zero the particles are not correlated. introducing, in the similar fashion, higher-order
+densities, one can derive an (innite) chain of equation for those densities. the so-called
+correlation energy is:
+
+ecorr = 
+
+1
+
+2 xf g
+
+nf ng
+
+v 2
+
+z z dx1dx2uf g(x1  x2)ef g(x1x2) .
+
+(43)
+
+knowing the correlation energy as function of temperature one can restore the helmholtz
+free energy from the general relation:
+
+ecorr =
+
+
+
+
+(f ) .
+
+(44)
+
+the debye-huckel approximation consists in assuming that f g is small and linearizing
+the equations [19].
+in the
+debye-huckel approximation it is also convenient to pass to the fourier transforms of the
+pair interaction potential uf g and of the correlation function f g. the basic equations from
+where one nds the correlation functions take the form:
+
+it is usually justied, when the temperature is high,   0.
+
+f g(k) = uf g(k) + xh
+
+nh
+2v
+
+[ugh(k)f h(k) + uf h(k)gh(k)] .
+
+(45)
+
+in our case the particles are zindons belonging either to instantons or to anti-instantons.
+let us denote ua1a2, a1a2 the interaction and the correlation of zindons of color a1, a2
+
+11
+
+belonging to instantons. similarly, u b1 b2,  b1 b2 refer to zindons belonging to anti-instantons.
+and ua b, a b refer to instanton zindons of color a and anti-instanton zindons of color b.
+the approximation is applicable only if all interactions are two-body. for that reason we
+choose to work with the instanton weights given by eqs. (31), (36):
+
+z = xn+, n
+
+ein+
+
+(n+!)nc
+
+ein
+
+(n!)nc z dadb 2nc(n++n) wa wbwab .
+
+(46)
+
+since our interactions are all of the logarithmic type the fourier transforms of uf g can be
+written as:
+
+ua1a2(k) = va1a2
+
+u b1 b2(k) = v b1 b2
+
+va1a1 = 1,
+
+v b1 b1 = 1,
+
+ua b(k) = va b
+
+va a = 21
+
+nc  1
+
+nc
+
+,
+
+4
+k2 ,
+4
+k2 ,
+4
+k2 ,
+
+1
+
+va1a2 = 
+v b1 b2 = 
+
+1
+
+nc  1
+nc  1
+va b = 21
+
+if a1 6= a2,
+if b1 6= b2,
+1
+nc
+
+if a 6= b .
+
+(47)
+
+it is now convenient to change the notation for the  correlation functions to:
+
+aa = 1,  aa
+a6=a
+
+= 2,  b b = 3,  b b
+b6= b
+
+= 4, a b = 5,  a b
+b 6=a
+
+= 6.
+
+(48)
+
+the above relations for the vs induce similar relations for the s:
+
+2 = 
+
+1
+
+nc  1
+
+1, 4 = 
+
+1
+
+nc  1
+
+3, 6 = 
+
+1
+
+nc  1
+
+5 .
+
+(49)
+
+with the new notations we get the following set of linear equations for the three independent
+correlation functions 1,2,3:
+
+1 = [1 + n+1 + n5] ,
+3 = [1 + n3 + n+5] ,
+5 = [ +
+
+(n+1 + n3) +
+
+1
+2
+
+1
+2
+
+5(n+ + n)],
+
+(50)
+
+where
+
+ =
+
+ = 21
+
+nc  1
+nc
+
+=
+
+4(nc  1)
+
+g2n 2
+c
+
+.
+
+4
+k2 ,
+nc
+
+nc
+nc  1
+we get the following solutions for the set of linear equations:
+
+nc
+nc  1
+
+nc  1
+
+n+
+v
+
+n+ =
+
+=
+
+n+ ,
+
+n =
+
+n
+v
+
+=
+
+nc
+nc  1
+
+n .
+
+(51)
+
+1 = 4[k2 + 4n(1  2)]
+
+(k2 + 2
+
+1)(k2 + 2
+2)
+
+,
+
+12
+
+3 = 4[k2 + 4n+(1  2)]
+
+,
+
+1)(k2 + 2
+2)
+
+(k2 + 2
+4k2
+
+5 =
+
+(k2 + 2
+
+1)(k2 + 2
+2)
+
+,
+
+1,2 = 2(cid:20)(n+ + n) q(n+  n)2 + 4n+n2 (cid:21) .
+
+(52)
+
+returning to the x-space we observe that all correlation functions are exponentially de-
+creasing at large separations between zindons, as contrasted to the original logarithmically
+growing interactions. this phenomenon is usually referred to as debye screening; in our
+case it takes the particular form of eq. (52).
+
+using eqs. (43,44) one can reconstruct the partition function for a xed number of instantons
+and anti-instantons:
+
+n 2
+c
+
+z(n+, n) = exp
+
+ln
+4qn+n(1  2)
+
+2(cid:21)(cid:27) (v 2)nc(n++n)
+4q(n+  n)2 + 4n+n2 ln
+
+
+(n+!)nc(n!)nc
+
+4(nc  1)
+
+v 
+
+
+n+ + n
+
+
+
+2
+
+1
+
+2
+
+1
+
+ = 2ee .
+
++ 1
+
+
+,
+
+(53)
+
+at n+=n = n/2 corresponding to the instanton angle  = 0 it simplies to:
+
+z(n) = exp" 
+
+nn 3
+c
+
+8(nc  1)2(1  ln  2ncn
+2(nc  1)v !
+1 + )#(v 2)ncn
+1  
+2 !(cid:17)2nc
+(cid:16) n
+
+ln[(1  )(1 + )] 
+
+ ln
+
+1
+2
+
+1
+2
+
+
+
+.
+
+(54)
+
+finally, one can nd the optimal density of instantons and anti-instantons by maximizing
+the above partition function in n. for a xed  and  we get then the following density of
+instantons plus anti-instantons:
+
+n = (n + n+) =
+
+< n >
+
+v 2 = "(1 + )
+
+1+
+
+2 (1  )
+
+1
+
+2 4
+
+e2e
+8
+
+n2
+c
+
+8(nc1)2n2
+c
+
+.
+
+8(nc1)2
+
+n2
+c
+
+2
+
+#
+
+nc
+nc  1
+
+(55)
+notice that the density is stable in the thermodynamic limit v  . at || = 1 corre-
+sponding to the value of the instantonanti-instanton interaction constant 1 =  nc
+2(nc1) the
+system becomes unstable. this could be anticipated from direct inspection of (37): at that
+value of 1 the attraction between zindons of dierent color belonging to instantons and to
+anti-instantons exceeds the repulsion between same-kind zindons, and the system collapses.
+
+13
+
+it should be stressed that all quantities involved (like the instanton density n, the screening
+masses 1,2 etc.) are stable in the limit nc  . this should be contrasted to the old con-
+jecture by witten [9] that instantons die out in the large nc limit. though this conjecture
+has been criticized later on [20, 21] it remains a widely-believed prejudice.
+
+5 the metropolis algorithm and regularization proce-
+
+dure
+
+the numerical treatment of instantons in the cp nc1 model is problematic for nc = 2, where
+the theory is equal to the two-dimensional o(3) model. the partition function in this case
+
+involves a product of integrals of the type r d2/2 and is therefore ultraviolet divergent.
+there are two ways of imposing a regularization. the rst consists in decreasing the powers
+in the interactions (20). physically, this is equivalent to the introduction of a temperature
+t  1/, see eqs. (29),(31), and (36). we reach the physical limit by taking   1. for
+small values of  we expect the model to be consistent with the predictions of the debye-
+huckel approximation. the second possibility is using an ultraviolet cuto . technically,
+this can be easiest done by changing the logarithmic interaction between zindons:
+
+ln(aai  aai)2  lnh(aai  aai)2 + 2i ,
+
+etc .
+
+(56)
+
+in both cases the physical limit t  1 and   0 does not exist for the free energy, however
+one can get meaningful results for physical quantities that are connected to derivatives of the
+free energy. an unpleasant point is that this  regularization destroys the scaling properties
+of the theory. we can restore the scaling property by using  = /l as a regularization
+parameter. then we restore the original scaling property which we express here in terms of
+the free energy f :
+
+f (, n, l) = ln z(, n, l) = n ln(l2) + ln z(, n) .
+
+(57)
+
+note that the reduced partition function z(, n) does no longer depend on l. it is exactly
+this scaling property which will be important later when we try to reconstruct the average
+density of instantons and anti-instantons in the system. we should emphasize that the price
+we have to pay for the restoration of the scaling behavior is that the two limits   0
+and l   cannot be interchanged, as with growing l the eective cuto  = l becomes
+larger than the average separation between zindons, hri = 1/n. however, when  becomes
+smaller the physical region where  = l < hri covers larger portions of the conguration
+space.
+
+to study the behavior of the system numerically we rst switch o the interaction between
+instantons and anti-instantons i.e. we put 1 = 0. we then have for nc = 2 the case of
+
+14
+
+a simple coulomb gas, where the two dierent colors interact in the same way as the two
+dierent electric charges. in the case of larger nc we have a more complicated multicolor
+interaction which would then require a picture with nc dierent kind of charges.
+
+the variables of integrations for the theory are the zindon coordinates aai and bai. a
+direct numerical calculation of the partition function (37) is technically not possible, be-
+cause the integrand has very sharp maxima: a small variation of the zindon coordinates
+changes its value by orders of magnitude. instead of this one can apply a metropolis algo-
+rithm: starting with a random conguration of zindons, step by step the position of one
+zindon is varied by a small amount.
+if the new conguration has a larger value of the
+weight wawbwab then this conguration is accepted, if not then it is only accepted with the
+probability wawbwab(new)/wawbwab(old). as fig. 2 shows, the plateau of important cong-
+urations is reached only after 250.000 metropolis sweeps for nc = 3, 4. in the case nc = 2
+the number of steps necessary to reach the plateau depends on the regularization parameter
+: it is large when  is small. in fig. 2 we have chosen 2 = 0.001. already after 20.000
+steps one is very close to the plateau here. it is now interesting to make a snapshot of the
+distribution of the zindons at the plateau region. in fig. 3 we show snapshots of the zindon
+ensemble at the plateau region after 500.000 metropolis steps with 1 = 0. each symbol
+represents zindons of one color. one observes clearly, that for nc = 2 zindons of dierent
+colors tend to condense into neutral pairs that can be very densely packed. this is the
+reason for the fact that the partition function is divergent and needs to be regularized in
+the way described above. such a condensation does not take place for higher colors nc = 3, 4.
+
+we can put this in a more quantitative way by plotting the free energy f = ln z as a
+function of the regularization parameter , see fig. 4. as it should be expected by simple
+power counting the free energy for the case nc = 2 diverges proportional to ln(ln(1/)),
+while it is nite in the case of higher nc. in principle such a divergence does not pose a real
+problem since physical quantities are only related to logarithmic derivatives of the partition
+function, but it does aect the eectiveness of the numerical studies considerably. in fact,
+with the computer powers used, it was not possible to go to 2 smaller than 0.001, which
+is not very small. the smaller 2 becomes the larger are the uctuations in the partition
+functions until a point is reached where we do not get any equilibrium within a reasonable
+time at all. we have to conclude from this that the nc = 2 case is not a good system to be
+studied numerically.
+
+6 the stability of the instantonanti-instanton ensem-
+
+ble
+
+15
+
+6.1 the case nc = 2
+
+the rst question is whether this system has a thermodynamic equilibrium, i.e. whether its
+density does not change with the system volume l2, when l is large. we start again with the
+coulomb gas of two noninteracting ensembles of instantons and anti-instantons, i.e. (1 = 0)
+and nc = 2. here it is sucient to consider the instantons alone. in this case we simply
+have n = n+ and we plot the logarithm of the partition function, i.e. the free energy as a
+function of the number of instantons n. the ideal situation would be now that the number
+nmax, where the partition function has a maximum, is proportional to l2. then one could
+continue this situation to an innite instanton ensemble with the same density. in fig. 5 we
+show the partition function for the coulomb gas as a function of the number of instantons
+n for various box lengths l. the simulation is done with the uv cuto 2 = 0.001. one
+sees that the free energy is plagued by large uctuations that correspond to uctuations in
+orders of magnitude in the partition function. a direct determination of the maximum of
+the free energy is not reliable. instead, one can exploit the expected scaling behavior. if the
+system has a stable density then the free energy must be of the form:
+
+f (, n, l) = ln z(, n, l) = n{ln(l2)  [ln(n)  1  ln(n+())]} + a ,
+
+(58)
+
+with the two t constants a and n+(), and  = /l being xed in order to preserve the
+scaling behavior of the initially unregularized theory. eq. (58) is obtained in the following
+way: from the inspection of eq. (37) it is clear that the free energy depends on l via
+n ln(l2). requiring now that the number n at the maximum of the free energy f is
+proportional to l2 leads to a dierential equation with the solution given by eq. (58).
+eq. (58) has the advantage that n+() gives immediately the density of the system. the
+symbol n+ refers to the instanton density. unfortunately, the system does not exhibit a
+stable density. the reason is, again, the tendency of the system to condense into neutral
+pairs corresponding to small-size instantons. when it happens, it is not reasonable anymore
+to write down the particle-identity factor 1/(n!)2 in the partition function:
+it should be
+rather replaced by the rst power of the factorial. therefore, we allow for an additional
+conbinatorical defect term in the t, which reads  ln n!, so that the full t function has
+now the form:
+
+ft(, n, l) = n{ln(l2)  [ln(n)  1  ln(n+())]} +  ln n! + a .
+
+(59)
+
+the smooth solid lines in fig. 5 are the tted curves, which t quite well to the heavily
+uctuating free energy. one should expect that the defect becomes smaller when  becomes
+smaller. as shown in tab. 1, one sees indeed such a behavior.
+
+now arises the question how reliable our simulations are, because so far we did not nd
+strictly speaking a stable system. the situation is also not very comfortable because in the
+limit  = 0, where a stable phase should exist the density n+ is divergent for nc = 2. we
+
+16
+
+therefore study now a dierent regularization method: it consists in introducing a tempera-
+ture t = 1/ in the zindon interactions, with  < 1. we reach the physical limit by taking
+  1. for small values of  we expect behavior of the system to be consistent with the
+predictions of the debye-huckel approximation. in fig. 6 we show the free energy for  = 0.1
+versus the number of instantons n. the solid lines are the ts using the form:
+
+ft, debye(n, l) = n{ln(l2)  [ln(n)  1  ln(n+,debye)]} + a .
+
+(60)
+
+we nd a stable density for various box lengths l. the ve curves yield a value for
+n+ = 1.06787  0.0024, which is in agreement with the prediction of the debye-huckel
+approximation: (55) gives n+,debye = 1.0370.
+
+we now switch on the interaction between instantons and anti-instantons putting 1 > 0.
+again we can only determine a kind of stable density n+(), if we allow for a defect param-
+eter. tab. 2 shows the results for n+() for three dierent values of  as a function of 1.
+in case of 1 = 0 we can compare the density to the one in tab. 1, both are results of inde-
+pendent simulations. a comparison of the upper line in tab. 2 with corresponding entries
+in tab. 1 gives an idea of the statistical error; it is not enormous, but certainly not negligible.
+
+we observe that the density rises only slowly with 1. this is in agreement with the results
+of the debye-huckel approximation, which also predicts a slow rising of the density with 1.
+for nc = 2, the equilibrium density is given by (see eq. (55)):
+
+n+ =
+
+1
+
+2"f (1)e2e 2
+
+2
+
+#
+
+
+
+2
+
+;
+
+f (1) = (1 + 1)
+
+1+1
+
+2 (1  1)
+
+11
+
+2
+
+.
+
+(61)
+
+the function f (1) varies between 1 and 2 for 1 varying between 0 and 1. for the real cp 1
+model, when  = 1, we can expect at least a behavior linear in ln f (1) for the logarithm
+of the density ln n+. fig. 7 shows, indeed, that we can obtain a good linear t, using this
+assumption. the numerical results for the linear t can be read o from tab. 3. the growth
+of the intercept a when 2 goes to zero reects the fact that in this theory the density is
+divergent. the growth of the slope b is also natural, since at   0 we expect b = 1 from
+eq. (61). in general one sees that the eect of the instantonanti-instanton coupling on the
+density is comparatively small as predicted also by the debye-huckel approximation.
+
+finally, let us discuss the running of the instantonanti-instanton coupling 1. from its
+derivation in sec. 3.2 it is seen that 1 = /g2 ( at nc = 2) is related to the bare coupling
+constant of the theory g2. however, physical quantities cannot depend on the bare couplings,
+but only on the renormalized ones. it means that by considering quantum corrections to the
+classical instantonanti-instanton interactions one would be able to observe that the bare
+coupling constant g2 (or 1) is replaced by the running coupling depending on the charac-
+teristic scale in the problem at hand. in our case the only dimensional scale is the average
+
+17
+
+separation between instantons and anti-instantons or, else, the density of zindons, n. from
+renormalization-group arguments one can write the 1-loop formula
+
+1 =
+
+1
+
+2 (cid:18)ln
+
+n
+
+l2 + c(cid:19) ,
+
+(62)
+
+however, the constant c remains unknown. in order to determine c one has to perform the
+renormalization of the instantonanti-instantons interaction with a very high precision; this
+has not been done.
+
+keeping in mind that the dependence of the instanton density on 1 is very mild in the
+whole range 0 < 1 < 1 (see fig. 7 and tab. 2) and that the dependence of 1 on the density
+is also quite weak (see (62)), and given the theoretical uncertainty in the constant c, we
+cannot reliably determine the density self-consistently by taking into account the running
+of 1.
+in the case of nc = 2 by far a more important factor aecting the density is the
+necessary ultraviolet cuto .
+
+6.2 the case nc = 3, 4
+
+in the case nc = 3, 4 we are not plagued with the necessity to introduce a regulator. however,
+we are confronted now with enormous uctuations. in fig. 8 the free energy is plotted for
+several values of 1. already in the free energy the uctuations are of an order of magnitude,
+so that a reasonable determination of the equilibrium density is not possible. however, we
+could at least try to compare the situation to the one in the debye-huckel approximation
+for nc = 3, 4. first of all it is necessary to mention that our partition function (37) is not
+based on two-body interactions only, and is therefore not directly comparable to the one used
+to derive the density (55). but, as we will see now, some of the features are nevertheless
+strikingly in parallel. first of all it turns out that for all values of 1 not too close to the
+critical value, the free energy does not change much (as compared to the extremely large
+uctuations). this is in parallel to the fact that the equilibrium density given by the debye-
+huckel approximation grows only slowly with 1, see fig. 9. another feature of the debye-
+huckel result for the equilibrium density is that it is comparatively large for nc = 2 and then
+falls rapidly to the asymptotic value n+(nc = ,  = 1, 1 = 0) = 1/7 exp(2e/7)  1.3888.
+the second point, where there is something in parallel between the debye-huckel result and
+the simulations, concerns the critical behavior. the debye-huckel formula for the density
+becomes meaningless when 1  nc/2(nc  1). hence for nc = 3 we nd crit = 3/4 and for
+nc = 4 we nd crit = 2/3. in the simulations it is seen (fig. 8) that for values of 1  1
+the system behaves abnormally and shows clear signs of a collapse.
+
+18
+
+7 size distribution
+
+a very important question is what is the size distribution of instantons in the ensemble.
+is the average size hi smaller or larger than the average separation between instantons
+hri = n1/2? in the former case one can say that instantons are dilute while in the latter
+case one says that instantons melt, so that individual instantons have not much sense.
+
+we are now in a position to study this problem quantitatively. the zindon parametriza-
+tion of instantons is an ideal tool for that since it allows for both extreme cases. if zindons
+of dierent color are uniformly distributed in space that would mean the instantons melt.
+if zindons of nc colors tend to form well-isolated color-neutral clusters, it means instantons
+are dilute. the size distribution of instantons has been measured on the lattice for nc = 2
+[14] after a cooling procedure has been applied to remove short-range uctuations. (for a
+recent comparison of dierent cooling techniques on the cp nc1 model see also [22].) a
+very delicate question in connection to this is, how to identify instantons on the lattice.
+several procedures are in use [1]. in this paper we want to compare two ways of extracting
+the instanton content. the rst one, which we call the geometric method, makes use of
+the zindon picture. from the sample of all zindons the color neutral nc-plet which has the
+least dispersion about the common center is chosen to be an instanton. then all zindons
+belonging to this instanton are removed from the sample, and the procedure is iterated to
+nd the next group of zindons that has the smallest dispersion and so on, until the whole
+sample is grouped into instantons. the second procedure, which we call the lattice method
+as it is more close to the ones used in lattice studies, is looking for local maxima of the
+topological charge density q(x) on a ngrid  ngrid lattice. an instanton is assumed if a grid
+point has a larger topological charge than its surrounding 8 nearest neighbors. in order to
+improve the accuracy in nding the center points and the sizes, we construct an interpolating
+polynomial,
+
+q(x, y) = ax2y2 + bx2y + cxy2 + dx2 + ey2 + f xy + gx + hy + j,
+
+(63)
+
+calculated from the 9 grid points consisting of the grid point under consideration and its 8
+neighbors. from this interpolating function we nd coordinates of the local extrema xe. an
+extremum is accepted if it lies inside the 3  3 grid used for the interpolation. in order to
+classify whether we have found a local maximum, minimum or a saddle point we construct
+the matrix of second derivatives at the extremum xe:
+
+if the two eigenvalues 1 and 2 of this matrix have a dierent sign then xe is a saddle
+point and is rejected. for negative 1 and 2 we have a local maximum and respectively a
+local minimum if both 1 and 2 are positive. the two eigenvalues give at the same time a
+
+x(cid:17)2
+(cid:16) 
+
+
+x
+
+
+y
+
+
+
+
+q(xe) .
+
+(64)
+
+
+y
+
+
+x
+
+y(cid:17)2 
+
+(cid:16) 
+
+19
+
+i = q8/|2i|, i = 1, 2 (they should coincide for an ideal spherically-
+measure for the size 2
+symmetric instanton). this size can be compared to the one derived from the value of the
+topological charge at the maximum 2
+3 = 2/|2q(xe)|. only if all three sizes are smaller
+than l/2 is the instantons or anti-instanton accepted and the size is then taken to be the
+geometrical mean of the three denitions,  = (123)1/3. it should be noted that usually
+1,2,3 are not drastically dierent. we should also stress that a reliable identication of all
+local extrema is achieved only with a ne grid. with a 100100 grid we nd almost the
+same number of maxima (instantons) and minima (anti-instantons) as we put in by hands
+by xing the number of zindons and anti-zindons.
+
+we rst test both methods, the geometric and the lattice, in a toy model where the
+positions of zindons and anti-zindons are random: the interactions are switched o com-
+pletely ( = 0 and 1 = 0) so that the distribution of zindons in space is given by a
+
+at measure q d2aaiq d2baj. we generate congurations of zindons with this measure and
+
+compute the topological charge density q(x) of a given conguration from the integrand of
+eq. (14). instantons and anti-instantons are then identied by the two methods described
+above. taking many congurations we compute the distribution of the instanton sizes, see
+fig. 10.
+
+for the at measure the small- side of the distribution can be immediatelly evaluated
+from dimensions to be ()  2nc3. the geometric distribution (shown by histograms)
+follows this prediction whereas the lattice method strongly deviates from it. [one can mimic
+the smooth geometric distribution by the lattice method by taking a crude grid but then
+many instantons are lost as they fall through the grid.] the fact is that the topological
+density computed from randomly distributed zindons shows many sharp and narrow peaks.
+the larger number of instantons we take (at xed density) the more sharp the peaks become:
+it clearly indicates a non-thermodynamic behavior of the system.
+
+this pathological behavior is due to the utmost instability of the product ansatz (13) in the
+case when the interactions are swithched o. indeed, the sizes of instantons are determined
+by eq. (18) where the role of the weights ca is played by long products (19). these products
+are extremely unstable: sucient to change the positions of very distant zindons, and cas
+will change. with zindons distributed according to the at measure cas uctuate by orders
+of magnitude, and the more zindons are taken the stronger they uctuate. it means that
+there will always be a zindon of a certain color whose weight ca is much much larger than
+those of the other zindons forming an instanton. according to eqs.(17, 18) the extremum of
+the topological density will then coincide with the position of the zindon of that particular
+color, and the size of the corresponding instanton will be close to zero. this is why we see
+too many small-size instantons by the lattice method. see also the discussion around fig. 12
+below.
+
+20
+
+when we switch on the interactions zindons get correlated and the product ansatz should
+not be pathological any more. in particular, from the experience of the debyehuckel ap-
+proximation we know that the correlation functions of zindons get exponentially suppressed
+at large separations. therefore, we expect that the topological density will not have un-
+physical sharp peaks at small  as in the case of the at measure, and the two methods of
+instanton identication should come closer. in practice, however, one cannot be sure before-
+hand that the thermodynamic equilibrium is fully reached, given the limited computer time
+for conguration generation.
+
+we switch on the interactions, rst, only of zindons belonging to same-kind instantons
+(1 = 0) and then adding interactions between instantons and anti-instantons (1 = 0.5),
+see fig. 11. we show only the cases nc = 3, 4 as for nc = 2 the size distribution is cuto
+dependent. for the lattice method we use again the 100  100 grid. unfortunately, the
+uctuations of the partition function in the simulations are so large that we have to apply a
+trick in order to get meaningful results. we let the metropolis algorithm work until a plateau
+is reached. then we make many measurements of the size distribution at the plateau, all
+weighted with a weight averaged over the plateau. we repeat this for several starts but we
+essentially see the size distribution for the plateau possessing the largest free energy.
+
+the price we have to pay for this somewhat truncated simulation is that the unphysical
+peaks at small , as determined from the lattice method, are still present though they are
+not so awkward as in the non-interacting case. as nc increases the small- peak shrinks,
+therefore one can speculate that at large nc it is easier to reach the thermodynamic equilib-
+rium. except for very small  the two methods of instanton identication seem to produce
+rather similar distributions.
+
+the geometric size distribution exhibits the expected behavior at all . in particular, at
+small  it behaves as ()  b3 where b = nc is the 1-loop gell-mannlow coecient,
+which is to be expected from dimensional analysis.
+
+we observe that the instantonanti-instanton interaction does not inuence the size dis-
+tributions signicantly. this is seen both from geometric and lattice methods by comparing
+curves in fig. 11 with 1 = 0 and 1 = 0.5. the case 1 = 0.5 has a slightly broader
+distribution. qualitatively, it should be anticipated since the interactions between zindons
+and anti-zindons tend to pull out individual zindons out of their neutral clusters, however,
+the eect is small.
+
+as to the interactions of the same-kind zindons, it clearly leads to smaller instanton sizes; this
+could be also anticipated. indeed, the zindon interactions are such that same-color zindons
+are repulsive while dierent-color zindons are, on the average, attractive. such interactions
+lead to preferred clustering of zindons into color-neutral groups. (this is especially clear
+
+21
+
+for nc = 2 where the coulomb interaction leads, as we have seen, to a collapse of zindons
+into neutral pairs as one removes the ultraviolet cuto,   0).
+in fig. 11 we show by
+arrows at the top of the plots the positions of the geometric distributions maxima in the
+non-interacting case of fig. 10: both for nc = 3 and 4 the maxima are noticeably shifted to
+smaller sizes when one switches on the interactions. the lattice method shows this shift
+only in the case nc = 4 where the unphysical small-size peaks of the topological density are
+suppressed.
+
+in fig. 12 we plot the topological density obtained from a typical conguration of zindons
+at nc = 3 with all interactions taken into account. we see that the peaks of the topological
+density in general correlate with the positions of the centers of instantons found by the ge-
+ometric method (shown by triangles in fig. 12). in some cases, however, the peaks of the
+topological charge density sit not in the centers of the 3-plet of zindons forming an instanton
+but rather near one of the three zindons. this is the consequence of the instability of the
+weight coecients ca, discussed above, and is the actual cause of the small- peaks in the
+lattice size distributions.
+
+finally, we would like to draw attention to the fact that in fig. 11 we have plotted the instan-
+ton sizes in units of the average separation between instantons, dened as hri = (n/v )1/2.
+it is remarkable that both for nc = 3 and 4 and independently of the method used to identify
+instantons, the average instanton size is denitely smaller than the average separation. it
+means that instantons formed of nc-plets of zindons are, on the average, dilute. though one
+can always nd a huge instanton overlapping with many others, the probability of such an
+event is relatively low.
+
+8 conclusions
+
+we have formulated the statistical mechanics of instantons and anti-instantons in the d = 2
+cp nc1 models in terms of their constituents which we call zindons. we have derived the
+interactions of same-kind and opposite-kind zindons for arbitrary nc. at nc = 2 they come
+to logarithmic coulomb interactions known previously. at nc > 2 the interactions are of
+a many-body type though one can reasonably approximate them by two body logarithmic
+interactions with charges depending on the color of zindons.
+
+at high temperatures the system can be studied analytically by ways of the debye-huckel
+approximation, at any nc. the physical case corresponds to the temperature  = 1 and can
+be studied by a metropolis-type simulation. the numerical study shows that the debye-
+huckel approximation is, as expected, accurate at small , but is qualitatively valid even
+at  = 1. both analytical an numerical studies indicate that the eect of instantonanti-
+instanton interactions (in our language the zindonanti-zindon interactions) is not signicant:
+
+22
+
+the interaction of same-kind zindons or, else, the multi-instanton measure, is by far more
+important for the statistical mechanics of the instantonsanti-instanton ensemble.
+
+at nc = 2 the system is, strictly speaking, collapsing into instantons of zero size: to reg-
+ularize its behavior one needs to introduce an ultraviolet cuto. we have studied in detail
+the statistical mechanics with varying cuto parameter: the numerical simulations are fully
+compatible with the expectations.
+
+at nc = 3, 4 the system does thermodynamically exist with no cuto, however, it exhibits
+enormous uctuations which undermine accurate measurements of physical quantities. nev-
+ertheless, we have managed to study the instanton size distribution introducing two methods
+of its determination, geometric and lattice. using the lattice method with a very ne
+grid we observe many unphysical small size instantons for nc = 3, which stem from the
+instability of the product ansatz. though this eect is believed to disappear when the sys-
+tem approaches the true statistical equilibrium it is very dicult to get rid of it in practice
+because of gigantic uctuations in the system. the eect is even more pronounced for the
+at measure but tends to vanish when nc is increased.
+
+though the zindon parametrization of instantons and of their interactions allows for com-
+plete melting of instantons and is quite opposite in spirit to dilute gas ansatze, we observe
+that zindons, nevertheless, tend to form color-neutral clusters which can be identied with
+well-isolated instantons. this eect is due to a combination of two dierent factors both
+supporting clustering. one factor is the interactions: same-color zindons are strongly repul-
+sive while dierent-color zindons are attractive. the second factor is pure geometry: even
+with a at measure the probability to combine nc zindons into a neutral cluster smaller than
+the average separation is quite sizeable. both these factors are expected to be even stronger
+in four dimensions appropriate for the yang-mills instantons.
+
+acknowledgments
+stimulating discussions with dima khveschenko, alan luther and especially with victor
+petrov are gratefully acknowledged.
+
+23
+
+references
+
+[1] j. w. negele, nucl. phys. proc. suppl. 73, 92 (1999).
+
+[2] t. schaefer and e. shuryak, rev. mod. phys. 70, 323 (1998).
+
+[3] d. i. diakonov, v. yu. petrov, nucl. phys. b 272, 457 (1986),
+
+d. diakonov,
+in: selected topics in non-perturbative qcd, proc. enrico fermi
+school, course cxxx, a. di giacomo and d. diakonov, eds., bologna, (1996) p.397,
+hep-ph/9602375.
+
+[4] v. l. golo and a. m. perelomov, phys. lett. b 79, 112 (1978).
+
+[5] a. dadda, m. luescher and p. di vecchia, nucl. phys. b 146, 63 (1978).
+
+[6] v. fateev, i. frolov and a. schwartz, nucl. phys. b 154, 1 (1979).
+
+[7] v. fateev, i. frolov and a. schwartz, sov. j. nucl. phys. 30(4), 590 (1979).
+
+[8] b. berg and m. luscher, comm. math. phys. 69, 57 (1979).
+
+[9] e. witten, nucl. phys. b 149, 285 (1979).
+
+[10] l. d. faddeev, n. yu. reshetikhin, annals phys. 167, 227 (1986).
+
+[11] m. campostrini, a. pelissetto, p. rossi, e. vicari phys. rev. d 54, 1782 (1996).
+
+[12] m. campostrini, p. rossi, e. vicari, phys. rev. d 46, 4643 (1992).
+
+[13] a. di giacomo, f. farchioni, a. papa, e. vicari, phys. rev. d 46, 4630 (1992).
+
+[14] c. michael, p. s. spencer, phys. rev. d 50, 7570 (1994).
+
+[15] a. p. bukhvostov and l. n. lipatov, nucl. phys. b 180, 116 (1981); pisma
+
+zh. eksp. teor. fiz. 31, 138 (1980).
+
+[16] a. a. belavin, a. m. polyakov, jetp lett. 22, 245 (1975); pisma zh. eksp. teor. fiz.
+
+22, 503 (1975).
+
+[17] d. diakonov and v. petrov, towards a new formulation of the yangmills theory,
+
+report pnpi-90-1581 (1990), unpublished.
+
+[18] a. jevicki, nucl. phys. b 127, 125 (1977).
+
+[19] l. d. landau and e. m. lifshitz, statistical physics, chapter vii,p. 74, pergamon press,
+
+london-paris, 1958.
+
+[20] a. jevicki, phys. rev. d 20, 3331 (1979).
+
+24
+
+[21] a. polyakov, gauge fields and strings, harwood academic publishers, 1987.
+
+[22] b. alles, l. cosmai, m. delia, a. papa, topology in the cp n 1 models: a critical
+comparision of dierent cooling techniques, bari-th-355-99, sep 1999. 3pp., e-print
+archive: hep-lat/9909034.
+
+25
+
+2
+
+density n+ average distance 1/n+ lmax nmax defect 
+
+0.1
+0.03
+0.01
+0.003
+0.001
+0.0003
+
+5.095  0.021
+12.707  0.107
+23.501  0.211
+42.723  0.673
+64.117  1.193
+135.207  4.299
+
+0.443
+0.281
+0.206
+0.153
+0.125
+0.086
+
+1.401
+1.620
+2.063
+2.793
+3.949
+4.965
+
+10
+33
+100
+333
+1000
+3333
+
+0.839
+0.777
+0.672
+0.571
+0.481
+0.518
+
+table 1: dependence of the zindon density in the coulomb gas on the cuto parameter.
+the error is given by the standard deviation of the n+s obtained by separate ts to ve
+measured curves. the value of n+ itself is the value one obtains if one performs a combined
+t with one n+ to all the measured curves. the real value of n+, however, is determined by
+the error in the defect , to gain experience of its inuence one may compare to tab. 2.
+
+26
+
+1
+
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0
+
+2 = 0.1
+ = 0.7539
+(a = 0.036)
+
+2 = 0.01
+2 = 0.001
+ = .5785  = 0.45992
+(a = 0.035) a = 0.013
+
+6.946
+7.062
+6.945
+7.060
+7.080
+7.164
+7.006
+7.149
+7.306
+7.395
+7.624
+
+26.314
+27.614
+27.650
+28.229
+27.711
+27.707
+29.171
+28.706
+30.013
+31.705
+34.757
+
+74.948
+75.371
+75.250
+74.075
+81.660
+77.512
+80.946
+82.323
+91.595
+93.606
+119.714
+
+table 2: dependence of the instanton density n+ on the coupling parameter 1. in the table
+the density n+ is given for three dierent values of 2 (l = 1). one should note that the
+defect  has quite a large error, therefore the resulting values for the density at 1 = 0 are
+dierent from the one in tab. 1 due to this statistical error. a is the intercept from the
+combined t of the free energy to a form f = a + n[ln(n/l2)  1] + n ln n +  ln n! and
+it is a small quantity, which can be neglected in the further discussion.
+
+2
+
+a
+
+b
+
+0.1
+0.01
+0.001
+
+1.94273
+3.29677
+4.29687
+
+0.119835
+0.331814
+0.607095
+
+table 3: fit of the equilibrium density to the form given by the debye-huckel approximation.
+the table shows the results for the linear t to the form ln n+ = a + b ln f (1), where
+2 [(1 + 1) ln(1 + 1) + (1  1) ln(1  1)]. the increase of the intercept when 2
+ln f (1) = 1
+becomes smaller is due to the fact the the density for nc = 2 is divergent. all values are for
+ = 1.
+
+27
+
+a
+
+11
+
+a
+
+12
+
+r
+
+12
+
+a
+
+31
+
+x
+
+1
+
+a
+
+21
+
+x
+
+2
+
+a
+
+32
+
+a
+
+22
+
+r
+
+23
+
+a
+
+33
+
+r
+
+13
+
+a
+
+23
+
+x
+
+3
+
+a
+
+13
+
+figure 1: the dilute regime for nc = 3: concentrating around the center-of-mass points x1,
+x2, and x3 zindons of three dierent colors are closely grouped together to form instantons
+with large distances rij between them. the conguration corresponds to a dilute gas of
+non-overlapping instantons.
+
+28
+
+0.0
+
+)
+z
+(
+n
+
+l
+ 
+
+ 
+
+=
+f
+
+100.0
+
+200.0
+
+1000.0
+
+2000.0
+
+3000.0
+
+4000.0
+
+)
+z
+(
+n
+
+l
+ 
+
+ 
+
+=
+f
+
+300.0
+
+0.0
+
+250000.0
+
+number of steps
+
+500000.0
+
+5000.0
+
+0.0
+
+500000.0
+
+number of steps
+
+1000000.0
+
+figure 2: stability of the metropolis algorithm for nc = 2 [2 = 0.001] (on the left) and
+nc = 3 (on the right, bold line) nc = 4 (on the right, thin line). the graphs show the free
+energy improved step by step by the metropolis algorithm until a plateau of important
+congurations is reached. in all three runs we used n+ = 30 and l = 10. in all cases the
+interaction between instantons and anti-instantons is switched o (1 = 0).
+
+29
+
+5.0
+
+3.0
+
+1.0
+
+1.0
+
+3.0
+
+y
+
+5.0
+
+5.0
+
+3.0
+
+1.0
+
+1.0
+
+3.0
+
+5.0
+
+x
+
+y
+
+5.0
+
+3.0
+
+1.0
+
+1.0
+
+3.0
+
+5.0
+
+3.0
+
+1.0
+
+1.0
+
+3.0
+
+y
+
+5.0
+
+5.0
+
+3.0
+
+1.0
+
+1.0
+
+3.0
+
+5.0
+
+5.0
+
+5.0
+
+3.0
+
+1.0
+
+1.0
+
+3.0
+
+5.0
+
+x
+
+x
+
+figure 3: snapshots of zindon congurations at the plateau after 500.000 metropolis steps:
+the gure shows the spatial distribution of zindons for nc = 2 (on the top ), nc = 3
+(bottom left) and nc = 4 (bottom right). the lled and empty circles and squares symbolize
+dierent colors. only for nc = 2 a condensation into neutral pairs is observed; for higher
+nc the free energy is nite though many distinct color-neutral nc-plets are seen. only
+instanton-zindons are shown.
+
+30
+
+figure 4: divergent/convergent behavior of the free energy: the free energy is plotted
+versus ln(ln(100/)) for nc = 2 (top), nc = 3 (bottom left), and nc = 4 (bottom right).
+one observes a divergent behavior for nc = 2, while the free energy is nite for nc = 3 and
+nc = 4. the last point in the plots with nc = 3 and nc = 4 is calculated using  = 0.
+
+31
+
+100.0
+
+50.0
+
+0.0
+
+f
+
+50.0
+
+0.0
+
+20.0
+
+40.0
+
+n
+
+60.0
+
+80.0
+
+figure 5: density of the coulomb gas (nc = 2): the curves in the gure show the free
+energy f versus the number of instantons n using 20.000 metropolis steps until equilibrium
+is reached. from thin to bold we use the lengths l = 0.5, l = 0.6, l = 0.7, l = 0.8,
+and l = 0.9. the smooth solid curves show the combined t with the scaling function
+f (l, n) = n[ln(l2)  (ln(n)  1  ln(n+))] + a, with a single a and n+ given to t all ve
+curves simultaneously. if we t each curve separately we get from thin to bold the following
+values for the density n+ = 62.341, n+ = 64.526, n+ = 66.027, n+ = 63.857, and n+ =
+63.836. in case of the combined t we get for the density the value n+,best = 64.117  1.193,
+where the error is the standard deviation derived from the ve separate measurements of n+
+given above. the cuto parameter in this gure is 2 = 0.001. the defect  is 0.481.
+
+32
+
+200.0
+
+100.0
+
+0.0
+
+100.0
+
+200.0
+
+f
+
+300.0
+
+0.0
+
+20.0
+
+40.0
+
+n
+
+60.0
+
+80.0
+
+figure 6: check of the debye-huckel approximation to the coulomb gas (nc = 2). the
+solid lines from thin to bold give the measured value for a coulomb gas with  = 0.1 and
+lengths l = 2, l = 3, l = 4, l = 5, l = 6. the thin smooth solid lines show the prediction
+of the scaling law, which is f(n,l) = (2  )n[ln(l2)  (ln(n)  1  ln(n+))] + a, where
+n in this case is the number of instantons only, as we do not consider any anti-instantons
+here. the four curves yield the value for n+ = 1.06787 0.0024, which is in agreement with
+the prediction of the debye-huckel approximation, which gives n+,debye = 1.0370.
+
+33
+
+figure 7: fit of the equilibrium density to the form given by the debye-huckel approxi-
+mation. according to the debye-huckel approximation the logarithm of the density ln n+
+is linear in ln f (1), where ln f (1) = 1
+in the
+gure the data for ln n+ are shown versus ln f (1), where the triangles belong to the sample
+with 2 = 0.1, the squares to the sample with 2 = 0.01 and the circles to the sample with
+2 = 0.001. the solid lines are linear ts. the corresponding t constants are given in
+tab. 3.
+
+2 [(1 + 1) ln(1 + 1) + (1  1) ln(1  1)].
+
+34
+
+)
+z
+(
+n
+
+l
+ 
+
+ 
+
+=
+f
+
+180.0
+
+140.0
+
+100.0
+
+60.0
+
+20.0
+
+20.0
+
+0.0
+
+250.0
+
+150.0
+
+50.0
+
+50.0
+
+)
+z
+(
+n
+
+l
+ 
+
+ 
+
+=
+f
+
+150.0
+
+250.0
+
+0.0
+
+10.0
+
+20.0
+
+30.0
+
+n/2
+
+10.0
+
+20.0
+
+30.0
+
+n/2
+
+figure 8: free energy versus the number of instantons (equal to the number of anti-
+instantons), n/2 = n = n+. the gures show the free energy versus n/2 for nc = 3
+(on the left) and nc = 4 (on the right). the solid lines from thin to bold are for 1 = 0.0,
+1 = 0.2, and 1 = 0.4. the dashed line is the free energy for the value 1 = 1, which shows
+all signs of a collapse.
+
+figure 9: prediction of the debye-huckel approximation for the density at  = 1. the solid
+line is the debye-huckel prediction for nc = 2, the dotted line for nc = 3, the dashed-dotted
+line for nc = 4, and the dashed line shows the limit nc  . the lines end at critical
+couplings.
+
+35
+
+figure 10: instanton size distribution following from random (non-interacting) zindons are
+displayed for nc = 2 (on the top), nc = 3 (bottom left), and nc = 4 (bottom right)
+for n+ = n = 8. the histograms show the size distributions geometrically dened by
+grouping zindons according to their dispersion . the stars show the result for the lattice
+method using a 100  100 grid.
+
+36
+
+figure 11: instanton size distributions with zindon interactions switched on are displayed
+for nc = 3 (left), and nc = 4 (right) for n+ = n = 8. the histograms show the geometric
+size distributions, and the solid lines the size distributions seen by the lattice method, again
+using a 100  100 lattice. the instantonanti-instanton coupling constant for the solid lines
+and the histograms is 1 = 0.0. the stars and the dashed lines show the geometric and
+lattice size distributions for the case of 1 = 0.5. instanton sizes are plotted in units of the
+average separation hri. the arrows show the maxima of the corresponding geometric size
+distributions obtained in the non-interacting case of fig. 10.
+
+37
+
+top. charge
+
+300
+
+150
+
+0
+
+-150
+
+-300
+
+0.5
+
+0.25
+
+0
+
+y
+
+-0.25
+
+-0.5
+
+-0.5
+
+0.5
+
+0.25
+
+x
+
+0
+
+-0.25
+
+figure 12: topology of a sample with 3 instantons and 3 anti-instantons (nc = 3) seen by
+the lattice method. the sample has been generated with the full partition function at the
+plateau for 1 = 0.5. on the left we show the the zindon content of the conguration. the
+triangles connect zindons of three dierent colors forming instantons (solid lines) and anti-
+instantons (dashed lines), as found by the geometric method. filled symbols correspond
+to zindons, open symbols to anti-zindons. the diamonds, squares and triangles denote the
+dierent colors. the stars show the centers and the circles show instanton sizes, as found by
+the lattice method using a 100 100 grid. the method has been applied to the topological
+charge density displayed as a 3-dimensional plot on the right.
+
+38
+
+

@@ -1,0 +1,3702 @@
+preprint typeset in jhep style. - hyper version
+
+damtp-1998-169, nikhef 98-034, hep-th/9901016
+
+spinors on manifolds with boundary: aps index
+theorems with torsion
+
+9
+9
+9
+1
+
+ 
+
+y
+a
+m
+7
+1
+
+ 
+
+ 
+ 
+
+2
+v
+6
+1
+0
+1
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+kasper peeters
+
+damtp, cambridge university
+silver street
+cambridge cb3 9ew
+united kingdom
+k.peeters@damtp.cam.ac.uk
+
+andrew waldron
+
+nikhef
+p.o. box 41882
+1009 db amsterdam
+the netherlands
+waldron@nikhef.nl
+
+abstract: index theorems for the dirac operator allow one to study spinors on manifolds with
+boundary and torsion. we analyse the modications of the boundary chernsimons correction
+and aps  invariant in the presence of torsion. the bulk contribution must also be modied and
+is computed using a supersymmetric quantum mechanics representation. here we nd agreement
+with existing results which employed heat kernel and paulivillars techniques. nonetheless, this
+computation also provides a stringent check of the feynman rules of de boer et al. for the
+computation of quantum mechanical path integrals. our results can be veried via a duality
+relation between manifolds admitting a killingyano tensor and manifolds with torsion. as
+an explicit example, we compute the indices of taubnut and its dual constructed using this
+method and nd agreement for any nite radius to the boundary. we also suggest a resolution
+to the problematic appearance of the niehyan invariant multiplied by the regulator (mass)2 in
+computations of the chiral gravitational anomaly coupled to torsion.
+
+keywords: index theorems, supersymmetry, taubnut, killingyano, torsion, path
+integrals.
+
+contents
+
+1.
+
+introduction
+
+2. bulk contribution to the index with torsion
+
+2.1 the dirac index as a quantum mechanical path integral
+2.2 loop expansion of the path integral
+
+3. boundary contributions to the index with torsion
+
+3.1 the aps boundary correction with torsion
+3.2 computation of the  invariant for manifolds with torsion and s3 boundary
+3.3 boundary correction for non-product metrics
+3.4 generalised aps index theorem
+
+1
+
+4
+4
+9
+
+12
+12
+17
+21
+22
+
+4.
+
+index theorems for manifolds with mutually anticommuting dirac operators 22
+22
+4.1 general formulation
+25
+4.2 killingyano dual manifolds
+4.3 example: taubnut geometry and its dual
+27
+30
+4.4 example: index theorems for taubnut and dual taubnut
+
+5. summary and conclusions
+
+a. conventions and general relativity with torsion
+
+34
+
+36
+
+1. introduction
+
+index theorems for manifolds with boundary and torsion involve a detailed understanding of
+spinors on such manifolds. in the torsion free case this problem was understood long ago in the
+mathematics literature and is solved by the atiyahpatodisinger index theorem [1]. essentially,
+they found that the index for manifolds with boundary is the sum of the usual bulk result for
+the index (proportional to the integral over the rst pontrjagin class) plus a correction from
+the so-called  invariant of the boundary dirac operator. upon the addition of torsion, further
+questions arise such as how does torsion aect the computation of the index in the bulk? what
+are the appropriate boundary conditions for spinors on such manifolds and how does one dene
+the adjoint of operators acting on these spinors? how does torsion modify the computation of
+
+1
+
+the  invariant? are there corrections to the index over and above that found by gilkey [2] if
+the metric is not of product form near the boundary? from a physical viewpoint the resolution
+of these questions is of considerable interest, not only because of the relation between the index
+of the dirac operator and anomalies, but also due to the considerable importance attached to
+the physics of supergravity theories (involving, of course, both spinors and torsion) on manifolds
+with boundary, e.g. anti de sitter spaces [3].
+
+manifolds in the einsteincartan theory which include torsion are not nearly as well studied
+as those without, and solutions of the equations of motion tend to be of considerable complexity,
+making explicit checks of the general formalism we are about to present cumbersome. fortu-
+
+nately, we can relate the index of a manifold m with torsion to a torsion free manifold fm when
+their dirac operators, d/ (e, a) and d/ (e,ev ) respectively, satisfy 1
+
+(1.1)
+
+{ d/ (e, a), d/ (e,ev ) } = 0
+
+(note that d/ (e,ev ) denotes the dirac operator with inverse vierbein er
+an abelian vector eld ev , whose necessity will be explained later, and d/ (e, a) refers to inverse
+
+ and coupling to totally antisymmetric torsion which may be re-expressed via hodge
+vierbein er
+duality as minimal coupling to an axial vector eld a). this equation will be made mathemati-
+cally more precise later, it suces to say here that if we are able to nd a pair of manifolds whose
+dirac operators are related in this way, we will be able to test our results for index theorems on
+manifolds with boundary in a concrete example. in what follows we will refer to the manifold
+
+ coupled minimally to
+
+background for classical spinning particle models with extended supersymmetry, one may view
+ +    as a supersymmetry generator and then search for additional super-
+symmetry generators d/ (e, a) = rer
+ is known as a killingyano tensor
+and may be viewed as the inverse vierbein of the dual manifold m. we also stress that in the
+
+with torsion m as the dual of the torsion-less manifold fm.
+in fact, as was pointed out in [5], for the case where one takes the manifold fm as the
+d/ (e,ev ) = reer
+quantum case, when one considers the dirac operators d/ (e, a) and d/ (e,ev ) depending on dirac
+
+matrices satisfying a cliord algebra, equation (1.1) is more subtle than in the classical case
+where one has supersymmetry charges depending on world line majorana spinors obeying canon-
+ical poisson brackets. the quantisation of killingyano symmetries is, in fact, an important
+aspect of our work.
+
+ +   . the tensor er
+
+at the end of this paper we take as an example fm to be taubnut,
+r + 2mhd + cos  di2
+
+hdr2 + r2 d2 + r2 sin2  d2i +
+
+r + 2m
+
+ds2 =
+
+4rm2
+
+r
+
+(1.2)
+
+1the existence of a relation of this type was rst suggested by jan-willem van holten based on the vanishing
+
+classical poisson brackets between the supercharges of manifolds with killingyano supersymmetries [4].
+
+2
+
+a manifold of considerable physical interest and m is then the dual taubnut manifold with
+metric
+
+ds2 =
+
+r + 2m
+
+r
+
+hdr2 +
+
+m2r2
+
+(r + m)2(cid:0)d2 + sin2  d2(cid:1)i +
+
+4rm2
+
+r + 2mhd + cos  di2
+
+,
+
+(1.3)
+
+along with totally antisymmetric torsion (our normalisations can be found in the appendix)
+
+t = 
+
+4r2m2 sin 
+(r + m)2 d  d  d .
+
+(1.4)
+
+we should mention that the dual taubnut manifold possesses neither self-dual riemann curva-
+ture tensors nor satises the einsteincartan equations but this is unimportant for our purposes
+since it does satisfy the central equation (1.1).
+
+our chief line of argument to compute the index of a manifold with torsion and boundary
+follows the atiyahpatodisinger index theorem [1]. we split the computation into a contribution
+from the bulk and a boundary contribution. the bulk contribution is computed by representing
+the index as the regulated trace of 5
+
+index d/ = tr(cid:20)5 exp(cid:16) 
+
+2
+
+d/ 2(cid:17)(cid:21)
+
+(1.5)
+
+which in turn may be represented as a supersymmetric quantum mechanical path integral [6].
+in this approach, however, one essentially inserts innitely many sets of plane wave resolutions
+of unity, for which one may clearly integrate by parts. therefore this calculation is insensitive
+to the precise boundary conditions obeyed by the states appearing in the trace in (1.5) and
+yields only the bulk contribution to the index. in fact, analogous computations have also been
+carried out in a heat kernel [7] as well as paulivillars [8] framework and yield results identical to
+ours. nonetheless, our independent computation is interesting in its own right since it provides
+a stringent test of the rigorous quantum mechanical path integral formalism for sigma models
+in curved space developed by de boer et al. [9, 10] (and in particular of the christ and lee 2
+counter terms [11] that must be added to the action in order that the path integral provides
+a faithful representation of the trace (1.5)). the details of this computation are described in
+section 2.
+
+having calculated the bulk contribution one must compute the boundary contribution which
+has two parts. the rst is the  invariant for the boundary manifold. the  invariant is a
+spectral invariant of the boundary dirac operator and may be computed from the eigenvalues of
+this operator. in the torsion free case this problem was solved for various asymptotic geometries
+by hitchin (and applied to the taubnut manifold in [12, 13, 14]). therefore, we generalise the
+computation of hitchin to include the dual taubnut example. to this end we construct and
+solve the boundary dirac operator in the presence of torsion which allows us to compute the 
+invariant for this manifold.
+
+3
+
+the second boundary contribution, due to gilkey [2], is necessary in the case where the
+manifold is not of product form at the boundary. the main idea is that the aps analysis is valid
+for manifolds which approach a cylinder whose cross section is the boundary manifold. if this is
+not the case, one must make an extra boundary correction proportional to the integral over the
+boundary of the dierence between the chernsimons form computed using the product metric
+and that computed using the metric itself. this computation can be easily generalised to the
+torsion-full case where we nd a boundary correction proportional to a generalised chernsimons
+term. note, in particular, that all our results hold for manifolds with boundaries at any nite
+radius, rather than just in some non-compact limit. the derivations of the boundary corrections
+are to be found in section 3.
+
+section 4 analyses in detail the precise relation between index theorems of manifolds pos-
+sessing mutually anticommuting dirac operators. this relation requires a careful understanding
+of boundary conditions for spinors and therefore the space of states in the trace (1.5). sub-
+section 4.2 outlines the main ingredients of the killingyano technique to generate manifolds
+with mutually anticommuting dirac operators and the explicit geometric data for our example
+manifolds, taubnut and dual taubnut may be found in 4.3. also included in subsection 4.2
+is the generalisation of the killingyano construction to the quantum case.
+
+urgent readers not wishing to wade through all the details may nd the nal expression for
+the index with torsion on manifolds with boundary in equation (3.32). a summary of the results
+we obtained for the example manifolds is presented in subsection 4.4. finally, more speculative
+remarks along with possible applications of our results are reserved for the conclusion where,
+in particular, we discuss the controversial 1/ regulator (mass)2 niehyan contribution to the
+index in light of our work. in passing, we note that many of the issues we encounter have been
+dealt with in some depth in the mathematics and physics literature so that we have attempted
+to present these more formal aspects in an accessible format.
+
+2. bulk contribution to the index with torsion
+
+2.1 the dirac index as a quantum mechanical path integral
+
+this section is devoted to the computation of the bulk computation to the index employing the
+supersymmetric path integral approach of alvarez-gaume and witten [6]. the bulk contribution
+to the index of the dirac operator with torsion has already been computed in [7] via a heat
+kernel expansion and in [8] using paulivillars regularisation, needless to say, our results exactly
+reproduce those of these authors. besides the high degree of certainty one now has in the result
+(see equation (2.19)), our motivations for performing this calculation were fourfold:
+
+1. our computation is carried out in the framework of rigorously dened quantum mechanical
+curved space path integrals introduced by de boer et al. [9, 10] and therefore provides a
+stringent check of their work. in particular, we note that the result depends crucially on
+
+4
+
+the christ and lee terms [11] (see the second line of (2.13)) that one must add to the action
+appearing in the path integral at order 2 = 2 in order to employ propagators derived via
+a midpoint rule.
+
+2. there has been some controversy in the literature over the appearance of a term in the
+(bulk) index with torsion that diverges as one takes the limit in which the regulator is
+removed [15, 16, 17, 18, 19, 20]. this term is proportional to the niehyan tensor (see
+the rst term on the right hand side of (2.19)) and arises at tree level in our path integral
+expansion. in the path integral approach, one clearly sees the importance of including this
+term in order to obtain the correct results for the bulk index (i.e. the regulator independent
+contribution) since it appears as a vertex as well as in disconnected graphs.
+
+3. the path integral derivation is based on inserting innitely many plane wave resolutions
+of unity. therefore one clearly sees that it is only sensitive to the bulk contribution, since
+dierentiations by parts then ignore any boundary terms.
+
+4. the quantum mechanical model itself is of intrinsic interest since it describes a spinning
+particle moving through a background with torsion. obviously, the construction of the
+precise path integral quantisation of this model is an important step in understanding its
+quantum dynamics.
+
+the index of the dirac operator d/ is given by the trace over the spectrum
+
+index d/ = tr(cid:20)5 exp(cid:16)
+
+2
+
+d/ 2(cid:17)(cid:21) .
+
+(2.1)
+
+when there is a gap between the zero-modes and the remainder of the spectrum [21] this result
+should, of course, be -independent. however, for manifolds with boundary, one must carefully
+take into account the states traced over. if one is interested in the bulk contribution only, the
+trace can be evaluated by inserting n sets of plane waves (where dt  1/n  0) and the result
+may then be represented as a path integral. the expression one then nds is an expansion in
+powers of 
+
+11(d/ ) + 0(d/ ) + o()  (d/ ) .
+
+(2.2)
+
+the one-loop beta independent contribution 0(d/ ) yields the bulk result for the index and as
+will be explained in section 3, the complete result for the index is obtained by including the aps
+and chernsimons boundary correction terms. here we will compute the terms 1(d/ ) and
+0(d/ ). we comment on the interpretation of the 1/ contribution 1(d/ ) in the conclusion.
+before introducing the details of our path integral computation, let us briey summarise the
+main ingredients of the approach. to begin with, one treats the exponential in the trace (2.1)
+as the imaginary time evolution operator of a quantum mechanical system. the operator in
+
+5
+
+the exponent corresponds to the hamiltonian. importantly, its operator ordering is now xed
+so that the usual step where one begins with some classical hamiltonian generating dynamics
+via poisson brackets and then elevates this expression to an operator, xing the ordering by
+symmetry principles (or ultimately experiment!) is not needed. the operator h = 2d/ 2/2 is
+the quantum hamiltonian.
+
+the next step is to derive the path integral by inserting n complete sets of states. the
+achievement of de boer et al. was to derive a path integral which faithfully represents the operator
+expression (2.1). the point being that once one takes the continuum limit n  , the discretised
+expressions derived at nite n become distributions whose products (which appear in feynman
+diagrams) are ambiguous. however, given the rigorous discretised expression for the path integral
+it is always possible to resolve these ambiguities in a unique and nite fashion. their derivation
+was performed by rewriting the quantum hamiltonian in a weyl ordered form which allows
+innitesimal transition elements at intermediate steps in the path to be evaluated by a midpoint
+rule which leads to a certain set of vertices, propagators and rules for products of distributions.
+of course another ordering principle would have yielded dierent propagators and vertices, the
+key point is to derive a path integral which precisely represents2 (2.1).
+
+we now turn to the details our calculation and begin by thinking of the exponential in (2.1)
+
+exp[i( 2d/ 2/2)(i)/]
+
+(2.3)
+
+as a quantum mechanical evolution operator exp[iht/] with hamiltonian  2d/ 2/2, unit
+euclidean time interval and plancks constant  = . the dirac matrices are then identied
+with fermionic coordinates and the derivative operator  with the canonical momentum of the
+bosonic coordinate x,
+
+r = 2 1/2 r ,
+{r, s} =  rs ,
+
+ = 1g
+
+1
+
+4 ip g 1
+4 ,
+
+[x, p] = i 
+
+ .
+
+(2.4)
+
+2it is interesting to compare this situation to what one nds in quantum eld theory.
+
+in quantum eld
+theory, one must regulate and renormalise to obtain a path integral yielding nite, well dened results for the
+products of distributions appearing at loop level in feynman diagrams. furthermore, one makes some choice of
+renormalisation point in order to make contact with physical quantities. of course, in quantum mechanics, there
+is no anomaly in scale invariance and the path integral z[y, r] (see (2.6)) should provide an unambiguous and
+nite representation of the transition amplitude hy, |  5 exp 
+2 d/ 2 |y, i. although, the quantum mechanical
+hamiltonian h = 2d/ 2/2 has a denite operator ordering, in passing to a path integral representation, the
+vertices of the path integral are ambiguous up to reorderings of the hamiltonian. however, once a particular
+ordering (there is nothing sacrosanct about weyl ordering, it is merely convenient) is xed one must decide
+(derive) which rule is used to dene products of distributions. in analogy with quantum eld theory theory, the
+discretisation procedure and rule for the products of delta and heaviside functions above may be thought of as
+regulating and renormalising the theory with renormalisation point judiciously chosen to reproduce the required
+transition amplitude with the given hamiltonian.
+
+6
+
+the similarity transformation for the canonical momentum p (with g = det g) implies the
+inner product hx|yi = g1/24(x  y). observe also that the rescalings by appropriate factors of
+ in (2.4) ensure that  plays the role of plancks constant in the canonical commutation relations
+and that the hamiltonian  2d/ 2/2 begins with a classical  independent contribution, plus
+possibly terms linear and quadratic in  (depending on the precise ordering in which one writes
+the operators x, p and r).
+
+we may now represent the index (2.1) by a path integral with periodic boundary conditions,
+
+the presence of 5 in the trace yields periodic boundary conditions for the fermions also.
+
+(d/ ) =zm
+
+d4ypg(y)
+(2i)2 d4 z[y, r]
+
+(2.5)
+
+where the path integral z is a function of constant real background elds y and r. schemati-
+cally
+
+z[y, r] =z [dq dr da db dc]
+
+expn 
+
+1
+
+z 1
+
+0
+
+dtl(x(t) = y + q(t), r(t) = r + r(t))o .
+
+(2.6)
+
+as discussed above, one usually expects path integrals to be plagued with ambiguities associated
+with the normalisation and precise denition of the measure along with products of distributions
+in loops. fortunately however, nite interval path integrals in curved space have been studied in
+detail by de boer et al. [9, 10]. in particular they have found the precise denition of z above,
+i.e. the exact vertices and feynman rules, such that the path integral representation (2.5) is
+identically equal to the index (d/ ). a two loop verication of their work in the torsion-less case
+may be found in [22] along with the conventions employed in this paper. we now spell out the
+key details of this approach.
+
+firstly, although manifestly the quantum mechanical trace (2.1) is nite, in the path integral,
+closed bose loops h q(t) q(t)i yield delta function divergences (0) (rst observed by lee and
+g1/2 at each point of the path which one may exponentiate via bosonic and fermionic ghosts a(t)
+and {b(t), c(t)}, respectively [24, 25] yielding the ghost action
+
+yang [23]). however, the decomposition of unity 1 = r d4x g1/2|xi hx| yields a measure factor
+
+(2.7)
+
+z 1
+
+0
+
+dtlghost =z 1
+
+0
+
+dt
+
+1
+2
+
+g(x(t))(cid:0)a(t)a(t) + 2 b(t)c(t)(cid:1) ,
+
+whose net eect is to precisely cancel the divergence (0) whenever it appears (for example graphs
+including a ghost loop are needed to cancel the divergence in the third graph of table 4).
+
+secondly, ambiguous products of distributions involving heaviside and delta functions (t 
+s)(t  s) also appear. the result of [9, 10] is that adopting vertices corresponding to a weyl
+ordered hamiltonian, one nds propagators such that (0) = 1/2 (strictly speaking, one returns
+
+7
+
+to the discretised derivation of the path integral where the delta function is a kronecker delta
+ij and the propagators depend on the discrete heaviside function with ii = 1/2). more pre-
+cisely, one must rewrite the operator valued hamiltonian h = 2d/ 2/2 in weyl ordered form.
+thereafter one obtains the lagrangian3
+
+l = ip x +
+
+1
+2
+
+r r + h .
+
+(2.8)
+
+by replacing operators by c-numbers in the weyl ordered hamiltonian. in general one then nds
+additional vertices, over and above the classical result, of order  and 2. the exact propagators
+are then those given in [9, 10] and in our conventions in [22]. note that employing the vertices
+of (2.13) and propagators of table 1 along with the above rule for products of distributions even
+the overall normalisation of the path integral as given in (2.5) is exactly correct.
+
+our task then is to rewrite the operator h = 2d/ 2/2 in weyl ordered form, i.e. in terms
+of symmetrised products of the bose operators x and p and antisymmetrised products for the
+fermions r. in particular, for the fermions, this just means that all products of dirac matrices
+should be written in the basis r, rs, rst and rstu. this computation will involve three dierent
+spin connections so to avoid confusion let us spell out our notations. the dirac operator is
+
+d/ = d/ (e, a) = d() ,
+
+ = er
+
+r , d() =  + 1
+
+4rsrs .
+
+(2.9)
+
+here d() denotes an operator depending on the spin connection rs = (e)rs + ars where
+(e)rs is the torsion free connection and ars is a completely antisymmetric contortion ten-
+sor. the classical ( independent) contribution to h has been computed in [26] and yields the
+
+(e)rs + 3ars with contortion three times the usual one. hence we introduce the operator
+
+hamiltonian for a spinning particle depending on a third connection brs = rs + 2ars =
+d(b) identical to the previous denition except depending on the new connection brs. we
+
+rdr) for the torsion free covariant derivative.
+
+we now make some simple algebraic manipulations
+
+reserve the symbol d( e
+
+d/ 2/2 =
+
+=
+
+1
+2
+1
+2
+
++
+
+(gd()  
+
+ + d() + ars
+
+rs)d()
+
+
+
+(2.10)
+
+g(d(b)d(b)  
+
+(r()rs  2a
+
+1
+16
+
+d(b))
+
+ars)rs +
+
+1
+4
+
+(da
+
+rs)rs
+
+(2.11)
+
+with rrs the curvature built from the spin connection rs (our conventions for the riemann
+tensor in the presence of torsion are spelled out in the appendix). the remainder of the weyl
+ordering computation for the rst term in (2.11) follows the computation in [10] and the remaining
+
+3note that the exponent of the path integral is then (1/)r l so that if one continues the euclidean time
+t  it back to real time the exponent becomes i(1/)r (p x + (i/2)r r  h), i.e. none other than the usual
+
+legendre transformation relating lagrangian and hamiltonian.
+
+8
+
+terms require only the identity rs = 
+the identications in (2.4)
+
+rs + 4 [
+
+[se]
+
+r] + 2 e[
+
+se]
+
+r. hence we nd, making
+
+h =
+
+1
+
+2hg(p 
+
+2
+8
+
+
+
+(
+
+
+
+i
+
+i
+
+2brsrs) (p 
+
+2btutu)iw 
+2brsbrs + 3 arstarst)
+
+ +
+
+1
+
+1
+2
+
+e
+
+r(dastu)hrstuiw
+
+(2.12)
+
+where [. . . ]w denotes weyl ordering. we may now take the weyl ordered expression for h and
+replace operators by c-numbers. integrating out the momenta p one nds the lagrangian
+
+l =
+
+1
+2
+
+
+
+g x x +
+
+1
+2
+
+2
+
+8(cid:16)
+
+
+
+1
+2
+
+d
+dt
+
+r(cid:16)rs
++ xbrs(cid:17)s 
+2brsbrs + 3 arstarst(cid:17) .
+
+1
+
+ +
+
+drastu rstu
+
+(2.13)
+
+at this point the vertices of the theory are those dened by (2.13) and propagators along with
+products of distributions are those found according to the midpoint rule. observe that the term
+at order  vanishes identically. for zero torsion, the above result has appeared in [27]. note
+also that the rst two o(2) terms in the second line of (2.13) are neither general coordinate
+(gc) nor local lorentz (ll) invariant. from rst principles however, we know that the result
+r and rs with
+for the index must enjoy these invariances, since varying the background elds e
+respect to gc and ll transformations, the operator d/ 2 varies into a commutator [d/ 2, g + l],
+(g and l are the generators of gc and ll transformations) which vanishes under the trace
+as [5, g + l] = 0 = [5, d/ 2]. the resolution of this apparent dichotomy is simply that the
+propagators, based on the midpoint rule obtained by weyl ordering, are also not gc or ll
+covariant. nonetheless, as we shall see, the combination of these two evils will yield a gc and
+ll invariant result.
+
+2.2 loop expansion of the path integral
+
+we are now ready to compute the path integral via a loopwise expansion in the planck constant 
+to orders 1 and 0 employing the feynman rules for the nite-time path integral of [9, 10]. the
+split into free and interacting parts is made via the expansion around backgrounds y and  so
+
+that x  y + q and r  r + r. the spin connectionb is now an independent background
+
+eld hence in our diagrammatic computation we make a riemann normal coordinate expansion
+for the metric only (details can be found in the references just mentioned as well as in [22]). we
+have listed the propagators in table 1 and some of the required integrals in table 2. other useful
+diagrammatic tricks and identities for this type of computation have been developed in [22].
+
+we only need compute graphs quartic in background fermions r (in the diagrams they
+are denoted by a dash on the external line) in order to saturate the grassmann integration d4
+in (2.5) which in turn yields a four-dimensional levi-civita symbol. there are several tree level
+
+9
+
+contributions4 (those contributions arising from the terms in the action that are independent of
+quantum elds). to order 0,
+
+tree(d/ ) =
+
+zm
+
+d4y
+
+g
+
+(2i)2 rstu(cid:20) 1
+
+2
+
+drastu +
+
+1
+32
+
+drastubmnbmn +
+
+3
+16
+
+amnpamnp drastu(cid:21) ,
+
+(2.14)
+
+beginning with the leading 1/ contribution to which we draw the readers attention. this
+contribution is proportional to the so-called niehyan tensor [28, 29]. as expressed above it is
+clear that this tensor vanishes for exact torsion; alternatively one can re-express the nieh-yan
+contribution into a perhaps more familiar form by writing
+
+2 [a] = r()[]  2 a[a
+
+] .
+
+(2.15)
+
+where r() is the riemann curvature of the torsion-full connection rs = (e)rs + ars.
+we will discuss this contribution, which has led to some confusion in the literature, in more
+detail in the conclusion. observe that the order 0 terms are also proportional to the curl of
+the torsion, though not immediately recognisable as a topological invariant as they are only a
+part of the result at this order in the planck constant. furthermore, observe that the product
+of the niehyan tree level tree level 1 contribution and the christ and lee weyl ordering
+counter terms yield the second and third o(0) terms in (2.14). this provides the long sought
+after explicit conrmation that these two loop counter terms (they appear with a factor 2 in
+the action (2.13)) are actually necessary in a rigorous denition of the path integral.
+
+the remaining graphs involve one- and two-loop integrals and are given in tables 3 and 4.
+note that we have not drawn graphs obtained by dierent locations of the dots, which denote
+time derivatives on propagators, although these contributions are, of course, included in the
+quoted results. adding all these contributions together our result for the regulated trace of 5 is
+
+(d/ ) =zm
+
+d4y
+
+1
+
+tu
+
+2
+
+g
+
+drastu +
+
+(2i)2 rstu(cid:26) 1
++ 8 dddrastu + 36 amnpamnp drastu + 4 r drastui(cid:27) + o() .
+
+192hr(b)rsr(b)
+
+(2.16)
+
+note that the contracted indices in the term quadratic in the riemann tensors are curved ones
+
+term are not displayed in the table but can be easily computed along the lines of [22]. also,
+
+since in the presence of torsion the r(b)rs 6= r(b)rs (see (a.15)). the graphs for this
+
+4to avoid confusion, note that we only compute contributions of order 1 and 0, however, since we must
+compute the partition function z[y, r], the generating function of all diagrams, disconnected products of two
+loop and tree graphs will produce  independent results which must not be neglected.
+
+10
+
+observe that the scalar curvature on the second line of (2.16) is that of the torsion-free riemann
+curvature since it comes from the gure eight graph on the last line of table 4 in which one
+expands the metric g(y + q) to second order in quantum uctuations q(t) which in riemann
+normal coordinates yields the torsion free riemann curvature.
+
+a useful test of the result (2.16) is independence of the choice of complexication of the
+original majorana spinors required to employ a coherent state formalism for the fermions. the
+three terms from the one-loop diagrams and the single term from the two-loop diagram do indeed
+vanish upon using the schouten identity, by virtue of the fact that k mn is anti-symmetric.
+
+to facilitate comparison with existing results and see that the result is a total derivative it is
+ where
+v = [d, d]v. furthermore, we rewrite the result in terms of the axial contortion vector
+
+useful to extract the dependence on the torsion free curvature which we denote by r
+r
+ar = rstuastu. using (a.15) one derives that
+
+r(b)rsr(b)
+
+tu rstu =hrr
+
+ + 2 dadai 1
+
+g
+
+
+
+ 4hdaaa  daaai  8 dar .
+
+(2.17)
+
+the cross terms between r and the torsion vanish identically by virtue of the ricci symmetry
+r[] = 0 and so do the terms quartic in the torsion. the second line of (2.16) is easily written
+as a covariant derivative by commuting the triple derivatives using
+
+ddda = ddda + dar + 1
+
+2adr .
+
+(2.18)
+
+this brings (2.16) into a form derived previously by obukhov [7] using heat kernel methods5,
+
+(d/ ) =zm
+
+d4y
+
+with
+
+g
+
+(2i)2(cid:26) 1
+
+2
+
+da +
+
+1
+192
+
+1
+g
+
+hrr
+
+ +
+
+1
+2
+
+ffi +
+
+1
+24
+
+dk(cid:27)
+
++ o() .
+
+(2.19)
+
+k =(cid:16)dd + 1
+
+4aa + 1
+
+2r(cid:17) a
+
+, f = 2d[a] .
+
+(2.20)
+
+in the case that the nieh-yan tensor vanishes, which is manifestly so when the torsion is
+
+the result derived by mavromatos some time ago [26].
+
+exact, the above expression (2.16) reduces to the term quadratic in r(b) which coincides with
+
+5obukhovs work has been re-examined by yajima and kimura [30, 31] who found, again in a heat kernel
+approach, the same result for the bulk index with torsion but disagree upon the precise details of his derivation of
+the heat kernel coecients and claim that it leads to incorrect results for the lorentz anomaly in the presence of
+torsion. we do not wish to enter this debate here and it suces to say that the path integral techniques presented
+in this paper can equally well be employed for other anomalies and could, therefore, provide an independent
+resolution of this issue.
+
+11
+
+
+
+m
+
+
+
+n
+
+= h q(s)q(t) i = ght(1  s)(s  t) + s(1  t)(t  s)i ,
+= h (s)m(t)n i = 1
+
+2mnh(s  t)  (t  s)i + k mn .
+
+table 1: propagators for the action (2.13). the symbol k mn parametrises the choice of
+complexication of the majorana spinors, as explained in [10].
+
+as long as the k vector is smooth (as it is for smooth metric and torsion), the additional
+contribution dk to the bulk index in the presence of torsion will only receive contributions
+from the boundary. the subtle interplay between the three order 0 terms in (2.19) can be
+clearly seen in the explicit example given in subsection 4.4.1 below.
+
+we stress that the nieh-yan term in the action (2.13) along with the christ and lee two-
+loop weyl ordering counter terms have been crucial in obtaining this result (see the two-loop
+diagrams in table 4 as well as (2.14)). although the 1/ niehyan bulk contribution to index
+has appeared in the literature before [15, 16, 17, 18, 19, 20], in our path integral approach one
+sees clearly its importance for the order 0 terms and hence the necessity to include it when
+computing the bulk index in the presence of torsion. we will comment further on this term in
+the conclusion.
+
+finally, we observe that the folkloric statement; the chiral anomaly is topological and
+therefore insensitive to the subtleties of the precise denition of the path integral can be made
+very denitive in the approach employed above. the reason being that in the absence of torsion
+the dierent counter terms corresponding to varying ordering schemes have no aect on the
+0 result since they are all higher loop eects. only once the torsion is turned on, so that
+the lagrangian includes the 1/ niehyan contribution must one worry about the subtleties of
+ordering schemes etc. when computing the  independent anomaly.
+
+3. boundary contributions to the index with torsion
+
+3.1 the aps boundary correction with torsion
+
+on manifolds with boundary, the central question is which boundary conditions one must impose
+for spinors in order that the index problem is well posed. exactly this problem was solved by
+atiyah, patodi and singer in the mid-seventies [1] for manifolds which have a product form
+near the boundary (i.e. when the manifold is a cylinder with the boundary manifold as cross
+section).
+in this case the hilbert space is suciently under control and consistent boundary
+conditions can be imposed on spinors. moreover, due to the fact that the radial factor can
+be written down explicitly, the index computation can be reduced to the problem of suitably
+
+12
+
+n p
+
+n p
+
+m
+
+m
+
+s
+
+m
+
+s
+
+q
+
+t
+
+q
+
+t
+
+n
+
+t
+
+4(cid:3)
+2(s  t) (s  t)  1
+2) mnk qp + (t  1
+
+= mnpq(cid:2) 1
++ (s  1
+2 (t2  t)mnpq  (t  1
+
+= 1
+
+= 
+
+m
+
+s
+
+2) qpk mn + k mnk qp ,
+
+2)pqk mn + k mnk qp ,
+
+n
+
+t
+
+.
+
+n
+
+m
+
+= 0 ,
+
+= 1
+
+4mnpq + k mnk pq ,
+
+n
+
+q
+
+m
+
+=  1
+
+6 nm ,
+
+m
+
+n p
+
+q
+
+n
+
+m
+
+=  1
+
+12 mnpq + k mnk qp ,
+
+m
+
+= nm 1
+
+12 ,
+
+m n
+
+p
+
+q
+
+= k mpk qn ,
+
+m
+
+p
+
+q
+
+= k nmk pq .
+
+p
+
+q
+
+n
+
+m
+
+=  1
+
+6nmpq ,
+
+=  1
+
+4mpnq ,
+
+p
+
+q
+
+r
+
+s
+
+= 0 ,
+
+m
+
+p
+
+n
+
+n
+
+n
+
+table 2: a number of useful integrals obtained by straightforward application of the prop-
+agators in table 1 where the denition of k mn may also be found. the remaining integrals
+required for our computation as well as a detailed explanation of the diagrammatic notation
+above can be found in [22].
+
+counting the dierence between the number of positive and negative eigenvalues of the boundary
+dirac operator.
+
+for manifolds that are not of a product form, a split of the hilbert space is not as obvious.
+nevertheless, due to the topological nature of the index, it is possible to deform these manifolds
+until their boundary takes a product form. the index then splits into a bulk part plus the
+
+13
+
+= 
+
+1
+64
+
+mn +
+
+1
+16
+
+rstu bfrsnmbftu
+
+rstubfrsnmbftupqk mpk nq ,
+
+= 
+
+1
+288
+
+rstu bfrstu ,
+
+=
+
+2
+288
+
+rstubfrstnbnmbum ,
+
+= 
+
+24
+288
+
+rstubfrstnbfupqmk npk qm ,
+
+= 
+
+12
+288
+
+rstubfrs
+
++
+
++
+
+
+
+nmbtmb
+
+
+2
+
+un ,
+
+=
+
+1
+32
+
+rstubfrsmnk mnbftupqk pq ,
+
+table 3: one-loop diagrams contributing to the path integral at order 0. only those graphs
+that are not already zero because of symmetry properties of the background elds are displayed.
+note that we denote rstu  rstu.
+
+aps boundary term, amended by a modication due to the deformation. this modication was
+pointed out by gilkey [2] and we will generalise it here to also include torsion.
+
+let us now explain these matters in more detail. suppose  = /r is a vector normal to
+the boundary m of the manifold in question. then the dirac operator (possibly including a
+
+14
+
+= 
+
+(3/4)
+
+288 bmnbmnrstubfrstu ,
+
+=
+
+1
+
+192bfmnpqk mnk pqrstubfrstu ,
+
+= 4 rbfrsturstu .
+
+table 4: disconnected two-loop diagrams contributing to the path integral at order 0. note
+that the result for the diagram on the third line includes graphs obtained by permutation of the
+time derivatives. one must also add to this diagram the corresponding ghost diagrams which
+
+d2
+dsdt
+
+(s, t)(cid:12)(cid:12)(cid:12)s=t
+
+cancel the divergence (s, s) =
+
+= (0)  1.
+
+coupling to the antisymmetric part of the contortion, assumed to have only components parallel
+to the boundary) takes the form
+
+d/ (e, a) = [r]h(cid:0) + 1
+
+2 (e)
+
+[r](cid:1) + bi
+
+(3.1)
+
+matrix [r] = rer
+
+[r] is xed to be that appearing in (3.1). however, to verify that the dirac
+
+where b evaluated at the boundary r = rb is the boundary dirac operator. we denote the curved
+index in the normal direction spanned by the coordinate r as [r] and (e)
+[r] is the trace of the
+r (no confusion should arise
+torsion-free part of the spin connection computed from the vierbein e
+between the at index r and the radial coordinate r). observe that since d/ (e, a) is antihermitean
+
+with respect to the volume element pg(e) the coecient of the single outward pointing dirac
+d4xpg(e)  , along
+operator is antihermitean with respect to the inner product (, ) =rm
+with taking into account dierentiations by parts that hit the measure factor pg(e) one must
+
+also ensure that any surface terms also vanish by imposing appropriate boundary conditions on
+spinors. however, local neumann or dirichlet boundary conditions do not lead to solutions of
+the rst order homogeneous zero-mode dirac equation. instead non-local boundary conditions
+are required.
+
+15
+
+let us write the dirac operator (3.1) in a chiral basis for the dirac matrices
+
+d/ =
+
+1
+
+v (cid:18)
+(cid:0) + 1
+
+0
+2(e)
+
+[r](cid:1)  b
+
+(cid:0) + 1
+
+2(e)
+0
+
+[r](cid:1) + b
+
+(cid:19)
+
+(3.2)
+
+where v is some function of the normal variable r. the 2  2 matrix b is hermitean acting on
+spinors on the compact boundary manifold m. the aps split of the index computation into
+a bulk piece and a boundary piece can only be achieved if (3.2) takes a simpler form near the
+boundary. first of all, b has to be independent of r and the connection trace (e)
+[r] should
+vanish. this holds when the manifold is a product metric near the boundary. in addition we will
+require that there is no radial component of the torsion (i.e. a[r] = 0) as this would enter
+the dirac operator in a way similar to the connection trace and prohibit an explicit solution of
+the radial part of the eigenfunction. although the aps condition can be imposed by smoothly
+deforming the manifold near the boundary, it is not obvious that such a deformation argument
+can be used to set a radial torsion component to zero.
+
+when these conditions are satised, atiyah et al. found that one can consistently impose the
+
+following non-local boundary conditions on spinors ,
+
+! ,
+ =  
+
+xl0
+xl<0
+
+|l ih l| (rb) = 0
+
+|l ih l| (rb) = 0
+
+
+
+b |l i = l |l i .
+
+where the boundary is at r = rb and the two component spinors |l i are eigenspinors of b,
+
+(3.3)
+
+(3.4)
+
+(3.5)
+
+only for such non-local boundary conditions does a non-trivial set of zero-modes of the dirac
+operator survive. the index splits in a bulk and a boundary piece as indicated according to
+
+indexd/ = index(bulk) 
+
+1
+
+2(cid:16)b(0) + hb(cid:17)
+
+where index(bulk) is the usual integral over the second pontrjagin class, h is the number of
+harmonic spinors on the boundary manifold m, i.e. the number of solutions to b  = 0, and
+b(s) is a spectral invariant of the boundary operator b given by
+
+b(s) =xl6=0
+
+sign(l)
+|l|s
+
+(3.6)
+
+where the sum runs over the eigenvalues l of the boundary dirac operator b. as a function of
+the complex variable s, b(s) has a well dened analytic continuation to s = 0 [1, 32, 33].
+
+16
+
+when b only has a nite number of eigenvalues one can take s = 0 before summing (3.6) (for
+other cases in which the aps conditions can be made explicit see e.g. [34, 35]). in this case, one
+can understand the appearance of b(0) in the expression for the index rather easily. assuming
+that near the boundary at r = rb the manifold is a product metric, the zero mode equation on
+this cylinder can be written as
+
+ + b
+
+  b 0 ! ck ekr|li
+  0
+
+dk ekr|li! = (k + l) dk ekr|li
+
+(k  l) ck ekr|li! = 0
+
+(3.7)
+
+(for the product metric we may simultaneously diagonalise b and ). this implies that positive
+chirality zero-modes (those for which only the upper components are non-vanishing) have k = l
+while those of negative chirality have k = l. the boundary conditions (3.3) imply that the
+positive chirality states have only negative eigenvalues of b while the negative chirality states
+carry positive b-eigenvalues (due to the relation between k and l this implies that only zero-
+modes which vanish exponentially as r   remain). the contribution to the index from the
+cylinder is therefore the disparity between the number of negative and positive eigenvalues of b
+which is clearly given by (3.6) at s = 0 and this limit may be taken before performing the nite
+summation (the factor 1/2 in (3.5) arises from the fact that half of the spinor boundary modes
+do not continue smoothly into the interior [1, 34]). the aps theorem renders this argument
+rigorous for operators b with an innite number of eigenvalues and also shows that the index
+problem indeed splits in a bulk and boundary piece according to (3.5) by appropriately gluing
+the two pieces of the manifold.
+
+before we discuss the gilkey correction term, we will now rst show how the  invariant can
+be computed for a class of boundary dirac operators general enough to include the torsion-full
+examples to be discussed later.
+
+3.2 computation of the  invariant for manifolds with torsion and s3 boundary
+
+the  invariant must be computed on a case by case basis and since it involves all non-zero
+boundary eigenvalues this can be rather tricky. fortunately this computation has been carried
+out by hitchin for a large class of boundary geometries [36] (to be specic, squashed s3 metrics).
+the addition of torsion modies the boundary dirac operator by what amounts to only a slight
+generalisation of hitchins calculations. however, in keeping with the rest of this paper and
+because the explicit solutions we nd to the boundary dirac equation will be needed when we
+explain how one is able to compare index problems for manifolds with mutually anticommuting
+dirac operators in section 4, we will now present these additional details.
+
+we begin with a boundary operator of the form
+
+b = s(cid:0)341 + 422(cid:1) +
+
+1
+
+
+143  1234(cid:20)2 + 2
+
+4
+
++ z(cid:21) .
+
+(3.8)
+
+17
+
+where , s and z are arbitrary parameters (depending, in general, on rb). the operators i
+commute with the so(3) killing vectors (i.e. they are the inverses of the left-invariant forms)
+and satisfy the algebra
+
+[1, 2] = 3
+
+and cyclic.
+
+(3.9)
+
+to motivate the somewhat obscure looking form we have chosen for the operator (3.8), we note
+that it is exactly the case solved by hitchin [36] when s = z = 0. the generalised form presented
+here can be handled too and (as we will see) appears in the example manifolds discussed in
+section 4. a useful basis for the dirac matrices is
+
+1 =(cid:18) 0 11 0(cid:19) 2 =(cid:18) 0 ix
+
+ix
+
+one then has
+
+0 (cid:19)
+0 (cid:19) 4 =(cid:18) 0 iz
+
+iz
+
+iy
+
+0 (cid:19) 3 =(cid:18) 0 iy
+p (s, z)(cid:19) ,
+b =(cid:18)p (s, z)
+
+0
+
+0
+
+(3.10)
+
+(3.11)
+
+(3.12)
+
+where the hitchinoperator is given by
+
+p (s, z) = is[1x + 2y] +
+
+i
+
+
+3z +
+
+2 + 2
+
+4
+
++ z .
+
+therefore it is most useful to solve the eigenvalue problem p (s, z)  = z. to begin with call
+i = iji where ji is the angular momentum operator (i = 1, .., 3) (and we employ the usual
+eigenstates |j, mi of j 2 and j3). note that the hitchin operator commutes with the casimir
+[j 2, p (s, z)] = 0 so we may look for solutions at a xed j. actually, it is easy to solve this
+equation with the following ansatz
+
+|j, m + 1i(cid:19)
+ =(cid:18) |j, mi
+
+(3.13)
+
+where we dene |j, j + 1i = 0 = |j,j  1i. then if m = j or m = j  1 we clearly obtain
+solutions with eigenvalue
+
+z = j/ + (2 + 2)/4 + z.
+
+(3.14)
+
+now if j > m > j  1 so that  p(j  m)(j + m + 1) is real and non-vanishing then we
+
+have solutions with eigenvalues
+
+z =  s  (m + 1)/ + (2 + 2)/4 + z
+
+where  solves the equation
+
+2
+ 
+
+2m + 1
+s
+
+  1 = 0 ,
+
+18
+
+(3.15)
+
+(3.16)
+
+so that explicitly
+
+2  2p(2m + 1)2 + 4s22(j  m)(j + m + 1)
+
+4
+
+z =
+
++ z .
+
+(3.17)
+
+to conform with the notation of hitchin we relabel j = (p + q  1)/2 and m = (p  q  1)/2 so
+that the eigenvectors, eigenvalues and their multiplicities read
+
+eigenvector
+
+0
+
+2 , p1
+2 i
+
+(cid:19) , (cid:18)
+(cid:18)| p1
+| p1
+2 , 1p
+  pq4pqs22+(pq)2
+| p+q1
+
+2 i(cid:19)
+| p+q1
+i
+
+2pq
+
+, pq+1
+
+2
+
+2
+
+0
+
+, pq1
+
+2
+
+2
+
+eigenvalue
+
+p
+2
+
++
+
+
+4
+
++ z
+
+!
+
+i
+
+
+
+4 p4pqs22 + (p  q)2
+
+2
+
+multiplicity
+
+2p
+
++ z
+
+p + q
+
+(3.18)
+
+where the integers p and q take all values strictly greater than zero (note that the multiplicities
+above refer to distinct eigenvalues). to understand the multiplicities quoted in (3.18), it is useful
+to briey explain the representation theory of states on s3. the metric on the squashed s3
+(considered in this section) may be represented (up to an overall irrelevant scaling) in terms of
+left invariant forms i (i = 1, .., 3) as
+
+ds2(cid:12)(cid:12)s3 = (1)2 + (2)2 + (3/(s))2
+
+(3.19)
+
+from the invariant forms one may write down left invariant vectors i which commute with
+the killing vectors ki and satisfy the algebra (the explicit forms of these vectors are given in
+section 4.3)
+
+[1, 2] = 3
+[i , kj] = 0 ,
+[k1 , k2] = k3
+
+and cyclic,
+
+and cyclic.
+
+(3.20)
+
+representing the operators i on the space {|j, mi} as above and the killing vectors on a second
+copy of this space {|j, mi} then from the relation
+
+(i)2 =
+
+3xi=1
+
+(ki)2
+
+3xi=1
+
+(3.21)
+
+expressing equality of the casimirs on s3 (which may be easily veried from the explicit forms
+in 4.3), one nds the representation space of functions on s3 to be {|j, mi|j, mi} which yields
+
+19
+
+the multiplicities quoted above (since in (3.18) we suppressed the dependence on the right
+representation |j, mi).
+
+we are now left with the task of computing b(0) = p (0) as in (3.6) given the spec-
+trum (3.18). therefore we must nd the analytic continuation to s = 0 of (we drop an overall
+factor (2)s which clearly does not modify b(0))
+
+2p
+
+(p + 2/2 + 2z)s
+
+b(s) =xp>0
++ xp,q>0
+
+p + q
+
+p + q
+
+
+
+(cid:16)2/2 +pd(s, p, q) + 2z(cid:17)s 
+
+(cid:16)2/2 +pd(s, p, q)  2z(cid:17)s(3.22)
+and z are such that 2/2 +pd(s, p, q)  2z > 0, which motivates the above split in a
+
+where d(s, p, q) = 4pq(s)2 + (p  q)2. (note that in all cases that we are interested, , s
+
+sum over positive and negative eigenvalues, but in general one should of course worry about
+this separation as well as any zero-modes of the boundary operator). the single sum can be
+expressed in zeta functions without any diculty. the double sum requires a lengthy analysis,
+most easily performed by rst taylor expanding in powers of the new variable  dened by
+2/2 = 2/2 + 2z,
+
+b(s) = 2 (s  1, 2/2)  2 (s, 2/2)
+
+ 2s(cid:18)2
+
+2 (cid:19) f(cid:0)(s + 1)/2(cid:1) 
+
+2s(s + 1)(s + 2)
+
+3!
+
+(cid:18)2
+2 (cid:19)3
+
+f(cid:0)(s + 3)/2(cid:1) +   
+
+where the dots vanish for s = 0 and the function f (s) is dened by
+
+the terms involving the zeta functions yield 4/4 1/6 while the analysis of the residues of f (s)
+is rather nontrivial and produces [37]
+
+(3.23)
+
+(3.24)
+
+(3.25)
+
+(3.26)
+
+f (s) = xp,q>0
+
+p + q
+
+d(s, p, q)s .
+
+1
+
+3(cid:0)(s)2  1(cid:1) ,
+
+1
+
+(s)2 .
+
+=
+
+=
+
+2 (cid:19)(cid:21)s=0
+res(cid:20)f(cid:18) s + 1
+res(cid:20)f(cid:18) s + 3
+2 (cid:19)(cid:21)s=0
+3(cid:20)16 z 3
+s2  4 z(cid:21) +
+3(cid:20) 3 z
+s2 + 4 s2z  6 z(cid:21) +
+
+1
+6 
+
+3
+
+2
+
+
+
+3(cid:20)12 z 2 
+4(cid:20)1 
+
+4
+
+12 z 2
+
+s2 + 1(cid:21)
+3 s2(cid:21) .
+
+1
+
+4 s2
+3 
+
+this nally yields the  invariant at s = 0
+
+b(0) = 
+
+
+
+20
+
+1
+
+24.82 zm
+
+r  r =
+
+1
+
+24.82 zm
+
+1
+
+24.82 zm
+
+dc =
+
+c ,
+
+(3.27)
+
+at s = 1 and z = 0, we recover hitchins result b(0) = 1/6 + 2/3  4/6. so summarising,
+our nal result for the  invariant for the class of dirac operators in (3.8) is given by the above
+result (3.26).
+
+3.3 boundary correction for non-product metrics
+
+the aps analysis presented in the previous two subsections is valid for the manifolds whose
+metric takes a product form [1] at the boundary (more intuitively, those manifolds which, near
+the boundary, are a cylinder with the boundary manifold as cross section). if this is not the case,
+the manifold has to be deformed to such a product structure near the boundary before the above
+machinery can be applied. the bulk term should in turn also be computed for this deformed
+metric. as an explicit form of the deformed metric is often not available, it is, however, much
+easier to determine instead the error that one has made by computing the bulk contribution
+using the original metric. this error term, due to gilkey [2] for torsion-less manifolds, has to be
+subtracted from the bulk.
+
+the form of this correction is rather simple. in the absence of torsion, the bulk term can be
+
+written as a boundary integral
+
+1
+
+provided discontinuities of c are taken into account properly. for the metric deformed to a
+product structure near the boundary, we get a boundary integral with c replaced by the chern
+ = g(r = rb), c . therefore, in the absence of torsion,
+simons term of the product metric g
+the correction term that has to be added is
+
+24.82zm
+where the chernsimons three-form c =   r  1
+3      (and similarly for c  built from
+sharped objects computed from the product metric). note that the integrand of (3.28) can
+be written as   r where  =    is the second fundamental form and  and  are the
+torsion-free spin connections computed from the metric and product metrics respectively. (where
+we warn the reader that from here on we replace (e) by simply  to denote the torsion-free
+spin connection.) however, for intuitive, along with practical reasons, we prefer the form given
+in (3.28).
+
+[c   c] ,
+
+(3.28)
+
+for the torsionfull case the integrand of the bulk index derived in section 2 above may be
+
+written as the exterior derivative of a generalised chernsimons form
+
+  r 
+
+1
+3
+
+     
+
+1
+2
+
+a  f  2 k  c(a)  2 k
+
+where the three-form k is the hodge dual of the vector k in (2.20),
+
+k =
+
+1
+g
+
+k .
+
+(3.29)
+
+(3.30)
+
+21
+
+therefore, the boundary correction for the torsion-full case is simply
+
+1
+
+24.82zm
+
+[c (a)  2 k  c(a) + 2 k] ,
+
+(3.31)
+
+where k is computed by inserting r = rb in the axial contortion vector a before computing
+the covariant derivatives in (2.20).
+
+3.4 generalised aps index theorem
+
+orchestrating the above bulk results presented in (2.19) as well as the  term and the boundary
+contribution (3.31) we obtain an aps index theorem generalised to manifolds with torsion
+
+indexd/ (e, a) =
+
+f (a)  f (a)  2 g dki
+
++
+
+1
+
+1
+
+1
+2
+
+24.82zm hr(e)mn  r(e)nm 
+24.82zmhc (a)  2 k  c(a) + 2 ki
+2(cid:2)b(0) + hb(cid:3) ,
+
+
+
+1
+
+(3.32)
+
+with the three-form k dened by (3.30) and (2.20) above. a result similar to (3.32) has appeared
+in a string theoretical context in [38] for which one encounters exact torsion and most of the
+terms above vanish. needless to say, in the general case presented here there are many extra
+subtleties as discussed in the preceeding text.
+
+4. index theorems for manifolds with mutually anticommuting dirac
+
+operators
+
+4.1 general formulation
+
+the existence of mutually anticommuting dirac operators on a pair of manifolds can be employed
+to derive a relation between the index theorems on these manifolds which we shall now present in
+detail. at the end of this section we test this relation on the explicit example of the taubnut
+and dual taubnut manifolds.
+
+to begin with, given a manifold m with (possibly torsion-full) dirac operator d/ (e, a)
+
+satisfying
+
+d/ (e, a) = d/ (e, a) ,
+
+{d/ (e, a), 5} = 0 ,
+
+then let us assume that we have found a second operator d/ (e,ev ) acting on spinors dened on
+
+m which solves the equations
+
+(4.1)
+
+(4.2)
+
+(4.3)
+
+{d/ (e, a), d/ (e,ev )} = 0
+
+d/ (e,ev ) = d/ (e,ev ) ,
+
+{d/ (e,ev ), 5} = 0 .
+
+22
+
+portantly the hermiticity requirement in (4.3) is formulated on the manifold m (the precise
+denition of the adjoint operation for spinors on manifolds with boundary was presented in sec-
+, observe that it will certainly be
+tion 3.1). in general, given that the inverse vierbeine er
+
+at this point we do not yet identify d/ (e,ev ) with the dirac operator on a manifold fm. im-
+necessary to include the additional vector coupling ev  in d/ (e,ev ) to satisfy both (4.2) and (4.3).
+as the operators id/ (e,ev ) and id/ (e, a) anticommute, we can construct a new operator
+
+5d/ (e, a) commuting with the original dirac operator,
+
+ 6= er
+
+[id/ (e,ev ), 5d/ (e, a)] = 0 .
+
+these two operators (hermitean on m) can thus be diagonalised simultaneously. eigenspinors
+with non-zero eigenvalues occur in pairs for both operators, since they anticommute with 5.
+
+however, eigenspinors with vanishing id/ (e,ev ) eigenvalues are not necessarily those with zero
+
+5d/ (e, a) eigenvalues. nonetheless, in the computation of the index,
+
+index d/ (e,ev ) = n+(d/ (e,ev ))  n(d/ (e,ev )) ,
+
+they still occur in pairs (n+ denotes the number of zero-modes with positive chirality). the
+above expression therefore only receives contributions from those zero-modes that are also zero-
+
+of zero-modes which do not have a partner of opposite chirality. the same holds true when we
+
+modes of 5d/ (e, a), that is ker  (id/ (e,ev ))  ker  (5d/ (e, a)), where ker  denotes the set
+interchange the role of the two dirac operators and we therefore also have ker  (id/ (e,ev )) 
+ker  (5d/ (e, a)). we may therefore conclude that the indices of id/ (e,ev ) and 5d/ (e, a) are
+
+equal and hence6
+
+(4.4)
+
+(4.5)
+
+(4.6)
+
+(4.7)
+
+index d/ (e,ev ) = index d/ (e, a) ,
+
+since if  is an eigenspinor of the operator 5 d/ (e, a) then 5 is the corresponding eigenspinor
+of id/ (e, a).
+
+the equation (4.6) becomes much more interesting if one is able to view the operator d/ (e,ev )
+as the dirac operator on the manifold fm but one must then carefully consider the space on which
+the operators d/ (e, a) and d/ (e,ev ) act. the reason being that typically one is interesting in
+
+computing the index of the dirac operator as a trace over states
+
+index d/ = tr(cid:20)5 exp(cid:16) 
+
+2
+
+d/ 2(cid:17)(cid:21)
+
+where the trace extends over the space of spinors living on the manifold of interest. however, we
+
+do not want to compute the index of the second dirac operator d/ (e,ev ) on the manifold m, but
+rather on the new manifold fm obtained by expressing d/ (e,ev ) = r er
+
+6the above argument was pointed out to us by jan-willem van holten [4].
+
+  +    and regarding
+
+23
+
+er
+
+ as the inverse vierbein. only in this way do we obtain a relation between index theorems
+
+on independent manifolds m and fm. a priori , however, there is no reason to expect that the
+space of spinors on m should coincide with that on fm. furthermore, although the operator
+d/ (e,ev ) was assumed to be antihermitean on the manifold m, since the volume elements of the
+two manifolds will in general not be equal, the operator d/ (e,ev ) will have no denite hermiticity
+viewed as an operator on spinors on fm. therefore we make the additional assumption, (which
+
+holds for the example we have in mind)
+
+assumption: the space of spinors (which were dened in detail in subsection 3.1 in such a way
+that index problems are well-posed) viewed as a four-component space of functions on m and
+
+it should now be clear that given the above assumption we have equality of well posed index
+
+clearly however, by the assumption, if the above similarity transformation is non-singular then
+
+fm coincide.
+notice that as a consequence the index problem for the operator d/ (e,ev ) is well posed on the
+manifold fm. this can be seen as follows. even though the operator d/ (e,ev ) has no denite
+hermiticity on the manifold fm the operator ed/ (e,ev ) pg(e)/g(e) d/ (e,ev )pg(e)/g(e) is anti-
+hermitean on fm. furthermore if  are a complete orthonormal set of eigenfunctions of d/ (e,ev )
+on m thenpg(e)/g(e) are a complete set of orthonormal eigenfunctions of ed/ (e,ev ) on fm.
+the set of functions  are still complete (although no longer orthonormal) on fm so that d/ (e,ev )
+can still be diagonalised on fm leading to a well posed index problem on that manifold.
+problems calculated on m and fm,
+index d/ (e, a)  trm 5 exp(cid:0)
+d/ (e,ev )2(cid:1)  index d/ (e,ev ) (4.8)
+manifolds m and fm one only needs to require equality of the projection operators
+where |l i and | l i are the eigenvalues of the respective boundary dirac operators b and eb.
+note that to compute the index of d/ (e,ev ) on fm we can split the operator into a sum of
+antihermitean and hermitean operators on fm by writing
+
+which is the main result of this section. if we recall the discussion of boundary conditions for
+spinors on manifolds with boundary in section 3.1, we see that to verify our assumption for the
+
+remarkably, we nd that (4.9) holds for the taubnut and dual taubnut manifolds.
+
+d/ (e, a)2(cid:1) = tr
+
+|l ih l| = xl 0
+
+5 exp(cid:0)
+
+| l ih l |
+
+xl0
+
+(4.10)
+
+(4.9)
+
+2
+
+fm
+
+2
+
+with
+
+d/ (e,ev )  d/ (e, 0) + ev
+  (e)
+
+(
+
+d/ (e, 0) =hd/ (e,ev ) 
+ev =
+
+ 
+
+
+
+1
+2
+
+1
+2
+
+1
+2
+(e)
+
+
+
+24
+
+)i
+
+(4.11)
+
+(4.12)
+
+. the trick now is that the hermitean term ev is nothing but the coupling of the dirac
+
+where (e)rs is the torsion free part of the spin connection computed from the inverse vierbein
+er
+operator to a purely imaginary abelian gauge eld whose contribution to the index we may obtain
+by a naive analytic continuation from the well known results for the index of the dirac operator
+with such couplings7.
+
+in the remainder of this section we show that manifolds with mutually anticommuting dirac
+operators can be found if invertible killingyano tensor exist and the above relation is realised
+explicitly by taubnut and its dual manifold. also provided are all relevant geometric data for
+these manifolds.
+
+4.2 killingyano dual manifolds
+
+manifolds with torsion admitting two dirac operators that satisfy the properties discussed
+in the previous section do in fact exist and are understood in a systematic way [5] (at least
+in the case where the dirac operator is viewed as a classical supercharge). before we move on
+to an explicit index computation we describe the killingyano technique for generating these
+manifolds.
+
+the operator d/ (e,ev ) can be viewed as the quantum analogue of the supercharge of a
+
+spinning particle and in this context the additional dirac operator d/ (e, a) generates the extended
+r
+supersymmetry. up to ordering ambiguities this means that the conditions on the tensors e
+and arst appearing in the additional dirac operator such that it anticommutes with the original
+dirac operator can be deduced from the existence conditions of extended supersymmetry of the
+classical model [39] (see [5] for the extension to include torsion). in short, additional supercharges
+
+on the manifold fm are given by
+
+d/ (e, a) = rer
+
+where the tensor er
+
+ satises
+
+(cid:16) + 1
+
+4(cid:0)(e)st  1
+
+3(e1)
+
+d(e)e
+
+r + d(e)e
+
+r = 0 ,
+
+pcpst(cid:1)st(cid:17) ,
+
+(4.13)
+
+(4.14)
+
+which is the killingyano [40] equation for e
+lowered indices with the vierbein e
+
+r on the manifold fm. here we have raised and
+
+r and d(e) denotes the
+
+r = e
+
+ses
+
+e
+
+torsion-free covariant derivative on fm. the connection is determined by requiring
+
+crst = d(e)[rest] ,
+
+r on fm so that e
+
+(4.15)
+
+7in the example below we will anyway nd a vanishing contribution from this additional abelian vector coupling,
+however in general it is quite simple to handle. the bulk term is just the usual result for the abelian anomaly
+modulo an overall minus sign due to the analytic continuation. the chernsimons and aps boundary corrections
+are computed exactly as described in section 3.
+
+25
+
+where again we have employed the vierbeine on fm to atten indices. note however that when
+
+ as the inverse vierbein on the dual manifold m we will denote its inverse
+pcpst as the connection
+
+we come to regard er
+(i.e. the vierbein itself on m) as e
+on the dual manifold m the contortion on that manifold is then
+
+r. viewing (e)st  1
+
+r  (e1)
+
+3(e1)
+
+kts = (e)st  (e)st 
+
+1
+3
+
+(e1)
+
+pcpst .
+
+(4.16)
+
+the totally antisymmetric part (on m) of which denes the tensor arst = k[rst].
+
+indeed just as complex structures (with one at index) can be used to dene a local lorentz
+frame dierent from the frame spanned by the inverse vierbein, an interpretation of the killing
+ as an inverse vierbein is possible as well. in this case, however, the manifold for
+yano tensor er
+rer
+which the inverse vierbein is e
+is a killing tensor which does not normally coincide with the metric on m). this observation
+was rst elucidated in [5] and plays a central role in this paper by providing an example of
+manifolds with mutually anticommuting dirac operators.
+
+r is not identical to the original one given by e
+
+r (the square e
+
+at the quantum level one must study the possible orderings when making the transition from
+a classical supercharge to the dirac operator acting on a spinorial hilbert space. for example,
+we have already discussed this problem in detail in section 2 (there symmetry principles such
+as general coordinate and local lorentz invariance of the index are central considerations). the
+key observation of the previous subsection in this respect is the role of the coupling to the
+
+d/ (e, a) are antihermitean on the manifold in question which necessitates the addition of the
+
+bracket formulation of the killingyano technique. upon inclusion of the torsion trace one must
+reanalyse the quantum anticommutator of dirac operators. in explicit examples we have found
+
+trace of the torsion ev . needless to say exactly this coupling is absent in the classical poisson
+that in order to obtain a vanishing anticommutator one must ensure that both d/ (e,ev ) and
+abovementioned torsion trace ev .
+
+unfortunately, manifolds which admit killingyano tensors are not nearly as well understood
+as their cousins that play a role in d  2 extended supersymmetry: kahler and hyper-kahler
+manifolds. the most extensive systematic study so far was made in [41, 42]. though very explicit,
+their analysis only concerns the local geometrical structure of manifolds admitting killingyano
+tensors. lacking a systematic topological analysis, this information has to be extracted for every
+example being studied. for this reason, we will in this paper focus on the taubnut manifold
+[43, 44] for all sample calculations. it should however be noted that at least the kerr metric
+is tractable as well; an extension of those results to include the kerr-newman family could be
+used to study a generalisation of our results to include electromagnetic coupling, although there
+are no conceptual problems expected there. the much simpler schwarzschild metric only admits
+a non-invertible killingyano tensor, which therefore does not lead to a non-singular inverse
+vierbein.
+
+26
+
+4.3 example: taubnut geometry and its dual
+
+both taubnut and dual taubnut possess an so(3) isometry generated by
+
+k1
+
+ = k1 =  sin []  cos  cot [] +
+
+cos 
+sin 
+
+[] ,
+
+k2 = cos []  sin  cot [] +
+
+sin 
+sin 
+
+[] ,
+
+as well as the trivial vector
+
+k3 = [] .
+
+(4.17)
+
+(4.18)
+
+(there is also a fourth trivial killing vector k4 = []). for the computation of the bulk contri-
+butions to the index, as reported in section 4.4.1, it is not very important to make this isometry
+manifest and one can use an (almost) diagonal inverse vierbein based on the metrics (1.2) or
+(1.3). it is, however, crucial to make this symmetry manifest in order to use the  invariant
+computations for manifolds with s3 boundary of subsection 3.2. to achieve this one makes use
+of the left-invariant forms i. these forms satisfy
+
+lki =(cid:0)kd + dk(cid:1) i =(cid:0)ki
+
+ + ki
+
+(cid:1) dx = 0 ,
+
+where lk is the lie derivative with respect to any one of the three killing vector elds ki.
+explicitly,
+
+
+
+1 dx = 1 = cos  d + sin  sin  d ,
+2 =  sin  d + cos  sin  d ,
+3 = cos  d + d ,
+
+and they satisfy dk = (1/2)ijki  j. the metric (1.2) of taubnut then becomes
+
+ds2 =
+
+r + 2m
+
+r
+
+whose determinant is given by
+
+dr2 + r(r + 2m)(cid:2)(1)2 + (2)2(cid:3) +
+g(e) = h 2mr(r + 2m) sin i2
+
+4rm2
+
+r + 2m (cid:2)3(cid:3)2
+
+(4.19)
+
+(4.20)
+
+(4.21)
+
+(4.22)
+
+(4.23)
+
+the killingyano tensor can also be expressed using the invariant one-forms,
+
+rer
+
+g(e) dx  dx = 2m dr  3 +
+
+1
+m
+
+(r + 2m)(r + m) 1  2 ,
+
+and is therefore so(3) invariant as well. the dual taubnut manifold, obtained through the
+procedure sketched in the present section, is given by the metric
+
+ey  e
+
+ds2 =
+
+r + 2m
+
+r
+
+dr2 +
+
+r(r + 2m)
+
+s2
+
+(cid:2)(1)2 + (2)2(cid:3) +
+
+4rm2
+
+r + 2m(cid:2)3(cid:3)2 .
+
+(4.24)
+
+27
+
+dr ,
+
+e1 =r r + 2m
+e3 =pr2 + 2mr 2 ,
+
+r
+
+e2 =pr2 + 2mr 1 ,
+e4 =r 4rm2
+
+r + 2m
+
+3 .
+
+2 ,
+
+r + m
+r + 2m
+r2 + 2m2 + 4rm
+
+(r + 2m)2
+m
+
+1 .
+
+r + 2m
+
+m
+
+1 ,
+
+r + m
+r + 2m
+m2
+
+2 ,
+
+r + 2m
+
+e13 = 
+(r + 2m)2 3 , e23 = 
+e34 = 
+(r + 2m)2 dr  1 
+(r + 2m)2 dr  2 +
+(r + 2m)3 dr  3 +
+
+e12 = 
+e14 = 2
+e24 =
+er43 = er21 =
+er42 = er31 =
+er32 = er41= 
+
+4m2
+
+m
+
+m
+
+3 ,
+
+2rm2
+
+2rm2
+
+(r + 2m)3 2  3 ,
+(r + 2m)3 1  3 ,
+(r + 2m)2 1  2 .
+
+2rm
+
+table 5: geometrical data of the taubnut manifold.
+
+with determinant
+
+where s = (r + m)/m.
+
+g(e) = h 2mr(r + 2m) sin 
+
+s2
+
+i2
+
+(4.25)
+
+the connections and curvatures are all summarised in the two tables 5 and 6. before we
+discuss the dirac operators, let us make a few remarks about the displayed results. first of all,
+the curvature of the dual manifold is not (anti)self-dual, in contrast to taubnut (note that
+
+in our conventions er rs = (1/2)rtsuer su). its asymptotic geometry is also dierent: whereas
+
+taubnut is asymptotically a at metric, the dual metric has a volume element independent
+of r at large radius; it tends to an innite tube.
+
+of course, we must also specify the coordinate ranges for the angular coordinates ,  and .
+it is easy to see that for both taubnut and dual taubnut one has   [0, ) and   [0, 2).
+for the coordinate  one nds   [0, 4) by ensuring the absence of the nut singularity at
+r = 0. in detail, one can write both the taubnut and dual taubnut metrics on a constant
+()slice in the vicinity of r = 0 as ds2 = dx2 + 1
+4x2d2 via the coordinate transformation
+x2 = 8mr. requiring this be the metric of a two-dimensional plane in polar coordinates we nd
+the quoted result for .
+
+28
+
+e1 = r 4rm2
+e3 = pm2r(r + 2m)
+
+r + 2m
+
+r + m
+
+3 ,
+
+1 ,
+
+e2 = pm2r(r + 2m)
+e4 = r r + 2m
+
+r + m
+
+dr .
+
+r
+
+2 ,
+
+12 = 
+
+14 = 2
+
+1 ,
+
+r + m
+r + 2m
+m2
+(r + 2m)2 3 ,
+
+m3
+
+24 =
+
+(r + 2m)(r + m)2 2 , 34 = 
+
+13 = 
+
+23 =
+
+2 ,
+
+a12 =
+
+r + m
+r + 2m
+r2  2m2
+(r + 2m)2 3 ,
+(r + 2m)(r + m)2 1 , a23 =
+
+a13 =
+
+m3
+
+1
+3
+1
+3
+2
+3
+
+r
+
+r + m
+
+r
+
+r + m
+
+1 ,
+
+2 ,
+
+r
+
+r + 2m
+
+3 .
+
+(r + 2m)3 
+
+m
+
+m
+
+(r + 2m)2 dr  12(cid:20) (r + m)3
+(r + 2m)2 dr  2+2(cid:20) (r + m)3
+(r + 2m)3 dr  3
+
+4m2
+
+(r + 2m)3 
+
+m5
+
+(r + m)2(r + 2m)3(cid:21) 2  3 ,
+(r + m)2(r + 2m)3(cid:21) 1  3 ,
+(r + m)(r + 2m)2 1  2 ,
+
+2m2r
+
+m5
+
+r21 =
+
+r31 =
+
+r41 =
+
+m3(3r + 5m)
+
+2rm2
+
+r42 =
+
+r43 = 
+
+m3(3r + 5m)
+
+(r + 2m)2(r + m)3 dr  1 +
+(r + 2m)2(r + m)3 dr  2 +
+(r + 2m)3 dr  3 +(cid:20) 2r2 + 2rm  m2
+
+(r + 2m)2
+
+4m(r + m)
+
+2rm2
+
+(r + 2m)3 2  3
+(r + 2m)3 1  3 ,
+(r + 2m)2(r + m)4(cid:21) 1  2 .
+
+m6
+
++
+
+r32 = 
+
+table 6: geometrical data of the dual taubnut manifold.
+
+for the dirac operators we actually need the inverse of the invariant one-forms. we denote
+them by i just as in subsection 3.2. they are the vectors commuting with the killing vectors,
+
+[ki, j] = 0 ,
+
+(4.26)
+
+and in components one nds
+
+1
+
+ = 1 = cos   +
+
+sin 
+sin 
+
+ 
+
+cos  sin 
+
+
+
+sin 
+cos  cos 
+
+sin 
+
+ ,
+
+(4.27)
+
+2 =  sin   +
+3 =  .
+
+cos 
+sin 
+
+ 
+
+29
+
+in the manifestly so(3) invariant basis the dirac operator on dual taubnut with killingyano
+torsion is given by
+
+d/ (e, a) =
+
+1
+rv
+
+4(cid:20)rr +
+
+1
+
+2(cid:18) 2r + 3m
+
+r + 2m 
+
+2r
+
+(r + m)(cid:19)
+
+it is antihermitean on the dual taubnut metric and anticommutes with the operator
+
++(cid:26)s(cid:0)341 + 422(cid:1) +
+
+1
+
+
+143  1234 2 + 2
+
+4 (cid:27)(cid:21) .
+
+(4.28)
+
+1
+rv
+
+1(cid:20)rr +
+
+d/ (e,ev ) =
+
+1
+
+2(cid:18)2r + 3m
+
+r + 2m 
+
+2r
+
+(r + m)(cid:19)
++(cid:26)121 + 132 +
+
+1
+
+
+143  1234 2 + 2
+
+4 (cid:27)(cid:21) .
+
+(4.29)
+
+hermiticity on taubnut itself where it can be regarded as the dirac operator coupled to the
+
+the operator d/ (e,ev ) is antihermitean on the dual taubnut manifold but has no denite
+trace of the torsion ev = 1/[(r + m)v ], or in other words a purely imaginary abelian vector
+
+eld. in fact the replacement
+
+r  r +
+
+r(r + m)
+
+1
+
+(4.30)
+
+former one obtains d/ (e), the torsion-free taubnut dirac operator. note that in the above
+
+renders the operators d/ (e,ev ) and d/ (e, a) antihermitean on taubnut and in the case of the
+ = 2m/(r + 2m), s = (r + m)/m and v =p(r + 2m)/r.
+
+4.4 example: index theorems for taubnut and dual taubnut
+
+4.4.1 bulk
+
+using the geometrical data of the two manifolds we just presented, all terms in (3.32) can be
+computed and the indices can be compared. let us start with the bulk part. for the dual
+taubnut manifold there are contributions from all terms in expression (2.19) except for the
+f  f term since f = da vanishes exactly for this example. putting the boundary at a nite
+radius r = rb we obtain the (rather unenlightening) result
+
+1
+
+24.82zmhrmn  rnm 
+
+1
+2
+
+f  f  2 g dki =
+
+1
+12
+
+r2
+b (r6
+
+b + 12mr5
+
+b + 86r4
+
+b m2 + 340m3r3
+
+b + 753r2
+(rb + 2m)4(rb + m)4
+
+b m4 + 872rbm5 + 408m6)
+
+.
+
+(4.31)
+
+30
+
+in the limit rb   this yields the number 1/12. if one turns the torsion o, the bulk result for
+dual taubnut is then simply
+
+1
+
+24.82zm
+
+rmn  rnm =
+
+1
+12
+
+r2
+b (9r4
+
+b + 42r3
+
+b m + 73r2
+(rb + 2m)4(rb + m)2
+
+b m2 + 56rbm3 + 24m4)
+
+the analogous computation for taubnut is well known [45, 46],
+
+.
+
+(4.32)
+
+(4.33)
+
+1
+
+24.82zfm
+
+rmn  rnm =
+
+1
+12
+
+r2
+b (r2
+
+b + 8rbm + 24m2)
+(rb + 2m)4
+
+.
+
+for a boundary at innity, this produces the answer 1/12 (or equivalently a pontrjagin number
+2). for taubnut it is known that this number, which seems to lead to a fractional index,
+in fact gets modied by the boundary contributions [12, 13, 14]. because of the general results
+discussed in the rst part of this section, we expect that a similar correction will arise for the
+dual taubnut manifold as well.
+
+4.4.2  invariant
+
+the boundaries of taubnut and the dual taubnut are s3 so our general discussion for
+the computation of the  invariant in subsection 3.2 applies. from (4.28) we obtain the dual
+taubnut boundary operator
+
+(4.34)
+
+(4.35)
+
+(4.36)
+
+b =(cid:18)p (s, z)
+
+0
+
+0
+
+p (s, z)(cid:19) ,
+
+ =
+
+2m
+
+r + 2m
+
+, s =
+
+r + m
+
+m
+
+analysed above in 3.2 with
+
+as well as
+
+z =
+
+0
+r
+2m
+
+killingyano torsion,
+
+torsion-free.
+
+(the torsion-free case is in fact the value for z at which the  invariant can be obtained from the
+one of taub-nut by replacing   s, but we have presented the general formula (3.26) just in
+case one wants to study the interpolation between the two cases). we then nd that (0) with
+the boundary at nite radius r = rb for dual taubnut with killingyano torsion is
+
+1
+2
+
+b(0) = 
+
+1
+12
+
+rb(r5
+
+b + 10mr4
+
+b + 65r3
+
+b m2 + 168m3r2
+
+b + 168rbm4 + 48m5)
+
+(rb + 2m)4(rb + m)2
+
+31
+
+(4.37)
+
+(4.38)
+
+(4.39)
+
+and for dual taubnut without torsion
+
+1
+2
+
+b (a=0)(0) = 
+
+1
+12
+
+(3rb + 4m)2r2
+b
+
+(rb + 2m)4
+
+.
+
+for taubnut itself, from (4.29) the boundary dirac operator is
+
+eb =(cid:18)p (1, 0)
+
+0
+
+0
+
+p (1, 0)(cid:19) .
+
+again  = 2m/(r + 2m) where this result as well as (4.34) are given in the same chiral ba-
+sis (3.10) to facilitate comparison of the space of boundary solutions with positive eigenvalues in
+subsection 4.4.4 below. clearly the analysis of subsection 3.2 applies equally well to the taub
+nut boundary dirac operator (4.39) and importantly the solutions still take the form quoted
+in (3.18). therefore, for the taubnut manifold, we reproduce the results of [46] and nd
+
+1
+2
+
+eb(0) = 
+
+1
+12
+
+r2
+b (4m + rb)2
+(rb + 2m)4
+
+.
+
+(4.40)
+
+note that the expressions (4.40) and (4.37) go to 1/12 when the boundary is moved out to
+innite radius, rb  . on the other hand, the limiting value for 1
+2(0) for dual taubnut
+without torsion is 3/4.
+
+finally we note that the number of harmonic boundary spinors h vanishes for taubnut
+
+and dual taubnut with or without torsion.
+
+4.4.3 chernsimons correction
+
+for the dual of taubnut, we have computed the dierence between the boundary integral at
+innity for the product metric and the same integral for the full metric to be (the contribution
+ada from the abelian axial vector eld drops out since in this example f = da  0)
+
+1
+
+24.82zmh  r  1
+
+3      2 k    r + 1
+b  23r3
+
+rbm3(4r4
+
+2
+3
+
+3     + 2 ki =
+
+b m  40m2r2
+
+b  18rbm3 + 6m4)
+
+(rb + 2m)4(rb + m)4
+
+.
+
+(4.41)
+
+since the dual metric is already a product metric at innity, one expects this correction to vanish
+in the large rb limit, which is indeed the case. turning o the torsion this reduces to
+
+3         r + 1
+
+3    i = 
+
+2
+3
+
+m4r2
+b
+
+(rb + 2m)4(rb + m)2 .
+
+(4.42)
+
+finally, for taubnut itself, we conrm the result of [46] which in our coordinate system is
+
+3        r + 1
+the above expression also vanishes in the large rb limit.
+
+3    i = 
+
+2
+3
+
+m2r2
+b
+
+(rb + 2m)4 .
+
+(4.43)
+
+1
+
+24.82zmh  r  1
+24.82zfmh  r  1
+
+1
+
+32
+
+4.4.4 equality of indices
+
+although it is now easy to verify the equality of the indices on the taubnut and dual taub
+nut manifolds, it would be remiss of us to do so without rst checking the validity the assump-
+tion of subsection 4.1 above. therefore we return to the solutions presented in equation (3.18)
+and check that the eigenspaces generated by the solutions with positive eigenvalues coincide for
+taubnut and dual taubnut. clearly the eigenvalues (setting z = 0, since z = r/(2m) 6= 0
+
+corresponds to dual taubnut without torsion) p/2 + /4 and /4 +p4pq(s)2 + (p  q)2/2
+
+(s = 1 for taubnut and s = (r + m)/m for dual taubnut) are always positive. further-
+more, from the form of the explicit solutions, we see that the eigenspaces generated by the
+corresponding eigenvectors are identical for both manifolds. (strictly, one must take rb su-
+ciently small for the preceding statement to hold. however, this is sucient since, as we are
+about to show, neither manifold possesses harmonic boundary spinors at any positive rb so that
+for both manifolds, the index is independent of rb > 0.)
+
+all to have strictly negative eigenvalues clearly we would be done since the projective boundary
+conditions then coincide for the two manifolds. yet for any non-negative radius r to the boundary,
+the eigenvalue with the negative root can never be positive for either manifold. to see this we
+
+if the solutions corresponding to the negative root /4 p4pq(s)2 + (p  q)2/2 were
+just need to look at the minimum of the square root p4pq(s)2 + (p  q)2 which occurs at
+
+p = 1 = q. but for both manifolds /4  s is negative so long as r is non-negative which
+completes our verication of the assumption.
+
+we are now justied in comparing the indices of taubnut and dual taubnut. there-
+fore, adding the bulk contribution (4.31), the  invariant (4.37) and the chernsimons correc-
+tion (4.41) of the dual taubnut manifold, we nd that the rb dependence drops out completely,
+
+indexd/ (e, a) =
+
+r8
+b + 12r7
+
+b m + 86r6
+
+b m2 + 340r5
+
+b m3 + 753r4
+
+b m4 + 872r3
+
+b m5 + 408r2
+
+b m6
+
+12(rb + 2m)4(rb + m)4
+
+b + 12r7
+r8
+
+b m + 86r6
+
+b m2+ 308r5
+
+b m3 + 569r4
+
+b m4+ 552r3
+
+b m5+ 264r2
+
+b m6+ 48rbm7
+
+12(rb + 2m)4(rb + m)4
+b m3 + 184r4
+
+32r5
+
+b m4 + 320r3
+b m5 + 144r2
+12(rb + 2m)4(rb + m)4
+
+b m6  48rbm7
+
+
+
+
+
+= 0 ,
+
+(the  invariant has to be added rather than subtracted because our conventions for the dirac
+matrices imply that the upper component states have negative chirality). this result matches
+precisely the (well known) result for taubnut obtained by adding (4.33), (4.40) and (4.43) (it
+is easy to verify that there is no additional contribution at any value of rb to the taubnut
+index from the abelian coupling v ) and therefore
+
+(4.44)
+
+indexd/ (e, a) = 0 = indexd/ (e,ev ) .
+
+33
+
+(4.45)
+
+it is interesting to also compute the index for dual taubnut without torsion. in that case,
+adding (4.32), (4.38) and (4.42), we again nd a vanishing result
+
+index d/ (e, a = 0) = 0
+
+(4.46)
+
+at any radius to the boundary rb (one might have even argued that since the dual metric can be
+smoothly deformed into that of taubnut, this was to be expected, although in the presence
+of boundary this statement should be carefully re-examined).
+
+even though the bulk and boundary terms decouple completely in the limit rb   for
+both manifolds, this is not true for general values of rb indicating the non-trivial nature of our
+result. moreover, the torsion terms in the various contributions yield a nontrivial answer which
+matches precisely with that of the metric terms to produce the rb independent result (4.45). this
+concludes our check of the aps index theorem generalised to manifolds with torsion.
+
+5. summary and conclusions
+
+in this paper we have presented the modications of the bulk and boundary terms in the index
+theorems for manifolds with boundary when torsion is added. in addition we have shown how
+the index theorem for such manifolds can be related when they possess mutually anticommuting
+dirac operators. all these results can be explicitly veried for the case of the taubnut and
+dual taubnut manifolds and we nd that the index for both these manifolds vanishes.
+
+many important technical and physical issues were solved en route to the above results. in
+particular the appearance of the niehyan tensor at order o(1) in the bulk index computation
+has previously caused some controversy [15, 16, 17, 18, 19, 20]. however, once one studies well-
+posed index problems by carefully imposing boundary terms for spinors, the index should be
+independent of the inverse regulator (mass)2 . therefore one suspects that keeping all regulator
+dependent terms in the aps analysis in the presence of torsion, all 1/ terms should exactly
+cancel. the importance of this remark for the axial anomaly in quantum eld theory should not
+go unnoticed.
+
+interestingly enough, we note that the torsion does not lead to a modication of the index
+for the dual taub-nut manifold, so that one may wonder whether on general grounds torsion
+should be expected contribute to the index or not. we are not aware of any general argument
+suggesting that torsion cannot contribute to the index of manifolds with boundary but from a
+physical viewpoint, where each of the bulk, boundary and generalised chernsimons corrections
+are separately of considerable interest, the existence of such an argument would not diminish the
+importance of our results which we now summarise.
+
+the relation found between manifolds with anticommuting dirac operators involves the
+in other words, one must must study the motion of spinning
+so-called killingyano duality.
+particles in curved space and in this paper we have extended existing studies of classical spinning
+
+34
+
+particle dynamics to the quantum case in backgrounds with torsion. the precise path integral
+quantisation was given in section 2 and the resolution of possible ordering ambiguities for the
+dirac operator by invoking anti-hermiticity was discussed in section 4. as mentioned earlier, our
+work may also be viewed as a stringent check of the precise path integral quantisation scheme
+utilised in this paper.
+
+the relationship we found between manifolds with mutually anticommuting dirac operators
+depended on being able to understand and compare the hilbert space of spinors on manifolds
+with boundary. this analysis was made possible by the work of aps and we have shown that
+it can be equally well applied to the torsion-full case also. in particular we note that in all our
+analysis it was possible to take any nite radius rb to the boundary. this allows one to study
+the non-compact limit in which rb   which of course has some topical signicance in present
+day studies of anti de sitter metrics. the agreement we found between indices at nite rb is a
+very strong check of our results.
+
+the generalisations to include torsion that we presented of hitchins  invariant computation
+for squashed s3 metrics and to gilkeys chernsimons non-product metric boundary correction
+were in principle straightforward but are of course an important step if one is to understand
+index theorems in the torsion-full case. we note that it would be desirable also to consider cases
+where the antisymmetric contortion also has non-vanishing components in the direction normal
+to the boundary. one might expect then that analogous results to ours would also hold. one
+might also like to proceed in such a case by searching for other manifolds satisfying the killing
+yano duality relation. to this end we note that the kerrnewman metric of a rotating black
+hole is certainly tractable along the lines presented in this paper, but we reserve this physically
+interesting metric for further study.
+
+as a nal note we also observe that the generalised chernsimons form c =   r  1
+
+3  
+    2 k found in section 2 (where, presumably one ought include the order 1 niehyan
+term along with possible higher o() corrections in k) might represent an interesting three
+dimensional eld theory in its own right. but again we leave such developments to the future.
+
+acknowledgments
+
+we thank jan-willem van holten for encouraging us to study this problem and indicating to us
+that a relation between index theorems for manifolds with killingyano tensors and their dual
+manifolds should exist. furthermore, we are honoured to thank gary gibbons, stephen hawking,
+sven moch, diana vaman and peter van nieuwenhuizen for discussions and are deeply indebted
+
+to nigel hitchin for providing us the derivation of the residues f(cid:0)(s + 1)/2(cid:1) and f(cid:0)(s + 3)/2(cid:1)
+
+required in the  invariant computation [36]. the calculations reported in this paper made
+extensive use of the tensor algebra package grtensor [47] along with the algebraic manipulation
+program form [48].
+
+35
+
+a. conventions and general relativity with torsion
+
+we work exclusively with manifolds of euclidean signature and our dirac matrices r are her-
+mitean and satisfy {r, s} = 2 rs. flat (tangent space) indices are denoted by the lower
+case roman alphabet whereas curved indices are members of the greek alphabet. products of
+dirac matrices are denoted as r1rn = [r1    rn] where we (anti) symmetrise with unit weight
+and 5 = 1
+24 rsturstu = 1234 = 5. we will often employ dierential form notation in which
+d = dx and at so(4) indices are usually suppressed and understood to be traced over. for
+a useful review of gravity with torsion see [49].
+
+our convention for the spin connection in the presence of torsion is encapsulated in the
+
+vierbein postulate,
+
+0 = e
+
+r  
+
+e
+
+r + 
+
+r
+
+se
+
+s ,
+
+where the contortion k 
+
+ is given by
+
+
+
+ = 
+
+  k 
+
+ , 
+
+m
+
+n = (e)
+
+m
+
+n  k m
+
+n .
+
+in general, this diers from the torsion itself,
+
+t m = dem + 
+
+m
+
+n  en ,
+
+or t 
+
+ = 
+
+[]
+
+the precise relation being
+
+the torsion-free spin connection is expressed in terms of the vierbein by
+
+k 
+
+ = g (t + t  t) .
+
+(a.1)
+
+(a.2)
+
+(a.3)
+
+(a.4)
+
+ rs(e) = 1
+
+2(cid:2)  rs + rs  sr(cid:3) ,
+
+we dene the eld strength of the contortion by
+
+r = 2 [e]r .
+
+(a.5)
+
+f = 4 [k] .
+
+our conventions for the riemann curvature are
+
+r(g, t ) = g 
+
+ + 
+
+r()mn = mn + mp
+
+p
+
+  (  ) ,
+
+n  (  ) .
+
+(a.6)
+
+(a.7)
+
+(a.8)
+
+(a.9)
+
+and rmn = dmn + m
+to be f = da = 1
+
+p  pn = 1
+
+2r
+
+mndx  dx (the eld strength f is similarly normalised
+
+2 fdx  dx). using (a.1) one veries that
+ = r()mn .
+
+r(g, t )em
+
+en
+
+36
+
+our sign convention for the ricci tensor is r = r
+
+
+
+.
+
+we will mostly be dealing with torsion that is fully anti-symmetric, which we denote by
+writing the symbol a
+. in this case, the torsion equals minus the contortion,
+so we will not introduce a separate symbol for it. the axial vector obtained by dualising a is
+denoted a
+
+ instead of k 
+
+a =
+
+1
+g
+
+a , a =  1
+
+6g a , aa = 1
+
+6aa , f = 2 [a] , (a.10)
+
+from which one obtains
+
+f =  2
+
+3 [(g ]a) = 1
+
+6g da ,
+
+(a.11)
+
+using (a.6) and the schouten identity. for the contractions of the riemann tensor, it is useful
+to separate the pieces that only involve a christoel connection. when the torsion is fully
+anti-symmetric, this leads to reasonably compact expressions,
+
+r(g, a) = r(g) + 2 d[a] + 2 a
+
+[a] ,
+
+r(g, a) = r(g) + da
+
+ + a
+
+a ,
+
+r(g, a) = r(g) + aa .
+
+(a.12)
+
+(a.13)
+
+(a.14)
+
+d denotes the covariant derivative without torsion. expressed in terms of the torsion pseudo
+vector we then have (along with analogous formulae for the ricci and scalar curvatures)
+
+r(g, a) = r(g)  1
+
+3d[ag ]
+
++ 1
+
+18(cid:2)g[a]a  g[a]a  g[g]aa(cid:3) .
+
+(a.15)
+
+finally we note that although the spin connection, in all generality has 24 components which
+decompose under so(4) as a 4 (the trace), a 16 (terms with mixed symmetry) and a 4 (the
+totally antisymmetric piece), the dirac operator can only couple via the dirac matrices to the
+
+two 4s which one may interpret as the coupling to abelian vector and axial vector elds ev and
+
+a respectively. therefore the most general dirac operator is given by
+
+d/ (e, v, a) = rer
+
+( +
+
+where the spin connection with torsion is then
+
+rs = (e)rs +
+
+4
+3
+
+e[rvs] 
+
+1
+4
+
+(e)stst +ev +
+6pg(e) e
+
+1
+
+1
+4
+
+a5)
+
+re
+
+sa .
+
+and (e)rs and g(e) are the torsion-less spin connection and metric determinant computed from
+the vierbein e
+even just d/ , but our intention should always be clear from the context.
+
+r. we abbreviate d/ (e, v, a) to d/ (e,ev ) = d/ (e, v, 0), d/ (e, a) = d/ (e, 0, a) or
+
+37
+
+references
+
+[1] m. f. atiyah, v. k. patodi, and i. m. singer, spectral asymmetry and riemannian geometry. i,
+
+math. proc. camb. phil. soc. 77 (1975) 4369.
+
+[2] p. b. gilkey, the boundary integrand in the formula for the signature and euler characteristic of
+
+a riemannian manifold with boundary, adv. math. 15 (1975) 334360.
+
+[3] j. m. maldacena, the large n limit of superconformal eld theories and supergravity, adv. theor.
+
+math. phys. 2 (1998) 231252, [hep-th/9711200].
+
+[4] k. peeters, j. w. van holten, and a. waldron. class. quant. grav., to appear.
+
+[5] r. rietdijk and j. w. van holten, killing tensors and a new geometric duality, nucl. phys. b472
+
+(1996) 427446, [hep-th/9511166].
+
+[6] l. alvarez-gaume and e. witten, gravitational anomalies, nucl. phys. b234 (1984) 269.
+
+[7] y. n. obukhov, spectral geometry of the riemann-cartan space-times, nucl. phys. b212 (1983)
+
+237254.
+
+[8] a. dobado and a. maroto, the standard model anomalies in curved space-time with torsion,
+
+phys. rev. d54 (1996) 51855194, [hep-ph/9509227].
+
+[9] j. de boer, b. peeters, k. skenderis, and p. van nieuwenhuizen, loop calculations in
+
+quantum-mechanical non-linear sigma models, nucl. phys. b446 (1995) 211, [hep-th/9504097].
+
+[10] j. de boer, b. peeters, k. skenderis, and p. van nieuwenhuizen, loop calculations in quantum
+mechanical non-linear sigma models with fermions and applications to anomalies, nucl. phys.
+b459 (1996) 631, [hep-th/9509158].
+
+[11] n. h. christ and t. d. lee, operator ordering and feynman rules in gauge theories, phys. rev.
+
+lett. d21 (1980) 939.
+
+[12] h. romer and b. schroer, fractional winding numbers and surface defects, phys. lett. 71b
+
+(1977) 182184.
+
+[13] t. eguchi, p. b. gilkey, and a. j. hanson, topological invariants and absence of an axial anomaly
+
+for a euclidean taub-nut (newman-unti-tamburino) metric, phys. rev. d17 (1978) 423427.
+
+[14] c. n. pope, axial-vector anomalies and the index theorem in charged schwarzschild and
+
+taub-nut spaces, nucl. phys. b141 (1978) 432444.
+
+[15] y. n. obukhov, e. w. mielke, j. budczies, and f. w. hehl, on the chiral anomaly in
+
+non-riemannian spacetimes, found. phys. 27 (1997) 12211236.
+
+[16] c. soo, adler-bell-jackiw anomaly, the nieh-yan form, and vacuum polarization, phys. rev.
+
+d59 045006, [hep-th/9805090].
+
+38
+
+[17] e. w. mielke and d. kreimer, chiral anomaly in contorted spacetimes, gr-qc/9704051.
+
+[18] o. chandia and j. zanelli, topological invariants, instantons and chiral anomaly on spaces with
+
+torsion, phys. rev. d55 (1997) 75807585, [hep-th/9702025].
+
+[19] o. chandia and j. zanelli, torsional topological invariants (and their relevance for real life),
+
+hep-th/9708138.
+
+[20] o. chandia and j. zanelli, supersymmetric particle in a spacetime with torsion and the index
+
+theorem, phys. rev. d58 (1998) 045014, [hep-th/9803034].
+
+[21] r. akhoury and a. comtet, anomalous behavior of the witten index  exactly soluble models,
+
+nucl. phys. b246 (1984) 253278.
+
+[22] a. k. waldron, cancellation of quantum mechanical higher loop contributions to the gravitational
+
+chiral anomaly, phys. rev. d53 (1996) 56925697, [hep-th/9511148].
+
+[23] t. d. lee and c. n. yang, theory of charged vector mesons interacting with the electromagnetic
+
+eld, phys. rev. 128 (1962) 885898.
+
+[24] f. bastianelli, the path integral for a particle in curved spaces and weyl anomalies, nucl. phys.
+
+b376 (1992) 113128, [hep-th/9112035].
+
+[25] f. bastianelli and p. van nieuwenhuizen, trace anomalies from quantum mechanics, nucl. phys.
+
+b389 (1993) 5380, [hep-th/9208059].
+
+[26] n. e. mavromatos, a note on the atiyah-singer index theorem for manifolds with totally
+
+antisymmetric torsion, j. phys. a21 (1988) 2279.
+
+[27] v. de alfaro, s. fubini, g. furlan, and m. roncadelli, operator ordering and supersymmetry,
+
+nucl. phys. b296 (1988) 402430.
+
+[28] h. t. nieh and m. l. yan, an identity in riemann-cartan geometry, j. math. phys. 23 (1982)
+
+373374.
+
+[29] h. t. nieh and m. l. yan, quantized dirac eld in curved riemann-cartan background.
+
+1. symmetry properties, greens function, ann. phys. 138 (1982) 237.
+
+[30] s. yajima and t. kimura, anomalies in four-dimensional curved space with torsion, prog. theor.
+
+phys. 74 (1985) 866.
+
+[31] s. yajima, mixed anomalies in four-dimensional and six-dimensional space with torsion, prog.
+
+theor. phys. 79 (1988) 535.
+
+[32] m. f. atiyah, v. k. patodi, and i. m. singer, spectral asymmetry and riemannian geometry. ii,
+
+math. proc. camb. phil. soc. 78 (1975) 405432.
+
+39
+
+[33] m. f. atiyah, v. k. patodi, and i. m. singer, spectral asymmetry and riemannian geometry. iii,
+
+math. proc. camb. phil. soc. 79 (1976) 7199.
+
+[34] m. hortacu, k. d. rothe, and b. schroer, zero-energy eigenstates for the dirac boundary
+
+problem, nucl. phys. b171 (1980) 530542.
+
+[35] m. ninomiya and c. tan, axial anomaly and index theorem for manifolds with boundary, nucl.
+
+phys. b257 (e:b266) (1985 (e:1986)) 199 (e:748).
+
+[36] n. hitchin, harmonic spinors, adv. math. 14 (1974) 155.
+
+[37] n. hitchin, harmonic spinors: page 34, aqf-th/1999/01/0002. ask questions frequently, see
+
+http://tristan.nikhef.nl:8000/aqf/.
+
+[38] d. bellisai, fermionic zero-modes around string solitons, nucl. phys. b467 (1996) 127145,
+
+[hep-th/9511198].
+
+[39] g. w. gibbons, r. h. rietdijk, and j. w. van holten, susy in the sky, nucl. phys. b404 (1993)
+
+4264, [hep-th/9303112].
+
+[40] k. yano, some remarks on tensor elds and curvature, ann. math. 55 (1952) 328347.
+
+[41] w. dietz and r. rudiger, space-times admitting killing-yano tensors. i, proc. roy. soc. london
+
+a375 (1981) 361.
+
+[42] w. dietz and r. rudiger, space-times admitting killing-yano tensors. ii, proc. roy. soc.
+
+london a381 (1981) 315.
+
+[43] a. taub, empty space-times admitting a three parameter group of motions, ann. math. 53 (1951)
+
+472.
+
+[44] e. newman, l. tamburino, and t. unti, empty-space generalisation of the schwarzschild metric,
+
+j. math. phys. 4 (1963) 915.
+
+[45] s. w. hawking, gravitational instantons, phys. lett. 60a (1977) 81.
+
+[46] t. eguchi, p. b. gilkey, and a. j. hanson, gravitation, gauge theories and dierential geometry,
+
+phys. rep. 66 (1980) 213.
+
+[47] p. musgrave, d. pollney, and k. lake, grtensorii, .
+
+http://www.astro.queensu.ca/~grtensor/.
+
+[48] j. a. m. vermaseren, symbolic manipulation with form, version 2. computer algebra
+
+nederland, amsterdam, 1991.
+
+[49] f. w. hehl, p. von der heyde, and g. d. kerlick, general relativity with spin and torsion:
+
+foundations and prospects, rev. mod. phys. 48 (1976) 393416.
+
+40
+
+

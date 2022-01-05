@@ -1,0 +1,2486 @@
+9
+9
+9
+1
+
+ 
+
+g
+u
+a
+4
+
+ 
+
+ 
+ 
+
+1
+v
+6
+2
+0
+8
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+ftuam-99-5
+
+ift-uam/csic-99-6
+
+large n corrections to the strong coupling
+
+behaviour of su (n )/zn lattice gauge theories
+
+a. gonzalez-arroyo1, and c. pena2,
+
+departamento de fsica teorica c-xi and
+
+instituto de fsica teorica c-xvi
+
+universidad autonoma de madrid,
+
+cantoblanco, madrid 28049, spain.
+
+abstract
+
+we derive a formula for the large n behaviour of the expectation values of
+
+an arbitrary product of wilson loops in the adjoint representation. we show
+
+the consequences of our formula for the study of the large n strong coupling
+
+behaviour of su(n)/zn pure gauge theories, and theories with matter elds
+
+in the adjoint representation. this allows us to calculate large n corrections
+
+to the gluino condensate and meson propagators in the lattice version of
+
+supersymmetric yang-mills. applications to the strong coupling behaviour
+
+of the kazakov-migdal model are also given.
+
+pacs: 11.15.ha, 11.15.pg, 11.15.me
+
+keywords: lattice gauge theories, large n expansions, strong coupling
+
+expansions.
+
+1e-mail: tony@martin.ft.uam.es
+2e-mail: carlos@martin.ft.uam.es
+
+1
+
+1 introduction
+
+su(n) group integration formulas at large n have attracted interest since
+
+the late 70s. they occur in the study of large n lattice gauge theories and
+
+in connection with matrix models. the latter have found a wide range of
+
+applications over the years in areas going from 2-dimensional quantum grav-
+
+ity to 4-dimensional yang-mills theory. the class of matrix models involving
+
+large n group integrations are the unitary matrix models (see ref. [1] for a
+
+recent review).
+
+within lattice gauge theories, su(n) group integrations arise naturally
+
+when studying strong coupling expansions of lattice gauge theory models,
+
+which simplify in the large n limit. the most standard method [2] uses an
+
+eective action approach centered around the one-link integral. our motiva-
+
+tion for this paper arose in the context of n = 1 susy yang-mills on the
+
+lattice, an interesting testing ground for non-perturbative methods, and for
+
+which some monte carlo data are available [3]. the model contains lattice
+
+gauge elds and quarks (gluinos) in the adjoint representation of the group.
+
+when studying the model at strong coupling one notices that the eective
+
+potential method cannot be carried through, lacking an equivalent one-link
+
+integral formula in the adjoint representation. our approach [4] was based
+
+on the hopping parameter expansion expressed as a sum of random walks
+
+on the lattice [5, 6]. then, one has to perform the gauge eld integration
+
+of an expression containing products of traces of wilson loops in the adjoint
+
+representation. it turns out, as will be shown in this paper, that the leading
+
+large n contribution is rather trivial from the point of view of large n in-
+
+tegration. it arises from loops which are pure-spikes (or pure backtrackers)
+
+and that actually do not depend on the gauge elds.
+
+2
+
+another instance in which group integrals of quantities in the adjoint
+
+representation have acquired relevance is in the context of induced qcd [7].
+
+the kazakov-migdal model has scalar quarks in the adjoint representation
+
+coupled to a  = 0 lattice gauge eld. a wide variety of techniques have
+
+been applied to this model. the strong coupling (large mass) region solution
+
+of the gaussian model was obtained by gross [8]. again, as realised later by
+
+khoklachev and makeenko [9], the role of the large n integration over the
+
+gauge variables is simply to restrict the sum over random walks to pure-spike
+
+paths. their contribution does not depend on the gauge elds, so that it can
+
+be taken outside the integral.
+
+in this paper we will address the problem of computing the leading non-
+
+trivial large n integral of a product of traces of wilson loops in the adjoint
+
+representation. the result is more easily presented in the form of the evalu-
+
+ation of a generating function (eq. (1)) for adjoint wilson loops. the main
+
+result is presented in eq. (13). the formula is obtained by expanding the
+
+exponential, performing the integration and resumming the result, so that it
+
+is only valid for suciently small lattice couplings s(), i.e. it is the strong
+
+coupling expression of the generating functional. the result is the exponen-
+
+tial of a quantity which is of order 1 ( n 0). this contrasts with the typical
+
+n 2 behaviour for the fundamental representation. indeed, in applications to
+
+strong coupling expansions of theories with matter elds, there is an addi-
+
+tional n 2  1 term arising from trivial wilson loops which are proportional
+
+to the trace of the unit matrix in this representation. this term comes from
+
+the pure-spike paths mentioned previously. thus, the terms we are calcu-
+
+lating here give large n subleading contributions to the observables of these
+
+theories. we emphasise nevertheless that our calculation gives the leading
+
+term in which the actual details of the group integration play any role.
+
+3
+
+the paper is organised as follows. the main quantity we are calculating
+
+is given in eq. (1) of section 2, and the result for it is given in eq. (13). the
+
+rest of the section contains the outline of the derivation, with details and
+
+terminology collected in the two appendices (this includes a useful diagram-
+
+matic formalism to deal with the computation of group invariants). readers
+
+not interested in the derivation might jump directly to section 3, where the
+
+formula in question is put to work in calculating large n corrections to the
+
+strong coupling values of observables in su(n)/zn lattice gauge theories,
+
+with or without matter elds. explicit formulas are given for the lattice ver-
+
+sion of n = 1 supersymmetric yang-mills theory. this includes the large
+
+n corrections to the gluino condensate and the leading non-ozi contribu-
+
+tions to the scalar meson propagator. similar calculations can be carried on
+
+for the gaussian kazakov-migdal model. as an example, we show how from
+
+our formulas one can deduce the leading n behaviour of the propagators of
+
+the p-scalar bound states. the masses of these states are explicitly given.
+
+finally, the paper is ended with a short conclusion section.
+
+2 group integration formulas
+
+we consider an su(n) gauge theory dened on a hypercubic, d-dimensional
+
+innite lattice . to any link  of the lattice there is associated a group
+
+element g. most expressions that we will use involve the matrices corre-
+
+sponding to the adjoint representation of the group ua(g)  u. regard-
+
+ing geometrical objects on the lattice, such as lattice paths, we will adopt
+
+the terminology and conventions of ref. [6]. given a closed lattice path ,
+
+tr (wa()) labels the trace of the corresponding wilson loop evaluated in
+
+the adjoint representation.
+
+4
+
+our main goal in this section is to compute, to leading order in n, the
+
+result of integrating over the group variables g an arbitrary product of traces
+
+of adjoint wilson loops. this result is best collected in the form of the
+
+following generating function:
+
+z(s) =y
+
+(cid:18)z dh(g)(cid:19) exp{x
+e
+
+s(e) tr (wa(e))} .
+
+(1)
+
+in this expression, dh(g) is the haar measure on the group variable g, and
+
+the product extends to all the links  of the lattice. the sum in the exponent
+
+runs over all equivalence classes of closed paths. each equivalence class e
+
+contains all paths such that the traces of the adjoint wilson loops computed
+
+along them coincide for an arbitrary gauge eld conguration. the common
+
+that z(s) can also be looked at as the partition function of a certain kind
+
+value of the trace of the adjoint wilson loop is labelled tr (wa(e)). the
+arguments of the generating function are the real parameters s(e). notice
+of pure gauge theory. the parameters s(e) would in that case appear as
+
+the (lattice) couplings of the corresponding action. although the action is
+
+not the most general su(n)/zn invariant action, other terms would give
+
+superuous information. from this point of view the result of this section
+
+can be interpreted as the evaluation of the partition function of this pure
+
+gauge model in the strong coupling region (small values of s(e)).
+
+the expansion of the exponential in z gives us the integrals of traces that
+
+we are interested in:
+
+z(s) =
+
+xn=0
+
+with
+
+e(e1 . . .en) =y
+
+1
+
+. . .x
+n!x
+s(e1) . . . s(en) e(e1 . . .en) ,
+en
+e1
+(z dh(g)) tr (wa(e1)) . . . tr (wa(en)) .
+
+5
+
+(2)
+
+(3)
+
+to compute the previous expression one must rst select a representative of
+
+the classe. we will choose a closed path without spikes (backtracking parts).
+
+it is always possible to reduce an arbitrary path by eliminating its spikes in a
+
+systematic way and reach a path which is called simple in ref. [6]. as we will
+
+see later there is more than one simple path within each class, but anyone
+
+will do. let us, from now on, use the same symbole to refer to the class and
+
+to its representative simple path. in the rest of this section we will show the
+
+main steps in the evaluation of expression (3). many of the technical details
+
+are collected in appendices a and b.
+
+a possible approach would be to express the adjoint wilson loops in
+
+terms of fundamental representation ones and then use the formulas available
+
+for the latter.
+
+instead we would use a procedure which could allow the
+
+calculation of traces of adjoint wilson loops and other gauge invariant objects
+
+systematically to all orders in 1/n. what we do rst is to express the
+
+integrand in eq. (3) as a sum of products of the elements of the adjoint
+
+representation matrices u:
+
+e(e1 . . .en) =xai,bi
+
+()a1...alb1...bly
+
+(cid:18)z dh(g)(cid:19) u a1b1
+
+1
+
+. . . u albl
+
+l
+
+.
+
+(4)
+
+the sum extends over the 2l(n 2  1) possible values of the indices. for
+
+simplicity we will refer to the indices jointly by the set i  {a1, b1, . . . al, bl}.
+
+the integer l gives the length of the total joint path e1 . . .en. the labels
+
+1 . . . l refer to the links of this joint path taken in an arbitrary order and
+
+where a given link can occur more than once in the sequence. finally, the
+
+symbol () contains the contraction of the indices necessary to produce the
+
+traces given in eq. (3). it is given by a product of l kronecker deltas. it
+
+is clear that which index is contracted with which depends on the naming
+
+of the indices and on the geometry of the paths. this information can be
+
+6
+
+coded into an application  : i  i which maps the contracted indices onto
+
+each other ((c) = c ; (c) = c). since the application is bijective it can be
+
+seen as an element of the group s2l of permutations of 2l indices, having
+
+the properties of a pairing. it is clear from the denition of the index set i,
+
+that there is another pairing   s2l naturally dened on our system. it is
+
+the application which maps the two indices of a given link matrix onto each
+
+other:  (ai) = bi ;  (bi) = ai.
+
+the next step in the calculation is the evaluation of the group integrals
+
+involved in eq. (4). our procedure will be to express the adjoint representa-
+
+tion matrices in terms of the fundamental representation ones, and then to
+
+make use of the available formulas for that case. here we will just explain
+
+and make use of the results, collecting the details of the derivation within
+
+appendix a. first, one can look at the result of integrating over a single link
+
+variable. the result can be expressed as a linear combination of invariant
+
+group tensors, with coecients depending on n. these tensors have indices
+
+within those elements of i which belong to the matrices corresponding to
+
+this link. the result of integrating over all link variables can be expressed
+
+similarly as a linear combination of invariant tensors, this time involving all
+
+the indices of the set i. thus we can write:
+
+e(e1 . . .en) =xci
+
+()c1...c2l xs
+
+cn () t ()c1...c2l ,
+
+(5)
+
+where t ()c1...c2l is an invariant tensor and cn () the corresponding n-
+
+dependent coecient. the indices ci simply label the elements of i. the
+
+symbol  stands for a permutation ( : i  i). in appendix a (eq. 37) we
+
+describe how one can associate to any permutation of a certain type an in-
+
+variant tensor (  t ()). there, one can also see that if the permutation
+
+has a nonvanishing number of 1-cycles, the corresponding tensor vanishes.
+
+7
+
+it is clear by the construction that both the invariant tensor and its coe-
+
+cient factorise into a product of contributions of single links. this and other
+
+properties (like the absence of 1-cycles) restrict the space of possible . the
+
+full set labelled s denes a certain subgroup of s2l. we will leave out its
+
+characterisation for later and continue with the outline of the procedure.
+
+the nal step consists in performing the summation over the values of the
+
+indices, which is equivalent to contracting the colour indices of the invariant
+
+tensor with the (). dening
+
+dn (, ) xci
+e(e1 . . .en) = xs
+
+()c1...c2l t ()c1...c2l
+
+cn ()dn (, ) .
+
+(6)
+
+(7)
+
+we nally get:
+
+the result is expressed in terms of the coecients cn () and dn (, ).
+
+explicit forms for these quantities can be traced back from eqs. (41) and
+
+(42) in appendix a. the main point now is to analyse the behaviour of these
+
+coecients as n  .
+
+the large-n behaviour of the coecients cn () follows from the result
+
+for the corresponding coecient in the one-link integral, eq. (35); one gets:
+
+n(cid:19)l
+cn () = a() (cid:18) 2
+
++ subleading terms .
+
+(8)
+
+where the leading prefactor a() is zero for all but a restricted class of
+
+permutations . it is not hard to characterise this subset within s. it is
+
+given by those permutations  satisfying:   = e, where e is the identity
+
+mapping. for these permutations the coecient a() is equal to 1. this
+
+result rests on the work of ref. [10].
+
+the machinery to deal with the contractions of invariant tensors entering
+
+the denition of dn , and extract their leading n behaviour, is set up in
+
+8
+
+appendix b, whither we refer for details. the method follows by setting up
+
+a feynman-diagram interpretation of each term in the sum eq. (7). for that
+
+we need to enter into the structure of the invariant tensors t (). these are
+
+products of traces of products of the group generators in the fundamental
+
+representation (cf. eq. (39)). to any p-cycle contained in the permutation 
+
+there corresponds an invariant tensor of the form tr (c1 . . . cp) (where ci is
+
+a group generator). it is clear why the tensor vanishes if there are 1-cycles.
+
+we look at these traces as vertices of a feynman diagram where the indices
+
+play the role of the legs. the vertices are not symmetric with respect to
+
+the exchange of the legs but only cyclic-symmetric. this form of vertices
+
+is characteristic of planar diagrams in large hermitian matrix models, for
+
+example. thus, for the full  one obtains a bunch of vertices with a total of
+
+2l legs. the contractions encoded in  can be seen as propagators joining
+
+pairs of legs of dierent or the same vertices. thus to every term in eq. (7)
+
+one can associate a (vacuum) feynman diagram with v vertices and l lines
+
+(note that l, which is the total number of pairs of colour indices in eq. (4),
+
+is the only topological quantity of the diagrams being equal for all the  and
+
+). we further call k the number of connected components of the diagram.
+
+in appendix b we prove that the large n maximal leading contribution of
+
+a diagram with k connected components, v vertices, and l lines is given by
+
+m 2ln 2kv +l, where m is an integer that can be zero or one. corrections
+
+go like inverse powers of n 2. if we combine this with (8), we obtain that the
+leading term coming from cn ()dn (, ) goes at most as n 2kv .
+
+now, from the topological constraints it is clear that 1  k  v . there-
+
+fore, the maximum value of 2k  v would occur when k = v . this means
+
+that all propagators go from one vertex to itself. to understand the impli-
+
+cations of this we need to make use of some of the properties of the vertices
+
+9
+
+appearing in such a diagram and its relation to the original set of lattice
+
+paths. since vertices arise from link integration they can only contain in-
+
+dices pertaining to matrices of the same link. furthermore, vertices only mix
+
+the rst indices of the matrices among themselves and the second among
+
+themselves (see appendix a for details). hence, a contraction between two
+
+indices of the same vertex comes from a contraction of the link matrix with
+
+itself. but since the rst index is contracted with the rst or the second with
+
+the second, we have either u t
+
+ , which due to the orthogonal nature
+of the adjoint representation matrix allows to eliminate the two matrices al-
+
+ u or uu t
+
+together.
+
+in terms of the original paths a self contraction corresponds to
+
+the path moving in one direction forward and backward consecutively. this
+
+gives what we call spikes. but remember that our original paths were sim-
+
+ple, and hence had no spikes. in conclusion, the restriction to simple paths
+
+tells us that there are no self-contractions of our diagrammatic vertices, cor-
+
+responding to the situation when these vertices come from normal ordered
+
+operators.
+
+we then conclude that all connected components of the diagram have at
+
+least two vertices. hence, the leading term arises from diagrams for which
+
+2k = v and which give a contribution of order one as n  . finally, we
+
+arrive at
+
+e(e1, . . .en) = 0 + o(
+
+1
+n 2 ) ,
+
+(9)
+
+where 0 is an integer summing the contribution from all the leading order
+
+diagrams. this is the main result that was needed in ref. [4] to justify the
+
+restriction to pure-spike paths. in what follows we will proceed to compute
+
+the value of 0.
+
+first of all let us study what can we learn about the graphs giving nonva-
+
+nishing leading contribution (o(n 0)). we have not yet given the condition
+
+10
+
+that has to be satised by  to give a nonvanishing leading contribution to
+
+dn (, ). this occurs (see appendix b) when the permutation  satises
+
+the relation:  = e. this is very similar to the characterisation coming
+
+from the link integration, with the replacement of  by . our nal number
+
+0 comes from counting the number of possible permutations  within s
+
+satisfying both relations simultaneously. furthermore, the set s is charac-
+
+terised by saying that it contains all permutations having no 1-cycles and
+
+such that all cycles contain indices belonging to matrices of the same link
+
+and to either the rst or the second index of these matrices (but not both).
+
+to understand the implications of the previous conditions, let us return
+
+to the connection between the original pathsei and the permutation . any
+
+of the paths is an ordered sequence of matrices. since the matrices have two
+
+indices we get a classication of indices into two sets: those appearing as a
+
+rst or a second index of the matrices. notice that if the link is followed in
+
+the reverse direction the denition of what index is rst or last is exchanged.
+
+any path is then associated to two equal length closed sequences of indices.
+
+it corresponds to two of the cycles of the permutation  . the two cycles can
+
+be connected by means of  (or ). now, from the conditions characterising
+
+the leading , we conclude:
+
+ =  1
+
+.
+
+(10)
+
+this means that  must map complete cycles of  into equal length cycles.
+
+given the identication of these cycles with the original paths, we see that
+
+a leading  just maps complete paths of equal length among themselves.
+
+but since  only connects indices belonging to the same lattice point, we
+
+conclude that the actual paths connected by  have to coincide. there are
+
+a few very simple conclusions one can extract from this result. the rst is
+
+11
+
+that there is a factorisation property satised by the integral e(e1, . . .en). its
+
+value factorises into a product of contributions of distint paths. this follows
+
+from a similar factorisation property for , since indices from dierent paths
+
+cannot be connected by it, despite the fact that the paths might overlap
+
+partially. thus, the nal number of maximal permutations 0 factorises as
+
+well. one might have guessed this factorisation from the standard arguments
+
+in the large n limit; notice, however, that the factorisation is not complete:
+
+as we will see, the integral of a given wilson loop to the power n is not the
+
+n-th power of the integral of a single wilson loop, so that the result is not
+
+classical.
+
+it only remains, therefore, to compute 0 for the case of a single wilson
+
+not be reducible equivalently. we will refer to  as the winding number of
+
+loop tr (wa(e)) taken to the power n. to do this, it is convenient to express
+the path e in the form (), where  is a positive integer. this notation
+means that e is built up by describing  sequentially  times;  itself must
+the path, and write it as (e). these considerations are necessary, as our
+results will depend explicitly on (e).
+for our path conguration we have that  has n cycles of length l(e)
+
+(the length of the path). the permutation  maps one cycle into other
+
+preserving the ordering within each cycle. thus, it is specied by giving the
+
+corresponding mapping of the indices at a given space point. naively one
+
+would say that the number is then n!. in fact this has to be corrected by two
+
+facts: the rst is that we have to eliminate all permutations  having 1-cycles;
+
+points. this last issue can be dealt with by arranging the indices belonging
+
+the second is that one must take into account that if (e) is larger than 1,
+the mapping has to respect the cyclic ordering in which e describes these
+to the same path into cycles of length (e).
+
+in a compact mathematical
+
+12
+
+form we have that, given a permutation   having n -cycles, we want to
+
+ 1 =  . let us call this number p n
+
+count how many permutations  without 1 cycles of the n indices satisfy:
+ . the action of  is simply the
+mathematical statement of a change of names of the indices, so that without
+
+the requirement of no 1-cycles, the solution would be simply n!n. this
+
+comes because we must map complete cycles into complete cycles, so we
+
+have n! possibilities. then after having selected the mapping of the cycles,
+
+there are  possible assignements for each cycle (it is enough to specify the
+
+mapping of 1 element of the cycle and the rest would follow): this gives the
+
+n. subtracting the permutations which have 1-cycles takes a little more
+
+eort but presents no real problem. as a matter of fact, it is easier and
+
+more compact to determine the expression for the generating function rst
+
+and deduce from it the expression of the quantity p n
+
+ . for the generating
+
+function corresponding to a single path one obtains:
+
+y
+
+(cid:18)z dh(g)(cid:19) exp{s(e) tr (wa(e))} =
+
+exp{s(e)}
+(1  (e)s(e))
+
+for completeness we give an expression for the numbers p n
+
+ themselves:
+
+,
+
+(11)
+
+p n
+
+ = n!
+
+nxp=0
+
+(1)p
+
+p!
+
+np
+
+.
+
+(12)
+
+finally, we combine the result eq. (11) for all the paths via the factorisa-
+
+tion property and arrive at the desired leading contribution to the generating
+
+functional eq. (1):
+
+z(s) = exp
+
+(s(e) + log(1  (e)s(e)))
+
+
+(13)
+
+x
+e
+
+which is the main result of this section. as explained in the introduction the
+
+exponent is of order n 0. had we added a contribution to the initial action
+
+13
+
+proportional to the trace of the unit matrix in the adjoint representation, the
+
+term would have remained unchanged by the integration (being a constant)
+
+and would have given a contribution to the exponent of order n 2  1 (the
+
+dimension of the adjoint representation). although trivial, this remark is im-
+
+portant in practice because such a term actually arises in many applications.
+
+it can be associated to the trivial path of zero length.
+
+3 application to strong coupling expansions
+
+in this section we will use the group integration formula obtained in the last
+
+section to derive results which are relevant for the behaviour of su(n)/zn
+
+gauge theories on the lattice, with or without matter elds, at strong cou-
+
+pling and large n. these include pure gauge theories, gauge theories with
+
+fermions in the adjoint representation, a particularly interesting case being
+
+the lattice version of n = 1 supersymmetric yang-mills [3], and also gauge-
+
+higgs models with scalars in the adjoint representation like the kazakov-
+
+migdal model [7]. in all cases, after integrating out the matter elds via a
+
+hopping parameter expansion, one ends up with an eective action of the
+
+type given in eq. (1). our integration formula eq. (13) allows us to write
+
+immediately the expression for the free energy in the strong coupling region
+
+at large n. in what follows we will give the explicit formulas in some of the
+
+cases that have been studied previously in the literature.
+
+consider rst the case of su(n)/zn pure gauge lattice theories. for this
+
+case the consequence of our formulas can be easily deduced. as mentioned
+
+at the beginning of section 2, the generating function z(s) can be seen as
+
+the partition function of a pure gauge model where the couplings a(e) are
+identied with s(e). the free energy of the model is then given by the
+
+14
+
+exponent of the right hand side of eq. (13). as a particular example we can
+
+write down the case of the wilson-type plaquette action model. the free
+
+energy per unit volume of the model is given by:
+
+f (a)/v olume =
+
+d(d  1)
+
+2
+
+(a  log(1  a))
+
+,
+
+(14)
+
+which has a singularity at a = 1. actually, the position of the singularity
+
+coincides with the position of the third-order phase transition point in the
+
+2-dimensional lattice gauge theory [11]. in higher dimensions the model is
+
+known to have a rst order phase transition line at a < 1 [12, 11]. thus,
+
+the strong coupling phase depicted by eq. (14) extends into the metastable
+
+region as is usually the case for these transitions. there is one atypical
+
+behaviour of the free energy eq. (14) which explains why this formula was
+
+not found before. this is the fact that it is of order 1 = o(n 0). typically
+
+the free energy goes like n 2, as for example is the case in this same model
+
+above the rst order phase transition point. the dierent n dependence of
+
+the free energy above and below the transition suggests that the position of
+
+the transition is given by the vanishing of the weak coupling free energy. this
+
+is indeed the case in 2 dimensions. an n 2 behaviour is also shown by the
+
+free energy of the mixed fundamental-adjoint action for any non-zero value
+
+of the fundamental coupling [11]. thus, in older work the free energy (14) of
+
+this model is taken to be zero [13]. remarkably, from eq. (13) one can easily
+
+read out the free energy for an arbitrary su(n)/zn invariant action.
+
+let us now consider the addition of matter elds in the adjoint represen-
+
+tation. the general features and behaviour is similar for scalar or fermionic
+
+matter. for deniteness we will illustrate the formulas restricting to the
+
+fermionic case. indeed, our concern with n = 1 susy yang-mills triggered
+
+our interest in the problem. here we will follow the procedure of ref. [4].
+
+15
+
+performing the integration over the quark (gluino) elds leads to a deter-
+
+minant. in the large mass (small hopping) region, this determinant can be
+
+written as the exponential of an eective action expressable as a sum over
+
+closed paths on the lattice:
+
+sef f = fxx
+
+xl=1 xsl(x)
+
+1
+l
+
+tr (w ())tr (()) ,
+
+(15)
+
+where sl(x) is the set of closed paths of length l with origin in the lattice
+
+point x, and () is a spin matrix associated to the path, whose explicit
+
+form we will detail later (cf. eq. (18)). the factor f takes into account
+
+the dierent possibilities for the nature of the fermion eld: m ajorana = 1/2,
+
+while dirac = 1.
+
+in ref. [6] it is shown how it is convenient and possible to rearrange the
+
+summation over paths into a sum over classes of paths labelled by what is
+
+called a simple path. a simple path is a closed contour that has no spikes or
+
+backtracking pieces. it is easy to see that for all paths associated with the
+
+same simple path the trace of the wilson loop is exactly the same, so that
+
+they actually belong to a single equivalence class of the type dened at the
+
+beginning of section 2. however, the classes considered in this paper contain
+
+more than one simple path and its corresponding classmates. the reason is
+
+that in ref. [6] closed paths are dened as ordered sets of links, which have
+
+therefore a rst and a last element. it is clear, however, that which link is
+
+taken as the rst one is irrelevant for the gauge eld dependence, being given
+
+by a trace. this is just a technical point, but essential to get the numbers
+
+right. to compensate for this point one has simply to multiply by a counting
+
+factor which gives the number of links that can be chosen as rst element.
+
+curiously this factor is not the length of the path l(e) but l(e)/(e), where
+(e) is the winding number factor dened in the last section. when the path
+
+16
+
+goes round a given loop (e) times, it is clear that the relevant factor is the
+
+number of links in the basic loop, and not in the total path. in addition, the
+
+orientation of the path is irrelevant for the gauge eld dependence, so that
+
+our present classes contain each path and its reverse. in summary, we stress
+
+that the classes of paths dened in section 2 contain a basic simple path,
+
+its reverse and all the l(e)/(e) simple paths obtained by selecting a point
+
+along the path (as origin).
+
+finally, one can rewrite the eective action (eq. (15)) in the form of
+
+the exponent of eq. (1), with coecients s(e) which depend on the basic
+
+parameters of the original theory. these coecients are o(1) in n. one can
+
+include in them the contribution of the pure gauge action. restricting for
+
+deniteness to one avour adjoint fermions at zero gauge couplings, which
+
+contains the lattice version of n = 1 supersymmetric yang-mills, one obtains
+
+the following coecients:
+
+,
+
+s(e) =
+ (e) 
+
+ (e)
+(e)
+(1  )l(e)(cid:0)tr ((e)) + tr ((e1)(cid:1)
+
+f
+
+(16)
+
+(17)
+
+,
+
+where 1 is the reverse of the path , and the matrix (e) is the spin matrix
+
+of the path, given by the product along the path of the link matrices:
+
+ (ris  )
+
+.
+
+(18)
+
+in the previous expression  is the hopping parameter, r the wilson parame-
+
+ter, and the spin matrices  are just the dirac matrices up to a sign, positive
+
+if the path traverses the link with positive orientation and negative if not.
+
+the factor 1   in eq. (17) is the result of resumming all paths within each
+
+class, with  given by:
+
+ =
+
+1 p1  4(2d  1)2(r2  1)
+
+2
+
+,
+
+(19)
+
+17
+
+where d is the space-time dimension.
+
+with the previous expression and formula (13), one can obtain the free
+
+energy of the model at large n:
+
+f = f (n 2  1) f0 v olume 
+
+(20)
+
+x
+e
+
+(cid:18)  (e)
+(e)
+
++ log(1   (e))(cid:19) ,
+
+where the sum runs over the equivalence classes of paths e dened in sec-
+
+tion 2.
+
+we see that our result provides the o(1) contribution to the free energy.
+
+this is not however the leading piece, which is given by the term proportional
+to f0, and is of order n 2. the latter was given in ref. [6] and its value is:
+
+f0 = f(cid:16)  d log(1  ) + (d  1) log(1 
+
+2d
+
+2d  1
+
+)(cid:17)tr (is) ,
+
+(21)
+
+where is is the identity matrix in spin space. this term arises from the
+
+paths whose gauge eld contribution is proportional to the trace of the unit
+
+matrix. this occurs for the so-called pure-spike paths, which are paths such
+
+that after eliminating all backtracking parts we are left with a single point
+
+(a path of zero length). this contribution is, however, fairly trivial from the
+
+point of view of the group integration, so that the o(1) contribution is the
+
+rst one in which the characteristics of group integration show up.
+
+obtaining a closed expression for the o(1) contribution to the free energy
+
+involves performing the sum over path classes explicitly. similar resumma-
+
+tions can be performed (see ref. [6] for a derivation of these resummations
+
+and for earlier references on the subject). the appearance of the factor (e)
+
+in the formula has prevented us so far from obtaining such a closed expres-
+
+sion.
+
+18
+
+1
+
+v olumex
+e
+
+f (1  2)(cid:18)
+l(e)  (e)
+
+1
+
+(e)
+
++
+
+1
+
+1   (e)(cid:19) ,
+
+(22)
+
+other interesting quantities can be computed to the order in n at which
+
+we are working. this includes the gluino condensate, which can be obtained
+
+by an appropriate dierentiation of the free energy. as in the previous case,
+
+the leading term given in ref. [4] comes from pure-spike paths, and is (up
+
+to some multiplication factors) independent of the group representation in
+
+which the quarks are living. this is a particular manifestation of the triviality
+
+from the point of view of group integration of the leading term. finally, our
+
+expression is as follows:
+
+h (x)(x)i = 
+
+(n 2  1)tr (is)
+
+1  2d
+
+2d1
+
+
+
+by the volume in the previous expression is simply accounted for by picking
+
+where l(e) is the length of any representative simple path. the division
+a single simple path e from the space of all space-time translates. the
+
+correction is the rst unquenched contribution. the leading one coincides
+
+with the result of the quenched approximation [4]. to arrive at expression
+
+eq. (22) we have made use of the resummation formulas of ref. [6]. the
+
+origin of the 1  2 factor can be traced back to the rearrangement of sum
+
+over paths into sums over simple paths.
+
+in a similar fashion, it is possible to derive the large n correction to the
+
+meson and p-gluino propagators and spectrum, which are given in ref. [4].
+
+we will not give the formulas explicitly since they are notationally fairly
+
+lengthy. instead we will provide the expression of a quantity for which our
+
+present computation gives the leading large n behaviour. this quantity
+
+is the non-ozi contribution to the meson propagator.
+
+in a theory with
+
+dierent equal mass avours, this term gives the main contribution to the
+
+19
+
+mass dierence between the non-singlet and singlet mesons. it contains what
+
+in the continuum would be the contribution of the anomaly. when expanding
+
+the fermion propagators in terms of paths, the non-ozi contributions come
+
+from 2 closed paths originating at the 2 meson positions (see ref. [4] for
+
+details). due to the main factorisation property which we have obtained for
+
+wilson loop integration at this order in n, the contribution is only non-zero
+
+when the two paths (classes) coincide. to the order in n at which we are
+
+working, this term is non-zero both in the quenched approximation and in the
+
+full theory. for simplicity, we give the contribution to the scalar propagator:
+
+gnonozi(x, y) =
+
+2
+
+1
+
+2d1 (cid:1)2 x12
+
+f(cid:0)1  2d
+
+ (1) (2) e1e2(cid:18) (e)
+1   (e)(cid:19)2
+
+(23)
+
+where the sum now extends over all closed terse paths 1 with origin in x
+
+and 2 with origin in y (see ref. [6] for an explanation of the lattice path
+
+that the two paths have the same common reduced simple path, which we
+
+terminology and an account of the resummation formulas). the e1e2 imposes
+labele. it is possible to eliminate the constraint given by the  in the previous
+
+formula, but its treatment exceeds the purpose of this paper.
+
+in a similar way one can study other models, like the kazakov-migdal
+
+model which has scalars in the adjoint representation. the gaussian model
+
+can be treated in a similar way as the fermionic model. in this model there
+
+are composites formed by p scalars, which are the analog of the p-gluino
+
+bound states of the fermionic model [4]. the operators which produce these
+
+states can be written in our notation as follows:
+
+op(x)  a1(x)    ap(x) t (l(p)
+
++ )a1...ap
+
+.
+
+(24)
+
+at strong coupling the correlator of two operators at dierent points (say x
+
+and y) can be written as a sum over p paths (1 . . . p) joining the elds at
+
+20
+
+the two dierent points. the gauge eld dependence of such a contribution
+
+is as follows (we restrict to correlators that are leading at large n):
+
+t (l(p)
+
++ )a1...ap t (l(p)
+
++ )bp...b1 (wa(1))a1b1 . . . (wa(p))apbp
+
+.
+
+(25)
+
+now we have to evaluate its expectation value with respect to the gauge
+
+eld in the large n limit. the quantity is not a product of traces of wilson
+
+loops. to handle this in a simple way with our formulas, we might add a
+new big link l going from y to x and its corresponding group element (as an
+
+independent variable). now, one can form p closed paths by attaching to each
+of the original open paths i the big link l (note they all have  = 1). one
+can then compute the expectation value of the product of the corresponding
+
+wilson loops. clearly s for these paths is zero, since none of the paths
+
+in the eective action contains the big link. the large n leading term of
+
+the connected expectation value is obtained for all paths belonging to the
+
+same class. the corresponding contribution is the p-th derivative of the free
+
+energy in eq. (13) at s = 0, which is (p  1)!. what has this to do with
+
+the expectation value of eq. (25)? to see that, one has simply to integrate
+
+over the big link group variable. one gets terms like eq. (25) multiplied by
+
+is (p  1)!. hence, nally, the expectation value of eq. (25) to leading order
+
+n(cid:1)p. then one has to multiply by the number of dierent p-cycles, which
+(cid:0) 2
+2(cid:1)p, and is achieved when all the path classes e1 . . .ep coincide.
+is given by(cid:0) n
+
+similar results can be obtained in the fermionic model, thus justifying the
+
+treatment of p-gluinos of ref. [4]. as an application of this result one can
+
+proceed in a similar fashion as in ref. [4] and deduce the values of the masses
+
+mp of the p-eld bound states for this theory:
+
+cosh(mp) =
+
+(2d  1)p/2
+
+2
+
+(cid:18)(cid:18)1  
+
+ (cid:19)p/2
+
++
+
+21
+
+(2d  1)p1(cid:18) 
+
+1  (cid:19)p/2(cid:19) , (26)
+
+1
+
+ being an integer number in {(d  1), . . . , (d  1)}, which accounts for all
+
+the possible doubler modes (see [4] for details), and  is given by the same
+
+formula as before (eq. 19) with r2  1 set to 1.
+
+4 conclusions
+
+in this paper we have studied the leading behaviour for large number of
+
+colours of su(n) group link integrals of products of traces of wilson loops
+
+in the adjoint representation. we have proven that the leading (non-trivial)
+
+result is o(1) = o(n 0). the corresponding coecient has been computed in
+
+section 2. the result factorises into contributions of wilson loops associated
+
+to inequivalent paths. this allows us to compute up to this order and in the
+
+strong coupling (small s()) region the corresponding generating function,
+
+given in eq. (13) of section 2.
+
+in section 3 we have shown how this generating functional and its deriva-
+
+tives enter in expressions which are relevant in the context of strong coupling
+
+expansions for gauge theories with matter elds in the adjoint representation.
+
+we have given the expression for the free energy of a pure gauge su(n)/zn
+
+model at strong coupling. adjoint wilson loop expectation values can be
+
+read out immediately for these theories. we then proceeded to show how the
+
+large mass expansion of theories with matter elds in the adjoint represen-
+
+tation yields an eective action suitable for treatment with our formula. we
+
+illustrate the applications by calculating explicitly the large n corrections
+
+to various quantities in the lattice version of supersymmetric yang-mills. in
+
+all cases, to obtain a compact form, one is faced with a path resummation
+
+problem which at the moment we have been unable to solve. (the problem
+
+looks tractable, though). we also showed that our present formulas can be
+
+22
+
+used to prove the form of the leading large n behaviour for p-gluino propa-
+
+gators and spectra given in ref. [4]. we then took the case of the gaussian
+
+kazakov-migdal model to show how, similarly, one arrives at the large n
+
+values of the masses of the p-particle bound states at strong coupling.
+
+from the methodological point of view, our paper might also prove of
+
+interest in other contexts where the large n limit is at play. our diagram-
+
+matical technique is non-standard and could help to complement other well-
+
+known techniques as loop equations, orthogonal polynomials, master eld
+
+equation, etc. it allows the computation of higher order corrections in 1/n 2
+
+keeping the feynman diagram analogy. on the negative side, such a tech-
+
+nique does not look appropriate for dealing with the weak coupling (large
+
+s()) behaviour of the generating function.
+
+acknowledgements
+
+this work has been nanced by the cicyt under grant aen97-1678. a. g-
+
+a wants to thank the theory division at cern for its hospitality during
+
+the last stages of this work. the authors acknowledge useful conversations
+
+with e. gabrielli and j. vermaseren.
+
+appendix a
+
+in this appendix we study group integrals with variables in the adjoint rep-
+
+resentation of the gauge group. for this purpose, as explained in section 2,
+
+we will relate the matrices in the adjoint representation to their fundamental
+
+counterparts, and afterwards we will use known integration formulas for the
+
+latter. these will be rst applied to the computation of single link integrals,
+
+23
+
+and then we will use the result to evaluate the multilink integral in eq. (4),
+
+and reduce it explicitly to the compact form in eq. (5).
+
+let us rst establish some notations and conventions. we write a for
+
+the generators of su(n) in the fundamental representation. they close the
+
+group algebra:
+
+[a, b] = f abcc
+
+,
+
+(27)
+
+where the indices a, b, c range from 1 to n 2  1. we choose the generators
+
+to be normalised as:
+
+tr (ab) =
+
+1
+2
+
+ab
+
+.
+
+furthermore, the completeness relation is written as:
+
+(a)ij(a)kl =
+
+1
+2
+
+jkil 
+
+1
+2n
+
+ijkl
+
+.
+
+(28)
+
+(29)
+
+now, the group integrals we want to compute have the general form:
+
+z dh(g) u a1b1 . . . u anbn ,
+
+(30)
+
+where u = ua(g) is the matrix corresponding to a given group element g in
+
+the adjoint representation, and dh(g) is the haar measure on su(n).
+
+the relation of u with the matrix u = uf (g) corresponding to the same
+
+group element in the fundamental representation reads, with the conventions
+
+adopted above:
+
+u ab = 2 tr (u aub) .
+
+(31)
+
+this allows us to rewrite (30) as an integral for matrices in the fundamental
+
+representation, whose indices are contracted with a certain tensor built up
+
+of a product of generators. before casting this statement into an explicit
+
+equality, let us introduce the following known formula for group integrals in
+
+24
+
+the fundamental representation [10]:
+
+r dh(g) u i1j1 . . . u injn(u )l1m1 . . . (u )lnmn =
+
+(j, (l)) (m, (i)) c n
+
+n (  ) ,
+
+x,sn
+
+(32)
+
+with n < n .
+
+in this expression, sn is the permutation group of n elements, and we have
+
+introduced the following notation:
+
+(j, (l)) 
+
+nyk=1
+
+jkl(k)
+
+,
+
+(33)
+
+where l(k) is the k-th element of ({l1, . . . , ln}), with   sn.
+
+c n
+
+the coecients c n
+
+n are class-functions on the space of permutations, i.e.,
+n () for any (, )
+(the notation    stands for the composition of two permutations), so
+
+n is a map sn  r fullling c n
+
+n (    1) = c n
+
+that the value c n
+
+n () only depends on the total number of cycles in the
+permutation . for this purpose we call ck() the number of k-cycles in ,
+
+and c() pk ck(). with this notation, it can be shown that the following
+
+relation holds [10]:
+
+  = xsn
+
+c n
+
+n (  ) n c()
+
+,
+
+(34)
+
+which allows to determine c n
+
+n () recursively. its general form turns out to
+q(n ), where q(n) = n 2(n 2  1) . . . (n 2  (n  1)2), and p (n)
+
+be c n
+
+n () = p (n )
+
+is a polynomial whose leading term is n c(). hence, at large n we get:
+
+n () n=
+c n
+
+1
+n n ,e + subleading terms ,
+
+(35)
+
+where e is the identity permutation, which maps a sequence to itself.
+
+25
+
+if we now merge eqs. (31) and (32), the result for (30) can be written as:
+
+z dh u a1b1 . . . u anbn = 2n x,esn
+
+c n
+
+n ( e) t ()a1...an t (e)b1...bn ,
+
+(36)
+
+where we have introduced the following notation:
+
+t ()a1...an  (a1)j1k1 . . . (an)jnkn(k, (j)) = (a1)j1j(1) . . . (an)jnj(n)
+
+,
+
+(37)
+
+an implicit summation over matrix indices being understood. these objects
+
+are products of traces of products of generators, and therefore invariant group
+
+tensors. to make this more explicit, we can introduce the one-step-forward
+cyclic permutation of m elements l(m)
+and l(m)
+
++ (ai) = ai+1 for i < m
+
++ , dened by l(m)
+
++ (am) = a1, such that:
+
+t (l(m)
+
++ )a1...am = tr (a1 . . . am) .
+
+(38)
+
+then we notice that each cycle in a generic permutation of n elements , as
+
+that appearing in (37), closes an l+ trace, so that we can write:
+
+t ()a1...an =
+
+c()yi=1
+
+t (l(i)
+
++ )ai(1)...ai(i)
+
+,
+
+(39)
+
+where i is a sub-permutation giving the index order inside the i-th cycle,
+
+which is a i-cycle.
+
+now we address the computation of eq. (4). if we substitute for each
+
+single-link integration in it the result (36) we get:
+
+e(e1 . . .en) = 2lxai,bi
+
+()a1...alb1...bl
+
+lyk=1h x(k),e(k)snk
+
+c nk
+
+n ((k) e(k)) t ((k))a1a2...ank t (e(k))b1b2...bnki ,
+
+26
+
+(40)
+
+where the index k labels the links which contribute at least one u in eq. (4),
+
+the total number of these links being l (note that the integral over a link
+
+carrying no u is 1). we call nk the number of us in (4) lying on the link k;
+
+as we dene in section 2 the total number of us to be l, it is obvious that
+
+k=1 nk = l.
+one can put the result in a more compact form by introducing a permu-
+
+pl
+tation   s2l combining the set {(k),e(k); k = 1, . . . , l}. it is important
+
+to notice that the set s of all the possible  obtained in this way is, in
+
+general, only a subgroup of s2l, determined by the structure of the joint
+
+path e1  . . . en. notice that the condition for cn () to be leading in n
+is read from eq. (35) to be (k) =e(k)1 for any k; when written in terms of
+
+the joint permutation , this condition is equivalent to   = e, where  is
+
+a pairing, dened in section 2, such that  (ai) = bi,  (bi) = ai.
+
+once  is xed, we can dene:
+
+cn ()  2l
+
+t ()c1...c2l 
+
+c nk
+
+n ((k) e(k)) ,
+
+lyk=1
+lyk=1
+t ((k))a1a2...ank t (e(k))b1b2...bnk
+
+(41)
+
+,
+
+(42)
+
+after renaming the colour indices as in section 2.
+
+it is these denitions,
+
+together with eq. (6), that give the nal form eq. (7).
+
+appendix b
+
+in this appendix we will study the large n behaviour of scalars (invariants)
+
+formed by contraction of invariant tensors. this type of objects appears
+
+in the denition of the quantities dn entering in eq. (7). we will use the
+
+symbolic representation for tensors as given in (37). for notational details we
+
+27
+
+refer the reader to appendix a. computational methods for calculating these
+
+quantities have been devised [14] due to their interest in dierent contexts.
+
+our iterative technique is related to the method of cvitanovic [15].
+
+first of all we will set up a feynman diagram-like representation for the
+
+invariant tensors t ()a1...am. for that, one uses the decomposition of the
+
+permutation  into cycles (see eq. (39)). the tensor corresponding to an
+m-cycle t (l(m)
++ )b1...bm is the trace of the product of m group generators, as
+shown in eq. (38). now, to each l(m)
++ tensor we associate an m-legged vertex,
+where the external legs are attached to indices, oriented clockwise according
+
+to the orientation given by the cycle. in this way, a tensor associated to the
+
+permutation  is associated to c() vertices. furthermore it will prove useful
+
+to consider vertices with no legs, associated to the trace of the identity. this
+
+representation is illustrated by the following:
+
+t (l(n)
+
++ )b1...bn 
+
+bn
+
+b1 b2
+
+b3
+
+b
+
+1(
+1)
+
+t ()b1...bn 
+
+b
+
+1(1)
+
+b
+
+1(2)
+b
+
+1(3)
+
+b
+
+c()(
+
+c())
+
+b
+
+c()(1)
+
+b
+
+c()(2)
+b
+
+c()(3)
+
+tr (i) = n 
+
+the contraction of two indices of a tensor is represented in the diagrams
+
+by joining the corresponding legs. given a product of invariant traces with
+
+contracted indices, these prescriptions allow to represent it by a diagram con-
+
+sisting of a certain number of vertices, joined by internal lines, and possibly
+
+with some external lines representing unsaturated indices of the tensor. for
+
+28
+
+the scalar quantities we are interested in, the corresponding diagram is a
+
+vacuum diagram with no external legs. notice, however, that the ordering
+
+of the legs in a vertex is relevant, up to cyclic permutations. as explained
+
+in section 2 and used later, the actual pattern of contraction of indices in
+
+a tensor can be labelled by a pairing  of the indices, that is a permutation
+
+made up of only 2-cycles.
+
+our technique is based upon equations which express the result of con-
+
+tracting two indices in an (m + n + 2)-tensor as a linear combination of
+
+(m + n)-tensors. these equations can be obtained easily from the complete-
+
+ness relation of the group generators eq. (29). we will refer to the basic
+
+equations as fusion and ssion rules, and they are given respectively by:
+
+xa
+
+t (l(m+1)
+
++
+
+)ab1...bmt (l(n+1)
+
++
+
+)ac1...cn =
+
+1
+2
+
+t (l(m+n)
+
++
+
+)b1...bmc1...cn 
+
+1
+2n
+
+t (l(m)
+
++ )b1...bmt (l(n)
+
++ )c1...cn (43)
+
+xa
+
+t (l(m+n+2)
+
++
+
+)ab1...bmac1...cn =
+
+1
+2
+
+t (l(m)
+
++ )b1...bmt (l(n)
+
++ )c1...cn 
+
+1
+2n
+
+t (l(m+n)
+
++
+
+)b1...bmc1...cn .
+
+(44)
+
+in our diagrammatic representation the fusion and ssion rules can be
+
+depicted as:
+
+bm
+
+b1
+
+bm
+
+b1
+
+c1
+
+cn
+
+c1
+
+cn
+
+=
+
+1
+2
+
+bm
+
+c1
+
+b1
+
+cn
+
+
+
+1
+2n
+
+bm
+
+b1
+
+c1
+
+cn
+
+=
+
+1
+2
+
+c1
+
+cn
+
+bm
+
+b1
+
+29
+
+
+
+1
+2n
+
+bm
+
+c1
+
+b1
+
+cn
+
+(45)
+
+(46)
+
+it is easy to see that the repeated application of eqs. (45, 46) allows the
+
+evaluation of all scalars formed by contracting the indices of an arbitrary
+
+tensor. our goal will be to extract information on the n dependence from
+
+these equations. as an example and for later use, we give in table 1 the
+
+value and associated diagram for all independent tensor contractions up to
+
+six indices. the corresponding diagrams have k = 1 connected components
+
+and up to l = 3 internal lines.
+
+if the number of indices of a tensor is odd, making all possible contractions
+
+would leave an unsaturated index. applying the fusion-ssion rules would
+
+reduce it to a linear combination of tensors with one index. but the only
+
+one-index tensor tr (a) vanishes, and hence the contribution of a diagram
+
+with a single external leg vanishes too. this allows to prove a result which
+
+will be needed in what follows: the scalar corresponding to a one-particle
+
+reducible diagram vanishes; by applying fusion and ssion rules iteratively
+
+in each of those two sides of the diagram connected by the reducible line we
+
+would reach the form b(n) tr (a)tr (a), which is zero q.e.d.
+
+now we will prove a result concerning the n dependence of the scalars
+
+formed by contraction of a given tensor, expressed in terms of the topological
+
+properties of the associated diagram. the result is that the leading n be-
+
+haviour of such a scalar is given by m2ln 2kv +l, with m being either 0 or
+
+1. it is easy to check this property directly for tensors with few indices. the
+
+tensor contractions given in table 1 and their multiplication allow to check
+
+it up to l  3. the general proof will be done by induction, making use of
+
+the fusion and ssion rules. hence, we will start by assuming that the result
+
+has been proven for all scalars obtained after the contraction of l pairs of
+
+indices, and end up proving that the result is also true for l + 1 contractions.
+
+consider then a scalar formed by performing l + 1 contractions of the
+
+30
+
+indices of a 2l + 2 invariant tensor and its associated one-particle irreducible
+
+diagram. let say it has k connected components, v vertices and l + 1
+
+internal lines. applying the fusion rule its contribution is given as a linear
+
+combination of the contribution of two diagrams with l internal lines, with
+
+coecients 1/2 and 1/2n. the rst diagram has l internal lines, v  1
+
+vertices and k connected components; thus, its leading term is of the form
+m12ln 2kv +l+1. the second has l internal lines, v vertices and k con-
+nected components3, so that the leading contribution is m22ln 2kv +l1,
+
+which is subleading with respect to the previous one. in summary, the be-
+
+haviour of the initial scalar is given by m2(l+1)n 2kv +(l+1), as predicted
+
+by our result, with m = m1.
+
+now let us turn to the ssion rule. as the original diagram has k con-
+
+nected components, v vertices and l + 1 internal lines, then the two sub-
+
+diagrams in the decomposition have (k , v + 1, l) and (k, v, l) topological
+
+numbers respectively, with k  being either k or k + 1. the leading term
+
+of the original diagram is thus of the required form m2(l+1)n 2kv +(l+1),
+
+with m = 0 if k  = k and m = m1 if k  = k + 1. this completes the proof.
+
+the previous result is used in section 2, to prove that the coecients
+
+dn (, ), which are associated to a given diagram, have the mentioned large
+
+n behaviour. this, combined with the leading behaviour of the coecients
+
+cn , leads to the conclusion that the large n dominant behaviour of the
+
+integrals e (eq. (3)) can only come from diagrams made out of connected
+
+components with two vertices. from our previous results we also know that
+
+the prefactor of the leading term is an integer counting the number of dia-
+
+grams giving a non-vanishing maximal leading behaviour. for that purpose
+
+3it cannot have k + 1 since this would contradict the hypothesis that the original
+
+diagram is one-particle irreducible.
+
+31
+
+we need to complement our previous result by characterising those diagrams
+
+which have a maximal large n behaviour (m = 1). fortunately, we only need
+
+to do this for diagrams with two vertices v = 2 (and no self-contractions),
+
+making up one of the connected components of a possible maximal diagram.
+
+in the remaining of this appendix, we will prove the statement made
+
+in section 2, namely that the two-vertex connected (and with no self-con-
+
+tractions) diagrams having maximal leading behaviour (n l) are the ones
+
+satisfying the identity  = e, where  is the permutation giving the
+
+vertex structure and  the permutation specifying the contractions. by the
+
+form of the diagram we know that  is made of 2 cycles of length l, and 
+
+of l cycles of length 2. let us see what this means in diagrammatic terms.
+
+take the legs of one vertex and label one as a1, then label the subsequent legs
+
+ai+1  (ai). this means that the legs are ordered in a clockwise fashion.
+
+now call bi  (ai) the indices of the other vertex (remember there are no self-
+
+contractions). the condition  = e is equivalent to having (bi) = bi1.
+
+this means that in the other vertex the ordering of the indices is counter-
+
+clockwise. the corresponding diagram can then be drawn by joining the legs
+
+with lines which do not cross: the diagram is planar.
+
+using this graphical characterisation, it is easy to show that a diagram
+
+coming from  6= e can never have a leading term, of the form studied
+
+above, with m = 1. on the other hand, an exact formula can be derived for
+
+planar diagrams by iterating the fusion rule; the result with l  2 lines is:
+
+(cid:18)n 2  1
+
+2n (cid:19)l(cid:18)1 
+
+(1  n 2)l1(cid:19) ,
+
+1
+
+(47)
+
+and obviously gives leading behaviour with m = 1.
+
+to prove that any nonplanar diagram is necessarily not leading, let us
+
+depict a generic nonplanar diagram with l = s + 2 lines in the following
+
+32
+
+form (which is always attainable),
+
+bn
+
+b1
+
+a1
+
+am
+
+dq
+
+d1
+
+c1
+
+cp
+
+where the indexed legs are completely contracted between themselves
+
+(remember that no self-contractions are allowed), and s = m + n = p + q  1.
+
+the nonplanarity condition enters as a constraint: both a  c and a  d
+
+contractions exist.
+
+if a fusion is applied, and then a ssion to the resulting rst term in the
+
+rhs, one gets:
+
+bn
+
+b1
+
+a1
+
+am
+
+dq
+
+d1
+
+c1
+
+cp
+
+=
+
+1
+4
+
+dq
+
+d1
+
+a1
+
+am
+
+bn
+
+b1
+
+c1
+
+cp
+
+
+
+1
+4n
+
+d1
+cp
+
+a1
+
+dq
+
+am
+b1
+
+bn
+
+c1
+
+
+
+1
+2n
+
+a1
+
+bn
+
+am
+
+b1
+
+d1
+
+cp
+
+dq
+
+c1
+
+(48)
+
+now, the nonplanarity constraint prevents the rst term in the rhs to have
+
+more than one connected component. it is then immediate, after applying
+
+the rule for the leading term to each diagram in the rhs, that the leading
+
+behaviour for the nonplanar diagram goes at most like n l2.
+
+33
+
+references
+
+[1] p. rossi, m. campostrini and e. vicari, phys.rep. 302 (1998) 143.
+
+[2] h. kluberg-stern, a. morel, o. napoly and b. petersson, nucl. phys.
+
+b190[fs3] (1981) 504;
+
+n. kawamoto and j. smit, nucl. phys. b192 (1981) 100.
+
+[3] g. curci and g. veneziano, nucl. phys. b292 (1987) 555;
+
+i. montvay, nucl. phys. b466 (1996) 259;
+
+g. koutsoumbas and i. montvay, phys.lett. 398b (1997) 130-134;
+
+a. donini, m. guagnelli, p. hernandez and a.vladikas, nucl. phys.
+
+b523 (1998) 529;
+
+r. kirchner, s. luckmann, i. montvay, k. spanderen, j. westphalen,
+
+phys.lett. 446b (1999) 209;
+
+i. campos, a. feo, r. kirchner, s. luckmann, i. montvay, g. munster,
+
+k. spanderen and j. westphalen, hep-th/9903014.
+
+[4] e. gabrielli, a. gonzalez-arroyo and c. pena, n = 1 supersymmetric
+
+yang-mills on the lattice at strong coupling, preprint ftuam-98-24,
+
+ift-uam/csic-99-4; hep-th/9902209.
+
+[5] k.g. wilson, in new phenomena in subnuclear physics (erice, 1975),
+
+ed. a. zichichi (new york, plenum, 1975);
+
+n. kawamoto, nucl. phys. b190 [fs3] (1981) 617.
+
+[6] a. gonzalez-arroyo, combinatorics of lattice paths with and without
+
+spikes, preprint ftuam-99-4, ift-uam/csic-99-5; hep-th/9903037.
+
+[7] v.a. kazakov, a.a. migdal, nucl. phys. b397 (1993) 214.
+
+34
+
+[8] d.j. gross, phys. lett. 293b (1992) 181.
+
+[9] s.b. khokhlachev and yu.m. makeenko, mod. phys. lett. a7 (1992)
+
+3653.
+
+[10] i. bars and f. green, phys. rev. d20 (1979) 3311.
+
+[11] yu.m. makeenko, m.i. polikarpov, nucl. phys. b205 [fs5] (1982) 386;
+
+t.-l. chen, c.-i. tan and x.-t. zheng, phys. lett. 109b (1982) 383;
+
+s. samuel, phys. lett. 112b (1982) 237; phys. lett. 122b (1983) 287.
+
+[12] s.b. khokhlachev and yu.m. makeenko, phys. lett. 101b (1981) 403;
+
+zh. eksp. teor. fiz. 53 (1981) 448 (sov. phys. jetp 53 (1981) 228).
+
+[13] y. brihaye and p. rossi, nucl. phys. b235 [fs11] (1984) 226.
+
+[14] t. van ritbergen, a.n. schellekens and j.a.m. vermaseren, int. j. mod.
+
+phys. a14 (1999) 41.
+
+[15] p. cvitanovic, phys. rev. d14 (1977) 1536.
+
+35
+
+table 1: explicit results for all topologically inequivalent, nonvanishing, com-
+
+pletely connected diagrams corresponding to contractions of invariant traces
+
+with up to 3 internal lines are shown. disconnected diagrams with l  3
+
+can be built as products of the ones shown here.
+
+= tr (aa)
+
+= tr (abba)
+
+= tr (abab)
+
+= tr (ab)tr (ab)
+
+= tr (abccba)
+
+= tr (aabbcc)
+
+=
+
+=
+
+n 2  1
+
+2
+
+(n 2  1)2
+
+4n
+
+= 
+
+n 2  1
+
+4n
+
+=
+
+=
+
+=
+
+n 2  1
+
+4
+
+(n 2  1)3
+
+8n 2
+
+(n 2  1)3
+
+8n 2
+
+= tr (ababcc)
+
+= 
+
+(n 2  1)2
+
+8n 2
+
+= tr (abcabc)
+
+=
+
+n 2  1
+
+8n 2
+
+= tr (abc)tr (cba) =
+
+(n 2  1)(n 2  2)
+
+8n
+
+36
+
+= tr (abc)tr (abc) = 
+
+n 2  1
+
+4n
+
+= tr (aabc)tr (bc) =
+
+(n 2  1)2
+
+8n
+
+= tr (abac)tr (bc) = 
+
+n 2  1
+
+8n
+
+= tr (ab)tr (bc)tr (ca) =
+
+n 2  1
+
+8
+
+37
+
+

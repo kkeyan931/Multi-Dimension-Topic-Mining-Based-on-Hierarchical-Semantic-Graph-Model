@@ -1,0 +1,3579 @@
+light-cone hamiltonian ow for positronium.
+
+the numerical solutions
+
+elena l. gubankova1and gabor papp1,2
+
+1 institut fur theoretische physik der universitat heidelberg,
+
+2 cnr, department of physics, kent state university,
+
+d-69120 heidelberg
+
+44242 oh usa
+
+15 january, 1999
+
+abstract
+
+the eective hamiltonian, as obtained from applying the hamiltonian ow equa-
+tions to front form qed, are solved numerically for positronium. both the exchange
+and the annihilation channels are included. the impact of dierent similarity func-
+tions is explicitly studied. perfect numerical agreement with other methods is found.
+
+9
+9
+9
+1
+
+ 
+r
+p
+a
+0
+1
+
+ 
+
+ 
+ 
+
+1
+v
+1
+8
+0
+4
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+present address: department of physics, north carolina state university, raleigh, 27695-8202 nc
+
+usa
+
+on leave from inst. for theor. physics, eotvos university, pazmany p.s. 1/a, budapest, h-1117
+
+1
+
+contents
+
+contents
+
+1 introduction
+
+2 formulation of the problem
+
+3 rotational invariance
+
+4 mass spectrum of positronium
+
+5 conclusion
+
+a dening dierent cut-os
+
+2
+
+3
+
+4
+
+7
+
+12
+
+14
+
+17
+
+b the matrix elements in the exchange channel
+
+19
+b.1 the helicity table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+b.2 the helicity table for arbitrary jz. . . . . . . . . . . . . . . . . . . . . . . . 22
+
+c the matrix elements in the annihilation channel
+
+24
+c.1 the helicity table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+c.2 the helicity table for |jz|  1 . . . . . . . . . . . . . . . . . . . . . . . . . 26
+
+1 introduction
+
+1 introduction
+
+3
+
+light-front frame is believed to be a useful tool for solving bound state problems in qcd.
+generally, bound state calculations in the eld theory have two sources of complexity -
+they are relativistic and of many-body type. the method of ow equations copes with
+both of them, at least to the denite order in perturbation theory. one transforms the
+hamiltonian to eliminate interactions changing particle number, reducing thus the bound
+state problem to a few-body problem. simultaneously utraviolet divergencies occur, origi-
+nating from the high-energy region. to complete renormalization one uses either coupling
+coherence or xes counterterms to provide nite values for physical observables and to
+retain symmetries violated by the procedure [5]. both type of ow equations of renormal-
+ization type and for the new (particle number conserving) interactions appear together.
+this program can be fullled in perturbation theory expansion. as a result, the bound
+state problem is approximated by a set of renormalized, eective interactions that do not
+change particle number.
+
+the sensitive tool in the light-front frame to check how accurately one desribes bound
+states by these eective interactions is to measure the violation of rotational symmetry.
+this symmetry is linked to a dynamical operator on the light-front, since rotations are
+dynamical, i.e. depend on the interaction. the symmetry may be spoiled in two steps:
+rst, regularization and renormalization; and second, reduction to the eective few-body
+interactions with particle number conservation. the nonperturbative renormalization ow
+is of crucial importance for qcd [2, 5, 8], but one can disregard this point in qed bound
+state calculations, that disentangles the two problems mentioned above. to the leading
+order the results for qed are obtained in [4], where positronium system is described
+approximately by the eective electron-positron interaction. in the nonrelativistic limit
+the results for positronium spectrum agree with the results of covariant calculations.
+
+there are at least two other alternative approaches to solve for bound states in the
+light-front dynamics, the scheme of similarity renormalization of glazek and wilson [6]
+and the method of iterated resolvents of pauli [8]. in both schemes calculations of the
+eective electron-positron interaction are performed and the question of rotational invari-
+ance for positronium spectrum is investigated.
+
+calculations done so far in the similarity renormalization scheme use the nonrelativis-
+tic limit to nd corresponding eigenvalues in the bound state perturbation theory [3].
+analytical calculations are performed there for ground state: ground triplet levels are
+degenerate, indicating that rotational symmetry is restored [3]. performing similarity
+renormalization one eliminates high-energy modes and absorbs relativistic eects into an
+eective band-diagonal hamiltonian, which describes bound state creation at nonrela-
+tivistic energy scales. it is a well working scheme for such systems as positronium [5];
+therefore nonrelativistic approximations done in this approach to extract eigenvalues from
+eective hamiltonian are quite natural there. in general, it is not always the case. in
+fact rotational symmetry becomes kinematic one, like light-front boost in the nonrela-
+tivistic limit, i.e. total momentum and its projection can be considered approximately as
+quantum numbers, that makes simpler to trace rotational invariance in these calculations.
+in the method of iterated resolvents an eective electron-positron potential is obtained
+and exact numerical solution of positronium bound state equation with the given poten-
+
+2 formulation of the problem
+
+4
+
+tial is done [10, 11]. degenerate multiplets for ground as well as for exited states are
+obtained [10].
+it is convenient to perform relativistic calculations in the light-front
+frame, which eectively has nonrelativistic kinematics.
+
+1
+
+in the present work we perform relativistic few-body calculations for positronium
+spectrum numerically in the spirit of the work trittmann et.al. [10] (and using numerical
+code [11]), based on the eective electron-positron hamiltonian obtained by the ow
+equations [15]. eective interaction was derived there for dierent cuto functions. the
+requirement of block-diagonalization of the hamiltonian determines the generator only up
+to a unitary transformation of the blocks; this explains why the eective interaction may
+depend on the cuto function. the question we investigate is to what extent rotational
+invariance is violated on the level of positronium spectrum and how does it depend on
+the choice of the cuto function. we are not able to trace rotational invariance during
+the calculations, since it is dynamical operator. this is an excellent test for the method
+of ow equations itself and the control of approximations done during the calculations.
+
+2 formulation of the problem
+
+we address to solve a light-front hamiltonian bound state equation
+
+h|i = e|i
+
+(1)
+
+for positronium. using ow equations we transform the qed hamiltonian h to a block-
+diagonal eective hamiltonian, which reduces positronium problem to a bound state
+problem in the electron-positron sector. the eective hamiltonian for an electron and a
+positron is
+
+he = h0 + ue
+
+(2)
+
+where h0 is the kinetic energy, and ue includes eective interactions generated by the
+ow equations in the second order in coupling constant. the integral bound state equation
+is written
+
+ehp1, p2; 1, 2|i = (ep1 +ep2)hp1, p2; 1, 2|i
+
++ x
+
+1,
+
+2z d3p
+
+1d3p
+
+2hp1, p2; 1, 2|ue|p
+
+1, p
+
+2; 
+
+1, 
+
+2ihp
+
+1, p
+
+2; 
+
+1, 
+
+2|i
+
+(3)
+
+where the eective hamiltonian pickes out from the positronium wave function |i the
+lowest ee-component hp1, p2; 1, 2|i with pi, i being the light-front three-momenta and
+helicities, respectively, carried by an electron (i = 1), and a positron (i = 2). the primed
+quantities refer to the initial state, the unprimed ones to the nal state. the eective
+interaction hp1, p2; 1, 2|ue|p
+2) will be specied be-
+low. in order to deduce a lorentz invariant energy we consider the bound state equation
+written for operator p p +, corresponding to the invariant mass-squared m 2 on the light-
+front, rather than for the light-front hamiltonian operator h = p . the light-front
+
+2i = ue(p1 + p2  p
+
+1  p
+
+2; 
+
+1, 
+
+1, p
+
+1 numerical solution of positronium bound state problem in the light-front frame can be found also
+
+in [13, 14].
+
+2 formulation of the problem
+
+5
+
+integral equation,
+
+m 2 hx, ~; 1, 2|i =
+
+m2+~2
+
+
+x(1x) hx, ~; 1, 2|i
+2zd
++ x
+
+dxd2~
+
+1,
+
+1, 
+
+; 
+
+ hx, ~; 1, 2|ve|x, ~
+
+2|i
+(4)
+is independent of the total momentum p + and ~p. we introduced ve = p +2ue. in that
+equation only intrinsic transversal momenta ~ and longitudinal momentum fractions x =
+1 /p + appear (p
+p+
+1 )). its spectrum is thus manifestly independent
+of the kinematical state of the bound system, particularly of p + and ~p, which reects
+on the boost invariance peculiar to the light-front form [1]. the integration domain d is
+restricted by the covariant cuto condition of brodsky and lepage [9],
+
+1 = (xp +, x ~p + ~, p
+
+2i hx, ~
+
+; 
+
+1, 
+
+m2 + ~2
+
+
+x(1  x)  2 + 4m2 ,
+
+(5)
+
+which allows for states having a kinetic energy below the bare cuto . the eective
+interaction between electron and positron, being a kernel in the integral equation (4), is
+generated by the ow equations [15]
+
+ve = 
+
+
+
+
+
+42hiex"g   ee
+42hian"g  ab
+
+q2
+e
+
+m 2
+a
+
+
+
++
+
++
+
+ee
+q2
+ba
+m 2
+
+e ! + 
+b !  
+
+q2
+
+q+2   ee
+e 
+q2
+p+2  ab
+a 
+
+m 2
+
+m 2
+
+with the generator of unitary transformation
+
+(l) = 
+
+1
+
+d   dln f (d; l)
+
+dl
+
+! g(l) .
+
+ee
+q2
+ba
+m 2
+
+e !#
+b !# .
+
+(6)
+
+(7)
+
+where g(l) is the coupling constant as a function of ow parameter l, and f (d; l) is the
+cuto function specied below. in eq. (6) subscript ex refers to the exchange part, and
+an to the annihilation part. the null vector  has components (+, ~, ) = (0,~0, 2)
+and is specic to the light-front calculations. the light-front metric tensor is denoted by
+g. the current-current tensors in the two channels are
+1)) (v(p
+
+(u(p1, 1)u(p
+
+2)v(p2, 2))
+
+,
+
+hiex =
+
+hian =
+
+1, 
+
+2, 
+qxx(1  x)(1  x)
+2, 
+qxx(1  x)(1  x)
+
+(u(p1, 1)v(p2, 2)) (v(p
+
+2)u(p
+
+1, 
+
+1))
+
+,
+
+(8)
+
+where the fermion momenta were dened after eq. (3). the remaining denitions are as
+follows. the energy dierences along the electron and the positron line,
+
+de = p
+1
+de = p
+
+  p
+2  p
+
+1  (p
+  (p2  p
+
+1  p1) ,
+2) .
+
+2
+
+(9)
+
+2 formulation of the problem
+
+6
+
+respectively, have a simple relation to the (feynman-) 4-momentum transfers along the
+two lines
+
+e = (p
+q2
+q2
+e = (p2  p
+
+1  p1)2 = q+de ,
+2)2 = q+de .
+
+(10)
+
+since the feynman-momentum transfer q is more physical quantity than the energy
+dierence, we will use the former as far as possible. in fact, in our formulae we make use
+of the mean-square momentum transfer and the mean-square dierence,
+
+q2 =
+
+q2 =
+
+1
+2
+1
+2
+
+(q2
+
+e + q2
+
+(q2
+
+e  q2
+
+e) = 
+e) = 
+
+q+
+2
+q+
+2
+
+(de + de) ,
+
+(de  de) ,
+
+(11)
+
+respectively. the dependence of the eective interaction eq. (6) on the cuto function
+f (d; l) is carried by the factor
+
+(de, de) = z 
+
+0
+
+dl df (de; l)
+
+dl
+
+f (de; l)  ee ,
+
+which is asymmetric in the arguments but which satises
+
+(de, de) + (de, de) = ee + ee = 1 .
+
+the latter combination obeys
+
++
+
+ee
+q2
+e
+ee
+e 
+q2
+
+ee
+q2
+e
+ee
+q2
+e
+
+=
+
+q2
+
+q2
+eq2
+q2
+eq2
+q2
+
+e  1 
+e  1 
+
+q2
+
+q2 (ee  ee)!
+q2 (ee  ee)! .
+
+q2
+
+= 
+
+that we use further.
+
+for the annihilation term we dene the energy dierences as
+
+ + p
+da = p
+1
+2
+db = p
+1 + p
+
+  (p
+2)
+1 + p
+2  (p1 + p2) .
+
+(12)
+
+(13)
+
+(14)
+
+(15)
+
+they are related to the 4-momentum p of the photon and to the free invariant mass-
+squares of the initial and nal states
+
+m 2
+m 2
+
+1 + p
+
+a = (p
+2)2 = p+da ,
+b = (p1 + p2)2 = p+db ,
+
+as well as to their mean and dierence
+
+m 2 =
+
+m 2 =
+
+1
+2
+1
+2
+
+(m 2
+
+a + m 2
+
+b ) =
+
+(m 2
+
+a  m 2
+
+b ) =
+
+p+
+2
+p+
+2
+
+(da + db) ,
+
+(da  db) ,
+
+(16)
+
+(17)
+
+3 rotational invariance
+
+7
+
+respectively.
+
+eective interaction (6) includes two dierent lorentz structures: g part insures
+the bohr spectrum and is responsible for the spin splittings;  term is diagonal in
+spin space and vanishes for real processes, i.e. on mass shell with q2 = 0, making the
+eective interaction to coincide with the tamm-danco approximation [15]. the explicit
+x-dependence in the denominator of eq. (8) looks like the only remnant of the light-front
+formulation; all other quantities are lorentz scalars. one can absorb this dependence by
+redening the wave function in the integral equation eq. (4). we introduce instead of
+jacobi momentum (x, ~) the three momentum in the center of mass frame ~p = (pz, ~)
+as follows
+
+x =
+
+1
+
+2  1 +
+
+pz~p 2 + m2! ,
+
+where the jacobian of this transformation dx/dpz is
+
+j =
+
+1
+2
+
+~2
+ + m2
+(~p 2 + m2)3/2 = 2
+
+x(1  x)
+
+e
+
+,
+
+and it holds in this frame
+
+x(1  x) =
+
+1
+4
+
+~2
+ + m2
+~p 2 + m2 ,
+e = q~p 2 + m2 .
+
+(18)
+
+(19)
+
+(20)
+
+the connection between old and new wave functions and the interaction matrix ele-
+ments are
+
+hx, ~|i =
+
+hx, ~|ve|x, ~
+
+i =
+
+integral equation (4),
+
+,
+
+h~p|i
+qx(1  x)
+h~p|v 
+qx(1  x)x(1  x)
+
+e|~p i
+
+.
+
+(21)
+
+m 2 h~p; 1, 2|i = 4(~p 2 + m2) h~p; 1, 2|i
+d3~p 
+2e h~p; 1, 2|v 
+
++ x
+
+1,
+
+2zd
+
+e|~p ; 
+
+1, 
+
+2i h~p ; 
+
+1, 
+
+2|i
+
+(22)
+
+is written in a rotationally covariant form.
+
+3 rotational invariance
+
+integral equation (4) has rotationally covariant but still not rotationally invariant form
+because of the interaction kernel vef f , written in the light-front frame. let us extract the
+part of interaction, which has manifestly rotational symmetry.
+
+3 rotational invariance
+
+8
+
+quite generally  factor eq. (12) is a function of the ratio of its two arguments.
+
+therefore, making use of eq. (14), the eective interaction eq. (6) is given as
+
+ve = 
+
+
+42hiexb 
+
+
+42hianc ,
+
+where the exchange part is dened
+
+g
+
+b =
+
+q2 + g
+q2 
+() = ee  ee
+
+,
+
+and the annihilation part
+
+g
+
+c =
+
+m 2 +  g
+m 2 
+() = ab  ba
+
+,
+
+
+
+q+2 ! 2  ()
+1  2
+
+ =
+
+q2
+q2 ,
+
+
+
+p+2 ! 2  ()
+1  2
+
+ =
+
+m 2
+m 2 .
+
+(23)
+
+(24)
+
+(25)
+
+the terms in the eective interaction proportional to (), () depend explicitly on the
+choice of cut-o function and arise from l-ordering of the generator in the operator of
+unitary transform [15]. explicit form of the eective interaction with dierent cut-o
+functions is given in appendix a.
+
+dene energy denominators in equation (25). due to the three-momentum conserva-
+tion on the light-front, p1 + p2 = p
+2 for longitudinal and transversal components, one
+has de  de = da  db, where the energy denominators dk in both channels are given
+in eq. (9) and eq. (15). therefore
+
+1 + p
+
+q2 =  
+
+q+
+
+p+! m 2 .
+
+(26)
+
+where m 2  the total energy dierence between initial and nal states shows the o-
+shellness of process.
+
+using the parametrization eq. (18) one has for the energy denominators
+
+mamb
+
+(ma  mb)2
+mb! m 2
+
+pz
+
+z
+
+q2 = ~q 2  pzp
+q2 =   p
+ma 
+a = 4(~p 2 + m2)
+b = 4(~p 2 + m2) ,
+
+m 2
+m 2
+
+z
+
+(27)
+
+where q = pp = (qz, q) is the three-momentum transfer of the photon, and the relations
+between mean-squared and dierence momenta and corresponding energy dierences are
+given in eq. (11) and eq. (12) for exchange and annihilation channels, respectively.
+
+the second term in eq. (25) is obviously not rotational invariant. for the real pro-
+cesses, m 2 = 0, the second term vanishes for both channels, and the eective interaction
+
+3 rotational invariance
+
+9
+
+is independent on the cuto function and coincide with the result of tamm-danco ap-
+proximation
+
+ve = 
+
+
+
+42 hi
+
+~q 2
+
+,
+
+(28)
+
+and similarly in annihilation channel. the same holds to the leading order of nonrela-
+tivistic expansion ~p 2/m2  1 [15].
+estimate current-current term in exchange channel, eq. (8), which denes nominator
+of the interaction eq. (28). we work in the lepage-brodsky convention for the spinors [9]
+
+u(p, ) =
+
+=
+
+2
+p+ (p+ + m + ~~p)+
+2
+n
+(e + m + ~~p)+ ,
+
+(29)
+
+and similarly for v(p, ) with the change m  m and    in the above formula.
+the second expression for spinor holds quite in general for the solution of dirac equation,
+where p0 = e = ~p 2 + m2 and the normalization factor n = e + pz. here  = 0,
+~ = 0~, + = 1/2(1 + 3) is the projection operator [1], and the spinor
+
+0! ,
+ =  
+
+is dened through the usual two-component spinors
+
+ =  1
+
+0! ;
+
+1! ,
+ 0
+
+using the explicit representation for  matrices and projection operators +,  and
+relations between them [1], one has
+
+u(p, )0u(p, ) =
+
+u(p, )iu(p, ) =
+
+1
+
+1
+
+nn 
+
++
+ ((e + pz)(e + p
++ i[~p  ~]z(p
++
+ ((e + pz)(p i + i[~p   ~]i) + (e + p
+
+z) + (~p~p ) + i[~p  ~p ]~
+z + m)  i[~p   ~]z(pz + m) + m2  pzp
+
+nn 
+
+z)
+
+z)(pi  i[~p  ~]i)
+
++ iz(ee  m2  (~p~p )  i[~p  ~p ]~
++ i[~p  ~]i(e  m)  i[~p   ~]i(e  m))
++ iijj((e + pz)(m + p
+
+z)  (e + p
+
+z)(m + pz))) ,
+
+(30)
+
+where i = 1, 2, 3; p = (pz, ~) is the three momentum and ij = ijz, 12 = 21 = 1.
+introducing three-momentum transfer and its mean
+
+~q = ~p   ~p
+~k =
+
+(~p  + ~p) ,
+
+1
+2
+
+(31)
+
+3 rotational invariance
+
+10
+
+where 4(~q~k) = m 2 = 2(e2  e 2) with m 2 dened above, eq. (30) is written
+ ((e + kz)(e + kz) + ~k2  ~q 2/4  i[~q  ~k]~
++
+
+u(p, )0u(p, ) =
+
+nn 
+
+1
+
+ i[~q  ~]z(kz + m) + qz((e  e)/2 + i[~k  ~]z) + m2  k2
+
+z)
+
+u(p, )iu(p, ) =
+
+ (((e + e)/2 + kz)(2ki + i[~q  ~]i)
++
+
+1
+
+nn 
+
++ ((e  e)  qz)(qi/2 + i[~k  ~]i)
++ iz(ee  m2  (~k2  ~q 2/4) + i[~q  ~k]~
+ i[~q  ~]i((e + e)/2  m)  i[~k  ~]i(e  e))
++ iijj((kz + m)(e  e) + qz((e + e)/2  m))) ,
+
+(32)
+
+where no approximations are done so far. excluding the overall normalization factor the
+rst lines in eq. (32) for scalar and vector current terms contain rotationally invariant
+parts (except terms proportional to kz), which coincide with the corresponding expressions
+when making use of bjorken-drell convention for spinors [12]. 2
+
+merkel et.al. [12] showed, that as far as the energy is conserved, this part gives rise
+to familiar spin dependent forces. the rest terms in eq. (32) are obviously not rota-
+tionally invariant, particularly when the spacial rotations are performed perpendicular
+to the z-axis. expanding expression eq. (32) to the second order in |~p|/m  1 and
+performing the unitary transformation in spin space, brisudova et.al. [3] obtained breit-
+fermi spin-spin and tensor interactions. it seems to be impossible to reproduce full set
+of breit-fermi terms from the second order eective interaction in the light-front gauge.
+also it is complicated to cover rotational symmetry on the level of light-front eective
+hamiltonians without additional approximations are done. we use directly the eective
+electron-positron interaction eq. (23) for numerical calculations of positronium spectrum.
+we aim to get ne structure and to investigate rotational symmetry on the level of spec-
+trum. the impact of dierent cuto functions is also considered. the results of these
+calculations are presented in the next section.
+
+2 spinors as used by bjorken-drell are
+
+u(p, ) =
+
+1
+n
+
+(e + m + ~~p) ,
+
+(33)
+
+where n = e + m and  is dened in the main text. the correspoding expressions for current terms
+are
+
+u(p, ) 0u(p, ) =
+
+u(p, )iu(p, ) =
+
+1
+
+n n 
+n n 
+
+1
+
+ ((e + m)(e + m) + ~k2  ~q 2/4  i[~q  ~k]~)
++
+ (((e + e)/2 + m)(2ki + i[~q  ~]i)
++
+
+for the energy conserving process this expression was obtained in [12].
+
++ (e  e)(qi/2 + i[~k  ~]i)) ,
+
+(34)
+
+3 rotational invariance
+
+11
+
+n term bet p t
+1
+2
+3
+4
+5
+6
+7
+8
+
+1.118125
+0.998125
+0.268633
+0.253633
+0.253633
+0.261133
+0.255508
+0.251008
+
+11s0
+13s1
+21s0
+23s1
+21p1
+23p0
+23p1
+23p2
+
+be
+
+1.049550
+1.001010
+0.260237
+0.253804
+0.257969
+0.267070
+0.259667
+0.255258
+
+b
+g
+
+1.101027
+1.049700
+0.266490
+0.259506
+0.263056
+0.273826
+0.265412
+0.260345
+
+bg
+
+1.026170
+0.981969
+0.260642
+0.254765
+0.257664
+0.266563
+0.260127
+0.255498
+
+bs
+
+0.920921
+0.885347
+0.242607
+0.234312
+0.237611
+0.243075
+0.238135
+0.236383
+
+table 1: binding coecients, bn = 4(2  mn)/2 ( = 0.3), for the lowest modes of the
+positronium spectrum at jz = 0 for the equal time perturbation theory up to order 4
+(bet p t ) compared to our calculations with exponential (be), gaussian (bg) and sharp
+(bs) cutos. bg is obtained using only g part of interaction; for b
+ term is
+g
+included. exchange channel is considered.
+
+n term
+11s0
+1
+13s1
+2
+21s0
+3
+23s1
+4
+21p1
+5
+23p0
+6
+23p1
+7
+23p2
+8
+
+be
+
+1.049550
+0.936800
+0.260237
+0.255292
+0.257969
+0.267090
+0.259667
+0.245615
+
+b
+g
+
+1.101270
+0.978018
+0.266490
+0.260383
+0.263056
+0.273847
+0.265412
+0.250821
+
+bg
+
+bs
+
+1.026170
+0.921847
+0.260642
+0.255615
+0.257664
+0.266626
+0.260127
+0.247091
+
+0.920921
+0.834004
+0.242624
+0.234338
+0.236383
+0.243075
+0.237611
+0.230901
+
+table 2: binding coecients, bn = 4(2  mn)/2 ( = 0.3), for the lowest modes of the
+positronium spectrum at jz = 0 for our calculations with exponential (be), gaussian
+(bg) and sharp (bs) cutos. b
+g includes  term in exchange channel; bg does not.
+exchange and annihilation channels are considered.
+
+n term
+
+be
+
+bg
+
+bs
+
+2
+4
+5
+7
+8
+
+13s1
+23s1
+21p1
+23p1
+23p2
+
+6.30 104
+8.40 105
+-1.30 105
+-4.08 104
+
+5 106
+
+1.76 103
+1.77 104
+-7.47 104
+-4.08 104
+-7.7 105
+
+1.18 103
+9.0 105
+-9.1 105
+1.4 104
+4.15 104
+
+table 3: dierence in the corresponding energy levels between jz = 0 and jz = 1 states
+for exponential (be), gaussian (bg) and sharp (bs) cutos. exchange is channel is
+considered.
+
+4 mass spectrum of positronium
+
+12
+
+n term
+
+be
+
+bg
+
+bs
+
+2
+4
+5
+7
+8
+
+13s1
+23s1
+21p1
+23p1
+23p2
+
+-1.411 103
+-4.1 105
+-6.4 105
+-4.69 104
+-1.96 104
+
+-7.86 104
+-4.0 105
+-6.52 104
+-4.74 104
+-1.36 104
+
+-1.65 103
+-1.15 104
+-4.60 104
+-1.40 104
+-2.44 104
+
+table 4: dierence in the corresponding energy levels between jz = 0 and jz = 1 states for
+exponential (be), gaussian (bg) and sharp (bs) cutos. exchange and annihilation
+channels are considered.
+
+4 mass spectrum of positronium
+
+we solve the integral equation (4), with interaction kernel given in eq.(6), for positronium
+spectrum numerically. eective interaction with dierent choice of cutos is sumarized
+in appendix a.
+
+in polar coordinates the light-front variables are (~; x) = (, ; x); therefore the
+matrix elements of the eective interaction eq.(6) depend on the angles  and , i.e.
+hx, , ; 1, 2|ve|x, 
+2i. in order to introduce the spectroscopic notation for
+positronium mass spectrum we integrate out the angular degree of freedom, , introducing
+a discrete quantum number jz = n, n  z (actually for the annihilation channel only
+|jz|  1 is possible),
+
+, ; 
+
+1, 
+
+hx, ; jz, 1, 2| ve|x, 
+
+; j 
+
+z, 
+1, 
+2i
+deil
+
+z
+
+=
+
+1
+
+2 z 2
+
+0
+
+deilzz 2
+
+0
+
+hx, , ; 1, 2|ve|x, 
+
+, ; 
+
+1, 
+2i
+
+(35)
+
+where lz = jzsz; sz = 1
+2 and the states can be classied (strictly speaking only for
+rotationally invariant systems) according to their quantum numbers of total angular mo-
+mentum j, orbit angular momentum l, and total spin s. denition of angular momentum
+operators in light-front dynamics is problematic because they include interactions.
+
+2 + 2
+
+1, 
+
+, ; 
+
+hx, , ; 1, 2|ve|x, 
+mentum, jz, hx, ; jz, 1, 2| ve|x, 
+in the exchange and annihilation channels in appendices b and c, respectively.
+
+the matrix elements of the eective interaction before integrating over the angles,
+2i, and after the integration inroducing the total mo-
+2i for dierent cuto functions are given
+now we proceed to solve for the positronium spectrum in all sectors of jz. for this pur-
+pose we formulate the light-front integral equation eq. (4) in the form where the integral
+kernel is given by the eective interaction for the total momentum jz, eq. (35). after the
+change of variables eq. (18) we parametrize ~p = (~, pz) = ( sin  cos ,  sin  sin ,  cos ).
+the jacobian of this transformation eq. (19) is given
+
+; j 
+
+z, 
+
+1, 
+
+j =
+
+1
+2
+
+m2 + 2 sin2 
+(m2 + 2)3/2 .
+
+(36)
+
+4 mass spectrum of positronium
+
+13
+
+one obtaines then the integral equation
+
+(m 2
+
+n  4(m2 + 2)) n(, cos ; jz, 1, 2)
+2zd
+
++ xj 
+ h, cos ; jz, 1, 2| ve|, cos ; j 
+
+d cos  2
+2
+
+dz +1
+
+z, 
+
+1,
+
+z,
+
+1
+
+m2 + 2(1  cos2 )
+
+(m2 + 2)3/2
+
+(37)
+
+1, 
+
+1, 
+
+2) = 0 .
+
+2i n(, cos ; j 
+
+z, 
+the integration domain d, dened in eq. (5), is given now by   [0; 
+sz are good quantum numbers; therefore we set lz = jz  sz.
+the integral equation eq. (37) is used to calculate positronium mass spectrum numer-
+ically. note, that if one succeeds to integrate out the angular degrees of freedom for the
+eective interaction eq. (35) analytically, one has 2-dimensional integration in eq. (37)
+instead of 3-dimensional one in the original integral equation (4) to perform numerically.
+we use the numerical code [11], worked out by uwe trittmann for the similar problem
+[10]. this code includes for the numerical integration the gauss-legendre algorithm
+(gaussian quadratures). to improve the numerical convergence the technique of coulomb
+counterterms is included. the problem has been solved for all components of the total
+angular momentum, jz.
+
+2 ]. neither lz nor
+
+positronium spectrum is mainly dened by the coulomb singularity
+
+~q  0 ,
+
+(38)
+
+which is an integrable one analytically and also, by use of technique of coulomb countert-
+erms, numerically. in this region q2  0 and the energy denominator q2  ~q 2 eq. (27),
+giving rise to the leading order coulomb behavior for the eective interaction eq. (28),
+independent on the cuto function. we use therefore standard coulomb counterterms,
+introduced for the coulomb problem eq. (28) [10, 11], in the case of all cutos. basing
+also on the argument eq. (38), we expect the same pattern of levels for dierent cutos,
+that we prove numerically to be true.
+
+another important limiting case to study eective interaction eq. (23), namely its
+
+exchange part, is the collinear limit
+
+that is special for light-front calculations. because of eq. (26) the variable 2  q+ 2,
+resulting for the 
+
+ part of eective interaction to be
+
+q+  0 ,
+
+(39)
+
+
+q+ 2 2(1  (0)) ,
+
+(40)
+
+which is nite in this limit. this is true for the regular cuto functions, as in the case
+of exponential and gaussian cutos, where the derivative d(0)/d is well dened. for
+sharp cuto this condition is not fullled, and the eective interaction contains the 1/q+
+type of singularity in this case (see appendix a). we do not associate any physics with
+this singularity, considering it as a consequence of articial choice of cuto, which corre-
+sponds to singular generator of unitary transformation eq. (7). we omit the 
+ term
+in exchange channel for sharp cuto in numerical calculations.
+
+5 conclusion
+
+14
+
+we argued that the region of coulomb singularity, and hence g
+
+ part of eective
+interaction, determines mainly the positronium spectrum. however, including 
+ part
+for gaussian cuto shifts all levels as a whole of about 57%, since this part is diagonal in
+spin space (appendix b), and improves the data to be near the result obtained in covariant
+equal time calculations (table 1). presumably, it is necessary to take into account 
+
+term in exchange channel also for sharp cuto after the proper regularization of infrared
+longitudinal divergences is done.
+
+we place the results of calculations for three dierent cutos, performed in exchange
+and including both exchange and annihilation channels, in tables 1 and 2, respectively.
+the corresponding set of gures is presented in fig.1 and fig.2. we get the ionization
+threshold at m 2  4m2, the bohr spectrum, and the ne structure. including annihilation
+part increases the splittings twice as large for the lowest multiplets.
+as one can see from presents gures, certain mass eigenvalues at jz = 0 are degenerate
+with certain eigenvalues at other jz to a very high degree of numerical precision. as an
+example, consider the second lowest eigenvalue for jz = 0. it is degenerate with the lowest
+eigenvalue for jz = 1, and can thus be classied as a member of the triplet with j = 1.
+correspondingly, the lowest eigenvalue for jz = 0 having no companion can be classied
+as the singlet state with j = 0. quite in general one can interpret degenerate multiplets
+as members of a state with total angular momentum j = 2jz,max + 1. one can get the
+quantum number of total angular momentum j from the number of degenerate states for
+a xed eigenvalue m 2
+n. one can make contact with the conventional classication scheme
+2s+1ljz
+
+j , as indicated in tables 1  2.
+
+such pattern of spectrum is driven by rotational invariance. to trace rotational sym-
+metry we calculate the dierence of energy levels between jz = 0 and jz = 1 states for the
+lowest multiplets. the data are given for exchange and including annihilation channnel
+in tables 3 and 4, respectively. annihilation part makes corresponding states practically
+degenerate (see tables 4 and figure 2).
+
+5 conclusion
+
+the numerical solution of positronium bound state problem, with the eective electron-
+positron interaction obtained by the ow equations, is presented. no approximations
+along numerical procedure are done.
+
+concerning the spin-splittings the best agreement with covariant calculations is ob-
+tained for gaussian cuto, the worst results are for sharp cuto. rotational invariance
+is traced on the level of spectrum by studing the degree of degeneracy of corresponding
+states with the same total momentum but dierent projection jz in the multiplet. again,
+better results are obtained for exponential and gaussian cuto functions than for sharp
+cuto. this suggests, that smooth cuto functions are preferable to perform calculations.
+including annihilation channel improves the extend of degeneracy.
+
+for the sharp cuto the lowest multiplet is placed higher than the one in case of
+exponential and gaussian cutos. the reason is in disregarding the infrared divergent
+part, which is diagonal in spin space and shifts the spectrum as a whole down. the
+question how to regularize this part and include it in mass spectrum calculations should
+
+5 conclusion
+
+15
+
+be considered. generally, the impact of the dierent choice of cuto functions on the
+spectrum is small.
+
+in this work we solve the bound state integral equation for the one xed integration in-
+terval. integration domain introduces the ultraviolet-cuto dependence of invariant mass
+squared m 2(), that reects renormalization group properties of the eective coupling
+constant. we leave this question for the future study.
+
+5 conclusion
+
+16
+
+4.00
+
+3.98
+
+3.96
+
+3.94
+
+3.92
+
+3.90
+
+3.88
+
+exponential
+
+gaussian
+
+sharp
+
+-3 -2 -1 0 1 2 3
+
+-3 -2 -1 0 1 2 3
+
+-3 -2 -1 0 1 2 3
+
+figure 1: the invariant mass-squared spectrum m 2
+i for positronium versus the projection
+of the total spin, jz, excluding annihilation with exponential, gaussian and sharp cutos.
+the number of integration points is n1 = n2 = 21.
+
+4.00
+
+3.98
+
+3.96
+
+3.94
+
+3.92
+
+3.90
+
+3.88
+
+exponential
+
+gaussian
+
+sharp
+
+-3 -2 -1 0 1 2 3
+
+-3 -2 -1 0 1 2 3
+
+-3 -2 -1 0 1 2 3
+
+figure 2: the invariant mass-squared spectrum m 2
+i for positronium versus the projection
+of the total spin, jz, including annihilation with exponential, gaussian and sharp cutos.
+the number of integration points is n1 = n2 = 21.
+
+a defining different cut-offs
+
+17
+
+a dening dierent cut-os
+
+in this appendix we summarize the results for the eective electron-positron interaction,
+generated by the ow equations with dierent similarity functions. in the practical work,
+three dierent similarity function will be studied explicitly:
+
+(1) the exponential cut-o, (2) the gaussian cut-o, and (3) the sharp cut-o.
+
+(1) exponential cut-o
+
+f (d; l) = exp (|d|l)
+
+(de, de) =
+
+ve =
+
+de
+
+; () = 
+
+de + de
+
+42hiex
+
+42hiex
+
+g
+q+d 
+
+1
+q2 
+
+= 
+
+
+42hian
+
+42hian
+
+g
+p+ d
+1
+m 2 ,
+
+(41)
+
+where d = 1/2(de + de) and d = 1/2(da + db). the rst choice of similarity function
+gives exactly the result of perturbation theory.
+(2) gaussian cut-o
+
+f (d; l) = exp(cid:16)d2l(cid:17)
+
+(de, de) =
+
+ve =
+
+
+
+= 
+
+
+
+2
+
+; () =
+
+d2
+e
+d2
+e + d2
+e
+
+
+
+
+q+
+
+42hiex" g
+42hian"g
+42hiex" g
+q2 +
+42hian" g
+m 2 
+
+1 + 2
+de + de
+d2
+e + d2
+da + db
+a + d2
+d2
+
+q+2
+
+p+2
+
+p+
+
+
+
+
+
+e 
+
+
+2q+2
+
+2p+2
+
+(de  de)2
+e #
+d2
+e + d2
+(da  db)2
+b #
+a + d2
+d2
+
+q4
+
+b 
+q4
+q4 #
+m 4 # m 4
+
+m 4
+
+q4 + q4
+
+m 4 + m 4 ,
+
+(42)
+
+where we understand under q4 = (q2)2 and q4 = (q2)2 with q2 and q2 dened in
+eq. (11).
+(3) sharp cut-o
+
+f (d; l) =  (1  |d|l)
+
+
+
+ve =
+
+(de, de) =  (|de|  |de|) ; () = sign()
+42hiex"g
+q+   (|de|  |de|)
+2q+2 (de  de)  (|de|  |de|)
+
+p+   (|da|  |db|)
+42hian"g
+
+
+
+
+
+
+da
+
+de
+
+de
+
++
+
+
+
++
+
+de
+
+(|de|  |de|)
+
+(|de|  |de|)
+
+!
+!#
+!
+(|db|  |da|)
+
+de
+
+db
+
+a defining different cut-offs
+
+18
+
+da
+
+
+
+2p+2 (da  db) (|da|  |db|)
+
+q+2 |q2|
+q2 #
+42hiex"g
+
+q2 +
+p+2 |m 2|
+42hian" g
+m 2 #
+m 2 
+
+
+
+
+
+= 
+
+
+
+
+
+(|db|  |da|)
+
+db
+
+!#
+
+
+
+q2
+
+q2 + |q2|
+m 2
+
+m 2 + |m 2|
+
+,
+
+(43)
+
+the motivation to choose these cuto functions is the following. using exponential cuto
+in ow equations one generates the same interaction as obtained also in tamm-danco
+approach,where numerical calculations of positronium spectrum are performed [10], and
+we use this numerical code here. note also, that for this cuto the eective interaction
+looks very much as in covariant calculations: it contains only g part, and  part
+is identically zero, so that there is no collinear problem. gaussian cuto corresponds to
+the original choice of generator eq. (7) by wegner as commutator of diagonal, particle
+number conserving, and o-diagonal, particle number changing, parts of hamiltonian.
+sharp cuto is used often in the alternative similarity scheme to perform calculations [6].
+
+b the matrix elements in the exchange channel
+
+19
+
+b the matrix elements in the exchange channel
+
+in this appendix we follow the scheme of the work [10] to calculate the matrix elements
+of the eective interaction in the exchange channel.3 here, we list the general, angle-
+dependent matrix elements dening the eective interaction in the exchange channel and
+the corresponding matrix elements of the eective interaction for arbitrary jz, after in-
+tegrating out the angles. exchange part of the eective interaction for three dierent
+cut-os eqs. (4143) can be written
+
+ve = 
+
+
+42hib ,
+
+b =
+
+g
+q2 ,
+
+where explicitly one has
+(1) exponential cut-o
+
+(2) gaussian cut-o
+
+b = gre 
+
+1
+
+q2 + iq2! 
+
+
+
+q+2 q2im 
+
+1
+
+q2 + iq2! ,
+
+where re and im are real and imaginary parts, respectively. and i2 = 1.
+(3) sharp cut-o
+
+b = g   (q2)
+
+(q2)
+
+q2 + q2!
+
+(q2)
+
+q2 + q2! ,
+
+q2  q2 +
+q+2 q2  (q2)
+
+
+
+q2  q2 
+
+
+
+(44)
+
+(45)
+
+(46)
+
+(47)
+
+where q = p
+in eq. (8). we omit index ex everywhere.
+
+1 p1 is the momentum transfer; and hi for the exchange channel is given
+
+it is convenient to extract the angular dependence in the functions
+
+q2
+e = a1  b cos t
+q2
+e = a2  b cos t
+t =   
+
+,
+
+
+
+where we dene
+
+in polar system; here the terms are given
+
+~k = k(cos , sin )
+
+a1 =
+
+x
+x
+
+k2
+ +
+
+x
+x k
+
+2
+
+ + m2 (x  x)2
+
+xx
+
+3 some of these calculations can be found in [16].
+
+(48)
+
+(49)
+
+b the matrix elements in the exchange channel
+
+20
+
+a2 =
+
+= k2
+
+ + k
+1  x
+1  x
+ + k
+
+= k2
+
+2
+
+ + (x  x)(cid:18)k2
+
+k2
+ +
+
+1  x
+1  x k
+
+2
+
+ + (x  x)(cid:18)k2
+
+
+
+1
+x
+
+(
+2
+ + m2
+
+2
+
+)  k
+
+ (
+(x  x)2
+
+1
+
+x )(cid:19) + m2 (x  x)2
+
+xx
+
+(1  x)(1  x)
+
+1
+
+2
+
+
+1  x  k
+
+1
+
+1  x(cid:19) + m2
+
+b = 2kk
+
+
+
+
+
+then the functions in eqs. (4547) are given
+
+where
+
+q2 = a  b cos t
+q2 = a ,
+
+a =
+
+a =
+
+1
+2
+1
+2
+
+(a1 + a2)
+
+(a1  a2) ,
+
+(x  x)2
+
+(1  x)(1  x)
+
+(50)
+
+(51)
+
+(52)
+
+it is useful to display the matrix elements of the eective interaction in the form of
+tables. the matrix elements depend on the one hand on the momenta of the electron
+and positron, respectively, and on the other hand on their helicities before and after
+the interaction. the dependence on the helicities occur during the calculation of these
+functions e(x, ~k; 1, 2|x, ~k
+2) in part
+ii as dierent kronecker deltas [9]. these functions are displayed in the form of helicity
+tables. we use the following notation for the elements of the tables
+
+2) in part i and g(x, k; 1, 2|x, k
+
+; 
+
+; 
+
+1, 
+
+1, 
+
+fi(1, 2)  ei(x, ~k; x, ~k
+
+); gi(x, k; x, k
+
+)
+
+also we have used in both cases for the permutation of particle and anti-particle
+
+3 (x, ~k; x, ~k
+f 
+
+) = f3(1  x,~k; 1  x,~k
+)
+
+(53)
+
+(54)
+
+one has the corresponding for the elements of arbitrary jz; in the case when the function
+additionally depends on the component of the total angular momentum jz = n we have
+introduced
+
+fi(n) = fi(n)
+
+(55)
+
+b.1 the helicity table
+
+to calculate the matrix elements of the eective interaction in the exchange channel we
+use the matrix elements of the dirac spinors listed in table 1 [9]. also the following holds
+v(p)v(q) = u(q)u(p).
+
+we introduce for the matrix elements entering in the eective interaction eqs. (4547)
+
+2e(1)(x, ~k; 1, 2|x, ~k
+
+
+
+; 
+
+
+
+1, 
+
+
+
+2) = hig ,
+
+(56)
+
+b the matrix elements in the exchange channel
+
+21
+
+m
+
++
+
+
+
+1
+
+
+2
+
+
+1
+
+k+k +
+
+u(k, )mu(k, )
+
+2
+
+
+2
+
+k+k + h(cid:16)m2 + kk
+
+e+i()(cid:17) 
+
+  m(cid:16)k
+
+e+i
+
+ ke+i(cid:17) 
+i
+
+
+
+  k
+k + ei
+
++
+
+k
+
+k+ e+i! 
+
+ + m(cid:18) 1
+
+k + 
+
+1
+
+k+(cid:19) 
+
+
+
+i  k
+
+
+
+k + ei
+
+
+
+k
+
+k+ e+i! 
+
+ + im(cid:18) 1
+
+k + 
+
+1
+
+k+(cid:19) 
+
+
+
+table 5: matrix elements of the dirac spinors.
+
+with hig = 1
+
+2h+i + 1
+2e(2)(x, ~k; 1, 2|x, ~k
+
+2h+i  h2
+; 
+
+1i  h2
+1, 
+
+
+
+
+
+
+
+2i and
+
+2) = hi
+
+1
+q+2 ,
+
+with hi = h++i; where
+(u(x, ~k; 1)u(x, ~k 
+
+hi =
+
+xx
+
+these functions are displayed in table 6.
+
+; 
+
+1))
+
+(v(1  x,~k 
+
+2) v(1  x,~k; 2))
+
+; 
+q(1  x)(1  x)
+
+(57)
+
+(58)
+
+nal : initial
+
+(1, 2) =
+(1, 2) =
+(1, 2) =
+(1, 2) =
+
+(
+
+1, 
+
+1, 
+
+2) = (
+e
+
+2) = (
+3(1, 2)
+
+e1(1, 2)
+
+e3(1, 2)
+
+1, 
+
+2) = (
+
+1, 
+
+2) =
+0
+
+e
+
+3 (2, 1)
+
+e3(2, 1)
+
+0
+
+e2(1, 2)
+
+e4(1, 2)
+
+e3(1, 2)
+
+e4(1, 2)
+
+e2(1, 2)
+e
+
+3 (1, 2)
+
+e3(2, 1)
+e
+3 (2, 1)
+e1(1, 2)
+
+table 6: general helicity table dening the eective interaction in the exchange channel.
+
+the matrix elements e(n)
+
+(1, 2) = e(n)
+ terms, respectively, are the following
+
+i
+
+i
+
+(x, ~k; x, ~k
+
+) with n = 1 and n = 2 for g
+
+ and
+
+e(1)
+
+1 (x, ~k; x, ~k
+
+
+
+) = m2  1
+
+xx +
+
+1
+
+(1  x)(1  x)! +
+
+kk 
+
+
+xx(1  x)(1  x)
+
+ei(
+
+
+
+)
+
+b the matrix elements in the exchange channel
+
+22
+
++ k
+
+2
+
+
+1
+
+x(1  x)
+
+e(1)
+
+2 (x, ~k; x, ~k
+
+e(1)
+
+3 (x, ~k; x, ~k
+
+e(1)
+
+4 (x, ~k; x, ~k
+
+and
+
+
+
+
+
+
+
+
+
+)
+
+
+
+1
+
+1
+
+) = m2  1
+xx +
+
+
+xx  k
+
++ kk
+
+) = 
+) = m2
+
+ei(
+
+(1  x)(1  x)! + k2
+x(1  x)
+(1  x)(1  x)
+ei(
+xx +
+
+1  x
+ei
+ k
+1  x
+(x  x)2
+,
+
+ei!
+
+m
+
+)
+
+
+
+
+
+
+
+
+
+xx(1  x)(1  x)
+
+e(2)
+
+1 (x, ~k; x, ~k
+
+e(2)
+
+3 (x, ~k; x, ~k
+
+
+
+) = e(2)
+
+2 (x, ~k; x, ~k
+
+
+
+) =
+
+
+
+) = e(2)
+
+4 (x, ~k; x, ~k
+
+
+
+) = 0 .
+
+2
+
+(x  x)2
+
+(59)
+
+(60)
+
+b.2 the helicity table for arbitrary jz.
+
+following the description given in the main text eq. (35) we integrate out the angles
+in the eective interaction in the exchange channel. for the matrix elements of the
+eective interaction for an arbitrary jz = n with n  z we introduce the functions
+g(x, k; 1, 2|x, k
+2i in the exchange chan-
+nel and obtain the helicity table 7.
+
+2) = hx, k; jz, 1, 2| ve|x, k
+
+; j 
+
+; 
+
+z, 
+
+1, 
+
+1, 
+
+nal : initial
+
+(1, 2) =
+(1, 2) =
+(1, 2) =
+(1, 2) =
+
+(
+
+1, 
+
+1, 
+
+2) = (
+g
+
+2) = (
+3(1, 2)
+
+g1(1, 2)
+
+g3(1, 2)
+
+1, 
+
+2) = (
+
+1, 
+
+2) =
+0
+
+g
+
+3(2, 1)
+
+g3(2, 1)
+
+0
+
+g2(1, 2)
+
+g4(1, 2)
+ g3(1, 2)
+
+g4(1, 2)
+g2(1, 2)
+ g
+
+3(1, 2)
+
+ g3(2, 1)
+ g
+3(2, 1)
+g1(1, 2)
+
+table 7: helicity table of the eective interaction for jz = n, x > x.
+
+here, the functions gi(1, 2) = gi(x, k; x, k
+
+) are given
+
+g1(x, k; x, k
+
+
+
+) =   m2
+xx +
+
+g2(x, k; x, k
+
+kk 
+
+
+m2
+
+(1  x)(1  x)! int(|1  n|)
+(x  x)2
+k2
+
+
+int(|n|) 
+(1  x)(1  x)! +
+1
+
+2a
+
+xx int(|1  n|) +
+
++
+
+xx(1  x)(1  x)
+
+
+
+) =  m2  1
+xx +
+  1
+
++ kk
+
+
+
+int(|1  n|)
+k 2
+
+
++
+
+x(1  x)! int(|n|)
+
+x(1  x)
+1
+
+(1  x)(1  x)
+
+int(|1 + n|)!
+
+b the matrix elements in the exchange channel
+
+int(|n|)
+
+
+
+2a
+
+(x  x)2
+xx  k
+
+m
+
+
+
+g3(x, k; x, k
+
+
+
+) = 
+
+g4(x, k; x, k
+
+
+
+) = m2
+
+we dene
+
+1  x
+1  x
+
+int(|n|)!
+
+int(|1  n|)  k
+(x  x)2
+
+xx(1  x)(1  x)
+
+int(|n|)
+
+i(n; a, b) = 
+
+
+
+22 z 2
+
+0
+
+dt
+
+cos nt
+
+a  b cos t
+
+,
+
+then in eq. (61) the following functions are introduced
+(1) exponential cut-o
+
+int(n) = i(n; a, b)
+int(n) = 0 ,
+
+int(n) = rei(n; a + ia, b)
+int(n) = imi(n; a + ia, b) ,
+
+(2) gaussian cut-o
+
+(3) sharp cut-o
+
+int(n) = (a)i(n; a  a, b) + (a)i(n; a + a, b)
+int(n) = (a)i(n; a  a, b)  (a)i(n; a + a, b) ,
+
+also a + a = a1 anda  a = a2.
+
+explicitly is used
+
+0
+
+z 2
+z 2
+
+0
+
+1
+
+a2  b2   a  a2  b2
+
+b
+
+!n
+
+dt
+
+dt
+
+cos nt
+
+a  b cos t
+
+sin nt
+
+a  b cos t
+
+= 2
+
+= 0 ,
+
+where a can contain imaginary part as in the case of gaussian cuto.
+
+23
+
+(61)
+
+(62)
+
+(63)
+
+(64)
+
+(65)
+
+(66)
+
+c the matrix elements in the annihilation channel
+
+24
+
+c the matrix elements in the annihilation channel
+
+we repeat the same calculations for the matrix elements of the eective interaction in the
+annihilation channel. annihilation part of the eective interaction can be written
+
+ve = 
+
+
+42hic ,
+
+where one has
+
+c = g
+
+   ab
+
++
+
+b ! 
+ba
+m 2
+m 2
+a
+1  ()
+1  2 
+
+=
+
+g
+
+m 2
+
+
+p+2
+
+
+p+2 ,
+
+(67)
+
+(68)
+
+in the frame p = 0.4 explicitly the annihilation part of the eective interaction for
+dierent cut-os eq. (41)- eq. (43) is given
+(1) exponential cut-o
+
+c =
+
+g
+
+m 2 ,
+
+c = g
+
+
+m 2
+
+m 4 + m 4 
+
+
+p+2 ,
+
+(2) gaussian cut-o
+
+(3) sharp cut-o
+
+c = g
+
+   (m 2
+
+a  m 2
+b )
+m 2
+a
+
++
+
+(m 2
+
+b  m 2
+a )
+m 2
+b
+
+! 
+
+
+p+2
+
+(69)
+
+(70)
+
+(71)
+
+where p+ = p+
+eq. (8). the functions present in eq. (69)- eq. (71) are given in the light-front frame
+
+2 is the total momentum; and hi for annihilation is dened in
+
+1 + p+
+
+m 2
+
+a =
+
+m 2
+
+b =
+
+2 + m2
+k
+
+x(1  x)
+k2
+ + m2
+,
+x(1  x)
+
+ ; therefore it holds
+
+2h+i + hig
+(p  p
+
+ ) + (p  p
+ )
+
+p+
+
+p2
+p+2  ,
+
+
+
+4 indeed hig = 1
+
+2h+i + 1
+
+g = g
+
+ +
+
+(72)
+
+2  da/2 = p1 +
+the 4-momentum of the photon p in the t-channel can be written p = p
+p2  db/2 with da, db dened in eq. (15). the dirac equation (p1 + p2) u(p1)v(p2) = 0 allows
+b /(2p+) u(p1, 1)v(p2, 2). thus, when p = 0, one has
+then to write p u(p1, 1)v(p2, 2) = m 2
+
+1 + p
+
+
+
+
+
+g  g
+
+ 
+
+
+p+2 m 2 ,
+
+where the arrow means that this tensor should be contracted with hi in the annihilation channel.
+
+c the matrix elements in the annihilation channel
+
+we remind also
+
+m 2 =
+
+m 2 =
+
+1
+2
+1
+2
+
+(m 2
+
+a + m 2
+b )
+
+(m 2
+
+a  m 2
+b )
+
+25
+
+(73)
+
+note that the energy denominators of the eective interaction in the annihilation
+
+channel do not depend on the angles , .
+
+m
+
++
+
+
+
+1
+
+
+2
+
+
+1
+
+k+k +
+
+v(k, )mu(k, )
+
+2
+
+
+
+2
+
+k+k + h(cid:16)m2  kk
+
+e+i()(cid:17) 
+
+  m(cid:16)k
+
+e+i
+
+i
++ ke+i(cid:17) 
+
+
+
+  k
+k + ei
+
++
+
+k
+
+k+ e+i! 
+
+  m(cid:18) 1
+
+k + +
+
+1
+
+k+(cid:19) 
+
+
+
+i  k
+
+
+
+k + ei
+
+
+
+k
+
+k+ e+i! 
+
+  im(cid:18) 1
+
+k + +
+
+1
+
+k+(cid:19) 
+
+
+
+table 8: matrix elements of the dirac spinors.
+
+c.1 the helicity table
+
+for the calculation of matrix elements of eective interaction in the annihilation channel
+we use the matrix elements of the dirac spinors listed in table 4 [9]. also the following
+holds (v(p)u(q))+ = u(q)v(p).
+we introduce
+
+2h (1)(x, ~k; 1, 2|x, ~k
+2h (2)(x, ~k; 1, 2|x, ~k
+
+
+
+; 
+
+1, 
+
+
+
+; 
+
+1, 
+
+2) = hig
+2) = hi
+
+ = h2
+
+1i  h2
+2i
+
+1
+p+2
+
+where
+
+hi =
+
+(v(1  x,~k 
+
+2)u(x, ~k 
+
+; 
+
+1))
+
+; 
+qx(1  x)
+
+(u(x, ~k; 1)v(1  x,~k; 2)
+
+qx(1  x)
+
+(74)
+
+(75)
+
+c the matrix elements in the annihilation channel
+
+26
+
+nal:initial
+
+(
+
+1, 
+
+2) = (
+
+1, 
+
+2) = (
+
+1, 
+
+1, 
+
+2) = (
+3 (2, 1)
+
+h 
+
+2) =
+0
+
+h 
+
+2 (1, 2)
+
+h3(2, 1)
+
+h3(1, 2)
+
+h1(1, 2)
+
+(1, 2) =
+(1, 2) =
+(1, 2) =
+(1, 2) =
+table 9: general helicity table dening the eective interaction in the annihilation chan-
+nel.
+
+h4(1, 2)
+
+h4(2, 1)
+
+h2(1, 2)
+
+3 (1, 2)
+
+h 
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+these functions are displayed in the table 5.
+
+here, the matrix elements h (n)
+
+i
+
+(1, 2) = h (n)
+
+i
+
+(x, ~k; x, ~k 
+
+) are the following
+
+h (1)
+
+1 (x, ~k; x, ~k
+
+h (1)
+
+2 (x, ~k; x, ~k
+
+h (1)
+
+3 (x, ~k; x, ~k
+
+h (1)
+
+4 (x, ~k; x, ~k
+
+and
+
+
+
+
+
+x
+
+) = m2(cid:18) 1
+
+) = kk
+
+) = m1(cid:18) 1
+
+
+
+) = kk
+
+
+
+
+
++
+
+ei(
+
+
+
+)
+
+1
+
+1  x(cid:19)(cid:18) 1
+x +
+xx 
+
+1  x(cid:19) k 
+
+1
+
+
+
++
+
+
+
+)
+
+x
+ei(
+
+x(1  x)
+
+
+1
+
+1  x(cid:19)
+
+1  x ei
+
+h (2)
+h (2)
+
+1 (x, ~k; x, ~k
+2 (x, ~k; x, ~k
+
+
+
+) = h (2)
+) = h (2)
+
+3 (x, ~k; x, ~k
+4 (x, ~k; x, ~k
+
+
+
+(76)
+
+(77)
+
+
+
+) = 0
+) = 2
+
+
+
+c.2 the helicity table for |jz|  1
+the matrix elements of the eective interaction for jz  0 f (x, k; 1, 2|x, k
+2) =
+hx, k; jz, 1, 2| vef f|x, k
+2i in the annihilation channel (the sum of the gener-
+ated interaction for jz = +1 and instantaneous graph for jz = 0) are given in table
+6.
+
+; j 
+
+; 
+
+z, 
+
+1, 
+
+1, 
+
+the function fi(1, 2) = fi(x, k; x, k
+
+) are the following
+
+f1(x, k; x, k
+
+
+
+) =
+
+f2(x, k; x, k
+
+
+
+) =
+
+f3(x, k; x, k
+
+
+
+) =
+
+m2
+
+1
+
+
+
+
+
+
+|jz|,1
+
+xx(1  x)(1  x)
+kk
+
+
+xx |jz|,1 + 2jz,0!
+
+   1
+
+
+
+
+
+
+1
+
+
+1
+
+m
+
+x(1  x)
+
+k
+1  x
+
+|jz|,1
+
+c the matrix elements in the annihilation channel
+
+27
+
+nal:initial
+
+(
+
+1, 
+
+2) = (
+
+1, 
+
+1, 
+
+2) = (
+f 
+
+2) = (
+3 (2, 1)
+
+1, 
+
+2) =
+0
+
+f 
+
+2 (1, 2)
+
+f3(2, 1)
+
+f3(1, 2)
+
+f1(1, 2)
+
+(1, 2) =
+(1, 2) =
+(1, 2) =
+(1, 2) =
+table 10: helicity table of the eective interaction in the annihilation channel for jz  0.
+
+f4(1, 2)
+
+f 
+
+3 (1, 2)
+
+f4(2, 1)
+
+f2(1, 2)
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+f4(x, k; x, k
+
+
+
+) =
+
+
+
+  
+
+1
+
+
+kk
+
+x(1  x)
+
+|jz|,1 + 2jz,0!
+
+where we have introduced
+(1) exponential cut-o
+
+(2) gaussian cut-o
+
+(3) sharp cut-o
+
+1
+
+
+=
+
+1
+m 2 ,
+
+1
+
+
+=
+
+m 2
+m 4
+
+a + m 2
+b
+a + m 4
+b
+
+,
+
+1
+
+
+=
+
+(m 2
+
+a  m 2
+b )
+m 2
+a
+
++
+
+(m 2
+
+b  m 2
+a )
+m 2
+b
+
+.
+
+the table for jz = 1 is obtained by inverting all helicities, i.e.
+
+f (jz = +1; 1, 2) = 1f (jz = 1;1,2) ,
+
+(78)
+
+(79)
+
+(80)
+
+(81)
+
+(82)
+
+the matrix elements of the eective interaction in the annihilation channel are nonzero
+
+only for |jz|  1 due to the restriction on the angular momentum of the photon.
+
+references
+
+references
+
+28
+
+[1] s.j. brodsky, h.c. pauli, and s.s. pinsky, quantum chromodynamics and other eld
+
+theories on the light cone, physics reports 301, 299 (1998).
+
+[2] m. brisudova, and r.j. perry, hep-ph/9511443, phys.rev. d54, (1996) 1831;
+m. brisudova, r.j. perry, k.g. wilson, hep-ph/9607280, phys.rev.lett.78, (1997)
+1227.
+
+[3] m. brisudova, and r.j. perry, hep-ph/9605363, phys.rev. d54, (1996) 6453.
+
+[4] b. d. jones, r. g. perry and s. d. glazek, phys.rev. d55, 6561 (1997); hep-
+
+th/9605231; b. d. jones and r. g. perry, hep-th/9703106.
+
+[5] r.j. perry, in proceedings of hdrons 94, edited by v. herscovitz and c. vasconcellos
+
+(world scientic, singapore, 1995), hep-th/9407056.
+
+[6] s.d. glazek and k.g. wilson, phys.rev. d48, 5863 (1993); s.d. glazek and k.g.
+
+wilson, phys.rev. d49, 4214 (1994).
+
+[7] f. wegner, ann.physik 3,77 (1994).
+
+[8] h.c. pauli, hep-th/9608035; hep-th/9707361; hep-th/9809005, mpih-v21-1998,
+
+june 1998, to appear in europhys.journal (1998).
+
+[9] g.p. lepage, s.j. brodsky, phys.rev. d22, 2157 (1980).
+
+[10] u. trittmann and h.c. pauli, hep-th/9704215, hep-th/9705021, hep-th/9705072.
+
+[11] computer
+
+code
+
+is
+
+available
+
+on the world wide web (www) under
+
+http://pluto.mpi-hd.mpg.de/trittman/code.html.
+
+[12] u. merkel and h.c. pauli, hep-th/9608152, phys.rev. d55, (1997), 2486.
+
+[13] m. krautgartner, h.c. pauli and f. wolz, phys.rev. d45, (1992) 3755.
+
+[14] m. kaluza and h.-j. pirner, phys.rev. d47, 1620 (1993).
+
+[15] e.l. gubankova, h.c. pauli, f. wegner hep-th/9809143
+
+[16] e.l. gubankova, hep-th/9801018.
+
+

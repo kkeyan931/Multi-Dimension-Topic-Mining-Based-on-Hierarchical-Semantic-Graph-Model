@@ -1,0 +1,2856 @@
+.
+
+spht/t98/112
+
+9
+9
+9
+1
+
+ 
+l
+u
+j
+ 
+
+8
+
+ 
+ 
+
+1
+v
+0
+6
+0
+7
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+conformal field theory techniques
+
+in random matrix models
+
+ivan k. kostov 
+
+c.e.a. - saclay, service de physique theorique
+
+f-91191 gif-sur-yvette, france
+
+in these notes we explain how the cft description of random matrix models can be
+used to perform actual calculations. our basic example is the hermitian matrix model,
+reformulated as a conformal invariant theory of free fermions. we give an explicit operator
+construction of the corresponding collective eld theory in terms of a bosonic eld on a
+hyperelliptic riemann surface, with special operators associated with the branch points.
+the quasiclassical expressions for the spectral kernel and the joint eigenvalue probabilities
+are then easily obtained as correlation functions of current, fermionic and twist operators.
+the result for the spectral kernel is valid both in macroscopic and microscopic scales. at
+the end we briey consider generalizations in dierent directions.
+
+based on the talk of the author at the third claude itzykson- meeting, integrable
+models and applications to statistical mechanics , paris, july 27-29, 1998, and at the
+workshop random matrices and integrable systems, univ. of warwick, november 2-4
+1998.
+
+july 1999
+
+ member of cnrs
+ kostov@spht.saclay.cea.fr
+
+1. introduction
+
+the random matrix models have various applications in rather dierent domains,
+and sometimes language barriers prevents the ow of ideas and knowledge from one eld
+to another. for example, such powerful techniques as the conformal eld theory (cft)
+description of the random matrix models and their relation with the integrable hierarchies,
+which were developped extensively by the string theorists in the early 90s, are practically
+unknown to the mesoscopic physicists. this lecture is an attempt to explain the uses of the
+the cft description in a language, which is acceptable by both communities. we therefore
+avoided any physical interpretation and concentrated on the method as such. the only
+thing the reader is supposed to know are the basics of the two-dimensional conformal eld
+theory.
+
+  
+
+the statistical ensembles of random matrices of large size (matrix models) have been
+introduced in 1951 by wigner in order to analyze the spectral properties of complicated
+systems with chaotic behavior [1]. in this approach the hamiltonian of a chaotic system
+is considered as a large matrix with random entries. consequently, the analytical studies
+of random matrix ensembles carried out in the next 25 years (see the mehtas book [2])
+were oriented to the calculation of the spectral correlation functions or joint eigenvalue
+probabilities.
+
+if m is an n  n hermitian random matrix, then the spectral correlation function
+
+(1, ..., n) is dened as the probability density that 1, ..., n are eigenvalues of m
+
+(1, ..., n) =
+
+n ! * n
+(n  n)!
+yi=1
+
+(m  i)+ .
+
+(1.1)
+
+all spectral correlation functions are expressed as determinants of a single kernel k(, )
+(the spectral kernel). the spectral kernel can be evaluated by the method of orthogonal
+polynomials [2]. its large n asymptotics is characterized by the interposition of a smooth
+behavior and fast oscillations with wavelength  1/n (in a scale where the total range of
+the spectrum is kept nite). the smooth large distance behavior depends on the concrete
+form of the matrix potential. on the contrary, the microscopic behavior characterized by
+oscillations depends only on the symmetry group (the unitary group in the case) and fall
+into several universality classes. it is the microscopic behavior of the spectral correlations,
+which is interesting from the point of view of applications to chaotic systems. a review of
+the latest developments in this direction, in particular these related to the recent monte
+carlo data in lattice qcd, can be found in [3].
+  
+
+the discovery by t hooft of the 1/n expansion [4] gave a meaning of the smooth part
+of the spectral correlators and opened the possibility of using random matrix models to
+solve various combinatorial problems, the simplest of which is the enumeration of planar
+graphs [5,6]. here we can mention the exact solution of various statistical models dened
+on random surfaces [7,8,9], the matrix formulation of the 2d quantum gravity [10,11] and
+some more dicult combinatorial problems as the enumeration of the dually weighted
+planar graphs [12] and the branched coverings of a compact riemann surface [13].
+
+1
+
+in this kind of problems the solution is encoded in the 1/n expansion of the loop
+
+correlation functions, which are the correlation functions of the collective eld variable
+
+w (z) = tr(cid:16)
+
+1
+
+z  m(cid:17).
+
+(1.2)
+
+in the large n limit the correlation functions of the resolvent (1.2) are meromorphic func-
+tions with cuts along the intervals where the spectral density is nonzero. the discontinuity
+along the cuts gives the smooth part of the joint eigenvalue probabilities (1.1). indeed, we
+have the evident relation
+
+(1, ..., n)
+
+(1.3)
+
+hw (z1) . . . w (zn)ic =z
+ic means connected correlator.
+
+d1 . . . dn
+
+(z1  1) . . . (zn  n)
+
+where h
+the rst exact results in the large n limit were obtained by direct application of
+the saddle point method [5], but later it was recognized that a more powerful method
+is provided by the so called loop equations [14], whose iterative solution allows one to
+reconstruct order by order the 1/n expansion. the most ecient iterative procedure
+proved to be the moments description [15], which allowed to calculate the free energy
+and loop correlators for an arbitrary potential up to 1/n 4 terms.
+
+in the early 90s, after the publication of the seminal papers [11], the two resolu-
+tion techniques in random matrix models (orthogonal polynomials and loop equations)
+developed rapidly and were recognized as particular cases of well developed mathematical
+methods.
+
+  
+
+the method of orthogonal polynomials was reformulated in terms of the theory of
+ functions of integrable hierarchies (see, for example, the review article [16]). on the
+other hand it was observed that the loop equations generate a representation of (half of)
+the virasoro algebra and are therefore equivalent to the requirement that the theory is
+conformal invariant [17,18]. this allowed to describe a class of large n matrix models
+near criticality in terms of the hilbert space of twisted bosonic elds, and apply the well
+developed formalism of the conformal eld theory. finally, it was observed that the two
+approaches are closely related since the  functions associated with the matrix models
+can be formulated as fermionic theories with conformal invariance [19]. (the approach
+based on integrable hierarchies is however less general since it works only for the unitary
+ensemble of random matrices.)
+
+  
+
+it happened that the cft techniques were developed exclusively from the point of
+view of their application to noncritical string theories, and therefore are known only to
+a relatively narrow circle of physicists. the aim of this lecture is to demonstrate the
+technical and conceptual advantages of the conformal eld theory description in a more
+general setting. in particular, we will reproduce, using the cft formalism, the microscopic
+oscillations of the spectral kernel and correlators. the cft formalism allows to understand
+better the origin of the observed universality at mesoscopic and microscopic scales.
+
+2
+
+we will restrict ourselves to the simplest example of the hermitian one matrix model
+with arbitrary potential and will only briey consider the generalizations at the end. first
+we will establish the equivalence of the unitary matrix ensemble with a system of two-
+dimensional free chiral fermions. then we will construct the collective eld theory, which
+is obtained from the fermionic system by the two-dimensional bosonization rules. the eld
+posesses a nontrivial expectation value associated with a hyperelliptic riemann surface.
+the latter is described, from the point of view of cft, by a collection of twist operators
+associated with its branch points. with interaction concentrated at the branch points. we
+will demonstrate the power of the cft description by performing some actual calculations.
+we will obtain the quasiclassical expressions for the correlator of the resolvent w (z), the
+joint eigenvalue probabilities and the spectral kernel. finally we will briey mention how
+the formalism can be generalized to the case of a chain of coupled random matrices in
+presence of external matrix elds.
+
+2. the hermitian one matrix model. loop equations as virasoro constraints
+
+the partition function of the unitary ensembleis dened as the integral
+
+zn [v ] =z dm etrv (m )
+
+(2.1)
+
+where dm denotes the translational invariant measure in the space of n  n hermitian
+matrices m = {mij}n
+
+i,j=1. we normalize the measure as
+
+dm =
+
+1
+
+vol[u (n )]
+
+n
+
+yk=1
+
+dmkk
+
+2 yk<j
+
+2 dre(mkj) dim(mkj)
+
+(2.2)
+
+where vol[u (n )] = qn
+
+k!
+potential is an entire function
+
+(2)k
+
+k=1
+
+is the volume of the unitary group. we assume that the
+
+v (m ) = 
+
+tnm n
+
+
+
+xn=0
+
+(2.3)
+
+which is the natural choice for the ensemble of hermitian matrices.
+
+the integrand depends on the matrix variable m only through its eigenvalues
+
+1, ..., n and the integral (2.1) is actually reduced to
+
+zn [v ] =
+
+1
+
+n ! z
+
+n
+
+yi=1
+
+di ev (i) yi<j
+
+(i  j)2.
+
+(2.4)
+
+the loop equations represent an innite set of identities satised by the correlation
+
+functions of the collective eld variable
+
+w (z) =
+
+n
+
+xi=1
+
+1
+
+z  i
+
+= tr(cid:16)
+
+1
+
+z  m(cid:17).
+
+3
+
+(2.5)
+
+the derivation goes as follows. from the translational invariance of the integration measure
+di we nd
+
+where h
+identity
+
+we write (2.6) as
+
+n
+
+1
+
+i
+
+xi=1(cid:16) 
+
++ 2 xj(6=i)
+
+d
+in,{t} means the average with respect to this partition function. using the
+
+(cid:17) 1
+z  ien,{t}
+
++xn0
+
+i  j
+
+ntnn1
+
+(2.6)
+
+i
+
+= 0
+
+xi
+
+1
+
+(z  i)2 + 2xi6=j
+
+1
+
+1
+
+z  i
+
+i  j
+
+=xi,j
+
+1
+
+1
+
+z  i
+
+z  j
+
+dw 2(z) +
+
+n
+
+xi=1
+
+1
+
+z  i xn0
+
+ntnn1
+
+i
+
+= 0.
+
+en,{t}
+
+(2.7)
+
+(2.8)
+
+assume that the point z is very far from the origin. then the sum in the second term
+can be viewed as the result of a contour integration along a big contour c circling all the
+eigenvalues 1, ..., n but not the point z:
+
+dz
+2i
+
+ic
+
+= 0
+
+1
+
+z  zdt (z)en,{t}
+tnzn 
+
+1
+
+2 xn0
+
+2 tr log(cid:16)
+
+1
+
+z  m(cid:17).
+
+(2.9)
+
+(2.10)
+
+with respect to the coupling tn. this allows to represent the operator (2.10) as
+
+i can be realized by taking a partial derivative
+
+where
+
+t (z) =
+
+1
+2
+
+[(z)]2, (z) =
+
+the insertion of the operator trm n =pi n
+2 xn>0
+
+[(z)]2, (z) =
+
+t(z) =
+
+1
+2
+
+1
+
+tnzn + 2n ln z + 2xn0
+
+zn
+n
+
+
+tn
+
+(2.11)
+
+(2.12)
+
+(2.13)
+
+and write the loop equations as linear dierential constraints
+
+where
+
+ln  zn [t] = 0
+
+(n  1)
+
+ln =
+
+n
+
+xk=0
+
+
+tk
+
+
+
+tnk
+
++
+
+
+
+xk=0
+
+ktk
+
+
+
+tn+k
+
+.
+
+(we used the notation zn [t] instead of zn [v ] since a concrete representation of the the
+potential v (z) by the set {tn}n=0 of coordinates (coupling constants) is chosen.) the
+operators ln satises the virasoro algebra
+
+[lm, ln] = (m  n)lm+n
+
+4
+
+(2.14)
+
+which implies that the this matrix integral realizes a representation of the conformal group.
+in writing the virasoro constraints we introduced the derivative with respect to the trivial
+variable t0, which satises
+
+
+t0zn [t] = nzn [t].
+
+(2.15)
+
+it turns to be much simpler to use apparatus of the conformal eld theory instead
+of solving directly the loop equations (2.12). the formal solution of these equations is
+given in terms of a chiral dirac fermion or, through bosonization, of a chiral bosonic
+eld with liouville-like interaction, which is by its denition conformal invariant. such a
+construction has been proposed in [18,19].
+
+in the next sections we consider the cft interpretation of the matrix model from
+more pragmatic point of view than in refs. [18,19]. our aim is explore the large n limit of
+the operator solution of the loop equations through the conformal eld theory and repro-
+duce the 1/n expansion for the free energy and the correlation functions. the bosonic eld
+can be considered as the collective eld describing the dyson gas of eigenvalues. the 1/n
+expansion can be constructed in terms of a free bosonic eld dened on a riemann sur-
+face determined by the classical background (the spectral density in the thermodynamical
+limit). the spectral correlations can be determined directly from the correlation functions
+of this bosonic eld.
+
+3. fermionic representation
+
+3.1. fock space representation of the hermitian matrix integral in terms of dirac fermions
+
+the model (2.1) was rst solved by the so called method of orthogonal polynomials
+[20,21]. the method is based on the possibility to consider the matrix model as a system
+of free fermions. later the fermionic partition function was identied as a  -function of
+the kp hierarchy [19]. (for a review of the theory of tau-functions see [22].)
+
+there are dierent fermionic representations of the matrix integral depending on the
+choice of the fermionic wave functions. below we will describe the one that is most natural
+from the point of view of the conformal symmetry. let us introduce the chiral fermions
+
+(z) =(cid:26) (1) (z)
+
+(2) (z)(cid:27) , (z) = {(1)(z), (2)(z)} .
+
+(3.1)
+
+choosing a local coordinate 1/z at z =  we expand
+
+(a)(z) = xrzz+ 1
+
+2
+
+r zr 1
+(a)
+2 ,
+
+(a)(z) = xrzz+ 1
+
+2
+
+(a)
+r
+
+zr 1
+2 .
+
+(3.2)
+
+where the fermion modes satisfy the anticommutation relations
+
+[(a)
+
+r , (b)
+r
+
+]+ = a,br+r,0.
+
+(3.3)
+
+5
+
+the left and right vacuum states of given charge ~l = (l
+
+(1)
+
+(2)
+
+, l
+
+) are dened by
+
+r = h~l|(a)
+h~l|(a)
+r |~li = (a)
+(a)
+
+r = 0
+|~li = 0
+
+r
+
+(r < l(a) )
+
+(r > l(a) )
+
+(3.4)
+
+and the corresponding normal ordering is denoted by :
+
+:. the action of the chiral fermions
+
+is s =r d2z  and the energy-momentum tensor is t = 1
+
+the fermion bilinears
+
+2 [  ].
+
+j (a)(z) =: (a)(z)(a)(z) :
+j+(z) = (1) (2)(z), j(z) = (2)(1)(z)
+
+(a = 1, 2)
+
+(3.5)
+
+satisfy the u(2) current algebra.
+
+the currents j (a) (z) = pn j (a)
+
+the fermionic elds as
+
+n zn1, jn(a) = przz+
+
+1
+2
+
+: (a)
+
+r (a)
+
+r+n : commute with
+
+[(a)(z), j (a)
+
+n ] = zn(a)(z),
+
+[(a)
+
+r , jn] = (a)
+
+r+n,
+
+[j (a)
+
+n , (a)
+
+r
+
+[j (a)
+
+n , (a)(z)] = zn(a)(z),
+] = (a)
+rn
+
+[j (a)
+
+n , j (a)
+
+m ] = nn+m,0.
+
+we will also denote the su(2) current components by
+
+e+(z) = j+(z),
+e(z) = j(z),
+h(z) =
+
+1
+2
+
+[j (1) (z)  j (2)(z)]
+
+and the u(1) current by
+
+h(z) =
+
+1
+2
+
+[j (1)(z) + j (2) (z)].
+
+the su2 currents are expressed in terms of the pauli matrices as
+
+h =: 3 : ,
+e =:  :
+
+.
+
+(3.6)
+
+(3.7)
+
+(3.8)
+
+(3.9)
+
+now we are ready to write the fock-space representation of the matrix partition
+function (2.1) in terms of the fermionic elds (3.1). for this purpose we dene the hamil-
+tonian
+
+v (z)h(z)
+
+2i
+
+h[v ] = i dz
+2 xn0
+
+=
+
+1
+
+tnxr (cid:16): (1)
+
+nr(1)
+
+r  (2)
+
+nr(2)
+
+r
+
+(3.10)
+
+:(cid:17)
+
+6
+
+and the screening operator
+
+q+ =z 
+
+
+
+d e+().
+
+statement:
+
+the scalar product
+
+zn [v ] = hn|eh[v ] eq+|0i ,
+
+where |0i  |0, 0i and hn|  hn, n|, is equal to the integral (2.4).
+
+proof:
+
+(3.11)
+
+(3.12)
+
+first we expand eq+ in fermion multilinears and move the operator eh[v ] to the right
+
+using the formulas
+
+eh[v ](2)(z)eh[v ] = e 1
+eh[v ](1)(z)eh[v ] = e 1
+
+2 v (z)(2)(z),
+
+2 v (z)(1)(z),
+
+(3.13)
+
+until it hits the right vacuum. the result is1
+
+zn [v ] = hn|eqv
+
++|0i, qv
+
++ =z 
+
+
+
+d(1)()(2)() ev ().
+
+(3.14)
+
+then, expanding the exponent in modes
+
+qv
+
++ = xr,r>0z dr+r1(1)
+r (2)
+
+r ev ()
+
+(3.15)
+
+and using (3.3) and (3.4), we reproduce the original integral.
+
+the representation (3.12) of the partition function implies that the latter is a  -
+function of the kp hierarchy (this fact has been established in [23]) and therefore satises
+an innite tower of dierential equations, the rst of which is the kp equation.
+
+1 here we assume that the potential grows suciently fast at    and therefore the
+
+integral is nite if the fermionic operator is regular at z = 0. this is indeed the case since all r
+
+with r > 0 are annihilated by the right vacuum.
+
+7
+
+3.2. relation to the method of orthogonal polynomials
+
+the method of orthogonal polynomials [20] consists, in this setting, in choosing a basis
+
+diagonalizing the quadratic form (3.15)
+
+xr 1
+
+2
+
+zr 1
+
+2 (1)
+
+r = xn0
+
+pn(z)b(1)
+
+n , xr 1
+
+2
+
+zr 1
+
+2 (2)
+
+r|0i = xn0
+
+pn(z)b(2)
+n
+
+(3.16)
+
+where the polynomials pn(z) = zn + ... satisfy the orthogonal relations
+
+z 
+
+d pn()pm()ev () = hn+1m,n.
+
+(3.17)
+
+the operators b(1)
+
+n
+
+and b(2)
+
+
+n are linear combinations of (1)
+
+r and (2)
+
+r respectively:
+
+b(1)
+
+n =xk
+
+bnk(1)
+
+k 1
+
+2
+
+,
+
+b(2)
+
+n =xk
+
+bnk(2)
+
+k 1
+
+2
+
+(3.18)
+
+where the matrix b is triangular and with with unitary diagonal elements
+
+bnn = 1, bnk = 0 for k > n
+
+(3.19)
+
+and therefore its determinant is equal to one, det b = 1.
+
+introducing the set of orthogonal functions
+
+fn() = pn1()e 1
+
+2 v (z), n = 1, 2, ...
+
+(3.20)
+
+such that (fk, fj) r dfk()fj() = kj hk, we represent the quadratic form (3.15) as
+
+(fm, fn) b(1)
+
+m b(2)
+
+n =
+
+hn b(1)
+
+n b(2)
+n
+
+(3.21)
+
+qv
+
++ =
+
+
+
+xm,n=1
+
+
+
+xn=1
+
+and the partition function equals
+
+zn [v ] =
+
+1
+n !
+
+(det b)2 detnn (fk, fj) = h1h2...hn .
+
+(3.22)
+
+3.3. spectral kernel and joint eigenvalue distributions
+
+a complete set of observables in the matrix model is given by the joint distribution
+
+probabilities for n eigenvalues (1  n  n )
+
+(1, ..., n) =
+
+(n  n)!
+
+n !
+
+n
+
+yk=1
+
+d
+
+(k  me.
+
+8
+
+(3.23)
+
+the density probabilities (3.23) are expressed as expectation values of fermionic bi-
++ /n ! + . . .
+
+linears. indeed, keeping the only relevant term in the expansion eq+ = . . . + qn
+we write the partition function as
+
+from where the representation of the probability measure (1, . . . , n ) as the expectation
+value of n operators e+. integrating with respect to n  n of the s gives
+
+n
+
+n !
+
+eh[v ]
+
+yk=1
+
+zn [v ] =z d1...dn
+
+e+(k)(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+e+(k)+ =
+where by denition hoi = hn|eh[v ]oeq+|0i
+hn|eh[v ]eq+|0i
+
+*n(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)
+n ! * n
+(n  n)!
+yk=1
+
+(1, ..., n) =
+
+pectation value of the fermionic current
+
+0+ =z d1...dn (1, ..., n)
+
+(3.24)
+
+n ! * n
+(n  n)!
+yk=1
+
+(1)(k)(2)(k)+ (3.25)
+
+. in particular, the spectral density is the ex-
+
+() =
+
+1
+n h(1)()(2)()i.
+
+(3.26)
+
+since we have a system of free fermions, the average is equal to the determinant of
+
+the two-point correlators [20]
+
+where
+
+(1, ..., n) =
+
+(n  n)!
+
+n !
+
+detnnk(i, j)
+
+k(, ) = h(1)()(2)()i .
+
+(3.27)
+
+(3.28)
+
+the two-point function (3.28) is called spectral kernel and is expressed in terms of the
+orthogonal functions (3.20) as
+
+k(, ) =
+
+fn()fn()
+
+(fn, fn)
+
+.
+
+n
+
+xn=1
+
+(3.29)
+
+another useful representation of (1, ..., n) is as the correlators of the cartan current
+
+h. one nds, using the operator product expansion for the currents h and e+,
+
+
+
+d
+z  
+
+this relation generates a set of ward identities the simplest of which is
+
+h(z)eq+|0i =dz 
+hh(z)i =z 
+
+e+()eq+(cid:12)(cid:12)(cid:12)
+0e.
+z  he+()i.
+n hh(z)i as an integral of the spectral density w (z) = r 
+
+this equation together with (3.26) gives the the representation of the resolvent w (z) =
+1
+z . therefore all the
+information about the spectral correlators is also contained in the discontinuities of the
+correlators of h(z).
+
+(3.30)
+
+(3.31)
+
+
+
+
+
+d()
+
+d
+
+9
+
+3.4. virasoro constraints and hirota equations
+
+we give here another derivation of the virasoro constraints, using the fock space
+representation of the partition function. the level-1 u(2) current algebra satised by the
+operators (3.5) decouples into u(1) and su(2)1 parts. the corresponding sugawara energy-
+momentum tensor also decouples to two noninteracting pieces
+
+where
+
+1
+
+2 xa=1,2
+
+: ((a)(a)  (a)(a)) : = t (z) + t (z),
+
+t (z) =
+
+1
+6
+
+: (2h 2 + e+e + ee+) : = : h 2(z) : ,
+
+t (z) = : h 2(z) :
+
+(3.32)
+
+(3.33)
+
+and h and h are given by (3.7) and (3.8) respectively. both pieces commute with the
+operator eq+, which means that theory is conformal invariant. only the operator t (z) =
+
+pn lnzn2 produces nontrivial ward identities. for any n  1,
+
+[ln, q+] =z 
+
+
+
+d[ln, e+()] =z 
+
+
+
+d
+
+d
+
+d(cid:16)n+1e+()(cid:17).
+
+(3.34)
+
+hn|eh[v ] t (z) eq+|0i = {regular function at z = 0}.
+
+since our potential diverges as   , the boundary terms of can be neglected, and we
+have
+(3.35)
+on the other hand, by commuting ln, n  1 with eh[v ] we nd the nontrivial linear
+dierential equations (2.12) known as virasoro constraints.
+the partition function is by construction a  -function of the kp hierarchy [18], zv [t] =
+n [t], where the times tn are the coecients in the expansion of the potential v (z) =
+pn=1 tnzn. it is a particular case of the general solution of the kp hierarchy presented
+
+in [22] and satises the bilinear hirota equations
+
+or
+
+e(tntn)zn (cid:28) det(z  m )(cid:29)n,{t}(cid:28)det
+i dz yn
+i
+
+dz (cid:16)v+(z)  zn [t](cid:17) (cid:16)v(z)  zn [t](cid:17) = 0
+
+1
+
+z  m(cid:29)n,{t}
+
+= 0
+
+(n  n ).
+
+(n  n )
+
+(3.36)
+
+where the vertex operators v(z) = exp(cid:16)pn=0 tnzn(cid:17) exp(cid:16) ln 1
+are understood as formal series in tn and 
+tn
+operators in the scalar product. namely, v+(z)zn [t] = hn|(1)
+v(z)zn [t] = hn|(1)
+
+tn(cid:17)
+t0 pn=1
+. they produce insertions of fermionic
+eh[v ](1) (z)g|0i,
+eh[v ](1)(z)g|0i. the direct derivation of the hirota equations
+
+n+ 1
+2
+
+n+ 1
+2
+
+zn
+
+n
+
+
+
+
+
+z
+
+from the matrix integral is given in [24].
+
+10
+
+the susceptibility u[t] = 2 2
+t2
+1
+
+log zn satises an innite hierarchy of dierential
+equations with respect to the times tn the rst of which is the kadomtsev-petviashvili
+(kp) equation
+
+(3.37)
+
+3
+
+2u
+t2
+2
+
++
+
+
+
+t1h  4
+
+u
+t3
+
++ 6u
+
+u
+t1
+
++
+
+3u
+t3
+
+1i = 0.
+
+one can check directly that it is satised by the asymptotic expansion around the gaussian
+point
+
+zn [tn]
+zn [n2]
+
+= (t2) n 2
+
+2
+
+exp(cid:16)n t0 
+
+n
+4
+
+t2
+1
+t2
+
++
+
+n 2
+4
+
+t3t1
+2 
+t2
+
+n
+8
+
+t3
+1t3
+t3
+2
+
++ ...(cid:17).
+
+(3.38)
+
+the hirota equations themselves are not sucient to determine uniquely the partition
+functions zn [t]. the missing information is supplied by the rst two virasoro constraints
+l0,1z = 0 describing the reaction of the integral (2.1) to translations and rescaling of
+the variables,
+
+l0 = n 2 +
+
+
+
+xn=1
+
+ntnn, l1 = t1n +
+
+
+
+xn=1
+
+(n + 1)tn+1n.
+
+(3.39)
+
+let us consider the example of the cubic potential v (z) = t1z t2z2  t3z3 [25]. the
+partition function depends, due to the scaling laws (3.39) only on a single combination of
+the three couplings:
+
+zn [t1, t2, t3] = e t1 t2
+
+3t3
+
++
+
+2t3
+2
+27t2
+
+3 zn [x, 0, 1),
+
+x =
+
+t2
+2  3t1t3
+3t4/3
+
+3
+
+.
+
+and the susceptibility depends on the three couplings as
+
+u(t1, t2, t3) = 22
+
+1 log zn = t2/3
+
+3
+
+f (x).
+
+(3.40)
+
+the kp equation reduces to an ordinary dierential equation
+
+
+
+t1(cid:16)f + 2fx  9f f 
+
+3
+2
+
+f(x)(cid:17) = 0.
+
+4. bosonic representation
+
+in most of the applications associated with the large n limit we are interested not in
+the exact expressions in terms of determinants of strongly oscillating fermionic eigenfunc-
+tions (typically they have n nodes), but in the smooth eective expressions. in this sense
+it is more advantageous to develop the theory of the collective excitations of fermions for
+which the small parameter 1/n 2 plays the role of a planck constant and whose ground
+state is the equilibrium state of the dyson gas. the free boson representation is very useful
+to study the large n limit of the theory.
+
+11
+
+by the 2d bosonization formulas we represent the chiral fermions as vertex operators
+
+(a)(z) =: e(a) (z) :
+(a)(x) =: e(a) (z) :
+
+: (a)(a) := (a) ,
+
+(a = 1, 2)
+
+(4.1)
+
+where
+
+(a) (z) = q(a) + p(a) ln z xn6=0
+
+j (a)
+n
+n
+
+zn
+
+(4.2)
+
+are holomorphic two-component scalar elds with
+
+[j (a)
+
+m , j (b)
+
+n ] = na,bn+m,0,
+
+[p(a) , q(b)] = a,b
+
+(4.3)
+
+do that their operator product expansion is then (a) (z)(b) (z)  a,b ln(z  z). the
+normal ordering :j (a)
+for n > m and
+: q p : = : pq := q p. the boson fock space is generated by the oscillators with negative
+frequencies applied to the vacuum vector |0i such that
+
+m for n  m, j (a)
+
+is dened as j (a)
+
+n j (a)
+m :
+
+m j (a)
+n
+
+n j (a)
+
+pa|0i = 1,
+
+j a
+n|0i = 0
+
+(n > 0).
+
+(4.4)
+
+the left vacuum h0| is similarly dened, with the normalization h0|0i = 0, and the state
+hn| is constructed as
+
+(4.5)
+
+hn| = h0|en q(1) en q(2) ].
+
+it will be convenient to introduce the elds
+
+ =
+
+(1)  (2)
+
+2
+
+,
+
+ =
+
+(1) + (2)
+
+2
+
+,
+
+(4.6)
+
+associated with the su(2) and the u(1) algebras. the corresponding currents h =
+j1j2
+
+, h = j1+j2
+
+2
+
+, e = j are given by
+
+2
+
+h =
+
+h =
+
+1
+2
+1
+2
+
+(z), e =: e2 :
+ .
+
+the hamiltonian and the screening operator q+ are represented as
+
+h[v ] = xn0
+
+tnhn =
+
+1
+
+2i
+
+dz
+2i
+
+v (z)(z),
+
+q+ =z 
+
+
+
+d : e
+
+2() :
+
+12
+
+(4.7)
+
+(4.8)
+
+(4.9)
+
+and the virasoro generators are realized as follows
+
+t (z) =xn
+
+lnzn2 =
+
+1
+2
+
+: (z)(z) :
+
+(4.10)
+
+the u (n )-invariant correlation functions of in the matrix model are obtained through
+
+the identication
+
+tr
+
+1
+
+z  m
+
+= 2 +(z),
+
+det(z  m ) =: e
+
+2+ (z) :
+
+(4.11)
+
+where +(z) is the singular at z = 0 part of the operator (z).
+
+the virasoro constraints (2.12) follow from the representation of the bosonic eld
+
+(z) by the operator
+
+(z) =
+
+1
+
+2 xn>0
+
+tnzn +
+
+t0 + 2
+
+1
+2
+
+
+t0
+
+ln z + 2xn0
+
+zn
+n
+
+
+tn
+
+(4.12)
+
+acting on the partition function. the bosonic representation is easily generalized for the
+orthogonal and symplectic matrix integrals, see for example [26].
+
+5. quasi-classics
+
+5.1. ground state
+
+in the large n limit the bosonic eld  = (1)(2)
+
+develops a large (of order n ) vac-
+uum expectation value c(z) = h(z)i which is a solution of classical virasoro constraints
+
+2
+
+tc 
+
+1
+2
+
+2
+
+c(z) = {regular function at z = 0}
+
+satisfying the boundary conditions at innity
+
+hc(z) 
+
+c(z)
+2
+
+1
+2
+
+= 
+
+v (z) +
+
+n
+z
+
++ o(cid:18) 1
+
+z2(cid:19) .
+
+therefore the classical current hc is of the form
+
+hc(z) = m (z) y(z),
+
+2p
+
+y(z) =vuut
+yk=1
+
+(z  ak)
+
+(5.1)
+
+(5.2)
+
+(5.3)
+
+where m (z) is an entire function of z.
+
+the classical current has discontinuities along the intervals [a2k1, a2k]. in the case
+of a single cut, the conditions (5.1) and (5.3) are sucient for reconstructing the ground
+state. in the case of several cuts the situation is more complicated. the potential v (z)
+then has p minima along the real axis (we assume that it grows at innity) so that the
+
+13
+
+spectral density () = 1
+2in [hc( + i0) hc( + i0)] splits into p discontinuous pieces k.
+each partition n1, ..., np (n1 + ... + np = n ) giving the distribution of the eigenvalues
+between the p minima denes a metastable state. the tunneling events leading to the
+decay of the the metastable state are of order en which means that in the large n limit
+the metastable states are actually stable. the true ground state is determined by requiring
+that the tunnelling amplitude between two neighboring vacua vanish, which yields p  1
+additional conditions xing the lling numbers n1, . . . , np.
+the classical eld c = 12h(1)  (2)i changes its sign after circling a branch point.
+this means that the the expectation values of the two original bosonic elds (1) (z) and
+(2) (z) are given by the two branches of the meromorphic function (5.3). therefore one can
+speak of a single eld ~(z) = {(1)(z), (2) (z)} dened on the two-fold branched covering
+of the complex plane given by the hyper-elliptic riemann surface y2 =q2p
+k=1(z  ak), the
+two sheets of which are sewed along the p cuts [a2k1, a2k].
+
+a. one-cut solution
+
+the classical eld depends on n and on the potential v (z) directly and through the
+positions a1, a2 of the two branch points. a simple but important observation (made rst
+by v. kazakov) is that the derivative with respect to n of the resolvent of the random
+matrix (the expectation value hc(z) in our interpretation) depends only on the positions
+of the branch points. indeed, according to the normalization condition
+
+the derivative hc/n satises
+
+i hc(z)
+
+dz
+2i
+
+= n,
+
+hc
+n
+
+ia1
+
+dz = 1
+
+(5.4)
+
+(5.5)
+
+and therefore behaves as 1/z at z  . the only analytic function of the form (5.3) with
+this asymptotics is
+
+.
+
+(5.6)
+
+hc(z)
+
+n
+
+=
+
+1
+
+y(z)
+
+=
+
+1
+
+p(z  a1)(z  a2)
+
+if we make a conformal transformation z   with
+
+ =z z d
+
+y()
+
+which maps the twice covered z-plane to the cylinder i < im  i, the branch points
+are replaces by an orbifold structure. the rotation around a branch point acts as
+
+or
+
+ : ~()  ~() =(cid:16) 0 1
+() = (),
+14
+
+1 0(cid:17)  ~(),
+() = ().
+
+according to (5.6), the classical eld is related tob  = (z) by
+
+hc
+n
+
+=
+
+d
+dz
+
+.
+
+(5.7)
+
+the explicit expression for the classical current is
+
+hc(z) =
+
+1
+
+2ia1
+
+dz
+2i
+
+y(z)
+y(z)
+
+v (z)  v (z)
+
+z  z
+
+.
+
+expanding at z =  and using the asymptotics hc(z)  n/z + ... one nds the conditions
+
+dz
+2i
+
+ia1
+
+zkv (z)
+
+y(z)
+
+= 2n k,1
+
+(k = 0, 1)
+
+(5.8)
+
+which allow to determine the positions of the branch points corresponding to given poten-
+tial.
+
+b. multi-cut solutions
+
+the above analysis can be carried out in the general case of a classical solution with an
+arbitrary number of cuts. assuming that the branch points are ordered as a1 < ... < a2p,
+we have
+
+z a2k
+
+a2k1
+
+k()d =
+
+nk
+n
+
+.
+
+or, in terms of the zero modes of the classical current,
+
+hc(z)
+
+dz
+2i
+
+iak
+
+= nk
+
+(k = 1, ..., p)
+
+(5.9)
+
+where ak is the contour circling the cut [a2k1, a2k].
+
+in this case there the p normalization conditions (5.9) which determine the lling
+numbers n1 + ... + np = n associated with the minima of the eective potential. the
+derivatives of the current with respect to the lling numbers nk
+
+hc(z)
+
+nj
+
+=
+
+dj(z)
+
+dz
+
+(5.10)
+
+form a basis of holomorphic abelian dierentials dk(z) associated with the canonical a-
+cycles encircling the cuts [a2k1, a2k] and satisfying
+
+1
+
+2iiak
+
+dj(z) = kj.
+
+15
+
+(5.11)
+
+the period matrix of the hyperelliptic surface is given by the integrals2
+
+kj =
+
+1
+
+2iibk
+
+dj
+
+(k = 1, ..., p  1, j = 1, ..., p)
+
+where the contour bk encircles the points a2k, a2k+1, ... a2p1 so that
+
+ak  bj = k,j, (k, j = 1, ..., p  1).
+
+the explicit form of the abelian dierentials is
+
+j(z)
+
+z
+
+=xk
+
+[k1]kjzk1
+
+y(z)
+
+kkj =iak
+
+dz
+2i
+
+zj1
+y(z)
+
+.
+
+(5.12)
+
+(5.13)
+
+(5.14)
+
+the functions /z behave as 1/z at innity and are completely determined by the
+positions of the cuts. the explicit expression for the classical current is
+
+hc(z) =
+
+1
+
+2ic
+
+d
+2i
+
+y(z)
+y()
+
+v ()  v (z)
+
+z  
+
+(5.15)
+
+where the contour c encloses all cuts and the point z. expanding in 1/z and using the
+asymptotics (5.2) we nd
+
+dz
+2i
+
+ic
+
+zkv (z)
+
+y(z)
+
+= 2n k,p
+
+(k = 0, ..., p)
+
+(5.16)
+
+while the normalization conditions (5.9) give, after integrating along the contour ak,
+
+
+
+1
+
+2z a2k
+
+a2k1
+
+k()
+
+v ()
+y()
+
+= nk
+
+(k = 1, ..., p)
+
+(5.17)
+
+where
+
+k() =
+
+1
+
+ z a2k
+
+a2k1
+
+d
+  
+
+y().
+
+(5.18)
+
+(it is sucient to add only p  1 such conditions in order to determine a1, ..., a2p.)
+the quasiclassical problem with several cuts has been considered in [27,28,29]. the
+authors of [29] nd a unique solution (the true vacuum) because they impose conditions
+equivalent to the requirement that the tunelling amplitudes between the dierent classical
+vacua are zero.
+
+2 the period matrix is generally overdetermined. the condition that the the period matrix
+describes a riemann surface (shottkey problem) is that the corresponding theta function is a
+
+tau-function of kp (krichevers conjecture proved by shiota and mulase).
+
+16
+
+5.2. quasi-classical expansion
+
+
+
+xg=0
+
+the quasiclassical expansion of the free energy fn = lnzn is actually the 1/n
+
+expansion
+
+fn [v ] =
+
+n 22gf (g)[v /n ] + nonperturbative terms.
+
+(5.19)
+
+it is also called genus expansion because the term f (g) represents the sum of all connected
+feynman diagrams of genus g.
+
+the leading term (o(n 2)) is simply the action for for the classical bosonic eld
+
+n 2f (0) = n 2zdd()() ln(  )  nz d()v ()
+
+=
+
+1
+
+4 z d2zc c 
+
+1
+
+2i dz
+
+2i
+
+v (z)c(z).
+
+(5.20)
+
+the next term (o(1)) is produced by the gaussian uctuations around the classical
+solution c. it is most easily calculated by considering the riemann surface as the complex
+plane with two twist operators associated with its branch points. the notion of a twist
+operator has been introduced by al. zamolodchikov [30] (see also [31]). the twist oper-
+ators, which are conformal operators with dimension 1/16, can be represented as vertex
+operators
+
++(z) = : e
+
+(z) = : e
+
+1
+
+4 [(1) (z)(2) (z)] : = : e
+4 [(2) (z)(1) (z)] : = : e 1
+22
+
+22
+
+1
+
+1
+
+(z) :
+
+(z) :
+
+(z = a2k1),
+(z = a2k).
+
+(5.21)
+
+the twist operators are not conformal invariant and have to be dressed by the modes
+of the bosonic eld in order to obtain translational invariant invariant star operators [32].
+one can construct perturbatively the star operators s(ak) out of the modes of the twisted
+bosonic eld (the descendants of the twist operator (ak)), by requiring that the singular
+terms with their ope with the energy-momentum tensor vanish. then the free energy can
+be evaluated as the logarithm of the correlation function of the 2p star operators.
+
+the star operators read
+
+let us nd the explicit expression for the o(1) term f (1). up to 1/n 2 corrections,
+s(a2k1) = [(a2k1)] 1
+where (a)  ha dz(z  a)3/2(z) is the coecient in front of the power (z  a)1/2 in
+
+the mode expansion of (z) at the point z = a. using the explicit expression for the
+correlation function of the twist operators we nd
+
+24 +(a2k1), s(a2k) = [(a2k)] 1
+
+24 (a2k)
+
+(k = 1, . . . , p)
+
+f (1) = loghs(a1) . . . s(a2p)i = 
+
+1
+24
+
+2p
+
+xk=1
+
+ln (ak) +
+
+1
+8
+
+log(cid:18)detkj(cid:20)
+
+1
+
+a2k1  a2j(cid:21)(cid:19) .
+
+this expression generalizes the one-cut solution found in [15] by solving directly the loop
+equations.
+
+the evaluation in this way of the next term f (2) requires more work, but is still
+much more simple than the direct iteration of the loop equations. (the result of [15] was
+obtained with the help of mathematica, and i reproduced all the coecients, except the
+rst one, using only my pen.)
+
+17
+
+6. two-point correlators for one-cut background
+
+6.1. the two-point correlator of the resolvent
+
+the connected correlation function of the resolvent
+
+w (z, z) =(cid:28)tr
+is related to that of the current h = 12
+
+ by
+
+1
+
+z  m
+
+tr
+
+1
+
+z  m(cid:29)c
+
+w (z, z) =
+
+=
+
+1
+2h+(z)+(z)i
+2(cid:18)h(z)(z)i 
+1
+
+1
+
+(z  z)2(cid:19) .
+
+(6.1)
+
+(we remind that + is the singular at z = 0 part of the eld .) therefore, in order to
+evaluate w (z, z), we need the expression for the two-point correlator of the gaussian eld
+(z) dened on the riemann surface with a cut along the interval [a1, a2]  [a, b]. the
+latter can be evaluated as the 4-point function of two current and two twist operators
+
+h(z)(z)ic = h0|(z)(z)+(a)
+
+
+
+(b)|0i
+
+.
+
+(6.2)
+
+= ln(cid:0)p(z  a)(z  b) p(z  b)(z  a)(cid:1)
+
+this function has a nontrivial monodromy, and the determination of the square roots
+depends on whether the two elds belong to the same or to dierent sheets the riemann
+surface. the correlator can be also determined from the condition that it behaves as
+ln(z  z) at short distances and that it has the same analytic structure as the background
+eld c(z). the sum over the four terms gives of course the two-point correlator on the
+plane:
+
+h(a)(z)(a ) (z)i = ln[(z)  (z)],
+
+(z) = (z  a)(z  b).
+
+xa,a
+
+we have to calculate the correlator of the eld (z) = (1)(2)
+
+which is antisymmetric
+with respect to the zz2 monodromy. taking the alternated sum over the four branches of
+(6.2), we get
+
+2
+
+h(z)(z)ic = lnp(z  a)(z  b) p(z  b)(z  a)
+p(z  a)(z  b) +p(z  b)(z  a)
+
+dierentiating twice, we obtain for the current correlator
+
+.
+
+h(z)(z)ic =
+
+(za)(zb)
+(zb)(za)
+
++
+
+(za)(zb)
+(zb)(za)
+
+2(z  z)2
+
+18
+
+(6.3)
+
+(6.4)
+
+6.2. the quasiclassical expression for the spectral kernel
+
+the quasiclassical evaluation of the spectral kernel can be done as well, but in this
+case it is not so easy to control the approximation. again we split the bosonic eld  into a
+classical and quantum parts and consider the quantum part as a free eld on the riemann
+surface. the kernel (3.28) is expressed in the free eld approximation as a correlation
+function of vertex operators
+
+k(, ) = h: e(1) () : : e(2) () :i.
+
+(6.5)
+
+as in the case of the resolvent, we rst write the quasiclassical expression for the four-point
+function of two vertex and two twist operators
+
+g(z, z) = h0| : e(z) : : e(z) : +(a)
+z  z  (cid:20) (z  a)(z  b)
+
+(b)|0i
+(z  b)(z  a)(cid:21)1/4
+
+c (z)c(z )
+
+1
+2
+
+=
+
+
+
+e
+
+2
+
+(z  a)(z  b)(cid:21)1/4!
++(cid:20) (z  b)(z  a)
+
+(6.6)
+
+where we have used that h(z)i =  12
+c(z), the sign depending on whether the eld is
+evaluated on the upper or the lower sheet of the riemann surface. the overall coecient
+is determined by the behavior at z  z where we have to reproduce 12
+c(z) = i(z).
+the branch of c(z) has to be chosen so that g(z) decays exponentially at innity.
+four values of this function on both sides of the cut [a, b]
+
+the kernel k(, ) is dened on the real axis and is obtained as the average over the
+
+k(, ) =
+
+1
+
+4i x,=
+
+g( + i0,  + i0).
+
+(6.7)
+
+(the average should be taken because of the ambiguity due to presence of the cut; this
+ambiguity of g appears only in the large n limit.) one nds explicitly, for ,   [a, b]
+
+k(, ) =
+
+1
+2
+
+(a)(b)(b)(a)
+
+sin(cid:0) c()c()
+
+(cid:1)
+
+i2
+
++
+
+(a)(b)+(b)(a)
+
+cos(cid:0) c()+c()
+
+(cid:1)
+
+i2
+
+[(  a)(b  )(  a)(b  )]1/4
+
+(6.8)
+
+.
+
+this expression coinsides with the one obtained in [33] and in [34,35] by solving the ap-
+propriate loop equations.
+
+when ,   [a, b] and     1/n , one obtains the well known short distance
+
+behavior
+
+k(, ) =
+
+sin[n (  )( +
+2 ])
+
+(  )
+
+.
+
+(6.9)
+
+in the case when one of the arguments is outside the eigenvalue interval, the exponent is
+real and negative and the spectral kernel decays rapidly.
+
+19
+
+7. generalization to chains of random matrices
+
+the most natural generalization of the cft construction is given by the ade matrix
+models [8], which were introduced as a nonperturbative microscopic realization of the
+rational string theories with c < 1. each one of these models is associated with a rank
+r classical simply laced lie algebra (that is, of type ar, dr, e6,7,8) or its ane extension,
+and represents a system of r coupled random matrices.
+
+here we will discuss only the models of the a-series, for which there exists a simple
+fermionic representation. the model associated with ar = su(r + 1) represents a chain
+of r hermitian matrices ma of size na  na (a = 1, ..., r), interacting by means of r  1
+auxiliary gauge-eld-like rectangular complex matrix variables aa (a = 1, ..., r  1) of size
+na  na+1. in this way the ma and aa are associated respectively with the nodes and the
+links of the dynkin diagram of ar. the partition function of the matrix chain is given by
+the following integral
+
+z ~n [~v ] =z y
+
+r
+
+ya=1
+
+dma etrv a(ma)z
+
+r1
+
+ya=1
+
+daadaa etraaaa matraa aama+1 .
+
+(7.1)
+
+after integrating with respect to the a-matrices and the angular variables of the m -
+matrices, the partition function reduces to an integral with respect of the eigenvalues
+ai, i = 1, ..., na, of the hermitian matrices ma
+
+z ~n [~v ] =z
+
+r
+
+ya=1yi
+
+dai epi
+
+v a(ai) yi<j
+
+(ai  aj )2
+
+r1
+
+ya=1yi,j
+
+1
+
+(ai + a+1,j)
+
+.
+
+(7.2)
+
+important remark: the integral with respect to the a-matrices exists only if all eigenvalues
+of the matrices ma are positive. this can be achieved by an appropriate choice of the
+potential. we will thus assume that the integration is restricted to the positive real axis
+a > 03.
+
+let c+ be a contour representing the boundary of the half-plane rez > 0. using the
+fact that the eigenvalue integration is restricted to the positive real axis, we can write the
+following loop equations for each a
+
+dwa(z)2 +ic+
+
+dz
+2i
+
+1
+
+z  z
+
+w (z)hxb
+
+gabwb(z)  zv a(z)ien,t
+
+= 0.
+
+(7.3)
+
+the representation of this integral as a fock space expectation value is a gener-
+alization of the su(2) construction of sect.3. now we consider r + 1 fermion elds
+(a)(z), a = 1, ..., r + 1, whose modes in the expansion (3.2) satisfy the anticommuta-
+]+ = rsab, so that the bilinears j (a)(z) =: (a)(z)(a)(z) :,
+tion relations [(a)
+
+r , (b)
+
+s
+
+3 another way to achieve this is to take ma = bab
+
+
+a where ba are complex na  na matrices.
+
+20
+
+(a+1)
+
+(a+1)
+
+(z) and ja (z) = 
+
+a (z) = (a)(z)
+j +
+(z)(a) (z) generate an algebra re-
+lated to the u(r + 1) current algebra4. as before, the u(1) current j = 1
+r+1pa j (a)
+completely decouples so that the cartan currents of su(r) are given by the dierences
+j a(z) = j (a)(z)  j
+(z),
+and dene the hamiltonians h (a)[v (a)] = h dz
+2i v (a) (z)j (a)(z). it is easy to see that the
+
+let us express the potentials v a(z) as dierences v a(z) = v (a)(z)  v
+
+partition function (7.2) can be written similarly to (3.12) as
+
+(z).
+
+(a+1)
+
+(a+1)
+
+zn [~v ] = h~l|
+
+r+1
+
+ya=1
+
+eh(a) [v (a) ]
+
+r
+
+ya=1
+
+eq+
+
+a |0i ,
+
+(7.4)
+
+where the vacuum state of charge ~l = (l
+2na, and the screening operators are given by q+
+
+ l(a) =
+the bosonic representation is obtained according to (4.1) in terms of the r + 1 bosonic
+elds (a), a = 1, ..., r + 1. they are split into r elds associated with the with the su(r)
+and the u(1) parts
+
+0 d [j (a)(z)  j
+
+) is dened by (3.4) with l
+
+a =r 
+
+(z)].
+
+, ..., l
+
+(a+1)
+
+(1)
+
+(r+1)
+
+(a+1)
+
+a(z) = (a)(z)  
+
+(r+1)
+
+(z) (a = 1, ..., r),
+
+(z) =
+
+1
+
+r + 1xa
+
+(a) (()a1z).
+
+(7.5)
+
+it is convenient to dene another set of elds a by
+
+a(z) = 2a(z) xb
+
+gabb(z)
+
+(7.6)
+
+where gab = (~a  ~b) is the adjacency matrix of the ar dynkin diagram. the elds a
+and a are related as the contravariant and covariant components of a vector eld in the
+base of the simple roots ~a of the su(r). note however the reection z  z in the second
+term of (7.6).
+
+if we dene in a similar way the covariant components va of the potential by
+
+v a(z) = 2va(z) xb
+
+gabvb(z)
+
+1
+
+z  ai
+
+.
+
+xi=1
+
+then
+
+na
+
+a(z) = va(z) + wa(z), wa(z) =
+
+the loop equations (7.3) read, in terms of the contravariant components a
+
+*zc+
+
+dz
+z  z
+
+[a(z)]2+ = 0 (a = 1, ..., r).
+
+(7.7)
+
+(7.8)
+
+(7.9)
+
+4 the dierence originates in the minus sign in the denition of the currents j 
+
+a corresponding
+
+to the simple roots of u(r + 1).
+
+21
+
+the riemann surface dened by the classical solution represents an (r + 1)-fold covering
+of the complex plane which has in the simplest case two cuts [a, b] and [b, a] on the real
+axis (0 < a < b). the elds (a) represent the values on the dierent sheets of a single
+meromorphic eld (z). the quasiclassical expressions for the correlation functions and
+the free energy are obtained by introducing 2r twist operators
+
++
+k [()ka] =: e
+
+1
+
+2 k[()ka] : , k [()kb] =: e 1
+
+2 k[()kb] :
+
+(7.10)
+
+associated with the points a, b. in the limit a  0, b   the r twist operators located
+at the points b and b merge into a zzr twist operator at the origin while the rest form a
+zzr twisted boundary condition at innity. in this case the bosonic description is given by
+the zzn twisted eld considered in refs. [17].
+
+8. another generalization: the hermitian matrix model as an amplitude be-
+tween two gl(n ) representations
+
+our cft representation actually holds for a more general class of matrix models,
+containing external matrix sources. the source can be introduced by replacing the left
+vacuum state with an excited state. consider the integral
+
+zr(1) ,r(2) [v ] =z dm etrv (m )
+
+r(1) (m )
+
+r(2) (m )
+
+(8.1)
+
+where r(1) and r(2) are the characters of two polynomial representations of the group
+u (n ). the polynomial representation r is labeled by the young tableau
+
+and the corresponding character is given by a ratio of two determinants
+
+yr = {l1  l2  ...  ln}
+
+r (m ) =
+
+i
+
+det(cid:16)j1+lnj+1
+i (cid:17)
+det(cid:16)j1
+
+(cid:17)
+
+(i, j = 1, ..., n ).
+
+(8.2)
+
+therefore the partition function can be written again as an integral over the eigenvalues
+
+zr(1) ,r(2) [v ] =z
+
+n
+
+yi=1
+
+di ev (i) det(
+i
+
+j1+l(1)
+
+nj+1
+
+) det(j1+l(2)
+
+nj+1 ).
+
+(8.3)
+
+the u (n ) characters are related to the expectation values of the fermions as [22]
+
+r(a) (m ) = (cid:28)0(cid:12)(cid:12)(cid:12)(cid:12)
+
+
+
+(a)
+r(a)
+1
+
+...(a)
+r(a)
+n
+
+(a)(n )...(a)(1)(cid:12)(cid:12)(cid:12)(cid:12)
+qi<j(i  j)
+
+22
+
+0(cid:29)
+
+(8.4)
+
+where r(a)
+(8.1) is an evident generalization of (3.12)
+
+k = k  1
+
+2 + l(a)
+
+nk+1 (k = 1, ..., n ). the fock representation of the matrix integral
+
+where
+
+zr(1) r(2) [v ] = hr(1)r(2)|eh[v ]eq+|0i
+
+hr(1)r(2)| = h0|
+
+n
+
+yk=1
+
+(1)
+r(1)
+k
+
+(2)
+r(2)
+k
+
+(8.5)
+
+(8.6)
+
+generalizes the vacuum state |ni. the analog of the diagonalization formula (3.22) is
+
+n=1 hn
+
+zr(1) ,r(2) [v ] =
+
+qn
+where the matrix pr labeled by the young diagram r = {l1  l2  ...  ln}, or equiva-
+lently, by the sequence of half-integers rk = k  1
+2 + lnk+1, is made of the coecients of
+the orthogonal polynomials pn() =pn
+ni1  0,
+the determinant of the triangular matrix pr(a) equals 1 and (8.7) reduces to the standard
+formula (3.22).
+
+k=1 pn,knk: p (a)
+
+det pr(1) det pr(2)
+
+2 ,j. when l(a)
+
+ij = pri 1
+
+(8.7)
+
+the quasiclassical expressions for the spectral correlations depend on the nontrivial
+left vacuum only through the classical eld c and are therefore given again by (6.4) and
+(6.8). the virasoro constraints are however more complicated because the left vacuum
+state is not annihilated by the negative components of the current.
+
+9. concluding remarks
+
+1
+
+the cft representation of the matrix models originates in the su (n ) invariant ma-
+trix integration measure and therefore can be actually constructed for all matrix models.
+in a system of several or even innitely many interacting random matrices, one can asso-
+and a vacuum |0ai, which
+ciate with each matrix variable ma a current ja(z) = tr
+is invariant with respect to conformal transformations generated by the sugawara stress-
+energy tensor ta(x)  j 2
+a (z). in the large n limit all other matrices interacting with ma
+can be reduced to an eective matrix mean eld, which will plays the role of the potential
+v in our analysis of the hermitian matrix model. the classical virasoro constraints (5.1)
+hold again, but the eective potential can have cuts and poles. the virasoro generators do
+not have in general a simple representation as linear dierential operators as the virasoro
+constraints (2.12). the classical background is described by a riemann surface, which is
+in general not a hyperelliptic one. the hilbert space associated with the matrix variable
+from the cuts of
+ma corresponds to a contour separating the cuts of the resolvent tr
+the eective potential.
+
+zma
+
+zma
+
+1
+
+the usefulness of the cft approach consists in the fact that once the classical solu-
+tion a(z) is found, the loop correlators and the spectral kernel are given by the universal
+expressions (6.4) and (6.8). in this sense observed universality of the short distance be-
+havior of the loop correlators and the spectral kernel is a rather trivial consequence of the
+conformal invariance. it is also possible to construct a universal loop diagram technique
+for the 1/n corrections, one particular case of which is considered in ref. [36].
+
+23
+
+references
+
+[1] e. wigner, proc. cambridge philos. soc. 47 (1951) 790.
+[2] m.l. mehta, random matrices, 2nd ed. , new york, academic press, 1991.
+[3] j.j.m. verbaarschot, universal behavior of dirac spectra, hep-th/9710114
+[4] g. t hooft, nucl. phys. b72 (1974) 461.
+[5] e. brezin, c. itzykson, g. parisi and j.-b. zuber, comm. math. phys. 59 (1978) 35
+[6] g. t hooft, counting planar diagrams with various restrictions, hep-th/9808113
+[7] v.a.kazakov, phys. lett. a 119 (1986) 140; d.v.boulatov and v. kazakov, phys.
+
+[8]
+[9]
+
+lett. b 186 (1987) 379
+i. kostov, phys. lett. b 297 (1992)74.
+i. kostov, mod. phys. lett. a 4 (1989) 217, m. gaudin and i. kostov, phys. lett. b220
+(1989) 200; i. kostov and m. staudacher, nucl. phys. b 384 (1992) 459; zinn-justin,
+nucl. phys. b 386 (1992) 459; phys. lett. b 302 (1993) 396.
+
+[10] v. kazakov, phys. lett. 150b (1985) 282; f. david, nucl. phys. b 257 (1985) 45; d.
+boulatov, v. kazakov, i. kostov, and a.a. migdal, nucl. phys. b 275 [fs 17] (1986)
+641; j. ambjorn, b. durhuus, and j. frohlich, nucl. phys. b 257 (1985) 43
+
+[11] e. brezin and v. kazakov, phys. lett. b 236 (1990) 144; m. douglas and s. shenker,
+nucl. phys. b 335 (1990) 635; d. gross and a.a. migdal, phys. rev. lett. 64 (1990)
+127; nucl. phys. b 340 (1990) 333.
+
+[12] v.a. kazakov, m. staudacher and t. wynter, comm. math. phys. 177 (1996) 451;
+
+[13]
+
+comm. math. phys. 179 (1996) 235; nucl. phys. b 471 (1996) 309.
+i. kostov and m. staudacher, hep-th/9611011; i. kostov, m. staudacher and t. wyn-
+ter, comm. math. phys. (1998).
+
+[14] a. a. migdal, phys. rep. 102 (1983) 199, f. david, mod. phys. lett. a5 (1990) 1019.
+[15] j. ambjorn, l. chekhov, c. kristjansen and yu. makeenko, nucl. phys. b404 (1993)
+
+127 and erratum nucl. phys. 449 (1995) 681.
+
+[16] p. di francesco, p. ginsparg and j. zinn-justin, phys.rev.254 (1995) 1-133.
+[17] m. fukuma, h. kawai and r. nakayama, int. j. mod. phys. a 6 (1991) 1385; r.
+
+dijkgraaf, h. verlinde and e. verlinde, nucl. phys. b 348 (1991) 435.
+
+[18] a. marshakov, a. mironov et al., phys. lett. 265 b (1991) 99; a. mironov and s.
+pakuliak, int. journ. mod. phys. a8 (1993) 3107; s. kharchev, a. marshakov, a.
+mironov, a. morozov and s. pakuliak, nucl. phys. b 404 (1993) 717.
+
+[19] a. morozov, matrix models as integrable systems, hep-th/9502091
+[20] m. l. mehta, randomm atrices (second edition), academic press, new york, 1990.
+[21] c. itzykson and j.-b. zuber, j. math. phys. 21 (1980) 411.
+[22] m. jimbo and t. miwa, solitons and innite dimensional lie algebras, rims vol.
+
+19 (1983) 943-1001.
+
+[23] a. marshakov at al., phys. lett. 265b (1991) 99.
+
+24
+
+[24]
+
+i. kostov, ilinear functional equations in 2d quantum gravity, talk delivered at the
+workshop on new trends in quantum field theory, 28 august - 1september 1995,
+razlog, bulgaria, hep-th/9602117
+
+[25] v. kazakov, i. kostov, n. nekrasov, hep-th/9810035
+[26] h. awata, y. matsuo, s. odake and j. shiriashi, hep-th/9503028.
+[27] a. boutet de monvel, l.pastur, m.shcherbina, on the statistical mechanics approach
+to the random matrix theory: the integrated density of states, j.stat.phys. 79 (1995)
+585-611
+
+[28] e. brezin and n. deo, smoothed correlators ..., cond-mat/9805096
+[29] j. ambjorn, g. akemann, new universal spectral correlators, cond-mat/9606129
+[30] al. b. zamolodchikov, nucl. phys. b285 [fs19] (1987) 481
+[31] v. g. knizhnik, comm. math. phys. 112 (1987) 567; m. bershadsky and a. radul,
+
+int. journ. mod. phys. a. vol. 2 (1987) 165.
+
+[32] g. moore, matrix models of 2d gravity and isomonodromic deformations, in the proc.
+of the cargese meeting random surfaces and quantum gravity, plenum press, 1991.
+
+[33] e. brezin and s. hikami, nucl. phys. b 422 (515) 1994.
+[34] e. brezin, s. hikami and a. zee, nucl. phys. b464 (1996) 411.
+[35] p. zinn-justin, comm. math. phys. 194, 631 (1988).
+[36] s. higuchi and i. kostov, phys. lett. b 357 (1995) 62.
+
+25
+
+

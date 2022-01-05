@@ -1,0 +1,1035 @@
+9
+9
+9
+1
+
+ 
+
+n
+u
+j
+ 
+
+7
+1
+
+ 
+ 
+
+3
+v
+2
+9
+1
+3
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+cgpg-99/3-2
+nsf-itp/99/19
+
+simple spin networks as feynman graphs
+
+l. freidel1,2, k. krasnov1
+
+1. center for gravitational physics and geometry
+
+department of physics, the pennsylvania state university
+
+university park, pa 16802, usa
+
+2. laboratoire de physique
+
+ecole normale superieure de lyon
+
+46, allee ditalie, 69364 lyon cedex 07, france
+
+(february 1, 2008)
+
+abstract
+
+we show how spin networks can be described and evaluated as feynman
+integrals over an internal space. this description can, in particular, be applied
+to the so-called simple so(d) spin networks that are of importance for higher-
+dimensional generalizations of loop quantum gravity. as an illustration of
+the power of the new formalism, we use it to obtain the asymptotics of an
+amplitude for the d-simplex and show that its oscillatory part is given by the
+regge action.
+
+i. introduction
+
+spin networks were originally introduced by penrose [1] in an attempt to give a combi-
+natorial description of spacetime. since then they reappeared in many branches of math-
+ematical physics, see, e.g., [2] and references therein.
+in particular, spin networks are of
+fundamental importance in the loop approach to quantum gravity [3,4]. more recently, with
+a development of the formalism of spin foam quantization [58], it was realized that spin
+networks that appear in the path integral version of loop quantum gravity are of a very
+special type.
+in the case of four spacetime dimensions these special spin networks were
+discovered in [6,7]. their higher-dimensional analogs were then described in [9]. these spin
+networks can be called simple: they satisfy a quantum analog of the simplicity constraint
+which requires a bivector to be a wedge product and, as was realized in [9], these are in
+
+e-mail addresses: freidel,krasnov@phys.psu.edu
+
+1
+
+certain precise sense the simplest possible spin networks that can be constructed in a given
+dimension.
+
+in this paper we give a new description of simple spin networks: we show that they
+can be viewed and evaluated as feynman graphs. our construction gives an interesting
+perspective on these objects, which are of fundamental importance in the loop approach to
+quantum gravity. it also gives us new technical tools: with the help of the feynman graph
+description we will be able to obtain the asymptotics of an amplitude for a d-simplex. we
+nd the expected regge action asymptotics for the amplitude.
+
+the organization of this paper is as follows. in the rest of this section we remind the
+reader the usual description of spin networks and give the main idea of our construction.
+it turns out that the description of spin networks as feynman graphs is quite general and
+relevant to gauge groups other than so(d) considered in [9]. the main idea of our con-
+struction is quite simple even when presented in its full generality. thus, in this section,
+we do not restrict ourselves to any particular choice of the gauge group and present a gen-
+eral construction. it is then applied in sec. ii to simple so(d) spin networks relevant for
+quantum gravity. as an illustration of the usefulness of the new description we utilize it to
+derive the asymptotics of the evaluation of a simple so(d) spin network in sec. iii.
+
+let us now remind the reader the standard description of spin networks, see, e.g., [10].
+
+denition 1 given a lie group g (which we assume to be semisimple and compact), spin
+network is a triple (, , i), where:
+(i)  is an oriented graph;
+(ii)  is a labelling of each edge e by an irreducible unitary representation e of g;
+(iii) i is a labelling of each vertex v of  by an intertwiner iv mapping the tensor product
+of incoming representations at v to the product of outgoing representations at v.
+
+these data dene a function (,,i) on ge invariant under the action of the group at vertices;
+here ge is the product of a number of copies of the group g, one for each of e edges of
+. thus, spin network can be described as a function which associates a number to each
+assignment of group elements ge to the edges e:
+
+(,,i) : ge  c
+
+an explicit construction of this function proceeds as follows. first, for each edge e let us
+consider the operator representing the group element ge in the representation e. introducing
+a basis in the corresponding representation space one can calculate the matrix elements
+u e(ge)n
+m. one then takes a tensor product of all these matrix elements to obtain a tensor
+u(ge); it has one subscript and one superscript for each edge e. then for each vertex v of
+ let s(v) be the set of edges having v as source and let t (v) be the set of edges having
+v as target. the intertwiner is a map (commuting with the action of g):
+
+iv : et (v)e  es(v)e.
+
+we can think of iv as of a tensor with one superscript for each edge e  t (v) and one
+subscript for each edge e  s(v). one can then form the tensor product of all intertwiners
+to obtain a tensor i, and then take the tensor product u(ge)  i. note now that each
+
+2
+
+superscript in u corresponds to a subscript in i and vice versa, because each edge of  lies
+in s(v) for one vertex v and in t (w) for one vertex w. therefore, one can contract indices of
+u(ge)  i to get a number. this is the value of the function (,,i). one can check that the
+function constructed is invariant under the action of the group g, where the group action
+is that at the vertices.
+
+before we present our construction we will need the standard notion of a representation
+of class 1 (see, e.g., [11]). spin networks that can be represented as feynman graphs are the
+ones constructed using only these special representations of g.
+
+denition 2 let  be an irreducible representation of g, and let h be a subgroup of g.
+if the representation space v  contains vectors invariant under h, and if all operators
+u (h), h  h are unitary, then  is called a representation of class 1 with respect to h.
+
+the signicance of these representations comes from the fact that they can be realized in
+the space of functions on the homogeneous space h\g. as we describe below, spin networks
+that are constructed using only representations of class 1 with respect to h can be viewed
+as feynman graphs on h\g. simple so(d) spin networks of [9] are just such spin networks.
+in this case h = so(d  1) and h\g = sd1.
+
+the realization of a representation of class 1 in the space of functions on a homogeneous
+space h\g is a particular case of a general description of an irreducible representation 
+by shift operators in the space of functions on the group. let us remind the reader this
+description. consider matrix elements
+
+u 
+x,a(g) := (u (g)x, a),
+
+where x, a are vectors from the representation space v . let us x a. then the functions
+u 
+x,a(g), x  v  span a subspace in the space l2(g) of square integrable functions on the
+group. one can then show that the right regular action of the group g on this subspace
+gives an irreducible representation equivalent to . the scalar product in the representation
+space is then given by the integral over the group. in the case  is a representation of class 1
+with respect to h, and a is a vector invariant under h, the functions u 
+x,a(g) are constant on
+the right cosets hg and can be regarded as functions on the homogeneous space x = h\g.
+the scalar product is then given by an integral over x.
+
+we are now ready to describe spin networks constructed from representations of class
+1 with respect to h as feynman graphs on x. let us denote by p ()n(x), x  x an
+orthonormal basis in the representation space  realized in the space of functions on x. the
+matrix elements of the group operators are then given by:
+
+u (g)n
+
+m = zx
+
+dx p ()
+
+m (x)p ()n(xg),
+
+where dx is the invariant normalized measure on x. this gives realization of the matrix
+elements as integrals over x. the other building block necessary to construct a spin network
+is an intertwiner. intertwiners can be characterized by their integral kernels. for a k-valent
+vertex one denes the integral kernel iv(x1, . . . , xk) so that:
+
+i ni+1...nk
+v m1...mi =
+
+dx1    dxk iv(x1, . . . , xk) p (1)
+
+m1 (x1)    p (i)
+
+mi (xi)p (i+1)ni+1(xi+1)    p (k)nk (xk).
+
+zx
+
+3
+
+the integral kernels iv(x1, . . . , xk) must satisfy the invariance property iv(x1g, . . . , xkg) =
+iv(x1, . . . , xk). a special important set of intertwiners is given by:
+
+iv(x1, . . . , xk) = zx
+
+dx (x, x1)    (x, xk)
+
+or
+
+v m1...mi = zx
+i ni+1...nk
+
+dx p (1)
+
+m1 (x)    p (i)
+
+mi (x)p (i+1)ni+1(x)    p (k)nk (x).
+
+these special intertwiners are the ones that appear in simple spin networks of [9]. exactly
+for such intertwiners it is possible to represent the spin network evaluation as a feynman
+graph. let us now introduce what can be called greens function:
+
+g()(x, y) := xn
+
+p ()
+
+n (x)p ()n(y).
+
+this greens function satises the propagator property:
+
+dz g()(x, z)g()(z, y) = g()(x, y).
+
+zx
+
+let us also introduce a propagator in the presence of a source:
+
+g()(x, y; g) := zx
+
+dz g()(x, z)g()(zg, y).
+
+it is clear that g()(x, y; e) = g()(x, y), where e is the identity element of the group. one can
+now check that, in the case all spin network intertwiners are of a special type iv described
+above, the spin network function (,, i) of the group elements g1, . . . , ge is given by the
+feynman graph with the following set of feynman rules:
+
+ with every edge e of the graph  associate a propagator g(e)(x, x; ge).
+
+ take a product of all these data and integrate over one copy of x for each vertex.
+
+these rules can be summarized by the following formula:
+
+(,, i)(g1, . . . , ge) = yv zx
+
+dxvye
+
+g(e)(x, x; ge).
+
+(1)
+
+thus, in the case intertwiners are given by i the evaluation of a spin network on a string of
+group elements is given by a feynman graph: one associates the greens function to every
+edge and integrates over the positions of vertices.
+
+before we illustrate this general construction on the example of simple so(d) spin net-
+works, let us note that this construction can be readily generalized to the case of an arbitrary
+spin network. indeed, the restriction of representations labelling the spin network to be those
+of class 1 with respect to a xed subgroup h was necessary only to guarantee that the re-
+sulting feynman graph lives in the homogeneous space x = h\g. it can be dropped at
+the expense of feynman graphs becoming graphs in the group manifold. the restriction
+of intertwiners to be of a special type iv can be dropped with the result that the set of
+
+4
+
+feynman rules specied above changes: in this case one has to associate with every vertex
+the integral kernel iv(x1, . . . , xk) and then integrate over all the arguments. thus, in the
+case of arbitrary intertwiners, the evaluation formula takes the form:
+
+(,,i)(g1, . . . , ge) = yv zx
+
+dxv iv(xv)ye
+
+g(e)(x, x; ge).
+
+(2)
+
+here xv stands for a string of arguments x1, . . . , xk of a k-valent intertwiner, and x, x
+in the argument of the greens function g(e)(x, x; ge) must be the same as those in two
+intertwiners: x must the appropriate argument in iv, e  s(v) and x must be the argument
+of i(w), e  t (w).
+
+ii. simple so(d) spin networks
+
+in this section we illustrate the general construction presented above on the example
+of simple so(d) spin networks. their relevance to quantum gravity in d dimensions was
+explained in [9].
+
+simple so(d) spin networks are the ones constructed from special representations of
+so(d). as is well-known, group so(d) has a special class of representations, called spherical
+harmonics, that appear in the decomposition of the space of functions l2(sd1) on sd1 into
+irreducible components. some properties of these representations are described in appendix
+a. using the terminology introduced in sec.
+i these representations of so(d) can be
+described as representations of class 1 with respect to so(d  1). they are characterized by
+a single parameter that we will denote by n in what follows; n is required to be an integer.
+these are the representations that were called simple in [9]. a simple so(d) spin network
+was dened in [9] as a spin network which is constructed only from simple representations
+and whose intertwiners are the special intertwiners i introduced in sec. i.
+
+in the case intertwiners are given by i, the value of a simple spin network on a sequence
+of group elements can be evaluated using the general formula (1). in what follows we will
+be concerned only with a special case of spin network evaluated on all group elements being
+equal to the identity element. this evaluation of a spin network gives a number that
+depends only on the graph and on the labelling of its edges by integers ne. evaluation of a
+spin network is of special importance for quantum gravity because this is the way to obtain
+an amplitude for a spacetime simplex, see [68]. thus, according to our feynman graph
+formula (1), the evaluation of a simple spin network is given by
+
+here
+
+(,) = yv zsd1
+
+dxvye
+
+gne(x, x).
+
+gn (x, y) = xk
+
+k(x)k(y),
+
+(3)
+
+(4)
+
+where we have introduced an orthonormal basis k, k = (k1,    , kd2) n  k1    
+kd3  |kd2| in the representation space (see appendix a for a construction of such a
+
+5
+
+basis). the invariance property gn (xg, yg) = gn (x, y) implies that gn (x, y) depends only
+on the scalar product (x  y), and it is a standard result [11] that
+
+g(d)
+
+n (x, y) =
+
+d + 2n  2
+
+d  2
+
+c (d2)/2
+
+n
+
+(x  y),
+
+(5)
+
+where c p
+n is the gegenbauer polynomial, see appendix b for the denition. the expression
+(3) for the evaluation of a simple spin network is a generalization of the result [12] for the
+evaluation in d = 4.
+
+example: evaluation of the -graph
+
+let us use the above representation of the simple spin network evaluation to compute the
+evaluation of the -graph. this is of importance because the value of the -graph appears
+in the normalization of tri-valent vertices. according to (3) the evaluation is given by:
+
+(d)(n1, n2, n3) = z dxdy gn1(x, y)gn2(x, y)gn3(x, y).
+
+(6)
+
+using the expression of gn in terms of a gegenbauer polynomial (5), this integral can
+be computed.
+it is not equal to zero only if g = (n1 + n2 + n3)/2 is an integer and
+g  ni  0, i = 1, 2, 3. in this case one gets:
+
+(d)(n1, n2, n3) =
+
+(g + 2p)(p + 1)
+(g + p + 1)(2p)
+
+3
+
+yi=1  (ni + p)(g  ni + p)
+(p + 1)(g  ni + 1)! .
+
+(7)
+
+here p = (d  2)/2. to check this result one can check that (6), (7) both satisfy the
+recurrence relation (implied by (b3)):
+
+n1 + 1
+
+n1 + p + 1
+n3 + 1
+
+n3 + p + 1
+
+(d)(n1 + 1, n2, n3) +
+
+n1 + 2p  1
+n1 + p  1
+
+(d)(n1  1, n2, n3) =
+
+(d)(n1, n2, n3 + 1) +
+
+n3 + 2p  1
+n3 + p  1
+
+(d)(n1, n2, n3  1),
+
+(8)
+
+(9)
+
+and that (n1, n2, 0) reproduces the orthogonality relation (b5). for d = 4 the above
+expression simplies:
+
+(4)(n1, n2, n3) = (n1 + 1)(n2 + 1)(n3 + 1).
+
+(10)
+
+this result can be used to show that the intertwiner used in [9] to dene simple spin
+networks in the case of d = 4 coincides with the one proposed in [6]. indeed, the four-valent
+intertwiner of [9] reads:
+
+i2,2(p1, p2, q1, q2) = z dx p1(x)p2(x)q1(x)q2(x).
+
+using the kernel of the identity operator on l2(sd1) given by p
+
+4-valent vertex in terms of the sum of the product of two tri-valent ones:
+
+n =0 gn we can expand the
+
+6
+
+i2,2(p1, p2, q1, q2) =
+
+
+
+xn =0z dxdy p1(x)p2(x)gn (x, y)q1(y)q2(y).
+
+in short this can be written as
+
+i (d)
+2,2 (n1, n2, n3, n4) = xn
+
+xn h(d)(n1, n2, n)(d)(n, n3, n4)i1/2 i (d)
+
+i (d)
+2,1 (n1, n2, n)  i (d)
+
+1,2 (n, n3, n4) =
+
+2,1 (n1, n2, n)  i (d)
+
+1,2 (n, n3, n4),
+
+where we have introduced the normalized intertwiner
+
+i (d)
+2,1 (n1, n2, n3) = ((d)(n1, n2, n3))1/2i (d)
+
+2,1 (n1, n2, n3).
+
+in the case of d = 4, using the result (10) for the -graph, we get
+
+i (d)
+4
+
+(n1, n2, n3, n4) =
+
+[(n1 + 1)(n2 + 1)(n3 + 1)(n4 + 1)]1/2
+
+(n + 1) i (d)
+
+2,1 (n1, n2, n)  i (d)
+
+1,2 (n, n3, n4).
+
+
+
+xn =0
+
+up to an overall normalization factor, this vertex is exactly the vertex given in [6].
+
+iii. large spin asymptotics
+
+in this section we use the feynman graph representation of the simple spin networks to
+study the asymptotics of a d-simplex amplitude for large n. the results of this section
+generalize those of [13] to the case of arbitrary dimension. most of the labor necessary to
+get the asymptotics is done in appendix c. here we simple use the asymptotics (c1) of the
+gegenbauer polynomial obtained there.
+
+as is explained in refs. [9], the amplitude for a d-simplex is given by the evaluation
+of the spin network that is dual to the boundary of the simplex. the (d  2)-simplices
+are labelled by simple representations of so(d), i.e., by integers n. the edges of the spin
+network dual to the boundary of the simplex are in one-to-one correspondence with the
+(d  2)-simplices, and inherit the labels of (d  2)-simplices. as one can easily check, all
+vertices of the spin network in question are d-valent. all intertwiners are of the special type
+described in sec. i, and, thus, the formula (3) can be used for the evaluation. using the
+asymptotics (c1) and the formula (3) we present an asymptotic evaluation the amplitude:
+we will use the stationary phase approximation for the integral. our discussion follows
+closely that of [13].
+
+to get a feeling about the behavior of the amplitude, we will concentrate only on the
+n (cos ). thus, dropping all multiplicative constants, which are unim-
+
+oscillatory part of c p
+portant for us, we get
+
+(,)  x{kl}
+
+
+yk<l
+
+kl
+zsd1
+
+dx1    dxd+1 eipk<l kl((nkl+p)kl+(1p)/2),
+
+7
+
+where the integral is taken over (d + 1) points  vertices of the spin network  on the unit
+(d  1)-sphere, and k, l are indices labelling the vertices k, l = 1, . . . , d + 1. thus, a pair kl
+labels a spin network edge, and kl : cos kl = xk  xl. the quantity kl takes values 1 and
+the sum is taken over both possibilities for every edge. the rest of the analysis is exactly
+the same as in [13]. taking into account the fact that the variation of the angles satisfy the
+following identity (see [13]):
+
+vklkl = 0,
+
+xk<l
+
+where vkl are the volumes of (d  2)-simplices inside a geometric d-simplex, one nds that
+all kl are either positive or negative, and that the stationary phase values of kl are the
+ones corresponding to a geometric d-simplex determined by nkl + p interpreted as volumes
+of (d  2)-simplices. then, in the case the number d(d + 1)/2 of edges in the simplex is
+even, we get
+
+(,)  cos
+xk<l
+
+(nkl + p)kl + 
+
+
+
+4
+ ,
+
+(11)
+
+where kl are the higher-dimensional analogs of the dihedral angles of the geometric d-
+simplex determined by nkl + p and
+
+ =
+
+(d + 1)d
+
+2
+
+(4  d)
+
+is the integer determined by d. in the case d(d + 1)/2 is odd one gets sin instead of cos
+in the asymptotics (11). thus, the simplex amplitude has the asymptotics of the exponential
+of the regge action, as expected.
+
+iv. acknowledgements
+
+we would like to thank raymond puzio for the help on the initial stage of this work, and
+sameer gupta for reading the manuscript. this work was supported in part by the nsf
+grant phy95-14240 and by the eberly research funds of penn state. k.k. was supported
+in part by a braddock fellowship from penn state. we are also grateful to the institute for
+theoretical physics, university of california, santa barbara, where this work was done. we
+acknowledge the support from nsf grant no. phy94-07194.
+
+appendix a: simple representations of so(d)
+
+what is referred to in this paper as simple representations of so(d) are the usual
+spherical harmonics representations. they are irreducible representations of so(d) of class
+1 with respect to the subgroup so(d  1) and, therefore, can be realized in the space
+of functions on sd1. this partially explains their relevance for quantum gravity in d
+dimensions, where the (d  1)-sphere has the geometrical meaning of the boundary of the
+
+8
+
+d-simplex. in this appendix we review some basic properties of these representations. for
+more information see, e.g., [11].
+
+the spherical harmonics representations of so(d) are the most obvious ones: they can
+be realized in the space of homogeneous polynomials of degree n. let us denote the space
+of such polynomials by v (d)
+
+n . then
+
+dimv (d)
+
+n =
+
+(n + d  1)!
+n!(d  1)!
+
+.
+
+it turns out, however, that the representation in this space is not irreducible. the invariant
+subspace in v (d)
+is given, as usual, by the space of polynomials satisfying the laplace
+equation in ird. thus, the irreducible representations of this type are realized in the space
+of homogeneous harmonic polynomials of degree n. let us denote this space by h(d)
+n . as
+one can show,
+
+n
+
+dimh(d)
+
+n =
+
+(2n + d  2)(d + n  3)!
+
+(d  2)!n!
+
+.
+
+(a1)
+
+as we have mentioned, these representations are of the class 1 with respect to so(d 1).
+n that
+n (xd) for
+n (x) is the so-called gegenbauer polynomial
+
+choosing the upper-left corner embedding of so(d  1) into so(d), the vector in h(d)
+is invariant under the action of so(d  1) is given (up to normalization) by c p
+x = (x1, . . . , xd). here p = (d  2)/2 and c p
+dened in the next appendix.
+
+an explicit basis in h(d)
+
+n can be constructed by choosing a string of embeddings
+
+so(2)  so(3)     so(d  1)  so(d).
+
+then h (d)
+n decomposes into subspaces irreducible with respect to the action of the subgroup
+so(d  1). the later again decompose into the irreducible subspaces with respect to the
+action of so(d  2) etc. finally, one arrives at so(2) whose irreducible representations are
+1-dimensional. thus, we have:
+
+h(d)
+
+n = n
+
+k1=0 k1
+
+k2=0    kd3
+
+kd2=kd3 vkd2.
+
+here vk are 1-dimensional representation spaces of so(2). note that kd2 in the last sum
+runs over both positive and negative values. thus, a basis in h(d)
+n can be labelled by a
+string of integers:
+
+k := (k1, k2, . . . , kd2),
+
+n  k1  k2      |kd2|.
+
+appendix b: properties of gegenbauer polynomials
+
+gegenbauer polynomials are orthogonal polynomials satisfying many dierent properties.
+in this appendix we review some of them. for more information of gegenbauer polynomials
+see, e.g., [11,14].
+
+9
+
+let p be denote a quantity related to the dimension d according to p = (d  2)/2, or
+
+d = 2p + 2. a generating functional for gegenbauer polynomial is given by:
+
+(1  2xr + r2)p =
+
+c p
+
+n (x)rn .
+
++
+
+xn =0
+
+gegenbauer polynomials satisfy the rodriguez formula:
+
+c p
+
+n (x) =
+
+(1)n (n + 2p  1)(n + 2p  2)    (2p)
+2)    (p + 1
+2n n!(n + p  1
+2)
+
+2)(n + p  3
+
+
+
+(1  x2)p+ 1
+2 (
+
+d
+dx
+
+)n (1  x2)n +p 1
+2 ,
+
+where the prefactor can also be written as
+
+(1)n
+2n n!
+
+(n + 2p)(p + 1
+2 )
+(2p)(n + 1
+2 + p)
+
+the recurrence formula is given by:
+
+(n + 1)c p
+
+n +1(x)  2(n + p)xc p
+
+n (x) + (n + 2p  1)c p
+
+n 1(x) = 0,
+
+(b1)
+
+(b2)
+
+(b3)
+
+with c p
+
+0 (x) = 1 and c p
+
+1 (x) = x. the polynomials satisfy the following dierential equation:
+
+((1  x2)(
+
+d
+dx
+
+)2  (2p + 1)x
+
+d
+dx
+
++ n(n + 2p)) c p
+
+n (x) = 0.
+
+a change of variable x = cos  puts this in the following form:
+
+((
+
+d
+d
+
+)2 + 2p
+
+cos 
+sin 
+
+d
+d
+
++ n(n + 2p)) c p
+
+n (cos ) = 0.
+
+(b4)
+
+the polynomials are normalized as:
+
+c p
+
+n (1) =
+
+(2p + n)
+(2p)n!
+
+= dimh(d)
+n
+
+d  2
+
+2n + d  2
+
+.
+
+where dimh(d)
+dition:
+
+n is given by (a1). the polynomials satisfy the following orthogonality con-
+
+z +1
+
+1
+
+dx(1  x2)p 1
+
+2 c p
+
+n c p
+
+m = n,m
+
+(2p + n)
+
+22p1n!(n + p)2(p)
+
+.
+
+(b5)
+
+10
+
+appendix c: asymptotics of the gegenbauer polynomial
+
+to get the asymptotics of the gegenbauer polynomial for large n we use the dierential
+
+equation (b4). it can be put into a form similar to that of a wave equation by setting
+
+one gets:
+
+c (p)
+
+n (cos ) = f () sinp .
+
+d2f
+
+d2 + f "(n + p)2 
+
+p(p  1)
+
+sin2  # = 0.
+
+for large n one can neglect the second term in the square brackets and p as compared to
+n in the rst term. thus, the large n asymptotics is given by
+
+c (p)
+
+n (cos ) 
+
+a
+
+sinp 
+
+sin[(n + p) + ],
+
+where  is a phase and a is a normalization factor, both arbitrary at this stage. it can be
+constrained by using symmetry properties of cn . from the expression for the generating
+functional one sees that
+
+cn (x) = (1)n cn (x).
+
+thus,
+
+c (p)
+n (cos(  )) = (1)n c (p)
+
+n (cos ).
+
+a simple analysis shows that this restricts  to be
+
+ =
+
+(1  p)
+
+2
+
+ + k,
+
+where k is an arbitrary integer. thus, the ambiguity in k is just the overall sign ambiguity.
+the constant a can be determined from the normalization condition (b5). one gets:
+
+
+2
+
+a2 =
+
+(2p + n)
+
+22p1n!(n + p)2(p)
+
+,
+
+or
+
+a = 
+
+for large n this behaves as
+
+using the fact that
+
+1
+
+2p1(p) " (2p + n)
+
+n!(n + p)#1/2
+
+.
+
+a  
+
+n p1
+
+2p1(p)
+
+.
+
+11
+
+c (p)
+
+2n (0) =
+
+(1)n
+
+(n + p)
+
+n!
+
+(p)
+
+
+
+(1)n
+(p)
+
+n p1,
+
+and the expression for the derivative of the gegenbauer polynomial
+
+d
+d
+
+c p
+
+n = 2p sin  c p+1
+n 1,
+
+we can x the overall sign to be plus. thus, nally, we get:
+
+c (p)
+
+n (cos ) 
+
+n p1
+
+1
+
+2p1(p)
+
+sinp 
+
+sin[(n + p) + (1  p)/2].
+
+(c1)
+
+12
+
+references
+
+[1] r. penrose, angular momentum: an approach to combinatorial space-time; in quan-
+
+tum theory and beyond, ed. ted bastin, cambridge university press, 1971.
+r. penrose, applications of negative dimensional tensors; in combinatorial mathe-
+matics and its applications, ed. d. j. a. welsh, academic press, 1971.
+r. penrose, combinatorial quantum theory and quantized directions; in advances
+in twistor theory, ed. l. p. hughston and r. s. ward, pitman advanced publishing
+program, 1979.
+
+[2] l. smolin, the future of spin networks, gr-qc/9702030.
+[3] c. rovelli, loop quantum gravity, review written for the electronic journal living re-
+
+views, available as gr-qc/9710008.
+
+[4] r. de pietri, canonical loop quantum gravity and spin foam models, gr-qc/9903076.
+[5] m. reisenberger, a lefthanded simplicial action for euclidean general relativity, class.
+
+quant. grav. 14 (1997), 1753-1770.
+
+[6] j. barrett and l. crane, relativistic spin networks and quantum gravity, j. math. phys.
+
+39 (1998), 3296-3302.
+
+[7] j. baez, spin foam models, class. quant. grav. 15 (1998), 1827-1858.
+[8] l. freidel and k. krasnov, spin foam models and the classical action principle, adv.
+
+theor. math. phys. 2 (1998), 1221-1285; also available as hep-th/9807092.
+
+[9] l. freidel, k. krasnov and r. puzio, bf description of higher-dimensional gravity
+
+theories, hep-th/9901069.
+
+[10] j. baez, spin networks in nonperturbative quantum gravity, in the interface of knots
+and physics, ed. louis kauman, american mathematical society, providence, rhode
+island, 1996, pp. 167-203; gr-qc/9504036.
+
+[11] n. vilenkin and a. klimyk, representation of lie groups and special functions, vol.
+
+2, mathematics and its applications, kluwer academic publisher, 1993.
+
+[12] j. barrett, the classical evaluation of relativistic spin networks, math.qa/9803063.
+[13] j. barrett, the asymptotics of an amplitude for the 4-simplex, gr-qc/9809032.
+[14] h. hochstadt, the functions of mathematical physics, dover publications, 1971.
+
+13
+
+

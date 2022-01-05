@@ -1,0 +1,5333 @@
+duke-cgtp-99-07
+
+hep-th/9909120
+
+9
+9
+9
+1
+
+ 
+
+p
+e
+s
+6
+1
+
+ 
+
+ 
+ 
+
+1
+v
+0
+2
+1
+9
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+discrete torsion and gerbes ii
+
+eric r. sharpe
+
+department of physics
+
+box 90305
+
+duke university
+
+durham, nc 27708
+
+ersharpe@cgtp.duke.edu
+
+in a previous paper we outlined how discrete torsion can be understood geometrically,
+as an analogue of orbifold u(1) wilson lines. in this paper we shall prove the remaining
+details. more precisely, in this paper we describe gerbes in terms of objects known as stacks
+(essentially, sheaves of categories), and develop much of the basic theory of gerbes in such
+language. then, once the relevant technology has been described, we give a rst-principles
+geometric derivation of discrete torsion. in other words, we dene equivariant gerbes, and
+classify equivariant structures on gerbes and on gerbes with connection. we prove that in
+general, the set of equivariant structures on a gerbe with connection is a torsor under the
+group h 2(, u(1)), where  is the orbifold group. in special cases, such as trivial gerbes,
+the set of equivariant structures can furthermore be canonically identied with the group
+h 2(, u(1)).
+
+september 1999
+
+1
+
+contents
+
+1 introduction
+
+2 stacks
+
+2.1 presheaf of categories . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.2 sheaf of categories
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.2.1 gluing law for objects
+
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.2.2 gluing law for morphisms
+
+. . . . . . . . . . . . . . . . . . . . . . . .
+
+2.2.3 examples
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.3 cartesian functors
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.4
+
+2-arrows . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.4.1
+
+2-arrows . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.4.2
+
+sheaves of natural transformations
+
+. . . . . . . . . . . . . . . . . . .
+
+3 gerbes and stacks
+
+3.1 denitions and examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3.2 equivalences of gerbes
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3.3 sheaf cohomology and gerbes
+
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3.4 gauge transformations of gerbes . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3.5 connections on gerbes
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3.6 transition functions for gerbes . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3.7 nonabelian gerbes
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+4 technical notes on stacks
+
+4.1 sheacation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+4.1.1
+
+sheacation of presheaves of sets . . . . . . . . . . . . . . . . . . . .
+
+2
+
+5
+
+6
+
+6
+
+8
+
+8
+
+10
+
+10
+
+12
+
+13
+
+13
+
+14
+
+15
+
+16
+
+17
+
+18
+
+21
+
+22
+
+26
+
+27
+
+28
+
+28
+
+28
+
+4.1.2 descent categories
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+4.1.3 direct limits . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+4.1.4 lifts of cartesian functors . . . . . . . . . . . . . . . . . . . . . . . .
+
+4.1.5 lifts of 2-arrows . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+4.2 pullbacks of stacks
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+4.2.1 pullbacks of stacks . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+4.2.2 pullbacks of cartesian functors
+
+. . . . . . . . . . . . . . . . . . . . .
+
+4.2.3 pullbacks of 2-arrows . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+4.2.4 analogues of natural transformations . . . . . . . . . . . . . . . . . .
+
+4.3 stalks of stacks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+5 technical notes on gerbes
+
+5.1 pullbacks of gerbes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+5.2 torsors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+5.3 gauge transformations of gerbes . . . . . . . . . . . . . . . . . . . . . . . . .
+
+5.3.1 gauge transformations of objects . . . . . . . . . . . . . . . . . . . .
+
+5.3.2
+
+induced equivalences of categories . . . . . . . . . . . . . . . . . . . .
+
+5.3.3 action on connections
+
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+
+5.3.4 gauge transformations commute with gerbe maps . . . . . . . . . . .
+
+5.3.5
+
+sheaves of morphisms as torsors . . . . . . . . . . . . . . . . . . . . .
+
+5.3.6
+
+sheaves of natural transformations as torsors . . . . . . . . . . . . . .
+
+5.3.7 maps of gerbes are equivalences of gerbes . . . . . . . . . . . . . . . .
+
+6 equivariant gerbes
+
+7 equivariant gerbes with connection
+
+3
+
+29
+
+32
+
+35
+
+38
+
+39
+
+39
+
+43
+
+44
+
+45
+
+47
+
+48
+
+48
+
+49
+
+51
+
+51
+
+52
+
+56
+
+57
+
+58
+
+61
+
+64
+
+66
+
+69
+
+8 check: loop spaces
+
+9 conclusions
+
+10 acknowledgements
+
+references
+
+71
+
+74
+
+74
+
+74
+
+4
+
+1 introduction
+
+historically discrete torsion has been a rather mysterious aspect of string theory. discrete
+torsion was originally discovered [1] as an ambiguity in the choice of phases to assign to
+dierent sectors of string orbifold partition functions. although other work has been done
+on the subject, no work done to date has succeeded in giving any sort of genuinely deep
+understanding of discrete torsion. in fact, discrete torsion has sometimes been referred to
+has an inherently stringy degree of freedom, without any geometric analogue.
+
+in this paper we shall give a purely geometric understanding of discrete torsion, as a
+precise analogue of orbifold u(1) wilson lines, but for (two-form) b-elds rather than vector
+elds. in [2] we outlined this description; in this paper we shall prove the technical details
+omitted in [2].
+
+more precisely, in this paper we shall argue that discrete torsion should be understood as
+a (discrete) ambiguity in lifting the action of an orbifold group  on a space x to a 1-gerbe
+with connection on x, just as orbifold wilson lines can be understood as an ambiguity in
+lifting the action of  to a bundle with connection. this description makes no assumptions
+on the nature of   it may or may not be freely-acting, it may or may not be abelian  this
+description holds true regardless.
+
+our description of discrete torsion hinges on a deeper understanding of type ii b-elds
+than is common in the literature. more specically, just as vector elds are understood
+as connections on bundles, we describe b-elds as connections on (1-)gerbes. although
+gerbes seem to be well-known in some circles, their usefulness does not seem to be widely
+appreciated. as accessible accounts of gerbes which provide the level of detail we need do
+not seem to exist, we describe gerbes in considerable detail.
+
+we begin this paper by describing stacks (essentially, sheaves of categories), in section 2.
+next, we give a basic description of gerbes in terms of stacks, in section 3. in order to dene
+and study equivariant structures on gerbes, we need some rather technical results, which
+we collect in sections 4 and 5, on stacks and gerbes. (readers studying this paper for the
+rst time are advised to skip sections 4 and 5.) finally, we dene equivariant structures on
+gerbes, and classify equivariant structures on gerbes and gerbes with connection, deriving
+h 2(, u(1)) in the process.
+
+for additional information on gerbes, the reader might consult [3, 4, 5, 6, 7, 8, 9, 10].
+
+in passing, we should mention that in addition to the description of gerbes in terms
+of stacks, there exist alternative descriptions. for example, (equivalence classes of) gerbes
+can be described in terms of objects on loop spaces, as described in (for example) [5]. (we
+briey review this description, using it to check our results, in section 8.) one noteworthy
+description not in [5] is known as bundle gerbes [11, 12]. because of certain technical
+
+5
+
+diculties with the description of gerbes in terms of bundle gerbes, notably the diculty
+in determining whether two bundle gerbes are isomorphic, we shall not refer to them any
+further in this paper. in general, which description of gerbes is most useful clearly depends
+upon both the application in mind and personal preference.
+
+2 stacks
+
+the reader might well ask what object should be associated to a gerbe  after all, in [2]
+we really only referred to gerbes in terms of sheaf cohomology groups. the answer is that
+gerbes can be understood in terms of sheaves of categories, also known as stacks, which we
+shall review in this section.
+
+our presentation of stacks closely follows [5, section 5], [6, section 3], and [9, chapter 1].
+
+2.1 presheaf of categories
+
+before dening a sheaf of categories, we shall rst dene a presheaf of categories, which are
+sometimes also called prestacks. we shall closely follow the denitions of [9]. in passing
+we shall note that stacks and related ideas are often dened with respect to grothendieck
+topologies and sites, i.e., in the language of descent, rather than the topologies that most
+physicists are acquainted with. we feel that such denitions add an essentially irrelevant (for
+our purposes) layer of technical abstraction, and so have circumvented them. (for denitions
+of stacks in terms of sites, see for example [5], [8, expose vi], or [13]; for a basic introduction
+to the ideas of grothendieck topologies, see for example [14, 15].)
+
+before we dene a presheaf of categories, let us take a moment to review the notion of a
+presheaf of sets, following [5, section 1.1]. a presheaf of sets s on a space x is an assignment
+of a set s(u) to every open set u  x, together with a map 
+v u : s(u)  s(v ) associated
+to each inclusion v u : v  u, such that if w  v  u are open sets, then
+
+
+v u  
+
+w v = 
+
+w u
+
+and such that 
+u u , the map associated to the trivial inclusion u  u, is the identity. to
+dene a presheaf of categories we shall follow a similar pattern: we shall associate a category
+to each open set, and a functor to each inclusion of open sets, with certain constraints on
+the functors.
+
+a presheaf of categories c on a topological space x associates, to any open set u  x,
+a category c(u), and for every inclusion of open sets  : u2  u1, there is a restriction
+functor  : c(u1)  c(u2), which may be taken to be the identity whenever u1 = u2 = u
+
+6
+
+and  = 1u . (a word on notation: we shall sometimes use the notation c() or |u2 instead
+of  in this paper.)
+
+in passing, we should point out that not every category c(u) need be nonempty  for
+example, we shall see later that a nontrivial 1-gerbe over a space x necessarily has c(x)
+empty.
+
+the restriction functors are required to satisfy two conditions. the rst is that for every
+pair of composable inclusions of open sets 1 : u2  u1 and 2 : u3  u2, one is given an
+invertible natural transformation1
+
+1,2 : (12) = 
+
+2  
+1
+
+the second condition on restriction functors is that if one has three composable inclusions
+1 : u2  u1, 2 : u3  u2, and 3 : u4  u3, then the following diagram of natural
+transformations is required to commute:
+
+(123) = 
+
+3  (12)
+
+
+
+
+3  
+2  
+1
+
+(23)  
+
+1 = 
+
+(1)
+
+an assignment of categories to open sets, together with inverse image functors satisfying
+
+the two conditions above, denes a presheaf of categories.
+
+in order to get a better grasp of this material, the reader is encouraged to compare the
+
+presheaf of categories dened above with the general denition of presheaf.
+
+at this point an example might help the reader.
+
+it is possible to describe a presheaf
+of sets as a special kind of presheaf of categories. to do this, consider a set as a discrete
+category  a category whose objects are the elements of the set, and whose only morphisms
+are the identity morphisms mapping any object back to itself. it can then be shown fairly
+easily that if we think of a set as a discrete category, then a presheaf of sets is a special kind
+of presheaf of categories.
+
+before going on, we should also describe how any presheaf of categories contains within
+it, a number of presheaves of sets. more specically, given a presheaf of categories c on
+a space x, we shall dene, for any open u  x and any two objects pa, pb  ob c(u),
+a presheaf (of sets) homu (pa, pb) of local morphisms from pa to pb. this presheaf of sets
+is dened as follows. for any open v  u, the set of sections of the presheaf is given by
+homc(v )(pa|v , pb|v ). for any inclusion  : u2  u1 of open sets u1, u2  u, dene the
+
+1readers closely watching related references will note that in [5, chapter 5], these natural transformations
+
+are dened in the opposite direction.
+
+7
+
+restriction map  by,
+
+ :  7 1
+
+1,2  |u2  1,2
+ hom (pa|u2, pb|u2)
+
+for any   hom(pa|u1, pb|u1).
+it is straightforward to check that the restriction map
+satises the axioms for a presheaf of sets, and so homu (pa, pb) is a presheaf of sets. in order
+to distinguish this presheaf of morphisms from a set of morphisms, we shall always denote
+the presheaf by hom and the set by hom.
+
+in passing, we should mention that we shall sometimes use the notation autc(u )(p ) to
+
+denote the set homc(u )(p, p ), and autu (p ) to denote the presheaf homu (p, p ).
+
+2.2 sheaf of categories
+
+we shall use the terms sheaf of categories and stack synonymously in this paper, though
+not all authors quite agree [9]. in the conventions of [9], where the two concepts are dis-
+tinguished, what we shall dene in this section will technically be a stack, rather than a
+sheaf of categories (which is required to satisfy a stronger gluing condition on objects in
+[9]).
+
+before giving the technical denitions, let us review the gluing conditions for a sheaf of
+sets, on which the gluing conditions below shall be modelled. following [5, section 1.1], given
+a presheaf s of sets over a space x, we say the presheaf is a sheaf of sets if for any open set
+u  x and every open cover {u} of u, if {s  s(u)} is a family of elements such that
+
+u us = 
+
+
+u u s
+
+then there exists a unique s  s(u) such that 
+uu s = s for all . the constraints for a
+presheaf of categories to be a sheaf of categories are closely related; one must give a rather
+similar gluing condition for both the objects and the morphisms of the categories.
+
+2.2.1 gluing law for objects
+
+first, we shall dene the gluing condition for objects. let {u} be an open cover of some
+open set u  x, and suppose we are given a family of objects x  ob c(u), and a family
+of isomorphisms :
+
+ : x|u
+
+ x|u
+
+satisfying the compatibility condition    =  in c(u), and such that  = 1
+in c(u).
+
+8
+
+gluing holds for objects (more technically, the descent condition is eective) if there
+ x,
+
+exists an object x  ob c(u), together with a family of isomorphisms  : x|u
+such that the following diagram commutes:
+
+x|u |u
+
+, x|u
+
+, x|u|u
+
+ |u 
+
+x|u
+
+
+
+ |u
+
+x|u
+
+(2)
+
+where we have used the notation |u to indicate the restriction functor, and where ,
+indicates the natural transformation |u  |u|u appearing in the denition of presheaf
+of categories.
+
+before we proceed to the gluing law for morphisms, we shall take a moment to reect on
+the gluing law for objects given above. first, note that one can not assume that the objects
+x|u|u , x|u |u , and x|u in ob c(u) are the same object. rather, they are related by
+invertible natural transformations between the restriction functors, nothing more.
+
+we should also mention that we were sloppy in part of the gluing law given above.
+strictly speaking, the relation    =  does not make sense, even after naively using
+the restriction functors, as the morphisms in question act on distinct objects. in order to
+properly make sense out of this relation, one must make use of the natural transformations
+between restriction functors appearing in the denition of presheaf. more concretely, the
+relation    =  should be replaced with the constraint that the following diagram
+commutes:
+
+1
+,
+
+x|u |u
+, 
+1
+
+x|u
+
+, 
+
+x|u |u
+
+ |u 
+
+x|u |u
+
+|u x|u |u
+
+1
+,
+
+x|u
+
+ ,
+
+x|u |u
+
+  |u
+
+x|u |u
+
+ 1
+
+,
+
+x|u
+
+(3)
+
+finally, the reader might ask to what extent the object x constructed in the gluing
+law above is unique. certainly in the denition of sheaves of sets, the gluing law specied
+unique objects, but uniqueness was not mentioned in the denition above. in fact, it can be
+shown using the gluing law for morphisms dened in the next section that the object x is
+unique up to unique isomorphism commuting with the . we shall not work through the
+details, but the basic idea is as follows. if x  ob c(u) is another object with isomorphisms
+ x that make diagram (2) commute, then dene a set of morphisms f :
+
+x|u  x|u by, f = 1
+  . using the gluing law for morphisms these can be glued
+together to form a unique morphism f : x  x whose restriction to each u commutes with
+
+ : x|u
+
+9
+
+ and 
+
+, i.e,
+
+x|u
+ 
+x
+
+f |u x|u
+ 
+x
+
+=
+
+
+
+commutes, and with further work it can be shown that f is an isomorphism. note that if
+we dropped the constraint that the restriction of f commute with the , then we would
+lose uniqueness  given any f , we could compose with any automorphism of either x or x
+to obtain another morphism x  x.
+
+2.2.2 gluing law for morphisms
+
+the gluing condition on morphisms can be stated as follows. let u  x be an open set,
+x, y  ob c(u), and {u} be an open cover of u. if {f : x|u  y|u} is a set of maps
+such that f|u = f|u , then there exists a unique f : x  y such that f = f |u.
+
+unfortunately this phrasing is slightly sloppy. strictly speaking, the relation f|u =
+f|u does not make sense: the objects x|u|u and x|u |u are (in general) distinct objects
+of ob c(u), so the morphisms f|u and f|u are morphisms between (in general)
+distinct objects of c(u), and so cannot be immediately compared. thus, we must replace
+the condition that f|u = f|u with the condition that the following diagram commutes:
+
+x|u |u
+
+, x|u
+
+, x|u|u
+
+f |u 
+
+ f|u
+
+y|u|u
+
+1
+, y|u
+
+1
+, y|u|u
+
+(4)
+
+finally, note that we can rephrase the gluing condition for morphisms somewhat more
+elegantly by saying that morphisms satisfy the gluing law if for any pair of objects x, y 
+ob c(u) and any open cover {u} of u, the ordinary sheaf (of sets) axiom for gluing in
+the presheaf of morphisms homu (x, y) is satised. put another way, satisfying the gluing
+condition for morphisms is equivalent to the presheaf of sets hom being a sheaf of sets.
+phrased yet another way, in a sheaf of categories, each presheaf of sets of morphisms hom
+is a sheaf of sets, not just a presheaf.
+
+2.2.3 examples
+
+one easy example of a stack is the sheaf of discrete categories associated to a sheaf of sets.
+recall we pointed out earlier that a presheaf of sets can be understood as a presheaf of
+discrete categories. (identify the elements of each set with objects in each category. by
+denition, the only morphisms in a discrete category are the identity morphisms, so we have
+
+10
+
+completely characterized the categories.) it is easy to check that if the presheaf of sets is
+actually a sheaf of sets, then the corresponding presheaf of (discrete) categories is actually
+a stack.
+
+a trivial example of a stack is the stack of all principal g-bundles on x, for some lie group
+g. more precisely, dene a stack c by associating to each open set u  x, the category c(u)
+whose objects are all principal g bundles over u, with morphisms all bundle isomorphisms2.
+it is straightforward to check that this denes a presheaf of categories (with the restriction
+functors dened naturally, and the natural transformations trivial), and furthermore this
+presheaf of categories is a stack. we shall denote this example of a stack by tors(g).
+
+now, let us describe an example of a presheaf of categories that is not a stack. fix some
+principal g bundle p on x, and dene a presheaf of categories as follows. to each open
+set u, associate a category with one object, equal to p |u , and let the morphisms in this
+category be the automorphisms of p |u . it is easy to check that this denes a presheaf of
+categories, with the restriction functors dened naturally, and the natural transformations
+trivial. denote this presheaf of categories by p.
+
+we shall now argue that the presheaf of categories p is not a stack in general, by observing
+that it does not always3 satisfy the gluing law for objects. let u  x be an open subset of x
+such that there exists a principal g bundle q over u such that p |u  q is not topologically
+equivalent to p |u . let {u} be a good cover of u. let g : u  g denote the transition
+functions for q, dened with respect to the cover {u}. dene a family of isomorphisms
+ : p |u|u  p |u|u by
+
+ = g  ,  1
+,
+
+where the  are the (trivial) natural transformations appearing in the denition of presheaf
+of categories p. (we have made them explicit for completeness.) it is easy to check these
+isomorphisms satisfy the gluing condition, and so by the gluing condition for objects we
+should nd a corresponding object in p(u). this new object was essentially created by
+tensoring local sections of p |u with local sections of q, and so in general should be local
+sections4 of p |u  q. (this argument is somewhat weak; rigorous versions can be found in
+section 5.3, in the discussion of gauge transformations for gerbes.) by assumption, however,
+no such object exists in p(u). thus, the gluing law is not satised, and so the presheaf of
+categories p cannot be a stack.
+
+2in fact, any morphism of principal g-bundles for xed g over a xed space x is necessarily an isomor-
+
+phism [16, section 4.3].
+
+3in special cases, such as x contractible, p may be a stack. however, we shall consider more general x,
+
+for which p will not be a stack.
+
+4in writing this slightly loose statement, we are assuming that g is abelian.
+
+11
+
+2.3 cartesian functors
+
+let c and d denote two presheaves of categories over a space x. a map f : c  d is
+dened to be [9, section 1] a family of functors f (u) : c(u)  d(u), together with, for every
+inclusion  : u2  u1, an invertible natural transformation  : 
+d  f (u1)  f (u2)  
+c.
+these invertible natural transformations are required to have the property that for any pair
+of composable inclusions 2 : u3  u2, 1 : u2  u1, the following diagram commutes:
+
+1d  f (u1)
+
+
+2d  
+1,2 
+d
+(12)
+
+d  f (u1)
+
+1= 
+
+2d  f (u2)  
+1c
+
+12=
+
+2= f (u3)  
+ c
+
+2c  
+1c
+
+1,2
+f (u3)  (12)
+c
+
+(5)
+
+where the  are the invertible natural transformations appearing in the denition of presheaf
+of categories.
+
+such maps between presheaves of categories are called cartesian functors. note that
+a cartesian functor is not precisely a functor, in the sense that it is not a map between
+categories, but rather a map between presheaves of categories.
+
+a morphism between stacks is precisely a morphism between the underlying presheaves
+
+of categories, that is, a morphism between stacks is precisely a cartesian functor.
+
+cartesian functors can be composed. that is, if c, d, and e are three presheaves of
+categories on x, and f : c  d and g : d  e are two cartesian functors, then one can
+dene a cartesian functor g  f : c  e. we shall outline the denition. for any open set
+u, the functors f (u) : c(u)  d(u) and g(u) : d(u)  e(u) can certainly be composed.
+given an inclusion  : u2  u1, we can dene the invertible natural transformation gf
+as the composition of the natural transformations associated to f and g. in other words,
+gf
+
+e  (gf )(u1)  (gf )(u2)  
+
+c is dened by
+
+
+
+: 
+
+
+
+gf
+
+
+
+: 
+
+e  g(u1)  f (u1)
+
+g
+= g(u2)  
+
+d  f (u1)
+
+f
+= g(u2)  f (u2)  
+c
+
+it can be shown that gf
+
+
+
+satises the pentagonal identity (5).
+
+now, what does it mean for two stacks to be equivalent? we say that two stacks c,
+d are equivalent if there exists a cartesian functor f : c  d such that the functor
+f (u) : c(u)  d(u) associated to any open set u is an equivalence of categories5.
+
+we shall now show that a cartesian functor f : c  d between presheaves of categories
+
+c, d induces a morphism of presheaves
+
+homc(u )(pa, pb)  homd(u )(f (u)(pa), f (u)(pb))
+
+5recall that a functor f : e  f is said to be an equivalence of the categories e, f if there is a functor
+g : f  e and there are invertible natural transformations ide  gf and idf  f g, i.e., ide = gf and
+idf = f g.
+
+12
+
+for any open set u and any two objects pa, pb  ob c(u). for any open v  u, dene a
+map of sets
+
+(v ) : homc(v )(pa|v , pb|v )  homd(v )(f (u)(pa)|v , f (u)(pb)|v )
+
+by,
+
+(v )()  (cid:16)f
+
+u,v (pb)(cid:17)1
+
+ f (v )()  f
+
+u,v (pa)
+
+for all  : pa|v  pb|v , where f denotes the invertible natural transformation dening f as
+a cartesian functor. it is straightforward to check that  denes a morphism of presheaves
+of sets, in other words, that for every inclusion  : u2  u1 of open u1, u2  u, the following
+diagram commutes:
+
+homu (pa, pb)(u1)
+
+(u1)
+ homu (f (u)(pa), f (u)(pb))(u1)
+
+ 
+
+ 
+
+(6)
+
+homu (pa, pb)(u2)
+
+(u2)
+ homu (f (u)(pa), f (u)(pb))(u2)
+
+2.4
+
+2-arrows
+
+now that we have dened analogues of functors for presheaves of categories (namely, carte-
+sian functors), we shall dene analogues of natural transformations between cartesian func-
+tors. these analogues of natural transformations are known as 2-arrows [9, section 1.1]. we
+shall also dene sheaves of sets describing local natural transformations between cartesian
+functors.
+
+2.4.1 2-arrows
+
+let f, g : c  d be cartesian functors between a pair of presheaves of categories c, d over a
+space x. a 2-arrow  : f  g is a family of natural transformations (u) : f (u)  g(u)
+(one for each open u  x), such that, for any inclusion  : u2  u1, the following diagram
+commutes:
+
+(u1)
+= 
+
+d  g(u1)
+
+
+d  f (u1)
+ 
+f
+f (u2)  
+c
+
+ g
+(u2)
+= g(u2)  
+c
+
+
+
+(7)
+
+where the  are natural transformations appearing in the denition of cartesian functors.
+
+in passing, note that 2-arrows can be composed. in other words, if f, g, h : c  d
+are cartesian functors and 1 : f  g, 2 : g  h are a pair of 2-arrows, then the
+composition 2  1 : f  h is well-dened as a 2-arrow.
+
+an invertible 2-arrow is a 2-arrow  such that (u) is an invertible natural transforma-
+
+tion for all open u  x.
+
+13
+
+2.4.2 sheaves of natural transformations
+
+let f, g : c  d be cartesian functors between a pair of presheaves of categories c and d,
+over a space x. fix some open set u  x. we shall dene a presheaf of sets 2ru (f, g)
+which shall describe local 2-arrows between f and g, as well as a presheaf of sets nt u (f, g),
+a related sheaf which shall describe local natural transformations between f and g.
+
+we shall dene a presheaf of 2-arrows from f |u to g|u , which we shall denote 2ru (f, g).
+to any open v  u, dene the set 2ru (f, g)(v ) to be the set of all 2-arrows f |v  g|v .
+in other words, an element   2ru (f, g)(v ) is a collection of natural transformations
+
+(w ) : f (w ) = g(w )
+
+(one such for each open w  v ), such that for any inclusion  : w2  w1 of open sets
+w1, w2  v , the following diagram commutes:
+
+  f (w1)
+
+(w1)
+=   g(w1)
+
+ 
+f
+f (w2)   (w2)
+
+= g(w2)  
+
+ g
+
+
+
+(8)
+
+where the  are the natural transformations dening f , g as cartesian functors.
+
+restriction maps in the presheaf 2ru (f, g) are dened as follows. let  : v2  v1
+denote an inclusion of open sets v1, v2  u. an element   2ru (f, g)(v1) is a collection
+of natural transformations (w ) : f (w )  g(w ), for w  v1, as above. we dene  to
+be the new collection of natural transformations obtained from the collection  by removing
+all elements corresponding to open w such that v2  w  v1.
+
+it should be clear that these denitions yield a presheaf of sets. for example, if 2 :
+v3  v2 and 1 : v2  v1 are a pair of composable inclusions of open sets, then for all
+  2ru (f, g)(v1), 
+
+1 = (12).
+
+2
+
+in the special case that d is a stack, not just a presheaf of categories, it can be shown
+that 2ru (f, g) is a sheaf of sets, not just a presheaf. we shall outline the details here. let
+v  u be an open set, and let {u} be an open cover of v . let {  2ru (f, g)(u)} be
+a set of elements such that 
+, (where the  are the natural inclusions from
+u  u into u, u). we need to show that there exists a unique   2ru (f, g)(v ) such
+that 
+
+ =  (where  : u  v is inclusion).
+
+, = 
+
+finding a 2-arrow  means nding a set of natural transformations (w ) : f (w ) 
+g(w ), one for each open w  v , obeying the usual compatibility condition. let p 
+ob c(w ), then we can dene (w )(p ) to be the unique morphism generated by gluing
+together morphisms
+
+(g
+
+ )1  (w  u)(p |w u)  f
+
+ : f (w )(p )|w u  g(w )(p )|w u
+
+14
+
+it is straightforward to check that this denes a natural transformation (w ) : f (w ) 
+g(w ) for all open w  v , and also that these natural transformations satisfy diagram (8).
+thus, we have dened a unique 2-arrow  such that 
+ = , and so we shown the gluing
+law for sheaves of sets is satised. thus, when d is a stack, the presheaf of sets 2ru (f, g)
+is a sheaf of sets.
+
+in addition to the presheaf of sets 2ru (f, g), one can also dene another presheaf of
+natural transformations, which we shall label nt u (f, g). our use of this presheaf will be
+very limited; we mention it solely for completeness. for any open v  u, dene the set
+nt u (f, g)(v ) to be the set of all natural transformations
+
+f (v )  |v = g(v )  |v
+
+where |v indicates the restriction functor from c(u) to c(v ). for any inclusion  : u2  u1
+between open sets u1, u2  u, dene the restriction map
+
+ : nt u (f, g)(u1)  nt u (f, g)(u2)
+
+by,
+
+  c1
+
+1,2  g
+
+    (f
+
+ )1  c
+1,2
+
+for   nt u (f, g)(u1) (i.e.,  : f (u1)  |u1  g(u1)  |u1), where the c are the natural
+transformations dening c as a presheaf of categories, and where the  are the natural
+transformations dening f , g as cartesian functors.
+
+it is straightforward to check that this denes a presheaf of sets. for example, for two
+composable inclusions 1 : u2  u1, 2 : u3  u2, u1, u2, u3  u, the restriction maps
+obey 
+
+1 = (12) for all  : f (u1)  |u1  g(u1)  |u1.
+
+2
+
+in the special case that d is a stack, not just a presheaf of categories, it is straightforward
+
+to check that nt u (f, g) is a sheaf of sets, not just a presheaf, for all open u  x.
+
+in passing, note that any 2-arrow  : f |u  g|u denes an element of nt u (f, g)(v )
+for all open v  u for which d(v ) 6= , and moreover if  : u2  u1 is inclusion of open
+sets, then (u1) = c1
+1,2, i.e., the restriction functor relates these elements
+in a natural way.
+
+1,2  (u2)  c
+
+3 gerbes and stacks
+
+for a brief but readable discussion of gerbes in terms of stacks, see for example [6, section
+3]. more detailed information is available in [5, 7, 9]. this section reviews material that can
+be found in [5, chapter 5], [6, section 3], and [9, chapter 1].
+
+15
+
+3.1 denitions and examples
+
+a stack c is called a (1-)gerbe if the following three conditions are satised:
+
+1. for every open set u  x, every morphism in the category c(u) is invertible. (in
+
+more technical language, this means c(u) is a groupoid.)
+
+2. each point x  x has a neighborhood ux for which c(ux) is nonempty.
+
+3. any two objects p1, p2 of c(u) are locally isomorphic. in other words, each x  u has
+
+a neighborhood vx such that the restrictions of p1 and p2 to vx are isomorphic.
+
+one says that a gerbe c is bound by a sheaf of abelian groups a (or, that the gerbe
+has band a) if for any open set u and object p  ob c(u), there exists an isomorphism
+= autu (p ). these isomorphisms are required to satisfy
+of sheaves of groups u (p ) : a|u
+a constraint which we shall describe shortly. in the rest of this paper, when we speak of
+gerbes, we will implicitly refer to gerbes bound by some sheaf of abelian groups.
+
+in passing, we should point out that since (u)(p ) is a morphism of sheaves of groups,
+
+it is compatible with restriction, i.e., the following diagram commutes:
+
+a(u1)
+ 
+
+a(u2)
+
+u (u1)(p )
+
+
+
+homc(u1)(p, p )
+
+ 
+
+u (u2)(p |u2 )
+
+
+
+homc(u2)(p |u2, p |u2)
+
+(9)
+
+where the  are the restriction maps dening the sheaves of sets, p  ob c(u1), and
+ : u2  u1 is an inclusion between open sets u1, u2  u.
+
+we mentioned above that the isomorphisms u (p ) : a|u  autu (p ) are required to
+satisfy a condition, which we shall now explain. let u be an open set, let p1, p2  ob c(u),
+let   homc(u ) (p1, p2), and let g  aut(p1). the morphism   g  1  aut(p2), and
+in fact inner automorphisms by  of the form above clearly dene a group homomorphism
+(in fact, an isomorphism) from aut(p1) to aut(p2). put another way, for any g  aut(p1),
+there exists g  aut(p2) such that   g = g  , and g and g are isomorphic to the same
+element of the group a(u). more generally, the morphism  denes a morphism of sheaves
+
+ : autu (p1)  autu (p2)
+
+we can now nally state the constraint on the isomorphisms u (p ). the u (p ) are required
+to be such that the following diagram commutes:
+
+a|u
+k
+
+a|u
+
+u (p1)
+ autu (p1)
+ 
+u (p2)
+ autu (p2)
+
+16
+
+(10)
+
+the 1-gerbes discussed in [2] all describe gerbes with band c (u(1)). here we see that
+
+more general gerbes can be dened.
+
+a trivial example of a 1-gerbe with band c (g) (for g an abelian lie group) is the stack
+tors(g), the stack of all principal g-bundles, introduced earlier. in fact, we shall see later
+that all gerbes with band c (g) look locally like tors(g), in the same sense that all ber
+bundles look locally like the trivial bundle.
+
+a nontrivial example of a 1-gerbe with band c (u(1)) is the stack describing spinc(n)
+lifts of a principal so(n) bundle, which we shall now describe. (relevant information can
+be found in [17, appendix d].) let p be a principal so(n)-bundle on x. we shall describe
+a 1-gerbe, call it c, that implicitly describes obstructions to lifting the structure group of p
+from so(n) to spinc(n). (we shall roughly follow [5, section 5.2].) to any open set u  x,
+dene the objects of c(u) to be pairs (q, ), where q is a principal spinc(n) bundle on u
+which is a lift of p |u , and where  : q  p |u is a morphism of principal bundles. (note that
+if p does not admit a global lift, then c(x) = , for example.) morphisms between objects
+of c(u) are dened as follows. let (q, ), (q, ) be two objects of c(u). a morphism
+u : (q, )  (q, ) is dened to be a morphism6 u : q  q of principal spinc(n) bundles,
+such that the following diagram commutes:
+
+u q
+
+q
+ 
+p |u = p |u
+
+ 
+
+(11)
+
+it is straightforward to check that this structure denes a stack, and furthermore is a 1-
+gerbe. the element of h 3(x, z) associated to this 1-gerbe precisely classies the obstruction
+to lifting the structure group of p to spinc(n). if the category c(x) is nonempty, then its
+objects are principal spinc(n) bundles on x, globally dened lifts of the principal so(n)
+bundle p .
+
+more generally, we shall see later that a nontrivial gerbe on a space x can be distinguished
+from a trivial gerbe on x by the category c(x). if this category is nonempty, then the gerbe
+is trivial  objects in c(x) dene trivializations of the gerbe, just as global sections of a
+principal bundle trivialize the bundle. we shall return to this matter later.
+
+3.2 equivalences of gerbes
+
+let c and d be 1-gerbes, both with band a (a sheaf of abelian groups). under what
+circumstances can we say that c is equivalent to d ?
+
+6recall [16, section 4.3] that if u : q1  q2 is a morphism of principal bundles over the same space
+with the same ber, then it is necessarily an isomorphism. thus, the morphisms we dene in c(u ) are all
+necessarily isomorphisms.
+
+17
+
+a map between two gerbes c and d with specied band a is dened to be a cartesian
+functor f : c  d such that for all open sets u and for all p  ob c(u), the following
+diagram of sheaves of groups commutes (by denition of morphism of sheaves):
+
+autc(u )(p )
+
+c(u )(p )  
+
+f (u )
+ autd(u )(f (u)(p ))
+  d(u )(p )
+
+a|u
+
+=
+
+a|u
+
+(12)
+
+where the  are the isomorphisms between the band and the automorphisms of an object
+(given in the denition of band), and we have used f (u) to denote the induced morphism
+of sheaves (here, sheaves of abelian groups) discussed in the section on cartesian functors.
+more intuitively, this condition means that the action of the band on the gerbe commutes
+with the cartesian functor.
+
+an equivalence of two gerbes c, d with band a is dened to be a cartesian functor
+f : c  d obeying the constraint (12), such that the cartesian functor denes an equivalence
+of stacks.
+
+we shall show in section 5.3.7 that any map between two gerbes with the same band,
+over the same space, is necessarily an equivalence of gerbes. this is closely analogous to
+the result that any morphism of principal g-bundles, for xed g, over the same space, is
+necessarily an isomorphism [16, section 4.3].
+
+3.3 sheaf cohomology and gerbes
+
+in [2] we claimed that gerbes were classied by elements of sheaf cohomology groups. how
+can we derive an element of h 2(x, a) from the description of gerbes given above? we shall
+work through the details in this subsection. more precisely, we shall show how to obtain a
+cech representative of the relevant sheaf cohomology group, associated to some xed open
+cover. for convenience, we shall assume the band a = c (u(1)), though the reader should
+be able to easily extend to more general cases.
+
+before describing how to associate sheaf (and also, more usually, cech) cohomology
+elements to gerbes, we shall take a moment to review how this procedure works for sheaves
+of local sections of bundles. let i be a sheaf of local sections of some principal g-bundle
+on a space x, and let {u} be a good open cover of x. let {s} be any choice of local
+sections of i with respect to the cover {u} (i.e., s  i(u) for all ). then on each overlap
+u = u  u, the sections s|u and s|u will dier by some element of c (g) over
+u. denote each such element by g. it is straightforward to check that the g dene a
+cocycle representative of an element of h 1(x, c (g)) (or, rather, the corresponding cech
+cohomology group associated to the cover {u}). picking dierent local sections corresponds
+to changing the cocycle by a coboundary. thus, we have derived an element of h 1(x, c (g))
+
+18
+
+classifying the sheaf i. finally, note that i admits a global section if and only if there exist
+sections s such that s|u and s|u agree on overlaps, i.e., g is the identity on each
+overlap, i.e., the corresponding element of sheaf and cech cohomology is trivial.
+
+now that we have described how to associate cech cohomology elements to any given
+sheaf of local sections of a bundle, we shall discuss how to associate cohomology elements to
+gerbes. we shall see that the details are closely analogous to the case above.
+
+let {u} be a good cover of x, i.e., a cover such that every element and every intersection
+of elements is contractible. we shall assume this is sucient for every object of any category
+c(u) to be isomorphic. (if not, pick a suitable renement of {u}.) then, let p denote
+an object of c(u). (since all objects in c(u) are isomorphic, the precise choice of p is
+irrelevant.) let u denote the isomorphisms
+
+u : p|u
+
+ p|u
+
+where u = uu, and we implicitly assume u = u1
+dene h : u  u(1) by
+
+. suppose u = uu u 6= .
+
+h = u  u  u
+
+ aut(p|u )
+
+in fact, we have been slightly sloppy about the distinction between objects x|u|u
+and x|u , for example. to rigorously dene h we must introduce the invertible natural
+transformations  dening c as a presheaf of categories. dene maps u, : p|u 
+p|u by,
+
+u, = 1
+
+,  u|  ,
+
+then the rigorous denition of h is as
+
+h = u,  u,  u,
+
+ aut(p|u )
+
+it is straightforward to check that h denes a cech 2-cocycle.
+
+naively, our description of h above might appear to always be a coboundary, as h
+naively appears to be the coboundary of a 1-cocycle dened by the u. however, there is
+an important distinction at work here. the u, are maps between (in general) distinct
+objects, not automorphisms of a single object. since they are maps between distinct objects,
+they will not (in general) be valued in the band of the gerbe. thus, h will not be a trivial
+cech cocycle in general.
+
+it can also be shown that if {p, u} and {p 
+
+isomorphisms, then the 2-cocycles h, h
+
+} are two choices of objects and
+ dened by either dier by a coboundary. we
+
+, u
+
+19
+
+shall leave the details of this verication to the reader, but in passing we will mention three
+important points that come up. first, one needs the fact that elements of the band commute
+ p be a set of
+with morphisms, as demonstrated earlier. second, if we let  : p 
+
+isomorphisms, then it is a useful fact that the  commute with the natural transformations
+used to dene the presheaf of categories, by denition of natural transformation. finally,
+note that u and |u  u
+ |u may dier by an element of the band, in general.
+
+  1
+
+thus, any set of choices {p, u} will dene the same element of cohomology.
+
+furthermore, any two equivalent gerbes dene the same element of cohomology. let
+f : c  d be a map between two gerbes on x with band a, which also denes an equivalence
+of gerbes. let {u} be a good open cover of x, let {p  ob c(u)} be a set of objects,
+ p|u } be a set of isomorphisms. then {f (u)(p)  ob d(u)} is
+and {u : p|u
+a set of objects in d, and
+
+nf (u)(u) : f (u)(p|u )  f (u)(p|u )o
+
+is a set of isomorphisms between objects in d. these objects and isomorphisms in d dene
+a cocycle hd
+, but as noted above, the cohomology class of the cocycle is independent of
+the choice of objects and isomorphisms. thus, any two equivalent gerbes dene the same
+element of cohomology.
+
+an astute reader may be slightly confused by the paragraph above. nowhere in our
+discussion did we seem to use the fact that f : c  d is an equivalence of gerbes; we only
+used the fact that it is a map of gerbes. in particular, the reader might be concerned that
+if we could derive a contradiction: if f were not an equivalence of gerbes, then we should
+not get the same cohomology element. however, we shall show in section 5.3.7 that any
+map of gerbes with the same band and over the same space is necessarily an equivalence of
+gerbes. thus, it is not possible for f to not be an equivalence of gerbes, and so any potential
+contradiction is averted.
+
+so far we have described how a sheaf cohomology element can be associated to a given
+gerbe. the converse is also possible  given a sheaf cohomology element, we can construct an
+associated gerbe. this construction is carried out in, for example, [5, section 5.2]. we shall
+not repeat the construction here, but in passing we shall mention that it uses techniques
+closely akin to the descent categories we describe in section 4.1.2.
+
+it should now be clear that equivalence classes of gerbes with band a on a space x are
+
+in one-to-one correspondence with elements of h 2(x, a).
+
+let us take a moment to try to gain some intuition for the meaning of this sheaf cohomol-
+ogy description of gerbes. suppose a gerbe c on a space x is described by a cohomologically-
+trivial cocycle h; what does this imply about the gerbe? if h is a coboundary, then by
+ p|u we can arrange for h = 1.
+slight redenitions of the isomorphisms u : p|u
+(simply compose each isomorphism with an automorphism dictated by the cochain dening
+
+20
+
+the coboundary; use the fact that elements of the band commute with morphisms.) then,
+we can use the gluing law for objects to construct an object of c(x). thus, a gerbe described
+by a cohomologically-trivial cocycle has c(x) 6= . conversely, it is straightforward to check
+that if c(x) 6= , then the corresponding element of cohomology is trivial. this is closely
+analogous to the fact that a global section of a principal g-bundle is a trivialization of the
+bundle; here, an object of c(x) is a trivialization of the gerbe.
+
+in particular, let us consider the example of the gerbe tors(g), for g an abelian lie group,
+on a space x. in this case, tors(g)(x) 6= , that is, there exists a globally dened object
+(in fact, several globally dened objects, in general), so it should be clear that on a good
+open cover {u} one can pick objects {p} and isomorphisms {u} such that h = 1. in
+other words, tors(g) is an example of a gerbe with a globally dened object, which implies
+that the corresponding element of cohomology is trivial. tors(g) is an example of a trivial
+gerbe.
+
+the spinc gerbes, discussed earlier, are somewhat more interesting. from the general
+discussion above, as this class of gerbes has band c (u(1)), they should be topologically
+classied by elements of
+
+h 2(x, c (u(1))) = h 3(x, z)
+
+indeed, in discussing whether an so(n)-bundle can be lifted to a spinc(n)-bundle, there
+arises an element of h 3(x, z), usually labeled w3, which is the image under a bockstein
+homomorphism of the second stiefel-whitney class of the so(n)-bundle in question. the
+characteristic class w3 is precisely the integral characteristic class classifying the spinc gerbe.
+an so(n)-bundle admits a spinc lift if and only if w3 vanishes, in precise accord with the
+general framework above  a 1-gerbe admits a global trivialization if and only if the classifying
+integral characteristic class vanishes. a global trivialization of the spinc gerbe associated to
+some so(n)-bundle is precisely a spinc lift of the bundle.
+
+3.4 gauge transformations of gerbes
+
+just as a gauge transformation of a principal g-bundle on a space x is dened by a map
+x  g, it turns out that a gauge transformation of a gerbe with band7 a = c (g) is a
+principal g-bundle. (in terminology introduced in [2], a gauge transformation of an n-gerbe
+is dened by an (n  1)-gerbe.) (note that we are implicitly assuming g is an abelian lie
+group.)
+
+how precisely does a principal g-bundle act on a gerbe with band c (g)? a complete
+discussion of the technical details is beyond the intended scope of this section  see instead
+section 5.3 for a complete discussion. however, we can give some general intuition. suppose,
+
+7more generally, a gauge transformation on a 1-gerbe with band a is dened by an a-torsor. we are
+
+specically trying to avoid using the language of torsors in this subsection.
+
+21
+
+for example, the objects of c(u) are line bundles on u. in this case, the action of i amounts
+to tensoring each object with i. this yields, for any object p , a map p 7 p  i. (we use
+the notation p  i instead of something like p  i because at the end of the day, we need
+not be manipulating bundles. again, see section 5.3 for details.)
+
+not only does a principal g-bundle yield an action on the objects of c(u), but it can
+
+also be used to dene a self-equivalence of the category c(u).
+
+in section 5.3 we will give a number of results related gauge transformations of gerbes.
+one result, as noted above, is that a gauge transformation of a gerbe is dened by a bundle
+(a 0-gerbe), just as a gauge transformation of a bundle is given by a function (a (-1)-gerbe).
+we also argue that gauge transformations of gerbes commute with gerbe maps, just as gauge
+transformations of principal bundles commute with principal bundle maps, and that any map
+between two gerbes of the same band, over the same space, is necessarily an isomorphism,
+just as any morphism of principal g-bundles, for xed g and over a xed space, is necessarily
+an isomorphism. finally, we shall argue that any gerbe with band c (g) looks locally like
+the trivial gerbe tors(g), just as any principal bundle looks locally like the trivial principal
+bundle.
+
+3.5 connections on gerbes
+
+in this subsection we shall restrict to gerbes with band c (u(1)), for convenience.
+
+now, how does one dene a connection on a 1-gerbe, dened in terms of stacks as above?
+it is tempting to proceed as follows. (this description will be wrong, but useful pedagogi-
+cally.) let {u} be an open cover. identify c(u) with tors(u(1))(u), i.e., identify objects
+of c(u) with principal u(1)-bundles on u. to each open set u and principal u(1) bundle
+l, associate a connection . note that since l need not be trivial, and since u need not
+be contractible, there is no reason why  should be expressible in terms of a single 1-form
+denable over all of u. let f  denote the curvature of  on u.
+it is very tempting
+(and incorrect) to then identify the b-eld associated to u with f . then, on overlaps,
+f   f  = 0 in cohomology, so there exists 1-forms a such that f   f  = da. we
+could then clearly build up the cech-de rham complex describing a connection on a gerbe,
+as described in [2].
+
+unfortunately, this natural-looking idea will not work in general. the essential problem
+is that this would dene a 3-form h that was always zero in cohomology, as h|u = df  = 0.
+put more simply, the b-eld associated to any open set need not be closed, whereas the idea
+described in the paragraph above would always necessarily associate a closed 2-form to each
+u.
+
+the correct way to associate a connection to a 1-gerbe is somewhat more complicated to
+
+22
+
+explain.
+
+in this section we shall make frequent use of the idea of a torsor. we have strenuously
+avoided speaking of torsors in previous sections, but at this point their use becomes un-
+avoidable. torsors are dened in section 5.2; we shall assume henceforward that the reader
+is acquainted with the material in that section.
+
+connections on gerbes are dened in [5] in terms of connective structures and curv-
+ings on the gerbe. in order to get some intuition for the meaning of these concepts, we shall
+take a moment to dene analogues of connective structure and curving for a bundle.
+on a xed principal u(1)-bundle on a space x, a connective structure is dened to be an
+1(x)-torsor consisting of all the connections on the principal u(1)-bundle. this connective
+structure is required to obey the constraint that any gauge transformation  : x  u(1) de-
+nes an automorphism  of the connective structure, such that any section  of the connec-
+tive structure (a single connection on the bundle) transforms under  as, () = d ln .
+one then denes a curving, which is a map that assigns a closed 2-form k() to any sec-
+tion  of the connective structure, such that
+
+1. if  : x  u(1) is a gauge transformation, then k(()) = k() for any 
+
+2. for any   1(x), k( + ) = k() + d
+
+clearly the curving corresponds to the curvature of the connection .
+
+these notions of connective structure and curving for a bundle seem quite clumsy, how-
+
+ever they are more useful when discussing gerbes.
+
+now that we have given some basic intuitions, we shall give the rigorous denition of a
+connection on a 1-gerbe. this is formally described as assigning a connective structure and
+curving to a gerbe, call it c. we shall closely follow the presentation of [5, section 5.3].
+
+let 1(u) denote the sheaf of 1-forms on an open set u. (note that 1(u) is a sheaf of
+
+abelian groups on u.)
+
+a connective structure on a gerbe c is dened to be a cartesian functor co : c  tors(1)
+between the underlying stacks, subject to the following constraint. let u be an open set and
+p  ob c(u), let  be a section of the 1(u)-torsor co(u)(p ), and let g : p  p be an
+automorphism of p , which we shall identify with an element of the band. then we demand
+co(u)(g)() =   d ln g.
+
+at this point we shall introduce some notation. for any isomorphism  : p1
+
+ p2 of
+objects of c(u), its image under the functor co(u) is denoted . in other words,  =
+co(u)(). for any inclusion  : u1  u, let  denote the invertible natural transformation
+  co(u)  co(u1)   appearing in the denition of co as a cartesian functor. (readers
+
+23
+
+also studying [5, section 5.3] will note that in that reference, co(u)(p ) is abbreviated to
+co(p ), and the natural transformation we denote by  is there denoted .)
+
+an example of a gerbe with connective structure is in order at this point. consider
+the (trivial) gerbe tors(g) of all principal g-bundles, where we assume g is an abelian lie
+group. an example of a connective structure on tors(g) is the one obtained by assigning,
+to each principal g-bundle p over any open set u, the 1(u)-torsor of all connections on p .
+in other words, dene co(u)(p ) to be the 1(u)-torsor of all connections on p , and dene
+the rest of the structure of a cartesian functor in the obvious way.
+
+it can be shown that any gerbe with band c (u(1)) admits a connective structure. we
+shall not work through the details of this argument here; see instead, for example, [5, section
+5.3].
+
+note that [5, section 5.3] if  : g  g denes an equivalence of two gerbes g, g on a
+space x, both with band c (u(1)), and the gerbe g has a connective structure, call it co,
+then the connective structure co on g can be pulled back to form a connective structure
+co on g. more specically, co = co  .
+
+it should now be clear that there is a natural notion of equivalence of gerbes with connec-
+tion structure. let (g1, co1) and (g2, co2) be a pair of gerbes with connective structure. we
+say that a cartesian functor  : g1  g2 denes an equivalence of gerbes with connective
+structure if
+
+1.  denes an equivalence of gerbes, and
+
+2. there exists an invertible 2-arrow  : co1  co2   between the cartesian functors
+
+co1 and co2  .
+
+just as the dierence between any two connections on a principal u(1) bundle on x is a
+1-form on x, i.e., an element of 1(x), it can be shown [5, prop. 5.3.6] that the dierence
+between any two connective structures on the same gerbe on x is given by an 1(x)-torsor.
+
+so far we have yet to describe precisely how to associate a b eld to a 1-gerbe. b elds
+
+are described as a curving of the connective structure introduced above.
+
+more precisely, given some gerbe c on x with connective structure co, we can dene a
+curving of the connective structure as follows. a curving of the connective structure is a rule
+that assigns to any object p  ob c(u) and to any section  of the 1(u)-torsor co(u)(p ),
+a (r-valued) 2-form k() on u, called the curvature8 of , such that the following three
+properties are satised:
+
+8the reader should note that the 2-form which we here denote the curvature of a connection, is not
+the curvature in the usual sense. rather, it is merely some 2-form  not necessarily closed  associated to
+the connection. the nomenclature is unfortunate, but seems to be standard.
+
+24
+
+1. given an inclusion  : u1  u, the curvature k(()) of the section () of
+co(u1)(p ) is equal to k(), where  denotes the natural transformation dening
+co as a cartesian functor.
+
+2. let  : p  p  be an isomorphism with another object p   ob c(u). let () be
+
+the corresponding section of co(u)(p ). then k() = k(()).
+
+3. let   1(u). then k( + ) = k() + d.
+
+from the last two conditions on the curving, we see that k associates to any isomorphism
+class of objects in c(u), a 2-form (an element of 2(u), not necessarily closed) modulo exact
+2-forms.
+
+it can be shown [5, section 5.3] that, given a connective structure co on a gerbe, there
+
+always exist curvings.
+
+suppose that two gerbes with connective structure (g1, co1) and (g2, co2) come with
+specied curvings k1, k2, respectively. then we say that  denes an equivalence of gerbes
+with connective structure and curving if
+
+1.  denes an equivalence of gerbes with connective structure, and
+
+2. for all open u, for all objects p  ob g1(u), and for all   (u, co1(u)(p )), we
+
+have that
+
+k1(  ) = k2( () )
+
+where  : co1  co2   is the 2-arrow given in the denition of equivalence of gerbes
+with connective structure.
+
+in passing, we should mention that if 1, 2 : g1  g2 are any pair of gerbe maps between
+the gerbes g1, g2, and  : 1  2 is any 2-arrow, then for any curving k on (g2, co), we
+have as an immediate consequence of the denition of curving that
+
+k() = k( () )
+
+where   (u, (co  1)(u)(p )), for any open u and any object p  ob g1(u).
+
+we dene an equivalence of gerbes with connection to be an equivalence of gerbes with
+connective structure and curving. we shall usually use the former notation rather than the
+latter, as it is briefer.
+
+how can we make contact with the description of connection given earlier in section 3?
+let {u} be a good cover of x, such that the objects in any one category c(u1n) are all
+isomorphic. then to each open set u, the curving k associates a 2-form (not necessarily
+
+25
+
+closed), dened up to the addition of an exact 2-form. these 2-forms are precisely the 2-
+forms appearing in the earlier denition of connections on 1-gerbes. the rest of the earlier
+description  connections on principal u(1) bundles on overlaps  can be understood directly
+in terms of the transition functions.
+
+earlier we argued that principal g-bundles dene gauge transformations on gerbes with
+band c (g); how does such a gauge transformation act on the connective structure and curv-
+ing? we shall examine this in detail in section 5.3.3; we shall outline the results here. let i
+denote a principal g-bundle dening a gauge transformation of a 1-gerbe. let p  ob c(u).
+we argued earlier that i denes a map p 7 p  (i|u ). now, a precise specication of how
+a particular section   (u, co(u)(p )) is mapped by i is equivalent to a specication of a
+connection on i [5, section 5.3, equn (5-11)]. (note in passing that this statement dovetails
+with the earlier observation that any two connective structures dier by an 1-torsor.)
+
+more explicitly, let {a} be a connection on i|u , dened with respect to an open cover
+{u} of u. in other words, each a is a 1-form on u. then if   (u, co(u)(p |)),
+then under the action of i on the gerbe,  7  + a.
+
+so far we have described how the bundle i dening a gauge transformation acts on the
+connective structure. how does i act on the curving? it is clear from the denition of
+curving that k( + a) = k() + da.
+
+thus, we have recovered the description of gauge transformations on gerbe connections
+
+outlined in [2].
+
+3.6 transition functions for gerbes
+
+in section 5.3.5, we show that if c is a gerbe with band9 a = c (g), then for any open u
+such that c(u) is nonempty, the category c(u) is equivalent to the category tors(g)(u).
+
+we can use this fact to dene transition functions for gerbes. now, such a term should
+be explained  we have described gerbes in terms of sheaves of categories, analogously to
+describing bundles in terms of sheaves of sections. transition functions are not a necessary
+component of such a description. however, we can certainly recover transition functions, if
+we choose to do so. (for a discussion of sheaves of sets in terms of transition-function-like
+language, see for example [18, ch. i.a.iii, cor. i-11].)
+
+the transition functions for a gerbe should be clear. given some open cover {u} of
+x such that c(u) 6=  for all , and a set of equivalences of categories from c(u) into
+tors(g)(u), it should be clear that we could describe the gerbe in terms of transition
+
+9more generally, for any open u such that c(u ) is nonempty, the category c(u ) is equivalent to the
+
+category tors(a)(u ) of a-torsors on u .
+
+26
+
+functions between the categories tors(g)(u). in other words, we can specify the gerbe by
+specifying principal g-bundles on overlaps u = u  u. each such bundle determines a
+functor, and so determines how tors(g)(u) is mapped into tors(g)(u). elements of cech
+cohomology classifying the gerbe are determined from tensor products of the bundles on
+triple overlaps; conversely, if one wishes to describe a gerbe with xed cech cohomology, one
+can demand that tensor products of bundles on triple overlaps have appropriate canonical
+trivializations. this description is precisely analogous to describing bundles in terms of
+gauge transformations on overlaps, describing how the local trivializations are mapped into
+one another. note furthermore that this description is precisely the description of 1-gerbes
+given in [3, 4].
+
+it should be clear that in order to describe a 1-gerbe with connection, one would specify
+
+a principal g-bundle with connection on each overlap u.
+
+morphisms of principal g-bundles (of same structure group, over same space) can be
+
+described in local trivializations as a set of gauge transformations [16, section 5.5]
+
+ : u  g
+
+one for each element u of an open cover {u}. it should be clear that one can describe
+a map of gerbes in a similar fashion: for each u, associate a principal g-bundle t. this
+bundle determines an automorphism of the category tors(g)(u), which describes how the
+gerbes are mapped into one another at the level of local trivializations.
+
+it should also be clear that a map of gerbes with connection can be described in terms
+
+of a set of principal g-bundles t with connection.
+
+3.7 nonabelian gerbes
+
+in the physics literature it is sometimes claimed10 that certain physical theories have an
+understanding in terms of nonabelian gerbes. in the rest of this paper we have specialized
+to abelian gerbes, that is, gerbes with abelian band.
+
+just as an abelian gerbe can be described in terms of a stack that locally looks like a
+stack of principal g-bundles for abelian g, it is presumably the case that a nonabelian gerbe
+can be described in terms of a stack that locally looks like a stack of principal g-bundles for
+nonabelian g.
+
+unfortunately, more than this is dicult to say within the present framework. much of
+our discussion of gerbes has hinged, either implicitly or explicitly, on the assumption that
+the band is a sheaf of abelian groups. we have not made a thorough study of how matters
+would be altered if the band became nonabelian.
+
+10for example, see [19].
+
+27
+
+considerably more information on nonabelian gerbes can be found in [7]. related mate-
+
+rial can be found in [20].
+
+4 technical notes on stacks
+
+in this section we give some highly technical material on stacks. a reader perusing this paper
+for the rst (or even the second or third) time is strongly encouraged to skip this section
+entirely.
+
+in particular, we shall describe sheacation of presheaves of categories, pullbacks of
+
+stacks, and stalks of stacks. the basics of these topics are outlined in [5, section 5].
+
+4.1 sheacation
+
+given any presheaf of sets, it is possible to construct a sheaf of sets through a process
+sometimes called sheacation. similarly, given any presheaf of categories, it is possible to
+construct a sheaf of categories. in this section we shall describe this procedure.
+
+we should warn the reader that this section is extremely technical in nature. a reader
+
+visiting this material for the rst time is urged to skip ahead to the next section.
+
+first, we shall review sheacation for presheaves of sets, then we shall describe the
+process for presheaves of categories. in sheacation of presheaves of categories, one denes
+a family of descent categories, then takes a direct limit of descent categories. we shall
+devote subsections to both of these notions. finally, we shall describe how to lift a cartesian
+functor between presheaves of categories to a cartesian functor between their sheacations.
+
+the bulk of our discussion will be based on material in [5, section 5.2].
+
+4.1.1 sheacation of presheaves of sets
+
+first, let us take a moment to review how sheacation works for presheaves of sets, following
+[5, section 5.1]. (for a less technical review, see for example [21, section 0.3].) let f be a
+presheaf of sets on a space x, and pick some open set u  x. we want to build a sheaf of sets
+f , i.e., a presheaf of sets f such that there is a bijective correspondence between elements
+of f (u) and collections {s  f (u)}, {u} an open cover of u, such that s|u = s|u .
+
+the basic idea will be to build f (u) by taking as elements, collections {s  f (u)} for
+{u} an open cover, such that s|u = s|u . in other words, we will build a set f (u) in
+
+28
+
+which the bijective correspondence between elements of the set and local elements satisfying
+compatibility conditions is built in from the denition.
+
+more formally, each set f (u) is constructed as follows. take f (u) to be the disjoint
+union over all open covers {u} of u of collections {s  f (u)} such that s|u = s|u ,
+modulo an equivalence relation . in other words,
+
+f (u) = a
+
+{u}
+
+n {s  f (u)} | s|u = s|u o / 
+
+(13)
+
+the equivalence relation  is dened as follows. identify two collections {u, s} and
+, s
+}, such
+
+} if there exists another open cover {u 
+
+}, a renement of both {u} and {u 
+
+{u 
+that whenever u 
+
+  u  u 
+
+, we have s|u 
+
+ = s
+
+|u 
+ .
+
+we can rewrite equation (13) in terms of a direct limit over open covers, as
+
+f (u) = lim
+
+{u}
+
+n {s  f (u)} | s|u = s|u o
+
+where the partial ordering on open covers {u} is provided by the notion of renement.
+
+note that if f is a sheaf, not just a presheaf, then f = f , i.e., for all open sets u,
+
+f (u) = f (u).
+
+4.1.2 descent categories
+
+let c denote a presheaf of categories on a space x, and let u denote an open set in x. in
+order to dene the category c(u) in the associated sheaf c, we shall take a direct limit over
+descent categories dened for the open set u. in this subsection we shall describe descent
+categories. in subsequent subsections we shall describe the process of taking direct limits,
+and the resulting sheacation.
+
+to each open cover {u} of u, we shall dene a category, which we shall denote by
+
+and which is called a descent category.
+
+descu (c, {u})
+
+the objects of desc(c, {u}) are collections {(x), ()}, where each x  ob c(u),
+
+and where  : x|u
+
+ x|u are isomorphisms, such that (schematically11)
+
+11the correct statement is commutativity of diagram (3).
+
+   = 
+
+29
+
+in c(u), and  = 1 in c(u).
+
+morphisms {(x), ()}  {(y), (
+
+)} in desc(c, {u}) are collections of morphisms
+
+{f : x  y} in {c(u)} such that the following diagram commutes:
+
+x|u
+
+ x|u
+
+f|u 
+
+y|u
+
+ f|u
+
+
+ y|u
+
+(14)
+
+note that if c is a sheaf of categories, not just a presheaf, then for any open cover {u}
+
+of u, the category desc(c, {u}) is equivalent to c(u).
+
+suppose that {u 
+
+i} is a renement of {u} and  : {u 
+
+i}  {u} is the inclusion, i.e., 
+
+is a collection of maps {i : u 
+
+i  u(i)}. then  induces a functor
+ : desc(c, {u})  desc(c, {u 
+
+i})
+
+the action of  on an object {(x), ()}  ob desc(c, {u}) is given by
+
+ :
+ :
+
+(x) 7 (xi  x(i)|u 
+() 7 (cid:16)ij  i,ij  1
+
+)
+
+i
+
+(i)(j),ij  (i)(j)|u 
+
+ij
+
+j,ij(cid:17)
+ (i)(j),ij  1
+
+where the  are the invertible natural transformations appearing in the denition of the
+presheaf of categories c. one can verify (after an extremely lengthy diagram chase) that
+this functor is well-dened on objects, i.e., that the image under  of the set of morphisms
+() satises the compatibility relation (3).
+
+we still need to dene the action of the proposed functor  on morphisms. given objects
+
+{(x, ()}, {(y), (
+
+)}  ob desc(c, {u})
+
+and a morphism
+
+dene
+
+{f : x  y} : {(x), ()}  {(y), (
+)}
+io
+ y(i)|u 
+
+{f} = nfi  f(i)|u 
+
+: x(i)|u 
+
+i
+
+i
+
+it can be shown that this map is well-dened, i.e., the appropriate version of diagram (14)
+commutes.
+
+it is now straightforward to check that  does indeed dene a functor
+
+ : desc(c, {u})  desc(c, {u 
+
+i})
+
+now, suppose 1 : {u 
+
+i}  {u} and 2 : {u 
+
+a }  {u 
+
+associated to the renement {u 
+exists an invertible natural transformation  : (12)  
+
+i} of {u}, and to the renement {u 
+
+2  
+1.
+
+i} are a pair of families of inclusions,
+i}. then there
+
+a } of {u 
+
+30
+
+this invertible natural transformation is dened as follows. to each object
+
+{(x), ()}  ob desc(c, {u})
+
+ associates a morphism
+
+({(x), ()}) :
+
+(12){(x), ()}  (
+
+2  
+
+1){(x), ()}
+a o
+|u 
+
+i(a)
+
+given by
+
+({(x), ()}) = n i(a),a(x(a)|u 
+
+a ) : x(a)|u 
+
+a  x(a)|u 
+
+where the  are the invertible natural transformations appearing in the denition of c as
+a presheaf of categories. it is straightforward to check that this indeed is a morphism, i.e.,
+the appropriate version of diagram (14) commutes, and moreover  is an invertible natural
+transformation.
+
+finally, it is straightforward to check that if we are given three composable inclusions of
+open covers 1, 2, 3, then the following diagram (corresponding to diagram (1)) of natural
+transformations commutes:
+
+(123) = 
+
+3  (12)
+
+
+
+(23)  
+
+1 = 
+
+
+3  
+2  
+1
+
+so far we have discussed functors associated to sets of inclusion maps between two open
+covers of a xed open set u. other functors can also be constructed, as we shall now discuss.
+suppose  : v  u is an inclusion of open sets. then, for any open cover {u} of u, 
+induces a functor 
+
+v,{u} between descent categories associated to u and v :
+
+
+v,{u} : descu (c, {u})  descv (c, {u|v })
+
+where we have used the fact that {u|v } is an open cover of v . this functor can be dened
+in precise analogy with the previously-described functor between descent categories between
+open covers of a single open set u; we shall not repeat the details, as they are virtually
+identical. similarly, given two inclusions 2 : u3  u2 and 1 : u2  u1, one can dene
+(as above) an invertible natural transformation 12 : (12)
+1 u2,{u},
+such that analogues of diagram (1) commute.
+
+2 u3,{u|u2 }  
+
+u3,{u}  
+
+finally, we can also construct natural transformations between compositions of the two
+types of functors listed above. let 12 : {u 2
+} be a set of inclusions between covers
+of an open set u  x, and let  : v  u be an inclusion map between open sets, inducing
+functors 
+|v } be the set of inclusion maps
+between covers of v that makes the following diagram commute:
+
+}. let v,12 : {u 2
+
+|v }  {u 1
+
+} and 
+
+}  {u 1
+
+v,{u 1
+
+v,{u 2
+
+{u 1
+}
+12 
+{u 2
+}
+
+v,{u 1
+} {u 1
+
+|v }
+ v,12
+
+v,{u 2
+} {u 2
+
+|v }
+
+31
+
+(15)
+
+then we can dene the following two invertible natural transformations:
+
+v,12 :
+12,v :
+
+(12  v,{u 2
+(v,{u 1
+
+})  
+}  v,12)  
+
+}  
+12
+v,12  
+
+v,{u 2
+
+v,{u 1
+
+}
+
+these natural transformations also make analogues of diagram (1) commute.
+
+4.1.3 direct limits
+
+given our presheaf of categories c and for any open u, the descent categories desc(c, {u}),
+we can now construct the associated sheaf of categories.
+
+the sheaf of categories c associated to the presheaf of categories c is dened by
+
+c(u) = lim
+
+{u}
+
+desc(c, {u})
+
+(16)
+
+in words, c(u) is dened to be the direct limit over open covers of u of descent categories.
+
+we shall now give the denition of the direct limit used above.
+
+the objects of the direct limit (16) are the disjoint union of the objects of all the descent
+
+categories associated to open covers of u. in other words,
+
+ob lim
+
+{u}
+
+desc(c, {u}) = a
+
+{u}
+
+ob desc(c, {u})
+
+(17)
+
+now, we shall describe morphisms of the direct limit category. let p1, p2 be objects:
+
+p1  ob desc(c, {u 1
+p2  ob desc(c, {u 2
+
+})
+})
+
+} be any (open cover) renement of both {u 1
+
+} and {u 2
+
+}, let 13 : {u 3
+
+}  {u 1
+}
+} to be the set of all
+
+let {u 3
+and 23 : {u 3
+morphisms  : 
+
+}  {u 2
+
+} be the two sets of inclusions, and dene s{u 3
+
+13p1  
+
+23p2 in desc(c, {u 3
+
+}).
+
+dene the set of all morphisms hom(p1, p2) to be the disjoint union of all the s{u 
+{u 
+} an (open cover) renement of both {u 1
+ to be dened momentarily. in other words,
+
+} (for
+}), modulo an equivalence relation
+
+} and {u 2
+
+hom(p1, p2) = a
+
+{u 
+
+}
+
+s{u 
+
+}/ 
+
+32
+
+the equivalence relation  is dened as follows. if {u} and {u 
+
+} are two open covers
+
+which both rene both {u 1
+
+} and {u 2
+
+}, and
+
+i : {u}  {u i
+
+i : {u 
+}  {u i
+
+}
+}
+
+are the sets of inclusion maps (i  {1, 2}), then we say  : 
+to  : 
+1 p1  
+both {u} and {u 
+
+}, with sets of inclusion maps
+
+2 p2 in s{u 
+
+} if and only if there exists an (open cover) renement {u 
+
+1p1  
+
+2p2 in s{u} is equivalent
+} of
+
+ : {u 
+ : {u 
+
+}  {u}
+}  {u 
+}
+
+such that
+
+1. i = 
+
+i for i  {1, 2},
+
+2. the following diagram commutes:
+
+(1)(p1)
+
+1 
+
+  
+
+1 (p1)
+
+1   
+
+1(p1)
+
+()
+   
+
+2(p2)
+ 2
+
+()
+   
+
+2 (p2)
+
+
+2 (2)(p2)
+
+(18)
+
+where the  are the natural transformations dened in the previous subsection.
+
+we have dened objects and morphisms in the categories c(u). we shall now take a mo-
+ment to discuss composition of morphisms in this category, as the correct denition might not
+be completely obvious to the reader. let p1, p2, p3  ob c(u), i.e., pi  ob descu (c, {u i
+})
+for some open covers {u i
+} of u, i  {1, 2, 3}. let   hom c(u )(p1, p2),   hom c(u )(p2, p3).
+in other words, there exist renements {u 4
+},
+such that
+
+}, and {u 5
+
+} and {u 3
+
+} and {u 2
+
+} of {u 1
+
+} of {u 2
+
+  homdesc(c,{u 4
+  homdesc(c,{u 5
+
+}) (
+} (
+
+14p1, 
+25p2, 
+
+24p2)
+35p3)
+
+we dene the composition    as follows. let {u 6
+{u 5
+
+}, such that 2446 = 2556. dene    to be
+
+} be a renement of both {u 4
+
+} and
+
+    1
+
+356  
+
+56  256  1
+
+246  
+
+46  146
+
+ homdesc(c,{u 6
+
+}) (
+
+16p1, 
+
+36p3)
+
+where the  are the natural transformations dened in the previous subsection. it is straight-
+forward to check that this composition is well-dened, i.e.,    and    implies
+      .
+
+33
+
+so far we have discussed how to construct the categories c(u) appearing in the sheaf
+associated to the presheaf of categories c. to completely dene the sheaf we must also
+specify restriction functors and natural transformations, which we shall now do.
+
+let  : v  u be an inclusion of open sets. we shall now show that  induces a functor
+
+ : c(u) = lim
+
+{u}
+
+descu (c, {u})  c(v ) = lim
+
+{u 
+}
+
+descv (c, {u 
+
+})
+
+first we shall describe how  acts on objects. recall that an object of c(u) is an object,
+call it p , of descu (c, {u}) for some open cover {u} of u. the functor  acts on the
+object p as,
+
+p 7 
+
+v,{u}(p )  ob descv (c, {u|v })
+
+now we shall describe how  acts on morphisms. let p1, p2  ob c(u). in other words,
+
+p1  ob descu (c, {u 1
+p2  ob descu (c, {u 2
+
+})
+})
+
+for some open covers {u 1
+
+}, {u 2
+} of u. recall
+hom(p1, p2) = a
+
+{u 3
+
+}
+
+hom(
+
+13p1, 
+
+23p2)/ 
+
+let   hom(
+
+13p1, 
+
+23p2) for some renement {u 3
+
+} of {u 1
+
+} and {u 2
+
+}. dene () as,
+
+() = 23,v  1
+
+v,23  
+
+v,{u 3
+
+}()  v,13  1
+
+13,v
+
+so that
+
+()  homdescv (c,{u 3
+
+|v })(cid:16)
+
+v,13  
+
+v,{u 1
+
+}(p1), 
+
+v,23  
+
+v,{u 2
+
+}(p2)(cid:17)
+
+it is straightforward to check that this functor is well-dened  for example,    implies
+()  ().
+
+let v : v  u and w : w  v be inclusions between open sets. it is easy to check
+that the natural transformations  dened in the previous subsection give a set of invertible
+natural transformations v w : (v w )  
+v between the restriction functors acting
+on the direct limit categories. moreover, these natural transformations make analogues of
+diagram (1) commute. (note that we have chosen to denote these natural transformations
+by  instead of , in keeping with our general tendency to denote sheaed objects with a
+tilde.)
+
+w  
+
+we have now given c the structure of a presheaf of categories  we have associated
+categories (direct limits of descent categories) to each open set, and given restriction functors
+and appropriate natural transformations.
+
+34
+
+furthermore, it can be shown that c is a sheaf of categories, not just a presheaf.
+
+note that if c is a sheaf of categories, not just a presheaf, then c is equivalent to c as
+a stack. in other words, if you sheafy a sheaf of categories, then you recover the original
+sheaf.
+
+4.1.4 lifts of cartesian functors
+
+suppose  : c  d is a cartesian functor between presheaves of categories c, d on a space
+x. in this section we shall show that  lifts to a cartesian functor  : c  d between the
+sheacations of c and d.
+
+let u be an open set, and {u} an open cover of u. we shall rst dene a functor
+
+(u, {u}) : descu (c, {u})  descu (d, {u})
+
+we shall dene the functor (u, {u}) on objects as follows. let {(x), ()} 
+
+ob descu (c, {u}). dene the action of (u, {u}) by,
+
+x 7 (u)(x)
+
+
+7 1
+
+,  (u)()  ,
+ homd(u)(cid:16)(u)(x)|u , (u)(x)|u(cid:17)
+
+where the  are the natural transformations appearing in the denition of  as a cartesian
+functor. it is straightforward to check that this action is well-dened, i.e., that the images
+of the  make the analogue of diagram (3) commute.
+
+now we shall dene the functor (u, {u}) on morphisms. given objects
+
+{(x), ()}, {(y), (
+
+)}  descu (c, {u})
+
+and a morphism
+
+{f : x  y} : {(x), ()}  {(y), (
+
+)}
+
+between these two objects, we dene the action of (u, {u}) on this morphism as,
+
+f 7 (u)(f)
+
+it is straightforward to check that this map is well-dened, and moreover that
+
+(u, {u}) : descu (c, {u})  descu (d, {u})
+
+is a well-dened functor.
+
+35
+
+in passing, note that if  : d  e is another cartesian functor between presheaves of
+
+categories d, e on x, then we have the relation
+
+()(u, {u}) = (u, {u})  (u, {u})
+
+now, let {u 2
+i }  {u 1
+
+i } be a renement of {u 1
+}, both open covers of the open set u, and let
+} be the set of inclusions. we shall dene an invertible natural transformation
+
+ : {u 2
+
+ : 
+
+d  (u, {u 1
+
+}) = (u, {u 2
+
+i })  
+c
+
+we dene this natural transformation as follows. to each object
+
+{(x), ()}  ob descu (c, {u 1
+
+})
+
+the natural transformation  associates the morphism
+
+n (i),i(x(i)) : (u 1
+
+(i))(x(i))|u 2
+
+i
+
+ (u 2
+
+i )(x(i)|u 2
+
+i
+
+) o
+
+where the  are the natural transformations dening  as a cartesian functor. it is straight-
+forward to check that this is a well-dened morphism, and moreover it denes a natural
+transformation, in that it commutes with morphisms {(x), ()}  {(y), ()} between
+objects in descu (c, {u 1
+
+}).
+
+if 1 : {u 2
+
+i } are two sets of inclusions from renements of
+open covers of u, then the following diagram (closely analogous to diagram (5)) commutes:
+
+} and 2 : {u 3
+
+i }  {u 1
+
+a }  {u 2
+
+1d  (u, {u 1
+
+2d  
+12 
+d
+(12)
+d  (u, {u 1
+
+})
+
+})
+
+1= 
+
+2d  (u, {u 2
+
+i })  
+1c
+
+12=
+
+2= (u, {u 3
+
+2c  
+1c
+
+a })  
+ c
+a })  (12)
+c
+
+12
+
+(u, {u 3
+
+(19)
+
+where the  are the natural transformations dened in the section on descent categories.
+
+we are nally ready to start dening a cartesian functor  : c  d. let u  x be an
+
+open set, and dene a functor (u) : c(u)  d(u) as follows.
+
+let p be an object of c(u), that is, p  ob descu (c, {u 1
+
+}) for some open cover {u 1
+}
+
+of u. dene
+
+(u)(p )  (u, {u 1
+
+})(p )  ob descu (d, {u 1
+
+})  ob d(u)
+
+let p1 and p2 be objects of c(u), meaning
+
+pi  ob descu (c, {u i
+
+})
+
+36
+
+for open covers {u i
+some renement {u 3
+
+} of u, and i  {1, 2}. let   hom c(u )(p1, p2), which means that for
+} of both {u 1
+
+} and {u 2
+
+},
+
+  homdesc(c,{u 3
+
+}) (
+
+13p1, 
+
+23p2)
+
+then dene
+
+(u)()  1
+
+23  (u, {u 3
+ homdesc(d,{u 3
+
+})()  13
+})(cid:16)
+
+13(u, {u 1
+
+})(p1), 
+
+23(u, {u 2
+
+})(p2)(cid:17)
+
+with the denitions above, it can be shown that
+
+(u) : c(u)  d(u)
+
+is a well-dened functor between the categories c(u) and d(u).
+
+in order to dene a cartesian functor  : c  d, we need to specify more than the
+functors (u). specically, for any inclusion  : v  u, we need to specify an invertible
+natural transformation
+
+ : 
+
+d  (u) = (v )  
+c
+
+satisfying certain identities. this natural transformation is dened as follows. to each object
+
+{(x), ()}  ob descu (c, {u})  c(u)
+
+(dened with respect to some open cover {u} of u) the natural transformation  assigns
+the following morphism:
+
+ ({(x), ()})  { u,uv (x) : (u)(x)|uv  (u  v )(x|uv ) }
+
+where the  are the invertible natural transformations dening  as a cartesian functor.
+
+it is straightforward to check that the denition given above for  does in fact yield a
+well-dened natural transformation. moreover,  satises the usual pentagonal identity (5).
+specically, if 1 : v  u and 2 : w  v are inclusions of open sets, then the following
+diagram commutes:
+
+2 d  
+
+
+1 d  (u)
+
+12 
+d
+
+
+1= 
+
+2 d  (v )  
+1 c
+
+(12)
+
+d  (u)
+
+12=
+
+2= (w )  
+ 
+c
+12
+
+2 c  
+1 c
+
+(w )  (12)
+c
+
+(20)
+
+where the  are the natural transformations dened in the previous subsection.
+
+thus, we have now dened a cartesian functor  : c  d. put another way, given
+a cartesian functor  : c  d between two presheaves of categories c, d, we have now
+constructed a lift of  to a cartesian functor between the sheacations c and d.
+
+37
+
+in passing, we shall mention that it is straightforward to check that if  : d  e is
+another cartesian functor between presheaves of categories d, e, then the lift is compatible
+with composition  in other words,
+
+g(  ) =   
+
+4.1.5 lifts of 2-arrows
+
+in this section, we shall demonstrate that 2-arrows can also be lifted to sheacations. let
+1, 2 : c  d be a pair of cartesian functors between presheaves of categories c, d, and
+let  : 1  2 be a 2-arrow. we shall now dene a lift  : 1  2 of the 2-arrow  to a
+2-arrow between the sheacations of the cartesian functors.
+
+first, for any open set u and any open cover {u} of u, we shall dene a natural
+
+transformation
+
+(u, {u}) : 1(u, {u}) = 2(u, {u})
+
+between functors from descu (c, {u}) to descu (d, {u}), as follows. let {(x), ()} be
+an object in descu (c, {u}). dene a morphism
+
+(u, {u}) ({(x), ()}) : 1(u, {u}) ({(x), ()})  2(u, {u}) ({(x), ()})
+
+by,
+
+(u, {u}) ({(x), ()})  { (u)(x) : 1(u)(x)  2(u)(x) }
+
+it is easy to check that this is a well-dened morphism in the category descu (d, {u}), and
+moreover that this denes a natural transformation 1(u, {u})  2(u, {u}).
+
+we should mention that if {u 1
+
+} and  : {u 2
+
+}  {u 1
+
+} and {u 2
+
+} are both open covers of u, with {u 2
+
+} a
+} the set of inclusion maps, then the following
+
+renement of {u 1
+diagram commutes:
+
+  1(u, {u 1
+
+})
+
+(u,{u 1
+
+}) 
+
+  2(u, {u 1
+
+})
+
+12= 1(u, {u 2
+
+12= 2(u, {u 2
+
+})  
+ (u,{u 2
+})  
+
+})
+
+(21)
+
+where  is the natural transformation dened earlier, relating (u, {u}) dened with re-
+spect to distinct open covers.
+
+now, we shall dene the 2-arrow  : 1  2, lifting  to the sheacations. for each
+open set u, let p  ob c(u), that is, p  ob descu (c, {u}) for some open cover {u} of
+u. dene a morphism
+
+(u)(p ) : 1(u)(p )  2(u)(p )
+
+by,
+
+(u)(p )  (u, {u})(p )
+
+38
+
+it is straightforward to check that (u) is a natural transformation for each open u, and
+moreover satises the usual compatibility relation, so  is a 2-arrow.
+
+in passing, we shall mention that it is easy to check that if 3 : c  d is another cartesian
+functor between presheaves of categories c, d, and if 1 : 1  2 and 2 : 2  3 are a
+pair of 2-arrows between the cartesian functors, then the sheacation is compatible with
+composition:
+
+g(2  1) = f2  f1
+
+4.2 pullbacks of stacks
+
+in this section we shall dene pullbacks of stacks and some associated technology. we shall
+begin by dening pullbacks of stacks themselves, then go on to describe pullbacks of cartesian
+functors, analogues of natural transformations between composed pullbacks of stacks, and
+more.
+
+4.2.1 pullbacks of stacks
+
+let f : x  y be a continuous map, and let c be a presheaf of categories on y . in this
+subsection we shall describe how to construct a stack f c on x.
+
+we should warn the reader that this section is extremely technical; the reader should
+
+probably skip this subsection on a rst reading.
+
+before we describe the construction of pullbacks of stacks, we shall take a moment to
+review the denition of pullbacks of sheaves of sets, which are closely analogous (and much
+simpler technically). if f is a sheaf of sets on a space y and f : x  y is a continuous
+map, then we dene the presheaf of sets f 1f to be the direct limit
+
+f 1f (u) = lim
+
+
+
+f (v )
+
+v f (u )
+
+over open subsets v  y containing f (u), for any open set u. restriction maps are dened
+in a straightforward manner. to recover a sheaf, we sheafy f 1f . we shall follow a very
+closely analogous procedure in dening pullbacks of stacks.
+
+in order to construct the stack f c, we shall rst construct a presheaf of categories which
+we shall denote f 1c. once we have constructed the presheaf f 1c on x, we shall sheafy
+f 1c to recover a sheaf of categories we shall denote f c. the construction we will give
+for f 1c will work for c a presheaf of categories, not necessarily a stack. readers following
+[5, section 5] will note that our usage of the notation f  and f 1 diers slightly from that
+reference.
+
+39
+
+in order to dene f 1c for a presheaf of categories c on y , one rst has to describe
+how to construct categories f c(u) associated to each open set u  x, then how to build
+restriction functors and invertible natural transformations.
+
+for each open set u  x, the category f 1c(u) is dened to be the direct limit
+
+f 1c(u) = lim
+f (u )v
+
+
+
+c(v )
+
+where the direct limit is over open sets v  y such that f (u)  v .
+
+we shall now describe precisely how one denes a direct limit of categories. we shall
+
+closely follow the prescription of [5, section 5.2].
+
+take as objects in f 1c(u), the disjoint union of all objects in all the categories c(v ).
+
+in other words,
+
+ob
+
+lim
+f (u )v
+
+
+
+c(v ) = a ob c(v )
+
+it remains to dene the set of morphisms in the category f 1c(u). let p1  ob c(v1),
+
+p2  ob c(v2). for any diagram
+
+v1
+
+1 w
+
+2 v2
+
+(22)
+
+for w an open set in y containing f (u), dene sw to be the set of morphisms  : 
+1p1 
+2p2 in c(w ). now, dene an equivalence relation  on the disjoint union `w sw as follows:
+
+for any diagram (22) and a similar diagram
+
+
+1 w 
+
+
+2 v2
+
+v1
+
+(w  open, f (u)  w ) we say the morphism  : 
+ : 
+
+2 p2 if and only if there exists a diagram
+
+1 p1  
+
+1p1  
+
+2p2 is equivalent to the morphism
+
+
+ z
+
+
+ w 
+
+w
+
+(z open, f (u)  z) such that
+
+1. i = 
+
+i for i  {1, 2},
+
+2. there is a commutative diagram
+
+(1)p1
+
+,1(p1)
+ 
+
+1p1
+
+,1(p1) 
+
+
+1 p1
+
+()
+ 
+
+2 p2
+
+,2(p2)
+ (2)p2
+
+()
+ 
+
+2p2
+ ,2(p2)
+
+(23)
+
+where the  are the natural transformations appearing in the denition of c as a
+presheaf of categories.
+
+40
+
+the set of morphisms hom(p1, p2) in the category f 1c(u) is dened to be the disjoint
+
+union `w sw , modulo the equivalence relation  described above.
+
+so far we have dened objects and morphisms in the direct limit category f 1c(u). we
+shall now take a moment to describe composition of morphisms, as the correct denition
+might not be obvious to the reader. let p1, p2, p3  ob (f 1c)(u), i.e., pi  ob c(vi) for
+some open sets vi  f (u). let   homf 1c(u )(p1, p2), and   homf 1c(u )(p2, p3). in
+other words, there exists open sets v, v, such that f (u)  v  v1  v2 and f (u)  v 
+v2  v3, with
+
+  homc(v )(p1|v , p2|v )
+  homc(v)(p2|v, p3|v)
+
+we dene    as follows. let v be an open set such that f (u)  v  v  v. then,
+dene
+
+    1
+
+vv  |v  vv  1
+
+v v  |v  v v
+
+ homc(v ) (p1|v , p3|v )
+
+it can be shown that this denition is well-dened, i.e., if    and   , then    
+  .
+
+so far we have described the categories f 1c(u) associated to any open set u  x. in
+order to dene f 1c as a presheaf of categories, we still need to dene restriction functors
+and appropriate natural transformations.
+
+before we describe restriction functors, however, we shall take a moment to reect on the
+meaning of the denition of the categories f 1c(u) given above. consider, for example, the
+special case of the identity map id : x  x. it can be shown that id1c(u) is equivalent (as
+a category) to c(u). naively, the reader might nd this result quite surprising  the direct
+limit dening id1c(u) contains more objects than c(u). however, although it contains
+more objects, there are also more isomorphisms, and in fact the number of isomorphism
+classes of objects in both categories is the same. for example, if p1, p2  ob id1c(u) are
+two objects, then it can be shown that p1 is isomorphic to p2 if and only if p1|u is isomorphic
+to p2|u .
+
+we shall not work through the details of proving that these are equivalent categories,
+though we shall take a moment to outline the general idea. dene a functor f : c(u) 
+id1c(u) by, f maps an object p 7 p , and f maps a morphism  7 . dene a functor
+g : idc(u)  c(u) as follows. g is dened to map an object p 7 p |u . suppose p1 
+ob c(v1) and p2  ob c(v2) for open sets v1, v2 such that u  v1  v2  in other words, let
+p1 and p2 be objects of the category id1c(u). let   homc(v ) (p1|v , p2|v ) for some open
+set v , u  v  v1  v2, i.e.,   homid 1c(u )(p1, p2). then dene g() = 1
+u v  |u  u v .
+it can be shown that g is a well-dened functor (meaning, for example, that    implies
+
+41
+
+g() = g()), and that f and g are inverses to one another, in the sense that there exist
+invertible natural transformations f  g  idid 1c(u ) and g  f  idc(u ).
+
+in fact, more generally it can be shown that if f : x  y is any open map (meaning, the
+image of any open set is open), then for all open u  x, the category f 1c(u) is equivalent
+to the category c(f (u)).
+
+now that we have given some intuition for the meaning of the direct limits used above,
+we shall describe the restriction functors and natural transformations needed to describe
+f 1c as a presheaf of categories.
+
+given the categories f 1c(u), we shall now dene the pullback functors  : f 1c(u1) 
+f 1c(u2) for  : u2  u1. in fact, these restriction functors are straightforward to dene.
+note that  induces a map
+
+{ v | f (u1)  v }  { v | f (u2)  v }
+
+given by v 7 v (any open set containing f (u1), also contains f (u2)). we dene  to act
+on objects p  f 1c(u1) as, p 7 p , and on morphisms  as,  7 . it should be clear
+that this map yields a well-dened12 functor f 1c(u1)  f 1c(u2).
+
+it should be clear that the invertible natural transformations (12)  
+
+1 needed
+to dene a presheaf of categories are trivial. in other words, if p  ob f 1c(u), meaning
+p  ob c(v ) for some open v  f (u), then both the functors (12) and 
+1, for any
+pair of composable inclusions 1, 2, map p 7 p , and so the morphism that the requisite
+natural transformation should assign to p is given by the identity morphism.
+
+2  
+
+2  
+
+so far we have dened a presheaf of categories f 1c. even if c is a sheaf, the presheaf
+f 1c is, in general, not itself a sheaf. in order to get a sheaf from the presheaf f 1c, we
+must sheafy the presheaf. we shall denote the result of the sheacation by f c.
+
+as an illuminating example, consider idc, where id : x  x is the identity map and c
+is a stack. we pointed out earlier that each category idc(u) is equivalent to the category
+c(u), for any open set u. it should now be clear that idc is equivalent to c as a stack.
+
+if f is a homeomorphism, for example, and c is a stack, then f 1c is already a stack,
+not just a presheaf of categories. stronger statements can be made, but this is all we need
+for later use.
+
+12for example, if   , then it should be clear that ()  ().
+
+42
+
+4.2.2 pullbacks of cartesian functors
+
+let f : x  y be a continuous map, and let  : c  d be a cartesian functor between
+presheaves of categories c, d on y . we shall construct a cartesian functor
+
+f  : f c  f d
+
+by rst constructing a cartesian functor
+
+f 1 : f 1c  f 1d
+
+between the presheaf pullbacks f 1c, f 1d on x, and using the fact that a cartesian functor
+between presheaves of categories lifts to a cartesian functor between the sheacations.
+
+we shall rst dene functors
+
+f 1(u) : f 1c(u)  f 1d(u)
+
+for u  x an open set.
+
+we dene f 1(u) on objects as follows. recall
+ob f 1c(u) = a
+
+f (u )v
+
+ob c(v )
+
+so p  ob f 1c(u) means, p  ob c(v ) for some open v  f (u). dene the action of
+f 1(u) on p as,
+
+p 7 (v )(p )  ob d(v )  ob f 1d(u)
+
+now we shall dene f 1(u) on morphisms. let p1, p2  ob f 1c(u), meaning, pi 
+ob c(vi) for open vi  f (u) and i  {1, 2}. let   homf 1c(u )(p1, p2). in other words,
+there exists open v, f (u)  v  v1  v2, such that   homc(v )(p1|v , p2|v ). dene
+f 1(u) on  as,
+
+ 7 1
+
+v v2(p2)  (v)()  v v1(p1)
+ homd(v) (cid:16)(v1)(p1)|v , (v2)(p2)|v(cid:17)
+
+where  is the invertible natural transformation appearing in the denition of  : c  d as
+a cartesian functor.
+
+it is straightforward to check that f 1(u), as given above, yields a well-dened functor
+
+f 1c(u)  f 1d(u).
+
+in order to create a cartesian functor f 1, it remains to specify invertible natural
+
+transformations
+
+f 1 : 
+
+f 1d  f 1(u1) = f 1(u2)  
+
+f 1c
+
+43
+
+for inclusions  : u2  u1.
+
+in fact, the requisite natural transformations are trivial. let p  ob f 1c(u1), meaning
+p  ob c(v ) for some open v  f (u1). first, note p |u2 is given by the same p  ob c(v ),
+from the denition of restriction functor for pullbacks. moreover,
+
+f 1(u1)(p )|u2 = f 1(u2)(p |u2) = (v )(p )  ob d(v )  ob f 1d(u2)
+
+clearly, the morphism that the natural transformation f 1 assigns to the object p is the
+identity morphism on (v )(p ). this yields a well-dened natural transformation, satisfying
+the usual pentagonal identity.
+
+thus, we have dened a cartesian functor f 1 : f 1c  f 1d.
+
+now that we have dened a cartesian functor between the presheaves f 1c and f 1d,
+we can use the fact that cartesian functors between presheaves lift to cartesian functors
+between sheacations to immediately recover a cartesian functor f :
+
+f  : f c  f d
+
+in passing, we shall mention that if we have another cartesian functor  : d  e between
+presheaves of categories on x, then it is straightforward to check that pullbacks of cartesian
+functors are compatible with composition of cartesian functors. in other words,
+
+f 1(  ) = f 1  f 1
+
+and so, using an analogous result for sheacations, we nd
+
+f (  ) = f   f 
+
+4.2.3 pullbacks of 2-arrows
+
+let f : x  y be a continuous map, and let 1, 2 : c  d be cartesian functors between
+presheaves of categories c, d. let  : 1  2 be a 2-arrow between the cartesian functors.
+in this section we shall construct a 2-arrow
+
+by rst constructing a 2-arrow
+
+f  : f 1 = f 2
+
+f 1 : f 11 = f 12
+
+between the pullbacks f 11, f 12, and using the fact that a 2-arrow lifts to a 2-arrow
+between sheacations.
+
+44
+
+we shall construct f 1 as follows. let u  x be an open set, and let p  ob f 1c(u),
+
+that is, p  ob c(v ) for some open v  f (u). dene a morphism
+
+(f 1)(u)(p ) : (f 11)(u)(p )  (f 12)(u)(p )
+
+by,
+
+(f 1)(u)(p )  (v )(p ) : 1(v )(p )  2(v )(p )
+
+it is easy to check that this denes a natural transformation
+
+(f 1)(u) : (f 11)(u) = (f 12)(u)
+
+and moreover, for any inclusion  : u2  u1 of open subsets of x, these natural transfor-
+mations are compatible with the natural transformations f 1 dening f 11 and f 12
+as cartesian functors.
+
+thus, we have dened a 2-arrow f 1 : f 11  f 12.
+
+now that we have dened a 2-arrow between the cartesian functors f 11 and f 12,
+we can use the fact that 2-arrows lift to 2-arrows between sheacations to immediately
+recover a 2-arrow f :
+
+f  : f 1 = f 2
+
+in passing, we shall mention that if we have another cartesian functor 3 : c  d and a
+pair of 2-arrows 1 : 1  2, 2 : 2  3, then pullback is compatible with composition.
+in other words,
+
+by using the analogous result for sheacations, we nd
+
+f 1(2  1) = (f 12)  (f 11)
+
+f (2  1) = (f 2)  (f 1)
+
+4.2.4 analogues of natural transformations
+
+in this section we shall dene an analogue of natural transformation for compositions of
+pullbacks. more precisely, let f : x  y and g : y  z be continuous maps between
+topological spaces. for any stack c on z, we shall dene a cartesian functor
+
+with the properties
+
+c
+
+gf : (gf )c  f gc
+
+1. for any cartesian functor  : c  d between stacks on z, the following diagram
+
+commutes:
+
+(gf )c
+gf 
+c
+f gc
+
+(gf )
+ (gf )d
+ d
+f g f gd
+
+gf
+
+45
+
+(24)
+
+2. if f : x  y , g : y  z, h : z  w are three continuous maps, then for any stack c
+
+on w we have the commuting diagram
+
+(hgf )c
+
+h,gf 
+((gf )  h) c
+
+hg,f (f   (hg)) c
+ h,g
+
+g,f (f   g  h) c
+
+(25)
+
+which the reader should immediately recognize as being analogous to diagram (1).
+
+moreover, the cartesian functor gf : (gf )c  f gc will be invertible, in the sense that
+there exists a cartesian functor 1
+gf : f gc  (gf )c and invertible 2-arrows   1  id
+and 1    id.
+
+in order to dene , we shall work at the level of presheaves of categories and dene a
+
+cartesian functor
+
+gf : (gf )1c  f 1g1c
+
+furthermore, we shall implicitly assume that the map f is open (i.e., images of open sets
+are open), and that g is such that g1c is a stack, not just a presheaf of categories. these
+restrictions could almost certainly be weakened; however, in this paper we shall only be
+interested in cases in which both f and g are homeomorphisms, so we shall not investigate
+these conditions further.
+
+to dene the cartesian functor gf : (gf )1c  f 1g1c, we shall rst dene functors
+
+gf (u) : (gf )1c(u)  f 1g1c(u)
+
+for open sets u  x.
+
+we dene the functor gf (u) on objects as follows. let p be an object in (gf )1c(u),
+
+which is to say, p  ob c(v ) for some open v  (gf )(u). the functor gf (u) acts as
+
+p 7 gf (u)(p )  p  a
+
+ob c(v )
+
+v (gf )(u )
+
+ a
+
+a
+
+v g(v )
+
+ob c(v ) = ob f 1g1c(u)
+
+v f (u )
+
+we dene the functor gf (u) on morphisms as follows. let p1, p2 be objects in
+(gf )1c(u), which is to say, pi  ob c(vi) for open vi  (gf )(u), i  {1, 2}. let
+  hom(gf )1c(u )(p1, p2), which means that for some open v, (gf )(u)  v  v1  v2,
+  homc(v)(p1|v , p2|v ). the functor gf (u) acts on  as,
+
+ 7 gf (u)()  
+
+46
+
+in terms of equivalence classes, denoted by brackets [ ], the functor gf (u) maps []gf to
+[[]g]f .
+
+in order to dene a cartesian functor gf : (gf )1c  f 1g1c, we must specify an
+
+invertible natural transformation
+
+gf : 
+
+f 1g1  gf (u) = gf (v )  
+
+(gf )1
+
+for every inclusion  : v  u. we dene this natural transformation to be the trivial one.
+in other words, given an object p in (gf )1c(u), which is to say, p  ob c(v ) for some
+open v  (gf )(u), we dene gf (p ) = idc(v )(p ). this assignment of morphisms to objects
+clearly denes a natural transformation, and moreover it is easy to see that  satises the
+pentagonal identity for natural transformations in cartesian functors.
+
+thus, we have now dened a cartesian functor gf : (gf )1c  f 1g1c. it is straight-
+forward to check that this denition satises the two properties listed at the beginning of
+this section, and moreover that this cartesian functor admits an inverse cartesian functor
+1
+gf , such that the composite functors   1 and 1   can be identied with identity
+functors, up to invertible 2-arrows.
+
+finally, we can lift this cartesian functor to a cartesian functor between sheacations
+
+satisfying the properties listed at the beginning of this section.
+
+gf : (gf )c  f gc
+
+4.3 stalks of stacks
+
+for a presheaf of sets f on a space x, recall that one can dene a stalk of the sheaf f at
+the point x  x to be the direct limit
+
+over open sets u  x containing the point x  x.
+
+fx  lim
+
+u x
+
+f (u)
+
+we can perform the analogous construction for presheaves of categories. dene the stalk
+
+of a presheaf of categories c at a point x  x to be the direct limit
+
+cx  lim
+
+u x
+
+c(u)
+
+over open sets u  x containing the point x  x. this direct limit is dened in precise
+analogy with the direct limits dened in the previous two sections. note that just as the
+stalk of a presheaf of sets is a set, the stalk of a presheaf of categories is a category.
+
+47
+
+this notion of stalk may give the reader some degree of intuition for stacks. furthermore,
+one ought to be able to work out many stack-variants of other concepts from ordinary sheaves.
+as we shall not use stalks of presheaves of categories in this paper, or other stack-theoretic
+versions of other sheaf theory concepts, we shall not speak about such matters any further.
+
+5 technical notes on gerbes
+
+in this section we shall make some highly technical remarks on gerbes. in particular, after
+discussing pullbacks of gerbes and dening torsors, we shall speak in detail about gauge
+transformations of gerbes, and use such ideas to derive some basic facts about gerbes which
+were mentioned earlier in this paper. many of the basic ideas are taken from [5, section 5].
+
+readers studying this paper for the rst time are urged to skip this section.
+
+5.1 pullbacks of gerbes
+
+let f : x  y be a continuous map, and c a gerbe on y with band a. it is easy to check
+that f c is a gerbe on x, with band f a [5, prop. 5.2.6]. moreover, the element of the sheaf
+cohomology group h 2(x, f a) characterizing f c is precisely the pullback of the element of
+the sheaf cohomology group h 2(y, a) characterizing c [5, section 5.2], as the reader might
+have guessed.
+
+if c has a connective structure, then (at least for f a dieomorphism) one naturally
+obtains a connective structure on f c. let co denote the connective structure on c, meaning
+that co is a cartesian functor
+
+co : c  torsy (1)
+
+which is compatible with the bands of either gerbe. this cartesian functor can be lifted to
+a cartesian functor
+
+f co : f c  f torsy (1)
+
+and at least in the special case that f is a dieomorphism (the only case we shall need),
+f torsy (1) = torsx(1). thus, at least for f a dieomorphism we nd that a connective
+structure on c naturally denes a connective structure on f c.
+
+let k denote a curving on (c, co). at least in the case that f is a dieomorphism, we
+can pullback k to a curving f k on (f c, f co). we shall outline the details here. since
+f is assumed to be a dieomorphism, we know that f c = f 1c, and so it suces to dene
+f k at the level of f 1c and f 1co. let u  x be open, and let p  ob (f 1c)(u), i.e.,
+
+48
+
+p  ob c(v ) for some open v  f (u). recall that by denition,
+
+(f 1co)(u)(p ) = co(v )(p )
+
+let  be a section of (f 1co)(u)(p ), which is to say, a section of co(v )(p ). we are now
+nally ready to dene f k. dene
+
+(f k)()  (f |u ) [k()]
+
+it is straightforward to check that this denition satises the dening axioms for a curving.
+
+to summarize, there exist natural notions of pullback for both gerbes and connections
+
+on gerbes.
+
+5.2 torsors
+
+most mathematical descriptions of gerbes rely heavily on torsors. for the most part, we have
+strenuously avoided speaking of torsors in this text, but at times their use is unavoidable.
+in this section we shall dene torsors. our discussion will largely follow [5, section 5.1] and
+[22].
+
+a torsor with respect to a group g is a set with an action of g that is free and transitive.
+an example of a g-torsor for a topological group g is the group g itself (though when
+described as a torsor, one implicitly drops the group structure). let c (g) denote the group
+of smooth maps from a manifold x into a lie group g, then an example of a c (g)-torsor
+is any principal g-bundle. (some authors abuse notation and refer to a principal g-bundle
+as a g-torsor, rather than a c (g)-torsor; we shall specically avoid such mangled usage.)
+let 1(x) denote the abelian group consisting of 1-forms on a manifold x, then an example
+of an 1(x)-torsor is the space of connections on any principal u(1)-bundle. (any two such
+connections dier by a 1-form, which can be seen as follows: let a
+ denote two
+locally-dened connections on the bundle with respect to a good open cover {u}. then
+a  a = a  a = d ln g on overlaps, so in particular a  a is a globally-dened
+1-form.)
+
+ and a
+
+the torsors that we use in this paper are torsors with respect to a sheaf of abelian groups,
+not just a group. a torsor with respect to a sheaf of groups (say, a) is a sheaf of sets, say,
+f , such that the set f (u) associated to any open set u is a torsor with respect to the group
+a(u), and such that the action of a commutes with restriction maps.
+
+a morphism of a-torsors  : f  g is a morphism of sheaves of sets, such that the
+
+action of a commutes with .
+
+49
+
+an example of a torsor with respect to the sheaf13 a = c (g) of c  maps into g is
+
+the sheaf of local sections of a smooth principal g-bundle.
+
+the set of isomorphism classes of a-torsors has an (abelian) group structure. let f , g
+be a pair of a-torsors. the product of sheaves f  g is an (a  a)-torsor. we dene the
+a-torsor f  g (the result of the group operation) to be the sheaf associated to the presheaf
+
+(f  g)  a
+
+a  a
+
+where a  a acts on a via the product map a  a  a.
+
+given any a-torsor f , there is a natural denition of f 1. specically, the a-torsor
+f 1 is dened by the property that for any open u  x, the set f 1(u) is the set of torsor
+isomorphisms f (u)  a(u).
+
+it can be shown that the group of isomorphism classes of a-torsors, over a space x, is
+
+in natural bijection with the group h 1(x, a).
+
+it should be clear that that any morphism of a-torsors, over the same space, is necessarily
+an isomorphism. this is a generalization of a similar result for principal g-bundles [16,
+section 4.3], namely that any morphism of principal g-bundles for xed g over the same
+base space is necessarily an isomorphism.
+
+we should also mention a technical lemma which we shall use in what follows. let i, k
+be a pair of a-torsors over a space x, for some sheaf of abelian groups a. we shall show
+that in order to dene an isomorphism i  k of a-torsors i, k, it suces to show how a
+set of local sections {s} of i, dened with respect to an open cover {u} of x, are mapped.
+to dene the isomorphism for other elements of the sets i(u), k(u), use the action of the
+group a(u)  in other words, any other element of i(u) will dier from s by an element
+of the group a(u), so we can dene its image to be the image of s modulo the same group
+element, thus explicitly recovering an isomorphism of sets which, by construction, commutes
+with the action of a(u). we can construct maps i(w )  k(w ) for w  u for some
+u by using restriction in the obvious way, and we can construct maps for w  u by
+performing all possible gluings of elements of {i(u)}.
+
+more information on torsors can be found in, for example, [22], [23, section viii.2], or
+
+[5, section 5.1].
+
+13note our notation is slightly ambiguous: we use c(g) to denote both the group of smooth maps into
+
+g, and the sheaf of smooth local maps into g. the correct interpretation should be clear from context.
+
+50
+
+5.3 gauge transformations of gerbes
+
+just as maps x  g dene gauge transformations of principal g-bundles on a space x, we
+will see explicitly in this section that bundles dene gauge transformations of gerbes of band
+c (g).
+
+to fully explain these ideas will take some time. much of the material we present in
+
+subsections 5.3.1 and 5.3.5 is taken from [5, section 5.2].
+
+5.3.1 gauge transformations of objects
+
+let c denote a gerbe on a manifold x, with band a. we shall assume a = c (g) for some
+abelian lie group g, for simplicity. let u  x be an open subset of a space x, and let i
+be a principal g-bundle on u. strictly speaking, we should take i to be a a|u -torsor, not a
+principal g-bundle; however, where possible, we are trying to avoid the language of torsors.
+
+given any object p  ob c(u), we shall show how to use i to construct another object
+we shall denote p i  ob c(u). let {u} be a good open cover of u, so that i(u) 6=  for
+all . let {s  i(u)} be a set of local sections of i, over the open subsets u. dene g
+to be the (unique) element of a(u) that transports s|u to s|u . (recall that strictly
+speaking, we should interpret i as a torsor, so that there is no natural group law on the {s}
+per se.)
+
+we can now dene the object p  i, using the gluing law for objects, as follows. dene
+
+a set of isomorphisms
+
+by,
+
+ : p |u |u  p |u|u
+
+  ,  g  1
+,
+
+it is straightforward to check that these satisfy the axioms for the gluing law for objects,
+and so from said gluing law we recover a new object in c(u) which we shall denote p  i.
+
+in passing, we should mention a minor technical problem with the description above,
+namely that the object p  i is almost, but not quite, uniquely specied by a set of local
+sections of i. recall that the gluing law for objects yields objects that are unique only up
+to unique isomorphism commuting with the gluing maps . thus, the object p  i is not
+uniquely dened  however, there exists a unique isomorphism (commuting with the gluing
+maps ) between any two objects that one might label p  i. thus, in order to uniquely
+specify an action of a torsor i together with a set of local sections of i on objects, we must
+choose specic examples of p  i for each object p . in the next subsection we shall derive a
+functor describing the action of the torsor i, and it is straightforward to check that for any
+two such functors diering only in the choices made of objects p  i, the isomorphisms
+
+51
+
+between the choices dene a 2-arrow between functors. we shall not speak further about
+this issue, except when absolutely necessary.
+
+in dening the action of a torsor i on objects p , we referred to a specic choice of a
+set of local sections of i. what happens if we choose a distinct set of local sections of i?
+the answer is that any two sets of local sections of i will dene isomorphic objects p  i.
+we shall outline how this is proven in the special case that the two sets of local sections
+in question are dened with respect to the same open cover {u}. (it is straightforward to
+check that the same result also holds for local sections dened with respect to distinct open
+covers, but the details are more cumbersome.) let u  x be an open set, i an a|u -torsor,
+and {s}, {s
+} two sets of local sections of i, both dened over the same open cover {u} of
+u. let p  i and (p  i) denote the two objects obtained from gluing via the local sections
+{s}, {s
+
+}, and let
+
+(p ) : (p  i)|u  p |u
+
+(p ) : (p  i)|u  p |u
+
+denote the corresponding isomorphisms. dene f : (p  i)|u  (p  i)|u by,
+
+f  (
+
+(p ))1  (s
+
+  s)  (p )
+
+  s) to denote the element of the band mapping s 7 s
+
+where we have used (s
+. it is
+straightforward to check that the {f} satisfy the gluing axiom for morphisms, and so there
+exists a (unique) morphism p  i  (p  i). thus, distinct local sections of i dene
+isomorphic objects p  i.
+
+5.3.2 induced equivalences of categories
+
+a a|u -torsor i not only induces a map between objects of the category c(u), but it also
+induces a self-equivalence of the category c(u), which we shall now explain.
+
+we shall denote the proposed functor by i(u). we explained the action of i(u) on
+objects, namely p 7 p  i, in the previous subsection. we dene the action of i(u) on
+morphisms as follows.
+
+let p1, p2 be objects of c(u), and let   homc(u )(p1, p2). let (pi) denote the
+
+isomorphisms
+
+(pi) : (pi  i)|u
+
+ pi|u
+
+(i  {1, 2}) constructed at the same time as the pi  i, in the gluing law for objects, for
+{u} an open cover of u. dene morphisms
+
+(  i)|u : (p1  i)|u  (p2  i)|u
+
+52
+
+by
+
+(  i)|u  ((p2))1  |u  (p1)
+
+one can then use the gluing law for morphisms to glue together the (  i)|u to form a
+(unique) morphism   i : p1  i  p2  i.
+
+it is straightforward to check that the map we have just dened, namely i(u) :  7  i,
+
+completes the denition of a functor i(u) : c(u)  c(u).
+
+in passing, note that the maps  dened above, dene a natural transformation  
+
+ic(u)    idc(u), for  : u  u inclusion.
+
+it is easy to check that there exist invertible natural transformations
+
+i 1(u)  i(u) = idc(u )
+i(u)  i 1(u) = idc(u )
+
+where the i 1(u) are the functors associated to the dual torsors, so each functor i(u) denes
+a self-equivalence of the category c(u).
+
+so far we have shown how an a|u -torsor i (together with a specic choice of local sections
+of i) denes an equivalence of categories i(u) : c(u)  c(u). we shall now use i to dene
+a cartesian functor.
+
+let i be an a-torsor, let {u} be a good open cover of x, and let {s} be a set of local
+sections of i, dened with respect to {u}. we have already demonstrated how to dene
+a family of functors i(u) : c(u)  c(u), each dened by the a|u -torsor i|u and local
+sections {s|u } of i|u , dened with respect to the open cover {u  u} of u. in order to
+dene a cartesian functor i : c  c, it remains to dene invertible natural transformations
+ :   i(u)  i(v )   for each inclusion  : v  u, obeying the usual constraint.
+
+let  : u2  u1 be an inclusion of open sets, and let p  ob c(u1). let
+
+1
+2
+
+(p ) :
+(p ) :
+
+(p  i|u1)|u1u ( = i(u1)(p )|u1u )
+
+ p |u1u
+
+(p |u2  i|u2)|u2u ( = i(u2)(p |u2)|u2u )  p |u2|u2u
+
+be the isomorphisms appearing in the gluing law for objects. dene f : i(u1)(p )|u2|u2u 
+i(u2)(p |u2)|u2u by,
+
+f  (2
+
+(p )|u2u  1,2  1
+2,2
+
+(p ))1  2,2  1
+
+1,2  1
+
+where  are the natural transformations dening c as a presheaf of categories, and we have
+implicitly used the notation ui = ui  u (i  {1, 2}). it is straightforward to check that
+the f satisfy the gluing axiom for morphisms, and so there exists a unique morphism
+
+(p ) : i(u1)(p )|u2  i(u2)(p |u2)
+
+53
+
+such that (p )|u2u = f. moreover, it is straightforward to check that the  dene
+a natural transformation   i(u1)  i(u2)  , and moreover that this set of natural
+transformations makes diagram (5) commute.
+
+thus, we have just dened the natural transformations needed to describe i : c  c
+as a cartesian functor. moreover, it should be clear that i denes a map of gerbes, i.e.,
+commutes with the action of the band.
+
+the cartesian functor i : c  c we dened above depends explicitly upon a choice of
+local sections {s} of i, with respect to some open cover {u} of x. how do two cartesian
+functors dened by distinct choices of local sections of the same a-torsor i dier? it is
+straightforward to check that any two such cartesian functors i : c  c dier by a 2-arrow.
+in other words, if i and i  are two cartesian functors c  c, both associated to the same
+a-torsor i but diering in the choice of local sections, then there exists an invertible 2-arrow
+ : i  i . the natural transformations over each open set u are dened by the morphisms
+p i  (p i) we dened earlier in section 5.3.1, in studying this same issue in the context
+of gauge transformations of individual objects.
+
+} dened over an open cover {u 1
+
+we should also mention an interesting special case of the matter above. let i 1
+
+c denote
+an automorphism of the gerbe c, associated to the a-torsor i and dened by local sections
+{s1
+}, and consider
+the automorphism i 2
+} of i, dened with respect
+to the cover {u 2
+i }. it is straightforward to check that, in this special case, the distinction
+between i 1
+c and i 2
+c is identical to the ambiguity in dening ic on objects, for xed choices of
+local sections. thus, for judicious choices in the denition of i 1
+c is the same functor as
+i 2
+c.
+
+c dened by the local sections {s2
+
+i } be a renement of {u 1
+
+} of x. let {u 2
+
+i  s1
+
+(i)|u 2
+
+c, i 1
+
+i
+
+c and i 2
+
+suppose i 1 and i 2 are a pair of a-torsors. let i 1
+
+c be corresponding automor-
+phisms of the gerbe c. we shall now show that (under the correct circumstances) the gerbe
+automorphism (i 1  i 2)c is identical to the automorphism i 1
+c . assume (without loss of
+generality) that the local sections dening i 1
+c are dened with respect to the same
+open cover {u} of x (if not, restrict to a mutual renement); let {s1
+} denote the
+local sections of i 1, i 2, respectively, dening i 1
+c. then it is straightforward to check
+that (with the usual judicious choices) the gerbe automorphism (i 1 i 2)c dened with respect
+to the local sections14 {s1
+c i 2
+c,
+i.e.,
+
+} of the torsor i 1 i 2 is identical to the composition i 1
+(cid:16) i 1  i 2(cid:17)c
+
+} and {s2
+
+ a(u) s2
+
+c and i 2
+
+c and i 2
+
+c  i 2
+
+= i 1
+
+c  i 2
+c
+
+ : i 1  i 2 is equivalent to a 2-arrow  : i 1
+assume {s1
+
+suppose i 1 and i 2 are a pair of a-torsors. we shall show here that a torsor isomorphism
+c. first, we shall dene some notation.
+c, i 2
+c,
+14our notation is slightly sloppy, in that a(u) is an abelian group, not a ring, and i i(u) is a set, not a
+
+} are local sections of i 1, i 2 dening the gerbe automorphisms i 1
+
+} and {s2
+
+c  i 2
+
+module.
+
+54
+
+assumed to both15 be dened over an open cover {u} of x. assume rst that we are given
+ : i 1  i 2; we shall describe how to construct  : i 1
+c. let u be an open set, and
+c , i 2
+denote the natural transformations associated to i 1
+
+c  i 2
+c by , i.e.,
+
+i
+(p ) : i i
+
+c(u)(p )|u u  p |u u
+
+for p  ob c(u), and i  {1, 2}. then we dene
+
+(u)(p ) : i 1
+
+c(u)(p )|u u  i 2
+
+c(u)(p )|u u
+
+by,
+
+(u)(p )  (cid:16)2
+
+(p )(cid:17)1
+
+ (cid:16)s2
+
+  (s1
+
+)(cid:17)  1
+
+(p )
+
+it is easy to check that the (u)(p ) satisfy the gluing axiom for morphisms, and so can be
+glued together to form a unique morphism
+
+(u)(p ) : i 1
+
+c(u)(p )  i 2
+
+c(u)(p )
+
+whose restriction to u  u is given by (u)(p ). moreover, it is straightforward to check
+that (u) : i 1
+c is
+a 2-arrow. thus, given a torsor isomorphism  : i 1  i 2, we have constructed a 2-arrow
+ : i 1
+
+c(u) is a natural transformation, and nally that  : i 1
+
+c(u)  i 2
+
+c  i 2
+
+c  i 2
+c.
+
+conversely, given a 2-arrow  : i 1
+
+c , we shall now construct a torsor isomorphism
+ : i 1  i 2. we shall dene  by describing the action of  on the local sections {s1
+} of i 1
+c.
+using the same conventions as in the paragraph above, for any open u and p  ob c(u),
+dene g(u  u)(p ) to be the element of the abelian group a(u  u) associated to the
+automorphism
+
+c  i 2
+
+(p )  (u)(p )  (cid:16)1
+2
+
+(p )(cid:17)1
+
+: p |u  p |u
+
+assume without loss of generality16 that {u} is a good cover, and so each category c(u)
+contains a single isomorphism class of objects17. then, for u = u, the band element g(u)
+dened above is independent of the choice of p . dene
+
+(s1
+
+)  g(u)1  s2
+
+
+
+to dene a torsor isomorphism, it suces to describe the action on a set of local sections
+associated to a cover, which we have just done. thus, we have just associated a torsor
+isomorphism  : i 1  i 2 to the 2-arrow  : i 1
+c. to summarize the results of this
+paragraph and the last, a torsor isomorphism  : i 1  i 2 is equivalent to a 2-arrow  : i 1
+c 
+i 2
+c.
+15if they are not both dened over the same open cover, then restrict to a mutual renement.
+16if not, restrict to a suitable renement.
+17we shall prove later that isomorphism classes of objects in each category c(u ) are in one-to-one corre-
+
+c  i 2
+
+spondence with elements of h 1(u, a|u ).
+
+55
+
+in passing, we should also speak briey on pullbacks, and how the pullback of an auto-
+morphism associated to a torsor i is related to the automorphism associated to the pullback
+of the torsor. let f : x  y be a continuous map, and let c be a gerbe on y , with band
+a. let i be an a-torsor, and let ic denote an associated automorphism of c (dened with
+respect to local sections {s}, over an open cover {u} of y ). let (f i)c denote the auto-
+morphism of the gerbe f c dened by the f a-torsor f i, with respect to the same open
+sections {s} of f i, over the open cover {f 1(u)} of x. it is straightforward to check
+that, at least in the case that f is a homeomorphism (so that f 1c = f c and f 1i = f i),
+the gerbe automorphisms f (ic) and (f i)c coincide18.
+
+5.3.3 action on connections
+
+in this section we shall describe how gauge transformations of gerbes act on connective
+structures and curvings. we briey touched on these matters in section 3.5; here we re-
+examine them in more detail.
+
+to x notation, let c be a gerbe with connective structure co. let u  x be open, and
+p  ob c(u). let i be an a|u -torsor, let {u} be a good open cover of u, and let {s}
+be a set of local sections of i, dened with respect to {u}. let ic : c|u  c|u denote the
+gerbe automorphism corresponding to i with sections {s}.
+
+consider the action of ic on p . by denition of p  i = ic(u)(p ), we have morphisms
+
+(p ) : (p  i)|u such that the following diagram commutes:
+,
+
+(p  i)|u |u
+
+,
+
+(p  i)|u
+
+ (p )|u 
+
+p |u|u
+
+, p |u
+
+ss
+
+p |u
+
+,
+
+(p  i)|u|u
+
+ (p )|u
+
+p |u|u
+
+where the  are the natural transformations dening c as a presheaf of categories, and ss
+denotes the band element mapping s  s.
+
+by applying the cartesian functor co, we can (with a bit of work) recover the following
+
+commutative diagram:
+
+co(p  i)|u |u
+
+
+
+,
+
+co(p  i)|u
+
+,
+
+co(p  i)|u|u
+
+
+
+co(p )|u |u
+
+, co(p )|u
+
+d ln (ss)
+
+
+
+co(p )|u
+
+, co(p )|u|u
+
+(26)
+
+18in fact, we are being slightly sloppy. in dening the action of i, recall there was a minor ambiguity in
+the denition of the action on the objects of c. distinct choices dier by unique morphisms, so we assumed
+such choices were made, and thereafter ignored the point. essentially the same problem arises here. the
+correct statement is that f (ic) and (f i)c dier by at most a unique 2-arrow; but by making judicious
+choices, they can be assumed to coincide.
+
+56
+
+where we have abbreviated co(u)(p ) by co(p ), for example, and where the map
+
+co(u)(p  i)|u|u  co(u)(p )|u|u
+
+is given by the composition
+
+()1  ()1  co(u)((p )|u)    
+
+the  are the natural transformations dening co as a cartesian functor.
+
+from diagram (26), it should be clear that co(u)(p  i) and co(u)(p ) dier by the
+1|u -torsor of connections on i. moreover, a precise specication of how a particular section
+  (u, co(u)(p )) is mapped is determined by the local sections {s} determining ic,
+and is equivalent to a choice of connection on i. (compare, for example, [5, section 5.3,
+equn (5-11)].)
+
+in other words, let {a} be a family of 1-forms on {u} dening a connection on i.
+assume the action of ic on sections of co(u)(p ) is determined by {a}. then for any
+  (u, co(u)(p |u),  7  + a under the action of ic.
+
+how does ic act on a curving k on (c, co)? the answer should be immediately clear
+
+from the denition of curving:
+
+k( + a) = k() + da
+
+5.3.4 gauge transformations commute with gerbe maps
+
+let f : c  d be a map between gerbes c, d, that is, a cartesian functor commuting with
+the action of the band. assume c and d both have band a, and are both dened over a
+space x.
+
+in this section, we shall show that if i is any a-torsor, then there exists an invertible
+
+2-arrow
+
+ : f  ic = id  f
+
+where ic : c  c and id : d  d are gerbe maps induced by the a-torsor i.
+
+in fact, this is quite straightforward. without loss of generality19, assume that the local
+sections of i dening ic and id are identical. let {u} be a good open cover of x, and let
+{s} be the local sections of i over {u} which dene ic and id. let
+
+c
+ic(u)(p )|u u  p |u u
+(p ) :
+ (p ) : id(u)(p )|u u  p |u u
+d
+
+for p  ob c(u)
+for p   ob d(u)
+
+19as the gerbe automorphisms dened by distinct choices of local sections of i dier by an invertible
+
+2-arrow, clearly we are free to choose any convenient sets of local sections without changing the result.
+
+57
+
+(for open u  x) denote the isomorphisms obtained in the denition of gauge transforma-
+tion. dene
+
+(u)(p ) : (f  ic)(u)(p )|u u  (id  f )(u)(p )|u u
+
+for open u  x and p  ob c(u) by,
+
+(u)(p )  d
+
+ (f (u)(p ))1  (cid:16)f
+
+(cid:17)1
+
+ f (u  u)(cid:16)c
+
+(p )(cid:17)  f
+
+
+
+where the f are the natural transformations dening f as a cartesian functor.
+it is
+straightforward to check that the (u)(p ) satisfy the gluing axiom for morphisms, so they
+can be glued together to form a unique morphism
+
+(u)(p ) : (f  ic)(u)(p )  (id  f )(u)(p )
+
+such that (u)(p )|u u = (u)(p ).
+
+it is straightforward to check that (u) denes a natural transformation (f  ic)(u) 
+
+(id  f )(u), and moreover that  denes an invertible 2-arrow f  ic  id  f .
+
+thus, loosely speaking, gauge transformations commute with gerbe maps.
+
+5.3.5 sheaves of morphisms as torsors
+
+if p1 and p2 are any two objects of c(u), then the sheaf of (iso)morphisms homu (p1, p2) is
+= aut(p1) acts on the left, and it should be clear that
+an a|u -torsor20. in particular, a|u
+this action is free and transitive  for any open v  u, the set hom(p1|v , p2|v ) is either
+empty (and so trivially an a(v )-torsor), or is nonempty and is manifestly a torsor under the
+group a(v ). thus, as a sheaf of abelian groups, a|u acts freely and transitively on the sheaf
+homu (p1, p2), and moreover its action commutes with restriction maps, so homu (p1, p2) is
+an a|u -torsor.
+
+one can easily check that if f : c  d is a map of gerbes of band a over the same space
+
+x, then for any open u and for any two objects pa, pb  ob c(u), the induced map
+
+homu (pa, pb)  homu (f (u)(pa), f (u)(pb))
+
+is a morphism of torsors. as any morphism of a-torsors is an isomorphism, this means that
+the a-torsors homu (pa, pb) and homu (f (u)(pa), f (u)(pb)) are isomorphic.
+
+it is straightforward to check that the torsor homu (p1, p2) induces the gauge trans-
+formation on c(u) that maps the object p1 to the object p2, as the reader has probably
+guessed.
+
+20those readers also studying [5, section 5] will note that in that reference, hom(p1, p2) is instead denoted
+
+isom(p1, p2).
+
+58
+
+moreover, it is straightforward to see that homu (p, p  i) = i as a|u -torsors, for any
+a|u -torsor i. let {u} be a good open cover of u, and let {s  i(u)} be the set of local
+sections of i dening the map p 7 p  i. recall that we constructed p  i using the gluing
+law for objects, and the same gluing law also yields a set of isomorphisms
+
+(p ) : (p  i)|u  p |u
+
+we can dene an isomorphism of a|u -torsors by specifying that the sections {s} should map
+to the isomorphisms {1
+ }. as mentioned in the section on torsors, to dene an isomorphism
+between two torsors, it suces to describe how a set of local sections (dened with respect to
+an open cover) are mapped, thus we have now dened an isomorphism i  homu (p, p i)
+of a|u -torsors.
+
+one implication of the fact that homu (p, p  i) = i is that the action of i is free on
+equivalence classes of objects in c(u): p i is isomorphic to p if and only if i is trivializable,
+i.e., only if i has a global section does there exist a morphism p  p  i, not just between
+their restrictions to open subsets.
+
+moreover, the action of torsors on objects is not only free, but transitive: any two objects
+p1, p2  ob c(u) can be related by a set of local sections of the a|u -torsor homu (p1, p2).
+
+thus, the set of equivalence classes of objects of c(u) is a torsor under the action of the
+
+abelian group h 1(u, a|u ).
+
+this means that there exists a (noncanonical) one-to-one correspondence between equiv-
+alence classes of objects of c(u) and equivalence classes of a|u -torsors. in the case that
+a = c (g) for some abelian g, we can rephrase this by saying that equivalence classes
+of objects of c(u), for any gerbe c with band a, are in one-to-one correspondence with
+equivalence classes of principal g-bundles on u. this implies that all gerbes with band
+a = c (g) look locally like the trivial gerbe tors(g), just as all bundles look locally like a
+trivial bundle.
+
+this last result gives a great deal of insight into gerbes, and so is worth repeating. just
+as all bundles can be locally trivialized, all gerbes can be locally trivialized. gerbes with
+band a = c (g) for abelian g are locally isomorphic to the stack of principal g-bundles,
+a trivial gerbe.
+
+we shall conclude this section by explicitly demonstrating such local trivializations. local
+trivializations are not needed to dene a sheaf  however, as they can be used to give insight
+into local structure, we shall work them out explicitly. more precisely, for any open set u
+such that c(u) 6= , we shall construct functors
+
+f (u) :
+f (u) : tors(a)(u) 
+
+c
+
+ tors(a)(u)
+
+c(u)
+
+59
+
+such that there exist invertible natural transformations f (u)  f (u)  id and f (u) 
+f (u)  id.
+
+fix an object p0  ob c(u), and a torsor i0  ob tors(a)(u). we dene the functor
+
+f (u) as follows. let p  ob c(u) be any object, and dene the a|u -torsor
+
+dene
+
+i  homu (p0, p )
+
+f (u)(p )  i  i0
+
+next, let pa, pb  ob c(u) be objects, and  : pa  pb be a morphism. dene the a|u -
+torsors
+
+i a  homu (p0, pa)
+i b  homu (p0, pb)
+
+the morphism  induces a morphism of torsors
+
+# : i a  i b
+
+and so we dene
+
+f (u)()  # : i a  i0  i b  i0
+
+with these denitions, f (u) is a well-dened functor from c(u) to tors(a)(u).
+
+next, we shall dene the functor f (u). let i be a a|u -torsor in ob tors(a)(u), and
+
+dene
+
+f (u)(i)  (cid:16)i  i 1
+0 (cid:17)c
+
+(u)(p0)
+
+next, let i a, i b be a|u -torsors in ob tors(a)(u), and let  : i a  i b be a morphism of
+a|u -torsors. the morphism  denes a 2-arrow
+
+dene
+
+ : (cid:16)i a  i 1
+0 (cid:17)c
+
+= (cid:16)i b  i 1
+0 (cid:17)c
+
+f (u)()  (u)(p0)
+
+with these denitions, f (u) is a well-dened functor from tors(a)(u) to c(u).
+
+finally, it is straightforward to check that there exist invertible natural transformations
+
+f (u)  f (u) = idc(u )
+f (u)  f (u) = idtors(a)(u )
+
+thus, we have now nished demonstrating explicitly that for any u such that c(u) 6= ,
+
+the category c(u) is equivalent to the category tors(a)(u).
+
+60
+
+5.3.6 sheaves of natural transformations as torsors
+
+we shall now show that sheaves of natural transformations are a-torsors. more specically,
+let f, g : c  d be a pair of cartesian functors dening maps of gerbes, between the gerbes
+c and d, assumed to both have band a and both be dened over the same space x. we
+shall show that the sheaf of local 2-arrows 2ru (f, g) is an a|u -torsor, for any open u  x.
+we shall also derive some useful properties of these torsors.
+
+we shall now argue that the sheaf of sets 2ru (f, g) is an a|u -torsor. we dene the action
+of a|u as follows. let v  u be open, and let g  a(v ). let  be an element of the set
+2ru (f, g)(v ), which is to say,  is a collection of natural transformations f (w )  g(w ),
+one for each open w  v . the element g  a(v ) acts on each natural transformation
+(w ) as,
+
+(w ) 7 (w )  (
+
+w g)
+
+where  is the restriction map in the sheaf a, and for each p  ob c(w ), g is interpreted
+as an element of aut(f (w )(p )).
+
+it is easy to see that this action of a is free, and commutes with the restriction map.
+to check that it is transitive requires more work, which we shall outline here. let a, b
+be two elements of the set 2ru (f, g)(v ). for any p  ob c(v ), b(v )(p )1  a(v )(p ) is
+an automorphism of f (v )(p ), which we can identify with an element g(p )  a(v ). any
+two objects p1, p2 which are related by a morphism will clearly dene isomorphic group
+elements: g(p1) = g(p2). more generally, one can show that g(p1) = g(p2) even if p1, p2 are
+not related by a morphism, by restricting to an open subset w  v such that there exists
+a morphism  : p1|w  p2|w . dene a morphism
+
+ : f (v )(p1)|w  f (v )(p2)|w
+
+by,
+
+  (f
+
+w )1  f (w )()  f
+
+w
+
+then it is straightforward to check that
+
+(cid:16)b(v )(p2)1  a(v )(p2)(cid:17) |w =   (cid:16)b(v )(p1)1  a(v )(p1)(cid:17) |w  1
+
+which implies that g(p1) = g(p2). thus, for any pair of 2-arrows a, b  2ru (f, g)(v ),
+there exists g  a(v ) such that a = b  g. this means that the action of a|u on the sheaf
+of sets 2ru (f, g) is transitive, and so we have nished demonstrating that 2ru (f, g) is an
+a|u -torsor.
+
+we shall now argue that if v is an open subset of u such that the categories c(v ) and
+d(v ) each only contain a single isomorphism class of objects, then the set of local 2-arrows
+2ru (f, g)(v ) is nonempty. first, we shall construct natural transformations f (v )  g(v ).
+fix some p0  ob c(v ), and a morphism (v )(p0) : f (v )(p0)  g(v )(p0). for any
+
+61
+
+other p  ob c(v ), let  : p  p0 be a morphism, and dene (v )(p ) : f (v )(p ) 
+g(v )(p ) by, (v )(p )  g(v )()1  (v )(p0)  f (v )(). it is straightforward to check
+that (v )(p ) is independent of the choice21 of , and moreover that this denes a natural
+transformation (v ) : f (v )  g(v ). in fact, we can generate an entire a(v )-torsor of
+natural transformations in this fashion, by choosing dierent p0 and dierent (v )(p0). in
+passing, note that this also implies that a natural transformation f (v )  |v  g(v )  |v ,
+for example, uniquely determines a natural transformation f (v )  g(v ) (assuming that,
+for |v denoting a restriction functor associated to the inclusion v  u, c(u) and d(u) are
+both nonempty).
+
+so far we have constructed a natural transformation (v ) : f (v )  g(v ); we shall
+now show that any such natural transformation denes a local 2-arrow f |v  g|v , i.e., an
+element of 2ru (f, g)(v ). in order to construct an element of 2ru (f, g)(v ), we need to
+specify (suitably compatible) natural transformations f (w )  g(w ) for all open w  v .
+for any (v ) : f (v )  g(v ) and any open w  v , dene (w ) to be the natural
+transformation generated by the composition
+
+f (w )   f
+
+=   f (v )
+
+(v )
+=   g(v )
+
+g
+= g(w )  
+
+where  : w  v is inclusion. the composition above only denes a natural transformation
+f (w )    g(w )  , not f (w )  g(w ); however using the ideas in the previous
+paragraph, it should be clear that the composition can be used to determine a natural
+transformation f (w )  g(w ) (uniquely, in fact, if every object of d(w ) is isomorphic
+to the restriction of an object of d(v )). moreover, it is straightforward to check that this
+collection of natural transformations has the property that for any inclusion of open sets
+ : w2  w1, the following diagram commutes:
+
+  f (w1)
+
+(w1)
+=   g(w1)
+
+ 
+f
+f (w2)   (w2)
+
+= g(w2)  
+
+ g
+
+
+
+(27)
+
+thus, given any natural transformation (v ) : f (v )  g(v ), we can construct a local 2-
+arrow  : f |v  g|v . in other words, we have constructed an element of 2ru (f, g)(v ), and
+so if v  u is an open set such that c(v ) and d(v ) each only contain a single isomorphism
+class of objects, then the set of local 2-arrows 2ru (f, g)(v ) is nonempty.
+
+we shall now argue that for any a|u -torsor i, there is an isomorphism
+
+i
+
+ 2ru (f, id  f )
+
+of a|u -torsors. we shall dene this isomorphism by describing how a distinguished set of local
+sections {s} of i, dened with respect to an open cover {u} of u, are mapped into local
+
+21in other words, if (v )(p ) and (v )(p ) denote the two isomorphisms dened by any two morphisms
+
+,  : p  p0, then (v )(p ) = (v )(p ).
+
+62
+
+sections of 2ru (f, id  f ). denote the local sections of i dening the gerbe map id : d  d
+by {s}, and assume (without loss of generality22) that they are dened with respect to an
+open cover {u} of u such that c(u) and d(u) each only contain a single isomorphism
+class of objects, for all . by denition of id, there exist natural transformations
+
+
+
+(u) : |u  id(u) = |u  idd(u)
+
+where the |u denote restriction functors associated to the inclusion u  u. dene new
+natural transformations
+
+as the natural transformations associated to the composition
+
+(u) : f (u) = (id  f )(u)
+
+f (u)  |u
+
+f
+= |u  f (u)
+
+
+(u)
+= |u  (id  f )(u)
+
+if
+= (id  f )(u)  |u
+
+as in the previous paragraphs. furthermore, proceeding again as in the previous few para-
+graphs, extend (u) to an element   2ru (f, g)(u). finally, dene the isomorphism
+i  2ru (f, id  f ) of a|u -torsors by mapping s 7 . as described in the section on
+torsors, to dene an isomorphism it suces to describe how a set of local sections, dened
+with respect to an open cover, is mapped. thus, i = 2ru (f, id  f ).
+
+we have just shown that i = 2ru (f, i  f ) as a|u -torsors. one important consequence
+which is immediately derived from this fact is that if there exists a 2-arrow f  i  f for
+some a-torsor i, then i must have a global section, and so is trivial.
+
+next, we shall show that for any two gerbe maps f, g : c  d, and for any open u  x,
+there exists an a|u -torsor i and a local 2-arrow  : g|u  (id  f )|u (i.e., a global section
+of the sheaf 2ru (g, id  f )). given f and g, dene i to be the a|u -torsor 2ru (f, g). let
+{u} be a good open cover of u, and let {s} be a set of local sections of i dening the
+gerbe automorphism id. let
+
+i
+
+(u) : |u  id(u) = |u  idd(u)
+
+(where |u denotes the restriction functors associated to the inclusions u  u) denote
+the natural transformations associated to the {s}, appearing in the denition of id. let
+s
+ : f |u  g|u denote the s, interpreted explicitly as local 2-arrows. now, we shall
+dene a natural transformation g(u)  (id  f )(u), by using the gluing law. for any
+object p  ob c(u), dene a morphism
+
+f(p ) : g(u)(p )|u  (id  f )(u)(p )|u
+
+by,
+
+(u)(p |u)1  g
+22if this is not true, then simply restrict the {s} to elements of a suitable renement.
+
+ (f (u)(p ))1  (f
+
+f(p )  i
+
+ )1  s
+
+
+
+63
+
+where the  denote natural transformations dening f , g as cartesian functors.
+it is
+straightforward to check that the f(p ) satisfy the gluing axiom for morphisms, and so dene
+a morphism (u)(p ) : g(u)(p )  (id  f )(u)(p ). moreover, it is straightforward to check
+that the (u)(p ) dene a natural transformation (u) : g(u)  (id  f )(u). finally, a
+few paragraphs earlier we argued that a natural transformation (u) : g(u)  (id  f )(u)
+denes a local 2-arrow g|u  (id  f )|u . thus, we have explicitly constructed a global
+section of the sheaf 2ru (g, id  f ). in other words, we have just shown that for any two
+gerbe maps f , g, and for any open u  x, there exists a a|u -torsor i and a local 2-arrow
+ : g|u  (id  f )|u .
+
+note that the result above implies that if  : c  c is any automorphism of the gerbe
+c, then there exists an a-torsor i such that  is equivalent to ic : c  c, i.e., there exists
+an invertible 2-arrow   ic.
+
+5.3.7 maps of gerbes are equivalences of gerbes
+
+in this subsection we shall argue that any map between gerbes with the same band, over the
+same space, is necessarily an isomorphism. this is a direct analogue of the statement that
+any morphism of principal g-bundles, for xed g and over a xed space, is necessarily an
+isomorphism [16, section 4.3].
+
+let f : c  d be a map between the gerbes c, d, both assumed to have band a and
+both be dened over a xed space x. we shall argue that f is an equivalence of gerbes.
+more precisely, we shall show that each functor f (u) : c(u)  d(u) is an equivalence
+of categories, in that there exists a functor f (u) : d(u)  c(u) and invertible natural
+transformations
+
+1 : f (u)  f (u) = idd(u )
+2 : f (u)  f (u) = idc(u )
+
+we dene the functor f (u) : d(u)  c(u) on objects as follows. fix some arbitrary
+
+object p0  ob c(u). for any object p  ob d(u), dene an a|u -torsor
+
+dene f (u)(p )  ic(u)(p0).
+
+i = homu (f (u)(p0), p )
+
+we dene f (u) on morphisms as follows. let  : pa  pb be a morphism between
+
+objects pa, pb  ob d(u). dene a|u -torsors
+
+i a  homu (f (u)(p0), pa)
+i b  homu (f (u)(p0), pb)
+
+64
+
+the morphism  denes a morphism of torsors # : i a  i b, and thus a 2-arrow  : i a
+dene
+
+c  i b
+c.
+
+f (u)()  (u)(p0)
+
+it is straightforward to check that with these denitions, f (u) is a well-dened functor
+d(u)  c(u).
+
+before proving that f (u) denes an inverse to f (u), we shall briey attempt to provide
+some intuition for this result. first, note that for any object p  ob d(u), there exists a
+2-arrow such that
+
+(f f )(u)(p ) = (f ic)(u)(p0) = (idf )(u)(p0) = p
+
+this is not quite sucient to prove that f is an equivalence of categories, because the 2-arrow
+above depends upon p , whereas we need to nd a single natural transformation. similarly,
+using the fact that
+
+homu (f (u)(p0), f (u)(p )) = homu (p0, p )
+
+for any object p  ob c(u), we see that
+
+(f f )(u)(p ) = ic(u)(p0) = p
+
+again, the remarks above are not intended to be proofs, but are intended merely to give the
+reader some intuition as to why our denition of f (u) is a correct one.
+
+we shall now construct invertible natural transformations
+
+1 : f (u)  f (u) = idd(u )
+2 : f (u)  f (u) = idc(u )
+
+existence of these natural transformations, together with f (u), will suce to prove that
+f (u) is an equivalence of categories, and that f : c  d is an equivalence of gerbes.
+
+we shall dene 1 : (f f )(u)  id as follows. let pi be a family of objects of d(u),
+
+one for each equivalence class of objects in d(u). dene a family of a|u -torsors
+
+fix a family of 2-arrows i:
+
+i i  homu (f (u)(p0), pi)
+
+i : (f i i
+
+c) = (i i
+
+df )
+
+now, for any object p  ob d(u), let f : p  pi be a morphism from p to some pi, and
+dene 1(p ) : (f f )(u)(p )  p by,
+
+1(p )  f 1  i(u)(p0)  (f f )(u)(f )
+
+65
+
+it is straightforward to check that 1(p ) is independent of the choice of f , and moreover
+that 1(p ) denes a natural transformation
+
+1 : f (u)  f (u) = idd(u )
+
+we shall dene 2 : (f f )(u)  id as follows. let p 
+
+i be a family of objects of c(u),
+
+one for each equivalence class of objects in c(u). dene families of a|u -torsors
+
+i i  homu (p0, pi)
+i i  homu (f (u)(p0), f (u)(pi))
+
+and x a family of 2-arrows
+
+
+
+i : i i
+
+c = i i
+c
+
+now, for any object p  ob c(u), let f : p  p 
+dene 2(p ) : (f f )(u)(p )  p by,
+
+i for a morphism from p to some p 
+
+i , and
+
+2(p )  f 1  
+
+i(u)(p0)  (f f )(u)(f )
+
+it is straightforward to check that 2(p ) is independent of the choice of f , and moreover
+that 2(p ) denes a natural transformation
+
+2 : f (u)  f (u) = idc(u )
+
+thus, any gerbe map f : c  d between gerbes of the same band, over the same space,
+
+is necessarily an equivalence of gerbes.
+
+6 equivariant gerbes
+
+in this section we shall dene the notion of equivariance under a group  acting on a space
+x for gerbes dened on the space x. we shall (loosely) follow [5, section 7.3]. we should
+also mention that we shall often refer to pullbacks of stacks and gerbes, concepts which were
+dened in section 4.2. more generally, in both this section and the next, we shall often make
+use of results proven in sections 4 and 5, without specic attribution.
+
+first, however, we shall dene the notion of an equivariant stack. let  be a group acting
+on a topological space x by homeomorphisms, and let c be a stack on x. loosely, for c to
+be equivariant under  means that gc should be isomorphic (in the appropriate sense) to
+c for all g  . technically, an equivariant structure on a stack c consists of the following
+data:
+
+1. a cartesian functor g : gc  c dening an equivalence of stacks, for each g  .
+
+66
+
+2. for each pair (g1, g2)    , an invertible 2-arrow
+
+g1,g2 : g1g2 = g2  g
+
+2g1  c
+
+g1,g2
+
+between cartesian functors (g1g2)c  c, where c
+analogue of a natural transformation dened in section 4.2.4.
+
+g1,g2 : (g1g2)c  g
+
+2g
+
+1c is the
+
+moreover, the 2-arrows g1,g2 are required to make the following diagram commute:
+
+g1g2g3
+
+g1,g2g3 
+
+g1g2,g3=
+
+g3  g
+
+3g1g2  g1g2,g3
+
+ g1,g2
+
+(28)
+
+g2g3  (g2g3)g1  g1,g2g3
+
+g2,g3= g3  g
+
+3 (g2  g
+
+2g1  g1,g2)  g1g2,g3
+
+note that in order to make sense out of the diagram above, we are using the fact that the
+ obey
+
+g1,g2  g1g2,g3 = g2,g3  g1,g2g3
+
+and also that
+
+g2,g3  (g2g3)g1 = g
+
+3g
+
+2g1  g2,g3
+
+as is discussed in section 4.2.4.
+
+an equivariant structure on a gerbe is dened to be an equivariant structure on the
+
+underlying stack such that each g : gc  c denes an equivalence of gerbes.
+
+we shall now argue that any two distinct equivariant structures on a gerbe dier by
+a choice of principal g-bundles tg (for a = c (g)), one for each g  , and a set of
+isomorphisms of principal g-bundles
+
+such that the following diagram commutes:
+
+g1,g2 : tg1g2  tg2  g
+
+2tg1
+
+g1g2,g3
+
+tg1g2g3
+
+g1,g2g3 
+tg2g3  (g2g3)tg1
+
+tg3  g
+
+3tg1g2
+ g1,g2
+3 (tg2  g
+
+g2,g3 tg3  g
+
+2tg1)
+
+(29)
+
+in passing, we should point out the close formal resemblance between diagram (29) and
+
+structures appearing in [10, section 1].
+
+g : gc  c and corresponding 2-arrows g1,g2, 
+
+suppose we have two distinct equivariant structures on a gerbe, that is, two sets of gerbe
+g1,g2. first, any two gerbe maps
+g dier by a gauge transformation, that is, (for band a = c (g)) there exists a
+g. note we have used
+
+maps g, 
+g, 
+principal g-bundle we shall denote tg and a 2-arrow g : g  tg  
+tg to denote both a principal g-bundle and an associated gerbe automorphism.
+
+67
+
+note that we have been slightly sloppy  to uniquely specify a gerbe automorphism
+associated to the bundle tg, we would also need to specify a choice of local sections. any
+two choices of local sections dene automorphisms that dier by a 2-arrow, so changing the
+choice of local sections merely corresponds to changing g. thus, we shall not belabor the
+choice of local sections any further.
+
+next, let g1,g2
+
+: tg1g2  tg2  g
+
+2tg1 be a 2-arrow such that the following diagram
+
+commutes:
+
+g1g2
+g1g2 
+tg1g2  
+
+g1g2
+
+g1,g2=
+
+g2  g
+
+2g1
+
+
+
+g1,g2= tg1g2  (cid:16)
+
+g2  g
+
+2
+
+g1(cid:17) 1,2g1,g2= (tg2  
+
+ g2 g
+
+2 g1
+2(tg1  
+
+g2)  g
+
+g1)
+
+(30)
+
+where  are implicit (omitted for aesthetic reasons), and where we have used 1,2 to denote
+a 2-arrow
+
+1,2 : (tg2  g
+
+2tg1)  (cid:16)
+
+g2  g
+
+2
+
+g1  g1,g2(cid:17) = (tg2  
+
+g2)  g
+
+2(tg1  
+
+g1)  g1,g2
+
+describing how we commute the gauge transformations past gerbe maps. the  should not
+be assumed to be completely arbitrary; we shall assume that the following diagram of 
+commutes:
+
+(tg3  g
+
+3(tg2  g
+
+g3  g
+
+3 (cid:16)
+
+g2  g
+
+(tg3  g
+
+3tg2)  
+
+g2  g
+
+2tg1  g
+
+2
+
+2tg1))  
+3 (cid:16)
+
+
+g3  g
+
+g1(cid:17) = tg3  
+2
+g1(cid:17) = tg3  
+
+g3  (tg2  g
+
+
+g3  g
+
+3 (cid:16)tg2  
+
+2tg1)  (cid:16)
+
+g2  g
+
+g2  g
+
+2tg1  g
+
+2g1(cid:17)
+g1(cid:17)
+2
+
+where we have omitted g1,g2 and g1g2,g3.
+
+the specication of the 2-arrow g1,g2 : tg1g2  tg2  g
+
+2tg1 is equivalent to a specication
+
+of an isomorphism of principal g-bundles
+
+g1,g2 : tg1g2  tg2  g
+
+2tg1
+
+and it is straightforward to check that the requirement that diagram (28) commute for both
+the g1,g2 and the 
+
+g1,g2 implies that the following diagram of 2-arrows commutes:
+
+tg1g2g3
+
+g1,g2g3 
+tg2g3  (g2g3)tg1
+
+g1g2,g3=
+
+tg3  g
+
+3tg1g2
+ g1,g2
+3 (tg2  g
+
+2tg1)
+
+g2,g3= tg3  g
+
+(31)
+
+which implies that diagram (29) commutes, as claimed.
+
+at the end of the day, we will recover a classication of equivariant structures preserving
+the gerbe connection in terms of elements of h 2(, g). before we begin working out the
+
+68
+
+details, we should take a moment to explain the general idea. we will demand that the
+connection on the gerbe be invariant under all gerbe equivalences, in precise analogy with
+our strategy for studying equivariant bundles in [2]. in particular, this will imply that any
+two equivariant structures dier by a set of topologically trivial bundles {tg} for g  .
+we will also nd strong constraints on the isomorphisms  relating the bundles t , and in
+the end the cocycle condition dening an representative of an element of group cohomology
+h 2(, g) will emerge from diagram (29).
+
+7 equivariant gerbes with connection
+
+in this
+in the previous section we dened the notion of equivariant structure for gerbes.
+section we shall extend this notion to dene equivariant structures for gerbes with connection
+(connective structure and curving). as we have only dened connections for gerbes with band
+a = c (u(1)), we shall assume throughout this section that all gerbes have band c (u(1)).
+
+let c be a gerbe which is equivariant with respect to the action of a group  acting
+by dieomorphisms. under what circumstances will the equivariant structure respect the
+connection on c ? as the reader has probably guessed, the gerbe maps g : gc  c are
+required to be equivalences of gerbes with connection. recall that the pullback of a gerbe
+with connection is another gerbe with connection  a connection on c naturally induces a
+connection on gc. in order for the equivariant structure to respect this connection, we must
+demand that the equivalence of gerbes g respect the connection.
+
+so far we have dened equivariant structures on gerbes with connection. how are these
+
+equivariant structures classied?
+
+suppose we have two equivariant structures on a gerbe with connection, that is, two sets
+g dening equivalences of gerbes with connection, and corresponding 2-
+g1,g2 satisfying the conditions above. how are these two equivariant structures
+
+of gerbe maps g, 
+arrows g1,g2, 
+related?
+
+in the previous section, we mentioned that for any pair g, 
+
+g, there exists a principal
+g. we shall derive constraints on both g
+
+u(1)-bundle23 tg and a 2-arrow g : g  tg  
+and tg, using the fact that g and 
+
+g are equivalences of gerbes with connection.
+
+by denition of equivalence of gerbe with connection, each g must be accompanied by
+
+a 2-arrow
+
+g : gco = co  g
+
+let 
+
+g denote the 2-arrow associated to 
+g.
+
+23 we get principal u (1) bundles because we have assumed the band is c(u (1)) in this section. in the
+
+previous section we did not have such a constraint on the band.
+
+69
+
+now, recall that the action of the gerbe automorphism tg on the connective structure
+is encoded in the torsor of connections on tg. in order for the connective structure to be
+well-dened, therefore, we must rst demand that tg be a trivial u(1) bundle. thus, g is
+a 2-arrow g : g  
+g.
+
+next, again in order for the connective structure to be well-dened, we must demand
+
+that the following diagram commute:
+
+gco
+
+k
+
+gco
+
+g= co  g
+ g
+
+g= co  
+g
+
+(32)
+
+naively the reader might guess that commutativity of diagram (32) would completely deter-
+mine g, but that is not quite correct. recall that every sheaf of 2-arrows 2r is an a-torsor,
+so we can recover all possible 2-arrows by composing with band elements. here, we see that
+if we compose g with any constant element of the band, i.e., any element g  a(x) such
+that d ln g = 0, then diagram (32) continues to commute. moreover, it should be clear that
+this represents all of the possible degrees of freedom of g. thus, we have derived that g is
+determined up to a constant element of the band.
+
+in passing, we should recall one easy implication of the denition of curving that for any
+
+open u, for any object p  ob gc(u), and for any section   (u, (co  g)(u)(p )),
+
+k() = k(g())
+
+where k denotes the curving on (c, co). this is true precisely because there exists a 2-arrow
+g : g  
+
+g; it does not depend upon commutativity of diagram (32).
+
+just as we derived constraints on the possible g, we can also derive constraints on the
+
+2-arrows g1,g2:
+
+g1,g2 : g1g2 = g2  g
+
+2g1  c
+
+g1,g2
+
+just as for the g, in order for the connective structure to be well-dened, we need the
+following diagram to commute:
+
+(g1g2)co
+
+g1g2=
+
+co  g1g2
+
+k
+
+(g1g2)co
+
+g2 g
+
+2 g1= co  g2  g
+
+ g1,g2
+2g1  c
+
+g1,g2
+
+(33)
+
+just as for the g, commutativity of this diagram xes the g1,g2 up to constant band
+elements.
+
+in passing, also note that for all open u, for all objects p  ob (g1g2)c(u), and for all
+
+sections   (u, (co  g1g2)(u)(p )), we trivially have that
+
+k() = k( g1,g2() )
+
+70
+
+this is a consequence of possessing a 2-arrow g1,g2; it does not depend upon commutativity
+of diagram (33).
+
+moreover, it should now be clear that the g1,g2 are determined by a constant element of
+
+the band.
+
+let us take stock of our results so far. in the previous section, we determined that given
+any one equivariant structure on a gerbe, we could describe any other equivariant structure
+in terms of a collection of a-torsors tg and torsor isomorphisms g1,g2 : tg1g2  tg2  g
+2tg1,
+making diagram (29) commute. here we have determined that the g1,g2 are determined by
+constant elements of the band. we have implicitly assumed (in all discussions of connections
+on gerbes) that the band a = c (u(1)), so from commutativity of diagram (29) it should
+be clear that the g1,g2, identied with constant elements of the band, i.e., elements of u(1),
+precisely describe a group cocycle representing an element of h 2(, u(1)). moreover, any
+group coboundary can be absorbed into the ambiguity in the g; conversely, the ambiguity
+in the g precisely describes a group coboundary, as should be clear from diagram (30).
+
+in other words, given any equivariant structure on a gerbe with connection, we can
+describe any other equivariant structure in terms of an element of the group cohomology
+group h 2(, u(1)).
+
+let us take a moment to summarize these results. we have shown that any two equivari-
+ant structures on a gerbe with connection (and, implicitly, band a = c (u(1))) dier by
+an element of h 2(, u(1)). phrased more abstractly, the set of equivariant structures on a
+gerbe with connection (and band a = c (u(1))) is a torsor under the group h 2(, u(1)).
+
+in the special case that the gerbe c is trivial, we can say more. assume without loss
+of generality that c = tors(u(1)), then there is an obvious canonical choice of g and
+g1,g2 dening a trivial equivariant structure. we can canonically associate this equivariant
+structure with the identity element of h 2(, u(1)), and so we see that when c is a trivial
+gerbe, the set of equivariant structures on c preserving the connection is canonically the
+group h 2(, u(1)), not merely a set forming a torsor under h 2(, u(1)).
+
+8 check: loop spaces
+
+in this section we shall shed some light on the methods and results of the previous two
+sections by thinking about gerbes in terms of loop spaces.
+
+first, note that a principal u(1) bundle p with connection on a manifold m determines
+a u(1)-valued function on lm, the loop space of m. more precisely, for any loop in m, we
+can assign an element of u(1) given by the value of the wilson loop. thus, wilson loops
+assign elements of u(1) to each loop in m, and so dene a u(1)-valued function on lm.
+
+71
+
+the assignment above, of u(1)-valued functions on lm to principal u(1) bundles with
+connection on m, is a basic example of a more general principle. namely, to any n-gerbe
+with connection on a manifold m, one can assign an (n  1)-gerbe with connection on the
+loop space lm. (this can be seen in terms of deligne cohomology; see, for example, [5,
+section 6.5].) more relevantly to this paper, to any (1-)gerbe with connection (and band
+c (u(1))) on a manifold m, one can assign24 a principal u(1) bundle with connection on
+the loop space lm. (for more details, see, for example, [5, section 6.2]; a derivation of this
+fact at the level of deligne cohomology is also given in [24].)
+
+thus, the reader might naively be led to suspect that an equivariant gerbe on a space
+m is equivalent to an equivariant bundle on lm. unfortunately, this is not quite correct.
+the essential diculty is that, in general, the map from n-gerbes on m to (n  1)-gerbes on
+lm is a many-to-one map. for example, consider the map from principal u(1) bundles on
+m to u(1)-valued functions on lm dened by wilson loops, as described at the beginning
+of this section. specifying wilson loops about every loop on a manifold m (i.e., specifying
+a u(1)-valued function on lm) does not uniquely determine a principal u(1) bundle with
+connection.
+instead, such a set of wilson loops only determines an equivalence class of
+principal u(1) bundles with connection [25, prop. 1.12.3].
+
+in the present situation, because a (1-)gerbe with connection on m can not be uniquely
+determined by a principal u(1) bundle with connection on lm, we can not completely
+describe equivariant gerbes with connection in terms of equivariant bundles with connection
+on lm.
+
+however, it is true that an equivariant structure on a gerbe with connection on m does
+determine an equivariant structure on the corresponding bundle with connection on lm.
+we shall merely outline the results. recall that an equivariant structure on a gerbe c with
+connection is dened by a collection of gerbe maps
+
+and invertible 2-arrows
+
+g : gc  c
+
+g1,g2 : g1g2 = g2  g
+
+2g1  c
+
+g1,g2
+
+subject to various constraints. we shall let p denote the bundle with connection on lm
+corresponding to the gerbe c on m. the gerbe maps g become bundle isomorphisms
+g : gp  p , and the existence of invertible 2-arrows g1,g2 implies that g1g2 = g1  g
+2g1,
+which, recall from [2], denes an equivariant structure on the bundle p .
+
+24strictly speaking, to a (1-)gerbe with connective structure on m , we can assign a bundle on lm . a
+curving on that connective structure can be used to dene a connection on the bundle on lm . see [5,
+section 6.2] for more details. in this framework, gerbe maps become morphisms of principal bundles (more
+generally, torsors) on lm , and gerbe maps related by invertible 2-arrows map to the same morphism of
+principal bundles on lm .
+
+72
+
+recall in [2] we pointed out that any equivariant structure on a bundle with connection
+could be obtained from any other equivariant structure via a set of constant gauge transfor-
+mations. in the present context, however, there is a slight subtlety. gauge transformations
+of p on lm are determined by principal u(1) bundles with connection on m, that is, u(1)-
+valued functions on lm. however, not all u(1)-valued functions on lm can be understood
+in terms of wilson loops on bundles with connection on m. in fact, the only constant u(1)-
+valued function on lm that can be understood in terms of wilson loops on bundles with
+connection on m, is the trivial constant function that is the identity for all points on lm.
+to see this fact, suppose that l is a principal u(1) bundle with connection on m with the
+property that all wilson loops are equal to some (single) element of u(1), call it x. let
+w () denote the value of the wilson loop about any loop , then it should be clear that
+
+w (2) = w ()2
+
+or, in other words, x = x2. but as x  u(1), the only way that this can be satised is if x is
+the identity. thus, the only constant gauge transformations on lm that can be understood
+as coming from bundles with connection on m are those that are identically the identity.
+
+the fact above implies that all the torsors tg, dened in the previous section, must be
+trivial in order for the equivariant structures to be compatible with the connection. we
+argued this fact on dierent grounds in the last section; in terms of loop spaces we have
+found a more nearly transparent discussion.
+
+as there is only one constant gauge transformation allowed between equivariant structures
+on p  lm, the reader might incorrectly conclude that this must mean that there can only
+be one equivariant structure on a gerbe with connection. the problem with this argument
+is that the map from bundles (with connection) on m to functions on lm is a many-to-one
+map. at the level of the loop space lm, there is only one equivariant structure; however,
+there are actually multiple equivariant structures on the gerbe on m, all of which map to
+the same equivariant structure on the bundle p on lm.
+
+to classify equivariant structures on a gerbe with connection, we must return to the
+analysis of the previous section. in passing, however, there is one slight additional bit of
+insight that can be gained from thinking in terms of loop spaces. we argued that on lm,
+there was only one equivariant structure on the bundle p ; any other diered from it by a
+constant gauge transformation on lm. however, specifying a constant gauge transformation
+on lm only determines an equivalence class of bundles with connection on m.
+in the
+previous section, we found that equivariant structures on a gerbe with connection on m were
+determined by a set of isomorphisms of (trivial) bundles with (trivial) connection; here we
+see that these isomorphisms must preserve the trivial connection, and so must be constant,
+in order to remain within the equivalence class determined by the trivial constant gauge
+transformation on lm. this sheds some light on the constraints on these isomorphisms
+determined in the previous section.
+
+73
+
+9 conclusions
+
+in this paper we have accomplished two things. first, we have given a thorough review
+of gerbes in terms of stacks, at a relatively basic level (i.e., without using the language of
+sites). second, we have discussed the classication of equivariant structures on (1-)gerbes
+with connection, and proven that in general the set of such equivariant structures is a torsor
+under the group h 2(, u(1)), as claimed in [2], providing a simple geometric understanding
+of discrete torsion.
+
+10 acknowledgements
+
+we would like to thank p. aspinwall, d. freed, a. knutson, d. morrison, and r. plesser for
+useful conversations.
+
+references
+
+[1] c. vafa, modular invariance and discrete torsion on orbifolds, nucl. phys. b273
+
+(1986) 592-606.
+
+[2] e. sharpe, discrete torsion and gerbes i, hep-th/9909108.
+
+[3] n. hitchin, lectures on special lagrangian submanifolds, math.dg/9907034, and lec-
+tures given at the harvard winter school on vector bundles, lagrangian submanifolds,
+and mirror symmetry, january 1999.
+
+[4] d. chatterjee, on the construction of abelian gerbs, ph.d. thesis, cambridge uni-
+
+versity, 1998.
+
+[5] j. l. brylinski, loop spaces, characteristic classes and geometric quantization,
+
+birkhauser, boston, 1993.
+
+[6] j.-l. brylinski and d. a. mclaughlin, the geometry of degree-four characteristic
+
+classes and of line bundles on loop spaces i, duke math. j. 75 (1994) 603-638.
+
+[7] j. giraud, cohomologie non abelienne, springer-verlag, berlin, 1971.
+
+[8] a. grothendieck, revetements etale et groupe fondamental, sga 1, lecture notes in
+
+math. 224, springer-verlag, berlin, 1971.
+
+[9] l. breen, on the classication of 2-gerbes and 2-stacks, asterisque 225, societe
+
+mathematique de france, 1994.
+
+74
+
+[10] d. freed, higher algebraic structures and quantization, comm. math. phys. 159
+
+(1994) 343-398, hep-th/9212115.
+
+[11] m. murray, bundle gerbes, j. london math. soc. (2) 54 (1996) 403-416,
+
+dg-ga/9407015.
+
+[12] a. carey, m. murray, and b. wang, higher bundle gerbes and cohomology classes in
+
+gauge theories, j. geom. phys. 21 (1997) 183-197, hep-th/9511169.
+
+[13] a. grothendieck, technique de descente et theor`emes dexistence en geometrie
+algebrique, i. generalites. descente par morphismes d`element plats, seminaire bour-
+baki 190.
+
+[14] m. artin, grothendieck topologies, harvard university, 1962.
+
+[15] d. mumford, picard groups of moduli problems, in arithmetical algebraic geometry,
+
+ed. by o. f. g. schilling, harper & row, new york, 1965.
+
+[16] d. husemoller, fibre bundles, third edition, springer-verlag, new york, 1966, 1994.
+
+[17] h. b. lawson and m.-l. michelsohn, spin geometry, princeton university press,
+
+princeton, 1989.
+
+[18] d. eisenbud and j. harris, schemes: the language of algebraic geometry, wadsworth
+
+& brooks, pacic grove, california, 1992.
+
+[19] r. dijkgraaf, the mathematics of vebranes, hep-th/9810157.
+
+[20] p. deligne, j. milne, a. ogus, and k. shih, hodge cycles, motives, and shimura
+
+varieties, lecture notes in math. 900, springer-verlag, berlin, 1982.
+
+[21] p. griths and j. harris, principles of algebraic geometry, john wiley & sons, new
+
+york, 1978.
+
+[22] b. iversen, lectures on torsors and divisors, aarhus universitet lecture notes series
+
+56, 1986.
+
+[23] s. mac lane and i. moerdijk, sheaves in geometry and logic, springer-verlag, new
+
+york, 1992.
+
+[24] k. ga wedzki, topological actions in two-dimensional quantum eld theories, pp.
+101-141 in nonperturbative quantum field theory, ed. by g. t hooft, a. jae,
+g. mack, p. k. mitter, and r. stora, nato asi series vol. 185, plenum press, new
+york, 1988.
+
+[25] b. kostant, quantization and unitary representations, pp. 87-208 of lectures in
+modern analysis and applications iii, r. m. dudley et al, lecture notes in math.
+170, springer-verlag, berlin, 1970.
+
+75
+
+

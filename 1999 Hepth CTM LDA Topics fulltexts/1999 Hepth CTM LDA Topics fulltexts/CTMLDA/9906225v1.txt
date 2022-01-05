@@ -1,0 +1,1884 @@
+9
+9
+9
+1
+
+ 
+
+n
+u
+j
+ 
+
+9
+2
+
+ 
+ 
+
+1
+v
+5
+2
+2
+6
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+braided quantum field theory
+
+robert oeckl
+
+department of applied mathematics and mathematical physics,
+
+university of cambridge, cambridge cb3 9ew, uk
+
+damtp-1999-82
+
+29 june 1999
+
+abstract
+
+we develop a general framework for quantum eld theory on non-
+commutative spaces, i.e., spaces with quantum group symmetry. we
+use the path integral approach to obtain expressions for n-point func-
+tions. perturbation theory leads us to generalised feynman diagrams
+which are braided, i.e., they have non-trivial over- and under-crossings.
+we demonstrate the power of our approach by applying it to 4-theory
+on the quantum 2-sphere. we nd that the basic divergent diagram of
+the theory is regularised.
+
+email: r.oeckl@damtp.cam.ac.uk
+
+1
+
+1
+
+introduction
+
+the idea that space-time might not be accurately described by ordinary
+geometry was expressed already a long time ago.
+it was then motivated
+by the problems encountered in dealing with the divergencies of quantum
+eld theories. an early suggestion was that spatial coordinates might in fact
+be noncommuting observables [1]. for a long time development has been
+hampered by the lack of proper mathematical tools. only with the advent
+of noncommutative geometry and quantum groups have such ideas taken
+a more concrete form. quantum groups emerged in fact from the theory
+of integrable models in physics and were connected from the beginning to
+the idea of noncommutative symmetries in physical systems [2][3][4]. it was
+then also suggested that they might play a role in physics at very short dis-
+tances [5]. the idea that quantum symmetry or noncommutativity might
+serve as a regulator for quantum eld theories was emphasised in [6] and [7].
+the persistent inability to unite quantum eld theory with gravity is a main
+motivation behind such considerations. in this context it is interesting to
+note that noncommutative geometric structures are emerging also in string
+theory [8]. despite progress in describing various physical models on non-
+commutative spaces (see e.g. [9][10][11][12]), a general consistent approach
+for doing this has been lacking. we aim at taking a step in this direction by
+providing a framework for doing quantum eld theory on noncommutative
+spaces.
+
+the most basic ingredient of a quantum eld theory is in our view the
+space of elds together with the group of symmetries acting on it. gen-
+eralising to the noncommutative context this means that we have a vector
+space of elds coacted upon by a quantum group (which we take to mean
+coquasitriangular hopf algebra) of symmetries. thus, the space of elds
+becomes an object in the braided category of comodules of the quantum
+group. we think that this braiding rather than the noncommutativity it-
+self is crucial when intending to regularise a conventional theory. (this is
+also supported by our results in section 5.) our approach in the spirit of
+braided geometry [13, chapter 10] is based on gaussian path integrals and
+the usual perturbation theory leading here to braided analogues of feynman
+diagrams. to simplify the discussion we use the conventions of euclidean
+quantum eld theory, i.e., strictly speaking we are doing statistical eld the-
+ory. also, we only consider scalar quantum eld theory in this paper. thus,
+conventionally the space of elds is just the algebra of functions on space-
+time and the symmetry group is the group of isometries of space-time. for a
+rigourous treatment we also require the quantum group of symmetries to be
+cosemisimple corresponding to compactness in the commutative case. how-
+ever, when aiming to regularise uv-divergencies this is not a disadvantage,
+since they should not be aected by the global properties of a space.
+
+we start out in section 2 by dening gaussian integrals on braided spaces
+
+2
+
+based on [14]. this provides us with the free n-point functions of a braided
+quantum eld theory. developing perturbation theory in a manner similar to
+standard quantum eld theory we obtain the braided analogues of feynman
+diagrams. it turns out that symmetry factors of ordinary feynman diagrams
+get resolved into dierent (and not necessarily equivalent) diagrams in the
+braided case.
+
+in section 3 we consider the case where the space of elds is a quantum
+homogeneous space under the symmetry quantum group. inspired by the
+conventional commutative case this gives us a more compact description
+of n-point functions. furthermore, it allows for simplications in braided
+feynman diagrams.
+
+while our approach is somewhat formal up to this point, section 4 intro-
+duces a context that allows us to work rigourously in innite dimensions. we
+need a further assumption to do this, which corresponds in the commutative
+case to the space-time being compact.
+
+finally, in section 5 we deliver on the promise to perform q-regularization
+within braided quantum eld theory. to this end we consider 4-theory on
+the standard quantum 2-sphere [15]. we make use of all the machinery
+developed up to this point to show that the only basic divergence of 4-
+theory in two dimensions, the tadpole diagram, becomes nite at q > 1. we
+identify the divergence in q-space and suggest that it would not depend on
+the conventional degree of divergence.
+
+by a quantum group we generally mean a hopf algebra (see e.g. [13]).
+when talking about a quantum group of symmetries we mean a hopf algebra
+equipped with a coquasitriangular structure. we denote the coaction by ,
+the counit by , and the antipode by s. we use sweedlers notation [16]
+ a = a(1)  a(2), etc., with summation implied. we apply the same notation
+to hopf algebras in braided categories.
+
+while working over a general eld k in sections 24 we specialise to the
+
+complex numbers in section 5.
+
+2 formal braided quantum field theory
+
+2.1 braided gaussian integration
+
+braided categories arise as the categories of modules or comodules over
+quantum groups (hopf algebras) with quasitriangular respectively coquasi-
+triangular structure (see e.g. [13]). the latter case will be the one of interest
+to us later. we consider rigid braided categories, where we have for every
+object x a dual object x  and morphisms ev : x  x   k (evaluation)
+and coev : k  x   x (coevaluation) that compose to the identity in the
+obvious ways. although rigidity implies nite dimensionality, we shall see
+later (section 4) how we can deal with innite dimensional objects. the
+dierentiation and gaussian integration on braided spaces that we require
+
+3
+
+were developed by majid [17] and kempf and majid [14] in an r-matrix
+setting. however, we need a more abstract and basis free formulation of
+their formalism so that we redevelop the notions here.
+
+suppose we have some (rigid) braided category b and a vector space
+x  b. essentially, we want to dene the (normalised) integral of functions
+ in the coordinate ring on x multiplied by a gaussian weight function
+w, i.e., we want to dene
+
+z() := r w
+r w
+
+.
+
+(1)
+
+first, we need to specify this coordinate ring. we identify the dual space
+x   b as the space of coordinate functions on x and consider the free
+unital tensor algebra over x ,
+
+mn=0
+
+cx  :=
+
+x n, with x 0 := 1 and x n := x       x 
+
+,
+
+|
+
+n times
+
+{z
+
+}
+
+where 1 is the one-dimensional space generated by the identity. it naturally
+has the structure of a braided hopf algebra [13, chapter 10] via
+
+ a = a  1 + 1  a,
+
+(a) = 0,
+
+s a = a
+
+make the notion of coordinate ring more precise, one could perhaps con-
+
+for a  x  and , , s extend to cx  as braided (anti-)algebra maps. to
+sider a kind of symmetrised quotient of cx  in analogy to the observation
+
+that coordinates commute in ordinary geometry. however, the following
+discussion is independent of introducing additional homogeneous relations.
+thus, we shall not consider any here.
+
+the next step is the introduction of dierentials [17]. the space of
+coordinate dierentials should be dual to the space x  of coordinate func-
+tions. we just take x itself and dene dierentiation on x  by the pairing
+ev : x  x   k in b. to extend dierentiation to the whole coordinate
+
+ring cx , we note that the coproduct encodes coordinate translation. this
+
+leads to the natural denition that
+
+di := (bev  id)  (id  ) : x  cx   cx 
+
+is dierentiation on cx , where bev is the trivial extension of ev to xcx   k,
+i.e., bev |xx n = 0 for n 6= 1. we also use the more intuitive notation
+(a) := di(  a) for   x and a  cx . let   x and ,   cx . the
+denition of bev gives at once
+
+bev(  ) = bev(  ) () + bev(  ) ().
+
+4
+
+using that the coproduct is a braided algebra map, we obtain the braided
+leibnitz rule
+
+() = () + 1(  )().
+
+(2)
+
+iteration yields
+
+() = (ev  idn2)(  [n] ),
+
+where n is the degree of  and
+
+[n] := idn +  idn2 +    + n2,1  id +n1,1
+
+is a braided integer. we adopt the convention of writing n,m for the braiding
+between x n and x m (respectively 1
+
+n,m for the inverse braiding).
+
+as in [14] we view the gaussian weight w formally as an element of cx 
+
+and dene its dierentiation via an isomorphism
+
+ : x   x
+
+so that
+
+(w) = 1()w
+
+for   x.
+
+(3)
+
+1 should be thought of as dening a braided analogue of a positive denite
+form on x . our denitions so far allow us to evaluate integrals of the form
+
+(1) up to termsr (w) with   x,   cx , which we identify as integrals
+
+of total dierentials and equate to zero.
+
+to express the integral (1) in a convenient way we dene alternative
+
+braided integers as
+
+[n]
+
+ := idn + idn2 1 +    + 1
+
+1,n1
+
+and set
+
+[2n  1]
+
+!! := ([1]
+
+  id2n1)([3]
+
+  id2n3)    ([2n  1]
+
+  id).
+
+proposition 2.1.
+
+z |x  2 = ev   (id ),
+
+z |x 2n = (z |x  2)n  [2n  1]
+
+!!, z |x  2n1 = 0,
+
+n  n.
+
+proof. for   cx  and a  x  we have
+
+aw =  di((a)  w) =  di((  (a))w) + (di (  (a)))w
+
+using the dierential property (3) of w and the braided leibnitz rule (2).
+applying z, we can ignore the total dierential and obtain
+
+z(a) = z(di (  (a))).
+
+(4)
+
+this gives us immediately
+
+z(a) = 0
+
+and
+
+z(ab) = ev (a  (b))
+
+5
+
+for b  x . we rewrite (4) to nd
+
+z |x n = z |x  n2  di (  idn1)  n1,1
+
+= z |x  n2  (ev  idn2)  (  [n  1])  n1,1
+= (ev  z |x  n2)  (  [n  1])  n1,1
+= (ev  z |x  n2)  n1,1  ([n  1]  )
+= (z |x 2  z |x  n2)  (id n2,1)  ([n  1]  id)
+= (z |x n2  z |x 2)  1
+= (z |x n2  z |x 2)  (1
+
+2,n2  (id n2,1)  ([n  1]  id)
+1,n2  id)  ([n  1]  id),
+
+which gives us a recursive denition of z leading to the formulas stated.
+
+another version of the braided integers
+
+[n]
+
+ := idn +1  idn2 +    + 1
+
+1,n1
+
+with [2n  1]
+
+!! := (id [2n  1]
+
+)    (id2n3 [3]
+
+)(id2n1 [1]
+)
+
+serves to formulate the dual of the proposition.
+
+corollary 2.2. let z k  x k denote the dual of z |x k. then
+
+z 2n = [2n  1]
+
+z 2 =   (  id)  coev,
+!! (z 2)n, z 2n1 = 0,
+
+n  n,
+
+proof. this is obtained from proposition 2.1 by reversing of arrows or equiv-
+alently by turning diagrams upside down in the diagrammatic language of
+braided categories.
+
+2.2 braided path integrals
+
+as emphasised in the introduction, the main basic ingredient of standard
+quantum eld theory in our view is the space of elds together with the
+group of symmetries acting on it.
+in the setting of quantum groups this
+means that we have a quantum group (a coquasitriangular hopf algebra) a
+of symmetries and a braided space of elds x on which a coacts. the aim is
+to construct the (analogues of) perturbative n-point functions. we use the
+conventions of euclidean quantum eld theory and only consider one scalar
+eld. thus, in the commutative case, x would be the space of functions
+on a riemannian space-time manifold m and a would be the lie group of
+isometries of m .
+
+the n-point function in standard quantum eld theory evaluated at
+
+(x1, . . . , xn) is given by the path integral
+
+h(x1)    (xn)i = r d (x1)    (xn)es()
+
+r d es()
+
+6
+
+with action s. this is really the normalised integral over x of the functional
+ 7 (x1)    (xn) with weight w() = es().
+
+let us deal with the free non-interacting theory rst. the path integral
+is then a gaussian integral and we are for the general braided case in the
+framework of section 2.1. disregarding the precise form of w for the moment,
+we already see that the value of the path integral is given by proposition 2.1.
+dually, the (unevaluated) n-point function itself is the element z n of x n
+given by corollary 2.2. it tells us in particular how the n-point functions
+are obtained from the 2-point function. thus, it is the braided version of
+wicks theorem, to which it reduces for the case of trivial braiding.
+
+let  be some dierential with respect to the elds. the denition of 
+
+in section 2.1 corresponds to
+
+((es0 ))() = (1())()es0(),
+
+where s0 denotes the free action. thus we nd (1())() = (s0)().
+the free action in standard euclidean (real) scalar eld theory is
+
+s0() =
+
+dx (x)(m2  m )(x),
+
+1
+
+2zm
+
+where m is the laplace operator on m and m is the mass of the eld.
+dene l := m2  m . let {i} be a basis of x and {
+i } a dual basis.
+denote the dierential with respect to i by i. we have
+
+(is0)() =zm
+
+dx (x)li(x) =xk
+
+k()zm
+
+
+
+dx k(x)li(x).
+
+rewriting this in the terminology of section 2.1 we get
+
+1 =(cid:18)id zm(cid:19)  (id )  (coev l),
+
+which we take as the dening equation for .
+
+(5)
+
+to evaluate interacting n-point functions, we use essentially the same
+perturbative techniques as in standard quantum eld theory. if s = s0 +
+sint with coupling constant , we expand
+
+h(x1)    (xn)i = r d (x1)    (xn)(1  sint() + . . . )es0()
+
+r d (1  sint() + . . . )es0()
+
+we write dually (assume sint is of degree k)
+
+z int
+
+n =
+
+z n (idn sint)(z n+k) + 1
+
+1  sint(z k) + 1
+
+2 2(idn sint  sint)(z n+2k) + . . .
+2 2(sint  sint)(z 2k) + . . .
+
+for the interacting n-point function in the general braided case. vacuum
+diagrams cancel as usual. note that we have used the ordinary exponential
+expansion for the interaction and not, say, a certain braided version. the
+latter might be more natural if, e.g., one wants to look at identities between
+diagrams of dierent order. however, we shall not consider this here.
+
+7
+
+.
+
+(6)
+
+2.3 braided feynman diagrams
+
+we are now ready to generalise feynman diagrams to our braided setting.
+to do this we use and modify the diagrammatic language of braided cate-
+gories appropriately:
+
+ an n-point function is a map k  x      x (n-fold). thus, its
+diagram is closed to the top and ends in n strands on the bottom. any
+strand represents an element of x.
+
+ the free 2-point function z 2 : k  x  x is represented by an arch
+
+(see gure 1.a). (this would usually represent the coevaluation.)
+
+ an n-leg vertex is a map x      x  k.
+
+it is represented by
+n strands joining in a dot (see gure 1.b). notice that the order of
+incoming strands matters.
+
+ any feynman diagram is made just out of free 2-point functions, (pos-
+sibly dierent kinds of) vertices and strands connecting them or ending
+at the bottom.
+
+otherwise the usual rules of braided diagrammatics apply.
+
+the diagrams for the free 2n-point functions can be read o immediately
+from corollary 2.2. figure 2 shows for example the free 4-point function and
+gure 3 the free 6-point function. for the interacting n-point functions we
+use formula (6) to obtain the diagrams. sint gives us the vertices. consider
+for example the 2-point function in 4-theory. to order  we get
+
+z int
+
+2 = z 2 (cid:0)(id2 sint)(z 6)  z 2 sint(z 4)(cid:1) + o(2).
+
+(7)
+
+sint is just the map 1  2  3  4 7r 1234. to obtain the diagrams
+
+at order  we start by drawing the free 6-point function (gure 3) and attach
+to the 4 rightmost strands of each diagram a 4-leg vertex (gure 1.b). those
+diagrams are generated by the rst term in brackets of (7). we realize
+that the rst three of our diagrams are vacuum diagrams which are exactly
+cancelled by the second term in the brackets. the remaining 12 diagrams
+are shown in gure 4. in standard quantum eld theory they all correspond
+to the same diagram: the tadpole diagram (see gure 5, we use a black dot to
+distinguish from the braided case). however, not all of them are necessarily
+dierent, as we shall see in section 3.2.
+
+3 braided qft on homogeneous spaces
+
+in standard quantum eld theory xing one point of an n-point function
+still allows to recover the whole n-point function. thus, we can reduce an
+n-point function to a function of just n  1 variables. this is simply due
+
+8
+
+  
+
+(b)
+
+(a)
+
+figure 1: free 2-point function (a) and vertex (b).
+
++
+
++
+
+figure 2: free 4-point function.
+
++
+
++
+
++
+
++
+
++
+
++
+
++
+
++
+
++
+
++
+
+figure 3: free 6-point function.
+
+9
+
++
+
++
+
++
+
++
+
++
+
++
+
++
+
++
+
++
+
++
+
++
+
++
+
++
+
++
+
++
+
+figure 4: interacting 2-point function of 4-theory at order 1.
+
+figure 5: tadpole diagram of standard 4-theory.
+
+10
+
+to the fact that any n-point function is invariant under the isometry group
+g of the space-time m and g acts transitively on m .
+in this case m is
+a homogenous space under g and we can make the above statement more
+precise in the following way.
+
+lemma 3.1. let g be a group and k a subgroup of g. for any n  n
+there is an isomorphism of coset spaces
+
+n : (k\g      k\g
+
+)/g = (k\g      k\g
+
+)/k
+
+|
+
+n times
+
+{z
+
+}
+
+|
+
+n1 times
+
+{z
+
+}
+
+n , . . . , an1a1
+
+given by n : [a1, . . . , an] 7 [a1a1
+n ] for ai  k\g. its inverse
+is given by 1
+: [b1, . . . , bn1] 7 [b1, . . . , bn1, e] for bi  k\g, where e
+n
+denotes the equivalence class of the identity in k\g. if g is a topological
+group (i.e., it is a topological space and multiplication and inversion are
+continuous) then equipping the coset spaces with the induced topologies makes
+n into a homeomorphism.
+
+3.1 quantum homogeneous spaces
+
+lemma 3.1 generalises to the quantum group case. to see this we rst recall
+the notion of a quantum homogeneous space.
+
+suppose we have two hopf algebras a and h together with a hopf
+algebra surjection  : a  h. this induces coactions l = (  id) and
+r = (id ) of h on a, making a into a left and right h-comodule algebra.
+dene ha to be the left h-invariant subalgebra of a, i.e., ha = {a 
+a|l(a) = 1  a}. we have  ha  ha  a since (l  id)   = (id  ) 
+l. this makes ha into a right a-comodule (and h-comodule) algebra.
+observe also that (a) = (a)1 for a  ha. ha is called a right (quantum)
+homogeneous space. dene the left homogenous space ah correspondingly.
+due to the anticoalgebra property of the antipode we nd s ha  ah and
+s ah  ha. if the antipode is invertible the inclusions become equalities.
+
+proposition 3.2. in the above setting with invertible antipode the map
+
+n : (ha      ha
+
+)a  (ha      ha
+
+)h
+
+|
+
+n times
+
+{z
+
+}
+
+|
+
+n1 times
+
+{z
+
+}
+
+given by n = (idn1  ) for n  n is an isomorphism.
+its inverse is
+(idn1  s)  n1, where n1 is the right coaction of a on ha extended to
+the (n  1)-fold tensor product.
+
+proof. let a1      an be an element of (ha      ha)a. in particular
+
+a1
+
+(1)      an
+
+(1)  a1
+
+(2)    an
+
+(2) = a1      an  1.
+
+11
+
+applying the antipode to the last component and multiplying with the n-th
+component we obtain
+
+a1
+
+(1)      an1
+
+(1)  (an) s(a1
+
+(2)    an1
+
+(2)) = a1      an.
+
+(8)
+
+thus, (idn1  s)  n1  (idn1  ) is the identity on (ha      ha)a.
+on the other hand applying the inverse antipode and then  to the last
+component of (8) we get
+
+a1
+
+(1)      an1
+
+(1)  (an)(a1
+
+(2)    an1
+
+(2)) = a1      an1  (an)1.
+
+this is to say that a1      an1 (an) is indeed right h-invariant.
+
+conversely, it is clear that (idn1  )  (idn1  s)  n1 = (idn1  ) 
+n1 is the identity. now take b1      bn1 in (ha      ha)h . its image
+under n1 is
+
+b1
+
+(1)      bn1
+
+(1)  b1
+
+(2)    bn1
+
+(2).
+
+(9)
+
+applying  to the last component we get
+
+b1
+
+(1)      bn1
+
+(1)  (b1
+
+(2)    bn1
+
+(2)) = b1      bn1  1
+
+by right h-invariance. applying n1  id we arrive at
+
+b1
+
+(1)      bn1
+= b1
+
+(2)    bn1
+(1)  b1
+(1)      bn1
+
+(2)  (b1
+(1)  b1
+
+(3)    bn1
+
+(3))
+
+(2)    bn1
+
+(2)  1.
+
+we observe that this is the same as applying (idn1 r) to (9). thus, the
+last component of (9) lives in ah and the application of the antipode sends
+it to ha as required. that the result is right a-invariant is also clear by the
+dening property of the antipode.
+
+to make use of the result we assume our space x of elds to be a (quan-
+tum) homogenous space under the (quantum) group (coquasitriangular hopf
+algebra) a of symmetries. (note that coquasitriangularity implies invertibil-
+ity of the antipode.) i.e., together with a we have another hopf algebra h
+and a hopf algebra surjection a  h. we then assume that the algebra of
+elds is the right homogeneous space x = ha living in the braided category
+ma of right a-comodules.
+
+3.2 diagrammatic techniques
+
+proposition 3.2, to which we shall refer as invariant reduction, is not only
+useful to express n-point functions in a more compact way, but can also be
+applied in the evaluation of braided feynman diagrams. for this we note
+that any horizontal cut of a braided feynman diagram lives in some tensor
+power of x (since the only allowed strand lives in x) and is invariant (since
+the diagram is closed at the top). thus, we can apply invariant reduction
+to it. we shall give three examples for this.
+
+12
+
+vertex evaluation. consider the evaluation of an n-leg vertex (the hori-
+zontal slice of an invariant diagram depicted in gure 6) with incoming
+elements a1      ak+n. by invariant reduction this can be expressed
+in two ways,
+
+a1      akz ak+1    ak+n
+= a1(1)      ak (1) (ak+1)    (ak+n)z s(a1(2)    ak (2))
+
+depending on the circumstances each side might be easier to evaluate.
+
+loop extraction. assume that the integral on ha is normalised, r 1 =
+
+1. consider the diagram in gure 7 (left-hand side). it is obviously
+invariant. thus, the single outgoing strand carries a multiple of the
+identity and we can replace it by the integral followed by the identity
+element (gure 7, right-hand side).
+
+loop separation. we assume further that the coquasitriangular structure
+
+is trivial on hah in the sense
+
+r(a  b) = (a) (b)
+
+if a  hah or b  hah .
+
+(10)
+
+consider now the diagram in gure 8 (left-hand side) as a horizontal
+slice of an invariant diagram. according to invariant reduction we
+apply the counit to the rightmost outgoing strand. this makes the
+braiding trivial due to the assumed property of r. we can push the
+counit up to each of the joining strands and disentangle them. then
+proceeding as in the previous example leads to the diagram in gure 8
+(right-hand side). note that this works the same way for an under-
+crossing.
+
+let us come back to the 2-point function of 4 theory that we considered
+
+at the end of section 2.3. assuming r 1 = 1 and property (10) we can
+
+use loop extraction and loop separation to simplify the order 1 diagrams of
+gure 4 considerably. the result is shown in gure 9. instead of 12 dierent
+diagrams we only have 2 dierent and much simpler diagrams, each with a
+multiplicity of 6.
+
+4 braided qft on compact spaces
+
+4.1 braided spaces of innite dimension
+
+up to now we have developed our approach on a formal level insofar, that we
+have not addressed the question how an innite dimensional space (of elds)
+can be treated in a braided category. this is certainly necessary if we want
+
+13
+
+  
+
+  
+
+  
+
+figure 6: vertex evaluation in a digram slice.
+
+=
+
+1
+
+figure 7: extracting a loop.
+
+  
+
+=
+
+  
+
+figure 8: separating a loop in an invariant slice.
+
+6
+
++ 6
+
+figure 9: simplied 2-point function of 4-theory at order 1.
+
+14
+
+to do quantum eld theory (statistical eld theory), i.e., deal with innitely
+many degrees of freedom. an obvious problem is the denition of the co-
+evaluation. it seems that we need at least a completed tensor product for
+this. however, instead of introducing heavy functional analytic machinery,
+we can stick with our algebraic approach given a further assumption.
+
+let us assume that the space of (regular) elds x decomposes into a
+
+direct sumli xi of countably many nite dimensional comodules under the
+
+symmetry quantum group a. this corresponds roughly to the classical case
+of the space-time manifold being compact. in particular, it is the case if the
+symmetry quantum group a is cosemisimple (or classically the lie group
+of symmetries is compact, see section 4.2 below). denote the projection
+x  xi by i.
+
+we now allow arbitrary sums of elements in x given that any projection
+i annihilates all but nitely many summands. similarly, we allow innite
+sums in the n-fold tensor product x n with the restriction that any projection
+i1   in yields a nite sum. to dene the dual of x, we take the dual of
+i . for each component xi we have an evaluation
+in
+i ) and coev =
+
+each xi and set x  =li x 
+the usual way. we then formally dene ev = pi evi (i   
+pi coevi.
+
+our denition is invariant under coactions of a as it should be, since the
+projections i commute with the coaction of a. in particular, it is invariant
+under braidings.
+
+i  k and a coevaluation map coevi : k  xi  x 
+i
+
+map evi : xi  x 
+
+4.2 cosemisimplicity and peter-weyl decomposition
+
+we describe a context in which all comodules over a hopf algebra decompose
+into nite dimensional (and even simple) pieces. the discussion here uses
+results of [16] but is more in the spirit of [18, ii.9].
+
+let c be a coalgebra, v a simple right c-comodule (i.e. v has no proper
+subcomodules) with coaction  : v  v  c.
+in particular, v is nite
+dimensional. the dual space v  is canonically a (simple) left c-comodule.
+denote a basis of v by {ei}, the dual basis of v  by {f i}.
+identify the
+endomorphism algebra on v end v = v  v  via (ei  f j)(ek  f l) = j
+k(ei 
+f l). we denote the dual coalgebra by (end v ) and identify (end v ) =
+
+v   v via (f i  ej) =pk(f i  ek)  (f k  ej).
+
+now consider the map (end v )  c given by f i ej 7 (f i id)(ej ).
+it is an injective (since v is simple) coalgebra map. we extend this to the
+direct sum of all inequivalent simple comodules. the resulting map
+
+mv
+
+(end v )  c
+
+is a coalgebra injection. it is an isomorphism of coalgebras if and only if
+all c-comodules are semisimple (i.e. they are direct sums of simple ones) or
+
+15
+
+equivalently if c is semisimple (i.e. it is a direct sum of simple coalgebras).
+assume now that a is a cosemisimple hopf algebra, i.e., a is semisimple
+
+as a coalgebra. we write the above decomposition as
+
+a =mv
+
+(v   v ).
+
+(11)
+
+it is also referred to as the peter-weyl decomposition, in analogy to the cor-
+responding decomposition of the algebra of regular functions on a compact
+lie group. there is a unique normalised left- and right-invariant integral
+(haar functional) on c, given by the induced projection to the unit element
+in c. note also that the antipode is invertible.
+
+consider now a second hopf algebra h with a hopf algebra surjection
+ : a  h. this induces a coaction of h on each a-comodule. for the
+right quantum homogenous space we then have
+
+ha =mv
+
+(h(v )  v )
+
+(12)
+
+as right h-comodules.
+
+5 4-theory on the quantum 2-sphere
+
+in accordance with the motivation of braided quantum eld theory as a
+way of regularising standard quantum eld theory, we replace lie groups of
+symmetries by corresponding parametric deformations. in order to have a
+well dened theory in the sense of section 4 we make use of the peter-weyl
+decomposition and thus restrict to compact lie groups. a natural choice
+are the standard q-deformations of lie groups with compact -structure. we
+specialise to k = c, although the discussion of the free action in section 2.2
+was in the spirit of real-valued scalar eld theory. this is necessary since
+the standard q-deformations viewed as deformations of complexications of
+compact lie groups do not restrict to real subalgebras for q 6= 1. however,
+viewing q-deformation purely as a mathematical tool we can always restrict
+to r when considering physical quantities living at q = 1.
+
+in the following we consider perturbative 4-theory on the quantum 2-
+sphere as an example of a quantum eld theory on a braided space. (see
+e.g. [19] for a treatment of standard 4-theory.) we demonstrate that the
+basic divergence of the theory, the tadpole diagram (gure 5), becomes nite
+for q > 1. our hopf algebra of symmetries is suq(2) under which s2
+q is a
+homogeneous space as a right comodule. (we adopt the convention to denote
+the hopf algebra of regular functions by the name of the (quantum) group
+or space.)
+
+16
+
+5.1 the decomposition of suq(2) and s2
+q
+
+to prepare the ground we need to recall the construction of s2
+q as a quantum
+homogeneous space under suq(2) and the peter-weyl decomposition of the
+latter [20][21]. this will enable us to apply the machinery of the previous
+sections.
+
+recall that suq(2) is the compact real form of slq(2). it is cosemisimple
+and there is one simple (right) comodule vl for each integer dimension,
+conventionally labelled by a half-integer l such that the dimension is 2l + 1.
+thus, the peter-weyl decomposition (11) is
+
+suq(2) = ml 1
+
+n0
+
+2
+
+(v 
+
+l  vl).
+
+there is a hopf -algebra surjection  : suq(2)  u (1) corresponding to
+the diagonal inclusion in the commutative case. this denes the quantum 2-
+sphere s2
+q as the right homogeneous -space u (1)suq(2). under the coaction
+of u (1) induced by  the comodules vl decompose into inequivalent one-
+dimensional comodules. those are classied by integers i such that the
+coaction takes the form v 7 v  gi. this determines up to normalisation
+a basis {v(l)
+n } for vl, where n are half-integers such that the coaction of
+u (1) is v(l)
+n 7 v(l)
+n  g2n. it turns out that the indices n take the values
+l, l + 1, . . . , l. in particular, we nd that v u (1)
+is one-dimensional if l is
+integer and zero-dimensional otherwise. thus, (12) simplies to
+
+l
+
+s2
+q
+
+= mln0
+
+vl
+
+as right suq(2)-comodules. we write the induced (normalisation indepen-
+dent) basis vectors of suq(2) as t(l)
+n is dual to
+e(l)
+n and  : vl  vl suq(2) is the coaction of suq(2) on vl. as a subalgebra
+u (1) = u (1)suq(2)u (1)
+q has the basis {t(l)
+s2
+has the basis {t(l)
+0 0}.
+
+0 i }. the bi-invariant subalgebra s2
+q
+
+j ) where f (l)
+
+i j = (f (l)
+
+i  id)(e(l)
+
+note that by construction
+
+m n(cid:17) = m,n
+(cid:16)t(l)
+
+and  t(l)
+
+m n =xk
+
+m k  t(l)
+t(l)
+k n.
+
+the antipode and -structure of suq(2) in this basis are
+
+s t(l)
+
+m n = (q)mnt(l)
+
+m n(cid:17)
+n m, (cid:16)t(l)
+
+= s t(l)
+
+n m = (q)nmt(l)
+
+m n.
+
+as can be veried by direct calculation from the formulas in [22, 4.2.4]. the
+i j = l,0. we
+
+normalised invariant integral (haar functional) is simply r t(l)
+
+17
+
+also need its value on the product of two basis elements
+
+z t(l)
+
+m nt(l)
+
+m n =
+
+(1)mnqm+n
+
+[2l + 1]q
+
+l,lm+m,0n+n,0.
+
+(13)
+
+this can be easily worked out considering the equation (a) = r a(1) s a(2)
+and using the invariance of the integral in the form b(1)r ab(2) = s a(1)r a(2)b
+and s b(2)r ab(1) = a(2)r a(1)b on basis elements. the q-integers for q  c
+
+are dened as
+
+[n]q :=
+
+n1xk=0
+
+qn2k1 =
+
+qn  qn
+q  q1 .
+
+(the second expression is only valid if q2 6= 1).
+
+denoting a dual basis of {t(l)
+
+m n} we observe that suq(2) be-
+comes an object in msuq(2) with evaluation ev : suq(2)  suq(2)  c
+and coevaluation coev : c  suq(2)  suq(2) by the coaction t(l)
+m n 7
+
+m n} by {t(l)
+
+pk
+
+m k  s1 t(l)
+t(l)
+n k.
+in the commutative case q = 1 the basis {t(l)
+
+m n} becomes the usual basis of
+regular functions (i.e., matrix elements of representations) on su (2) (see e.g.
+[23, chapter 6] to which conventions we conform in this case). the restriction
+to {t(l)
+0 n} recovers nothing but (a version of) the spherical harmonics on s2.
+in particular, we notice that the zonal spherical functions can be expressed
+in terms of legrende polynomials t(l)
+0 0(, , ) = pl(cos ), where , ,  are
+the euler angles on su (2) (see [23, chapter 6]). from the orthogonality
+relation of the legendre polynomials, the fact that their only common value
+is at pl(1) = 1, and considering that  = 0 denotes a pole of su (2), we nd
+that the delta function at the identity of su (2) can be represented as
+
+0(, , ) =xl
+
+(2l + 1)pl(cos ) =xl
+
+t(l)
+0 0(, , ).
+
+(14)
+
+for calculations we need the functionals u and v dened for a coquasi-
+
+triangular structure r as (see e.g. [13])
+
+u(a) := r(a(2)  s a(1)),
+
+v(a) := r(a(1)  s a(2)).
+
+(15)
+
+for suq(2) in our basis they are
+
+u(t(l)
+
+m n) = m,n q2l(l+1)+2m,
+
+v(t(l)
+
+m n) = m,n q2l(l+1)2m.
+
+(16)
+
+we also note that property (10) is satised, i.e.,
+
+r(cid:16)t(l)
+
+0 0  t(l)
+
+i j(cid:17) = i,j = r(cid:16)t(l)
+
+0 0(cid:17) .
+i j  t(l)
+
+(17)
+
+see the appendix for a derivation of (16) and (17).
+
+18
+
+5.2 the free 2-point function
+
+the rst step towards the free 2-point function is to dene the free action.
+for this we need an analogue of the laplace operator. we note that by
+the duality of suq(2) with the quantum enveloping algebra uq(sl2), a cental
+element of the latter denes an invariant operator on suq(2)-comodules. a
+natural choice is the quantum casimir element which we dene as
+
+cq = ef +
+
+(k  1)q1 + (k 1  1)q
+
+(q  q1)2
+
+.
+
+here k, k 1, e, and f are the generators of uq(sl2) (see the appendix). cq
+diers from quantum casimir elements considered elsewhere (see e.g. [21]
+or [22]) only by a q-multiple of the identity. the eigenvalue of cq on vl is
+[l]q[l +1]q so that we get exactly the (negative of the) usual laplace operator
+for q = 1. including a mass term we set
+
+l = cq + m2.
+
+thus, the eigenvalue of l on vl is
+
+ll = [l]q[l + 1]q + m2.
+
+now we can determine  according to (5). using (13) we nd
+
+1(cid:16)t(l)
+
+0 i(cid:17) =xm,j
+
+inverting we obtain
+
+0 j z t(m)
+
+t(m)
+
+0 j
+
+l(cid:16)t(l)
+
+0 i(cid:17) = [2l + 1]1
+
+q
+
+ll (q)i t(l)
+
+0 i,
+
+(cid:16)t(l)
+
+0 i(cid:17) = [2l + 1]q l1
+
+l
+
+(q)i t(l)
+
+0 i.
+
+now we are ready to determine the free 2-point function according to corol-
+lary 2.2.
+
+t(l)
+
+(id )  (cid:16)t(l)
+0 i  (cid:16)t(l)
+0 i  (cid:16)t(l)
+
+0 k(cid:17)
+0 k  t(l)
+0 j(cid:17) r(cid:16)s1 t(l)
+i j(cid:17)
+0 j(cid:17) u(cid:16)t(l)
+
+t(l)
+
+i k(cid:17)
+k j  t(l)
+
+z 2 =xl,k
+= xl,i,j,k
+=xl,i,j
+=xl,i
+
+[2l + 1]q l1
+
+l
+
+q2l(l+1) (q)i t(l)
+
+0 i  t(l)
+
+0 i.
+
+using invariant reduction (proposition 3.2) we nd
+
+ez 2 =xl
+
+[2l + 1]q l1
+
+l
+
+19
+
+q2l(l+1) t(l)
+0 0
+
+(18)
+
+to be the reduced form of the 2-point function as an element of s2
+q
+the commutative case (q = 1) we can rewrite (18) as
+
+u (1). in
+
+ez 2 |q=1 = (m2  )10
+
+by comparison with (14). this is the familiar expression for the free 2-point
+function (propagator).
+
+5.3 interactions
+
+we proceed to evaluate the order 1 contribution of the 4 interaction to the
+2-point function. the corresponding diagrams are depicted in gure 4 (see
+section 2.3). since the property (10) holds in suq(2) the diagrams simplify
+to those of gure 9 (see section 3.2). the disconnected loop comes out as
+
+loop :=
+
+=xl
+
+[2l + 1]q
+
+[l]q[l + 1]q + m2 q2l(l+1).
+
+(19)
+
+(just apply the counit to (18).) the connected diagram in the right hand
+summand of gure 9 is (in reduced form)
+
+=(cid:18)id   z (cid:19)  (id2 )  (id  z2  id)  z 2
+= xl,m,i,j
+=xl
+
+0 j (cid:17)z s t(m)
+
+0 i (cid:16)t(m)
+
+2
+l [2l + 1]1
+q
+
+j 0 s t(l)
+
+lm t(l)
+
+i 0
+
+t(l)
+0 0,
+
+with l := [2l + 1]q l1
+
+its reduced form (18), the property r  s =r of the integral, and (13). the
+
+connected diagram in the left hand summand of gure 9 is (in reduced form)
+
+q2l(l+1). we have used z 2 as reconstructed from
+
+l
+
+=(cid:18)id   z (cid:19)  (id2 )  (id 1  id)  (z 2  z 2)
+j 0 r1(cid:16)t(m)
+= xl,m,i,j,k,n
+n 0 s t(m)
+i n(cid:17)
+= xl,m,i,j,n
+0 j  t(l)
+
+0 k (cid:17)z s t(l)
+n 0 r(cid:16)t(m)
+
+0 i (cid:16)t(m)
+0 iz t(m)
+j 0 t(l)
+
+lm t(l)
+
+lm t(l)
+
+i n(cid:17)
+k j  s t(l)
+
+20
+
+lm t(l)
+
+lm t(l)
+
+0 iz t(m)
+j k (cid:17)
+i 0 r(cid:16)t(m)
+k 0 t(l)
+0 j  s t(m)
+0 iz t(m)
+0 k (cid:17)
+i 0 v(cid:16)t(m)
+k 0 t(l)
+
+l [2l + 1]1
+2
+
+q q2l(l+1) t(l)
+0 0.
+
+= xl,m,i,j,k
+= xl,m,i,k
+=xl
+
+here we have also used the invariance of the integral in the form (r ab(2))b(1) =
+(r a(2)b) s a(1) in the third equality. thus, the (reduced) 2-point function up
+
+to order 1 comes out as
+
+int
+
+2 =xl
+ez
+
+[2l + 1]q l1
+
+l
+
+q2l(l+1) t(l)
+0 0
+
+(cid:16)1  6  loop l1
+
+l q2l(l+1)(1 + q2l(l+1)) + o(2)(cid:17) .
+
+(20)
+
+in the commutative case (q = 1), we know that the order 1 contribution
+(given by the tadpole diagram in gure 5) is divergent. we can easily see
+where this divergence comes from. the loop contribution (19)
+
+loop|q=1 =xl
+
+2l + 1
+
+l(l + 1) + m2
+
+(21)
+
+is innite. however, at q > 1 it becomes nite! we are truly able the
+regularise the tadpole diagram. let us identify the divergency in q-space.
+for q > 1 we can nd both an upper and a lower bound for (19) of the form
+
+const +z 
+
+1
+
+dl
+
+2
+l
+
+q2l2
+
+,
+
+where const does not depend on q (but may depend on m2). setting q = e2h2
+with h > 0 we nd
+
+loop|q>1 =
+
+1
+h
+
++ o(1).
+
+the conventional divergence of (21) is only logarithmical in l. what
+would happen with higher divergencies? it seems natural to assume that
+they would give rise to terms like
+
+xl
+
+[l]n
+
+q q2l(l+1).
+
+but this converges in the domain q > 1 for any n. we can even apply the
+very same discussion of the divergence in q-space as above. the nature of
+the divergence in q-space does not seem to be aected by the degree of the
+
+21
+
+classical divergence at all. this suggests that q-regularization in our frame-
+work is powerful indeed. compare this, e.g., to dimensional regularization
+which can only handle logarithmic divergencies.
+
+reviewing our calculations of z 2 and z int
+
+2 we nd that the crucial factor
+of q2l(l+1) is caused by the braiding. thus, the braiding and not the mere
+noncommutativity appears to be essential for the regularization.
+
+5.4 renormalisation
+
+classically, 4-theory in dimension 2 is super-renormalisable. the only basic
+divergent diagram is the tadpole (gure 5). thus, if in a given diagram we
+separate out all loops from tadpole vertices according to gures 7 and
+8 (as we did in the last section for the tadpole), the remaining diagram
+is nite at q = 1. the stripped vertices have just become 2-vertices.
+notice however, that from a rigourous point of view this can only be done
+if the whole diagram is nite. while we have seen that the tadpole diagram
+alone becomes nite for q > 1, it is conceivable that certain diagrams that
+converge at q = 1 would diverge at q > 1. this might be due to the
+introduction of factors like q2l(l+1) into summations over l. the expression
+(20) suggests, however, that this does not happen, but rather that all q-
+factors introduced in summations have negative exponent. we shall assume
+this in the following.
+
+let us now see how renormalisation looks like in our framework. to
+
+renormalise the coupling we set
+
+ =  loop
+
+at q > 1 and x  as our new coupling. then, given any diagram we
+perform the stripping of tadpole loops as described above and the separated
+loops cancel with 1
+loop in . as q goes to 1 those loops are just 2 vertices.
+however, in this limit, any other vertex vanishes due to a factor of 1
+loop.
+thus we remain with only 2 vertices that just correspond to an additional
+mass term. the eective shift in mass is
+
+m2  m2 + 12.
+
+what one usually does in 4-theory is to renormalise the mass to cancel
+
+the divergence. thus, instead of redening  we set
+
+m2 = m2  12 loop.
+
+to be the new mass. of course this equation must not be understood literally
+in our framework since we can not write the free and the interacting part of
+the action together. instead we introduce (at q > 1) a 2 vertex with a factor
+of 6  loop in front. writing all diagrams of a given order, all tadpoles are
+cancelled in the limit q  1 and only nite non-tadpole vertices remain.
+
+22
+
+6 concluding remarks
+
+we have presented a coherent framework for the treatment of quantum eld
+theory on braided spaces. although we have only discussed the scalar case,
+the generalisation to elds living in non-trivial representations of the symme-
+try (quantum) group should be straightforward. the example of 4-theory
+on the quantum 2-sphere has shown that quantum deformations of sym-
+metries do lead to the regularization of divergencies in our approach. our
+results also suggest that divergencies of arbitrary order could be regularised
+in this way. this appears to be a considerable advantage over dimensional
+regularization. a next step would be the investigation of quantum eld the-
+ories on deformations of higher dimensional spaces. we note in particular
+that quantum deformations of minkowski space are available (see [24][25]
+and [26][27]).
+
+acknowledgements
+
+i would like to thank s. majid for valuable discussions during the preparation
+of this paper.
+i would also like to acknowledge the nancial support by
+the german academic exchange service (daad) and the engineering and
+physical sciences research council (epsrc).
+
+a coquasitriangular structure of suq(2)
+
+in this section we provide the formulas for the coquasitriangular structure
+of suq(2) in our peter-weyl basis needed in section 5. we use the context
+of section 5.1. denitions and results that are just stated are standard and
+can be found e.g. in [13] or [22].
+
+the hopf algebra uq(sl2) is dened over c for q  c and q2 6= 1 with
+
+generators e, f, k, k 1 and relations
+
+kek 1 = q2e, kf k 1 = q2f,
+
+kk 1 = k 1k = 1,
+
+[e, f ] =
+
+k  k 1
+q  q1 ,
+
+(e) = e  k + 1  e, (f ) = f  1 + k 1  f,
+
+(k) = k  k,
+s(k) = k 1,
+
+(k) = 1,
+
+(e) = (f ) = 0,
+
+s(e) = ek 1,
+
+s(f ) = kf.
+
+uq(sl2) and suq(2) are non-degenerately paired. thus, actions of uq(sl2)
+and coactions of suq(2) on nite dimensional vector spaces are dual to each
+other. in particular, the simple comodule vl of suq(2) is a simple module
+of uq(sl2). by the representation theory of uq(sl2) it has a basis {wi},
+
+23
+
+i = l, l + 1, . . . , l such that
+
+k  wm = q2mwm, e  wm = ([l  m]q[l + m + 1]q)1/2wm+1
+
+f  wm = ([l + m]q[l  m + 1]q)1/2wm1.
+
+(22)
+
+uq(sl2) has an h-adic version uh(sl2) dened over c[[h]] correspondingly
+with q = eh and an additional generator h so that qh = k. it has the
+quasitriangular structure
+
+r = q(hh)/2
+
+xn=0
+
+qn(n+1)/2(1  q2)n
+
+[n]q!
+
+en  f n.
+
+(23)
+
+the elements (dene r(1)  r(2) = r)
+
+u = (s r(2))r(1),
+
+v = r(1) s r(2)
+
+(24)
+
+act on vl as [13, proposition 3.2.7]
+
+u  wm = q2l(l+1)+2mwm,
+
+v  wm = q2l(l+1)2mwm.
+
+(25)
+
+the coquasitriangular structure r of suq(2) is given by the duality with
+
+uq(sl2) from the quasitriangular structure r of uh(sl2). using
+
+u(a(1))a(2) = s2 a(1)u(a(2)) and v(a(1)) s2 a(2) = a(1)v(a(2))
+
+we nd
+
+u(cid:16)t(l)
+
+m n(cid:17) = m,n q2(mk)u(cid:16)t(l)
+k k(cid:17) ,
+
+v(cid:16)t(l)
+
+m n(cid:17) = m,n q2(km)v(cid:16)t(l)
+k k(cid:17) .
+
+(26)
+
+since the denitions (15) and (24) are dual to each other we can use
+
+g  vn =xm
+
+vmhg, t(l)
+
+m ni,
+
+g  uq(sl2)
+
+to compare (25) with (26). we nd (16) and infer that wi is (a multiple of)
+vi. with the latter, the pairing between uq(sl2) and suq(2) comes out from
+(22) as
+
+hk, t(l)
+
+m ni = m,n q2n,
+
+he, t(l)
+
+m ni = m,n+1([l  n]q[l + n + 1]q)1/2,
+
+hf, t(l)
+
+m ni = m,n1([l + n]q[l  n + 1]q)1/2.
+
+note also hh, t(l)
+(23) we easily verify the property (17).
+
+m ni = m,n2n in the h-adic version. with this pairing and
+
+24
+
+references
+
+[1] h. s. snyder, quantized space-time, phys. rev. 71 (1947) 3841
+
+[2] v. g. drinfeld, quantum groups, in a. gleason, editor, proceedings of
+
+the icm 1986, pages 798820, ams, rhode island, 1987
+
+[3] m. jimbo, a q-dierence analogue of u (g) and the yang-baxter equa-
+
+tion, lett. math. phys. 10 (1985) 6369
+
+[4] s. l. woronowicz, compact matrix pseudogroups, comm. math. phys.
+
+111 (1987) 613665
+
+[5] s. majid, hopf algebras for physics at the planck scale, class. quantum
+
+grav. 5 (1988) 15871606
+
+[6] s. majid, on q-regularization, internat. j. modern phys. a 5 (1990)
+
+46894696
+
+[7] a. kempf, noncommutative geometric regularization, phys. rev. d 54
+
+(1996) 51745178
+
+[8] a. connes, m. douglas, a. schwarz, noncommutative geometry and
+matrix theory: compactication on tori, j. high energy phys. 1998
+no.2, paper 3
+
+[9] j. madore, an introduction to noncommutative dierential geometry
+and its physical applications, cambridge university press, cambridge,
+1995
+
+[10] h. grosse, c. klimcik, p. presnajder, on finite 4d quantum field
+theory in non-commutative geometry, comm. math. phys. 180
+(1996) 429438
+
+[11] s. cho, r. hinterding, j. madore, h. steinacker, finite field theory
+
+on noncommutative geometries, preprint, hep-th/9903239
+
+[12] m. chaichian, a. demichev, p. presnajder, quantum field theory
+on the noncommutative plane with eq(2) symmetry, preprint, hep-
+th/9904132
+
+[13] s. majid, foundations of quantum group theory, cambridge univer-
+
+sity press, cambridge, 1995
+
+[14] a. kempf, s. majid, algebraic q-integration and fourier theory on
+
+quantum and braided spaces, j. math. phys. 35 (1994) 68026837
+
+[15] p. podles, quantum spheres, lett. math. phys. 14 (1987) 193202
+
+25
+
+[16] m. e. sweedler, hopf algebras, w. a. benjamin, new york, 1969
+
+[17] s. majid, free braided dierential calculus, braided binomial theorem,
+and the braided exponential map, j. math. phys. 34 (1993) 48434856
+
+[18] r. carter, g. segal, i. macdonald, lectures on lie groups and lie
+
+algebras, cambridge university press, cambridge, 1995
+
+[19] j. zinn-justin, quantum field theory and critical phenomena, third
+
+edition, oxford university press, 1996
+
+[20] t. h. koornwinder, representations of
+
+the twisted su (2) quan-
+tum group and some q-hypergeometric orthogonal polynomials, ned-
+erl. akad. wetensch. proc. ser. a 92 (1989) 97117
+
+[21] t. masuda, k. mimachi, y. nakagami, m. noumi, k. ueno, represen-
+tations of the quantum group suq(2) and the little q-jacobi polyno-
+mials, j. funct. anal. 99 (1991) 357386
+
+[22] a. klimyk, k. schmudgen, quantum groups and their representa-
+
+tions, springer verlag, berlin, 1997
+
+[23] n. ja. vilenkin, a. u. klimyk, representation of lie groups and special
+
+functions, volume 1, kluwer academic publishers, dordrecht, 1991
+
+[24] u. carow-watamura, m. schlieker, m. scholl, s. watamura, tensor
+representation of the quantum group slq(2, c) and quantum minkowski
+space, z. phys. c 48 (1990) 159165
+
+[25] s. majid, u. meyer, braided matrix structure of q-minkowski space and
+
+q-poincare group, z. phys. c 63 (1994) 357362
+
+[26] j. lukierski, a. nowicki, h. ruegg, new quantum poincare algebra and
+
+-deformed eld theory, phys. lett. b 293 (1991) 344352
+
+[27] s. majid, h. ruegg, bicrossproduct structure of -poincare group and
+
+non-commutative geometry, phys. lett. b 334 (1994) 348354
+
+26
+
+

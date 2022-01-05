@@ -1,0 +1,3423 @@
+february 1, 2008
+
+dedicated to the memory of nicolaj n. bogoliubov
+on the occassion of his 90th birthday.
+
+evolution of the bogoluibov renormalization group
+
+n.n.bogoliubov laboratory, jinr, dubna, russia;
+
+shirkovd@thsun1.jinr.ru
+
+abstract
+
+we start with a simple introduction into the renormalization group (rg) in
+quantum eld theory and give an overview of the renormalization group method.
+the third section is devoted to essential topics of the renorm-group use in the
+qft. here, some fresh results are included.
+
+then we turn to the remarkable proliferation of the rg ideas into various elds
+of physics. the last section summarizes an impressive recent progress of the qft
+renormalization group application in mathematical physics.
+
+9
+9
+9
+1
+
+ 
+
+p
+e
+s
+4
+
+ 
+
+ 
+ 
+
+1
+v
+4
+2
+0
+9
+0
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+contents
+
+1 renormalization group primer
+
+1.1 mathematical preliminaries
+
+1.2 denition of the renorm-group
+
+. . . . . . . . . . . . . . . . . . . . . . . . .
+1.1.1 renorm-group folklore . . . . . . . . . . . . . . . . . . . . . . . . .
+1.1.2 group functional equation . . . . . . . . . . . . . . . . . . . . . . .
+1.1.3 abstract formulation . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . .
+1.2.1 the rg transformation . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . .
+1.2.2
+. . . . . . . . . . . . . . . . . . . . .
+1.3.1 renormalization and renormalization invariance . . . . . . . . . . . .
+1.3.2 the discovery of the renormalization group
+. . . . . . . . . . . . . .
+1.3.3 creation of the rg method . . . . . . . . . . . . . . . . . . . . . . .
+1.4 rg in qed . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1.4.1 eective electron charge . . . . . . . . . . . . . . . . . . . . . . . .
+1.4.2 rg transformations
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+
+1.3 early history and the rg method
+
+simple generalizations
+
+2 renormalization group method
+
+2.1 basic idea . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.2 dierential formulation
+. . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.3 general solution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.4 rgm algorithm . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.4.1 technology of rg method . . . . . . . . . . . . . . . . . . . . . . .
+2.4.2 rgm usage in qft . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3 rg in qft
+
+3.1 uv analysis in general
+
+3.1.1 one-coupling case
+3.1.2 multi-coupling case
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+3.2 perturbative approach to the uv asymptote . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3.2.1
+3.2.2 the ghost-pole trouble
+3.2.3
+
+3.3 massdependent analytic solution
+3.4 some important results
+
+structure of rg results
+
+scalar quartic model
+
+4 rg expansion
+
+spin lattices
+
+4.1 critical phenomena . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.1.1
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.1.2 polymer theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.1.3 turbulence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.2 paths of rg expansion . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.3 two faces of rg in qft . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+i
+
+1
+1
+1
+2
+3
+4
+4
+5
+5
+5
+7
+8
+9
+10
+11
+
+12
+12
+14
+15
+16
+16
+17
+
+18
+18
+19
+20
+21
+21
+22
+23
+25
+27
+
+29
+29
+29
+31
+31
+32
+33
+
+5 rg symmetry in mathematical physics
+
+5.1 functional self-similarity . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5.2 recent application to boundary value problem . . . . . . . . . . . . . . .
+
+bibliography
+
+34
+34
+35
+
+37
+
+ii
+
+1 renormalization group primer
+
+1.1 mathematical preliminaries
+
+1.1.1 renorm-group folklore
+
+let us start with some simple statements which can be supposed to be widely known by
+particle theorists. in the quantum eld theory (qft) the renormalization group (rg) is
+usually associated with a possibility of presenting any physical quantity, f (q2, g), cal-
+culated under a denite renormalization prescription in the form f (q2/2, g)
+(for
+simplicity  in a massless case) with the renormalized coupling constant g denition
+attached to some renormalization point (or reference momentum scale) q = . dieren-
+tial rg equation is usually said to be driven from the condition that f does not depend
+on the choice of  ,
+
+df
+d
+
+= 0 .
+
+(1)
+
+the coupling constant g dependence on  is described by a specic function g(q2)
+
+known as an eective coupling (sometimes  eective coupling constant) g = g(2) .
+
+eq.(1) can be written down in the form of a partial linear dierential equation (de)
+
+"x
+
+
+x  (g)
+
+
+
+g# f (x, g) = 0
+
+(2)
+
+where x = q2/2, g stands for g and (g), the group generator, usually referred to as
+beta function, is dened by
+
+(g) = z
+
+g(z)
+
+z
+
+at
+
+z = 2 .
+
+the eective coupling g should be considered as a function of two arguments: x =
+
+q2/2 and g with the boundary condition g(1, g) = g. besides
+
+it satises the nonlinear de
+
+"x
+
+
+x  (g)
+
+
+
+g# g(x, g) = 0
+
+x
+
+g(x, g)
+
+x
+
+= (g(x, g))
+
+(3)
+
+(4)
+
+which is nothing else but a characteristic equation for (2). to employ this formalism,
+one has to give (g). usually, for this one uses renormalized perturbation theory.
+
+the foregoing can be considered as a rg folklore. for brevity, we gave it in the
+simplest massless version, which corresponds to the uv case, for the qft model with
+one coupling constant.
+
+1
+
+1.1.2 group functional equation
+
+less popular are the rg functional equations (fes). the fe for the g in the uv case
+has the form
+
+g(x, g) = g(cid:18) x
+
+t
+
+, g(t, g)(cid:19) .
+
+(5)
+
+this equation, which follows (see, e.g., the chapter renormalization group in ref.[1])
+from nite dyson renormalization transformations, represents a basement of the dieren-
+tial rg formulation. popular de (4) can be directly obtained from it by dierentiating
+over x and then putting t = x. on the other hand, by dierentiating (5) with respect
+to t at t = 1 we get partial de (3).
+
+the fe (5) as well as similar fes for propagators and vertex functions (see, below,
+eq.(19)) must be considered as the most compact and general formulation of the rg
+symmetry in qft.
+
+however, in reality, group fes, like (5) (and des (4) and (3) as well) do not contain
+any physics at all being just the reection of the group composition law! here, we mean
+the continuous group (that is, the lie group of transformations) of operations changing
+the reference point  involved into the coupling constant g denition. namely, we can
+regard the change of a reference coupling g  g as an operation of the group element
+tt
+
+ttg = gt = g(t, g)
+
+with a real continuous positive numerical parameter t (= 2/2) .
+
+if we set x =  t, then the l.h.s. of (5) can be achieved from g by operation t t, while
+the r.h.s. may be identied as t ttg. the content of eq.(5) is just the group composition
+law,
+
+t t = t tt .
+
+thus, the essence of the basic rg functional equation (5) is the necessary condition
+
+for transformations tt to form a group.
+
+at the same time, it demonstrates that function g is invariant with respect to simul-
+
+taneos transformation
+
+invariance condition for an observable now can be written down as
+
+rt
+
+: { x = x/t , g = g(t, g)} .
+f (x, g) = f (cid:18) x
+, g(t, g)(cid:19) .
+
+t
+
+(6)
+
+usually, of interest are also functions (x, g) (like, e.g., propagator amplitudes in
+
+qft) transforming as a linear representation of rg
+
+(x, g)  rt = (x, g) = z(t, g)(x, g) .
+
+(7)
+
+note also that the group fe for an observable, like matrix element, is of the form
+
+m({x}, y; g) = m (cid:18)(cid:26)x
+t(cid:27) ,
+
+y
+t
+
+, g(t, y; g)(cid:19) ; {x} = x1, x2, . . . , xk
+
+(8)
+
+which reects an existence of several q2-type arguments and implements its indepen-
+dence of renormalization details corresponding to eq.(1).
+
+2
+
+1.1.3 abstract formulation
+
+to make this point clearer, let us show that fe (5) can formally be obtained directly
+from the group composition law. generally, the mathematical formulation of the rg
+transformation can be presented as a functional realization of the mentioned lie group.
+consider the transformation t (l) of a certain abstract set m of elements mi into
+( < l < ) such that for each
+
+itself depending on a continuous real parameter l
+element m we have
+
+t (l)m = m (m, m  m) .
+
+suppose that m can be projected onto the real axis, i.e., for every mi there corresponds
+a real number gi
+
+1. then, this transformation can be written in the analytic form
+
+t (l)g = g = g(l, g) ,
+
+g being a continuous function of two arguments satisfying the normalization condition
+g(0, g) = g which corresponds to the identity transformation t (0) = e.
+
+transformations t (l) form a group if they satisfy the composition law
+
+to which there corresponds the functional equation for g :
+
+t (l)  t () = t (l + )
+
+g{l, g(, g)} = g(l + , g) .
+
+(9)
+
+(10)
+
+as it follows from the bases of the lie group theory, it is sucient to deal with the
+innitesimal transformation at   1 , i.e., with the de
+
+g(l, g)
+
+l
+
+= {g(l, g)} .
+
+(11)
+
+here the group generator is dened as
+
+(g) =
+
+g(, g)
+
+
+
+at
+
+ = 0.
+
+performing a logarithmic change of variables
+
+l = ln x,
+
+ = ln t , g(l, g) = g(x, g) , t (ln t) = tt
+
+(12)
+
+we obtain (5) and (4) instead of (10) and (11).
+
+1this condition is not essential and can be modied  see, below, eqs. (16) and (17).
+
+3
+
+1.2 denition of the renorm-group
+
+1.2.1 the rg transformation
+
+generally, the rg can be dened as a continuous one-parameter group of specic trans-
+formations of a partial solution (or the solution characteristic) of a problem, a solution
+that is xed by a boundary condition. the rg transformation involves boundary condi-
+tion parameters and corresponds to some change in the way of imposing this condition.
+for illustration, imagine an one-argument solution characteristic f (x) that has to
+be specied by the boundary condition f (x0) = f0. formally, represent the given char-
+acteristic of a partial solution as a function of boundary parameters as well: f (x) =
+f (x, x0, f0). (this step can be considered as an embedding operation). the rg trans-
+formation then corresponds to a changeover of the way of parameterization, say from
+{x0, f0} to {x1, f1} for the same solution. in other words, the x argument value, at which
+the boundary condition is given, does not need to be x0, but we may choose another
+point xi. our solution f can be written in a form of a two-argument function f (x/x0, f0)
+with the property f (1, ) = . the equality f (x/x0, f0) = f (x/x1, f1) reects the fact
+that under such a change of a boundary condition the form of function f itself is not
+modied (as, e.g., in the case of f (x, ) = (ln x + )). noting that f1 = f (x1/x0, f0) ,
+we obtain
+
+f (, f0) = f (/t, f (t, f0)) ;
+
+ = x/x0 , t = x1/x0 .
+
+the group transformation here is {   /t, f0  f1 = f (t, f0) } .
+
+the renorm-group transformation for a given solution of some physical problem in the
+
+simplest case can be dened as
+
+a simultaneous one-parameter transformation of two variables, say x and g, by
+
+rt
+
+: { x  x = x/t , g  g = g(x, g) } ,
+
+(6)
+
+the rst being a scaling of a coordinate x and the second  a more complicated functional
+transformation of the solution characteristics. eq.(5) for the transformation function g
+provides the group property t t = t tt of the transformation (6). performing the loga-
+rithmic change of variables and an appropriate redenition of a transformation function
+(12), we obtain eqs.(10), (11) and
+
+r(l)
+
+: { q  q = q  l , g  g = g(l, g) } ,
+
+(13)
+
+instead of (5), (4) and (6). one can refer to these equations as the multiplicative version
+(and previous equations in abstract formulation as to the additive one). they are just the
+rg equations and transformation for a massless qft model with one coupling constant.
+in that case x = q2/2 is the ratio of a 4-momentum q squared to a normalization
+momentum  squared and g, the coupling constant.
+
+several generalizations of (6) and (13) will be considered below.
+
+4
+
+1.2.2
+
+simple generalizations
+
+massive case
+
+for example in qft, if we do not neglect the mass m of a particle, we have to insert
+an additional dimensionless argument into the invariant coupling g which now has to be
+considered as a function of three variables: x = q2/2, y = m2/2, and g. the presence
+of a new mass argument y modies the group transformation
+
+rt
+
+: (cid:26)x =
+
+x
+t
+
+, y =
+
+y
+t
+
+, g = g(t, y; g) (cid:27)
+
+and the functional equation
+
+g(x, y; g) = g(cid:18) x
+
+t
+
+,
+
+y
+t
+
+; g(t, y; g)(cid:19) .
+
+(14)
+
+(15)
+
+here, it is important that the new parameter y (which in physical nature must be close
+to the x variable as it scales similarly) enters also into the transformation law of g .
+
+if the considered qft model, like qcd, contains several masses there will be several
+
+mass arguments
+
+y  {y} = y1, y2, . . . yn .
+
+multi-coupling case
+a more complicated generalization corresponds to transition to the case with several
+coupling constants: g  {g} = g1, . . . gk . here, one has to introduce the family of
+eective couplings
+
+g  {g} , gi = gi(x, y;{g}) ;
+
+i = 1, 2, . . . k ,
+
+satisfying the system of coupled functional equations
+
+gi(x, y;{g}) = gi(cid:18)x
+
+t
+
+,
+
+y
+t
+
+; { g(t, y;{g}) } (cid:19) .
+
+(16)
+
+in the abstract formulation this system is a generalization of (5) and (15) for the case
+when every element mi of m can be described by k numerical parameters, i.e., by a
+point {g} in the k-dimensional real parameter space. the rg transformation now is
+
+rt
+
+: (cid:26) x 
+
+x
+t
+
+, y 
+
+y
+t
+
+, {g}  {g(t)} (cid:27) , gi(t) = gi(t, y;{g}) .
+
+(17)
+
+1.3 early history and the rg method
+
+1.3.1 renormalization and renormalization invariance
+
+as it is known, the regular formalism for eliminating the uv divergences in qft was
+developed on the basis of covariant perturbation theory for the scattering smatrix in
+the late 40s. this breakthrough is connected with the names of tomonaga, feynman,
+
+5
+
+schwinger and some others.
+in particular, dyson and abdus salam carried out the
+general analysis of the structure of divergences in arbitrarily high orders of perturbation
+theory. nevertheless, a number of subtle questions concerning overlapping divergences
+remained unclear.
+
+an important contribution in this direction based on a thorough analysis of the
+mathematical nature of uv divergences was made by bogoliubov. this was achieved on
+the basis of a branch of mathematics which was new at that time, namely, the sobolev
+schwartz
+theory of distributions. the point is, that propagators in local qft are
+distributions (similar to the dirac deltafunction) and propagator products appearing
+in the coecients of the smatrix expansion require a supplementary denition in the
+case when their arguments coincide and lie on the light cone.
+
+in the mid 50s on the basis of this approach bogoliubov and his disciples developed a
+technique of supplementing the denition of products of singular stuckelbergfeynman
+propagators [2] and proved a theorem [3] on the niteness and uniqueness (for renor-
+malizable theories) of the smatrix elements in any order of perturbation theory. the
+prescriptive part of this theorem, the bogoliubov r-operation (see, e.g., chapter removal
+of divergencies from the smatrix in the monograph [1]), still remains a practical means
+of obtaining nite and unique results in the higher order perturbation calculation.
+
+the bogoliubov algorithm works, essentially, as follows:
+ to remove the uv divergences of a one-loop diagram, instead of introducing some
+regularization, e.g., the momentum cuto, and handling (quasi) innite counterterms, it
+suces to complete the denition of a divergent feynman integral by subtracting from
+it a certain polynomial in the external momenta which in the simplest case is reduced
+to the rst few terms of the taylor series.
+
+ for multi-loop diagram (including one with overlapping divergences) one should
+rst subtract all divergent subdiagrams and nish with subtracting the diagram as a
+whole in a hierarchical order regulated by the roperator.
+
+an attractive feature of this approach is that it is free from any auxiliary nonphysical
+attributes such as bare masses, bare coupling constants, and regularization parameters
+which are not involved in the computation within the bogoliubovs algorithm. the latter
+can be regarded as renormalization without regularization and counterterms.
+
+the uniqueness of computational results for the observable s-matrix elements is
+ensured by special conditions imposed on them. these conditions contain some degree
+of freedom (related to dierent renormalization schemes and momentum scales) that
+can be used to establish nite relations between the lagrangian parameters (masses,
+coupling constants) and corresponding renormalized quantities. the fact that physical
+predictions are independent of arbitrariness in the renormalization conditions, that is,
+they are renorminvariant, constitutes the conceptual foundation of the renormalization
+group.
+
+6
+
+1.3.2 the discovery of the renormalization group
+
+in the 1952-1953 stuckelberg and peterman [5] discovered2 a group of innitesimal trans-
+formations related to nite arbitrariness arising in the s-matrix elements upon elimina-
+tion of the uv divergences. these authors introduced normalization group generated by
+lie operators connected with renormalization of the coupling constant e.
+
+in the following year, on the basis of (innite) dysons renormalization transfor-
+mations formulated in the regularized form, gell-mann and low [6] derived functional
+equations for the qed propagators in the uv limit. the appendix to this article con-
+tains the general solution (obtained by t.d. lee) of this functional equation for the
+renormalized transverse photon propagator amplitude d(x, e2), written in two equiva-
+lent forms:
+
+e2d(cid:16)x, e2(cid:17) = f (cid:16)xf 1(cid:16)e2(cid:17)(cid:17)
+
+and
+
+ln x =
+
+e2d
+
+ze2
+
+dy
+(y)
+
+, (e2) =
+
+.
+
+(18)
+
+(e2d)
+
+ ln x (cid:12)(cid:12)(cid:12)(cid:12)(cid:12)x=1
+
+a qualitative analysis of the behaviour of the quantum electromagnetic interaction at
+small distances was carried out with the aid of (18). two possibilities, namely, innite
+and nite charge renormalizations were pointed out.
+
+however, paper [6] paid no attention to the group character of the analysis and the
+results obtained there. the authors missed a chance to establish a connection between
+their results and the standard perturbation theory and did not discuss the possibility
+that a ghost pole solution might exist.
+
+the nal step was taken by bogoliubov and the present author bs-55a,bs-55b,sh-55
+ see also the survey [10] published in english in 1956. using the group properties of
+nite dyson transformations for the coupling constant, elds and green functions, these
+authors derived functional group equations for the propagators and vertices in qed in
+the general case (that is, with the electron mass taken into account). for example, the
+equation for the transverse amplitude of the photon propagator and electron propagator
+amplitude were obtained in the form
+
+d(x, y; e2) = d(t, y; e2) d(cid:18)x
+s(x, y; e2) = s(t, y; e2) s(cid:18)x
+
+t
+
+t
+
+,
+
+y
+t
+
+; e2d(t, y; e2)(cid:19) ,
+; e2d(t, y; e2)(cid:19)
+
+y
+t
+
+,
+
+(19)
+
+in which the dependence on the mass variable y = m2/2 was present.
+
+as can be seen, the product e2d of electron charge squared and photon propagator
+amplitude enters in both the fes. this product is invariant with respect to dysons
+transformation. we called this function  invariant charge and introduced the term
+renormalization group.
+
+2 for a more detailed exposition of the rg early history see our review [4].
+
+7
+
+in the modern notation, the rst equation is that for the invariant charge (now widely
+
+known as an eective or running coupling)  = d(x, y;  = e2):
+
+(x, y; ) = (cid:18)x
+
+t
+
+,
+
+y
+t
+
+; (t, y; )(cid:19) .
+
+(20)
+
+let us emphasize that, unlike the approach ref.[6], in the latter case there is no
+relation with uv divergences and simplication due to the massless nature of the uv
+asymptotics. here, the homogeneity of the transfer momentum scale is violated explic-
+itly by mass m. nevertheless, the symmetry (even though a bit more complex one)
+underlying the rg, as before, can be stated as an exact symmetry of the solutions of the
+qft problem. this is what we mean when using the term bogoliubovs renormalization
+group or renorm-group for short.
+
+the dierential group equations for  and for the electron propagator:
+
+ (x, y; )
+
+ ln x
+
+= (cid:18) y
+
+x
+
+, (x, y; )(cid:19) ;
+
+s(x, y; )
+
+ ln x
+
+= (cid:18) y
+
+x
+
+, (x, y; )(cid:19) s(x, y; ) ,
+
+(21)
+
+with
+
+(y, ) =
+
+ (, y; )
+
+
+
+,
+
+(y, ) =
+
+s(, y; )
+
+
+
+at  = 1
+
+(22)
+
+were rst derived in [7] by dierentiating the fes. in this way, explicit realization of
+the group des mentioned in the paper [5] was obtained. these results established a
+conceptual link with the stuckelbergpeterman and gell-mannlow results.
+
+1.3.3 creation of the rg method
+
+another important achievement of paper [7] consisted in formulating a simple algorithm
+for improving an approximate perturbative solution by combining it with the lie equa-
+tions (for detail, see below, section 2).
+
+in our adjacent publication [8] this algorithm was eectively used to analyse the uv
+
+and infrared (ir) behaviour in qed. the one-loop and two-loop uv asymptotics
+
+(1)
+rg(x; )  (1)
+
+rg(x, 0, ) =
+
+
+1  
+3 ln x
+
+,
+
+(2)
+rg(x; ) =
+
+
+4 ln(1  
+3 ln x + 3
+
+1  
+
+3 ln x)
+
+of the photon propagator as well as the ir behavior
+
+(23)
+
+(24)
+
+(25)
+
+s(x, y; )  (x/y  1)3/2 = (p2/m2  1)3/2
+
+of the electron propagator in the transverse gauge were obtained. at that time, these
+expressions were already known only at the oneloop level. it should be noted that in
+the mid 50s the problem of the uv behaviour in local qft was quite urgent. at that
+time, substantial progress in the analysis of qed at small distances was made by landau
+
+8
+
+and his collaborators [11]. however, landaus approach did not provide a prescription
+for constructing subsequent approximations.
+
+the simple technique for obtaining higher approximations was found only within the
+new renormgroup method. the one-loop uv asymptotics of qed propagators obtained
+in our paper [8], eqs. (23) and (25), agreed precisely with the results of landaus group.
+within the rg approach these results can be obtained in just a few lines of argu-
+mentation. to this end, e.g., the massless one-loop perturbation approximation should
+be substituted into the r.h.s. of the rst equation in (22) to compute the generator
+(0, ) = () = 2/3 followed by elementary integration of the rst of eqs.(21).
+
+moreover, starting from the next order perturbation expression (2)
+
+p t h(x, ; ) con-
+taining the 3 ln x term, we arrived at the second renorm-group approximation (24)
+performing summation of the 2( ln)n terms. this two-loop solution for the invariant
+coupling rst obtained in [8] contains the nontrivial logoflog dependence which is now
+widely known of the next-to-leadind logs approximation for the running coupling in
+quantum chromodynamics (qcd)  see, below, eq.(47).
+
+comparing solution (24) with (23), one can conclude that the two-loop correction is
+extremely essential just in the vicinity of the ghost pole singularity at x1 = exp (3/).
+this demonstrates that the rg method is a regular procedure, within which it is quite
+easy to estimate the range of applicability of the results.
+
+quite soon, this approach was formulated [9] for the case of qft with two coupling
+constants, say, g and h, namely, for a model of pionnucleon interactions with the pions
+self-interaction. to the system of functional equations for two invariant couplings
+
+g2(cid:16)x, y; g2, h(cid:17) = g2(cid:18)x
+h(cid:16)x, y; g2, h(cid:17) = h(cid:18)x
+
+t
+
+,
+
+t
+
+,
+
+y
+t
+
+y
+t
+
+, g2(t, y; g2, h), h(cid:16)t, y; g2, h(cid:17)(cid:19) ,
+, g2(cid:16)t, y; g2, h(cid:17) , h(cid:16)t, y; g2, h(cid:17)(cid:19)
+
+there corresponds a coupled system of nonlinear des  see, below, eqs.(52).
+it was
+analysed [12] in the one-loop appriximation to carry out the uv analysis of the renor-
+malizable model of the pion-nucleon interaction.
+
+in a more general case of arbitrary covariant gauge the rg analysis in qed was
+carried out in [13]. here, the point was that the charge renormalization is connected
+only with the transverse part of the photon propagator. therefore, under nontransverse
+covariant (e.g., feynman) gauge the dyson transformation has a more complex form.
+this issue has been resolved by considering the gauge parameter as another coupling
+constant.
+
+in refs.[7, 8, 9, 13] and [12] the rg was thus directly connected with practical
+computations of the uv and ir asymptotics. since then this technique, known as the
+renormalization group method (rgm) and being summarized in the rst edition of
+monograph [1], has become the sole means of asymptotic analysis in local qft.
+
+1.4 rg in qed
+
+9
+
+1.4.1 eective electron charge
+
+an essential feature of quantum theory is the presence of virtual states and transitions.
+in qed, e.g., the process of virtual dissociation of a photon into an electron-positron
+pair and vice versa   e+ + e can take place. the sequence of two such virtuale
+transitions represents the simplest contribution to the eect of vacuum polarization.
+the vacuum polarization processes lead to several specic phenomena and partic-
+ularly to the notion of eective electron charge. to explain this, let us start with a
+classical analogy.
+
+take a polarizable medium consisting of molecules that can be imagined as electric
+dipoles. insert into it an external electric charge q. due to the attraction of opposite
+charges, the dipoles change their position so that the charge q turns out to be partially
+screened. as a result, at a distance r from q the electric potential will be smaller than
+the vacuum coulomb law q/r and can be presented in the form q(r)/r where, generally,
+q(r)  q. the introduced quantity q(r) is known as an eective charge. as r decreases,
+q(r) increases and as r  0, q(r) tends to q.
+in qft the vacuum, i.e., the interparticle space itself stands for the polarizable
+medium. quantumeld vacuum is not physically empty.
+it is lled with vacuum
+uctuations, i.e., with virtual particles. these zero uctuations are a well-known
+eect of a ground state in quantum world. in qed, zero oscillations consist mainly of
+short-lived virtual (e+, e) pairs which play the role of tiny electric dipoles.
+
+consider the process of measuring the electron charge with the help of some external
+electromagnetic eld.
+in the quantum case the probing photon can virtually dissoci-
+ate into the (e+, e) pair. this pair can be treated as a virtual dipole that produces
+partial screening of the measured charge. the simplest process involves two elementary
+electromagnetic interactions, its contribution to an eective charge being proportional
+to the small number e2    1/137; and this contribution depends on the distance
+in the region of r values much smaller than the compton length of the electron
+r !
+re = h/mc  3, 9.1011cm it depends on r logatithmically
++ . . .(cid:27)
+
+e  e(r) = e(cid:26)1 
+
+
+3
+
+ln
+
+r
+re
+
+(26)
+
+as was rst discussed by dirac [14] in the middle of the 30s. the e(r) value decreases as
+r grows. so, qualitatively, the qed eective charge behavior corresponds to a classical
+picture of screening.
+
+this dependence can be presented by a set of curves e(r). each curve represents a
+possible behavior of the eective charge e(r) as obtained from the theory and considered
+without any reference to experiment ( = e2 being unspecied numerically).
+
+the point is that in the classical analogue the value of an external charge q inserted
+into the polarizable medium is known from the very beginning. in quantum physics it
+is not the case, and a charge value can be measured at not very small distances. the
+result of measurement generally has to be specied by two quantities: the distance of
+measurement ri and the measured charge value ei. hence, to make the choice from
+the mentioned set of curves, one has to x the point on the plane with the coordinates
+
+10
+
+r = ri, e(r) = ei. thus, for the chosen physical curve e(ri) = ei. note, that the usual
+denition of the electron charge by a classical macroscopic (like millikan) experiment
+
+corresponds here to very large distances r  re, i.e., e = e(r = re) = 1/137.
+
+as it is well known, in relativistic microphysics one usually uses the momentum rather
+than coordinate representation. correspondingly, instead of e(r) one deals with the
+quantity (q2), the fourier transform of e(r) squared. it is a monotonically increasing
+function of its argument q2, the 4-momentum transfer squared. here and below, the bar
+denotes a function (distinct from , , i  its numerical values at some given value of
+the q2 argument). the correspondence condition with the classical electrodynamics now
+takes the form (0) = 1/137, as in our scale the external long-range eld corresponds to
+a photon with vanishing 4-momentum. however, as before, to x one of possible curves
+
+on the plane (q, ) one has to give a point q  q2 = ,  =  and hence, for the
+
+selected curve (2) = .
+
+the parameter  sometimes is referred to as a scale parameter. as is clear, it is just
+the momentum magnitude for a photon used for the charge measurement. the eective
+coupling function (q2) describes the dependence of the electron charge value on the
+measurement conditions. in our days the logarithmic corrections to the millikan value
+become essential and are measured at big accelerators.
+
+the parameter  has no analogue in the qed lagrangian that reproduces the clas-
+sical electrodynamical one. the phenomenon of its arising in qft was exaggerated by
+the term dimensional transmutation. as it was shown, its appearance is very natural
+and is connected with the measurement procedure.
+
+this is a good place to recall the ideas by niels bohr formulated in the middle of
+30s [15] and related to the complementarity principle. the point is that to specify a
+quantum system, it is necessary to x its macroscopic surrounding, i.e., to give the
+properties of macroscopic devices used in the measurement process. just these devices
+are described by additional parameters, like . however, this is not the end of the bohr
+(i.e.  scale) parameter story. as can be shown, in the qft this parameter existence
+leads to a new symmetry lying in the foundation of the renormalization group.
+
+1.4.2 rg transformations
+
+to do this, consider again the function (q2) having in mind that the physical solution
+has been chosen by the condition (q2 = 2) = . assume also for simplicity that
+we deal with a massless qed, more precisely, with the approximation | q | m. this
+corresponds to the gev-energy region or to distances r  re. here the eective charge
+function  can be represented as a function of two dimensionless arguments q2/2 and
+, i.e., (q2) = (q2/2, ) .
+
+now, take into account that the couple of parameters ,  used to identify the
+physical solution may, generally, correspond to any scale . take two scales 1 and 2
+with coordinates 1, 1 and 2, 2, respectively. it is evident that  can be parameterized
+by any pair i, i; i = 1, 2, . . .
+
+so that for arbitrary q2 values the identity
+
+(q2/2
+
+1, 1) = (q2/2
+
+2, 2)
+
+11
+
+should hold.
+
+at the same time the second argument in the r.h.s., 2, which by denition is equal
+2, can be expressed in terms of  parameterized with the help of point
+1, 1) . combining the last two relations
+
+to  at q2 = 2
+1 coordinates, i.e., 2 = (q2 = 2
+and introducing a notation q2/2 = x, 1 = , 2
+
+1 = t , we arrive at the fe
+
+2) = (2
+
+2/2
+
+2/2
+
+(x, ) = (
+
+x
+t
+
+, (t, )),
+
+(27)
+
+identical with eq.(5).
+
+note, that the corresponding continuous one-parameter transformation is just the
+
+change (1  2) of the parameterization point
+
+rt : {1  2 = t1, 1  2 = (t, 1)} .
+
+(28)
+
+thus, we have shown that in the renormalized qed there exists invariance with
+respect to continuous transformations of the group type which involve two quantities
+and contain a functional dependence. this precisely corresponds to denition (6).
+
+as can be shown, in qed the eective coupling  is equal to a product of  and
+dimensionless function d(x, )  the transverse photon propagator amplitude with due
+regard for vacuum polarization eects. generally, in qft models with one coupling
+constant the invariant coupling g(x, g) can be expressed as a product of g, corresponding
+vertex function and the square root of propagator amplitudes of the elds participating
+in the interaction. usually, this can be done on the basis of dyson nite renormalization
+transformations.
+
+thus, the rg invariance is nothing else but the invariance of a solution with respect
+to the way of its parameterization. for instance, in real qed, instead of using the
+millikans value (0) = 1/137 one may take the cern value (m 2
+z)  1/128, 9.
+
+2 renormalization group method
+
+2.1 basic idea
+
+approximate solution of the physical problems with rg symmetry usually does not
+obey this symmetry which is lost in the course of approximation. this is essential when
+the solution under consideration posseses a singularity as far as the singularity structure
+commonly is destroyed by an approximation.
+
+in qft, e.g., the usual way of calculation is based on the perturbation method, i.e.,
+it is not dicult to see that nite sums of this expansion
+on power expansion in g.
+do not satisfy the functional group equations. as the simplest illustration, consider the
+eective coupling g in the uv region where the one-loop contribution has a logarithmic
+form
+
+g(1)
+pth(x, g) = g + g2 ln x
+
+(29)
+
+12
+
+with , a numerical coecient. by substituting this expression into fe (5), after simple
+manipulation one has
+
+discr[g(1)
+
+pt(cid:16)x/t, g(1)
+
+pt(t, g)(cid:17) =
+
+pt]  g(1)
+
+pt(x, g)  g(1)
+
+= [g + g2 ln x]  [g + g2 ln x + 2g32 ln t ln(x/t)] 6= 0
+
+ error in the g3 order. this discrepancy can be liquidated by addition of the particular
+next order term to the r.h.s. of (29)
+
+g(2)
+pt = g + g2 ln x + g32 ln2 x.
+
+this improved expression would yield the discrepancy of the g4 order which in its
+
+turn can be abolished by adding the g4 ln3 term to (29) and so on.
+
+thus, we see, on the one hand, that the nite polynomials cannot satisfy the condition
+of renormalization invariance. on the other hand, we can conclude that the functional
+rg equation represents a tool for iterative reconstruction of renorm-invariant expression
+that has the form of innite series.
+
+this example illustrates a rather general situation. as a rule, approximate solutions
+do not satisfy a group symmetry. here, this happens in the uv limit as ln x   where
+the observed discrepancy becomes important.
+another illustration is provided by the one-dimensional transfer problem (for detail,
+see our reviews in refs. [16]). take a half-space (l > 0) lled with a homogenious media.
+let some given amount of particles (or radiation) be falling on the surface (at l = 0)
+from the empty half-space. the particle density n(l, v) is a function of coordinate and
+of particle velocity v.
+it satises an integrodierential kinetic boltzmann equation.
+in some cases one can neglect by the energy dependence of crosssections. here, the
+solution can be treated as a function of coordinate and direction of particle velocity
+ = v/v. in this, one-velocity, case the simple symmetry of the rg type was found
+not for density, but for n integrated over directions in forward hemisphere
+
+g(l) = z+
+
+n(l, )d .
+
+the function g relates to amount of all particles moving inwards the media. a par-
+tial solution of this problem will depend on the boundary condition at l = 0. corre-
+spondingly, the solution characteristic g will be the function of two arguments g(l, g)
+ coordinate l (distance from the boundary) and total amount of ingoing particles
+g = g(l = 0) = g(0, g). just this function g(l, g) satises [17] the group fe (10)
+in the additive form.
+
+it is rather simple to get an approximate behavior of this density g(l, g), at small l
+
+g(l, g) = g + lg(0, g),
+
+l  1,
+
+(30)
+
+which, being considered for large l values, also does not obey the mentioned symmetry.
+
+13
+
+on this basis one can set the task of renormalization-invariant improvement of
+perturbative results. the key idea is to combine an approximate solution with the
+group equations. the simplest and most convenient way for this marriage is the use
+of lie equations, i.e., group dierential equations. the renormalization group method
+(rgm) as it was rst formulated in refs.[7, 8, 10] is essentially based on these group
+equations.
+
+2.2 dierential formulation
+
+the dierential equations can be obtained from the functional ones in two dierent ways.
+dierentiating eq.(15) by x and putting then t = x , one obtains (compare with (4)):
+
+x
+
+g(x, y, g)
+
+x
+
+= (cid:18) y
+
+x
+
+, g(x, y; g)(cid:19) ,
+
+(y, g) =
+
+g(t, y; g)
+
+t
+
+.
+
+(22a)
+
+the nonlinear equation (22a) can be considered as massive generalization of eq.(4).
+on the other hand, one can dierentiate eq.(15) with respect to t at the point t = 1,
+which yields
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)t=1
+
+
+y  (y, g)
+a linear partial dierential equation (pde).
+
+
+x
+
++ y
+
+"x
+
+
+
+g# g(x, y; g) = 0 ,
+
+analogous operations applied to the second of eqs.(19) lead to:
+
+is the so-called anomalous dimension of s. for a group invariant, like, e.g., matrix
+element m satisfying fe (8) this dimension is equal to zero. the corresponding pde
+looks like
+
+(xi
+
+xi
+
+
+x i  y
+
+
+y  (y, g)
+
+equations (31), (32), and (34) express the independence on the t parameter of the
+r.h.s. of the related functional group equations, i.e., a mutual compensation of t depen-
+dences via three (or more) arguments. this des can be called compensational equations
+to distinguish them from nonlinear eqs.(21) which can be referred to as evolutional group
+equations.
+
+stress that compensational as well as evolutional des taken together with normaliza-
+tion (i.e. boundary) conditions like g(1, g) = g , s(1, g) = 1 are equivalent to functional
+
+14
+
+s(x, y; g)
+
+ lnx
+
+= (cid:20) y
+
+x
+
+and
+
+where
+
+(x
+
+
+x
+
++ y
+
+
+y  (y, g)
+
+(y, g) =
+
+, g(x, y; g)(cid:21) s(x, y; g)
+g  (y, g)) s(x, y; g) = 0
+
+
+
+s(t, y; g
+
+t
+
+(cid:12)(cid:12)(cid:12)(cid:12)(cid:12)t=1
+g) m(x, y; g) = 0 .
+
+
+
+(31)
+
+(22b)
+
+(32)
+
+(33)
+
+(34)
+
+equations and to each other. at the same time, evolutional lie equations turn out to be
+more convenient for practical construction of the solution, generators ,  being given.
+
+let us comment also that the uv limit of compensational des like, e.g.,
+
+(x
+
+
+x  (g)
+
+
+
+g  (g)) s(x, g) = 0
+
+coincides with the uv limit of specic nonclosed equation
+
+(x
+
+
+x  (g)
+
+
+
+g  (g)) s(x, g) = s
+
+(35)
+
+(c  s)
+
+obtained in the early 70s by callan and symansik. the r.h.s. of this equation contains
+the result of mass counter-term insertion into all internal lines of all diagrams for the
+function s under consideration. for this reason, in current literature compensational
+equations are often related to as the callansymansik equations. however, these equa-
+tions just in the form (31) and (32) were rst obtained by lev ovsyannikov in 1956
+while solving [18] functional rg equations. therefore, we consider it justiable to relate
+compensational des to the ovsyannikovs rather than to some other names.
+
+it is not dicult to formulate group des for a multi-coupling case by proper dier-
+
+entiation of fes (16). for instance, the system of evolutional des looks like
+
+x
+
+gi(x, y,{g})
+
+x
+
+= i(cid:18) y
+
+x
+
+,{ gj(x, y;{g})}(cid:19) .
+
+(36)
+
+2.3 general solution
+
+general solution of the group fes was obtained in the paper [18] by applying the theory
+of pde to the compensational eqs. (31) and (32). details of the derivation can be found
+in the section 48.3 of the third edition of the monograph [1]. the results obtained can
+be formulated as follows:
+
+to every solution of de (31), there corresponds some function of two arguments
+f (y, g), reversible with respect to its second argument and connected to g by the relation
+
+f (y, g) = f (cid:18) y
+
+x
+
+, g(x, y; g)(cid:19) .
+
+(37)
+
+the explicit form of g can be obtained now by reversing the r.h.s:
+
+g(x, y, g) = f 1
+
+(2) (cid:20) y
+
+x
+
+, f (y, g)(cid:21) .
+
+to determine f it is sucient to specify the generator (y, g).
+
+note also that to get from the ovsyannikov result (37) the solution in the uv limit,
+
+i.e., in a massless case at y = 0, one has to assume for f a specic limiting form
+
+f (y, g) = y exp[f (g)] or = ln y + f (g) as
+
+y  0 .
+
+15
+
+then
+
+f{g(x, g)}  f (g) = ln x ;
+
+g = f1{ln x + f (g)} .
+
+(38)
+
+here, f(g) = 1/(g). this is equivalent to the gell-mannlowlee solution (18).
+to every solution of eq.(19) for a function s, there corresponds some function (y, g)
+
+related to s by
+
+s(x, y; g) =
+
+[y/x, g(x, y; g)]
+
+(y, g)
+
+.
+
+(39)
+
+let us give also the general solution of the same type for the system (16) for the k-
+couplings case. it can be written down in terms of k arbitrary functions fi, reversible
+simultaneously with respect to last arguments, and dened from the system of k func-
+tional relations
+
+fi(y,{g}) = fi(cid:20) y
+
+x
+
+, {g(x, y;{g})}(cid:21) , {g} = g1, ... gk ; i, j = 1, ... k .
+
+(40)
+
+all solutions (37)  (40) satisfy the usual normalization conditions.
+the transition to the massless limit in expressions (39)  (40) can be performed by
+
+a trick analogous to the given above. then, e.g.,
+
+s(x, g) = x {g(x, g)}
+
+(g)
+
+.
+
+let us also formulate solution for the 2-coupling case g1 = g, g2 = h in the massless
+
+limit in the form analogous to (38)
+
+fi(g, h) = fi(g, h) + ln x,
+
+i = 1, 2 .
+
+(41)
+
+from the solutions presented it follows that imposing group symmetry one reduces
+
+by unity the number of independent arguments.
+
+2.4 rgm algorithm
+
+2.4.1 technology of rg method
+
+the idea of the approximate solution marriage [7, 8] with group symmetry can be realised
+with help of group des.
+if we dene group generators ,  from some approximate
+solutions and then solve evolutional des, we obtain rg improved solutions that obey
+the group symmetry and correspond to the approximate solutions used as an input.
+
+now we can formulate an algorithm of improving an approximate solution. the
+procedure is given by the following recipe which we illustrate by a massless onecoupling
+case (4) and (5):
+
+assume some approximate solution gappr is known.
+1. on the basis of eq.(22a) dene the beta-function
+
+(g) def=
+
+
+
+
+gappr(, g)(cid:12)(cid:12)(cid:12)(cid:12)=1
+
+16
+
+.
+
+(42)
+
+2. integrate eq.(4), i.e., construct the function
+
+3. resolve the eq.(38)
+
+f (g) def= z g d
+
+()
+
+,
+
+grg(x, g) = f1{f (g) + ln x} .
+
+(43)
+
+(44)
+
+4. then, the solution grg, precisely satises the rg symmetry, i.e., it is an exact
+
+solution of eq.(5) and corresponds to gappr .
+
+for illustration, take as a gappr the simplest perturbative expression (29) for the
+
+invariant coupling. here, the -function is (g) = 1g2 , and the integration yields
+
+the solution obtained
+
+z g
+
+g
+
+dg
+(g)
+
+=
+
+1
+
+1   1
+g 
+
+1
+
+g! = ln x .
+
+g(x, g) =
+
+g
+
+1 + g1 ln x
+
+,
+
+(45)
+
+one one hand, exactly satises the rg symmetry and, on the other, being expanded in
+powers of g, correlates with the input (29).
+
+2.4.2 rgm usage in qft
+
+as it has been explained above in section 2.1, the qft perturbation expression of
+nite order does not obey the rg symmetry. on the other hand, in section 2.4.1 it
+was shown that the one-loop uv approximation for g used as an input in eq.(22) for
+the construction of a group generator (g) yields expression (45) that obeys the group
+symmetry and exactly satises fe (5).
+
+now, using the geometric progression (45) as a hint, let us represent the 2-loop
+
+perturbative approximation for g in the form
+gpt = g  g21 ln x + g3 [2
+
+1 ln2 x  2 ln x] + o(g4) ,
+
+where 1 and 2 mean the  -function coecients at the one-loop and two-loop level,
+respectively. if we substitute this expression into eq.(5) we obtain
+
+g(2)
+pt (x, g)  g(2)
+
+1 ln(x/t) ln2 t .
+
+pt (x/t; g(2)
+
+pt (t, g)) = g43
+
+meanwhile, we can use g(2)
+
+pt as an input in eq.(42). now the step 1 yields
+
+and then (step 2)
+
+(2)(g) = 1g2  2g3
+
+1f (2)(z) = z z
+
+d
+
+2 + b3 =
+
+1
+z
+
++ b ln
+
+z
+
+1 + bz
+
+;
+
+b =
+
+2
+1
+
+.
+
+(46)
+
+17
+
+to make the last step, we have to start with the equation
+
+f (2)[g(2)
+
+rg (x, g)] = f (2)(g) + 1 ln x
+
+which is a transcendental one and has no simple explicit solution3. due to this, one has
+to resolve this relation approximately. take into account that the second, logarithmic,
+contribution to f (2)(z) in (46) is a small correction to the rst one at bz  1. under
+this reservation we can substitute the one-loop rg expression (45) instead of g(2)
+rg into
+this correction and obtain the explicit expression
+
+g(2)
+rg =
+
+g
+
+1 + g1l + g(2/1) ln [1 + g1l]
+
+;
+
+l = ln x.
+
+(47)
+
+this result (rst obtained [8] in mid-50s) is interesting in several aspects.
+first, being expanded in g and gl powers, it produces an innite series containing
+leading, i.e.  g(gl)n, and next-to-leading  g2(gl)n uv logarithmic contributions.
+second, it contains a nontrivial analytic dependence
+
+ln(1 + g1l)  ln(ln q2)
+
+which is absent the in perturbation input. third, being compared with eq.(45), it
+demonstrates algorithm of subsequent improving of accuracy, .e., of rgm regularity.
+
+now we can resume the rgm properties. the rgm is a regular procedure of combin-
+ing dynamical information (taken from an approximate solution) with the rg symmetry.
+the essence of rgm is the following:
+1) the mathematical tool used in rgm is lie dierential equations.
+2) the key element of rgm is possibility of (approximate) determination of group
+generators from dynamics.
+3) the rgm works eectively in the case when a solution has a singular behaviour. it
+restores the structure of singularity compatible with rg symmetry.
+
+3 rg in qft
+
+this section is devoted, mainly, to general topics of rg applications in the qft short
+distance asymptotic behavior. we discuss the specic features of uv analysis connected
+with use of perturbation theory, in particular, reliability of results.
+
+3.1 uv analysis in general
+
+3it can be expressed in terms of a special, lambert, w -function : w (z) expw (z) = z; see, e.g., [19].
+
+18
+
+3.1.1 one-coupling case
+
+general analysis of the uv asymptotic behavior for the one-coupling qft model can
+be performed rather simply on the basis of the solution
+
+z g(x,g)
+
+g
+
+d
+()
+
+= ln x , x =
+
+q2
+2
+
+,
+
+(48)
+
+of the massless rg equation (4) for an eective coupling with g = g(1, g) and , a
+reference point. as follows from it, the asymptotics at ln x   corresponds to the
+divergence at the upper limit of the l.h.s.
+integral. depending on the feature of the
+function the resultant uv behaviour of the invariant coupling g diers very much.
+
+suppose that at very small g values the beta-function is positive. then, three cases
+
+are possible :
+
+a) consider rst the situation with
+
+z g
+
+g
+
+dz
+(z)
+
+= 
+
+(52a)
+
+corresponding to the case when the betafunction has a zero at some nite point g .
+here, the uv asymptotic value of eective coupling is nite g(, g) = g <  ,
+using the terminology of des qualitative theory, one can say that at g = g we have
+
+which relates to the nite renormalization of the coupling constant: z = g(, g)/g.
+a uv xed point.
+
+if at g = g there is a rst order zero (g)  b(g  g) , then eq.(52a) gives
+
+g(x, g)  g  c expb ln x = c(q2/2)b as q2   ,
+i.e., in the vicinity of a xed point we have an asymptotic power regime.
+
+b) if (g) is (monotonically) increasing as g   but gentler than g2, so that
+
+z 
+
+g
+
+dz
+(z)
+
+= 
+
+then the eective coupling tends to innity
+
+lim
+x
+
+g(x, g)   ,
+
+(50)
+
+(52b)
+
+which corresponds to innite coupling constant renormalization. formally, this is equiv-
+alent to g = .
+
+c) at
+
+that happens if
+
+z 
+
+g
+
+d
+()
+
+= l = ln x <  ,
+
+lim
+x
+
+(g)/g2  const ,
+
+19
+
+(52c)
+
+the theory has an inner contradiction, as far as
+
+g(x, g) =  at x < 
+
+and the momentum region x > x can not be described by the theory. we encounter
+here a ghost trouble, as explained below in this section.
+
+up to now we have assumed that the generator (g) is positive. in the opposite case
+
+d) (g) = b(g) < 0 one has to deal with the equation
+
+z g
+
+g
+
+dz
+b(z)
+
+= ln x
+
+(52d)
+
+and study possible divergence of the integral involved at the lower limit.
+
+if this occurs at some nite value g = g , the situation is quite analogous to the
+case b). the only dierence is that now the eective coupling tends to its limiting value
+g from above.
+
+as the most important case, we consider the possibility when the singularity lies at
+the origin (0) = 0 which happens in qcd. then, g vanishes g(, g) = 0 in the uv
+limit which corresponds to the asymptotic freedom phenomenon. e.g., if we assume here
+that (g) = 1g2 at g  0 , then
+g(x, g) 
+
+x   .
+
+(51)
+
+1
+
+1 ln x
+
+as
+
+3.1.2 multi-coupling case
+
+for the quantum eld model with several coupling constants one has to consider the
+system of coupled functional (16) or dierential equations. the last ones can be analyzed
+by the well-known methods of the qualitative theory of dierential equations.
+
+take the case with two coupling constants g and h. the system of evolutional
+
+dierential equations is
+
+g = g(g, h) ,
+
+f  f / ;  = ln x .
+according to (41), the general solution to this system is of the form
+
+h = h(g, h) ;
+
+(52)
+
+f (g, h) = f (g, h) +  ,
+
+(g, h) = (g, h) +  .
+
+where f and   two arbitrary reversible functions.
+
+as far as argument l = ln x does not enter explicitly into the generators g and h,
+
+it can formally be excluded by dividing one of the equations (52) by the other :
+
+dg
+dh
+
+= f (g, h),
+
+f =
+
+g
+h
+
+.
+
+(53)
+
+this equation can be analyzed on the two dimensional phase plane (g, h).
+
+20
+
+first explicit example of such phase portrait has been obtained in mid-fties by
+i. ginzburg [12]  see also section 51.4 in the third edition of the monograph [1].
+the essential features are now singular points and singular solutions. singular points
+correspond to i = 0 (or = ). they can be of dierent types: a stable xed point that
+is known as attractor, an unstable xed point and a saddle-type point. in the vicinity
+of the uv attractor one can have a power scaling behavior as in eq.(50). singular
+solution, separatrix, joins singular points and can also be stable or unstable. generally,
+the unstable ones separate the parts of phase plane with dierent uv asymptotes that
+correspond to uv stable separatrices.
+
+3.2 perturbative approach to the uv asymptote
+
+3.2.1
+
+structure of rg results
+
+consider a general situation with the rg approach to the uv asymptotic behavior based
+on perturbation calculation input.
+in the one-coupling qft case, group generators
+entering into des can be written as
+
+(g) = 1g2 + 2g3 + . . .
+
+,
+
+(g) = 1g + 2g2 + . . . .
+
+(54)
+
+generally, expansion coecients depend on the mass variable
+
+(y, g) = xl1
+
+1(y)gl+1 ,
+
+(y, g) = xl
+
+l(y)gl .
+
+(55)
+
+note that if g is just the smatrix expansion parameter (that can be equal to the
+coupling constant or to its square) then usually the rst term in expansion for  is
+quadratic and for   linear, as it is explicitly indicated above.
+
+substituting (54) into (48), and re-expanding the ratio 2/(), we obtain after
+
+integration
+
+1
+2
+
+ln(g/g)  b3(g  g) + 0(g2, g2) = 1 ln x ,
+1/g  1/g 
+ln s(x, g) = (1/1) ln{g(x, g)/g} + c2(g  g) + 0(g2) ,
+b3 = 3/1  (2/1)2,
+c2 = [2/1](2/1  2/1).
+
+(56)
+
+(57)
+
+as follows, the solutions g and s depend on two arguments g and g ln x . by expanding
+
+them in powers of g we get
+
+g(x, g) = gf1(g ln x)+g2f2(g ln x)+. . . ,
+
+ln s(x, g) = 1(g ln x)+g2(g ln x)+. . .
+
+(58)
+
+where fj and i have a simple form. for example, f1(z) = (1  1z)1, 1(z)  f2(z) 
+ln f1(z) .
+
+comparing expressions obtained with usual perturbative expansions
+
+gpt(x, g) = g + g21 ln x + g3[2
+
+1 ln x + 2 ln x] + 0(g4),
+
+21
+
+spt(x, g) = 1 + g1 ln x + g2[(11/2) ln2 x + 2 ln x] + 0(g3) ,
+
+used as an input to obtain our starting generators, one can see the qualitative eect
+of the rgm using. in the case considered, it changes the region of applicability of the
+perturbation method limited by the condition g ln x  1 to a more larger region dened
+by two relations
+(59)
+
+the second of which is dening.
+
+g  1 ,
+
+g(x, g)  1,
+
+3.2.2 the ghost-pole trouble
+
+turn now to the one-loop rg approximation for the eective coupling g, considered in
+the uv, i.e., massless limit. according to (45) and (23), it has the form
+
+g(1)(x, g) =
+
+g
+
+1  1g ln x
+
+.
+
+let the numerical coecient 1 be positive. such is the case in qed where 1 = 1/3
+and g stands for the expansion parameter  = e2. this expression obviously has a pole
+singularity at
+
+x = x  exp(1/1g) = exp(3/) .
+
+as far as the qed eective coupling is proportional to the (transverse part of) photon
+propagator, this pole, generally, describes some bound state of a system with the photon
+quantum numbers. however, a pole related to a physical bound state must have positive
+residue while the l.h.s. of eq.(23) has a negative one.
+
+this means that it corresponds not to a physical but rather to some unphysical,
+so-called ghost, state. the presence of a ghost singularity can be treated as a signal of
+inconsistency of a theory. such claims have been made [20] in the mid 50s when the
+ghost-pole trouble was rst discovered [21] just before the birth of the rgm.
+
+the rg method proved to be very eective for a general discussion of the ghost-pole
+issue. the rst question that must be answered here is the stability of indication of the
+ghost-pole existence with respect to the multi-loop corrections.
+
+note that in a perturbation calculation, the function depends on the adopted
+renormalization procedure; at the massless case, starting with the 3-loop level the coef-
+cients of the perturbation series (54) depend on the renormalization scheme (rs) used.
+in qed, the 3-loop  function in mom (i.e., momentum subtraction) scheme is
+
+m om
+(3)
+
+=
+
+2
+3
+
++
+
+3
+42 +
+
+4
+
+83(cid:18)8
+
+3
+
+(3) 
+
+101
+
+36 (cid:19) .
+
+(60)
+
+the numerical value of the last parenthesis is about 0.4. neglecting it for the moment,
+we start our discussion with the two-loop approximation for the  function. according
+to eq.(24), the 2-loop iterative rg solution is
+
+(2) =
+
+1  
+
+
+3 l + 3
+4 ln(1  
+22
+
+3 l)
+
+.
+
+this solution has an error of an order of 4l and is interesting from several points
+of view. as it has been mentioned before, its  expansion besides leading logs contains
+an innite number of next-to-leading terms 2(l)m, the rst of which has been used
+as an input for construction of the  function. second, in the vicinity of the ghost pole
+of the one-loop rg solution at l1 = 3/, the twoloop (2) solution diers from (1)
+considerably. hence, an innite sum of the next-to-leading logarithmic contributions in
+the region l  1 becomes important.
+it is not trivial because for an each order of the perturbation input the next-to-leading
+term is negligible comparing with the leading one of the previous order (the ratio being
+of an order of 2/1 = 3/4  2.103). it can be seen with the help of (56) that the
+allowing for the last, 3-loop, term in (60) also becomes essential for the   1 case.
+this means that the problem of existence for the ghost pole in qed cannot be
+solved by taking into the account of next-to-leading and so on logs. moreover, one can
+argue [22] on general rg ground that it is impossible to make any qualitative statement
+about the uv asymptote for the (g) > g case basing on rg-improved perturbation
+calculations. our next example illustrates this thesis.
+
+3.2.3
+
+scalar quartic model
+
+for the nonlinear scalar eld with the quartic (self)interaction lagrangian
+
+lint = 
+
+42
+3
+
+g4
+
+important progress has been achieved in 80s in the higher perturbation orders calcula-
+tion. the  function was calculated in the ms-scheme up to the 5-loop level [23]
+
+m s
+(5) =
+
+3
+2
+
+g2 
+
+17
+6
+
+g3 + 16.275g4  135.8g5 + 1437g6 .
+
+we see from this expression that, in conrast with the qed case, due to its alternate-
+sign structure, there is no stability here even on a qualitative level. the odd-order
+approximations have a ghost-pole type behavior, whereas the even ones yield the xed
+point (nite charge renormalization) case. note also that, as can be shown [24], the
+upper boundary of the 10% condence region corresponds to g values close to 0.1 .
+
+to comprehend the loop dependence of this boundary it is useful to represent
+
+expression m s
+(5)
+
+in a slightly dierent form
+
+m s(g) =
+
+3
+2
+
+g2(cid:20)1 
+
+g
+
+0.529
+
++(cid:18) g
+
+0.303(cid:19)2
+
+(cid:18) g
+
+0.222(cid:19)3
+
++(cid:18) g
+
+0.180(cid:19)4(cid:21) .
+
+(61)
+
+it is clear now, that a boundary of the condence region diminishes with rising the
+order of a loop approximation. the expression (61) looks like a beginning of a power
+asymptotic series of the poincare type. indeed, if we represent the  -function in a series
+expansion form (54) then, as it is can be shown, the coecients n at n  1 behave
+like  n!.
+
+23
+
+the method of determining asymptotic estimates of the perturbation expansion co-
+ecients of the green functions uses a representation in the form of a functional (i.e.
+path) integral. this integral written down for the mentioned expansion coecient can
+be calculated by the steepest descent method in the function space. to the saddle point,
+there corresponds an instantontype euclidean classical solution with a nite action.
+in this manner, an asymptotic expression was obtained [25] for the coecients of the
+
+ function expansion. it has the form
+
+n 
+
+1.096
+
+162 n! n7/2(cid:16)1 + o(n1)(cid:17)
+
+(n  ) .
+
+(62)
+
+the factorial growth of coecients indicates that this is a power asymptotic series with
+zero radius of convergence that cannot be summed in the usual manner. we can obtain
+the information about the singularity structure at the origin (g = 0) by using some
+special procedures. one of them is the borel summation method.
+
+here, we give short exposition of the results on the attempt of the summation of the
+
+series of (61) type made in [24] (see also the review [26]).
+
+authors of the ref. [24] used as an input the -function 4-loop expression in the
+
+symmetric mom-scheme
+
+m om
+5
+
+(g) =
+
+3
+2
+
+g2 
+
+17
+6
+
+g3 + 19.3g4  146g5 .
+
+(63)
+
+this alternate-sign asymptotic series can be summed by the borel method. the idea
+is to represent the sum in a form of a laplace transform integral. it is not dicult to
+see that the transition to the laplace image just kills the factorial factor n!. for the
+modied borel transformation
+
+(g) = z 
+
+0
+
+dx
+g
+
+exp (x/g)(cid:18)x
+
+
+
+x(cid:19)5
+
+b(x)
+
+(64)
+
+perturbation series can be written down as
+
+b(x) = xn
+
+n
+n!n5 xn .
+
+it has a nonzero circle of convergence and can be summed within the circle. however, as
+the integration domain in (64) goes outside the convergency region, we must make an an-
+alytic continuation for the function b(x). it can be done by a conformal transformation
+of the x-plane into the w-plane to map the domain of integration [0,] into the interior
+of the unit disk and the cut [,1] into the boundary of the disk. one can choose
+this transformation in such a way that it correctly reproduces the singularity on the cut.
+the result of conformal transformation x  w(x) = (1 + x 1) (1 + x + 1)1 looks
+
+quite well :
+
+b(x) =
+
+3x2
+128
+
+(1  0.32w  0.127w2 + 0.084w3) .
+
+24
+
+then, by transformation reverse to (64) one can reconstruct beta function (g) which
+is nonanalytic in the g variable with essential singularity at g = 0. graphs of the
+function (g) obtained by the borel summation with allowance for the 1-, 2-, 3- and
+4-loop approximations look very similar one to other.
+
+they all lie now in a narrow parabolic ray slightly below the original one-loop
+parabola and within the limit of 10% accuracy enable to advance into the region g  50.
+this means that the summation procedure adopted enlarges the condence interval in
+several hundred times! besides this it gives the qualitative stability of results. all they
+are now in favour of a ghost-type uv asymptote.
+
+nevertheless, these results can be considered only as a support but not the proof
+of the 4-model inconsistency. the weak point here is that starting with (64) we have
+assumed the denite analyticity properties of (g) in the whole complex g-plane.
+
+3.3 massdependent analytic solution
+
+a general method of an approximate solution to the massive (i.e., mass-dependent) rg
+equations was developed in ref.[27]. analytic expressions of a high level of accuracy for
+an eective coupling and a one-argument function were obtained up to 3 and 4loop
+order [28].
+
+for example, the two-loop massive rgsolution for the invariant coupling
+
+s(q2)(2)
+
+rg =
+
+1 + sa1(q2, m2) + sa2/a1) ln (1 + sa1(...))
+
+s
+
+(65)
+
+at small s values corresponds to perturbation expansion
+
+s(q2)(2)
+
+pert = s  2
+
+sa1(q2, m2) + 3
+
+sha2
+
+1  a2(q2, m2)i + . . . .
+
+at the same time, it smoothly interpolates between two massless limits (with a 
+ ln q2 + c) at q2  m2 and q2  m2 described by an equation analogous to (47).
+in the latter case it can be represented in the form usual for the qcd practice:
+
+1
+s (q2/2)(2)
+
+rg  1(ln
+
+q2
+
+2 + b1 ln ln
+
+q2
+
+2!) ; b1 =
+
+2
+2
+1
+
+.
+
+solution (65) demonstrates, in particular, that the threshold crossing generally chan-
+
+ges the subtraction scheme [29].
+
+the investigation [27, 28] was prompted by the problem of taking explicitly into
+account of heavy quark masses in qcd. however, the results obtained are important
+from a more general point of view for a discussion of the scheme dependence problem
+in qft. the method used could also be of interest for rg applications in other elds
+within the situation with disturbed homogeneity, such as, e.g., intermediate asymptotics
+in hydrodynamics, nite-size scaling in critical phenomena and the excluded volume
+problem in polymer theory.
+
+25
+
+in paper [30], this method was applied to the evolution of eective gauge couplings
+in standard model (sm). here, a new analytic solution of a coupled system of three
+mass-dependent two-loop rg equations for three sm gauge couplings was obtained.
+
+for this goal, one has to start with a perturbative input for the sm couplings
+
+i(q2, m2)  i  2
+
+i ai(q, m, ) + 3
+
+i a2
+
+i (q)  2
+
+i xj
+
+jaij(q) ;
+
+i = 1, 2, 3.
+
+(66)
+
+where ai and aij are one- and two-loop mass- and -dependent contributions of ap-
+propriate feynman diagrams. in the framework of a massive renorm-group formalism
+[7, 8, 10] the corresponding lie equations look like
+
+i(q2, m2)  2
+
+i (q)
+ai(q) +xj
+
+
+j(q) aij(q)
+
+
+(67)
+
+with a  a/;  = ln q2/2 . note that in the uv limit ai(q) = i ; aij(q) = ij
+we arrive at the system
+
+i() = 
+
+i +xj
+
+ijj()
+ 2
+
+i ()
+
+that is commonly used  see, e.g., refs.[31]  for the discussion of data extrapolation
+across the gauge desert and possibility of grand unication.
+
+the latter system can be solved iteratively in the form
+
+1
+
+i()
+
+=
+
+1
+i
+
++ i +xj
+
+ij
+j
+
+ln[1 + jj] ; i = i() .
+
+(68)
+
+here, we present a generalization of this solution for the massive case, that is conve-
+nient for taking into account of threshold eects and discussing, in particular, the issue
+of the grand unication consistency check.
+
+using the method of the paper [32], one can obtain explicit iterative solution to the
+system (67). here, as in the massless case, one rst solves the one-loop approximation
+to (67) to get 4
+
+(1)
+i (q2, m2) = [1/i + ai(q2, m2)]1 .
+
+inserting then this explicit expression into the second factor in the r.h.s. of (67) and
+performing an approximate integration of some integral  for detail see paper [32] 
+we arrive at the expression
+
+1
+
+i(q2, m2)
+
+=
+
+1
+i
+
++ ai(q) +xj
+
+aij(q)
+aj(q)
+
+ln[1 + jaj(q)] .
+
+(69)
+
+quite analogous to (65).
+
+4this exact solution of an one-loop massive rg equation was rst obtained in ref.[33].
+
+26
+
+the remarkable feature of this solution is that it depends explicitly only on mass-
+dependent perturbation coecients ai(q), aij(q) and, being expanded in powers of
+coupling constants, exactly corresponds to the perturbative input (66). on the other
+hand, in the massless limit it goes to solution (68).
+
+the accuracy of the last approximate expression can be estimated by the method
+used in paper [34]. generally, it corresponds to the accuracy 5 of threeloop expression
+(  5 ln ) for the eective coupling in the one-coupling case that is quite sucient for
+current pactice.
+
+3.4 some important results
+
+in the early 70s, s. weinberg [35] proposed the notion of a running mass of a fermion.
+if considered from the viewpoint of paper [13], this idea can be formulated as follows:
+
+any parameter of the lagrangian can be treated as a (generalized) coupling constant,
+
+and its eective counterpart should be included into the renorm-group formalism.
+
+new possibilities for applying the rg method were discovered when the technique of
+operator expansion at short distances (on the light cone) appeared [36]. the plausibility
+of this approach stems from the fact that the rg transformation, regarded as a dyson
+transformation of the renormalized vertex function, involves the simultaneous scaling
+of all its invariant arguments  normally, the squares of the momenta. meanwhile, for
+the physical amplitude, some of them are xed on a mass shell. the expansion on the
+light cone, so to say, separates the arguments, as a result of which it becomes possible
+to study the physical uv asymptotic behaviour by means of the expansion coecients
+(when some momenta being xed on mass shell). as an important example, we can
+mention the evolution equations for moments of qcd structure functions [37].
+
+the revealing of an asymptotic freedom phenomenon can be considered as the most
+
+important result obtained in particle physics by the rg technique.
+
+historically, this discovery was made [38] in the framework of the su(3) nonabelian
+yang-mills model in the early 70s. since that time this model for the eightcomponent
+4-vector eld bab
+ (x) was adopted as a basic ingredient for the qft description of matter
+on the parton level.
+
+the key point is that self-interaction of this non-abelian gluonic quantum eld due to
+dominance of its unphysical components gives negative contribution to the beta function
+perturbation expansion. for the two-loop (schemeindependent) case
+
+qcd() = 12  23
+
+with positive 1,2 for a number nf of quark avours small enough.
+
+correspondingly, the one-loop renorm-group expression
+
+(1)
+
+s (x; s) =
+
+s
+
+1 + s1 ln x
+
+,
+
+5see eqs.(13) and (16) in ref.[34].
+
+27
+
+for the qcd eective coupling exhibits a remarkable uv asymptotic behaviour thanks
+to 1 being positive. this expression implies, in contrast to eq.(23), that the eective
+qcd coupling decreases as x  q2 increases and tends to zero in the uv limit. this
+feature discovered in the early 70s, precisely corresponded to the parton physical picture
+of the hadronic structure.
+
+one more interesting application of the rg method in the multicoupling case, as-
+cending to 50s [12], refers to special solutions, the so-called separatrixes in a phase space
+of several invariant couplings. these solutions relate eective couplings and represent
+scale-invariant trajectories, like, e.g., gi = gi(g1) in the phase space which are straight
+lines in the one-loop case.
+
+some of them that are attractive (or stable) in the uv limit, are related to sym-
+metries that reveal themselves in the high-energy domain. it was conjectured that these
+trajectories may be related to hidden symmetries of a lagrangian and even could serve
+as a tool to nd them. on this basis the method was developed [39] for nding out these
+symmetries. it was shown that in the phase space of invariant couplings the internal
+symmetry corresponds to a singular solution that remains a straight-line when higher or-
+der corrections are taken into account. such solutions corresponding to supersymmetry
+were derived for some combinations of gauge, yukawa and quartic interactions.
+
+generally, these singular solutions obey the relations
+
+dgi
+dl
+
+=
+
+dgi
+dg1
+
+dg1
+dl
+
+,
+
+l = ln x
+
+which are known since zimmermanns paper [40] as the reduction equations. in the 80s
+they were used [41] (see also review paper [42] and references therein) in the uv analyzis
+of asymptotically free models. just for these cases the one-loop reduction relations are
+adequate to physics.
+
+quite recently some other application of this technique was obtained in supersym-
+metric generalizations of grand unication scenario in the standard model.
+it was
+shown [43, 44] that it is possible to achieve complete uv niteness of a theory if yukawa
+couplings are related to the gauge ones in a way corresponding to these special solutions,
+that is, to reduction relations.
+
+the mass-dependent technique described in section 3.3 was successfully used for
+the development of the dhar-gupta approach [45, 46] that led to nite perturbative
+predictions for a physical quantity which is free of renormalization scheme ambiguities.
+in paper [47], this approach was reformulated for the mass-dependent case with several
+coupling constants.
+
+one more recent qft development relevant to the renorm-group is the analytic
+approach to perturbative qcd (pqcd). it is based upon the procedure of invariant
+analyticization [48, 49] ascending to the end of 50s.
+
+the approach consists in the combining of two ideas: the rg summation of uv logs
+with analyticity in the q2 variable, imposed by spectral representation of the kallen
+lehmann type which implements general properties of the local qft including the
+
+28
+
+bogoliubov condition of microscopic causality. this combination was rst devised [50]
+to get rid of the ghost pole in qed about forty years ago.
+
+here, the pqcd invariant coupling s(q2) is transformed into an analytic cou-
+pling an(q2/2)  a(x) which, by construction, is free of ghost singularities due to
+incorporating some nonperturbative structures.
+this analytic coupling a(x) has no unphysical singularities in the complex q2-plane;
+its conventional perturbative expansion precisely coincides with the usual perturbation
+one for s(q2) ; it has no extra parameters; it obeys a universal ir limiting value a(0) =
+4/0 independent of the scale parameter ; it turns out to be remarkably stable [49]
+in the ir domain with respect to higher-loop corrections and, in turn, to the scheme
+dependence.
+
+meanwhile, the analyticized perturbation expansion [51] for an observable f , in
+contrast to the usual case, may contain specic functions an(x), instead of powers
+(a(x))n . in other words, the pertubation series for f (x), due to analyticity imperative,
+can change its form in the ir region [19] turning into an asymptotic expansion `a la
+erdelyi over a nonpower set {an(x)} .
+
+4 rg expansion
+
+in 70s and 80s rgm was applied to (besides qft) critical phenomena: polymers, tur-
+bulence, non-coherent radiation transfer, dynamical chaos, and so on. simpler and less
+sohpisticated motivation in critical phenomena (than in qft) makes this explosion
+of rg applications possible.
+
+4.1 critical phenomena
+
+4.1.1
+
+spin lattices
+
+the so called renormalization group in critical phenomena is based on the kadano
+wilson procedure [52, 53] referred to as decimation or blocking. initially, it emerged
+from the problem of spin lattice. imagine a regular (two- or three- dimentional) lattice
+consisting of n d, d = 2, 3 cites with an elementary step a between them. suppose, that
+at every site a spin vector  is sitting. the hamiltonian describing the spin interaction
+of nearest neighbours
+
+h = kxi
+
+i  i1
+
+(70)
+
+contains k, the coupling constant. the statistical sum is obtained from the partition
+function, s =< exp(h/) >aver. .
+to realize the blocking or decimation, one has to perform the spin averaging over
+block consisting of nd elementary sites. this is a very essential step as far as it dimin-
+ishes the degree of freedom number (from n d to (n/n)d). it destroys the small-range
+properties of the system under consideration, in the averaging course some information
+
+29
+
+being lost. however, the long-range physics (like correlation length essential for phase
+transition) is not aected by it, and we gain simplication of our problem.
+
+after this procedure, new eective spins  arise in sites of a new eective lattice
+with a step na. we obtain also a new eective hamiltonian, with new eective coupling
+kn that has to be dened in the averaging process as a function of k and n
+
+he = knxi
+
+i  i1 + h ,
+
+where h contains quartic and higher terms; h = p       +    .
+
+for the ir (long-distance) properties, h is unessential. hence, we can conclude
+
+that the spin averaging leads to an approximate transformation,
+
+kxi
+
+    knxi
+
+   ,
+
+(71)
+
+or, taking into account the elementary step change, to
+
+kwn : {a  n a, k  kn} .
+
+the latter is the kadano-wilson transformation.
+
+in general, the new coupling constant kn is a function of the old one and of
+the decimation index n. it is convenient to write it down in the form kn = k(1/n, k).
+then, the kw transformation can be formulated as follows:
+
+kw (n) : (cid:26)a  na,
+
+k  kn = k(cid:18) 1
+
+n
+
+, k(cid:19)(cid:27) .
+
+these transformations obey the group composition law
+
+kw (n)  kw (m) = kw (nm)
+
+if
+
+k(x, k) = k(
+
+this is just the rg symmetry.
+
+x
+t
+
+, k(t, k))
+
+(cid:20)x =
+
+1
+nm
+
+, t =
+
+1
+
+n(cid:21) .
+
+(72)
+
+(73)
+
+we observe the following points:
+ the rg symmetry is approximate (due to neglecting by h).
+ the transformations kw (n) are discrete.
+ there exist no reverse transformation to kw (n) .
+
+hence, the kadano-wilson renormalization group is an approximate and discrete
+semi-group. for a long distance (ir limit) physics, however, h is irrelevant, (1/n)
+is close to continuum and it is possible to use dierential lie equations.
+
+in application of these transformations to critical phenomena the notion of a xed
+point is important. as it was explained in section 3.1, it is usually associated with
+power-type asymptotic behavior. note here that, contrary to the qft case considered
+in section 3.1, in phase transition physics we deal with the ir stable point.
+
+30
+
+4.1.2 polymer theory
+
+in the polymer physics one considers statistical properties of polymer macromolecules
+which can be imagined as a very long chain of identical elements. the number of elements
+n could be as big as 105, the macromolecular size reaching several hundred angstroms.
+such a big molecular chain forms a specic pattern resembling the pattern of a
+random walk. the central problem of the polymer theory is very close to that of a
+random walk and can be formulated as follows.
+
+for a very long chain of n steps (the size of each step = a) one has to nd
+the chain size rn as the distance between the start and the nish points, the
+distribution function of angles i between neighboring elements being given.
+
+the function f () is dened by the forces between adjacent elements depending on
+some external factors like temperature t . the essential feature of a polymer chain is
+the impossibility of a self-intersection. this is known as an excluded volume eect in
+the random walk problem. in reality, polymer molecules are swimming in a solvent and
+form globulars.
+
+for large n values the molecular size rn follows the power fleury law rn  n 
+with , the fleury index. when n is given, rn is a functional of f () which depends on
+external conditions (e.g., temperature t , properties of solvent, etc. ). if t increases, rn
+increases and at some moment globulars touch one another. this is the polymerization
+process very similar to a phase transition phenomenon.
+
+the kadanovwilson rg (kwrg) blocking ideology has been used in polymer
+physics by de gennes [54]. the key idea is a grouping of n chain subsequent elements
+into a new elementary block. this grouping operation is very close to kadanos
+blocking. it leads to the transformation
+
+{1  n ; a  an}
+
+which is analogous to one for spin lattice decimation. this transformation must be
+specied by a direct calculation which gives the explicit form of an = a(n, a). here we
+have a discrete semi-group. then, by using the kwrg technique, one nds the xed
+point, obtains the fleury power law and can calculate its index .
+
+generally, the excluded volume eect yields some complications. however, inside the
+qft rg framework it can be treated rather simply [55] by introducing an additional
+argument similar to nite length l in transfer problem and particle mass m in qtf.
+
+besides polymers, the kwrg approach has been used in some elds of physics, like
+percolation, noncoherent radiation transfer [56], dynamical chaos [57] and some others.
+meanwhile, the original qftrg approach proliferated into the theory of turbulence.
+
+4.1.3 turbulence
+
+to formulate the turbulence problem on the rg language one has to perform the
+following steps [59, 60, 61]:
+
+1. introduce the generating functional for correlation functions.
+
+31
+
+2. write the path integral representation for this functional.
+
+3. by changing the function integration variable nd the equivalence of the classical
+
+statistical system to some quantum eld theory model.
+
+4. construct the system of schwingerdyson equations for this equivalent qft.
+
+5. perform the nite renormalization procedure.
+
+6. derive the rg equations.
+
+4.2 paths of rg expansion
+
+rg is expanded in diverse elds of physics in two dierent ways:
+
+ by direct analogy with the kadanov-wilson construction (averaging over some set
+of degrees of freedom) in polymers, non-coherent transfer and percolation, i.e.,
+constructing a set of models for a given physical problem.
+
+ search for an exact rg symmetry by proof of the equivalence with a qft model:
+
+e.g., in turbulence (refs. [59, 61]), plasma turbulence [62] and some others.
+
+to the question are there dierent renormalization groups? the answer is positive:
+
+1. in qft and some simple macroscopic examples (like, onedimentional transfer
+problem) , rg symmetry is an exact symmetry of the solution formulated in its
+natural variables.
+
+2. in turbulence, continuous spin-eld models and some others, it is a symmetry of
+
+an equivalent qft model.
+
+3. in polymers, percolation, etc. , (with kw blocking), the rg transformation is
+a transformation between dierent auxiliary models (specially constructed for this
+purpose) of a given system.
+
+as we have shown, there is no essential dierence in the mathematical formalism.
+
+there exists, however, a profound dierence in physics:
+
+ in cases 1 and 2 (as well as in some macroscopic examples), the rg is an exact
+
+symmetry of a solution.
+
+ in the kadanovwilsontype problem (spin lattice, polymers, etc. ), one has to
+
+construct a set m of models mi. the kwrg transformation
+
+r(n)mi = mni , with integer n
+
+(74)
+
+is acting inside a set of models.
+
+32
+
+4.3 two faces of rg in qft
+
+as it was explained in section 1.4, the vacuum, i.e., the interparticle space, contain
+vacuum uctuations. due to them, the charge of a particle is screened. in accordance
+with dirac eq.(26), in momentum space the q2 dependence of an electron charge can be
+presented
+
+e(q2) = e(cid:26)1 +
+
+
+6
+
+ln(q2r2
+
+e) + . . .(cid:27) ; e2 = e2(1/r2
+
+e) = 1/137.
+
+(75)
+
+in terms of the classical electron charge and of electron compton lenght.
+
+the rst idea of an additional symmetry in this problem was born by stueckelberg
+and peterman [5]. in their pioneering investigation the very existence of group transfor-
+mation was discovered within the renormalization procedure the result of which contains
+nite arbitrariness. just this degree of freedom in nite renormalized expressions was
+used by bogoliubov and shirkov in refs.[7][10]. roughly speaking, this corresponds
+to the change re  1/.
+the basic idea was that, instead of 1/re, one can use some other reference point .
+this is equivalent to introducing of a new degree of freedom associated with the reference
+point scale. instead of (75) we have
+
+e(q2/2) = e(1 +
+
+
+6
+
+ln
+
+q2
+
+2 + . . .) .
+
+(76)
+
+here, the eective charge is considered after the subtracting of innities and is given
+by a nite representation (76). the rg symmetry is formulated in terms of the q2
+scale and  represents the reference point.
+
+another approach was used by gell-mann and low [6]. their paper was devoted to
+the short distance behaviour in a nonlocal qed with a cuto , and the  degree of
+freedom was used to analyze the uv behaviour. instead of renormalization, there is a
+regularization and the charge is given by the singular representation
+
+e() = e(cid:18)1 +
+
+
+6
+
+ln 2r2
+
+e +    (cid:19)
+
+(77)
+
+which is singular in the limit   .
+we can draw a transparent picture (as was commented later by wilson in his nobel
+lecture) of the last approach. imagine an electron of a nite size, smeared over a small
+volume with the radius ri = h/ci , ln(2/m2
+e)  1. the electric charge ei of such a
+non-local electron is considered as depending on the cut-o momentum i so that this
+dependence accumulates the vacuum polarization eects which, in reality, take place at
+distances from the point electron smaller than ri. we deal with a set of models of the
+non-local electron correponding to dierent values of the cut-o i. here, ei depends on
+ri and the vacuum polarization eects in the excluded volume r3
+i should be subtracted.
+in this language, the rg transformation is the transition from one value of the smearing
+radius to another ri  rj, simultaneously with a corresponding change of the eective
+
+33
+
+in other words, the rg symmetry here is that related to
+electron charge ei  ej.
+operations in the space of models of non-local qed constructed in such a way that at
+large distances every model is equivalent to the real local one.
+
+5 rg symmetry in mathematical physics
+
+5.1 functional self-similarity
+
+the rg transformations discussed above have close connection with the concept of a
+self-similarity(ss). the ss transformations for problems formulated by nonlinear partial
+des are well known, since the last century, mainly in dynamics of liquids and gases.
+they are one parameter  transformations dened as simultaneous power scaling of
+independent variables z = {x, t, . . .} , solutions fk(z) and other functions vi(z)
+{x  x , t  ta , fk(z)  fk(z) = kfk(z) , vi(z) = ivi(z) }
+
+s :
+
+entering into the equations.
+
+to emphasize their power structure, we use a term power self-similarity = pss.
+
+according to zeldovich and barenblatt, [63, 64] the pss can be classied as:
+
+a/ pss of the 1st kind
+
+with all indices a, ..., , ... being (half)integers (integer pss) that are usually found
+from the theory of dimensions;
+
+b/ pss of the 2nd kind
+
+with irrational indices (fractal pss) which should be dened from dynamics.
+
+to relate rg with pss, let us turn to the solution of the renorm-group fe
+
+g(xt, g) = g(x, g(t, g)) .
+
+its general solution is known; it depends on an arbitrary function of one argument 
+see eq.(38). however, at the moment we are interested in a special solution linear in
+the second argument: g(x, g) = gf (x). the function f (x) should satisfy the equation
+f (xt) = f (x)f (t) with the solution f (x) = x . hence, g(x, t) = gx. this means that in
+our special case, linear in g, the rg transformation (6) is reduced to pss transformation,
+
+rt  {x  xt1, g  gt} = st
+
+.
+
+(78)
+
+generally, in rg, instead of a power law, we have arbitrary functional dependence.
+thus, one can consider transformations (6), (15) and (17) as functional generalizations
+of usual (i.e., power) self-similarity transformations. hence, it is natural to refer to them
+as to the transformations of functional scaling or functional (self)similarity (fs) rather
+than to rg-transformations. in short,
+
+with fs standing for functional similarity.
+
+rg  fs ,
+
+34
+
+we can now answer the question concerning the physical meaning of the symmetry
+underlying fs and the bogoliubovs renormgroup. as we have mentioned, it is not
+a symmetry of the physical system or the equations of the problem at hand, but a
+symmetry of a solution considered as a function of the relevant physical variables and
+suitable boundary conditions. a symmetry like that can be related, in particular, to
+the invariance of a physical quantity described by this solution with respect to the way
+in which the boundary conditions are imposed. the changing of this way constitutes a
+group operation in the sense that the group composition law is related to the transitivity
+property of such changes.
+
+homogeneity is an important feature of the physical systems under consideration.
+however, homogeneity can be violated in a discrete manner. imagine that such a discrete
+inhomogeneity is connected with a certain value of x , say, x = y. in this case the rg
+transformation with the canonical parameter t will have the form (14) with the group
+composition law (15).
+
+the symmetry connected with fs is a very simple and frequently encountered prop-
+erty of physical phenomena.
+it can easily be discovered in numerous problems of
+theoretical physics like classical mechanics, transfer theory, classical hydrodynamics,
+and so on [65, 17, 16].
+
+5.2 recent application to boundary value problem
+
+recently, some interesting attempts have been made to use the rg concept in classical
+mathematical physics, in particular, to study strong nonlinear regimes and to investigate
+asymptotic behavior of physical systems described by nonlinear pdes.
+
+about a decade ago, the rg ideas were applied by late veniamin pustovalov with
+co-authors [67] to analyze a problem of generating higher harmonics in plasma. this
+problem, after some simplication, was reduced to a couple of partial des with the
+boundary parameter  solution characteristic  explicitly included.
+it was proved
+that corresponding solutions admitted an exact symmetry group that takes into account
+transformations of this boundary parameter, which is related to the amplitude of the
+magnetic eld at a critical density point. the solution symmetry obtained was then
+used to evaluate the eciency of harmonics generation in cold and hot plasma. the
+advantageous use of the rg-approach in solving the above particular problem gave
+promise that it may work in other cases and this was illustrated in [68] by a series of
+examples for various boundary value problems.
+
+moreover, in refs. [65, 68] the possibility of devising a regular method for nding a
+special class of symmetries of solution to the boundary value problem (bvp) in math-
+ematical physics, namely, rg-type symmetries, was discussed. the latter are dened
+as solution symmetries with respect to transformations involving parameters that enter
+through the equations as well as through the boundary conditions in addition to (or
+even rather than) the natural variables of the equations.
+
+as it is well known, the aim of the modern group analysis [69, 70], which goes back
+to works by s. lie [71], is to nd symmetries of des. this approach does not include a
+
+35
+
+similar problem of studying the symmetries of solutions of these equations. outside the
+main direction of both the classical and modern analysis, there remains as well a study
+of solution symmetries with respect to transformations involving not only the variables
+present in the equations, but also parameters entering into the solutions from boundary
+conditions.
+
+from the afore-said it is clear that the symmetries which attracted attention in
+the 50s in connection with the discovery of the rg in qft were those involving the
+parameters of the system in the group transformations. it is natural to refer to these
+symmetries related to fs (or rg-type) symmetries.
+
+it should be noted that the procedure of revealing the fs symmetry (fss), or some
+group feature, similar to the fs regularity, in any partial case (qft, spin lattice, poly-
+mers, turbulence and so on) up to now is not a regular one. in practice, it needs some
+imagination and atypical manipulation invented for every particular case  see the
+discussion in [72]. by this reason, the possibility to nd a regular approach to construct-
+ing fss is of principal interest.
+
+recently, a possible scheme of this kind was presented as applied to a mathematical
+model that is described by a bvp. the leading idea [65, 68, 73] in this case is based on
+the fact that solution symmetry for this system can be found in a regular manner by
+using the well-developed methods of modern group analysis.
+
+the scheme that describes devising of fss and its application is then formulated
+[74, 76] as follows. firstly, a specic rg-manifold should be constructed. secondly, some
+auxiliary symmetry, i.e., the most general symmetry group admitted by this manifold is
+to be found. thirdly, this symmetry should be restricted on a particular solution to get
+the fss. fourthly, the fss allows one to improve an approximate solution or, in some
+cases, to get an exact solution.
+
+depending on both a mathematical model and boundary conditions, the rst step of
+this procedure can be realized in dierent ways. in some cases, the desired fs-manifold
+is obtained by including parameters, entering into a solution via an equation(s) and a
+boundary condition, in the list of independent variables. the extension of the space of
+variables involved in group transformations, e.g., by taking into account the dependence
+of coordinates of the renormgroup operator upon dierential and/or non-local variables
+(which leads to the liebacklund and non-local transformation groups [70]) can also
+be used for constructing the fsmanifold. the use of the ambartsumian invariant
+embedding method [77] and of dierential constraints sometimes allows reformulations
+of a boundary condition in a form of additional de(s) and enables one to construct
+the fs-manifold as a combination of original and embedding equations (or dierential
+constraints) which are compatible with these equations. at last, of particular interest is
+the perturbation method of constructing the fsmanifold which is based on the presence
+of a small parameter.
+
+the second step, the calculating of a most general group g admitted by the fs
+manifold, is a standard procedure in the group analysis and has been described in detail
+in many texts and monographs  see, for example, [69, 78].
+
+36
+
+the symmetry group g thus constructed cannot as yet be referred to as a renorm
+group. in order to obtain this, the next, third step should be done which consists in
+restricting g on a solution of a boundary value problem. this procedure utilizes the in-
+variance condition and mathematically appears as a combining of dierent coordinates
+of group generators admitted by the fsmanifold.
+
+the nal step, i.e., constructing analytic expression for the solution of the boundary
+
+value problem on the basis of the fs, usually presents no specic problems.
+
+a review of the results, which were obtained on the basis of the formulated scheme,
+
+can be found, for example, in [76, 79, 80].
+
+we mention briey, the fs analysis result for a particular problem of nonlinear
+optics, the problem of the laser beam self-focusing in a nonlinear medium. here, one
+have a bvp for a coupled system of two nonlinear pdes with the boundary condition
+given in a form of two one-argument functions. with help of rg=fs approach one new
+exact analytic and one new approximate analytic solution (for the practically important
+gaussian initial transverse prole) has been found [81].
+
+the important qualitative features of this example are:
+
+ the two-dimension structure has been analysed, that has a singularity in the be-
+
+havior of derivatives with respect to transverse coordinate,
+
+ the algebraic structure of the fss operators is dierent from that of usual rg of
+the qft type. here, we meet with a set of several innitesimal renormgroup oper-
+ators, each of those can be used to reconstruct the analytic (exact or approximate)
+solution of bvp starting from the perturbative theory result. moreover, renorm-
+group operators for exact solutions of bvp obtained appear as lie-backlund (not
+lie) innitesimal operators.
+
+up to now the outlined regular method is feasible for systems that can be described
+by des and is based on the formalism of modern group analysis. however, it seems also
+possible to extend this approach to boundary value problems that are not described just
+by dierential equations. a chance of such an extension is based on recent advances
+in group analysis of systems of integro-dierential equations [82] which allow transfor-
+mations of both dynamical variables and functionals of a solution to be formulated
+[83]. more intriguing is the issue of a possibility of constructing a regular approach for
+more complicated systems, in particular to those having an innite number of degrees
+of freedom. the formers can be represented in a compact form by functional (or path)
+integrals.
+
+acknowledgments
+the author is grateful to professor ashoke mitra for invitation to participate in this
+book. he is indebted to d.v. kazakov, v.f. kovalev, and i.l. solovtsov for useful discus-
+sion and comments. this work was partially supported by grants of russian foundation
+for fundamental research (rffr projects nos 96-15-96030 and 99-01-00091) and by
+intas grant no 96-0842.
+
+37
+
+references
+
+[1] n.n.bogoluibov and d.v.shirkov, introduction to the theory of quantized fields
+
+wiley-intersc., n.y., 1959 and 1980.
+
+[2] n.n. bogoliubov and d.v. shirkov, problems of quantum eld theory. i, uspekhi
+fiz. nauk 55, (1955), 149-214; ibid. 57, (1955), 3-92  in russian; fortschr. der
+physik 3 (1955), pp 439-495; 4 (1956), pp 438-517  in german.
+
+[3] n.n. bogoliubov and o.s. parasyuk, doklady akad. nauk sssr, 100 (1955) 2528,
+
+429432  in russian; also acta mathematica, 97 (1957), 227266.
+
+[4] laurie m. brown, editor, renormalization, springerverlag, n.y., 1993.
+
+[5] e.c.g. stuckelberg and a. peterman, helv. phys. acta, 26 (1953) 499-520.
+
+[6] m. gell-mann and f. low, phys. rev. 95 (1954) 1300-1312.
+
+[7] n.n. bogoliubov and d.v. shirkov, on the renormalization group in quantum
+
+electrodynamics, doklady an sssr, 103 (1955) 203-206  in russian.
+
+[8] n.n. bogoliubov and d.v. shirkov, application of the renormalization group to
+improve the formulae of perturbation theory, doklady akad. nauk sssr, 103
+(1955) 391-394  in russian.
+
+[9] d.v. shirkov, doklady an sssr, 105 (1955) 972  in russian. see also in [10].
+
+[10] n.n. bogoliubov and d.v. shirkov, charge renormalization group in quantum eld
+
+theory, nuovo cim. 3 (1956) 845-637.
+
+[11] l.d. landau, a.a. abrikosov and i.m. khalatnikov, doklady an sssr, 95 (1954)
+
+497; 773; 1117; 96 (1954) 261  in russian; nuovo cim. supp.3, 80-104.
+
+[12] i.f. ginzburg, doklady an sssr 110 (1956) 535  in russian.
+
+[13] a.a. logunov, soviet phys. jetp 3 (1956).
+
+[14] p.a.m. dirac in theorie du positron (7-eme conseil du physique solvay: structure
+et propriete de noyaux atomiques, oct. 1933), gauthier-villars, paris, 1934, p 203.
+
+[15] n. bohr, phys. rev. 48 (1935), 696.
+
+[16] d.v. shirkov, sov. phys. doklady 27 (1982) 197; the rg method and fun-
+ctional self-similarity in physics  in nonlinear and turbulent processes in phy-
+sics, ed. r.z. sagdeev, harwood acad.publ., n.y. 1984, v.3, pp 1637-1647;
+d.v. shirkov, renormalization group in dierent elds of theoretical physics,
+kek report 91-13, feb. 1992.
+
+[17] m.a. mnatsakanyan, soviet phys. doklady 27 (1982).
+
+[18] l.v. ovsyannikov, doklady an sssr, 109 (1956) 1112. for english translation
+
+see pp 76-79 in in the intermission ... , ed. yu.a. trutnev, ws, singapore,1998.
+
+[19] d.v. shirkov, theor. math. fiz. 119 (1999) 55; hep-th/9810246.
+
+38
+
+[20] l.d. landau and i.ya. pomeranchuk, doklady an sssr, 102 (1955) 489-492;
+i.ya. pomeranchuk, ibid., 103 (1955) 1005; 105 (1955) 461  in russian; nuovo
+cim. 10 (1956) 1186; see also l.d. landau, on the quantum theory of fields  in
+niels bohr and the development of physics, eds. w. pauli et al., pergamon, london,
+1955, pp 52-69.
+
+[21] e.s. fradkin, soviet phys. jetp 1 (1955).
+
+[22] n.n. bogoliubov and d.v. shirkov, doklady an sssr 105 (1955) 685-688 (in
+russian); see also section asymptotic behavior in the uv in chapter renor-
+malization group of the monograph [1].
+
+[23] s.g. gorishny et al., phys. lett. 132b (1983) 351. d.i. kazakov, phys. lett. 133b
+
+(1983) 406.
+
+[24] d.i. kazakov, o.v.tarasov and d.v. shirkov, teor. mat. fiz. 38 (1979) 15.
+
+[25] l.n. lipatov, zh. eksp. teor. fiz. 71 (1976) 2010.
+
+[26] d.i. kazakov and d.v. shirkov, fortschr. d. phys. 28 (1980) 465-499.
+
+[27] d.v. shirkov, sov. j. nucl. phys. 34(2) (1981) 300-2; theor. math. fiz. 49 (1981)
+
+1039-42.
+
+[28] d.v. shirkov, nucl. phys. b 371 (1992) 467-81.
+
+[29] d.v. shirkov, mass eects in running coupling evolution and hard processes, in
+perspectives in particle physics, eds. d.klabucar et al., ws, 1995, pp 113; on con-
+tinuous mass-dependent analysis of dis data, in proc. epshep95 conf. (bruxelles,
+july 1995), eds. j.lemonne et al., ws, pp 141-2.
+
+[30] d.v. shirkov, mass and scheme eects in coupling constant evolution, teor. mat.
+
+fizika (1992) 93 466-72.
+
+[31] u.amaldi et al., phys. lett. b 260 (1991) 447-55; m.b.einhorn and d.r.t.jones,
+
+nucl.phys. b 196 (1982) 475.
+
+[32] d.v.shirkov, sov. j. nucl. phys. 34 (1981) 300-2; teor. mat. fiz. (ussr) 49 (dec.
+
+1981) 291-7 [pp 1039-43 in the american ed.].
+
+[33] v.z.blank and d.v.shirkov, nucl. phys.2 (1956) 356-70.
+
+[34] d.v.shirkov, nucl.phys. b 371 (1992) 467-81.
+
+[35] s. weinberg, phys.rev. d 8 (1973) 605-625.
+
+[36] k. wilson, phys.rev. 179 (1969) 1499-1515.
+
+[37] g. altarelli and g. parisi, nucl. phys. b 126 (1977) 298-318.
+
+[38] d. gross and p. wilczek, phys. rev. d8 (1973) 3633-52;
+
+h. politzer, phys. rev. lett. 30 (1973) 1346-49.
+
+[39] d.i. kazakov and d.v. shirkov, singular solutions of rg eqs. and the symmetry
+of the lagrangian, jinr preprint e2-8974, 1975, in high energy particle interaction
+(proceed. 1975 smolenice conf.), eds. d.krupa & j. pisut, veda, bratislava, 1976,
+255-78.
+
+39
+
+[40] w. zimmermann, comm. math. phys. 97 (1985) 211.
+
+[41] r. oehme and w. zimmermann, comm. math. phys. 97 (1985) 569; r. oehme,
+k. sibold and w. zimmermann, phys. lett. b 147 (1984) 115; b153 (1985) 142.
+
+[42] w. zimmermann, in renormalization group, eds. d.v. shirkov et al, ws, singapore,
+
+1988, pp 5564.
+
+[43] a.v. ermushev, d.i. kazakov, o.v. tarasov, nucl. phys. b 281 (1987) 72.
+
+[44] d.i. kazakov, phys. lett. b 421 (1998) 211-216.
+
+[45] a. dhar, phys. lett. 128 b (1983) 407.
+
+[46] a. dhar and v.g. gupta, pramana 21 (1983) 207; phys. rev. d 29 (1984) 2822.
+
+[47] v.g. gupta, d.v. shirkov and o.tarasov, intern. j. mod. phys.a 6 (1991) 3381.
+
+[48] d.v. shirkov and i.l. solovtsov, jinr rapid comm. no. 2[76]-96 (1996) 5, hep-
+
+ph/9604363; phys. rev. lett. 79 (1997) 1209, hep-ph/9704333.
+
+[49] d.v. shirkov, nucl. phys. (proc. suppl.) b 64, (1998) 106, hep-ph/9708480.
+
+[50] n.n. bogoliubov, a.a. logunov and d.v. shirkov, sov. phys. jetp 10 (1959)
+
+574.
+
+[51] k.a. milton, i.l. solovtsov and o.p. solovtsova, phys. lett. b 415 (1997) 104.
+
+[52] l. kadano, physica 2 (1966) 263.
+
+[53] k. wilson, phys.rev. b4 (1971) 3174-3183.
+
+[54] p.g. de gennes, phys. lett. 38a (1972), 339-40; j. des cloiseaux, j. physique
+
+(paris) 36 (1975) 281.
+
+[55] v.i. alkhimov, theor. mat. fiz. 39 (1979) 281; 59 (1984) 432.
+
+[56] t.l. bell et al., phys. rev. a17 (1978) 1049-1057;
+g.f. chapline, phys. rev. a21 (1980) 1263-1271.
+
+[57] b.v. chirikov, lecture notes in physics 179 (1983) 29; b.v. chirikov & d.l. she-
+pelansky, chaos border and statistical anomalies  in [58], 221; yu. g. sinai &
+k.m. khanin, renormalization group method in the theory of dynamical systems
+ in [58], 251; a. peterman and a. zichichi, nuovo cimento 109a (1996) 341.
+
+[58] renormalization group, (proceed. 1986 dubna conference), eds. d.v. shirkov, d.i.
+
+kazakov and a.a. vladimirov, ws, singapore, 1988.
+
+[59] c. dedominicis and p. martin, phys. rev. a19 (1979) 419-422.
+
+[60] l. adjemyan et al, teor. mat. fiz. 58 (1984) 72; 65 (1985) 196; a.n. vasiliev, quan-
+tum field renormalization group in the theory of turbulence and in magnetic
+hydrodynamics, in [58], pp 146-159.
+
+[61] a.n. vasiliev, quantum field renormalization group in the theory of critical behavior
+and stochastic dynamics, pinf publ., st-petersburg, 1998, 773 pp  in russian, also
+gordon & breach, amsterdam (in press).
+
+40
+
+[62] g. pelletier, plasma phys. 24 (1980) 421.
+
+[63] ja.b. zeldovich and g.i. barenblatt, sov. phys. doklady 3(1) (1958) 44-47; see
+
+also in [64].
+
+[64] g.i. barenblatt, scaling, self-similarity, and intermediate asymptotics, cambridge
+
+univ. press, 1996.
+
+[65] d.v. shirkov, renormalization group in modern physics, in [58] pp 1-32, int. j.
+mod. phys. a3 (1988) 1321-1341; several topics on renorm-group theory, in [66] ,
+pp 1-10.
+
+[66] renormalization group 91 (proceed. of 1991 dubna conf.), eds. d.v. shirkov and
+
+v.b. priezzhev, ws, singapore, 1992.
+
+[67] v.f. kovalev and v.v. pustovalov, teor. mat. fizika 81 (1990) 10611071; also:
+strong nonlinearity and generation of high harmonics in laser plasma, in proceed.
+conf. plasma physics (kiev, ussr, april 1987), ed. a.g. sitenko, naukova dumka,
+kiev, 1987, 1, 271; inuence of laser plasma temperature on the high harmonics
+generation process, ibid., 1, 274.
+
+[68] v.f. kovalev, s.v. krivenko, v.v. pustovalov, the renormalization group method
+
+based on group analysis  in [66], 300-314.
+
+[69] l.v. ovsyannikov, group analysis of dierential equations, acad. press, n.y., 1982.
+
+[70] n.h. ibragimov, transformation groups applied to mathematical physics, reidel publ.,
+
+dordrechtlancaster, 1985.
+
+[71] m. s. lie, gesammelte abhandlungen, leipzigoslo, bd.5, 1924; bd.6, 1927.
+
+[72] d.v. shirkov, bogoliubov renormgroup, russian math. surveys 49:5 (1994) 155 
+with numerous misprints. for corrected version see: the bogoliubov renormaliza-
+tion group (second english printing), jinr comm. e2-96-15; hep-th/9602024.
+
+[73] d.v. shirkov, intern. j. mod. physics c 6 (1995) 503-512.
+
+[74] v.f.kovalev, rgsymmetries: constructing and applications  in [75], 263.
+
+[75] renormalization group 96, (proc. 1996 dubna conf.), eds. d.v. shirkov, d.i. kaza-
+
+kov and v.b. priezzhev, jinr publ., dubna, 1997.
+
+[76] v.f. kovalev, v.v. pustovalov, d.v. shirkov, j. math. phys. 39 (1998) 1170-1188;
+
+hep-th/9706056.
+
+[77] the embedding method was introduced by v.a.ambartzumyan in astr. journ. 19
+(1942) 30  in russian; later on this method enjoyed wide application to dierent
+problems  see, e.g., j.casti, r.kalaba, imbedding methods in applied mathematics
+addison-wesley, reading, ma, 1973 and references therein.
+
+[78] peter j. olver, applications of lie groups to dierential equations, springer, n. y.,
+1986; crc handbook of lie group analysis of di. equations, ed. n.h.ibragimov
+(crc press, boca raton, florida, usa)  in three volumes. 1994  1996.
+
+41
+
+[79] v.f.kovalev, group and renormgroup symmetries of boundary value problems, in
+modern group analysis vi, eds. n.h.ibragimov and f.m.mahomed, 1997, new age
+internatl (p) ltd publ., india, n. delhi, 225.
+
+[80] v.f. kovalev and d.v. shirkov, teor. mat. fizika 121 (oct. 1999) no.1.
+
+[81] v.f. kovalev and d.v. shirkov, j. nonlin. opt. phys. & mater. 6 (1997) 443.
+
+[82] v.f. kovalev, s.v. krivenko and v.v. pustovalov, dier. equations 29 (1993)
+
+no 10, 1568; no 11, 1712.
+
+[83] v.f. kovalev, s.v. krivenko and v.v. pustovalov, j. nonlin. math. phys. 3 (1996)
+
+175-180.
+
+42
+
+

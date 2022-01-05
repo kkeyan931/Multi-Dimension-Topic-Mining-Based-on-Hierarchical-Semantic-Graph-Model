@@ -1,0 +1,1878 @@
+mit-ctp-2921
+nsf-itp-99-137
+hep-th/9911114
+
+some remarks on the finitude of quiver theories
+
+9
+9
+9
+1
+
+ 
+
+v
+o
+n
+6
+1
+
+ 
+
+ 
+ 
+
+1
+v
+4
+1
+1
+1
+1
+9
+9
+/
+h
+t
+-
+p
+e
+h
+:
+v
+i
+x
+r
+a
+
+yang-hui he
+yhe@ctp.mit.edu1
+
+center for theoretical physics,
+
+massachusetts institute of technology
+
+cambridge, ma 02139, u.s.a.
+
+and
+
+institute for theoretical physics,
+
+ucsb, santa barbara, ca 93106, u.s.a.2
+
+abstract
+
+d-brane probes, hanany-witten setups and geometrical engineering stand
+as a trichotomy of the currently fashionable techniques of constructing gauge
+theories from string theory. meanwhile, asymptotic freedom, nitude and ir
+freedom pose as a trichotomy of the beta-function behaviour in quantum eld
+theories. parallel thereto is a trichotomy in set theory of nite, tame and
+wild representation types. at the intersection of the above lies the theory of
+quivers. we briey review some of the terminology standard to the physics
+and to the mathematics. then we utilise certain results from graph theory
+and axiomatic representation theory of path algebras to address physical issues
+such as the implication of graph additivity to niteness of gauge theories, the
+impossibility of constructing completely ir free string orbifold theories and the
+unclassiability of n < 2 yang-mills theories in four dimensions.
+
+1 research supported in part by the ctp and the lns of mit and the u.s. department of
+energy under cooperative research agreement #de-fc02-94er40818, the itp of ucsb under nsf
+grant phy94-07194, as well as the nsf graduate fellowship.
+
+2 address until nov. 21st, 1999.
+
+1 introduction
+
+in a quantum eld theory (qft), it has been known since the 70s (q.v. e.g. [1]), that
+the behaviour of physical quantities such as mass and coupling constant are sensitive
+to the renormalisation and evolve according to momentum scale as dictated by the
+so-called renormalisation ows.
+in particular, the correlation (greens) functions,
+which encode the physical information relevant to feymanns perturbative analysis
+of the theory and hence unaected by such ows, obey the famous callan-symanzik
+equations. these equations assert the existence two universal functions () and
+() shifting according to the coupling and eld renormalisation in such a way so as
+to compensate for the renormalisation scale.
+
+a class of qfts has lately received much attention, particularly among the string
+theorists. these are the so-named nite theories, characterised by the vanishing of
+the -functions. these theories are extremely well-behaved and no divergences can
+be associated with the coupling in the ultraviolet; they were thus once embraced
+as the solution to ultraviolet innities of qfts. four-dimensional nite theories
+are restricted to supersymmetric gauge theories (or super-yang-mills, syms), of
+which divergence cancelation is a general feature, and have a wealth of interesting
+structure. n = 4 sym theories have been shown to be nite to all orders (cf.
+e.g. [7, 8]) whereas for n = 2, the adler-bardeen theorem guarantees that no higher
+than 1-loop corrections exist for the -function [9]. finally, for the unextended n = 1
+theories, the vanishing at 1-loop implies that for 2-loops [10].
+
+when a conformal eld theory (cft) with vanishing -function also has the
+anomalous dimensions vanishing, the theory is in fact a nite theory. this class of
+theories is without divergence and scale  and here we enter the realm of string theory.
+recently much attempts have been undertaken in the construction of such theories
+as low-energy limits of the world-volume theories of d-brane probes on spacetime
+singularities [13, 14, 15, 16, 18] or of brane setups of the hanany-witten type [2,
+3, 4, 5]. the construction of these theories not only supplies an excellent check for
+string theoretic techniques but also, vice versa, facilitate the incorporation of the
+standard model into string unications. these nite (super-)conformal theories in
+four dimensions still remain a topic of fervent pursuit.
+
+almost exactly concurrent with these advances in physics was a host of activities in
+mathematics. inspired by problems in linear representations of partially ordered sets
+over a eld [32, 35, 36, 40, 41], elegant and graphical methods have been developed in
+attacking standing problems in algebra and combinatorics such as the classication
+of representation types and indecomposables of nite-dimensional algebras.
+
+in 1972, p. gabriel introduced the concept of a kocher in [35]. this is what is
+
+2
+
+known to our standard parlance today as a quiver. what entailed was a plethora
+of exciting and fruitful research in graph theory, axiomatic set theory, linear algebra
+and category theory, among many other branches. in particular one result that has
+spurned interest is the great limitation imposed on the shapes of the quivers once the
+concept of nite representation type has been introduced.
+
+it may at rst glance seem to the reader that these two disparate directions of re-
+search in contemporary physics and mathematics may never share conjugal harmony.
+however, following the works of [14, 15, 16] those amusing quiver diagrams have sur-
+prisingly - or perhaps not too much so, considering how that illustrious eld of string
+theory has of late brought such enlightenment upon physics from seemingly most
+esoteric mathematics - taken a slight excursion from the reveries of the abstract, and
+manifested themselves in sym theories emerging from d-branes probing orbifolds.
+the gauge elds and matter content of the said theories are conveniently encoded
+into quivers and further elaborations upon relations to beyond orbifold theories have
+been suggested in [18, 19].
+
+it is therefore natural, for one to pause and step back awhile, and regard the string
+orbifold theory from the perspective of a mathematician, and the quivers, from that
+of a physicist. however, due to his inexpertise in both, the author could call himself
+neither. therefore we are compelled to peep at the two elds as outsiders, and from
+afar attempt to make some observations on similarities, obtain some vague notions of
+the beauty, and speculate upon some underlying principles. this is then the purpose
+of this note: to perceive, with a distant and weak eye; to inform, with a remote and
+feeble voice.
+
+the organisation of the paper is as follows. though the main results are given in
+4, we begin with some preliminaries from contemporary techniques in string theory
+on constructing four dimensional super-yang-mills, focusing on what each interprets
+nitude to mean: 2.1 on d-brane probes on orbifold singularities, 2.2 on hanany-
+witten setups and 2.3 on geometrical engineering. then we move to the other
+direction and give preliminaries in the mathematics, introducing quiver graphs and
+path algebras in 3.1, classication of representation types in 3.2 and how the latter
+imposes constraints on the former in 3.3. the physicist may thus liberally neglect 2
+and the mathematician, 3. finally in 4 we shall see how those beautiful theorems
+in graph theory and axiomatic set theory may be used to give surprising results in
+constructing gauge theories from string theory.
+
+3
+
+nomenclature
+
+unless the contrary is stated, we shall throughout this paper adhere to the convention
+that k is a eld of characteristic zero (and hence innite), that q denotes a quiver
+and kq, the path algebra over the eld k associated thereto, that rep(x) refers
+to the representation of the object x, and that irrep() is the set of irreducible
+representations of the group . moreover, san serif type setting will be reserved for
+
+categories, calligraphic n is used to denote the number of supersymmetries and b,
+
+to distinguish the ane lie algebras or dynkin graphs.
+
+2 preliminaries from the physics
+
+the callan-symanzik equation of a qft dictates the behaviour, under the renor-
+malisation group ow, of the n-point correlator g(n)({(xi)}; m, ) for the quantum
+elds (x), according to the renormalisation of the coupling  and momentum scale
+m (see e.g. [1], whose conventions we shall adopt):
+
+"m
+
+
+m
+
++ ()
+
++ n()# g(n)({(xi)}; m, ) = 0.
+
+
+
+
+the two universal dimensionless functions  and  are known respectively as the -
+function and the anomalous dimension. they determine how the shifts   +
+in the coupling constant and   (1 + ) in the wave function compensate for the
+shift in the renormalisation scale m:
+
+() := m
+
+
+m
+
+() := m
+
+
+m
+
+.
+
+three behaviours are possible in the region of small : (1) () > 0; (2) () < 0;
+and (3) () = 0. the rst has good ir behaviour and admits valid feynmann
+perturbation at large-distance, and the second possesses good perturbative behaviour
+at uv limits and are asymptotically free. the third possibility is where the coupling
+constants do not ow at all and the renormalised coupling is always equal to the bare
+coupling. the only possible divergences in these theories are associated with eld-
+rescaling which cancel automatically in physical s-matrix computations.
+it seems
+that to arrive at these well-tamed theories, some supersymmetry (susy) is needed
+so as to induce the cancelation of boson-fermion loop eects3. these theories are
+known as the nite theories in qft.
+
+3proposals for non-supersymmetric nite theories in four dimensions have been recently made in
+
+[15, 16, 17, 20]; to their techniques we shall later turn briey.
+
+4
+
+of particular importance are the nite theories that arise from conformal eld
+theories which generically have in addition to the vanishing -functions, also zero
+anomalous dimensions. often this subclass belongs to a continuous manifold of scale
+invariant theories and is characterised by the existence of exactly marginal opera-
+tors and whence dimensionless coupling constants, the set of mappings among which
+constitutes the duality group `a la mantonen-olive of n = 4 sym, a hotly pursued
+topic.
+
+a remarkable phenomenon is that if there is a choice of coupling constants such
+that all -functions as well as the anomalous dimensions (which themselves do vanish
+at leading order if the manifold of xed points include the free theory) vanish at
+references in [3]). a host
+rst order then the theory is nite to all orders (cf.
+of nite theories arise as low energy eective theories of string theory.
+it will be
+under this light that our discussions proceed. there are three contemporary methods
+of constructing (nite, super) gauge theories: (1) geometrical engineering; (2) d-
+branes probing singularities and (3) hanany-witten brane setups. discussions on
+the equivalence among and extensive reviews for them have been in wide circulation
+(q.v. e.g. [29, 22]). therefore we shall not delve too far into their account; we shall
+recollect from them what each interprets nitude to mean.
+
+2.1 d-brane probes on orbifolds
+
+when placing n d3-branes on a space-time orbifold singularity cm/, out of the par-
+u(ni) gauge theory with irrep() :=
+
+ent n = 4 su(n) sym one can fabricate a qi
+{ri} and pi
+
+ni dim ri = n [16]. the resulting susy in the four-dimensional world-
+volume is n = 2 if the orbifold is c2/{  su(2)} as studied in [14], n = 1
+if c3/{  su(3)} as in [18] and non-susy if c3/{  su(4)} as in [20]. the
+subsequent matter elds are a4
+fij with
+i, j = 1, ..., n and ar
+
+and a6
+
+ij scalars ij
+
+ij weyl fermions ij
+
+fij=1,...,a4
+ij
+
+ij dened by
+
+r  ri =mj
+
+ar
+ij rj
+
+(2.1)
+
+respectively for r = 4, 6. it is upon these matrices aij, which we call bifundamental
+matter matrices that we shall dwell. they dictate how many matter elds transform
+under the (ni, nj) of the product gauge group.
+it was originally pointed out in
+[14] that one can encode this information in quiver diagrams where one indexes
+the vector multiplets (gauge) by nodes and hypermultiplets (matter) by links in a
+(nite) graph so that the bifundamental matter matrix denes the (possibly oriented)
+adjacency matrix for this graph. in other words, one draws amn number of arrows
+
+5
+
+from node m to n. therefore to each vertex i is associated a vector space vi and a
+semisimple component su(ni) of the gauge group acting on vi. moreover an oriented
+link from v1 to v2 represents a complex eld transforming under hom(v1, v2). we
+shall see in section 3.1 what all this means.
+
+when we take the dimension of both sides of (2.1), we obtain the matrix equation
+
+dim(r)ri = ar
+
+ij rj
+
+(2.2)
+
+where ri := dim ri. as discussed in [16, 18], the remaining susy must be in the
+commutant of  in the su(4) r-symmetry of the parent n = 4 theory. in the case
+of n = 2 this means that 4 = 1 + 1 + 2 and by susy, 6 = 1 + 1 + 2 + 2 where the
+1 is the principal (trivial) irrep and 2, a two-dimensional irrep. therefore due to the
+additivity and orthogonality of group characters, it was thus pointed out (cit. ibid.)
+that one only needs to investigate the fermion matrix a4
+ij, which is actually reduced
+to 2ij + a2
+ij. it was subsequently shown that
+(2.2) necessitates the vanishing of the -function to one loop. summarising these
+points, we state the condition for nitude from the orbifold perspective:
+
+ij. similarly for n = 1, we have ij + a3
+
+susy finitude
+n = 2 2ri = a2
+ijrj
+n = 1 3ri = a3
+ijrj
+n = 0 4ri = a4
+ijrj
+
+(2.3)
+
+in fact it was shown in [16, 27], that the 1-loop -function is proportional to dri ad
+ijrj
+for d = 4  n whereby the vanishing thereof signies nitude, exceeding zero signies
+asymptotical freedom and ir free otherwise4. we shall call this expression dij  ad
+ij
+the discriminant function since its relation with respective to zero (once dotted
+with the vector of labels) discriminates the behaviour of the qft. this point shall
+arise once again in 4.
+
+2.2 hanany-witten
+
+in brane congurations of the hanany-witten type [2], d-branes are stretched be-
+tween sets of ns-branes, the presence of which break the susy aorded by the 32
+supercharges of the type ii theory. in particular, parallel sets of ns-branes break one-
+half susy, giving rise to n = 2 in four dimensions [2] whereas rotated ns-branes
+[6] or grids of ns-branes (the so-called brane box models) [3, 4, 5] break one further
+half susy and gives n = 1 in four dimensions.
+
+4as a cautionary note, these conditions are necessary but may not be sucient. in the cases of
+n < 2, one needs to check the superpotential. however, throughout the paper we shall focus on the
+necessity of these conditions.
+
+6
+
+the brane box models (bbm) (and possible extensions to brane cubes) provide
+an intuitive and visual realisation of sym. they generically give rise to n = 1, with
+n = 2 as a degenerate case. eectively, the d-branes placed in the boxes of ns-
+branes furnish a geometrical way to encode the representation properties of the nite
+group  discussed in 2.1. the bi-fundamentals, and hence the quiver diagram, are
+constructed from oriented open strings connecting the d-branes according to the rule
+given in [4]:
+
+rj.
+
+3  ri = mj n, e, sw
+
+neighbours
+
+this is of course (2.1) in a dierent guise and we clearly see the equivalence between
+this and the orbifold methods of 2.1.
+
+now in [2], for the classical setup of stretching a d-brane between two ns-branes,
+the asymptotic bending of the ns-brane controls the evolution of the gauge cou-
+pling (since the inverse of which is dictated by the distance between the ns-branes).
+whence ns-branes bending towards each other gives an ir free theory (case (1) de-
+ned above for the -functions), while bending away give an uv free (case (2)) theory.
+no bending thus indicates the non-evolution of the -function and thus niteness; this
+is obviously true for any brane congurations, intervals, boxes or cubes. we quote
+[3] verbatim on this issue: given a brane conguration which has no bending, the
+corresponding eld theory which is read o from the brane conguration by using the
+rules of [4] is a nite theory.
+
+discussions on bending have been treated in [11, 12] while works towards the
+establishment of the complete correspondence between hanany-witten methods and
+orbifold probes (to beyond the abelian case) are well under way [22]. under this light,
+we would like to lend this opportunity to point out that the anomaly cancelation
+equations (2-4) of [11] which discusses the implication of tadpole-cancelation to bbm
+in excellent detail, are precisely in accordance with (2.1). in particular, what they
+referred as the fourier transform to extract the rank matrix for the zzk  zzk bbm
+is precisely the orthogonality relations for nite group characters (which in the case
+of the abelian groups conveniently reduce to roots of unity and hence fourier series).
+the generalisation of these equations for non-abelian groups should be immediate.
+we see indeed that there is a close intimacy between the techniques of the current
+subsection with 2.1; let us now move to a slightly dierent setting.
+
+2.3 geometrical engineering
+
+on compactifying type iia string theory on a non-compact calabi-yau threefold,
+we can geometrically engineer [25, 26, 27] an n = 2 sym. more specically when
+
+7
+
+we compactify type iia on a k3 surface, locally modeled by an ale singularity, we
+arrive at an n = 2 sym in 6 dimensions with gauge group ade depending on the
+singularity about which d2-branes wrap in the zero-volume limit. however if we were
+to further compactify on t 2, we would arrive at an n = 4 sym in 4 dimensions. in
+order to kill the extraneous scalars we require a 2-fold without cycles, namely p1, or
+the 2-sphere. therefore we are eectively compactifying our original 10 dimensional
+theory on a (non-compact) calabi-yau threefold which is an ale (k3) bration over
+p1, obtaining a pure n = 2 sym in 4 dimensions with coupling 1
+g2 equaling to the
+volume of the base p1.
+
+to incorporate matter [26, 27] we let an an1 ale bre collide with an am1 one
+to result in an am+n1 singularity; this corresponds to a higgsing of su(m + n) 
+su(m)su(n), giving rise to a bi-fundamental matter (n, m). of course, by colliding
+the a singular bres appropriately (i.e., in accordance with dynkin diagrams) this
+above idea can easily be generalised to fabricate generic product su gauge groups.
+thus as opposed to 2.1 where bi-fundamentals (and hence the quiver diagram) arise
+from linear maps between irreducible modules of nite group representations, or 2.2
+where they arise from open strings linking d-branes, in the context of geometrical
+engineering, they originate from colliding bres of the calabi-yau.
+
+the properties of the -function from this geometrical perspective were also in-
+vestigated in [27]. the remarkable fact, using the perron-frobenius theorem, is that
+the possible resulting sym is highly restricted. the essential classication is that if
+the n = 2 - function vanishes (and hence a nite theory), then the quiver diagram
+
+encoding the bi-fundamentals must be the ane dade dynkin diagrams and when
+
+it is less than zero (and thus an asymptotically free theory), the quiver must be the
+ordinary ade. we shall see later how one may graphically arrive at these results.
+
+having thus reviewed the contemporary trichotomy of the methods of constructing
+sym from string theory fashionable of late, with special emphasis on what the word
+nitude means in each, we are obliged, as prompted by the desire to unify, to ask
+ourselves whether we could study these techniques axiomatically. after all, the quiver
+diagram does manifest under all these circumstances. and it is these quivers, as
+viewed by a graph or representation theorist, that we discuss next.
+
+3 preliminaries from the mathematics
+
+we now formally study what a quiver is in a mathematical sense. there are various
+approaches one could take, depending on whether ones interest lies in category theory
+or in algebra. we shall commence with p. gabriels denition, which was the genesis
+
+8
+
+of the excitement which ensued. then we shall introduce the concept of path algebras
+and representation types as well as a host of theorems that limit the shapes of quivers
+depending on those type. as far as convention and nomenclature are concerned, 3.1
+and 3.2 will largely follow [30, 31, 32].
+
+3.1 quivers and path algebras
+
+in his two monumental papers [35, 36], gabriel introduced the following concept:
+
+definition 3.1 a quiver is a pair q = (q0, q1), where q0 is a set of vertices
+and q1, a set of arrows such that each element   q1 has a beginning s() and an
+end e() which are vertices, i.e., {s()  q0}  {e()  q0}.
+
+in other words a quiver is a (generically) directed graph, possibly with multiple arrows
+and loops. we shall often denote a member  of q1 by the beginning and ending
+vertices, as in x  y.
+
+1 i1 . . .
+
+given such a graph, we can generalise q0,1 by dening a path of length m to
+m im) with j  q1 and
+be the formal composition  = 12 . . . m := (i0
+ij  q0 such that i0 = s(1) and it = s(t1) = e(t) for t = 1, ..., m. this is to
+say that we follow the arrows and trace through m nodes. subsequently we let qm
+be the set of all paths of length m and for the identity dene, for each node x, a
+trivial path of length zero, ex, starting and ending at x. this allows us to associate
+q0  {ex}xq0 and (i  j)  ei = ej. now qm is dened for all non-negative m,
+whereby giving a gradation in q.
+
+objects5 may be assigned to the nodes and edges of the quiver so as to make its
+
+conception more concrete. this is done so in two closely-related ways:
+
+1. by the representation of a quiver, rep(q), we mean to associate to each
+vertex x  q0 of q, a vector space vx and to each arrow x  y, a linear
+transformation between the corresponding vector spaces vx  vy.
+
+2. given a eld k and a quiver q, a path algebra kq is an algebra which as a
+
+vector space over k has its basis prescribed by the paths in q.
+
+{vxq0, (x  y)  q1}, the associated kq module is lx
+
+there is a 1-1 correspondence between kq-modules and rep(q). given rep(q) =
+vx whose basis is the set of
+paths qm. conversely, given a kq-module v , we dene vx = exv and the arrows to
+be prescribed by the basis element u such that u  eyu = uex whereby making u a
+map from vx to vy.
+
+5we could take this word literally and indeed we shall later briey dene the objects in a quiver
+
+category.
+
+9
+
+2
+
+1
+
+
+
+
+
+()
+
+
+
+()
+
+figure 1: two examples of quivers with nodes and edges labeled.
+
+on an algebraic level, due to the gradation of the quiver q by qm, the path
+
+algebra is furnished by
+
+kq :=mm
+
+kqm with kqm := mqm
+
+k
+
+(3.4)
+
+as a k-algebra, the addition and multiplication axioms of kq are as follows: given
+(a +b)
+
+a and b =
+
+pqn; a k
+
+a as two elements in kq, a+b =p
+
+ab with  being the joining of paths (if the endpoint of one is
+
+a =
+
+pqm; ak
+and a  b = p,
+
+the beginning of another, otherwise it is dened to be 0).
+
+this correspondence between path algebras and quiver representations gives us the
+exibility of freely translating between the two, an advantage we shall later graciously
+take. as illustrative examples of concepts thus far introduced, we have drawn two
+quivers in figure 1. in example (i), q0 = {1, 2}, q1 = {, } and qm>1 = {}. the
+path algebra is then the so-called kronecker algebra:
+
+kq = e1k  e2k  k  k =
+
+k k2
+0
+
+k  .
+
+on the other hand, for example (ii), qm{0,1,2,...} = {m} and the path algebra
+mk = k[], the innite dimensional free algebra of polynomials of one
+
+becomes lm
+
+variable over k.
+
+in general, kq is nitely generated if there exists a nite number of vertices and
+arrows in q and kq is nite-dimensional if there does not exist any oriented cycles
+in q.
+
+to specify the quiver even further one could introduce labeling schemes for the
+nodes and edges; to do so we need a slight excursion to clarify some standard termi-
+nology from graph theory.
+
+definition 3.2 the following are common categorisations of graphs:
+
+ a labeled graph is a graph which has, for each of its edge (i
+
+ j), a pair of
+
+positive integers (a
+
+ij, a
+
+ji) associated thereto;
+
+10
+
+ a valued graph is a labeled graph for which there exists a positive integer fi
+
+for each node i, such that a
+
+ijfj = a
+
+jifi for each arrow6.
+
+ a modulation of a valued graph consists of an assignment of a eld ki to each
+
+node i, and a ki-kj bi-module m 
+
+ij to each arrow (i
+
+ j) satisfying
+
+(a) m 
+ij
+(b) dimki(m 
+
+= homki(m 
+ij, ki) = homkj (m 
+ij) = a
+ij.
+
+ij, kj);
+
+ a modulated quiver is a valued graph with a modulation (and orientation).
+
+we shall further adopt the convention that we omit the label to edges if it is (1, 1).
+we note that of course according to this labeling, the matrices aij are almost what
+we call adjacency matrices. in the case of unoriented single-valence edges between
+say nodes i and j, the adjacency matrix has aij = aji = 1, precisely the label (1, 1).
+however, directed edges, as in figure 2 and figure 3, are slightly more involved. this
+is exemplied by    which has the label (2, 1) whereas the conventional adjacency
+matrix would have the entries aij = 2 and aji = 0. such a labeling scheme is of
+course so as to be consistent with the entries of the dynkin-cartan matrices of the
+semi-simple lie algebras. to this subtlety we shall later turn.
+
+the canonical examples of labeled (some of them are valued) graphs are what
+are known as the dynkin and euclidean graphs. the dynkin graphs are further
+subdivided into the nite and the innite; the former are simply the dynkin-coxeter
+diagrams well-known in lie algebras while the latter are analogues thereof but with
+innite number of labeled nodes (note that the nodes are not labeled so as to make
+them valued graphs; we shall shortly see what those numbers signify.) the euclidean
+graphs are the so-called ane coxeter-dynkin diagrams (of the ane extensions of
+the semi-simple lie algebras) but with their multiple edges dierentiated by oriented
+labeling schemes. these diagrams are shown in figure 2 and figure 3.
+
+how are these the canonical examples? we shall see the reason in 3.3 why
+they are ubiquitous and atomic, constituting, when certain niteness conditions are
+imposed, the only elemental quivers. before doing so however, we need some facts
+from representation theory of algebras; upon these we dwell next.
+
+3.2 representation type of algebras
+
+henceforth we restrict ourselves to innite elds, as some of the upcoming denitions
+make no sense over nite elds. this is of no loss of generality because in physics
+
+6 thus a labeled graph without any cycles is always a valued graph since we have enough degrees
+of freedom to solve for a consistent set of fi whereas cycles would introduce extra constraints. (of
+course there is no implicit summation assumed in the equation.)
+
+11
+
+(n nodes)
+
+a n
+
+bn
+
+c n
+
+dn
+
+a8
+
+b8
+
+c8
+
+1
+
+1
+
+1
+
+2
+
+1
+
+2
+
+3
+
+1
+
+2
+
+means
+
+(2,1)
+
+means 
+
+(3,1)
+
+e6
+
+e7
+
+e8
+
+f4
+
+g2
+
+(i) the finite dynkin diagrams
+
+d8
+
+8
+
+a8
+
+1
+
+1
+
+2
+
+2
+
+1
+
+1
+
+1
+
+(ii) the infinite dynkin diagrams
+
+figure 2: the finite and innite dynkin diagrams as labeled quivers. the nite
+cases are the well-known dynkin-coxeter graphs in lie algebras (from chapter 4 of
+[30]).
+
+12
+
+means
+
+(2,1)
+
+means 
+
+(3,1)
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+2
+
+2
+
+2
+
+2
+
+1
+
+1
+
+1
+
+1
+
+2
+
+1
+
+2
+
+2
+
+2
+
+2
+
+2
+
+2
+
+2
+
+2
+
+2
+
+2
+
+2
+
+2
+
+2
+
+1
+
+2
+
+2
+
+2
+
+2
+
+^
+a n
+
+^
+bn
+
+^
+c n
+
+^
+dn
+
+bcn
+
+bd n
+
+cd n
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+^
+a11
+
+(1,4)
+
+2
+
+1
+
+^
+a12
+
+(2,2)
+
+1
+
+1
+
+1
+
+2
+
+1
+
+2
+
+3
+
+1
+
+2
+
+2
+
+1
+
+2
+
+3
+
+4
+
+3
+
+2
+
+1
+
+3
+
+2
+
+4
+
+6
+
+5
+
+4
+
+3
+
+2
+
+1
+
+1
+
+2
+
+3
+
+2
+
+1
+
+1
+
+2
+
+3
+
+2
+
+1
+
+^
+e6
+
+^
+e7
+
+^
+e8
+
+^
+f41
+
+^
+f42
+
+^
+g21
+
+1
+
+2
+
+1
+
+^
+g22
+
+1
+
+2
+
+3
+
+the euclidean diagrams
+
+figure 3: the euclidean diagrams as labeled quivers; we recognise that this list
+contains the so-called ane dynkin diagrams (from chapter 4 of [30]).
+
+13
+
+we are usually concerned with the eld c. when given an algebra, we know its
+quintessential properties once we determine its decomposables (or equivalently the
+irreducibles of the associated module). therefore classifying the behaviour of the
+indecomposables is the main goal of classifying representation types of the algebras.
+the essential idea is that an algebra is of nite type if there are only nitely many
+indecomposables; otherwise it is of innite type. of the innite type, there is one
+well-behaved subcategory, namely the algebras of tame representation type, which
+has its indecomposables of each dimension coming in nitely many one-parameter
+families with only nitely many exceptions. tameness in some sense still suggests
+classiability of the innite indecomposables. on the other hand, an algebra of wild
+type includes the free algebra on two variables, k[x, y ], (the path algebra of figure 1
+(ii), but with two self-adjoining arrows), which indicates representations of arbitrary
+nite dimensional algebras, and hence unclassiability7.
+
+we formalise the above discussion into the following denitions:
+
+definition 3.3 let k be an innite eld and a, a nite dimensional algebra.
+
+ a is of nite representation type if there are only nitely many isomorphism
+
+classes of indecomposable a-modules, otherwise it is of innite type;
+
+ a is of tame representation type if it is of innite type and for any dimen-
+sion n, there is a nite set of a-k[x]-bimodules8 mi which obey the following:
+
+1. mi are free as right k[x]-modules;
+
+2. for some i and some indecomposable k[x]-module m, all but a nitely
+many indecomposable a-modules of dimension n can be written as mi k[x]
+m.
+
+if the mi may be chosen independently of n, then we say a is of domestic
+representation type.
+
+ a is of wild representation type if it is of innite representation type and
+there is a nitely generated a-k[x, y ]-bimodule m which is free as a right
+k[x, y ]-module such that the functor mk[x,y ] from nite-dimensional k[x, y ]-
+modules to nite-dimensional a-modules preserves indecomposability and iso-
+morphism classes.
+
+we are naturally led to question ourselves whether the above list is exhaustive. this is
+indeed so: what is remarkable is the so-called trichotomy theorem which says that all
+
+7 for precise statements of the unclassiability of modules of two-variable free algebras as turing-
+
+machine undecidability, cf. e.g. thm 4.4.3 of [30] and [42].
+
+8 therefore for the polynomial ring k[x], the indeterminate x furnishes the parameter for the
+one-parameter family mentioned in the rst paragraph of this subsection. indeed the indecomposable
+k[x]-modules are classied by powers of irreducible polynomials over k.
+
+14
+
+nite dimensional algebras must fall into one and only one of the above classication
+of types9:
+
+theorem 3.1 (trichotomy theorem) for k algebraically closed, every nite di-
+mensional algebra a is of nite, tame or wild representation types, which are mutually
+exclusive.
+
+to this pigeon-hole we may readily apply our path algebras of 3.1. of course
+such denitions of representation types can be generalised to additive categories with
+unique decomposition property. here by an additive category b we mean one with
+nite direct sums and an abelian structure on b(x, y ), the set of morphisms from
+object x to y in b such that the composition map b(y, z)  b(x, y )  b(x, z)
+is bilinear for x, y, z objects in b. indeed, that (a) each object in b can be nitely
+decomposed via the direct sum into indecomposable objects and that (b) the ring
+of endomorphisms between objects has a unique maximal ideal guarantees that b
+possesses unique decomposability as an additive category [32].
+
+the category rep(q), what [37] calls the quiver category, has as its objects
+the pairs (v, ) with linear spaces v associated to the nodes and linear mappings ,
+to the arrows. the morphisms of the category are mappings  : (v, )  (v , )
+compatible with  by e(l)l = 
+ls(l). in the sense of the correspondence between
+representation of quivers and path algebras as discussed in 3.1, the category rep(q)
+of nite dimensional representations of q, as an additive category, is equivalent to
+mod(kq), the category of nite dimensional (right) modules of the path algebra kq
+associated to q. this equivalence
+
+rep(q) = mod(kq)
+
+is the axiomatic statement of the correspondence and justies why we can hereafter
+translate freely between the concept of representation types of quivers and associated
+path algebras.
+
+3.3 restrictions on the shapes of quivers
+
+now we return to our quivers and in particular combine 3.1 and 3.2 to address the
+problem of how the representation types of the path algebra restricts the shapes of
+the quivers. before doing so let us rst justify, as advertised in 3.1, why figure 2
+and figure 3 are canonical. we rst need a preparatory denition: we say a labeled
+graph t1 is smaller than t2 if there is an injective morphism of graphs  : t1  t2
+
+9for a discussion on this theorem and how similar structures arises for nite groups, cf. e.g.
+
+[30, 32] and references therein.
+
+15
+
+ j) in t1, aij  a(i)(j) (and t1 is said to be strictly
+such that for each edge (i
+smaller if  can not be chosen to be an isomorphism). with this concept, we can see
+that the dynkin and euclidean graphs are indeed our archetypal examples of labeled
+graphs due to the following theorem:
+
+theorem 3.2 [30, 31] any connected labeled graph t is one and only one of the
+following:
+
+1. t is dynkin (nite or innite);
+
+2. there exists a euclidean graph smaller than t .
+
+this is a truly remarkable fact which dictates that the atomic constituents of all
+labeled graphs are those arising from semi-simple (ordinary and ane) lie algebras.
+the omni-presence of such meta-patterns is still largely mysterious (see e.g. [19, 28]
+for discussions on this point).
+
+let us see another manifestation of the elementarity of the dynkin and euclidean
+
+graphs. again, we need some rudimentary notions.
+
+definition 3.4 the cartan matrix for a labeled graph t with labels (aij, aji)
+
+for the edges is the matrix10 cij := 2ij p
+
+a
+ij
+
+we can symmetrise the cartan matrix for valued graphs as cij = cijfj with {fj} the
+valuation of the nodes of the labeled graph. with the cartan matrix at hand, let us
+introduce an important function on labeled graphs:
+
+definition 3.5 a subadditive function n(x) on a labeled graph t is a func-
+n(i)cij  0  j. a subadditive function
+
+tion taking nodes x  t to n  q+ such thatpi
+
+is additive if the equality holds.
+
+it turns out that imposing the existence such a function highly restricts the possible
+shape of the graph; in fact we are again led back to our canonical constituents. this
+is dictated by the following
+
+theorem 3.3 (happel-preiser-ringel [30]) let t be a labeled graph and n(x) a
+subadditive function thereupon, then the following holds:
+
+1. t is either (nite or innite) dynkin or euclidean;
+
+2. if n(x) is not additive, then t is nite dynkin or a;
+
+3. if n(x) is additive, then t is innite dynkin or euclidean;
+
+10this denition is inspired by, but should be confused with, cartan matrices for semisimple lie
+algebras; to the latter we shall refer as dynkin-cartan matrices. also, in the denition we have
+summed over edges  adjoining i and j so as to accommodate multiple edges between the two nodes
+each with non-trivial labels.
+
+16
+
+4. if n(x) is unbounded then t = a
+
+we shall see in the next section what this notion of graph additivity [30, 28] signies
+for super-yang-mills theories. for now, let us turn to the theorema egregium of
+gabriel that denitively restricts the shape of the quiver diagram once the nitude
+of the representation type of the corresponding path algebra is imposed.
+
+theorem 3.4 (gabriel [35, 36, 32]) a nite quiver q (and hence its associated
+path algebra over an innite eld) is of nite representation type if and only if it
+is a disjoint union of dynkin graphs of type an, dn and e678, i.e., the ordinary
+simply-laced ade coxeter-dynkin diagrams.
+
+in the language of categories [37], where a proof of the theorem may be obtained using
+coxeter functors in the quiver category, the above proposes that the quiver is (unions
+of) ade if and only if there are a nite number of non-isomorphic indecomposable
+objects in the category rep(q).
+
+once again appears the graphs of figure 2, and in fact only the single-valence
+ones: that ubiquitous ade meta-pattern! we recall from discussions in 3.1 that
+only for the simply-laced (and thus simply-valanced quivers) cases, viz. ade and
+ij precisely prescribe the adjacency matrices. to what type of
+
+dade, do the labels a
+path algebras then, one may ask, do the ane dade euclidean graphs correspond?
+
+the answer is given by nazarova as an extension to gabriels theorem.
+
+theorem 3.5 (nazarova [39, 32]) let q be a connected quiver without oriented
+cycles and let k be an algebraically closed eld, then kq is of tame (in fact domestic)
+representation type if and only if q is the one of the euclidean graphs of type an, dn
+and e678, i.e., the ane ade coxeter-dynkin diagrams.
+
+can we push further? what about the remaining quivers of in our canonical list?
+indeed, with the introduction of modulation on the quivers, as introduced in 3.1,
+the results can be further relaxed to include more graphs, in fact all the dynkin and
+euclidean graphs:
+
+theorem 3.6 (tits, bernstein-gelfand-ponomarev, dlab-ringel, nazarova-ringel
+[37, 41, 38, 30]) let q be a connected modulated quiver, then
+
+1. if q is of nite representation type then q is dynkin;
+
+2. if q is of tame representation type, then q is euclidean.
+
+this is then our dualism, on the one level of having nite graphs encoding a (classi-
+ability) innite algebra and on another level having the two canonical constituents
+of all labeled graphs being partitioned by nitude versus innitude11.
+
+11this is much in the spirit of that wise adage, cette opposition nouvelle, le ni et linni, ou
+mieux linni dans le ni, remplace le dualisme de letre et du paratre: ce qui parat, en eet, cest
+
+17
+
+4 quivers in string theory and yang-mills in graph
+
+theory
+
+we are now equipped with a small arsenal of facts; it is now our duty to expound
+upon them. therefrom we shall witness how axiomatic studies of graphs and repre-
+sentations may shed light on current developments in string theory.
+
+let us begin then, upon examining condition (2.3) and denition 3.5, with the
+
+following
+
+observation 4.1 the condition for nitude of n = 2 orbifold sym theory is
+equivalent to the introduction of an additive function on the corresponding quiver as
+a labeled graph.
+
+2ni =pj
+
+this condition that for the label ni to each node i and adjacency matrix aij,
+aijnj is a very interesting constraint to which we shall return shortly. what
+
+we shall use now is part 3 of theorem 3.3 in conjunction with the above observation
+to deduce
+
+corollary 4.1 all nite n = 2 super-yang-mills theories with bi-fundamental
+matter have their quivers as (nite disjoint unions) of the single-valence (i.e., (1, 1)-
+labeled edges) cases of the euclidean (figure 3) or innite dynkin (figure 2) graphs.
+
+a few points to remark. this is slightly a more extended list than that given in
+
+contemporary interest because they, in addition to being geometrically constructable
+(cf. 2.3), are also obtainable from the string orbifold technique12 (cf. 2.1) since
+
+[27] which is comprised solely of the dade quivers. these latter cases are the ones of
+after all the nite discrete subgroups of su(2) fall into an dade classication due to
+
+mckays correspondence [33, 13, 18]. in addition to the above well-behaved cases,
+we also have the innite simply-laced dynkin graphs: a, d and a
+. the usage of
+the perron-frobenius theorem in [27] restricts ones attention to nite matrices. the
+allowance for innite graphs of course implies an innitude of nodes and hence innite
+products for the gauge group. one needs not exclude these possibilities as after all in
+the study of d-brane probes, maldacenas large n limit has been argued in [15, 16, 3]
+to be required for conformality and niteness. in this limit of an innite stack of d-
+branes, innite gauge groups may well arise. in the hanany-witten picture, a
+ for
+example would correspond to an innite array of ns5-branes, and a, a semi-innite
+
+seulement un aspect de lobjet et lobjet est tout entier dans cet aspect et tout entier hors de lui
+[43].
+
+12 and in the cases of a and d also from hanany-witten setups [21, 22].
+
+18
+
+array with enough d-branes on the other side to ensure the overall non-bending and
+parallelism of the ns. such cases had been considered in [6].
+
+another comment is on what had been advertised earlier in 3.1 regarding the
+adjacency matrices. theorem 3.3 does not exclude graphs with multiple-valanced
+oriented labels. this issue does not arise in n = 2 which has only single-valanced and
+unoriented quivers. however, going beyond to n = 1, 0, requires generically oriented
+and multiply-valanced quivers (i.e., non-symmetric, non-binary matter matrices) [18,
+20]; or, it is conceivable that certain theories not arising from orbifold procedures may
+also possess these generic traits. under this light we question ourselves how one may
+identify the bi-fundamental matter matrices not with strict adjacency matrices of
+graphs but with the graph-label matrices a
+ij of 3.1 so as to accommodate multiple,
+chiral bi-fundamentals (i.e. multi-valence, directed graphs). in other words, could
+corollary 4.1 actually be relaxed to incorporate all of the euclidean and innite dynkin
+graphs as dictated by theorem 3.3? thoughts on this direction, viz., how to realise
+hanany-witten brane congurations for non-simply-laced groups have been engaged
+but still waits further clarication [23].
+
+let us now turn to gabriels famous theorem 3.4 and see its implications in string
+theory and vice versa what information the latter provides for graph theory. first we
+make a companion statement to observation 4.1:
+
+observation 4.2 the condition for asymptotically free ( < 0) n = 2 sym
+theory with bi-fundamentals is equivalent to imposing a subadditive (but not additive)
+function of the corresponding quiver.
+
+this may thus promptly be utilised together with part 2 of theorem 3.3 to con-
+clude that the only such theories are ones with ade quiver, or, allowing innite
+gauge groups, a as well (and indeed all nite dynkin quivers once, as mentioned
+above, non-simply-laced groups have been resolved). this is once again a slightly
+extended version of the results in [27].
+
+let us digress, before trudging on, a moment to consider what is means to encode
+sym with quivers. now we recall that for the quiver q, the assignment of objects and
+morphisms to the category rep(q), or vector spaces and linear maps to nodes q0 and
+edges q1 in q, or bases to the path algebra kq, are all equivalent procedures. from
+the physics perspective, these assignments are precisely what we do when we associate
+vector multiplets to nodes and hypermultiplets to arrows as in the orbifold technique,
+or ns-branes to nodes and oriented open strings between d-branes to arrows as in the
+hanany-witten congurations, or singularities in calabi-yau to nodes and colliding
+bres to arrows as in geometrical engineering. in other words the three methods, 3.1,
+2.1 and 2.3, of constructing gauge theories in four dimensions currently in vogue
+
+19
+
+are dierent representations of rep(q) and are hence axiomatically equivalent as far
+as quiver theories are concerned.
+
+bearing this in mind, and in conjunction with observations 4.1 and 4.2, as well
+as theorem 3.4 together with its generalisations, and in particular theorem 3.6, we
+make the following
+
+corollary 4.2 to an asymptotically free n = 2 sym with bi-fundamentals
+is associated a nite path algebra and to a nite one, a tame path algebra. the
+association is in the sense that these sym theories (or some theory categorically
+equivalent thereto) prescribe representations of the only quivers of such representation
+types.
+
+what is even more remarkable perhaps is that due to the trichotomy theorem,
+the path algebra associated to all other quivers must be of wild representation type.
+what this means, as we recall the unclassiability of algebras of wild representations,
+is that these quivers are unclassiable. in particular, if we assume that sym with
+n = 0, 1 and arbitrary bi-fundamental matter content can be constructed (either
+from orbifold techniques, hanany-witten, or geometrical engineering), then these
+theories can not be classied, in the strict sense that they are turing undecidable
+and there does not exist, in any nite language, a nite scheme by which they could
+be listed. since the set of sym with bi-fundamentals is a proper subset of all sym,
+the like applies to general sym. what this signies is that however ardently we may
+continue to provide more examples of say nite n = 1, 0 sym, the list can never be
+nished nor be described, unlike the n = 2 case where the above discussions exhaust
+their classication. we summarise this amusing if not depressing fact as follows:
+
+corollary 4.3 the generic n = 1, 0 sym in four dimensions are unclassi-
+able in the sense of being turing undecidable.
+
+we emphasise again that by unclassiable here we mean not completely classiable
+because we have given a subcategory (the theories with bi-fundamentals) which is
+unclassiable. also, we rest upon the assumption that for any bi-fundamental matter
+content an sym could be constructed. works in the direction of classifying all possible
+gauge invariant operators in an n = 1 susy lagrangian have been pursued [24].
+our claim is much milder as no further constraints than the possible nave matter
+content are imposed; we simply state that the complete generic problem of classifying
+the n < 2 matter content is untractable.
+in [24], the problem has been reduced
+to manipulating a certain cohomological algebra; it would be interesting to see for
+example, whether such brst techniques may be utilised in the classication of certain
+categories of graphs.
+
+20
+
+such an innitude of gauge theories need not worry us as there certainly is no
+shortage of say, calabi-yau threefolds which may be used to geometrically engineer
+them. this unclassiability is rather in the spirit of that of, for example, four-
+manifolds.
+indeed, though we may never exhaust the list, we are not precluded
+from giving large exemplary subclasses which are themselves classiable, e.g., those
+prescribed by the orbifold theories. determining these theories amounts to the clas-
+sication of the nite discrete subgroups of su(n).
+
+we recall from corollary 4.1 that n = 2 is given by the ane and innite coxeter-
+
+dynkin graphs of which the orbifold theories provide the dade cases. what remarks
+
+could one make for n = 0, 1, i.e., su(3, 4) mckay quivers [18, 20]? let us rst see
+n = 2 from the graph-theoretic perspective, which will induce a relationship between
+additivity (theorem 3.3) and gabriel-nazarova (theorems 3.4 and extensions). the
+crucial step in tits proof of gabriels theorem is the introduction of the quadratic
+form on a graph [37, 45]:
+
+definition 4.6 for a labeled quiver q = (q0, q1), one denes the (symmetric
+bilinear) quadratic form b(x) on the set x of the labels as follows:
+
+b(x) := xiq0
+
+x2
+
+i  xq1
+
+xs()xe().
+
+the subsequent work was then to show that nitude of representation is equivalent to
+the positive-denity of b(x), and in fact, as in nazarovas extension, that tameness
+is equivalent to positive-semi-denity. in other words, nite or tame representation
+type can be translated, in this context, to a diophantine inequality which dictates
+the nodes and connectivity of the quiver (incidentally the very same inequality which
+dictates the shapes of the coxeter-dynkin diagrams or the vertices and faces of the
+platonic solids in ir3):
+
+b(x)  0  dade, ade
+
+b(x) > 0  ade.
+
+now we note that b(x) can be written as 1
+2xt  c  x where (c)ij is de facto the
+cartan matrix for graphs as dened in 3.3. the classication problem thus, because
+c := 2i a, becomes that of classifying graphs whose adjacency matrix a has maximal
+eigenvalue 2, or what mckay calls c2-graphs in [33]. this issue was addressed in [46]
+cijxj 
+
+and indeed the dade graphs emerge. furthermore the additivity conditionpj
+0  i clearly implies the constraint pij
+
+cijxixj  0 (since all labels are positive) and
+
+thereby the like on the quadratic form. hence we see how to arrive at the vital step
+in gabriel-nazarova through graph subadditivity.
+
+the above discussions relied upon the specialty of the number 2.
+
+indeed one
+could translate between the graph quadratic form b(x) and the graph cartan matrix
+
+21
+
+precisely because the latter is dened by 2i  a. from a physical perspective this is
+precisely the discriminant function for n = 2 orbifold sym (i.e. d = 2) as discussed
+
+at the end of 2.1. this is why dade arises in all these contexts. we are naturally
+
+led to question ourselves, what about general13 d? this compels us to consider a
+generalised cartan matrix for graphs (cf. denition in 3.3), given by cij :=
+dij  aij, our discriminant function of 2.1. indeed such a matrix was considered
+in [34] for general mckay quivers. as a side remarks, due to such an extension,
+theorem 3.3 must likewise be adjusted to accommodate more graphs; a recent paper
+[44] shows an example, the so-dubbed semi-ane dynkin diagrams, where a new
+class of labeled graphs with additivity with respect to the extended cij emerge.
+
+returning to the generalised cartan matrix, in [34], the mckay matrices aij were
+obtained, for an arbitrary nite group g, by tensoring a faithful d-dimensional rep-
+resentation with the set of irreps: rd  ri = jaijrj. what was noticed was that the
+scalar product dened with respect to the matrix dij  aij (precisely our generalised
+cartan) was positive semi-denite in the vector space v = {xi} of labels. in other
+cijxixj  0. we briey transcribe his proof in the appendix. what this
+
+words, pij
+
+means for us is that is the following
+
+corollary 4.4 string orbifold theories can not produce a completely ir free
+(i.e., with respect to all semisimple components of the gauge group) qft (i.e., type
+(1),  > 0).
+
+to see this suppose there existed such a theory. then  > 0, implying for our
+cijxj < 0  i for some nite group. this would then im-
+
+cijxixj < 0, violating the positive semidenity
+
+discriminant function thatpj
+ply, since all labels are positive, thatpij
+
+condition that it should always be nonnegative for any nite group according to [34].
+therefore by reductio ad absurdum, we conclude corollary 4.4.
+
+on a more general setting, if we were to consider using the generalised cartan
+matrix dij  aij to dene a generalised subadditive function (as opposed to merely
+d = 2), could we perhaps have an extended classication scheme? to our knowledge
+this is so far an unsolved problem for indeed take the subset of these graphs with
+aijnj, these are known as d-regular graphs (the only
+
+all labels being 1 and dni = pj
+2-regular one is the ba-series) and these are already unclassied for d > 2. we await
+
+input from mathematicians on this point.
+
+13 in the arena of orbifold sym, d = 1, 2, 3, but in a broader settings, as in generalisation of
+
+mckays correspondence, d could be any natural number.
+
+22
+
+5 concluding remarks and prospects
+
+the approach of this writing has been bilateral. on the one hand, we have briey
+reviewed the three contemporary techniques of obtaining four dimensional gauge the-
+ories from string theory, namely hanany-witten, d-brane probes and geometrical
+engineering. in particular, we focus on what nitude signies for these theories and
+how interests in quiver diagrams arises. subsequently, we approach from the mathe-
+matical direction and have taken a promenade in the eld of axiomatic representation
+theory of algebras associated to quivers. the common ground rests upon the language
+of graph theory, some results from which we have used to address certain issues in
+string theory.
+
+from the expression of the one-loop -function, we have dened a discriminant
+function f := dij  ad
+ij for the quiver with adjacency matrix aij which encodes
+the bi-fundamental matter content of the gauge theory. the nullity (resp. negativ-
+ity/positivity) of this function gives a necessary condition for the nitude (resp. ir
+freedom/asymptotic freedom) of the associated gauge theory. we recognise this func-
+tion to be precisely the generalised cartan matrix of a (not necessarily nite) graph
+and the nullity (resp. negativity) thereof, the additivity (resp. strict subadditivity) of
+the graph. in the case of d = 2, such graphs are completely classied: innite dynkin
+or euclidean if f = 0 and nite dynkin or a if f < 0. in physical terms, this means
+that these are the only n = 2 theories with bi-fundamental matter (corollary 4.1
+and observation 4.2). this slightly generalises the results of [27] by the inclusion of
+innite graphs, i.e., theories with innite product gauge groups. from the mathe-
+matics alone, also included are the non-simply-laced diagrams, however we still await
+progress in the physics to clarify how these gauge theories may be fabricated.
+
+for d > 2, the mathematical problem of their classication is so far unsolved.
+a subclass of these, namely the orbifold theories coming from discrete subgroups
+of su(n) have been addressed upto n = 4 [14, 18, 20]. a general remark we can
+make about these theories is that, due to a theorem of steinberg, d-brane probes on
+orbifolds can never produce a completely ir free qft (corollary 4.4).
+
+from a more axiomatic stand, we have also investigated possible nite quivers
+that may arise. in particular we have reviewed the correspondence between a quiver
+and its associated path algebra. using the trichotomy theorem of representation
+theory, that all nite dimensional algebras over an algebraically closed eld are of
+either nite, tame or wild type, we have seen that all quivers are respectively either
+in physical terms, this means that asymptotically
+free and nite n = 2 sym in four dimensions respectively exhaust the only quiver
+theories of respectively nite and tame type (corollary 4.2). what these particular
+
+ade, dade or unclassiable.
+
+23
+
+path algebras mean in a physical context however, is yet to be ascertained. for the
+last type, we have drawn a melancholy note that all other theories, and in particular,
+n < 2 in four dimensions, are in general turing unclassiable (corollary 4.3).
+
+much work remains to be accomplished.
+
+it is the main purpose of this note,
+through the eyes of a neophyte, to inform readers in each of two hitherto disparate
+elds of gauge theories and axiomatic representations, of certain results from the
+other. it is hoped that future activity may be prompted.
+
+acknowledgements
+
+ad catharinae sanctae alexandriae et ad majorem dei gloriam...
+i extend my sincere gratitude to a. hanany for countless valuable suggestions and
+comments on the paper. also i would like to acknowledge b. feng for extolling the
+virtues of branes, l. ng, those of n-regular graphs and j. s. song, those of geomet-
+rical engineering, as well as the tireless discussions these my friends and collegues
+have aorded me. moreover, i am indebted to k. skenderis for helpful discussions
+and his bringing [24] to my attention, n. moeller for reference [43] and n. tkachuk
+for oering to translate the extensive list of russian documents in which are buried
+priceless jewels. furthermore, i am thankful to the organisers of the modular invari-
+ants, operator algebras and quotient singularities workshop and the mathematics
+research institute of the university of warwick at conventry, u. k. for providing
+the friendly atmosphere wherein much fruitful discussions concerning the unication
+through ade were engaged.
+
+indeed, i am much obliged to m. warden for charming inspirations, the ctp and
+
+the nsf for their gracious patronage as well as the itp for her warm hospitality.
+
+appendix
+
+we here transcribe steinbergs proof of the semi-denity of the scalar product with
+respect to the generalised cartan matrix, in the vector space v = {xi  zz+} of labels
+[34]. our starting point is (2.1), which we re-write here as
+
+rd  ri =mj
+
+aijrj
+
+first we note that, if i is the dual representation to i, then aij = aji by taking the
+conjugates (dual) of both sides of (2.1). whence we have
+
+lemma 5.1 for di = dim ri, ddi =pj
+
+aijdj =pj
+
+ajidj.
+
+24
+
+the rst equality is obtained directly by taking the dimension of both sides of (2.1) as
+in (2.2). to see the second we have ddi = ddi (as dual representations have the same
+aijdj, and then by the dual property aij = aji
+
+dimension) which is thus equal to pj
+above becomes pj
+2xij
+
+ajidj =pj
+(dij  aij)xixj = 2(dxi
+
+ajidj. qed.
+
+now consider the following for the scalar product:
+
+x2
+
+i xij
+
+aijxixj)
+
+cijxixj = 2xij
+= 2(xi
+= 2xi
+= xi6=j
+= xi<j
+
+(d  aii)x2
+
+aijxixj)
+
+i xi6=j
+
+1
+2
+
+(
+
+1
+
+dixj
+
+aijdj +
+
+1
+
+dixj
+
+ajidj  aii)x2
+
+i xi6=j
+
+aijxixj) (by lemma 5.1)
+
+(aij + aji)
+
+(aij + aji)
+
+(aij + aji)(
+
+dj
+di
+
+x2
+i +
+
+di
+dj
+
+x2
+j  2xixj)
+
+dj
+di
+
+x2
+
+i  2aijxixj =xi<j
+
+(djxi  dixj)2
+
+didj
+
+ 0
+
+from which we conclude
+
+proposition 5.1 (steinberg) in the vector space of positive labels, the scalar
+
+product is positive semi-denite, i.e., pij
+
+cijxixj  0.
+
+references
+
+[1] m. peskin and d. schroder, an introduction to quantum field theory,
+
+addison-wesley 1995.
+
+[2] a. hanany and e. witten, type iib superstrings, bps monopoles, and three-
+
+dimensional gauge dynamics, hep-th/9611230.
+
+[3] amihay hanany, matthew j. strassler and angel m. uranga, finite theories
+and marginal operators on the brane, hep-th/9803086, jhep 9806 (1998) 011.
+
+[4] a. hanany and a. zaaroni, on the realisation of chiral four-dimensional
+
+gauge theories using branes, hep-th/9801134.
+
+[5] a. hanany and a. uranga, brane boxes and branes on singularities, hep-
+
+th/9805139.
+
+[6] j. erlich, a. hanany, and a. naqvi, marginal deformations from branes, hep-
+
+th/9902118.
+
+25
+
+[7] p. west, finite four dimensional supersymmetric theories, in problems in
+
+unication and supergravity, aip conference proceedings, no. 116.
+
+[8] s. ferrara and b. zumino, nucl. phys. b79 (1974) 413.
+
+[9] m. grisaru and w. siegel, nucl. phys. b201 (1982) 292.
+
+p. howe, k. stelle and p. west, santa barbara preprint nsf-itp-83-09.
+
+[10] p. west, phys. lett. b137 (1984) 371.
+
+a. parkes and p. west, phy. lett. b138 (1984) 99.
+x.-d. jiang and x.-j. zhou, phys. lett. b216 (1989) 160.
+
+[11] r. leigh and m. rozali, brane boxes, anomalies, bending and tadpoles, hep-
+
+th/9807082.
+
+[12] l. randall, y. shirman, and r. von unge, brane boxes: bending and beta
+
+functions, hep-th/9806092.
+
+[13] m. douglas and b. greene, metrics on d-brane orbifolds, hep-th/9707214.
+
+m. douglas, b. greene, and d. morrison, orbifold resolution by d-branes,
+hep-th/9704151.
+
+[14] m. douglas and g. moore, d-branes, quivers, and ale instantons, hep-
+
+th/9603167;
+cliord v. johnson, robert c. myers, aspects of type iib theory on ale
+spaces, phys.rev. d55 (1997) 6382-6393.hep-th/9610140.
+
+[15] s. kachru and e. silverstein, 4d conformal field theories and strings on
+
+orbifolds, hep-th/9802183.
+
+[16] a. lawrence, n. nekrasov and c. vafa, on conformal field theories in four
+
+dimensions, hep-th/9803015.
+
+[17] p. frampton, and c. vafa, conformal approach to particle phenomenology,
+
+hep-th/9903226.
+
+[18] a. hanany and y.-h. he, non-abelian finite gauge theories,
+
+hep-th/9811183.
+
+[19] y.-h. he and j. s. song, of mckay correspondence, non-linear sigma-model
+
+and conformal field theory, hep-th/9903056.
+
+[20] a. hanany and y.-h. he, a monograph on the classication of the discrete
+
+subgroups of su(4), hep-th/9905212.
+
+26
+
+[21] a. kapustin, dn quivers from branes, hep-th/9806238.
+
+[22] b. feng, a. hanany, and y.-h. he, the zk  dk brane box model, hep-
+
+th/9906031.
+t. muto, brane congurations for three-dimensional nonabelian orbifolds,
+hep-th/9905230.
+b. feng, a. hanany, and y.-h. he, z-d brane box models and non-chiral
+dihedral quivers, hep-th/9909125.
+
+[23] personal correspondences with bo feng and amihay hanany.
+
+[24] personal correspondences with kostas skenderis.
+
+g. barnich, f. brandt, m. henneaux, local brst cohomology in einstein
+yangmills theory, hep-th/9505173.
+f. brandt, local brst cohomology in minimal d=4, n=1 supergravity, hep-
+th/9609192.
+g. barnich, m. henneaux, t. hurth, k. skenderis, cohomological analysis of
+gauged-xed gauge theories, hep-th/9910201.
+
+[25] s. katz, a. klemm and c. vafa, geometric engineering of quantum field
+
+theories, hep-th/9609239.
+
+[26] s.katz and c. vafa, matter from geometry, hep-th/9606086.
+
+[27] s. katz, p. mayr and c. vafa, mirror symmetry and exact solution of 4d n=2
+
+gauge theories i, hep-th/9706110.
+
+[28] t. gannon, monstrous moonshine and the classication of cft,
+
+math/9906167.
+
+[29] s. elitzur, a. giveon, d. kutasov, e. rabinovici, and a. schwimmer, brane
+
+dynamics and n=1 supersymmetric gauge theory, hep-th/9704104.
+a. karch, d. lust, d. smith, equivalence of geometric engineering and hanany-
+witten via fractional branes, hep-th/9803232.
+
+[30] d. benson, representations and cohomology, cambridge studies in advanced
+
+mathematics 30, cup 1991.
+
+[31] d. benson, modular representation theory: new trends and methods, lec-
+
+ture notes in mathematics 1081, springer-verlag 1984.
+
+27
+
+[32] d. simson, linear representations of partially ordered sets and vector space
+categories, algebra, logic and applications series, vol 4., gordon and breach
+sci. pub. (1992)
+
+[33] j. mckay, graphs, singularities, and finite groups, proc. symp. pure math.
+
+37, 183-186 (1980).
+
+[34] r. steinberg, finite subgroups of su2, dynkin diagrams and ane coxeter
+
+elements, pacic j. of math. 118, no. 2, 1985.
+
+[35] p. gabriel, unzerlegbare darstellugen i, manuscripta math. 6 (1972) 71-103.
+
+[36] p. gabriel, indecomposable representations ii, symposia mathematica, vol. xi
+(convegno di algebra commutativa, indam, rome, 1971), pp81-104. academic
+press, london, 1973.
+
+[37] i. n. bernstein, i. m. gelfand, v. a. ponomarev, coxeter functors and
+
+gabriels theorem, russian math. surveys, 28, (1973) ii.
+
+[38] l. a. nazarova and a. v. roiter, polyquivers and dynkin schemes, functional
+
+anal. appl. 7 (1973/4) p252-253.
+
+[39] l. a. nazarova, s. a. ovsienko, and a. v. roiter, polyquivers of finite type
+
+(russian) trudy mat. inst. steklov. 148 (1978), pp190-194, 277;
+l. nazarova,  polyquivers of innite type (russian) trudy mat. inst. steklov.
+148 (1978), pp175-189, 275;
+l. nazarova, s. ovsienko, and a. roiter, polyquivers of a finite type (russian)
+akad. nauk ukrain. ssr inst. mat. preprint no. 23 (1977), pp17-23l
+l. nazarova, representations of polyquivers of tame type (russian) zap.
+naucn. sem. leningrad. otdel. mat. inst. steklov. (lomi) 71 (1977), pp181-206,
+286.
+
+[40] i. m. gelfand and v. a. ponomarev, quadruples of subspaces of a finite-
+
+dimensional vector space, soviet math. dokl. vol 12 (1971) no. 2;
+i. m. gelfand and v. a. ponomarev, problems of linear algebra and classi-
+cation of quadruples of subspaces in a finite-dimensional vector space, in
+colloquia mathematica societatis janos bolyai, no. 5: hilbert space operators
+and operator algebras, ed. bela sz.-nagy north-holland pub. comp. (1972);
+c. m. ringel and k. w. roggenkamp, indecomposable representations of or-
+ders and dynkin diagrams, c. r. math. rep. acad. sci. canada, vol 1, no. 2
+(1979).
+
+28
+
+[41] v. dlab and c. ringel, on algebras of finite representation type, j. of
+
+algebra, vol 33, (1975) pp306-394.
+
+[42] w. baur, decidability and undecidability of theories of abelian groups with
+
+predicates for subgroups, compositio math. 31 (9175) pp23-30.
+a. i. kokorin and v. i. martyanov, universal extended theories, algebra,
+irkutsk (1963) pp107-114.
+
+[43] j.-p. sartre, letre et le neant, essai dontologie phenonenologique.
+
+[44] j. mckay,
+
+semi-ane coxeter-dynkin graphs and g  su2(c),
+
+math/9907089.
+
+[45] p. donovan and m. freislich, the representation theory of finite graphs and
+
+associated algebras, carleton mathematical lecture notes no. 5, oct 1973.
+
+[46] j. smith, some properties of the spectrum of a graph, proc. of 1969 calgary
+
+conference on combinatorial structures and their applications, 1970, pp403406
+
+29
+
+
