@@ -4,6 +4,7 @@ Topic mining of scientiﬁc literature can accurately capture the contextual str
 track research hotspots within a ﬁeld, and improve the availability of information about the literature. 
 This paper introduces a multi-dimensional topic mining method based on a hierarchical semantic graph 
 model. The main innovations include 
+
         (1) the hierarchical extraction of feature terms and construction of a corresponding semantic graph and
         (2) multi-dimensional topic mining based on graph segmentation and 
             structure analysis. The process of semantic graph construction is based primarily on hierarchical feature 
