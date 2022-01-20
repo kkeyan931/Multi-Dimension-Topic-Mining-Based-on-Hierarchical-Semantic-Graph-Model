@@ -60,6 +60,31 @@ Then, the GMM algorithm is used to obtain the k subgraph segmentation results (A
 Based on the above, the k initial mining results are further revised with the use of structural analysis, revealing the contribution of specific feature terms to different topics. Owing to the complexity of contextual expression and the ambiguity of boundaries, the feature terms of topics often have multi-dimensional characteristics; i.e., a feature term may belong to multiple topics.
 
 
+## EXPERIMENT
+
+### A. TOPIC CLUSTERING RESULTS ANALYSIS
+
+Modularity is a common method of measuring the strength of a network community structure. The value of the modularity depends on the community distribution of nodes in the network, which can be used to quantitatively measure the quality of the network community.
+
+<img width="621" alt="image" src="https://user-images.githubusercontent.com/65884897/150325335-c9a94947-8037-445b-b0bf-8a1f35598d68.png">
+
+
+### B. METRICS EVALUATION
+
+For a given dataset, it is a ground truth that a set of reference topics exists, along with a corresponding set of documents per reference topic. Thus, we can use precision, recall, and F-measure to evaluate the accuracy of the topic clustering method. Precision indicates the accuracy with which two documents are identified as belonging to the same topic and recall indicates the accuracy of classifying two documents to different topics.
+
+
+<img width="272" alt="image" src="https://user-images.githubusercontent.com/65884897/150325594-676e64c9-d32e-4a94-a529-658e0335d1f0.png">
+
+
+### C. TOPIC DISTRIBUTION STATISTICS
+
+<img width="609" alt="image" src="https://user-images.githubusercontent.com/65884897/150325704-d9343dc2-c19c-4e2b-bbab-1a5dc555cab0.png">
+
+
+## CONCLUSION
+
+Scientific literature, as an important carrier of knowledge, contains an abundance of topics, each with information value. In this project, a hierarchical term graph approach to integrate content relations and context relations for multidimension topic mining. Our method merges multiple relations into a hierarchical semantic graph and detects topics.
 
 
 
