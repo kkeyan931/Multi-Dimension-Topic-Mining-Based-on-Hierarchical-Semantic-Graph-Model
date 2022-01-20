@@ -33,6 +33,10 @@ The correlations between terms are represented by similarities P(Ti|Tj) and P(Tj
 Representing the document as a graph allows the retention of some important information, such as semantic relationships and internal structures.
 
 
+<img width="437" alt="image" src="https://user-images.githubusercontent.com/65884897/150326188-a2b378fa-6fc8-4af5-9ec7-78e647e055ed.png">
+
+
+
 ### C. SEMANTIC GRAPH REFINEMENT
 
 We use the word2vec model to refine the semanticterm graph by considering word embedding information. The essence of this procedure is to combine content correlation and contextual correlation in graph analysis for topic modelling.
@@ -42,6 +46,10 @@ The procedure contains two main steps,
 (a) generation of contextual relationships
 
 (b) refinement of the semantic graph
+
+
+<img width="438" alt="image" src="https://user-images.githubusercontent.com/65884897/150326244-aacca166-6b89-4c8c-9df7-3480cfae1928.png">
+
 
 
 ##  TOPIC MINING FROM THE REFINED SEMANTIC GRAPH
@@ -58,6 +66,11 @@ Then, the GMM algorithm is used to obtain the k subgraph segmentation results (A
 ### B. TOPIC CLUSTERING
 
 Based on the above, the k initial mining results are further revised with the use of structural analysis, revealing the contribution of specific feature terms to different topics. Owing to the complexity of contextual expression and the ambiguity of boundaries, the feature terms of topics often have multi-dimensional characteristics; i.e., a feature term may belong to multiple topics.
+
+
+<img width="367" alt="image" src="https://user-images.githubusercontent.com/65884897/150326309-0e4e105e-81e9-4e0e-844b-d89d657b1bf3.png">
+
+<img width="367" alt="image" src="https://user-images.githubusercontent.com/65884897/150326344-b8e5de83-558a-4904-a3ed-083d01326463.png">
 
 
 ## EXPERIMENT
@@ -84,7 +97,7 @@ For a given dataset, it is a ground truth that a set of reference topics exists,
 
 ## CONCLUSION
 
-Scientific literature, as an important carrier of knowledge, contains an abundance of topics, each with information value. In this project, a hierarchical term graph approach to integrate content relations and context relations for multidimension topic mining. Our method merges multiple relations into a hierarchical semantic graph and detects topics.
+Scientific literature, as an important carrier of knowledge, contains an abundance of topics, each with information value. In this project, a hierarchical term graph approach to integrate content relations and context relations for multi-dimension topic mining. Our method merges multiple relations into a hierarchical semantic graph and detects topics.
 
 
 
