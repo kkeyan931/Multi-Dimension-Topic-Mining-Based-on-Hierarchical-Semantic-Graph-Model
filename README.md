@@ -35,7 +35,32 @@ Representing the document as a graph allows the retention of some important info
 
 ### C. SEMANTIC GRAPH REFINEMENT
 
-We use the word2vec model to refine the semanticterm graph by considering word embedding information. The essence of this procedure is to combine content correlation and contextual correlation in graph analysis for topic modelling.
+We use the word2vec model to refine the semanticterm graph by considering word embedding information. The essence of this procedure is to combine content correlation and contextual correlation in graph analysis for topic modelling.
+
+The procedure contains two main steps,
+
+(a) generation of contextual relationships
+
+(b) refinement of the semantic graph
+
+
+##  TOPIC MINING FROM THE REFINED SEMANTIC GRAPH
+
+First, a spectral technique is used for subgraph segmentation. Then, a structural analysis method is applied to mine multidimensional topics for use in the topic clustering.
+
+### A. SUBGRAPH SEGMENTATION
+
+Subgraph segmentation comprises two main steps. The first step is to compose a graph G. The process of composition entails reconstructing the association matrix R into adjacency matrix W.
+
+Then, the GMM algorithm is used to obtain the k subgraph segmentation results (A1, A2,. . . , Ak ) based on the m eigenvalues.
+
+
+### B. TOPIC CLUSTERING
+
+Based on the above, the k initial mining results are further revised with the use of structural analysis, revealing the contribution of specific feature terms to different topics. Owing to the complexity of contextual expression and the ambiguity of boundaries, the feature terms of topics often have multi-dimensional characteristics; i.e., a feature term may belong to multiple topics.
+
+
+
 
 
 
