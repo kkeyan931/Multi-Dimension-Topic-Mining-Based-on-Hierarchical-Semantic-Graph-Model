@@ -15,3 +15,27 @@ The main innovations include
 
 
 <img width="523" alt="image" src="https://user-images.githubusercontent.com/65884897/150322993-25eb961f-d846-439b-b1f4-9fe6f30cdc12.png">
+
+
+## SEMANTIC GRAPH CONSTRUCTION
+
+First, the content correlation between feature terms is calculated based on co-occurrence. Second, the hierarchical extraction of feature terms is carried out to construct a semantic graph based on content correlation. Finally, the contextual correlation between feature terms is calculated based on word2vec, and the previously constructed graph is refined to generate the final semantic graph.
+
+### A. TERM CORRELATION BASED ON CO-OCCURRENCE
+
+The correlations between terms are represented by similarities P(Ti|Tj) and P(Tj|Ti) via the distribution of term frequencies in each paragraph. We use the symbol r(Ti, Tj) to represent the association between term Ti and term Tj:
+
+<img width="289" alt="image" src="https://user-images.githubusercontent.com/65884897/150323773-f06f4243-efea-44fe-9b5c-5bfee6cade0b.png">
+
+
+### B. SEMANTIC GRAPH CONSTRUCTION
+
+Representing the document as a graph allows the retention of some important information, such as semantic relationships and internal structures.
+
+
+### C. SEMANTIC GRAPH REFINEMENT
+
+We use the word2vec model to refine the semanticterm graph by considering word embedding information. The essence of this procedure is to combine content correlation and contextual correlation in graph analysis for topic modelling.
+
+
+
